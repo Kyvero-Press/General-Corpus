@@ -1,7 +1,33 @@
 * Intro
 This repository contains the totality of the Corpus provided by KVP.
 
-* license
+* Mission
+Although most if not all historical texts are in the public domain, great effort and care has gone into transcribing old manuscripts and providing these transcriptions free of charge, and advancements in print on demand technology have made it easier than ever to publish obscure works, it remains nearly impossible to find properly formatted public domain texts at a reasonable price. Instead people are met with either "translations" by large reputable publishing companies or exorbitant prices for unknown quality reprints, many times consisting of low quality scans directly reprinted.
+
+The mission of this project is to provide historical texts in a format that can be printed to reliable aesthetically pleasing and sensible results.
+
+The project aims to provide, first and foremost, a readable edition of the texts in their original languages, accessible for the layperson who is familiar with the language of the text (which, for middle English texts consists of the vast majority of modern English speakers given a brief adjustment period). Later goals could include unofficial critical editions (provided that scholarly parsable public domain critical editions exist), bilingual texts, and interlinear texts.
+
+These resulting texts will be distributed at or near cost via print on demand services in order to ensure the public's access to our shared history. The resulting texts will be freely available and modifiable to all in digital form.
+
+* Technology
+This project uses ConTeXt to translate XML sources into pdfs, using TeX. Most texts are in TEI format. Some texts, especially those from the Corpus of Middle English are in custom XML formats similar to TEI.
+
+* TODO Printing at home
+It is possible to print these texts at home using a bash script like
+#+BEGIN_SRC bash
+  ps2pdf example.pdf
+  psbook -s8 example.ps | psnup -2 -pletter -Pletter | lpr
+#+END_SRC
+
+* License
 All code in this repository is licensed under the [[file:gpl-3.0.txt][GPL-3.0]]
 
-All output, except that which is in the public domain, is Licensed under [[file:by-sa_legaltext.txt][CC BY-SA 4.0]]
+All output, except that which is in the public domain, is Licensed under [[file:by-sa_legaltext.txt][CC BY-SA 4.0]]. For attribution, please provide a link to this repository somewhere in the text, preferably in the colophon, with an explanation that the user may download this and other texts in the corpus.
+
+The reason for licensing under CC BY-SA is to ensure that notice is provided to everyone purchasing the texts that the source and other works are freely available online.
+
+You may use these resulting texts for commercial purposes, and in fact are encouraged to do so.
+
+* Resources
+- https://quod.lib.umich.edu/c/cme/browse.html
