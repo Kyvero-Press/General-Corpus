@@ -1,0 +1,478 @@
+% \startxmlsetups xml:demo:base
+%   \xmlsetsetup {#1} {*} {xml:*}
+%   \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/*} {src:title:*}
+%   \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/*} {src:pub:*}
+%   \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/SERIESSTMT/*} {src:series:*}
+%   \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/NOTESSTMT} {src:notes}
+%   \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/NOTESSTMT/*} {src:notes:*}
+%   \xmlsetsetup {#1} {DIV1|DIV2|DIV3|DIV4|DIV5|DIV6|DIV7} {text:head}
+% \stopxmlsetups
+% \xmlregisterdocumentsetup{demo}{xml:demo:base}
+
+% for env file method
+\startxmlsetups xml:presets:all
+  \xmlsetsetup {#1} {*} {xml:*}
+  \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/TITLESTMT/*} {src:title:*}
+  \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/PUBLICATIONSTMT/*} {src:pub:*}
+  \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/SERIESSTMT/*} {src:series:*}
+  \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/NOTESSTMT} {src:notes}
+  \xmlsetsetup {#1} {DLPSTEXTCLASS/HEADER/FILEDESC/SOURCEDESC/BIBLFULL/NOTESSTMT/*} {src:notes:*}
+  \xmlsetsetup {#1} {DIV1|DIV2|DIV3|DIV4|DIV5|DIV6|DIV7} {text:head}
+  % \xmlsetsetup {#1} {DIV1[@TYPE=Preface]} {text:preface}
+\stopxmlsetups
+
+
+% todo:
+% replace paragraph symbol
+% intelligently replace / as in MaloryWks2
+% process books
+% process prefaces and put them at the beginning of the book in the frontmatter
+% fix frontmatter page numbering so that it is in lower case romannumerals
+% 
+
+\setupdocument[shortchapters={false}] %todo: get this based on actual chapter length
+% \setupdocument[chapterpb={no}]       %todo: only if shortchapters
+\setupdocument[chapterpb={right}]       %todo: only if shortchapters
+%%% font
+\starttypescript [condjunicode]
+% \definefontsynonym[Human readable]       [file:filename without extension]
+  \definefontsynonym[junicode]            [file:Junicode-Cond] [features=default]
+  \definefontsynonym[junicode-Italic]     [file:Junicode-CondItalic] [features=default]
+  \definefontsynonym[junicode-Bold]       [file:Junicode-CondMedium] [features=default]
+  \definefontsynonym[junicode-BoldItalic] [file:Junicode-CondMediumItalic] [features=default]
+\stoptypescript
+
+\starttypescript [condjunicode]
+  \setups[font:fallback:serif]          % security: if not found==> back to defaults
+% \definefontsynonym[ConTeXt basics name] [Human readable]       [features=default]
+  \definefontsynonym[Serif]                [junicode]    [features=default]
+  \definefontsynonym[SerifItalic]          [junicode-Italic]     [features=default]
+  \definefontsynonym[SerifBold]            [junicode-Bold]       [features=default]
+  \definefontsynonym[SerifBoldItalic]      [junicode-BoldItalic] [features=default]
+\stoptypescript
+
+\starttypescript [condjunicode]
+  \definetypeface [condjunicode]    [rm] [serif] [condjunicode]    [default]
+\stoptypescript
+\setupbodyfont[condjunicode]
+
+  \hyphenation{significantly}
+%%%
+
+\xmlregistersetup{xml:presets:all}
+% \defineparagraph[linepar][
+%              \hangafter=1\hangindent=1em\relax
+
+  \language[enm]
+
+%%% debug info
+% \showframe
+
+\definelistalternative
+  [editorlist]
+  [renderingsetup=list:editorlist]
+\startsetups [list:editorlist]
+\starttabulate
+    \NC edited by                   \EQ {\it\currentlistentrytitle}          \NC
+\stoptabulate
+\stopsetups
+\definelist[editors][criterium=all,alternative=editorlist]
+
+%%% default document info
+\setupdocument[author={Anonymous}]
+
+\definebreakpoints[conservativebreaks]
+\definebreakpoint[conservativebreaks][;][type=1]
+\definebreakpoint[conservativebreaks][.][type=1]
+\definebreakpoint[conservativebreaks][,][type=1]
+
+% \setuphead
+%    [chapter]
+%    [number=yes,numbercommand=\bold,insidesection={\bold{\structureuservariable{longtitle} }}]
+
+\definehead     [intro] [chapter]
+\setuphead      [intro] [number=no]
+
+\definecombinedlist     [content][list={intro,chapter,section}]
+\setuplist      [intro] [headnumber=no]
+
+%%% toc setup
+\setupcombinedlist [content] [alternative=c]
+%%% macros
+%% according to menota https://www.menota.org/HB1-1_ch7_corr.xhtml (end of page)
+\definestartstop[Unclear][style=underdots,right={\high{U}\indenting[next]}]
+
+\def\verseline#1{\startparagraph
+  \hyphenation{significantly}
+  \hangafter=1
+  \hangindent=1em\relax
+  \setbreakpoints[conservativebreaks]
+  \setupalign[flushleft,nothanging,verytolerant]
+  #1
+\stopparagraph}
+
+\def\GetChapterNum{
+  \ifnum\rawcountervalue[partcounter]>0{%
+    \romannumerals{\rawcountervalue[chaptercounter]}
+  }\else{%
+    \Romannumerals{\rawcountervalue[chaptercounter]}
+  }\fi
+}
+% \hyphenation{sig-ni-fi-cant-ly}
+
+\setupalign[hz,hanging,tolerant]
+% \setuplayout[grid=yes]
+%%% header and footer
+
+% \setupsection[section-2][headnumber=yes,bodypartconversion=Romannumerals]
+\setuphead[chapter][conversion=Romannumerals] % Chapter pages won’t have headers
+\setuphead[part][conversion=Romannumerals] % Chapter pages won’t have headers
+
+% \def\UPart{\somenamedheadnumber{part}{current}}
+% \def\UPart{\headnumber[part][current]}
+
+\setuphead	[part]
+		[%command=\UPart,
+		style=\tfd\it,
+		placehead=yes, frame=off,
+                align=middle,bodypartlabel=,
+		number=yes]
+
+% \setuphead[section][color=darkcyan]  % This is how you change your section’s color.
+
+% \setupheadertexts[][chapter] 
+
+%% footer
+
+\startsetups [header:leftpage]
+  \midaligned{
+    \hfill
+    \ifnum\rawcountervalue[partcounter]>0{%
+      \labeltext{part} \Romannumerals{\rawcountervalue[partcounter]}\hfill
+    }\fi
+    \ifnum\rawcountervalue[chaptercounter]>0{%
+      % \labeltext{chapter} {\romannumeral\rawcountervalue[chaptercounter]}
+      \labeltext{chapter} \GetChapterNum
+    }\fi
+    \hfill
+  } 
+
+\stopsetups
+
+\startsetups [header:rightpage]
+     \midaligned{\documentvariable{title}}
+\stopsetups
+
+\setuplabeltext
+     [en]
+     [chapter=Chapter]
+
+\setuplabeltext
+     [en]
+     [part=Book]
+
+\setuphead
+     [chapter]
+     [align=middle,bodypartlabel=,page=\documentvariable{chapterpb}]
+
+
+\setuppagenumbering
+     [alternative=doublesided]
+
+%% alt unclear
+% \definestartstop[Unclear][style=italic,right={\high{U}\indenting[next]}]
+
+\startsetups document:copyrightpage
+  \page
+  this is the copyright page
+
+\stopsetups
+\definemakeup [title] [doublesided=no,style={\switchtobodyfont[junicode,16pt]}]
+\startsetups document:start
+  \definecounter[partcounter][way=bytext]
+  \definecounter[chaptercounter][way=bytext]
+  \starttitlemakeup
+  \startalignment[middle]
+    \setupeffect[both][stretch=1]
+    \starteffect[both]
+      \tfd
+      \sc{\documentvariable{title}}\break\break
+    \stopeffect
+    \setupeffect[both][stretch=0]
+    \starteffect[both]
+      \tfb
+      \sc{\documentvariable{subtitle}}\break\break
+    \stopeffect
+    % \tft{}
+    % \sc{\documentvariable{title}}\break
+    % \bold{\documentvariable{subtitle}}\break
+    \tfx
+    \bold{\documentvariable{subsubtitle}}\break\break\break
+      \tfb
+    written by {\it\documentvariable{author}}\break
+    edited by {\it\documentvariable{editor}}\break\break\break
+    {\it\documentvariable{date}}\break
+    \bold{\documentvariable{srcnotes}}\break
+  \stopalignment
+  \stoptitlemakeup
+    \setup[document:copyrightpage]
+\stopsetups
+
+
+%% test macro def
+% \def\Correction#1#2{#1\high{#2}}] %todo
+
+% \showmakeup
+%%% Root
+\startxmlsetups xml:DLPSTEXTCLASS
+  \xmlflush{#1}
+\stopxmlsetups
+% todo: header
+
+% \startxmlsetups xml:DLPSTEXTCLASS
+%   \setupdocument[title={blah}]
+%   \xmlflush{#1}
+% \stopxmlsetups
+%%% Header
+
+\startxmlsetups xml:HEADER
+  \xmlflush{#1}
+\stopxmlsetups
+\startxmlsetups xml:LB
+  \break
+\stopxmlsetups
+
+\startxmlsetups xml:SOURCEDESC
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:BIBLFULL
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:FILEDESC
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:PUBLICATIONSTMT
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:TITLESTMT
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups src:title:AUTHOR
+  \setupdocument[author={\xmltext{#1}}]
+\stopxmlsetups
+
+\startxmlsetups src:title:TITLE \setupdocument[title={\xmltext{#1}}]
+\stopxmlsetups
+
+\startxmlsetups src:title:SUBTITLE \setupdocument[subtitle={\xmltext{#1}}]
+\stopxmlsetups
+
+\startxmlsetups src:title:SUBSUBTITLE \setupdocument[subsubtitle={\xmltext{#1}}]
+\stopxmlsetups
+\startxmlsetups src:title:date \setupdocument[date={\xmltext{#1}}]
+\stopxmlsetups
+
+\startxmlsetups src:title:EDITOR
+  % \writetolist[editors]{}{\xmltext{#1}}
+  \setupdocument[editor={\xmltext{#1}}]
+\stopxmlsetups
+\startxmlsetups src:notes
+  \setupdocument[srcnotes={\xmlflush{#1}}]
+\stopxmlsetups
+
+\startxmlsetups src:notes:NOTE
+  \xmlflush{#1}\break
+\stopxmlsetups
+\startxmlsetups text:preface
+  \xmlflush{#1}\break
+\stopxmlsetups
+
+%%% Structure
+\startxmlsetups xml:TEXT
+  \setuppagenumbering[state=stop]
+  \startdocument
+  \starttext
+  % \setuplines
+  %   [before={\blank\startnarrow[default=left,left=1cm]},
+  %     after={\stopnarrow\blank},
+  %     indenting={yes,-1cm}]
+  \xmlflush{#1}
+  \page
+  \stoptext
+  \stopdocument
+\stopxmlsetups
+
+\startxmlsetups xml:BODY
+  \setuppagenumbering[state=start,alternative=doublesided,location=right]
+  \setupheadertexts
+     [] [\directsetup{header:rightpage}]
+     [\directsetup{header:leftpage}] []
+  \setcounter[userpage][1]
+  \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:FRONT
+  \startfrontmatter
+  \xmlflush{text:preface}
+  \completecontent % with title
+  \xmlflush{#1}
+  \stopfrontmatter
+\stopxmlsetups
+
+
+\startxmlsetups text:head
+  \doif{\xmlatt{#1}{TYPE}}{supplied line groups}
+       {\startmixedcolumns[balance=yes]
+             \xmlflush{#1}
+           \stopmixedcolumns}
+       \doif{\xmlatt{#1}{TYPE}}{Preface}
+            {\startchapter[title={ \xmltext{#1}{/HEAD} }]
+              [longtitle=\xmltext{#1}{HEAD}]
+              \setcounter[chaptercounter][0]
+              \incrementcounter[partcounter]
+              \doif{\documentvariable{shortchapters}}{true}{\startmixedcolumns[balance=yes]}
+                 \xmlflush{#1}
+              \doif{\documentvariable{shortchapters}}{true}{\stopmixedcolumns}
+             \stopchapter
+            }
+       \doif{\xmlatt{#1}{TYPE}}{Book}
+            {\startpart[title={ \xmltext{#1}{/HEAD} }]
+              [longtitle=\xmltext{#1}{HEAD}]
+              \setcounter[chaptercounter][0]
+              \incrementcounter[partcounter]
+              \doif{\documentvariable{shortchapters}}{true}{\startmixedcolumns[balance=yes]}
+                 \xmlflush{#1}
+              \doif{\documentvariable{shortchapters}}{true}{\stopmixedcolumns}
+             \stoppart
+            }
+       \doif{\xmlatt{#1}{TYPE}}{chapter}
+            {\startchapter[title={ \xmltext{#1}{/HEAD}}] %why doesnt xmlfirst work?
+             [longtitle=\xmltext{#1}{/HEAD}]
+              \xmltext{#1}{/NOTE1}
+              \doifnumberelse{\xmlatt{#1}{NUMBER}}{%
+                \setcounter[chaptercounter][{\xmlatt{#1}{NUMBER}}]
+              }{\incrementcounter[chaptercounter]}
+              % \incrementcounter[chaptercounter]
+              % }\fi
+
+              \doif{\documentvariable{shortchapters}}{false}{\startmixedcolumns[balance=yes]}
+               % \startmixedcolumns[balance=yes]
+                 \xmlflush{#1}
+               % \stopmixedcolumns
+              \doif{\documentvariable{shortchapters}}{false}{\stopmixedcolumns}
+             \stopchapter
+            }
+\stopxmlsetups
+% \startxmlsetups xml:DIV1
+%   \startchapter[title=\xmltext{#1}{HEAD}]
+%     \startmixedcolumns[balance=yes]
+%     \xmlflush{#1}
+%     \stopmixedcolumns
+%   \stopchapter
+% \stopxmlsetups
+
+\startxmlsetups xml:P
+  \startparagraph
+    \xmlflush{#1}
+  \stopparagraph
+\stopxmlsetups
+
+%%% Formatting
+%% Prose
+% more technical format
+
+% \startxmlsetups xml:UNCLEAR
+%     \Unclear{\xmlflush{#1}}
+% \stopxmlsetups
+
+% \startxmlsetups xml:CORR
+%     \xmlflush{#1}\footnote{sic: \xmlatt{#1}{SIC}}
+% \stopxmlsetups
+
+% \startxmlsetups xml:NOTE1
+%     \footnote{\xmlflush{#1}}
+% \stopxmlsetups
+
+% standard reading format
+\startxmlsetups xml:UNCLEAR
+    \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:CORR
+    \xmlflush{#1}
+\stopxmlsetups
+
+\startxmlsetups xml:HI
+    \xmlflush{#1}
+\stopxmlsetups
+
+%% Verse
+\startxmlsetups xml:LG
+    \xmlflush{#1}
+\stopxmlsetups
+\startxmlsetups xml:L
+    \verseline{\xmlflush{#1}}
+\stopxmlsetups
+
+% \startxmlsetups xml:CORR
+%     \Correction{\xmlflush{#1}}{\xmlatt{#1}{SIC}}
+% \stopxmlsetups
+
+% \startxmlsetups xml:UNCLEAR
+%   \startparagraph
+%     \xmlflush{#1}
+%   \stopparagraph
+% \stopxmlsetups
+%%% Ignored
+%% Page Breaks
+% \startxmlsetups xml:EPB
+%   \xmlflush{#1}
+% \stopxmlsetups
+% \startxmlsetups xml:PB
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \startxmlsetups xml:body
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \startxmlsetups xml:date
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+
+\startxmlsetups xml:FOREIGN
+  \bgroup\language[\xmlatt{#1}{xml:lang}]\em\xmlflush{#1}\egroup
+\stopxmlsetups
+
+% \startxmlsetups xml:name
+%   \bgroup\sc\xmlflush{#1}\egroup
+% \stopxmlsetups
+
+
+% \startxmlsetups xml:p:date
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \startxmlsetups xml:quote
+%   \bgroup\language[\xmlatt{#1}{xml:lang}]\quotation{\xmlflush{#1}}\egroup
+% \stopxmlsetups
+
+% \startxmlsetups xml:said
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \startxmlsetups xml:teiHeader
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \startxmlsetups xml:text
+%   \xmlflush{#1}
+% \stopxmlsetups
+
+% \xmlprocessfile{demo}{merlin_linted_2.xml}{}
