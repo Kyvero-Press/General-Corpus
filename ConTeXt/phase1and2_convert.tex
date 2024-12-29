@@ -21,6 +21,27 @@
   % \xmlsetsetup {#1} {DIV1[@TYPE=Preface]} {text:preface}
 \stopxmlsetups
 
+% start lua code
+\startluacode
+require("util")
+\stopluacode
+
+\def\Settitle#1{\setupdocument[title={#1}]}
+\def\Setsubtitle#1{\setupdocument[subtitle={#1}]}
+\def\Setsubsubtitle#1{\setupdocument[subsubtitle={#1}]}
+\def\Parsetitle#1{
+  \startluacode
+    local value = xml.text(lxml.getid("#1") )
+    pipe(
+    splitname,
+    reversetable,
+    popthru(context.Settitle),
+    popthru(context.Setsubtitle),
+    popthru(context.Setsubsubtitle)
+    )(value)
+  \stopluacode
+}
+% end lua code
 
 % todo:
 % replace paragraph symbol
@@ -33,6 +54,10 @@
 \setupdocument[shortchapters={false}] %todo: get this based on actual chapter length
 % \setupdocument[chapterpb={no}]       %todo: only if shortchapters
 \setupdocument[chapterpb={right}]       %todo: only if shortchapters
+% \setupwhitespace[line]                  %add line between paragraphs
+\setupinitial[n=2,method={first,auto},before=] %first causes it to drop the parens which is what is recommended by chicago manual of style
+
+% \setupwhitespace[none]                  %add line between paragraphs
 %%% font
 \starttypescript [condjunicode]
 % \definefontsynonym[Human readable]       [file:filename without extension]
@@ -89,6 +114,9 @@
 % \setuphead
 %    [chapter]
 %    [number=yes,numbercommand=\bold,insidesection={\bold{\structureuservariable{longtitle} }}]
+
+\setpenalties\widowpenalties{2}{10000}
+\setpenalties\clubpenalties {2}{10000}
 
 \definehead     [intro] [chapter]
 \setuphead      [intro] [number=no]
@@ -156,7 +184,6 @@
     }\fi
     \hfill
   } 
-
 \stopsetups
 
 \startsetups [header:rightpage]
@@ -266,8 +293,14 @@
   \setupdocument[author={\xmltext{#1}}]
 \stopxmlsetups
 
-\startxmlsetups src:title:TITLE \setupdocument[title={\xmltext{#1}}]
+% using lua
+\startxmlsetups src:title:TITLE
+  \Parsetitle{#1}
 \stopxmlsetups
+
+% old way
+% \startxmlsetups src:title:TITLE \setupdocument[title={\xmltext{#1}}]
+% \stopxmlsetups
 
 \startxmlsetups src:title:SUBTITLE \setupdocument[subtitle={\xmltext{#1}}]
 \stopxmlsetups
@@ -327,7 +360,7 @@
 
 \startxmlsetups text:head
   \doif{\xmlatt{#1}{TYPE}}{supplied line groups}
-       {\startmixedcolumns[balance=yes]
+       {\startmixedcolumns[balance=no]
              \xmlflush{#1}
            \stopmixedcolumns}
        \doif{\xmlatt{#1}{TYPE}}{Preface}
@@ -345,7 +378,7 @@
               [longtitle=\xmltext{#1}{HEAD}]
               \setcounter[chaptercounter][0]
               \incrementcounter[partcounter]
-              \doif{\documentvariable{shortchapters}}{true}{\startmixedcolumns[balance=yes]}
+              \doif{\documentvariable{shortchapters}}{true}{\startmixedcolumns[balance=no]}
                  \xmlflush{#1}
               \doif{\documentvariable{shortchapters}}{true}{\stopmixedcolumns}
              \stoppart
@@ -360,7 +393,7 @@
               % \incrementcounter[chaptercounter]
               % }\fi
 
-              \doif{\documentvariable{shortchapters}}{false}{\startmixedcolumns[balance=yes]}
+              \doif{\documentvariable{shortchapters}}{false}{\startmixedcolumns[balance=no]}
                % \startmixedcolumns[balance=yes]
                  \xmlflush{#1}
                % \stopmixedcolumns
@@ -378,6 +411,7 @@
 
 \startxmlsetups xml:P
   \startparagraph
+    \placeinitial
     \xmlflush{#1}
   \stopparagraph
 \stopxmlsetups
