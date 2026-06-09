@@ -1,0 +1,68 @@
+% CME/Pandoc book front matter.
+% Loaded automatically by scripts/pandoc-cme-xml for .tex and .pdf output.
+%
+% Design notes: use a conventional book sequence (title page, colophon/copyright
+% page, table of contents) with front-matter roman pagination and a clean,
+% centered title page.  The visible page numbers begin with the contents.
+
+\IfFileExists{emptypage.sty}{\usepackage{emptypage}}{}
+\pagestyle{plain}
+
+\makeatletter
+
+\renewcommand{\maketitle}{%
+  \begin{titlepage}%
+    \thispagestyle{empty}%
+    \null%
+    \vspace*{0.16\textheight}%
+    \begin{center}%
+      {\small\MakeUppercase{General Corpus Edition}\par}%
+      \vspace{0.12\textheight}%
+      {\Huge\bfseries\@title\par}%
+      \vspace{2\baselineskip}%
+      {\Large\@author\par}%
+      \vfill%
+      {\large Kyvero Press\par}%
+    \end{center}%
+    \clearpage%
+  \end{titlepage}%
+}
+
+\newcommand{\cmeIfNotEmpty}[2]{%
+  \if\relax\detokenize{#1}\relax\else#2\fi%
+}
+
+\newcommand{\cmeMetaLine}[2]{%
+  \cmeIfNotEmpty{#2}{\noindent\textsc{#1}: #2\par}%
+}
+
+\newcommand{\cmeColophon}[8]{%
+  \thispagestyle{empty}%
+  \vspace*{\fill}%
+  \begingroup%
+  \small\raggedright%
+    \noindent\textsc{Colophon}\par%
+    \vspace{\baselineskip}%
+    \noindent This General Corpus edition of \emph{#1} by #2 is generated from
+    the corpus XML source and is intended as a readable scholarly edition for
+    print and screen.\par%
+    \vspace{\baselineskip}%
+    \noindent The text was normalized to HTML, converted with Pandoc, and
+    typeset with Xe\LaTeX{} using the Junicode typeface. Transport markup such
+    as source page, folio, and milestone markers is omitted from the reading
+    text unless milestone output is explicitly requested.\par%
+    \vspace{\baselineskip}%
+    \cmeMetaLine{Source XML}{\texttt{#3}}%
+    \cmeMetaLine{Format}{#4}%
+    \cmeMetaLine{Editor}{#5}%
+    \cmeMetaLine{Source date}{#6}%
+    \cmeMetaLine{Identifier}{#7}%
+    \cmeMetaLine{Warning}{#8}%
+    \vspace{\baselineskip}%
+    \noindent Generated \today.\par%
+  \endgroup%
+  \clearpage%
+  \cleardoublepage%
+}
+
+\makeatother

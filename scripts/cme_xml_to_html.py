@@ -56,6 +56,7 @@ HTML_TAG_RE = re.compile(r"<[^>]+>")
 class Options:
     include_notes: bool = True
     preserve_milestones: bool = False
+    include_source_metadata: bool = True
 
 
 @dataclass(frozen=True)
@@ -799,10 +800,49 @@ def metadata_value_html(key: str, value: str) -> str:
     return html_text(value)
 
 
+LATEX_REPLACEMENTS = {
+    "\\": r"\textbackslash{}",
+    "&": r"\&",
+    "%": r"\%",
+    "$": r"\$",
+    "#": r"\#",
+    "_": r"\_",
+    "{": r"\{",
+    "}": r"\}",
+    "~": r"\textasciitilde{}",
+    "^": r"\textasciicircum{}",
+}
+
+
+def latex_text(value: str | None, *, break_paths: bool = False) -> str:
+    escaped = "".join(LATEX_REPLACEMENTS.get(char, char) for char in (value or ""))
+    if break_paths:
+        escaped = escaped.replace("/", r"/\allowbreak{}")
+    return escaped
+
+
+def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
+    meta = metadata(parsed.root, fmt, path, parsed)
+    title = meta.get("title", path.stem)
+    author = meta.get("author") or "Anonymous"
+    values = [
+        latex_text(title),
+        latex_text(author),
+        latex_text(meta.get("source"), break_paths=True),
+        latex_text(meta.get("format")),
+        latex_text(meta.get("editor")),
+        latex_text(meta.get("date")),
+        latex_text(meta.get("id")),
+        "XML was parsed in recovery mode." if parsed.recovered else "",
+    ]
+    return "\\cmeColophon{" + "}{".join(values) + "}\n"
+
+
 def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> str:
     root = parsed.root
     meta = metadata(root, fmt, path, parsed)
     title = meta.get("title", path.stem)
+    author = meta.get("author") or "Anonymous"
 
     meta_rows = "\n".join(
         f"<dt>{html_text(key.replace('_', ' ').title())}</dt><dd>{metadata_value_html(key, value)}</dd>"
@@ -815,6 +855,15 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
             '<p class="xml-warning"><strong>Warning:</strong> XML was parsed in recovery mode. '
             "The source has well-formedness errors; check conversion around the reported locations.</p>\n"
         )
+    source_metadata = ""
+    if opts.include_source_metadata:
+        source_metadata = f"""<div class="source-metadata">
+<h2>Source metadata</h2>
+{warning}<dl>
+{meta_rows}
+</dl>
+</div>
+"""
 
     if fmt == "headwords":
         body = render_headwords(root, opts)
@@ -826,6 +875,7 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
 <head>
 <meta charset="utf-8" />
 <title>{html_text(title)}</title>
+<meta name="author" content="{html_attr(author)}" />
 <style>
 body {{ line-height: 1.35; }}
 .source-metadata {{ border-bottom: 1px solid #ccc; margin-bottom: 2rem; }}
@@ -843,13 +893,7 @@ td, th {{ border: 1px solid #ccc; padding: .2rem .4rem; vertical-align: top; }}
 </head>
 <body>
 <main>
-<div class="source-metadata">
-<h2>Source metadata</h2>
-{warning}<dl>
-{meta_rows}
-</dl>
-</div>
-{body}
+{source_metadata}{body}
 </main>
 </body>
 </html>
@@ -880,6 +924,16 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
         action="store_true",
         help="fail instead of recovering when the source XML is not well formed",
     )
+    parser.add_argument(
+        "--omit-source-metadata",
+        action="store_true",
+        help="omit the visible source metadata block from the rendered HTML body",
+    )
+    parser.add_argument(
+        "--colophon-tex",
+        action="store_true",
+        help="emit a LaTeX colophon macro call for this source instead of HTML",
+    )
     return parser.parse_args(argv)
 
 
@@ -895,7 +949,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(message, file=sys.stderr)
     detected = detect_format(parsed.root)
     require_format(args.format, detected, args.input)
-    opts = Options(include_notes=not args.drop_notes, preserve_milestones=args.preserve_milestones)
+    if args.colophon_tex:
+        sys.stdout.write(render_colophon_tex(args.input, parsed, detected))
+        return 0
+    opts = Options(
+        include_notes=not args.drop_notes,
+        preserve_milestones=args.preserve_milestones,
+        include_source_metadata=not args.omit_source_metadata,
+    )
     sys.stdout.write(render_document(args.input, parsed, detected, opts))
     return 0
 

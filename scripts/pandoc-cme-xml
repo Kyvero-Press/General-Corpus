@@ -11,7 +11,8 @@ Usage: pandoc-cme-xml [XML_OPTIONS] INPUT.xml OUTPUT [PANDOC_OPTIONS...]
 
 Convert one CME XML file to any Pandoc output format.  The XML is first
 normalized to HTML, then passed to pandoc.  LaTeX/PDF output defaults to
-Junicode from TeX Live's junicode package unless you pass your own Pandoc
+a book-style front matter sequence (title page, colophon, table of contents)
+and Junicode from TeX Live's junicode package unless you pass your own Pandoc
 mainfont variable.
 
 XML_OPTIONS:
@@ -68,9 +69,26 @@ shift 2
 
 mkdir -p "$(dirname "$output")"
 
+output_ext="${output##*.}"
+output_ext="${output_ext,,}"
+is_latex_output=0
+if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "latex" ]]; then
+  is_latex_output=1
+fi
+
 tmp="$(mktemp --suffix=.cme.html)"
-cleanup() { rm -f "$tmp"; }
+colophon_tmp=""
+cleanup() {
+  rm -f "$tmp"
+  [[ -z "$colophon_tmp" ]] || rm -f "$colophon_tmp"
+}
 trap cleanup EXIT
+
+if [[ "$is_latex_output" -eq 1 ]]; then
+  xml_opts+=(--omit-source-metadata)
+  colophon_tmp="$(mktemp --suffix=.cme-colophon.tex)"
+  python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" --colophon-tex "$input" > "$colophon_tmp"
+fi
 
 python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" "$input" > "$tmp"
 
@@ -99,10 +117,21 @@ has_pandoc_variable() {
   return 1
 }
 
+has_pandoc_flag() {
+  local long="$1"
+  shift
+  local arg
+  for arg in "$@"; do
+    [[ "$arg" == "$long" ]] && return 0
+  done
+  return 1
+}
+
 pandoc_args=(--from html --standalone "$tmp" --output "$output")
-output_ext="${output##*.}"
-output_ext="${output_ext,,}"
-if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "latex" ]]; then
+if [[ "$is_latex_output" -eq 1 ]]; then
+  if ! has_pandoc_variable documentclass "$@"; then
+    pandoc_args+=(-V documentclass=book)
+  fi
   if ! has_pandoc_variable mainfont "$@"; then
     pandoc_args+=(
       -V mainfont=Junicode-Regular.otf
@@ -111,7 +140,12 @@ if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "late
       -V mainfontoptions=BoldItalicFont=Junicode-BoldItalic.otf
     )
   fi
+  if ! has_pandoc_flag --toc "$@" && ! has_pandoc_flag --table-of-contents "$@"; then
+    pandoc_args+=(--toc)
+  fi
+  pandoc_args+=(--include-in-header "$script_dir/pandoc-book-frontmatter.tex")
   pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-pagebreaks.tex")
+  pandoc_args+=(--include-before-body "$colophon_tmp")
   pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-pagebreaks.lua")
 fi
 
