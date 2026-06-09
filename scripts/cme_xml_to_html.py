@@ -268,6 +268,10 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
             ("TEIHEADER", "FILEDESC", "TITLESTMT", "AUTHOR"),
             ("HEADER", "FILEDESC", "SOURCEDESC", "BIBLFULL", "TITLESTMT", "AUTHOR"),
         ],
+        "original_date": [
+            ("HEADER", "PROFILEDESC", "CREATION", "DATE"),
+            ("TEIHEADER", "PROFILEDESC", "CREATION", "DATE"),
+        ],
         "editor": [
             ("HEADER", "FILEDESC", "TITLESTMT", "EDITOR"),
             ("TEIHEADER", "FILEDESC", "TITLESTMT", "EDITOR"),
@@ -828,6 +832,7 @@ def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
     values = [
         latex_text(title),
         latex_text(author),
+        latex_text(meta.get("original_date")),
         latex_text(meta.get("source"), break_paths=True),
         latex_text(meta.get("format")),
         latex_text(meta.get("editor")),
@@ -843,6 +848,11 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
     meta = metadata(root, fmt, path, parsed)
     title = meta.get("title", path.stem)
     author = meta.get("author") or "Anonymous"
+    original_date_meta = (
+        f'<meta name="date" content="{html_attr(meta["original_date"])}" />\n'
+        if meta.get("original_date")
+        else ""
+    )
 
     meta_rows = "\n".join(
         f"<dt>{html_text(key.replace('_', ' ').title())}</dt><dd>{metadata_value_html(key, value)}</dd>"
@@ -876,7 +886,7 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
 <meta charset="utf-8" />
 <title>{html_text(title)}</title>
 <meta name="author" content="{html_attr(author)}" />
-<style>
+{original_date_meta}<style>
 body {{ line-height: 1.35; }}
 .source-metadata {{ border-bottom: 1px solid #ccc; margin-bottom: 2rem; }}
 .source-metadata dl {{ display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; }}

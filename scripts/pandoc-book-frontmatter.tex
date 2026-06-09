@@ -21,6 +21,7 @@
       {\Huge\bfseries\@title\par}%
       \vspace{2\baselineskip}%
       {\Large\@author\par}%
+      \ifx\@date\@empty\else\vspace{\baselineskip}{\large\@date\par}\fi%
       \vfill%
       {\large Kyvero Press\par}%
     \end{center}%
@@ -36,14 +37,14 @@
   \cmeIfNotEmpty{#2}{\noindent\textsc{#1}: #2\par}%
 }
 
-\newcommand{\cmeColophon}[8]{%
+\newcommand{\cmeColophon}[9]{%
   \thispagestyle{empty}%
   \vspace*{\fill}%
   \begingroup%
   \small\raggedright%
     \noindent\textsc{Colophon}\par%
     \vspace{\baselineskip}%
-    \noindent This General Corpus edition of \emph{#1} by #2 is generated from
+    \noindent This General Corpus edition of \emph{#1} by #2\cmeIfNotEmpty{#3}{, dated #3,} is generated from
     the corpus XML source and is intended as a readable scholarly edition for
     print and screen.\par%
     \vspace{\baselineskip}%
@@ -52,12 +53,13 @@
     as source page, folio, and milestone markers is omitted from the reading
     text unless milestone output is explicitly requested.\par%
     \vspace{\baselineskip}%
-    \cmeMetaLine{Source XML}{\texttt{#3}}%
-    \cmeMetaLine{Format}{#4}%
-    \cmeMetaLine{Editor}{#5}%
-    \cmeMetaLine{Source date}{#6}%
-    \cmeMetaLine{Identifier}{#7}%
-    \cmeMetaLine{Warning}{#8}%
+    \cmeMetaLine{Original date}{#3}%
+    \cmeMetaLine{Source XML}{\texttt{#4}}%
+    \cmeMetaLine{Format}{#5}%
+    \cmeMetaLine{Editor}{#6}%
+    \cmeMetaLine{Source date}{#7}%
+    \cmeMetaLine{Identifier}{#8}%
+    \cmeMetaLine{Warning}{#9}%
     \vspace{\baselineskip}%
     \noindent Generated \today.\par%
   \endgroup%
