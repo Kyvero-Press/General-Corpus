@@ -1,0 +1,26 @@
+% CME/Pandoc LaTeX pagination defaults.
+% Loaded automatically by scripts/pandoc-cme-xml for .tex and .pdf output.
+%
+% The corpus contains long prose paragraphs and verse stanzas whose sentences
+% often span several rendered lines.  These settings make LaTeX prefer moving a
+% little more vertical whitespace over leaving orphaned/widowed sentence or
+% stanza fragments at page boundaries.
+\IfFileExists{needspace.sty}{\usepackage{needspace}}{\newcommand{\Needspace}[1]{}}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+
+% e-TeX multi-line orphan/widow penalties: forbid one/two-line fragments and
+% strongly discourage three-line fragments at the top or bottom of a page.
+\clubpenalties 4 10000 10000 7500 0\relax
+\widowpenalties 4 10000 10000 7500 0\relax
+
+% Prefer paragraph/stanza boundaries for page breaks, but still allow breaks in
+% very long paragraphs or verse groups when necessary.
+\interlinepenalty=1000
+
+% Let pages vary in depth rather than stretching vertical glue aggressively to
+% satisfy the stricter page-break penalties.
+\raggedbottom

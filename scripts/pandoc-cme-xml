@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+format="${CME_XML_FORMAT:-auto}"
+xml_opts=()
+
+usage() {
+  cat >&2 <<'USAGE'
+Usage: pandoc-cme-xml [XML_OPTIONS] INPUT.xml OUTPUT [PANDOC_OPTIONS...]
+
+Convert one CME XML file to any Pandoc output format.  The XML is first
+normalized to HTML, then passed to pandoc.
+
+XML_OPTIONS:
+  --xml-format FORMAT       auto, dlpstextclass, ets, ets-temphead-eebo,
+                            ets-header-eebo, tei2, or headwords
+  --drop-notes              omit NOTE/NOTE1/etc. from output
+  --preserve-milestones     render PB/EPB/MILESTONE markers visibly
+  --strict                  fail instead of recovering malformed XML
+
+Examples:
+  scripts/pandoc-cme-xml CME/source/CME_from_OTA/Gawain.xml build/Gawain.html
+  scripts/pandoc-cme-xml --drop-notes CME/source/CME_from_OTA/Gawain.xml build/Gawain.epub
+  scripts/pandoc-cme-xml CME/source/CME_from_OTA/JulianRev.xml build/JulianRev.pdf --pdf-engine=xelatex
+USAGE
+}
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --xml-format)
+      [[ $# -ge 2 ]] || { echo "--xml-format requires an argument" >&2; exit 2; }
+      format="$2"
+      shift 2
+      ;;
+    --xml-format=*)
+      format="${1#--xml-format=}"
+      shift
+      ;;
+    --drop-notes|--preserve-milestones|--strict)
+      xml_opts+=("$1")
+      shift
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    --)
+      shift
+      break
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
+
+if [[ $# -lt 2 ]]; then
+  usage
+  exit 2
+fi
+
+input="$1"
+output="$2"
+shift 2
+
+mkdir -p "$(dirname "$output")"
+
+tmp="$(mktemp --suffix=.cme.html)"
+cleanup() { rm -f "$tmp"; }
+trap cleanup EXIT
+
+python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" "$input" > "$tmp"
+
+pandoc_args=(--from html --standalone "$tmp" --output "$output")
+output_ext="${output##*.}"
+output_ext="${output_ext,,}"
+if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "latex" ]]; then
+  pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-pagebreaks.tex")
+  pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-pagebreaks.lua")
+fi
+
+pandoc "${pandoc_args[@]}" "$@"

@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+usage() {
+  cat >&2 <<'USAGE'
+Usage: pandoc-all [SOURCE_DIR] [OUTPUT_DIR] [EXT] [PANDOC_OPTIONS...]
+
+Convert every *.xml under SOURCE_DIR with scripts/pandoc-cme-xml, preserving
+relative paths under OUTPUT_DIR.  EXT is the output extension without a leading
+dot and defaults to html.
+
+Examples:
+  scripts/pandoc-all CME/source build/pandoc html
+  scripts/pandoc-all CME/source build/pandoc epub --toc
+USAGE
+}
+
+if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+source_dir="${1:-CME/source}"
+source_dir="${source_dir%/}"
+output_dir="${2:-build/pandoc}"
+ext="${3:-html}"
+ext="${ext#.}"
+if [[ $# -ge 1 ]]; then shift; fi
+if [[ $# -ge 1 ]]; then shift; fi
+if [[ $# -ge 1 ]]; then shift; fi
+
+if [[ ! -d "$source_dir" ]]; then
+  echo "Source directory not found: $source_dir" >&2
+  exit 2
+fi
+
+failures=0
+converted=0
+while IFS= read -r -d '' file; do
+  rel="${file#"$source_dir"/}"
+  dest="$output_dir/${rel%.xml}.$ext"
+  mkdir -p "$(dirname "$dest")"
+  echo "pandoc: $file -> $dest" >&2
+  if "$script_dir/pandoc-cme-xml" "$file" "$dest" "$@"; then
+    converted=$((converted + 1))
+  else
+    echo "FAILED: $file" >&2
+    failures=$((failures + 1))
+  fi
+done < <(find "$source_dir" -type f -name '*.xml' -print0 | sort -z)
+
+printf 'Converted: %d\nFailed: %d\n' "$converted" "$failures" >&2
+[[ "$failures" -eq 0 ]]
