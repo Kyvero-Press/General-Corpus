@@ -10,7 +10,9 @@ usage() {
 Usage: pandoc-cme-xml [XML_OPTIONS] INPUT.xml OUTPUT [PANDOC_OPTIONS...]
 
 Convert one CME XML file to any Pandoc output format.  The XML is first
-normalized to HTML, then passed to pandoc.
+normalized to HTML, then passed to pandoc.  LaTeX/PDF output defaults to
+Junicode from TeX Live's junicode package unless you pass your own Pandoc
+mainfont variable.
 
 XML_OPTIONS:
   --xml-format FORMAT       auto, dlpstextclass, ets, ets-temphead-eebo,
@@ -72,10 +74,43 @@ trap cleanup EXIT
 
 python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" "$input" > "$tmp"
 
+has_pandoc_variable() {
+  local key="$1"
+  shift
+  local expect_value=0
+  local arg
+  for arg in "$@"; do
+    if [[ "$expect_value" -eq 1 ]]; then
+      case "$arg" in
+        "$key"|"$key"=*|"$key":*) return 0 ;;
+      esac
+      expect_value=0
+      continue
+    fi
+    case "$arg" in
+      -V|--variable|-M|--metadata)
+        expect_value=1
+        ;;
+      -V"$key"=*|-M"$key"=*|--variable="$key"=*|--metadata="$key"=*|--variable="$key":*|--metadata="$key":*)
+        return 0
+        ;;
+    esac
+  done
+  return 1
+}
+
 pandoc_args=(--from html --standalone "$tmp" --output "$output")
 output_ext="${output##*.}"
 output_ext="${output_ext,,}"
 if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "latex" ]]; then
+  if ! has_pandoc_variable mainfont "$@"; then
+    pandoc_args+=(
+      -V mainfont=Junicode-Regular.otf
+      -V mainfontoptions=BoldFont=Junicode-Bold.otf
+      -V mainfontoptions=ItalicFont=Junicode-Italic.otf
+      -V mainfontoptions=BoldItalicFont=Junicode-BoldItalic.otf
+    )
+  fi
   pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-pagebreaks.tex")
   pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-pagebreaks.lua")
 fi
