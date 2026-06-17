@@ -1,0 +1,187 @@
+{
+  "defaultGraph": "general-corpus-pandoc-pdf",
+  "graphs": {
+    "general-corpus-pandoc-pdf": {
+      "description": "Required General-Corpus CME XML-to-Pandoc workflow for any repository change that aims to affect the final/end PDF output, including conversion scripts, LaTeX/frontmatter, typography, pagination, PDF metadata, or visual layout. Verification compiles source XML to LaTeX, reviews the generated LaTeX, compiles that LaTeX into PDF, then renders PDF pages as images for visual requirements review.",
+      "stages": [
+        {
+          "id": "scope-sources",
+          "kind": "PLAN",
+          "title": "Scope source XMLs and PDF requirements",
+          "description": "Confirm that this required PDF-affecting workflow applies, then identify the affected CME XML formats, representative source files, expected Pandoc outputs, and concrete PDF/LaTeX requirements before editing.",
+          "runnerKind": "chain",
+          "runnerName": "general-dev-plan",
+          "sideEffects": "read",
+          "skills": ["build-test-procedures"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.scope-sources",
+            "purpose": "Scope affected CME source XML formats and PDF/LaTeX requirements before implementation.",
+            "inputs": ["User request", "README.org", "docs/xml-formats.md", "scripts/pandoc-*", "scripts/cme_xml_to_html.py", "CME/source/**/*.xml"],
+            "outputs": ["Affected formats and source files", "Representative sample set", "Explicit PDF/LaTeX acceptance requirements"],
+            "artifacts": ["stage report with source paths and requirements"],
+            "acceptanceChecks": ["Affected XML formats and sample files are named", "Required LaTeX/PDF visual behavior is explicit", "No implementation files are edited during planning"],
+            "writeScope": ["read-only planning notes"],
+            "isolationBoundary": ["Stay read-only", "Record uncertainty instead of inventing corpus behavior"]
+          },
+          "promptInstructions": [
+            "Use this custom graph whenever the requested change aims to affect the final/end PDF output. Inspect the repository before editing. Identify the affected XML format(s), conversion wrapper(s), source XML sample(s), generated output locations, and acceptance requirements.",
+            "For broad converter or PDF-layout changes, prefer the established representative set: Gawain and Everyman for dlpstextclass; CME301 and CME302 for ets-temphead-eebo; recent_changes/additions_2023 CME301 and CME302 for ets-header-eebo; JulianRev for tei2; and headwords_forms_and_IDs.202112.xml for headwords.",
+            "State which requirements must be verified in generated LaTeX and which must be verified visually from rendered PDF page images. Do not edit product files in this stage."
+          ]
+        },
+        {
+          "id": "implement-conversion",
+          "kind": "IMPLEMENT",
+          "title": "Implement bounded converter or PDF-output change",
+          "description": "Make the smallest repository change needed for the requested CME XML/Pandoc/LaTeX/PDF behavior while keeping docs and generated-artifact policy synchronized.",
+          "dependsOn": ["scope-sources"],
+          "subagentType": "implementer",
+          "sideEffects": "write",
+          "skills": ["build-test-procedures", "tdd", "implementer"],
+          "expectedWritePaths": ["scripts/**", "docs/**", "README.org", ".gitignore", ".pi/task-graph.json"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.implement-conversion",
+            "purpose": "Implement the bounded General-Corpus converter or PDF-output change.",
+            "inputs": ["Scoped requirements", "Current conversion scripts and docs"],
+            "outputs": ["Updated scripts/docs/configuration", "Focused local validation evidence when produced"],
+            "artifacts": ["implementation notes and changed-file summary"],
+            "acceptanceChecks": ["Implementation is limited to the requested converter/PDF behavior", "Docs/config stay synchronized with behavior", "Generated artifacts remain under ignored build paths"],
+            "writeScope": ["scripts/**", "docs/**", "README.org", ".gitignore", ".pi/task-graph.json"],
+            "isolationBoundary": ["Avoid broad converter rewrites", "Do not commit or push from this stage"]
+          },
+          "promptInstructions": [
+            "Implement only the requested CME XML/Pandoc/LaTeX/PDF behavior. Keep generated files under build/ or another ignored location.",
+            "Update docs or helper scripts when behavior or invocation changes. Preserve existing command-line compatibility unless the user explicitly requested a breaking change.",
+            "Do not commit or push. Record changed files and any focused smoke checks run before the verification stages."
+          ]
+        },
+        {
+          "id": "compile-latex",
+          "kind": "COMPILE",
+          "title": "Compile source XML to Pandoc LaTeX",
+          "description": "Generate Pandoc LaTeX from the affected source XML files and capture exact commands, logs, and generated .tex paths.",
+          "dependsOn": ["implement-conversion"],
+          "subagentType": "compile-verifier",
+          "sideEffects": "shell",
+          "skills": ["build-test-procedures", "compile-verifier"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.compile-latex",
+            "purpose": "Compile affected CME source XML files to Pandoc-generated LaTeX.",
+            "inputs": ["Implementation diff", "Scoped XML sample set", "scripts/pandoc-cme-xml and format wrappers"],
+            "outputs": ["Generated .tex files", "Pandoc/converter command evidence"],
+            "artifacts": ["LaTeX output paths", "conversion logs", "frontmatter audit report when relevant"],
+            "acceptanceChecks": ["Each scoped source XML produces a .tex file", "Commands and logs are recorded", "Converter failures are classified with actionable context"],
+            "writeScope": ["build/** validation artifacts only"],
+            "isolationBoundary": ["Do not edit product files in compile verification", "Use Pandoc-generated LaTeX, not hand-written substitute TeX"]
+          },
+          "promptInstructions": [
+            "Compile each scoped source XML to a .tex file with scripts/pandoc-cme-xml or the appropriate scripts/pandoc-* wrapper. Store generated LaTeX and logs under build/task-graph/ or another ignored build directory.",
+            "For broad PDF-output changes, run the representative set named in the planning stage; for targeted changes, run the affected source plus at least one nearby representative sample if practical.",
+            "When frontmatter, metadata, titles, dates, or source provenance are affected, run scripts/audit-frontmatter-latex.py against the relevant scope or all CME/source XML files and record the report path.",
+            "Capture exact commands, exit codes, generated .tex paths, and any parser/recovery warnings. Fail this stage if Pandoc/HTML conversion does not produce usable LaTeX."
+          ]
+        },
+        {
+          "id": "review-latex",
+          "kind": "CODE_REVIEW",
+          "title": "Review generated LaTeX",
+          "description": "Inspect the generated LaTeX files directly before PDF compilation, checking frontmatter, metadata, text structure, escaping, and absence of unwanted source artifacts.",
+          "dependsOn": ["compile-latex"],
+          "subagentType": "code-review-enforcer",
+          "sideEffects": "read",
+          "skills": ["code-review"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.review-latex",
+            "purpose": "Review generated Pandoc LaTeX before compiling it into PDF.",
+            "inputs": ["Generated .tex files", "Scoped requirements", "Frontmatter audit report when present"],
+            "outputs": ["LaTeX review findings or PASS report"],
+            "artifacts": ["LaTeX review report with file/line references when applicable"],
+            "acceptanceChecks": ["Generated LaTeX is inspected directly", "Frontmatter/order/metadata requirements are checked", "Findings cite generated .tex paths and relevant lines"],
+            "writeScope": ["review report only"],
+            "isolationBoundary": ["Do not edit files during review", "Do not skip LaTeX review by relying only on PDF output"]
+          },
+          "promptInstructions": [
+            "Review the generated .tex files, not only source scripts. Check title page, colophon, table of contents order, document class, font variables/includes, source provenance placement, original/source dates, title/subtitle completeness, and body structure as applicable to the request.",
+            "Check for unwanted visible source markers, raw XML/HTML leakage, broken escaping, duplicated metadata, or prose/verse/list structures that are likely to compile poorly.",
+            "If the request affects a specific behavior such as pilcrow splitting, cite representative generated LaTeX snippets showing the behavior. Do not edit product files in this stage."
+          ]
+        },
+        {
+          "id": "compile-pdf",
+          "kind": "COMPILE",
+          "title": "Compile reviewed LaTeX into PDF",
+          "description": "Compile the reviewed Pandoc-generated LaTeX files into PDFs with XeLaTeX/latexmk and capture logs, page counts, and severe warnings.",
+          "dependsOn": ["review-latex"],
+          "subagentType": "compile-verifier",
+          "sideEffects": "shell",
+          "skills": ["build-test-procedures", "compile-verifier"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.compile-pdf",
+            "purpose": "Compile reviewed Pandoc-generated LaTeX into PDF artifacts.",
+            "inputs": ["Reviewed .tex files", "LaTeX review results"],
+            "outputs": ["Generated PDFs", "LaTeX build logs", "PDF page counts"],
+            "artifacts": ["PDF paths", "latexmk/xelatex logs", "pdfinfo summaries"],
+            "acceptanceChecks": ["PDFs are built from the reviewed .tex files", "LaTeX failures are actionable", "PDF page counts and paths are recorded"],
+            "writeScope": ["build/** validation artifacts only"],
+            "isolationBoundary": ["Do not edit product files in PDF compile verification", "Do not bypass the reviewed .tex by generating unrelated PDFs"]
+          },
+          "promptInstructions": [
+            "Compile the reviewed .tex files into PDFs using latexmk -xelatex -interaction=nonstopmode -halt-on-error, or an equivalent XeLaTeX flow required by the repository. Use the reviewed .tex paths as inputs.",
+            "Store PDFs and logs under build/task-graph/ or another ignored build directory. Run pdfinfo or an equivalent command to record page counts and PDF metadata needed for review.",
+            "Treat LaTeX errors as failures. Surface severe overfull boxes, missing fonts, missing includes, missing images, or frontmatter build errors with file/log context."
+          ]
+        },
+        {
+          "id": "visual-pdf-review",
+          "kind": "UX_REVIEW",
+          "title": "Render PDFs to images and visually review requirements",
+          "description": "Render representative PDF pages to images/contact sheets, view those images, and determine whether the visible PDF requirements are satisfied.",
+          "dependsOn": ["compile-pdf"],
+          "subagentType": "ux-review-enforcer",
+          "sideEffects": "shell",
+          "skills": ["ux-review"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.visual-pdf-review",
+            "purpose": "Render PDF pages as images and visually verify PDF requirements.",
+            "inputs": ["Generated PDFs", "Scoped visual requirements", "PDF build logs"],
+            "outputs": ["Rendered page images/contact sheets", "Visual requirements review findings"],
+            "artifacts": ["PNG/JPEG page renders", "contact sheet", "visual review report", "ui_feedback_analyze artifacts when used"],
+            "acceptanceChecks": ["Representative PDF pages are rendered to images", "Images are viewed or analyzed before pass/fail judgment", "Visible requirements are explicitly marked pass/fail/unknown"],
+            "writeScope": ["build/** visual validation artifacts only"],
+            "isolationBoundary": ["Do not rely on text extraction alone for visual quality", "Do not edit product files in the visual review stage"]
+          },
+          "promptInstructions": [
+            "Render representative PDF pages to images using pdftoppm, ImageMagick, or an equivalent local tool. Include title page, colophon, table of contents, first body page, and pages around the changed behavior; for long works, sample beginning/middle/end plus targeted pages.",
+            "Create a contact sheet when multiple pages are rendered. View the rendered images directly in Pi when useful, and use ui_feedback_analyze for non-secret local screenshots/assets when heuristic visual feedback would help.",
+            "Evaluate visible requirements such as book-style frontmatter order, typography/font suitability, headings, paragraph/verse breaks, overflow, blank pages, widows/orphans where relevant, and absence of visible source markers. Record image paths and pass/fail/unknown findings."
+          ]
+        },
+        {
+          "id": "final-evidence-review",
+          "kind": "CODE_REVIEW",
+          "title": "Review evidence and requirements satisfaction",
+          "description": "Review the implementation diff and all LaTeX/PDF/visual evidence before handoff, ensuring requirements are satisfied or gaps are explicit.",
+          "dependsOn": ["visual-pdf-review"],
+          "subagentType": "code-review-enforcer",
+          "sideEffects": "read",
+          "skills": ["code-review"],
+          "descriptor": {
+            "stableKey": "custom.general-corpus-pandoc-pdf.final-evidence-review",
+            "purpose": "Review final diff and verification evidence for General-Corpus PDF work.",
+            "inputs": ["Implementation diff", "LaTeX review report", "PDF build evidence", "Rendered image visual review"],
+            "outputs": ["Final PASS/FAIL review with remaining risks"],
+            "artifacts": ["final evidence review report"],
+            "acceptanceChecks": ["All user requirements are mapped to evidence", "Generated artifacts remain ignored", "Remaining gaps are explicit before handoff"],
+            "writeScope": ["review report only"],
+            "isolationBoundary": ["Do not commit or push", "Do not modify implementation during final review"]
+          },
+          "promptInstructions": [
+            "Review the git diff plus recorded verification artifacts. Confirm the task included XML-to-LaTeX compilation, direct LaTeX review, LaTeX-to-PDF compilation, and visual PDF image review.",
+            "Map each user requirement to evidence paths and exact commands where possible. Check that build artifacts are ignored and source/config files intended for the repo are tracked.",
+            "Return PASS only if requirements are satisfied by evidence; otherwise list blocking gaps and the stage that must be rerun. Do not commit or push."
+          ]
+        }
+      ]
+    }
+  }
+}
