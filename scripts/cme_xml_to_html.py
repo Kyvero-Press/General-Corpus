@@ -139,7 +139,10 @@ def spaced_text_content(el: etree._Element | None) -> str:
 
 
 def html_text(text: str | None) -> str:
-    return escape(text or "", quote=False)
+    # Pilcrows are source paragraph markers, not output glyphs.  Block renderers
+    # split on them before escaping; this fallback prevents any unhandled marker
+    # from leaking into visible text.
+    return escape((text or "").replace("¶", " "), quote=False)
 
 
 def has_visible_html(fragment: str) -> bool:
@@ -249,6 +252,141 @@ def primary_text_nodes(root: etree._Element, fmt: str) -> list[etree._Element]:
     return [root]
 
 
+def title_text(el: etree._Element | None) -> str:
+    if el is None:
+        return ""
+    value = spaced_text_content(el)
+    value = re.sub(r"\s+([,.;:!?])", r"\1", value)
+    return value.strip()
+
+
+def clean_title(value: str | None) -> str:
+    value = clean_text((value or "").replace("¶", " — "))
+    value = re.sub(r"\s+([,.;:!?])", r"\1", value)
+    return re.sub(r"\s*[:/]\s*$", "", value).strip()
+
+
+def title_key(value: str | None) -> str:
+    return re.sub(r"[^a-z0-9]+", "", clean_title(value).casefold())
+
+
+def same_title(left: str | None, right: str | None) -> bool:
+    return bool(title_key(left)) and title_key(left) == title_key(right)
+
+
+def remove_author_from_title(title: str, author: str | None) -> str:
+    if not author:
+        return title
+    pattern = re.compile(r"\s*/\s*" + re.escape(clean_text(author)) + r"\s*$", re.IGNORECASE)
+    return clean_title(pattern.sub("", title))
+
+
+def unique_title_parts(parts: Iterable[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for part in parts:
+        cleaned = clean_title(part)
+        key = title_key(cleaned)
+        if cleaned and key not in seen:
+            seen.add(key)
+            result.append(cleaned)
+    return result
+
+
+def titlepage_title_parts(root: etree._Element, fmt: str) -> list[str]:
+    for text_node in primary_text_nodes(root, fmt):
+        containers: list[etree._Element] = []
+        for name in ("FRONT", "BODY"):
+            container = first_child(text_node, name)
+            if container is not None:
+                containers.append(container)
+        if not containers:
+            containers.append(text_node)
+
+        for container in containers:
+            for child in child_elements(container):
+                child_tag = tagu(child)
+                if child_tag in MILESTONE_TAGS:
+                    continue
+                if child_tag == "TITLEPAGE":
+                    doctitle = first_descendant(child, "DOCTITLE")
+                    if doctitle is not None:
+                        parts = [title_text(part) for part in child_elements(doctitle, "TITLEPART")]
+                        parts = unique_title_parts(parts)
+                        if parts:
+                            return parts
+                        doctitle_text = title_text(doctitle)
+                        if doctitle_text:
+                            return [doctitle_text]
+                break
+    return []
+
+
+def looks_like_incipit(value: str) -> bool:
+    lowered = value.strip().casefold()
+    return lowered.startswith(("here begynneth", "here beginneth", "here begins", "here bygynneth"))
+
+
+def body_title_supplements(root: etree._Element, fmt: str, title: str) -> list[str]:
+    supplements: list[str] = []
+    for text_node in primary_text_nodes(root, fmt):
+        container = first_child(text_node, "BODY")
+        if container is None:
+            container = text_node
+        children = [child for child in child_elements(container) if tagu(child) not in MILESTONE_TAGS]
+        index = 0
+        while index < len(children) and tagu(children[index]) == "HEAD":
+            head_text = title_text(children[index])
+            if head_text and not same_title(head_text, title):
+                supplements.append(head_text)
+            index += 1
+        if index >= len(children):
+            break
+
+        first = children[index]
+        if not (DIV_TAG_RE.match(tagu(first)) or tagu(first) == "DIV"):
+            break
+
+        div_children = [child for child in child_elements(first) if tagu(child) not in MILESTONE_TAGS]
+        if not div_children or tagu(div_children[0]) != "HEAD":
+            break
+
+        div_title = title_text(div_children[0])
+        if not same_title(div_title, title):
+            break
+
+        for child in div_children[1:]:
+            child_tag = tagu(child)
+            if child_tag == "HEAD" and (attr(child, "TYPE") or "").lower() in {"sub", "subtitle", "subsubtitle", "sub-subtitle"}:
+                supplements.append(title_text(child))
+            elif child_tag == "OPENER":
+                opener_text = title_text(child)
+                if looks_like_incipit(opener_text):
+                    supplements.append(opener_text)
+                break
+            else:
+                break
+        break
+    return unique_title_parts(supplements)
+
+
+def apply_display_title_metadata(root: etree._Element, fmt: str, data: dict[str, str]) -> None:
+    title_parts = titlepage_title_parts(root, fmt)
+    if title_parts:
+        data["title"] = title_parts[0]
+        subtitles = title_parts[1:]
+    else:
+        data["title"] = remove_author_from_title(clean_title(data.get("title")), data.get("author"))
+        subtitles = body_title_supplements(root, fmt, data["title"])
+
+    if subtitles:
+        data["subtitle"] = " — ".join(subtitles)
+        data["full_title"] = f"{data['title']} — {data['subtitle']}"
+    else:
+        data.pop("subtitle", None)
+        data["full_title"] = data["title"]
+
+
 def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) -> dict[str, str]:
     data: dict[str, str] = {
         "source": str(source),
@@ -313,6 +451,7 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
             data["id"] = value
 
     data.setdefault("title", source.stem)
+    apply_display_title_metadata(root, fmt, data)
     return data
 
 
@@ -413,49 +552,88 @@ def has_block_child(el: etree._Element) -> bool:
     return any(is_block_element(child) for child in child_elements(el))
 
 
-def render_inline_children(el: etree._Element, opts: Options) -> str:
-    parts: list[str] = []
+def append_inline_segments(parts: list[str], segments: list[str]) -> None:
+    if not segments:
+        return
+    parts[-1] += segments[0]
+    parts.extend(segments[1:])
+
+
+def html_text_segments(text: str | None) -> list[str]:
+    if text is None:
+        return [""]
+    return [html_text(part) for part in text.split("¶")]
+
+
+def wrap_inline_segments(open_tag: str, close_tag: str, segments: list[str]) -> list[str]:
+    return [f"{open_tag}{segment}{close_tag}" for segment in segments]
+
+
+def render_inline_children_segments(el: etree._Element, opts: Options) -> list[str]:
+    parts: list[str] = [""]
     if el.text:
-        parts.append(html_text(el.text))
+        append_inline_segments(parts, html_text_segments(el.text))
     for child in child_elements(el):
-        parts.append(render_inline_node(child, opts))
+        append_inline_segments(parts, render_inline_node_segments(child, opts))
         if child.tail:
-            parts.append(html_text(child.tail))
-    return "".join(parts)
+            append_inline_segments(parts, html_text_segments(child.tail))
+    return parts
 
 
-def render_inline_node(el: etree._Element, opts: Options) -> str:
+def render_inline_children(el: etree._Element, opts: Options) -> str:
+    return "".join(render_inline_children_segments(el, opts))
+
+
+def render_hi_segments(el: etree._Element, opts: Options) -> list[str]:
+    rend = (attr(el, "REND") or "").strip().lower()
+    body = render_inline_children_segments(el, opts)
+    if rend in {"i", "italic", "ital", "itialic"}:
+        return wrap_inline_segments("<em>", "</em>", body)
+    if rend in {"b", "bold"}:
+        return wrap_inline_segments("<strong>", "</strong>", body)
+    if rend in {"sup", "super", "superscript", "aup"}:
+        return wrap_inline_segments("<sup>", "</sup>", body)
+    if rend in {"sub", "subscript"}:
+        return wrap_inline_segments("<sub>", "</sub>", body)
+    if rend in {"u", "und", "underline"}:
+        return wrap_inline_segments("<u>", "</u>", body)
+    if "small" in rend or rend == "sc":
+        return wrap_inline_segments('<span class="smallcaps">', "</span>", body)
+    return wrap_inline_segments(f"<span{render_attrs(el, 'hi')}>", "</span>", body)
+
+
+def render_inline_node_segments(el: etree._Element, opts: Options) -> list[str]:
     tag = tagu(el)
     if tag == "LB":
-        return "<br />"
+        return ["<br />"]
     if tag in MILESTONE_TAGS:
-        return render_milestone(el, opts)
+        return [render_milestone(el, opts)]
     if NOTE_TAG_RE.match(tag):
-        return render_note(el, opts)
+        return [render_note(el, opts)]
     if tag in {"HI", "HI1"}:
-        return render_hi(el, opts)
+        return render_hi_segments(el, opts)
     if tag == "FOREIGN":
         lang = attr(el, "LANG") or attr(el, "XML:LANG")
         lang_attr = f' lang="{html_attr(lang)}"' if lang else ""
-        return f"<em{lang_attr}>{render_inline_children(el, opts)}</em>"
+        return wrap_inline_segments(f"<em{lang_attr}>", "</em>", render_inline_children_segments(el, opts))
     if tag in QUOTE_TAGS:
-        return f"<q{render_attrs(el)}>{render_inline_children(el, opts)}</q>"
+        return wrap_inline_segments(f"<q{render_attrs(el)}>", "</q>", render_inline_children_segments(el, opts))
     if tag in {"REF", "PTR", "XPTR"}:
         target = attr(el, "TARGET", "HREF", "URL")
-        body = render_inline_children(el, opts)
+        body = render_inline_children_segments(el, opts)
         if target:
-            return f'<a href="{html_attr(target)}">{body}</a>'
-        return f"<span{render_attrs(el, 'ref')}>{body}</span>"
+            return wrap_inline_segments(f'<a href="{html_attr(target)}">', "</a>", body)
+        return wrap_inline_segments(f"<span{render_attrs(el, 'ref')}>", "</span>", body)
     if tag in {"DEL"}:
-        return f"<del{render_attrs(el)}>{render_inline_children(el, opts)}</del>"
+        return wrap_inline_segments(f"<del{render_attrs(el)}>", "</del>", render_inline_children_segments(el, opts))
     if tag in {"ADD", "INS"}:
-        return f"<ins{render_attrs(el)}>{render_inline_children(el, opts)}</ins>"
+        return wrap_inline_segments(f"<ins{render_attrs(el)}>", "</ins>", render_inline_children_segments(el, opts))
     if tag == "SUP":
-        return f"<sup>{render_inline_children(el, opts)}</sup>"
+        return wrap_inline_segments("<sup>", "</sup>", render_inline_children_segments(el, opts))
     if tag == "SUB":
-        return f"<sub>{render_inline_children(el, opts)}</sub>"
+        return wrap_inline_segments("<sub>", "</sub>", render_inline_children_segments(el, opts))
     if tag == "GAP":
-        return render_gap(el)
+        return [render_gap(el)]
     if tag in {
         "CORR",
         "REG",
@@ -478,10 +656,14 @@ def render_inline_node(el: etree._Element, opts: Options) -> str:
         "IDNO",
         "LABEL",
     }:
-        return f"<span{render_attrs(el, tag.lower())}>{render_inline_children(el, opts)}</span>"
+        return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts))
     if is_block_tag_name(tag):
-        return render_inline_children(el, opts)
-    return f"<span{render_attrs(el, tag.lower())}>{render_inline_children(el, opts)}</span>"
+        return render_inline_children_segments(el, opts)
+    return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts))
+
+
+def render_inline_node(el: etree._Element, opts: Options) -> str:
+    return "".join(render_inline_node_segments(el, opts))
 
 
 def heading_level_for_div(el: etree._Element) -> int:
@@ -590,6 +772,14 @@ def render_ref(el: etree._Element, opts: Options) -> str:
     return f"<{wrapper}{render_attrs(el, 'ref')}>{body}</{wrapper}>"
 
 
+def wrap_visible_blocks(tag: str, attrs: str, segments: Iterable[str]) -> str:
+    return "".join(
+        f"<{tag}{attrs}>{segment.strip()}</{tag}>\n"
+        for segment in segments
+        if has_visible_html(segment)
+    )
+
+
 def render_paragraphish(
     el: etree._Element,
     opts: Options,
@@ -598,7 +788,7 @@ def render_paragraphish(
 ) -> str:
     if has_block_child(el):
         return f"<div{render_attrs(el, css_class or 'p')}>{render_children(el, opts)}</div>\n"
-    return f"<p{render_attrs(el, css_class)}>{render_children(el, opts)}</p>\n"
+    return wrap_visible_blocks("p", render_attrs(el, css_class), render_inline_children_segments(el, opts))
 
 
 def render_doctitle(el: etree._Element, opts: Options) -> str:
@@ -624,6 +814,21 @@ def render_doctitle(el: etree._Element, opts: Options) -> str:
     return f"<h1{render_attrs(el, 'doctitle')}>{body}</h1>\n"
 
 
+def render_list_item(el: etree._Element, opts: Options) -> str:
+    attrs = render_attrs(el)
+    if has_block_child(el):
+        body = render_children(el, opts)
+    else:
+        segments = [segment.strip() for segment in render_inline_children_segments(el, opts) if has_visible_html(segment)]
+        if not segments:
+            return ""
+        if len(segments) == 1:
+            body = segments[0]
+        else:
+            body = "".join(f"<p>{segment}</p>" for segment in segments)
+    return f"<li{attrs}>{body}</li>\n"
+
+
 def render_list(el: etree._Element, opts: Options) -> str:
     children = child_elements(el)
     simple = all(
@@ -640,7 +845,12 @@ def render_list(el: etree._Element, opts: Options) -> str:
     for child in children:
         child_tag = tagu(child)
         if child_tag in {"ITEM", "CASTITEM"}:
-            parts.append(f"<div{render_attrs(child, 'item')}>{render_children(child, opts)}</div>\n")
+            if has_block_child(child):
+                parts.append(f"<div{render_attrs(child, 'item')}>{render_children(child, opts)}</div>\n")
+            else:
+                item_body = wrap_visible_blocks("p", "", render_inline_children_segments(child, opts))
+                if item_body:
+                    parts.append(f"<div{render_attrs(child, 'item')}>{item_body}</div>\n")
         elif child_tag == "LABEL":
             parts.append(f"<div{render_attrs(child, 'label')}>{render_inline_children(child, opts)}</div>\n")
         elif child_tag in MILESTONE_TAGS and not opts.preserve_milestones:
@@ -653,28 +863,32 @@ def render_list(el: etree._Element, opts: Options) -> str:
 
 
 def render_lg(el: etree._Element, opts: Options) -> str:
-    """Render a verse line group as one HTML paragraph with explicit line breaks.
+    """Render a verse line group as paragraphs with explicit line breaks.
 
     Pandoc turns consecutive block ``div`` lines into separate LaTeX paragraphs,
     which makes widow/orphan controls ineffective for poetry: a page break can
-    strand the final one or two lines of a stanza.  A single paragraph with
-    ``<br />`` line breaks maps to LaTeX line breaks inside one paragraph, so the
-    project LaTeX page-break penalties can keep stanza fragments together.
+    strand the final one or two lines of a stanza.  Grouping verse lines into
+    paragraphs with ``<br />`` maps to LaTeX line breaks inside paragraphs, so
+    page-break penalties can keep stanza fragments together.  Source pilcrows
+    split those verse paragraphs without rendering the pilcrow glyph.
     """
     if el.text and el.text.strip():
         return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
-    lines: list[str] = []
+    groups: list[list[str]] = [[]]
     for child in child_elements(el):
         child_tag = tagu(child)
         if child_tag == "L":
-            line = render_inline_children(child, opts)
-            if has_visible_html(line):
-                lines.append(line)
+            line_segments = render_inline_children_segments(child, opts)
+            for index, segment in enumerate(line_segments):
+                if index > 0 and groups[-1]:
+                    groups.append([])
+                if has_visible_html(segment):
+                    groups[-1].append(segment.strip())
         elif child_tag in MILESTONE_TAGS:
             marker = render_milestone(child, opts)
             if marker:
-                lines.append(marker)
+                groups[-1].append(marker)
         elif child_tag in {"HEAD"}:
             return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
         else:
@@ -683,10 +897,15 @@ def render_lg(el: etree._Element, opts: Options) -> str:
         if child.tail and child.tail.strip():
             return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
-    if not lines:
+    groups = [group for group in groups if any(has_visible_html(line) for line in group)]
+    if not groups:
         return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
-    return f"<div{render_attrs(el, 'lg')}>\n<p class=\"verse-lines\">\n{'<br />\n'.join(lines)}\n</p>\n</div>\n"
+    paragraphs = "".join(
+        f"<p class=\"verse-lines\">\n{'<br />\n'.join(group)}\n</p>\n"
+        for group in groups
+    )
+    return f"<div{render_attrs(el, 'lg')}>\n{paragraphs}</div>\n"
 
 
 def render_node(el: etree._Element, opts: Options) -> str:
@@ -713,10 +932,12 @@ def render_node(el: etree._Element, opts: Options) -> str:
     if tag == "LG":
         return render_lg(el, opts)
     if tag == "L":
-        body = render_children(el, opts)
-        if not has_visible_html(body):
-            return ""
-        return f"<div{render_attrs(el, 'l')}>{body}</div>\n"
+        if has_block_child(el):
+            body = render_children(el, opts)
+            if not has_visible_html(body):
+                return ""
+            return f"<div{render_attrs(el, 'l')}>{body}</div>\n"
+        return wrap_visible_blocks("div", render_attrs(el, "l"), render_inline_children_segments(el, opts))
     if tag == "LB":
         return "<br />"
     if tag in MILESTONE_TAGS:
@@ -726,7 +947,7 @@ def render_node(el: etree._Element, opts: Options) -> str:
     if tag in {"LIST", "CASTLIST"}:
         return render_list(el, opts)
     if tag in {"ITEM", "CASTITEM"}:
-        return f"<li{render_attrs(el)}>{render_children(el, opts)}</li>\n"
+        return render_list_item(el, opts)
     if tag == "LABEL":
         return f"<strong{render_attrs(el, 'label')}>{render_children(el, opts)}</strong>"
     if tag == "TABLE":
@@ -831,6 +1052,7 @@ def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
     author = meta.get("author") or "Anonymous"
     values = [
         latex_text(title),
+        latex_text(meta.get("subtitle")),
         latex_text(author),
         latex_text(meta.get("original_date")),
         latex_text(meta.get("source"), break_paths=True),
@@ -838,7 +1060,6 @@ def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
         latex_text(meta.get("editor")),
         latex_text(meta.get("date")),
         latex_text(meta.get("id")),
-        "XML was parsed in recovery mode." if parsed.recovered else "",
     ]
     return "\\cmeColophon{" + "}{".join(values) + "}\n"
 
@@ -848,6 +1069,11 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
     meta = metadata(root, fmt, path, parsed)
     title = meta.get("title", path.stem)
     author = meta.get("author") or "Anonymous"
+    subtitle_meta = (
+        f'<meta name="subtitle" content="{html_attr(meta["subtitle"])}" />\n'
+        if meta.get("subtitle")
+        else ""
+    )
     original_date_meta = (
         f'<meta name="date" content="{html_attr(meta["original_date"])}" />\n'
         if meta.get("original_date")
@@ -886,7 +1112,7 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
 <meta charset="utf-8" />
 <title>{html_text(title)}</title>
 <meta name="author" content="{html_attr(author)}" />
-{original_date_meta}<style>
+{subtitle_meta}{original_date_meta}<style>
 body {{ line-height: 1.35; }}
 .source-metadata {{ border-bottom: 1px solid #ccc; margin-bottom: 2rem; }}
 .source-metadata dl {{ display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; }}

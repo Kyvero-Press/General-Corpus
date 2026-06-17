@@ -9,6 +9,8 @@
 \pagestyle{plain}
 
 \makeatletter
+\def\@subtitle{}
+\providecommand{\subtitle}[1]{\gdef\@subtitle{#1}}
 
 \renewcommand{\maketitle}{%
   \begin{titlepage}%
@@ -19,6 +21,10 @@
       {\small\MakeUppercase{General Corpus Edition}\par}%
       \vspace{0.12\textheight}%
       {\Huge\bfseries\@title\par}%
+      \ifx\@subtitle\@empty\else%
+        \vspace{1.5\baselineskip}%
+        \begin{minipage}{0.82\textwidth}\centering\Large\itshape\@subtitle\par\end{minipage}\par%
+      \fi%
       \vspace{2\baselineskip}%
       {\Large\@author\par}%
       \ifx\@date\@empty\else\vspace{\baselineskip}{\large\@date\par}\fi%
@@ -44,7 +50,7 @@
   \small\raggedright%
     \noindent\textsc{Colophon}\par%
     \vspace{\baselineskip}%
-    \noindent This General Corpus edition of \emph{#1} by #2\cmeIfNotEmpty{#3}{, dated #3,} is generated from
+    \noindent This General Corpus edition of \emph{#1}\cmeIfNotEmpty{#3}{, by #3}\cmeIfNotEmpty{#4}{, dated #4,} is generated from
     the corpus XML source and is intended as a readable scholarly edition for
     print and screen.\par%
     \vspace{\baselineskip}%
@@ -53,13 +59,13 @@
     as source page, folio, and milestone markers is omitted from the reading
     text unless milestone output is explicitly requested.\par%
     \vspace{\baselineskip}%
-    \cmeMetaLine{Original date}{#3}%
-    \cmeMetaLine{Source XML}{\texttt{#4}}%
-    \cmeMetaLine{Format}{#5}%
-    \cmeMetaLine{Editor}{#6}%
-    \cmeMetaLine{Source date}{#7}%
-    \cmeMetaLine{Identifier}{#8}%
-    \cmeMetaLine{Warning}{#9}%
+    \cmeMetaLine{Subtitle}{#2}%
+    \cmeMetaLine{Original date}{#4}%
+    \cmeMetaLine{Source XML}{\texttt{#5}}%
+    \cmeMetaLine{Format}{#6}%
+    \cmeMetaLine{Editor}{#7}%
+    \cmeMetaLine{Source date}{#8}%
+    \cmeMetaLine{Identifier}{#9}%
     \vspace{\baselineskip}%
     \noindent Generated \today.\par%
   \endgroup%
