@@ -992,6 +992,14 @@ def render_list(el: etree._Element, opts: Options) -> str:
     return f"<div{render_attrs(el, 'list')}>\n{''.join(parts)}</div>\n"
 
 
+def render_lg_fallback(el: etree._Element, opts: Options) -> str:
+    return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
+
+
+def is_simple_trailing_lg_closer(el: etree._Element) -> bool:
+    return tagu(el) == "CLOSER" and not has_block_child(el)
+
+
 def render_lg(el: etree._Element, opts: Options) -> str:
     """Render a verse line group as paragraphs with explicit line breaks.
 
@@ -1003,10 +1011,19 @@ def render_lg(el: etree._Element, opts: Options) -> str:
     split those verse paragraphs without rendering the pilcrow glyph.
     """
     if el.text and el.text.strip():
-        return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
+        return render_lg_fallback(el, opts)
+
+    children = child_elements(el)
+    trailing_closer = ""
+    if children and is_simple_trailing_lg_closer(children[-1]):
+        closer = children[-1]
+        if closer.tail and closer.tail.strip():
+            return render_lg_fallback(el, opts)
+        trailing_closer = render_node(closer, opts)
+        children = children[:-1]
 
     groups: list[list[VerseFragment]] = [[]]
-    for child in child_elements(el):
+    for child in children:
         child_tag = tagu(child)
         if child_tag == "L":
             line_number = source_line_number_for_verse_line(child)
@@ -1034,23 +1051,21 @@ def render_lg(el: etree._Element, opts: Options) -> str:
             marker = render_milestone(child, opts)
             if marker:
                 groups[-1].append(RawVerseFragment(marker))
-        elif child_tag in {"HEAD"}:
-            return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
         else:
-            return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
+            return render_lg_fallback(el, opts)
 
         if child.tail and child.tail.strip():
-            return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
+            return render_lg_fallback(el, opts)
 
     groups = [group for group in groups if any(has_visible_html(fragment.segment) for fragment in group)]
     if not groups:
-        return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
+        return render_lg_fallback(el, opts)
 
     paragraphs = "".join(
         f"<p class=\"verse-lines\">\n{'<br />\n'.join(render_verse_fragment(fragment, opts) for fragment in group)}\n</p>\n"
         for group in groups
     )
-    return f"<div{render_attrs(el, 'lg')}>\n{paragraphs}</div>\n"
+    return f"<div{render_attrs(el, 'lg')}>\n{paragraphs}{trailing_closer}</div>\n"
 
 
 def render_node(el: etree._Element, opts: Options) -> str:

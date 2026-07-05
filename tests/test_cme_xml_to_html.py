@@ -103,6 +103,60 @@ class RenderLgContinuationTests(unittest.TestCase):
         self.assertNotIn("Base line<br />", html)
 
 
+class RenderLgTrailingCloserTests(unittest.TestCase):
+    def test_trailing_simple_closer_preserves_optimized_verse_lines(self) -> None:
+        html = render_lg(
+            """
+            <LG>
+              <L N="5">Þe feste of corpus day cristy</L>
+              <L>Þe hyȝe feste of þe holy sacrament</L>
+              <CLOSER>Ame<HI REND="italic">n.</HI></CLOSER>
+            </LG>
+            """,
+            include_verse_line_metadata=True,
+        )
+
+        self.assertIn('<p class="verse-lines">', html)
+        self.assertIn(
+            '<span class="verse-line" data-line-number="5">Þe feste of corpus day cristy</span><br />\n'
+            '<span class="verse-line">Þe hyȝe feste of þe holy sacrament</span>',
+            html,
+        )
+        self.assertIn('<p class="closer">Ame<em>n.</em></p>', html)
+        self.assertNotIn('<div class="l"', html)
+
+    def test_lg_with_head_still_uses_generic_fallback(self) -> None:
+        html = render_lg(
+            """
+            <LG>
+              <HEAD>Head inside group</HEAD>
+              <L>First line</L>
+              <L>Second line</L>
+            </LG>
+            """
+        )
+
+        self.assertNotIn('<p class="verse-lines">', html)
+        self.assertIn('<h3>Head inside group</h3>', html)
+        self.assertIn('<div class="l">First line</div>', html)
+
+    def test_non_trailing_closer_still_uses_generic_fallback(self) -> None:
+        html = render_lg(
+            """
+            <LG>
+              <L>First line</L>
+              <CLOSER>Amen.</CLOSER>
+              <L>Second line</L>
+            </LG>
+            """
+        )
+
+        self.assertNotIn('<p class="verse-lines">', html)
+        self.assertIn('<div class="l">First line</div>', html)
+        self.assertIn('<p class="closer">Amen.</p>', html)
+        self.assertIn('<div class="l">Second line</div>', html)
+
+
 class PandocCmeXmlMarkdownTests(unittest.TestCase):
     def test_default_markdown_output_is_reader_facing_without_source_attrs(self) -> None:
         if shutil.which("pandoc") is None:
