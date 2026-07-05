@@ -1,0 +1,26 @@
+% CME/Pandoc lettrine support.
+% Loaded automatically by scripts/pandoc-cme-xml for LaTeX/PDF output when
+% --lettrine is not "none".
+
+\IfFileExists{lettrine.sty}{%
+  \usepackage{lettrine}%
+}{%
+  \PackageWarningNoLine{cme-lettrine}{lettrine.sty not found; CME drop caps will be set inline}%
+  \providecommand{\lettrine}[3][]{#2#3}%
+}
+
+% The lettrine package defaults the rest of the first word to small caps.  CME
+% editions keep that text in the body font so decorative modes affect only the
+% initial glyph.
+\providecommand{\LettrineTextFont}[1]{#1}
+\renewcommand{\LettrineTextFont}[1]{#1}
+
+\newcommand{\cmeLettrinePlain}[2]{%
+  \lettrine[lines=3,lhang=0.05,nindent=0em]{#1}{#2}%
+}
+
+\newcommand{\cmeLettrineWithFontHook}[3]{%
+  \lettrine[lines=3,lhang=0.05,nindent=0em]{\begingroup#1#2\endgroup}{#3}%
+}
+
+\newcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}

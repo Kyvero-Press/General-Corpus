@@ -50,6 +50,7 @@ MILESTONE_TAGS = {"PB", "EPB", "MILESTONE", "FW"}
 NOTE_TAG_RE = re.compile(r"^NOTE\d*$")
 DIV_TAG_RE = re.compile(r"^DIV\d*$")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
+NUMERIC_LINE_NUMBER_RE = re.compile(r"^\d+$")
 
 
 @dataclass(frozen=True)
@@ -57,6 +58,7 @@ class Options:
     include_notes: bool = True
     preserve_milestones: bool = False
     include_source_metadata: bool = True
+    include_verse_line_metadata: bool = False
 
 
 @dataclass(frozen=True)
@@ -158,6 +160,39 @@ def has_visible_html(fragment: str) -> bool:
 
 def html_attr(value: str | None) -> str:
     return escape(value or "", quote=True)
+
+
+def safe_numeric_line_number(value: str | None) -> str | None:
+    if value is None:
+        return None
+    stripped = value.strip()
+    if not NUMERIC_LINE_NUMBER_RE.match(stripped):
+        return None
+    number = int(stripped)
+    if number <= 0:
+        return None
+    return str(number)
+
+
+def milestone_unit_indicates_page_marker(el: etree._Element) -> bool:
+    unit = (attr(el, "UNIT") or "").strip().lower()
+    if not unit:
+        return False
+    normalized = re.sub(r"[^a-z0-9]+", "", unit)
+    if any(marker in normalized for marker in ("page", "folio", "leaf", "column")):
+        return True
+    return normalized in {
+        "pb",
+        "epb",
+        "fol",
+        "f",
+        "col",
+        "cols",
+        "sig",
+        "signature",
+        "quire",
+        "sheet",
+    }
 
 
 def child_elements(el: etree._Element, name: str | None = None) -> list[etree._Element]:
@@ -455,8 +490,14 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     return data
 
 
-def render_attrs(el: etree._Element, css_class: str | None = None) -> str:
+def render_attrs(
+    el: etree._Element,
+    css_class: str | None = None,
+    *,
+    skip_xml_names: set[str] | None = None,
+) -> str:
     pairs: list[tuple[str, str]] = []
+    skipped = skip_xml_names or set()
     if css_class:
         pairs.append(("class", css_class))
     for xml_name, html_name in (
@@ -467,12 +508,49 @@ def render_attrs(el: etree._Element, css_class: str | None = None) -> str:
         ("LANG", "lang"),
         ("REND", "data-rend"),
     ):
+        if xml_name in skipped:
+            continue
         value = attr(el, xml_name)
         if value:
             if html_name == "id" and not re.match(r"^[A-Za-z][-A-Za-z0-9_:.]*$", value):
                 html_name = "data-id"
             pairs.append((html_name, value))
     return "".join(f' {name}="{html_attr(value)}"' for name, value in pairs)
+
+
+def source_line_number_for_verse_line(el: etree._Element) -> str | None:
+    line_number = safe_numeric_line_number(attr(el, "N"))
+    if line_number:
+        return line_number
+    for child in child_elements(el, "MILESTONE"):
+        if milestone_unit_indicates_page_marker(child):
+            continue
+        line_number = safe_numeric_line_number(attr(child, "N"))
+        if line_number:
+            return line_number
+    return None
+
+
+def render_verse_line_attrs(
+    el: etree._Element,
+    opts: Options,
+    css_class: str | None = None,
+) -> str:
+    rendered = render_attrs(el, css_class, skip_xml_names={"N"})
+    if opts.include_verse_line_metadata:
+        line_number = source_line_number_for_verse_line(el)
+        if line_number:
+            rendered += f' data-line-number="{html_attr(line_number)}"'
+    return rendered
+
+
+def render_verse_line_span(segment: str, line_number: str | None, opts: Options) -> str:
+    if not opts.include_verse_line_metadata:
+        return segment.strip()
+    attrs = ' class="verse-line"'
+    if line_number:
+        attrs += f' data-line-number="{html_attr(line_number)}"'
+    return f"<span{attrs}>{segment.strip()}</span>"
 
 
 def render_children(
@@ -879,12 +957,13 @@ def render_lg(el: etree._Element, opts: Options) -> str:
     for child in child_elements(el):
         child_tag = tagu(child)
         if child_tag == "L":
+            line_number = source_line_number_for_verse_line(child)
             line_segments = render_inline_children_segments(child, opts)
             for index, segment in enumerate(line_segments):
                 if index > 0 and groups[-1]:
                     groups.append([])
                 if has_visible_html(segment):
-                    groups[-1].append(segment.strip())
+                    groups[-1].append(render_verse_line_span(segment, line_number, opts))
         elif child_tag in MILESTONE_TAGS:
             marker = render_milestone(child, opts)
             if marker:
@@ -936,8 +1015,8 @@ def render_node(el: etree._Element, opts: Options) -> str:
             body = render_children(el, opts)
             if not has_visible_html(body):
                 return ""
-            return f"<div{render_attrs(el, 'l')}>{body}</div>\n"
-        return wrap_visible_blocks("div", render_attrs(el, "l"), render_inline_children_segments(el, opts))
+            return f"<div{render_verse_line_attrs(el, opts, 'l')}>{body}</div>\n"
+        return wrap_visible_blocks("div", render_verse_line_attrs(el, opts, "l"), render_inline_children_segments(el, opts))
     if tag == "LB":
         return "<br />"
     if tag in MILESTONE_TAGS:
@@ -1166,6 +1245,11 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
         help="omit the visible source metadata block from the rendered HTML body",
     )
     parser.add_argument(
+        "--verse-line-metadata",
+        action="store_true",
+        help="emit hidden verse line metadata for the LaTeX/PDF verse-line-number filter",
+    )
+    parser.add_argument(
         "--colophon-tex",
         action="store_true",
         help="emit a LaTeX colophon macro call for this source instead of HTML",
@@ -1192,6 +1276,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         include_notes=not args.drop_notes,
         preserve_milestones=args.preserve_milestones,
         include_source_metadata=not args.omit_source_metadata,
+        include_verse_line_metadata=args.verse_line_metadata,
     )
     sys.stdout.write(render_document(args.input, parsed, detected, opts))
     return 0

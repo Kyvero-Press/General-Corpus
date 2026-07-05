@@ -1,0 +1,15 @@
+% CME/Pandoc LaTeX verse line number defaults.
+% Loaded automatically by scripts/pandoc-cme-xml for .tex and .pdf output.
+%
+% The Lua filter inserts \cmeVerseLineNumber{N} at the start of selected verse
+% lines.  Keep the marker zero-width so it does not alter line breaking.
+\IfFileExists{xcolor.sty}{%
+  \usepackage{xcolor}%
+  \providecommand{\cmeVerseLineNumberColor}{\color{black!35}}%
+}{%
+  \providecommand{\cmeVerseLineNumberColor}{}%
+}
+
+\providecommand{\cmeVerseLineNumber}[1]{%
+  \leavevmode\llap{\hbox{\scriptsize\cmeVerseLineNumberColor #1\kern0.75em}}%
+}

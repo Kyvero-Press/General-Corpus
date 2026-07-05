@@ -4,7 +4,7 @@
 The audit checks that the generated Pandoc LaTeX contains the title-page and
 colophon data derived from the source XML: title, subtitles/title supplements,
 author (or Anonymous), original date, source path, format, editor, source date,
-and identifier when present.
+identifier when present, and the General Corpus repository/download notice.
 """
 
 from __future__ import annotations
@@ -20,6 +20,21 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 import cme_xml_to_html as cme  # noqa: E402
+
+
+REPOSITORY_URL = "https://github.com/Kyvero-Press/General-Corpus"
+COLLECTION_NOTICE_MARKERS = (
+    "source for this book",
+    "other general corpus books and texts",
+    "available for download",
+)
+DOCUMENT_BEGIN_MARKER = "\\begin{document}"
+FRONTMATTER_ORDER_MARKERS = (
+    "\\maketitle",
+    "\\cmeColophon",
+    "\\tableofcontents",
+    "\\mainmatter",
+)
 
 
 def label_for(path: Path, root: Path) -> Path:
@@ -40,6 +55,15 @@ def contains_tex_value(tex: str, value: str, *, break_paths: bool = False) -> bo
     compact_expected = re.sub(r"\s+", " ", expected).strip()
     compact_tex = re.sub(r"\s+", " ", tex)
     return compact_expected in compact_tex
+
+
+def frontmatter_order_is_valid(tex: str) -> bool:
+    body_start = tex.find(DOCUMENT_BEGIN_MARKER)
+    if body_start < 0:
+        return False
+    body = tex[body_start + len(DOCUMENT_BEGIN_MARKER) :]
+    positions = [body.find(marker) for marker in FRONTMATTER_ORDER_MARKERS]
+    return not any(position < 0 for position in positions) and positions == sorted(positions)
 
 
 def audit_one(source: Path, root: Path, output_root: Path) -> dict[str, str]:
@@ -73,6 +97,12 @@ def audit_one(source: Path, root: Path, output_root: Path) -> dict[str, str]:
         }
 
     tex = tex_path.read_text(errors="replace")
+    if REPOSITORY_URL not in tex:
+        omissions.append("repository_url")
+    normalized_tex = re.sub(r"\s+", " ", tex).lower()
+    if any(marker not in normalized_tex for marker in COLLECTION_NOTICE_MARKERS):
+        omissions.append("collection_notice")
+
     checks = [
         ("title", meta.get("title", ""), False),
         ("subtitle", meta.get("subtitle", ""), False),
@@ -88,9 +118,7 @@ def audit_one(source: Path, root: Path, output_root: Path) -> dict[str, str]:
         if value and not contains_tex_value(tex, value, break_paths=break_paths):
             omissions.append(name)
 
-    ordered_markers = ["\\maketitle", "\\cmeColophon", "\\tableofcontents", "\\mainmatter"]
-    positions = [tex.find(marker) for marker in ordered_markers]
-    if any(position < 0 for position in positions) or positions != sorted(positions):
+    if not frontmatter_order_is_valid(tex):
         omissions.append("frontmatter_order")
     if "\\section{Source metadata}" in tex:
         omissions.append("source_metadata_left_in_body")

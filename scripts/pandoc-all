@@ -5,15 +5,18 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 usage() {
   cat >&2 <<'USAGE'
-Usage: pandoc-all [SOURCE_DIR] [OUTPUT_DIR] [EXT] [PANDOC_OPTIONS...]
+Usage: pandoc-all [SOURCE_DIR] [OUTPUT_DIR] [EXT] [WRAPPER_OR_PANDOC_OPTIONS...]
 
 Convert every *.xml under SOURCE_DIR with scripts/pandoc-cme-xml, preserving
 relative paths under OUTPUT_DIR.  EXT is the output extension without a leading
-dot and defaults to html.
+dot and defaults to html. Arguments after EXT are passed after each output path;
+wrapper options such as --lettrine are consumed by scripts/pandoc-cme-xml, and
+all remaining arguments are passed to Pandoc.
 
 Examples:
   scripts/pandoc-all CME/source build/pandoc html
   scripts/pandoc-all CME/source build/pandoc epub --toc
+  scripts/pandoc-all CME/source build/pandoc pdf --lettrine plain --pdf-engine=xelatex
 USAGE
 }
 

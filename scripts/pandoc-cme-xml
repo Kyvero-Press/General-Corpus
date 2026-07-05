@@ -4,16 +4,136 @@ set -euo pipefail
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 format="${CME_XML_FORMAT:-auto}"
 xml_opts=()
+lettrine_mode="plain"
+
+accepted_lettrine_modes() {
+  cat >&2 <<'MODES'
+Accepted --lettrine modes: none, plain, goudyinitialen, gotischeinitialen, baroqueinitials.
+Aliases: no/off=none; default/body/bodyfont=plain; goudy=goudyinitialen; gotische/gotin=gotischeinitialen; baroque=baroqueinitials.
+Hyphen, underscore, and case variants are accepted.
+MODES
+}
+
+missing_lettrine_mode() {
+  echo "--lettrine requires a mode" >&2
+  accepted_lettrine_modes
+  exit 2
+}
+
+normalize_lettrine_mode() {
+  local raw="$1"
+  local normalized="${raw,,}"
+  normalized="${normalized//-/}"
+  normalized="${normalized//_/}"
+  case "$normalized" in
+    none|no|off)
+      printf '%s\n' "none"
+      ;;
+    plain|default|body|bodyfont)
+      printf '%s\n' "plain"
+      ;;
+    goudyinitialen|goudy)
+      printf '%s\n' "goudyinitialen"
+      ;;
+    gotischeinitialen|gotische|gotin)
+      printf '%s\n' "gotischeinitialen"
+      ;;
+    baroqueinitials|baroque)
+      printf '%s\n' "baroqueinitials"
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+set_lettrine_mode() {
+  local raw="$1"
+  local normalized=""
+  [[ -n "$raw" ]] || missing_lettrine_mode
+  if ! normalized="$(normalize_lettrine_mode "$raw")"; then
+    echo "Invalid --lettrine mode: $raw" >&2
+    accepted_lettrine_modes
+    exit 2
+  fi
+  lettrine_mode="$normalized"
+}
+
+write_lettrine_mode_header() {
+  case "$1" in
+    plain)
+      cat <<'LATEX'
+% CME lettrine mode: plain body-font initial.
+\renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}
+LATEX
+      ;;
+    goudyinitialen)
+      cat <<'LATEX'
+% CME lettrine mode: Goudy Initialen when available.
+\IfFileExists{GoudyIn.sty}{%
+  \usepackage{GoudyIn}%
+  \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\GoudyInfamily}{##1}{##2}}%
+}{%
+  \PackageWarningNoLine{cme-lettrine}{GoudyIn.sty not found; falling back to plain lettrine}%
+  \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{##1}{##2}}%
+}
+LATEX
+      ;;
+    gotischeinitialen)
+      cat <<'LATEX'
+% CME lettrine mode: Gotische Initialen when available.
+\IfFileExists{GotIn.sty}{%
+  \usepackage{GotIn}%
+  \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\GotInfamily}{##1}{##2}}%
+}{%
+  \PackageWarningNoLine{cme-lettrine}{GotIn.sty not found; falling back to plain lettrine}%
+  \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{##1}{##2}}%
+}
+LATEX
+      ;;
+    baroqueinitials)
+      cat <<'LATEX'
+% CME lettrine mode: Baroque Initials system font when available.
+\makeatletter
+\@ifundefined{IfFontExistsTF}{%
+  \PackageWarningNoLine{cme-lettrine}{\string\IfFontExistsTF not available; falling back to plain lettrine}%
+  \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+}{%
+  \IfFontExistsTF{Baroque Initials}{%
+    \@ifundefined{newfontfamily}{%
+      \PackageWarningNoLine{cme-lettrine}{\string\newfontfamily not available; falling back to plain lettrine}%
+      \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+    }{%
+      \newfontfamily\cmeBaroqueInitials{Baroque Initials}%
+      \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\cmeBaroqueInitials}{#1}{#2}}%
+    }%
+  }{%
+    \PackageWarningNoLine{cme-lettrine}{Baroque Initials font not found; falling back to plain lettrine}%
+    \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+  }%
+}
+\makeatother
+LATEX
+      ;;
+    *)
+      echo "Internal error: unknown lettrine mode '$1'" >&2
+      exit 2
+      ;;
+  esac
+}
 
 usage() {
   cat >&2 <<'USAGE'
-Usage: pandoc-cme-xml [XML_OPTIONS] INPUT.xml OUTPUT [PANDOC_OPTIONS...]
+Usage: pandoc-cme-xml [XML_OPTIONS] INPUT.xml OUTPUT [WRAPPER_OR_PANDOC_OPTIONS...]
 
 Convert one CME XML file to any Pandoc output format.  The XML is first
 normalized to HTML, then passed to pandoc.  LaTeX/PDF output defaults to
-a book-style front matter sequence (title page, colophon, table of contents)
-and Junicode from TeX Live's junicode package unless you pass your own Pandoc
-mainfont variable.
+a book-style front matter sequence (title page, colophon, table of contents),
+plain body-font lettrines, subtle fifth-line verse numbers, and Junicode from
+TeX Live's junicode package unless you pass your own Pandoc mainfont variable.
+For .tex, .latex, and .pdf outputs, the default page size is 5in x 8in (Lulu
+novella size); pass -V geometry=... or
+-V papersize=... after OUTPUT to override it.
 
 XML_OPTIONS:
   --xml-format FORMAT       auto, dlpstextclass, ets, ets-temphead-eebo,
@@ -22,10 +142,23 @@ XML_OPTIONS:
   --preserve-milestones     render PB/EPB/MILESTONE markers visibly
   --strict                  fail instead of recovering malformed XML
 
+WRAPPER_OPTIONS:
+  --lettrine MODE           LaTeX/PDF drop caps: none, plain, goudyinitialen,
+                            gotischeinitialen, or baroqueinitials. Accepted
+                            before INPUT.xml or after OUTPUT. Aliases include
+                            no/off, default/body/bodyfont, goudy,
+                            gotische/gotin, and baroque. Decorative modes do
+                            not verify every medieval glyph; use plain if a
+                            selected font warns about missing initials.
+
 Examples:
   scripts/pandoc-cme-xml CME/source/CME_from_OTA/Gawain.xml build/Gawain.html
   scripts/pandoc-cme-xml --drop-notes CME/source/CME_from_OTA/Gawain.xml build/Gawain.epub
   scripts/pandoc-cme-xml CME/source/CME_from_OTA/JulianRev.xml build/JulianRev.pdf --pdf-engine=xelatex
+  scripts/pandoc-cme-xml --lettrine none CME/source/CME_from_OTA/JulianRev.xml build/JulianRev.tex
+  scripts/pandoc-cme-xml CME/source/CME_from_OTA/JulianRev.xml build/JulianRev.pdf --lettrine goudy --pdf-engine=xelatex
+  scripts/pandoc-cme-xml CME/source/CME_from_OTA/Gawain.xml build/Gawain.pdf --pdf-engine=xelatex -V geometry=paperwidth=6in -V geometry=paperheight=9in
+  scripts/pandoc-cme-xml CME/source/CME_from_OTA/Gawain.xml build/Gawain.pdf --pdf-engine=xelatex -V papersize=a5
 USAGE
 }
 
@@ -42,6 +175,15 @@ while [[ $# -gt 0 ]]; do
       ;;
     --drop-notes|--preserve-milestones|--strict)
       xml_opts+=("$1")
+      shift
+      ;;
+    --lettrine)
+      [[ $# -ge 2 ]] || missing_lettrine_mode
+      set_lettrine_mode "$2"
+      shift 2
+      ;;
+    --lettrine=*)
+      set_lettrine_mode "${1#--lettrine=}"
       shift
       ;;
     -h|--help)
@@ -67,6 +209,25 @@ input="$1"
 output="$2"
 shift 2
 
+pandoc_passthrough=()
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --lettrine)
+      [[ $# -ge 2 ]] || missing_lettrine_mode
+      set_lettrine_mode "$2"
+      shift 2
+      ;;
+    --lettrine=*)
+      set_lettrine_mode "${1#--lettrine=}"
+      shift
+      ;;
+    *)
+      pandoc_passthrough+=("$1")
+      shift
+      ;;
+  esac
+done
+
 mkdir -p "$(dirname "$output")"
 
 output_ext="${output##*.}"
@@ -78,16 +239,22 @@ fi
 
 tmp="$(mktemp --suffix=.cme.html)"
 colophon_tmp=""
+lettrine_mode_tmp=""
 cleanup() {
   rm -f "$tmp"
   [[ -z "$colophon_tmp" ]] || rm -f "$colophon_tmp"
+  [[ -z "$lettrine_mode_tmp" ]] || rm -f "$lettrine_mode_tmp"
 }
 trap cleanup EXIT
 
 if [[ "$is_latex_output" -eq 1 ]]; then
-  xml_opts+=(--omit-source-metadata)
+  xml_opts+=(--omit-source-metadata --verse-line-metadata)
   colophon_tmp="$(mktemp --suffix=.cme-colophon.tex)"
   python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" --colophon-tex "$input" > "$colophon_tmp"
+  if [[ "$lettrine_mode" != "none" ]]; then
+    lettrine_mode_tmp="$(mktemp --suffix=.cme-lettrine.tex)"
+    write_lettrine_mode_header "$lettrine_mode" > "$lettrine_mode_tmp"
+  fi
 fi
 
 python3 "$script_dir/cme_xml_to_html.py" --format "$format" "${xml_opts[@]}" "$input" > "$tmp"
@@ -109,7 +276,7 @@ has_pandoc_variable() {
       -V|--variable|-M|--metadata)
         expect_value=1
         ;;
-      -V"$key"=*|-M"$key"=*|--variable="$key"=*|--metadata="$key"=*|--variable="$key":*|--metadata="$key":*)
+      -V"$key"=*|-M"$key"=*|-V"$key":*|-M"$key":*|--variable="$key"=*|--metadata="$key"=*|--variable="$key":*|--metadata="$key":*)
         return 0
         ;;
     esac
@@ -129,10 +296,10 @@ has_pandoc_flag() {
 
 pandoc_args=(--from html --standalone "$tmp" --output "$output")
 if [[ "$is_latex_output" -eq 1 ]]; then
-  if ! has_pandoc_variable documentclass "$@"; then
+  if ! has_pandoc_variable documentclass "${pandoc_passthrough[@]}"; then
     pandoc_args+=(-V documentclass=book)
   fi
-  if ! has_pandoc_variable mainfont "$@"; then
+  if ! has_pandoc_variable mainfont "${pandoc_passthrough[@]}"; then
     pandoc_args+=(
       -V mainfont=Junicode-Regular.otf
       -V mainfontoptions=BoldFont=Junicode-Bold.otf
@@ -140,13 +307,29 @@ if [[ "$is_latex_output" -eq 1 ]]; then
       -V mainfontoptions=BoldItalicFont=Junicode-BoldItalic.otf
     )
   fi
-  if ! has_pandoc_flag --toc "$@" && ! has_pandoc_flag --table-of-contents "$@"; then
+  if ! has_pandoc_variable geometry "${pandoc_passthrough[@]}" && ! has_pandoc_variable papersize "${pandoc_passthrough[@]}"; then
+    pandoc_args+=(
+      -V geometry=paperwidth=5in
+      -V geometry=paperheight=8in
+    )
+  fi
+  if ! has_pandoc_flag --toc "${pandoc_passthrough[@]}" && ! has_pandoc_flag --table-of-contents "${pandoc_passthrough[@]}"; then
     pandoc_args+=(--toc)
   fi
   pandoc_args+=(--include-in-header "$script_dir/pandoc-book-frontmatter.tex")
+  if [[ "$lettrine_mode" != "none" ]]; then
+    pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-lettrine.tex")
+    pandoc_args+=(--include-in-header "$lettrine_mode_tmp")
+  fi
+  pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-verse-lines.tex")
   pandoc_args+=(--include-in-header "$script_dir/pandoc-latex-pagebreaks.tex")
   pandoc_args+=(--include-before-body "$colophon_tmp")
+  pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-running-heads.lua")
+  if [[ "$lettrine_mode" != "none" ]]; then
+    pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-lettrine.lua")
+  fi
+  pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-verse-lines.lua")
   pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-pagebreaks.lua")
 fi
 
-pandoc "${pandoc_args[@]}" "$@"
+pandoc "${pandoc_args[@]}" "${pandoc_passthrough[@]}"
