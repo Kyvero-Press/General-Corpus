@@ -237,6 +237,16 @@ if [[ "$output_ext" == "pdf" || "$output_ext" == "tex" || "$output_ext" == "late
   is_latex_output=1
 fi
 
+is_markdown_output=0
+if [[ "$output_ext" == "md" || "$output_ext" == "markdown" ]]; then
+  is_markdown_output=1
+fi
+
+is_text_output=0
+if [[ "$output_ext" == "txt" || "$output_ext" == "text" ]]; then
+  is_text_output=1
+fi
+
 tmp="$(mktemp --suffix=.cme.html)"
 colophon_tmp=""
 lettrine_mode_tmp=""
@@ -294,7 +304,27 @@ has_pandoc_flag() {
   return 1
 }
 
+has_pandoc_writer_option() {
+  local arg
+  for arg in "$@"; do
+    case "$arg" in
+      -t|--to|-w|--write|-t*|-w*|--to=*|--write=*)
+        return 0
+        ;;
+    esac
+  done
+  return 1
+}
+
 pandoc_args=(--from html --standalone "$tmp" --output "$output")
+if ! has_pandoc_writer_option "${pandoc_passthrough[@]}"; then
+  if [[ "$is_markdown_output" -eq 1 ]]; then
+    pandoc_args+=(--to gfm-raw_html)
+  elif [[ "$is_text_output" -eq 1 ]]; then
+    pandoc_args+=(--to plain)
+  fi
+fi
+
 if [[ "$is_latex_output" -eq 1 ]]; then
   if ! has_pandoc_variable documentclass "${pandoc_passthrough[@]}"; then
     pandoc_args+=(-V documentclass=book)

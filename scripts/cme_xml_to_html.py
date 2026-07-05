@@ -553,6 +553,58 @@ def render_verse_line_span(segment: str, line_number: str | None, opts: Options)
     return f"<span{attrs}>{segment.strip()}</span>"
 
 
+@dataclass(frozen=True)
+class VerseLineFragment:
+    segment: str
+    line_number: str | None
+
+
+@dataclass(frozen=True)
+class RawVerseFragment:
+    segment: str
+
+
+VerseFragment = VerseLineFragment | RawVerseFragment
+
+
+def is_wrapped_l_continuation(el: etree._Element) -> bool:
+    """Return true for source-wrapped verse continuation lines.
+
+    In Gawain and similar line groups, exact-four-space unnumbered ``<L>``
+    entries are source-text wraps of the previous intended line, while two-space
+    wheel lines, six-space motto/display lines, and explicitly numbered lines
+    are intentional separate lines.
+    """
+    if tagu(el) != "L":
+        return False
+    if source_line_number_for_verse_line(el) is not None:
+        return False
+    return bool(re.match(r"^ {4}(?! )", el.text or ""))
+
+
+def strip_wrapped_continuation_indent(segment: str) -> str:
+    return re.sub(r"^[ \t\r\n]+", "", segment)
+
+
+def join_inline_continuation(base: str, continuation: str) -> str:
+    base = base.rstrip()
+    continuation = strip_wrapped_continuation_indent(continuation)
+    if not base:
+        return continuation
+    if not continuation:
+        return base
+    no_space_after = "([{«“‘"
+    no_space_before = ",.;:!?)]}»”’"
+    separator = "" if base[-1] in no_space_after or continuation[0] in no_space_before else " "
+    return f"{base}{separator}{continuation}"
+
+
+def render_verse_fragment(fragment: VerseFragment, opts: Options) -> str:
+    if isinstance(fragment, VerseLineFragment):
+        return render_verse_line_span(fragment.segment, fragment.line_number, opts)
+    return fragment.segment
+
+
 def render_children(
     el: etree._Element,
     opts: Options,
@@ -953,21 +1005,35 @@ def render_lg(el: etree._Element, opts: Options) -> str:
     if el.text and el.text.strip():
         return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
-    groups: list[list[str]] = [[]]
+    groups: list[list[VerseFragment]] = [[]]
     for child in child_elements(el):
         child_tag = tagu(child)
         if child_tag == "L":
             line_number = source_line_number_for_verse_line(child)
             line_segments = render_inline_children_segments(child, opts)
+            is_continuation = is_wrapped_l_continuation(child)
             for index, segment in enumerate(line_segments):
                 if index > 0 and groups[-1]:
                     groups.append([])
-                if has_visible_html(segment):
-                    groups[-1].append(render_verse_line_span(segment, line_number, opts))
+                if not has_visible_html(segment):
+                    continue
+                if (
+                    is_continuation
+                    and index == 0
+                    and groups[-1]
+                    and isinstance(groups[-1][-1], VerseLineFragment)
+                ):
+                    previous = groups[-1][-1]
+                    groups[-1][-1] = VerseLineFragment(
+                        join_inline_continuation(previous.segment, segment),
+                        previous.line_number,
+                    )
+                else:
+                    groups[-1].append(VerseLineFragment(segment, line_number))
         elif child_tag in MILESTONE_TAGS:
             marker = render_milestone(child, opts)
             if marker:
-                groups[-1].append(marker)
+                groups[-1].append(RawVerseFragment(marker))
         elif child_tag in {"HEAD"}:
             return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
         else:
@@ -976,12 +1042,12 @@ def render_lg(el: etree._Element, opts: Options) -> str:
         if child.tail and child.tail.strip():
             return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
-    groups = [group for group in groups if any(has_visible_html(line) for line in group)]
+    groups = [group for group in groups if any(has_visible_html(fragment.segment) for fragment in group)]
     if not groups:
         return f"<div{render_attrs(el, 'lg')}>\n{render_children(el, opts)}</div>\n"
 
     paragraphs = "".join(
-        f"<p class=\"verse-lines\">\n{'<br />\n'.join(group)}\n</p>\n"
+        f"<p class=\"verse-lines\">\n{'<br />\n'.join(render_verse_fragment(fragment, opts) for fragment in group)}\n</p>\n"
         for group in groups
     )
     return f"<div{render_attrs(el, 'lg')}>\n{paragraphs}</div>\n"
