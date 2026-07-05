@@ -255,6 +255,44 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertIn(r"p{(\linewidth", latex)
         self.assertNotIn(r"@{}llll@{}", latex)
 
+    def test_nested_tables_in_cells_are_flattened_for_latex(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1><HEAD>Nested Table Fixture</HEAD>
+                <TABLE><ROW><CELL>Outer before
+                  <TABLE>
+                    <HEAD>Wherof in:—</HEAD>
+                    <ROW><CELL>1st.</CELL><CELL>Inner cell text.</CELL></ROW>
+                    <ROW><CELL>2nd.</CELL><CELL>More inner text.</CELL></ROW>
+                  </TABLE>
+                Outer after</CELL></ROW></TABLE>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertEqual(latex.count(r"\begin{longtable}"), 1)
+        self.assertIn("Outer before", latex)
+        self.assertIn("Wherof in", latex)
+        self.assertIn("1st. --- Inner cell text.", latex)
+        self.assertIn("2nd. --- More inner text.", latex)
+        self.assertIn("Outer after", latex)
+
+    def test_latex_preamble_drops_fragile_xelatex_inline_decorations(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1><HEAD>Decoration Fixture</HEAD>
+                <P><HI REND="u">underlined editorial text</HI> and <DEL>deleted text</DEL>.</P>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r"\renewcommand{\ul}[1]{#1}", latex)
+        self.assertIn(r"\renewcommand{\st}[1]{#1}", latex)
+
     def test_latex_preamble_maps_unavailable_source_glyphs(self) -> None:
         latex = self.render_latex(
             """

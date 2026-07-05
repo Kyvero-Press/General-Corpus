@@ -36,6 +36,17 @@
   \newunicodechar{̘}{}%
 }{}
 
+% Pandoc maps HTML underline/strikeout to \ul/\st from soul for XeLaTeX.
+% Several CME transcriptions wrap long, macro-rich editorial insertions in
+% underline/strikeout markup; soul treats those as fatal reconstruction errors.
+% For the book PDFs, preserve the readable text and drop the fragile decoration.
+\providecommand{\ul}[1]{#1}%
+\providecommand{\st}[1]{#1}%
+\ifXeTeX
+  \renewcommand{\ul}[1]{#1}%
+  \renewcommand{\st}[1]{#1}%
+\fi
+
 \makeatletter
 \def\@subtitle{}
 \providecommand{\subtitle}[1]{\gdef\@subtitle{#1}}

@@ -133,14 +133,24 @@ local function previous_line_allows_protected_break(text)
 end
 
 local function starts_with_lowercase(text)
-  for _, codepoint in utf8.codes(text) do
-    local character = utf8.char(codepoint)
-    if character:match("%s") or character:match("%p") then
-      -- Skip leading whitespace and ASCII punctuation/quotes.
-    else
-      return pandoc.text.lower(character) == character and pandoc.text.upper(character) ~= character
+  local ok, result = pcall(function()
+    for _, codepoint in utf8.codes(text) do
+      local character = utf8.char(codepoint)
+      if character:match("%s") or character:match("%p") then
+        -- Skip leading whitespace and ASCII punctuation/quotes.
+      else
+        return pandoc.text.lower(character) == character and pandoc.text.upper(character) ~= character
+      end
     end
+    return false
+  end)
+  if ok then
+    return result
   end
+
+  -- Some recovered corpus XML reaches Pandoc as byte strings that are not
+  -- valid UTF-8.  Clause-protection is only a pagination hint, so prefer a
+  -- conservative unprotected line break over failing the entire PDF build.
   return false
 end
 

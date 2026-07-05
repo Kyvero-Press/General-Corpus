@@ -925,6 +925,63 @@ def render_table(el: etree._Element, opts: Options) -> str:
     return table
 
 
+def render_nested_table(el: etree._Element, opts: Options) -> str:
+    """Render a table nested inside a table cell as line-level prose.
+
+    HTML permits nested tables, but Pandoc's LaTeX writer turns both levels into
+    longtable environments.  A longtable inside a longtable cell is not legal
+    LaTeX and causes XeLaTeX failures for a small number of corpus sources.
+    Flatten the inner table while preserving row/cell reading order and any
+    non-row readable children, such as nested table headings.
+    """
+    segments: list[str] = []
+    if el.text and el.text.strip():
+        segments.append(f'<div class="nested-table-text">{html_text(el.text)}</div>')
+
+    for child in child_elements(el):
+        tag = tagu(child)
+        if tag == "ROW":
+            cell_segments: list[str] = []
+            for cell in child_elements(child, "CELL"):
+                body = render_table_cell_children(cell, opts).strip()
+                if has_visible_html(body):
+                    cell_segments.append(body)
+            if cell_segments:
+                segments.append(
+                    f'<div class="nested-table-row">{" — ".join(cell_segments)}</div>'
+                )
+        elif tag in MILESTONE_TAGS and not opts.preserve_milestones:
+            pass
+        elif tag == "HEAD":
+            body = render_inline_children(child, opts).strip()
+            if has_visible_html(body):
+                segments.append(f'<div class="nested-table-head">{body}</div>')
+        else:
+            body = render_node(child, opts).strip()
+            if has_visible_html(body):
+                segments.append(body)
+        if child.tail and child.tail.strip():
+            segments.append(f'<div class="nested-table-text">{html_text(child.tail)}</div>')
+
+    if segments:
+        return f'<div class="nested-table">{"".join(segments)}</div>'
+    return ""
+
+
+def render_table_cell_children(el: etree._Element, opts: Options) -> str:
+    parts: list[str] = []
+    if el.text:
+        parts.append(html_text(el.text))
+    for child in el:
+        if isinstance(child.tag, str) and tagu(child) == "TABLE":
+            parts.append(render_nested_table(child, opts))
+        else:
+            parts.append(render_node(child, opts))
+        if child.tail:
+            parts.append(html_text(child.tail))
+    return "".join(parts)
+
+
 def render_row(el: etree._Element, opts: Options) -> str:
     return f"<tr>{render_children(el, opts)}</tr>\n"
 
@@ -937,7 +994,7 @@ def render_cell(el: etree._Element, opts: Options) -> str:
         extra.append(f' rowspan="{html_attr(rows)}"')
     if cols and cols.isdigit():
         extra.append(f' colspan="{html_attr(cols)}"')
-    return f"<td{''.join(extra)}>{render_children(el, opts)}</td>"
+    return f"<td{''.join(extra)}>{render_table_cell_children(el, opts)}</td>"
 
 
 def render_gap(el: etree._Element) -> str:
