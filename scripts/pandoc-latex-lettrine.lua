@@ -8,10 +8,44 @@
 local skipped_container_classes = {
   titlepage = true,
   ["source-metadata"] = true,
+  apparatus = true,
+  ["provenance-note"] = true,
+  ["transcription-note"] = true,
+  ["editorial-note"] = true,
   headwords = true,
   headnote = true,
   argument = true,
   epigraph = true,
+  opener = true,
+  byline = true,
+  dateline = true,
+  closer = true,
+  signed = true,
+  salute = true,
+  trailer = true,
+  lg = true,
+  l = true,
+  ["verse-lines"] = true,
+  lineated = true,
+  verse = true,
+  speech = true,
+  speaker = true,
+  stage = true,
+  direction = true,
+  table = true,
+}
+
+local pending_consuming_container_classes = {
+  lg = true,
+  l = true,
+  ["verse-lines"] = true,
+  lineated = true,
+  verse = true,
+  speech = true,
+  speaker = true,
+  stage = true,
+  direction = true,
+  table = true,
 }
 
 local skipped_inline_classes = {
@@ -53,6 +87,10 @@ end
 
 local function has_skipped_class(el)
   return has_class_in(el, skipped_container_classes)
+end
+
+local function consumes_pending_dropcap(el)
+  return has_class_in(el, pending_consuming_container_classes)
 end
 
 local function is_skipped_inline(inline)
@@ -514,11 +552,17 @@ function Pandoc(doc)
         processed:insert(block)
       elseif block.t == "Div" then
         if has_skipped_class(block) then
+          if pending_dropcap and consumes_pending_dropcap(block) then
+            pending_dropcap = false
+          end
           processed:insert(block)
         else
           block.content = process_blocks(block.content)
           processed:insert(block)
         end
+      elseif pending_dropcap and block.t == "LineBlock" then
+        pending_dropcap = false
+        processed:insert(block)
       elseif pending_dropcap and (block.t == "Para" or block.t == "Plain") then
         if mark_first_word(block) then
           pending_dropcap = false

@@ -102,6 +102,24 @@ def text_content(el: etree._Element | None) -> str:
     return clean_text("".join(el.itertext()))
 
 
+def text_content_excluding_notes(el: etree._Element | None) -> str:
+    if el is None:
+        return ""
+    parts: list[str] = []
+
+    def walk(node: etree._Element) -> None:
+        if node.text:
+            parts.append(node.text)
+        for child in child_elements(node):
+            if not NOTE_TAG_RE.match(tagu(child)):
+                walk(child)
+            if child.tail:
+                parts.append(child.tail)
+
+    walk(el)
+    return clean_text("".join(parts))
+
+
 def spaced_text_content(el: etree._Element | None) -> str:
     """Extract text while inserting spaces between adjacent XML elements.
 
@@ -472,9 +490,10 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     if "title" not in data:
         for text_node in primary_text_nodes(root, fmt):
             for tag in ("DOCTITLE", "TITLEPART", "HEAD", "P"):
-                candidate = text_content(first_descendant(text_node, tag))
+                element = first_descendant(text_node, tag)
+                candidate = text_content_excluding_notes(element) or text_content(element)
                 if candidate:
-                    data["title"] = candidate[:180]
+                    data["title"] = candidate
                     break
             if "title" in data:
                 break
@@ -855,6 +874,39 @@ def render_note(el: etree._Element, opts: Options) -> str:
     return f'<span{render_attrs(el, "note")}>[{html_text(value)}]</span>'
 
 
+def table_column_count(el: etree._Element) -> int:
+    declared = attr(el, "COLS")
+    if declared and declared.isdigit():
+        return max(1, int(declared))
+
+    count = 0
+    for row in child_elements(el, "ROW"):
+        row_count = 0
+        for cell in child_elements(row, "CELL"):
+            colspan = attr(cell, "COLS")
+            row_count += int(colspan) if colspan and colspan.isdigit() else 1
+        count = max(count, row_count)
+    return max(1, count)
+
+
+def table_column_widths(column_count: int) -> list[float]:
+    if column_count == 1:
+        return [1.0]
+    if column_count == 2:
+        return [0.5, 0.5]
+    if column_count == 3:
+        return [0.15, 0.70, 0.15]
+    if column_count == 4:
+        return [0.10, 0.15, 0.65, 0.10]
+    return [1.0 / column_count] * column_count
+
+
+def render_colgroup(el: etree._Element) -> str:
+    widths = table_column_widths(table_column_count(el))
+    cols = "".join(f'<col style="width: {width:.0%}" />' for width in widths)
+    return f"<colgroup>{cols}</colgroup>\n"
+
+
 def render_table(el: etree._Element, opts: Options) -> str:
     rows: list[str] = []
     surrounding: list[str] = []
@@ -867,7 +919,7 @@ def render_table(el: etree._Element, opts: Options) -> str:
             surrounding.append(render_node(child, opts))
         if child.tail and child.tail.strip():
             surrounding.append(html_text(child.tail))
-    table = f"<table{render_attrs(el)}>\n{''.join(rows)}\n</table>\n"
+    table = f"<table{render_attrs(el)}>\n{render_colgroup(el)}{''.join(rows)}\n</table>\n"
     if surrounding:
         return f"<div{render_attrs(el, 'table-block')}>\n{''.join(surrounding)}{table}</div>\n"
     return table

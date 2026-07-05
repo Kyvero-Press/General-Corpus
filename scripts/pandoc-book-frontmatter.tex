@@ -26,6 +26,16 @@
 }
 \pagestyle{plain}
 
+% A few CME transcriptions use Unicode symbols as paleographic shorthand that
+% Junicode does not cover.  Map them to printable reader-facing fallbacks for
+% LaTeX/PDF rather than letting XeLaTeX drop the glyph.
+\IfFileExists{newunicodechar.sty}{%
+  \usepackage{newunicodechar}%
+  \newunicodechar{ℏ}{h}%
+  \newunicodechar{∣}{\textbar{}}%
+  \newunicodechar{̘}{}%
+}{}
+
 \makeatletter
 \def\@subtitle{}
 \providecommand{\subtitle}[1]{\gdef\@subtitle{#1}}
