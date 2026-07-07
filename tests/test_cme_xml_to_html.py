@@ -298,10 +298,25 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         )
 
         needspace = r"\Needspace{6\baselineskip}%"
-        quoted_dropcap = r'"\cmeLettrine{A}{lpha} paragraph starts with quote.'
+        quoted_dropcap = r'\cmeLettrineAnte{"}{A}{lpha} paragraph starts with quote.'
         self.assertIn(needspace, latex)
         self.assertIn(quoted_dropcap, latex)
         self.assertLess(latex.index(needspace), latex.index(quoted_dropcap))
+        self.assertNotIn(r'"\cmeLettrine{A}{lpha}', latex)
+
+    def test_separate_leading_quote_is_absorbed_into_emphasized_dropcap(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <P>" <HI REND="i">Dixit Mater Iesu</HI> follows.</P>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r'\emph{\cmeLettrineAnte{"}{D}{ixit} Mater Iesu}', latex)
+        self.assertNotIn(r'" \emph{\cmeLettrine{D}{ixit}', latex)
 
     def test_lineated_heading_does_not_reserve_dropcap_opening_space(self) -> None:
         latex = self.render_latex(
@@ -316,6 +331,24 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
 
         self.assertNotIn(r"\Needspace{20\baselineskip}%", latex)
 
+    def test_hard_line_break_opening_does_not_receive_or_defer_dropcap(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1 TYPE="sermon"><HEAD>Line Break Fixture</HEAD>
+                <P>First preserved line<LB />second preserved line</P>
+                <P>Later prose should not receive a deferred drop cap.</P>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r"First preserved line\\", latex)
+        self.assertNotIn(r"\Needspace{20\baselineskip}%", latex)
+        self.assertNotIn(r"\Needspace{6\baselineskip}%", latex)
+        self.assertNotIn(r"\cmeLettrine{F}{irst} preserved line", latex)
+        self.assertNotIn(r"\cmeLettrine{L}{ater} prose", latex)
+
     def test_needspace_fallbacks_are_idempotent(self) -> None:
         lettrine_header = (MODULE_PATH.parent / "pandoc-latex-lettrine.tex").read_text(
             encoding="utf-8"
@@ -329,6 +362,53 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertNotIn(r"\newcommand{\Needspace}[1]{}", lettrine_header)
         self.assertNotIn(r"\newcommand{\Needspace}[1]{}", pagebreak_header)
         self.assertNotIn(r"\Needspace{6\baselineskip}%", lettrine_header)
+
+    def test_lettrine_ante_fallback_preserves_leading_punctuation(self) -> None:
+        if shutil.which("xelatex") is None or shutil.which("pdftotext") is None:
+            self.skipTest("xelatex and pdftotext are required")
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            source = temp / "ante-fallback.tex"
+            header = (MODULE_PATH.parent / "pandoc-latex-lettrine.tex").resolve()
+            source.write_text(
+                rf"""
+                \documentclass{{article}}
+                \input{{{header}}}
+                \begin{{document}}
+                \cmehaslettrinefalse
+                \cmeLettrineAnte{{"}}{{A}}{{lpha}}
+                \par
+                \cmeLettrineWithFontHookAnte{{\relax}}{{"}}{{B}}{{eta}}
+                \end{{document}}
+                """,
+                encoding="utf-8",
+            )
+            subprocess.run(
+                [
+                    "xelatex",
+                    "-interaction=nonstopmode",
+                    "-halt-on-error",
+                    str(source),
+                ],
+                cwd=temp,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            result = subprocess.run(
+                ["pdftotext", str(source.with_suffix(".pdf")), "-"],
+                cwd=temp,
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+
+        text = " ".join(result.stdout.split())
+        self.assertRegex(text, r'["”]Alpha')
+        self.assertRegex(text, r'["”]Beta')
 
     def test_latex_notes_in_verse_lines_render_as_footnotes(self) -> None:
         latex = self.render_latex(

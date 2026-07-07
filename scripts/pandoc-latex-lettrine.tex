@@ -2,9 +2,12 @@
 % Loaded automatically by scripts/pandoc-cme-xml for LaTeX/PDF output when
 % --lettrine is not "none".
 
+\newif\ifcmehaslettrine
 \IfFileExists{lettrine.sty}{%
   \usepackage{lettrine}%
+  \cmehaslettrinetrue%
 }{%
+  \cmehaslettrinefalse%
   \PackageWarningNoLine{cme-lettrine}{lettrine.sty not found; CME drop caps will be set inline}%
   \providecommand{\lettrine}[3][]{#2#3}%
 }
@@ -20,8 +23,25 @@
   \lettrine[lines=3,lhang=0.05,nindent=0em]{#1}{#2}%
 }
 
+\newcommand{\cmeLettrinePlainAnte}[3]{%
+  \ifcmehaslettrine
+    \lettrine[lines=3,lhang=0.05,nindent=0em,ante={#1}]{#2}{#3}%
+  \else
+    #1#2#3%
+  \fi
+}
+
 \newcommand{\cmeLettrineWithFontHook}[3]{%
   \lettrine[lines=3,lhang=0.05,nindent=0em]{\begingroup#1#2\endgroup}{#3}%
 }
 
+\newcommand{\cmeLettrineWithFontHookAnte}[4]{%
+  \ifcmehaslettrine
+    \lettrine[lines=3,lhang=0.05,nindent=0em,ante={#2}]{\begingroup#1#3\endgroup}{#4}%
+  \else
+    #2{\begingroup#1#3\endgroup}#4%
+  \fi
+}
+
 \newcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}
+\newcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{#1}{#2}{#3}}

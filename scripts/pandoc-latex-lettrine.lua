@@ -73,6 +73,10 @@ local function escape_tex(text)
   return text:gsub("[\\{}$&%%#_^~]", tex_escapes)
 end
 
+local function trim(text)
+  return (text:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
 local function has_class_in(el, class_set)
   if not el.classes then
     return false
@@ -140,20 +144,36 @@ local function split_at_first_letter_cluster(text)
   return nil
 end
 
-local function lettrine_replacement(text)
+local function text_has_alphabetic(text)
+  for _, codepoint in utf8.codes(text) do
+    if is_alphabetic_codepoint(codepoint) then
+      return true
+    end
+  end
+  return false
+end
+
+local function normalize_ante_text(text)
+  return trim(text)
+end
+
+local function lettrine_replacement(text, ante_text)
   local split = split_at_first_letter_cluster(text)
   if not split then
     return nil
   end
 
-  local replacement = pandoc.List()
-  if split.prefix ~= "" then
-    replacement:insert(pandoc.Str(split.prefix))
+  local ante = normalize_ante_text((ante_text or "") .. split.prefix)
+  local command
+  if ante ~= "" then
+    command = "\\cmeLettrineAnte{" .. escape_tex(ante) .. "}{"
+      .. escape_tex(split.initial) .. "}{" .. escape_tex(split.rest) .. "}"
+  else
+    command = "\\cmeLettrine{" .. escape_tex(split.initial) .. "}{" .. escape_tex(split.rest) .. "}"
   end
-  replacement:insert(pandoc.RawInline(
-    "latex",
-    "\\cmeLettrine{" .. escape_tex(split.initial) .. "}{" .. escape_tex(split.rest) .. "}"
-  ))
+
+  local replacement = pandoc.List()
+  replacement:insert(pandoc.RawInline("latex", command))
   return replacement
 end
 
@@ -192,31 +212,66 @@ end
 
 local mark_inline
 
-local function mark_inlines(inlines)
+local function inline_ante_text(inline)
+  if inline.t == "Space" or inline.t == "SoftBreak" then
+    return " "
+  end
+  if inline.t ~= "Str" then
+    return nil
+  end
+
+  local text = inline_text(inline)
+  if text == "" or text_has_alphabetic(text) or text:match("%d") then
+    return nil
+  end
+  return text
+end
+
+local function mark_inlines(inlines, ante_text)
   local updated = pandoc.List()
-  for index, inline in ipairs(inlines) do
-    local replacement, marked = mark_inline(inline)
-    if marked then
-      for _, replacement_inline in ipairs(replacement) do
-        updated:insert(replacement_inline)
-      end
-      for remaining = index + 1, #inlines do
-        updated:insert(inlines[remaining])
-      end
-      return updated, true
+  local pending_ante_inlines = pandoc.List()
+  local pending_ante_text = ante_text or ""
+  local collecting_ante = true
+
+  local function flush_pending_ante()
+    for _, pending_inline in ipairs(pending_ante_inlines) do
+      updated:insert(pending_inline)
     end
-    updated:insert(inline)
+    pending_ante_inlines = pandoc.List()
+    pending_ante_text = ""
+  end
+
+  for index, inline in ipairs(inlines) do
+    local inline_ante = collecting_ante and inline_ante_text(inline) or nil
+    if inline_ante then
+      pending_ante_inlines:insert(inline)
+      pending_ante_text = pending_ante_text .. inline_ante
+    else
+      local replacement, marked = mark_inline(inline, pending_ante_text)
+      if marked then
+        for _, replacement_inline in ipairs(replacement) do
+          updated:insert(replacement_inline)
+        end
+        for remaining = index + 1, #inlines do
+          updated:insert(inlines[remaining])
+        end
+        return updated, true
+      end
+      flush_pending_ante()
+      updated:insert(inline)
+      collecting_ante = false
+    end
   end
   return inlines, false
 end
 
-mark_inline = function(inline)
+mark_inline = function(inline, ante_text)
   if is_skipped_inline(inline) then
     return nil, false
   end
 
   if inline.t == "Str" then
-    local replacement = lettrine_replacement(inline_text(inline))
+    local replacement = lettrine_replacement(inline_text(inline), ante_text)
     if replacement then
       return replacement, true
     end
@@ -224,7 +279,7 @@ mark_inline = function(inline)
   end
 
   if recursive_inline_types[inline.t] and inline.content then
-    local content, marked = mark_inlines(inline.content)
+    local content, marked = mark_inlines(inline.content, ante_text)
     if marked then
       inline.content = content
       return single_inline_list(inline), true
@@ -232,10 +287,6 @@ mark_inline = function(inline)
   end
 
   return nil, false
-end
-
-local function trim(text)
-  return (text:gsub("^%s+", ""):gsub("%s+$", ""))
 end
 
 local function inlines_plain_text(inlines)
@@ -279,6 +330,23 @@ local function first_visible_inline(inlines)
     end
   end
   return nil
+end
+
+local function inlines_have_hard_line_break(inlines)
+  for _, inline in ipairs(inlines) do
+    if inline.t == "LineBreak" then
+      return true
+    end
+    if plain_text_inline_types[inline.t] and inline.content and inlines_have_hard_line_break(inline.content) then
+      return true
+    end
+  end
+  return false
+end
+
+local function is_hard_line_break_block(block)
+  return (block.t == "Para" or block.t == "Plain")
+    and inlines_have_hard_line_break(block.content)
 end
 
 local function first_visible_inline_deep(inlines)
@@ -518,7 +586,8 @@ end
 
 local function should_skip_dropcap_paragraph(block)
   local text = inlines_plain_text(block.content)
-  return begins_with_bracketed_note_label(text)
+  return is_hard_line_break_block(block)
+    or begins_with_bracketed_note_label(text)
     or is_short_margin_or_editorial_label(text)
     or begins_with_underlined_label(block.content)
     or begins_with_emphasized_label(block.content)
@@ -598,12 +667,17 @@ function Pandoc(doc)
         section_opening_space_reserved = false
         processed:insert(block)
       elseif pending_dropcap and (block.t == "Para" or block.t == "Plain") then
-        if can_receive_dropcap(block) then
-          processed:insert(pandoc.RawBlock("latex", "\\Needspace{6\\baselineskip}%"))
-        end
-        if mark_first_word(block) then
+        if is_hard_line_break_block(block) then
           pending_dropcap = false
           section_opening_space_reserved = false
+        else
+          if can_receive_dropcap(block) then
+            processed:insert(pandoc.RawBlock("latex", "\\Needspace{6\\baselineskip}%"))
+          end
+          if mark_first_word(block) then
+            pending_dropcap = false
+            section_opening_space_reserved = false
+          end
         end
         processed:insert(block)
       else

@@ -65,6 +65,7 @@ write_lettrine_mode_header() {
       cat <<'LATEX'
 % CME lettrine mode: plain body-font initial.
 \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}
+\renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{#1}{#2}{#3}}
 LATEX
       ;;
     goudyinitialen)
@@ -73,9 +74,11 @@ LATEX
 \IfFileExists{GoudyIn.sty}{%
   \usepackage{GoudyIn}%
   \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\GoudyInfamily}{##1}{##2}}%
+  \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrineWithFontHookAnte{\GoudyInfamily}{##1}{##2}{##3}}%
 }{%
   \PackageWarningNoLine{cme-lettrine}{GoudyIn.sty not found; falling back to plain lettrine}%
   \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{##1}{##2}}%
+  \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{##1}{##2}{##3}}%
 }
 LATEX
       ;;
@@ -85,9 +88,11 @@ LATEX
 \IfFileExists{GotIn.sty}{%
   \usepackage{GotIn}%
   \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\GotInfamily}{##1}{##2}}%
+  \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrineWithFontHookAnte{\GotInfamily}{##1}{##2}{##3}}%
 }{%
   \PackageWarningNoLine{cme-lettrine}{GotIn.sty not found; falling back to plain lettrine}%
   \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{##1}{##2}}%
+  \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{##1}{##2}{##3}}%
 }
 LATEX
       ;;
@@ -98,18 +103,22 @@ LATEX
 \@ifundefined{IfFontExistsTF}{%
   \PackageWarningNoLine{cme-lettrine}{\string\IfFontExistsTF not available; falling back to plain lettrine}%
   \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+  \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{#1}{#2}{#3}}%
 }{%
   \IfFontExistsTF{Baroque Initials}{%
     \@ifundefined{newfontfamily}{%
       \PackageWarningNoLine{cme-lettrine}{\string\newfontfamily not available; falling back to plain lettrine}%
       \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+      \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{#1}{#2}{#3}}%
     }{%
       \newfontfamily\cmeBaroqueInitials{Baroque Initials}%
       \renewcommand{\cmeLettrine}[2]{\cmeLettrineWithFontHook{\cmeBaroqueInitials}{#1}{#2}}%
+      \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrineWithFontHookAnte{\cmeBaroqueInitials}{#1}{#2}{#3}}%
     }%
   }{%
     \PackageWarningNoLine{cme-lettrine}{Baroque Initials font not found; falling back to plain lettrine}%
     \renewcommand{\cmeLettrine}[2]{\cmeLettrinePlain{#1}{#2}}%
+    \renewcommand{\cmeLettrineAnte}[3]{\cmeLettrinePlainAnte{#1}{#2}{#3}}%
   }%
 }
 \makeatother
