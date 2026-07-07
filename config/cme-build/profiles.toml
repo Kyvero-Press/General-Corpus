@@ -1,0 +1,54 @@
+[profiles.print-pdf]
+description = "5x8 print PDF with notes rendered as footnotes and plain lettrines."
+output_format = "pdf"
+extension = "pdf"
+output_template = "build/profile/{work}.pdf"
+xml_format = "auto"
+notes = "footnotes"
+standalone = true
+toc = true
+pdf_engine = "xelatex"
+lettrine = "plain"
+modules = [
+  "book-frontmatter",
+  "colophon",
+  "running-heads",
+  "lettrine",
+  "footnotes",
+  "verse-lines",
+  "pagebreaks",
+]
+variables = [
+  { name = "documentclass", value = "book", unless_variable = "documentclass" },
+  { name = "mainfont", value = "Junicode-Regular.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "BoldFont=Junicode-Bold.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "ItalicFont=Junicode-Italic.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "BoldItalicFont=Junicode-BoldItalic.otf", unless_variable = "mainfont" },
+  { name = "geometry", value = "paperwidth=5in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "paperheight=8in", unless_any_variable = ["geometry", "papersize"] },
+]
+
+[profiles.reader-pdf-no-notes]
+inherits = "print-pdf"
+description = "5x8 reader PDF with source notes dropped and no footnote filter."
+output_template = "build/profile/{work}.reader.pdf"
+notes = "drop"
+modules = [
+  "book-frontmatter",
+  "colophon",
+  "running-heads",
+  "lettrine",
+  "verse-lines",
+  "pagebreaks",
+]
+
+[profiles.epub]
+description = "EPUB3 reader output with inline notes and no LaTeX modules."
+output_format = "epub"
+extension = "epub"
+output_template = "build/profile/{work}.epub"
+xml_format = "auto"
+notes = "inline"
+standalone = true
+to = "epub3"
+modules = []

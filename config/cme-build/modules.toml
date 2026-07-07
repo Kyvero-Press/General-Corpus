@@ -1,0 +1,37 @@
+[modules.book-frontmatter]
+description = "Book title/frontmatter LaTeX definitions."
+include_in_header = ["scripts/pandoc-book-frontmatter.tex"]
+
+[modules.colophon]
+description = "Generated CME source colophon placed before the body."
+include_before_body = ["{colophon_tex}"]
+generated = ["colophon_tex"]
+xml_flags = ["--omit-source-metadata"]
+
+[modules.running-heads]
+description = "LaTeX running-head cleanup filter."
+lua_filters = ["scripts/pandoc-latex-running-heads.lua"]
+
+[modules.lettrine]
+description = "Plain/decorative LaTeX lettrines."
+include_in_header = [
+  "scripts/pandoc-latex-lettrine.tex",
+  "{lettrine_mode_tex}",
+]
+lua_filters = ["scripts/pandoc-latex-lettrine.lua"]
+generated = ["lettrine_mode_tex"]
+
+[modules.footnotes]
+description = "Convert CME inline note spans to LaTeX footnotes."
+lua_filters = ["scripts/pandoc-latex-footnotes.lua"]
+
+[modules.verse-lines]
+description = "Subtle fifth-line verse numbering for LaTeX/PDF."
+include_in_header = ["scripts/pandoc-latex-verse-lines.tex"]
+lua_filters = ["scripts/pandoc-latex-verse-lines.lua"]
+xml_flags = ["--verse-line-metadata"]
+
+[modules.pagebreaks]
+description = "LaTeX page-break spacing helpers and filter."
+include_in_header = ["scripts/pandoc-latex-pagebreaks.tex"]
+lua_filters = ["scripts/pandoc-latex-pagebreaks.lua"]
