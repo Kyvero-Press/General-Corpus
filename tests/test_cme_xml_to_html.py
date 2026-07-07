@@ -212,6 +212,51 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertNotIn(r"\cmeLettrine{O}{xford} Text Archive copy.", latex)
         self.assertIn(r"\cmeLettrine{I}{n} Dei nomine begins the body.", latex)
 
+    def test_cme00065_style_nested_initial_heads_are_in_pdf_title(self) -> None:
+        latex = self.render_latex(
+            """
+            <ETS>
+              <TEMPHEAD />
+              <EEBO><IDG><BIBNO>CME00065</BIBNO></IDG><TEXT><BODY>
+                <DIV1 TYPE="poem">
+                  <PB N="16" REF="1" />
+                  <DIV2 N="H." TYPE="version">
+                    <HEAD>H.</HEAD>
+                    <HEAD>DE TYOPHILO CLERICO NARRATIO.</HEAD>
+                    <LG><L>A bisschop wond biȝond þe se,</L></LG>
+                  </DIV2>
+                </DIV1>
+              </BODY></TEXT></EEBO>
+            </ETS>
+            """
+        )
+
+        self.assertIn("pdftitle={H. --- DE TYOPHILO CLERICO NARRATIO.}", latex)
+        self.assertIn(r"\title{H. --- DE TYOPHILO CLERICO NARRATIO.}", latex)
+
+    def test_latex_notes_in_verse_lines_render_as_footnotes(self) -> None:
+        latex = self.render_latex(
+            """
+            <ETS>
+              <TEMPHEAD />
+              <EEBO><IDG><BIBNO>CME00065</BIBNO></IDG><TEXT><BODY>
+                <DIV1 TYPE="poem"><DIV2 N="H." TYPE="version">
+                  <HEAD>H.</HEAD>
+                  <HEAD>DE TYOPHILO CLERICO NARRATIO.</HEAD>
+                  <LG>
+                    <L>A bisschop wond biȝond þe se,</L>
+                    <L>and Cicile hight [þe same cete <NOTE N="1)" PLACE="foot">þonne þe cuntre <HI REND="italic">T. Schon im blick</HI> cuntre.</NOTE>.</L>
+                  </LG>
+                </DIV2></DIV1>
+              </BODY></TEXT></EEBO>
+            </ETS>
+            """
+        )
+
+        self.assertIn(r"\footnote{þonne þe cuntre", latex)
+        self.assertIn(r"\emph{T. Schon im blick}", latex)
+        self.assertNotIn(r"{{[}þonne þe cuntre", latex)
+
     def test_fallback_title_excludes_heading_notes_without_mid_word_truncation(self) -> None:
         latex = self.render_latex(
             """

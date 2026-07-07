@@ -380,8 +380,38 @@ def looks_like_incipit(value: str) -> bool:
     return lowered.startswith(("here begynneth", "here beginneth", "here begins", "here bygynneth"))
 
 
+def initial_body_heading_parts(root: etree._Element, fmt: str) -> list[str]:
+    for text_node in primary_text_nodes(root, fmt):
+        body = first_child(text_node, "BODY")
+        container = body if body is not None else text_node
+        current = container
+        for _ in range(8):
+            children = [child for child in child_elements(current) if tagu(child) not in MILESTONE_TAGS]
+            if not children:
+                break
+
+            heading_parts: list[str] = []
+            for child in children:
+                if tagu(child) != "HEAD":
+                    break
+                heading_parts.append(title_text(child))
+            if heading_parts:
+                return unique_title_parts(heading_parts)
+
+            first = children[0]
+            if DIV_TAG_RE.match(tagu(first)) or tagu(first) == "DIV":
+                current = first
+                continue
+            break
+    return []
+
+
 def body_title_supplements(root: etree._Element, fmt: str, title: str) -> list[str]:
     supplements: list[str] = []
+    initial_headings = initial_body_heading_parts(root, fmt)
+    if initial_headings and same_title(initial_headings[0], title):
+        supplements.extend(initial_headings[1:])
+
     for text_node in primary_text_nodes(root, fmt):
         container = first_child(text_node, "BODY")
         if container is None:
@@ -868,10 +898,10 @@ def render_milestone(el: etree._Element, opts: Options) -> str:
 def render_note(el: etree._Element, opts: Options) -> str:
     if not opts.include_notes:
         return ""
-    value = text_content(el)
-    if not value:
+    body = render_inline_children(el, opts).strip()
+    if not has_visible_html(body):
         return ""
-    return f'<span{render_attrs(el, "note")}>[{html_text(value)}]</span>'
+    return f'<span{render_attrs(el, "note")}>[{body}]</span>'
 
 
 def table_column_count(el: etree._Element) -> int:
@@ -1337,12 +1367,12 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
     root = parsed.root
     meta = metadata(root, fmt, path, parsed)
     title = meta.get("title", path.stem)
+    display_title = meta.get("full_title") or title
     author = meta.get("author") or "Anonymous"
-    subtitle_meta = (
-        f'<meta name="subtitle" content="{html_attr(meta["subtitle"])}" />\n'
-        if meta.get("subtitle")
-        else ""
-    )
+    # Pandoc's LaTeX template uses the HTML <title> for PDF metadata and the
+    # title page.  Fold CME subtitle/head supplements into that title string;
+    # the separately generated colophon still records title/subtitle fields.
+    subtitle_meta = ""
     original_date_meta = (
         f'<meta name="date" content="{html_attr(meta["original_date"])}" />\n'
         if meta.get("original_date")
@@ -1379,7 +1409,7 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>{html_text(title)}</title>
+<title>{html_text(display_title)}</title>
 <meta name="author" content="{html_attr(author)}" />
 {subtitle_meta}{original_date_meta}<style>
 body {{ line-height: 1.35; }}

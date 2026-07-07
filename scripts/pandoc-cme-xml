@@ -358,6 +358,7 @@ if [[ "$is_latex_output" -eq 1 ]]; then
   if [[ "$lettrine_mode" != "none" ]]; then
     pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-lettrine.lua")
   fi
+  pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-footnotes.lua")
   pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-verse-lines.lua")
   pandoc_args+=(--lua-filter "$script_dir/pandoc-latex-pagebreaks.lua")
 fi
