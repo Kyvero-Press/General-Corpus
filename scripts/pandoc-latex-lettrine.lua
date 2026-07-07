@@ -537,23 +537,56 @@ local function mark_first_word(block)
   return marked
 end
 
+local function can_receive_dropcap(block)
+  return (block.t == "Para" or block.t == "Plain")
+    and not should_skip_dropcap_paragraph(block)
+    and first_visible_inline(block.content) ~= nil
+end
+
+local function is_running_head_mark(block)
+  return block.t == "RawBlock"
+    and block.format == "latex"
+    and block.text:match("^\\markright{") ~= nil
+end
+
+local function next_block_receives_dropcap(blocks, start_index)
+  for index = start_index + 1, #blocks do
+    local next_block = blocks[index]
+    if is_running_head_mark(next_block) then
+      -- The running-head filter inserts \markright immediately after headings;
+      -- it should not break the heading/opening-paragraph keep-with-next check.
+    elseif can_receive_dropcap(next_block) then
+      return true
+    else
+      return false
+    end
+  end
+  return false
+end
+
 function Pandoc(doc)
   if not FORMAT:match("latex") then
     return nil
   end
 
   local pending_dropcap = true
+  local section_opening_space_reserved = false
 
   local function process_blocks(blocks)
     local processed = pandoc.List()
-    for _, block in ipairs(blocks) do
+    for index, block in ipairs(blocks) do
       if block.t == "Header" then
         pending_dropcap = true
+        section_opening_space_reserved = next_block_receives_dropcap(blocks, index)
+        if section_opening_space_reserved then
+          processed:insert(pandoc.RawBlock("latex", "\\Needspace{20\\baselineskip}%"))
+        end
         processed:insert(block)
       elseif block.t == "Div" then
         if has_skipped_class(block) then
           if pending_dropcap and consumes_pending_dropcap(block) then
             pending_dropcap = false
+            section_opening_space_reserved = false
           end
           processed:insert(block)
         else
@@ -562,10 +595,15 @@ function Pandoc(doc)
         end
       elseif pending_dropcap and block.t == "LineBlock" then
         pending_dropcap = false
+        section_opening_space_reserved = false
         processed:insert(block)
       elseif pending_dropcap and (block.t == "Para" or block.t == "Plain") then
+        if can_receive_dropcap(block) then
+          processed:insert(pandoc.RawBlock("latex", "\\Needspace{6\\baselineskip}%"))
+        end
         if mark_first_word(block) then
           pending_dropcap = false
+          section_opening_space_reserved = false
         end
         processed:insert(block)
       else

@@ -251,6 +251,85 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
             self.assertNotIn(r"\thepage", line)
         self.assertIn(r"\fancyfoot[C]{\small\thepage}", latex)
 
+    def test_lettrines_reserve_space_before_page_breaks(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <P>Alpha paragraph starts a section.</P>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r"\usepackage{needspace}", latex)
+        self.assertIn(r"\Needspace{6\baselineskip}%", latex)
+        self.assertNotIn(r"\Needspace{20\baselineskip}%", latex)
+
+    def test_heading_before_dropcap_reserves_section_opening_space(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1 TYPE="prose"><HEAD>Fixture Heading</HEAD>
+                <P>Alpha paragraph starts a section.</P>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        section_needspace = r"\Needspace{20\baselineskip}%"
+        dropcap_needspace = r"\Needspace{6\baselineskip}%"
+        section = r"\section{Fixture Heading}"
+        lettrine = r"\cmeLettrine{A}{lpha} paragraph starts a section."
+        self.assertIn(section_needspace, latex)
+        self.assertLess(latex.index(section_needspace), latex.index(section))
+        self.assertLess(latex.index(section), latex.index(dropcap_needspace, latex.index(section)))
+        self.assertLess(latex.index(dropcap_needspace, latex.index(section)), latex.index(lettrine))
+
+    def test_punctuation_prefixed_dropcap_keeps_prefix_with_initial(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <P>"Alpha paragraph starts with quote.</P>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        needspace = r"\Needspace{6\baselineskip}%"
+        quoted_dropcap = r'"\cmeLettrine{A}{lpha} paragraph starts with quote.'
+        self.assertIn(needspace, latex)
+        self.assertIn(quoted_dropcap, latex)
+        self.assertLess(latex.index(needspace), latex.index(quoted_dropcap))
+
+    def test_lineated_heading_does_not_reserve_dropcap_opening_space(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1 TYPE="poem"><HEAD>Lineated Fixture</HEAD>
+                <L N="1">at london in englonde</L>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertNotIn(r"\Needspace{20\baselineskip}%", latex)
+
+    def test_needspace_fallbacks_are_idempotent(self) -> None:
+        lettrine_header = (MODULE_PATH.parent / "pandoc-latex-lettrine.tex").read_text(
+            encoding="utf-8"
+        )
+        pagebreak_header = (MODULE_PATH.parent / "pandoc-latex-pagebreaks.tex").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(r"\providecommand{\Needspace}[1]{}", lettrine_header)
+        self.assertIn(r"\providecommand{\Needspace}[1]{}", pagebreak_header)
+        self.assertNotIn(r"\newcommand{\Needspace}[1]{}", lettrine_header)
+        self.assertNotIn(r"\newcommand{\Needspace}[1]{}", pagebreak_header)
+        self.assertNotIn(r"\Needspace{6\baselineskip}%", lettrine_header)
+
     def test_latex_notes_in_verse_lines_render_as_footnotes(self) -> None:
         latex = self.render_latex(
             """
