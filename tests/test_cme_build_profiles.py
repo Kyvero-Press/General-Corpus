@@ -5,6 +5,7 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "cme_build_profiles.py"
@@ -37,7 +38,7 @@ class CmeBuildProfilesTests(unittest.TestCase):
 
         self.assertEqual(
             config.profile_names(),
-            ["epub", "print-pdf", "reader-pdf-no-notes"],
+            ["epub", "lulu-paperback-5x8-print-pdf", "print-pdf", "reader-pdf-no-notes"],
         )
 
     def test_print_pdf_expands_current_latex_defaults_and_order(self) -> None:
@@ -133,6 +134,32 @@ class CmeBuildProfilesTests(unittest.TestCase):
         self.assertIn("--omit-source-metadata", plan["xml"]["options"])
         self.assertIn("--verse-line-metadata", plan["xml"]["options"])
 
+    def test_lulu_paperback_profile_uses_bleed_sized_geometry(self) -> None:
+        plan = self.resolve(
+            "lulu-paperback-5x8-print-pdf",
+            output_path="build/profile/Gawain.lulu.pdf",
+        )
+
+        self.assertEqual(plan["output_format"], "pdf")
+        self.assertEqual(plan["notes"], "footnotes")
+        variables = [(variable["name"], variable["value"]) for variable in plan["pandoc"]["variables"]]
+        self.assertIn(("geometry", "paperwidth=5.25in"), variables)
+        self.assertIn(("geometry", "paperheight=8.25in"), variables)
+        self.assertIn(("geometry", "layoutwidth=5in"), variables)
+        self.assertIn(("geometry", "layoutheight=8in"), variables)
+        self.assertIn(("geometry", "layouthoffset=0.125in"), variables)
+        self.assertIn(("geometry", "layoutvoffset=0.125in"), variables)
+        self.assertEqual(
+            cme_build_profiles.expected_lulu_page_size_points("5x8"),
+            (378.0, 594.0),
+        )
+
+    def test_preflight_page_size_parser_accepts_single_page_pdfinfo_output(self) -> None:
+        self.assertEqual(
+            cme_build_profiles._parse_page_size_points("Page    1 size:  378 x 594 pts\n"),
+            (378.0, 594.0),
+        )
+
     def test_epub_uses_epub3_without_latex_modules_or_filters(self) -> None:
         plan = self.resolve("epub", output_path="build/profile/Gawain.epub")
 
@@ -162,6 +189,52 @@ class CmeBuildProfilesTests(unittest.TestCase):
         self.assertEqual(exit_code, 2)
         self.assertEqual(stdout.getvalue(), "")
         self.assertIn("Unexpected arguments for list-profiles", stderr.getvalue())
+
+    def test_preflight_missing_pdf_reports_failure_without_crashing(self) -> None:
+        missing = REPO_ROOT / "build" / "does-not-exist.pdf"
+        stdout = io.StringIO()
+
+        result = cme_build_profiles.preflight_lulu_pdf(missing)
+        with contextlib.redirect_stdout(stdout):
+            cme_build_profiles.emit_preflight(result, json_output=False)
+
+        self.assertFalse(result["passed"])
+        self.assertIsNone(result["page_size_points"])
+        output = stdout.getvalue()
+        self.assertIn("FAIL", output)
+        self.assertIn("page size: unavailable", output)
+        self.assertIn("Missing PDF", output)
+
+    def test_run_text_command_reports_missing_poppler_tool(self) -> None:
+        with mock.patch.object(cme_build_profiles.subprocess, "run", side_effect=FileNotFoundError):
+            with self.assertRaisesRegex(cme_build_profiles.BuildProfileError, "pdfinfo not found"):
+                cme_build_profiles._run_text_command(["pdfinfo", "missing.pdf"])
+
+    def test_run_text_command_reports_stderr_from_poppler_tool(self) -> None:
+        error = cme_build_profiles.subprocess.CalledProcessError(
+            1,
+            ["pdfinfo", "bad.pdf"],
+            output="",
+            stderr="Syntax Error: not a PDF",
+        )
+        with mock.patch.object(cme_build_profiles.subprocess, "run", side_effect=error):
+            with self.assertRaisesRegex(cme_build_profiles.BuildProfileError, "Syntax Error: not a PDF"):
+                cme_build_profiles._run_text_command(["pdfinfo", "bad.pdf"])
+
+    def test_preflight_cli_reports_tool_errors_without_silent_exit(self) -> None:
+        stdout = io.StringIO()
+        stderr = io.StringIO()
+        with mock.patch.object(
+            cme_build_profiles,
+            "_run_text_command",
+            side_effect=cme_build_profiles.BuildProfileError("pdfinfo failed with exit code 1: broken PDF"),
+        ):
+            with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
+                exit_code = cme_build_profiles.main(["preflight-lulu", str(REPO_ROOT / ".gitignore"), "--json"])
+
+        self.assertEqual(exit_code, 2)
+        self.assertEqual(stdout.getvalue(), "")
+        self.assertIn("pdfinfo failed with exit code 1: broken PDF", stderr.getvalue())
 
 
 if __name__ == "__main__":

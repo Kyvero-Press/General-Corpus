@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -502,6 +503,199 @@ def run_single(
         return plan
 
 
+POINTS_PER_INCH = 72.0
+TRIM_SIZES_IN = {
+    "5x8": (5.0, 8.0),
+    "5x8in": (5.0, 8.0),
+    "5x8-in": (5.0, 8.0),
+}
+BINDING_PAGE_LIMITS = {
+    "paperback-perfect": (32, 800),
+}
+PAGE_SIZE_RE = re.compile(r"^Page(?:\s+\d+)?\s+size:\s+([0-9.]+) x ([0-9.]+) pts", re.MULTILINE)
+PAGES_RE = re.compile(r"^Pages:\s+(\d+)", re.MULTILINE)
+ENCRYPTED_RE = re.compile(r"^Encrypted:\s+(\S+)", re.MULTILINE)
+
+
+def normalize_trim(trim: str) -> str:
+    normalized = trim.lower().replace(" ", "").replace("×", "x")
+    if normalized not in TRIM_SIZES_IN:
+        known = ", ".join(sorted(TRIM_SIZES_IN))
+        raise BuildProfileError(f"Unsupported trim '{trim}'. Known trims: {known}")
+    return normalized
+
+
+def trim_size_inches(trim: str) -> tuple[float, float]:
+    return TRIM_SIZES_IN[normalize_trim(trim)]
+
+
+def expected_lulu_page_size_points(trim: str, bleed: float = 0.125) -> tuple[float, float]:
+    width, height = trim_size_inches(trim)
+    return ((width + 2 * bleed) * POINTS_PER_INCH, (height + 2 * bleed) * POINTS_PER_INCH)
+
+
+def _run_text_command(command: Sequence[str]) -> str:
+    try:
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    except FileNotFoundError as exc:
+        tool = command[0] if command else "command"
+        raise BuildProfileError(f"{tool} not found; install poppler-utils and ensure it is on PATH") from exc
+    except subprocess.CalledProcessError as exc:
+        tool = command[0] if command else "command"
+        stderr = (exc.stderr or "").strip()
+        stdout = (exc.stdout or "").strip()
+        detail = stderr or stdout or "no diagnostic output"
+        raise BuildProfileError(f"{tool} failed with exit code {exc.returncode}: {detail}") from exc
+    return result.stdout
+
+
+def _parse_required_int(pattern: re.Pattern[str], text: str, label: str) -> int:
+    match = pattern.search(text)
+    if not match:
+        raise BuildProfileError(f"Could not parse {label} from pdfinfo output")
+    return int(match.group(1))
+
+
+def _parse_page_size_points(text: str) -> tuple[float, float]:
+    match = PAGE_SIZE_RE.search(text)
+    if not match:
+        raise BuildProfileError("Could not parse page size from pdfinfo output")
+    return (float(match.group(1)), float(match.group(2)))
+
+
+def _parse_encrypted(text: str) -> str:
+    match = ENCRYPTED_RE.search(text)
+    if not match:
+        return "unknown"
+    return match.group(1).lower()
+
+
+def _font_rows(pdffonts_output: str) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for line in pdffonts_output.splitlines():
+        if not line.strip() or line.startswith("name ") or line.startswith("----"):
+            continue
+        parts = line.split()
+        if len(parts) < 6:
+            continue
+        rows.append({"name": parts[0], "embedded": parts[-5], "subset": parts[-4], "unicode": parts[-3]})
+    return rows
+
+
+def preflight_lulu_pdf(
+    pdf_path: Path | str,
+    trim: str = "5x8",
+    binding: str = "paperback-perfect",
+    bleed: float = 0.125,
+    tolerance_points: float = 0.5,
+) -> dict[str, Any]:
+    path = Path(pdf_path)
+    checks: list[dict[str, Any]] = []
+
+    def add_check(name: str, passed: bool, detail: str) -> None:
+        checks.append({"name": name, "passed": bool(passed), "detail": detail})
+
+    if not path.exists():
+        add_check("file-exists", False, f"Missing PDF: {path}")
+        expected_size = expected_lulu_page_size_points(trim, bleed)
+        return {
+            "pdf": str(path),
+            "trim": trim,
+            "binding": binding,
+            "bleed_in": bleed,
+            "pages": None,
+            "page_size_points": None,
+            "expected_page_size_points": {"width": expected_size[0], "height": expected_size[1]},
+            "encrypted": None,
+            "fonts": [],
+            "checks": checks,
+            "passed": False,
+        }
+    add_check("file-exists", True, str(path))
+
+    info = _run_text_command(["pdfinfo", str(path)])
+    pages = _parse_required_int(PAGES_RE, info, "page count")
+    first_page_size = _parse_page_size_points(info)
+    encrypted = _parse_encrypted(info)
+    expected_size = expected_lulu_page_size_points(trim, bleed)
+    page_size_ok = all(abs(actual - expected) <= tolerance_points for actual, expected in zip(first_page_size, expected_size))
+    add_check(
+        "page-size",
+        page_size_ok,
+        f"first page {first_page_size[0]:.2f} x {first_page_size[1]:.2f} pt; expected "
+        f"{expected_size[0]:.2f} x {expected_size[1]:.2f} pt for trim {trim} with {bleed:g}in bleed",
+    )
+
+    unique_page_sizes: set[tuple[float, float]] = set()
+    for page in range(1, pages + 1):
+        page_info = _run_text_command(["pdfinfo", "-f", str(page), "-l", str(page), str(path)])
+        size = _parse_page_size_points(page_info)
+        unique_page_sizes.add((round(size[0], 2), round(size[1], 2)))
+    add_check(
+        "uniform-page-size",
+        len(unique_page_sizes) == 1,
+        f"unique page sizes: {sorted(unique_page_sizes)}",
+    )
+
+    add_check("not-encrypted", encrypted == "no", f"Encrypted: {encrypted}")
+
+    if binding not in BINDING_PAGE_LIMITS:
+        raise BuildProfileError(f"Unsupported binding '{binding}'. Known bindings: {', '.join(sorted(BINDING_PAGE_LIMITS))}")
+    minimum, maximum = BINDING_PAGE_LIMITS[binding]
+    add_check("page-count-range", minimum <= pages <= maximum, f"{pages} pages; {binding} requires {minimum}-{maximum}")
+
+    fonts_output = _run_text_command(["pdffonts", str(path)])
+    fonts = _font_rows(fonts_output)
+    unembedded = [font["name"] for font in fonts if font["embedded"].lower() != "yes"]
+    add_check(
+        "fonts-embedded",
+        not unembedded,
+        "all fonts embedded" if not unembedded else "unembedded fonts: " + ", ".join(unembedded),
+    )
+
+    return {
+        "pdf": str(path),
+        "trim": trim,
+        "binding": binding,
+        "bleed_in": bleed,
+        "pages": pages,
+        "page_size_points": {"width": first_page_size[0], "height": first_page_size[1]},
+        "expected_page_size_points": {"width": expected_size[0], "height": expected_size[1]},
+        "encrypted": encrypted,
+        "fonts": fonts,
+        "checks": checks,
+        "passed": all(check["passed"] for check in checks),
+    }
+
+
+def emit_preflight(result: Mapping[str, Any], json_output: bool) -> None:
+    if json_output:
+        json.dump(result, sys.stdout, indent=2, ensure_ascii=False)
+        sys.stdout.write("\n")
+        return
+    status = "PASS" if result.get("passed") else "FAIL"
+    print(f"{status}: {result.get('pdf')}")
+    print(f"pages: {result.get('pages')}  trim: {result.get('trim')}  binding: {result.get('binding')}")
+    size = result.get("page_size_points")
+    expected = result.get("expected_page_size_points")
+    if isinstance(size, Mapping) and isinstance(expected, Mapping):
+        print(
+            "page size: "
+            f"{size.get('width'):.2f} x {size.get('height'):.2f} pt "
+            f"(expected {expected.get('width'):.2f} x {expected.get('height'):.2f} pt)"
+        )
+    elif isinstance(expected, Mapping):
+        print(
+            "page size: unavailable "
+            f"(expected {expected.get('width'):.2f} x {expected.get('height'):.2f} pt)"
+        )
+    else:
+        print("page size: unavailable")
+    for check in result.get("checks", []):
+        marker = "✓" if check["passed"] else "✗"
+        print(f"{marker} {check['name']}: {check['detail']}")
+
+
 def _add_common_build_args(parser: argparse.ArgumentParser, require_output: bool) -> None:
     parser.add_argument("input", type=Path, help="CME XML input file")
     parser.add_argument("--profile", required=True, help="Build profile name")
@@ -521,6 +715,17 @@ def make_arg_parser() -> argparse.ArgumentParser:
 
     single_parser = subparsers.add_parser("single", help="Build one input with one profile")
     _add_common_build_args(single_parser, require_output=True)
+
+    preflight_parser = subparsers.add_parser("preflight-lulu", help="Preflight a Lulu interior PDF")
+    preflight_parser.add_argument("pdf", type=Path, help="Interior PDF to inspect")
+    preflight_parser.add_argument("--trim", default="5x8", help="Trim size, currently 5x8")
+    preflight_parser.add_argument(
+        "--binding",
+        default="paperback-perfect",
+        help="Binding/product rule, currently paperback-perfect",
+    )
+    preflight_parser.add_argument("--bleed", type=float, default=0.125, help="Bleed in inches on each edge")
+    preflight_parser.add_argument("--json", action="store_true", help="Emit preflight result as JSON")
 
     return parser
 
@@ -568,6 +773,13 @@ def main(argv: Sequence[str] | None = None) -> int:
                 lettrine=args.lettrine,
             )
             return 0
+
+        if args.command == "preflight-lulu":
+            if passthrough_args:
+                raise BuildProfileError(f"Unexpected arguments for preflight-lulu: {' '.join(passthrough_args)}")
+            result = preflight_lulu_pdf(args.pdf, trim=args.trim, binding=args.binding, bleed=args.bleed)
+            emit_preflight(result, args.json)
+            return 0 if result["passed"] else 1
 
         parser.error(f"Unknown command: {args.command}")
     except BuildProfileError as exc:

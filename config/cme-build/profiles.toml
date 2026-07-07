@@ -42,6 +42,24 @@ modules = [
   "pagebreaks",
 ]
 
+[profiles.lulu-paperback-5x8-print-pdf]
+inherits = "print-pdf"
+description = "Lulu-ready 5x8 paperback PDF with 0.125in bleed-sized pages."
+output_template = "build/profile/{work}.lulu.pdf"
+variables = [
+  { name = "documentclass", value = "book", unless_variable = "documentclass" },
+  { name = "mainfont", value = "Junicode-Regular.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "BoldFont=Junicode-Bold.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "ItalicFont=Junicode-Italic.otf", unless_variable = "mainfont" },
+  { name = "mainfontoptions", value = "BoldItalicFont=Junicode-BoldItalic.otf", unless_variable = "mainfont" },
+  { name = "geometry", value = "paperwidth=5.25in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "paperheight=8.25in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "layoutwidth=5in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "layoutheight=8in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "layouthoffset=0.125in", unless_any_variable = ["geometry", "papersize"] },
+  { name = "geometry", value = "layoutvoffset=0.125in", unless_any_variable = ["geometry", "papersize"] },
+]
+
 [profiles.epub]
 description = "EPUB3 reader output with inline notes and no LaTeX modules."
 output_format = "epub"
