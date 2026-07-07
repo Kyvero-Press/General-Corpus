@@ -234,6 +234,23 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertIn("pdftitle={H. --- DE TYOPHILO CLERICO NARRATIO.}", latex)
         self.assertIn(r"\title{H. --- DE TYOPHILO CLERICO NARRATIO.}", latex)
 
+    def test_running_head_page_numbers_move_to_footer(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY><DIV1 TYPE="poem"><HEAD>Lineated Fixture</HEAD>
+                <P>Text body for a numbered page.</P>
+              </DIV1></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        fancyhead_lines = [line for line in latex.splitlines() if r"\fancyhead" in line]
+        self.assertTrue(fancyhead_lines)
+        for line in fancyhead_lines:
+            self.assertNotIn(r"\thepage", line)
+        self.assertIn(r"\fancyfoot[C]{\small\thepage}", latex)
+
     def test_latex_notes_in_verse_lines_render_as_footnotes(self) -> None:
         latex = self.render_latex(
             """
