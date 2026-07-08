@@ -200,6 +200,15 @@ class BodyDivision:
 
 
 @dataclass(frozen=True)
+class TitlePageCandidate:
+    line: int | None
+    path: str
+    tag: str
+    type_value: str
+    text: str
+
+
+@dataclass(frozen=True)
 class AuditState:
     source: Path
     fmt: str
@@ -419,6 +428,17 @@ def division_kind(el: etree._Element) -> str | None:
     return None
 
 
+def is_title_page_candidate(el: etree._Element) -> bool:
+    if tagu(el) == "TITLEPAGE":
+        return True
+    if not is_div(el):
+        return False
+    typ = normalized_type(el)
+    if "verso" in typ or "omitted" in typ:
+        return False
+    return typ.startswith("titlepage") or typ.startswith("volumetitlepage")
+
+
 def direct_head_text(el: etree._Element) -> str:
     for child in child_elements(el):
         if tagu(child) == "HEAD":
@@ -594,6 +614,51 @@ def collect_front_part_expectations(root: etree._Element, fmt: str) -> tuple[Fro
     return tuple(expectations)
 
 
+def collect_title_pages(root: etree._Element, fmt: str) -> tuple[TitlePageCandidate, ...]:
+    candidates: list[TitlePageCandidate] = []
+    seen: set[str] = set()
+    for text_node in primary_text_nodes(root, fmt):
+        for el in text_node.iter():
+            if not isinstance(el.tag, str):
+                continue
+            key = el.getroottree().getpath(el)
+            if key in seen:
+                continue
+            seen.add(key)
+            if not is_title_page_candidate(el):
+                continue
+            candidates.append(
+                TitlePageCandidate(
+                    line=el.sourceline,
+                    path=element_path(el),
+                    tag=tagu(el),
+                    type_value=attr(el, "TYPE") or "",
+                    text=short_text(title_text(el), 90),
+                )
+            )
+    return tuple(candidates)
+
+
+def title_page_context(candidates: Sequence[TitlePageCandidate]) -> str:
+    parts = [f"count={len(candidates)}"]
+    shown = candidates[:8]
+    for index, candidate in enumerate(shown, start=1):
+        fields = [
+            f"#{index}",
+            f"line={candidate.line if candidate.line is not None else 'unknown'}",
+            f"path={candidate.path}",
+            f"tag={candidate.tag}",
+        ]
+        if candidate.type_value:
+            fields.append(f"type={candidate.type_value}")
+        if candidate.text:
+            fields.append(f"text={candidate.text}")
+        parts.append(" ".join(fields))
+    if len(shown) < len(candidates):
+        parts.append(f"(+{len(candidates) - len(shown)} more)")
+    return "; ".join(parts)
+
+
 def contents_indicator_text(el: etree._Element) -> str:
     return " ".join(part for part in [attr(el, "TYPE") or "", direct_head_text(el)] if part)
 
@@ -740,6 +805,17 @@ def collect_toc_refs(root: etree._Element, fmt: str) -> tuple[TocRef, ...]:
     return tuple(refs)
 
 
+def audit_multiple_title_pages(state: AuditState, root: etree._Element) -> None:
+    candidates = collect_title_pages(root, state.fmt)
+    if len(candidates) <= 1:
+        return
+    state.add(
+        "multiple_title_pages",
+        "Multiple title-page-like elements were found in the source XML.",
+        title_page_context(candidates),
+    )
+
+
 def audit_front_part_expectations(state: AuditState, root: etree._Element, body: BodyIndex) -> None:
     expectations = collect_front_part_expectations(root, state.fmt)
     expected = sorted({expectation.ordinal for expectation in expectations})
@@ -852,6 +928,7 @@ def audit_file(path: Path) -> list[Issue]:
 
     state = AuditState(path, fmt, [])
     body = build_body_index(parsed.root, fmt)
+    audit_multiple_title_pages(state, parsed.root)
     audit_front_part_expectations(state, parsed.root, body)
     audit_toc_refs(state, parsed.root, body)
     audit_body_sequence_gaps(state, parsed.root)

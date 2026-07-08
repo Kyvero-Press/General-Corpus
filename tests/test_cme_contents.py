@@ -26,6 +26,7 @@ KNTTOUR_L = REPO_ROOT / "CME" / "source" / "CME_phase_1-2" / "KntTour-L.xml"
 AHA2727 = REPO_ROOT / "CME" / "source" / "CME_phase_1-2" / "aha2727.xml"
 AHA2749 = REPO_ROOT / "CME" / "source" / "CME_phase_1-2" / "aha2749.xml"
 MALORYWKS2 = REPO_ROOT / "CME" / "source" / "CME_phase_1-2" / "MaloryWks2.xml"
+EGILDS = REPO_ROOT / "CME" / "source" / "CME_phase_1-2" / "EGilds.xml"
 
 
 def audit_xml(xml: str) -> list[object]:
@@ -332,6 +333,62 @@ class ContentsReferenceAuditTests(unittest.TestCase):
         self.assertNotIn("toc_part_missing_from_body", issue_codes(issues))
 
 
+class MultipleTitlePageAuditTests(unittest.TestCase):
+    def test_two_literal_titlepages_are_reported(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT><FRONT>
+              <TITLEPAGE><TITLEPART>First title</TITLEPART></TITLEPAGE>
+              <TITLEPAGE><TITLEPART>Second title</TITLEPART></TITLEPAGE>
+            </FRONT><BODY><P>Body.</P></BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("multiple_title_pages", issue_codes(issues))
+        issue = next(issue for issue in issues if issue.code == "multiple_title_pages")
+        self.assertIn("count=2", issue.context)
+        self.assertIn("tag=TITLEPAGE", issue.context)
+
+    def test_literal_and_typed_title_page_are_reported(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT><FRONT>
+              <TITLEPAGE><TITLEPART>First title</TITLEPART></TITLEPAGE>
+              <DIV1 TYPE="title page"><P>Second title</P></DIV1>
+            </FRONT><BODY><P>Body.</P></BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("multiple_title_pages", issue_codes(issues))
+        issue = next(issue for issue in issues if issue.code == "multiple_title_pages")
+        self.assertIn("type=title page", issue.context)
+
+    def test_verso_and_omitted_title_page_divisions_are_not_counted(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT><FRONT>
+              <TITLEPAGE><TITLEPART>Only title</TITLEPART></TITLEPAGE>
+              <DIV1 TYPE="verso of title page"><P>Verso.</P></DIV1>
+              <DIV1 TYPE="omitted temporary title pages"><P>Omitted.</P></DIV1>
+            </FRONT><BODY><P>Body.</P></BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertNotIn("multiple_title_pages", issue_codes(issues))
+
+    def test_typed_title_page_divisions_are_reported(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT><FRONT>
+              <DIV1 TYPE="volume title page"><P>Volume title.</P></DIV1>
+              <DIV1 TYPE="title page of part"><P>Part title.</P></DIV1>
+            </FRONT><BODY><P>Body.</P></BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("multiple_title_pages", issue_codes(issues))
+
+
 class FormatFilterTests(unittest.TestCase):
     def test_headwords_format_is_excluded(self) -> None:
         issues = audit_xml("<HEADWORDS><ENTRY><WORD>abide</WORD></ENTRY></HEADWORDS>")
@@ -346,6 +403,14 @@ class RealCmeRegressionTests(unittest.TestCase):
 
         self.assertIn("front_parts_not_represented_in_body", codes)
         self.assertFalse([code for code in codes if "line" in code])
+
+    def test_egilds_multiple_title_pages_are_reported(self) -> None:
+        issues = cme_contents_audit.audit_file(EGILDS)
+        matching = [issue for issue in issues if issue.code == "multiple_title_pages"]
+
+        self.assertEqual(len(matching), 1)
+        self.assertIn("count=2", matching[0].context)
+        self.assertNotIn("verso of title page", matching[0].context)
 
     def test_aha2738_front_parts_are_represented_in_body(self) -> None:
         issues = cme_contents_audit.audit_file(AHA2738)
@@ -440,7 +505,10 @@ class ContentsAuditCliTests(unittest.TestCase):
             report = root / "contents.tsv"
             source.write_text(
                 """
-                <DLPSTEXTCLASS><TEXT><BODY>
+                <DLPSTEXTCLASS><TEXT><FRONT>
+                  <TITLEPAGE><TITLEPART>First title.</TITLEPART></TITLEPAGE>
+                  <TITLEPAGE><TITLEPART>Second title.</TITLEPART></TITLEPAGE>
+                </FRONT><BODY>
                   <DIV1 TYPE="chapter" N="1"><P>One.</P></DIV1>
                   <DIV1 TYPE="chapter" N="3"><P>Three.</P></DIV1>
                 </BODY></TEXT></DLPSTEXTCLASS>
@@ -458,6 +526,7 @@ class ContentsAuditCliTests(unittest.TestCase):
             text = report.read_text(encoding="utf-8")
             self.assertIn("source\tformat\tcode\tmessage\tcontext", text.splitlines()[0])
             self.assertIn("body_chapter_sequence_gap", text)
+            self.assertIn("multiple_title_pages", text)
 
 
 if __name__ == "__main__":
