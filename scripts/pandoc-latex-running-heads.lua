@@ -124,6 +124,45 @@ local function stringify_meta_value(value)
   return tostring(value)
 end
 
+local function normalize_marker(value)
+  return pandoc.text.lower(trim(value or "")):gsub("[^%w]+", "")
+end
+
+local skipped_header_classes = {
+  nonrunning = true,
+  unlisted = true,
+  unnumbered = true,
+  ["source-apparatus"] = true,
+  ["source-titlepage"] = true,
+  ["source-contents"] = true,
+}
+
+local function marker_is_nonrunning_type(marker)
+  return marker == "toc"
+    or marker == "content"
+    or marker:match("contents") ~= nil
+    or marker:match("titlepage") ~= nil
+end
+
+local function header_is_nonrunning(block)
+  if block.classes then
+    for _, class in ipairs(block.classes) do
+      if skipped_header_classes[class] or skipped_header_classes[normalize_marker(class)] then
+        return true
+      end
+    end
+  end
+  if block.attributes then
+    for _, name in ipairs({ "data-type", "type" }) do
+      local value = block.attributes[name]
+      if value and marker_is_nonrunning_type(normalize_marker(value)) then
+        return true
+      end
+    end
+  end
+  return false
+end
+
 local process_blocks
 
 local function running_head_mark_for_header(block)
@@ -142,9 +181,11 @@ process_blocks = function(blocks)
       updated_blocks:insert(block)
     elseif block.t == "Header" then
       updated_blocks:insert(block)
-      local mark = running_head_mark_for_header(block)
-      if mark then
-        updated_blocks:insert(mark)
+      if not header_is_nonrunning(block) then
+        local mark = running_head_mark_for_header(block)
+        if mark then
+          updated_blocks:insert(mark)
+        end
       end
     else
       updated_blocks:insert(block)

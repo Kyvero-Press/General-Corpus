@@ -539,6 +539,72 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     return data
 
 
+def normalized_marker(value: str | None) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (value or "").casefold())
+
+
+def marker_is_titlepage_like(marker: str) -> bool:
+    return "titlepage" in marker
+
+
+def marker_is_contents_like(marker: str) -> bool:
+    return marker in {"toc", "content"} or "contents" in marker
+
+
+def source_apparatus_classes(el: etree._Element) -> list[str]:
+    titlepage_like = False
+    contents_like = False
+    current: etree._Element | None = el
+    while current is not None and isinstance(current.tag, str):
+        marker = normalized_marker(attr(current, "TYPE"))
+        titlepage_like = titlepage_like or tagu(current) == "TITLEPAGE" or marker_is_titlepage_like(marker)
+        contents_like = contents_like or marker_is_contents_like(marker)
+        if titlepage_like or contents_like:
+            break
+        current = current.getparent()
+    if not (titlepage_like or contents_like):
+        return []
+    classes = ["source-apparatus", "nonrunning", "unlisted", "unnumbered"]
+    if titlepage_like:
+        classes.append("source-titlepage")
+    if contents_like:
+        classes.append("source-contents")
+    return classes
+
+
+def join_classes(*groups: str | Sequence[str] | None) -> str | None:
+    classes: list[str] = []
+    for group in groups:
+        if not group:
+            continue
+        if isinstance(group, str):
+            candidates = group.split()
+        else:
+            candidates = list(group)
+        for candidate in candidates:
+            if candidate and candidate not in classes:
+                classes.append(candidate)
+    return " ".join(classes) if classes else None
+
+
+def render_heading_attrs(
+    el: etree._Element,
+    classes: Sequence[str],
+    *,
+    preserve_attrs: bool = True,
+) -> str:
+    class_value = join_classes(classes)
+    if preserve_attrs:
+        return render_attrs(el, class_value)
+    pairs: list[tuple[str, str]] = []
+    if class_value:
+        pairs.append(("class", class_value))
+    type_value = attr(el, "TYPE")
+    if type_value:
+        pairs.append(("data-type", type_value))
+    return "".join(f' {name}="{html_attr(value)}"' for name, value in pairs)
+
+
 def render_attrs(
     el: etree._Element,
     css_class: str | None = None,
@@ -860,9 +926,10 @@ def render_div(el: etree._Element, opts: Options) -> str:
     if not clean_text(text_content(head)):
         fallback_bits = [attr(el, "TYPE"), attr(el, "N")]
         title = " ".join(bit for bit in fallback_bits if bit)[:120]
-    heading = f"<h{level}>{title}</h{level}>\n" if title else ""
+    apparatus_classes = source_apparatus_classes(el)
+    heading = f"<h{level}{render_heading_attrs(el, apparatus_classes, preserve_attrs=False)}>{title}</h{level}>\n" if title else ""
     body = render_children(el, opts, skip_first_head=head is not None)
-    return f"<section{render_attrs(el, 'div')}>\n{heading}{body}\n</section>\n"
+    return f"<section{render_attrs(el, join_classes('div', apparatus_classes))}>\n{heading}{body}\n</section>\n"
 
 
 def render_hi(el: etree._Element, opts: Options) -> str:
@@ -1061,6 +1128,7 @@ def render_paragraphish(
 
 
 def render_doctitle(el: etree._Element, opts: Options) -> str:
+    apparatus_classes = source_apparatus_classes(el)
     children = child_elements(el)
     if not children:
         body = html_text(el.text or "")
@@ -1071,7 +1139,7 @@ def render_doctitle(el: etree._Element, opts: Options) -> str:
         for index, child in enumerate(children):
             if tagu(child) == "TITLEPART":
                 parts.append(
-                    f"<span{render_attrs(child, 'titlepart')}>{render_inline_children(child, opts)}</span>"
+                    f"<span{render_attrs(child, join_classes('titlepart', apparatus_classes))}>{render_inline_children(child, opts)}</span>"
                 )
                 if index != len(children) - 1:
                     parts.append("<br />")
@@ -1080,7 +1148,7 @@ def render_doctitle(el: etree._Element, opts: Options) -> str:
             if child.tail:
                 parts.append(html_text(child.tail))
         body = "".join(parts)
-    return f"<h1{render_attrs(el, 'doctitle')}>{body}</h1>\n"
+    return f"<h1{render_heading_attrs(el, join_classes('doctitle', apparatus_classes).split())}>{body}</h1>\n"
 
 
 def render_list_item(el: etree._Element, opts: Options) -> str:
@@ -1217,13 +1285,14 @@ def render_node(el: etree._Element, opts: Options) -> str:
     if tag in {"P", "AB"}:
         return render_paragraphish(el, opts)
     if tag == "HEAD":
-        return f"<h3{render_attrs(el)}>{render_inline_children(el, opts)}</h3>\n"
+        apparatus_classes = source_apparatus_classes(el)
+        return f"<h3{render_heading_attrs(el, apparatus_classes)}>{render_inline_children(el, opts)}</h3>\n"
     if tag in {"DOCTITLE"}:
         return render_doctitle(el, opts)
     if tag in {"TITLEPART", "BYLINE", "DOCIMPRINT", "OPENER", "CLOSER", "SIGNED", "SALUTE", "TRAILER", "DATELINE"}:
         return render_paragraphish(el, opts, css_class=tag.lower())
     if tag in {"TITLEPAGE"}:
-        return f"<section{render_attrs(el, tag.lower())}>\n{render_children(el, opts)}</section>\n"
+        return f"<section{render_attrs(el, join_classes(tag.lower(), source_apparatus_classes(el)))}>\n{render_children(el, opts)}</section>\n"
     if tag in {"HEADNOTE", "ARGUMENT"}:
         return f"<div{render_attrs(el, tag.lower())}>{render_children(el, opts)}</div>\n"
     if tag == "EPIGRAPH":

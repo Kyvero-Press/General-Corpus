@@ -157,6 +157,76 @@ class RenderLgTrailingCloserTests(unittest.TestCase):
         self.assertIn('<div class="l">Second line</div>', html)
 
 
+class SourceApparatusRenderingTests(unittest.TestCase):
+    def test_standalone_head_and_doctitle_preserve_source_attributes(self) -> None:
+        head = etree.fromstring(b'<HEAD ID="h1" N="I" NODE="n1" LANG="enm" REND="center">Heading</HEAD>')
+        doctitle = etree.fromstring(b'<DOCTITLE ID="dt1" N="T" NODE="n2" LANG="enm" REND="display">Title</DOCTITLE>')
+        options = cme_xml_to_html.Options()
+
+        head_html = cme_xml_to_html.render_node(head, options)
+        doctitle_html = cme_xml_to_html.render_node(doctitle, options)
+
+        self.assertIn('<h3 id="h1" data-n="I" data-node="n1" lang="enm" data-rend="center">Heading</h3>', head_html)
+        self.assertIn('<h1 class="doctitle" id="dt1" data-n="T" data-node="n2" lang="enm" data-rend="display">Title</h1>', doctitle_html)
+
+    def test_literal_titlepage_sections_are_marked_as_source_apparatus(self) -> None:
+        titlepage = etree.fromstring(
+            b'<TITLEPAGE><DOCTITLE>Source Title</DOCTITLE><P>Publisher text.</P></TITLEPAGE>'
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_node(titlepage, options)
+
+        self.assertIn('class="titlepage source-apparatus nonrunning unlisted unnumbered source-titlepage"', html)
+        self.assertIn('<h1 class="doctitle source-apparatus nonrunning unlisted unnumbered source-titlepage">', html)
+
+    def test_source_titlepage_and_contents_sections_are_marked_unlisted_nonrunning(self) -> None:
+        titlepage = etree.fromstring(
+            b'<DIV1 TYPE="title page of part"><HEAD>Part Title</HEAD><P>Display title.</P></DIV1>'
+        )
+        contents = etree.fromstring(
+            b'<DIV1 TYPE="list of contents"><HEAD>List of Contents</HEAD><P>Entry.</P></DIV1>'
+        )
+        options = cme_xml_to_html.Options()
+
+        title_html = cme_xml_to_html.render_div(titlepage, options)
+        contents_html = cme_xml_to_html.render_div(contents, options)
+
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-titlepage"', title_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-titlepage" data-type="title page of part">Part Title</h2>', title_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-contents"', contents_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-contents" data-type="list of contents">List of Contents</h2>', contents_html)
+
+    def test_table_headings_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
+        contents = etree.fromstring(
+            b'''
+            <DIV1 TYPE="table of contents"><HEAD>Table of Contents</HEAD>
+              <P><TABLE><HEAD>Nested Table Heading</HEAD><ROW><CELL>Entry</CELL></ROW></TABLE></P>
+            </DIV1>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(contents, options)
+
+        self.assertIn('<h3 class="source-apparatus nonrunning unlisted unnumbered source-contents">Nested Table Heading</h3>', html)
+
+    def test_nested_divisions_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
+        contents = etree.fromstring(
+            b'''
+            <DIV1 TYPE="table of contents"><HEAD>Table of Contents</HEAD>
+              <DIV2><HEAD>Nested Entry Heading</HEAD><P>Entry text.</P></DIV2>
+            </DIV1>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(contents, options)
+
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-contents" data-type="table of contents">Table of Contents</h2>', html)
+        self.assertIn('<h3 class="source-apparatus nonrunning unlisted unnumbered source-contents">Nested Entry Heading</h3>', html)
+
+
 class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
     def render_latex(self, xml: str) -> str:
         if shutil.which("pandoc") is None:
@@ -303,7 +373,10 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
 
         self.assertIn("Her begynnythe a noble boke.", latex)
         self.assertNotIn(r"\cmeLettrine{H}{er} begynnythe", latex)
-        before_title_section = latex.split(r"\section{Part Title}", 1)[0].rsplit("\n", 4)[-1]
+        self.assertIn(r"\section*{Part Title}", latex)
+        self.assertNotIn(r"\section{Part Title}", latex)
+        self.assertNotIn(r"\markright{Part Title}", latex)
+        before_title_section = latex.split(r"\section*{Part Title}", 1)[0].rsplit("\n", 4)[-1]
         self.assertNotIn(r"\Needspace{20\baselineskip}%", before_title_section)
         self.assertIn(r"\cmeLettrine{A}{lpha} prose begins here.", latex)
 
@@ -324,6 +397,9 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         )
 
         self.assertIn("Alpha table entry should stay plain.", latex)
+        self.assertIn(r"\section*{List of Contents}", latex)
+        self.assertNotIn(r"\section{List of Contents}", latex)
+        self.assertNotIn(r"\markright{List of Contents}", latex)
         self.assertNotIn(r"\cmeLettrine{A}{lpha} table entry", latex)
         self.assertIn(r"\cmeLettrine{B}{eta} prose begins here.", latex)
 

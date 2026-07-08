@@ -8,6 +8,11 @@
 local skipped_container_classes = {
   titlepage = true,
   ["source-metadata"] = true,
+  ["source-apparatus"] = true,
+  ["source-titlepage"] = true,
+  ["source-contents"] = true,
+  nonrunning = true,
+  unlisted = true,
   apparatus = true,
   ["provenance-note"] = true,
   ["transcription-note"] = true,
@@ -54,6 +59,11 @@ local pending_consuming_container_classes = {
   item = true,
   castlist = true,
   castitem = true,
+  ["source-apparatus"] = true,
+  ["source-titlepage"] = true,
+  ["source-contents"] = true,
+  nonrunning = true,
+  unlisted = true,
 }
 
 local skipped_container_data_types = {
