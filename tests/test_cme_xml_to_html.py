@@ -178,6 +178,37 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
             )
             return output.read_text(encoding="utf-8")
 
+    def render_html_latex_fragment(self, html: str) -> str:
+        if shutil.which("pandoc") is None:
+            self.skipTest("pandoc is not installed")
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            source = temp / "fixture.html"
+            output = temp / "fixture.tex"
+            source.write_text(html, encoding="utf-8")
+
+            subprocess.run(
+                [
+                    "pandoc",
+                    "--from",
+                    "html",
+                    "--to",
+                    "latex",
+                    "--lua-filter",
+                    str(MODULE_PATH.parent / "pandoc-latex-lettrine.lua"),
+                    str(source),
+                    "-o",
+                    str(output),
+                ],
+                check=True,
+                cwd=MODULE_PATH.parents[1],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            return output.read_text(encoding="utf-8")
+
     def test_lineated_blocks_do_not_receive_prose_lettrines(self) -> None:
         latex = self.render_latex(
             """
@@ -253,6 +284,96 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertIn("Origin of the Religious Gilds", latex)
         self.assertNotIn(r"\cmeLettrine{O}{rigin} of the Religious Gilds", latex)
         self.assertIn(r"\cmeLettrine{I}{N} order to study", latex)
+
+    def test_title_page_of_part_sections_do_not_receive_dropcaps(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <DIV1 TYPE="title page of part"><HEAD>Part Title</HEAD>
+                  <P>Her begynnythe a noble boke.</P>
+                </DIV1>
+                <DIV1 TYPE="chapter"><HEAD>Chapter</HEAD>
+                  <P>Alpha prose begins here.</P>
+                </DIV1>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("Her begynnythe a noble boke.", latex)
+        self.assertNotIn(r"\cmeLettrine{H}{er} begynnythe", latex)
+        before_title_section = latex.split(r"\section{Part Title}", 1)[0].rsplit("\n", 4)[-1]
+        self.assertNotIn(r"\Needspace{20\baselineskip}%", before_title_section)
+        self.assertIn(r"\cmeLettrine{A}{lpha} prose begins here.", latex)
+
+    def test_list_of_contents_sections_do_not_receive_dropcaps(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><FRONT>
+                <DIV1 TYPE="list of contents"><HEAD>List of Contents</HEAD>
+                  <P>Alpha table entry should stay plain.</P>
+                </DIV1>
+                <DIV1 TYPE="preface"><HEAD>Preface</HEAD>
+                  <P>Beta prose begins here.</P>
+                </DIV1>
+              </FRONT></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("Alpha table entry should stay plain.", latex)
+        self.assertNotIn(r"\cmeLettrine{A}{lpha} table entry", latex)
+        self.assertIn(r"\cmeLettrine{B}{eta} prose begins here.", latex)
+
+    def test_titlepage_and_contents_type_variants_do_not_receive_dropcaps(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><FRONT>
+                <DIV1 TYPE="table of contents"><HEAD>Table of Contents</HEAD>
+                  <P>Alpha contents row should stay plain.</P>
+                </DIV1>
+                <DIV1 TYPE="volume title page"><HEAD>Volume Title</HEAD>
+                  <P>Beta volume title should stay plain.</P>
+                </DIV1>
+                <DIV1 TYPE="verso of title page"><HEAD>Verso</HEAD>
+                  <P>Gamma verso note should stay plain.</P>
+                </DIV1>
+                <DIV1 TYPE="title-page"><HEAD>Hyphenated Title Page</HEAD>
+                  <P>Delta title page should stay plain.</P>
+                </DIV1>
+                <DIV1 TYPE="preface"><HEAD>Preface</HEAD>
+                  <P>Epsilon prose begins here.</P>
+                </DIV1>
+              </FRONT></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertNotIn(r"\cmeLettrine{A}{lpha} contents row", latex)
+        self.assertNotIn(r"\cmeLettrine{B}{eta} volume title", latex)
+        self.assertNotIn(r"\cmeLettrine{G}{amma} verso note", latex)
+        self.assertNotIn(r"\cmeLettrine{D}{elta} title page", latex)
+        self.assertIn(r"\cmeLettrine{E}{psilon} prose begins here.", latex)
+
+    def test_raw_html_type_attribute_uses_same_nonrunning_classifier(self) -> None:
+        latex = self.render_html_latex_fragment(
+            """
+            <section type="title page of part">
+              <h1>Part Title</h1>
+              <p>Her raw title should stay plain.</p>
+            </section>
+            <section>
+              <h1>Chapter</h1>
+              <p>Alpha prose begins here.</p>
+            </section>
+            """
+        )
+
+        self.assertNotIn(r"\cmeLettrine{H}{er} raw title", latex)
+        self.assertIn(r"\cmeLettrine{A}{lpha} prose begins here.", latex)
 
     def test_cme00065_style_nested_initial_heads_are_in_pdf_title(self) -> None:
         latex = self.render_latex(

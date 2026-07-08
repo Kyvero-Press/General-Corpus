@@ -137,21 +137,40 @@ local function has_class_in(el, class_set)
   return false
 end
 
-local function has_attribute_value_in(el, names, value_set)
+local function marker_is_titlepage_like(marker)
+  return marker:match("titlepage") ~= nil
+end
+
+local function marker_is_contents_like(marker)
+  return marker == "toc"
+    or marker == "content"
+    or marker:match("contents") ~= nil
+end
+
+local function marker_is_nonrunning_type(marker, exact_set)
+  return exact_set[marker]
+    or marker_is_titlepage_like(marker)
+    or marker_is_contents_like(marker)
+end
+
+local function has_attribute_value_in(el, names, value_set, predicate)
   if not el.attributes then
     return false
   end
   for _, name in ipairs(names) do
     local value = el.attributes[name]
-    if value and value_set[normalize_marker(value)] then
-      return true
+    if value then
+      local marker = normalize_marker(value)
+      if value_set[marker] or (predicate and predicate(marker, value_set)) then
+        return true
+      end
     end
   end
   return false
 end
 
 local function has_data_type_in(el, value_set)
-  return has_attribute_value_in(el, { "data-type", "type" }, value_set)
+  return has_attribute_value_in(el, { "data-type", "type" }, value_set, marker_is_nonrunning_type)
 end
 
 local function has_skipped_class(el)
