@@ -547,6 +547,18 @@ def marker_is_titlepage_like(marker: str) -> bool:
     return "titlepage" in marker
 
 
+def element_is_in_front_matter(el: etree._Element) -> bool:
+    current: etree._Element | None = el
+    while current is not None and isinstance(current.tag, str):
+        name = tagu(current)
+        if name == "FRONT":
+            return True
+        if name == "BODY":
+            return False
+        current = current.getparent()
+    return False
+
+
 def marker_is_contents_like(marker: str) -> bool:
     return marker in {"toc", "content"} or "contents" in marker
 
@@ -557,7 +569,13 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
     current: etree._Element | None = el
     while current is not None and isinstance(current.tag, str):
         marker = normalized_marker(attr(current, "TYPE"))
-        titlepage_like = titlepage_like or tagu(current) == "TITLEPAGE" or marker_is_titlepage_like(marker)
+        front_title_like = marker == "title" and element_is_in_front_matter(current)
+        titlepage_like = (
+            titlepage_like
+            or tagu(current) == "TITLEPAGE"
+            or marker_is_titlepage_like(marker)
+            or front_title_like
+        )
         contents_like = contents_like or marker_is_contents_like(marker)
         if titlepage_like or contents_like:
             break
