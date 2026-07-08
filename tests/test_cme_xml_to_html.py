@@ -218,6 +218,25 @@ class SourceApparatusRenderingTests(unittest.TestCase):
         self.assertNotIn("source-apparatus", body_html)
         self.assertIn('<h2 data-type="Title">Body Title</h2>', body_html)
 
+    def test_front_omitted_front_matter_sections_are_marked_unlisted_nonrunning(self) -> None:
+        text = etree.fromstring(
+            b'''
+            <TEXT>
+              <FRONT>
+                <DIV1 TYPE="omitted front matter"><P>Figure caption.</P></DIV1>
+              </FRONT>
+            </TEXT>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+        front_div = text.xpath("./FRONT/DIV1")[0]
+
+        html = cme_xml_to_html.render_div(front_div, options)
+
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter"', html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter" data-type="omitted front matter">omitted front matter</h2>', html)
+        self.assertIn("<p>Figure caption.</p>", html)
+
     def test_table_headings_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
         contents = etree.fromstring(
             b'''

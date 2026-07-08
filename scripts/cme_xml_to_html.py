@@ -563,9 +563,14 @@ def marker_is_contents_like(marker: str) -> bool:
     return marker in {"toc", "content"} or "contents" in marker
 
 
+def marker_is_omitted_front_matter(marker: str) -> bool:
+    return marker == "omittedfrontmatter"
+
+
 def source_apparatus_classes(el: etree._Element) -> list[str]:
     titlepage_like = False
     contents_like = False
+    omitted_front_matter = False
     current: etree._Element | None = el
     while current is not None and isinstance(current.tag, str):
         marker = normalized_marker(attr(current, "TYPE"))
@@ -577,16 +582,21 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
             or front_title_like
         )
         contents_like = contents_like or marker_is_contents_like(marker)
-        if titlepage_like or contents_like:
+        omitted_front_matter = omitted_front_matter or (
+            marker_is_omitted_front_matter(marker) and element_is_in_front_matter(current)
+        )
+        if titlepage_like or contents_like or omitted_front_matter:
             break
         current = current.getparent()
-    if not (titlepage_like or contents_like):
+    if not (titlepage_like or contents_like or omitted_front_matter):
         return []
     classes = ["source-apparatus", "nonrunning", "unlisted", "unnumbered"]
     if titlepage_like:
         classes.append("source-titlepage")
     if contents_like:
         classes.append("source-contents")
+    if omitted_front_matter:
+        classes.append("source-omitted-frontmatter")
     return classes
 
 
