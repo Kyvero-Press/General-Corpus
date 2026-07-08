@@ -333,6 +333,39 @@ class ContentsReferenceAuditTests(unittest.TestCase):
         self.assertNotIn("toc_part_missing_from_body", issue_codes(issues))
 
 
+class MultipleContentsAuditTests(unittest.TestCase):
+    def test_single_contents_section_is_not_reported(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT>
+              <FRONT><DIV1 TYPE="TOC"><HEAD>Contents</HEAD></DIV1></FRONT>
+              <BODY><DIV1 TYPE="chapter" N="I"><P>One.</P></DIV1></BODY>
+            </TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertNotIn("multiple_contents_sections", issue_codes(issues))
+
+    def test_two_contents_sections_are_reported(self) -> None:
+        issues = audit_xml(
+            """
+            <DLPSTEXTCLASS><TEXT>
+              <FRONT>
+                <DIV1 TYPE="TOC"><HEAD>Contents</HEAD></DIV1>
+                <DIV1 TYPE="contents"><HEAD>More Contents</HEAD></DIV1>
+              </FRONT>
+              <BODY><DIV1 TYPE="chapter" N="I"><P>One.</P></DIV1></BODY>
+            </TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        matching = [issue for issue in issues if issue.code == "multiple_contents_sections"]
+        self.assertEqual(len(matching), 1)
+        self.assertIn("count=2", matching[0].context)
+        self.assertIn("type=TOC", matching[0].context)
+        self.assertIn("type=contents", matching[0].context)
+
+
 class MultipleTitlePageAuditTests(unittest.TestCase):
     def test_two_literal_titlepages_are_reported(self) -> None:
         issues = audit_xml(
@@ -411,6 +444,17 @@ class RealCmeRegressionTests(unittest.TestCase):
         self.assertEqual(len(matching), 1)
         self.assertIn("count=2", matching[0].context)
         self.assertNotIn("verso of title page", matching[0].context)
+
+    def test_egilds_multiple_contents_sections_are_reported(self) -> None:
+        issues = cme_contents_audit.audit_file(EGILDS)
+        matching = [issue for issue in issues if issue.code == "multiple_contents_sections"]
+
+        self.assertEqual(len(matching), 1)
+        self.assertIn("count=2", matching[0].context)
+        self.assertIn("DIV1[TYPE=TOC]", matching[0].context)
+        self.assertIn("DIV2[TYPE=contents]", matching[0].context)
+        self.assertIn("type=TOC", matching[0].context)
+        self.assertIn("type=contents", matching[0].context)
 
     def test_aha2738_front_parts_are_represented_in_body(self) -> None:
         issues = cme_contents_audit.audit_file(AHA2738)
@@ -508,6 +552,8 @@ class ContentsAuditCliTests(unittest.TestCase):
                 <DLPSTEXTCLASS><TEXT><FRONT>
                   <TITLEPAGE><TITLEPART>First title.</TITLEPART></TITLEPAGE>
                   <TITLEPAGE><TITLEPART>Second title.</TITLEPART></TITLEPAGE>
+                  <DIV1 TYPE="TOC"><HEAD>Contents</HEAD></DIV1>
+                  <DIV1 TYPE="contents"><HEAD>More Contents</HEAD></DIV1>
                 </FRONT><BODY>
                   <DIV1 TYPE="chapter" N="1"><P>One.</P></DIV1>
                   <DIV1 TYPE="chapter" N="3"><P>Three.</P></DIV1>
@@ -527,6 +573,7 @@ class ContentsAuditCliTests(unittest.TestCase):
             self.assertIn("source\tformat\tcode\tmessage\tcontext", text.splitlines()[0])
             self.assertIn("body_chapter_sequence_gap", text)
             self.assertIn("multiple_title_pages", text)
+            self.assertIn("multiple_contents_sections", text)
 
 
 if __name__ == "__main__":

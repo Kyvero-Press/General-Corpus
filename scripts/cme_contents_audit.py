@@ -209,6 +209,15 @@ class TitlePageCandidate:
 
 
 @dataclass(frozen=True)
+class ContentsCandidate:
+    line: int | None
+    path: str
+    tag: str
+    type_value: str
+    text: str
+
+
+@dataclass(frozen=True)
 class AuditState:
     source: Path
     fmt: str
@@ -659,6 +668,39 @@ def title_page_context(candidates: Sequence[TitlePageCandidate]) -> str:
     return "; ".join(parts)
 
 
+def collect_contents_sections(root: etree._Element, fmt: str) -> tuple[ContentsCandidate, ...]:
+    return tuple(
+        ContentsCandidate(
+            line=el.sourceline,
+            path=element_path(el),
+            tag=tagu(el),
+            type_value=attr(el, "TYPE") or "",
+            text=short_text(title_text(el), 90),
+        )
+        for el in contents_containers(root, fmt)
+    )
+
+
+def contents_section_context(candidates: Sequence[ContentsCandidate]) -> str:
+    parts = [f"count={len(candidates)}"]
+    shown = candidates[:8]
+    for index, candidate in enumerate(shown, start=1):
+        fields = [
+            f"#{index}",
+            f"line={candidate.line if candidate.line is not None else 'unknown'}",
+            f"path={candidate.path}",
+            f"tag={candidate.tag}",
+        ]
+        if candidate.type_value:
+            fields.append(f"type={candidate.type_value}")
+        if candidate.text:
+            fields.append(f"text={candidate.text}")
+        parts.append(" ".join(fields))
+    if len(shown) < len(candidates):
+        parts.append(f"(+{len(candidates) - len(shown)} more)")
+    return "; ".join(parts)
+
+
 def contents_indicator_text(el: etree._Element) -> str:
     return " ".join(part for part in [attr(el, "TYPE") or "", direct_head_text(el)] if part)
 
@@ -816,6 +858,17 @@ def audit_multiple_title_pages(state: AuditState, root: etree._Element) -> None:
     )
 
 
+def audit_multiple_contents_sections(state: AuditState, root: etree._Element) -> None:
+    candidates = collect_contents_sections(root, state.fmt)
+    if len(candidates) <= 1:
+        return
+    state.add(
+        "multiple_contents_sections",
+        "Multiple contents/table-of-contents sections were found in the source XML.",
+        contents_section_context(candidates),
+    )
+
+
 def audit_front_part_expectations(state: AuditState, root: etree._Element, body: BodyIndex) -> None:
     expectations = collect_front_part_expectations(root, state.fmt)
     expected = sorted({expectation.ordinal for expectation in expectations})
@@ -929,6 +982,7 @@ def audit_file(path: Path) -> list[Issue]:
     state = AuditState(path, fmt, [])
     body = build_body_index(parsed.root, fmt)
     audit_multiple_title_pages(state, parsed.root)
+    audit_multiple_contents_sections(state, parsed.root)
     audit_front_part_expectations(state, parsed.root, body)
     audit_toc_refs(state, parsed.root, body)
     audit_body_sequence_gaps(state, parsed.root)
