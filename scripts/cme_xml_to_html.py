@@ -563,8 +563,8 @@ def marker_is_contents_like(marker: str) -> bool:
     return marker in {"toc", "content"} or "contents" in marker
 
 
-def marker_is_omitted_front_matter(marker: str) -> bool:
-    return marker == "omittedfrontmatter"
+def marker_is_omitted_apparatus(marker: str) -> bool:
+    return "omitted" in marker
 
 
 def source_apparatus_classes(el: etree._Element) -> list[str]:
@@ -583,7 +583,7 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
         )
         contents_like = contents_like or marker_is_contents_like(marker)
         omitted_front_matter = omitted_front_matter or (
-            marker_is_omitted_front_matter(marker) and element_is_in_front_matter(current)
+            marker_is_omitted_apparatus(marker) and element_is_in_front_matter(current)
         )
         if titlepage_like or contents_like or omitted_front_matter:
             break
