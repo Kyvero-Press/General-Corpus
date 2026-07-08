@@ -33,6 +33,10 @@ local skipped_container_classes = {
   stage = true,
   direction = true,
   table = true,
+  list = true,
+  item = true,
+  castlist = true,
+  castitem = true,
 }
 
 local pending_consuming_container_classes = {
@@ -46,6 +50,46 @@ local pending_consuming_container_classes = {
   stage = true,
   direction = true,
   table = true,
+  list = true,
+  item = true,
+  castlist = true,
+  castitem = true,
+}
+
+local skipped_container_data_types = {
+  toc = true,
+  contents = true,
+  content = true,
+  tableofcontents = true,
+  titlepage = true,
+  titlepages = true,
+  volumetitlepage = true,
+  versooftitlepage = true,
+  dedication = true,
+  argument = true,
+  headnote = true,
+  editorialinterjection = true,
+}
+
+local pending_consuming_container_data_types = {
+  toc = true,
+  contents = true,
+  content = true,
+  tableofcontents = true,
+  titlepage = true,
+  titlepages = true,
+  volumetitlepage = true,
+  versooftitlepage = true,
+  dedication = true,
+  argument = true,
+  headnote = true,
+  editorialinterjection = true,
+}
+
+local pending_consuming_block_types = {
+  BulletList = true,
+  OrderedList = true,
+  DefinitionList = true,
 }
 
 local skipped_inline_classes = {
@@ -77,24 +121,47 @@ local function trim(text)
   return (text:gsub("^%s+", ""):gsub("%s+$", ""))
 end
 
+local function normalize_marker(value)
+  return pandoc.text.lower(trim(value or "")):gsub("[^%w]+", "")
+end
+
 local function has_class_in(el, class_set)
   if not el.classes then
     return false
   end
   for _, class in ipairs(el.classes) do
-    if class_set[class] then
+    if class_set[class] or class_set[normalize_marker(class)] then
       return true
     end
   end
   return false
 end
 
+local function has_attribute_value_in(el, names, value_set)
+  if not el.attributes then
+    return false
+  end
+  for _, name in ipairs(names) do
+    local value = el.attributes[name]
+    if value and value_set[normalize_marker(value)] then
+      return true
+    end
+  end
+  return false
+end
+
+local function has_data_type_in(el, value_set)
+  return has_attribute_value_in(el, { "data-type", "type" }, value_set)
+end
+
 local function has_skipped_class(el)
   return has_class_in(el, skipped_container_classes)
+    or has_data_type_in(el, skipped_container_data_types)
 end
 
 local function consumes_pending_dropcap(el)
   return has_class_in(el, pending_consuming_container_classes)
+    or has_data_type_in(el, pending_consuming_container_data_types)
 end
 
 local function is_skipped_inline(inline)
@@ -663,6 +730,10 @@ function Pandoc(doc)
           processed:insert(block)
         end
       elseif pending_dropcap and block.t == "LineBlock" then
+        pending_dropcap = false
+        section_opening_space_reserved = false
+        processed:insert(block)
+      elseif pending_dropcap and pending_consuming_block_types[block.t] then
         pending_dropcap = false
         section_opening_space_reserved = false
         processed:insert(block)

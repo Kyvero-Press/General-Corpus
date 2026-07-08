@@ -212,6 +212,48 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertNotIn(r"\cmeLettrine{O}{xford} Text Archive copy.", latex)
         self.assertIn(r"\cmeLettrine{I}{n} Dei nomine begins the body.", latex)
 
+    def test_egilds_toc_list_sections_do_not_receive_dropcaps(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><FRONT>
+                <DIV1 TYPE="TOC"><HEAD>Contents</HEAD>
+                  <LIST><HEAD>PART I.</HEAD>
+                    <ITEM>Gild Ordinances from Returns made, in English.</ITEM>
+                  </LIST>
+                </DIV1>
+                <DIV1 TYPE="preface"><HEAD>Preface</HEAD>
+                  <P>IN order to study the English labour-question.</P>
+                </DIV1>
+              </FRONT></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("Gild Ordinances from Returns made, in English.", latex)
+        self.assertNotIn(r"\cmeLettrine{G}{ild} Ordinances", latex)
+        self.assertIn(r"\cmeLettrine{I}{N} order to study", latex)
+
+    def test_egilds_argument_sections_do_not_receive_dropcaps(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><FRONT>
+                <DIV1 TYPE="argument"><HEAD>Argument</HEAD>
+                  <P>Origin of the Religious Gilds, p. lxxxi. The Capitulary.</P>
+                </DIV1>
+                <DIV1 TYPE="preface"><HEAD>Preface</HEAD>
+                  <P>IN order to study the English labour-question.</P>
+                </DIV1>
+              </FRONT></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("Origin of the Religious Gilds", latex)
+        self.assertNotIn(r"\cmeLettrine{O}{rigin} of the Religious Gilds", latex)
+        self.assertIn(r"\cmeLettrine{I}{N} order to study", latex)
+
     def test_cme00065_style_nested_initial_heads_are_in_pdf_title(self) -> None:
         latex = self.render_latex(
             """
