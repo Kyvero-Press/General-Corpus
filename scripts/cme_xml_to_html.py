@@ -346,6 +346,39 @@ def unique_title_parts(parts: Iterable[str]) -> list[str]:
     return result
 
 
+def normalized_marker(value: str | None) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (value or "").casefold())
+
+
+def marker_is_titlepage_like(marker: str) -> bool:
+    return "titlepage" in marker
+
+
+def source_titlepage_title_parts(el: etree._Element) -> list[str]:
+    doctitle = first_descendant(el, "DOCTITLE")
+    if doctitle is not None:
+        parts = [title_text(part) for part in child_elements(doctitle, "TITLEPART")]
+        parts = unique_title_parts(parts)
+        if parts:
+            return parts
+        doctitle_text = title_text(doctitle)
+        if doctitle_text:
+            return [doctitle_text]
+
+    heading_parts = unique_title_parts(
+        title_text(child) for child in child_elements(el) if tagu(child) == "HEAD"
+    )
+    if heading_parts:
+        return heading_parts
+
+    for child in child_elements(el):
+        if tagu(child) in {"P", "L"}:
+            paragraph_text = title_text(child)
+            if paragraph_text:
+                return [paragraph_text]
+    return []
+
+
 def titlepage_title_parts(root: etree._Element, fmt: str) -> list[str]:
     for text_node in primary_text_nodes(root, fmt):
         containers: list[etree._Element] = []
@@ -361,16 +394,11 @@ def titlepage_title_parts(root: etree._Element, fmt: str) -> list[str]:
                 child_tag = tagu(child)
                 if child_tag in MILESTONE_TAGS:
                     continue
-                if child_tag == "TITLEPAGE":
-                    doctitle = first_descendant(child, "DOCTITLE")
-                    if doctitle is not None:
-                        parts = [title_text(part) for part in child_elements(doctitle, "TITLEPART")]
-                        parts = unique_title_parts(parts)
-                        if parts:
-                            return parts
-                        doctitle_text = title_text(doctitle)
-                        if doctitle_text:
-                            return [doctitle_text]
+                marker = normalized_marker(attr(child, "TYPE"))
+                if child_tag == "TITLEPAGE" or marker_is_titlepage_like(marker):
+                    parts = source_titlepage_title_parts(child)
+                    if parts:
+                        return parts
                 break
     return []
 
@@ -537,14 +565,6 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     data.setdefault("title", source.stem)
     apply_display_title_metadata(root, fmt, data)
     return data
-
-
-def normalized_marker(value: str | None) -> str:
-    return re.sub(r"[^a-z0-9]+", "", (value or "").casefold())
-
-
-def marker_is_titlepage_like(marker: str) -> bool:
-    return "titlepage" in marker
 
 
 def element_is_in_front_matter(el: etree._Element) -> bool:

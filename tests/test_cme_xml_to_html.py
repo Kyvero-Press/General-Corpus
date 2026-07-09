@@ -218,6 +218,28 @@ class SourceApparatusRenderingTests(unittest.TestCase):
         self.assertNotIn("source-apparatus", body_html)
         self.assertIn('<h2 data-type="Title">Body Title</h2>', body_html)
 
+    def test_display_title_prefers_front_titlepage_div_over_body_contents_head(self) -> None:
+        root = etree.fromstring(
+            '''
+            <ETS><EEBO><IDG><BIBNO>CME00146</BIBNO></IDG><TEXT>
+              <FRONT>
+                <DIV1 TYPE="title page"><P>LIBER CURE COCORUM.</P><P>Publisher text.</P></DIV1>
+              </FRONT>
+              <BODY>
+                <DIV1 TYPE="introductory verses"><LG><L>Introductory line.</L></LG></DIV1>
+                <DIV1 TYPE="table of contents"><P><TABLE><HEAD>Incipit tabula cure, primo, de potagiis:—</HEAD></TABLE></P></DIV1>
+              </BODY>
+            </TEXT></EEBO></ETS>
+            '''.encode("utf-8")
+        )
+        parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+
+        meta = cme_xml_to_html.metadata(root, "ets-temphead-eebo", Path("CME00146.xml"), parsed)
+
+        self.assertEqual(meta["title"], "LIBER CURE COCORUM.")
+        self.assertEqual(meta["full_title"], "LIBER CURE COCORUM.")
+        self.assertNotIn("Incipit tabula", meta["title"])
+
     def test_omitted_front_or_back_apparatus_sections_are_marked_unlisted_nonrunning(self) -> None:
         text = etree.fromstring(
             b'''
