@@ -218,6 +218,34 @@ class SourceApparatusRenderingTests(unittest.TestCase):
         self.assertNotIn("source-apparatus", body_html)
         self.assertIn('<h2 data-type="Title">Body Title</h2>', body_html)
 
+    def test_front_half_title_sections_are_source_titlepage_apparatus_only_in_frontmatter(self) -> None:
+        text = etree.fromstring(
+            b'''
+            <TEXT>
+              <FRONT>
+                <DIV1 TYPE="half title"><HEAD>Half Title</HEAD><P>Front text.</P></DIV1>
+                <DIV1 TYPE="half titles"><HEAD>Half Titles</HEAD><P>Plural front text.</P></DIV1>
+              </FRONT>
+              <BODY><DIV1 TYPE="half title"><HEAD>Body Half Title</HEAD><P>Body text.</P></DIV1></BODY>
+            </TEXT>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+        front_div = text.xpath("./FRONT/DIV1")[0]
+        plural_front_div = text.xpath("./FRONT/DIV1")[1]
+        body_div = text.xpath("./BODY/DIV1")[0]
+
+        front_html = cme_xml_to_html.render_div(front_div, options)
+        plural_front_html = cme_xml_to_html.render_div(plural_front_div, options)
+        body_html = cme_xml_to_html.render_div(body_div, options)
+
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-titlepage"', front_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-titlepage" data-type="half title">Half Title</h2>', front_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-titlepage"', plural_front_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-titlepage" data-type="half titles">Half Titles</h2>', plural_front_html)
+        self.assertNotIn("source-apparatus", body_html)
+        self.assertIn('<h2 data-type="half title">Body Half Title</h2>', body_html)
+
     def test_display_title_prefers_front_titlepage_div_over_body_contents_head(self) -> None:
         root = etree.fromstring(
             '''

@@ -606,12 +606,15 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
     current: etree._Element | None = el
     while current is not None and isinstance(current.tag, str):
         marker = normalized_marker(attr(current, "TYPE"))
-        front_title_like = marker == "title" and element_is_in_front_matter(current)
+        in_front_matter = element_is_in_front_matter(current)
+        front_title_like = marker == "title" and in_front_matter
+        front_half_title_like = marker in {"halftitle", "halftitles"} and in_front_matter
         titlepage_like = (
             titlepage_like
             or tagu(current) == "TITLEPAGE"
             or marker_is_titlepage_like(marker)
             or front_title_like
+            or front_half_title_like
         )
         contents_like = contents_like or marker_is_contents_like(marker)
         omitted_apparatus = omitted_apparatus or (
