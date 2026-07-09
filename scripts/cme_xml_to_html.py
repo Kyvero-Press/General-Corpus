@@ -559,6 +559,18 @@ def element_is_in_front_matter(el: etree._Element) -> bool:
     return False
 
 
+def element_is_in_front_or_back_matter(el: etree._Element) -> bool:
+    current: etree._Element | None = el
+    while current is not None and isinstance(current.tag, str):
+        name = tagu(current)
+        if name in {"FRONT", "BACK"}:
+            return True
+        if name == "BODY":
+            return False
+        current = current.getparent()
+    return False
+
+
 def marker_is_contents_like(marker: str) -> bool:
     return marker in {"toc", "content"} or "contents" in marker
 
@@ -570,7 +582,7 @@ def marker_is_omitted_apparatus(marker: str) -> bool:
 def source_apparatus_classes(el: etree._Element) -> list[str]:
     titlepage_like = False
     contents_like = False
-    omitted_front_matter = False
+    omitted_apparatus = False
     current: etree._Element | None = el
     while current is not None and isinstance(current.tag, str):
         marker = normalized_marker(attr(current, "TYPE"))
@@ -582,21 +594,21 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
             or front_title_like
         )
         contents_like = contents_like or marker_is_contents_like(marker)
-        omitted_front_matter = omitted_front_matter or (
-            marker_is_omitted_apparatus(marker) and element_is_in_front_matter(current)
+        omitted_apparatus = omitted_apparatus or (
+            marker_is_omitted_apparatus(marker) and element_is_in_front_or_back_matter(current)
         )
-        if titlepage_like or contents_like or omitted_front_matter:
+        if titlepage_like or contents_like or omitted_apparatus:
             break
         current = current.getparent()
-    if not (titlepage_like or contents_like or omitted_front_matter):
+    if not (titlepage_like or contents_like or omitted_apparatus):
         return []
     classes = ["source-apparatus", "nonrunning", "unlisted", "unnumbered"]
     if titlepage_like:
         classes.append("source-titlepage")
     if contents_like:
         classes.append("source-contents")
-    if omitted_front_matter:
-        classes.append("source-omitted-frontmatter")
+    if omitted_apparatus:
+        classes.append("source-omitted-apparatus")
     return classes
 
 

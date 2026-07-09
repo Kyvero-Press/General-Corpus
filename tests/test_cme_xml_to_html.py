@@ -218,7 +218,7 @@ class SourceApparatusRenderingTests(unittest.TestCase):
         self.assertNotIn("source-apparatus", body_html)
         self.assertIn('<h2 data-type="Title">Body Title</h2>', body_html)
 
-    def test_front_omitted_apparatus_sections_are_marked_unlisted_nonrunning(self) -> None:
+    def test_omitted_front_or_back_apparatus_sections_are_marked_unlisted_nonrunning(self) -> None:
         text = etree.fromstring(
             b'''
             <TEXT>
@@ -226,22 +226,37 @@ class SourceApparatusRenderingTests(unittest.TestCase):
                 <DIV1 TYPE="omitted front matter"><P>Figure caption.</P></DIV1>
                 <DIV1 TYPE="omitted half titles"><P>Half title placeholder.</P></DIV1>
               </FRONT>
+              <BODY>
+                <DIV1 TYPE="omitted material"><P>Body omission note.</P></DIV1>
+              </BODY>
+              <BACK>
+                <DIV1 TYPE="omitted back matter"><P>Back matter note.</P></DIV1>
+              </BACK>
             </TEXT>
             '''
         )
         options = cme_xml_to_html.Options()
         frontmatter_div = text.xpath("./FRONT/DIV1")[0]
         half_titles_div = text.xpath("./FRONT/DIV1")[1]
+        body_omission_div = text.xpath("./BODY/DIV1")[0]
+        backmatter_div = text.xpath("./BACK/DIV1")[0]
 
         frontmatter_html = cme_xml_to_html.render_div(frontmatter_div, options)
         half_titles_html = cme_xml_to_html.render_div(half_titles_div, options)
+        body_omission_html = cme_xml_to_html.render_div(body_omission_div, options)
+        backmatter_html = cme_xml_to_html.render_div(backmatter_div, options)
 
-        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter"', frontmatter_html)
-        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter" data-type="omitted front matter">omitted front matter</h2>', frontmatter_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus"', frontmatter_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus" data-type="omitted front matter">omitted front matter</h2>', frontmatter_html)
         self.assertIn("<p>Figure caption.</p>", frontmatter_html)
-        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter"', half_titles_html)
-        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-frontmatter" data-type="omitted half titles">omitted half titles</h2>', half_titles_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus"', half_titles_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus" data-type="omitted half titles">omitted half titles</h2>', half_titles_html)
         self.assertIn("<p>Half title placeholder.</p>", half_titles_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus"', backmatter_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus" data-type="omitted back matter">omitted back matter</h2>', backmatter_html)
+        self.assertIn("<p>Back matter note.</p>", backmatter_html)
+        self.assertNotIn("source-apparatus", body_omission_html)
+        self.assertIn('<h2 data-type="omitted material">omitted material</h2>', body_omission_html)
 
     def test_table_headings_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
         contents = etree.fromstring(
