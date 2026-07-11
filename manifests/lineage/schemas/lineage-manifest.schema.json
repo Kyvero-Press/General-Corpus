@@ -99,6 +99,39 @@
         "$ref": "#/$defs/relation"
       }
     },
+    "access": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/access"
+      }
+    },
+    "rights": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rights"
+      }
+    },
+    "editorial_practices": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/editorialPractice"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/openQuestion"
+      }
+    }
+  },
+  "$defs": {
     "localCopy": {
       "type": "object",
       "additionalProperties": false,
@@ -156,39 +189,6 @@
         }
       }
     },
-    "access": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/access"
-      }
-    },
-    "rights": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/rights"
-      }
-    },
-    "editorial_practices": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/editorialPractice"
-      }
-    },
-    "evidence": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/evidence"
-      }
-    },
-    "open_questions": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/openQuestion"
-      }
-    }
-  },
-  "$defs": {
     "localId": {
       "type": "string",
       "pattern": "^[a-z][a-z0-9_-]*:[^ ]+$"
