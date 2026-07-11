@@ -1,0 +1,543 @@
+#!/usr/bin/env python3
+"""Validate General Corpus lineage manifests without network access or dependencies."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from datetime import date
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlparse
+
+
+LINEAGE_DIR = Path("manifests/lineage")
+INDEX_PATH = LINEAGE_DIR / "index.json"
+INDEX_SCHEMA_PATH = LINEAGE_DIR / "schemas/lineage-index.schema.json"
+MANIFEST_SCHEMA_PATH = LINEAGE_DIR / "schemas/lineage-manifest.schema.json"
+WORKS_DIR = LINEAGE_DIR / "works"
+
+
+def _load_json(path: Path, errors: list[str]) -> Any | None:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        errors.append(f"{path}: file does not exist")
+    except json.JSONDecodeError as exc:
+        errors.append(f"{path}:{exc.lineno}:{exc.colno}: invalid JSON: {exc.msg}")
+    except OSError as exc:
+        errors.append(f"{path}: cannot read file: {exc}")
+    return None
+
+
+def _json_type_matches(value: Any, expected: str) -> bool:
+    if expected == "object":
+        return isinstance(value, dict)
+    if expected == "array":
+        return isinstance(value, list)
+    if expected == "string":
+        return isinstance(value, str)
+    if expected == "integer":
+        return isinstance(value, int) and not isinstance(value, bool)
+    if expected == "number":
+        return isinstance(value, (int, float)) and not isinstance(value, bool)
+    if expected == "boolean":
+        return isinstance(value, bool)
+    if expected == "null":
+        return value is None
+    return False
+
+
+def _resolve_local_ref(root_schema: dict[str, Any], ref: str) -> Any:
+    if not ref.startswith("#/"):
+        raise ValueError(f"unsupported non-local schema reference {ref!r}")
+    value: Any = root_schema
+    for raw_part in ref[2:].split("/"):
+        part = raw_part.replace("~1", "/").replace("~0", "~")
+        value = value[part]
+    return value
+
+
+def _validate_format(value: str, format_name: str) -> bool:
+    if format_name == "date":
+        try:
+            return date.fromisoformat(value).isoformat() == value
+        except ValueError:
+            return False
+    if format_name == "uri":
+        parsed = urlparse(value)
+        return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+    return True
+
+
+def _schema_errors(
+    value: Any,
+    schema: dict[str, Any],
+    root_schema: dict[str, Any],
+    location: str,
+) -> list[str]:
+    """Validate the JSON Schema features used by this repository's schemas."""
+
+    if "$ref" in schema:
+        try:
+            target = _resolve_local_ref(root_schema, schema["$ref"])
+        except (KeyError, TypeError, ValueError) as exc:
+            return [f"{location}: invalid schema reference: {exc}"]
+        return _schema_errors(value, target, root_schema, location)
+
+    errors: list[str] = []
+    expected_type = schema.get("type")
+    if expected_type is not None:
+        allowed_types = expected_type if isinstance(expected_type, list) else [expected_type]
+        if not any(_json_type_matches(value, item) for item in allowed_types):
+            errors.append(
+                f"{location}: expected JSON type {' or '.join(allowed_types)}, "
+                f"got {type(value).__name__}"
+            )
+            return errors
+
+    if "enum" in schema and value not in schema["enum"]:
+        errors.append(f"{location}: value {value!r} is not in {schema['enum']!r}")
+
+    if isinstance(value, str):
+        min_length = schema.get("minLength")
+        if min_length is not None and len(value) < min_length:
+            errors.append(f"{location}: string is shorter than {min_length}")
+        pattern = schema.get("pattern")
+        if pattern is not None and re.search(pattern, value) is None:
+            errors.append(f"{location}: value {value!r} does not match {pattern!r}")
+        format_name = schema.get("format")
+        if format_name is not None and not _validate_format(value, format_name):
+            errors.append(f"{location}: value {value!r} is not a valid {format_name}")
+
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        minimum = schema.get("minimum")
+        if minimum is not None and value < minimum:
+            errors.append(f"{location}: value {value!r} is less than {minimum}")
+
+    if isinstance(value, list):
+        min_items = schema.get("minItems")
+        if min_items is not None and len(value) < min_items:
+            errors.append(f"{location}: array has fewer than {min_items} items")
+        if schema.get("uniqueItems"):
+            serialized = [json.dumps(item, sort_keys=True, ensure_ascii=False) for item in value]
+            if len(set(serialized)) != len(serialized):
+                errors.append(f"{location}: array items are not unique")
+        item_schema = schema.get("items")
+        if isinstance(item_schema, dict):
+            for index, item in enumerate(value):
+                errors.extend(_schema_errors(item, item_schema, root_schema, f"{location}[{index}]"))
+
+    if isinstance(value, dict):
+        required = schema.get("required", [])
+        for key in required:
+            if key not in value:
+                errors.append(f"{location}: missing required property {key!r}")
+        properties = schema.get("properties", {})
+        for key, item in value.items():
+            if key in properties:
+                errors.extend(
+                    _schema_errors(item, properties[key], root_schema, f"{location}.{key}")
+                )
+            elif schema.get("additionalProperties") is False:
+                errors.append(f"{location}: unexpected property {key!r}")
+
+    if "anyOf" in schema:
+        alternatives = [
+            _schema_errors(value, alternative, root_schema, location)
+            for alternative in schema["anyOf"]
+        ]
+        if all(alternative_errors for alternative_errors in alternatives):
+            errors.append(f"{location}: value does not satisfy any anyOf alternative")
+
+    return errors
+
+
+def _safe_repo_file(repo_root: Path, raw_path: Any, location: str, errors: list[str]) -> Path | None:
+    if not isinstance(raw_path, str) or not raw_path:
+        errors.append(f"{location}: repository path must be a non-empty string")
+        return None
+    path = Path(raw_path)
+    if path.is_absolute():
+        errors.append(f"{location}: repository path must be relative: {raw_path!r}")
+        return None
+    resolved_root = repo_root.resolve()
+    resolved = (repo_root / path).resolve()
+    try:
+        resolved.relative_to(resolved_root)
+    except ValueError:
+        errors.append(f"{location}: repository path escapes the repository: {raw_path!r}")
+        return None
+    if not resolved.is_file():
+        errors.append(f"{location}: repository file does not exist: {raw_path!r}")
+        return None
+    return resolved
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _git_blob_hash(path: Path) -> str:
+    content = path.read_bytes()
+    header = f"blob {len(content)}\0".encode("ascii")
+    return hashlib.sha1(header + content).hexdigest()
+
+
+def _check_evidence_refs(
+    refs: Any,
+    evidence_ids: set[str],
+    location: str,
+    errors: list[str],
+) -> None:
+    if not isinstance(refs, list):
+        return
+    for ref in refs:
+        if ref not in evidence_ids:
+            errors.append(f"{location}: unresolved evidence reference {ref!r}")
+
+
+def _check_entity_ref(ref: Any, entity_ids: set[str], location: str, errors: list[str]) -> None:
+    if isinstance(ref, str) and ref not in entity_ids:
+        errors.append(f"{location}: unresolved entity reference {ref!r}")
+
+
+def _check_agent_ref(ref: Any, agent_ids: set[str], location: str, errors: list[str]) -> None:
+    if isinstance(ref, str) and ref not in agent_ids:
+        errors.append(f"{location}: unresolved agent reference {ref!r}")
+
+
+def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[str]) -> None:
+    try:
+        tree = ET.parse(path)
+    except (ET.ParseError, OSError) as exc:
+        errors.append(f"{location}: cannot parse XML for identifier validation: {exc}")
+        return
+
+    root = tree.getroot()
+    idg_values = [node.get("ID", "").strip() for node in root.findall(".//IDG")]
+    bibno_values = [(node.text or "").strip() for node in root.findall(".//BIBNO")]
+    vid_values = [(node.text or "").strip() for node in root.findall(".//VID")]
+    for label, values in (("IDG/@ID", idg_values), ("BIBNO", bibno_values), ("VID", vid_values)):
+        if work_id not in values:
+            errors.append(
+                f"{location}: XML {label} does not contain manifest work_id {work_id!r}; "
+                f"found {values!r}"
+            )
+
+
+def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    location = str(path.relative_to(repo_root))
+    work_id = manifest.get("work_id")
+    if isinstance(work_id, str) and path.stem != work_id:
+        errors.append(f"{location}: filename must equal work_id ({work_id}.json)")
+
+    collection_names = (
+        "entities",
+        "agents",
+        "relations",
+        "access",
+        "rights",
+        "editorial_practices",
+        "evidence",
+        "open_questions",
+    )
+    records: dict[str, dict[str, Any]] = {}
+    record_locations: dict[str, str] = {}
+    for collection_name in collection_names:
+        collection = manifest.get(collection_name, [])
+        if not isinstance(collection, list):
+            continue
+        for index, record in enumerate(collection):
+            if not isinstance(record, dict) or not isinstance(record.get("id"), str):
+                continue
+            record_id = record["id"]
+            item_location = f"{location}.{collection_name}[{index}]"
+            if record_id in records:
+                errors.append(
+                    f"{item_location}: duplicate record id {record_id!r}; first used at "
+                    f"{record_locations[record_id]}"
+                )
+            else:
+                records[record_id] = record
+                record_locations[record_id] = item_location
+
+    entity_ids = {
+        item.get("id") for item in manifest.get("entities", []) if isinstance(item, dict)
+    }
+    agent_ids = {
+        item.get("id") for item in manifest.get("agents", []) if isinstance(item, dict)
+    }
+    evidence_ids = {
+        item.get("id") for item in manifest.get("evidence", []) if isinstance(item, dict)
+    }
+    access_ids = {
+        item.get("id") for item in manifest.get("access", []) if isinstance(item, dict)
+    }
+    entity_ids.discard(None)
+    agent_ids.discard(None)
+    evidence_ids.discard(None)
+    access_ids.discard(None)
+
+    _check_entity_ref(manifest.get("primary_subject"), entity_ids, f"{location}.primary_subject", errors)
+
+    for index, entity in enumerate(manifest.get("entities", [])):
+        if not isinstance(entity, dict):
+            continue
+        item_location = f"{location}.entities[{index}]"
+        _check_evidence_refs(entity.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
+        for ref_index, creator_id in enumerate(entity.get("creator_ids", [])):
+            _check_agent_ref(creator_id, agent_ids, f"{item_location}.creator_ids[{ref_index}]", errors)
+        holding = entity.get("holding")
+        if isinstance(holding, dict):
+            _check_agent_ref(
+                holding.get("institution_id"),
+                agent_ids,
+                f"{item_location}.holding.institution_id",
+                errors,
+            )
+        for date_index, statement in enumerate(entity.get("date_statements", [])):
+            if isinstance(statement, dict):
+                _check_evidence_refs(
+                    statement.get("evidence_ids"),
+                    evidence_ids,
+                    f"{item_location}.date_statements[{date_index}].evidence_ids",
+                    errors,
+                )
+        repository_file = entity.get("repository_file")
+        if isinstance(repository_file, dict):
+            file_path = _safe_repo_file(
+                repo_root,
+                repository_file.get("path"),
+                f"{item_location}.repository_file.path",
+                errors,
+            )
+            if file_path is not None:
+                expected_sha = repository_file.get("sha256")
+                if isinstance(expected_sha, str) and _sha256(file_path) != expected_sha:
+                    errors.append(f"{item_location}.repository_file.sha256: checksum mismatch")
+                expected_blob = repository_file.get("git_blob")
+                if isinstance(expected_blob, str) and _git_blob_hash(file_path) != expected_blob:
+                    errors.append(f"{item_location}.repository_file.git_blob: git blob mismatch")
+                if file_path.suffix.lower() == ".xml" and isinstance(work_id, str):
+                    _validate_xml_work_id(file_path, work_id, item_location, errors)
+
+    for index, agent in enumerate(manifest.get("agents", [])):
+        if isinstance(agent, dict) and "evidence_ids" in agent:
+            _check_evidence_refs(
+                agent.get("evidence_ids"),
+                evidence_ids,
+                f"{location}.agents[{index}].evidence_ids",
+                errors,
+            )
+
+    for index, relation in enumerate(manifest.get("relations", [])):
+        if not isinstance(relation, dict):
+            continue
+        item_location = f"{location}.relations[{index}]"
+        _check_entity_ref(relation.get("subject"), entity_ids, f"{item_location}.subject", errors)
+        _check_entity_ref(relation.get("object"), entity_ids, f"{item_location}.object", errors)
+        assertion = relation.get("assertion")
+        if isinstance(assertion, dict):
+            _check_evidence_refs(
+                assertion.get("evidence_ids"),
+                evidence_ids,
+                f"{item_location}.assertion.evidence_ids",
+                errors,
+            )
+
+    for index, access in enumerate(manifest.get("access", [])):
+        if not isinstance(access, dict):
+            continue
+        item_location = f"{location}.access[{index}]"
+        _check_entity_ref(access.get("entity"), entity_ids, f"{item_location}.entity", errors)
+        if "provider_id" in access:
+            _check_agent_ref(access.get("provider_id"), agent_ids, f"{item_location}.provider_id", errors)
+        _check_evidence_refs(access.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
+        if "repository_path" in access:
+            _safe_repo_file(repo_root, access.get("repository_path"), f"{item_location}.repository_path", errors)
+        if access.get("status") == "no_public_copy_found" and not access.get("last_checked"):
+            errors.append(f"{item_location}: negative access claim requires last_checked")
+
+    for index, rights in enumerate(manifest.get("rights", [])):
+        if not isinstance(rights, dict):
+            continue
+        item_location = f"{location}.rights[{index}]"
+        _check_entity_ref(rights.get("entity"), entity_ids, f"{item_location}.entity", errors)
+        access_id = rights.get("access_id")
+        if isinstance(access_id, str) and access_id not in access_ids:
+            errors.append(f"{item_location}.access_id: unresolved access reference {access_id!r}")
+        if "asserted_by_id" in rights:
+            _check_agent_ref(
+                rights.get("asserted_by_id"), agent_ids, f"{item_location}.asserted_by_id", errors
+            )
+        _check_evidence_refs(rights.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
+
+    for index, practice in enumerate(manifest.get("editorial_practices", [])):
+        if not isinstance(practice, dict):
+            continue
+        item_location = f"{location}.editorial_practices[{index}]"
+        _check_entity_ref(practice.get("entity"), entity_ids, f"{item_location}.entity", errors)
+        _check_evidence_refs(practice.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
+
+    for index, question in enumerate(manifest.get("open_questions", [])):
+        if isinstance(question, dict):
+            _check_evidence_refs(
+                question.get("evidence_ids"),
+                evidence_ids,
+                f"{location}.open_questions[{index}].evidence_ids",
+                errors,
+            )
+
+    all_ids = set(records)
+    manifest_id = manifest.get("id")
+    if isinstance(manifest_id, str):
+        all_ids.add(manifest_id)
+    for index, evidence in enumerate(manifest.get("evidence", [])):
+        if not isinstance(evidence, dict):
+            continue
+        item_location = f"{location}.evidence[{index}]"
+        if "repository_path" in evidence:
+            file_path = _safe_repo_file(
+                repo_root,
+                evidence.get("repository_path"),
+                f"{item_location}.repository_path",
+                errors,
+            )
+            if file_path is not None and isinstance(evidence.get("sha256"), str):
+                if _sha256(file_path) != evidence["sha256"]:
+                    errors.append(f"{item_location}.sha256: checksum mismatch")
+        for support_index, supported_id in enumerate(evidence.get("supports", [])):
+            if supported_id not in all_ids:
+                errors.append(
+                    f"{item_location}.supports[{support_index}]: unresolved record reference "
+                    f"{supported_id!r}"
+                )
+
+    return errors
+
+
+def validate_repository(repo_root: Path) -> list[str]:
+    repo_root = repo_root.resolve()
+    errors: list[str] = []
+    index_schema = _load_json(repo_root / INDEX_SCHEMA_PATH, errors)
+    manifest_schema = _load_json(repo_root / MANIFEST_SCHEMA_PATH, errors)
+    index = _load_json(repo_root / INDEX_PATH, errors)
+    if not all(isinstance(item, dict) for item in (index_schema, manifest_schema, index)):
+        return errors
+
+    errors.extend(_schema_errors(index, index_schema, index_schema, str(INDEX_PATH)))
+
+    discovered_paths = sorted((repo_root / WORKS_DIR).glob("*.json"))
+    discovered_relative = {
+        str(path.relative_to(repo_root / LINEAGE_DIR)) for path in discovered_paths
+    }
+    indexed_items = index.get("items", []) if isinstance(index.get("items"), list) else []
+    indexed_relative = {
+        item.get("manifest") for item in indexed_items if isinstance(item, dict)
+    }
+    indexed_relative.discard(None)
+    if discovered_relative != indexed_relative:
+        missing = sorted(discovered_relative - indexed_relative)
+        stale = sorted(indexed_relative - discovered_relative)
+        if missing:
+            errors.append(f"{INDEX_PATH}: manifests missing from index: {missing!r}")
+        if stale:
+            errors.append(f"{INDEX_PATH}: indexed manifests do not exist: {stale!r}")
+
+    manifest_count = index.get("coverage", {}).get("manifest_count")
+    if manifest_count != len(discovered_paths):
+        errors.append(
+            f"{INDEX_PATH}.coverage.manifest_count: expected {len(discovered_paths)}, "
+            f"found {manifest_count!r}"
+        )
+
+    seen_index_ids: set[str] = set()
+    seen_work_ids: set[str] = set()
+    for index_number, item in enumerate(indexed_items):
+        if not isinstance(item, dict):
+            continue
+        item_location = f"{INDEX_PATH}.items[{index_number}]"
+        for key, seen in (("id", seen_index_ids), ("work_id", seen_work_ids)):
+            value = item.get(key)
+            if isinstance(value, str):
+                if value in seen:
+                    errors.append(f"{item_location}.{key}: duplicate value {value!r}")
+                seen.add(value)
+
+        relative_manifest = item.get("manifest")
+        if not isinstance(relative_manifest, str):
+            continue
+        manifest_path = repo_root / LINEAGE_DIR / relative_manifest
+        manifest = _load_json(manifest_path, errors)
+        if not isinstance(manifest, dict):
+            continue
+        manifest_location = str(manifest_path.relative_to(repo_root))
+        errors.extend(_schema_errors(manifest, manifest_schema, manifest_schema, manifest_location))
+        errors.extend(_semantic_manifest_errors(repo_root, manifest_path, manifest))
+
+        for key in ("id", "work_id", "title", "record_status", "last_reviewed"):
+            if item.get(key) != manifest.get(key):
+                errors.append(
+                    f"{item_location}.{key}: index value {item.get(key)!r} does not match "
+                    f"manifest value {manifest.get(key)!r}"
+                )
+        if item.get("work_id") and Path(relative_manifest).stem != item["work_id"]:
+            errors.append(f"{item_location}.manifest: filename does not match work_id")
+
+        repository_paths = set(item.get("repository_paths", []))
+        entity_paths = {
+            entity.get("repository_file", {}).get("path")
+            for entity in manifest.get("entities", [])
+            if isinstance(entity, dict) and isinstance(entity.get("repository_file"), dict)
+        }
+        entity_paths.discard(None)
+        for repository_path in repository_paths:
+            _safe_repo_file(repo_root, repository_path, f"{item_location}.repository_paths", errors)
+            if repository_path not in entity_paths:
+                errors.append(
+                    f"{item_location}.repository_paths: {repository_path!r} is not represented "
+                    "by a manifest entity"
+                )
+
+    return errors
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=Path(__file__).resolve().parents[1],
+        help="repository root (defaults to the parent of scripts/)",
+    )
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    errors = validate_repository(args.root)
+    if errors:
+        for item in errors:
+            print(f"ERROR: {item}", file=sys.stderr)
+        print(f"Lineage validation failed with {len(errors)} error(s).", file=sys.stderr)
+        return 1
+
+    index = json.loads((args.root / INDEX_PATH).read_text(encoding="utf-8"))
+    count = len(index["items"])
+    noun = "manifest" if count == 1 else "manifests"
+    print(f"Validated {count} lineage {noun}; index, references, source IDs, and checksums are consistent.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
