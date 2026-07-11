@@ -20,6 +20,10 @@ Preserve historical shelfmarks separately.
 
 Add scans, facsimiles, prior editions, source works, translations, transcripts,
 or comparison editions only when their identity and relevance are evidenced.
+Do not leave contextual entities dangling: each lineage entity should
+participate in an evidenced relation or have a practical access/rights role.
+Keep broader source context used only for description in metadata
+`related_works` instead.
 
 ## Relations and direction
 

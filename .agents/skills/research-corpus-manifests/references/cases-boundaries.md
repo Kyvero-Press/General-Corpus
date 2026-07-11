@@ -45,3 +45,10 @@ for codicology/access. Do not absorb adjacent contents into the work.
 For fragmentary witnesses bound into composite volumes, distinguish the leaves
 carrying the cataloged work from adjacent leaves carrying other fragments.
 Report total codex extent only at the physical-object layer.
+
+## Candidate fragments: acb1675
+
+A scholarly proposal that a difficult fragment may preserve a related text is
+not a confirmed witness. Model the exact folio with a tentative, scoped
+relation and an open question; do not count the fragment—or its whole host
+codex—in the secure witness set until textual identity is demonstrated.

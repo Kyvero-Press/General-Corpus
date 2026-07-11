@@ -18,6 +18,11 @@ If foreign-language witnesses were consulted only for notes or specimens,
 scope their `collated_against` relations to that apparatus. They are not base
 witnesses or intrinsic parallel parts of the cataloged work.
 
+When an editor states that an independent manuscript transcript predates a
+prior edition, connect the prior edition with `consulted` at the supported
+scope. Do not make it the transcription source merely because it influenced
+later discussion or selected emendations.
+
 ## Source author versus translator: ChaucerBo
 
 Separate Boethius as source author, Chaucer as Middle English translator and
