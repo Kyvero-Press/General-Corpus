@@ -86,6 +86,7 @@ When working as a one-book subagent in an isolated worktree:
 - edit only the two work manifest files unless explicitly assigned otherwise;
 - do not edit indexes, shared schemas, validators, documentation, or the skill;
 - validate JSON and the pair as far as the worktree permits;
+- run `python3 scripts/validate-manifest-pair.py WORK_ID`;
 - commit the two manifest files on the assigned research branch; and
 - report sources used, validation results, unresolved questions, and at most
   three genuinely reusable skill lessons.

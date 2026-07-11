@@ -22,6 +22,7 @@ worktree.
    ```bash
    python3 scripts/validate-lineage-manifests.py
    python3 scripts/validate-work-metadata-manifests.py
+   python3 scripts/validate-manifest-pair.py WORK_ID
    python3 -m unittest tests.test_lineage_manifests tests.test_work_metadata_manifests
    python3 scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public
    python3 /home/tay/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
