@@ -10,6 +10,10 @@ base witness. Model the aggregate tradition and representative witnesses until
 reading-level dependencies are verified. Do not transfer one witness's dialect
 or date to the poem.
 
+When an eclectic edition's dependency is explicit, go beyond one aggregate
+edge: scope separate `transcribes` relations for the principal base and any
+supplied passages, then add `collated_against` edges for variant witnesses.
+
 ## Source author versus translator: ChaucerBo
 
 Separate Boethius as source author, Chaucer as Middle English translator and
@@ -30,6 +34,10 @@ Van Vliet's partial seventeenth-century transcript preserves now-lost Ormulum
 material but was not upstream of White or Holt. Some van Vliet readings reached
 them through alterations in Junius 1 itself. Model the physical route of a
 reading; do not promote a related transcript into an editorial source.
+
+A witness discovered or identified after an edition appeared belongs in the
+broader tradition, not that edition's source chain, unless historical evidence
+shows the editor actually knew and used it.
 
 ## Roles in a retained-text edition
 

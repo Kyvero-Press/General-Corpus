@@ -36,3 +36,7 @@ lineage; only a genuinely earliest attestation belongs in work metadata.
 The exact BL child record ends Ayenbite at folio 94r; later folios contain other
 texts. Use a component record for work boundaries and the parent codex record
 for codicology/access. Do not absorb adjacent contents into the work.
+
+For fragmentary witnesses bound into composite volumes, distinguish the leaves
+carrying the cataloged work from adjacent leaves carrying other fragments.
+Report total codex extent only at the physical-object layer.

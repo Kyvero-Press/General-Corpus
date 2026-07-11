@@ -1,0 +1,998 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:aaw7316",
+  "work_id": "aaw7316",
+  "title": "The Vision of Tundale",
+  "primary_subject": "artifact:general-corpus:aaw7316",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository XML is a local copy or version of University of Michigan CME item AAW7316.0001.001, an uncorrected OCR encoding of Albrecht Wagner's 1893 critical edition of the anonymous Middle English Vision of Tundale. Wagner based lines 64–2354 primarily on British Library Royal MS 17 B XLIII (R), supplied the lost opening from Cotton MS Caligula A II (C), collated those witnesses with National Library of Scotland Adv.MS.19.3.1 (A) and Bodleian MS Ashmole 1491 (B), and used his 1882 Latin edition to assess readings. A fifth Middle English witness, now Beinecke Takamiya MS 32, was not identified or used by Wagner. The electronic item omits Wagner's introduction and concluding commentary but retains the edited poem, its dense variant apparatus, and a short appendix.",
+  "languages": ["enm", "deu", "lat"],
+  "review_notes": [
+    "The cataloged work is the anonymous Middle English verse version, not Marcus's Latin Visio Tnugdali, Wagner's German-language editorial matter, or any one manuscript witness.",
+    "Wagner's edition is multi-witness and materially eclectic: it is not a facsimile or a diplomatic transcription of Royal 17 B XLIII.",
+    "The current NLS digital object is a complete public color facsimile of Adv.MS.19.3.1; the BSB object is a complete public scan of Wagner's 1893 print edition. Their reuse terms are recorded separately.",
+    "The CELT Latin text and the modern METS edition are comparison resources, not ancestors of the repository encoding."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:aaw7316",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for aaw7316",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "AAW7316.0001.001"},
+        {"scheme": "git-blob", "value": "ad944cbdc962963d457a861f20eab9b6b6f4704c"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/aaw7316.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "ad944cbdc962963d457a861f20eab9b6b6f4704c",
+        "sha256": "513343221c89f4e833f46e0760f0df44f127959ff71464199d19ec2cb64208ed"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:aaw7316-xml"]
+    },
+    {
+      "id": "encoding:umich-cme:AAW7316.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item AAW7316.0001.001",
+      "description": "A publicly viewable OCR/TEI encoding of Wagner's Middle English text and apparatus. Its item-specific header calls the OCR uncorrected, says that no content editing was performed, and describes the markup as TEI in Libraries Level 1 with links to page images.",
+      "identifiers": [
+        {"scheme": "UMDL handle", "value": "AAW7316.0001.001", "uri": "https://name.umdl.umich.edu/AAW7316.0001.001"},
+        {"scheme": "DLPS IDNO", "value": "AAW7316.0001.001"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "date_statements": [
+        {"label": "header creation", "value": "2006-02-22", "normalized": "2006-02-22", "certainty": "high", "evidence_ids": ["evidence:aaw7316-xml"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:aaw7316-xml", "evidence:umich-aaw7316"],
+      "notes": [
+        "The XML language field says German, but direct inspection shows that the encoded poem is Middle English, the apparatus and appendix are German, and the closing manuscript colophon is Latin.",
+        "The file has 188 PB elements and links page milestones to U-M page images; this count is an encoding metric, not the printed pagination."
+      ]
+    },
+    {
+      "id": "edition:wagner:tundale-1893",
+      "type": "scholarly_edition",
+      "label": "Wagner 1893 edition of Tundale",
+      "creator_ids": ["agent:wagner"],
+      "date_statements": [
+        {"label": "publication", "value": "1893", "normalized": "1893", "certainty": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:umich-aaw7316"]}
+      ],
+      "bibliographic": {
+        "citation": "Tundale: Das mittelenglische Gedicht über die Vision des Tundalus, auf Grund von vier Handschriften mit Einleitung und Anmerkungen, ed. Albrecht Wagner (Halle an der Saale: Max Niemeyer, 1893).",
+        "title": "Tundale: Das mittelenglische Gedicht über die Vision des Tundalus",
+        "publisher": "Max Niemeyer",
+        "publication_place": "Halle an der Saale",
+        "date": "1893",
+        "pages": "XL, 146",
+        "languages": ["enm", "deu", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wagner-1893-scan", "evidence:umich-aaw7316"],
+      "notes": [
+        "Wagner chose R as his principal base after line 63, supplied R's missing opening from C, and corrected R from A, B, C, and the Latin source.",
+        "Everything in the edited text not taken from R is printed in italics. Expanded abbreviations are italic within roman text and roman within italic supplied text.",
+        "The edition includes a German introduction (pp. III–XXXIX), the poem and apparatus (pp. 1–137), a short Nachtrag supplying omitted B variants, and concluding German notes (pp. 138–146)."
+      ]
+    },
+    {
+      "id": "facsimile:bsb:wagner-tundale-1893",
+      "type": "facsimile",
+      "label": "BSB digital facsimile of Wagner's 1893 Tundale",
+      "description": "A complete 198-canvas color scan of Bayerische Staatsbibliothek copy P.o.angl. 451 i, with IIIF Image API delivery and page-level hOCR where available.",
+      "identifiers": [
+        {"scheme": "BSB digital object", "value": "bsb11665517", "uri": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=1"},
+        {"scheme": "URN", "value": "urn:nbn:de:bvb:12-bsb11665517-5", "uri": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11665517-5"},
+        {"scheme": "B3Kat", "value": "BV002853563"}
+      ],
+      "creator_ids": ["agent:bsb"],
+      "holding": {
+        "institution_id": "agent:bsb",
+        "shelfmark": "P.o.angl. 451 i",
+        "historical_designations": [],
+        "catalog_url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=1"
+      },
+      "reproduction_format": "198-canvas color IIIF scan with JPEG images and hOCR",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bsb-iiif", "evidence:ddb-wagner-1893"]
+    },
+    {
+      "id": "catalog:middle-english-tundale-tradition",
+      "type": "catalog_description",
+      "label": "Five-witness Middle English Vision of Tundale tradition",
+      "description": "An aggregate description of the five complete or fragmentary fifteenth-century witnesses recognized by modern scholarship. It is not itself a manuscript and does not imply that Wagner knew or used all five.",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:mets-tundale-textual-notes"]
+    },
+    {
+      "id": "witness:nls:adv-ms-19-3-1",
+      "type": "manuscript_witness",
+      "label": "National Library of Scotland Adv.MS.19.3.1",
+      "alternate_labels": ["Heege Manuscript", "Wagner witness A"],
+      "description": "The longest extant Middle English version used by Wagner, copied and signed by Richard Heeg. Tundale occupies fols. 98r–157v.",
+      "identifiers": [
+        {"scheme": "NLS shelfmark", "value": "Adv.MS.19.3.1", "uri": "https://manuscripts.nls.uk/repositories/2/resources/15302"},
+        {"scheme": "NLS digital object", "value": "133680060", "uri": "https://digital.nls.uk/133680060"}
+      ],
+      "creator_ids": ["agent:richard-heeg"],
+      "date_statements": [
+        {"label": "production", "value": "circa 1480", "certainty": "high", "evidence_ids": ["evidence:nls-adv-19-3-1"]}
+      ],
+      "holding": {
+        "institution_id": "agent:nls",
+        "shelfmark": "Adv.MS.19.3.1",
+        "historical_designations": ["Advocates' Library MS 19.3.1", "Jac.V.7.27"],
+        "catalog_url": "https://manuscripts.nls.uk/repositories/2/resources/15302"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "xii + 216 + xviii folios; Tundale at fols. 98r–157v",
+        "dimensions": "140 × 210 mm",
+        "notes": ["The Tundale fascicle is signed by Richard Heeg at fol. 157v.", "The manuscript's ten Passus, seven Gaudia, and Reversio Anime divisions are not present in the other Middle English witnesses."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-adv-19-3-1", "evidence:nls-digital", "evidence:wagner-1893-scan"]
+    },
+    {
+      "id": "witness:bl:cotton-caligula-a-ii",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Caligula A II, ff. 3–139",
+      "alternate_labels": ["Wagner witness C"],
+      "description": "A Middle English miscellany containing Visio Tundalie at fols. 95v–107v. Wagner supplied lines 1–63 from this witness because the opening leaf of R is missing.",
+      "identifiers": [
+        {"scheme": "BL shelfmark", "value": "Cotton MS Caligula A II, ff. 3–139", "uri": "https://searcharchives.bl.uk/catalog/041-001102312"},
+        {"scheme": "BL ARK", "value": "ark:/81055/vdc_100000001630.0x00014c"}
+      ],
+      "date_statements": [
+        {"label": "production", "value": "second half of the fifteenth century (current BL component record)", "normalized": "1450/1499", "certainty": "high", "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"], "notes": "METS dates the witness c. 1400–1450; the discrepancy remains unresolved."}
+      ],
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Cotton MS Caligula A II, ff. 3–139",
+        "historical_designations": ["British Museum Cotton MS Caligula A II"],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/041-001102312"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Component fols. 3–139; Tundale at fols. 95v–107v",
+        "notes": ["The BL record dates the component to 1450–1499 and identifies its origin as England."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii", "evidence:mets-tundale-introduction", "evidence:wagner-1893-scan"]
+    },
+    {
+      "id": "witness:bl:royal-17-b-xliii",
+      "type": "manuscript_witness",
+      "label": "British Library Royal MS 17 B XLIII",
+      "alternate_labels": ["Wagner witness R"],
+      "description": "Wagner's principal base witness from line 64 onward. The Tundale text begins imperfectly at fol. 150r and ends with a scribal colophon dated 1451 near the top of fol. 184r.",
+      "identifiers": [
+        {"scheme": "BL shelfmark", "value": "Royal MS 17 B XLIII", "uri": "https://searcharchives.bl.uk/catalog/040-002107332"},
+        {"scheme": "BL ARK", "value": "ark:/81055/vdc_100000000338.0x0001dc"}
+      ],
+      "date_statements": [
+        {"label": "Tundale copying", "value": "1451", "normalized": "1451", "certainty": "high", "evidence_ids": ["evidence:bl-royal-17-b-xliii", "evidence:wagner-1893-scan"], "notes": "The colophon's scriptus dates this copy, not the composition of the Middle English work."}
+      ],
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Royal MS 17 B XLIII",
+        "historical_designations": ["British Museum Royal MS 17 B XLIII"],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002107332"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "187 folios; Tundale at fols. 150r–184r, imperfect at the beginning",
+        "notes": ["The lost opening leaf corresponds to Wagner lines 1–63."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-royal-17-b-xliii", "evidence:wagner-1893-scan", "evidence:mets-tundale-introduction"]
+    },
+    {
+      "id": "witness:bodleian:ashmole-1491",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Ashmole 1491",
+      "alternate_labels": ["Summary Catalogue 7656", "Wagner witness B"],
+      "description": "Five parchment leaves bound at the end of a later paper volume preserve disordered fragments of the Middle English Tundale. Wagner records lines 2307–2326 followed by 115–386 on the first fragment and lines 700–1165 on the second.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS Ashmole 1491"},
+        {"scheme": "Summary Catalogue", "value": "7656"}
+      ],
+      "date_statements": [
+        {"label": "production of Tundale leaves", "value": "circa 1400–1450", "normalized": "1400/1450", "certainty": "medium", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:wagner-1893-scan"], "notes": "Wagner's palaeographical advice placed the leaves near the beginning of the fifteenth century; the 1845 Ashmole catalogue called the fragment fourteenth-century."}
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian",
+        "shelfmark": "MS Ashmole 1491",
+        "historical_designations": ["SC 7656"],
+        "catalog_url": "https://ora.ox.ac.uk/objects/uuid%3A2e2f9838-a7a2-4a7a-8cf3-9346c4139538",
+        "notes": "The linked official digitized catalogue describes the composite volume; a current item-level online record for the five Tundale leaves was not verified."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "Five Tundale leaves at the end of MS Ashmole 1491; fragmentary",
+        "notes": ["The 1845 catalogue describes six medieval leaves at the end: the first five carry Tundale and the sixth carries an Old French religious fragment."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-ashmole-catalog", "evidence:wagner-1893-scan", "evidence:mets-tundale-introduction"]
+    },
+    {
+      "id": "witness:beinecke:takamiya-32",
+      "type": "manuscript_witness",
+      "label": "Beinecke Library Takamiya MS 32",
+      "alternate_labels": ["Delamere Chaucer", "Penrose 10", "Penrose 6", "Modern siglum P"],
+      "description": "A fifth Middle English witness, not identified or collated by Wagner, in the composite Delamere Chaucer. The Tundale fragment occupies fols. 166v–175v.",
+      "identifiers": [
+        {"scheme": "Beinecke shelfmark", "value": "Takamiya MS 32"}
+      ],
+      "date_statements": [
+        {"label": "production", "value": "second quarter of the fifteenth century", "normalized": "1425/1450", "certainty": "high", "evidence_ids": ["evidence:beinecke-takamiya-32"]}
+      ],
+      "holding": {
+        "institution_id": "agent:beinecke",
+        "shelfmark": "Takamiya MS 32",
+        "historical_designations": ["Penrose 10", "Penrose 6", "Delamere"],
+        "notes": "The reviewed Beinecke collection page identifies Takamiya MS 32 but is not an item-level catalog record."
+      },
+      "physical_description": {
+        "extent": "Tundale at fols. 166v–175v; fragmentary",
+        "notes": ["The manuscript also contains The Canterbury Tales and other Middle English verse.", "Wagner reports an unidentified private English Tundale manuscript on p. XL, but the evidence consulted here does not establish that it was the codex now called Takamiya MS 32.", "Foster's 2004 bibliography reports photographic copies at the University of Chicago Library and British Library Facs. 405 (16); current access to those surrogates was not verified."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:beinecke-takamiya-32", "evidence:mets-tundale-introduction", "evidence:mets-tundale-textual-notes"]
+    },
+    {
+      "id": "edition:wagner:visio-tnugdali-1882",
+      "type": "scholarly_edition",
+      "label": "Wagner 1882 edition of Visio Tnugdali",
+      "creator_ids": ["agent:marcus", "agent:wagner"],
+      "date_statements": [
+        {"label": "publication", "value": "1882", "normalized": "1882", "certainty": "high", "evidence_ids": ["evidence:wagner-1882"]}
+      ],
+      "bibliographic": {
+        "citation": "Visio Tnugdali: Lateinisch und Altdeutsch, ed. Albrecht Wagner (Erlangen: Andreas Deichert, 1882).",
+        "title": "Visio Tnugdali: Lateinisch und Altdeutsch",
+        "publisher": "Andreas Deichert",
+        "publication_place": "Erlangen",
+        "date": "1882",
+        "pages": "lxxii, 186",
+        "languages": ["lat", "gmh", "deu"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wagner-1882", "evidence:wagner-1893-scan"],
+      "notes": ["Wagner's 1893 introduction explicitly identifies the Latin text on pp. 3–56 of this edition as a source he used to test the Middle English readings."]
+    },
+    {
+      "id": "work:marcus:visio-tnugdali",
+      "type": "catalog_description",
+      "label": "Marcus of Regensburg, Visio Tnugdali",
+      "alternate_labels": ["The Vision of Tnugdalus"],
+      "description": "The Latin otherworld vision attributed to the Irish monk Marcus at Regensburg and dated within the work to 1149. It is the ultimate narrative source of the Middle English poem, although the immediate recension or vernacular intermediary remains disputed.",
+      "creator_ids": ["agent:marcus"],
+      "date_statements": [
+        {"label": "composition or recorded vision", "value": "1149", "normalized": "1149", "certainty": "medium", "evidence_ids": ["evidence:celt-visio", "evidence:mets-tundale-introduction"], "notes": "The Latin work itself dates the vision to 1149; modern scholarship treats the date as close but distinguishes the narrated event from the act of writing."}
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:celt-visio", "evidence:mets-tundale-introduction", "evidence:getty-tundale"]
+    },
+    {
+      "id": "encoding:celt:L207009",
+      "type": "digital_encoding",
+      "label": "CELT L207009: The Vision of Tnugdalus",
+      "description": "A modern Latin electronic edition used here as a comparison resource for Marcus's work, not as an ancestor of Wagner's 1893 or U-M's electronic text.",
+      "identifiers": [
+        {"scheme": "CELT", "value": "L207009", "uri": "https://celt.ucc.ie/published/L207009.html"}
+      ],
+      "creator_ids": ["agent:celt"],
+      "date_statements": [
+        {"label": "electronic publication", "value": "2009; revised 2012", "certainty": "high", "evidence_ids": ["evidence:celt-visio"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:celt-visio"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:wagner", "type": "person", "name": "Albrecht Wagner", "dates": "1850–1909", "identifiers": [{"scheme": "GND", "value": "115698698", "uri": "https://d-nb.info/gnd/115698698"}], "evidence_ids": ["evidence:wagner-1893-scan"]},
+    {"id": "agent:marcus", "type": "person", "name": "Marcus of Regensburg", "alternate_names": ["Brother Marcus"], "dates": "fl. 1149", "evidence_ids": ["evidence:celt-visio", "evidence:mets-tundale-introduction"]},
+    {"id": "agent:richard-heeg", "type": "person", "name": "Richard Heeg", "alternate_names": ["Richard Heege", "Richard Hyheg"], "dates": "fl. c. 1480", "evidence_ids": ["evidence:nls-adv-19-3-1"]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-aaw7316"]},
+    {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:aaw7316-xml"]},
+    {"id": "agent:bsb", "type": "organization", "name": "Bayerische Staatsbibliothek", "urls": ["https://www.bsb-muenchen.de/en/"], "evidence_ids": ["evidence:bsb-iiif"]},
+    {"id": "agent:nls", "type": "organization", "name": "National Library of Scotland", "urls": ["https://www.nls.uk/"], "evidence_ids": ["evidence:nls-adv-19-3-1"]},
+    {"id": "agent:bl", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"], "evidence_ids": ["evidence:bl-cotton-caligula-a-ii", "evidence:bl-royal-17-b-xliii"]},
+    {"id": "agent:bodleian", "type": "organization", "name": "Bodleian Libraries", "urls": ["https://www.bodleian.ox.ac.uk/"], "evidence_ids": ["evidence:bodleian-ashmole-catalog"]},
+    {"id": "agent:beinecke", "type": "organization", "name": "Beinecke Rare Book and Manuscript Library", "urls": ["https://beinecke.library.yale.edu/"], "evidence_ids": ["evidence:beinecke-takamiya-32"]},
+    {"id": "agent:celt", "type": "organization", "name": "CELT: Corpus of Electronic Texts, University College Cork", "urls": ["https://celt.ucc.ie/"], "evidence_ids": ["evidence:celt-visio"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:aaw7316-repo-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:aaw7316",
+      "object": "encoding:umich-cme:AAW7316.0001.001",
+      "scope": {"subject": {"kind": "whole", "description": "Repository XML"}, "object": {"kind": "whole", "description": "U-M CME item AAW7316.0001.001"}, "notes": "The exact transfer date is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:aaw7316-xml", "evidence:umich-aaw7316"]}
+    },
+    {
+      "id": "relation:aaw7316-umich-from-wagner",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:AAW7316.0001.001",
+      "object": "edition:wagner:tundale-1893",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Electronic item: edited poem, apparatus, and Nachtrag with omitted-matter placeholders"},
+        "object": {"kind": "selected_passages", "description": "Printed Middle English text and apparatus, excluding the German introduction and concluding commentary", "locators": ["pp. 1–137; poem lines 1–2354"]},
+        "notes": "The OCR retains the poem's variant apparatus but omits pp. III–XL and 138–146 as text."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:aaw7316-xml", "evidence:wagner-1893-scan", "evidence:umich-aaw7316"]}
+    },
+    {
+      "id": "relation:bsb-facsimile-of-wagner",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:wagner-tundale-1893",
+      "object": "edition:wagner:tundale-1893",
+      "scope": {"subject": {"kind": "whole", "description": "198-canvas BSB digital object"}, "object": {"kind": "whole", "description": "A complete physical copy of the 1893 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bsb-iiif", "evidence:ddb-wagner-1893"]}
+    },
+    {
+      "id": "relation:wagner-transcribes-royal",
+      "type": "transcribes",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:bl:royal-17-b-xliii",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Principal base text after the missing opening", "locators": ["lines 64–2354"]}, "object": {"kind": "selected_passages", "description": "Royal witness Tundale text", "locators": ["fols. 150r–184r"]}, "notes": "R supplies the base spelling and readings, but Wagner often corrects it from the other witnesses and the Latin source."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:aaw7316-xml"]}
+    },
+    {
+      "id": "relation:wagner-transcribes-cotton-opening",
+      "type": "transcribes",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:bl:cotton-caligula-a-ii",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Opening supplied because R lacks its first leaf", "locators": ["lines 1–63"]}, "object": {"kind": "selected_passages", "description": "Corresponding Cotton text", "locators": ["fol. 95v and following"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:aaw7316-xml"]}
+    },
+    {
+      "id": "relation:wagner-collates-advocates",
+      "type": "collated_against",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:nls:adv-ms-19-3-1",
+      "scope": {"subject": {"kind": "whole", "description": "Critical text and apparatus"}, "object": {"kind": "selected_passages", "description": "Advocates' Tundale witness, siglum A", "locators": ["fols. 98r–157v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:nls-adv-19-3-1"]}
+    },
+    {
+      "id": "relation:wagner-collates-cotton",
+      "type": "collated_against",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:bl:cotton-caligula-a-ii",
+      "scope": {"subject": {"kind": "whole", "description": "Critical text and apparatus"}, "object": {"kind": "selected_passages", "description": "Cotton Tundale witness, siglum C", "locators": ["fols. 95v–107v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:bl-cotton-caligula-a-ii"]}
+    },
+    {
+      "id": "relation:wagner-collates-royal",
+      "type": "collated_against",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:bl:royal-17-b-xliii",
+      "scope": {"subject": {"kind": "whole", "description": "Critical text and apparatus"}, "object": {"kind": "selected_passages", "description": "Royal Tundale witness, siglum R", "locators": ["fols. 150r–184r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:bl-royal-17-b-xliii"]}
+    },
+    {
+      "id": "relation:wagner-collates-ashmole",
+      "type": "collated_against",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "witness:bodleian:ashmole-1491",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Critical text and apparatus where B survives"}, "object": {"kind": "whole", "description": "Five-leaf fragment, siglum B", "locators": ["Wagner lines 2307–2326, 115–386, and 700–1165"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:bodleian-ashmole-catalog"]}
+    },
+    {
+      "id": "relation:wagner-consults-latin-edition",
+      "type": "consulted",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "edition:wagner:visio-tnugdali-1882",
+      "scope": {"subject": {"kind": "whole", "description": "Middle English critical text, apparatus, and commentary"}, "object": {"kind": "selected_passages", "description": "Wagner's Latin Visio text used to judge authenticity and readings", "locators": ["pp. 3–56"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:wagner-1882"]}
+    },
+    {
+      "id": "relation:wagner-1882-version-of-latin-work",
+      "type": "version_of",
+      "subject": "edition:wagner:visio-tnugdali-1882",
+      "object": "work:marcus:visio-tnugdali",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Edited Latin Visio", "locators": ["pp. 3–56"]}, "object": {"kind": "whole", "description": "Marcus's Latin work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:wagner-1882", "evidence:celt-visio"]}
+    },
+    {
+      "id": "relation:middle-english-version-of-latin-work",
+      "type": "version_of",
+      "subject": "edition:wagner:tundale-1893",
+      "object": "work:marcus:visio-tnugdali",
+      "scope": {"subject": {"kind": "selected_passages", "description": "The anonymous Middle English poem represented by Wagner's edited text"}, "object": {"kind": "whole", "description": "Latin Visio Tnugdali narrative"}, "notes": "The work-level dependence is secure, but whether the immediate exemplar was a Latin recension associated with Vincent of Beauvais or an Anglo-Norman intermediary remains disputed."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:wagner-1893-scan", "evidence:mets-tundale-introduction", "evidence:getty-tundale"]}
+    },
+    {
+      "id": "relation:celt-version-of-latin-work",
+      "type": "version_of",
+      "subject": "encoding:celt:L207009",
+      "object": "work:marcus:visio-tnugdali",
+      "scope": {"subject": {"kind": "whole", "description": "CELT Latin digital edition"}, "object": {"kind": "whole", "description": "Marcus's Latin work"}, "notes": "This comparison relation does not place CELT upstream of the repository text."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celt-visio"]}
+    },
+    {
+      "id": "relation:tradition-describes-advocates",
+      "type": "describes",
+      "subject": "catalog:middle-english-tundale-tradition",
+      "object": "witness:nls:adv-ms-19-3-1",
+      "scope": {"subject": {"kind": "part", "description": "One witness in the five-witness tradition"}, "object": {"kind": "whole", "description": "Adv.MS.19.3.1"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:nls-adv-19-3-1"]}
+    },
+    {
+      "id": "relation:tradition-describes-cotton",
+      "type": "describes",
+      "subject": "catalog:middle-english-tundale-tradition",
+      "object": "witness:bl:cotton-caligula-a-ii",
+      "scope": {"subject": {"kind": "part", "description": "One witness in the five-witness tradition"}, "object": {"kind": "whole", "description": "Cotton MS Caligula A II component"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:bl-cotton-caligula-a-ii"]}
+    },
+    {
+      "id": "relation:tradition-describes-royal",
+      "type": "describes",
+      "subject": "catalog:middle-english-tundale-tradition",
+      "object": "witness:bl:royal-17-b-xliii",
+      "scope": {"subject": {"kind": "part", "description": "One witness in the five-witness tradition"}, "object": {"kind": "whole", "description": "Royal MS 17 B XLIII"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:bl-royal-17-b-xliii"]}
+    },
+    {
+      "id": "relation:tradition-describes-ashmole",
+      "type": "describes",
+      "subject": "catalog:middle-english-tundale-tradition",
+      "object": "witness:bodleian:ashmole-1491",
+      "scope": {"subject": {"kind": "part", "description": "One fragmentary witness in the five-witness tradition"}, "object": {"kind": "whole", "description": "Five Tundale leaves in MS Ashmole 1491"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:bodleian-ashmole-catalog"]}
+    },
+    {
+      "id": "relation:tradition-describes-takamiya",
+      "type": "describes",
+      "subject": "catalog:middle-english-tundale-tradition",
+      "object": "witness:beinecke:takamiya-32",
+      "scope": {"subject": {"kind": "part", "description": "The fifth, fragmentary witness, not used by Wagner"}, "object": {"kind": "whole", "description": "Takamiya MS 32"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:mets-tundale-textual-notes", "evidence:beinecke-takamiya-32"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:aaw7316-repo",
+      "entity": "artifact:general-corpus:aaw7316",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path",
+      "repository_path": "CME/source/CME_phase_1-2/aaw7316.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:aaw7316-xml"]
+    },
+    {
+      "id": "access:aaw7316-umich",
+      "entity": "encoding:umich-cme:AAW7316.0001.001",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page and full-text view",
+      "url": "https://quod.lib.umich.edu/c/cme/AAW7316.0001.001",
+      "alternate_urls": ["https://name.umdl.umich.edu/AAW7316.0001.001"],
+      "cost": "free",
+      "format": "HTML digital text with page-image links; collection XML download",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:umich-aaw7316", "evidence:umich-cme-about"]
+    },
+    {
+      "id": "access:bsb-wagner-facsimile",
+      "entity": "facsimile:bsb:wagner-tundale-1893",
+      "provider_id": "agent:bsb",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "MDZ viewer or direct IIIF Presentation 2 manifest",
+      "url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=1",
+      "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest", "https://www.deutsche-digitale-bibliothek.de/item/52LUNGEVBHR4SPRTACNVSFDGITQFQ7WE"],
+      "cost": "free",
+      "format": "198 color canvases, IIIF JPEG images, page-level hOCR",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bsb-iiif", "evidence:ddb-wagner-1893"]
+    },
+    {
+      "id": "access:nls-adv-facsimile",
+      "entity": "witness:nls:adv-ms-19-3-1",
+      "provider_id": "agent:nls",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "NLS image viewer or complete-book color PDF download",
+      "url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060?mode=fullsize",
+      "alternate_urls": ["https://digital.nls.uk/133680060", "https://manuscripts.nls.uk/repositories/2/resources/15302"],
+      "cost": "free",
+      "format": "Complete color facsimile; page JPEGs and approximately 95 MB PDF",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:nls-digital", "evidence:nls-adv-19-3-1"]
+    },
+    {
+      "id": "access:cotton-catalog",
+      "entity": "witness:bl:cotton-caligula-a-ii",
+      "provider_id": "agent:bl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts component record",
+      "url": "https://searcharchives.bl.uk/catalog/041-001102312",
+      "cost": "free",
+      "format": "Catalogue record; no digitized content link on the component record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "access:cotton-physical",
+      "entity": "witness:bl:cotton-caligula-a-ii",
+      "provider_id": "agent:bl",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request the component for consultation in the British Library London reading room; a Reader Pass and letter of introduction are required",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "access:royal-catalog",
+      "entity": "witness:bl:royal-17-b-xliii",
+      "provider_id": "agent:bl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts record",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107332",
+      "cost": "free",
+      "format": "Catalogue record; no current digitized-content URL",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bl-royal-17-b-xliii"]
+    },
+    {
+      "id": "access:royal-physical",
+      "entity": "witness:bl:royal-17-b-xliii",
+      "provider_id": "agent:bl",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request for consultation in the British Library London reading room; a Reader Pass and letter of introduction are required",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bl-royal-17-b-xliii"]
+    },
+    {
+      "id": "access:ashmole-catalog",
+      "entity": "witness:bodleian:ashmole-1491",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Official digitized 1845 Ashmole catalogue, entry 1491",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A2e2f9838-a7a2-4a7a-8cf3-9346c4139538",
+      "cost": "free",
+      "format": "PDF catalogue",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bodleian-ashmole-catalog"]
+    },
+    {
+      "id": "access:ashmole-enquiry",
+      "entity": "witness:bodleian:ashmole-1491",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Use Bodleian Special Collections finding aids and contact/request services, quoting MS Ashmole 1491 and SC 7656",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/finding-aids-and-catalogues",
+      "cost": "unknown",
+      "format": "Catalogue enquiry or physical consultation request",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bodleian-finding-aids", "evidence:bodleian-ashmole-catalog"]
+    },
+    {
+      "id": "access:takamiya-onsite",
+      "entity": "witness:beinecke:takamiya-32",
+      "provider_id": "agent:beinecke",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Consult Takamiya MS 32 in the Beinecke Rare Book and Manuscript Library reading room",
+      "url": "https://beinecke.library.yale.edu/medieval-manuscripts-toshiyuki-takamiya-beinecke-library",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:beinecke-takamiya-32"]
+    },
+    {
+      "id": "access:wagner-1882",
+      "entity": "edition:wagner:visio-tnugdali-1882",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Free Google Play/Google Books digitization",
+      "url": "https://play.google.com/store/books/details/Tnugdalus_Visio_Tnugdali?id=E_evWVPAtEsC",
+      "alternate_urls": ["https://books.google.com/books?id=9Y90P5W9P7YC"],
+      "cost": "free",
+      "format": "Scanned ebook, 186 pages",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:wagner-1882"]
+    },
+    {
+      "id": "access:celt-latin",
+      "entity": "encoding:celt:L207009",
+      "provider_id": "agent:celt",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Anonymously viewable CELT HTML edition",
+      "url": "https://celt.ucc.ie/published/L207009.html",
+      "cost": "free",
+      "format": "HTML Latin text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:celt-visio"],
+      "notes": ["The page is publicly readable, but its availability statement requires prior CELT consent and limits use to academic research and teaching."]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:aaw7316-local-artifact",
+      "entity": "artifact:general-corpus:aaw7316",
+      "component": "The local XML serialization and any repository-specific changes",
+      "jurisdiction": "United States and repository terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "U-M labels the upstream item public domain in the United States, but the local XML header does not state a license governing this serialization or any later repository changes.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:aaw7316-xml", "evidence:umich-aaw7316"],
+      "notes": ["This uncertainty concerns the local serialization and repository terms, not the medieval poem or Wagner's 1893 edition."]
+    },
+    {
+      "id": "rights:tundale-underlying-and-wagner-us",
+      "entity": "edition:wagner:tundale-1893",
+      "component": "The anonymous medieval Middle English work and Wagner's 1893 printed edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The underlying work is medieval, and Wagner's edition was published in 1893, well beyond the maximum 95-year U.S. term described by the U.S. Copyright Office for pre-1978 protected works; U-M independently labels this item public domain.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wagner-1893-scan", "evidence:umich-aaw7316", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:umich-aaw7316-us",
+      "entity": "encoding:umich-cme:AAW7316.0001.001",
+      "component": "Materials presented in U-M CME item AAW7316.0001.001",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M expressly labels the item public domain and applies No Copyright–United States.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-aaw7316"],
+      "notes": ["NoC-US is jurisdiction-specific and is not a worldwide license or dedication."]
+    },
+    {
+      "id": "rights:bsb-wagner-facsimile",
+      "entity": "facsimile:bsb:wagner-tundale-1893",
+      "access_id": "access:bsb-wagner-facsimile",
+      "component": "BSB digital images of its 1893 copy",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-11",
+      "basis": "The BSB IIIF manifest and DDB item apply No Copyright–Non-Commercial Use Only to the digital object.",
+      "asserted_by_id": "agent:bsb",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bsb-iiif", "evidence:ddb-wagner-1893"],
+      "notes": ["The noncommercial provider condition concerns reuse of BSB's digital object and does not alter the U.S. public-domain status of the underlying 1893 edition."]
+    },
+    {
+      "id": "rights:nls-adv-manuscript",
+      "entity": "witness:nls:adv-ms-19-3-1",
+      "component": "The medieval manuscript content represented by the NLS digital object",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The exact NLS digital object applies the Public Domain Mark to the manuscript work.",
+      "asserted_by_id": "agent:nls",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-digital"]
+    },
+    {
+      "id": "rights:nls-adv-images",
+      "entity": "witness:nls:adv-ms-19-3-1",
+      "access_id": "access:nls-adv-facsimile",
+      "component": "NLS page images and transcriptions on the exact digital-object page, including medium image downloads",
+      "jurisdiction": "Worldwide license grant, subject to exact-page exceptions",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "The NLS exact object page states that its images and transcriptions, including medium image downloads, may be used under CC BY 4.0 unless otherwise stated.",
+      "asserted_by_id": "agent:nls",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-digital"],
+      "notes": ["Confirm whether any particular full-resolution or PDF deliverable carries an exception before redistribution; the object page's express statement covers images and transcriptions on the page and medium downloads."]
+    },
+    {
+      "id": "rights:wagner-1882-us",
+      "entity": "edition:wagner:visio-tnugdali-1882",
+      "component": "Wagner's 1882 Latin and Old German scholarly edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1882, well beyond the maximum 95-year U.S. term described by the U.S. Copyright Office for pre-1978 protected works.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wagner-1882", "evidence:copyright-office"],
+      "notes": ["Access through Google Books or Google Play may still be subject to platform terms distinct from copyright status."]
+    },
+    {
+      "id": "rights:celt-latin-encoding",
+      "entity": "encoding:celt:L207009",
+      "access_id": "access:celt-latin",
+      "component": "CELT's modern electronic edition and its source edition",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "CELT states that the electronic edition was prepared with permission from Brigitte Pfeil and Peter Lang and is available only with prior consent for academic research and teaching.",
+      "asserted_by_id": "agent:celt",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:celt-visio"],
+      "notes": ["These restrictions do not place Marcus's twelfth-century underlying Latin work under copyright."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:wagner-collation",
+      "entity": "edition:wagner:tundale-1893",
+      "practice": "collation",
+      "description": "Wagner uses R as the principal base after line 63, supplies the opening from C, checks R against A, B, and C, and sometimes adopts other readings or material supported by the Latin source.",
+      "scope": "Middle English critical text and apparatus, lines 1–2354",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wagner-1893-scan", "evidence:aaw7316-xml"]
+    },
+    {
+      "id": "practice:wagner-supplies",
+      "entity": "edition:wagner:tundale-1893",
+      "practice": "selection",
+      "source_feature": "Text not taken from Royal 17 B XLIII",
+      "representation": "Italic type",
+      "description": "Wagner prints every passage or reading not drawn from R in italics, making italic type a source-layer marker rather than emphasis.",
+      "scope": "Edited Middle English poem",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wagner-1893-scan"]
+    },
+    {
+      "id": "practice:wagner-expansions",
+      "entity": "edition:wagner:tundale-1893",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviation",
+      "representation": "Italic type within roman base text; roman type within italic supplied text",
+      "description": "Expanded abbreviations are distinguished by changing typeface relative to the surrounding source-status typography.",
+      "scope": "Edited Middle English poem",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wagner-1893-scan"],
+      "notes": ["The uncorrected OCR may not reliably preserve this nested typographic distinction."]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:AAW7316.0001.001",
+      "practice": "selection",
+      "description": "The electronic item encodes the poem, variant apparatus, and Nachtrag but represents the introduction and pp. 138–146 only as omitted front/back matter.",
+      "scope": "Whole electronic item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:aaw7316-xml", "evidence:wagner-1893-scan"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:aaw7316-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/aaw7316.xml, HEADER and full encoded text.",
+      "repository_path": "CME/source/CME_phase_1-2/aaw7316.xml",
+      "locator": "HEADER; DIV1 elements; NOTE1 apparatus; lines 1–2354; trailer",
+      "summary": "Identifies U-M accession AAW7316.0001.001, Wagner 1893 as source, uncorrected OCR/TEI Level 1 production, omitted matter, 2,354 encoded verse lines, 2,208 apparatus notes, four sigla, the 1451 R colophon, and editorial notes identifying C for lines 1–63 and R as the later base.",
+      "accessed_on": "2026-07-11",
+      "sha256": "513343221c89f4e833f46e0760f0df44f127959ff71464199d19ec2cb64208ed"
+    },
+    {
+      "id": "evidence:umich-aaw7316",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, CME item AAW7316.0001.001, Tundale.",
+      "url": "https://quod.lib.umich.edu/c/cme/AAW7316.0001.001",
+      "alternate_urls": ["https://name.umdl.umich.edu/AAW7316.0001.001"],
+      "summary": "Confirms the item title, 1893 Halle/Niemeyer publication, public access, stable handle, contents divisions, and the current Public Domain/No Copyright–United States assertion.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-cme-about",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, About the Corpus of Middle English Prose and Verse.",
+      "url": "https://quod.lib.umich.edu/c/cme/about.html",
+      "summary": "Describes the collection's public purpose, TEI text delivery, and XML bulk availability; item-specific OCR statements in aaw7316.xml take precedence over the collection's general production description.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:wagner-1893-scan",
+      "type": "edition_statement",
+      "citation": "Albrecht Wagner, ed., Tundale: Das mittelenglische Gedicht über die Vision des Tundalus (Halle an der Saale: Max Niemeyer, 1893), BSB P.o.angl. 451 i.",
+      "url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=1",
+      "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest"],
+      "locator": "title page; pp. IX–XL; pp. 1–146",
+      "summary": "Directly supplies the bibliography, four witness descriptions and sigla, stemmatic argument, northern rhyme-based localization, base-text choice, italic/supply and expansion conventions, use of the 1882 Latin edition, dating discussion, critical text, apparatus, and notes.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bsb-iiif",
+      "type": "digital_surrogate",
+      "citation": "Bayerische Staatsbibliothek, IIIF manifest for bsb11665517, Tundale.",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest",
+      "summary": "Confirms title, editor, 1893 imprint, extent XL + 146 pages, BSB shelfmark P.o.angl. 451 i, URN, 198 canvases, IIIF images, hOCR links, BSB attribution, and NoC-NC rights URI.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ddb-wagner-1893",
+      "type": "official_webpage",
+      "citation": "Deutsche Digitale Bibliothek, Tundale: das mittelenglische Gedicht über die Vision des Tundalus, BSB digital object.",
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/52LUNGEVBHR4SPRTACNVSFDGITQFQ7WE",
+      "summary": "Confirms BSB digitization, shelfmark, bibliographic extent, URN, public download route, and No Copyright–Non-Commercial Use Only statement.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:nls-adv-19-3-1",
+      "type": "official_catalog",
+      "citation": "National Library of Scotland, Adv.MS.19.3.1, collection of romances and religious material copied chiefly by Richard Heeg.",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/15302",
+      "summary": "Catalogues the manuscript as circa 1480, identifies Tundale at fols. 98r–157v and signed by Heeg, records the former shelfmark Jac.V.7.27, physical extent and dimensions, microfilms, a 2000 facsimile, and a permanent link to the digitized copy.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:nls-digital",
+      "type": "digital_surrogate",
+      "citation": "National Library of Scotland, complete digitized Adv.MS.19.3.1, digital object 133680060.",
+      "url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060?mode=fullsize",
+      "alternate_urls": ["https://digital.nls.uk/133680060"],
+      "summary": "Provides a complete-book color PDF and page images, identifies shelfmark and date, marks the manuscript work Public Domain, and states CC BY 4.0 terms for images and transcriptions on the page including medium downloads unless otherwise stated.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-cotton-caligula-a-ii",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Caligula A II, ff. 3–139.",
+      "url": "https://searcharchives.bl.uk/catalog/041-001102312",
+      "summary": "The exact component record places Visio Tundalie at fols. 95v–107v, dates the paper component to the second half of the fifteenth century, identifies England as origin, reports no digitized content, and supplies physical-request instructions and user conditions.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-royal-17-b-xliii",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Royal MS 17 B XLIII.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107332",
+      "summary": "Describes the imperfect 2,292-line Tundale beginning at fol. 150, transcribes the 1451 colophon, identifies the manuscript as parchment with 187 folios, and provides request instructions; no current digital-content URL is present.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bodleian-ashmole-catalog",
+      "type": "official_catalog",
+      "citation": "William Henry Black, A Descriptive, Analytical, and Critical Catalogue of the Manuscripts Bequeathed unto the University of Oxford by Elias Ashmole (Oxford, 1845), MS Ashmole 1491, pp. 1368–69; Bodleian Libraries ORA scan.",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A2e2f9838-a7a2-4a7a-8cf3-9346c4139538",
+      "locator": "catalogue entry 1491, pp. 1368–69",
+      "summary": "Describes six medieval parchment leaves bound at the end of the composite volume: Tundale on pages 1–10 (five leaves), followed by an Old French religious fragment on pages 11–12. The catalogue PDF is released under CC0.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bodleian-finding-aids",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Special collections finding aids and catalogues.",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/finding-aids-and-catalogues",
+      "summary": "Provides the current institutional route to manuscript catalogues, Digital Bodleian, and special-collections access information.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:beinecke-takamiya-32",
+      "type": "official_catalog",
+      "citation": "Beinecke Rare Book and Manuscript Library, The Medieval Manuscripts of Toshiyuki Takamiya at the Beinecke Library, Takamiya MS 32.",
+      "url": "https://beinecke.library.yale.edu/medieval-manuscripts-toshiyuki-takamiya-beinecke-library",
+      "summary": "Records Beinecke's 2017 acquisition, identifies Takamiya MS 32 as the Delamere Chaucer made in England in the second quarter of the fifteenth century, and says the books can be consulted in the Beinecke reading room.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mets-tundale-introduction",
+      "type": "scholarly_source",
+      "citation": "Edward E. Foster, ed., The Vision of Tundale: Introduction, in Three Purgatory Poems (Middle English Texts Series, 2004).",
+      "url": "https://metseditions.org/read/M3EABw4TVxE7FKpqi8jbjHmD68bdE8e",
+      "locator": "introduction and select bibliography",
+      "summary": "Identifies Marcus and 1149, argues that Vincent of Beauvais's Latin version was probably the primary source of the Middle English poem, describes the narrative, theology, and witness-specific Passus/Gaudia structure, and lists five manuscripts with folio ranges and dates.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mets-tundale-textual-notes",
+      "type": "scholarly_source",
+      "citation": "Edward E. Foster, ed., The Vision of Tundale: Textual Notes, Middle English Texts Series.",
+      "url": "https://metseditions.org/read/wjVPQA8uRwd1TapMfy4EwiEeGZmdELQ",
+      "summary": "Explains the modern edition's Advocates' base, identifies all five witnesses and their modern sigla, and accurately characterizes Wagner as editing R with variants from A, B, and C.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:getty-tundale",
+      "type": "authority_record",
+      "citation": "J. Paul Getty Trust, CONA Iconography Record 901001219, Vision of Tundale.",
+      "url": "https://www.getty.edu/cona/CONAIconographyRecord.aspx?iconid=901001219",
+      "summary": "Treats the work as an anonymous Middle English verse version composed circa 1400 in England, based on Visio Tnugdali, and reports an Anglo-Norman intermediary; that immediate-source claim conflicts with Foster's Latin-source account.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mearns-volume",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, Vol. 18, The Vision of Tundale, ed. Rodney Mearns (1985).",
+      "url": "https://met.wp.st-andrews.ac.uk/1985/12/28/vol-18-the-vision-of-tundale/",
+      "summary": "Describes the poem as a Middle English verse translation of Latin prose in octosyllabic couplets, reports five mid- or late-fifteenth-century witnesses, and identifies Cotton Caligula A II as the Mearns edition's base.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:wagner-1882",
+      "type": "digital_surrogate",
+      "citation": "Albrecht Wagner, ed., Visio Tnugdali: Lateinisch und Altdeutsch (Erlangen: Andreas Deichert, 1882), Google Books/Play scan.",
+      "url": "https://play.google.com/store/books/details/Tnugdalus_Visio_Tnugdali?id=E_evWVPAtEsC",
+      "alternate_urls": ["https://books.google.com/books?id=9Y90P5W9P7YC"],
+      "summary": "Confirms editor, title, 1882 Deichert imprint, 186-page extent, and free full-book access to the Latin/Old German edition that Wagner cites in 1893.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:celt-visio",
+      "type": "scholarly_source",
+      "citation": "CELT: Corpus of Electronic Texts, L207009, The Vision of Tnugdalus, attributed to Marcus of Regensburg.",
+      "url": "https://celt.ucc.ie/published/L207009.html",
+      "summary": "Provides a Latin text and header identifying Marcus, the 1149 internal date, source manuscript Clm 22254, Wagner's 1882 edition, electronic-production history, and the prior-consent academic-use restriction on the modern electronic edition.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, What Is Copyright? and Circular 15A, Duration of Copyright.",
+      "url": "https://copyright.gov/what-is-copyright/",
+      "alternate_urls": ["https://www.copyright.gov/circs/circ15a.pdf"],
+      "summary": "Explains the maximum 95-year term for works already protected before 1978 and states that works published in the United States before 1 January 1931 are currently in the U.S. public domain.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:tundale-immediate-source",
+      "question": "Was the Middle English poem translated directly from a Latin recension, especially the Vincent of Beauvais tradition, or through an Anglo-Norman intermediary?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult Eileen Gardiner, ‘The Translation into Middle English of the Vision of Tundale’ (1980), and Rodney Mearns's full 1985 introduction and parallel Latin text.", "Model a more specific source edge only after the verbal correspondences and recension are verified."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:mets-tundale-introduction", "evidence:getty-tundale", "evidence:wagner-1893-scan"]
+    },
+    {
+      "id": "question:cotton-date-conflict",
+      "question": "Why does the current British Library component record date Cotton Caligula A II, ff. 3–139 to 1450–1499 while Foster's METS bibliography dates the Tundale witness c. 1400–1450?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult the full current BL codicological description and Mearns 1985 for dating criteria.", "Do not use Cotton as a securely earliest witness until the discrepancy is resolved."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii", "evidence:mets-tundale-introduction"]
+    },
+    {
+      "id": "question:takamiya-digital-access",
+      "question": "Does Beinecke now provide a stable item-level catalogue record or complete digital facsimile for Takamiya MS 32, especially fols. 166v–175v?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Ask Beinecke Early Books and Manuscripts staff for the current catalogue identifier and digitization status.", "Ask the University of Chicago Library and British Library about the photographic copies cited by Foster as Chicago and Facs. 405 (16).", "Retain the verified reading-room route and do not infer that the manuscript is undigitized from a negative web search."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:beinecke-takamiya-32", "evidence:mets-tundale-introduction"]
+    }
+  ]
+}
