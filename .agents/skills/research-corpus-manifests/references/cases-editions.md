@@ -28,6 +28,13 @@ against Arundel 57. Model `version_of` the prior edition plus a distinct
 `collated_against` witness edge. Do not describe the 1965 edition date as a
 revision date of the medieval work.
 
+## Unchanged reprint: 3KCol
+
+An explicitly described reprint is still a distinct edition entity linked to
+the earlier edition with scoped `version_of`. Verify the reprint's included and
+omitted matter independently, and give any new cover, preliminaries, or terms a
+separate rights analysis instead of inheriting every claim from the original.
+
 ## Later transcript and indirect readings: afw5744
 
 Van Vliet's partial seventeenth-century transcript preserves now-lost Ormulum

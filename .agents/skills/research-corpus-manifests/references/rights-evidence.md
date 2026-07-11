@@ -62,6 +62,10 @@ For local evidence, record repository-relative paths and checksums. For web
 evidence, prefer item/component records and direct digital objects. A
 collection home or repository contact page can support an enquiry route but
 must not masquerade as the catalog or image terms for a shelfmark.
+Likewise, reserve a witness `holding.catalog_url` for a repository-owned exact
+item/component record. Record an exact scholarly handlist as scholarly evidence
+and access, explicitly labeled as such, rather than making it look like the
+holding institution's online catalog.
 
 Test URLs during substantive review. Replace dead legacy paths with current
 official routes while retaining useful persistent identifiers as alternates.

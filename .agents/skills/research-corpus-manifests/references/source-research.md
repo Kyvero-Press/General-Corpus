@@ -83,6 +83,11 @@ as historical assertions. Search later accession reports and current catalogs;
 record both the older status and a verified modern identification instead of
 silently rewriting the source's history.
 
+Compare shelfmark forms in the encoding header, internal headings, source
+edition, and current institutional record. Use the repository's current exact
+shelfmark for the witness, but preserve malformed or legacy source forms in
+notes with the evidence that resolves them.
+
 ## Inspect the immediate edition
 
 Whenever possible, open the actual book and inspect:

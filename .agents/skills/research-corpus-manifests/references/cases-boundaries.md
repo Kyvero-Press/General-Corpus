@@ -31,6 +31,11 @@ represents one intellectual work. Create separate witness entities and scoped
 edition-to-witness edges. Keep witness-specific dates and access routes in
 lineage; only a genuinely earliest attestation belongs in work metadata.
 
+If an encoding serializes those parallel columns or pages as consecutive XML
+divisions, treat the divisions as representations of separate witnesses, not
+as intrinsic chapters or parts of the work. Record the layout transformation
+as an encoding practice.
+
 ## Component records: Ayenbite
 
 The exact BL child record ends Ayenbite at folio 94r; later folios contain other
