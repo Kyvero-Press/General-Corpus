@@ -79,6 +79,10 @@ for scholarly reconstruction, approximate localization, inferred transfer,
 and conflicting catalog data. Explain the uncertainty; confidence alone is not
 an explanation.
 
+If an edition and current repository disagree about hands, dates, or added
+material, preserve each as an attributed assertion with its own evidence and
+open a reconciliation question. Do not manufacture one consensus description.
+
 ## Lineage checklist
 
 - Use the cataloged unit's preferred title as top-level `title`.

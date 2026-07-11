@@ -43,6 +43,14 @@ integrate and push their branches sequentially. Never validate one book while
 another finished book's unindexed files are sitting uncommitted in the main
 worktree.
 
+Create a disk-efficient worktree with:
+
+```bash
+python3 scripts/create-manifest-research-worktree.py WORK_ID
+```
+
+The helper sparsely checks out only that work's XML from the CME submodule.
+
 ## Skill update test
 
 After each work, ask:

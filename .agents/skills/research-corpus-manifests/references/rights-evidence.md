@@ -34,6 +34,10 @@ Test the exact deliverable, not only its landing page.
 - A facsimile bibliography proves existence, not online access.
 - A selected image is not a complete manuscript.
 
+When an edition publishes a few manuscript plates, model those plates as their
+own reproduction entity. A complete scan of that edition makes the plates
+viewable but still does not become a complete facsimile of the witness.
+
 Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
 checks with `last_checked`.

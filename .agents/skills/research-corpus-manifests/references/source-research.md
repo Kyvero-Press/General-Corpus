@@ -78,6 +78,11 @@ snippets as final evidence. When authorities disagree, preserve the competing
 claims with attribution and confidence; do not average dates or select the
 most precise one merely because it is precise.
 
+Treat “lost,” “whereabouts unknown,” and former shelfmarks in an older edition
+as historical assertions. Search later accession reports and current catalogs;
+record both the older status and a verified modern identification instead of
+silently rewriting the source's history.
+
 ## Inspect the immediate edition
 
 Whenever possible, open the actual book and inspect:
