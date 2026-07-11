@@ -480,13 +480,32 @@
       "provider_id": "agent:umich",
       "resource_kind": "digital_text",
       "status": "publicly_available",
-      "access_method": "U-M item page and full-text view",
+      "access_method": "U-M item page and full-text view; Internet Archive mirror of the raw Michigan book package",
       "url": "https://quod.lib.umich.edu/c/cme/AAW7316.0001.001",
-      "alternate_urls": ["https://name.umdl.umich.edu/AAW7316.0001.001"],
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/AAW7316.0001.001",
+        "https://archive.org/details/aaw7316.0001.001.umich.edu",
+        "https://archive.org/download/aaw7316.0001.001.umich.edu/aaw7316.0001.001.umich.edu_umichbook.zip"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete U-M raw book package (ZIP)",
+          "path": "source-cache/aaw7316/umich-raw-book.zip",
+          "source_url": "https://archive.org/download/aaw7316.0001.001.umich.edu/aaw7316.0001.001.umich.edu_umichbook.zip",
+          "sha256": "3eee295c47c3ef7e0a4c1f849f64b9d48c5c0bd216077317701c759f266c2eea",
+          "bytes": 10257905,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "The raw package contains all 188 U-M TIFF page images plus five supporting encoding and page-map files; complete describes the delivered package, not a claim that it includes every physical surface in the BSB copy."
+          ]
+        }
+      ],
       "cost": "free",
-      "format": "HTML digital text with page-image links; collection XML download",
+      "format": "HTML digital text with page-image links; collection XML; 188-TIFF raw-book ZIP",
       "last_checked": "2026-07-11",
-      "evidence_ids": ["evidence:umich-aaw7316", "evidence:umich-cme-about"]
+      "evidence_ids": ["evidence:umich-aaw7316", "evidence:umich-cme-about", "evidence:umich-raw-package"]
     },
     {
       "id": "access:bsb-wagner-facsimile",
@@ -497,6 +516,51 @@
       "access_method": "MDZ viewer or direct IIIF Presentation 2 manifest",
       "url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=1",
       "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest", "https://www.deutsche-digitale-bibliothek.de/item/52LUNGEVBHR4SPRTACNVSFDGITQFQ7WE"],
+      "local_copies": [
+        {
+          "label": "BSB Wagner 1893 IIIF Presentation manifest",
+          "path": "source-cache/aaw7316/bsb-wagner-1893-iiif-manifest.json",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest",
+          "sha256": "9e583d848034c6cab45db71efa99f525f80f90164b21b1fcfd66b51b6ada19c9",
+          "bytes": 171162,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-11",
+          "coverage": "metadata_only",
+          "notes": [
+            "This Presentation manifest enumerates the complete 198-canvas scan but does not itself contain the page-image bytes."
+          ]
+        },
+        {
+          "label": "Complete BSB Wagner 1893 IIIF bundle",
+          "path": "source-cache/aaw7316/bsb-wagner-1893-complete-iiif.zip",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11665517/manifest",
+          "sha256": "b73f4c257a53d9cabf6d9a7d9de9210586584b95f5065289f29b58f1e7c8dccc",
+          "bytes": 74705377,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 198,
+          "work_portion": {
+            "label": "Edited poem and apparatus represented by aaw7316",
+            "locators": [
+              "printed pp. 1–137",
+              "IIIF canvases 47–183"
+            ],
+            "start_url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=47",
+            "end_url": "https://www.digitale-sammlungen.de/en/view/bsb11665517?page=183",
+            "notes": [
+              "The bundle covers the complete 198-canvas physical copy. The corpus encoding represents the poem and apparatus on printed pp. 1–137; it omits the German introduction and concluding commentary as text."
+            ]
+          },
+          "notes": [
+            "Complete 198-canvas scan of BSB copy P.o.angl. 451 i.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 198 canvas images listed when retrieved.",
+            "IIIF image request size profile: full; format: JPEG."
+          ]
+        }
+      ],
       "cost": "free",
       "format": "198 color canvases, IIIF JPEG images, page-level hOCR",
       "last_checked": "2026-07-11",
@@ -510,9 +574,55 @@
       "status": "publicly_available",
       "access_method": "NLS image viewer or complete-book color PDF download",
       "url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060?mode=fullsize",
-      "alternate_urls": ["https://digital.nls.uk/133680060", "https://manuscripts.nls.uk/repositories/2/resources/15302"],
+      "alternate_urls": [
+        "https://digital.nls.uk/133680060",
+        "https://manuscripts.nls.uk/repositories/2/resources/15302",
+        "https://deriv.nls.uk/dcn23/1341/6160/134161605.23.pdf",
+        "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete NLS Adv.MS.19.3.1 color facsimile PDF",
+          "path": "source-cache/aaw7316/nls-adv-ms-19-3-1-complete.pdf",
+          "source_url": "https://deriv.nls.uk/dcn23/1341/6160/134161605.23.pdf",
+          "sha256": "b09926c267d2a30f9dcab0a1eb4056f97c58c044b8a3940ad773c8325bd05c44",
+          "bytes": 97450493,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "work_portion": {
+            "label": "The Vision of Tundale",
+            "locators": [
+              "manuscript fols. 98r–157v",
+              "IIIF canvases 211–330 (viewer indices 210–329)",
+              "facsimile PDF pages 211–330"
+            ],
+            "start_url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060#?c=0&m=0&s=0&cv=210",
+            "end_url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060#?c=0&m=0&s=0&cv=329",
+            "notes": [
+              "Canvas and PDF page 211 visibly begin the poem at fol. 98r; canvas and page 330 carry the explicit on fol. 157v, and the following surface begins the next text."
+            ]
+          },
+          "notes": [
+            "The 482-page PDF reproduces the complete physical manuscript, not only the Tundale leaves."
+          ]
+        },
+        {
+          "label": "NLS Adv.MS.19.3.1 IIIF Presentation manifest",
+          "path": "source-cache/aaw7316/nls-adv-ms-19-3-1-iiif-manifest.json",
+          "source_url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json",
+          "sha256": "bd079bf789757623c57e33924885ffa8ab3d16a02df9bd8acbdd3b98e1ea3b9d",
+          "bytes": 398804,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-11",
+          "coverage": "metadata_only",
+          "notes": [
+            "The manifest enumerates all 482 canvases and preserves the canvas crosswalk; it does not itself contain the manuscript image bytes."
+          ]
+        }
+      ],
       "cost": "free",
-      "format": "Complete color facsimile; page JPEGs and approximately 95 MB PDF",
+      "format": "Complete 482-page color PDF, 482-canvas IIIF facsimile, and page JPEGs",
       "last_checked": "2026-07-11",
       "evidence_ids": ["evidence:nls-digital", "evidence:nls-adv-19-3-1"]
     },
@@ -815,6 +925,20 @@
       "accessed_on": "2026-07-11"
     },
     {
+      "id": "evidence:umich-raw-package",
+      "type": "digital_surrogate",
+      "citation": "University of Michigan/Internet Archive Raw Michigan Book package for AAW7316.0001.001.",
+      "url": "https://archive.org/download/aaw7316.0001.001.umich.edu/aaw7316.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": [
+        "https://archive.org/details/aaw7316.0001.001.umich.edu",
+        "https://archive.org/metadata/aaw7316.0001.001.umich.edu"
+      ],
+      "locator": "ZIP directory; 188 TIFF files and five supporting files",
+      "summary": "Verified public 10,257,905-byte raw-book ZIP containing the 188 TIFF page images corresponding to the U-M encoding's page breaks plus U-M XML, text, header, page-map, and log files. The package is a source surrogate for the electronic item; its 188-image extent must not be conflated with the BSB object's 198 complete-copy canvases.",
+      "accessed_on": "2026-07-11",
+      "sha256": "3eee295c47c3ef7e0a4c1f849f64b9d48c5c0bd216077317701c759f266c2eea"
+    },
+    {
       "id": "evidence:umich-cme-about",
       "type": "official_webpage",
       "citation": "University of Michigan Library, About the Corpus of Middle English Prose and Verse.",
@@ -861,8 +985,13 @@
       "type": "digital_surrogate",
       "citation": "National Library of Scotland, complete digitized Adv.MS.19.3.1, digital object 133680060.",
       "url": "https://digital.nls.uk/early-manuscripts/browse/archive/133680060?mode=fullsize",
-      "alternate_urls": ["https://digital.nls.uk/133680060"],
-      "summary": "Provides a complete-book color PDF and page images, identifies shelfmark and date, marks the manuscript work Public Domain, and states CC BY 4.0 terms for images and transcriptions on the page including medium downloads unless otherwise stated.",
+      "alternate_urls": [
+        "https://digital.nls.uk/133680060",
+        "https://deriv.nls.uk/dcn23/1341/6160/134161605.23.pdf",
+        "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json"
+      ],
+      "locator": "complete 482-page PDF and IIIF canvases; Tundale at canvases/pages 211–330",
+      "summary": "Provides a complete-book 482-page color PDF and 482-canvas IIIF facsimile, identifies shelfmark and date, and maps Tundale at fols. 98r–157v to canvases/pages 211–330. Visual inspection confirms that surface 211 begins the poem, surface 330 carries its explicit, and surface 331 begins the following text. The item marks the manuscript work Public Domain and states CC BY 4.0 terms for images and transcriptions on the page including medium downloads unless otherwise stated.",
       "accessed_on": "2026-07-11"
     },
     {
