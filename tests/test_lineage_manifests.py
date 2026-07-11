@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import importlib.util
 import json
 import sys
@@ -51,6 +52,100 @@ class LineageManifestTests(unittest.TestCase):
         )
 
         self.assertIn("CME00099: unexpected property 'unreviewed_guess'", errors)
+
+    def test_local_copy_is_optional_but_verified_when_present(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest_path = root / "manifests/lineage/works/TestWork.json"
+            payload = b"%PDF-1.7\nsource fixture\n%%EOF\n"
+            local_copy = {
+                "path": "source-cache/TestWork/source.pdf",
+                "source_url": "https://example.test/source.pdf",
+                "sha256": hashlib.sha256(payload).hexdigest(),
+                "bytes": len(payload),
+                "media_type": "application/pdf",
+                "downloaded_on": "2026-07-11",
+            }
+            manifest = {
+                "id": "lineage:TestWork",
+                "work_id": "TestWork",
+                "primary_subject": "edition:test",
+                "entities": [{"id": "edition:test"}],
+                "agents": [],
+                "relations": [],
+                "access": [
+                    {
+                        "id": "access:test",
+                        "entity": "edition:test",
+                        "url": "https://example.test/source",
+                        "alternate_urls": ["https://example.test/source.pdf"],
+                        "local_copies": [local_copy],
+                        "evidence_ids": ["evidence:test"],
+                    }
+                ],
+                "rights": [],
+                "editorial_practices": [],
+                "evidence": [{"id": "evidence:test"}],
+                "open_questions": [],
+            }
+
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root, manifest_path, manifest
+            )
+            self.assertEqual([], errors)
+
+            cached = root / local_copy["path"]
+            cached.parent.mkdir(parents=True)
+            cached.write_bytes(payload)
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root, manifest_path, manifest
+            )
+            self.assertEqual([], errors)
+
+            cached.write_bytes(b"%PDF-1.7\nchanged\n%%EOF\n")
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root, manifest_path, manifest
+            )
+            self.assertTrue(any("local_copies[0].bytes: byte count mismatch" in item for item in errors))
+
+    def test_local_copy_requires_exact_download_link_and_work_scoped_path(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest_path = root / "manifests/lineage/works/TestWork.json"
+            manifest = {
+                "id": "lineage:TestWork",
+                "work_id": "TestWork",
+                "primary_subject": "edition:test",
+                "entities": [{"id": "edition:test"}],
+                "agents": [],
+                "relations": [],
+                "access": [
+                    {
+                        "id": "access:test",
+                        "entity": "edition:test",
+                        "url": "https://example.test/source",
+                        "local_copies": [{
+                            "path": "source-cache/OtherWork/source.pdf",
+                            "source_url": "https://example.test/source.pdf",
+                            "sha256": "0" * 64,
+                            "bytes": 1,
+                            "media_type": "application/pdf",
+                            "downloaded_on": "2026-07-11",
+                        }],
+                        "evidence_ids": ["evidence:test"],
+                    }
+                ],
+                "rights": [],
+                "editorial_practices": [],
+                "evidence": [{"id": "evidence:test"}],
+                "open_questions": [],
+            }
+
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root, manifest_path, manifest
+            )
+            self.assertTrue(any("must be one file under 'source-cache/TestWork'" in item for item in errors))
+            self.assertTrue(any("exact download URL must also appear" in item for item in errors))
 
     def _xml_identifier_errors(self, xml: str, work_id: str) -> list[str]:
         with tempfile.TemporaryDirectory() as directory:

@@ -120,6 +120,7 @@ function accessActionLabel(access: AccessRecord): string {
 }
 
 function AccessCard({ access }: { access: AccessRecord }) {
+  const availableCopies = access.localCopies.filter((copy) => copy.available).length;
   return (
     <article className="access-card">
       <div className="access-card-heading">
@@ -127,7 +128,20 @@ function AccessCard({ access }: { access: AccessRecord }) {
           <p className="eyebrow">{humanizeToken(access.resourceKind)}</p>
           <h4>{access.provider ?? "Provider not recorded"}</h4>
         </div>
-        <StatusBadge value={access.status} />
+        <div className="access-statuses">
+          <StatusBadge value={access.status} />
+          {access.localCopies.length > 0 && (
+            <StatusBadge
+              value={
+                availableCopies === access.localCopies.length
+                  ? "downloaded locally"
+                  : availableCopies > 0
+                    ? "partly downloaded"
+                    : "cache files absent"
+              }
+            />
+          )}
+        </div>
       </div>
       {access.accessMethod && <p>{access.accessMethod}</p>}
       <dl className="inline-facts">
@@ -150,11 +164,47 @@ function AccessCard({ access }: { access: AccessRecord }) {
           </div>
         )}
       </dl>
+      {access.localCopies.map((localCopy) => (
+        <div
+          className={`local-copy ${localCopy.available ? "is-available" : "is-absent"}`}
+          key={localCopy.path}
+        >
+          <strong>
+            {localCopy.available
+              ? "Checksum-verified local copy"
+              : "Local copy recorded, but absent in this checkout"}
+          </strong>
+          <dl>
+            <div>
+              <dt>Cache path</dt>
+              <dd><code>{localCopy.path}</code></dd>
+            </div>
+            <div>
+              <dt>File</dt>
+              <dd>{localCopy.sizeLabel ?? `${localCopy.bytes} bytes`} · {localCopy.mediaType}</dd>
+            </div>
+            <div>
+              <dt>Downloaded</dt>
+              <dd>{localCopy.downloadedOn}</dd>
+            </div>
+            <div>
+              <dt>SHA-256</dt>
+              <dd><code>{localCopy.sha256}</code></dd>
+            </div>
+          </dl>
+          <div className="local-copy-action">
+            <ExternalLink href={localCopy.sourceUrl}>Exact file download</ExternalLink>
+          </div>
+          <Notes notes={localCopy.notes} />
+        </div>
+      ))}
       <div className="access-actions">
         {access.url && (
           <ExternalLink href={access.url}>{accessActionLabel(access)}</ExternalLink>
         )}
-        {access.alternateUrls.map((url, index) => (
+        {access.alternateUrls.filter(
+          (url) => !access.localCopies.some((copy) => copy.sourceUrl === url),
+        ).map((url, index) => (
           <ExternalLink href={url} key={url}>
             Alternate link {index + 1}
           </ExternalLink>

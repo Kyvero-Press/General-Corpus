@@ -34,6 +34,14 @@ work is still pending. The generator writes:
 - optionally, downloadable PDFs under
   `build/corpus-viewer/public/publication-pdfs/`.
 
+For every lineage access route with `local_copies`, the normalized work record
+also reports whether each ignored `source-cache/<work_id>/…` file is present
+and checksum-valid in the checkout that built the catalog. The work detail UI
+shows that status, the cache path and checksum, and the exact upstream file
+URL. Cached research sources are deliberately not copied into the public site:
+their provider terms may permit research download without permitting this
+project to redistribute them.
+
 The default command builds catalog data without copying the PDFs. Add
 `--copy-pdfs` when the generated public tree must be self-contained:
 

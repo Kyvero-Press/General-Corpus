@@ -34,6 +34,29 @@ manifests/lineage/
 `incremental`: the repository has many more works than researched manifests.
 Do not create empty or speculative manifests merely to increase the count.
 
+## Local source cache
+
+Exact downloadable facsimiles and supporting research files live outside Git
+under `source-cache/<work_id>/`. Cache a verified file with:
+
+```bash
+python3 scripts/cache-source-download.py CME00099 \
+  https://example.org/exact-source.pdf \
+  --filename exact-source.pdf
+```
+
+The command prints a JSON `local_copies` snippet containing the relative path,
+exact direct URL, SHA-256, byte count, media type, and date. Add the object to
+the matching access record and keep the human-facing landing page in `url`;
+the exact `source_url` must also be present in `url` or `alternate_urls`.
+Multiple files or volumes belong in the same `local_copies` array when they
+share an access route.
+
+The cache is research storage, not a redistribution channel. It is never
+copied into the viewer's public tree automatically. Manifest validation checks
+the location, URL linkage, and any locally present file; a missing ignored file
+is valid so the committed manifest remains portable between clones.
+
 ## Data model
 
 Each work manifest contains:
@@ -43,7 +66,8 @@ Each work manifest contains:
 - `agents`: people and institutions referenced by those entities;
 - `relations`: directed, scoped provenance edges;
 - `access`: dated routes to public files, catalogues, reading-room access,
-  reproduction orders, and documented negative searches;
+  reproduction orders, documented negative searches, and checksummed local
+  copies of verified file deliverables;
 - `rights`: component- and jurisdiction-specific assessments;
 - `editorial_practices`: transformations such as expanded abbreviations or
   normalized punctuation;
@@ -145,10 +169,12 @@ from `works/*.json` or disagrees with a manifest's identifying fields.
 
 ## When a requested facsimile arrives
 
-Before committing any supplied images:
+Before recording any supplied images:
 
-1. Preserve the institution's written rights/terms response outside the public
-   repository if it contains personal information.
+1. Preserve the institution's written rights/terms response and supplied files
+   under ignored local storage if they contain personal information or cannot
+   be redistributed. Add a `local_copies` record only when its non-sensitive
+   path, URL, hash, and terms can safely be committed.
 2. Create a new facsimile entity recording provider, request date, production
    date if known, exact manuscript coverage, format, resolution, color mode,
    file count, and checksums.
@@ -156,9 +182,10 @@ Before committing any supplied images:
    any provider contract terms. Quote only the minimum factual language needed.
 4. Remove private addresses, telephone numbers, customer/order numbers,
    signatures, invoices, and payment details from committed evidence.
-5. If redistribution is not permitted, do not commit the images. Record a
-   non-sensitive citation and the public request route so another researcher
-   can obtain a copy independently.
+5. If redistribution is not permitted, do not commit or publicly stage the
+   images. A terms-compliant research copy may remain in `source-cache/`;
+   record a non-sensitive citation and public request route so another
+   researcher can obtain a copy independently.
 
 ## Validation
 
@@ -174,6 +201,9 @@ It enforces the committed JSON Schemas and additionally checks:
 - unique IDs and resolvable entity, agent, access, and evidence references;
 - exact index coverage of `works/*.json`;
 - repository-relative, non-escaping paths that exist;
+- work-scoped `source-cache/` paths whose exact URLs are exposed by their
+  access records, with byte/hash verification whenever the ignored file is
+  present;
 - SHA-256 and git-blob hashes for repository artifacts;
 - agreement between a manifest work ID and the XML identifier family used by
   that source (`IDG`/`BIBNO`/`VID` or `IDNO`);

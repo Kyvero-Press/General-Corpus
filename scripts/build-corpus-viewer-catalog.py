@@ -434,7 +434,52 @@ def _agent_names(lineage: dict[str, Any]) -> dict[str, str]:
     }
 
 
-def _normalized_lineage(lineage: dict[str, Any]) -> dict[str, Any] | None:
+def _normalized_local_copy(
+    repo_root: Path,
+    work_id: str,
+    local_copy: Any,
+) -> dict[str, Any] | None:
+    if not isinstance(local_copy, dict):
+        return None
+    raw_path = local_copy.get("path")
+    if not isinstance(raw_path, str):
+        raise CatalogError(f"lineage {work_id} local_copy has no path")
+    candidate = Path(raw_path)
+    expected_parent = Path("source-cache") / work_id
+    if candidate.is_absolute() or candidate.parent != expected_parent:
+        raise CatalogError(
+            f"lineage {work_id} local_copy must be one file under "
+            f"{expected_parent.as_posix()}"
+        )
+    resolved = safe_child(repo_root, raw_path, must_exist=False)
+    available = resolved.is_file()
+    if resolved.exists() and not available:
+        raise CatalogError(f"lineage {work_id} local_copy is not a file: {raw_path}")
+    if available:
+        expected_bytes = local_copy.get("bytes")
+        if resolved.stat().st_size != expected_bytes:
+            raise CatalogError(f"lineage {work_id} local_copy byte count mismatch: {raw_path}")
+        expected_sha = local_copy.get("sha256")
+        if sha256(resolved) != expected_sha:
+            raise CatalogError(f"lineage {work_id} local_copy checksum mismatch: {raw_path}")
+    byte_count = local_copy.get("bytes")
+    return {
+        "path": raw_path,
+        "sourceUrl": local_copy.get("source_url"),
+        "sha256": local_copy.get("sha256"),
+        "bytes": byte_count,
+        "sizeLabel": format_bytes(byte_count) if isinstance(byte_count, int) else None,
+        "mediaType": local_copy.get("media_type"),
+        "downloadedOn": local_copy.get("downloaded_on"),
+        "notes": local_copy.get("notes", []),
+        "available": available,
+    }
+
+
+def _normalized_lineage(
+    lineage: dict[str, Any],
+    repo_root: Path,
+) -> dict[str, Any] | None:
     if not lineage:
         return None
     entities = {
@@ -442,6 +487,9 @@ def _normalized_lineage(lineage: dict[str, Any]) -> dict[str, Any] | None:
         for item in lineage.get("entities", [])
         if isinstance(item, dict) and isinstance(item.get("id"), str)
     }
+    work_id = lineage.get("work_id")
+    if not isinstance(work_id, str):
+        raise CatalogError("lineage manifest has no work_id")
     agents = _agent_names(lineage)
     access_by_entity: dict[str, list[dict[str, Any]]] = {}
     rights_by_entity: dict[str, list[dict[str, Any]]] = {}
@@ -465,6 +513,9 @@ def _normalized_lineage(lineage: dict[str, Any]) -> dict[str, Any] | None:
             continue
         entity = entities.get(entity_id, {})
         access_id = access.get("id")
+        raw_local_copies = access.get("local_copies", [])
+        if not isinstance(raw_local_copies, list):
+            raise CatalogError(f"lineage {work_id} access {access_id} has invalid local_copies")
         normalized = {
             "id": access_id,
             "entityId": entity_id,
@@ -481,6 +532,12 @@ def _normalized_lineage(lineage: dict[str, Any]) -> dict[str, Any] | None:
             "format": access.get("format"),
             "lastChecked": access.get("last_checked"),
             "notes": access.get("notes", []),
+            "localCopies": [
+                normalized_copy
+                for item in raw_local_copies
+                if (normalized_copy := _normalized_local_copy(repo_root, work_id, item))
+                is not None
+            ],
             "rights": rights_by_access.get(access_id, []),
         }
         source_links.append(normalized)
@@ -1001,7 +1058,11 @@ def build_catalog(
                 "schemaVersion": "1.0.0",
                 "work": card,
                 "metadata": None,
-                "lineage": _normalized_lineage(lineage) if lineage is not None else None,
+                "lineage": (
+                    _normalized_lineage(lineage, repo_root)
+                    if lineage is not None
+                    else None
+                ),
                 "metadataManifestPath": None,
                 "lineageManifestPath": (
                     f"catalog/manifests/lineage/{quote_path_segment(work_id)}.json"
@@ -1016,7 +1077,7 @@ def build_catalog(
                 "schemaVersion": "1.0.0",
                 "work": card,
                 "metadata": _normalized_metadata(metadata),
-                "lineage": _normalized_lineage(lineage),
+                "lineage": _normalized_lineage(lineage, repo_root),
                 "metadataManifestPath": (
                     "catalog/manifests/work-metadata/"
                     f"{quote_path_segment(work_id)}.json"

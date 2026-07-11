@@ -206,6 +206,18 @@ export interface RightRecord {
   notes?: string[];
 }
 
+export interface LocalCopyRecord {
+  path: string;
+  sourceUrl: string;
+  sha256: string;
+  bytes: number;
+  sizeLabel: string | null;
+  mediaType: string;
+  downloadedOn: string;
+  notes: string[];
+  available: boolean;
+}
+
 export interface AccessRecord {
   id: string | null;
   entityId: string;
@@ -222,6 +234,7 @@ export interface AccessRecord {
   format: string | null;
   lastChecked: string | null;
   notes: string[];
+  localCopies: LocalCopyRecord[];
   rights: RightRecord[];
 }
 

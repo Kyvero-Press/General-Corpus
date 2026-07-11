@@ -147,12 +147,23 @@ const detail: WorkDetailRecord = {
             status: "publicly_available",
             accessMethod: "Public page images",
             url: "https://example.test/holthausen",
-            alternateUrls: [],
+            alternateUrls: ["https://example.test/holthausen.pdf"],
             contact: null,
             cost: "free",
             format: "PDF",
             lastChecked: "2026-07-11",
             notes: [],
+            localCopies: [{
+              path: "source-cache/CME00099/holthausen.pdf",
+              sourceUrl: "https://example.test/holthausen.pdf",
+              sha256: "a".repeat(64),
+              bytes: 2048,
+              sizeLabel: "2.0 KiB",
+              mediaType: "application/pdf",
+              downloadedOn: "2026-07-11",
+              notes: [],
+              available: true,
+            }],
             rights: [],
           },
         ],
@@ -253,6 +264,12 @@ describe("App", () => {
     expect(within(dialog).getByRole("link", { name: /View page images/ })).toHaveAttribute(
       "href",
       "https://example.test/holthausen",
+    );
+    expect(within(dialog).getByText("Downloaded locally")).toBeInTheDocument();
+    expect(within(dialog).getByText("Checksum-verified local copy")).toBeInTheDocument();
+    expect(within(dialog).getByRole("link", { name: /Exact file download/ })).toHaveAttribute(
+      "href",
+      "https://example.test/holthausen.pdf",
     );
     expect(within(dialog).getByText("The complete CME digital text")).toBeInTheDocument();
     expect(within(dialog).getByText("Holthausen’s printed pages 75–88")).toBeInTheDocument();

@@ -52,12 +52,16 @@ needed; do not load both complete schemas merely for orientation.
 5. Verify witness, bibliographic, access, and rights facts at the exact item
    level with the responsible institution. Supplement interpretation with
    reliable scholarship. Never cite a search-result snippet as evidence.
-6. Draft a claim ledger: claim, entity/layer, scope, source, confidence, and
+6. Cache every verified public file deliverable used as a facsimile or
+   supporting source under `source-cache/WORK_ID/` with
+   `scripts/cache-source-download.py`. Record every file in the relevant
+   access record's `local_copies`; keep the landing page and exact file URL.
+7. Draft a claim ledger: claim, entity/layer, scope, source, confidence, and
    destination field.
-7. Create both files:
+8. Create both files:
    - `manifests/work-metadata/works/WORK_ID.json`
    - `manifests/lineage/works/WORK_ID.json`
-8. Record unresolved material questions explicitly. Use `partial`, `unknown`,
+9. Record unresolved material questions explicitly. Use `partial`, `unknown`,
    or qualified assertions instead of filling gaps from expectation.
 
 ## Keep the layers honest
@@ -85,6 +89,8 @@ When working as a one-book subagent in an isolated worktree:
 
 - edit only the two work manifest files unless explicitly assigned otherwise;
 - do not edit indexes, shared schemas, validators, documentation, or the skill;
+- place downloaded research files only in the ignored
+  `source-cache/WORK_ID/` directory and never stage them;
 - validate JSON and the pair as far as the worktree permits;
 - run `python3 scripts/validate-manifest-pair.py WORK_ID`;
 - commit the two manifest files on the assigned research branch; and

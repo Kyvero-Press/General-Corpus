@@ -187,6 +187,26 @@ class CatalogFixture:
         path.write_bytes(payload or b"%PDF-1.7\nfixture publication\n%%EOF\n")
         return path
 
+    def add_source_copy(self, payload: bytes | None = None) -> Path:
+        content = payload or b"%PDF-1.7\nfixture source\n%%EOF\n"
+        relative = Path("source-cache") / self.work_id / "test-source.pdf"
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+        access = self.lineage["access"][0]
+        assert isinstance(access, dict)
+        source_url = "https://example.test/scan.pdf"
+        access["local_copies"] = [{
+            "path": relative.as_posix(),
+            "source_url": source_url,
+            "sha256": hashlib.sha256(content).hexdigest(),
+            "bytes": len(content),
+            "media_type": "application/pdf",
+            "downloaded_on": "2026-07-11",
+        }]
+        self.write_manifests()
+        return path
+
     def write_publication_inventory(self, pdf: Path, *, digest: str | None = None) -> Path:
         path = self.root / "manifests" / "publication-set" / "viewer-default.json"
         self._write_json(
@@ -356,6 +376,69 @@ class CorpusViewerCatalogTests(unittest.TestCase):
                 fixture.lineage_path.read_bytes(),
                 (output / "catalog" / "manifests" / "lineage" / "CME00099.json").read_bytes(),
             )
+
+    def test_source_links_report_verified_local_copy_and_exact_download(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fixture = CatalogFixture(Path(temp_dir))
+            cached = fixture.add_source_copy()
+            output = fixture.root / "build" / "viewer"
+
+            build_corpus_viewer_catalog.build_catalog(
+                fixture.root,
+                pdf_root=fixture.pdf_root,
+                output_root=output,
+                include_pdf_only=False,
+                validate=False,
+            )
+
+            detail = json.loads(
+                (output / "catalog" / "works" / "CME00099.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            local_copy = detail["lineage"]["sourceLinks"][0]["localCopies"][0]
+            self.assertTrue(local_copy["available"])
+            self.assertEqual(
+                "source-cache/CME00099/test-source.pdf",
+                local_copy["path"],
+            )
+            self.assertEqual("https://example.test/scan.pdf", local_copy["sourceUrl"])
+            self.assertEqual(hashlib.sha256(cached.read_bytes()).hexdigest(), local_copy["sha256"])
+
+            cached.unlink()
+            build_corpus_viewer_catalog.build_catalog(
+                fixture.root,
+                pdf_root=fixture.pdf_root,
+                output_root=output,
+                include_pdf_only=False,
+                validate=False,
+            )
+            detail = json.loads(
+                (output / "catalog" / "works" / "CME00099.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertFalse(
+                detail["lineage"]["sourceLinks"][0]["localCopies"][0]["available"]
+            )
+
+    def test_source_cache_checksum_mismatch_fails_catalog_build(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fixture = CatalogFixture(Path(temp_dir))
+            cached = fixture.add_source_copy()
+            cached.write_bytes(b"%PDF-1.7\nchanged source\n%%EOF\n")
+
+            with self.assertRaisesRegex(
+                build_corpus_viewer_catalog.CatalogError,
+                "local_copy (byte count|checksum) mismatch",
+            ):
+                build_corpus_viewer_catalog.build_catalog(
+                    fixture.root,
+                    pdf_root=fixture.pdf_root,
+                    output_root=fixture.root / "build" / "viewer",
+                    include_pdf_only=False,
+                    validate=False,
+                )
 
     def test_output_is_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir, fake_pdfinfo():

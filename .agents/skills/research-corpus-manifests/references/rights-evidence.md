@@ -42,6 +42,31 @@ Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
 checks with `last_checked`.
 
+## Cache verified file deliverables
+
+Download every exact public file used as a manuscript/book facsimile or
+supporting source—such as a PDF, ZIP, image, or IIIF manifest—to the ignored
+`source-cache/WORK_ID/` directory. Ordinary landing/catalog HTML need not be
+saved when it is only an access route. Do not bypass authentication, access
+controls, or provider restrictions.
+
+Use the project helper so filenames, signatures, hashes, and sizes are
+reproducible:
+
+```bash
+python3 scripts/cache-source-download.py WORK_ID EXACT_FILE_URL \
+  --filename stable-name.pdf
+```
+
+Add the emitted object to the access record's `local_copies` array. Its
+`source_url` must also appear as `access.url` or in `alternate_urls`, while the
+landing page remains available as a human-readable route. Use one array item
+per deliverable or volume. The manifest records that a research copy was made;
+the viewer checks whether the ignored file is present in the current checkout.
+Never infer redistribution permission from local caching, and never copy the
+cache into a public web build without an independently supported right to do
+so.
+
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields
@@ -92,4 +117,6 @@ scholarly reproduction” merely because a quick public search failed.
 - Keep copyright status separate from contract terms.
 - Preserve jurisdiction and item-level attribution.
 - Confirm catalog, preview, download, and reuse statements independently.
+- Verify each present `local_copies` file against its recorded byte count and
+  SHA-256, and retain the exact direct file URL.
 - Re-read human summaries for claims broader than their cited sources.

@@ -20,6 +20,7 @@ INDEX_PATH = LINEAGE_DIR / "index.json"
 INDEX_SCHEMA_PATH = LINEAGE_DIR / "schemas/lineage-index.schema.json"
 MANIFEST_SCHEMA_PATH = LINEAGE_DIR / "schemas/lineage-manifest.schema.json"
 WORKS_DIR = LINEAGE_DIR / "works"
+SOURCE_CACHE_DIR = Path("source-cache")
 
 
 def _load_json(path: Path, errors: list[str]) -> Any | None:
@@ -176,6 +177,44 @@ def _safe_repo_file(repo_root: Path, raw_path: Any, location: str, errors: list[
         errors.append(f"{location}: repository file does not exist: {raw_path!r}")
         return None
     return resolved
+
+
+def _safe_local_copy(
+    repo_root: Path,
+    raw_path: Any,
+    work_id: Any,
+    location: str,
+    errors: list[str],
+) -> Path | None:
+    """Validate a gitignored cache path and return it only when present."""
+
+    if not isinstance(raw_path, str) or not raw_path:
+        errors.append(f"{location}: local copy path must be a non-empty string")
+        return None
+    if not isinstance(work_id, str) or not work_id:
+        errors.append(f"{location}: cannot validate local copy without a work_id")
+        return None
+    path = Path(raw_path)
+    expected_parent = SOURCE_CACHE_DIR / work_id
+    if path.is_absolute() or path.parent != expected_parent or path.name in {"", ".", ".."}:
+        errors.append(
+            f"{location}: local copy must be one file under "
+            f"{expected_parent.as_posix()!r}: {raw_path!r}"
+        )
+        return None
+    resolved_root = repo_root.resolve()
+    resolved_cache = (repo_root / expected_parent).resolve()
+    resolved = (repo_root / path).resolve()
+    try:
+        resolved.relative_to(resolved_root)
+        resolved.relative_to(resolved_cache)
+    except ValueError:
+        errors.append(f"{location}: local copy path escapes its work cache: {raw_path!r}")
+        return None
+    if resolved.exists() and not resolved.is_file():
+        errors.append(f"{location}: local copy path is not a file: {raw_path!r}")
+        return None
+    return resolved if resolved.is_file() else None
 
 
 def _sha256(path: Path) -> str:
@@ -397,6 +436,42 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
         _check_evidence_refs(access.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
         if "repository_path" in access:
             _safe_repo_file(repo_root, access.get("repository_path"), f"{item_location}.repository_path", errors)
+        local_copies = access.get("local_copies", [])
+        if isinstance(local_copies, list):
+            alternate_urls = access.get("alternate_urls", [])
+            access_urls = [access.get("url")]
+            if isinstance(alternate_urls, list):
+                access_urls.extend(alternate_urls)
+            seen_cache_paths: set[str] = set()
+            for copy_index, local_copy in enumerate(local_copies):
+                if not isinstance(local_copy, dict):
+                    continue
+                copy_location = f"{item_location}.local_copies[{copy_index}]"
+                raw_cache_path = local_copy.get("path")
+                if isinstance(raw_cache_path, str):
+                    if raw_cache_path in seen_cache_paths:
+                        errors.append(f"{copy_location}.path: duplicate local copy path")
+                    seen_cache_paths.add(raw_cache_path)
+                cache_path = _safe_local_copy(
+                    repo_root,
+                    raw_cache_path,
+                    work_id,
+                    f"{copy_location}.path",
+                    errors,
+                )
+                source_url = local_copy.get("source_url")
+                if source_url not in access_urls:
+                    errors.append(
+                        f"{copy_location}.source_url: exact download URL must also "
+                        "appear as access.url or in alternate_urls"
+                    )
+                if cache_path is not None:
+                    expected_bytes = local_copy.get("bytes")
+                    if isinstance(expected_bytes, int) and cache_path.stat().st_size != expected_bytes:
+                        errors.append(f"{copy_location}.bytes: byte count mismatch")
+                    expected_sha = local_copy.get("sha256")
+                    if isinstance(expected_sha, str) and _sha256(cache_path) != expected_sha:
+                        errors.append(f"{copy_location}.sha256: checksum mismatch")
         if access.get("status") == "no_public_copy_found" and not access.get("last_checked"):
             errors.append(f"{item_location}: negative access claim requires last_checked")
 
