@@ -147,6 +147,17 @@
       "survival_status": "not_applicable",
       "evidence_ids": ["evidence:telma-supra-montem", "evidence:seton-edition"],
       "notes": ["This entity represents the source work and document tradition, not a claim that the English translator used one identified surviving Latin codex."]
+    },
+    {
+      "id": "catalog:copyright-office:circular-15a",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A, Duration of Copyright",
+      "description": "The April 2026 revision of the Copyright Office's duration guidance, used only to support this manifest's United States rights assessment for the 1914 edition; it is not part of the textual transmission lineage.",
+      "identifiers": [{"scheme": "U.S. Copyright Office circular", "value": "15A", "uri": "https://www.copyright.gov/circs/circ15a.pdf"}],
+      "creator_ids": ["agent:us-copyright-office"],
+      "date_statements": [{"label": "revision", "value": "April 2026", "normalized": "2026-04", "certainty": "high", "evidence_ids": ["evidence:copyright-office"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:copyright-office"]
     }
   ],
   "agents": [
@@ -156,6 +167,7 @@
     {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-franrule", "evidence:franrule-xml"]},
     {"id": "agent:nlw", "type": "organization", "name": "National Library of Wales", "urls": ["https://www.library.wales/"], "evidence_ids": ["evidence:nlw-catalog", "evidence:nlw-annual-report"]},
     {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-scan"]},
+    {"id": "agent:us-copyright-office", "type": "organization", "name": "United States Copyright Office", "urls": ["https://www.copyright.gov/"], "evidence_ids": ["evidence:copyright-office"]},
     {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:franrule-xml"]}
   ],
   "relations": [
@@ -239,6 +251,18 @@
         "object": {"kind": "whole", "description": "Complete composite 1914 volume"}
       },
       "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-scan", "evidence:seton-edition"]}
+    },
+    {
+      "id": "relation:manifest-cites-circular-15a",
+      "type": "cites",
+      "subject": "artifact:general-corpus:3rdFranRule",
+      "object": "catalog:copyright-office:circular-15a",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Repository work and its linked manifest rights analysis"},
+        "object": {"kind": "selected_passages", "description": "United States duration guidance", "locators": ["p. 2"]},
+        "notes": "This is an evidentiary rights-analysis dependency, not a textual derivation edge."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:copyright-office", "evidence:seton-edition"]}
     }
   ],
   "access": [
@@ -277,10 +301,48 @@
       "access_method": "Internet Archive item page and direct PDF",
       "url": "https://archive.org/details/courtesybook00unknuoft",
       "alternate_urls": ["https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf"],
+      "local_copies": [
+        {
+          "label": "Complete 1914 EETS OS 148 edition PDF",
+          "path": "source-cache/3rdFranRule/courtesy-book-franciscan-rules-1914.pdf",
+          "source_url": "https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf",
+          "sha256": "a6909e547e3ce1c4115e812c1121389cc7c301cb4e647d75850dfd03675157cd",
+          "bytes": 10409276,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": ["The complete printed edition includes two selected manuscript plates, not a complete facsimile of NLW MS 22873B."]
+        }
+      ],
       "cost": "free",
       "format": "PDF, OCR text, EPUB, and page images",
       "last_checked": "2026-07-11",
       "evidence_ids": ["evidence:ia-scan", "evidence:seton-edition"]
+    },
+    {
+      "id": "access:copyright-office-circular",
+      "entity": "catalog:copyright-office:circular-15a",
+      "provider_id": "agent:us-copyright-office",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct PDF from the U.S. Copyright Office",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies": [
+        {
+          "label": "U.S. Copyright Office Circular 15A PDF",
+          "path": "source-cache/3rdFranRule/us-copyright-office-circular-15a-2026.pdf",
+          "source_url": "https://www.copyright.gov/circs/circ15a.pdf",
+          "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+          "bytes": 273867,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF (application/pdf, 273,867 bytes)",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:copyright-office"]
     },
     {
       "id": "access:seton-plates",
@@ -290,6 +352,23 @@
       "status": "publicly_available",
       "access_method": "View within the public scan of the 1914 edition",
       "url": "https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf",
+      "local_copies": [
+        {
+          "label": "Complete edition PDF containing both selected manuscript plates",
+          "path": "source-cache/3rdFranRule/courtesy-book-franciscan-rules-1914.pdf",
+          "source_url": "https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf",
+          "sha256": "a6909e547e3ce1c4115e812c1121389cc7c301cb4e647d75850dfd03675157cd",
+          "bytes": 10409276,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "work_portion": {
+            "label": "The Rule of the Third Order of St Francis",
+            "locators": ["printed manuscript plates reproduce fols. 9v and 15v"],
+            "notes": ["These are two selected manuscript pages, not the complete NLW MS 22873B codex."]
+          }
+        }
+      ],
       "cost": "free",
       "format": "Two plates within PDF page images",
       "last_checked": "2026-07-11",
@@ -307,6 +386,31 @@
       "format": "Catalog description",
       "last_checked": "2026-07-11",
       "evidence_ids": ["evidence:nlw-catalog"]
+    },
+    {
+      "id": "access:nlw-annual-report",
+      "entity": "witness:nlw:22873B",
+      "provider_id": "agent:nlw",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct NLW annual-report PDF containing acquisition record 1992036",
+      "url": "https://www.library.wales/fileadmin/docs_gwefan/adroddiadau_blynyddol/Ab1992.pdf",
+      "local_copies": [
+        {
+          "label": "Complete NLW Annual Report 1991–92 PDF",
+          "path": "source-cache/3rdFranRule/nlw-annual-report-1991-92.pdf",
+          "source_url": "https://www.library.wales/fileadmin/docs_gwefan/adroddiadau_blynyddol/Ab1992.pdf",
+          "sha256": "78e021275c54044a19cf246424f7409a283a48d48c0091b1db4b6dcc520dbb25",
+          "bytes": 86783,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF annual report",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:nlw-annual-report"]
     },
     {
       "id": "access:nlw-manuscript",
@@ -489,7 +593,8 @@
       "alternate_urls": ["https://archive.org/details/courtesybook00unknuoft", "https://catalog.hathitrust.org/Record/001644649"],
       "locator": "Title page and contents; pp. 25-41, 45-59, and 126-127; plates reproducing manuscript fols. 9v and 15v",
       "summary": "The inspected complete scan establishes edition responsibility and bibliography, the source-work analysis, manuscript provenance and physical description, direct transcription, editorial conventions, English and Latin content, notes, glossary, and two selected manuscript facsimiles.",
-      "accessed_on": "2026-07-11"
+      "accessed_on": "2026-07-11",
+      "sha256": "a6909e547e3ce1c4115e812c1121389cc7c301cb4e647d75850dfd03675157cd"
     },
     {
       "id": "evidence:ia-scan",
@@ -498,7 +603,8 @@
       "url": "https://archive.org/details/courtesybook00unknuoft",
       "alternate_urls": ["https://archive.org/metadata/courtesybook00unknuoft", "https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf"],
       "summary": "Provides a retrievable 150-page scan and derivatives of the University of Toronto Kelly Library copy; metadata names scanner uoft1 and supplies no item-specific rights or license field.",
-      "accessed_on": "2026-07-11"
+      "accessed_on": "2026-07-11",
+      "sha256": "a6909e547e3ce1c4115e812c1121389cc7c301cb4e647d75850dfd03675157cd"
     },
     {
       "id": "evidence:wellcome-edition",
@@ -525,7 +631,8 @@
       "url": "https://www.library.wales/fileadmin/docs_gwefan/adroddiadau_blynyddol/Ab1992.pdf",
       "locator": "PDF p. 8, acquisition 1992036",
       "summary": "Records acquisition of NLW MS 22873B, describes the unique English translation and c. 1500 manuscript, and confirms former ownership by Thomas Pennant at Downing.",
-      "accessed_on": "2026-07-11"
+      "accessed_on": "2026-07-11",
+      "sha256": "78e021275c54044a19cf246424f7409a283a48d48c0091b1db4b6dcc520dbb25"
     },
     {
       "id": "evidence:telma-supra-montem",
@@ -567,7 +674,8 @@
       "url": "https://www.copyright.gov/circs/circ15a.pdf",
       "locator": "p. 2, works already under statutory protection before 1978",
       "summary": "Describes a 95-year maximum total term for pre-1978 statutory copyrights and states that U.S.-published works before 1 January 1931 are public domain; together with U-M's item statement, this supports the U.S. assessment for the 1914 edition.",
-      "accessed_on": "2026-07-11"
+      "accessed_on": "2026-07-11",
+      "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef"
     }
   ],
   "open_questions": [
