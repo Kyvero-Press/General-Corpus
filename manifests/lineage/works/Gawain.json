@@ -288,6 +288,36 @@
       "notes": [
         "The collection is a reproduction layer, not the manuscript itself and not the repository XML."
       ]
+    },
+    {
+      "id": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "type": "facsimile",
+      "label": "Wikimedia Commons complete Cotton Nero A X/2 PDF",
+      "description": "A downloadable 180-page PDF compiled from the University of Calgary page images, covering every side from modern folios 41r–130v.",
+      "identifiers": [
+        {
+          "scheme": "Wikimedia Commons file",
+          "value": "BL Cotton MS Nero A x (art. 3).pdf",
+          "uri": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf"
+        }
+      ],
+      "creator_ids": [
+        "agent:wikimedia-foundation"
+      ],
+      "physical_description": {
+        "extent": "180 PDF pages, one for each manuscript side",
+        "format": "Complete color PDF facsimile",
+        "notes": [
+          "Commons identifies Calgary as the file source. Direct inspection confirms color manuscript photography, including the painted Gawain leaves."
+        ]
+      },
+      "reproduction_format": "Digital PDF compiled from Calgary page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-gawain-boundaries",
+        "evidence:ucalgary-gawain-facsimile"
+      ]
     }
   ],
   "agents": [
@@ -564,6 +594,32 @@
           "evidence:bl-cotton-nero-a-x-2"
         ]
       }
+    },
+    {
+      "id": "relation:commons-version-of-ucalgary",
+      "type": "version_of",
+      "subject": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "object": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 180-page Commons PDF"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 180-image Calgary facsimile"
+        },
+        "notes": "The Commons record identifies the University of Calgary collection as its source."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:commons-complete-facsimile",
+          "evidence:commons-gawain-boundaries",
+          "evidence:ucalgary-gawain-facsimile"
+        ]
+      }
     }
   ],
   "access": [
@@ -703,6 +759,56 @@
         "evidence:ucalgary-gawain-facsimile",
         "evidence:bl-cotton-nero-a-x-2"
       ]
+    },
+    {
+      "id": "access:commons-complete-pdf",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "provider_id": "agent:wikimedia-foundation",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Commons file record and direct complete-PDF download",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Cotton MS Nero A X/2 PDF facsimile",
+          "path": "source-cache/Gawain/cotton-nero-a-x-2-complete-facsimile.pdf",
+          "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+          "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac",
+          "bytes": 220421432,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "work_portion": {
+            "label": "Sir Gawain and the Green Knight",
+            "locators": [
+              "modern pencil folios 94v–130r",
+              "older foliation represented in the XML: 91r–124v",
+              "PDF pages 108–179 inclusive"
+            ],
+            "start_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=108",
+            "end_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=179",
+            "notes": [
+              "PDF page 108 is the prefatory Gawain illustration on modern fol. 94v; page 179 is the final illustrated surface on modern fol. 130r."
+            ]
+          },
+          "notes": [
+            "The file contains all 180 manuscript sides; the work mapping points to Gawain without reducing the cache to those leaves."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "180-page PDF",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-gawain-boundaries"
+      ],
+      "notes": [
+        "Commons's public-domain assertion conflicts with restrictions presented by the Calgary source service; this access record does not resolve that conflict."
+      ]
     }
   ],
   "rights": [
@@ -825,6 +931,31 @@
       "notes": [
         "Do not generalize a sampled item's public-domain label to the whole collection or to unrestricted commercial redistribution without reviewing the exact image record and current terms.",
         "Apply the item-level attribution supplied by the provider when using an image."
+      ]
+    },
+    {
+      "id": "rights:commons-complete-facsimile",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "access_id": "access:commons-complete-pdf",
+      "component": "Commons-hosted complete PDF compiled from Calgary images",
+      "jurisdiction": "Wikimedia Commons provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "Commons applies a mechanical-scan rationale and Public Domain Mark 1.0 to the hosted PDF.",
+      "asserted_by_id": "agent:wikimedia-foundation",
+      "license": {
+        "name": "Public Domain Mark 1.0",
+        "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile"
+      ],
+      "notes": [
+        "Confidence is high that Commons makes this assertion, not that it resolves Calgary's conflicting British Library license and use restrictions.",
+        "Do not transfer this provider claim to Calgary, the British Library's own images, or newly ordered photography."
       ]
     }
   ],
@@ -974,6 +1105,29 @@
       "locator": "Details and How can you use this image?",
       "summary": "The item identifies a Gawain illustration as folio 125/129 verso, derived from microfilm, labels Copyright Status Public Domain, lists Usage Rights Education, Instruction, Private study, Research, and supplies an attribution line.",
       "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:commons-complete-facsimile",
+      "type": "digital_surrogate",
+      "citation": "Wikimedia Commons, BL Cotton MS Nero A x (art. 3).pdf.",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "locator": "complete 180-page PDF",
+      "summary": "The file record identifies Calgary as the source, exposes a direct complete-manuscript PDF, and applies a mechanical-scan public-domain rationale and Public Domain Mark 1.0.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
+    },
+    {
+      "id": "evidence:commons-gawain-boundaries",
+      "type": "visual_inspection",
+      "citation": "Direct inspection and folio mapping of the complete Commons Cotton Nero A X/2 PDF.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+      "locator": "PDF pp. 1–180; Gawain pp. 108–179",
+      "summary": "Confirmed complete codex coverage and color manuscript photography. PDF page 108 is the Gawain prefatory illustration at modern fol. 94v, and page 179 is the final illustrated surface at modern fol. 130r.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
     },
     {
       "id": "evidence:us-copyright-circular-15a",
