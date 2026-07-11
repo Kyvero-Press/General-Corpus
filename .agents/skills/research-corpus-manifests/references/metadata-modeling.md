@@ -73,6 +73,11 @@ affect them. Keep planned, composed-but-lost, extant, printed, and encoded
 extent separate. If markup is coarse or inconsistent, use `summary` or
 `partial` structure status and explain why.
 
+Count structural nodes at the depth that represents the cataloged work.
+Exclude verse lines nested inside editorial notes, quotations, or apparatus
+from the direct poem-line count, report them separately, and preserve any
+disagreement with a scholarly lineation as an explicit open question.
+
 Derive `catalog_summary` from detailed records. Preserve detailed-record order
 in summary language, genre, and tag arrays. Maintain exactly one preferred
 whole title and one whole discovery form.

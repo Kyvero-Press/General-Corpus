@@ -14,6 +14,10 @@ When an eclectic edition's dependency is explicit, go beyond one aggregate
 edge: scope separate `transcribes` relations for the principal base and any
 supplied passages, then add `collated_against` edges for variant witnesses.
 
+If foreign-language witnesses were consulted only for notes or specimens,
+scope their `collated_against` relations to that apparatus. They are not base
+witnesses or intrinsic parallel parts of the cataloged work.
+
 ## Source author versus translator: ChaucerBo
 
 Separate Boethius as source author, Chaucer as Middle English translator and
@@ -28,12 +32,16 @@ against Arundel 57. Model `version_of` the prior edition plus a distinct
 `collated_against` witness edge. Do not describe the 1965 edition date as a
 revision date of the medieval work.
 
-## Unchanged reprint: 3KCol
+## Reprints: 3KCol and aba2096
 
 An explicitly described reprint is still a distinct edition entity linked to
 the earlier edition with scoped `version_of`. Verify the reprint's included and
 omitted matter independently, and give any new cover, preliminaries, or terms a
 separate rights analysis instead of inheriting every claim from the original.
+
+Do not call a reset reprint a facsimile merely because it reproduces an earlier
+title page or retains the text. Compare type, pagination, preliminaries, and
+printing colophons to establish the reset and its edition-specific scope.
 
 ## Later transcript and indirect readings: afw5744
 

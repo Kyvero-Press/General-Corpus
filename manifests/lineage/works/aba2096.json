@@ -1,0 +1,918 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:aba2096",
+  "work_id": "aba2096",
+  "title": "The Chronicle, Part II",
+  "primary_subject": "artifact:general-corpus:aba2096",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository artifact is a pinned copy of University of Michigan CME item ABA2096.0001.001, a 2006 uncorrected-OCR encoding linked to 946 page images of the 1810 Bagster reprint in The Works of Thomas Hearne, volumes III-IV. That reset reprint preserves Thomas Hearne's 1725 first edition of Robert Mannyng's complete Part II, printed on pages 1-341 within a two-volume composite. Hearne transcribed the Middle English text from Inner Temple Library, Petyt MS 511, vol. 7. After printing began, he used three Anglo-Norman Langtoft manuscripts only for comparative specimens and notes: the extant College of Arms Arundel MS LXI and two manuscripts then owned and bound together by John Anstis whose current shelfmarks remain unidentified. The searchable U-M text retains Part II and Hearne's embedded apparatus but omits most surrounding preface, glossary, index, and appended antiquarian tracts, while retaining their page-image milestones.",
+  "languages": ["enm", "eng", "lat", "xno"],
+  "review_notes": [
+    "The primary Middle English text is Robert Mannyng's Part II. The inherited Peter Langtoft AUTHOR label describes its source tradition and Hearne's publication title, not the English work's intellectual authorship.",
+    "Hearne explicitly selected Part II and omitted Part I; the surrounding Glastonbury, Scrooby, Roman-antiquities, and Stonehenge texts are separate components of the composite edition.",
+    "The College of Arms and Anstis French manuscripts supplied Anglo-Norman comparison notes only. They are separate collation witnesses, not parallel intrinsic parts or Middle English base witnesses.",
+    "The Lambeth Palace copy known to Hearne belongs to the wider Mannyng tradition, but the reviewed preface does not show that it supplied the printed Part II text; it is therefore not placed upstream of the edition.",
+    "The 1810 publication is a reset reprint, not a facsimile of 1725. Its changed preliminaries, final pagination, and printing colophons remain edition-specific.",
+    "No exact current Inner Temple online item record was found for Petyt 511, vol. 7. The official collection page supports holding and access policy but is not used as holding.catalog_url."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:aba2096",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for aba2096",
+      "description": "Repository XML supplied through the pinned CME submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "ABA2096.0001.001"},
+        {"scheme": "git-blob", "value": "af45a16c548e7d581148dedc749da0229d899be3"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/aba2096.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "af45a16c548e7d581148dedc749da0229d899be3",
+        "sha256": "ae2ff7057969deb9414d70c7b4c49493e91e9bc89ebdf0779538534994ffd1a8"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:aba2096-xml"]
+    },
+    {
+      "id": "encoding:umich-cme:ABA2096.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item ABA2096.0001.001",
+      "description": "A 2006 Level-1 TEI-in-Libraries encoding created by uncorrected OCR from the 1810 Bagster reprint, with links to 946 600-dpi TIFF G4 page images. Its searchable text encodes Mannyng's Part II and Hearne's embedded notes, not the full composite publication.",
+      "identifiers": [
+        {"scheme": "UMDL handle", "value": "ABA2096.0001.001", "uri": "https://name.umdl.umich.edu/ABA2096.0001.001"},
+        {"scheme": "Library of Congress call number", "value": "DA229 .P48 1810"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "date_statements": [
+        {"label": "header creation", "value": "22 February 2006", "normalized": "2006-02-22", "certainty": "high", "evidence_ids": ["evidence:aba2096-xml"]},
+        {"label": "electronic publication", "value": "2006", "normalized": "2006", "certainty": "high", "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096"],
+      "notes": [
+        "The header declares only 'eng', although the encoded main text is Middle English and Hearne's apparatus also contains Latin and Anglo-Norman.",
+        "The header explicitly states that no corrections or content editing were performed after OCR.",
+        "The title page reproduces the 1725 imprint embedded in the 1810 reprint; SOURCEDESC and call number correctly identify the physical source as the 1810 Bagster issue."
+      ]
+    },
+    {
+      "id": "edition:bagster:hearne-works-1810",
+      "type": "scholarly_edition",
+      "label": "Bagster reset reprint of Hearne's Peter Langtoft's Chronicle (1810)",
+      "alternate_labels": ["The Works of Thomas Hearne, volumes III-IV", "Peter Langtoft's Chronicle, 1810 reprint"],
+      "description": "The immediate print source: volumes III-IV of The Works of Thomas Hearne. It resets Hearne's 1725 edition in new type while retaining the old title page wording and the continuously paged Middle English text, notes, glossary, index, and appended tracts. Its printing colophons and pagination distinguish it from the 1725 first edition.",
+      "creator_ids": ["agent:thomas-hearne"],
+      "date_statements": [
+        {"label": "reprint publication", "value": "1810", "normalized": "1810", "certainty": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:folger-hearne-1810", "evidence:aba2096-xml"]}
+      ],
+      "bibliographic": {
+        "citation": "Thomas Hearne, ed., Peter Langtoft's Chronicle (as illustrated and improv'd by Robert of Brunne), in The Works of Thomas Hearne, M.A., vols. III-IV (London: printed for Samuel Bagster, 1810).",
+        "title": "Peter Langtoft's Chronicle (as illustrated and improv'd by Robert of Brunne)",
+        "container_title": "The Works of Thomas Hearne, M.A.",
+        "volume": "III-IV",
+        "publisher": "Samuel Bagster",
+        "publication_place": "London",
+        "date": "1810",
+        "pages": "ccxxvi, 230, [2], 235-714, 4 pages, continuously paged across two volumes",
+        "languages": ["enm", "eng", "lat", "xno"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:folger-hearne-1810", "evidence:aba2096-xml"],
+      "notes": [
+        "Mercier and Chervet printing colophons appear on pages 230 and 714.",
+        "The cataloged Mannyng selection is printed at pages 1-341. The Glastonbury roll begins at page 343; later appendices concern Scrooby, Roman antiquities, and Stonehenge, followed by glossary and index.",
+        "The reset uses modern long-s-free typography and is not a photographic facsimile of 1725."
+      ]
+    },
+    {
+      "id": "edition:hearne:langtoft-1725",
+      "type": "scholarly_edition",
+      "label": "Thomas Hearne's first edition of Peter Langtoft's Chronicle (1725)",
+      "description": "Hearne's two-volume first publication of Robert Mannyng's Part II, embedded in a composite antiquarian publication. Hearne transcribed the Middle English text from the Inner Temple manuscript, deliberately omitted Part I, and added Anglo-Norman comparison notes after consulting three Langtoft manuscripts.",
+      "creator_ids": ["agent:thomas-hearne"],
+      "date_statements": [
+        {"label": "first publication", "value": "1725", "normalized": "1725", "certainty": "high", "evidence_ids": ["evidence:hearne-1725-scan", "evidence:folger-hearne-1725"]}
+      ],
+      "bibliographic": {
+        "citation": "Thomas Hearne, ed., Peter Langtoft's Chronicle (as illustrated and improv'd by Robert of Brunne), from the Death of Cadwalader to the End of K. Edward the First's Reign, 2 vols. (Oxford: printed at the Theater, 1725).",
+        "title": "Peter Langtoft's Chronicle (as illustrated and improv'd by Robert of Brunne)",
+        "publisher": "Printed at the Theater",
+        "publication_place": "Oxford",
+        "date": "1725",
+        "pages": "ccxxxii, 230, [2], 235-722, [2] pages, continuously paged across two volumes",
+        "languages": ["enm", "eng", "lat", "xno"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1725-scan", "evidence:folger-hearne-1725"],
+      "notes": [
+        "The title page says the Middle English text was transcribed and first published from a manuscript in the Inner Temple Library.",
+        "The composite also contains an extensive publisher's preface and appendix, a Glastonbury survey, John Slacke's Scrooby hospital account, two anonymous antiquarian tracts, glossary, index, subscribers, and an advertisement.",
+        "Hearne's phrase 'Peter Langtoft's Chronicle' names the source and publication, but the continuous English verse at pages 1-341 is Mannyng's Part II."
+      ]
+    },
+    {
+      "id": "witness:inner-temple:petyt511-v7",
+      "type": "manuscript_witness",
+      "label": "Inner Temple Library, Petyt MS 511, vol. 7",
+      "alternate_labels": ["Petyt 511.7", "P manuscript", "William Petyt's vellum copy"],
+      "description": "The parchment manuscript from which Hearne transcribed Mannyng's complete Part II. Hearne received it on loan from the Inner Temple through John Anstis and John Bridges. The Middle English Compendium records one hand, LALME Linguistic Profile 38, and Lincolnshire localization; recent linguistic scholarship dates it to the second half of the fourteenth century, possibly about 1375, while the MED bibliography uses about 1400.",
+      "identifiers": [
+        {"scheme": "Inner Temple shelfmark", "value": "Petyt MS 511, vol. 7"},
+        {"scheme": "LALME linguistic profile", "value": "LP 38"}
+      ],
+      "date_statements": [
+        {"label": "Middle English Compendium dating", "value": "around 1400, after a 1338 original", "normalized": "1375/1425", "certainty": "medium", "evidence_ids": ["evidence:med-petyt"]},
+        {"label": "recent linguistic assessment", "value": "second half of the fourteenth century, possibly about 1375", "normalized": "1350/1399", "certainty": "medium", "evidence_ids": ["evidence:pons-sanz-petyt"], "notes": "Attributed to Sullens's codicological discussion and eLALME profile 38 by Pons-Sanz and Roberts."}
+      ],
+      "holding": {
+        "institution_id": "agent:inner-temple",
+        "shelfmark": "Petyt MS 511, vol. 7",
+        "historical_designations": ["William Petyt manuscript", "Petyt 511.7"],
+        "notes": "The official Inner Temple collection page confirms the extant Petyt collection and manuscript access policy but is not an exact item catalog record."
+      },
+      "physical_description": {
+        "support": "Parchment (Hearne: vellum)",
+        "extent": "A manuscript of Mannyng's complete two-part Chronicle; exact foliation was not established from a current public item record",
+        "format": "Manuscript codex",
+        "notes": [
+          "Hearne describes the copy as complete from beginning to end and uses it as the sole named Middle English base for the published Part II.",
+          "The MED bibliography records one hand and a Lincolnshire scribal language; this witness localization is not transferred to every textual layer of the abstract work."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:med-petyt", "evidence:pons-sanz-petyt", "evidence:inner-temple-collection"]
+    },
+    {
+      "id": "witness:college-of-arms:arundel-lxi",
+      "type": "manuscript_witness",
+      "label": "College of Arms, Arundel MS LXI",
+      "alternate_labels": ["Vincent", "Hearne's Heralds' Office manuscript", "Wright manuscript D"],
+      "description": "An Anglo-Norman manuscript of Pierre de Langtoft's Chronicle used by Hearne for specimens and comparison notes. Hearne says it had belonged to Ralph Sheldon and judged it the oldest of the three French manuscripts he consulted. Wright identifies the current shelfmark as Arundel MS LXI, lettered Vincent, and describes Langtoft's Chronicle as occupying all but the first two leaves.",
+      "identifiers": [
+        {"scheme": "College of Arms shelfmark", "value": "Arundel MS LXI"},
+        {"scheme": "Wright siglum", "value": "D"}
+      ],
+      "holding": {
+        "institution_id": "agent:college-of-arms",
+        "shelfmark": "Arundel MS LXI",
+        "historical_designations": ["Vincent", "Heralds' Office manuscript", "Ralph Sheldon manuscript"],
+        "notes": "The official College of Arms page confirms that its Arundel manuscripts are medieval chronicles and histories but does not expose an exact online record for LXI."
+      },
+      "physical_description": {
+        "extent": "Langtoft's Chronicle occupies the volume except for the first two leaves, which contain a king list and other entries",
+        "format": "Manuscript codex",
+        "notes": ["Wright describes the copy as generally close to his manuscript A but with many readings shared with C; he does not treat it as the universal base of Langtoft's text."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:wright-langtoft-1866", "evidence:college-arms-collection"]
+    },
+    {
+      "id": "witness:anstis:langtoft-complete",
+      "type": "manuscript_witness",
+      "label": "John Anstis's complete manuscript of Langtoft's Chronicle",
+      "alternate_labels": ["One of Mr. Anstis's copies"],
+      "description": "One of two Anglo-Norman Langtoft manuscripts owned by John Anstis and bound together in a single volume when lent to Hearne. This copy continued through the death of Edward I and supplied comparison readings in Hearne's notes. No current shelfmark was identified in the reviewed public sources.",
+      "identifiers": [{"scheme": "Historical designation", "value": "Anstis complete Langtoft copy"}],
+      "physical_description": {
+        "extent": "Complete through the death of Edward I; bound with Anstis's partial copy in Hearne's time",
+        "format": "Manuscript codex or codicological unit; material and present binding not established"
+      },
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-sale", "evidence:anstis-search"]
+    },
+    {
+      "id": "witness:anstis:langtoft-partial",
+      "type": "manuscript_witness",
+      "label": "John Anstis's partial Part II manuscript of Langtoft's Chronicle",
+      "alternate_labels": ["The other of Mr. Anstis's copies"],
+      "description": "The second Anglo-Norman Langtoft manuscript owned by John Anstis and bound with his complete copy. Hearne says it contained only Part II and ended at material corresponding to his printed page 287. It supplied comparison readings in the notes. No current shelfmark was identified in the reviewed public sources.",
+      "identifiers": [{"scheme": "Historical designation", "value": "Anstis partial Langtoft Part II copy"}],
+      "physical_description": {
+        "extent": "Part II only, ending before the death of Edward I at material corresponding to Hearne page 287",
+        "format": "Manuscript codex or codicological unit; material and present binding not established"
+      },
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-sale", "evidence:anstis-search"]
+    },
+    {
+      "id": "work:langtoft:chronicle",
+      "type": "catalog_description",
+      "label": "The Chronicle of Pierre de Langtoft",
+      "alternate_labels": ["La Chronique de Pierre de Langtoft", "Peter Langtoft's Chronicle"],
+      "description": "Pierre de Langtoft's Anglo-Norman verse history of Britain and England through Edward I. Mannyng's Part II chiefly translates and adapts the corresponding later portion, with additions absent from Langtoft.",
+      "creator_ids": ["agent:pierre-langtoft"],
+      "date_statements": [
+        {"label": "completion", "value": "about 1307", "normalized": "1307", "certainty": "medium", "evidence_ids": ["evidence:cambridge-burek", "evidence:wright-langtoft-1866"]}
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:wright-langtoft-1866", "evidence:cambridge-burek"],
+      "notes": ["This is a source-work description, not an assertion that Mannyng used any one of Hearne's three surviving French collation manuscripts as his physical exemplar."]
+    },
+    {
+      "id": "facsimile:ia:b33291020-1810",
+      "type": "facsimile",
+      "label": "Internet Archive scan of The Works of Thomas Hearne, volumes III-IV (1810)",
+      "description": "A complete digital reproduction of the two immediate-source volumes from the Wellcome Library copy, including title pages, publisher's preface, Mannyng's Part II, notes, glossary, index, and appended tracts.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "b33291020_0003", "uri": "https://archive.org/details/b33291020_0003"},
+        {"scheme": "Internet Archive", "value": "b33291020_0004", "uri": "https://archive.org/details/b33291020_0004"}
+      ],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Two-volume PDF, page-image, and OCR derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:ia-1810-metadata"]
+    },
+    {
+      "id": "facsimile:ia:ecco-langtoft-1725",
+      "type": "facsimile",
+      "label": "Internet Archive ECCO scans of Hearne's 1725 edition",
+      "description": "A public two-volume digital reproduction of the 1725 first edition. A separate original-copy scan of volume I was also visually inspected to confirm the title page and original long-s typography.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_1", "uri": "https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_1"},
+        {"scheme": "Internet Archive", "value": "bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_2", "uri": "https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_2"}
+      ],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Two-volume PDF and page-image derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hearne-1725-scan", "evidence:ia-1725-metadata"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:robert-mannyng", "type": "person", "name": "Robert Mannyng of Brunne", "alternate_names": ["Robert of Brunne", "Robert Manning of Brunne"], "dates": "active 1288-1338", "evidence_ids": ["evidence:folger-sullens", "evidence:cambridge-burek"]},
+    {"id": "agent:pierre-langtoft", "type": "person", "name": "Pierre de Langtoft", "alternate_names": ["Peter of Langtoft", "Piers Langtoft"], "evidence_ids": ["evidence:wright-langtoft-1866", "evidence:cambridge-burek"]},
+    {"id": "agent:thomas-hearne", "type": "person", "name": "Thomas Hearne", "alternate_names": ["Thomas Hearnius"], "dates": "1678-1735", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:folger-hearne-1725"]},
+    {"id": "agent:john-anstis", "type": "person", "name": "John Anstis", "alternate_names": ["John Anstis the elder"], "dates": "1669-1744", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-sale"], "notes": ["Owner and lender of two French Langtoft manuscripts and intermediary for Hearne's access to Petyt 511 and Arundel LXI."]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096"]},
+    {"id": "agent:inner-temple", "type": "organization", "name": "Inner Temple Library", "urls": ["https://www.innertemplelibrary.org.uk/"], "evidence_ids": ["evidence:inner-temple-collection", "evidence:hearne-1810-scan"]},
+    {"id": "agent:college-of-arms", "type": "organization", "name": "College of Arms", "alternate_names": ["Heralds' College", "Heralds' Office"], "urls": ["https://www.college-of-arms.gov.uk/"], "evidence_ids": ["evidence:college-arms-collection", "evidence:wright-langtoft-1866"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-1810-metadata", "evidence:ia-1725-metadata"]},
+    {"id": "agent:wellcome", "type": "organization", "name": "Wellcome Library", "alternate_names": ["Wellcome Collection"], "urls": ["https://wellcomecollection.org/"], "evidence_ids": ["evidence:ia-1810-metadata"]},
+    {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:aba2096-xml"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:aba2096",
+      "object": "encoding:umich-cme:ABA2096.0001.001",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Checked-in repository XML at the pinned CME commit"},
+        "object": {"kind": "whole", "description": "U-M CME electronic item ABA2096.0001.001"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096"], "notes": "Identifier, header, structure, and content align; the current U-M source XML was not separately downloaded and checksummed."}
+    },
+    {
+      "id": "relation:umich-from-1810",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:ABA2096.0001.001",
+      "object": "edition:bagster:hearne-works-1810",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Searchable text, apparatus, and omitted-matter page milestones in ABA2096.0001.001"},
+        "object": {"kind": "selected_passages", "description": "Mannyng Part II and embedded Hearne notes, with linked images for the surrounding composite", "locators": ["vols. III-IV", "printed pp. 1-341 for the main work"]},
+        "notes": "The encoding retains page-image milestones for 946 pages but transcribes chiefly the Part II text. Most preface, glossary, index, and appended tracts are declared omitted."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:aba2096-xml", "evidence:hearne-1810-scan"]}
+    },
+    {
+      "id": "relation:1810-version-of-1725",
+      "type": "version_of",
+      "subject": "edition:bagster:hearne-works-1810",
+      "object": "edition:hearne:langtoft-1725",
+      "scope": {
+        "subject": {"kind": "whole", "description": "1810 two-volume reset in The Works of Thomas Hearne, vols. III-IV"},
+        "object": {"kind": "whole", "description": "1725 two-volume first edition"},
+        "notes": "The 1810 issue retains the main text and apparatus but resets type and has different preliminaries, ending pagination, advertisements, and printing colophons. It is not a photographic facsimile."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:hearne-1725-scan", "evidence:folger-hearne-1725", "evidence:folger-hearne-1810"]}
+    },
+    {
+      "id": "relation:hearne-transcribes-petyt",
+      "type": "transcribes",
+      "subject": "edition:hearne:langtoft-1725",
+      "object": "witness:inner-temple:petyt511-v7",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Mannyng's Middle English Part II", "locators": ["pp. 1-341"]},
+        "object": {"kind": "part", "description": "The complete second part of Mannyng's Chronicle in Petyt MS 511, vol. 7"},
+        "notes": "Hearne deliberately omits Part I from the main edition but prints its prologue and transition in the preface appendix."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:hearne-1725-scan", "evidence:med-petyt"]}
+    },
+    {
+      "id": "relation:hearne-collates-arundel-lxi",
+      "type": "collated_against",
+      "subject": "edition:hearne:langtoft-1725",
+      "object": "witness:college-of-arms:arundel-lxi",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Anglo-Norman specimens and variant notes attached to the Middle English edition"},
+        "object": {"kind": "selected_passages", "description": "Corresponding readings in Langtoft's Anglo-Norman Chronicle"},
+        "notes": "This witness informed the French comparison apparatus only; it was not the base of the Middle English transcription."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:wright-langtoft-1866"]}
+    },
+    {
+      "id": "relation:hearne-collates-anstis-complete",
+      "type": "collated_against",
+      "subject": "edition:hearne:langtoft-1725",
+      "object": "witness:anstis:langtoft-complete",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Anglo-Norman specimens and variant notes attached to the Middle English edition"},
+        "object": {"kind": "selected_passages", "description": "Corresponding readings throughout Anstis's complete Langtoft copy"},
+        "notes": "The current shelfmark is unresolved; the explicit historical use is nevertheless secure from Hearne's preface and notes."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan"]}
+    },
+    {
+      "id": "relation:hearne-collates-anstis-partial",
+      "type": "collated_against",
+      "subject": "edition:hearne:langtoft-1725",
+      "object": "witness:anstis:langtoft-partial",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Anglo-Norman specimens and variant notes through the corresponding printed sequence", "locators": ["through about printed p. 287"]},
+        "object": {"kind": "whole", "description": "Anstis's partial Part II copy, which ends at the material corresponding to Hearne p. 287"},
+        "notes": "The scope ends with the manuscript; it supplied no readings for later portions and was not a Middle English base witness."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan"]}
+    },
+    {
+      "id": "relation:mannyng-version-of-langtoft",
+      "type": "version_of",
+      "subject": "edition:hearne:langtoft-1725",
+      "object": "work:langtoft:chronicle",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "The Middle English Part II edited by Hearne", "locators": ["pp. 1-341"]},
+        "object": {"kind": "part", "description": "The corresponding later portion of Langtoft's Anglo-Norman Chronicle"},
+        "notes": "This is a work-level translation-and-adaptation relation represented through the edition. It does not claim that Hearne translated the text or that Mannyng used one identified surviving French manuscript."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:folger-sullens", "evidence:cambridge-burek"]}
+    },
+    {
+      "id": "relation:ia-1810-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:b33291020-1810",
+      "object": "edition:bagster:hearne-works-1810",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Two public digital volume scans"},
+        "object": {"kind": "whole", "description": "The complete 1810 source volumes III-IV"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1810-scan", "evidence:ia-1810-metadata"]}
+    },
+    {
+      "id": "relation:ia-1725-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:ecco-langtoft-1725",
+      "object": "edition:hearne:langtoft-1725",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Two public ECCO-derived digital volume scans"},
+        "object": {"kind": "whole", "description": "The complete 1725 two-volume edition"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hearne-1725-scan", "evidence:ia-1725-metadata"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-xml",
+      "entity": "artifact:general-corpus:aba2096",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path at the pinned commit",
+      "repository_path": "CME/source/CME_phase_1-2/aba2096.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:aba2096-xml"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page, full HTML text, and table-of-contents views",
+      "url": "https://quod.lib.umich.edu/c/cme/ABA2096.0001.001/1:3?rgn=div1&view=fulltext",
+      "alternate_urls": ["https://name.umdl.umich.edu/ABA2096.0001.001"],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:umich-aba2096"]
+    },
+    {
+      "id": "access:umich-images",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "provider_id": "agent:umich",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use the 'View Page' actions from the U-M HTML item to open linked page images",
+      "url": "https://quod.lib.umich.edu/c/cme/ABA2096.0001.001/1:3?rgn=div1&view=fulltext",
+      "cost": "free",
+      "format": "Web page images linked to 600-dpi TIFF source milestones",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:umich-aba2096", "evidence:aba2096-xml"],
+      "notes": ["The interface exposed page-view links, but direct automated retrieval was blocked with HTTP 403 during review; no bulk image download was verified."]
+    },
+    {
+      "id": "access:ia-1810",
+      "entity": "facsimile:ia:b33291020-1810",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item pages, book readers, and direct PDF downloads for both volumes",
+      "url": "https://archive.org/details/b33291020_0003",
+      "alternate_urls": ["https://archive.org/details/b33291020_0004", "https://archive.org/download/b33291020_0003/b33291020_0003.pdf", "https://archive.org/download/b33291020_0004/b33291020_0004.pdf"],
+      "cost": "free",
+      "format": "PDF, page images, and OCR derivatives",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:ia-1810-metadata"]
+    },
+    {
+      "id": "access:ia-1725",
+      "entity": "facsimile:ia:ecco-langtoft-1725",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item pages and direct public PDF downloads for both 1725 volumes",
+      "url": "https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_1",
+      "alternate_urls": ["https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_2", "https://archive.org/details/peterlangtoftsch01pete"],
+      "cost": "free",
+      "format": "PDF and page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:hearne-1725-scan", "evidence:ia-1725-metadata"]
+    },
+    {
+      "id": "access:petyt-scholarly-bibliography",
+      "entity": "witness:inner-temple:petyt511-v7",
+      "provider_id": "agent:umich",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Exact Middle English Compendium scholarly bibliography entry for Petyt 511, vol. 7",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2350?rid=HYP.324.19981211T105002",
+      "cost": "free",
+      "format": "HTML scholarly bibliography entry",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:med-petyt"],
+      "notes": ["This is an exact scholarly bibliography entry maintained by U-M, not an Inner Temple-owned item catalog record. Inner Temple's collection-level page is used only for physical consultation, microfilm supply, photography, and publication policy."]
+    },
+    {
+      "id": "access:petyt-physical",
+      "entity": "witness:inner-temple:petyt511-v7",
+      "provider_id": "agent:inner-temple",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Apply in writing to the Librarian with research purpose and, where appropriate, an academic recommendation; request Petyt MS 511, vol. 7 for consultation",
+      "url": "https://www.innertemplelibrary.org.uk/collections/manuscript-collection/",
+      "cost": "unknown",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:inner-temple-collection"]
+    },
+    {
+      "id": "access:petyt-microfilm",
+      "entity": "witness:inner-temple:petyt511-v7",
+      "provider_id": "agent:inner-temple",
+      "resource_kind": "microfilm",
+      "status": "purchasable",
+      "access_method": "Request information from Inner Temple Library about the 1978 World Microfilms edition and purchase of microcopies",
+      "url": "https://www.innertemplelibrary.org.uk/collections/manuscript-collection/",
+      "cost": "fee",
+      "format": "Microfilm copy; exact reel and current supply route require confirmation",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:inner-temple-collection"]
+    },
+    {
+      "id": "access:arundel-lxi-enquiry",
+      "entity": "witness:college-of-arms:arundel-lxi",
+      "provider_id": "agent:college-of-arms",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Contact the College of Arms about consultation, catalog detail, or reproduction for Arundel MS LXI; no exact public item record or complete surrogate was found",
+      "url": "https://www.college-of-arms.gov.uk/about-us/records-and-collections",
+      "cost": "unknown",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:college-arms-collection", "evidence:wright-langtoft-1866"]
+    },
+    {
+      "id": "access:anstis-complete",
+      "entity": "witness:anstis:langtoft-complete",
+      "resource_kind": "catalog_record",
+      "status": "no_public_copy_found",
+      "access_method": "No current shelfmark or exact public catalog match was identified in targeted College of Arms, British Library, Bodleian/MarCO, and All Souls searches",
+      "cost": "unknown",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-search"]
+    },
+    {
+      "id": "access:anstis-partial",
+      "entity": "witness:anstis:langtoft-partial",
+      "resource_kind": "catalog_record",
+      "status": "no_public_copy_found",
+      "access_method": "No current shelfmark or exact public catalog match was identified in targeted College of Arms, British Library, Bodleian/MarCO, and All Souls searches",
+      "cost": "unknown",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-search"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:1725-edition-us",
+      "entity": "edition:hearne:langtoft-1725",
+      "component": "Hearne's 1725 transcription, edition, apparatus, and the underlying medieval texts",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was first published in 1725 and is far older than the maximum U.S. term for works first published before 1978; the exact edition is publicly reproduced by Internet Archive.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hearne-1725-scan", "evidence:folger-hearne-1725", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:1810-edition-us",
+      "entity": "edition:bagster:hearne-works-1810",
+      "component": "The 1810 reset text, typography, arrangement, and the underlying 1725 and medieval content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The reset reprint was first published in 1810 and is far older than the maximum U.S. term for works first published before 1978; Internet Archive's Wellcome-derived item also bears the Public Domain Mark.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:ia-1810-metadata", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:umich-current-us",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "access_id": "access:umich-text",
+      "component": "Materials presented in U-M CME item ABA2096.0001.001",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M currently states that the materials are in the public domain and applies No Copyright-United States.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-aba2096", "evidence:rightsstatements-nocus"],
+      "notes": ["NoC-US is jurisdiction-specific, is not a license, and does not by itself resolve reuse outside the United States or the embedded legacy restriction."]
+    },
+    {
+      "id": "rights:umich-legacy-notice",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "component": "The electronic transcription and markup under the availability notice embedded in the 2006 XML",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2006-02-22",
+      "basis": "The XML says that copyright may apply and that other distribution restrictions may apply, directing users to U-M for further information; it does not state a reusable license.",
+      "asserted_by_id": "agent:umich",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:aba2096-xml"],
+      "notes": ["This historical notice is recorded separately from U-M's current NoC-US label rather than silently treated as superseded."]
+    },
+    {
+      "id": "rights:local-artifact",
+      "entity": "artifact:general-corpus:aba2096",
+      "access_id": "access:repo-xml",
+      "component": "The checked-in U-M-derived XML artifact",
+      "jurisdiction": "United States and inherited provider terms",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M currently labels the presented materials public domain in the United States, and the underlying editions are public domain, but the checked-in XML retains U-M's older caution about copyright and distribution restrictions.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096"]
+    },
+    {
+      "id": "rights:ia-1810-scan",
+      "entity": "facsimile:ia:b33291020-1810",
+      "access_id": "access:ia-1810",
+      "component": "Wellcome-derived 1810 scan, PDFs, page images, and OCR derivatives",
+      "jurisdiction": "Provider statement and intended place of reuse",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-11",
+      "basis": "Internet Archive metadata identifies the source edition as 1810 and displays the Creative Commons Public Domain Mark supplied with the Wellcome item.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-1810-metadata", "evidence:hearne-1810-scan"]
+    },
+    {
+      "id": "rights:ia-1725-scan",
+      "entity": "facsimile:ia:ecco-langtoft-1725",
+      "access_id": "access:ia-1725",
+      "component": "ECCO-derived 1725 PDFs and page-image derivatives",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-11",
+      "basis": "The underlying 1725 edition is public domain in the United States and the files were publicly downloadable, but the reviewed Internet Archive metadata exposes no item-specific rights or license field for these scan derivatives.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:ia-1725-metadata", "evidence:hearne-1725-scan"]
+    },
+    {
+      "id": "rights:petyt-text-us",
+      "entity": "witness:inner-temple:petyt511-v7",
+      "component": "The medieval text embodied in Petyt MS 511, vol. 7",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The manuscript and text were created in the fourteenth century and Hearne's transcription was published in 1725; this statement does not cover modern photography, repository permissions, or contractual access conditions.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:med-petyt", "evidence:hearne-1725-scan", "evidence:inner-temple-collection"]
+    },
+    {
+      "id": "rights:petyt-images",
+      "entity": "witness:inner-temple:petyt511-v7",
+      "component": "Any modern photographs, scans, or microfilm frames of Petyt MS 511, vol. 7",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "Inner Temple permits non-flash research photography for private study but requires prior written permission for publication; no complete image set with item-specific reuse license was found.",
+      "asserted_by_id": "agent:inner-temple",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:inner-temple-collection"]
+    },
+    {
+      "id": "rights:arundel-lxi-images",
+      "entity": "witness:college-of-arms:arundel-lxi",
+      "component": "Any modern photographs or scans of College of Arms Arundel MS LXI",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The official collection page confirms the holding but exposes neither an exact image record nor item-specific reproduction and reuse terms.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:college-arms-collection"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:hearne-selection",
+      "entity": "edition:hearne:langtoft-1725",
+      "practice": "selection",
+      "source_feature": "Mannyng's complete two-part Chronicle in Petyt MS 511, vol. 7",
+      "representation": "Part II as the main edited text, with only the whole-work prologue and transition from Part I printed in the preface appendix",
+      "description": "Hearne explicitly judged Part I unnecessary for publication and made Part II, from Cadwaladr to Edward I, the main edition.",
+      "scope": "Mannyng's Chronicle in the 1725 first edition",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:hearne-1725-scan"]
+    },
+    {
+      "id": "practice:hearne-collation",
+      "entity": "edition:hearne:langtoft-1725",
+      "practice": "collation",
+      "source_feature": "Corresponding Anglo-Norman readings in Arundel LXI and two Anstis manuscripts",
+      "representation": "French specimens, omissions, and variant readings in footnotes beneath the Petyt-based Middle English text",
+      "description": "After printing had begun, Hearne consulted three French Langtoft manuscripts to illustrate Langtoft's language and explain Mannyng, without replacing Petyt 511 as the English base.",
+      "scope": "Anglo-Norman comparison apparatus throughout Part II; the partial Anstis copy contributes only through material corresponding to page 287",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:wright-langtoft-1866"]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "practice": "selection",
+      "source_feature": "Complete 1810 two-volume composite publication",
+      "representation": "Searchable Part II and embedded Hearne notes, with most front and back matter represented only by omitted-matter divisions and PB links",
+      "description": "The encoding makes Mannyng's Part II at printed pages 1-341 searchable while omitting the surrounding preface, appendices, glossary, and index from full text.",
+      "scope": "Whole electronic item and 946 linked page milestones",
+      "confidence": "high",
+      "evidence_ids": ["evidence:aba2096-xml", "evidence:hearne-1810-scan"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:aba2096-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/aba2096.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/aba2096.xml",
+      "locator": "HEADER; TITLEPAGE; TEXT/FRONT, BODY, and BACK; printed pp. 1-714 and page milestones",
+      "summary": "Supplies repository checksums and pinned source, the 1810 source description, 2006 U-M production statement, explicit uncorrected OCR, 946 linked images, encoded Part II and apparatus, composite title, omissions, and embedded availability notice.",
+      "accessed_on": "2026-07-11",
+      "sha256": "ae2ff7057969deb9414d70c7b4c49493e91e9bc89ebdf0779538534994ffd1a8"
+    },
+    {
+      "id": "evidence:umich-aba2096",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, ABA2096.0001.001.",
+      "url": "https://quod.lib.umich.edu/c/cme/ABA2096.0001.001/1:3?rgn=div1&view=fulltext",
+      "alternate_urls": ["https://name.umdl.umich.edu/ABA2096.0001.001"],
+      "summary": "Confirms current public HTML text, page-view actions, the 1810 source, stable identifier, U-M public-domain statement, and No Copyright-United States label.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:hearne-1810-scan",
+      "type": "visual_inspection",
+      "citation": "Thomas Hearne, ed., Peter Langtoft's Chronicle, 1810 Bagster reprint, The Works of Thomas Hearne, vols. III-IV, Wellcome Library scans at Internet Archive.",
+      "url": "https://archive.org/details/b33291020_0003",
+      "alternate_urls": ["https://archive.org/details/b33291020_0004", "https://archive.org/download/b33291020_0003/b33291020_0003.pdf", "https://archive.org/download/b33291020_0004/b33291020_0004.pdf"],
+      "locator": "title pages; publisher's preface sections X, XIV-XVI; Part II pp. 1-341; appendices pp. 343-714; Mercier and Chervet colophons pp. 230 and 714",
+      "summary": "Directly establishes the reset 1810 edition, composite contents, Hearne's Petyt base, deliberate omission of Part I, use and scope of the three French manuscripts, current historical designations, main-work boundaries, and the 1810-specific printing and pagination.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-1810-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata and files for b33291020_0003 and b33291020_0004.",
+      "url": "https://archive.org/metadata/b33291020_0003",
+      "alternate_urls": ["https://archive.org/metadata/b33291020_0004"],
+      "summary": "Identifies the two 1810 volumes as The Works of Thomas Hearne, contributed by Wellcome Library, and applies the Creative Commons Public Domain Mark; direct PDFs were successfully retrieved.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:hearne-1725-scan",
+      "type": "visual_inspection",
+      "citation": "Thomas Hearne, ed., Peter Langtoft's Chronicle, first edition (Oxford: printed at the Theater, 1725), Internet Archive scans.",
+      "url": "https://archive.org/details/peterlangtoftsch01pete",
+      "alternate_urls": ["https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_1", "https://archive.org/details/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_2"],
+      "locator": "original title page and publisher's preface; continuously paged two-volume contents",
+      "summary": "Confirms the original 1725 title page, long-s typography, Oxford Theater imprint, first-publication claim, composite scope, and distinction from the typographically reset 1810 reprint. Both ECCO volume PDFs were retrievable.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-1725-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for the two-volume ECCO reproduction of Hearne's 1725 Peter Langtoft's Chronicle.",
+      "url": "https://archive.org/metadata/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_1",
+      "alternate_urls": ["https://archive.org/metadata/bim_eighteenth-century_peter-langtofts-chronic_peter-of-langtoft_1725_2", "https://archive.org/metadata/peterlangtoftsch01pete"],
+      "summary": "Confirms public two-volume digital files dated 1725 and a separate original-copy scan; the reviewed metadata has no item-specific rights or license field for the ECCO derivatives.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:folger-hearne-1725",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, catalog record 760549, Peter Langtoft's Chronicle (1725).",
+      "url": "https://catalog.folger.edu/record/760549",
+      "summary": "Gives the full 1725 title, Oxford imprint, continuous two-volume pagination and composite contents, first-publication statement, ESTC T154205, and a diagnostic warning distinguishing the 1810 reset by its colophons and shorter final pagination.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:folger-hearne-1810",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, catalog record 6640, The Works of Thomas Hearne, M.A. (1810).",
+      "url": "https://catalog.folger.edu/record/6640",
+      "summary": "Confirms the London Bagster imprint, four-volume Works, modern- and Middle-English languages, reprinted original title pages, and placement of Peter Langtoft's Chronicle in volumes III-IV.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:wright-langtoft-1866",
+      "type": "scholarly_source",
+      "citation": "Thomas Wright, ed., The Chronicle of Pierre de Langtoft, in French Verse, vol. I, Rolls Series (London: Longmans, Green, Reader, and Dyer, 1866).",
+      "url": "https://archive.org/details/chroniclepierre01wriggoog",
+      "locator": "preface, manuscript descriptions C-E, especially pp. xxiv-xxv",
+      "summary": "Identifies Hearne's former Sheldon/Heralds' Office copy as College of Arms Arundel MS LXI, lettered Vincent, Wright siglum D; describes its extent and readings and distinguishes it from Arundel XIV.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:med-petyt",
+      "type": "official_webpage",
+      "citation": "Middle English Compendium, Middle English Bibliography entry BIB2350, The Chronicle of England, Part 1.",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2350?rid=HYP.324.19981211T105002",
+      "summary": "Identifies Inner Temple Library, Petyt 511, vol. 7; dates its Mannyng text about 1400 after the 1338 work; records one hand, LALME LP 38, Lincolnshire localization, Hearne 1725/reprint 1810, and a MED photostat now in Bentley Historical Library records.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:pons-sanz-petyt",
+      "type": "scholarly_source",
+      "citation": "Sara M. Pons-Sanz and Sean Roberts, 'The Integration of Norse-Derived Terms in English: Effects of Formal Similarity,' Transactions of the Philological Society (2025).",
+      "url": "https://orca.cardiff.ac.uk/id/eprint/181141/1/Trans%20of%20the%20Philol%20Soc%20-%202025%20-%20Pons%E2%80%90Sanz%20-%20The%20Integration%20of%20Norse%E2%80%90Derived%20Terms%20in%20English%20%20Effects%20of%20Formal.pdf",
+      "summary": "Uses Petyt 511.7 for Mannyng's Chronicle, describes it as the only localized Lincolnshire manuscript of Mannyng's texts, and dates it to the second half of the fourteenth century, possibly about 1375, citing Sullens and eLALME LP 38.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:inner-temple-collection",
+      "type": "official_webpage",
+      "citation": "Inner Temple Library, Manuscript Collection.",
+      "url": "https://www.innertemplelibrary.org.uk/collections/manuscript-collection/",
+      "summary": "Confirms the extant Petyt Manuscripts, their bequest in 1707, written-application access for scholars, private-study photography policy, publication-permission requirement, and the 1978 World Microfilms edition and microcopy route.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:college-arms-collection",
+      "type": "official_webpage",
+      "citation": "College of Arms, Records and Collections.",
+      "url": "https://www.college-of-arms.gov.uk/about-us/records-and-collections",
+      "summary": "Confirms that the College holds the Arundel Manuscripts, chiefly medieval chronicles and histories, and provides the institutional context for an enquiry; it is not an exact online record for Arundel LXI and gives no item-specific image terms.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:anstis-sale",
+      "type": "scholarly_source",
+      "citation": "Susan Baker and George Leigh, A Catalogue of the Large and Valuable Collection of Manuscripts of John Anstis Esq, Garter King of Arms, sale catalogue, 12-13 December 1768, cited in 'The Islip Roll Re-examined,' The Antiquaries Journal.",
+      "url": "https://www.cambridge.org/core/journals/antiquaries-journal/article/islip-roll-reexamined/545E2171DDB33853F1C310D6D82F56A8",
+      "summary": "Confirms the existence, title, and dates of the 1768 sale catalogue for Anstis's manuscript collection; it does not itself identify the modern shelfmarks of Hearne's two Langtoft copies.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:anstis-search",
+      "type": "search_result",
+      "citation": "Targeted current catalog searches for Hearne's two John Anstis Langtoft manuscripts.",
+      "url": "https://searcharchives.bl.uk/?f%5Brelated_names_ssim%5D%5B%5D=Anstis%2C+John%2C+the+elder%2C+herald+and+antiquary%2C+1669-1774&per_page=50&search_field=all_fields&sort=date",
+      "alternate_urls": ["https://archives.bodleian.ox.ac.uk/", "https://www.asc.ox.ac.uk/special-collections", "https://www.college-of-arms.gov.uk/about-us/records-and-collections"],
+      "summary": "Searches of British Library Anstis records, Bodleian Archives/MarCO, All Souls special-collections information, and College of Arms collection information found dispersed Anstis material but no exact match to the two bound Langtoft manuscripts. This negative result does not prove loss or destruction.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:folger-sullens",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, catalog record 93020, The Chronicle, Robert Mannyng of Brunne, ed. Idelle Sullens (1996).",
+      "url": "https://catalog.folger.edu/record/93020",
+      "summary": "Catalogs Mannyng as author, the text as Middle English verse, and Part II as derived from Peter of Langtoft.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:cambridge-burek",
+      "type": "scholarly_source",
+      "citation": "Jacqueline M. Burek, 'Of diuers kynd: Robert Mannyng's Story of Inglande,' in Literary Variety and the Writing of History in Britain's Long Twelfth Century (Boydell & Brewer, 2023).",
+      "url": "https://www.cambridge.org/core/books/literary-variety-and-the-writing-of-history-in-britains-long-twelfth-century/of-diuers-kynd-robert-mannyngs-story-of-inglande/03EDD29C3DEC01F50E1BBA25F6F71F0B",
+      "summary": "Identifies the Story as also known as the Chronicle, explains its primary dependence on Wace and Langtoft, and emphasizes Mannyng's additions and independent shaping.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:rightsstatements-nocus",
+      "type": "official_webpage",
+      "citation": "RightsStatements.org, No Copyright-United States 1.0.",
+      "url": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "summary": "Defines NoC-US as a United States copyright-status statement, cautions that other jurisdictions may differ, and states that the designation is not a license.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Explains U.S. duration rules for works first published before 1978, supporting the public-domain status of editions published in 1725 and 1810.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-terms",
+      "question": "Does U-M's current No Copyright-United States statement supersede, clarify, or coexist with the copyright and distribution caution embedded in the 2006 XML?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Request a written interpretation from U-M Library before redistributing the XML or a close derivative as a content provider.",
+        "Keep copyright status, page-image terms, electronic-markup terms, and repository licensing separate in downstream reuse decisions."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:aba2096-xml", "evidence:umich-aba2096", "evidence:rightsstatements-nocus"]
+    },
+    {
+      "id": "question:anstis-shelfmarks",
+      "question": "What are the current shelfmarks, holdings, and survival status of the two Anglo-Norman Langtoft manuscripts that John Anstis owned bound together and lent to Hearne?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Inspect an annotated copy of the 12-13 December 1768 Anstis sale catalogue and trace the relevant lot purchasers.",
+        "Compare Hearne's quoted readings, the complete-copy ending, and the partial-copy ending near page 287 against current Langtoft manuscript censuses.",
+        "Enquire with the College of Arms, British Library, Bodleian Library, and All Souls rather than describing either copy as lost."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:hearne-1810-scan", "evidence:anstis-sale", "evidence:anstis-search", "evidence:wright-langtoft-1866"]
+    },
+    {
+      "id": "question:petyt-catalog-and-images",
+      "question": "Is there an exact current Inner Temple item record or complete institutional digital surrogate for Petyt MS 511, vol. 7, and what written terms would govern publication of its images?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask Inner Temple Library for its current item-level description, condition and foliation data, the exact 1978 microfilm reel, and any existing digital photography.",
+        "Obtain item-specific written publication permission and image terms before reusing manuscript photographs.",
+        "Check the Bentley Historical Library MED Records Box 70 photostat as a research surrogate without assuming publication rights."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:inner-temple-collection", "evidence:med-petyt"]
+    },
+    {
+      "id": "question:petyt-date",
+      "question": "Should Petyt MS 511, vol. 7 be dated about 1375, broadly to the second half of the fourteenth century, or around 1400?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Compare Sullens's codicological discussion, Davies's 1972 catalog entry, and current eLALME profile 38 directly.",
+        "Record palaeographical and linguistic dating as attributed claims and do not collapse them into a false consensus."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:med-petyt", "evidence:pons-sanz-petyt", "evidence:inner-temple-collection"]
+    },
+    {
+      "id": "question:arundel-lxi-surrogate",
+      "question": "Does the College of Arms have an exact public or mediated catalog record, complete surrogate, and item-specific reuse terms for Arundel MS LXI?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Request the exact catalog entry and reproduction options from the College of Arms.",
+        "Do not generalize access or image terms from the collection-level webpage."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:college-arms-collection", "evidence:wright-langtoft-1866"]
+    }
+  ]
+}
