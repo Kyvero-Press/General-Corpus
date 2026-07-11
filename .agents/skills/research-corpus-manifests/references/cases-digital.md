@@ -43,3 +43,9 @@ facsimile.
 A collection may describe manual keying and proofreading while one item says
 uncorrected OCR/TEI Level 1. Prefer the item-specific production statement and
 record the collection description only as broader context.
+
+A complete page-image package can be a facsimile of an entire printed volume
+while its associated OCR or TEI encodes only selected text. Scope the
+facsimile relation to the whole edition and the encoding relation to the
+actually transcribed pages; do not infer textual completeness from image
+count alone.

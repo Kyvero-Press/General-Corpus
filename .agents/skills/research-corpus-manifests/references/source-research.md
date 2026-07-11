@@ -88,6 +88,16 @@ edition, and current institutional record. Use the repository's current exact
 shelfmark for the witness, but preserve malformed or legacy source forms in
 notes with the evidence that resolves them.
 
+Treat legacy and corrected foliation as a locator crosswalk for one physical
+witness unless evidence establishes distinct objects. Record both ranges and
+name which system each source uses; do not create a second witness merely
+because an older edition is offset by a skipped or duplicated folio number.
+
+An enclosing catalog title or inherited author heading can describe a whole
+miscellany while an exact contents entry rejects that attribution for one
+work. Prefer the component-level statement for work responsibility and retain
+the broader label only as attribution history or catalog context.
+
 For archival series that have been reorganized or renumbered, establish a
 legacy-to-current crosswalk from matching parties, titles, dates, contents, and
 context—not number resemblance alone. Preserve unresolved reference history
