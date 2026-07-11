@@ -58,3 +58,8 @@ public-domain label that conflicts with the source provider's license or use
 conditions, preserve both as access-specific claims. Provenance does not make
 the more permissive claim automatically control the upstream images, nor does
 the upstream restriction erase what the downstream provider actually asserts.
+
+An item-level IIIF license and a provider-wide publication or permission
+policy may also address different acts. Record the exact object's license and
+the institution's broader reproduction/publication conditions separately;
+neither silently cancels the other when their practical permissions diverge.
