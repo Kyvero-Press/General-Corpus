@@ -53,6 +53,54 @@ class LineageManifestTests(unittest.TestCase):
 
         self.assertIn("CME00099: unexpected property 'unreviewed_guess'", errors)
 
+    def test_schema_records_work_portion_within_complete_source(self) -> None:
+        schema_path = (
+            REPO_ROOT
+            / "manifests"
+            / "lineage"
+            / "schemas"
+            / "lineage-manifest.schema.json"
+        )
+        manifest_path = REPO_ROOT / "manifests" / "lineage" / "works" / "CME00099.json"
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        changed = copy.deepcopy(manifest)
+        changed["access"][0]["local_copies"] = [{
+            "label": "Complete manuscript PDF",
+            "path": "source-cache/CME00099/manuscript.pdf",
+            "source_url": "https://example.test/manuscript.pdf",
+            "sha256": "0" * 64,
+            "bytes": 1,
+            "media_type": "application/pdf",
+            "downloaded_on": "2026-07-11",
+            "coverage": "complete",
+            "work_portion": {
+                "label": "The cataloged work",
+                "locators": ["folios 10r–20v", "IIIF canvases 21–42"],
+                "start_url": "https://example.test/canvas/21",
+                "end_url": "https://example.test/canvas/42",
+            },
+        }]
+
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._schema_errors(
+                changed,
+                schema,
+                schema,
+                "CME00099",
+            ),
+        )
+
+        del changed["access"][0]["local_copies"][0]["work_portion"]["locators"]
+        errors = validate_lineage_manifests._schema_errors(
+            changed,
+            schema,
+            schema,
+            "CME00099",
+        )
+        self.assertTrue(any("locators" in item and "required" in item for item in errors))
+
     def test_local_copy_is_optional_but_verified_when_present(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

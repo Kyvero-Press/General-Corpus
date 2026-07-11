@@ -180,6 +180,45 @@
             "unknown"
           ]
         },
+        "work_portion": {
+          "$ref": "#/$defs/workPortion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "workPortion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "locators"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "start_url": {
+          "$ref": "#/$defs/uri"
+        },
+        "end_url": {
+          "$ref": "#/$defs/uri"
+        },
         "notes": {
           "type": "array",
           "items": {

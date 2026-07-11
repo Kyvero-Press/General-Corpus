@@ -22,7 +22,10 @@ Verified downloadable facsimiles and supporting files are cached locally under
 the Git-ignored `source-cache/<work_id>/` directory. Each cached file is linked
 from its access record through `local_copies`, including its exact download
 URL, relative path, SHA-256, byte count, media type, and download date. These
-records remain useful when a clone does not contain the ignored files.
+records remain useful when a clone does not contain the ignored files. Prefer
+a complete manuscript codex when it is obtainable; `work_portion` records the
+folios/pages/canvases occupied by this work without mislabeling selected
+leaves—or a metadata-only IIIF manifest—as a complete facsimile.
 
 Validate the index, schemas, references, source identifiers, and checksums with:
 

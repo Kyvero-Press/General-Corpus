@@ -205,6 +205,13 @@ class CatalogFixture:
             "media_type": "application/pdf",
             "downloaded_on": "2026-07-11",
             "coverage": "complete",
+            "work_portion": {
+                "label": "Test work",
+                "locators": ["folios 10r–20v", "IIIF canvases 21–42"],
+                "start_url": "https://example.test/canvas/21",
+                "end_url": "https://example.test/canvas/42",
+                "notes": ["The cached file contains the complete manuscript."],
+            },
         }]
         self.write_manifests()
         return path
@@ -406,6 +413,16 @@ class CorpusViewerCatalogTests(unittest.TestCase):
             )
             self.assertEqual("https://example.test/scan.pdf", local_copy["sourceUrl"])
             self.assertEqual(hashlib.sha256(cached.read_bytes()).hexdigest(), local_copy["sha256"])
+            self.assertEqual(
+                {
+                    "label": "Test work",
+                    "locators": ["folios 10r–20v", "IIIF canvases 21–42"],
+                    "startUrl": "https://example.test/canvas/21",
+                    "endUrl": "https://example.test/canvas/42",
+                    "notes": ["The cached file contains the complete manuscript."],
+                },
+                local_copy["workPortion"],
+            )
 
             cached.unlink()
             build_corpus_viewer_catalog.build_catalog(

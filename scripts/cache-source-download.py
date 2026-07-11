@@ -70,6 +70,7 @@ def download(
     label: str,
     coverage: str,
     force: bool,
+    work_portion: dict[str, object] | None = None,
 ) -> dict[str, object]:
     if not SAFE_WORK_ID.fullmatch(work_id):
         raise CacheError(f"unsafe work ID: {work_id!r}")
@@ -124,7 +125,7 @@ def download(
         if temp_path is not None and temp_path.exists():
             temp_path.unlink()
 
-    return {
+    local_copy: dict[str, object] = {
         "label": label,
         "path": relative.as_posix(),
         "source_url": url,
@@ -134,6 +135,38 @@ def download(
         "downloaded_on": date.today().isoformat(),
         "coverage": coverage,
     }
+    if work_portion is not None:
+        local_copy["work_portion"] = work_portion
+    return local_copy
+
+
+def work_portion_from_args(args: argparse.Namespace) -> dict[str, object] | None:
+    supplied = any(
+        (
+            args.work_portion_label,
+            args.work_locator,
+            args.work_start_url,
+            args.work_end_url,
+            args.work_portion_note,
+        )
+    )
+    if not supplied:
+        return None
+    if not args.work_portion_label:
+        raise CacheError("--work-portion-label is required when recording a work portion")
+    if not args.work_locator:
+        raise CacheError("at least one --work-locator is required when recording a work portion")
+    work_portion: dict[str, object] = {
+        "label": args.work_portion_label,
+        "locators": args.work_locator,
+    }
+    if args.work_start_url:
+        work_portion["start_url"] = validate_url(args.work_start_url)
+    if args.work_end_url:
+        work_portion["end_url"] = validate_url(args.work_end_url)
+    if args.work_portion_note:
+        work_portion["notes"] = args.work_portion_note
+    return work_portion
 
 
 def parser() -> argparse.ArgumentParser:
@@ -154,6 +187,28 @@ def parser() -> argparse.ArgumentParser:
         choices=("complete", "partial", "metadata_only", "unknown"),
         default="unknown",
         help="how completely this file represents the described source",
+    )
+    result.add_argument(
+        "--work-portion-label",
+        help="work or component found within a larger cached source",
+    )
+    result.add_argument(
+        "--work-locator",
+        action="append",
+        help="physical or digital locator for the work; repeat for folio and canvas ranges",
+    )
+    result.add_argument(
+        "--work-start-url",
+        help="optional deep link to the first page or canvas containing the work",
+    )
+    result.add_argument(
+        "--work-end-url",
+        help="optional deep link to the final page or canvas containing the work",
+    )
+    result.add_argument(
+        "--work-portion-note",
+        action="append",
+        help="optional note about the work-to-source mapping; may be repeated",
     )
     result.add_argument("--force", action="store_true", help="replace differing cached content")
     result.add_argument(
@@ -177,6 +232,7 @@ def main(argv: list[str] | None = None) -> int:
             label=args.label or args.filename or infer_filename(args.url),
             coverage=args.coverage,
             force=args.force,
+            work_portion=work_portion_from_args(args),
         )
     except CacheError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

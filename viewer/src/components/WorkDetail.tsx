@@ -184,7 +184,7 @@ function AccessCard({ access }: { access: AccessRecord }) {
               <dd>{localCopy.sizeLabel ?? `${localCopy.bytes} bytes`} · {localCopy.mediaType}</dd>
             </div>
             <div>
-              <dt>Coverage</dt>
+              <dt>Source coverage</dt>
               <dd>{humanizeToken(localCopy.coverage)}</dd>
             </div>
             <div>
@@ -196,6 +196,27 @@ function AccessCard({ access }: { access: AccessRecord }) {
               <dd><code>{localCopy.sha256}</code></dd>
             </div>
           </dl>
+          {localCopy.workPortion && (
+            <div className="work-portion">
+              <strong>Work location within source: {localCopy.workPortion.label}</strong>
+              <ul className="compact-notes">
+                {localCopy.workPortion.locators.map((locator) => (
+                  <li key={locator}>{locator}</li>
+                ))}
+              </ul>
+              {(localCopy.workPortion.startUrl || localCopy.workPortion.endUrl) && (
+                <div className="work-portion-actions">
+                  {localCopy.workPortion.startUrl && (
+                    <ExternalLink href={localCopy.workPortion.startUrl}>Open work start</ExternalLink>
+                  )}
+                  {localCopy.workPortion.endUrl && (
+                    <ExternalLink href={localCopy.workPortion.endUrl}>Open work end</ExternalLink>
+                  )}
+                </div>
+              )}
+              <Notes notes={localCopy.workPortion.notes} />
+            </div>
+          )}
           <div className="local-copy-action">
             <ExternalLink href={localCopy.sourceUrl}>Exact file download</ExternalLink>
           </div>

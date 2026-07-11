@@ -163,6 +163,13 @@ const detail: WorkDetailRecord = {
               mediaType: "application/pdf",
               downloadedOn: "2026-07-11",
               coverage: "complete",
+              workPortion: {
+                label: "Recipes in KB X 90",
+                locators: ["manuscript pages 12–21", "digital images 16–25"],
+                startUrl: "https://example.test/x90/image/16",
+                endUrl: "https://example.test/x90/image/25",
+                notes: ["The cached file contains the complete manuscript."],
+              },
               notes: [],
               available: true,
             }],
@@ -274,6 +281,12 @@ describe("App", () => {
     expect(within(dialog).getByRole("link", { name: /Exact file download/ })).toHaveAttribute(
       "href",
       "https://example.test/holthausen.pdf",
+    );
+    expect(within(dialog).getByText("Work location within source: Recipes in KB X 90")).toBeInTheDocument();
+    expect(within(dialog).getByText("manuscript pages 12–21")).toBeInTheDocument();
+    expect(within(dialog).getByRole("link", { name: /Open work start/ })).toHaveAttribute(
+      "href",
+      "https://example.test/x90/image/16",
     );
     expect(within(dialog).getByText("The complete CME digital text")).toBeInTheDocument();
     expect(within(dialog).getByText("Holthausen’s printed pages 75–88")).toBeInTheDocument();

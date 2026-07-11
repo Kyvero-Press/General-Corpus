@@ -216,8 +216,17 @@ export interface LocalCopyRecord {
   mediaType: string;
   downloadedOn: string;
   coverage: "complete" | "partial" | "metadata_only" | "unknown";
+  workPortion: WorkPortionRecord | null;
   notes: string[];
   available: boolean;
+}
+
+export interface WorkPortionRecord {
+  label: string;
+  locators: string[];
+  startUrl: string | null;
+  endUrl: string | null;
+  notes: string[];
 }
 
 export interface AccessRecord {

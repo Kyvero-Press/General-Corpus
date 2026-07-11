@@ -42,9 +42,14 @@ under `source-cache/<work_id>/`. Cache a verified file with:
 ```bash
 python3 scripts/cache-source-download.py CME00099 \
   https://example.org/exact-source.pdf \
-  --filename exact-source.pdf \
-  --label "Complete source PDF" \
-  --coverage complete
+  --filename complete-manuscript.pdf \
+  --label "Complete manuscript PDF" \
+  --coverage complete \
+  --work-portion-label "Work represented by CME00099" \
+  --work-locator "folios 10r–20v" \
+  --work-locator "IIIF canvases 21–42" \
+  --work-start-url https://example.org/canvas/21 \
+  --work-end-url https://example.org/canvas/42
 ```
 
 The command prints a JSON `local_copies` snippet containing the relative path,
@@ -55,6 +60,15 @@ Multiple files or volumes belong in the same `local_copies` array when they
 share an access route. Every file states whether its coverage is `complete`,
 `partial`, `metadata_only`, or `unknown`, so an IIIF manifest or selected image
 cannot masquerade as a locally complete facsimile.
+
+For a manuscript witness, prefer the provider's complete physical codex rather
+than downloading only the leaves that contain the cataloged work. Here,
+`coverage` describes the completeness of the cached source object: use
+`complete` for the whole codex and `partial` for selected leaves. The optional
+`work_portion` then maps this manifest's work back into that larger source with
+one or more physical and digital locators and, when available, deep links to
+its first and final page or canvas. Do not call an IIIF presentation manifest
+alone a complete image cache.
 
 The cache is research storage, not a redistribution channel. It is never
 copied into the viewer's public tree automatically. Manifest validation checks
@@ -208,6 +222,8 @@ It enforces the committed JSON Schemas and additionally checks:
 - work-scoped `source-cache/` paths whose exact URLs are exposed by their
   access records, with byte/hash verification whenever the ignored file is
   present;
+- structured `work_portion` locators that keep whole-source coverage distinct
+  from the leaves or canvases occupied by this work;
 - SHA-256 and git-blob hashes for repository artifacts;
 - agreement between a manifest work ID and the XML identifier family used by
   that source (`IDG`/`BIBNO`/`VID` or `IDNO`);

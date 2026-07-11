@@ -54,8 +54,11 @@ needed; do not load both complete schemas merely for orientation.
    reliable scholarship. Never cite a search-result snippet as evidence.
 6. Cache every verified public file deliverable used as a facsimile or
    supporting source under `source-cache/WORK_ID/` with
-   `scripts/cache-source-download.py`. Record every file in the relevant
-   access record's `local_copies`; keep the landing page and exact file URL.
+   `scripts/cache-source-download.py`. For manuscript facsimiles, prefer the
+   complete physical codex and record this work's folio/page/canvas range in
+   `work_portion`; do not substitute a work-only excerpt when a complete
+   source is obtainable. Record every file in the relevant access record's
+   `local_copies`; keep the landing page and exact file URL.
 7. Draft a claim ledger: claim, entity/layer, scope, source, confidence, and
    destination field.
 8. Create both files:

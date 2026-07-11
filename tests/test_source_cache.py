@@ -49,6 +49,11 @@ class SourceCacheTests(unittest.TestCase):
                 label="Complete source PDF",
                 coverage="complete",
                 force=False,
+                work_portion={
+                    "label": "The target work",
+                    "locators": ["folios 10r–20v"],
+                    "start_url": "https://example.test/canvas/21",
+                },
             )
 
             cached = root / "source-cache/CME00099/source.pdf"
@@ -59,6 +64,40 @@ class SourceCacheTests(unittest.TestCase):
             self.assertEqual(len(payload), result["bytes"])
             self.assertEqual("Complete source PDF", result["label"])
             self.assertEqual("complete", result["coverage"])
+            self.assertEqual(
+                {
+                    "label": "The target work",
+                    "locators": ["folios 10r–20v"],
+                    "start_url": "https://example.test/canvas/21",
+                },
+                result["work_portion"],
+            )
+
+    def test_cli_builds_work_portion_with_physical_and_digital_locators(self) -> None:
+        args = cache_source_download.parser().parse_args([
+            "CME00099",
+            "https://example.test/manuscript.pdf",
+            "--work-portion-label",
+            "The target work",
+            "--work-locator",
+            "folios 10r–20v",
+            "--work-locator",
+            "IIIF canvases 21–42",
+            "--work-start-url",
+            "https://example.test/canvas/21",
+            "--work-end-url",
+            "https://example.test/canvas/42",
+        ])
+
+        self.assertEqual(
+            {
+                "label": "The target work",
+                "locators": ["folios 10r–20v", "IIIF canvases 21–42"],
+                "start_url": "https://example.test/canvas/21",
+                "end_url": "https://example.test/canvas/42",
+            },
+            cache_source_download.work_portion_from_args(args),
+        )
 
     def test_download_rejects_html_disguised_as_pdf(self) -> None:
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(

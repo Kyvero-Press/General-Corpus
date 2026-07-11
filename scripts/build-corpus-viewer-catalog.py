@@ -463,6 +463,16 @@ def _normalized_local_copy(
         if sha256(resolved) != expected_sha:
             raise CatalogError(f"lineage {work_id} local_copy checksum mismatch: {raw_path}")
     byte_count = local_copy.get("bytes")
+    raw_work_portion = local_copy.get("work_portion")
+    work_portion = None
+    if isinstance(raw_work_portion, dict):
+        work_portion = {
+            "label": raw_work_portion.get("label"),
+            "locators": raw_work_portion.get("locators", []),
+            "startUrl": raw_work_portion.get("start_url"),
+            "endUrl": raw_work_portion.get("end_url"),
+            "notes": raw_work_portion.get("notes", []),
+        }
     return {
         "label": local_copy.get("label"),
         "path": raw_path,
@@ -473,6 +483,7 @@ def _normalized_local_copy(
         "mediaType": local_copy.get("media_type"),
         "downloadedOn": local_copy.get("downloaded_on"),
         "coverage": local_copy.get("coverage"),
+        "workPortion": work_portion,
         "notes": local_copy.get("notes", []),
         "available": available,
     }

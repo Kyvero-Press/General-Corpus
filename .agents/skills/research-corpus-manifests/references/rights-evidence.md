@@ -71,6 +71,15 @@ Never infer redistribution permission from local caching, and never copy the
 cache into a public web build without an independently supported right to do
 so.
 
+For manuscript images, download the provider's complete physical manuscript
+when it is publicly obtainable and practical, even when the cataloged work
+occupies only part of it. `coverage=complete` means the cached file covers that
+whole source object, not merely the work. Add `work_portion` with the verified
+folio/page range, corresponding digital canvas or image range, and start/end
+deep links when exposed. If only selected leaves are obtainable, use
+`coverage=partial` and say so. A complete edition scan, a miniature cycle, or
+an IIIF manifest without its image files is not a complete manuscript cache.
+
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields
