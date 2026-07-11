@@ -23,6 +23,14 @@ A library record can prove that a printed facsimile exists without proving a
 free online copy. Distinguish catalog, selected image, mediated copying,
 purchase, and complete public facsimile. Verify what can actually be opened.
 
+A second repository's microfilm can be the best known scholarly reproduction
+route even when the holding library has no public images. Model it as a
+facsimile with its own request/access and rights records, outside the upstream
+textual chain. If a collection finding aid says its reels reproduce
+manuscripts “in full or in part” but does not identify this reel's extent,
+record coverage as unknown until the reel or an institutional answer is
+checked.
+
 ## Public item page, restricted bitstream: AllitMA and Pearl
 
 OTA item records expose metadata, file names, previews, and CC labels while

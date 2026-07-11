@@ -197,6 +197,43 @@
       ]
     },
     {
+      "id": "catalog:schaer:three-kings-1992",
+      "type": "catalog_description",
+      "label": "Frank Schaer's 1992–1993 study of The Three Kings of Cologne",
+      "description": "A three-volume doctoral thesis providing a diplomatic edition and a detailed study of the English manuscript tradition. It is supporting scholarship, not an upstream source of the 1886 Horstmann edition or the U-M encoding.",
+      "creator_ids": [
+        "agent:frank-schaer"
+      ],
+      "date_statements": [
+        {
+          "label": "submission and degree",
+          "value": "Submitted October 1992; degree awarded 1993",
+          "normalized": "1992/1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:schaer-thesis"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Frank Schaer, The Three Kings of Cologne: A Diplomatic Edition of the Unabridged English Version of John of Hildesheim's Historia Trium Regum in Durham MS Hunter 15, with a Reconstruction of the Translator's Latin Text on Facing Pages Based on Corpus Christi College Cambridge MS 275, and a Study of the Manuscript Tradition (PhD thesis, University of Adelaide, submitted 1992; degree 1993), 3 vols.",
+        "title": "The Three Kings of Cologne",
+        "publisher": "University of Adelaide",
+        "publication_place": "Adelaide",
+        "date": "1992–1993",
+        "pages": "xiii, 746 leaves in three volumes",
+        "languages": [
+          "eng",
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:schaer-thesis"
+      ]
+    },
+    {
       "id": "witness:cul:Ee4-32",
       "type": "manuscript_witness",
       "label": "Cambridge University Library MS Ee.4.32, part 1",
@@ -249,6 +286,23 @@
         "evidence:cul-ee432-note",
         "evidence:cul-catalog-policy",
         "evidence:horstmann-scan"
+      ]
+    },
+    {
+      "id": "facsimile:qub:MS59-215",
+      "type": "facsimile",
+      "label": "Queen's University Belfast MS 59/215 microfilm of CUL Ee.4.32",
+      "description": "A microfilm surrogate held in QUB's Medieval Manuscripts on Microfilm collection. The finding aid identifies Ee.4.32 as MS 59/215 but does not state whether this particular reel covers the complete codex or selected parts.",
+      "identifiers": [
+        {
+          "scheme": "QUB Special Collections",
+          "value": "MS 59/215"
+        }
+      ],
+      "reproduction_format": "Microfilm; exact completeness and generation not stated in the public finding aid",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:qub-ms59"
       ]
     },
     {
@@ -548,6 +602,15 @@
       ]
     },
     {
+      "id": "agent:qub",
+      "type": "organization",
+      "name": "Queen's University Belfast Special Collections & Archives",
+      "evidence_ids": [
+        "evidence:qub-ms59",
+        "evidence:qub-reprographics"
+      ]
+    },
+    {
       "id": "agent:bl",
       "type": "organization",
       "name": "British Library",
@@ -574,6 +637,22 @@
       "name": "Internet Archive",
       "evidence_ids": [
         "evidence:horstmann-scan"
+      ]
+    },
+    {
+      "id": "agent:frank-schaer",
+      "type": "person",
+      "name": "Frank Schaer",
+      "evidence_ids": [
+        "evidence:schaer-thesis"
+      ]
+    },
+    {
+      "id": "agent:university-of-adelaide",
+      "type": "organization",
+      "name": "University of Adelaide",
+      "evidence_ids": [
+        "evidence:schaer-thesis"
       ]
     },
     {
@@ -689,6 +768,57 @@
         "confidence": "high",
         "evidence_ids": [
           "evidence:horstmann-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:schaer-describes-horstmann-tradition",
+      "type": "describes",
+      "subject": "catalog:schaer:three-kings-1992",
+      "object": "edition:horstmann:3kcol-1886",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Schaer's manuscript-tradition analysis and discussion of Horstmann",
+          "locators": [
+            "Introduction sections 1.5, 2.3, 4–10, and 12.8"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Horstmann's edition and its represented English manuscript tradition"
+        },
+        "notes": "This is a later scholarly description and critique, not a derivation edge."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:schaer-thesis"
+        ]
+      }
+    },
+    {
+      "id": "relation:qub-microfilm-of-ee432",
+      "type": "facsimile_of",
+      "subject": "facsimile:qub:MS59-215",
+      "object": "witness:cul:Ee4-32",
+      "scope": {
+        "subject": {
+          "kind": "unknown",
+          "description": "QUB microfilm MS 59/215; reel coverage is not specified in the finding aid"
+        },
+        "object": {
+          "kind": "unknown",
+          "description": "CUL Ee.4.32, possibly in full or in part"
+        },
+        "notes": "The collection-level description says MS 59 contains manuscript copies in full or in part, so this reel must not be called a complete facsimile without inspection or confirmation."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:qub-ms59"
         ]
       }
     },
@@ -951,11 +1081,89 @@
       "alternate_urls": [
         "https://archive.org/download/threekingscolog00horsgoog/threekingscolog00horsgoog.pdf"
       ],
+      "local_copies": [
+        {
+          "label": "Complete Horstmann 1886 edition PDF",
+          "path": "source-cache/3KCol/horstmann-three-kings-1886.pdf",
+          "source_url": "https://archive.org/download/threekingscolog00horsgoog/threekingscolog00horsgoog.pdf",
+          "sha256": "a9737322cf081ab104a43aa6156abb4337a3e8054d225df6ca4ca9f4d58eb14c",
+          "bytes": 13352244,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        }
+      ],
       "cost": "free",
       "format": "PDF, page images, and OCR derivatives",
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:horstmann-scan"
+      ]
+    },
+    {
+      "id": "access:schaer-thesis",
+      "entity": "catalog:schaer:three-kings-1992",
+      "provider_id": "agent:university-of-adelaide",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "University of Adelaide item page and four direct PDF files",
+      "url": "https://digital.library.adelaide.edu.au/items/fbb0d88a-1d64-4b11-8897-973fcb0b9802",
+      "alternate_urls": [
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c2c30488-a4b4-4b57-8651-4ef9e726fc10/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/1100fa40-0a6a-46b8-8d25-c362d3a0ec5c/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/52e7a9a9-6d9d-4a84-ae4b-4d90243ade1f/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c4553be8-f8ef-4268-8827-05c5467c5d39/content"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Schaer thesis front matter PDF",
+          "path": "source-cache/3KCol/schaer-1992-front.pdf",
+          "source_url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c2c30488-a4b4-4b57-8651-4ef9e726fc10/content",
+          "sha256": "eb0bf5e8498494e6b9473270af0b79a5838f848b5a5cc1c6b37f1f56399781a9",
+          "bytes": 149975,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        },
+        {
+          "label": "Complete Schaer thesis volume 1 PDF",
+          "path": "source-cache/3KCol/schaer-1992-volume-1.pdf",
+          "source_url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/1100fa40-0a6a-46b8-8d25-c362d3a0ec5c/content",
+          "sha256": "282ef0c477efb133f55362e903f535e9d6db9b45d28f86e227e688adaf70b822",
+          "bytes": 19894198,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        },
+        {
+          "label": "Complete Schaer thesis volume 2 PDF",
+          "path": "source-cache/3KCol/schaer-1992-volume-2.pdf",
+          "source_url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/52e7a9a9-6d9d-4a84-ae4b-4d90243ade1f/content",
+          "sha256": "3f339511a0ceb2a8401a5b06a52cc9a473f6cbfa866cb1200e2eb2b21d5590c9",
+          "bytes": 12810497,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        },
+        {
+          "label": "Complete Schaer thesis volume 3 PDF",
+          "path": "source-cache/3KCol/schaer-1992-volume-3.pdf",
+          "source_url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c4553be8-f8ef-4268-8827-05c5467c5d39/content",
+          "sha256": "ccb5a71a9c33417521c0f5acc053999ef833eb61c2028aefdb7765e2755a9112",
+          "bytes": 12677530,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete"
+        }
+      ],
+      "cost": "free",
+      "format": "Four PDF files: front matter and three complete thesis volumes",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:schaer-thesis"
+      ],
+      "notes": [
+        "All four files are required for the complete public digital thesis."
       ]
     },
     {
@@ -1000,11 +1208,63 @@
       "status": "publicly_available",
       "access_method": "Selected manuscript photographs embedded in a Cambridge Faculty of English research note",
       "url": "https://www.english.cam.ac.uk/manuscriptslab/ms-ee-4-32-and-the-case-of-the-disappearing-pope/",
+      "alternate_urls": [
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f90v.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f82r.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f88v.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f85r.jpg"
+      ],
+      "local_copies": [
+        {
+          "label": "CUL Ee.4.32 selected image of folio 90v",
+          "path": "source-cache/3KCol/cul-ee4-32-f90v-selected.jpg",
+          "source_url": "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f90v.jpg",
+          "sha256": "0a03ad3ddda92e28934bcc62adc1127e7dd97cdf17e350754c8d04aac568006a",
+          "bytes": 78257,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial"
+        },
+        {
+          "label": "CUL Ee.4.32 selected image of folio 82r",
+          "path": "source-cache/3KCol/cul-ee4-32-f82r-selected.jpg",
+          "source_url": "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f82r.jpg",
+          "sha256": "fe17e0617edab1012d13e54df5f3c33cd48ac1e48b03a0e9f93cd5ccc44bf208",
+          "bytes": 328883,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial"
+        },
+        {
+          "label": "CUL Ee.4.32 selected image of folio 88v",
+          "path": "source-cache/3KCol/cul-ee4-32-f88v-selected.jpg",
+          "source_url": "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f88v.jpg",
+          "sha256": "88a1dcbc9afa3403af2de10dbdb3d60ebc2d3d1c351a27be0a4e240e18ce33a0",
+          "bytes": 106494,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial"
+        },
+        {
+          "label": "CUL Ee.4.32 selected image of folio 85r",
+          "path": "source-cache/3KCol/cul-ee4-32-f85r-selected.jpg",
+          "source_url": "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f85r.jpg",
+          "sha256": "21bae0ce17730d0da4c0c99d2ad3659fb08caac2fb1e20069484f2c3ecec21e6",
+          "bytes": 212722,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial"
+        }
+      ],
       "cost": "free",
       "format": "Selected web images, not a complete facsimile",
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:cul-ee432-note"
+      ],
+      "notes": [
+        "The public images are selected leaves 82r, 85r, 88v, and 90v from the Prose Brut, outside The Three Kings of Cologne at fols. 1r–23v; they document the codex but do not reproduce the cataloged work.",
+        "No complete public facsimile was verified."
       ]
     },
     {
@@ -1021,6 +1281,31 @@
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:cul-scan-service"
+      ]
+    },
+    {
+      "id": "access:qub-ee432-microfilm",
+      "entity": "facsimile:qub:MS59-215",
+      "provider_id": "agent:qub",
+      "resource_kind": "microfilm",
+      "status": "requestable",
+      "access_method": "Request advance consultation of QUB MS 59/215 onsite or through the Virtual Reading Room; ask separately whether a digital reproduction can be supplied",
+      "url": "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/Manuscripts/",
+      "alternate_urls": [
+        "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/FileStore/Filetoupload%2C1710296%2Cen.pdf",
+        "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/Reprographics/"
+      ],
+      "contact": "specialcollections@qub.ac.uk",
+      "cost": "unknown",
+      "format": "Microfilm MS 59/215; remote digital supply subject to request and quotation",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:qub-ms59",
+        "evidence:qub-reprographics"
+      ],
+      "notes": [
+        "The public finding aid confirms the surrogate but does not specify whether it covers the whole codex or only part of Ee.4.32.",
+        "The finding-aid PDF is publicly indexed, but its server returned HTTP 403 to the project downloader on 2026-07-11, so no local cache file is claimed."
       ]
     },
     {
@@ -1222,6 +1507,25 @@
       ]
     },
     {
+      "id": "rights:schaer-thesis",
+      "entity": "catalog:schaer:three-kings-1992",
+      "access_id": "access:schaer-thesis",
+      "component": "Schaer's thesis text and University of Adelaide PDF files",
+      "jurisdiction": "Australia and intended place of reuse",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-11",
+      "basis": "The University of Adelaide makes the thesis publicly downloadable under its open-access policy but states that copyright remains with the author and identifies no open reuse license.",
+      "asserted_by_id": "agent:university-of-adelaide",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:schaer-thesis"
+      ],
+      "notes": [
+        "Public research access and citation do not by themselves authorize republication of the thesis or its incorporated manuscript images."
+      ]
+    },
+    {
       "id": "rights:cul-selected-images",
       "entity": "witness:cul:Ee4-32",
       "access_id": "access:cul-ee432-selected-images",
@@ -1235,6 +1539,26 @@
       "evidence_ids": [
         "evidence:cul-ee432-note",
         "evidence:cul-scan-service"
+      ]
+    },
+    {
+      "id": "rights:qub-ee432-microfilm",
+      "entity": "facsimile:qub:MS59-215",
+      "access_id": "access:qub-ee432-microfilm",
+      "component": "QUB's microfilm surrogate and any supplied digital reproduction",
+      "jurisdiction": "United Kingdom and provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "QUB offers consultation and considers film-media digitisation and reproduction requests individually; the public finding aid provides no item-specific reuse license.",
+      "asserted_by_id": "agent:qub",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:qub-ms59",
+        "evidence:qub-reprographics"
+      ],
+      "notes": [
+        "Confirm coverage, cost, delivery format, and redistribution or publication terms in writing before treating a supplied file as a complete reusable facsimile."
       ]
     },
     {
@@ -1421,10 +1745,13 @@
       "citation": "Frank Schaer, The Three Kings of Cologne: A Diplomatic Edition of the Unabridged English Version ... and a Study of the Manuscript Tradition, PhD thesis, University of Adelaide, submitted October 1992 (degree 1993).",
       "url": "https://digital.library.adelaide.edu.au/items/fbb0d88a-1d64-4b11-8897-973fcb0b9802",
       "alternate_urls": [
-        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/1100fa40-0a6a-46b8-8d25-c362d3a0ec5c/content"
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c2c30488-a4b4-4b57-8651-4ef9e726fc10/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/1100fa40-0a6a-46b8-8d25-c362d3a0ec5c/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/52e7a9a9-6d9d-4a84-ae4b-4d90243ade1f/content",
+        "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/c4553be8-f8ef-4268-8827-05c5467c5d39/content"
       ],
       "locator": "Abstract; Introduction sections 1.5, 2.3, 4-10, and 12.8",
-      "summary": "Provides the most detailed reviewed analysis of the standard translation and its more than twenty witnesses, distinguishes other Middle English versions, establishes the conventional c. 1400 date and hard bounds, analyzes the Cambridge, Royal, Titus, Vespasian, and printed branches, and qualifies Horstmann's editorial reconstruction.",
+      "summary": "Provides the most detailed reviewed analysis of the standard translation and its more than twenty witnesses, distinguishes other Middle English versions, establishes the conventional c. 1400 date and hard bounds, analyzes the Cambridge, Royal, Titus, Vespasian, and printed branches, and qualifies Horstmann's editorial reconstruction. The repository exposes front matter and all three thesis volumes as four PDF files and states that copyright remains with the author.",
       "accessed_on": "2026-07-11",
       "sha256": "282ef0c477efb133f55362e903f535e9d6db9b45d28f86e227e688adaf70b822"
     },
@@ -1442,8 +1769,14 @@
       "type": "official_webpage",
       "citation": "Thai-Catherine Matthews, 'MS Ee.4.32 and the Case of the Disappearing Pope,' The Manuscripts Lab, Faculty of English, University of Cambridge, 23 February 2022.",
       "url": "https://www.english.cam.ac.uk/manuscriptslab/ms-ee-4-32-and-the-case-of-the-disappearing-pope/",
+      "alternate_urls": [
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f90v.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f82r.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE.4.32-f88v.jpg",
+        "https://www.english.cam.ac.uk/manuscriptslab/wp-content/uploads/2022/02/EE-4.32-f85r.jpg"
+      ],
       "locator": "Opening description and selected manuscript images",
-      "summary": "Describes Ee.4.32 as a membrane manuscript containing The Three Kings of Cologne and the English Prose Brut, summarizes a fifteenth-century dating with either half possible, and publishes selected images rather than a complete facsimile.",
+      "summary": "Describes Ee.4.32 as a membrane manuscript containing The Three Kings of Cologne and the English Prose Brut, summarizes a fifteenth-century dating with either half possible, and publishes selected images of Brut fols. 82r, 85r, 88v, and 90v rather than the Three Kings portion or a complete facsimile.",
       "accessed_on": "2026-07-11"
     },
     {
@@ -1471,6 +1804,27 @@
       "url": "https://www.lib.cam.ac.uk/search-and-find/zero-contact-services/scan-deliver/special-collections",
       "locator": "Eligibility, image quality, publication-quality route, copyright restrictions, and conditions of supply",
       "summary": "Distinguishes research-only scans from publication images, limits the free Scan and Deliver service to eligible Cambridge users and reasonable orders, subjects delivery to conservation and copyright review, and prohibits redistribution of research scans.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:qub-ms59",
+      "type": "official_catalog",
+      "citation": "Queen's University Belfast Special Collections & Archives, MS 59 Medieval Manuscripts on Microfilm Collection finding aid.",
+      "url": "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/Manuscripts/",
+      "alternate_urls": [
+        "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/FileStore/Filetoupload%2C1710296%2Cen.pdf"
+      ],
+      "locator": "Collection description and Cambridge entry for MS Ee.4.32, QUB reference MS 59/215",
+      "summary": "Confirms that QUB holds a microfilm surrogate of Cambridge University Library MS Ee.4.32 as MS 59/215. The collection contains manuscript copies in full or in part and the item row does not specify this reel's coverage. QUB states that microfilms can be consulted with advance notice and through its Virtual Reading Room.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:qub-reprographics",
+      "type": "official_webpage",
+      "citation": "Queen's University Belfast Special Collections & Archives, Reprographics.",
+      "url": "https://www.qub.ac.uk/directorates/InformationServices/TheLibrary/SpecialCollections/Reprographics/",
+      "locator": "Personal-research reproductions, publication images, film-media digitisation, fees, and contact details",
+      "summary": "Explains that reproduction is discretionary and subject to rights and condition review, provides research and publication request routes, and says film-media digitisation requests are considered individually by quotation.",
       "accessed_on": "2026-07-11"
     },
     {
@@ -1538,6 +1892,7 @@
       "impact": "high",
       "next_steps": [
         "Ask CUL Rare Books and Early Manuscripts staff whether an unindexed digital surrogate or fuller internal record exists.",
+        "Ask QUB whether MS 59/215 covers the complete codex and whether a complete digital transfer can be supplied through the Virtual Reading Room or reprographics service.",
         "Request fols. 1r-23v through the appropriate imaging route and obtain written reuse terms before publication.",
         "Consult the printed Western Illuminated Manuscripts catalogue directly to record the evidence behind its two alternative half-century datings."
       ],
@@ -1546,7 +1901,9 @@
         "evidence:cul-imep-ee432",
         "evidence:cul-ee432-note",
         "evidence:cul-catalog-policy",
-        "evidence:cul-scan-service"
+        "evidence:cul-scan-service",
+        "evidence:qub-ms59",
+        "evidence:qub-reprographics"
       ]
     },
     {
