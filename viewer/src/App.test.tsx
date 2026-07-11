@@ -163,6 +163,9 @@ const detail: WorkDetailRecord = {
               mediaType: "application/pdf",
               downloadedOn: "2026-07-11",
               coverage: "complete",
+              retrievalMethod: "direct_download",
+              sourceFileCount: null,
+              bundleSourceKind: null,
               workPortion: {
                 label: "Recipes in KB X 90",
                 locators: ["manuscript pages 12–21", "digital images 16–25"],
@@ -171,6 +174,28 @@ const detail: WorkDetailRecord = {
                 notes: ["The cached file contains the complete manuscript."],
               },
               notes: [],
+              available: true,
+            }, {
+              label: "Complete manuscript IIIF bundle",
+              path: "source-cache/CME00099/complete-manuscript.zip",
+              sourceUrl: "https://example.test/x90/manifest",
+              sha256: "b".repeat(64),
+              bytes: 4096,
+              sizeLabel: "4.0 KiB",
+              mediaType: "application/zip",
+              downloadedOn: "2026-07-11",
+              coverage: "complete",
+              retrievalMethod: "iiif_bundle",
+              sourceFileCount: 496,
+              bundleSourceKind: "iiif_presentation_manifest",
+              workPortion: {
+                label: "Recipes in KB X 90",
+                locators: ["manuscript pages 12–21", "IIIF canvases 16–25"],
+                startUrl: "https://example.test/x90/canvas/16",
+                endUrl: "https://example.test/x90/canvas/25",
+                notes: ["The ZIP contains all manuscript canvases."],
+              },
+              notes: ["Includes the provider manifest and exact-source inventory."],
               available: true,
             }],
             rights: [],
@@ -282,12 +307,21 @@ describe("App", () => {
       "href",
       "https://example.test/holthausen.pdf",
     );
-    expect(within(dialog).getByText("Work location within source: Recipes in KB X 90")).toBeInTheDocument();
-    expect(within(dialog).getByText("manuscript pages 12–21")).toBeInTheDocument();
-    expect(within(dialog).getByRole("link", { name: /Open work start/ })).toHaveAttribute(
+    expect(within(dialog).getByRole("link", { name: /Exact IIIF manifest/ })).toHaveAttribute(
       "href",
-      "https://example.test/x90/image/16",
+      "https://example.test/x90/manifest",
     );
+    expect(within(dialog).getByText("Iiif bundle")).toBeInTheDocument();
+    expect(within(dialog).getByText("496")).toBeInTheDocument();
+    expect(
+      within(dialog).getAllByText("Work location within source: Recipes in KB X 90"),
+    ).toHaveLength(2);
+    expect(within(dialog).getAllByText("manuscript pages 12–21")).toHaveLength(2);
+    expect(
+      within(dialog)
+        .getAllByRole("link", { name: /Open work start/ })
+        .some((link) => link.getAttribute("href") === "https://example.test/x90/image/16"),
+    ).toBe(true);
     expect(within(dialog).getByText("The complete CME digital text")).toBeInTheDocument();
     expect(within(dialog).getByText("Holthausen’s printed pages 75–88")).toBeInTheDocument();
     expect(within(dialog).getByText("The 1897 edition and editorial text")).toBeInTheDocument();

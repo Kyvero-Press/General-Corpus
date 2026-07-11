@@ -216,6 +216,9 @@ export interface LocalCopyRecord {
   mediaType: string;
   downloadedOn: string;
   coverage: "complete" | "partial" | "metadata_only" | "unknown";
+  retrievalMethod: "direct_download" | "iiif_bundle";
+  sourceFileCount: number | null;
+  bundleSourceKind: "iiif_presentation_manifest" | "image_url_inventory" | null;
   workPortion: WorkPortionRecord | null;
   notes: string[];
   available: boolean;

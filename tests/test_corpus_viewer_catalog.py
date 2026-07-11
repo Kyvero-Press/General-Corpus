@@ -413,6 +413,9 @@ class CorpusViewerCatalogTests(unittest.TestCase):
             )
             self.assertEqual("https://example.test/scan.pdf", local_copy["sourceUrl"])
             self.assertEqual(hashlib.sha256(cached.read_bytes()).hexdigest(), local_copy["sha256"])
+            self.assertEqual("direct_download", local_copy["retrievalMethod"])
+            self.assertIsNone(local_copy["sourceFileCount"])
+            self.assertIsNone(local_copy["bundleSourceKind"])
             self.assertEqual(
                 {
                     "label": "Test work",

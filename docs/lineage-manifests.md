@@ -61,6 +61,50 @@ share an access route. Every file states whether its coverage is `complete`,
 `partial`, `metadata_only`, or `unknown`, so an IIIF manifest or selected image
 cannot masquerade as a locally complete facsimile.
 
+If a provider exposes a complete object only as IIIF canvas images, cache the
+whole Presentation manifest as one ZIP bundle:
+
+```bash
+python3 scripts/cache-iiif-bundle.py CME00099 \
+  https://example.org/iiif/complete-manuscript/manifest \
+  --filename complete-manuscript.zip \
+  --label "Complete manuscript IIIF bundle" \
+  --work-portion-label "Work represented by CME00099" \
+  --work-locator "folios 10r–20v" \
+  --work-locator "IIIF canvases 21–42" \
+  --work-start-url https://example.org/viewer/canvas/21 \
+  --work-end-url https://example.org/viewer/canvas/42
+```
+
+The helper downloads every canvas, then stores `manifest.json`, all images,
+and `inventory.json` in one ignored ZIP. The inventory retains the exact image
+request, canvas URL and label, ZIP member path, checksum, and byte count for
+each image. Its compact manifest record sets `retrieval_method` to
+`iiif_bundle`, records `source_file_count`, and uses the exact IIIF manifest as
+`source_url`. The generated notes disclose the image request-size profile.
+Thus `coverage=complete` means every canvas in that manifest was cached; it
+does not claim access to an archive's preservation masters.
+
+Some providers publish a complete facsimile as individual Image API services
+without a Presentation manifest. In that case, pass the official whole-
+facsimile source record as the positional URL and an exhaustive JSON or
+newline inventory of exact image requests:
+
+```bash
+python3 scripts/cache-iiif-bundle.py CME00099 \
+  https://example.org/complete-manuscript \
+  --image-url-list build/complete-manuscript-images.json \
+  --filename complete-manuscript.zip \
+  --label "Complete manuscript IIIF image bundle"
+```
+
+The emitted `bundle_source_kind` is `image_url_inventory`, and the ZIP stores
+the normalized exact URL list without fabricating canvas identifiers. JSON
+inventory objects may contain `label`, a real `canvas_url`, and `reuse_path`
+for a previously downloaded local image; machine-local reuse paths are removed
+from the ZIP. Use `coverage=complete` only after verifying that the provider's
+list covers the whole physical object.
+
 For a manuscript witness, prefer the provider's complete physical codex rather
 than downloading only the leaves that contain the cataloged work. Here,
 `coverage` describes the completeness of the cached source object: use

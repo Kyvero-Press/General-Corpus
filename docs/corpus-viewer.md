@@ -38,10 +38,13 @@ For every lineage access route with `local_copies`, the normalized work record
 also reports whether each ignored `source-cache/<work_id>/…` file is present
 and checksum-valid in the checkout that built the catalog. The work detail UI
 shows that status, the cache path and checksum, and the exact upstream file
-URL. When a complete manuscript contains only one portion relevant to the
-current work, the viewer separately shows the physical and digital locators
-and any start/end deep links recorded in `work_portion`. Cached research
-sources are deliberately not copied into the public site:
+URL. For an IIIF bundle it also identifies the retrieval method, captured
+image count, bundle source kind, and exact Presentation-manifest or official
+whole-facsimile source URL. When a complete manuscript
+contains only one portion relevant to the current work, the viewer separately
+shows the physical and digital locators and any start/end deep links recorded
+in `work_portion`. Cached research sources are deliberately not copied into
+the public site:
 their provider terms may permit research download without permitting this
 project to redistribute them.
 

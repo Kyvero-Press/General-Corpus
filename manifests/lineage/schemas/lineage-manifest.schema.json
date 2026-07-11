@@ -180,6 +180,22 @@
             "unknown"
           ]
         },
+        "retrieval_method": {
+          "enum": [
+            "direct_download",
+            "iiif_bundle"
+          ]
+        },
+        "source_file_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bundle_source_kind": {
+          "enum": [
+            "iiif_presentation_manifest",
+            "image_url_inventory"
+          ]
+        },
         "work_portion": {
           "$ref": "#/$defs/workPortion"
         },
@@ -190,7 +206,27 @@
             "minLength": 1
           }
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "retrieval_method": {
+                "const": "iiif_bundle"
+              }
+            },
+            "required": [
+              "retrieval_method"
+            ]
+          },
+          "then": {
+            "required": [
+              "source_file_count",
+              "bundle_source_kind"
+            ]
+          }
+        }
+      ]
     },
     "workPortion": {
       "type": "object",

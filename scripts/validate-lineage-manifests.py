@@ -9,6 +9,7 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
+import zipfile
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -103,6 +104,8 @@ def _schema_errors(
 
     if "enum" in schema and value not in schema["enum"]:
         errors.append(f"{location}: value {value!r} is not in {schema['enum']!r}")
+    if "const" in schema and value != schema["const"]:
+        errors.append(f"{location}: value {value!r} does not equal {schema['const']!r}")
 
     if isinstance(value, str):
         min_length = schema.get("minLength")
@@ -154,6 +157,16 @@ def _schema_errors(
         ]
         if all(alternative_errors for alternative_errors in alternatives):
             errors.append(f"{location}: value does not satisfy any anyOf alternative")
+
+    for requirement in schema.get("allOf", []):
+        errors.extend(_schema_errors(value, requirement, root_schema, location))
+
+    if "if" in schema:
+        condition_errors = _schema_errors(value, schema["if"], root_schema, location)
+        branch_name = "then" if not condition_errors else "else"
+        branch = schema.get(branch_name)
+        if isinstance(branch, dict):
+            errors.extend(_schema_errors(value, branch, root_schema, location))
 
     return errors
 
@@ -223,6 +236,62 @@ def _sha256(path: Path) -> str:
         for chunk in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _check_iiif_bundle(
+    path: Path,
+    local_copy: dict[str, Any],
+    location: str,
+    errors: list[str],
+) -> None:
+    source_kind = local_copy.get("bundle_source_kind")
+    expected_source_member = (
+        "source-list.json" if source_kind == "image_url_inventory" else "manifest.json"
+    )
+    try:
+        with zipfile.ZipFile(path) as archive:
+            names = set(archive.namelist())
+            for required_name in (expected_source_member, "inventory.json"):
+                if required_name not in names:
+                    errors.append(f"{location}: IIIF bundle is missing {required_name}")
+            if "inventory.json" not in names:
+                return
+            try:
+                inventory = json.loads(archive.read("inventory.json"))
+            except (KeyError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+                errors.append(f"{location}: IIIF bundle inventory is invalid JSON: {exc}")
+                return
+    except (OSError, zipfile.BadZipFile) as exc:
+        errors.append(f"{location}: IIIF bundle is not a readable ZIP: {exc}")
+        return
+
+    if not isinstance(inventory, dict):
+        errors.append(f"{location}: IIIF bundle inventory root must be an object")
+        return
+    if inventory.get("source_kind") != source_kind:
+        errors.append(f"{location}: IIIF bundle source kind does not match its inventory")
+    if inventory.get("source_url") != local_copy.get("source_url"):
+        errors.append(f"{location}: IIIF bundle source URL does not match its inventory")
+    expected_count = local_copy.get("source_file_count")
+    items = inventory.get("items")
+    if inventory.get("source_file_count") != expected_count:
+        errors.append(f"{location}: IIIF bundle source file count does not match its inventory")
+    if not isinstance(items, list) or len(items) != expected_count:
+        errors.append(f"{location}: IIIF bundle inventory item count is inconsistent")
+        return
+    member_paths = [
+        item.get("member_path")
+        for item in items
+        if isinstance(item, dict) and isinstance(item.get("member_path"), str)
+    ]
+    if len(member_paths) != len(items) or len(set(member_paths)) != len(member_paths):
+        errors.append(f"{location}: IIIF bundle inventory member paths are missing or duplicated")
+        return
+    missing_members = [member_path for member_path in member_paths if member_path not in names]
+    if missing_members:
+        errors.append(
+            f"{location}: IIIF bundle is missing {len(missing_members)} inventoried image member(s)"
+        )
 
 
 def _git_blob_hash(path: Path) -> str:
@@ -462,9 +531,16 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 source_url = local_copy.get("source_url")
                 if source_url not in access_urls:
                     errors.append(
-                        f"{copy_location}.source_url: exact download URL must also "
+                        f"{copy_location}.source_url: exact source URL must also "
                         "appear as access.url or in alternate_urls"
                     )
+                if local_copy.get("retrieval_method") == "iiif_bundle":
+                    if not isinstance(raw_cache_path, str) or not raw_cache_path.endswith(".zip"):
+                        errors.append(f"{copy_location}.path: IIIF bundle must be a .zip file")
+                    if local_copy.get("media_type") != "application/zip":
+                        errors.append(
+                            f"{copy_location}.media_type: IIIF bundle must use application/zip"
+                        )
                 if cache_path is not None:
                     expected_bytes = local_copy.get("bytes")
                     if isinstance(expected_bytes, int) and cache_path.stat().st_size != expected_bytes:
@@ -472,6 +548,8 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                     expected_sha = local_copy.get("sha256")
                     if isinstance(expected_sha, str) and _sha256(cache_path) != expected_sha:
                         errors.append(f"{copy_location}.sha256: checksum mismatch")
+                    if local_copy.get("retrieval_method") == "iiif_bundle":
+                        _check_iiif_bundle(cache_path, local_copy, copy_location, errors)
         if access.get("status") == "no_public_copy_found" and not access.get("last_checked"):
             errors.append(f"{item_location}: negative access claim requires last_checked")
 

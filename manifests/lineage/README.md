@@ -26,6 +26,11 @@ records remain useful when a clone does not contain the ignored files. Prefer
 a complete manuscript codex when it is obtainable; `work_portion` records the
 folios/pages/canvases occupied by this work without mislabeling selected
 leaves—or a metadata-only IIIF manifest—as a complete facsimile.
+When the complete codex is available as IIIF canvases, one `iiif_bundle` local
+copy holds the provider manifest, all canvas images, and an exact-source
+inventory; `source_file_count` reports the number of captured canvas images.
+Where no Presentation manifest exists, `bundle_source_kind` distinguishes an
+exhaustive provider-image URL inventory from a manifest-driven bundle.
 
 Validate the index, schemas, references, source identifiers, and checksums with:
 

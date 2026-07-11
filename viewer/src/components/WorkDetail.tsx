@@ -188,6 +188,22 @@ function AccessCard({ access }: { access: AccessRecord }) {
               <dd>{humanizeToken(localCopy.coverage)}</dd>
             </div>
             <div>
+              <dt>Retrieval</dt>
+              <dd>{humanizeToken(localCopy.retrievalMethod)}</dd>
+            </div>
+            {localCopy.sourceFileCount && (
+              <div>
+                <dt>Source files</dt>
+                <dd>{localCopy.sourceFileCount.toLocaleString()}</dd>
+              </div>
+            )}
+            {localCopy.bundleSourceKind && (
+              <div>
+                <dt>Bundle source</dt>
+                <dd>{humanizeToken(localCopy.bundleSourceKind)}</dd>
+              </div>
+            )}
+            <div>
               <dt>Downloaded</dt>
               <dd>{localCopy.downloadedOn}</dd>
             </div>
@@ -218,7 +234,13 @@ function AccessCard({ access }: { access: AccessRecord }) {
             </div>
           )}
           <div className="local-copy-action">
-            <ExternalLink href={localCopy.sourceUrl}>Exact file download</ExternalLink>
+            <ExternalLink href={localCopy.sourceUrl}>
+              {localCopy.retrievalMethod === "iiif_bundle"
+                ? localCopy.bundleSourceKind === "image_url_inventory"
+                  ? "Complete IIIF source record"
+                  : "Exact IIIF manifest"
+                : "Exact file download"}
+            </ExternalLink>
           </div>
           <Notes notes={localCopy.notes} />
         </div>

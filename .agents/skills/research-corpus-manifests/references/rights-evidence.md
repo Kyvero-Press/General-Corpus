@@ -60,6 +60,41 @@ python3 scripts/cache-source-download.py WORK_ID EXACT_FILE_URL \
   --coverage complete
 ```
 
+When a complete manuscript is delivered as IIIF canvases rather than a single
+file, create one auditable bundle instead of hundreds of manifest entries:
+
+```bash
+python3 scripts/cache-iiif-bundle.py WORK_ID EXACT_IIIF_MANIFEST_URL \
+  --filename complete-manuscript.zip \
+  --label "Complete manuscript IIIF bundle" \
+  --work-portion-label "Cataloged work" \
+  --work-locator "folios 10r–20v" \
+  --work-locator "IIIF canvases 21–42" \
+  --work-start-url https://example.org/viewer/canvas/21 \
+  --work-end-url https://example.org/viewer/canvas/42
+```
+
+The ZIP contains the provider manifest, every canvas image, and an inventory
+mapping canvas labels and URLs to exact image requests, member paths, sizes,
+and checksums. The emitted `local_copies` object uses
+`retrieval_method=iiif_bundle` and records `source_file_count`; add its exact
+Presentation-manifest URL to the access route. `coverage=complete` means all
+canvases in that physical-source manifest were captured, not that the image
+request necessarily reproduces the provider's preservation master. Preserve
+the recorded request-size profile in `notes`.
+
+If the provider publishes every Image API surface but no Presentation
+manifest, do not invent canvases or downgrade an obtainable whole codex to a
+target-leaf cache. Supply `--image-url-list PATH`, where the file is a JSON
+array or newline list of exact image request URLs, and use the provider's
+official complete-facsimile record as the positional source URL. JSON objects
+may add `label`, a genuine `canvas_url` when one exists, and an ignored local
+`reuse_path` for already downloaded bytes. The helper records
+`bundle_source_kind=image_url_inventory`, includes the normalized exact URL
+list in the ZIP, and does not expose machine-local reuse paths. Confirm from
+provider evidence that the list covers the whole physical object before using
+`coverage=complete`.
+
 Add the emitted object to the access record's `local_copies` array. Its
 `source_url` must also appear as `access.url` or in `alternate_urls`, while the
 landing page remains available as a human-readable route. Use one array item
@@ -79,6 +114,8 @@ folio/page range, corresponding digital canvas or image range, and start/end
 deep links when exposed. If only selected leaves are obtainable, use
 `coverage=partial` and say so. A complete edition scan, a miniature cycle, or
 an IIIF manifest without its image files is not a complete manuscript cache.
+Do not list one `local_copies` object per canvas when a single bundle and exact
+source inventory can represent the complete set.
 
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms

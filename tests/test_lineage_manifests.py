@@ -5,6 +5,7 @@ import json
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 
 
@@ -100,6 +101,75 @@ class LineageManifestTests(unittest.TestCase):
             "CME00099",
         )
         self.assertTrue(any("locators" in item and "required" in item for item in errors))
+
+    def test_iiif_bundle_requires_source_count_and_zip_shape(self) -> None:
+        schema_path = (
+            REPO_ROOT
+            / "manifests"
+            / "lineage"
+            / "schemas"
+            / "lineage-manifest.schema.json"
+        )
+        manifest_path = REPO_ROOT / "manifests" / "lineage" / "works" / "CME00099.json"
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        changed = copy.deepcopy(manifest)
+        access = changed["access"][0]
+        access["alternate_urls"] = [
+            *access.get("alternate_urls", []),
+            "https://example.test/manifest",
+        ]
+        access["local_copies"] = [{
+            "label": "Complete manuscript IIIF bundle",
+            "path": "source-cache/CME00099/manuscript.zip",
+            "source_url": "https://example.test/manifest",
+            "sha256": "0" * 64,
+            "bytes": 1,
+            "media_type": "application/zip",
+            "downloaded_on": "2026-07-11",
+            "coverage": "complete",
+            "retrieval_method": "iiif_bundle",
+            "source_file_count": 496,
+            "bundle_source_kind": "iiif_presentation_manifest",
+        }]
+
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._schema_errors(
+                changed,
+                schema,
+                schema,
+                "CME00099",
+            ),
+        )
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._semantic_manifest_errors(
+                REPO_ROOT,
+                manifest_path,
+                changed,
+            ),
+        )
+
+        del access["local_copies"][0]["source_file_count"]
+        errors = validate_lineage_manifests._schema_errors(
+            changed,
+            schema,
+            schema,
+            "CME00099",
+        )
+        self.assertTrue(any("source_file_count" in item and "required" in item for item in errors))
+
+        access["local_copies"][0]["source_file_count"] = 496
+        access["local_copies"][0]["path"] = "source-cache/CME00099/manuscript.pdf"
+        access["local_copies"][0]["media_type"] = "application/pdf"
+        errors = validate_lineage_manifests._semantic_manifest_errors(
+            REPO_ROOT,
+            manifest_path,
+            changed,
+        )
+        self.assertTrue(any("IIIF bundle must be a .zip" in item for item in errors))
+        self.assertTrue(any("IIIF bundle must use application/zip" in item for item in errors))
 
     def test_local_copy_is_optional_but_verified_when_present(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -197,7 +267,75 @@ class LineageManifestTests(unittest.TestCase):
                 root, manifest_path, manifest
             )
             self.assertTrue(any("must be one file under 'source-cache/TestWork'" in item for item in errors))
-            self.assertTrue(any("exact download URL must also appear" in item for item in errors))
+            self.assertTrue(any("exact source URL must also appear" in item for item in errors))
+
+    def test_present_iiif_bundle_inventory_is_cross_checked(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest_path = root / "manifests/lineage/works/TestWork.json"
+            cached = root / "source-cache/TestWork/manuscript.zip"
+            cached.parent.mkdir(parents=True)
+            source_url = "https://example.test/manifest"
+            inventory = {
+                "source_kind": "iiif_presentation_manifest",
+                "source_url": source_url,
+                "source_file_count": 1,
+                "items": [{"member_path": "images/000001.jpg"}],
+            }
+            with zipfile.ZipFile(cached, "w") as archive:
+                archive.writestr("manifest.json", "{}")
+                archive.writestr("inventory.json", json.dumps(inventory))
+                archive.writestr("images/000001.jpg", b"\xff\xd8\xfffixture")
+            local_copy = {
+                "label": "Complete manuscript bundle",
+                "path": "source-cache/TestWork/manuscript.zip",
+                "source_url": source_url,
+                "sha256": hashlib.sha256(cached.read_bytes()).hexdigest(),
+                "bytes": cached.stat().st_size,
+                "media_type": "application/zip",
+                "downloaded_on": "2026-07-11",
+                "coverage": "complete",
+                "retrieval_method": "iiif_bundle",
+                "bundle_source_kind": "iiif_presentation_manifest",
+                "source_file_count": 1,
+            }
+            manifest = {
+                "id": "lineage:TestWork",
+                "work_id": "TestWork",
+                "primary_subject": "witness:test",
+                "entities": [{"id": "witness:test"}],
+                "agents": [],
+                "relations": [],
+                "access": [{
+                    "id": "access:test",
+                    "entity": "witness:test",
+                    "url": source_url,
+                    "local_copies": [local_copy],
+                    "evidence_ids": ["evidence:test"],
+                }],
+                "rights": [],
+                "editorial_practices": [],
+                "evidence": [{"id": "evidence:test"}],
+                "open_questions": [],
+            }
+
+            self.assertEqual(
+                [],
+                validate_lineage_manifests._semantic_manifest_errors(
+                    root,
+                    manifest_path,
+                    manifest,
+                ),
+            )
+
+            local_copy["source_file_count"] = 2
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+            )
+            self.assertTrue(any("file count does not match" in item for item in errors))
+            self.assertTrue(any("item count is inconsistent" in item for item in errors))
 
     def _xml_identifier_errors(self, xml: str, work_id: str) -> list[str]:
         with tempfile.TemporaryDirectory() as directory:
