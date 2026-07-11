@@ -1,5 +1,5 @@
 * Intro
-This repository contains the totality of the Corpus provided by KVP.
+This repository contains Kyvero Press (KVP) production tooling and a working source snapshot drawn from the Corpus of Middle English (CME). Its scope is the source material and publication workflow maintained here; it does not claim to mirror every current CME holding.
 
 * Mission
 Although most if not all historical texts are in the public domain, great effort and care has gone into transcribing old manuscripts and providing these transcriptions free of charge, and advancements in print on demand technology have made it easier than ever to publish obscure works, it remains nearly impossible to find properly formatted public domain texts at a reasonable price. Instead people are met with either "translations" by large reputable publishing companies or exorbitant prices for unknown quality reprints, many times consisting of low quality scans directly reprinted.
@@ -11,14 +11,29 @@ The project aims to provide, first and foremost, a readable edition of the texts
 These resulting texts will be distributed at or near cost via print on demand services in order to ensure the public's access to our shared history. The resulting texts will be freely available and modifiable to all in digital form.
 
 * Technology
-This project uses ConTeXt to translate XML sources into pdfs, using TeX. Most texts are in TEI format. Some texts, especially those from the Corpus of Middle English are in custom XML formats similar to TEI.
+The current production path normalizes the supported CME XML variants to standalone HTML with Python, passes that HTML through Pandoc, and produces either EPUB or LaTeX typeset as PDF with XeLaTeX. The =ConTeXt/= directory contains historical conversion utilities rather than the current production entry point.
 
-* TODO Printing at home
-It is possible to print these texts at home using a bash script like
+* Build and architecture
+First complete [[file:docs/architecture.md#setup-and-verification][setup and verification]]. From the repository root, inspect the plan immediately before building one print-profile review candidate under =build/=:
+
 #+BEGIN_SRC bash
-  ps2pdf example.pdf
-  psbook -s8 example.ps | psnup -2 -pletter -Pletter | lpr
+  scripts/cme-build plan CME/source/CME_from_OTA/Gawain.xml \
+    --profile print-pdf \
+    --output build/profile/Gawain.pdf
+  scripts/cme-build single CME/source/CME_from_OTA/Gawain.xml \
+    --profile print-pdf \
+    --output build/profile/Gawain.pdf
 #+END_SRC
+
+Artifacts have three stages:
+- =build/=: generated candidates, intermediates, and validation evidence;
+- =bin/pdf/=: a reviewed PDF built with repository defaults for inspection; and
+- =dist/=: the publication set, replaced only through the [[file:docs/architecture.md#fail-closed-corpus-refresh-contract][fail-closed architecture procedure]].
+
+See the [[file:docs/architecture.md][build architecture]], [[file:docs/build-profiles.md][profile commands]], [[file:docs/xml-formats.md][XML formats]], and [[file:docs/lulu-production.md][Lulu production checklist]] for current details.
+
+* Printing at home
+Home-print imposition and printer submission are unsupported. The repository does not maintain a safe, current printing recipe; use reviewed PDFs with an independently verified local print workflow.
 
 * License
 All code in this repository is licensed under the [[file:gpl-3.0.txt][GPL-3.0]]

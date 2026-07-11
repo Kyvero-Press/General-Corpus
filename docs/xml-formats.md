@@ -1,6 +1,16 @@
-# XML format inventory
+# XML formats and inventory
 
-Scanned `CME/source` and found **307 XML files**.
+See [architecture.md](architecture.md) for the complete production pipeline and
+component ownership.
+
+The format table below and `docs/xml-format-manifest.tsv` are a generation-time
+snapshot of `CME/source`, which contained **307 XML files** when the inventory was
+last generated. This document now combines maintained explanatory prose with
+generated inventory data. The snapshot is not a timeless corpus total and does
+not define the PDF publication set. Duplicate stems, repaired/recent variants,
+and non-running-text inputs mean source count cannot be equated with `dist/`
+count. Follow [Inventory provenance](#inventory-provenance) to refresh the
+inventory without replacing the maintained sections of this document.
 
 | Format | Files | Strict XML failures | Main root/signature | Primary text payload |
 |---|---:|---:|---|---|
@@ -105,10 +115,57 @@ Most common elements:
 Sample files:
 - `CME/source/CME_from_OTA/JulianRev.xml`
 
-## Conversion scripts
+## Converter behavior
 
-The scripts in `scripts/` normalize the source XML to HTML and then call Pandoc.
-Use the format-specific wrappers when you already know the category, or `pandoc-cme-xml` to auto-detect.
+`scripts/cme_xml_to_html.py` detects `dlpstextclass`, ETS with `TEMPHEAD` or
+`HEADER`, generic ETS, `tei2`, and `headwords`. It selects the known readable
+payload: `TEXT` for DLPS/TEI.2; direct or grouped `EEBO/TEXT` for ETS; and the
+`HEADWORDS` root for lexical records. A direct `BODY` is a narrow fallback when
+a known wrapper is missing. The converter deliberately renders no body rather
+than treating headers or revision metadata as primary text.
+
+Parsing first uses strict XML. Unless `--strict` is given, a strict parse failure
+is reparsed with `lxml` recovery and reported on standard error; source metadata
+also carries a visible recovery warning when that metadata block is enabled.
+Recovery makes malformed input reviewable but does not guarantee an editorially
+correct interpretation.
+
+Direct HTML conversion is useful for converter debugging:
+
+```bash
+mkdir -p build/xml
+python3 scripts/cme_xml_to_html.py --format auto \
+  CME/source/CME_from_OTA/Gawain.xml > build/xml/Gawain.html
+```
+
+The converter's normal XML options are `--format`, `--drop-notes`,
+`--preserve-milestones`, and `--strict`; build plumbing also uses
+`--omit-source-metadata`, `--verse-line-metadata`, and `--colophon-tex`.
+
+### Transcriptional word-break verbar (U+2223)
+
+The U+2223 character `∣` is treated as a transcriptional word-break marker only
+when its immediately adjacent visible characters are alphabetic within one
+maximal inline flow. For example, `dili∣gatis` becomes `diligatis`, and the join
+may cross ordinary inline emphasis markup in either direction.
+
+A flow cannot cross a block, `LB`, NOTE/NOTE1, GAP, milestone such as PB/EPB/FW,
+or (for headwords) ENTRY/FORM boundary. Included note content is normalized in
+its own flow; an omitted note remains a boundary. Consequently, standalone,
+leading, trailing, punctuation-adjacent, and digit-adjacent U+2223 markers stay
+visible. ASCII `|`, double vertical line `‖`, and other lookalikes are untouched.
+
+Only the selected rendered payload is normalized. When it contains U+2223,
+`render_document()` copies the source tree, changes that copy, and leaves source
+metadata and the caller's XML tree unchanged. A marker-free selected payload
+uses the no-copy fast path. These rules apply before Pandoc, so all final output
+formats receive the same normalized readable text.
+
+## Direct and compatibility wrappers
+
+The direct wrappers normalize XML to standalone HTML and then call Pandoc. Use a
+format-specific name only when the category is already known; otherwise use the
+auto-detecting wrapper:
 
 ```bash
 scripts/pandoc-dlpstextclass INPUT.xml OUTPUT.html [PANDOC_OPTIONS...]
@@ -119,13 +176,47 @@ scripts/pandoc-cme-xml INPUT.xml OUTPUT.docx
 scripts/pandoc-all CME/source build/pandoc html
 ```
 
-Useful XML-side options accepted before `INPUT.xml`: `--drop-notes`, `--preserve-milestones`, and `--strict`.
-Wrapper options such as `--lettrine MODE` are accepted before `INPUT.xml` or after `OUTPUT` and are stripped before Pandoc is called; after wrapper options are removed, remaining arguments after `OUTPUT` are passed directly to Pandoc.
-For `.tex`, `.latex`, and `.pdf` output, `pandoc-cme-xml` defaults to a book-style LaTeX front matter sequence (title page, colophon, table of contents), plain body-font lettrines, subtle fifth-line verse numbers, the `book` document class, Junicode (`Junicode-Regular.otf` from TeX Live's `junicode` package), and a 5in x 8in page size (Lulu novella size). The title page uses the full source title where available, including title-page `TITLEPART` subtitles/subtitles, first-body subtitle heads, and incipit-style title supplements such as Everyman's opening treatyse line. In body text, source pilcrows (`¶`) are treated as paragraph breaks instead of visible glyphs. When the XML includes a creation/original date, that date appears on the title page and in the colophon. For LaTeX/PDF output, `--lettrine none` disables drop caps; `plain`, `goudyinitialen`, `gotischeinitialen`, and `baroqueinitials` select body-font or decorative initials, with aliases such as `goudy`, `gotin`, and `baroque`. Decorative font modes fall back when the package/font is unavailable, but they do not verify every medieval initial glyph in the selected font; use `plain` if a decorative mode reports missing-character warnings for initials such as `Ȝ`. It also automatically adds the project LaTeX lettrine, verse line numbering, and pagination headers/filters in `scripts/pandoc-latex-lettrine.*`, `scripts/pandoc-latex-verse-lines.*`, and `scripts/pandoc-latex-pagebreaks.*` to mark chapter openings, number every fifth verse line, and reduce orphaned/widowed prose and verse fragments. Pass your own Pandoc `documentclass`, `mainfont`, `geometry`, or `papersize` variables after `OUTPUT` to override those defaults; any `geometry` or `papersize` variable suppresses the default 5in x 8in geometry.
+For `scripts/pandoc-cme-xml`, XML options (`--xml-format`, `--drop-notes`,
+`--preserve-milestones`, and `--strict`) go before `INPUT.xml`. The wrapper's
+`--lettrine MODE` may appear before the input or after the output and is removed
+before Pandoc runs. Other arguments after `OUTPUT` pass to Pandoc. The recursive
+`scripts/pandoc-all` forwards arguments after its output extension to each
+`scripts/pandoc-cme-xml` invocation.
 
-A complete per-file TSV manifest is generated by:
+These wrappers retain hard-coded LaTeX/PDF defaults for compatibility. The
+recommended production interface is `scripts/cme-build`; see
+[build-profiles.md](build-profiles.md). Profile XML flags come from
+`config/cme-build/profiles.toml` and the selected definitions in
+`config/cme-build/modules.toml`. Arguments after `--` on profile `plan` or
+`single` are Pandoc passthrough and cannot be used to inject arbitrary XML
+converter options. Inspect a profile plan for the effective XML command.
+
+## Inventory provenance
+
+The format table, its supporting inventory details, and
+`docs/xml-format-manifest.tsv` are generated from the same scan. Because this
+document now combines that generated inventory data with maintained explanatory
+prose, always generate refresh candidates at temporary paths:
 
 ```bash
-scripts/categorize-xml-formats.py CME/source --manifest docs/xml-format-manifest.tsv --output docs/xml-formats.md
+mkdir -p build/inventory-refresh
+scripts/categorize-xml-formats.py CME/source \
+  --manifest build/inventory-refresh/xml-format-manifest.tsv \
+  --output build/inventory-refresh/xml-formats.generated.md
 ```
+
+Review the temporary Markdown report and TSV together. If an inventory refresh
+is approved, deliberately integrate only inventory data and count changes from
+the generated report into this maintained document, and update
+`docs/xml-format-manifest.tsv` from the reviewed temporary TSV in the same
+change.
+
+**Warning:** pointing `--output` at `docs/xml-formats.md` replaces the whole
+document with the generator's legacy report and discards all maintained sections
+until/unless the generator is modernized. Do not use the maintained document as
+the generator's output path.
+
+The manifest inventories source files and detected payloads; it is not an
+approved source-to-publication mapping and does not imply that each XML file
+should produce one PDF.
 
