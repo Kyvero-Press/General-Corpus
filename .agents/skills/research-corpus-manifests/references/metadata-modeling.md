@@ -78,6 +78,11 @@ Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
 disagreement with a scholarly lineation as an explicit open question.
 
+In an edited archival collection, numbered editorial units may combine several
+physical documents, fragments, abstracts, or outside illustrative records.
+Report editorial-unit, XML-container, physical-object, and archive-size counts
+separately; do not treat them as interchangeable extent measures.
+
 Derive `catalog_summary` from detailed records. Preserve detailed-record order
 in summary language, genre, and tag arrays. Maintain exactly one preferred
 whole title and one whole discovery form.

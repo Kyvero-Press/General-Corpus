@@ -1,0 +1,735 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:aca1723",
+  "work_id": "aca1723",
+  "title": "The Stonor Letters and Papers, 1290–1483",
+  "primary_subject": "artifact:general-corpus:aca1723",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository XML is a U-M-derived version of CME item ACA1723.0001.001, created in 2006 by uncorrected OCR from 460 linked page images of Charles Lethbridge Kingsford's 1919 two-volume edition. Kingsford reconstructed an editorial selection from dispersed Public Record Office records, chiefly Ancient Correspondence now in TNA SC 1, with selected Chancery Miscellanea now in C 47, Ancient Deeds now in C 146, a Ministers' Account now in SC 6, and an Early Chancery Proceedings item now cataloged as C 1/31/534. The electronic text retains the 333 numbered documents and Kingsford's headnotes but omits most print introduction, appendices, glossary, and indexes. A 1924 supplement, Carpenter's 1996 reissue, and later-recovered C 47/37/22 and /23 material are recorded as later layers, not sources of the 1919 edition or CME encoding.",
+  "languages": ["enm", "xno", "lat", "eng"],
+  "review_notes": [
+    "The cataloged work is Kingsford's editorially assembled selection, not a single authored medieval work and not the complete historical Stonor archive.",
+    "The XML header's DA 20 .R9 Ser.3 v.29-30 is a library call number for the print series, not an archival shelfmark.",
+    "Historical Public Record Office designations and modern TNA shelfmarks are preserved separately; current catalog dates do not replace Kingsford's conjectural document dates.",
+    "Later-recovered C 47/37/22 and C 47/37/23 material is relevant for comparison but is not placed upstream of 1919, 1924, or CME without evidence of use."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:aca1723",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for aca1723",
+      "description": "Repository XML supplied through the pinned CME submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "ACA1723.0001.001", "uri": "https://name.umdl.umich.edu/ACA1723.0001.001"},
+        {"scheme": "git-blob", "value": "0f7752328df3aae7293f99e3c884d590f238e985"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/aca1723.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "0f7752328df3aae7293f99e3c884d590f238e985",
+        "sha256": "1ce6205aee12d82613f596324df06aa2ef4385b04f4d0052ab2128bb3a781e7d"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:aca1723-xml"]
+    },
+    {
+      "id": "encoding:umich-cme:ACA1723.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item ACA1723.0001.001",
+      "description": "A 2006 Level 1 TEI-in-Libraries encoding created by uncorrected OCR. It links 460 page images, encodes the 333 numbered documents and Kingsford's headnotes, and represents most front and back matter only by page milestones and omitted-matter wrappers.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "ACA1723.0001.001", "uri": "https://name.umdl.umich.edu/ACA1723.0001.001"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "date_statements": [
+        {"label": "electronic publication", "value": "2006", "normalized": "2006", "certainty": "high", "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-aca1723"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-aca1723"]
+    },
+    {
+      "id": "facsimile:umich:aca1723-460-images",
+      "type": "facsimile",
+      "label": "U-M 460-image scan set for ACA1723.0001.001",
+      "description": "The exact page-image set named by the CME header and PB milestones. The publicly downloadable U-M package contains 460 TIFF files matching the electronic item's image references, plus pageview data, OCR text, header data, and an earlier XML export.",
+      "identifiers": [
+        {"scheme": "Internet Archive item", "value": "aca1723.0001.001.umich.edu", "uri": "https://archive.org/details/aca1723.0001.001.umich.edu"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "date_statements": [
+        {"label": "image-file date", "value": "2003; package metadata public 2011", "normalized": "2003/2011", "certainty": "high", "evidence_ids": ["evidence:umich-raw-package"]}
+      ],
+      "reproduction_format": "460 monochrome 600 dpi TIFF G4 page images in a downloadable ZIP package",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-raw-package"]
+    },
+    {
+      "id": "edition:kingsford:stonor-1919",
+      "type": "scholarly_edition",
+      "label": "Kingsford's 1919 Stonor Letters and Papers",
+      "description": "The immediate two-volume source edition. Kingsford selected and arranged 333 numbered units from a dispersed documentary archive, printed almost all identified letters, gave full copies or abstracts of selected deeds and other records, added a few illustrative documents outside the historical Stonor archive, and supplied source notes, editorial dates, introduction, calendars, glossary, and indexes.",
+      "creator_ids": ["agent:charles-lethbridge-kingsford"],
+      "date_statements": [
+        {"label": "first publication", "value": "1919", "normalized": "1919", "certainty": "high", "evidence_ids": ["evidence:kingsford-volumes", "evidence:rhs-camden-series"]}
+      ],
+      "bibliographic": {
+        "citation": "The Stonor Letters and Papers, 1290–1483, ed. Charles Lethbridge Kingsford, 2 vols., Camden Third Series 29–30 (London: Offices of the Royal Historical Society, 1919).",
+        "title": "The Stonor Letters and Papers, 1290–1483",
+        "series": "Camden Third Series 29–30",
+        "publisher": "Offices of the Royal Historical Society",
+        "publication_place": "London",
+        "date": "1919",
+        "pages": "vol. I: lvi, 165; vol. II: 224",
+        "languages": ["enm", "xno", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:kingsford-volumes", "evidence:kingsford-introduction", "evidence:rhs-camden-series"]
+    },
+    {
+      "id": "facsimile:ia:pims-stonor-1919",
+      "type": "facsimile",
+      "label": "PIMS/Internet Archive scans of Kingsford's 1919 volumes",
+      "description": "An independent two-volume scan useful for checking the U-M OCR and omitted print matter; it is a facsimile of the printed edition, not of the medieval archival documents.",
+      "identifiers": [
+        {"scheme": "Internet Archive item", "value": "stonorletterspap01king", "uri": "https://archive.org/details/stonorletterspap01king"},
+        {"scheme": "Internet Archive item", "value": "stonorletterspap02king", "uri": "https://archive.org/details/stonorletterspap02king"}
+      ],
+      "creator_ids": ["agent:pims", "agent:internet-archive"],
+      "date_statements": [
+        {"label": "digitization", "value": "2011", "normalized": "2011", "certainty": "high", "evidence_ids": ["evidence:kingsford-volumes"]}
+      ],
+      "reproduction_format": "Two 400 ppi scanned volumes; 240 and 246 scan pages, including two foldouts in volume I",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:kingsford-volumes"]
+    },
+    {
+      "id": "witness:tna:SC1-stonor-correspondence",
+      "type": "manuscript_witness",
+      "label": "Selected Stonor correspondence in TNA SC 1",
+      "description": "The principal archival source group for Kingsford's letters, especially current SC 1/46, with additional Stonor material in SC 1/44, /51, /52, and /60. SC 1 is an archival series and this entity represents only the identified Stonor components, not the whole series.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "SC 1/46", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C2601947"},
+        {"scheme": "TNA reference", "value": "SC 1/46/1", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C12228065"},
+        {"scheme": "TNA reference", "value": "SC 1/46/102", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C12228166"}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "SC 1/44, SC 1/46, SC 1/51, SC 1/52, and SC 1/60 (selected items)",
+        "historical_designations": ["Ancient Correspondence xliv", "Ancient Correspondence xlvi", "Ancient Correspondence li", "Ancient Correspondence lii", "Ancient Correspondence lx"],
+        "notes": "No single catalog record represents this cross-series selection; the exact SC 1/46 subgroup and representative first and last Kingsford items have direct current records."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-sc1", "evidence:kingsford-introduction", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "witness:tna:C47-37-selected",
+      "type": "manuscript_witness",
+      "label": "Selected Stonor miscellanea in TNA C 47/37",
+      "description": "The historical Chancery Miscellanea 37 records from which Kingsford printed or abstracted selected documents, including shrieval papers, household accounts, inventories, and other Stonor material. This aggregate excludes later-recovered C 47/37/22 and /23 as upstream sources unless separately evidenced.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "C 47/37/1", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5908066"},
+        {"scheme": "TNA reference", "value": "C 47/37/2", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5908067"}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "C 47/37 (selected components used by Kingsford)",
+        "historical_designations": ["Chancery Miscellanea 37, vols. i–xvii"],
+        "notes": "The entity aggregates selected components. Direct current component records, rather than the generic C 47 series record, support the holding."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-c47-selected", "evidence:kingsford-introduction", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "witness:tna:C146-selected-deeds",
+      "type": "manuscript_witness",
+      "label": "Selected Stonor deeds in TNA C 146",
+      "description": "The deeds historically cited by Kingsford as Ancient Deeds, class C, from which eleven numbered units in the CME text are directly sourced and additional deeds are calendared in the print appendix.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "C 146/221", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5884680"}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "C 146/221 and other selected C 146 items",
+        "historical_designations": ["Ancient Deeds C. 221", "Ancient Deeds, class C"],
+        "notes": "C 146/221 is the current exact record for Kingsford item 1; the entity groups additional deeds whose complete item-level crosswalk remains to be made."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-c146", "evidence:kingsford-introduction", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "witness:tna:SC6-1250-6",
+      "type": "manuscript_witness",
+      "label": "TNA SC 6/1250/6, rents of Sir William Stonor",
+      "description": "The Ministers' Account from which Kingsford item 228 gives an abstract of rents at Michaelmas 1478.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "SC 6/1250/6", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5969469"}
+      ],
+      "date_statements": [
+        {"label": "account date", "value": "18 Edward IV (1478–1479)", "normalized": "1478/1479", "certainty": "high", "evidence_ids": ["evidence:tna-sc6", "evidence:aca1723-xml"]}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "SC 6/1250/6",
+        "historical_designations": ["Ministers Accounts 1250/6"],
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C5969469"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-sc6", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "witness:tna:C1-31-534",
+      "type": "manuscript_witness",
+      "label": "TNA C 1/31/534, Frende v Fortescue",
+      "description": "The Early Chancery Proceedings record matching Kingsford item 80, a complaint by John Frende against Richard Fortescue concerning false imprisonment in Devon. Kingsford prints the historical source designation as 31/34–36; the current exact Discovery record is C 1/31/534.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "C 1/31/534", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C7443668"}
+      ],
+      "date_statements": [
+        {"label": "current catalog date", "value": "1465–1471, or perhaps 1480–1483", "normalized": "1465/1483", "certainty": "high", "evidence_ids": ["evidence:tna-c1"], "notes": "This preserves TNA's alternative ranges. Kingsford instead assigns item 80 to 1466 from related King's Bench proceedings."}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "C 1/31/534",
+        "historical_designations": ["Early Chancery Proceedings 31/34–36 (Kingsford, 1919)"],
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C7443668",
+        "notes": "The title and parties establish the modern match; the reason for the difference between Kingsford's printed number and the current reference is unresolved."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-c1", "evidence:kingsford-volumes", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "edition:kingsford:stonor-supplement-1924",
+      "type": "scholarly_edition",
+      "label": "Supplementary Stonor Letters and Papers (1314–1482)",
+      "description": "Kingsford's later supplement in Camden Third Series 34. It is later scholarship and is not an upstream source for the 1919 edition or U-M encoding.",
+      "creator_ids": ["agent:charles-lethbridge-kingsford"],
+      "date_statements": [
+        {"label": "first publication", "value": "1924", "normalized": "1924", "certainty": "high", "evidence_ids": ["evidence:kingsford-supplement-1924", "evidence:rhs-camden-series"]}
+      ],
+      "bibliographic": {
+        "citation": "Charles Lethbridge Kingsford, ‘Supplementary Stonor Letters and Papers (1314–1482),’ Camden Third Series 34 (1924), 1–26, doi:10.1017/S2042171000006907.",
+        "title": "Supplementary Stonor Letters and Papers (1314–1482)",
+        "series": "Camden Third Series 34",
+        "publisher": "Royal Historical Society",
+        "date": "1924",
+        "pages": "1–26",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:kingsford-supplement-1924", "evidence:rhs-camden-series"]
+    },
+    {
+      "id": "edition:carpenter:stonor-1996",
+      "type": "scholarly_edition",
+      "label": "Carpenter's 1996 Kingsford's Stonor Letters and Papers",
+      "description": "A one-volume reissue of Kingsford's 1919 volumes and 1924 supplement, with Christine Carpenter's new introduction, annotation, and supplementary listing of later-found records.",
+      "creator_ids": ["agent:christine-carpenter"],
+      "date_statements": [
+        {"label": "publication", "value": "1996", "normalized": "1996", "certainty": "high", "evidence_ids": ["evidence:carpenter-1996"]}
+      ],
+      "bibliographic": {
+        "citation": "Kingsford's Stonor Letters and Papers 1290–1483, ed. Christine Carpenter (Cambridge: Cambridge University Press, 1996).",
+        "title": "Kingsford's Stonor Letters and Papers 1290–1483",
+        "publisher": "Cambridge University Press",
+        "publication_place": "Cambridge",
+        "date": "1996",
+        "pages": "519",
+        "languages": ["enm", "xno", "lat", "eng"]
+      },
+      "identifiers": [
+        {"scheme": "ISBN", "value": "9780521555869"},
+        {"scheme": "ISBN", "value": "9780521554671"}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:carpenter-1996", "evidence:noble-2009"]
+    },
+    {
+      "id": "witness:tna:C47-37-22-later-material",
+      "type": "manuscript_witness",
+      "label": "TNA C 47/37/22, later-listed Stonor material",
+      "description": "A current item-level group of Stonor records, including material recovered or added after Kingsford's edition. Carpenter listed later-found material in 1996; Noble reports 152 documents or fragments, while the current catalog has a parent record and item/component numbering that requires reconciliation.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "C 47/37/22", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5908087"}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "C 47/37/22",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C5908087"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-c47-later", "evidence:noble-2009", "evidence:carpenter-1996"]
+    },
+    {
+      "id": "witness:tna:C47-37-23-household-book",
+      "type": "manuscript_witness",
+      "label": "TNA C 47/37/23, Stonor household account book",
+      "description": "A 24-folio household account book, chiefly provisions and miscellaneous expenses, cataloged as added in June 1998. It postdates Carpenter's research and is not a source for the 1919 or 1996 editions.",
+      "identifiers": [
+        {"scheme": "TNA reference", "value": "C 47/37/23", "uri": "https://discovery.nationalarchives.gov.uk/details/r/C5908088"}
+      ],
+      "date_statements": [
+        {"label": "production", "value": "4 March 1482–3 March 1483", "normalized": "1482/1483", "certainty": "high", "evidence_ids": ["evidence:tna-c47-later"]}
+      ],
+      "holding": {
+        "institution_id": "agent:tna",
+        "shelfmark": "C 47/37/23",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C5908088",
+        "notes": "The current catalog states that this component was added in June 1998."
+      },
+      "physical_description": {"extent": "24 folios"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:tna-c47-later", "evidence:noble-2009"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:charles-lethbridge-kingsford", "type": "person", "name": "Charles Lethbridge Kingsford", "dates": "1862–1926", "evidence_ids": ["evidence:kingsford-volumes"]},
+    {"id": "agent:christine-carpenter", "type": "person", "name": "Christine Carpenter", "evidence_ids": ["evidence:carpenter-1996"]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-aca1723"]},
+    {"id": "agent:rhs", "type": "organization", "name": "Royal Historical Society", "urls": ["https://royalhistsoc.org/"], "evidence_ids": ["evidence:rhs-camden-series"]},
+    {"id": "agent:tna", "type": "organization", "name": "The National Archives (United Kingdom)", "urls": ["https://www.nationalarchives.gov.uk/"], "evidence_ids": ["evidence:tna-crosswalk"]},
+    {"id": "agent:pims", "type": "organization", "name": "Pontifical Institute of Mediaeval Studies", "urls": ["https://pims.ca/"], "evidence_ids": ["evidence:kingsford-volumes"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:kingsford-volumes", "evidence:umich-raw-package"]},
+    {"id": "agent:cambridge-university-press", "type": "organization", "name": "Cambridge University Press", "urls": ["https://www.cambridge.org/"], "evidence_ids": ["evidence:carpenter-1996", "evidence:kingsford-supplement-1924"]},
+    {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:aca1723-xml"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:aca1723",
+      "object": "encoding:umich-cme:ACA1723.0001.001",
+      "scope": {"subject": {"kind": "whole", "description": "Repository XML"}, "object": {"kind": "whole", "description": "U-M CME item ACA1723.0001.001"}, "notes": "The repository file self-identifies as the U-M item; byte identity with every historical U-M export is not asserted."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-aca1723", "evidence:umich-raw-package"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-images",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:ACA1723.0001.001",
+      "object": "facsimile:umich:aca1723-460-images",
+      "scope": {"subject": {"kind": "whole", "description": "Uncorrected OCR/TEI encoding with PB links"}, "object": {"kind": "whole", "description": "The 460 TIFF files named by the encoding"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-raw-package"]}
+    },
+    {
+      "id": "relation:umich-images-facsimile-of-1919",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:aca1723-460-images",
+      "object": "edition:kingsford:stonor-1919",
+      "scope": {"subject": {"kind": "whole", "description": "460-page scan sequence covering both volumes"}, "object": {"kind": "whole", "description": "Kingsford's two-volume edition, including front and back matter"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich-raw-package", "evidence:kingsford-volumes", "evidence:aca1723-xml"]}
+    },
+    {
+      "id": "relation:pims-facsimile-of-1919",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:pims-stonor-1919",
+      "object": "edition:kingsford:stonor-1919",
+      "scope": {"subject": {"kind": "whole", "description": "Independent scans of volumes I and II"}, "object": {"kind": "whole", "description": "Kingsford's 1919 two-volume edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-volumes"]}
+    },
+    {
+      "id": "relation:kingsford-transcribes-sc1",
+      "type": "transcribes",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:SC1-stonor-correspondence",
+      "scope": {"subject": {"kind": "selected_passages", "description": "The principal body of edited letters, with Kingsford's headnotes and dating"}, "object": {"kind": "selected_passages", "description": "Identified Stonor letters in SC 1/44, /46, /51, /52, and /60"}, "notes": "Kingsford says he printed all identified letters except trifling fragments; the relation does not include unrelated Ancient Correspondence records or assert that every item is complete."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-introduction", "evidence:tna-sc1", "evidence:aca1723-xml"]}
+    },
+    {
+      "id": "relation:kingsford-transcribes-c47",
+      "type": "transcribes",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:C47-37-selected",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Numbered documents printed in full from Chancery Miscellanea 37"}, "object": {"kind": "selected_passages", "description": "Selected C 47/37 Stonor records corresponding to Kingsford's historical citations"}, "notes": "A separate excerpt relation records documents represented only by abstracts; a complete item-level full-text/abstract crosswalk remains open."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-introduction", "evidence:tna-c47-selected", "evidence:aca1723-xml"]}
+    },
+    {
+      "id": "relation:kingsford-excerpts-c47",
+      "type": "excerpted_from",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:C47-37-selected",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Editorial abstracts and calendars of selected Chancery Miscellanea records"}, "object": {"kind": "selected_passages", "description": "C 47/37 material not printed as a full transcription"}},
+      "assertion": {"status": "confirmed", "confidence": "medium", "evidence_ids": ["evidence:kingsford-introduction", "evidence:kingsford-volumes"]}
+    },
+    {
+      "id": "relation:kingsford-transcribes-c146",
+      "type": "transcribes",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:C146-selected-deeds",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Full copies of selected deeds among the numbered units"}, "object": {"kind": "selected_passages", "description": "Selected Stonor deeds in C 146"}, "notes": "The edition also gives abstracts and an appendix calendar; not every deed is transcribed in full."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-introduction", "evidence:tna-c146", "evidence:aca1723-xml"]}
+    },
+    {
+      "id": "relation:kingsford-excerpts-c146",
+      "type": "excerpted_from",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:C146-selected-deeds",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Abstracts and calendar entries for deeds not printed in full"}, "object": {"kind": "selected_passages", "description": "Selected Stonor deeds in C 146"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-introduction", "evidence:kingsford-volumes"]}
+    },
+    {
+      "id": "relation:kingsford-excerpts-sc6-1250-6",
+      "type": "excerpted_from",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:SC6-1250-6",
+      "scope": {"subject": {"kind": "part", "description": "Numbered item 228, an editorial abstract", "locators": ["vol. II, item 228"]}, "object": {"kind": "whole", "description": "SC 6/1250/6"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:aca1723-xml", "evidence:tna-sc6"]}
+    },
+    {
+      "id": "relation:kingsford-transcribes-c1-31-534",
+      "type": "transcribes",
+      "subject": "edition:kingsford:stonor-1919",
+      "object": "witness:tna:C1-31-534",
+      "scope": {"subject": {"kind": "part", "description": "Numbered item 80, John Frende v. Richard Fortescue", "locators": ["vol. I, item 80, pp. 74–76"]}, "object": {"kind": "whole", "description": "The matching C 1 petition record"}, "notes": "Kingsford expressly says this illustrative record does not form part of the Stonor Papers."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kingsford-volumes", "evidence:tna-c1", "evidence:aca1723-xml"]}
+    },
+    {
+      "id": "relation:carpenter-version-of-1919",
+      "type": "version_of",
+      "subject": "edition:carpenter:stonor-1996",
+      "object": "edition:kingsford:stonor-1919",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Reissued text of Kingsford's two 1919 volumes, with new Carpenter framing"}, "object": {"kind": "whole", "description": "Kingsford's 1919 volumes I–II"}, "notes": "This relation does not transfer Carpenter's 1996 copyright or supplementary scholarship to the 1919 edition."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:carpenter-1996", "evidence:noble-2009"]}
+    },
+    {
+      "id": "relation:carpenter-version-of-1924",
+      "type": "version_of",
+      "subject": "edition:carpenter:stonor-1996",
+      "object": "edition:kingsford:stonor-supplement-1924",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Reissued 1924 supplementary texts"}, "object": {"kind": "whole", "description": "Kingsford's 1924 supplement"}, "notes": "The scope is independent of the 1919 reissue relation; Carpenter's new introduction, annotation, and listing remain 1996 material."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:carpenter-1996", "evidence:kingsford-supplement-1924"]}
+    },
+    {
+      "id": "relation:carpenter-describes-c47-37-22",
+      "type": "describes",
+      "subject": "edition:carpenter:stonor-1996",
+      "object": "witness:tna:C47-37-22-later-material",
+      "scope": {"subject": {"kind": "part", "description": "Supplementary listing and discussion of later-found Stonor material"}, "object": {"kind": "selected_passages", "description": "Material then identified among what is now C 47/37/22"}, "notes": "Description/listing does not establish full transcription and does not make this material a source of 1919."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:carpenter-1996", "evidence:noble-2009", "evidence:tna-c47-later"]}
+    }
+  ],
+  "access": [
+    {"id": "access:aca1723-repo", "entity": "artifact:general-corpus:aca1723", "provider_id": "agent:kyvero", "resource_kind": "repository_file", "status": "local_only", "access_method": "Read the checked-out CME submodule path", "repository_path": "CME/source/CME_phase_1-2/aca1723.xml", "cost": "not_applicable", "format": "XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:aca1723-xml"]},
+    {"id": "access:aca1723-umich", "entity": "encoding:umich-cme:ACA1723.0001.001", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item page and full-text view", "url": "https://quod.lib.umich.edu/c/cme/ACA1723.0001.001", "alternate_urls": ["https://name.umdl.umich.edu/ACA1723.0001.001"], "cost": "free", "format": "HTML digital text with linked page images", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-aca1723"]},
+    {"id": "access:umich-raw-package", "entity": "facsimile:umich:aca1723-460-images", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "access_method": "Direct anonymous ZIP download from the U-M Internet Archive item", "url": "https://archive.org/download/aca1723.0001.001.umich.edu/aca1723.0001.001.umich.edu_umichbook.zip", "alternate_urls": ["https://archive.org/details/aca1723.0001.001.umich.edu"], "cost": "free", "format": "ZIP containing 460 TIFF images, OCR text, pageview data, header data, and XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-raw-package"]},
+    {"id": "access:pims-volumes", "entity": "facsimile:ia:pims-stonor-1919", "provider_id": "agent:internet-archive", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Internet Archive viewers and downloadable files for both volumes", "url": "https://archive.org/details/stonorletterspap01king", "alternate_urls": ["https://archive.org/details/stonorletterspap02king"], "cost": "free", "format": "Page images, PDF, OCR text, and derived formats", "last_checked": "2026-07-11", "evidence_ids": ["evidence:kingsford-volumes"]},
+    {"id": "access:tna-sc1-catalog", "entity": "witness:tna:SC1-stonor-correspondence", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Current SC 1/46 subgroup and item-level Discovery records", "url": "https://discovery.nationalarchives.gov.uk/details/r/C2601947", "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C12228065", "https://discovery.nationalarchives.gov.uk/details/r/C12228166"], "cost": "free", "format": "Catalog records; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-sc1"]},
+    {"id": "access:tna-c47-selected-catalog", "entity": "witness:tna:C47-37-selected", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Discovery component records for C 47/37; consult exact item references in Kingsford's headnotes and appendix", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908066", "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C5908067"], "cost": "free", "format": "Catalog records; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c47-selected"]},
+    {"id": "access:tna-c146-catalog", "entity": "witness:tna:C146-selected-deeds", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Discovery record for C 146/221 and item-level searches for other deed references", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5884680", "cost": "free", "format": "Catalog record; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c146"]},
+    {"id": "access:tna-sc6-catalog", "entity": "witness:tna:SC6-1250-6", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Exact Discovery item record", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5969469", "cost": "free", "format": "Catalog record; no public digital copy found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-sc6"]},
+    {"id": "access:tna-c1-catalog", "entity": "witness:tna:C1-31-534", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Exact Discovery item record", "url": "https://discovery.nationalarchives.gov.uk/details/r/C7443668", "cost": "free", "format": "Catalog record; no public digital copy found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c1"]},
+    {"id": "access:tna-sc1-copy", "entity": "witness:tna:SC1-stonor-correspondence", "provider_id": "agent:tna", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Request a page check and digital copies from TNA, quoting each exact SC 1 reference; onsite consultation requires a reader ticket and booking", "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/", "alternate_urls": ["https://www.nationalarchives.gov.uk/visit/researching-here/booking-a-visit-to-view-documents/"], "cost": "fee", "format": "Mediated digital copies or physical consultation", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-copying", "evidence:tna-access"]},
+    {"id": "access:tna-c47-copy", "entity": "witness:tna:C47-37-selected", "provider_id": "agent:tna", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Request a page check and copies using exact C 47/37 component references; onsite consultation is also available by booking", "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/", "cost": "fee", "format": "Mediated digital copies or physical consultation", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-copying", "evidence:tna-access"]},
+    {"id": "access:tna-c146-copy", "entity": "witness:tna:C146-selected-deeds", "provider_id": "agent:tna", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Request a page check and copies using exact C 146 references; onsite consultation is also available by booking", "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/", "cost": "fee", "format": "Mediated digital copies or physical consultation", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-copying", "evidence:tna-access"]},
+    {"id": "access:tna-sc6-copy", "entity": "witness:tna:SC6-1250-6", "provider_id": "agent:tna", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Request a page check and copies quoting SC 6/1250/6; onsite consultation is also available by booking", "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/", "cost": "fee", "format": "Mediated digital copies or physical consultation", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-copying", "evidence:tna-access"]},
+    {"id": "access:tna-c1-copy", "entity": "witness:tna:C1-31-534", "provider_id": "agent:tna", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Request a page check and copies quoting C 1/31/534; onsite consultation is also available by booking", "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/", "cost": "fee", "format": "Mediated digital copies or physical consultation", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-copying", "evidence:tna-access"]},
+    {"id": "access:supplement-1924", "entity": "edition:kingsford:stonor-supplement-1924", "provider_id": "agent:cambridge-university-press", "resource_kind": "digital_text", "status": "subscription_required", "access_method": "Cambridge Core article page; institutional access or purchase may be offered", "url": "https://doi.org/10.1017/S2042171000006907", "alternate_urls": ["https://www.cambridge.org/core/journals/camden-third-series/article/abs/supplementary-stonor-letters-and-papers-13141482/4C4CDDFE85620C8F57B12C2D3D62F777"], "cost": "fee", "format": "Online article/PDF access subject to Cambridge terms", "last_checked": "2026-07-11", "evidence_ids": ["evidence:kingsford-supplement-1924"]},
+    {"id": "access:carpenter-1996", "entity": "edition:carpenter:stonor-1996", "provider_id": "agent:cambridge-university-press", "resource_kind": "catalog_record", "status": "purchasable", "access_method": "Purchase the print book from Cambridge University Press or consult Google Books bibliographic/preview access", "url": "https://www.cambridge.org/pe/universitypress/subjects/history/british-history-1066-1450/kingsfords-stonor-letters-and-papers-12901483?format=PB", "alternate_urls": ["https://books.google.com/books/about/Kingsford_s_Stonor_Letters_and_Papers_12.html?id=YD0_AQAAMAAJ"], "cost": "fee", "format": "Print book product record; no digital download was verified", "last_checked": "2026-07-11", "evidence_ids": ["evidence:carpenter-1996"]},
+    {"id": "access:tna-c47-22-catalog", "entity": "witness:tna:C47-37-22-later-material", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Exact Discovery parent record with item-level descriptions", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908087", "cost": "free", "format": "Catalog hierarchy; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c47-later"]},
+    {"id": "access:tna-c47-23-catalog", "entity": "witness:tna:C47-37-23-household-book", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Exact Discovery record", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908088", "cost": "free", "format": "Catalog record; no public digital copy found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c47-later"]}
+  ],
+  "rights": [
+    {"id": "rights:aca1723-local-artifact", "entity": "artifact:general-corpus:aca1723", "component": "The local XML serialization and any repository-specific changes", "jurisdiction": "United States and repository/provider terms", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "The medieval documents and 1919 edition are public domain in the United States and U-M labels its item No Copyright–United States, but the local serialization has no explicit license and retains U-M's 2006 generic warning that other restrictions may apply.", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:aca1723-xml", "evidence:umich-aca1723", "evidence:copyright-office"]},
+    {"id": "rights:kingsford-1919-us", "entity": "edition:kingsford:stonor-1919", "component": "The medieval documentary texts, Kingsford's 1919 edited text, and 1919 editorial matter", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The underlying records are medieval and the edition was published in 1919, more than 95 years ago; U-M independently labels the corresponding item public domain in the United States.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:kingsford-volumes", "evidence:umich-aca1723", "evidence:copyright-office"]},
+    {"id": "rights:umich-encoding-us", "entity": "encoding:umich-cme:ACA1723.0001.001", "component": "Materials presented in U-M CME item ACA1723.0001.001", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "U-M currently labels the exact item public domain and applies No Copyright–United States.", "asserted_by_id": "agent:umich", "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-aca1723", "evidence:aca1723-xml"], "notes": ["NoC-US is jurisdiction-specific and is not a worldwide license; the embedded 2006 availability statement says other distribution restrictions may apply without specifying them."]},
+    {"id": "rights:umich-raw-images", "entity": "facsimile:umich:aca1723-460-images", "access_id": "access:umich-raw-package", "component": "U-M's 460 TIFF files and package derivatives", "jurisdiction": "Provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "The underlying 1919 edition is public domain in the United States, but the raw Internet Archive item exposes no item-specific license or rights field for the TIFF files.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-raw-package", "evidence:kingsford-volumes"], "notes": ["Public download does not by itself grant a reuse license for the digital-image files."]},
+    {"id": "rights:pims-ia-images", "entity": "facsimile:ia:pims-stonor-1919", "access_id": "access:pims-volumes", "component": "PIMS/Internet Archive page images and derivatives", "jurisdiction": "Provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "The underlying 1919 edition is public domain in the United States, but the two item metadata records expose no item-specific rights or license field for the scans.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:kingsford-volumes"]},
+    {"id": "rights:tna-sc1-underlying-us", "entity": "witness:tna:SC1-stonor-correspondence", "component": "The medieval written contents of the selected SC 1 records, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The documents and their creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-sc1", "evidence:copyright-office"]},
+    {"id": "rights:tna-c47-underlying-us", "entity": "witness:tna:C47-37-selected", "component": "The medieval written contents of the selected C 47/37 records, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The documents and their creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-c47-selected", "evidence:copyright-office"]},
+    {"id": "rights:tna-c146-underlying-us", "entity": "witness:tna:C146-selected-deeds", "component": "The medieval written contents of the selected C 146 deeds, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The deeds and their creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-c146", "evidence:copyright-office"]},
+    {"id": "rights:tna-sc6-underlying-us", "entity": "witness:tna:SC6-1250-6", "component": "The medieval written contents of SC 6/1250/6, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The account and its creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-sc6", "evidence:copyright-office"]},
+    {"id": "rights:tna-c1-underlying-us", "entity": "witness:tna:C1-31-534", "component": "The medieval written contents of C 1/31/534, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The petition and its creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-c1", "evidence:copyright-office"]},
+    {"id": "rights:tna-c47-22-underlying-us", "entity": "witness:tna:C47-37-22-later-material", "component": "The historical written contents of C 47/37/22, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The records and their creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-c47-later", "evidence:copyright-office"]},
+    {"id": "rights:tna-c47-23-underlying-us", "entity": "witness:tna:C47-37-23-household-book", "component": "The medieval written contents of C 47/37/23, excluding modern images, catalog prose, and transcriptions", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The account book and its creators predate modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:tna-c47-later", "evidence:copyright-office"]},
+    {"id": "rights:tna-sc1-images", "entity": "witness:tna:SC1-stonor-correspondence", "access_id": "access:tna-sc1-copy", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA allows ordered copies for private non-commercial research and education but requires Image Library permission and may charge fees for publication of record images.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-copying"]},
+    {"id": "rights:tna-c47-selected-images", "entity": "witness:tna:C47-37-selected", "access_id": "access:tna-c47-copy", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA's record-image publication rules and ordered-copy restrictions apply separately from the age of the underlying records.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-copying"]},
+    {"id": "rights:tna-c146-images", "entity": "witness:tna:C146-selected-deeds", "access_id": "access:tna-c146-copy", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA's record-image publication rules and ordered-copy restrictions apply separately from the age of the underlying records.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-copying"]},
+    {"id": "rights:tna-sc6-images", "entity": "witness:tna:SC6-1250-6", "access_id": "access:tna-sc6-copy", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA's record-image publication rules and ordered-copy restrictions apply separately from the age of the underlying record.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-copying"]},
+    {"id": "rights:tna-c1-images", "entity": "witness:tna:C1-31-534", "access_id": "access:tna-c1-copy", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA's record-image publication rules and ordered-copy restrictions apply separately from the age of the underlying record.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-copying"]},
+    {"id": "rights:kingsford-supplement-us", "entity": "edition:kingsford:stonor-supplement-1924", "component": "The medieval documents and Kingsford's 1924 supplementary edition", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "The underlying records are medieval and the supplement was published in 1924, more than 95 years ago.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:kingsford-supplement-1924", "evidence:copyright-office"], "notes": ["Cambridge's current platform version and access service remain subject to provider terms distinct from the underlying 1924 content."]},
+    {"id": "rights:carpenter-reprinted-historical-content-us", "entity": "edition:carpenter:stonor-1996", "component": "Reprinted medieval documents and Kingsford's 1919 and 1924 material", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "Reissue in a modern volume does not renew copyright in the medieval records or Kingsford's public-domain 1919 and 1924 editions.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:carpenter-1996", "evidence:kingsford-volumes", "evidence:kingsford-supplement-1924", "evidence:copyright-office"]},
+    {"id": "rights:carpenter-modern-matter", "entity": "edition:carpenter:stonor-1996", "component": "Christine Carpenter's 1996 introduction, annotations, supplementary listing, arrangement contributions, and other new matter", "jurisdiction": "United States and provider terms", "copyright_status": "copyrighted", "as_of": "2026-07-11", "basis": "The new scholarly matter was first published in 1996 and the edition remains commercially distributed by Cambridge University Press.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:carpenter-1996"]},
+    {"id": "rights:tna-c47-22-images", "entity": "witness:tna:C47-37-22-later-material", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA requires permission for publication of record images even when the underlying historical text is old.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-c47-later"]},
+    {"id": "rights:tna-c47-23-images", "entity": "witness:tna:C47-37-23-household-book", "component": "Any modern TNA-supplied photographs or digital copies", "jurisdiction": "TNA provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "TNA requires permission for publication of record images even when the underlying historical text is old.", "asserted_by_id": "agent:tna", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:tna-copyright", "evidence:tna-c47-later"]}
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:kingsford-selection",
+      "entity": "edition:kingsford:stonor-1919",
+      "practice": "selection",
+      "description": "Kingsford attempted to reconstruct the dispersed Stonor archive, printed all identified letters except fragments he judged too slight, gave full texts or abstracts of deeds and other records selected for interest, calendared further material, and added a few illustrative documents he expressly said did not belong to the archive.",
+      "scope": "The two-volume edited collection, including numbered documents and appendices",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kingsford-introduction", "evidence:kingsford-volumes"]
+    },
+    {
+      "id": "practice:kingsford-expansion",
+      "entity": "edition:kingsford:stonor-1919",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations and historical letterforms",
+      "representation": "Expanded forms with stated exceptions; modern u/v and i/j usage; thorn and yogh generally retained",
+      "description": "Kingsford says original spelling is retained, with limited expansion of abbreviated forms such as with and that, modernized distribution of u/v and i/j subject to characteristic exceptions, preservation of signature spelling, and general retention of thorn and yogh.",
+      "scope": "Printed letters and documentary transcriptions",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kingsford-introduction"]
+    },
+    {
+      "id": "practice:kingsford-arrangement",
+      "entity": "edition:kingsford:stonor-1919",
+      "practice": "selection",
+      "description": "Documents are arranged as nearly chronologically as Kingsford considered possible; letters of uncertain date concerning the same subject may be grouped together instead of placed by a strict inferred date.",
+      "scope": "Numbered sequence 1–333",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kingsford-introduction"]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:ACA1723.0001.001",
+      "practice": "selection",
+      "description": "The electronic text encodes the 333 numbered documents and Kingsford's prefatory notes but omits most textual front matter and all appendix, glossary, and index text; page milestones and linked images still represent those omitted pages.",
+      "scope": "Whole U-M electronic item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:aca1723-xml", "evidence:kingsford-volumes"],
+      "notes": ["The header states that OCR was not corrected and content was not edited; the encoding should not be treated as a diplomatic transcript of the archival documents or a complete electronic edition of all 1919 print matter."]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:aca1723-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/aca1723.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/aca1723.xml",
+      "locator": "HEADER; FRONT; BODY items 1–333; BACK",
+      "summary": "Identifies U-M item ACA1723.0001.001, Kingsford's 1919 two-volume source, 460 linked TIFF images, uncorrected OCR and TEI Level 1 encoding, generic availability terms, omitted front/back matter, 333 numbered documents, historical source citations, and Kingsford's headnotes and dates.",
+      "accessed_on": "2026-07-11",
+      "sha256": "1ce6205aee12d82613f596324df06aa2ef4385b04f4d0052ab2128bb3a781e7d"
+    },
+    {
+      "id": "evidence:umich-aca1723",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, CME item ACA1723.0001.001, The Stonor Letters and Papers, 1290–1483.",
+      "url": "https://quod.lib.umich.edu/c/cme/ACA1723.0001.001",
+      "alternate_urls": ["https://name.umdl.umich.edu/ACA1723.0001.001"],
+      "summary": "Confirms the stable item, public digital text, Kingsford 1919 source, page-image links, subjects, and U-M's current Public Domain/No Copyright–United States assertion.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-raw-package",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, U-M raw package for aca1723.0001.001.umich.edu.",
+      "url": "https://archive.org/details/aca1723.0001.001.umich.edu",
+      "alternate_urls": ["https://archive.org/download/aca1723.0001.001.umich.edu/aca1723.0001.001.umich.edu_umichbook.zip"],
+      "summary": "The anonymously retrievable ZIP was inspected and contains exactly 460 TIFF files matching the XML page references, plus pageview data, OCR text, header data, and an earlier U-M XML export. Item metadata identifies U-M provenance and provides no item-specific license or rights field.",
+      "accessed_on": "2026-07-11",
+      "notes": ["The embedded older XML export differs bytewise from the repository XML through declaration, identifiers, formatting, and header changes; content-level derivation is supported, but exact byte identity is not asserted."]
+    },
+    {
+      "id": "evidence:kingsford-volumes",
+      "type": "digital_surrogate",
+      "citation": "Charles Lethbridge Kingsford, ed., The Stonor Letters and Papers, 1290–1483, vols. I–II (1919), PIMS/Internet Archive scans.",
+      "url": "https://archive.org/details/stonorletterspap01king",
+      "alternate_urls": ["https://archive.org/details/stonorletterspap02king"],
+      "locator": "Title pages; vol. I pp. i–lvi and 1–165; vol. II pp. 1–224; appendices pp. 165–191; glossary and indexes pp. 192–224",
+      "summary": "Complete independent scans confirm publication and series data, two-volume pagination, numbered sequence 1–333, document texts and headnotes, introduction, appendices and calendars, glossary, and indexes. Item metadata identifies PIMS/U-Toronto digitization at 400 ppi in 2011 and provides no item-specific rights/license field.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:kingsford-introduction",
+      "type": "edition_statement",
+      "citation": "Kingsford, introduction, The Stonor Letters and Papers, vol. I (1919), pp. xxxvi–xlvii.",
+      "url": "https://archive.org/details/stonorletterspap01king",
+      "locator": "vol. I, pp. xxxvi–xxxviii and xlvii",
+      "summary": "Kingsford reconstructs the papers' archival dispersal, identifies Ancient Correspondence, Ancient Deeds, Ministers' Accounts, and Chancery Miscellanea, states his selection of almost all letters plus full texts or abstracts and calendars of other records, identifies a few added illustrative documents, describes chronological arrangement, and states spelling, abbreviation, u/v, i/j, thorn, and yogh practices. He counts 256 letters excluding fragments and more than 600 historical documents overall.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:rhs-camden-series",
+      "type": "official_webpage",
+      "citation": "Royal Historical Society, Camden Third Series publications list.",
+      "url": "https://files.royalhistsoc.org/wp-content/uploads/2019/11/17204821/Camden-Third-Series.pdf",
+      "summary": "Lists The Stonor Letters and Papers as Camden Third Series volumes XXIX and XXX (1919) and Supplementary Stonor Letters and Papers as volume XXXIV (1924).",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-crosswalk",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, current records for the archival classes and exact Stonor components cited by Kingsford.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C2601947",
+      "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C5908066", "https://discovery.nationalarchives.gov.uk/details/r/C5884680", "https://discovery.nationalarchives.gov.uk/details/r/C5969469", "https://discovery.nationalarchives.gov.uk/details/r/C7443668"],
+      "summary": "Supports the current SC 1, C 47, C 146, SC 6, and C 1 identifiers used in this manifest and demonstrates why Kingsford's historical designations must be retained separately rather than mechanically normalized.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-sc1",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, SC 1/46 and representative Stonor items SC 1/46/1 and SC 1/46/102.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C2601947",
+      "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C12228065", "https://discovery.nationalarchives.gov.uk/details/r/C12228166"],
+      "summary": "The current SC 1/46 subgroup is described at item level. Exact records identify John de Stonor's Valladolid letter of 11 April 1325 as SC 1/46/1 and Francis Lovell's 11 October 1483 letter to William Stonor as SC 1/46/102, matching Kingsford's historical A.C. xlvi references and collection endpoints.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-c47-selected",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, C 47/37/1 and C 47/37/2.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908066",
+      "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C5908067", "https://discovery.nationalarchives.gov.uk/details/r/C3608"],
+      "summary": "Current C 47 component records identify Stonor shrieval and estate records and Alice de Stonor's household account book within Chancery Miscellanea. The generic C 47 series history explains its formation by rearrangement of miscellaneous records; exact components support the selected holding.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-c146",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, C 146/221, grant by Richard de Stonor.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C5884680",
+      "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C3704"],
+      "summary": "The exact current record matches Kingsford item 1 and historical Ancient Deeds C. 221, but dates it broadly 1200–1300 rather than accepting Kingsford's c. 1290 without qualification. The C 146 series record describes the Ancient Deeds, Series C arrangement.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-sc6",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, SC 6/1250/6.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C5969469",
+      "summary": "Exact record for William Stonour's Watlington lands and arrears, dated 18 Edward IV, matching Kingsford item 228's historical Ministers Accounts 1250/6 citation.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-c1",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, C 1/31/534, Frende v Fortescue.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C7443668",
+      "summary": "The exact current record names John Frende and Richard Fortescue, concerns false imprisonment in Devon, and gives the alternative date ranges 1465–1471 or perhaps 1480–1483, establishing the match to Kingsford item 80 despite his printed historical citation Early Chancery Proceedings 31/34–36 and his editorial date 1466.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-c47-later",
+      "type": "official_catalog",
+      "citation": "The National Archives Discovery, C 47/37/22 and C 47/37/23.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908087",
+      "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C5908088"],
+      "summary": "The /22 parent is described at item level; current numbering reaches at least /157 and includes verso component records. The /23 record describes a 24-folio household account book and states that it was added in June 1998, after Carpenter's 1996 edition.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-access",
+      "type": "official_webpage",
+      "citation": "The National Archives, booking a visit to view documents and reader registration.",
+      "url": "https://www.nationalarchives.gov.uk/visit/researching-here/booking-a-visit-to-view-documents/",
+      "alternate_urls": ["https://www.nationalarchives.gov.uk/readers/reader-registration.html"],
+      "summary": "Provides current routes and requirements for obtaining a reader ticket, booking, and consulting original records onsite.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-copying",
+      "type": "official_webpage",
+      "citation": "The National Archives, record copying service and fees.",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/",
+      "alternate_urls": ["https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/fees/"],
+      "summary": "Explains page checks and mediated digital-copy orders. On 11 July 2026 the published fees were £9.92 for a page check, £1.52 per digital image up to A3, and £11.95 per image over A3; fees can change and do not grant publication rights.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:tna-copyright",
+      "type": "official_webpage",
+      "citation": "The National Archives, Copyright and re-use of materials.",
+      "url": "https://www.nationalarchives.gov.uk/terms-and-conditions/copyright/",
+      "summary": "Distinguishes Open Government Licence reuse of eligible written content and transcriptions from supplied record images. Ordered digital copies are limited to private non-commercial research and education, while publication of record images requires Image Library permission and may incur fees; TNA and the document reference should be credited.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:kingsford-supplement-1924",
+      "type": "official_webpage",
+      "citation": "Cambridge Core, Charles Lethbridge Kingsford, Supplementary Stonor Letters and Papers (1314–1482).",
+      "url": "https://doi.org/10.1017/S2042171000006907",
+      "alternate_urls": ["https://www.cambridge.org/core/journals/camden-third-series/article/abs/supplementary-stonor-letters-and-papers-13141482/4C4CDDFE85620C8F57B12C2D3D62F777"],
+      "summary": "Confirms title, author, Camden Third Series volume 34, December 1924 publication, pages 1–26, DOI, current Cambridge platform access, and later online publication date.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:carpenter-1996",
+      "type": "official_webpage",
+      "citation": "Cambridge University Press and Google Books, Kingsford's Stonor Letters and Papers 1290–1483, ed. Christine Carpenter (1996).",
+      "url": "https://www.cambridge.org/pe/universitypress/subjects/history/british-history-1066-1450/kingsfords-stonor-letters-and-papers-12901483?format=PB",
+      "alternate_urls": ["https://books.google.com/books/about/Kingsford_s_Stonor_Letters_and_Papers_12.html?id=YD0_AQAAMAAJ"],
+      "summary": "Confirms the 1996 Cambridge publication, Carpenter's editorship, ISBNs, 519-page extent, and reissue of Kingsford's three parts with a new introduction, annotation, and supplementary listing.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:noble-2009",
+      "type": "scholarly_source",
+      "citation": "Elizabeth Noble, The World of the Stonors: A Gentry Society (Woodbridge: Boydell, 2009), publisher page and preview.",
+      "url": "https://boydellandbrewer.com/book/the-world-of-the-stonors-pdf/",
+      "alternate_urls": ["https://api.pageplace.de/preview/DT0400.9781846157790_A47141060/preview-9781846157790_A47141060.pdf"],
+      "summary": "Noble distinguishes letters from the larger documentary archive, reports Kingsford's estimate of about 600 documents and 256 letters excluding fragments, describes 152 later-found documents or fragments listed by Carpenter, and notes the separately added C 47/37/23 household book after 1996.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:truelove-transcriptions",
+      "type": "scholarly_source",
+      "citation": "Alison Truelove, ‘Linguistic Diversity in the Fifteenth-Century Stonor Letters,’ Reading Medieval Studies 31 (2005).",
+      "url": "https://centaur.reading.ac.uk/84547/",
+      "alternate_urls": ["https://centaur.reading.ac.uk/84547/1/RMS-2005-04_A._Truelove%2C_Linguistic_Diversity_in_the_Fifteenth-Century_Stonor_Letters.pdf"],
+      "summary": "States that Kingsford's transcriptions are not consistently accurate and that the study used revised transcriptions, supporting caution about treating the 1919 text and uncorrected U-M OCR as diplomatic evidence for manuscript detail.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Supports the U.S. term assessment for the 1919 and 1924 publications and the continued protection of new 1996 scholarly matter.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:full-item-crosswalk",
+      "question": "What is the exact current TNA reference and representation type for every source document in Kingsford's 333 numbered units and appendices?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Create an item-level table from each Kingsford headnote and appendix entry to current Discovery records.", "Record whether each source is printed in full, excerpted, abstracted, merely cited, grouped with another document, or added from outside the historical Stonor archive.", "Confirm current references directly with TNA where catalog rearrangement prevents a mechanical crosswalk."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:kingsford-introduction", "evidence:aca1723-xml", "evidence:tna-crosswalk"]
+    },
+    {
+      "id": "question:c1-reference-history",
+      "question": "Why does Kingsford cite Early Chancery Proceedings 31/34–36 for John Frende v. Richard Fortescue while the exact current TNA record is C 1/31/534?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult historical Early Chancery Proceedings finding aids and TNA transfer/renumbering documentation.", "Ask TNA whether 31/34–36 was a legacy range, a typesetting error, or a designation for multiple membranes now cataloged under C 1/31/534."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:kingsford-volumes", "evidence:aca1723-xml", "evidence:tna-c1"]
+    },
+    {
+      "id": "question:later-material-count",
+      "question": "How do Carpenter's and Noble's 152 later-found documents or fragments correspond to the current C 47/37/22 hierarchy, whose numbered items reach at least 157 and include verso component records?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare Carpenter's supplementary listing item by item with the current Discovery export.", "Distinguish physical documents, fragments, catalog items, and separately described recto/verso components.", "Keep C 47/37/23 separate because it was added in 1998 and was unavailable to Carpenter's 1996 edition."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:noble-2009", "evidence:carpenter-1996", "evidence:tna-c47-later"]
+    },
+    {
+      "id": "question:digital-image-reuse",
+      "question": "What reuse terms govern the exact U-M raw TIFF package and the independent PIMS/Internet Archive scan derivatives?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Obtain written clarification from U-M and PIMS/Internet Archive before redistributing their page-image files.", "Rely on separately generated text or a clearly licensed source for publication workflows unless permission is confirmed.", "Keep the public-domain status of the 1919 content separate from provider terms for modern digital files."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:umich-aca1723", "evidence:umich-raw-package", "evidence:kingsford-volumes", "evidence:aca1723-xml"]
+    },
+    {
+      "id": "question:revised-transcriptions",
+      "question": "Is a complete scholarly edition or accessible corpus of Alison Truelove's revised Stonor transcriptions available for systematic comparison?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Consult Truelove's 2001 thesis and subsequent publication history.", "Ask the author or repository about access to complete revised transcriptions.", "Treat Kingsford's readings and U-M's uncorrected OCR as fallible when researching manuscript letterforms, abbreviations, or exact wording."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:truelove-transcriptions", "evidence:aca1723-xml"]
+    }
+  ]
+}

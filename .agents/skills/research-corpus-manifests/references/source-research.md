@@ -88,6 +88,11 @@ edition, and current institutional record. Use the repository's current exact
 shelfmark for the witness, but preserve malformed or legacy source forms in
 notes with the evidence that resolves them.
 
+For archival series that have been reorganized or renumbered, establish a
+legacy-to-current crosswalk from matching parties, titles, dates, contents, and
+context—not number resemblance alone. Preserve unresolved reference history
+instead of presenting a plausible numeric substitution as certain.
+
 ## Inspect the immediate edition
 
 Whenever possible, open the actual book and inspect:
