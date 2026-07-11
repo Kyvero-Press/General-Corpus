@@ -42,7 +42,9 @@ under `source-cache/<work_id>/`. Cache a verified file with:
 ```bash
 python3 scripts/cache-source-download.py CME00099 \
   https://example.org/exact-source.pdf \
-  --filename exact-source.pdf
+  --filename exact-source.pdf \
+  --label "Complete source PDF" \
+  --coverage complete
 ```
 
 The command prints a JSON `local_copies` snippet containing the relative path,
@@ -50,7 +52,9 @@ exact direct URL, SHA-256, byte count, media type, and date. Add the object to
 the matching access record and keep the human-facing landing page in `url`;
 the exact `source_url` must also be present in `url` or `alternate_urls`.
 Multiple files or volumes belong in the same `local_copies` array when they
-share an access route.
+share an access route. Every file states whether its coverage is `complete`,
+`partial`, `metadata_only`, or `unknown`, so an IIIF manifest or selected image
+cannot masquerade as a locally complete facsimile.
 
 The cache is research storage, not a redistribution channel. It is never
 copied into the viewer's public tree automatically. Manifest validation checks

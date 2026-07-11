@@ -154,6 +154,7 @@ const detail: WorkDetailRecord = {
             lastChecked: "2026-07-11",
             notes: [],
             localCopies: [{
+              label: "Complete Holthausen PDF",
               path: "source-cache/CME00099/holthausen.pdf",
               sourceUrl: "https://example.test/holthausen.pdf",
               sha256: "a".repeat(64),
@@ -161,6 +162,7 @@ const detail: WorkDetailRecord = {
               sizeLabel: "2.0 KiB",
               mediaType: "application/pdf",
               downloadedOn: "2026-07-11",
+              coverage: "complete",
               notes: [],
               available: true,
             }],
@@ -266,7 +268,9 @@ describe("App", () => {
       "https://example.test/holthausen",
     );
     expect(within(dialog).getByText("Downloaded locally")).toBeInTheDocument();
-    expect(within(dialog).getByText("Checksum-verified local copy")).toBeInTheDocument();
+    expect(
+      within(dialog).getByText("Checksum-verified local copy: Complete Holthausen PDF"),
+    ).toBeInTheDocument();
     expect(within(dialog).getByRole("link", { name: /Exact file download/ })).toHaveAttribute(
       "href",
       "https://example.test/holthausen.pdf",

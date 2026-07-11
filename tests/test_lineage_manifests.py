@@ -59,12 +59,14 @@ class LineageManifestTests(unittest.TestCase):
             manifest_path = root / "manifests/lineage/works/TestWork.json"
             payload = b"%PDF-1.7\nsource fixture\n%%EOF\n"
             local_copy = {
+                "label": "Complete source PDF",
                 "path": "source-cache/TestWork/source.pdf",
                 "source_url": "https://example.test/source.pdf",
                 "sha256": hashlib.sha256(payload).hexdigest(),
                 "bytes": len(payload),
                 "media_type": "application/pdf",
                 "downloaded_on": "2026-07-11",
+                "coverage": "complete",
             }
             manifest = {
                 "id": "lineage:TestWork",
@@ -125,12 +127,14 @@ class LineageManifestTests(unittest.TestCase):
                         "entity": "edition:test",
                         "url": "https://example.test/source",
                         "local_copies": [{
+                            "label": "Source PDF",
                             "path": "source-cache/OtherWork/source.pdf",
                             "source_url": "https://example.test/source.pdf",
                             "sha256": "0" * 64,
                             "bytes": 1,
                             "media_type": "application/pdf",
                             "downloaded_on": "2026-07-11",
+                            "coverage": "unknown",
                         }],
                         "evidence_ids": ["evidence:test"],
                     }

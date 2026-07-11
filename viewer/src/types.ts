@@ -207,6 +207,7 @@ export interface RightRecord {
 }
 
 export interface LocalCopyRecord {
+  label: string;
   path: string;
   sourceUrl: string;
   sha256: string;
@@ -214,6 +215,7 @@ export interface LocalCopyRecord {
   sizeLabel: string | null;
   mediaType: string;
   downloadedOn: string;
+  coverage: "complete" | "partial" | "metadata_only" | "unknown";
   notes: string[];
   available: boolean;
 }

@@ -103,14 +103,20 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "label",
         "path",
         "source_url",
         "sha256",
         "bytes",
         "media_type",
-        "downloaded_on"
+        "downloaded_on",
+        "coverage"
       ],
       "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
         "path": {
           "type": "string",
           "pattern": "^source-cache/[^/]+/[^/]+$"
@@ -132,6 +138,14 @@
         },
         "downloaded_on": {
           "$ref": "#/$defs/date"
+        },
+        "coverage": {
+          "enum": [
+            "complete",
+            "partial",
+            "metadata_only",
+            "unknown"
+          ]
         },
         "notes": {
           "type": "array",

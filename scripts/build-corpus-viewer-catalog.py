@@ -464,6 +464,7 @@ def _normalized_local_copy(
             raise CatalogError(f"lineage {work_id} local_copy checksum mismatch: {raw_path}")
     byte_count = local_copy.get("bytes")
     return {
+        "label": local_copy.get("label"),
         "path": raw_path,
         "sourceUrl": local_copy.get("source_url"),
         "sha256": local_copy.get("sha256"),
@@ -471,6 +472,7 @@ def _normalized_local_copy(
         "sizeLabel": format_bytes(byte_count) if isinstance(byte_count, int) else None,
         "mediaType": local_copy.get("media_type"),
         "downloadedOn": local_copy.get("downloaded_on"),
+        "coverage": local_copy.get("coverage"),
         "notes": local_copy.get("notes", []),
         "available": available,
     }

@@ -46,6 +46,8 @@ class SourceCacheTests(unittest.TestCase):
                 raw_url="https://example.test/source.pdf",
                 filename="source.pdf",
                 media_type=None,
+                label="Complete source PDF",
+                coverage="complete",
                 force=False,
             )
 
@@ -55,6 +57,8 @@ class SourceCacheTests(unittest.TestCase):
             self.assertEqual("https://example.test/source.pdf", result["source_url"])
             self.assertEqual("application/pdf", result["media_type"])
             self.assertEqual(len(payload), result["bytes"])
+            self.assertEqual("Complete source PDF", result["label"])
+            self.assertEqual("complete", result["coverage"])
 
     def test_download_rejects_html_disguised_as_pdf(self) -> None:
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(
@@ -72,6 +76,8 @@ class SourceCacheTests(unittest.TestCase):
                     raw_url="https://example.test/source.pdf",
                     filename="source.pdf",
                     media_type=None,
+                    label="Source PDF",
+                    coverage="unknown",
                     force=False,
                 )
 
@@ -83,6 +89,8 @@ class SourceCacheTests(unittest.TestCase):
                 raw_url="https://example.test/source.pdf",
                 filename="source.pdf",
                 media_type=None,
+                label="Source PDF",
+                coverage="unknown",
                 force=False,
             )
         with self.assertRaisesRegex(cache_source_download.CacheError, "cache filename"):
@@ -92,6 +100,8 @@ class SourceCacheTests(unittest.TestCase):
                 raw_url="https://example.test/source.pdf",
                 filename="../source.pdf",
                 media_type=None,
+                label="Source PDF",
+                coverage="unknown",
                 force=False,
             )
 

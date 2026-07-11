@@ -197,12 +197,14 @@ class CatalogFixture:
         assert isinstance(access, dict)
         source_url = "https://example.test/scan.pdf"
         access["local_copies"] = [{
+            "label": "Complete test source PDF",
             "path": relative.as_posix(),
             "source_url": source_url,
             "sha256": hashlib.sha256(content).hexdigest(),
             "bytes": len(content),
             "media_type": "application/pdf",
             "downloaded_on": "2026-07-11",
+            "coverage": "complete",
         }]
         self.write_manifests()
         return path

@@ -55,13 +55,17 @@ reproducible:
 
 ```bash
 python3 scripts/cache-source-download.py WORK_ID EXACT_FILE_URL \
-  --filename stable-name.pdf
+  --filename stable-name.pdf \
+  --label "Complete edition PDF" \
+  --coverage complete
 ```
 
 Add the emitted object to the access record's `local_copies` array. Its
 `source_url` must also appear as `access.url` or in `alternate_urls`, while the
 landing page remains available as a human-readable route. Use one array item
-per deliverable or volume. The manifest records that a research copy was made;
+per deliverable or volume. Label whether coverage is `complete`, `partial`,
+`metadata_only`, or `unknown`; a cached IIIF manifest alone is metadata, not a
+complete facsimile. The manifest records that a research copy was made;
 the viewer checks whether the ignored file is present in the current checkout.
 Never infer redistribution permission from local caching, and never copy the
 cache into a public web build without an independently supported right to do

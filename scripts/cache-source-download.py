@@ -67,6 +67,8 @@ def download(
     raw_url: str,
     filename: str,
     media_type: str | None,
+    label: str,
+    coverage: str,
     force: bool,
 ) -> dict[str, object]:
     if not SAFE_WORK_ID.fullmatch(work_id):
@@ -123,12 +125,14 @@ def download(
             temp_path.unlink()
 
     return {
+        "label": label,
         "path": relative.as_posix(),
         "source_url": url,
         "sha256": sha256(destination),
         "bytes": destination.stat().st_size,
         "media_type": media_type or response_media_type,
         "downloaded_on": date.today().isoformat(),
+        "coverage": coverage,
     }
 
 
@@ -141,6 +145,16 @@ def parser() -> argparse.ArgumentParser:
         help="safe cache filename; defaults to the decoded URL path basename",
     )
     result.add_argument("--media-type", help="override the HTTP response media type")
+    result.add_argument(
+        "--label",
+        help="human-readable file label; defaults to the cache filename",
+    )
+    result.add_argument(
+        "--coverage",
+        choices=("complete", "partial", "metadata_only", "unknown"),
+        default="unknown",
+        help="how completely this file represents the described source",
+    )
     result.add_argument("--force", action="store_true", help="replace differing cached content")
     result.add_argument(
         "--root",
@@ -160,6 +174,8 @@ def main(argv: list[str] | None = None) -> int:
             raw_url=args.url,
             filename=args.filename or infer_filename(args.url),
             media_type=args.media_type,
+            label=args.label or args.filename or infer_filename(args.url),
+            coverage=args.coverage,
             force=args.force,
         )
     except CacheError as exc:

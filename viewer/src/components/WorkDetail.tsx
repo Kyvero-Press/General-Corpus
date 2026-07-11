@@ -171,8 +171,8 @@ function AccessCard({ access }: { access: AccessRecord }) {
         >
           <strong>
             {localCopy.available
-              ? "Checksum-verified local copy"
-              : "Local copy recorded, but absent in this checkout"}
+              ? `Checksum-verified local copy: ${localCopy.label}`
+              : `Local copy recorded but absent: ${localCopy.label}`}
           </strong>
           <dl>
             <div>
@@ -182,6 +182,10 @@ function AccessCard({ access }: { access: AccessRecord }) {
             <div>
               <dt>File</dt>
               <dd>{localCopy.sizeLabel ?? `${localCopy.bytes} bytes`} · {localCopy.mediaType}</dd>
+            </div>
+            <div>
+              <dt>Coverage</dt>
+              <dd>{humanizeToken(localCopy.coverage)}</dd>
             </div>
             <div>
               <dt>Downloaded</dt>
