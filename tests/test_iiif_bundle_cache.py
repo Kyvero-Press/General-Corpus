@@ -237,6 +237,35 @@ class IiifBundleCacheTests(unittest.TestCase):
             sources[0]["image_url"],
         )
 
+    def test_provider_spaces_are_encoded_and_narrow_canvases_are_not_upscaled(self) -> None:
+        manifest = iiif_v2_manifest()
+        canvases = manifest["sequences"][0]["canvases"]  # type: ignore[index]
+        canvases[0]["width"] = 800
+        canvases[0]["@id"] = "https://example.test/canvas/front cover"
+        canvases[0]["images"][0]["resource"]["service"]["@id"] = (
+            "https://example.test/image/front cover"
+        )
+        canvases[1]["width"] = 2400
+
+        sources = cache_iiif_bundle.extract_canvas_sources(
+            manifest,
+            image_size="1600,",
+        )
+
+        self.assertEqual(
+            "https://example.test/canvas/front%20cover",
+            sources[0]["canvas_url"],
+        )
+        self.assertEqual(
+            "https://example.test/image/front%20cover/full/full/0/default.jpg",
+            sources[0]["image_url"],
+        )
+        self.assertEqual("full", sources[0]["image_request_size"])
+        self.assertEqual(
+            "https://example.test/image/2/full/1600,/0/default.jpg",
+            sources[1]["image_url"],
+        )
+
     def test_work_portion_requires_label_and_locator(self) -> None:
         args = cache_iiif_bundle.parser().parse_args([
             "TestWork",

@@ -85,6 +85,10 @@ the recorded request-size profile in `notes`.
 Interrupted bundles resume only from staging images whose recorded URL still
 matches. Keep the default single worker for fragile services; use a modest
 `--workers` value only when the provider can sustain parallel requests.
+Retain the original Presentation manifest even when retrieval must percent-
+encode literal spaces in provider service URLs. Do not force an upscale of
+narrow canvases: use their native `full`/`max` response and preserve mixed
+effective request profiles in the bundle inventory.
 
 If the provider publishes every Image API surface but no Presentation
 manifest, do not invent canvases or downgrade an obtainable whole codex to a

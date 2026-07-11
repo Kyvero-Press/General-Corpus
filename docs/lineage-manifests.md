@@ -87,6 +87,12 @@ does not claim access to an archive's preservation masters.
 Large objects can be resumed from URL-matched staging files. The default uses
 one request at a time; `--workers 4` (up to 32) permits conservative parallel
 retrieval when the provider service can support it.
+Provider manifests are stored byte-for-byte even when their service URLs need
+standards-compliant `%20` encoding for literal spaces. For simple width,
+height, or bounding-box requests, canvases smaller than the requested size use
+the Image API's native `full`/`max` form instead of requesting an unsupported
+upscale; every effective request profile remains recorded in the inventory and
+bundle notes.
 
 Some providers publish a complete facsimile as individual Image API services
 without a Presentation manifest. In that case, pass the official whole-

@@ -54,6 +54,14 @@ def validate_url(raw_url: str) -> str:
     return raw_url
 
 
+def normalize_provider_url(raw_url: str) -> str:
+    """Encode literal provider URL spaces while rejecting all other whitespace."""
+
+    if any(character.isspace() and character != " " for character in raw_url):
+        raise BundleError("provider URL contains unsupported whitespace")
+    return validate_url(raw_url.replace(" ", "%20"))
+
+
 def validate_filename(filename: str) -> str:
     if not SAFE_FILENAME.fullmatch(filename):
         raise BundleError(
@@ -149,7 +157,7 @@ def _image_url(
 
     direct = body.get("id") or body.get("@id")
     if isinstance(direct, str) and direct:
-        return validate_url(direct), "provider_resource"
+        return normalize_provider_url(direct), "provider_resource"
     raise BundleError("canvas painting annotation has no downloadable image body")
 
 
@@ -200,6 +208,31 @@ def _v3_body(canvas: dict[str, Any]) -> dict[str, Any] | None:
     return _first_mapping(body)
 
 
+def _non_upscaling_size(image_size: str | None, canvas: dict[str, Any]) -> str | None:
+    """Use the service's native-size keyword when a simple request would upscale."""
+
+    if image_size is None:
+        return None
+    width = canvas.get("width")
+    height = canvas.get("height")
+    width_match = re.fullmatch(r"(\d+),", image_size)
+    if width_match and isinstance(width, int) and width < int(width_match.group(1)):
+        return None
+    height_match = re.fullmatch(r",(\d+)", image_size)
+    if height_match and isinstance(height, int) and height < int(height_match.group(1)):
+        return None
+    box_match = re.fullmatch(r"!(\d+),(\d+)", image_size)
+    if (
+        box_match
+        and isinstance(width, int)
+        and isinstance(height, int)
+        and width < int(box_match.group(1))
+        and height < int(box_match.group(2))
+    ):
+        return None
+    return image_size
+
+
 def extract_canvas_sources(
     manifest: dict[str, Any],
     *,
@@ -223,7 +256,7 @@ def extract_canvas_sources(
             raise BundleError(f"canvas {index} has no painting image")
         image_url, request_size = _image_url(
             body,
-            image_size=image_size,
+            image_size=_non_upscaling_size(image_size, canvas),
             image_format=image_format,
         )
         canvas_url = canvas.get("id") or canvas.get("@id")
@@ -233,8 +266,8 @@ def extract_canvas_sources(
             {
                 "index": index,
                 "label": _label(canvas.get("label"), f"Canvas {index}"),
-                "canvas_url": validate_url(canvas_url),
-                "image_url": validate_url(image_url),
+                "canvas_url": normalize_provider_url(canvas_url),
+                "image_url": normalize_provider_url(image_url),
                 "image_request_size": request_size,
                 "presentation_version": presentation_version,
             }
@@ -284,8 +317,8 @@ def extract_image_url_sources(path: Path) -> list[dict[str, Any]]:
             {
                 "index": index,
                 "label": label,
-                "canvas_url": validate_url(canvas_url) if canvas_url else None,
-                "image_url": validate_url(image_url),
+                "canvas_url": normalize_provider_url(canvas_url) if canvas_url else None,
+                "image_url": normalize_provider_url(image_url),
                 "image_request_size": "provider_resource",
                 "presentation_version": None,
                 "reuse_path": reuse_path,
