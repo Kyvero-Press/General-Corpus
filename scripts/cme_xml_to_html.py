@@ -11,8 +11,10 @@ format.
 from __future__ import annotations
 
 import argparse
+import copy
 import re
 import sys
+import unicodedata
 from dataclasses import dataclass
 from html import escape, unescape
 from pathlib import Path
@@ -308,15 +310,28 @@ def require_format(requested: str, detected: str, path: Path) -> None:
 
 
 def primary_text_nodes(root: etree._Element, fmt: str) -> list[etree._Element]:
-    """Return the top-level textual payload nodes, not nested quoted TEXT tags."""
+    """Return top-level textual payload nodes without falling back to metadata.
+
+    Malformed or reduced fixtures occasionally omit the format's expected
+    ``TEXT``/``EEBO`` wrapper.  In those shapes, rendering no body is safer than
+    treating the document root (and therefore headers or revision metadata) as
+    primary text.  A direct ``BODY`` remains a narrow, unambiguous fallback.
+    """
     if fmt == "dlpstextclass" or fmt == "tei2":
         text = first_child(root, "TEXT")
-        return [text] if text is not None else [root]
+        if text is not None:
+            return [text]
+        body = first_child(root, "BODY")
+        return [body] if body is not None else []
 
     if fmt.startswith("ets"):
         eebo = first_child(root, "EEBO")
         if eebo is None:
-            return [root]
+            text = first_child(root, "TEXT")
+            if text is not None:
+                return [text]
+            body = first_child(root, "BODY")
+            return [body] if body is not None else []
         nodes: list[etree._Element] = []
         for child in child_elements(eebo):
             child_tag = tagu(child)
@@ -324,7 +339,10 @@ def primary_text_nodes(root: etree._Element, fmt: str) -> list[etree._Element]:
                 nodes.append(child)
             elif child_tag == "GROUP":
                 nodes.extend(child_elements(child, "TEXT"))
-        return nodes or [eebo]
+        if nodes:
+            return nodes
+        body = first_child(eebo, "BODY")
+        return [body] if body is not None else []
 
     return [root]
 
@@ -954,6 +972,115 @@ def is_block_element(el: etree._Element) -> bool:
 
 def has_block_child(el: etree._Element) -> bool:
     return any(is_block_element(child) for child in child_elements(el))
+
+
+PAYLOAD_HAS_WORD_BREAK_VERBAR = etree.XPath(
+    "boolean(.//text()[contains(., '∣')])"
+)
+
+
+def payload_has_word_break_verbar(nodes: Iterable[etree._Element]) -> bool:
+    """Return whether selected rendered payload text contains U+2223."""
+    return any(PAYLOAD_HAS_WORD_BREAK_VERBAR(node) for node in nodes)
+
+
+def normalize_word_break_verbars(
+    nodes: Iterable[etree._Element],
+    opts: Options,
+    fmt: str,
+) -> set[etree._Element]:
+    """Remove transcriptional U+2223 word-break markers from rendered flows.
+
+    A marker is removed only when its immediately adjacent visible characters
+    are both Unicode alphabetic characters.  Ordinary inline elements do not
+    interrupt adjacency.  Blocks, explicit line breaks, lexical ENTRY/FORM
+    units, notes, gaps, and milestones do: the latter wrappers either render a
+    bracketed label or are deliberately suppressed, so their source text must
+    never provide adjacency for the surrounding flow.  Included note content
+    is normalized independently.
+    """
+
+    changed_nodes: set[etree._Element] = set()
+    for node in nodes:
+        flow: list[tuple[etree._Element, str]] = []
+
+        def flush() -> None:
+            if not flow:
+                return
+            if not any("∣" in (getattr(owner, field) or "") for owner, field in flow):
+                flow.clear()
+                return
+            values = [getattr(owner, field) or "" for owner, field in flow]
+            combined = "".join(values)
+
+            def alphabetic_before(index: int) -> bool:
+                index -= 1
+                while index >= 0 and unicodedata.category(combined[index]).startswith("M"):
+                    index -= 1
+                return index >= 0 and combined[index].isalpha()
+
+            remove_at = {
+                index
+                for index, char in enumerate(combined)
+                if char == "∣"
+                and alphabetic_before(index)
+                and index + 1 < len(combined)
+                and combined[index + 1].isalpha()
+            }
+            if remove_at:
+                offset = 0
+                for (owner, field), value in zip(flow, values):
+                    normalized = "".join(
+                        char
+                        for local_index, char in enumerate(value)
+                        if offset + local_index not in remove_at
+                    )
+                    if normalized != value:
+                        setattr(owner, field, normalized)
+                        changed_nodes.add(owner)
+                    offset += len(value)
+            flow.clear()
+
+        def append(owner: etree._Element, field: str) -> None:
+            if getattr(owner, field):
+                flow.append((owner, field))
+
+        def walk(container: etree._Element) -> None:
+            append(container, "text")
+            for child in container:
+                if not isinstance(child.tag, str):
+                    continue
+                child_tag = local_name(child.tag).upper()
+                is_special_boundary = (
+                    child_tag == "GAP"
+                    or child_tag in MILESTONE_TAGS
+                    or bool(NOTE_TAG_RE.match(child_tag))
+                )
+                is_headword_boundary = fmt == "headwords" and child_tag in {
+                    "ENTRY",
+                    "FORM",
+                }
+                if (
+                    child_tag == "LB"
+                    or is_block_tag_name(child_tag)
+                    or has_block_child(child)
+                    or is_special_boundary
+                    or is_headword_boundary
+                ):
+                    flush()
+                    if not is_special_boundary or (
+                        NOTE_TAG_RE.match(child_tag) and opts.include_notes
+                    ):
+                        walk(child)
+                    flush()
+                else:
+                    walk(child)
+                append(child, "tail")
+
+        walk(node)
+        flush()
+
+    return changed_nodes
 
 
 def append_inline_segments(parts: list[str], segments: list[str]) -> None:
@@ -1589,20 +1716,45 @@ def render_node(el: etree._Element, opts: Options) -> str:
     return f"<span{render_attrs(el, tag.lower())}>{render_inline_children(el, opts)}</span>"
 
 
-def render_headwords(root: etree._Element, opts: Options) -> str:
-    """Render the lexical headword file as flowing paragraphs.
+def render_headwords(
+    root: etree._Element,
+    opts: Options,
+    normalized_nodes: set[etree._Element] | None = None,
+) -> str:
+    """Render lexical entries, preserving the compact legacy path by default.
 
-    Large tables or definition-list labels become oversized TeX boxes when
-    converted to PDF.  Flowing paragraphs keep the lexical records readable and
-    allow TeX to wrap long form lists naturally.
+    Only an entry whose content had a word-break marker removed needs the
+    structure-preserving inline renderer.  Unaffected entries retain the
+    compact plain-text output used before word-break normalization.
     """
+    normalized_nodes = normalized_nodes or set()
     items: list[str] = []
     for entry in child_elements(root, "ENTRY"):
         entry_id = attr(entry, "ID") or ""
         seq = attr(entry, "SEQ") or ""
-        form = first_child(entry, "FORM")
+        forms = child_elements(entry, "FORM")
+        targets = forms or [entry]
+        normalized_targets = (
+            {
+                target
+                for target in targets
+                if any(node in normalized_nodes for node in target.iter())
+            }
+            if normalized_nodes
+            else set()
+        )
+        if normalized_targets:
+            bodies = [
+                render_inline_children(target, opts).strip()
+                if target in normalized_targets
+                else html_text(spaced_text_content(target))
+                for target in targets
+            ]
+            body = " ".join(body for body in bodies if has_visible_html(body))
+        else:
+            form = first_child(entry, "FORM")
+            body = html_text(spaced_text_content(form if form is not None else entry))
         label = " ".join(html_text(bit) for bit in (seq, entry_id) if bit)
-        body = html_text(spaced_text_content(form if form is not None else entry))
         prefix = f"<strong>{label}</strong> " if label else ""
         items.append(f"<p class=\"headword-entry\">{prefix}{body}</p>\n")
     return "<div class=\"headwords\">\n" + "".join(items) + "</div>\n"
@@ -1713,10 +1865,19 @@ def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> s
 </div>
 """
 
-    if fmt == "headwords":
-        body = render_headwords(root, opts)
+    source_payload_nodes = primary_text_nodes(root, fmt)
+    normalized_nodes: set[etree._Element] = set()
+    if payload_has_word_break_verbar(source_payload_nodes):
+        render_root = copy.deepcopy(root)
+        rendered_payload_nodes = primary_text_nodes(render_root, fmt)
+        normalized_nodes = normalize_word_break_verbars(rendered_payload_nodes, opts, fmt)
     else:
-        body = "\n".join(render_node(node, opts) for node in primary_text_nodes(root, fmt))
+        render_root = root
+        rendered_payload_nodes = source_payload_nodes
+    if fmt == "headwords":
+        body = render_headwords(render_root, opts, normalized_nodes)
+    else:
+        body = "\n".join(render_node(node, opts) for node in rendered_payload_nodes)
 
     return f"""<!doctype html>
 <html lang="en">

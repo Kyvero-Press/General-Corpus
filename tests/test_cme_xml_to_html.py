@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from lxml import etree
 
@@ -21,6 +22,290 @@ def render_lg(xml: str, **option_overrides: object) -> str:
     element = etree.fromstring(xml.encode("utf-8"))
     options = cme_xml_to_html.Options(**option_overrides)
     return cme_xml_to_html.render_lg(element, options)
+
+
+def render_document_fixture(xml: str, **option_overrides: object) -> str:
+    root = etree.fromstring(xml.encode("utf-8"))
+    parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+    fmt = cme_xml_to_html.detect_format(root)
+    return cme_xml_to_html.render_document(
+        Path("CMEFIXTURE.xml"),
+        parsed,
+        fmt,
+        cme_xml_to_html.Options(**option_overrides),
+    )
+
+
+class WordBreakVerbarNormalizationTests(unittest.TestCase):
+    def test_plain_alphabetic_verbar_joins_word(self) -> None:
+        html = render_document_fixture(
+            "<DLPSTEXTCLASS><TEXT><BODY><P>dili∣gatis</P></BODY></TEXT></DLPSTEXTCLASS>"
+        )
+
+        self.assertIn("<p>diligatis</p>", html)
+        self.assertNotIn("<p>dili∣gatis</p>", html)
+
+    def test_decomposed_alphabetic_character_before_verbar_joins_word(self) -> None:
+        html = render_document_fixture(
+            "<DLPSTEXTCLASS><TEXT><BODY><P>mȳ∣stralsy</P></BODY></TEXT></DLPSTEXTCLASS>"
+        )
+
+        self.assertIn("<p>mȳstralsy</p>", html)
+
+    def test_verbar_joins_across_inline_markup_in_both_directions(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>dili∣<HI REND="italic">gatis</HI></P>
+              <P><HI REND="italic">con</HI>∣tinue</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("<p>dili<em>gatis</em></p>", html)
+        self.assertIn("<p><em>con</em>tinue</p>", html)
+
+    def test_standalone_and_other_verbars_are_preserved(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha ∣ beta; gamma|delta; epsilon‖zeta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("alpha ∣ beta; gamma|delta; epsilon‖zeta", html)
+
+    def test_punctuation_digits_and_edge_contexts_are_preserved(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>∣alpha alpha∣ alpha∣, .∣alpha a∣2 2∣b</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("∣alpha alpha∣ alpha∣, .∣alpha a∣2 2∣b", html)
+
+    def test_block_and_explicit_lb_boundaries_prevent_join(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣</P><P>beta</P>
+              <P>gamma∣<LB />delta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("<p>alpha∣</p>", html)
+        self.assertIn("<p>beta</p>", html)
+        self.assertIn("<p>gamma∣<br />delta</p>", html)
+
+    def test_verse_lines_keep_structure_and_do_not_join_across_l_boundaries(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY><LG>
+              <L>dili∣<HI REND="italic">gatis</HI></L>
+              <L>alpha∣</L>
+              <L>beta</L>
+            </LG></BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn("dili<em>gatis</em><br />\nalpha∣<br />\nbeta", html)
+        self.assertEqual(html.count('<p class="verse-lines">'), 1)
+        self.assertEqual(html.count("<br />"), 2)
+
+    def test_included_notes_are_boundaries_and_normalize_their_own_content(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣<NOTE>dili∣gatis</NOTE>beta</P>
+              <P>alpha<NOTE>beta</NOTE>∣gamma</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn('alpha∣<span class="note">[diligatis]</span>beta', html)
+        self.assertIn('alpha<span class="note">[beta]</span>∣gamma', html)
+
+    def test_omitted_notes_remain_boundaries_on_both_marker_sides(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣<NOTE>hidden</NOTE>beta</P>
+              <P>alpha<NOTE>hidden</NOTE>∣beta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """,
+            include_notes=False,
+        )
+
+        self.assertEqual(html.count("<p>alpha∣beta</p>"), 2)
+
+    def test_gap_is_a_visible_boundary_on_both_marker_sides(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣<GAP />beta</P>
+              <P>alpha<GAP />∣beta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn('alpha∣<span class="gap">[gap]</span>beta', html)
+        self.assertIn('alpha<span class="gap">[gap]</span>∣beta', html)
+
+    def test_suppressed_milestones_remain_boundaries_on_both_marker_sides(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣<PB N="2" />beta</P>
+              <P>alpha<PB N="3" />∣beta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertEqual(html.count("<p>alpha∣beta</p>"), 2)
+        self.assertNotIn("[pb", html)
+
+    def test_preserved_milestones_are_visible_boundaries_on_both_marker_sides(self) -> None:
+        html = render_document_fixture(
+            """
+            <DLPSTEXTCLASS><TEXT><BODY>
+              <P>alpha∣<PB N="2" />beta</P>
+              <P>alpha<PB N="3" />∣beta</P>
+            </BODY></TEXT></DLPSTEXTCLASS>
+            """,
+            preserve_milestones=True,
+        )
+
+        self.assertIn('alpha∣<span class="milestone" data-n="2">[pb 2]</span>beta', html)
+        self.assertIn('alpha<span class="milestone" data-n="3">[pb 3]</span>∣beta', html)
+
+    def test_headword_entries_and_forms_are_structural_flow_boundaries(self) -> None:
+        html = render_document_fixture(
+            "<HEADWORDS><ENTRY><FORM>alpha∣</FORM></ENTRY>"
+            "<ENTRY><FORM>beta</FORM></ENTRY></HEADWORDS>"
+        )
+
+        self.assertIn('<p class="headword-entry">alpha∣</p>', html)
+        self.assertIn('<p class="headword-entry">beta</p>', html)
+
+    def test_headword_same_form_inline_markup_remains_contiguous(self) -> None:
+        html = render_document_fixture(
+            """
+            <HEADWORDS>
+              <ENTRY><FORM>dili∣<HI REND="italic">gatis</HI></FORM></ENTRY>
+            </HEADWORDS>
+            """
+        )
+
+        self.assertIn('<p class="headword-entry">dili<em>gatis</em></p>', html)
+
+    def test_marker_free_dlpstextclass_payload_skips_copy(self) -> None:
+        xml = "<DLPSTEXTCLASS><TEXT><BODY><P>plain text</P></BODY></TEXT></DLPSTEXTCLASS>"
+
+        with mock.patch.object(
+            cme_xml_to_html.copy,
+            "deepcopy",
+            side_effect=AssertionError("marker-free payload must not be copied"),
+        ):
+            html = render_document_fixture(xml)
+
+        self.assertIn("<p>plain text</p>", html)
+
+    def test_marker_free_payload_skips_copy_and_preserves_legacy_headword_rendering(self) -> None:
+        xml = """
+            <HEADWORDS>
+              <ENTRY ID="one"><FORM>alpha<HI REND="italic">beta</HI>gamma</FORM></ENTRY>
+            </HEADWORDS>
+        """
+
+        with mock.patch.object(
+            cme_xml_to_html.copy,
+            "deepcopy",
+            side_effect=AssertionError("marker-free payload must not be copied"),
+        ):
+            html = render_document_fixture(xml)
+
+        self.assertIn(
+            '<p class="headword-entry"><strong>one</strong> alpha betagamma</p>',
+            html,
+        )
+        self.assertNotIn("<em>beta</em>", html)
+
+    def test_only_headword_form_with_removed_marker_uses_inline_rendering(self) -> None:
+        html = render_document_fixture(
+            """
+            <HEADWORDS>
+              <ENTRY ID="affected"><FORM>dili∣<HI REND="italic">gatis</HI></FORM></ENTRY>
+              <ENTRY ID="legacy"><FORM>alpha<HI REND="italic">beta</HI>gamma</FORM></ENTRY>
+            </HEADWORDS>
+            """
+        )
+
+        self.assertIn(
+            '<strong>affected</strong> dili<em>gatis</em>',
+            html,
+        )
+        self.assertIn(
+            '<strong>legacy</strong> alpha betagamma',
+            html,
+        )
+        self.assertNotIn('<strong>legacy</strong> alpha<em>beta</em>gamma', html)
+
+    def test_metadata_is_not_normalized_with_rendered_primary_text(self) -> None:
+        root = etree.fromstring(
+            """
+            <DLPSTEXTCLASS>
+              <HEADER><FILEDESC><TITLESTMT><TITLE>Meta∣data</TITLE></TITLESTMT></FILEDESC>
+                <REVISIONDESC><CHANGE>revi∣sion</CHANGE></REVISIONDESC>
+              </HEADER>
+              <TEXT><BODY><P>pri∣mary</P></BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """.encode("utf-8")
+        )
+        parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+
+        html = cme_xml_to_html.render_document(
+            Path("CMEFIXTURE.xml"),
+            parsed,
+            "dlpstextclass",
+            cme_xml_to_html.Options(),
+        )
+
+        self.assertIn("<title>Meta∣data</title>", html)
+        self.assertIn("<p>primary</p>", html)
+        self.assertNotIn("<p>pri∣mary</p>", html)
+        self.assertEqual(root.xpath("string(HEADER/REVISIONDESC/CHANGE)"), "revi∣sion")
+        self.assertEqual(root.xpath("string(TEXT/BODY/P)"), "pri∣mary")
+
+    def test_missing_primary_payload_does_not_normalize_or_render_metadata(self) -> None:
+        fixtures = (
+            """
+            <DLPSTEXTCLASS>
+              <HEADER><FILEDESC><TITLESTMT><TITLE>Meta∣data</TITLE></TITLESTMT></FILEDESC>
+                <REVISIONDESC><CHANGE>revi∣sion</CHANGE></REVISIONDESC>
+              </HEADER>
+            </DLPSTEXTCLASS>
+            """,
+            """
+            <ETS>
+              <HEADER><FILEDESC><TITLESTMT><TITLE>Meta∣data</TITLE></TITLESTMT></FILEDESC>
+                <REVISIONDESC><CHANGE>revi∣sion</CHANGE></REVISIONDESC>
+              </HEADER>
+            </ETS>
+            """,
+        )
+
+        for xml in fixtures:
+            with self.subTest(root=etree.fromstring(xml.encode("utf-8")).tag):
+                html = render_document_fixture(xml)
+
+                self.assertIn("<title>Meta∣data</title>", html)
+                self.assertNotIn("Meta<span", html)
+                self.assertNotIn("revisiondesc", html)
+                self.assertNotIn("revi∣sion</span>", html)
 
 
 class RenderLgContinuationTests(unittest.TestCase):
