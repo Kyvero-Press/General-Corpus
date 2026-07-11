@@ -282,6 +282,36 @@
       "notes": [
         "The collection is a reproduction layer, not the manuscript itself and not the repository XML."
       ]
+    },
+    {
+      "id": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "type": "facsimile",
+      "label": "Wikimedia Commons complete Cotton Nero A X/2 PDF",
+      "description": "A downloadable 180-page PDF compiled from University of Calgary page images, covering every side from modern folios 41r–130v.",
+      "identifiers": [
+        {
+          "scheme": "Wikimedia Commons file",
+          "value": "BL Cotton MS Nero A x (art. 3).pdf",
+          "uri": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf"
+        }
+      ],
+      "creator_ids": [
+        "agent:wikimedia-commons"
+      ],
+      "physical_description": {
+        "extent": "180 PDF pages, one for each manuscript side",
+        "format": "Complete color PDF facsimile",
+        "notes": [
+          "Direct inspection confirms color manuscript photography, including Pearl's four prefatory painted leaves."
+        ]
+      },
+      "reproduction_format": "Digital PDF compiled from Calgary page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-pearl-boundaries",
+        "evidence:ucalgary-manuscript-facsimile"
+      ]
     }
   ],
   "agents": [
@@ -376,6 +406,17 @@
       ],
       "notes": [
         "Internet Archive catalog metadata credits her with the final revision after E. V. Gordon's death."
+      ]
+    },
+    {
+      "id": "agent:wikimedia-commons",
+      "type": "organization",
+      "name": "Wikimedia Commons",
+      "urls": [
+        "https://commons.wikimedia.org/"
+      ],
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile"
       ]
     }
   ],
@@ -509,6 +550,32 @@
         "evidence_ids": [
           "evidence:ucalgary-manuscript-facsimile",
           "evidence:bl-cotton-nero-a-x-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:commons-version-of-ucalgary",
+      "type": "version_of",
+      "subject": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "object": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 180-page Commons PDF"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 180-image Calgary facsimile"
+        },
+        "notes": "The Commons record identifies the University of Calgary collection as its source."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:commons-complete-facsimile",
+          "evidence:commons-pearl-boundaries",
+          "evidence:ucalgary-manuscript-facsimile"
         ]
       }
     }
@@ -650,6 +717,57 @@
         "evidence:ucalgary-manuscript-facsimile",
         "evidence:bl-cotton-nero-a-x-2"
       ]
+    },
+    {
+      "id": "access:commons-complete-pdf",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "provider_id": "agent:wikimedia-commons",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Commons file record and direct complete-PDF download",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Cotton MS Nero A X/2 PDF facsimile",
+          "path": "source-cache/Pearl/cotton-nero-a-x-2-complete-facsimile.pdf",
+          "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+          "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac",
+          "bytes": 220421432,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "work_portion": {
+            "label": "Pearl",
+            "locators": [
+              "modern pencil folios 41r–59v",
+              "older foliation represented in the XML: 39r–55v",
+              "PDF pages 1–38 inclusive",
+              "text proper: modern folios 43r–59v, PDF pages 5–38"
+            ],
+            "start_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=1",
+            "end_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=38",
+            "notes": [
+              "PDF pages 1–4 are Pearl's four prefatory illustrations; the written poem begins on page 5 and ends on page 38."
+            ]
+          },
+          "notes": [
+            "The file contains all 180 manuscript sides; the work mapping points to Pearl without reducing the cache to those leaves."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "180-page PDF",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-pearl-boundaries"
+      ],
+      "notes": [
+        "Commons's public-domain assertion conflicts with restrictions presented by the Calgary source service; this access record does not resolve that conflict."
+      ]
     }
   ],
   "rights": [
@@ -776,6 +894,31 @@
       "notes": [
         "Do not generalize a sampled item's public-domain label to the whole collection or to unrestricted commercial redistribution without reviewing the exact image record and current terms.",
         "Apply the item-level attribution supplied by the provider when using an image."
+      ]
+    },
+    {
+      "id": "rights:commons-complete-facsimile",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "access_id": "access:commons-complete-pdf",
+      "component": "Commons-hosted complete PDF compiled from Calgary images",
+      "jurisdiction": "Wikimedia Commons provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "Commons applies a mechanical-scan rationale and Public Domain Mark 1.0 to the hosted PDF.",
+      "asserted_by_id": "agent:wikimedia-commons",
+      "license": {
+        "name": "Public Domain Mark 1.0",
+        "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile"
+      ],
+      "notes": [
+        "Confidence is high that Commons makes this assertion, not that it resolves Calgary's conflicting British Library license and use restrictions.",
+        "Do not transfer this provider claim to Calgary, the British Library's own images, or newly ordered photography."
       ]
     }
   ],
@@ -906,6 +1049,29 @@
       "notes": [
         "The sampled rights item depicts Gawain rather than Pearl; it documents collection-level presentation practice, while item-specific Pearl attribution should be taken from the exact image record used."
       ]
+    },
+    {
+      "id": "evidence:commons-complete-facsimile",
+      "type": "digital_surrogate",
+      "citation": "Wikimedia Commons, BL Cotton MS Nero A x (art. 3).pdf.",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "locator": "complete 180-page PDF",
+      "summary": "The file record identifies Calgary as the source, exposes a direct complete-manuscript PDF, and applies a mechanical-scan public-domain rationale and Public Domain Mark 1.0.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
+    },
+    {
+      "id": "evidence:commons-pearl-boundaries",
+      "type": "visual_inspection",
+      "citation": "Direct inspection and folio mapping of the complete Commons Cotton Nero A X/2 PDF.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+      "locator": "PDF pp. 1–180; Pearl pp. 1–38; written text pp. 5–38",
+      "summary": "Confirmed complete codex coverage and color manuscript photography. Pages 1–4 are Pearl's four prefatory painted leaves, page 5 begins the written poem at modern fol. 43r, and page 38 ends it at modern fol. 59v.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
     },
     {
       "id": "evidence:us-copyright-circular-15a",
