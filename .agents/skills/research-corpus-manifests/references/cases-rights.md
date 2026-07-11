@@ -50,3 +50,11 @@ as a worldwide open license.
 A sampled Calgary image carries a public-domain label alongside enumerated use
 categories. Do not generalize it across the collection or to commercial reuse.
 Use exact image records and leave collection-wide status unknown if necessary.
+
+## Conflicting derivative-provider claims: Purity
+
+When one repository republishes another provider's derivative and applies a
+public-domain label that conflicts with the source provider's license or use
+conditions, preserve both as access-specific claims. Provenance does not make
+the more permissive claim automatically control the upstream images, nor does
+the upstream restriction erase what the downstream provider actually asserts.

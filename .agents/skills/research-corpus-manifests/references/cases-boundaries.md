@@ -24,6 +24,12 @@ ranges. Preserve current part-level shelfmarks and legacy foliation without
 forcing false agreement. Reuse of the same physical codex does not merge work
 metadata or image-rights analysis.
 
+When one image or PDF page contains the end of one work and the opening
+illustration or text of the next, include that shared surface in both verified
+work mappings and say that the boundary is shared. Do not crop the cached
+complete-codex surrogate or imply that the page belongs exclusively to either
+work.
+
 ## Parallel witnesses: HMaid
 
 An edition printing Bodley 34 and Cotton Titus D XVIII in parallel still
