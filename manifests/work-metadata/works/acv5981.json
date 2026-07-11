@@ -1,0 +1,662 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:acv5981",
+  "work_id": "acv5981",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:acv5981",
+    "unit_type": "compilation",
+    "label": "An English Chronicle of the Reigns of Richard II, Henry IV, Henry V, and Henry VI",
+    "scope_note": "The edited compilation published by John Silvester Davies in 1856 and represented by CME item ACV5981.0001.001. It contains the anonymous Middle English prose continuation commonly called the Davies Chronicle (printed pp. 1-110), selected passages from Richard Fox's chronicle (pp. 111-118), Latin supplements from the continuation of the Eulogium Historiarum (pp. 119-142), Davies's notes (pp. 143-212), and an index (pp. 213-228). This record does not collapse those components into one medieval work and does not treat the U-M encoding, the repository XML, any manuscript codex, or William Marx's later edition as the same intellectual object."
+  },
+  "catalog_summary": {
+    "title": "An English Chronicle of the Reigns of Richard II, Henry IV, Henry V, and Henry VI",
+    "author": "Anonymous compilers; Richard Fox and an anonymous Eulogium compiler for appended selections",
+    "editor": "John Silvester Davies",
+    "date": "Main continuation compiled in stages and completed after 4 March 1461, probably before 22 May 1471; Fox source completed 1448; first published 1856",
+    "region": "England; St Albans for the Richard Fox component; main continuation's exact place unresolved",
+    "genres": ["Prose chronicle", "Historiography", "Scholarly edition", "Middle English Prose Brut continuation"],
+    "form": "prose",
+    "language_codes": ["enm", "lat", "eng"],
+    "tags": ["middle-english", "prose-chronicle", "prose-brut", "english-history", "late-medieval", "richard-ii", "henry-iv", "henry-v", "henry-vi", "kingship", "parliament", "hundred-years-war", "wars-of-the-roses", "st-albans", "eulogium-historiarum", "manuscript-studies", "scholarly-edition"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "ACV5981.0001.001", "uri": "https://name.umdl.umich.edu/ACV5981.0001.001"},
+    {"scheme": "Library of Congress call number for source copy", "value": "DA20 .R9 no.64"},
+    {"scheme": "Camden Society series number", "value": "Old series 64"},
+    {"scheme": "Bodleian shelfmark for main base witness", "value": "MS. Lyell 34"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "An English Chronicle of the Reigns of Richard II, Henry IV, Henry V, and Henry VI",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-xml", "evidence:metadata-davies"]},
+      "notes": ["The preferred title is the main title of Davies's edited compilation; its title-page subtitle describes the appendix and Eulogium supplements separately."]
+    },
+    {
+      "id": "title:full-1856",
+      "type": "original",
+      "value": "An English Chronicle of the Reigns of Richard II, Henry IV, Henry V, and Henry VI, Written Before the Year 1471; with an Appendix, Containing the 18th and 19th Years of Richard II, and the Parliament at Bury St. Edmund's, 25th Henry VI; and Supplementary Additions from the Cotton MS. Chronicle Called ‘Eulogium’",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-xml", "evidence:metadata-davies"]}
+    },
+    {
+      "id": "title:davies-chronicle",
+      "type": "alternate",
+      "value": "The Davies Chronicle",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"], "description": "The main anonymous Middle English continuation only"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-tmr", "evidence:metadata-boydell"]},
+      "notes": ["This conventional scholarly label must not be extended to the Richard Fox and Eulogium appendices or to Davies's apparatus."]
+    },
+    {
+      "id": "title:modern-edition",
+      "type": "alternate",
+      "value": "An English Chronicle 1377-1461",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"], "description": "Modern title for the two anonymous continuations"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-boydell", "evidence:metadata-tmr"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-continuators",
+      "type": "collective",
+      "name": "Anonymous continuators of the Middle English Prose Brut",
+      "notes": ["Modern scholarship distinguishes two continuation layers, covering 1377-1437 and 1440-1461. Their personal identities are unknown."]
+    },
+    {
+      "id": "agent:richard-fox",
+      "type": "person",
+      "name": "Richard Fox of St Albans",
+      "notes": ["Layman employed at St Albans Abbey and compiler of the prose chronicle uniquely preserved in Woburn Abbey MS 181."]
+    },
+    {
+      "id": "agent:john-silvester-davies",
+      "type": "person",
+      "name": "John Silvester Davies"
+    },
+    {
+      "id": "agent:frederic-madden",
+      "type": "person",
+      "name": "Frederic Madden"
+    },
+    {
+      "id": "agent:william-macray",
+      "type": "person",
+      "name": "William Dunn Macray"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-main",
+      "agent_id": "agent:anonymous-continuators",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"], "description": "The two Middle English prose continuation layers"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-boydell", "evidence:metadata-tmr", "evidence:metadata-davies"]},
+      "notes": ["Davies described a single compiler; modern scholarship's two-continuator model is used here without claiming two named people or an exact hand-to-author mapping."]
+    },
+    {
+      "id": "responsibility:fox-compiler",
+      "agent_id": "agent:richard-fox",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix"], "description": "Source chronicle from which Davies prints selected passages"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-probert", "evidence:metadata-davies"]},
+      "notes": ["Fox compiled the source chronicle; he did not compile Davies's nineteenth-century appendix as a publication unit."]
+    },
+    {
+      "id": "responsibility:eulogium-anonymous",
+      "display_name": "Anonymous compiler of the continuation of the Eulogium Historiarum",
+      "role": "compiler",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:eulogium-supplements"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-cotton"]}
+    },
+    {
+      "id": "responsibility:davies-editor",
+      "agent_id": "agent:john-silvester-davies",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-xml", "evidence:metadata-davies"]}
+    },
+    {
+      "id": "responsibility:davies-compiler",
+      "agent_id": "agent:john-silvester-davies",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix", "part:eulogium-supplements"], "description": "Selection and arrangement of the appended source materials"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies"]}
+    },
+    {
+      "id": "responsibility:davies-commentator",
+      "agent_id": "agent:john-silvester-davies",
+      "role": "commentator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:davies-notes"], "description": "Historical and textual notes"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies"]}
+    },
+    {
+      "id": "responsibility:madden-transcriber",
+      "agent_id": "agent:frederic-madden",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix"], "description": "Extracts from Richard Fox's chronicle supplied to Davies"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies"]}
+    },
+    {
+      "id": "responsibility:macray-collator",
+      "agent_id": "agent:william-macray",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"], "description": "Comparison of press sheets with Bodleian MS. Lyell 34"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:main-compilation",
+      "type": "compilation",
+      "display": "Compiled in stages; final continuation after Edward IV's accession on 4 March 1461 and probably before Henry VI's death on 22 May 1471",
+      "normalized": {"not_before": 1461, "not_after": 1471},
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-tmr", "evidence:metadata-de-la-mare"]},
+      "notes": ["Davies inferred the terminal bounds from the narrative. Modern scholarship distinguishes an earlier continuation through 1437 and a later continuation covering 1440-1461, so this range describes the final compilation layer rather than every passage."]
+    },
+    {
+      "id": "date:fox-compilation",
+      "type": "compilation",
+      "display": "Richard Fox completed the main body of his chronicle in 1448; later additions include the 1447 Bury material printed by Davies",
+      "normalized": {"not_before": 1447, "not_after": 1450},
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-probert", "evidence:metadata-davies"]},
+      "notes": ["The range accommodates the relationship between Fox's 1448 completion statement and later additions; it is not a date for Davies's selection."]
+    },
+    {
+      "id": "date:lyell-attestation",
+      "type": "first_known_attestation",
+      "display": "Bodleian MS. Lyell 34, part 3, written in or soon after 1461",
+      "normalized": {"not_before": 1461, "not_after": 1471},
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"]},
+      "source_lineage_entity_id": "witness:bodleian:ms-lyell-34",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-de-la-mare"]},
+      "notes": ["This is a witness-production date. It does not prove that both continuation layers were composed at the same moment or by the manuscript's two scribes."]
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "First published as Davies's Camden Society edition in 1856",
+      "normalized": {"not_before": 1856, "not_after": 1856},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:davies:english-chronicle-1856",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-xml", "evidence:metadata-davies"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:st-albans", "label": "St Albans, Hertfordshire", "kind": "settlement", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-probert", "evidence:metadata-cotton"]},
+      "notes": ["England is a broad cultural origin. It does not supply an exact place of composition for the two anonymous continuations."]
+    },
+    {
+      "id": "place-statement:st-albans",
+      "place_id": "place:st-albans",
+      "type": "place_of_compilation",
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix"]},
+      "source_lineage_entity_id": "witness:woburn:ms-181",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-probert"]},
+      "notes": ["This statement applies to Richard Fox's source chronicle and must not be generalized to the Davies Chronicle or the Eulogium."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle", "part:fox-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-xml", "evidence:metadata-davies", "evidence:metadata-probert"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "secondary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:eulogium-supplements"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-cotton"]}
+    },
+    {
+      "id": "language:modern-english",
+      "code": "eng",
+      "label": "Modern English",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:davies-notes", "part:index"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A predominantly prose chronicle compilation with prose scholarly apparatus; the CME XML marks 96 embedded verse lines in 13 line groups, which do not make the whole work mixed-form.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-structure", "evidence:metadata-davies"]}
+    },
+    {
+      "id": "form:embedded-verse",
+      "value": "verse",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:main-chronicle", "part:fox-appendix"], "description": "Short embedded verse and document-like passages within the encoded prose"},
+      "description": "The encoding contains 13 LG elements and 96 L elements, embedded within a much larger prose structure.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:acv5981-structure"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:prose-chronicle",
+      "term": "prose-chronicle",
+      "label": "Prose chronicle",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle", "part:fox-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-boydell", "evidence:metadata-probert", "evidence:acv5981-structure"]}
+    },
+    {
+      "id": "genre:historiography",
+      "term": "historiography",
+      "label": "Historiography",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell", "evidence:metadata-probert"]}
+    },
+    {
+      "id": "genre:scholarly-edition",
+      "term": "scholarly-edition",
+      "label": "Scholarly edition",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-xml"]},
+      "notes": ["This is an edition-level genre. It does not describe the medieval source works as nineteenth-century scholarship."]
+    },
+    {
+      "id": "genre:prose-brut",
+      "term": "prose-brut",
+      "label": "Middle English Prose Brut continuation",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell", "evidence:metadata-tmr"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:english-history",
+      "term": "history-of-england",
+      "label": "Political and military history of England, principally 1377-1461",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell"]}
+    },
+    {
+      "id": "subject:kingship",
+      "term": "kingship",
+      "label": "Kingship, deposition, succession, and royal government",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-xml"]}
+    },
+    {
+      "id": "subject:richard-ii",
+      "term": "reign-of-richard-ii",
+      "label": "Reign and deposition of Richard II",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle", "part:fox-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-xml"]}
+    },
+    {
+      "id": "subject:lancastrian-kings",
+      "term": "lancastrian-kingship",
+      "label": "Reigns of Henry IV, Henry V, and Henry VI",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-xml"]}
+    },
+    {
+      "id": "subject:war",
+      "term": "late-medieval-war",
+      "label": "Hundred Years War and Wars of the Roses",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:main-chronicle"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-boydell", "evidence:acv5981-xml"]}
+    },
+    {
+      "id": "subject:parliament",
+      "term": "parliament-and-political-conflict",
+      "label": "Parliament, magnate politics, and political conflict",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-xml"]}
+    },
+    {
+      "id": "subject:st-albans",
+      "term": "st-albans-historiography",
+      "label": "St Albans historical writing and Richard Fox",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:fox-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-probert"]}
+    },
+    {
+      "id": "subject:textual-transmission",
+      "term": "textual-transmission",
+      "label": "Chronicle transmission, manuscript damage, supplementation, and editorial reconstruction",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-de-la-mare", "evidence:metadata-tmr"]}
+    }
+  ],
+  "tags": ["middle-english", "prose-chronicle", "prose-brut", "english-history", "late-medieval", "richard-ii", "henry-iv", "henry-v", "henry-vi", "kingship", "parliament", "hundred-years-war", "wars-of-the-roses", "st-albans", "eulogium-historiarum", "manuscript-studies", "scholarly-edition"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Davies's 1856 volume centers on an anonymous Middle English prose continuation of the Brut tradition narrating English history from Richard II through Edward IV's accession. It adds selected Richard Fox accounts and Latin Eulogium passages to supplement the damaged principal witness, followed by extensive editorial notes and an index. The chronicle is especially concerned with deposition and succession, royal and magnate politics, parliament, warfare in France, and the crises of Lancastrian rule.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell", "evidence:metadata-probert"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "Printed pp. 1-110: the anonymous Davies Chronicle from Lyell 34. Pp. 111-118: three Richard Fox extracts from Woburn MS 181. Pp. 119-142: Latin Eulogium supplements from Cotton Galba E VII. Pp. 143-212: Davies's notes. Pp. 213-228: index. The CME searchable XML transcribes only pp. 1-118, although page milestones continue through p. 228.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-structure"]
+    },
+    {
+      "id": "summary:cataloging",
+      "type": "cataloging_note",
+      "value": "The date, place, language, and responsibility statements are part-scoped because this is an edited compilation of distinct medieval sources. The Lyell and NLW manuscript dates and dialect evidence describe physical witnesses and are not automatically transferred to the abstract continuation texts.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-de-la-mare", "evidence:metadata-nlw", "evidence:metadata-tmr"]
+    }
+  ],
+  "extent": {
+    "numbered_items": null,
+    "sections": 5,
+    "prose_only_items": null,
+    "verse_only_items": null,
+    "mixed_items": null,
+    "verse_groups": 13,
+    "verse_lines": 96,
+    "description": "The 1856 edition has xvi preliminary pages and 228 numbered pages. Repository inspection finds 244 PB, 439 P, 13 LG, and 96 L elements. The searchable XML covers printed pp. 1-118; later pages survive as page milestones without transcribed text. Five top-level catalog parts model the main chronicle, Fox appendix, Eulogium supplements, notes, and index.",
+    "evidence_ids": ["evidence:acv5981-structure", "evidence:metadata-davies"]
+  },
+  "content_structure_status": "partial",
+  "content_parts": [
+    {
+      "id": "part:main-chronicle",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "work",
+      "label": "Anonymous English Chronicle, 1377-1461",
+      "summary": "Two anonymous Middle English prose continuations of the Brut tradition, arranged by Davies under the reigns of Richard II, Henry IV, Henry V, and Henry VI and ending with Edward IV's accession.",
+      "item_count": null,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": null, "verse_only_items": null, "mixed_items": null, "verse_groups": null, "verse_lines": null},
+      "locators": [
+        {"lineage_entity_id": "edition:davies:english-chronicle-1856", "scheme": "printed pages", "value": "1-110"},
+        {"lineage_entity_id": "witness:bodleian:ms-lyell-34", "scheme": "folios", "value": "fragment leaves 144a-h and fols. 145v-214v"},
+        {"lineage_entity_id": "encoding:umich-cme:ACV5981.0001.001", "scheme": "XML divisions", "value": "reign divisions through the end of Henry VI"}
+      ],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-de-la-mare", "evidence:acv5981-structure"],
+      "notes": ["Davies printed all of Lyell 34 part 3. The earlier Brut in the same complete codex is outside this printed part."]
+    },
+    {
+      "id": "part:fox-appendix",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "appendix",
+      "label": "Appendix from Richard Fox's Chronicle",
+      "summary": "Selected accounts of the eighteenth and nineteenth years of Richard II and the Parliament at Bury and death of Humphrey, duke of Gloucester, supplied from Woburn Abbey MS 181.",
+      "item_count": 3,
+      "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "edition:davies:english-chronicle-1856", "scheme": "printed pages", "value": "111-118"},
+        {"lineage_entity_id": "witness:woburn:ms-181", "scheme": "folios", "value": "exact folios unresolved"}
+      ],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-probert"]
+    },
+    {
+      "id": "part:eulogium-supplements",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "appendix",
+      "label": "Supplementary Additions from the Continuation of the Eulogium",
+      "summary": "Latin passages printed by Davies from Cotton MS Galba E VII to document sources, supply context, and supplement damaged or missing material in the main manuscript.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "edition:davies:english-chronicle-1856", "scheme": "printed pages", "value": "119-142"},
+        {"lineage_entity_id": "witness:bl:cotton-galba-e-vii", "scheme": "folios", "value": "selected passages in the Eulogium at fols. 18r-208v; individual folios printed with each supplement"}
+      ],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-cotton"],
+      "notes": ["These pages are not searchable in the CME XML."]
+    },
+    {
+      "id": "part:davies-notes",
+      "parent_id": null,
+      "sequence": 4,
+      "type": "commentary",
+      "label": "Notes",
+      "summary": "Davies's historical and textual notes to the medieval texts.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [{"lineage_entity_id": "edition:davies:english-chronicle-1856", "scheme": "printed pages", "value": "143-212"}],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-structure"],
+      "notes": ["Represented by PB milestones but not searchable text in the CME XML."]
+    },
+    {
+      "id": "part:index",
+      "parent_id": null,
+      "sequence": 5,
+      "type": "other",
+      "label": "Index",
+      "summary": "Alphabetical index to the edition.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [{"lineage_entity_id": "edition:davies:english-chronicle-1856", "scheme": "printed pages", "value": "213-228"}],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:acv5981-structure"],
+      "notes": ["Represented by PB milestones but not searchable text in the CME XML."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:prose-brut",
+      "title": "Middle English Prose Brut",
+      "relation": "version_of",
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell", "evidence:metadata-tmr"],
+      "notes": ["The relation applies to part:main-chronicle, which continues the Brut tradition; it does not apply to Davies's full compilation or its apparatus."]
+    },
+    {
+      "id": "related:fox-chronicle",
+      "title": "The Chronicle of Richard Fox of St Albans",
+      "relation": "contains",
+      "identifiers": [{"scheme": "Unique witness", "value": "Woburn Abbey MS 181"}],
+      "evidence_ids": ["evidence:metadata-probert", "evidence:metadata-davies"],
+      "notes": ["The compilation contains only selected passages, not Fox's complete approximately 180,000-word chronicle."]
+    },
+    {
+      "id": "related:eulogium",
+      "title": "Eulogium Historiarum, continuation",
+      "relation": "contains",
+      "identifiers": [{"scheme": "Source witness", "value": "Cotton MS Galba E VII"}],
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-cotton"],
+      "notes": ["Davies prints selected Latin passages and also identifies the Eulogium as a major source translated or adapted by the anonymous continuator."]
+    },
+    {
+      "id": "related:marx-edition",
+      "title": "An English Chronicle 1377-1461: A New Edition",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "Bibliographic citation", "value": "William Marx, ed., Medieval Chronicles 3 (Boydell, 2003)"}],
+      "evidence_ids": ["evidence:metadata-boydell", "evidence:metadata-tmr"],
+      "notes": ["A later edition based on NLW MS 21608D and collated against Lyell 34; it is not upstream of the CME text."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:acv5981",
+    "manifest_path": "manifests/lineage/works/acv5981.json",
+    "bindings": [
+      {"metadata_target": "work:acv5981", "lineage_entity_id": "edition:davies:english-chronicle-1856", "role": "source_edition"},
+      {"metadata_target": "work:acv5981", "lineage_entity_id": "encoding:umich-cme:ACV5981.0001.001", "role": "digital_encoding"},
+      {"metadata_target": "work:acv5981", "lineage_entity_id": "artifact:general-corpus:acv5981", "role": "repository_representation"},
+      {"metadata_target": "part:main-chronicle", "lineage_entity_id": "witness:bodleian:ms-lyell-34", "role": "source_witness"},
+      {"metadata_target": "part:main-chronicle", "lineage_entity_id": "witness:nlw:ms-21608d", "role": "related_source"},
+      {"metadata_target": "part:fox-appendix", "lineage_entity_id": "witness:woburn:ms-181", "role": "source_witness"},
+      {"metadata_target": "part:eulogium-supplements", "lineage_entity_id": "witness:bl:cotton-galba-e-vii", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:acv5981-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_1-2/acv5981.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/acv5981.xml",
+      "summary": "Supplies title and responsibility statements, UMDL identifier, 1856 source description, uncorrected-OCR declaration, divisions, page milestones, prose paragraphs, and embedded verse markup.",
+      "accessed_on": "2026-07-11",
+      "sha256": "75319fac3a6d8c85fbd0eadd56f31377098374b46d8a93349d298cd2bbb3a14f"
+    },
+    {
+      "id": "evidence:acv5981-structure",
+      "type": "computational_inspection",
+      "citation": "Repository inspection of acv5981.xml with scripts/inspect-corpus-source.py and element counts.",
+      "repository_path": "CME/source/CME_phase_1-2/acv5981.xml",
+      "summary": "Finds 244 PB, 439 P, 13 LG, 96 L, 5 DIV1, 7 DIV2, 85 DIV3, and 94 HEAD elements; confirms searchable text through p. 118 and page-break-only representation for pp. 119-228.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:metadata-davies",
+      "type": "linked_manifest_evidence",
+      "citation": "Davies 1856 complete edition scan and editor's preface, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:davies-scan",
+      "summary": "Primary evidence for the edited compilation's title, contents, boundaries, source statements, inferred date, named editorial contributors, and main historical subjects."
+    },
+    {
+      "id": "evidence:metadata-de-la-mare",
+      "type": "linked_manifest_evidence",
+      "citation": "De la Mare 1971 Lyell catalogue, pp. 85-87, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:de-la-mare",
+      "summary": "Evidence for the complete Lyell codex, part 3's date and hands, exact folio range, manuscript damage, and provenance."
+    },
+    {
+      "id": "evidence:metadata-probert",
+      "type": "linked_manifest_evidence",
+      "citation": "Anna Probert's 2023 study of Richard Fox and Woburn Abbey MS 181, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:probert-fox",
+      "summary": "Evidence for Fox's identity, St Albans association, chronicle genre, 1448 completion, scope, unique witness, and later additions."
+    },
+    {
+      "id": "evidence:metadata-cotton",
+      "type": "linked_manifest_evidence",
+      "citation": "British Library catalog record for Cotton MS Galba E VII, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:bl-cotton",
+      "summary": "Evidence for the Latin Eulogium source's date, material, extent, and folio range."
+    },
+    {
+      "id": "evidence:metadata-nlw",
+      "type": "linked_manifest_evidence",
+      "citation": "National Library of Wales catalog record for MS 21608D, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:nlw-21608",
+      "summary": "Evidence for the parallel witness's date, contents, extent, dialect localization, and restricted access; used to preserve the witness/work boundary."
+    },
+    {
+      "id": "evidence:metadata-boydell",
+      "type": "linked_manifest_evidence",
+      "citation": "Boydell & Brewer description of William Marx's modern edition, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:boydell-marx",
+      "summary": "Evidence for the two-continuation model, date coverage, modern title, and modern edition's use of NLW 21608D and Lyell 34."
+    },
+    {
+      "id": "evidence:metadata-tmr",
+      "type": "linked_manifest_evidence",
+      "citation": "The Medieval Review review of Marx's edition, as documented in lineage:acv5981.",
+      "repository_path": "manifests/lineage/works/acv5981.json",
+      "source_evidence_id": "evidence:tmr-marx",
+      "summary": "Independent scholarly support for Davies's damaged Lyell base, Marx's NLW base, the two-continuation model, and Eulogium source relationship."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:main-layer-dates",
+      "question": "What dates and places can be assigned independently to the two anonymous continuation layers?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult Marx's introduction and subsequent textual scholarship.", "Do not turn narrative coverage dates or witness dates into unsupported composition dates."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-boydell", "evidence:metadata-tmr", "evidence:metadata-nlw"]
+    },
+    {
+      "id": "question:woburn-locators",
+      "question": "Which exact folios of Woburn Abbey MS 181 correspond to the three extracts on Davies pp. 111-118?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask Woburn Abbey Archive to identify the passages when requesting a complete-manuscript facsimile.", "Update part:fox-appendix and the lineage work_portion if folios are confirmed."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:metadata-davies", "evidence:metadata-probert"]
+    },
+    {
+      "id": "question:complete-facsimiles",
+      "question": "Can complete-codex digital facsimiles be obtained for Lyell 34, NLW 21608D, Woburn 181, and Cotton Galba E VII?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Use the repository enquiry and reproduction-order routes in lineage:acv5981.", "Prefer one complete-manuscript bundle per witness and map the work portion rather than downloading isolated folios."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:metadata-de-la-mare", "evidence:metadata-nlw", "evidence:metadata-probert", "evidence:metadata-cotton"]
+    },
+    {
+      "id": "question:xml-backmatter",
+      "question": "Should the currently untranscribed pp. 119-228 be incorporated into a future corpus text layer?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Use the cached complete 1856 scan and OCR as reference.", "Keep the Latin supplements, Davies's notes, and index distinguishable from the Middle English main text."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:acv5981-structure", "evidence:metadata-davies"]
+    }
+  ],
+  "notes": [
+    "The overall prose classification follows the dominant textual organization; 96 embedded verse lines in 13 groups do not justify a whole-work mixed label.",
+    "The preferred title describes Davies's publication unit. 'Davies Chronicle' and 'An English Chronicle 1377-1461' apply only to the anonymous main continuation.",
+    "Modern normalized tags are discovery aids, not assertions that medieval compilers used those categories.",
+    "The complete 1856 print facsimile is locally cached outside Git. No manuscript facsimile is locally cached because no verified complete public manuscript surrogate was found."
+  ]
+}
