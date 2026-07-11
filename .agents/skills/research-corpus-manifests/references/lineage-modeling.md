@@ -18,6 +18,12 @@ edition full bibliographic facts. Give a witness its current shelfmark,
 repository, item/component catalog record, date, and supported locators.
 Preserve historical shelfmarks separately.
 
+Resolve an editor's witness sigla from that edition's explicit manuscript key,
+not from an intuitive expansion of a letter. Record the siglum with the
+edition-to-witness relation while identifying the physical witness by its
+current repository and shelfmark; a letter such as `L` may name a collection
+or city different from the one a modern reader would guess.
+
 Add scans, facsimiles, prior editions, source works, translations, transcripts,
 or comparison editions only when their identity and relevance are evidenced.
 Do not leave contextual entities dangling: each lineage entity should

@@ -561,7 +561,7 @@ def bundle(
     )
     if reuse_pattern or any(source.get("reuse_path") for source in sources):
         local_notes.append(
-            "Canvas files were reused from an explicit local path pattern; the caller is "
+            "Canvas files were reused from explicit local source paths; the caller is "
             "responsible for having verified that they came from the recorded image requests."
         )
     local_copy: dict[str, object] = {
