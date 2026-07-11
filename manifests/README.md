@@ -24,6 +24,6 @@ when its complete artifact snapshot may be replaced.
 
 For agent-assisted source research and cataloging, use the project
 [`research-corpus-manifests`](../.agents/skills/research-corpus-manifests/SKILL.md)
-skill. Its field guide defines source priority, layer boundaries, rights
-scoping, evidence requirements, validation, and reusable lessons from
-completed records.
+skill. Its progressively loaded references define source priority, layer
+boundaries, rights scoping, evidence requirements, validation, and reusable
+lessons from completed records.

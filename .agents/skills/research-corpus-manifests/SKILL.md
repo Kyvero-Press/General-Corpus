@@ -1,136 +1,106 @@
 ---
 name: research-corpus-manifests
-description: Research, create, review, or extend General Corpus descriptive work-metadata and source-lineage manifests. Use for manifests/work-metadata or manifests/lineage changes, for tracing a CME XML item through its electronic encoding and scholarly edition to manuscript witnesses, for cataloging title, responsibility, date, region, language, form, genre, subject, or tags, and for recording access and copyright evidence without conflating textual, physical, editorial, and digital layers.
+description: Research, create, review, or integrate General Corpus descriptive work-metadata and source-lineage manifests. Use for manifests/work-metadata or manifests/lineage changes, tracing a corpus XML item through electronic encodings and scholarly editions to witnesses, cataloging title, responsibility, date, region, language, form, genre, subjects, and tags, or recording access and copyright evidence without conflating textual, physical, editorial, and digital layers.
 ---
 
 # Research Corpus Manifests
 
-Build a defensible pair of manifests for one corpus item: descriptive metadata
-for the intellectual/content unit and a lineage graph for its material and
-digital sources. Prefer facts read from the work, edition, encoding, and
-holding institution over convenient secondary summaries.
+Produce one defensible manifest pair for one corpus work. Ground claims in the
+repository source, the immediate edition, responsible repositories, and
+reliable scholarship. Treat uncertainty as data.
 
-Before researching, read:
+## Load guidance progressively
 
-- [`references/field-guide.md`](references/field-guide.md) for source priority,
-  layer modeling, field decisions, and reusable case lessons;
-- [`manifests/work-metadata/schemas/work-metadata-manifest.schema.json`](../../../manifests/work-metadata/schemas/work-metadata-manifest.schema.json)
-  and [`manifests/lineage/schemas/lineage-manifest.schema.json`](../../../manifests/lineage/schemas/lineage-manifest.schema.json)
-  for the current contracts; and
-- one nearby manifest pair as a structural example. Use CME00099 for a
-  branching, multi-witness example, not as a template for claims about a
-  different work.
+Do not load every reference at the start.
 
-## Work source-first
+1. Before browsing, read
+   [`references/source-research.md`](references/source-research.md).
+2. After identifying the cataloging boundary, read
+   [`references/metadata-modeling.md`](references/metadata-modeling.md) before
+   drafting work metadata.
+3. Before drawing derivation edges, read
+   [`references/lineage-modeling.md`](references/lineage-modeling.md).
+4. Before recording availability or reuse, read
+   [`references/rights-evidence.md`](references/rights-evidence.md).
+5. Read only the case reference matching a problem encountered:
+   - composite works, parts, shared codices, or parallel witnesses:
+     [`references/cases-boundaries.md`](references/cases-boundaries.md);
+   - reissues, eclectic editions, contributor roles, or later transcripts:
+     [`references/cases-editions.md`](references/cases-editions.md);
+   - XML identifiers, OCR, typography, counts, or competing digital objects:
+     [`references/cases-digital.md`](references/cases-digital.md);
+   - provider conflicts, restricted downloads, facsimiles, or image terms:
+     [`references/cases-rights.md`](references/cases-rights.md).
+6. Read [`references/integration.md`](references/integration.md) only when
+   integrating indexes, updating this skill, committing, or pushing.
 
-1. Locate the exact repository artifact and verify its internal identifier.
-2. Read its bibliographic header, source description, availability statement,
-   editorial declaration, opening and closing matter, division structure,
-   notes, milestones, and language markup.
-3. Identify the immediate source edition from its own title page, preface, and
-   apparatus when a scan is available.
-4. Trace the edition to its explicitly named witness or witnesses. Distinguish
-   a base witness, collated witnesses, later comparison editions, and a broad
-   manuscript tradition.
-5. Verify material and digital facts with the responsible repositories and
-   reliable scholarly sources. Open the supporting page; do not cite a search
-   result snippet as evidence.
-6. Draft a claim ledger before writing JSON: claim, layer/entity, source,
-   confidence, scope, and destination field.
+Inspect schema definitions with targeted `jq` or `rg` queries as fields are
+needed; do not load both complete schemas merely for orientation.
 
-Do not begin from a generic biography or modern plot summary and work backward.
+## Research one work
 
-## Define the cataloging boundary
+1. Locate the exact XML and verify its internal identifier, checksum, Git blob,
+   and CME submodule commit.
+2. Read the header, source description, availability and editorial statements,
+   opening and closing matter, divisions, milestones, notes, and language
+   markup.
+3. Define the intellectual unit being cataloged. Keep it distinct from its XML
+   artifact, encoding, edition, witness, and reproductions.
+4. Inspect the immediate edition's title page, preface, and apparatus whenever
+   a scan is available. Determine its actual editor, translator, compiler, base
+   text, witnesses, omissions, and interventions.
+5. Verify witness, bibliographic, access, and rights facts at the exact item
+   level with the responsible institution. Supplement interpretation with
+   reliable scholarship. Never cite a search-result snippet as evidence.
+6. Draft a claim ledger: claim, entity/layer, scope, source, confidence, and
+   destination field.
+7. Create both files:
+   - `manifests/work-metadata/works/WORK_ID.json`
+   - `manifests/lineage/works/WORK_ID.json`
+8. Record unresolved material questions explicitly. Use `partial`, `unknown`,
+   or qualified assertions instead of filling gaps from expectation.
 
-State what the metadata record describes before assigning title or author.
-Choose among a textual work, translation, compilation, edited selection, or
-edition-level content unit. Keep the XML file, electronic encoding, print
-edition, physical witness, and abstract work distinct.
+## Keep the layers honest
 
-Use the cataloged unit's preferred title as the lineage manifest's top-level
-`title`; the manifest type already supplies the “source lineage” context.
-
-When a corpus item contains editorial introductions, appendices, or several
-source works, represent that structure explicitly. Do not silently make the
-whole item inherit a part's author, date, language, place, or form.
-
-## Build the lineage graph
-
-Create separate entities for every evidenced layer, normally:
+Use separate entities and scoped relations for the usual chain:
 
 ```text
-repository artifact -> U-M/OTA encoding -> immediate print edition
-                                           -> manuscript witness(es)
+repository artifact -> electronic encoding -> immediate edition
+                                              -> witness(es)
 ```
 
-Add scans, facsimiles, prior editions, or later comparison editions only when
-their relationship is known. Use scoped relations for excerpts, selected
-folios, appendices, or eclectic texts. Never turn “consulted” into “derived
-from,” or a repository holding location into a work's place of composition.
+Add prior editions, scans, facsimiles, translations, or later comparison
+sources only when evidenced. Do not turn “consulted,” “distributed through,”
+or “held by” into a derivation claim. Do not transfer a witness's date,
+dialect, location, or image terms to the abstract work.
 
-Record author, translator, compiler, scribe, editor, collator, digitizer, and
-encoder as different responsibilities. Model anonymous or plural creators
-honestly. Put an attractive but unverified attribution in `open_questions`,
-not in `agents`.
+Maintain exactly one preferred whole-work title and one whole-work discovery
+form. Keep composition, event, witness, edition, encoding, and review dates
+distinct. Separate author, translator, compiler, scribe, editor, collator,
+encoder, and digitizer responsibilities.
 
-## Catalog descriptive metadata
+## Researcher handoff
 
-Derive the compact `catalog_summary` from the detailed assertions. Maintain:
+When working as a one-book subagent in an isolated worktree:
 
-- exactly one preferred whole-work title and one whole-work form;
-- distinct composition, witness, publication, and encoding dates;
-- scoped place assertions that say whether they describe origin, dialect,
-  composition, copying, or publication;
-- ISO language codes plus the evidence for mixed or embedded languages;
-- genre as a literary/documentary category, subject as topical content, and
-  tags as controlled discovery terms actually supported by the item; and
-- content structure no more granular than the evidence permits.
+- edit only the two work manifest files unless explicitly assigned otherwise;
+- do not edit indexes, shared schemas, validators, documentation, or the skill;
+- validate JSON and the pair as far as the worktree permits;
+- commit the two manifest files on the assigned research branch; and
+- report sources used, validation results, unresolved questions, and at most
+  three genuinely reusable skill lessons.
 
-Use `partial` or `unknown` rather than filling gaps from expectation. Preserve
-disagreement among authorities in assertions and open questions.
+## Improve without bloating
 
-## Treat rights and access as layer-specific
+After each work, add guidance only when the case changes a future decision.
+Put the rule in the smallest matching reference, merge it with an existing
+rule when possible, and keep book-specific bibliography in manifests. Do not
+add a per-work changelog.
 
-Record the source text, manuscript object, manuscript images, print edition,
-electronic encoding, and repository artifact separately. Public access does
-not prove public-domain status, and an old manuscript does not establish terms
-for modern photography or transcription. Cite the institution's item-specific
-rights statement where available, date availability checks, and avoid legal
-conclusions broader than the source supports.
-
-## Make evidence auditable
-
-For local artifacts, record the repository-relative path, SHA-256, and Git blob
-hash where the schema permits. For web evidence, use the most direct stable URL,
-an access date, a concise summary of what it proves, and alternates only when
-useful. One source may support several facts, but every consequential claim
-must resolve to evidence that actually says it.
-
-Before finishing, inspect all IDs and references mechanically and read the
-human-facing summaries again for overstatement.
-
-## Integrate and validate
-
-Add both files, then derive their index entries from the completed manifests;
-do not hand-invent compact values that disagree with detailed records.
-
-Run:
+The integrator follows [`references/integration.md`](references/integration.md)
+and validates the skill with:
 
 ```bash
-python3 scripts/validate-lineage-manifests.py
-python3 scripts/validate-work-metadata-manifests.py
-python3 -m unittest tests.test_lineage_manifests tests.test_work_metadata_manifests
-python3 scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public
-(cd viewer && npm test && npm run typecheck)
+python3 /home/tay/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
+  .agents/skills/research-corpus-manifests
 ```
-
-Remote URLs are not covered by offline validation. Re-open key institutional
-and edition links during substantive review.
-
-## Improve this skill from new cases
-
-After completing a newly researched work, compare the difficulty against the
-patterns in `references/field-guide.md`. Add a concise case lesson only when it
-changes a future research or modeling decision. Generalize the lesson; retain
-the work ID as an example and cite the manifest paths. Do not add a changelog or
-duplicate facts already recorded in manifests.

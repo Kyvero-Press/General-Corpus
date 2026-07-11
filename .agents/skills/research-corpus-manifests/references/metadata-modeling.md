@@ -1,0 +1,88 @@
+# Work-metadata modeling
+
+Read this after fixing the cataloging boundary and before drafting
+`manifests/work-metadata/works/WORK_ID.json`.
+
+## Identity and responsibility
+
+Use an established work title as the preferred whole-work title. Retain a
+source edition's long title as an alternative when it describes a different
+layer.
+
+Assign roles from intellectual responsibility, not an inherited `AUTHOR`
+field. Distinguish source author, translator, adapter, compiler, medieval
+scribe, editor, collator, and digital contributor. Model anonymous, attributed,
+and disputed creation honestly.
+
+When an immediate source retains an earlier editor's text but adds a new
+collation or revision, represent both roles. A compact editor display may name
+one primary editor or include every editor agent in a composite description.
+
+## Dates
+
+Separate:
+
+- narrated or autobiographical event;
+- composition, translation, compilation, and revision;
+- witness production;
+- genuine first publication of the work;
+- immediate source-edition issue/reissue;
+- encoding creation/distribution; and
+- repository review.
+
+Keep an immediate source edition's date in lineage unless it is genuinely the
+work's first publication. Use qualified displays and normalized ranges only
+when the range itself is sourced. Do not normalize `c. 1385` to an exact 1385
+interval merely to satisfy a facet.
+
+## Places and languages
+
+Type place claims as composition, translation, cultural origin, dialect,
+historical setting, association, copying, publication, or current holding.
+Witness production at an abbey does not by itself prove that every composition
+stage occurred there.
+
+Inspect language markup and the work itself. Scope embedded Latin, French, or
+other languages to the relevant parts; do not make the whole work multilingual
+because a title page, rubric, or surrounding codex is multilingual.
+
+## Form, genre, subject, and tags
+
+`form` describes expression: prose, verse, or mixed. Use whole-work `mixed`
+only when both forms are intentional and substantive. Keep prose or verse when
+the other form is limited to brief quotations, rubrics, framing, or excluded
+editorial material, and record the exception at part level.
+
+`genre` is a recognized textual category. `subject` is what the work discusses.
+`tags` are normalized discovery terms. Do not duplicate one synonym list
+across all three or tag material merely mentioned by an editor.
+
+Reuse the same label for a normalized language code, genre term, or subject
+term throughout the corpus. Put dialect, period, and work-specific nuance in
+scoped notes. The viewer rejects conflicting labels even when each pair passes
+isolated validation.
+
+## Structure and summaries
+
+Model stable intellectual parts before attaching part-level authors, dates,
+languages, forms, or lineage bindings. `part` and `selected_passages` scopes
+must name modeled `part_ids`.
+
+Counts must be reproducible and labeled as encoding metrics when markup choices
+affect them. Keep planned, composed-but-lost, extant, printed, and encoded
+extent separate. If markup is coarse or inconsistent, use `summary` or
+`partial` structure status and explain why.
+
+Derive `catalog_summary` from detailed records. Preserve detailed-record order
+in summary language, genre, and tag arrays. Maintain exactly one preferred
+whole title and one whole discovery form.
+
+## Metadata checklist
+
+- Define `cataloging_subject.scope_note` against nearby layers.
+- Confirm author/translator/editor roles from direct evidence.
+- Keep work dates free of mere source-edition dates.
+- Do not infer region from publisher or current holding.
+- Use distinct genre, subject, and tag vocabularies.
+- Bind every lineage entity and evidence ID to the linked lineage manifest.
+- Use `partial`, qualified assertions, and open questions for real gaps.
