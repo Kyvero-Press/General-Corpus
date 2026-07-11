@@ -174,59 +174,21 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
-.masthead-note {
-  margin: 0;
-  color: rgb(255 255 255 / 68%);
-  font-family: var(--serif);
-  font-size: 0.94rem;
-  font-style: italic;
-}
-
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(420px, 0.75fr);
-  gap: clamp(3rem, 8vw, 9rem);
-  align-items: end;
-  padding-block: clamp(4.5rem, 8vw, 8.5rem) clamp(4rem, 7vw, 7rem);
-}
-
-.hero-copy {
-  max-width: 55rem;
-}
-
-.hero .eyebrow {
-  color: #e3b85e;
-}
-
-.hero h1 {
-  max-width: 13ch;
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(3.2rem, 6.4vw, 6.9rem);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.94;
-}
-
-.hero-copy > p:last-child {
-  max-width: 48rem;
-  margin: 2rem 0 0;
-  color: rgb(255 255 255 / 76%);
-  font-family: var(--serif);
-  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
-  line-height: 1.65;
+  padding-block: 1.5rem;
 }
 
 .catalog-totals {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
   margin: 0;
   border-top: 1px solid rgb(255 255 255 / 22%);
   border-left: 1px solid rgb(255 255 255 / 22%);
 }
 
 .catalog-totals div {
-  min-height: 7.2rem;
+  min-height: 6.4rem;
   padding: 1.2rem 1.3rem;
   border-right: 1px solid rgb(255 255 255 / 22%);
   border-bottom: 1px solid rgb(255 255 255 / 22%);
@@ -1707,15 +1669,6 @@ summary:focus-visible {
 }
 
 @media (max-width: 1100px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .catalog-totals {
-    max-width: 44rem;
-  }
-
   .catalog-layout {
     grid-template-columns: 230px minmax(0, 1fr);
     gap: 2rem;
@@ -1734,16 +1687,12 @@ summary:focus-visible {
     width: min(100% - 2rem, 1460px);
   }
 
-  .masthead-note {
-    display: none;
-  }
-
   .hero {
-    padding-block: 4.5rem;
+    padding-block: 1.25rem;
   }
 
-  .hero h1 {
-    font-size: clamp(3.1rem, 12vw, 5.5rem);
+  .catalog-totals {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .catalog-intro,
@@ -1820,15 +1769,7 @@ summary:focus-visible {
   }
 
   .hero {
-    padding-block: 3.6rem;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.8rem, 15vw, 4.5rem);
-  }
-
-  .hero-copy > p:last-child {
-    font-size: 1rem;
+    padding-block: 0.9rem;
   }
 
   .catalog-totals div {

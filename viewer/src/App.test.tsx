@@ -224,6 +224,8 @@ describe("App", () => {
     expect(await screen.findByText("Sir Gawain and the Green Knight")).toBeInTheDocument();
     expect(screen.getByText("Recipes, Blessings, and Charms from Two Stockholm Manuscripts")).toBeInTheDocument();
     expect(screen.getByText("2 works")).toBeInTheDocument();
+    expect(screen.queryByText("Books with their sources in view.")).not.toBeInTheDocument();
+    expect(within(screen.getByLabelText("Catalog totals")).getAllByText("2")).toHaveLength(2);
 
     const filters = screen.getByRole("complementary", { name: "Catalog filters" });
     await user.click(within(filters).getByRole("checkbox", { name: /Cataloged/ }));

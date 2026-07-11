@@ -246,16 +246,8 @@ export default function App() {
               <small>Reader’s catalog</small>
             </span>
           </a>
-          <p className="masthead-note">Open editions · documented sources · print-ready files</p>
         </div>
         <div className="hero">
-          <div className="hero-copy">
-            <p className="eyebrow">A working library of historical texts</p>
-            <h1>Books with their sources in view.</h1>
-            <p>
-              Browse readable corpus editions, choose a PDF to print, and follow the recorded lineage back through digital encodings, scholarly editions, and manuscript witnesses.
-            </p>
-          </div>
           <dl className="catalog-totals" aria-label="Catalog totals">
             <div>
               <dt>{catalog.counts.works.toLocaleString()}</dt>
