@@ -1,0 +1,770 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:JulianRev",
+  "work_id": "JulianRev",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:JulianRev",
+    "unit_type": "single_work",
+    "label": "A Revelation of Love (Long Text)",
+    "scope_note": "Julian of Norwich's Middle English Long Text, represented in 86 encoded chapters from Marion Glasscoe's 1976 edition. The cataloging subject is the later, extended literary work, not the May 1373 visionary event itself, the distinct Short Text, Sloane MS 2499, Glasscoe's edition, the OTA/U-M encoding, or the repository XML artifact."
+  },
+  "catalog_summary": {
+    "title": "A Revelation of Love",
+    "author": "Julian of Norwich",
+    "editor": "Marion Glasscoe",
+    "date": "Visions experienced in May 1373; Long Text begun in or after 1393 and completed before Julian's unknown death date (she was alive after 1416)",
+    "region": "Norwich, England; place associated securely with the author, while the precise stages and locations of composition remain uncertain",
+    "genres": [
+      "Visionary writing",
+      "Mystical theology",
+      "Devotional treatise",
+      "Spiritual autobiography"
+    ],
+    "form": "prose",
+    "language_codes": [
+      "enm"
+    ],
+    "tags": [
+      "christian-devotion",
+      "divine-love",
+      "english-mysticism",
+      "hope",
+      "julian-of-norwich",
+      "middle-english",
+      "motherhood-of-god",
+      "mystical-theology",
+      "norwich",
+      "passion-of-christ",
+      "prayer",
+      "revelations",
+      "sin-and-redemption",
+      "spiritual-autobiography",
+      "trinity",
+      "visionary-writing"
+    ]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "JulianRev"
+    },
+    {
+      "scheme": "Oxford Text Archive",
+      "value": "U-700-A",
+      "uri": "https://llds.phon.ox.ac.uk/llds/xmlui/handle/20.500.14106/0700"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "A Revelation of Love",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499",
+          "evidence:julian-glasscoe-catalog"
+        ]
+      },
+      "notes": [
+        "This title distinguishes the extended Long Text in current manuscript cataloging; capitalization varies."
+      ]
+    },
+    {
+      "id": "title:alternate-revelations",
+      "type": "alternate",
+      "value": "Revelations of Divine Love",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499"
+        ]
+      }
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Long Text",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "Modern scholarship and cataloging",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-mets"
+        ]
+      },
+      "notes": [
+        "A modern distinguishing label, not an authorial short title."
+      ]
+    },
+    {
+      "id": "title:sloane-heading",
+      "type": "alternate",
+      "value": "Revelations to One Who Could Not Read a Letter. Anno Domini, 1373",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml"
+        ]
+      },
+      "notes": [
+        "Normalized capitalization of the heading encoded at the opening; its 1373 date refers to the revelations, not final composition of the Long Text."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:julian-of-norwich",
+      "type": "person",
+      "name": "Julian of Norwich",
+      "alternate_names": [
+        "Juliana of Norwich",
+        "Julian, anchoress of Norwich"
+      ],
+      "notes": [
+        "The conventional author name derives from her association with St Julian's Church in Norwich; her birth name is not known."
+      ]
+    },
+    {
+      "id": "agent:marion-glasscoe",
+      "type": "person",
+      "name": "Marion Glasscoe"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:julian-author",
+      "agent_id": "agent:julian-of-norwich",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499",
+          "evidence:julian-ota"
+        ]
+      }
+    },
+    {
+      "id": "responsibility:julian-reviser",
+      "agent_id": "agent:julian-of-norwich",
+      "role": "reviser",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Extended theological reflection developed long after the 1373 visions and beyond the shorter account"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-mets"
+        ]
+      },
+      "notes": [
+        "The exact number and dates of compositional stages remain debated; this responsibility does not assert a simple one-step expansion of one surviving Short Text manuscript."
+      ]
+    },
+    {
+      "id": "responsibility:glasscoe-editor",
+      "agent_id": "agent:marion-glasscoe",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Immediate 1976 source edition based on British Library Sloane MS 2499"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499",
+          "evidence:julian-glasscoe-catalog"
+        ]
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:visions",
+      "type": "historical_setting",
+      "display": "Sixteen revelations experienced in May 1373, when Julian was about thirty and a half",
+      "normalized": {
+        "not_before": 1373,
+        "not_after": 1373
+      },
+      "scope": {
+        "kind": "whole",
+        "description": "Event recounted by the work"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499"
+        ]
+      },
+      "notes": [
+        "The schema lacks a dedicated event-date type; historical_setting is used here for the autobiographical event and must not be read as the composition date."
+      ]
+    },
+    {
+      "id": "date:long-text-composition",
+      "type": "composition",
+      "display": "Long Text begun in or after 1393 and completed before Julian's unknown death date; she was alive after 1416",
+      "normalized": {
+        "not_before": 1393
+      },
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:julian-sloane2499"
+        ],
+        "notes": "The BL catalogue summarizes the defensible chronology but does not establish a single completion year."
+      },
+      "notes": [
+        "No not_after value is supplied because 'before a death after 1416' does not make 1416 a valid upper bound."
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "place:norwich",
+      "label": "Norwich",
+      "kind": "settlement"
+    },
+    {
+      "id": "place:england",
+      "label": "England",
+      "kind": "country"
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:norwich",
+      "place_id": "place:norwich",
+      "type": "associated_place",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-ota"
+        ]
+      },
+      "notes": [
+        "Norwich is securely associated with the anchoress and author; the statement deliberately stops short of assigning every compositional stage to a documented room or date."
+      ]
+    },
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-ota"
+        ]
+      }
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-ota",
+          "evidence:julian-sloane2499"
+        ]
+      }
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole",
+      "value": "prose",
+      "scope": {
+        "kind": "whole"
+      },
+      "description": "An 86-chapter prose account and theological meditation; the repository XML contains no verse line groups or line elements.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-structure",
+          "evidence:julian-xml"
+        ]
+      }
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:visionary-writing",
+      "term": "visionary-writing",
+      "label": "Visionary writing",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499"
+        ]
+      }
+    },
+    {
+      "id": "genre:mystical-theology",
+      "term": "mystical-theology",
+      "label": "Mystical theology",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-mets",
+          "evidence:julian-xml"
+        ]
+      }
+    },
+    {
+      "id": "genre:devotional-treatise",
+      "term": "devotional-treatise",
+      "label": "Devotional treatise",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-mets"
+        ]
+      }
+    },
+    {
+      "id": "genre:spiritual-autobiography",
+      "term": "spiritual-autobiography",
+      "label": "Spiritual autobiography",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-sloane2499"
+        ]
+      }
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:divine-love",
+      "term": "divine-love",
+      "label": "Divine love and providence",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-mets"
+        ]
+      }
+    },
+    {
+      "id": "subject:passion",
+      "term": "passion-of-christ",
+      "label": "Passion of Christ",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml"
+        ]
+      }
+    },
+    {
+      "id": "subject:sin-redemption",
+      "term": "sin-and-redemption",
+      "label": "Sin, suffering, redemption, and hope",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-mets"
+        ]
+      }
+    },
+    {
+      "id": "subject:motherhood",
+      "term": "motherhood-of-god",
+      "label": "Motherhood of God and Christ",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml"
+        ]
+      }
+    },
+    {
+      "id": "subject:prayer-trinity",
+      "term": "prayer-and-trinity",
+      "label": "Prayer and the Trinity",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml"
+        ]
+      }
+    }
+  ],
+  "tags": [
+    "christian-devotion",
+    "divine-love",
+    "english-mysticism",
+    "hope",
+    "julian-of-norwich",
+    "middle-english",
+    "motherhood-of-god",
+    "mystical-theology",
+    "norwich",
+    "passion-of-christ",
+    "prayer",
+    "revelations",
+    "sin-and-redemption",
+    "spiritual-autobiography",
+    "trinity",
+    "visionary-writing"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Julian of Norwich's extended prose account of sixteen revelations received during severe illness in May 1373 and contemplated over subsequent decades. The Long Text develops a theology of divine love through meditation on Christ's Passion, sin and salvation, prayer, the Trinity, spiritual motherhood, suffering, hope, and the assurance that all shall be well.",
+      "language": "eng",
+      "scope": {
+        "kind": "whole"
+      },
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-sloane2499",
+        "evidence:julian-mets"
+      ]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "This record describes the Long Text, not the shorter account now called A Vision Showed to a Devout Woman. The repository XML follows Glasscoe's 1976 edition based on the seventeenth-century Sloane 2499 copy; that late witness date is not the work's composition date.",
+      "language": "eng",
+      "scope": {
+        "kind": "whole"
+      },
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-sloane2499",
+        "evidence:julian-glasscoe-catalog"
+      ]
+    }
+  ],
+  "extent": {
+    "numbered_items": 86,
+    "sections": 86,
+    "prose_only_items": 86,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": 0,
+    "verse_lines": 0,
+    "description": "The repository XML contains 86 chapter DIV1 elements, 90 paragraph elements, and no encoded verse. Its first chapter summarizes the chapter sequence; chapters II-LXXXVI contain the extended account and reflection.",
+    "evidence_ids": [
+      "evidence:julian-structure"
+    ]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:chapter-summary",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "section",
+      "label": "Chapter I: Particular of the Chapters",
+      "summary": "An opening prose summary that enumerates the revelations and the subjects developed in the subsequent chapters.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {
+        "prose_only_items": 1,
+        "verse_only_items": 0,
+        "mixed_items": 0,
+        "verse_groups": 0,
+        "verse_lines": 0
+      },
+      "locators": [
+        {
+          "lineage_entity_id": "encoding:ota-u700-a",
+          "scheme": "chapter",
+          "value": "I"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ]
+    },
+    {
+      "id": "part:chapters-ii-lxxxvi",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "Chapters II-LXXXVI",
+      "summary": "Julian's account of the revelations and the extended theological interpretation developed from them.",
+      "item_count": 85,
+      "textual_form": "prose",
+      "metrics": {
+        "prose_only_items": 85,
+        "verse_only_items": 0,
+        "mixed_items": 0,
+        "verse_groups": 0,
+        "verse_lines": 0
+      },
+      "locators": [
+        {
+          "lineage_entity_id": "encoding:ota-u700-a",
+          "scheme": "chapters",
+          "value": "II-LXXXVI"
+        },
+        {
+          "lineage_entity_id": "witness:bl:Sloane2499",
+          "scheme": "folios",
+          "value": "ff. 1r-57v"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-sloane2499"
+      ]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:julian-short-text",
+      "title": "A Vision Showed to a Devout Woman (Short Text)",
+      "relation": "related_to",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-mets"
+      ],
+      "notes": [
+        "The Short Text is an earlier, briefer account of the same revelations. The relationship is recorded conservatively because the surviving texts and stages should not be collapsed into a simple manuscript-to-manuscript copying edge."
+      ]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:JulianRev",
+    "manifest_path": "manifests/lineage/works/JulianRev.json",
+    "bindings": [
+      {
+        "metadata_target": "work:JulianRev",
+        "lineage_entity_id": "edition:glasscoe:revelation-1976",
+        "role": "source_edition"
+      },
+      {
+        "metadata_target": "work:JulianRev",
+        "lineage_entity_id": "witness:bl:Sloane2499",
+        "role": "source_witness"
+      },
+      {
+        "metadata_target": "work:JulianRev",
+        "lineage_entity_id": "encoding:ota-u700-a",
+        "role": "digital_encoding"
+      },
+      {
+        "metadata_target": "work:JulianRev",
+        "lineage_entity_id": "artifact:general-corpus:JulianRev",
+        "role": "repository_representation"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:julian-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_from_OTA/JulianRev.xml.",
+      "repository_path": "CME/source/CME_from_OTA/JulianRev.xml",
+      "locator": "HEADER; Chapters I-LXXXVI",
+      "summary": "Supplies title, Julian and Glasscoe responsibilities, OTA U-700-A, the 1976 source edition, electronic omissions, the 1373 opening heading, and 86 chapters of prose.",
+      "accessed_on": "2026-07-11",
+      "sha256": "e3b0c1631c0e9c0833e84e8da4ec51330bb697fb70b5a99a02278076bc5aa829"
+    },
+    {
+      "id": "evidence:julian-structure",
+      "type": "computational_inspection",
+      "citation": "General Corpus structural inspection of JulianRev.xml.",
+      "repository_path": "CME/source/CME_from_OTA/JulianRev.xml",
+      "locator": "DIV1, P, PB, LG, and L element counts",
+      "summary": "Counts 86 chapter DIV1 elements, 90 paragraphs, 103 page breaks, and no verse line groups or line elements.",
+      "accessed_on": "2026-07-11",
+      "sha256": "e3b0c1631c0e9c0833e84e8da4ec51330bb697fb70b5a99a02278076bc5aa829"
+    },
+    {
+      "id": "evidence:julian-sloane2499",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Sloane MS 2499: Julian of Norwich, Revelations of Divine Love (Long Text).",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114866",
+      "summary": "Distinguishes the Short and Long Texts, dates the visions and later composition, describes the c. 1650 Sloane witness at ff. 1r-57v, links its full digitization, and states that Glasscoe 1976 was edited from it.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-ota",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, item 0700, A Revelation of Love.",
+      "url": "https://llds.phon.ox.ac.uk/llds/xmlui/handle/20.500.14106/0700",
+      "summary": "Provides the current public OTA record and downloadable text for Julian's Middle English work and identifies the electronic item represented in the repository header as U-700-A.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-mets",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, Julian of Norwich, Introduction and Select Bibliography.",
+      "url": "https://metseditions.org/read/jA7XV0kUvjzBtm6YC1jgZS08K7gkGvq",
+      "summary": "Lists Long and Short Text witnesses and identifies Glasscoe's 1976 edition, revised in 1986, as based on Sloane 2499.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-glasscoe-catalog",
+      "type": "official_catalog",
+      "citation": "WorldCat, A Revelation of Love, OCLC 3482699.",
+      "url": "https://search.worldcat.org/title/A-revelation-of-love/oclc/3482699",
+      "summary": "Confirms Marion Glasscoe, the University of Exeter 1976 imprint, ISBN 0859890619, and bibliographic identity of the immediate print edition.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:julian-composition-stages",
+      "question": "How many distinct compositional and revision stages led from Julian's 1373 visions and the shorter account to the surviving Long Text?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult current scholarship on Julian's textual development before assigning narrower dates or direct derivation among surviving witnesses."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-mets"
+      ]
+    },
+    {
+      "id": "question:julian-extent-authorial",
+      "question": "To what extent do the 86 chapter divisions and the opening chapter summary reflect Julian's composition, the early-modern Sloane copy, or Glasscoe's editorial presentation?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Compare Sloane 2499 images with Glasscoe's introduction and the encoded chapter boundaries."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-sloane2499",
+        "evidence:julian-glasscoe-catalog"
+      ]
+    }
+  ],
+  "notes": [
+    "The repository file's SHA-256 happens to begin e3b0 but is not the empty-file hash; the complete 64-character value is recorded above.",
+    "Edition, witness, encoding, access, and rights details are maintained in manifests/lineage/works/JulianRev.json and are not inherited automatically by the medieval work."
+  ]
+}

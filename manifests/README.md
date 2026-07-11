@@ -21,3 +21,9 @@ identity boundary, not a source-lineage substitute.
 Descriptive and lineage coverage is incremental; consult their `index.json`
 files for the records currently available. The publication-set README explains
 when its complete artifact snapshot may be replaced.
+
+For agent-assisted source research and cataloging, use the project
+[`research-corpus-manifests`](../.agents/skills/research-corpus-manifests/SKILL.md)
+skill. Its field guide defines source priority, layer boundaries, rights
+scoping, evidence requirements, validation, and reusable lessons from
+completed records.

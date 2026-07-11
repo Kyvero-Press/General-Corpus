@@ -2,6 +2,7 @@ import copy
 import importlib.util
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -50,6 +51,55 @@ class LineageManifestTests(unittest.TestCase):
         )
 
         self.assertIn("CME00099: unexpected property 'unreviewed_guess'", errors)
+
+    def _xml_identifier_errors(self, xml: str, work_id: str) -> list[str]:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "source.xml"
+            path.write_text(xml, encoding="utf-8")
+            errors: list[str] = []
+            validate_lineage_manifests._validate_xml_work_id(
+                path,
+                work_id,
+                "fixture",
+                errors,
+            )
+            return errors
+
+    def test_xml_identifier_accepts_legacy_cme_triplet(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<ETS><IDG ID='CME00099'><BIBNO>CME00099</BIBNO>"
+            "<VID>CME00099</VID></IDG></ETS>",
+            "CME00099",
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_accepts_dlps_idno(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>Troilus</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "Troilus",
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_accepts_delimited_case_insensitive_idno(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>AFW5744.0001.001</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "afw5744",
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_rejects_undelimited_prefix(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>TroilusExtra</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "Troilus",
+        )
+
+        self.assertTrue(any("no matching" in item for item in errors))
 
 
 if __name__ == "__main__":

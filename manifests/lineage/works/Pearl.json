@@ -1,0 +1,1011 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Pearl",
+  "work_id": "Pearl",
+  "title": "Pearl",
+  "primary_subject": "artifact:general-corpus:Pearl",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The checked-in Pearl XML is a local repository representation of a University of Michigan electronic text whose legacy header names Oxford Text Archive U-1686-A and a 1993 distribution date. The current OTA 1686 record is separately dated 1992-04-03. Their declared immediate source is E. V. Gordon's 1953 Clarendon Press edition, finalized for publication after his death by Ida L. Gordon; that edition represents the unique medieval witness, British Library Cotton MS Nero A X/2. The manuscript, scholarly edition, electronic versions, and repository artifact are modeled separately so that composition, copying, publication, access, foliation, and rights statements remain scoped to the correct layer.",
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Pearl",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Pearl",
+      "description": "The XML artifact consumed by this repository's conversion, catalog, and publication workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "General Corpus work ID",
+          "value": "Pearl"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "cd7b31cdf746d957b199d86f80e0204f0d5a9b6e"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero-press"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/Pearl.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "cd7b31cdf746d957b199d86f80e0204f0d5a9b6e",
+        "sha256": "b4ca5f1a7ee2c878853fc3d920c77097c964f8f9fc39071cec4f49e08509ab30"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-pearl-xml-header",
+        "evidence:repo-pearl-xml-content"
+      ],
+      "notes": [
+        "The XML identifies the digital item as Pearl through HEADER/FILEDESC/PUBLICATIONSTMT/IDNO[@TYPE='dlps'].",
+        "The source submodule is a distinct git repository; this manifest does not alter the XML."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Pearl",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item Pearl",
+      "description": "A publicly accessible electronic text of the Middle English poem, structurally divided into twenty sections and associated in the legacy header with Oxford Text Archive U-1686-A.",
+      "identifiers": [
+        {
+          "scheme": "University of Michigan CME item",
+          "value": "Pearl",
+          "uri": "https://name.umdl.umich.edu/Pearl"
+        },
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1686-A"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "electronic distribution date in legacy header",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-pearl-xml-header"
+          ],
+          "notes": "The header does not distinguish initial OTA creation, U-M ingest, or later platform migration dates."
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header",
+        "evidence:umich-pearl-item",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "The current U-M item exposes the complete poem as web text.",
+        "The exact division of encoding responsibility between OTA and U-M is not documented by the item-level evidence reviewed here."
+      ]
+    },
+    {
+      "id": "encoding:ota:1686",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive text 1686, Pearl",
+      "description": "The current OTA record corresponding to legacy identifier U-1686-A. The official record describes it as an SGML-tagged version of OTA text 581 and provides a header and plain-text file.",
+      "identifiers": [
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "1686",
+          "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1686"
+        },
+        {
+          "scheme": "Oxford Text Archive legacy identifier",
+          "value": "U-1686-A"
+        }
+      ],
+      "creator_ids": [
+        "agent:ota"
+      ],
+      "date_statements": [
+        {
+          "label": "OTA issue date",
+          "value": "1992-04-03",
+          "normalized": "1992-04-03",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-pearl-1686"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-pearl-1686",
+        "evidence:repo-pearl-xml-header"
+      ],
+      "notes": [
+        "The matching U-1686-A identifier ties this record to the local header; no checksum comparison between the OTA files and U-M or local representations was completed.",
+        "OTA text 581 is a separately numbered precursor mentioned by this record and should not be collapsed into text 1686."
+      ]
+    },
+    {
+      "id": "edition:gordon:1953",
+      "type": "scholarly_edition",
+      "label": "E. V. Gordon edition of Pearl (1953)",
+      "creator_ids": [
+        "agent:ev-gordon",
+        "agent:ida-gordon"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1953",
+          "normalized": "1953",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-pearl-xml-header",
+            "evidence:ia-pearl-1953-scan",
+            "evidence:umich-pearl-item"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Pearl, ed. E. V. Gordon (Oxford: Clarendon Press, 1953); final revision after the editor's death by Ida L. Gordon.",
+        "title": "Pearl",
+        "publisher": "Clarendon Press",
+        "publication_place": "Oxford",
+        "date": "1953",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "physical_description": {
+        "extent": "lx, 167 pages; frontispiece",
+        "format": "Printed scholarly edition",
+        "notes": [
+          "The local XML header abbreviates the extent as 167 pages and excludes the edition's substantial preliminary and apparatus matter from the electronic text."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header",
+        "evidence:ia-pearl-1953-scan",
+        "evidence:umich-pearl-item",
+        "evidence:pearl-1953-scholarly-review"
+      ],
+      "notes": [
+        "Internet Archive metadata states that Ida L. Gordon made the final revision after E. V. Gordon's death.",
+        "The edition is a Middle English scholarly text, not a modern-language translation."
+      ]
+    },
+    {
+      "id": "witness:bl:Cotton-Nero-A-X-2",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Nero A X/2",
+      "alternate_labels": [
+        "Cotton MS Nero A X, article 3",
+        "Pearl Manuscript",
+        "Gawain Manuscript"
+      ],
+      "description": "The unique manuscript witness of Pearl and of Cleanness, Patience, and Sir Gawain and the Green Knight. Pearl occupies modern folios 41r–59v; the older foliation embedded in the repository XML runs 39r–55v.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Cotton MS Nero A X/2",
+          "uri": "https://searcharchives.bl.uk/catalog/040-003316720"
+        },
+        {
+          "scheme": "British Library record ID",
+          "value": "040-003316720"
+        },
+        {
+          "scheme": "British Library LARK",
+          "value": "ark:/81055/vdc_100165158643.0x000001"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "text copied",
+          "value": "between 1375 and 1400",
+          "normalized": "1375/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-nero-a-x-2"
+          ]
+        },
+        {
+          "label": "miniatures added",
+          "value": "circa 1400–1410",
+          "normalized": "1400/1410",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-nero-a-x-2"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Nero A X/2",
+        "historical_designations": [
+          "Cotton MS Nero A X, article 3",
+          "Cotton MS Nero A X, ff. 41–130"
+        ],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-003316720",
+        "notes": "The original composite Cotton MS Nero A X was separated into two volumes in 1964."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "90 folios in the separately bound volume; Pearl at modern folios 41r–59v",
+        "format": "Parchment codex, written in one column of 36 lines",
+        "dimensions": "Approximately 180 × 155 mm",
+        "notes": [
+          "Gothic cursive script described as textura rotunda with anglicana features.",
+          "The manuscript has two foliation sequences; the BL catalog uses modern pencil foliation, while the XML milestones preserve the older sequence.",
+          "The text was copied by one scribe in a South-East Cheshire or North-East Staffordshire dialect; the poet's dialect is distinguished as farther south in Staffordshire.",
+          "Four full-page Pearl drawings at modern folios 41r–42v precede the written poem; the BL catalog describes the dreamer, Pearl Maiden, river, and heavenly Jerusalem scenes."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2",
+        "evidence:repo-pearl-xml-content"
+      ],
+      "notes": [
+        "Do not describe the repository XML's folio milestones as modern BL foliation.",
+        "The witness date is separate from the poem's composition date and the later illustration date."
+      ]
+    },
+    {
+      "id": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "type": "facsimile",
+      "label": "University of Calgary Gawain Manuscript microfilm page images",
+      "description": "A public digital collection of page images made from a microfilm reel of Cotton MS Nero A X/2, covering the manuscript that uniquely contains Pearl.",
+      "identifiers": [
+        {
+          "scheme": "University of Calgary collection",
+          "value": "Gawain Manuscript",
+          "uri": "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/"
+        }
+      ],
+      "physical_description": {
+        "extent": "Full digital coverage of Cotton MS Nero A X/2 reported by the British Library catalog",
+        "format": "Digital page images derived from microfilm",
+        "notes": [
+          "Item-level records pair the older and modern foliation sequences and provide attribution and usage fields."
+        ]
+      },
+      "reproduction_format": "Digital page images from microfilm",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ucalgary-manuscript-facsimile",
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The collection is a reproduction layer, not the manuscript itself and not the repository XML."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press/CME"
+      ]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-pearl-item",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header",
+        "evidence:umich-pearl-item"
+      ]
+    },
+    {
+      "id": "agent:oxford-university-press",
+      "type": "organization",
+      "name": "Oxford University Press",
+      "alternate_names": [
+        "Clarendon Press"
+      ],
+      "urls": [
+        "https://global.oup.com/"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ]
+    },
+    {
+      "id": "agent:university-calgary",
+      "type": "organization",
+      "name": "University of Calgary Libraries and Cultural Resources",
+      "urls": [
+        "https://digitalcollections.ucalgary.ca/"
+      ],
+      "evidence_ids": [
+        "evidence:ucalgary-manuscript-facsimile"
+      ]
+    },
+    {
+      "id": "agent:ev-gordon",
+      "type": "person",
+      "name": "E. V. Gordon",
+      "alternate_names": [
+        "Eric Valentine Gordon"
+      ],
+      "dates": "1896–1938",
+      "evidence_ids": [
+        "evidence:ia-pearl-1953-scan"
+      ]
+    },
+    {
+      "id": "agent:ida-gordon",
+      "type": "person",
+      "name": "Ida L. Gordon",
+      "evidence_ids": [
+        "evidence:ia-pearl-1953-scan"
+      ],
+      "notes": [
+        "Internet Archive catalog metadata credits her with the final revision after E. V. Gordon's death."
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-xml-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Pearl",
+      "object": "encoding:umich-cme:Pearl",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete checked-in Pearl XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The U-M CME digital text identified as Pearl"
+        },
+        "notes": "The local header, item identifier, structure, and text align with U-M's item. The exact download, release, and any intermediate normalization are not documented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-readme-source",
+          "evidence:repo-pearl-xml-header",
+          "evidence:umich-pearl-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-version-of-ota-1686",
+      "type": "version_of",
+      "subject": "encoding:umich-cme:Pearl",
+      "object": "encoding:ota:1686",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The U-M CME Pearl electronic text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "OTA text 1686"
+        },
+        "notes": "The shared U-1686-A identifier establishes a version relationship, but the reviewed records do not prove the direction or mechanics of copying between these electronic representations."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:repo-pearl-xml-header",
+          "evidence:umich-pearl-item",
+          "evidence:ota-pearl-1686"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-1953-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Pearl",
+      "object": "edition:gordon:1953",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete electronic poem, excluding omitted editorial matter"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The Middle English text and twenty-section structure in Gordon's edition"
+        },
+        "notes": "The header explicitly names the 1953 Gordon edition and enumerates print components omitted from the electronic text."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-pearl-xml-header",
+          "evidence:umich-pearl-item",
+          "evidence:ia-pearl-1953-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:1953-edition-transcribes-witness",
+      "type": "transcribes",
+      "subject": "edition:gordon:1953",
+      "object": "witness:bl:Cotton-Nero-A-X-2",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The edited Middle English poem on text pages 1–44"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Pearl",
+          "locators": [
+            "modern folios 41r–59v",
+            "older foliation 39r–55v in the repository XML"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-pearl-xml-header",
+          "evidence:repo-pearl-xml-content",
+          "evidence:bl-cotton-nero-a-x-2",
+          "evidence:ia-pearl-1953-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:ucalgary-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "object": "witness:bl:Cotton-Nero-A-X-2",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The Gawain Manuscript page-image collection"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Cotton MS Nero A X/2"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ucalgary-manuscript-facsimile",
+          "evidence:bl-cotton-nero-a-x-2"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-pearl-xml",
+      "entity": "artifact:general-corpus:Pearl",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Checked-out CME submodule or pinned GitHub blob",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/Pearl.xml",
+      "repository_path": "CME/source/CME_from_OTA/Pearl.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header"
+      ]
+    },
+    {
+      "id": "access:umich-pearl-text",
+      "entity": "encoding:umich-cme:Pearl",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page and View entire text",
+      "url": "https://quod.lib.umich.edu/c/cme/Pearl?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Pearl"
+      ],
+      "cost": "free",
+      "format": "HTML text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:umich-pearl-item"
+      ]
+    },
+    {
+      "id": "access:ota-pearl-1686",
+      "entity": "encoding:ota:1686",
+      "provider_id": "agent:ota",
+      "resource_kind": "download",
+      "status": "registration_required",
+      "access_method": "The public OTA record lists and previews header1686.xml and pearl-1686.txt, but direct anonymous bitstream requests are disallowed and download-all redirects to OTA login",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1686",
+      "cost": "unknown",
+      "format": "SGML/XML header and plain text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ota-pearl-1686"
+      ],
+      "notes": [
+        "A successful authenticated download was not verified; registration may not by itself guarantee file access."
+      ]
+    },
+    {
+      "id": "access:pearl-1953-ia",
+      "entity": "edition:gordon:1953",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Internet Archive controlled digital lending item; sign-in and borrowing availability may be required",
+      "url": "https://archive.org/details/pearlgord00gord",
+      "cost": "free",
+      "format": "Access-restricted page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ia-pearl-1953-scan"
+      ],
+      "notes": [
+        "The item is in the printdisabled collection and exposes encrypted lending derivatives rather than an unrestricted public PDF."
+      ]
+    },
+    {
+      "id": "access:bl-witness-catalog",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts Catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/040-003316720",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    },
+    {
+      "id": "access:bl-witness-physical",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Request the shelfmark using the BL collection-item request process; consultation is in London and restrictions apply",
+      "url": "https://forms.office.com/pages/responsepage.aspx?id=6B2cfc7MZUyMS4s31RjO_4dHAT3W5mdPvXcbR0bE2RFUOFlXM1AzQ1JaMVBRSUZYSEJURjVNUlI3Mi4u",
+      "cost": "unknown",
+      "format": "Original parchment codex",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The catalog states that access restrictions and a letter of introduction apply and directs readers to consult staff."
+      ]
+    },
+    {
+      "id": "access:bl-witness-digital",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "British Library digital item viewer",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100165158643.0x000001",
+      "cost": "not_applicable",
+      "format": "Digital page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The current catalog explicitly reports the digital images as unavailable."
+      ]
+    },
+    {
+      "id": "access:ucalgary-facsimile",
+      "entity": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "provider_id": "agent:university-calgary",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "University of Calgary Digital Collections Gawain Manuscript collection",
+      "url": "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/",
+      "cost": "free",
+      "format": "Online page images from microfilm",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ucalgary-manuscript-facsimile",
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:umich-pearl-us",
+      "entity": "encoding:umich-cme:Pearl",
+      "access_id": "access:umich-pearl-text",
+      "component": "The Pearl digital text and materials presented by University of Michigan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The item and collection pages expressly state that the materials are in the public domain in the United States and apply No Copyright–United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-pearl-item",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "No Copyright–United States is a rights statement, not a worldwide license and not an itemized analysis of Gordon's 1953 editorial contributions."
+      ]
+    },
+    {
+      "id": "rights:repo-pearl-upstream-us",
+      "entity": "artifact:general-corpus:Pearl",
+      "access_id": "access:repo-pearl-xml",
+      "component": "The upstream U-M/OTA transcription and medieval text represented in the checked-in XML",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M currently marks the corresponding item No Copyright–United States, while the checked-in XML header says the OTA text was made available for personal scholarly use only.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-pearl-xml-header",
+        "evidence:umich-pearl-item"
+      ],
+      "notes": [
+        "The public-domain assertion and legacy provider restriction are separate facts; this record does not treat the current U-M label as silently superseding the embedded term.",
+        "This statement does not independently adjudicate protectable Gordon-edition readings or cover project-authored code, metadata, typography, or outputs."
+      ]
+    },
+    {
+      "id": "rights:ota-pearl-1686",
+      "entity": "encoding:ota:1686",
+      "access_id": "access:ota-pearl-1686",
+      "component": "Files distributed through the current OTA text 1686 record",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "The current official OTA record expressly licenses the item under Creative Commons Attribution 3.0; that license grant is recorded separately from any public-domain status of the medieval text.",
+      "asserted_by_id": "agent:ota",
+      "license": {
+        "name": "Creative Commons Attribution 3.0 Unported",
+        "spdx": "CC-BY-3.0",
+        "uri": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-pearl-1686"
+      ],
+      "notes": [
+        "This records OTA's current license assertion; it does not independently resolve copyright in Gordon's 1953 editorial contributions or show that the license governs every U-M or repository representation."
+      ]
+    },
+    {
+      "id": "rights:pearl-medieval-text-us",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "component": "The anonymous medieval textual content of Pearl",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The text is attested in a manuscript copied between 1375 and 1400 and is centuries beyond any U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "This concerns the old text, not modern photographs, scans, transcriptions, editions, catalog prose, or provider contracts."
+      ]
+    },
+    {
+      "id": "rights:pearl-1953-edition-us",
+      "entity": "edition:gordon:1953",
+      "access_id": "access:pearl-1953-ia",
+      "component": "Protectable readings, introduction, notes, glossary, bibliography, appendixes, typography, and other editorial contributions in Gordon's 1953 edition",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "A 1953 work required timely renewal to retain an ordinary U.S. term, while certain foreign works may have had protection restored. No item-specific renewal, restoration, exception, or permission was established in this review, and Internet Archive restricts the scan.",
+      "effective_until": "2048-12-31",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-pearl-1953-scan",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "The effective-until date is the maximum ordinary 95-year term if protection was secured or restored; it is not a finding that every transcription choice is independently copyrightable.",
+        "U-M's NoC-US statement for its digital item is recorded separately and is not silently generalized to the complete printed apparatus."
+      ]
+    },
+    {
+      "id": "rights:ucalgary-facsimile-provider",
+      "entity": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "access_id": "access:ucalgary-facsimile",
+      "component": "University of Calgary Gawain Manuscript microfilm-derived page images, including Pearl folios",
+      "jurisdiction": "Provider rights statement and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "A representative University of Calgary item carries a Public Domain label but also enumerates limited usage categories and requires attribution; collection-wide terms and the exact Pearl image records were not verified.",
+      "asserted_by_id": "agent:university-calgary",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ucalgary-manuscript-facsimile"
+      ],
+      "notes": [
+        "Do not generalize a sampled item's public-domain label to the whole collection or to unrestricted commercial redistribution without reviewing the exact image record and current terms.",
+        "Apply the item-level attribution supplied by the provider when using an image."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:encoding-omits-apparatus",
+      "entity": "encoding:umich-cme:Pearl",
+      "practice": "selection",
+      "source_feature": "Preface, table of contents, abbreviations, introduction, bibliography, notes, and appendixes in Gordon's printed edition",
+      "representation": "Omitted from the electronic text",
+      "description": "The electronic encoding selects the poem and excludes the scholarly edition's prefatory and apparatus material.",
+      "scope": "Complete electronic item relative to the 1953 source edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-readme-source",
+      "type": "repository_file",
+      "citation": "General Corpus README, ‘Intro.’",
+      "repository_path": "README.org",
+      "locator": "Intro",
+      "summary": "The repository describes its working source snapshot as drawn from the Corpus of Middle English."
+    },
+    {
+      "id": "evidence:repo-pearl-xml-header",
+      "type": "repository_file",
+      "citation": "General Corpus local Pearl XML header.",
+      "repository_path": "CME/source/CME_from_OTA/Pearl.xml",
+      "locator": "HEADER/FILEDESC, ENCODINGDESC, and PROFILEDESC",
+      "summary": "The header identifies Pearl, U-M distributor, item Pearl, OTA U-1686-A, 1993, and E. V. Gordon's 1953 Clarendon Press edition; it lists omitted prefatory and apparatus matter and limits the OTA text to personal scholarly use.",
+      "sha256": "b4ca5f1a7ee2c878853fc3d920c77097c964f8f9fc39071cec4f49e08509ab30"
+    },
+    {
+      "id": "evidence:repo-pearl-xml-content",
+      "type": "repository_file",
+      "citation": "General Corpus local Pearl XML text.",
+      "repository_path": "CME/source/CME_from_OTA/Pearl.xml",
+      "locator": "TEXT/BODY; twenty DIV1 sections; folio MILESTONE elements",
+      "summary": "The complete encoded poem supports its twenty-section content, source-edition page markers 1–44, older manuscript foliation 39r–55v, incipit, and final Amen."
+    },
+    {
+      "id": "evidence:repo-pearl-xml-structure",
+      "type": "repository_file",
+      "citation": "XPath structural inspection of the General Corpus local Pearl XML.",
+      "repository_path": "CME/source/CME_from_OTA/Pearl.xml",
+      "locator": "Counts of DIV1, LG, L, PB, and MILESTONE elements, including per-section counts",
+      "summary": "The XML contains twenty DIV1 sections, 101 LG stanza elements, and 1,212 L elements. Every section has five 12-line stanzas except Section XV, which has six.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-pearl-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, ‘Pearl,’ item Pearl.",
+      "url": "https://quod.lib.umich.edu/c/cme/Pearl?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Pearl"
+      ],
+      "locator": "Item information, rights, actions, and contents",
+      "summary": "The page identifies Oxford: Clarendon Press 1953, OTA U-1686-A, twenty sections, a complete web text, and No Copyright–United States.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection home and rights statement.",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "locator": "Collection description and Rights and Permissions",
+      "summary": "U-M describes an initial group of texts obtained from OTA, transcribed by the Library, or contributed by faculty; later batches were manually keyed from public-domain editions with in-house proofreading and basic TEI markup. It offers bulk XML and states No Copyright–United States.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ota-pearl-1686",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, text 1686, Pearl, full item record.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1686",
+      "alternate_urls": [
+        "http://purl.ox.ac.uk/ota/1686"
+      ],
+      "locator": "Full item record, files, issue date, abstract, identifier, and rights",
+      "summary": "The official record identifies ota:1686 as Pearl, issued 1992-04-03, describes it as an SGML-tagged version of text 581, lists and previews header1686.xml and pearl-1686.txt, and asserts a Creative Commons Attribution 3.0 license. Its bitstreams currently disallow anonymous access and download-all redirects to login.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-cotton-nero-a-x-2",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Nero A X/2, record 040-003316720.",
+      "url": "https://searcharchives.bl.uk/catalog/040-003316720",
+      "locator": "Full record",
+      "summary": "The record supplies the shelfmark, four anonymous poems and modern folios, copying and decoration dates, dialect localizations, physical description, Pearl illustration subjects, current access restrictions, unavailable BL digital images, and a pointer to full Calgary coverage.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-pearl-1953-scan",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive item pearlgord00gord, Pearl, ed. E. V. Gordon (Oxford: Clarendon Press, 1953).",
+      "url": "https://archive.org/details/pearlgord00gord",
+      "alternate_urls": [
+        "https://archive.org/metadata/pearlgord00gord"
+      ],
+      "locator": "Item metadata and access status",
+      "summary": "The scan metadata confirms the 1953 Clarendon Press edition, E. V. Gordon's editorship, Ida L. Gordon's final revision after his death, bibliography, and access-restricted printdisabled status.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:pearl-1953-scholarly-review",
+      "type": "scholarly_source",
+      "citation": "Review of E. V. Gordon, ed., Pearl, Speculum 29 (1954): 113–115.",
+      "url": "https://www.journals.uchicago.edu/doi/pdf/10.2307/2850049",
+      "locator": "Bibliographic heading",
+      "summary": "The contemporary scholarly review identifies Gordon's Oxford: Clarendon Press 1953 edition and gives its extent as lx plus 167 pages with a frontispiece.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ucalgary-manuscript-facsimile",
+      "type": "official_webpage",
+      "citation": "University of Calgary Digital Collections, Gawain Manuscript collection and representative Cotton Nero A X/2 item.",
+      "url": "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/",
+      "alternate_urls": [
+        "https://digitalcollections.ucalgary.ca/CS.aspx?VP3=SearchResult&VBID=2R34WNG3AQUL&PN=4&IID=2R3BF1FQQ9DW2"
+      ],
+      "locator": "Collection; representative item Details and How can you use this image?",
+      "summary": "The public collection supplies Cotton Nero A X/2 microfilm-derived page images. A representative item pairs older and modern foliation, labels Copyright Status Public Domain, lists Usage Rights Education, Instruction, Private study, Research, and supplies attribution wording.",
+      "accessed_on": "2026-07-11",
+      "notes": [
+        "The sampled rights item depicts Gawain rather than Pearl; it documents collection-level presentation practice, while item-specific Pearl attribution should be taken from the exact image record used."
+      ]
+    },
+    {
+      "id": "evidence:us-copyright-circular-15a",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright, revised April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "Works already under statutory protection before 1978; mandatory renewal; restoration of foreign works",
+      "summary": "The Copyright Office explains the possible 95-year term for protected pre-1978 publications, mandatory renewal for 1950–1963 works, restoration of certain foreign works, and the current pre-1931 U.S. public-domain cutoff.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:local-xml-transfer-history",
+      "question": "What exact OTA/U-M release, download date, and transformation history produced the pinned local Pearl XML blob?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect CME repository history and surviving U-M or OTA release documentation.",
+        "Record any intermediate normalization with checksums and dates."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-pearl-xml-header",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "question:1953-editorial-rights",
+      "question": "Was the 1953 Gordon edition's U.S. copyright renewed or restored, which edition components remain protected in intended publication jurisdictions, and how should U-M's NoC-US statement be reconciled with them?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Review the edition's copyright page, renewal records, and any URAA restoration evidence.",
+        "Compare the XML systematically with public-domain manuscript facsimiles and earlier editions before attributing reusable readings to the 1953 edition.",
+        "Obtain legal review before distributing protected apparatus or nontrivial edition-specific readings."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:umich-pearl-item",
+        "evidence:ia-pearl-1953-scan",
+        "evidence:us-copyright-circular-15a"
+      ]
+    },
+    {
+      "id": "question:pearl-provider-terms",
+      "question": "How do the current U-M and OTA rights statements apply to the distinct U-M, OTA 1686, and checked-in Pearl representations, and do either supersede the personal-scholarly-use-only term embedded in the checked-in XML?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask U-M and OTA to explain which terms govern each representation and whether the historical restriction remains operative.",
+        "Compare OTA 1686, U-M, and checked-in files by checksum and content before asserting a copying direction; keep separately numbered OTA text 581 distinct.",
+        "Retain the historical restriction and current provider statements as separate dated layers."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-pearl-xml-header",
+        "evidence:umich-pearl-item",
+        "evidence:ota-pearl-1686"
+      ]
+    },
+    {
+      "id": "question:ucalgary-commercial-reuse",
+      "question": "Do the University of Calgary facsimile's enumerated Usage Rights permit commercial redistribution despite representative item-level Public Domain labels?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Review the current Calgary license and terms linked from each exact Pearl image proposed for use.",
+        "Request written clarification for commercial print or bundled image redistribution.",
+        "Preserve exact item-level attribution and any response."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ucalgary-manuscript-facsimile"
+      ]
+    },
+    {
+      "id": "question:gordon-finalization-scope",
+      "question": "Which specific portions of the posthumous 1953 edition were completed or revised by Ida L. Gordon rather than E. V. Gordon?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Inspect the edition's preface and archival publication history.",
+        "Refine creator roles only when the division of labor is explicitly documented."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ia-pearl-1953-scan"
+      ]
+    }
+  ],
+  "languages": [
+    "enm",
+    "eng"
+  ],
+  "review_notes": [
+    "Composition, manuscript copying, illustration, print publication, electronic distribution, and repository dates are modeled separately.",
+    "Older XML foliation 39r–55v and modern BL foliation 41r–59v are both retained with explicit labels.",
+    "Access and rights records apply only to the named entity or component; public access to a transcription does not automatically authorize reuse of Gordon's apparatus or manuscript images.",
+    "This record deliberately treats the exact OTA-to-U-M-to-repository transfer history and the 1953 edition's rights as unresolved."
+  ]
+}

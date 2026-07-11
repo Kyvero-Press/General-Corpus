@@ -1,0 +1,1450 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:HMaid",
+  "work_id": "HMaid",
+  "title": "Hali Meiðhad",
+  "primary_subject": "artifact:general-corpus:HMaid",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository XML is a local copy/version of University of Michigan CME item HMaid. U-M scanned and OCRed Frederick James Furnivall's posthumously published 1922 revision of EETS Original Series 18. That edition prints parallel transcriptions from Oxford, Bodleian Library MS Bodley 34, fols. 52v–71v, and British Library Cotton MS Titus D XVIII, fols. 112v–127r, and revises/expands Oswald Cockayne's 1866 edition of the Cotton witness. The XML encodes the two witnesses as separate divisions and omits the title page, prefatory note, grammatical notes, and glossary. A 1960 printed facsimile of Bodley 34 and the 2016 METS edition are linked as comparison resources, not upstream sources of HMaid.xml.",
+  "languages": [
+    "enm",
+    "lat",
+    "eng"
+  ],
+  "review_notes": [
+    "The two DIV1 elements represent two witnesses of one work; they must not be modeled as two separate authored works.",
+    "The medieval text, nineteenth- and early-twentieth-century editions, U-M encoding, modern scholarly editions, and manuscript photographs have separate rights and access layers."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:HMaid",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for HMaid",
+      "description": "The checked-in XML source used by this repository, containing two manuscript-witness divisions.",
+      "identifiers": [
+        {
+          "scheme": "CME",
+          "value": "HMaid",
+          "uri": "https://name.umdl.umich.edu/HMaid"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/HMaid.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "187b46bda43f224bb219da90d02c97500024dd53",
+        "sha256": "69534e5261bb66654fc568e407a5d18b4b010120e047e7115592fe98669029b1"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml"
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:HMaid",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item HMaid",
+      "alternate_labels": [
+        "Hali Meidenhad: An Alliterative Homily of the Thirteenth Century"
+      ],
+      "description": "U-M Humanities Text Initiative digital text created by scanning and OCRing the 1922 EETS edition, then reviewing and marking up the text.",
+      "identifiers": [
+        {
+          "scheme": "UMDL",
+          "value": "HMaid",
+          "uri": "https://name.umdl.umich.edu/HMaid"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich-library"
+      ],
+      "date_statements": [
+        {
+          "label": "Digital publication",
+          "value": "1997",
+          "normalized": "1997",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-hmaid-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:umich-hmaid-item"
+      ],
+      "notes": [
+        "The header names Janet Erickson for markup, Jean Borger for proofreading, and Jason Chu for markup review."
+      ]
+    },
+    {
+      "id": "edition:furnivall:1922",
+      "type": "scholarly_edition",
+      "label": "Furnivall's 1922 parallel-text edition",
+      "alternate_labels": [
+        "Hali Meidenhad: An Alliterative Homily of the Thirteenth Century",
+        "EETS Original Series 18, revised edition"
+      ],
+      "description": "The immediate printed source of U-M HMaid, printing the Bodley and Cotton witness texts in parallel and a modernized version at the foot of the pages.",
+      "identifiers": [
+        {
+          "scheme": "EETS",
+          "value": "Original Series 18"
+        },
+        {
+          "scheme": "HathiTrust",
+          "value": "001644594",
+          "uri": "https://catalog.hathitrust.org/Record/001644594"
+        }
+      ],
+      "creator_ids": [
+        "agent:frederick-james-furnivall",
+        "agent:oswald-cockayne"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1922 (for 1920)",
+          "normalized": "1922",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-hmaid-xml",
+            "evidence:nli-hmaid-1922"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Hali Meidenhad: An Alliterative Homily of the Thirteenth Century, from MS. Bodley 34, Oxford, and Cotton MS. Titus D.18, British Museum, edited by the late F. J. Furnivall (London: Early English Text Society / H. Milford, Oxford University Press, 1922), EETS Original Series 18.",
+        "title": "Hali Meidenhad: An Alliterative Homily of the Thirteenth Century",
+        "series": "Early English Text Society, Original Series 18",
+        "publisher": "H. Milford, Oxford University Press, for the Early English Text Society",
+        "publication_place": "London",
+        "date": "1922",
+        "pages": "116 pages",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:nli-hmaid-1922",
+        "evidence:hathi-hmaid-1922"
+      ],
+      "notes": [
+        "The NLI record says the text was published as Furnivall left it, without changes or additions, with a prefatory note signed I. G. (Israel Gollancz)."
+      ]
+    },
+    {
+      "id": "edition:cockayne:1866",
+      "type": "scholarly_edition",
+      "label": "Cockayne's 1866 edition from Cotton Titus D XVIII",
+      "alternate_labels": [
+        "Hali Meidenhad",
+        "EETS Original Series 18"
+      ],
+      "description": "Oswald Cockayne's first EETS edition of the Cotton witness, later revised and expanded by Furnivall's 1922 parallel-text edition.",
+      "identifiers": [
+        {
+          "scheme": "EETS",
+          "value": "Original Series 18"
+        },
+        {
+          "scheme": "URN",
+          "value": "urn:nbn:de:bvb:12-bsb10748405-0",
+          "uri": "https://www.deutsche-digitale-bibliothek.de/item/7SP2BDJIDHXTKANYOSVEU34ORO6NRWIH"
+        }
+      ],
+      "creator_ids": [
+        "agent:oswald-cockayne"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1866",
+          "normalized": "1866",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ddb-hmaid-1866"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Hali Meidenhad: from MS. Cott. Titus D. XVIII, fol. 112c; an Alliterative Homily of the Thirteenth Century, edited by Oswald Cockayne (London: Trübner for the Early English Text Society, 1866), EETS Original Series 18.",
+        "title": "Hali Meidenhad: An Alliterative Homily of the Thirteenth Century",
+        "series": "Early English Text Society, Original Series 18",
+        "publisher": "Trübner",
+        "publication_place": "London",
+        "date": "1866",
+        "pages": "viii, 50 pages",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:ddb-hmaid-1866"
+      ]
+    },
+    {
+      "id": "witness:bodleian:Bodley34",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library MS Bodley 34",
+      "alternate_labels": [
+        "MS. Bodl. 34",
+        "Bodley 34"
+      ],
+      "description": "Early-thirteenth-century manuscript containing the complete Katherine Group; Hali Meiðhad occupies fols. 52v–71v.",
+      "identifiers": [
+        {
+          "scheme": "Shelfmark",
+          "value": "MS. Bodl. 34"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Manuscript production",
+          "value": "First quarter of the thirteenth century, approximately 1225",
+          "normalized": "1200/1225",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:mets-katherine-introduction"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian-libraries",
+        "shelfmark": "MS. Bodl. 34",
+        "notes": "Hali Meiðhad is at fols. 52v–71v."
+      },
+      "physical_description": {
+        "extent": "80 folios; Hali Meiðhad at fols. 52v–71v",
+        "format": "Small, modest, largely unadorned codex",
+        "dimensions": "Approximately 5 × 7 inches",
+        "notes": [
+          "The Middle English text is laid out as prose across the page."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:mets-katherine-introduction",
+        "evidence:mets-hmaid-text"
+      ]
+    },
+    {
+      "id": "witness:bl:CottonTitusDXVIII",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Titus D XVIII",
+      "alternate_labels": [
+        "Cotton Titus D.18",
+        "Cotton Titus D XVIII, ff. 14–147"
+      ],
+      "description": "Composite parchment codex; its early-thirteenth-century Katherine Group part contains Hali Meiðhad at fols. 112v–127r.",
+      "identifiers": [
+        {
+          "scheme": "Shelfmark",
+          "value": "Cotton MS Titus D XVIII",
+          "uri": "https://searcharchives.bl.uk/catalog/040-001103581"
+        },
+        {
+          "scheme": "British Library record",
+          "value": "041-001103583",
+          "uri": "https://searcharchives.bl.uk/catalog/041-001103583"
+        },
+        {
+          "scheme": "ARK",
+          "value": "ark:/81055/vdc_100152540994.0x000002"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Katherine Group manuscript part",
+          "value": "First half of the thirteenth century",
+          "normalized": "1200/1249",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-part-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Titus D XVIII",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/041-001103583",
+        "notes": "Hali Meiðhad is at fols. 112v–127r in the part comprising fols. 14–147."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "Composite codex; relevant part fols. 14–147; Hali Meiðhad fols. 112v–127r",
+        "format": "Gothic script, two columns of 24–30 lines",
+        "dimensions": "165 × 120 mm; text space 110 × 90 mm",
+        "notes": [
+          "Initials are green with red pen flourishing; paraphs are red."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-cotton-part-catalog",
+        "evidence:bl-cotton-parent-catalog"
+      ]
+    },
+    {
+      "id": "facsimile:bodley34:eets-247-1960",
+      "type": "facsimile",
+      "label": "Facsimile of MS. Bodley 34, EETS Original Series 247",
+      "description": "Printed facsimile of Bodley 34 with an introduction by N. R. Ker; useful for comparing manuscript layout and the faint Hali Meiðhad rubric.",
+      "creator_ids": [
+        "agent:n-r-ker",
+        "agent:bodleian-libraries"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1960",
+          "normalized": "1960",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:folger-bodley34-facsimile"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Facsimile of MS. Bodley 34: St. Katherine, St. Margaret, St. Juliana, Hali Meiðhad, Sawles Warde, introduction by N. R. Ker (London and New York: Oxford University Press for the Early English Text Society, 1960), EETS Original Series 247.",
+        "title": "Facsimile of MS. Bodley 34",
+        "series": "Early English Text Society, Original Series 247",
+        "publisher": "Oxford University Press for the Early English Text Society",
+        "publication_place": "London and New York",
+        "date": "1960",
+        "pages": "xviii pages, 161 pages of facsimile",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "reproduction_format": "Printed photographic facsimile",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:folger-bodley34-facsimile"
+      ]
+    },
+    {
+      "id": "edition:huber-robertson:mets-2016",
+      "type": "scholarly_edition",
+      "label": "Huber–Robertson METS edition of the Katherine Group",
+      "description": "Modern edited and translated text of Bodley 34, including Hali Meithhad; linked as a scholarly comparison source rather than an upstream source of HMaid.xml.",
+      "creator_ids": [
+        "agent:emily-huber",
+        "agent:elizabeth-robertson"
+      ],
+      "date_statements": [
+        {
+          "label": "Print publication",
+          "value": "2016",
+          "normalized": "2016",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:mets-katherine-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Emily Rebekah Huber and Elizabeth Robertson, eds. and trans., The Katherine Group (MS Bodley 34) (Kalamazoo: Medieval Institute Publications, 2016).",
+        "title": "The Katherine Group (MS Bodley 34)",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo, Michigan",
+        "date": "2016",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition",
+        "evidence:mets-katherine-introduction",
+        "evidence:mets-hmaid-text"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml"
+      ]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "alternate_names": [
+        "University of Michigan Humanities Text Initiative"
+      ],
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-hmaid-item"
+      ]
+    },
+    {
+      "id": "agent:frederick-james-furnivall",
+      "type": "person",
+      "name": "Frederick James Furnivall",
+      "alternate_names": [
+        "F. J. Furnivall"
+      ],
+      "dates": "1825–1910",
+      "identifiers": [
+        {
+          "scheme": "VIAF",
+          "value": "24616924",
+          "uri": "https://viaf.org/viaf/24616924"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:nli-hmaid-1922"
+      ]
+    },
+    {
+      "id": "agent:oswald-cockayne",
+      "type": "person",
+      "name": "Thomas Oswald Cockayne",
+      "alternate_names": [
+        "Oswald Cockayne"
+      ],
+      "dates": "1807–1873",
+      "identifiers": [
+        {
+          "scheme": "VIAF",
+          "value": "24618198",
+          "uri": "https://viaf.org/viaf/24618198"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:ddb-hmaid-1866",
+        "evidence:nli-hmaid-1922"
+      ]
+    },
+    {
+      "id": "agent:bodleian-libraries",
+      "type": "organization",
+      "name": "Bodleian Libraries, University of Oxford",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bodleian-special-collections",
+        "evidence:bodleian-copying"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-cotton-part-catalog"
+      ]
+    },
+    {
+      "id": "agent:n-r-ker",
+      "type": "person",
+      "name": "N. R. Ker",
+      "alternate_names": [
+        "Neil Ripley Ker"
+      ],
+      "dates": "1908–1982",
+      "evidence_ids": [
+        "evidence:folger-bodley34-facsimile"
+      ]
+    },
+    {
+      "id": "agent:emily-huber",
+      "type": "person",
+      "name": "Emily Rebekah Huber",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition"
+      ]
+    },
+    {
+      "id": "agent:elizabeth-robertson",
+      "type": "person",
+      "name": "Elizabeth Robertson",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:HMaid",
+      "object": "encoding:umich-cme:HMaid",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete local HMaid XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME item HMaid"
+        },
+        "notes": "The local file carries U-M's title, DLPS identifier, publication and encoding statements, and two witness divisions. The exact repository ingestion date is not documented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-hmaid-xml",
+          "evidence:umich-hmaid-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-furnivall",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:HMaid",
+      "object": "edition:furnivall:1922",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The two-witness U-M digital text"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The Bodley and Cotton parallel texts and their inline editorial notes"
+        },
+        "notes": "The XML header says the title page, prefatory note, grammatical notes, and glossarial index were not encoded."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-hmaid-xml",
+          "evidence:nli-hmaid-1922"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-version-of-cockayne",
+      "type": "version_of",
+      "subject": "edition:furnivall:1922",
+      "object": "edition:cockayne:1866",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Furnivall's 1922 revised EETS OS 18 edition"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Cockayne's 1866 EETS OS 18 edition from Cotton Titus D XVIII"
+        },
+        "notes": "The 1922 edition revises the earlier edition and adds a parallel Bodley 34 text; it is not a simple reprint."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-hmaid-xml",
+          "evidence:nli-hmaid-1922",
+          "evidence:ddb-hmaid-1866"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-bodley",
+      "type": "transcribes",
+      "subject": "edition:furnivall:1922",
+      "object": "witness:bodleian:Bodley34",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The Bodley 34 parallel text"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Hali Meiðhad",
+          "locators": [
+            "fols. 52v–71v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-hmaid-xml",
+          "evidence:nli-hmaid-1922",
+          "evidence:mets-katherine-introduction"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-cotton",
+      "type": "transcribes",
+      "subject": "edition:furnivall:1922",
+      "object": "witness:bl:CottonTitusDXVIII",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The Cotton Titus D XVIII parallel text"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Hali Meiðhad",
+          "locators": [
+            "fols. 112v–127r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-hmaid-xml",
+          "evidence:nli-hmaid-1922",
+          "evidence:bl-cotton-part-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:cockayne-transcribes-cotton",
+      "type": "transcribes",
+      "subject": "edition:cockayne:1866",
+      "object": "witness:bl:CottonTitusDXVIII",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Cockayne's edition of Hali Meidenhad"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Hali Meiðhad beginning at fol. 112v",
+          "locators": [
+            "fols. 112v–127r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ddb-hmaid-1866",
+          "evidence:bl-cotton-part-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:bodley-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodley34:eets-247-1960",
+      "object": "witness:bodleian:Bodley34",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete printed facsimile"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "MS Bodley 34"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:folger-bodley34-facsimile"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-transcribes-bodley",
+      "type": "transcribes",
+      "subject": "edition:huber-robertson:mets-2016",
+      "object": "witness:bodleian:Bodley34",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The Hali Meithhad edition and translation"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Hali Meiðhad, fols. 52v–71v"
+        },
+        "notes": "This is a related modern edition for comparison, not an upstream source of HMaid.xml."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-katherine-edition",
+          "evidence:mets-hmaid-text"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-hmaid-local",
+      "entity": "artifact:general-corpus:HMaid",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path.",
+      "repository_path": "CME/source/CME_phase_1-2/HMaid.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml"
+      ]
+    },
+    {
+      "id": "access:umich-hmaid-text",
+      "entity": "encoding:umich-cme:HMaid",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the item and either witness division online.",
+      "url": "https://quod.lib.umich.edu/c/cme/HMaid",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/HMaid",
+        "https://quod.lib.umich.edu/c/cme/HMaid/1%3A1?rgn=div1&view=fulltext",
+        "https://quod.lib.umich.edu/c/cme/HMaid/1%3A2?rgn=div1%3Bview%3Dfulltext"
+      ],
+      "cost": "free",
+      "format": "HTML-rendered structured text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:umich-hmaid-item"
+      ]
+    },
+    {
+      "id": "access:hathi-hmaid-1922",
+      "entity": "edition:furnivall:1922",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use either full-view copy linked from the HathiTrust catalog record.",
+      "url": "https://catalog.hathitrust.org/Record/001644594",
+      "alternate_urls": [
+        "https://play.google.com/store/books/details/Frederick_James_Furnivall_Hali_meidenhad?id=f9hZAAAAMAAJ"
+      ],
+      "cost": "free",
+      "format": "Full-view page images; Google Play also lists a free ebook",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:hathi-hmaid-1922",
+        "evidence:google-play-hmaid-1922"
+      ]
+    },
+    {
+      "id": "access:bsb-hmaid-1866",
+      "entity": "edition:cockayne:1866",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open or download the Bayerische Staatsbibliothek digitization through the Deutsche Digitale Bibliothek record.",
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/7SP2BDJIDHXTKANYOSVEU34ORO6NRWIH",
+      "cost": "free",
+      "format": "Digitized page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ddb-hmaid-1866"
+      ],
+      "notes": [
+        "The provider applies No Copyright–Non-Commercial Use Only to the digital surrogate; link rather than redistribute its images in a commercial-capable corpus unless separate permission applies."
+      ]
+    },
+    {
+      "id": "access:bodley34-physical",
+      "entity": "witness:bodleian:Bodley34",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Apply for a Bodleian Reader card with Group A access, state the research interest, and order the manuscript for consultation at the Weston Library. Independent researchers are explicitly welcomed.",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using",
+      "contact": "specialcollections.enquiries@bodleian.ox.ac.uk",
+      "cost": "free",
+      "format": "Onsite consultation in a Weston Library reading room",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bodleian-special-collections"
+      ]
+    },
+    {
+      "id": "access:bodley34-reference-scans",
+      "entity": "witness:bodleian:Bodley34",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Complete the Bodleian mediated-copying order form for reference-quality PDF scans; identify shelfmark MS. Bodl. 34 and fols. 52v–71v. Contact the service first if scan feasibility or foliation is uncertain.",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "contact": "mediated.copying@bodleian.ox.ac.uk",
+      "cost": "fee",
+      "format": "Reference-quality PDF scans with simple shelfmark/folio metadata",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bodleian-copying"
+      ],
+      "notes": [
+        "The public page states £1 per scan for non-Oxford users and an average turnaround of 10 working days, subject to legal, conservation, and other exceptions.",
+        "Images are supplied subject to Imaging Services Terms of Use; obtain separate written terms for repository publication or print-on-demand reuse."
+      ]
+    },
+    {
+      "id": "access:cotton-catalog",
+      "entity": "witness:bl:CottonTitusDXVIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the manuscript-part description online.",
+      "url": "https://searcharchives.bl.uk/catalog/041-001103583",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-part-catalog"
+      ]
+    },
+    {
+      "id": "access:cotton-physical",
+      "entity": "witness:bl:CottonTitusDXVIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Register or renew a British Library Reader Pass, use the linked online collection-item request form, quote Cotton MS Titus D XVIII, and consult manuscripts in London. The catalog says a letter of introduction is required.",
+      "url": "https://searcharchives.bl.uk/catalog/041-001103583",
+      "contact": "British Library Reference Services via the catalog's Reference team link",
+      "cost": "free",
+      "format": "Onsite consultation in London",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-part-catalog"
+      ]
+    },
+    {
+      "id": "access:cotton-digital-images",
+      "entity": "witness:bl:CottonTitusDXVIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The parent catalog points to the legacy Digitised Manuscripts object but explicitly says the digital images are currently unavailable.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001103581",
+      "cost": "unknown",
+      "format": "Legacy digital manuscript images, currently unavailable",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-parent-catalog"
+      ],
+      "notes": [
+        "This is a dated service-status statement, not a claim that no digital surrogate exists. Recheck as British Library systems recover."
+      ]
+    },
+    {
+      "id": "access:bodley34-facsimile-folger",
+      "entity": "facsimile:bodley34:eets-247-1960",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Consult the printed facsimile at the Folger Shakespeare Library; the catalog lists an open-stacks copy.",
+      "url": "https://catalog.folger.edu/record/40715",
+      "cost": "free",
+      "format": "Printed photographic facsimile",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:folger-bodley34-facsimile"
+      ]
+    },
+    {
+      "id": "access:mets-hmaid-text",
+      "entity": "edition:huber-robertson:mets-2016",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the edited Middle English text and translation online or use METS download/print features subject to provider terms.",
+      "url": "https://metseditions.org/read/188DrglBCEeZU42mSzNGNs8P3a2eLRR",
+      "alternate_urls": [
+        "https://metseditions.org/editions/plEPa2NujgQpTBzVWsN8zMUZRQqZ5BXR"
+      ],
+      "cost": "free",
+      "format": "HTML scholarly edition and translation with notes",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition",
+        "evidence:mets-hmaid-text"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:umich-hmaid-us",
+      "entity": "encoding:umich-cme:HMaid",
+      "access_id": "access:umich-hmaid-text",
+      "component": "The HMaid materials presented through U-M's CME item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M currently labels the materials public domain and applies the DPLA No Copyright–United States statement.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-hmaid-item"
+      ],
+      "notes": [
+        "No Copyright–United States is a rights statement, not a worldwide license and not a statement about manuscript photography."
+      ]
+    },
+    {
+      "id": "rights:repo-hmaid-us",
+      "entity": "artifact:general-corpus:HMaid",
+      "access_id": "access:repo-hmaid-local",
+      "component": "The checked-in XML transcription and structure derived from U-M's encoding of the 1922 edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M currently applies No Copyright–United States to HMaid, and the immediate printed source was published in 1922, before the current U.S. public-domain cutoff.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:umich-hmaid-item",
+        "evidence:nli-hmaid-1922",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "The XML embeds a historical U-M availability notice allowing individual copying for personal use, research, and teaching while forbidding redistribution by content providers. That historical notice conflicts in scope with the current public-domain statement and should be preserved and clarified rather than silently discarded.",
+        "Repository-authored code, metadata, typesetting, and generated outputs can have separate licenses."
+      ]
+    },
+    {
+      "id": "rights:furnivall-1922-us",
+      "entity": "edition:furnivall:1922",
+      "access_id": "access:hathi-hmaid-1922",
+      "component": "The 1922 edition, parallel transcriptions, modernization, notes, and other published editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1922. U.S. Copyright Office Circular 15A states that all works published in the United States before 1931 are in the public domain as of 2026.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nli-hmaid-1922",
+        "evidence:hathi-hmaid-1922",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "Provider terms can still govern use of a particular scan or interface even when the underlying edition is public domain."
+      ]
+    },
+    {
+      "id": "rights:cockayne-1866-us",
+      "entity": "edition:cockayne:1866",
+      "component": "The 1866 edition and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1866, far before the current U.S. public-domain cutoff.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ddb-hmaid-1866",
+        "evidence:us-copyright-circular-15a"
+      ]
+    },
+    {
+      "id": "rights:bsb-1866-surrogate",
+      "entity": "edition:cockayne:1866",
+      "access_id": "access:bsb-hmaid-1866",
+      "component": "The BSB/DDB digital surrogate and supplied page images",
+      "jurisdiction": "Provider rights statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-11",
+      "basis": "The Deutsche Digitale Bibliothek record labels the digitization No Copyright–Non-Commercial Use Only.",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ddb-hmaid-1866"
+      ],
+      "notes": [
+        "NoC-NC is a rights statement, not an affirmative open license. It is safer to link to these images than redistribute them in a corpus that supports commercial print-on-demand use."
+      ]
+    },
+    {
+      "id": "rights:bodley34-underlying-text-us",
+      "entity": "witness:bodleian:Bodley34",
+      "component": "The medieval textual content embodied in Bodley 34",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The manuscript and its texts date from the early thirteenth century and are centuries beyond any U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-katherine-introduction"
+      ],
+      "notes": [
+        "This concerns medieval content, not modern photographs, scans, catalog prose, or order terms."
+      ]
+    },
+    {
+      "id": "rights:cotton-underlying-text-us",
+      "entity": "witness:bl:CottonTitusDXVIII",
+      "component": "The medieval textual content embodied in Cotton Titus D XVIII",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The relevant manuscript part dates from the first half of the thirteenth century and is centuries beyond any U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-part-catalog"
+      ],
+      "notes": [
+        "This concerns medieval content, not modern photographs, scans, catalog prose, or reader conditions."
+      ]
+    },
+    {
+      "id": "rights:bodley34-requested-images",
+      "entity": "witness:bodleian:Bodley34",
+      "access_id": "access:bodley34-reference-scans",
+      "component": "Any new scans supplied by Bodleian mediated copying or Imaging Services",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The service supplies scans subject to Imaging Services Terms of Use; the public order page does not grant item-specific repository-publication or commercial-reuse permission.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-copying"
+      ],
+      "notes": [
+        "Ask for written reuse terms before committing supplied scans or using them in a print-on-demand publication."
+      ]
+    },
+    {
+      "id": "rights:cotton-digital-images",
+      "entity": "witness:bl:CottonTitusDXVIII",
+      "access_id": "access:cotton-digital-images",
+      "component": "British Library digital manuscript photographs or scans",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The catalog reports that legacy digital images are currently unavailable and supplies no item-specific image-reuse grant on the manuscript record.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-parent-catalog"
+      ]
+    },
+    {
+      "id": "rights:bodley34-facsimile-1960",
+      "entity": "facsimile:bodley34:eets-247-1960",
+      "access_id": "access:bodley34-facsimile-folger",
+      "component": "The 1960 facsimile's photographs, N. R. Ker's introduction, layout, and other modern contributions",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "The facsimile was published in 1960 and includes modern photographs and an introduction; no open license was found, and the status of the U.S. publication formalities/renewal has not been researched.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:folger-bodley34-facsimile",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "A holding-library catalog and onsite access do not authorize republication of the facsimile images."
+      ]
+    },
+    {
+      "id": "rights:mets-hmaid",
+      "entity": "edition:huber-robertson:mets-2016",
+      "access_id": "access:mets-hmaid-text",
+      "component": "The modern edition, translation, introduction, notes, glosses, and web presentation",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 2016 and is a modern scholarly and translated presentation; free web access is not treated as public-domain status or a blanket republication grant.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:furnivall-parallel-collation",
+      "entity": "edition:furnivall:1922",
+      "practice": "collation",
+      "source_feature": "Two manuscript witnesses and a reader-oriented modernization",
+      "representation": "Bodley and Cotton texts printed in parallel on facing pages, with a modernized version at the foot of pages",
+      "description": "The 1922 edition enables witness comparison while retaining a separate modernization; it is a revised expansion of Cockayne's Cotton-only edition.",
+      "scope": "The complete work in both witnesses",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nli-hmaid-1922",
+        "evidence:repo-hmaid-xml"
+      ]
+    },
+    {
+      "id": "practice:umich-two-witness-structure",
+      "entity": "encoding:umich-cme:HMaid",
+      "practice": "collation",
+      "source_feature": "The two parallel witness texts in Furnivall's source edition",
+      "representation": "Separate DIV1 nodes HMaid:1 for Bodley 34 and HMaid:2 for Cotton Titus D XVIII",
+      "description": "U-M preserves separately addressable witness transcriptions rather than silently conflating their readings into one normalized text.",
+      "scope": "Both encoded witness divisions",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:umich-hmaid-item"
+      ]
+    },
+    {
+      "id": "practice:umich-omissions",
+      "entity": "encoding:umich-cme:HMaid",
+      "practice": "selection",
+      "source_feature": "Title page, prefatory note, grammatical notes, and glossarial index in the 1922 edition",
+      "representation": "Not encoded",
+      "description": "U-M's encoding declaration explicitly identifies these omitted edition components.",
+      "scope": "Front matter, back matter, and ancillary apparatus outside the two transcribed witness texts",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml"
+      ],
+      "notes": [
+        "HMaid.xml is not a complete digital facsimile or complete-content transcription of the 1922 volume."
+      ]
+    },
+    {
+      "id": "practice:cockayne-cotton-selection",
+      "entity": "edition:cockayne:1866",
+      "practice": "selection",
+      "source_feature": "The work's two surviving manuscript witnesses",
+      "representation": "The 1866 edition represents Cotton Titus D XVIII only",
+      "description": "The first EETS edition was made from the Cotton witness; Bodley 34 was added in Furnivall's later parallel-text revision.",
+      "scope": "Hali Meidenhad in Cotton Titus D XVIII",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ddb-hmaid-1866",
+        "evidence:nli-hmaid-1922"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-hmaid-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HMaid.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HMaid.xml",
+      "locator": "FILEDESC, SOURCEDESC, ENCODINGDESC, and BODY",
+      "summary": "The file identifies U-M's 1997 encoding, Furnivall's 1922 revision of Cockayne's EETS edition, Bodley 34 and Cotton Titus D XVIII as sources, U-M's OCR/markup workflow and omissions, and two witness-level divisions.",
+      "supports": [
+        "artifact:general-corpus:HMaid",
+        "encoding:umich-cme:HMaid",
+        "edition:furnivall:1922",
+        "edition:cockayne:1866",
+        "relation:repo-copied-from-umich",
+        "relation:umich-encoded-from-furnivall",
+        "relation:furnivall-version-of-cockayne",
+        "practice:umich-two-witness-structure",
+        "practice:umich-omissions"
+      ],
+      "sha256": "69534e5261bb66654fc568e407a5d18b4b010120e047e7115592fe98669029b1"
+    },
+    {
+      "id": "evidence:umich-hmaid-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, Hali Meidenhad item information.",
+      "url": "https://quod.lib.umich.edu/c/cme/HMaid",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/HMaid"
+      ],
+      "locator": "Item information, rights, and contents",
+      "summary": "The page identifies Furnivall, Oxford University Press 1922, separate Bodley and Cotton contents, and U-M's public-domain/No Copyright–United States statement.",
+      "supports": [
+        "encoding:umich-cme:HMaid",
+        "access:umich-hmaid-text",
+        "rights:umich-hmaid-us"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:nli-hmaid-1922",
+      "type": "official_catalog",
+      "citation": "National Library of Ireland, Hali meidenhad: an alliterative homily of the thirteenth century, 1922.",
+      "url": "https://catalogue.nli.ie/Record/vtls000396296",
+      "locator": "Bibliographic details and notes",
+      "summary": "The record identifies the 1922 volume as Furnivall's revision of Cockayne's EETS OS 18, based on Bodley 34 and Cotton Titus D XVIII, with parallel texts and a modernized version at the foot of pages.",
+      "supports": [
+        "edition:furnivall:1922",
+        "relation:furnivall-version-of-cockayne",
+        "relation:furnivall-transcribes-bodley",
+        "relation:furnivall-transcribes-cotton",
+        "practice:furnivall-parallel-collation",
+        "rights:furnivall-1922-us"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:hathi-hmaid-1922",
+      "type": "digital_surrogate",
+      "citation": "HathiTrust Digital Library, catalog record 001644594, Hali meidenhad, 1922.",
+      "url": "https://catalog.hathitrust.org/Record/001644594",
+      "locator": "Description and full-view links",
+      "summary": "The record gives the 1922 publication and 116-page extent and links two full-view digital copies.",
+      "supports": [
+        "edition:furnivall:1922",
+        "access:hathi-hmaid-1922",
+        "rights:furnivall-1922-us"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:google-play-hmaid-1922",
+      "type": "digital_surrogate",
+      "citation": "Google Play Books, Hali meidenhad: an alliterative homily of the thirteenth century, 1922.",
+      "url": "https://play.google.com/store/books/details/Frederick_James_Furnivall_Hali_meidenhad?id=f9hZAAAAMAAJ",
+      "locator": "Book information and free-ebook availability",
+      "summary": "Google Play lists the 1922 116-page EETS volume by Furnivall and Cockayne as a free ebook.",
+      "supports": [
+        "access:hathi-hmaid-1922"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ddb-hmaid-1866",
+      "type": "digital_surrogate",
+      "citation": "Deutsche Digitale Bibliothek / Bayerische Staatsbibliothek, Oswald Cockayne, Hali meidenhad, 1866.",
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/7SP2BDJIDHXTKANYOSVEU34ORO6NRWIH",
+      "locator": "Bibliographic record, download, and rights statement",
+      "summary": "The record identifies Cockayne, Cotton Titus D XVIII fol. 112c, Trübner 1866, EETS OS 18, the BSB digitization, and a No Copyright–Non-Commercial Use Only provider statement.",
+      "supports": [
+        "edition:cockayne:1866",
+        "relation:furnivall-version-of-cockayne",
+        "relation:cockayne-transcribes-cotton",
+        "access:bsb-hmaid-1866",
+        "rights:cockayne-1866-us",
+        "rights:bsb-1866-surrogate",
+        "practice:cockayne-cotton-selection"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-cotton-part-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Titus D XVIII, ff. 14–147.",
+      "url": "https://searcharchives.bl.uk/catalog/041-001103583",
+      "locator": "Contents, date, access, and physical characteristics",
+      "summary": "The record places Hali Meiðhad at fols. 112v–127r, dates the part to 1200–1249, records Middle English and Latin, describes parchment, Gothic script and two-column layout, and explains current physical request requirements.",
+      "supports": [
+        "witness:bl:CottonTitusDXVIII",
+        "relation:furnivall-transcribes-cotton",
+        "relation:cockayne-transcribes-cotton",
+        "access:cotton-catalog",
+        "access:cotton-physical",
+        "rights:cotton-underlying-text-us"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-cotton-parent-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Titus D XVIII.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001103581",
+      "locator": "Composite contents, physical description, and Digitised Content status",
+      "summary": "The parent record describes the composite codex and explicitly reports that legacy digital images are currently unavailable.",
+      "supports": [
+        "witness:bl:CottonTitusDXVIII",
+        "access:cotton-digital-images",
+        "rights:cotton-digital-images"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mets-katherine-edition",
+      "type": "scholarly_source",
+      "citation": "Emily Rebekah Huber and Elizabeth Robertson, eds. and trans., The Katherine Group (MS Bodley 34), Middle English Texts Series, 2016.",
+      "url": "https://metseditions.org/editions/plEPa2NujgQpTBzVWsN8zMUZRQqZ5BXR",
+      "locator": "Edition description, credits, classification, and contents",
+      "summary": "The page identifies the editors/translators and 2016 publication and classifies the Bodley 34 group as thirteenth-century Middle English prose, including Hali Meithhad (Holy Maidenhood).",
+      "supports": [
+        "edition:huber-robertson:mets-2016",
+        "relation:mets-transcribes-bodley",
+        "access:mets-hmaid-text",
+        "rights:mets-hmaid"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mets-katherine-introduction",
+      "type": "scholarly_source",
+      "citation": "Emily Rebekah Huber and Elizabeth Robertson, Introduction to The Katherine Group (MS Bodley 34), Middle English Texts Series.",
+      "url": "https://metseditions.org/read/289yrWEFaavSvqe9haV5PfBwy5N6gAG",
+      "locator": "Bodley 34, Hali Meithhad, audience, region, and textual modes sections",
+      "summary": "The introduction describes Bodley 34's date, size, contents and Welsh-Marches context, Hali Meithhad's subject and Latin sources, probable female contemplative audience, and the editors' decision to present the rhythmical alliterative texts as prose.",
+      "supports": [
+        "witness:bodleian:Bodley34",
+        "relation:furnivall-transcribes-bodley",
+        "rights:bodley34-underlying-text-us"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:mets-hmaid-text",
+      "type": "scholarly_source",
+      "citation": "Huber and Robertson, Hali Meithhad (Holy Maidenhood), Middle English Texts Series.",
+      "url": "https://metseditions.org/read/188DrglBCEeZU42mSzNGNs8P3a2eLRR",
+      "locator": "Complete edited text and manuscript-folio sequence",
+      "summary": "The online edition presents the Bodley 34 text with folio progression from 52v through 71v and provides modern scholarly notes and translation.",
+      "supports": [
+        "witness:bodleian:Bodley34",
+        "edition:huber-robertson:mets-2016",
+        "relation:mets-transcribes-bodley",
+        "access:mets-hmaid-text"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bodleian-special-collections",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Using special collections.",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using",
+      "locator": "Who can access special collections and planning a visit",
+      "summary": "The page explicitly welcomes independent researchers, explains Group A Reader-card access, and directs manuscript consultation to the Weston Library.",
+      "supports": [
+        "access:bodley34-physical"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bodleian-copying",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Special collections mediated copying.",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "locator": "How to order images, cost, turnaround, restrictions, and contact",
+      "summary": "The service offers reference-quality PDF scans to all users, lists £1 per scan for non-Oxford users and an average 10-working-day turnaround, gives mediated.copying@bodleian.ox.ac.uk, and subjects images to Imaging Services Terms of Use and item-level exceptions.",
+      "supports": [
+        "access:bodley34-reference-scans",
+        "rights:bodley34-requested-images"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:folger-bodley34-facsimile",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, Facsimile of MS. Bodley 34, 1960.",
+      "url": "https://catalog.folger.edu/record/40715",
+      "locator": "Bibliographic and item details",
+      "summary": "The catalog identifies the 1960 EETS OS 247 printed facsimile, N. R. Ker's introduction, its contents including Hali Meiðhad, pagination, and an open-stacks Folger copy.",
+      "supports": [
+        "facsimile:bodley34:eets-247-1960",
+        "relation:bodley-facsimile-of-witness",
+        "access:bodley34-facsimile-folger",
+        "rights:bodley34-facsimile-1960"
+      ],
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:us-copyright-circular-15a",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright, revised April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "Works already under statutory protection before 1978",
+      "summary": "The Copyright Office states that all works published in the United States before 1931 are in the public domain and explains renewal/term rules for later pre-1978 works.",
+      "supports": [
+        "rights:furnivall-1922-us",
+        "rights:cockayne-1866-us",
+        "rights:bodley34-facsimile-1960"
+      ],
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:embedded-umich-notice",
+      "question": "How should HMaid.xml's historical copying/redistribution notice be reconciled with U-M's current No Copyright–United States statement?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask U-M whether the current item-level rights statement supersedes the embedded 1997 availability notice for redistribution of the digital transcription.",
+        "Preserve both dated statements in provenance rather than silently deleting the older notice."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:umich-hmaid-item"
+      ]
+    },
+    {
+      "id": "question:bodley34-public-facsimile",
+      "question": "Has Bodley 34 been fully digitized for public access, apart from the 1960 printed facsimile and modern edited text?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask Bodleian Special Collections whether an unindexed or staff-only digital surrogate exists.",
+        "Request reference scans of fols. 52v–71v and written reuse terms if a public object is unavailable.",
+        "Consult the 1960 printed facsimile for layout comparison."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:mets-katherine-edition",
+        "evidence:bodleian-copying",
+        "evidence:folger-bodley34-facsimile"
+      ]
+    },
+    {
+      "id": "question:cotton-images-restoration",
+      "question": "When will the British Library's digital images for Cotton Titus D XVIII become available again, and under what reuse terms?",
+      "status": "pending_external_response",
+      "impact": "high",
+      "next_steps": [
+        "Recheck the interim Archives and Manuscripts Catalogue and legacy Digitised Manuscripts link periodically.",
+        "Ask British Library Reference Services whether images of fols. 112v–127r can currently be supplied and request written reuse terms."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-parent-catalog",
+        "evidence:bl-cotton-part-catalog"
+      ]
+    },
+    {
+      "id": "question:exact-ocr-source-pages",
+      "question": "Which physical or microfilm copy of Furnivall's 1922 volume did U-M scan, and were any corrections made against another copy?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask U-M whether scanning logs, source-copy identifiers, OCR correction files, or QA documentation survive.",
+        "Compare HMaid.xml against the HathiTrust page images, treating witness text, modernization, and notes separately."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-hmaid-xml",
+        "evidence:hathi-hmaid-1922"
+      ]
+    }
+  ]
+}

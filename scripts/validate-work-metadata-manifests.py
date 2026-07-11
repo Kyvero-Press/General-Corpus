@@ -368,8 +368,16 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
             if isinstance(item, dict) and item.get("role") == "editor"
         ]
         editor_names = [name for name in editor_names if isinstance(name, str)]
-        if editor_names and summary.get("editor") not in editor_names:
-            errors.append(f"{location}.catalog_summary.editor: does not match an editor agent")
+        editor_display = summary.get("editor")
+        names_a_single_editor = editor_display in editor_names
+        names_every_editor = isinstance(editor_display, str) and all(
+            name in editor_display for name in editor_names
+        )
+        if editor_names and not (names_a_single_editor or names_every_editor):
+            errors.append(
+                f"{location}.catalog_summary.editor: must name one editor agent or include "
+                "every editor agent in a composite display"
+            )
 
         language_codes = {
             item.get("code")

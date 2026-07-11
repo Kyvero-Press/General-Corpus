@@ -222,16 +222,48 @@ def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[
         errors.append(f"{location}: cannot parse XML for identifier validation: {exc}")
         return
 
-    root = tree.getroot()
-    idg_values = [node.get("ID", "").strip() for node in root.findall(".//IDG")]
-    bibno_values = [(node.text or "").strip() for node in root.findall(".//BIBNO")]
-    vid_values = [(node.text or "").strip() for node in root.findall(".//VID")]
-    for label, values in (("IDG/@ID", idg_values), ("BIBNO", bibno_values), ("VID", vid_values)):
-        if work_id not in values:
-            errors.append(
-                f"{location}: XML {label} does not contain manifest work_id {work_id!r}; "
-                f"found {values!r}"
-            )
+    def values_for(tag: str, attribute: str | None = None) -> list[str]:
+        values: list[str] = []
+        for node in tree.getroot().findall(f".//{tag}"):
+            raw_value = node.get(attribute, "") if attribute else node.text or ""
+            value = raw_value.strip()
+            if value:
+                values.append(value)
+        return values
+
+    def matches(value: str) -> bool:
+        """Accept the exact ID or a case-insensitive, structurally delimited extension."""
+
+        normalized_value = value.casefold()
+        normalized_work_id = work_id.casefold()
+        return normalized_value == normalized_work_id or any(
+            normalized_value.startswith(f"{normalized_work_id}{delimiter}")
+            for delimiter in (".", ":")
+        )
+
+    legacy_identifiers = (
+        ("IDG/@ID", values_for("IDG", "ID")),
+        ("BIBNO", values_for("BIBNO")),
+        ("VID", values_for("VID")),
+    )
+    present_legacy = [(label, values) for label, values in legacy_identifiers if values]
+    if present_legacy:
+        for label, values in present_legacy:
+            if not any(matches(value) for value in values):
+                errors.append(
+                    f"{location}: XML {label} does not identify manifest work_id {work_id!r}; "
+                    f"found {values!r}"
+                )
+        return
+
+    idno_values = values_for("IDNO")
+    if any(matches(value) for value in idno_values):
+        return
+
+    errors.append(
+        f"{location}: XML has no matching IDG/BIBNO/VID or IDNO identifier for manifest "
+        f"work_id {work_id!r}; found IDNO values {idno_values!r}"
+    )
 
 
 def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, Any]) -> list[str]:

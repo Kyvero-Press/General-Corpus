@@ -1,0 +1,121 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:Troilus",
+  "work_id": "Troilus",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:Troilus",
+    "unit_type": "single_work",
+    "label": "Troilus and Criseyde",
+    "scope_note": "Geoffrey Chaucer's five-book Middle English poem, as represented by the text selected from Windeatt's 1984 edition in CME/OTA item Troilus. The cataloging subject excludes Windeatt's parallel Il Filostrato, apparatus, and bibliography, which the XML says were omitted."
+  },
+  "catalog_summary": {
+    "title": "Troilus and Criseyde",
+    "author": "Geoffrey Chaucer",
+    "editor": "Barry A. Windeatt",
+    "date": "Composed c. 1385",
+    "region": "England; exact place of composition not securely established; narrative set in Troy",
+    "genres": ["Narrative poem", "Romance", "Tragedy", "Trojan narrative"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": ["chaucer", "courtly-love", "fidelity-and-betrayal", "fortune", "middle-english", "narrative-poetry", "rhyme-royal", "romance", "tragedy", "trojan-war", "translation-and-adaptation"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "Troilus", "uri": "https://name.umdl.umich.edu/Troilus"},
+    {"scheme": "OTA", "value": "U-1689-A"}
+  ],
+  "titles": [
+    {"id": "title:preferred", "type": "preferred", "value": "Troilus and Criseyde", "language": "enm", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-umich", "evidence:troilus-xml"]}},
+    {"id": "title:alternate-book", "type": "alternate", "value": "The Book of Troilus", "language": "enm", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-windeatt"]}, "notes": ["Used in the subtitle of Windeatt's edition and reflected in Chaucer's closing address to his book."]},
+    {"id": "title:umich", "type": "alternate", "value": "Geoffrey Chaucer's Troilus and Criseyde", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-umich"]}}
+  ],
+  "agents": [
+    {"id": "agent:geoffrey-chaucer", "type": "person", "name": "Geoffrey Chaucer", "alternate_names": ["Geffrey Chaucer"], "identifiers": [{"scheme": "VIAF", "value": "100185203", "uri": "https://viaf.org/viaf/100185203"}]},
+    {"id": "agent:barry-windeatt", "type": "person", "name": "Barry A. Windeatt", "alternate_names": ["B. A. Windeatt"]}
+  ],
+  "responsibilities": [
+    {"id": "responsibility:chaucer-author", "agent_id": "agent:geoffrey-chaucer", "role": "author", "attribution_status": "known", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-umich", "evidence:troilus-scholarly"]}},
+    {"id": "responsibility:chaucer-adapter", "agent_id": "agent:geoffrey-chaucer", "role": "adapter", "attribution_status": "known", "scope": {"kind": "whole", "description": "Creative retelling drawing especially on Boccaccio's Il Filostrato and on Boethian materials"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:troilus-scholarly", "evidence:troilus-windeatt"]}},
+    {"id": "responsibility:windeatt-editor", "agent_id": "agent:barry-windeatt", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "Immediate 1984 source edition"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt"]}},
+    {"id": "responsibility:windeatt-collator", "agent_id": "agent:barry-windeatt", "role": "collator", "attribution_status": "known", "scope": {"kind": "whole", "description": "Extant-manuscript variants in the immediate edition"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-windeatt", "evidence:troilus-scholarly"]}}
+  ],
+  "date_statements": [
+    {"id": "date:composition", "type": "composition", "display": "c. 1385", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt", "evidence:troilus-scholarly"]}, "notes": ["The date is approximate: the repository XML supplies 1385, and this record does not infer unsupported multi-year bounds or normalize the approximation to an exact year."]},
+    {"id": "date:first-secure-witness", "type": "first_known_attestation", "display": "Morgan MS M.817, securely dated 1403–1413", "normalized": {"not_before": 1403, "not_after": 1413}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "witness:morgan:M817", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-morgan"]}, "notes": ["This is a date for an extant copy, not composition."]}
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:troy", "label": "Troy", "kind": "historical_region", "identifiers": [{"scheme": "Wikidata", "value": "Q22647", "uri": "https://www.wikidata.org/entity/Q22647"}]}
+  ],
+  "place_statements": [
+    {"id": "place-statement:england", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-umich", "evidence:troilus-scholarly"]}, "notes": ["This does not identify a precise place of composition or a manuscript dialect."]},
+    {"id": "place-statement:troy", "place_id": "place:troy", "type": "historical_setting", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt"]}}
+  ],
+  "language_statements": [
+    {"id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-umich"]}}
+  ],
+  "form_statements": [
+    {"id": "form:whole", "value": "verse", "scope": {"kind": "whole"}, "description": "A five-book narrative poem predominantly in seven-line rhyme-royal stanzas, with embedded songs and letters.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-form", "evidence:troilus-xml"]}}
+  ],
+  "genre_statements": [
+    {"id": "genre:narrative-poem", "term": "narrative-poem", "label": "Narrative poem", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt"]}},
+    {"id": "genre:romance", "term": "romance", "label": "Romance", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:troilus-scholarly"]}},
+    {"id": "genre:tragedy", "term": "tragedy", "label": "Tragedy", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:troilus-windeatt", "evidence:troilus-scholarly"]}},
+    {"id": "genre:trojan-narrative", "term": "trojan-narrative", "label": "Trojan narrative", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:love", "term": "courtly-love", "label": "Courtly love and desire", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml"]}},
+    {"id": "subject:fortune", "term": "fortune", "label": "Fortune and mutability", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-scholarly", "evidence:troilus-xml"]}},
+    {"id": "subject:war", "term": "trojan-war", "label": "Trojan War", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-windeatt"]}},
+    {"id": "subject:betrayal", "term": "fidelity-and-betrayal", "label": "Fidelity, exchange, and betrayal", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:troilus-xml"]}}
+  ],
+  "tags": ["chaucer", "courtly-love", "fidelity-and-betrayal", "fortune", "middle-english", "narrative-poetry", "rhyme-royal", "romance", "tragedy", "trojan-war", "translation-and-adaptation"],
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "A five-book Middle English narrative poem recounting Troilus's love for Criseyde during the Trojan War, their union through Pandarus, Criseyde's exchange to the Greek camp and relationship with Diomede, and Troilus's death and final vision beyond earthly mutability. Chaucer transforms Boccaccio's Il Filostrato through sustained reflection on love, agency, Fortune, providence, and authorship.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt", "evidence:troilus-scholarly"]},
+    {"id": "summary:scope", "type": "scope_note", "value": "This record describes Chaucer's poem. The 1984 printed source also contains Italian parallel text and modern editorial matter that the electronic edition expressly omits.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt"]}
+  ],
+  "extent": {"numbered_items": null, "sections": 5, "prose_only_items": 0, "verse_only_items": 5, "mixed_items": 0, "verse_groups": 1178, "verse_lines": 8252, "description": "Five books; repository XML contains 1,178 line groups and 8,252 L elements, including embedded songs and letters as well as rhyme-royal stanzas.", "evidence_ids": ["evidence:troilus-structure"]},
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id": "part:book-i", "parent_id": null, "sequence": 1, "type": "section", "label": "Book I", "summary": "Troilus first sees and falls in love with Criseyde; Pandarus undertakes to mediate.", "item_count": 156, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:windeatt:troilus-1984", "scheme": "book", "value": "Book I"}], "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "part:book-ii", "parent_id": null, "sequence": 2, "type": "section", "label": "Book II", "summary": "Pandarus advances the courtship and brings Troilus and Criseyde into communication.", "item_count": 250, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:windeatt:troilus-1984", "scheme": "book", "value": "Book II"}], "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "part:book-iii", "parent_id": null, "sequence": 3, "type": "section", "label": "Book III", "summary": "The lovers are united and experience the poem's central period of joy.", "item_count": 261, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:windeatt:troilus-1984", "scheme": "book", "value": "Book III"}], "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "part:book-iv", "parent_id": null, "sequence": 4, "type": "section", "label": "Book IV", "summary": "Criseyde is exchanged for Antenor, separating the lovers and provoking debate over destiny and free will.", "item_count": 243, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:windeatt:troilus-1984", "scheme": "book", "value": "Book IV"}], "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "part:book-v", "parent_id": null, "sequence": 5, "type": "section", "label": "Book V", "summary": "Criseyde remains with the Greeks and Diomede; Troilus dies in battle and looks back on earthly love from the heavens.", "item_count": 268, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:windeatt:troilus-1984", "scheme": "book", "value": "Book V"}], "evidence_ids": ["evidence:troilus-xml"]}
+  ],
+  "related_works": [
+    {"id": "related:il-filostrato", "title": "Il Filostrato", "relation": "adaptation_of", "evidence_ids": ["evidence:troilus-windeatt", "evidence:troilus-scholarly"], "notes": ["Boccaccio is the principal narrative source, but Chaucer's poem is a substantial creative transformation rather than a simple line-for-line translation."]},
+    {"id": "related:boece", "title": "Boece", "relation": "related_to", "identifiers": [{"scheme": "CME/UMDL", "value": "ChaucerBo", "uri": "https://name.umdl.umich.edu/ChaucerBo"}], "evidence_ids": ["evidence:troilus-scholarly"], "notes": ["Troilus repeatedly adapts Boethian language and ideas."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:Troilus",
+    "manifest_path": "manifests/lineage/works/Troilus.json",
+    "bindings": [
+      {"metadata_target": "work:Troilus", "lineage_entity_id": "edition:windeatt:troilus-1984", "role": "source_edition"},
+      {"metadata_target": "work:Troilus", "lineage_entity_id": "encoding:umich-cme:Troilus", "role": "digital_encoding"},
+      {"metadata_target": "work:Troilus", "lineage_entity_id": "artifact:general-corpus:Troilus", "role": "repository_representation"},
+      {"metadata_target": "work:Troilus", "lineage_entity_id": "catalog:troilus-manuscript-tradition", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:troilus-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_from_OTA/Troilus.xml.", "repository_path": "CME/source/CME_from_OTA/Troilus.xml", "locator": "HEADER and Books I–V", "summary": "Supplies title, Chaucer attribution, Windeatt source edition, creation date 1385, omissions, five-book structure, and poem text.", "accessed_on": "2026-07-11", "sha256": "b04741b72ab10fee685c4c7ae12377b1f57cff34631ba8ad04433be78b08d129"},
+    {"id": "evidence:troilus-umich", "type": "official_webpage", "citation": "University of Michigan Library, CME item Troilus.", "url": "https://quod.lib.umich.edu/c/cme/Troilus?view=toc", "summary": "Confirms preferred discovery title, Chaucer attribution, Longman 1984 imprint, OTA identifier, and five-book table of contents.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:troilus-windeatt", "type": "official_catalog", "citation": "Indiana University Libraries, Troilus & Criseyde, ed. Barry A. Windeatt (Longman, 1984).", "url": "https://iucat.iu.edu/iue/1703887", "alternate_urls": ["https://books.google.com/books?id=V25aAAAAMAAJ"], "summary": "Confirms bibliographic responsibility and describes the Middle English edition; Google Books summarizes the mid-1380s composition and Trojan love tragedy.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:troilus-scholarly", "type": "scholarly_source", "citation": "University of Cambridge Faculty of English, Troilus & Criseyde: Translation & Commentary, Form and Recommended Editions.", "url": "https://www.english.cam.ac.uk/troilus/?page_id=49", "alternate_urls": ["https://www.english.cam.ac.uk/troilus/?page_id=155"], "summary": "Documents rhyme royal and Windeatt's manuscript variants, critical apparatus, and parallel Il Filostrato.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:troilus-morgan", "type": "official_catalog", "citation": "Morgan Library & Museum, MS M.817, Troilus and Criseyde.", "url": "https://www.themorgan.org/manuscript/147148", "summary": "Confirms the earliest securely datable witness, produced 1403–1413.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:troilus-form", "type": "scholarly_source", "citation": "University of Cambridge Faculty of English, ‘Form,’ Troilus & Criseyde: Translation & Commentary.", "url": "https://www.english.cam.ac.uk/troilus/?page_id=49", "summary": "Defines the poem's seven-line ababbcc rhyme-royal stanzas and metre.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:troilus-structure", "type": "computational_inspection", "citation": "Element count of repository Troilus.xml.", "repository_path": "CME/source/CME_from_OTA/Troilus.xml", "locator": "DIV1/LG/L elements", "summary": "Counts five book divisions, 1,178 LG elements, and 8,252 L elements; counts describe the encoding rather than a universal critical lineation.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:lineage-troilus", "type": "linked_manifest_evidence", "citation": "General Corpus lineage manifest for Troilus.", "repository_path": "manifests/lineage/works/Troilus.json", "source_evidence_id": "evidence:cambridge-editions", "summary": "Binds descriptive claims to the Windeatt edition and aggregate manuscript tradition.", "accessed_on": "2026-07-11"}
+  ],
+  "open_questions": [
+    {"id": "question:composition-date", "question": "Can the composition and revision chronology be narrowed beyond the conventional mid-1380s range without overstating disputed internal and historical evidence?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult the dating discussion in Windeatt's introduction and current Chaucer scholarship before adopting narrower phases."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:troilus-xml", "evidence:troilus-windeatt"]},
+    {"id": "question:edition-language", "question": "Which manuscript dialect and normalization choices underlie each form in Windeatt's eclectic text?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult the full textual introduction and apparatus; do not assign one manuscript's dialect to the work as a whole."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:troilus-windeatt", "evidence:lineage-troilus"]}
+  ],
+  "notes": [
+    "No single dialect region is assigned: an eclectic edition of a multi-witness literary work cannot safely inherit one witness's scribal localization.",
+    "The line and stanza counts are encoding metrics; embedded songs and letters complicate simple rhyme-royal stanza arithmetic."
+  ]
+}

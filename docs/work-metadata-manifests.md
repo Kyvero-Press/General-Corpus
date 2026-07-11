@@ -27,7 +27,8 @@ manifests/work-metadata/
 │   ├── work-metadata-index.schema.json
 │   └── work-metadata-manifest.schema.json
 └── works/
-    └── CME00099.json
+    ├── CME00099.json
+    └── … one JSON file per cataloged work
 ```
 
 `index.json` contains compact discovery fields for consumers that do not need

@@ -26,7 +26,8 @@ manifests/lineage/
 │   ├── lineage-index.schema.json
 │   └── lineage-manifest.schema.json
 └── works/
-    └── CME00099.json
+    ├── CME00099.json
+    └── … one JSON file per researched work
 ```
 
 `index.json` is the only discovery list. Its `coverage.strategy` is currently
@@ -174,7 +175,8 @@ It enforces the committed JSON Schemas and additionally checks:
 - exact index coverage of `works/*.json`;
 - repository-relative, non-escaping paths that exist;
 - SHA-256 and git-blob hashes for repository artifacts;
-- agreement between a CME manifest ID and the XML `IDG`, `BIBNO`, and `VID`;
+- agreement between a manifest work ID and the XML identifier family used by
+  that source (`IDG`/`BIBNO`/`VID` or `IDNO`);
   and
 - agreement between index fields and their work manifest.
 

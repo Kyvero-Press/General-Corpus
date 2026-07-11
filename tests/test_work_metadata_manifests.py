@@ -89,6 +89,41 @@ class WorkMetadataManifestTests(unittest.TestCase):
 
         self.assertIn("CME00099: unexpected property 'unscoped_region'", errors)
 
+    def test_composite_editor_display_may_name_every_editor(self) -> None:
+        changed = copy.deepcopy(self.manifest)
+        changed["agents"].append(
+            {
+                "id": "agent:second-editor",
+                "type": "person",
+                "name": "Second Editor",
+            }
+        )
+        changed["responsibilities"].append(
+            {
+                "id": "responsibility:second-editor",
+                "agent_id": "agent:second-editor",
+                "role": "editor",
+                "attribution_status": "known",
+                "scope": {"kind": "whole"},
+                "assertion": {
+                    "status": "confirmed",
+                    "confidence": "high",
+                    "evidence_ids": ["evidence:holthausen-1897-scan"],
+                },
+            }
+        )
+        changed["catalog_summary"]["editor"] = (
+            "Ferdinand Holthausen; revised by Second Editor"
+        )
+
+        errors = validate_work_metadata_manifests._semantic_manifest_errors(
+            REPO_ROOT,
+            self.path,
+            changed,
+        )
+
+        self.assertFalse(any("catalog_summary.editor" in item for item in errors))
+
 
 if __name__ == "__main__":
     unittest.main()
