@@ -3,6 +3,10 @@
 This directory contains evidence-backed provenance, access, reproduction, and
 rights records for individual General Corpus works.
 
+Descriptive title, authorship, date, region, language, genre, form, subject,
+and tag data lives in the parallel [`../work-metadata/`](../work-metadata/)
+system.
+
 - [`index.json`](index.json) is the discovery index.
 - [`works/`](works/) contains one self-contained JSON graph per work.
 - [`schemas/`](schemas/) contains the JSON Schema Draft 2020-12 contracts.

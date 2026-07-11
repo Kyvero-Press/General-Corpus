@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Corpus work metadata index",
+  "description": "Discovery index for the per-work descriptive metadata manifests.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "generated",
+    "coverage",
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "manifest_count",
+        "notes"
+      ],
+      "properties": {
+        "strategy": {
+          "enum": [
+            "incremental",
+            "complete"
+          ]
+        },
+        "manifest_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "work_id",
+          "preferred_title",
+          "author_display",
+          "editor_display",
+          "date_display",
+          "region_display",
+          "manifest",
+          "unit_type",
+          "primary_form",
+          "language_codes",
+          "genre_terms",
+          "tags",
+          "lineage_manifest",
+          "record_status",
+          "last_reviewed"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^metadata:[^ ]+$"
+          },
+          "work_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "preferred_title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "author_display": {
+            "type": "string",
+            "minLength": 1
+          },
+          "editor_display": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "date_display": {
+            "type": "string",
+            "minLength": 1
+          },
+          "region_display": {
+            "type": "string",
+            "minLength": 1
+          },
+          "manifest": {
+            "type": "string",
+            "pattern": "^works/[^/]+\\.json$"
+          },
+          "unit_type": {
+            "enum": [
+              "single_work",
+              "collection",
+              "compilation",
+              "edited_selection",
+              "fragment",
+              "composite",
+              "unknown"
+            ]
+          },
+          "primary_form": {
+            "enum": [
+              "prose",
+              "verse",
+              "mixed",
+              "other",
+              "unknown"
+            ]
+          },
+          "language_codes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]{3}$"
+            },
+            "uniqueItems": true
+          },
+          "genre_terms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "uniqueItems": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "uniqueItems": true
+          },
+          "lineage_manifest": {
+            "type": "string",
+            "pattern": "^../lineage/works/[^/]+\\.json$"
+          },
+          "record_status": {
+            "enum": [
+              "draft",
+              "partial",
+              "reviewed",
+              "deprecated"
+            ]
+          },
+          "last_reviewed": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}

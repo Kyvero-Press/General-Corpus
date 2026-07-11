@@ -1,0 +1,1324 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Corpus work metadata manifest",
+  "description": "Descriptive catalog metadata for one intellectual or content unit, distinct from its physical and digital lineage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "id",
+    "work_id",
+    "record_status",
+    "created",
+    "last_reviewed",
+    "cataloging_subject",
+    "catalog_summary",
+    "identifiers",
+    "titles",
+    "agents",
+    "responsibilities",
+    "date_statements",
+    "places",
+    "place_statements",
+    "language_statements",
+    "form_statements",
+    "genre_statements",
+    "subject_statements",
+    "tags",
+    "summaries",
+    "extent",
+    "content_structure_status",
+    "content_parts",
+    "related_works",
+    "lineage",
+    "evidence",
+    "open_questions",
+    "notes"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^metadata:[^ ]+$"
+    },
+    "work_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_status": {
+      "enum": [
+        "draft",
+        "partial",
+        "reviewed",
+        "deprecated"
+      ]
+    },
+    "created": {
+      "$ref": "#/$defs/date"
+    },
+    "last_reviewed": {
+      "$ref": "#/$defs/date"
+    },
+    "cataloging_subject": {
+      "$ref": "#/$defs/catalogingSubject"
+    },
+    "catalog_summary": {
+      "$ref": "#/$defs/catalogSummary"
+    },
+    "identifiers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/identifier"
+      }
+    },
+    "titles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/titleStatement"
+      }
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/agent"
+      }
+    },
+    "responsibilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/responsibility"
+      }
+    },
+    "date_statements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dateStatement"
+      }
+    },
+    "places": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/place"
+      }
+    },
+    "place_statements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/placeStatement"
+      }
+    },
+    "language_statements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/languageStatement"
+      }
+    },
+    "form_statements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/formStatement"
+      }
+    },
+    "genre_statements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/classificationStatement"
+      }
+    },
+    "subject_statements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/classificationStatement"
+      }
+    },
+    "tags": {
+      "$ref": "#/$defs/tagArray"
+    },
+    "summaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/summary"
+      }
+    },
+    "extent": {
+      "$ref": "#/$defs/extent"
+    },
+    "content_structure_status": {
+      "enum": [
+        "summary",
+        "partial",
+        "complete",
+        "unknown"
+      ]
+    },
+    "content_parts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contentPart"
+      }
+    },
+    "related_works": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relatedWork"
+      }
+    },
+    "lineage": {
+      "$ref": "#/$defs/lineageBinding"
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/openQuestion"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$defs": {
+    "localId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*:[^ ]+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "tag": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "tagArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tag"
+      },
+      "uniqueItems": true
+    },
+    "evidenceIdArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/localId"
+      },
+      "uniqueItems": true
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ]
+    },
+    "identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ],
+      "properties": {
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "$ref": "#/$defs/uri"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "whole",
+            "part",
+            "selected_passages",
+            "unknown"
+          ]
+        },
+        "part_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/localId"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "confidence",
+        "evidence_ids"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "confirmed",
+            "supported",
+            "tentative",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "catalogingSubject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "unit_type",
+        "label",
+        "scope_note"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^work:[^ ]+$"
+        },
+        "unit_type": {
+          "enum": [
+            "single_work",
+            "collection",
+            "compilation",
+            "edited_selection",
+            "fragment",
+            "composite",
+            "unknown"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "catalogSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "author",
+        "editor",
+        "date",
+        "region",
+        "genres",
+        "form",
+        "language_codes",
+        "tags"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "editor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "form": {
+          "$ref": "#/$defs/textualForm"
+        },
+        "language_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z]{3}$"
+          },
+          "uniqueItems": true
+        },
+        "tags": {
+          "$ref": "#/$defs/tagArray"
+        }
+      }
+    },
+    "titleStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "value",
+        "language",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "preferred",
+            "original",
+            "alternate",
+            "uniform",
+            "translated",
+            "supplied",
+            "incipit",
+            "explicit",
+            "short"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{3}$"
+        },
+        "script": {
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{3}$"
+        },
+        "supplied_by": {
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "person",
+            "organization",
+            "collective"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternate_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "responsibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "role",
+        "attribution_status",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "agent_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "author",
+            "coauthor",
+            "compiler",
+            "editor",
+            "transcriber",
+            "collator",
+            "translator",
+            "adapter",
+            "reviser",
+            "commentator",
+            "attributed_author",
+            "unknown"
+          ]
+        },
+        "attribution_status": {
+          "enum": [
+            "known",
+            "attributed",
+            "anonymous",
+            "unknown",
+            "disputed"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "agent_id"
+          ]
+        },
+        {
+          "required": [
+            "display_name"
+          ]
+        }
+      ]
+    },
+    "normalizedDate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "not_before": {
+          "type": "integer"
+        },
+        "not_after": {
+          "type": "integer"
+        }
+      },
+      "minProperties": 1
+    },
+    "dateStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "display",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "composition",
+            "compilation",
+            "revision",
+            "translation",
+            "first_known_attestation",
+            "first_publication",
+            "historical_setting",
+            "unknown"
+          ]
+        },
+        "display": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalized": {
+          "$ref": "#/$defs/normalizedDate"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "source_lineage_entity_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "place": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "settlement",
+            "region",
+            "country",
+            "historical_region",
+            "cultural_region",
+            "dialect_region",
+            "unknown"
+          ]
+        },
+        "broader_place_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/localId"
+          },
+          "uniqueItems": true
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "placeStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "place_id",
+        "type",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "place_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "place_of_composition",
+            "place_of_compilation",
+            "cultural_origin",
+            "dialect_region",
+            "historical_setting",
+            "associated_place",
+            "first_known_attestation",
+            "unknown"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "source_lineage_entity_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "languageStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "code",
+        "label",
+        "usage",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "code": {
+          "type": "string",
+          "pattern": "^[a-z]{3}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "usage": {
+          "enum": [
+            "primary",
+            "secondary",
+            "embedded",
+            "quoted",
+            "editorial",
+            "unknown"
+          ]
+        },
+        "script": {
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{3}$"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "textualForm": {
+      "enum": [
+        "prose",
+        "verse",
+        "mixed",
+        "other",
+        "unknown"
+      ]
+    },
+    "formStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "value",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "value": {
+          "$ref": "#/$defs/textualForm"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "description": {
+          "type": "string"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        }
+      }
+    },
+    "classificationStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "term",
+        "label",
+        "scheme",
+        "scope",
+        "assertion"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "term": {
+          "$ref": "#/$defs/tag"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "primary": {
+          "type": "boolean"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "assertion": {
+          "$ref": "#/$defs/assertion"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "value",
+        "language",
+        "scope",
+        "evidence_ids"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "abstract",
+            "contents_note",
+            "scope_note",
+            "cataloging_note"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{3}$"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        }
+      }
+    },
+    "nullableCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "extent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numbered_items",
+        "sections",
+        "prose_only_items",
+        "verse_only_items",
+        "mixed_items",
+        "verse_groups",
+        "verse_lines",
+        "description",
+        "evidence_ids"
+      ],
+      "properties": {
+        "numbered_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "sections": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "prose_only_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_only_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "mixed_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_groups": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_lines": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        }
+      }
+    },
+    "partMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prose_only_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_only_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "mixed_items": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_groups": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "verse_lines": {
+          "$ref": "#/$defs/nullableCount"
+        }
+      }
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ],
+      "properties": {
+        "lineage_entity_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "contentPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "parent_id",
+        "sequence",
+        "type",
+        "label",
+        "summary",
+        "item_count",
+        "textual_form",
+        "locators",
+        "evidence_ids"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "parent_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z][a-z0-9_-]*:[^ ]+$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "enum": [
+            "work",
+            "section",
+            "item",
+            "preface",
+            "introduction",
+            "commentary",
+            "appendix",
+            "prologue",
+            "epilogue",
+            "fragment",
+            "other"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "item_count": {
+          "$ref": "#/$defs/nullableCount"
+        },
+        "textual_form": {
+          "$ref": "#/$defs/textualForm"
+        },
+        "metrics": {
+          "$ref": "#/$defs/partMetrics"
+        },
+        "locators": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/locator"
+          }
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relatedWork": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "relation",
+        "evidence_ids"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relation": {
+          "enum": [
+            "contains",
+            "contained_in",
+            "version_of",
+            "translation_of",
+            "adaptation_of",
+            "related_to"
+          ]
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lineageBindingItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metadata_target",
+        "lineage_entity_id",
+        "role"
+      ],
+      "properties": {
+        "metadata_target": {
+          "$ref": "#/$defs/localId"
+        },
+        "lineage_entity_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "role": {
+          "enum": [
+            "source_edition",
+            "source_witness",
+            "digital_encoding",
+            "repository_representation",
+            "related_source"
+          ]
+        }
+      }
+    },
+    "lineageBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest_id",
+        "manifest_path",
+        "bindings"
+      ],
+      "properties": {
+        "manifest_id": {
+          "type": "string",
+          "pattern": "^lineage:[^ ]+$"
+        },
+        "manifest_path": {
+          "type": "string",
+          "pattern": "^manifests/lineage/works/[^/]+\\.json$"
+        },
+        "bindings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/lineageBindingItem"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "citation",
+        "summary"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "type": {
+          "enum": [
+            "repository_file",
+            "official_webpage",
+            "official_catalog",
+            "digital_surrogate",
+            "scholarly_source",
+            "linked_manifest_evidence",
+            "computational_inspection"
+          ]
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "$ref": "#/$defs/uri"
+        },
+        "alternate_urls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          },
+          "uniqueItems": true
+        },
+        "repository_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string"
+        },
+        "source_evidence_id": {
+          "$ref": "#/$defs/localId"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessed_on": {
+          "$ref": "#/$defs/date"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "url"
+          ]
+        },
+        {
+          "required": [
+            "repository_path"
+          ]
+        }
+      ]
+    },
+    "openQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "question",
+        "status",
+        "impact",
+        "next_steps",
+        "last_checked",
+        "evidence_ids"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/localId"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "unresolved",
+            "pending_external_response",
+            "no_public_source_found",
+            "resolved",
+            "not_applicable"
+          ]
+        },
+        "impact": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "next_steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "last_checked": {
+          "$ref": "#/$defs/date"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidenceIdArray"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

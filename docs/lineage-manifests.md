@@ -7,6 +7,10 @@ The lineage manifests answer four different questions without conflating them:
 3. Where can each layer be read, downloaded, requested, or purchased?
 4. What rights statement or uncertainty applies to that particular layer?
 
+General descriptive catalog data—titles, authorship, dates, regions,
+languages, textual form, genres, subjects, and tags—lives in the separate
+[`work metadata`](work-metadata-manifests.md) system.
+
 The records are JSON graphs, because a work does not always have one straight
 source chain. CME00099 is the motivating example: its first section comes from
 KB X 90, while its second section comes from a different 1597 manuscript whose
