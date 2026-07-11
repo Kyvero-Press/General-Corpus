@@ -51,6 +51,30 @@ NOTE_TAG_RE = re.compile(r"^NOTE\d*$")
 DIV_TAG_RE = re.compile(r"^DIV\d*$")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 NUMERIC_LINE_NUMBER_RE = re.compile(r"^\d+$")
+NUMERIC_OR_ROMAN_TITLE_RE = re.compile(r"^(?:\d+|[ivxlcdm]+)\.?$", re.IGNORECASE)
+STANZA_HEAD_MARKER_PREFIX_RE = re.compile(
+    r"""
+    ^\s*
+    [\[({]?\s*\*?\s*
+    (?:\d+[a-z]?|[ivxlcdm]+)
+    (?=\s*(?:[\])}.,;:—–-]|\(|$))
+    \s*[\])}.]?
+    (?:\s*\(\s*(?:\d+[a-z]?|[ivxlcdm]+)\s*\)\s*[\])}.]?)?
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+GENERATED_FALLBACK_HEADING_CLASSES = [
+    "structural-fallback-heading",
+    "nonrunning",
+    "unlisted",
+    "unnumbered",
+]
+STANZA_HEADING_CLASSES = [
+    "stanza-head",
+    "nonrunning",
+    "unlisted",
+    "unnumbered",
+]
 
 
 @dataclass(frozen=True)
@@ -313,6 +337,14 @@ def title_text(el: etree._Element | None) -> str:
     return value.strip()
 
 
+def heading_title_text(el: etree._Element | None) -> str:
+    if el is None:
+        return ""
+    value = text_content_excluding_notes(el)
+    value = re.sub(r"\s+([,.;:!?])", r"\1", value)
+    return value.strip()
+
+
 def clean_title(value: str | None) -> str:
     value = clean_text((value or "").replace("¶", " — "))
     value = re.sub(r"\s+([,.;:!?])", r"\1", value)
@@ -325,6 +357,16 @@ def title_key(value: str | None) -> str:
 
 def same_title(left: str | None, right: str | None) -> bool:
     return bool(title_key(left)) and title_key(left) == title_key(right)
+
+
+def title_is_numeric_only(value: str | None) -> bool:
+    cleaned = clean_title(value)
+    cleaned = re.sub(r"^[\[({]+|[\])}.]+$", "", cleaned).strip()
+    return bool(cleaned and NUMERIC_OR_ROMAN_TITLE_RE.fullmatch(cleaned))
+
+
+def title_candidate_is_meaningful(value: str | None) -> bool:
+    return bool(title_key(value)) and not title_is_numeric_only(value)
 
 
 def remove_author_from_title(title: str, author: str | None) -> str:
@@ -422,7 +464,9 @@ def initial_body_heading_parts(root: etree._Element, fmt: str) -> list[str]:
             for child in children:
                 if tagu(child) != "HEAD":
                     break
-                heading_parts.append(title_text(child))
+                candidate = heading_title_text(child)
+                if title_candidate_is_meaningful(candidate):
+                    heading_parts.append(candidate)
             if heading_parts:
                 return unique_title_parts(heading_parts)
 
@@ -447,8 +491,8 @@ def body_title_supplements(root: etree._Element, fmt: str, title: str) -> list[s
         children = [child for child in child_elements(container) if tagu(child) not in MILESTONE_TAGS]
         index = 0
         while index < len(children) and tagu(children[index]) == "HEAD":
-            head_text = title_text(children[index])
-            if head_text and not same_title(head_text, title):
+            head_text = heading_title_text(children[index])
+            if title_candidate_is_meaningful(head_text) and not same_title(head_text, title):
                 supplements.append(head_text)
             index += 1
         if index >= len(children):
@@ -462,14 +506,16 @@ def body_title_supplements(root: etree._Element, fmt: str, title: str) -> list[s
         if not div_children or tagu(div_children[0]) != "HEAD":
             break
 
-        div_title = title_text(div_children[0])
+        div_title = heading_title_text(div_children[0])
         if not same_title(div_title, title):
             break
 
         for child in div_children[1:]:
             child_tag = tagu(child)
             if child_tag == "HEAD" and (attr(child, "TYPE") or "").lower() in {"sub", "subtitle", "subsubtitle", "sub-subtitle"}:
-                supplements.append(title_text(child))
+                subtitle = heading_title_text(child)
+                if title_candidate_is_meaningful(subtitle):
+                    supplements.append(subtitle)
             elif child_tag == "OPENER":
                 opener_text = title_text(child)
                 if looks_like_incipit(opener_text):
@@ -548,10 +594,21 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     if "title" not in data:
         for text_node in primary_text_nodes(root, fmt):
             for tag in ("DOCTITLE", "TITLEPART", "HEAD", "P"):
-                element = first_descendant(text_node, tag)
-                candidate = text_content_excluding_notes(element) or text_content(element)
-                if candidate:
-                    data["title"] = candidate
+                tag_name = tag.upper()
+                saw_candidates_for_tag = False
+                for element in text_node.iter():
+                    if not isinstance(element.tag, str) or tagu(element) != tag_name:
+                        continue
+                    if element_is_inside_note(element):
+                        continue
+                    saw_candidates_for_tag = True
+                    candidate = text_content_excluding_notes(element) or text_content(element)
+                    if title_candidate_is_meaningful(candidate):
+                        data["title"] = candidate
+                        break
+                if "title" in data:
+                    break
+                if tag == "HEAD" and saw_candidates_for_tag:
                     break
             if "title" in data:
                 break
@@ -565,6 +622,15 @@ def metadata(root: etree._Element, fmt: str, source: Path, parsed: ParsedXml) ->
     data.setdefault("title", source.stem)
     apply_display_title_metadata(root, fmt, data)
     return data
+
+
+def element_is_inside_note(el: etree._Element) -> bool:
+    current = el.getparent()
+    while current is not None and isinstance(current.tag, str):
+        if NOTE_TAG_RE.match(tagu(current)):
+            return True
+        current = current.getparent()
+    return False
 
 
 def element_is_in_front_matter(el: etree._Element) -> bool:
@@ -633,6 +699,36 @@ def source_apparatus_classes(el: etree._Element) -> list[str]:
     if omitted_apparatus:
         classes.append("source-omitted-apparatus")
     return classes
+
+
+def element_is_direct_child_of(el: etree._Element, parent_tag: str) -> bool:
+    parent = el.getparent()
+    return (
+        parent is not None
+        and isinstance(parent.tag, str)
+        and tagu(parent) == parent_tag.upper()
+    )
+
+
+def heading_text_has_stanza_marker_prefix(value: str | None) -> bool:
+    cleaned = clean_title(value)
+    if not cleaned:
+        return False
+    match = STANZA_HEAD_MARKER_PREFIX_RE.match(cleaned)
+    if not match:
+        return False
+    # Inside an ``LG``, a heading with an initial numeric/roman stanza marker is
+    # local source apparatus even when it carries a longer editorial gloss.
+    return True
+
+
+def stanza_heading_classes(el: etree._Element, heading_text: str | None = None) -> list[str]:
+    if tagu(el) != "HEAD" or not element_is_direct_child_of(el, "LG"):
+        return []
+    text = heading_text if heading_text is not None else heading_title_text(el)
+    if not heading_text_has_stanza_marker_prefix(text):
+        return []
+    return list(STANZA_HEADING_CLASSES)
 
 
 def join_classes(*groups: str | Sequence[str] | None) -> str | None:
@@ -877,24 +973,42 @@ def wrap_inline_segments(open_tag: str, close_tag: str, segments: list[str]) -> 
     return [f"{open_tag}{segment}{close_tag}" for segment in segments]
 
 
-def render_inline_children_segments(el: etree._Element, opts: Options) -> list[str]:
+def render_inline_children_segments(
+    el: etree._Element,
+    opts: Options,
+    *,
+    exclude_notes: bool = False,
+) -> list[str]:
     parts: list[str] = [""]
     if el.text:
         append_inline_segments(parts, html_text_segments(el.text))
     for child in child_elements(el):
-        append_inline_segments(parts, render_inline_node_segments(child, opts))
+        append_inline_segments(parts, render_inline_node_segments(child, opts, exclude_notes=exclude_notes))
         if child.tail:
-            append_inline_segments(parts, html_text_segments(child.tail))
+            tail = child.tail
+            if exclude_notes and NOTE_TAG_RE.match(tagu(child)) and parts[-1].endswith((" ", "\n", "\t")):
+                tail = re.sub(r"^\s+", "", tail)
+            append_inline_segments(parts, html_text_segments(tail))
     return parts
 
 
-def render_inline_children(el: etree._Element, opts: Options) -> str:
-    return "".join(render_inline_children_segments(el, opts))
+def render_inline_children(
+    el: etree._Element,
+    opts: Options,
+    *,
+    exclude_notes: bool = False,
+) -> str:
+    return "".join(render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
 
 
-def render_hi_segments(el: etree._Element, opts: Options) -> list[str]:
+def render_hi_segments(
+    el: etree._Element,
+    opts: Options,
+    *,
+    exclude_notes: bool = False,
+) -> list[str]:
     rend = (attr(el, "REND") or "").strip().lower()
-    body = render_inline_children_segments(el, opts)
+    body = render_inline_children_segments(el, opts, exclude_notes=exclude_notes)
     if rend in {"i", "italic", "ital", "itialic"}:
         return wrap_inline_segments("<em>", "</em>", body)
     if rend in {"b", "bold"}:
@@ -910,36 +1024,41 @@ def render_hi_segments(el: etree._Element, opts: Options) -> list[str]:
     return wrap_inline_segments(f"<span{render_attrs(el, 'hi')}>", "</span>", body)
 
 
-def render_inline_node_segments(el: etree._Element, opts: Options) -> list[str]:
+def render_inline_node_segments(
+    el: etree._Element,
+    opts: Options,
+    *,
+    exclude_notes: bool = False,
+) -> list[str]:
     tag = tagu(el)
     if tag == "LB":
         return ["<br />"]
     if tag in MILESTONE_TAGS:
         return [render_milestone(el, opts)]
     if NOTE_TAG_RE.match(tag):
-        return [render_note(el, opts)]
+        return [""] if exclude_notes else [render_note(el, opts)]
     if tag in {"HI", "HI1"}:
-        return render_hi_segments(el, opts)
+        return render_hi_segments(el, opts, exclude_notes=exclude_notes)
     if tag == "FOREIGN":
         lang = attr(el, "LANG") or attr(el, "XML:LANG")
         lang_attr = f' lang="{html_attr(lang)}"' if lang else ""
-        return wrap_inline_segments(f"<em{lang_attr}>", "</em>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments(f"<em{lang_attr}>", "</em>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag in QUOTE_TAGS:
-        return wrap_inline_segments(f"<q{render_attrs(el)}>", "</q>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments(f"<q{render_attrs(el)}>", "</q>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag in {"REF", "PTR", "XPTR"}:
         target = attr(el, "TARGET", "HREF", "URL")
-        body = render_inline_children_segments(el, opts)
+        body = render_inline_children_segments(el, opts, exclude_notes=exclude_notes)
         if target:
             return wrap_inline_segments(f'<a href="{html_attr(target)}">', "</a>", body)
         return wrap_inline_segments(f"<span{render_attrs(el, 'ref')}>", "</span>", body)
     if tag in {"DEL"}:
-        return wrap_inline_segments(f"<del{render_attrs(el)}>", "</del>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments(f"<del{render_attrs(el)}>", "</del>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag in {"ADD", "INS"}:
-        return wrap_inline_segments(f"<ins{render_attrs(el)}>", "</ins>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments(f"<ins{render_attrs(el)}>", "</ins>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag == "SUP":
-        return wrap_inline_segments("<sup>", "</sup>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments("<sup>", "</sup>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag == "SUB":
-        return wrap_inline_segments("<sub>", "</sub>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments("<sub>", "</sub>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if tag == "GAP":
         return [render_gap(el)]
     if tag in {
@@ -964,14 +1083,50 @@ def render_inline_node_segments(el: etree._Element, opts: Options) -> list[str]:
         "IDNO",
         "LABEL",
     }:
-        return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts))
+        return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
     if is_block_tag_name(tag):
-        return render_inline_children_segments(el, opts)
-    return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts))
+        return render_inline_children_segments(el, opts, exclude_notes=exclude_notes)
+    return wrap_inline_segments(f"<span{render_attrs(el, tag.lower())}>", "</span>", render_inline_children_segments(el, opts, exclude_notes=exclude_notes))
 
 
-def render_inline_node(el: etree._Element, opts: Options) -> str:
-    return "".join(render_inline_node_segments(el, opts))
+def render_inline_node(
+    el: etree._Element,
+    opts: Options,
+    *,
+    exclude_notes: bool = False,
+) -> str:
+    return "".join(render_inline_node_segments(el, opts, exclude_notes=exclude_notes))
+
+
+def heading_note_descendants(el: etree._Element) -> Iterator[etree._Element]:
+    for child in child_elements(el):
+        if NOTE_TAG_RE.match(tagu(child)):
+            yield child
+        else:
+            yield from heading_note_descendants(child)
+
+
+def render_heading_note_blocks(el: etree._Element, opts: Options) -> str:
+    parts: list[str] = []
+    for note in heading_note_descendants(el):
+        rendered = render_note(note, opts)
+        if rendered:
+            parts.append(f'<p class="heading-note">{rendered}</p>\n')
+    return "".join(parts)
+
+
+def render_standalone_head(el: etree._Element, opts: Options) -> str:
+    title_text_for_classification = heading_title_text(el)
+    heading_classes = join_classes(
+        source_apparatus_classes(el),
+        stanza_heading_classes(el, title_text_for_classification),
+    )
+    body = render_inline_children(el, opts, exclude_notes=True).strip()
+    heading = ""
+    if has_visible_html(body):
+        attrs = render_heading_attrs(el, heading_classes.split() if heading_classes else [])
+        heading = f"<h3{attrs}>{body}</h3>\n"
+    return heading + render_heading_note_blocks(el, opts)
 
 
 def heading_level_for_div(el: etree._Element) -> int:
@@ -985,14 +1140,19 @@ def heading_level_for_div(el: etree._Element) -> int:
 def render_div(el: etree._Element, opts: Options) -> str:
     head = first_child(el, "HEAD")
     level = heading_level_for_div(el)
-    title = render_inline_children(head, opts) if head is not None else ""
-    if not clean_text(text_content(head)):
+    title = render_inline_children(head, opts, exclude_notes=True).strip() if head is not None else ""
+    heading_notes = render_heading_note_blocks(head, opts) if head is not None else ""
+    is_generated_fallback = not clean_text(heading_title_text(head))
+    if is_generated_fallback:
         fallback_bits = [attr(el, "TYPE"), attr(el, "N")]
-        title = " ".join(bit for bit in fallback_bits if bit)[:120]
+        title = html_text(" ".join(bit for bit in fallback_bits if bit)[:120])
     apparatus_classes = source_apparatus_classes(el)
-    heading = f"<h{level}{render_heading_attrs(el, apparatus_classes, preserve_attrs=False)}>{title}</h{level}>\n" if title else ""
+    heading_classes = apparatus_classes
+    if is_generated_fallback and title and not apparatus_classes:
+        heading_classes = GENERATED_FALLBACK_HEADING_CLASSES
+    heading = f"<h{level}{render_heading_attrs(el, heading_classes, preserve_attrs=False)}>{title}</h{level}>\n" if title else ""
     body = render_children(el, opts, skip_first_head=head is not None)
-    return f"<section{render_attrs(el, join_classes('div', apparatus_classes))}>\n{heading}{body}\n</section>\n"
+    return f"<section{render_attrs(el, join_classes('div', apparatus_classes))}>\n{heading}{heading_notes}{body}\n</section>\n"
 
 
 def render_hi(el: etree._Element, opts: Options) -> str:
@@ -1348,8 +1508,7 @@ def render_node(el: etree._Element, opts: Options) -> str:
     if tag in {"P", "AB"}:
         return render_paragraphish(el, opts)
     if tag == "HEAD":
-        apparatus_classes = source_apparatus_classes(el)
-        return f"<h3{render_heading_attrs(el, apparatus_classes)}>{render_inline_children(el, opts)}</h3>\n"
+        return render_standalone_head(el, opts)
     if tag in {"DOCTITLE"}:
         return render_doctitle(el, opts)
     if tag in {"TITLEPART", "BYLINE", "DOCIMPRINT", "OPENER", "CLOSER", "SIGNED", "SALUTE", "TRAILER", "DATELINE"}:
@@ -1477,6 +1636,27 @@ def latex_text(value: str | None, *, break_paths: bool = False) -> str:
     return escaped
 
 
+COLOPHON_SEPARATOR_PUNCTUATION = {",", ":", ";"}
+COLOPHON_TERMINAL_PUNCTUATION = {".", "?", "!"}
+COLOPHON_TRAILING_CLOSERS = set("'\"”’»)]}")
+
+
+def colophon_title_final_punctuation(value: str | None) -> str:
+    text = clean_text(value)
+    while text and text[-1] in COLOPHON_TRAILING_CLOSERS:
+        text = text[:-1].rstrip()
+    return text[-1] if text else ""
+
+
+def colophon_macro_for_title(title: str) -> str:
+    punctuation = colophon_title_final_punctuation(title)
+    if punctuation in COLOPHON_SEPARATOR_PUNCTUATION:
+        return "cmeColophonPunctuatedTitle"
+    if punctuation in COLOPHON_TERMINAL_PUNCTUATION:
+        return "cmeColophonTerminalTitle"
+    return "cmeColophon"
+
+
 def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
     meta = metadata(parsed.root, fmt, path, parsed)
     title = meta.get("title", path.stem)
@@ -1492,7 +1672,8 @@ def render_colophon_tex(path: Path, parsed: ParsedXml, fmt: str) -> str:
         latex_text(meta.get("date")),
         latex_text(meta.get("id")),
     ]
-    return "\\cmeColophon{" + "}{".join(values) + "}\n"
+    macro = colophon_macro_for_title(title)
+    return f"\\{macro}{{" + "}{".join(values) + "}\n"
 
 
 def render_document(path: Path, parsed: ParsedXml, fmt: str, opts: Options) -> str:

@@ -306,7 +306,10 @@ class SourceApparatusRenderingTests(unittest.TestCase):
         self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-omitted-apparatus" data-type="omitted back matter">omitted back matter</h2>', backmatter_html)
         self.assertIn("<p>Back matter note.</p>", backmatter_html)
         self.assertNotIn("source-apparatus", body_omission_html)
-        self.assertIn('<h2 data-type="omitted material">omitted material</h2>', body_omission_html)
+        self.assertIn(
+            '<h2 class="structural-fallback-heading nonrunning unlisted unnumbered" data-type="omitted material">omitted material</h2>',
+            body_omission_html,
+        )
 
     def test_table_headings_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
         contents = etree.fromstring(
@@ -322,6 +325,86 @@ class SourceApparatusRenderingTests(unittest.TestCase):
 
         self.assertIn('<h3 class="source-apparatus nonrunning unlisted unnumbered source-contents">Nested Table Heading</h3>', html)
 
+    def test_body_and_back_source_contents_sections_are_marked_unlisted_nonrunning(self) -> None:
+        text = etree.fromstring(
+            b'''
+            <TEXT>
+              <BODY>
+                <DIV1 TYPE="table of contents"><HEAD>Body Contents</HEAD><P>Body table row.</P></DIV1>
+                <DIV1 TYPE="chapter"><HEAD>Real Chapter</HEAD><P>Body text.</P></DIV1>
+              </BODY>
+              <BACK>
+                <DIV1 TYPE="table of contents to appendices"><HEAD>Appendix Contents</HEAD><P>Appendix table row.</P></DIV1>
+              </BACK>
+            </TEXT>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+        body_contents = text.xpath("./BODY/DIV1")[0]
+        real_chapter = text.xpath("./BODY/DIV1")[1]
+        back_contents = text.xpath("./BACK/DIV1")[0]
+
+        body_html = cme_xml_to_html.render_div(body_contents, options)
+        real_html = cme_xml_to_html.render_div(real_chapter, options)
+        back_html = cme_xml_to_html.render_div(back_contents, options)
+
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-contents"', body_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-contents" data-type="table of contents">Body Contents</h2>', body_html)
+        self.assertIn("<p>Body table row.</p>", body_html)
+        self.assertIn('class="div source-apparatus nonrunning unlisted unnumbered source-contents"', back_html)
+        self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-contents" data-type="table of contents to appendices">Appendix Contents</h2>', back_html)
+        self.assertIn("<p>Appendix table row.</p>", back_html)
+        self.assertNotIn("source-apparatus", real_html)
+        self.assertIn('<h2 data-type="chapter">Real Chapter</h2>', real_html)
+
+    def test_numeric_roman_and_bracketed_lg_stanza_heads_are_visible_but_unlisted_nonrunning(self) -> None:
+        div = etree.fromstring(
+            b'''
+            <DIV1 TYPE="poem"><HEAD>Major Poem</HEAD>
+              <LG N="1"><HEAD>1.</HEAD><L>First stanza.</L></LG>
+              <LG N="2"><HEAD>[II]</HEAD><L>Second stanza.</L></LG>
+              <LG N="3"><HEAD>(III) <HI REND="italic">Proem.</HI></HEAD><L>Third stanza.</L></LG>
+              <LG N="4"><HEAD>19 (18). Audiens tunc corpus redargucionem spiritus et voce quasi iracundiosa sono quodam lamentacionis horribilis sic respondit dicens.</HEAD><L>Glossed stanza.</L></LG>
+            </DIV1>
+            '''
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(div, options)
+
+        self.assertIn('<h2 data-type="poem">Major Poem</h2>', html)
+        self.assertIn('<h3 class="stanza-head nonrunning unlisted unnumbered">1.</h3>', html)
+        self.assertIn('<h3 class="stanza-head nonrunning unlisted unnumbered">[II]</h3>', html)
+        self.assertIn('<h3 class="stanza-head nonrunning unlisted unnumbered">(III) <em>Proem.</em></h3>', html)
+        self.assertIn(
+            '<h3 class="stanza-head nonrunning unlisted unnumbered">19 (18). Audiens tunc corpus redargucionem spiritus et voce quasi iracundiosa sono quodam lamentacionis horribilis sic respondit dicens.</h3>',
+            html,
+        )
+        self.assertIn('<div class="l">First stanza.</div>', html)
+        self.assertIn('<div class="l">Second stanza.</div>', html)
+        self.assertIn('<div class="l">Third stanza.</div>', html)
+        self.assertIn('<div class="l">Glossed stanza.</div>', html)
+
+    def test_meaningful_lg_heads_remain_listed_running_candidates(self) -> None:
+        div = etree.fromstring(
+            '''
+            <DIV1 TYPE="poem"><HEAD>Recipe Poem</HEAD>
+              <LG><HEAD>Furmente.</HEAD><L>Take wete and pyke hit fayre.</L></LG>
+              <LG><HEAD>Conyngus in gravé.</HEAD><L>Sethe welle þy conyngus.</L></LG>
+            </DIV1>
+            '''.encode("utf-8")
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(div, options)
+
+        self.assertIn('<h2 data-type="poem">Recipe Poem</h2>', html)
+        self.assertIn('<h3>Furmente.</h3>', html)
+        self.assertIn('<h3>Conyngus in gravé.</h3>', html)
+        self.assertNotIn('stanza-head', html)
+        self.assertNotIn('nonrunning unlisted unnumbered">Furmente.', html)
+        self.assertNotIn('nonrunning unlisted unnumbered">Conyngus', html)
+
     def test_nested_divisions_inside_source_contents_inherit_unlisted_nonrunning_markers(self) -> None:
         contents = etree.fromstring(
             b'''
@@ -336,6 +419,123 @@ class SourceApparatusRenderingTests(unittest.TestCase):
 
         self.assertIn('<h2 class="source-apparatus nonrunning unlisted unnumbered source-contents" data-type="table of contents">Table of Contents</h2>', html)
         self.assertIn('<h3 class="source-apparatus nonrunning unlisted unnumbered source-contents">Nested Entry Heading</h3>', html)
+
+    def test_generated_type_fallback_heading_is_visible_but_unlisted_nonrunning(self) -> None:
+        div = etree.fromstring(b'<DIV1 TYPE="text"><P>Body text remains visible.</P></DIV1>')
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(div, options)
+
+        self.assertIn(
+            '<h2 class="structural-fallback-heading nonrunning unlisted unnumbered" data-type="text">text</h2>',
+            html,
+        )
+        self.assertIn('<p>Body text remains visible.</p>', html)
+        self.assertNotIn('class="div nonrunning', html)
+
+    def test_explicit_headings_remain_listed_running_candidates(self) -> None:
+        div = etree.fromstring(
+            b'<DIV1 TYPE="text"><HEAD>Authored Title</HEAD><P>Body text.</P></DIV1>'
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(div, options)
+
+        self.assertIn('<h2 data-type="text">Authored Title</h2>', html)
+        self.assertNotIn('structural-fallback-heading', html)
+        self.assertNotIn('nonrunning unlisted unnumbered', html)
+
+    def test_heading_notes_render_as_notes_outside_heading(self) -> None:
+        div = etree.fromstring(
+            b'<DIV1 TYPE="account"><HEAD>[Lenvoy] <NOTE>Long collation note.</NOTE> tail</HEAD><P>Body text.</P></DIV1>'
+        )
+        options = cme_xml_to_html.Options()
+
+        html = cme_xml_to_html.render_div(div, options)
+
+        self.assertIn('<h2 data-type="account">[Lenvoy] tail</h2>', html)
+        self.assertIn(
+            '<p class="heading-note"><span class="note">[Long collation note.]</span></p>',
+            html,
+        )
+        heading = html.split('</h2>', 1)[0]
+        self.assertNotIn('Long collation note', heading)
+        self.assertIn('<p>Body text.</p>', html)
+
+    def test_title_metadata_fallback_skips_numeric_only_initial_heads(self) -> None:
+        root = etree.fromstring(
+            b'''
+            <ETS><EEBO><IDG><BIBNO>CMEFIXTURE</BIBNO></IDG><TEXT><BODY>
+              <DIV1 TYPE="letter">
+                <HEAD>X. <NOTE>Manuscript note.</NOTE></HEAD>
+                <HEAD>THE EARL OF MARCH TO HENRY IV.</HEAD>
+                <P>Body text.</P>
+              </DIV1>
+            </BODY></TEXT></EEBO></ETS>
+            '''
+        )
+        parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+
+        meta = cme_xml_to_html.metadata(root, "ets-temphead-eebo", Path("CMEFIXTURE.xml"), parsed)
+
+        self.assertEqual(meta["title"], "THE EARL OF MARCH TO HENRY IV.")
+        self.assertEqual(meta["full_title"], "THE EARL OF MARCH TO HENRY IV.")
+
+    def test_title_metadata_fallback_uses_stem_instead_of_note_prose_after_numeric_heads(self) -> None:
+        root = etree.fromstring(
+            b'''
+            <ETS><EEBO><IDG><BIBNO>CMEFIXTURE</BIBNO></IDG><TEXT><BODY>
+              <DIV1 TYPE="collection of songs">
+                <DIV2 N="1" TYPE="song"><HEAD>1.</HEAD><LG><L>Song text.</L></LG>
+                  <P>Variant note prose should not become the generated title.</P>
+                </DIV2>
+              </DIV1>
+            </BODY></TEXT></EEBO></ETS>
+            '''
+        )
+        parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+
+        meta = cme_xml_to_html.metadata(root, "ets-temphead-eebo", Path("CMEFIXTURE.xml"), parsed)
+
+        self.assertEqual(meta["title"], "CMEFIXTURE")
+        self.assertEqual(meta["full_title"], "CMEFIXTURE")
+
+
+class ColophonTitlePunctuationTests(unittest.TestCase):
+    def render_colophon_for_title(self, title: str) -> str:
+        root = etree.fromstring(
+            f'''
+            <ETS><TEMPHEAD /><EEBO><IDG><BIBNO>CMEFIXTURE</BIBNO></IDG><TEXT>
+              <FRONT><DIV1 TYPE="title page"><P>{title}</P></DIV1></FRONT>
+              <BODY><DIV1 TYPE="text"><P>Body text.</P></DIV1></BODY>
+            </TEXT></EEBO></ETS>
+            '''.encode("utf-8")
+        )
+        parsed = cme_xml_to_html.ParsedXml(root=root, recovered=False, errors=())
+        return cme_xml_to_html.render_colophon_tex(Path("CMEFIXTURE.xml"), parsed, "ets-temphead-eebo")
+
+    def test_colophon_uses_punctuation_aware_macro_without_rewriting_titles(self) -> None:
+        cases = [
+            ("Plain Title", r"\cmeColophon{Plain Title}"),
+            ("ROMANCE,", r"\cmeColophonPunctuatedTitle{ROMANCE,}"),
+            ("A Treatise:", r"\cmeColophonPunctuatedTitle{A Treatise:}"),
+            ("A Treatise;", r"\cmeColophonPunctuatedTitle{A Treatise;}"),
+            ("The Legend of the Holy Grail.", r"\cmeColophonTerminalTitle{The Legend of the Holy Grail.}"),
+            ("Which Craft?", r"\cmeColophonTerminalTitle{Which Craft?}"),
+            ("A Wonder!", r"\cmeColophonTerminalTitle{A Wonder!}"),
+        ]
+
+        for title, expected_start in cases:
+            with self.subTest(title=title):
+                colophon = self.render_colophon_for_title(title)
+
+                self.assertTrue(colophon.startswith(expected_start), colophon)
+
+    def test_colophon_terminal_title_preserves_abbreviation_period(self) -> None:
+        colophon = self.render_colophon_for_title("St.")
+
+        self.assertTrue(colophon.startswith(r"\cmeColophonTerminalTitle{St.}"), colophon)
+        self.assertNotIn(r"{St}{", colophon)
 
 
 class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
@@ -513,6 +713,49 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertNotIn(r"\markright{List of Contents}", latex)
         self.assertNotIn(r"\cmeLettrine{A}{lpha} table entry", latex)
         self.assertIn(r"\cmeLettrine{B}{eta} prose begins here.", latex)
+
+    def test_generated_fallback_headings_are_unlisted_and_nonrunning_in_latex(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <DIV1 TYPE="text"><P>Alpha body begins here.</P></DIV1>
+                <DIV1 TYPE="chapter"><HEAD>Authored Chapter</HEAD><P>Beta body.</P></DIV1>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r"\section*{text}", latex)
+        self.assertNotIn(r"\section{text}", latex)
+        self.assertNotIn(r"\markright{text}", latex)
+        self.assertIn(r"\section{Authored Chapter}", latex)
+        self.assertIn(r"\markright{Authored Chapter}", latex)
+        self.assertIn(r"\cmeLettrine{A}{lpha} body begins here.", latex)
+
+    def test_stanza_heads_are_unlisted_and_nonrunning_in_latex(self) -> None:
+        latex = self.render_latex(
+            """
+            <DLPSTEXTCLASS>
+              <TEXT><BODY>
+                <DIV1 TYPE="poem"><HEAD>Major Poem</HEAD>
+                  <LG><HEAD>1.</HEAD><L>First stanza line.</L></LG>
+                  <LG><HEAD>[II]</HEAD><L>Second stanza line.</L></LG>
+                  <LG><HEAD>Furmente.</HEAD><L>Recipe-like stanza heading.</L></LG>
+                </DIV1>
+              </BODY></TEXT>
+            </DLPSTEXTCLASS>
+            """
+        )
+
+        self.assertIn(r"\section{Major Poem}", latex)
+        self.assertIn(r"\markright{Major Poem}", latex)
+        self.assertIn(r"\subsection*{1.}", latex)
+        self.assertIn(r"\subsection*{{[}II{]}}", latex)
+        self.assertNotIn(r"\markright{1.}", latex)
+        self.assertNotIn(r"\markright{{[}II{]}}", latex)
+        self.assertIn(r"\subsection{Furmente.}", latex)
+        self.assertIn(r"\markright{Furmente.}", latex)
 
     def test_titlepage_and_contents_type_variants_do_not_receive_dropcaps(self) -> None:
         latex = self.render_latex(
@@ -878,6 +1121,120 @@ class PandocCmeXmlLatexLettrineTests(unittest.TestCase):
         self.assertIn("\\newunicodechar{ℏ}{h}", latex)
         self.assertIn("\\newunicodechar{∣}{\\textbar{}}", latex)
         self.assertIn("\\newunicodechar{̘}{}", latex)
+        self.assertIn("\\newunicodechar{✗}{", latex)
+        self.assertIn("\\newunicodechar{✚}{", latex)
+        self.assertIn("\\newunicodechar{⋮}{", latex)
+        self.assertIn("\\newunicodechar{♥}{", latex)
+        self.assertIn("\\newunicodechar{ϒ}{", latex)
+        self.assertIn("\\newunicodechar{б}{", latex)
+        self.assertIn("\\newunicodechar{Ы}{", latex)
+        self.assertIn("\\newunicodechar{ㆴ}{", latex)
+
+    def test_pdf_preserves_literal_straight_quotes_and_semantic_quote_markup(self) -> None:
+        if shutil.which("pandoc") is None or shutil.which("xelatex") is None or shutil.which("pdftotext") is None:
+            self.skipTest("pandoc, xelatex, and pdftotext are required")
+
+        xml = """
+        <ETS>
+          <TEMPHEAD />
+          <EEBO><IDG><BIBNO>CMEQUOTE</BIBNO></IDG><TEXT><BODY>
+            <DIV1 TYPE="text">
+              <HEAD>"Literal" Heading</HEAD>
+              <ARGUMENT><P>Literal "quote" and <QUOTE>semantic quote</QUOTE>.</P></ARGUMENT>
+            </DIV1>
+          </BODY></TEXT></EEBO>
+        </ETS>
+        """
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            source = temp / "fixture.xml"
+            output = temp / "fixture.pdf"
+            source.write_text(xml, encoding="utf-8")
+
+            subprocess.run(
+                [
+                    str(MODULE_PATH.parent / "cme-build"),
+                    "single",
+                    str(source),
+                    "--profile",
+                    "print-pdf",
+                    "--output",
+                    str(output),
+                    "--lettrine",
+                    "none",
+                ],
+                check=True,
+                cwd=MODULE_PATH.parents[1],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            result = subprocess.run(
+                ["pdftotext", str(output), "-"],
+                check=True,
+                cwd=MODULE_PATH.parents[1],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+
+        text = " ".join(result.stdout.split())
+        self.assertIn('"Literal" Heading', text)
+        self.assertIn('Literal "quote" and “semantic quote”.', text)
+        self.assertNotIn('”Literal” Heading', text)
+        self.assertNotIn('Literal ”quote”', text)
+
+    def test_pdf_unicode_fallbacks_render_recorded_source_glyphs(self) -> None:
+        if shutil.which("pandoc") is None or shutil.which("xelatex") is None or shutil.which("pdftotext") is None:
+            self.skipTest("pandoc, xelatex, and pdftotext are required")
+
+        xml = """
+        <ETS>
+          <TEMPHEAD />
+          <EEBO><IDG><BIBNO>CMEGLYPH</BIBNO></IDG><TEXT><BODY>
+            <DIV1 TYPE="text"><HEAD>Glyph Fixture</HEAD>
+              <P>Symbols ✗ ⋮ ✚ ♥ ⊚ ϒ б Ы ㆴ.</P>
+            </DIV1>
+          </BODY></TEXT></EEBO>
+        </ETS>
+        """
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            source = temp / "fixture.xml"
+            output = temp / "fixture.pdf"
+            source.write_text(xml, encoding="utf-8")
+
+            completed = subprocess.run(
+                [
+                    str(MODULE_PATH.parent / "cme-build"),
+                    "single",
+                    str(source),
+                    "--profile",
+                    "print-pdf",
+                    "--output",
+                    str(output),
+                    "--lettrine",
+                    "none",
+                ],
+                check=True,
+                cwd=MODULE_PATH.parents[1],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            result = subprocess.run(
+                ["pdftotext", str(output), "-"],
+                check=True,
+                cwd=MODULE_PATH.parents[1],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+
+        self.assertNotIn("Missing character:", completed.stdout + completed.stderr)
+        self.assertIn("Symbols ✗ ⋮ ✚ ♥ ⊚ ϒ б Ы ㆴ.", " ".join(result.stdout.split()))
 
 
 class PandocCmeXmlMarkdownTests(unittest.TestCase):

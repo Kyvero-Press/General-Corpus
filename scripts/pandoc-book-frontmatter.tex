@@ -26,15 +26,65 @@
 }
 \pagestyle{plain}
 
-% A few CME transcriptions use Unicode symbols as paleographic shorthand that
-% Junicode does not cover.  Map them to printable reader-facing fallbacks for
-% LaTeX/PDF rather than letting XeLaTeX drop the glyph.
+% A few CME transcriptions use Unicode symbols as paleographic shorthand or
+% non-Latin citation text that Junicode does not cover.  Use narrow,
+% per-character fallbacks for LaTeX/PDF rather than changing the main Junicode
+% body font or letting XeLaTeX drop the glyph.
+\newif\ifcmeHasDejaVuSans
+\newif\ifcmeHasNotoSerif
+\newif\ifcmeHasNotoSansCJK
+\ifPDFTeX\else
+  \ifdefined\IfFontExistsTF
+    \IfFontExistsTF{DejaVu Sans}{\cmeHasDejaVuSanstrue\newfontfamily\cmeDejaVuSans{DejaVu Sans}}{}%
+    \IfFontExistsTF{Noto Serif}{\cmeHasNotoSeriftrue\newfontfamily\cmeNotoSerif{Noto Serif}}{}%
+    \IfFontExistsTF{Noto Sans CJK KR}{\cmeHasNotoSansCJKtrue\newfontfamily\cmeNotoSansCJK{Noto Sans CJK KR}}{}%
+  \fi
+\fi
+\newcommand{\cmeSymbolFallback}[2]{%
+  \ifPDFTeX
+    #2%
+  \else
+    \ifcmeHasDejaVuSans{\cmeDejaVuSans\symbol{#1}}\else#2\fi%
+  \fi
+}%
+\newcommand{\cmeSerifFallback}[2]{%
+  \ifPDFTeX
+    #2%
+  \else
+    \ifcmeHasNotoSerif{\cmeNotoSerif\symbol{#1}}\else\cmeSymbolFallback{#1}{#2}\fi%
+  \fi
+}%
+\newcommand{\cmeCjkFallback}[2]{%
+  \ifPDFTeX
+    #2%
+  \else
+    \ifcmeHasNotoSansCJK{\cmeNotoSansCJK\symbol{#1}}\else#2\fi%
+  \fi
+}%
 \IfFileExists{newunicodechar.sty}{%
   \usepackage{newunicodechar}%
   \newunicodechar{ℏ}{h}%
   \newunicodechar{∣}{\textbar{}}%
   \newunicodechar{̘}{}%
+  \newunicodechar{ϒ}{\cmeSerifFallback{978}{\ensuremath{\Upsilon}}}%
+  \newunicodechar{✗}{\cmeSymbolFallback{10007}{\ensuremath{\times}}}%
+  \newunicodechar{⋮}{\cmeSymbolFallback{8942}{\ensuremath{\vdots}}}%
+  \newunicodechar{✚}{\cmeSymbolFallback{10010}{\ensuremath{+}}}%
+  \newunicodechar{♥}{\cmeSymbolFallback{9829}{\ensuremath{\heartsuit}}}%
+  \newunicodechar{⊚}{\cmeSymbolFallback{8858}{\ensuremath{\circledcirc}}}%
+  \newunicodechar{б}{\cmeSerifFallback{1073}{\symbol{1073}}}%
+  \newunicodechar{Ы}{\cmeSerifFallback{1067}{\symbol{1067}}}%
+  \newunicodechar{ㆴ}{\cmeCjkFallback{12724}{\symbol{12724}}}%
 }{}
+
+% Literal U+0022 quotes in source transcriptions should stay neutral straight
+% quotes.  Junicode's direct quote glyph maps/extracts like a closing quote, so
+% make subsequent literal quote characters expand to LaTeX's neutral quotedbl;
+% semantic <QUOTE>/<Q> markup still comes from Pandoc as typographic quotes.
+\ifPDFTeX\else
+  \catcode`\"=13
+  \protected\def"{\textquotedbl{}}
+\fi
 
 % Pandoc maps HTML underline/strikeout to \ul/\st from soul for XeLaTeX.
 % Several CME transcriptions wrap long, macro-rich editorial insertions in
@@ -135,6 +185,9 @@
   \if\relax\detokenize{#1}\relax\else#2\fi%
 }
 
+\newcommand{\cmeColophonAuthorPrefix}{, by }
+\newcommand{\cmeColophonAuthorSuffix}{}
+
 \newcommand{\cmeMetaLine}[2]{%
   \cmeIfNotEmpty{#2}{\noindent\textsc{#1}: #2\par}%
 }
@@ -146,7 +199,7 @@
   \small\raggedright%
     \noindent\textsc{Colophon}\par%
     \vspace{\baselineskip}%
-    \noindent This General Corpus edition of \emph{\cmeBreakableTitleText{#1}}\cmeIfNotEmpty{#3}{, by #3}\cmeIfNotEmpty{#4}{, dated #4,} is generated from
+    \noindent This General Corpus edition of \emph{\cmeBreakableTitleText{#1}}\cmeIfNotEmpty{#3}{\cmeColophonAuthorPrefix#3\cmeColophonAuthorSuffix}\cmeIfNotEmpty{#4}{, dated #4,} is generated from
     the corpus XML source and is intended as a readable scholarly edition for
     print and screen.\par%
     \vspace{\baselineskip}%
@@ -171,6 +224,21 @@
   \endgroup%
   \clearpage%
   \cleardoublepage%
+}
+
+\newcommand{\cmeColophonPunctuatedTitle}[9]{%
+  \begingroup%
+  \renewcommand{\cmeColophonAuthorPrefix}{ by }%
+  \cmeColophon{#1}{#2}{#3}{#4}{#5}{#6}{#7}{#8}{#9}%
+  \endgroup%
+}
+
+\newcommand{\cmeColophonTerminalTitle}[9]{%
+  \begingroup%
+  \renewcommand{\cmeColophonAuthorPrefix}{ (by }%
+  \renewcommand{\cmeColophonAuthorSuffix}{)}%
+  \cmeColophon{#1}{#2}{#3}{#4}{#5}{#6}{#7}{#8}{#9}%
+  \endgroup%
 }
 
 \makeatother
