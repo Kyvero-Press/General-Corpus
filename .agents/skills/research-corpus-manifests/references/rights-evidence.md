@@ -122,6 +122,11 @@ the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields
 can be more precise than the viewer page, including geographic limits.
 
+Describe a facsimile's color and visual fidelity from representative page
+inspection, including ordinary text and any painted leaves. Do not infer that
+an object is monochrome from a “microfilm” provenance label, or that it is
+meaningfully full color merely because its JPEGs have three channels.
+
 ## Make evidence auditable
 
 Every consequential claim needs evidence that actually supports its layer and
