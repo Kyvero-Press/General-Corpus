@@ -86,6 +86,7 @@ class IiifBundleCacheTests(unittest.TestCase):
                 timeout=10,
                 retries=0,
                 force=False,
+                workers=2,
                 work_portion={
                     "label": "Target work",
                     "locators": ["folios 1r–2r", "IIIF canvases 1–2"],

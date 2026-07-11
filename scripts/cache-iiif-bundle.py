@@ -13,6 +13,7 @@ import sys
 import tempfile
 import time
 import zipfile
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -402,6 +403,7 @@ def bundle(
     image_url_list: Path | None = None,
     work_portion: dict[str, object] | None = None,
     notes: list[str] | None = None,
+    workers: int = 1,
 ) -> dict[str, object]:
     if not SAFE_WORK_ID.fullmatch(work_id):
         raise BundleError(f"unsafe work ID: {work_id!r}")
@@ -411,8 +413,10 @@ def bundle(
         raise BundleError("--image-format must be jpg, jpeg, png, or webp")
     if image_size is not None and not SAFE_IIIF_SIZE.fullmatch(image_size):
         raise BundleError("--image-size contains characters outside an IIIF size segment")
-    if timeout <= 0 or retries < 0:
-        raise BundleError("timeout must be positive and retries cannot be negative")
+    if timeout <= 0 or retries < 0 or not 1 <= workers <= 32:
+        raise BundleError(
+            "timeout must be positive, retries cannot be negative, and workers must be 1–32"
+        )
 
     relative = Path("source-cache") / work_id / filename
     destination = repo_root / relative
@@ -460,8 +464,8 @@ def bundle(
     images_dir = staging / "images"
     images_dir.mkdir(parents=True, exist_ok=True)
     extension = "jpg" if image_format == "jpeg" else image_format
-    inventory_items: list[dict[str, Any]] = []
-    for source in sources:
+
+    def cache_one(source: dict[str, Any]) -> dict[str, Any]:
         index = source["index"]
         member_path = f"images/{index:06d}.{extension}"
         staged_image = staging / member_path
@@ -493,16 +497,27 @@ def bundle(
             staged_url.write_text(f"{source['image_url']}\n", encoding="utf-8")
         _verify_image(staged_image, image_format)
         public_source = {key: value for key, value in source.items() if key != "reuse_path"}
-        inventory_items.append(
-            {
-                **public_source,
-                "member_path": member_path,
-                "sha256": sha256(staged_image),
-                "bytes": staged_image.stat().st_size,
-            }
-        )
-        if index == 1 or index == len(sources) or index % 25 == 0:
-            print(f"Cached IIIF canvas {index}/{len(sources)}", file=sys.stderr)
+        return {
+            **public_source,
+            "member_path": member_path,
+            "sha256": sha256(staged_image),
+            "bytes": staged_image.stat().st_size,
+        }
+
+    inventory_items: list[dict[str, Any]] = []
+    if workers == 1:
+        cached_items = map(cache_one, sources)
+    else:
+        executor = ThreadPoolExecutor(max_workers=workers)
+        cached_items = executor.map(cache_one, sources)
+    try:
+        for completed, item in enumerate(cached_items, start=1):
+            inventory_items.append(item)
+            if completed == 1 or completed == len(sources) or completed % 25 == 0:
+                print(f"Cached IIIF image {completed}/{len(sources)}", file=sys.stderr)
+    finally:
+        if workers != 1:
+            executor.shutdown(wait=True, cancel_futures=True)
 
     retrieved_on = date.today().isoformat()
     (staging / source_member).write_bytes(source_bytes)
@@ -610,6 +625,12 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--timeout", type=float, default=120.0, help="per-request timeout")
     result.add_argument("--retries", type=int, default=3, help="retries after first attempt")
     result.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help="parallel image requests (1–32); use conservatively for provider services",
+    )
+    result.add_argument(
         "--reuse-pattern",
         help="optional existing image path pattern containing {index}, e.g. page-{index:03d}.jpg",
     )
@@ -664,6 +685,7 @@ def main(argv: list[str] | None = None) -> int:
             image_url_list=args.image_url_list,
             work_portion=work_portion_from_args(args),
             notes=args.note,
+            workers=args.workers,
         )
     except BundleError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

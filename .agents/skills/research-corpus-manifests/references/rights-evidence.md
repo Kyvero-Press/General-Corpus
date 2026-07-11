@@ -82,6 +82,9 @@ Presentation-manifest URL to the access route. `coverage=complete` means all
 canvases in that physical-source manifest were captured, not that the image
 request necessarily reproduces the provider's preservation master. Preserve
 the recorded request-size profile in `notes`.
+Interrupted bundles resume only from staging images whose recorded URL still
+matches. Keep the default single worker for fragile services; use a modest
+`--workers` value only when the provider can sustain parallel requests.
 
 If the provider publishes every Image API surface but no Presentation
 manifest, do not invent canvases or downgrade an obtainable whole codex to a

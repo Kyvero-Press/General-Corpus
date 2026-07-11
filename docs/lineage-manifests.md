@@ -84,6 +84,9 @@ each image. Its compact manifest record sets `retrieval_method` to
 `source_url`. The generated notes disclose the image request-size profile.
 Thus `coverage=complete` means every canvas in that manifest was cached; it
 does not claim access to an archive's preservation masters.
+Large objects can be resumed from URL-matched staging files. The default uses
+one request at a time; `--workers 4` (up to 32) permits conservative parallel
+retrieval when the provider service can support it.
 
 Some providers publish a complete facsimile as individual Image API services
 without a Presentation manifest. In that case, pass the official whole-
