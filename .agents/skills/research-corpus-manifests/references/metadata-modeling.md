@@ -19,6 +19,11 @@ field. Distinguish source author, translator, adapter, compiler, medieval
 scribe, editor, collator, and digital contributor. Model anonymous, attributed,
 and disputed creation honestly.
 
+Treat an acrostic as direct evidence for its recovered letter sequence, not
+automatically for that sequence's referent or role. Model author, scribe,
+patron, person, and place interpretations separately with qualified assertions;
+preserve competing readings as an open question.
+
 When an immediate source retains an earlier editor's text but adds a new
 collation or revision, represent both roles. A compact editor display may name
 one primary editor or include every editor agent in a composite description.
