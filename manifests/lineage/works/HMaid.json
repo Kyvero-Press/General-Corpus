@@ -451,6 +451,13 @@
       ]
     },
     {
+      "id": "agent:google-books",
+      "type": "organization",
+      "name": "Google Books",
+      "urls": ["https://books.google.com/"],
+      "evidence_ids": ["evidence:google-play-hmaid-1922", "evidence:google-books-hmaid-1922-download"]
+    },
+    {
       "id": "agent:bayerische-staatsbibliothek",
       "type": "organization",
       "name": "Bayerische Staatsbibliothek",
@@ -774,6 +781,52 @@
       ]
     },
     {
+      "id": "access:google-hmaid-1922-pdf",
+      "entity": "edition:furnivall:1922",
+      "provider_id": "agent:google-books",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open the stable full-view Google Books record; the local cache was retrieved from the exact provider-issued PDF URL recorded below.",
+      "url": "https://books.google.com/books?id=8rULAQAAIAAJ&printsec=frontcover",
+      "alternate_urls": [
+        "https://play.google.com/store/books/details?id=8rULAQAAIAAJ",
+        "https://books.google.com/books/download/Hali_Meidenhad.pdf?id=8rULAQAAIAAJ&output=pdf",
+        "https://books.googleusercontent.com/books/content?req=AKW5QacYzAmlvYLZ8vBDxmhkhzCYsLUsZ9gGt4_mFB_6N7Oz6oofRUxMo-NcBGnVrq8IyXRdMHqwmLfFJa6WC1MDXH_XfK1ze5iqETVCRj_CN-5m86ua61BFDrp2RUVUPebIW2tj4qd63rXqRpxo5_tsY4hKC5HaVGmdvI6xXMYOerdkSQwlrBXkz8O9y4thNLV3ZXEmdH0C9SY7n9C-IfrTXZkwsDnnua8OC9v0cL9d4QlV6aKRVfeuWbzxgVWMCiH7TF_EfMWO"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Google Books Furnivall Hali Meidenhad 1922 PDF",
+          "path": "source-cache/HMaid/furnivall-hali-meidenhad-1922-google-complete.pdf",
+          "source_url": "https://books.googleusercontent.com/books/content?req=AKW5QacYzAmlvYLZ8vBDxmhkhzCYsLUsZ9gGt4_mFB_6N7Oz6oofRUxMo-NcBGnVrq8IyXRdMHqwmLfFJa6WC1MDXH_XfK1ze5iqETVCRj_CN-5m86ua61BFDrp2RUVUPebIW2tj4qd63rXqRpxo5_tsY4hKC5HaVGmdvI6xXMYOerdkSQwlrBXkz8O9y4thNLV3ZXEmdH0C9SY7n9C-IfrTXZkwsDnnua8OC9v0cL9d4QlV6aKRVfeuWbzxgVWMCiH7TF_EfMWO",
+          "sha256": "3b2a6b7243dbedf50193bdef4ee82445ae17685308663db98cf196f1bd605d70",
+          "bytes": 4446300,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The 141-page provider PDF preserves the complete physical-volume scan, including title matter, both witness texts with modernization, notes, glossary, society lists, and terminal leaves.",
+            "The exact Googleusercontent retrieval URL is provider-issued and may be temporary; the stable Google Books and Google Play item URLs remain recorded on the access record.",
+            "Local caching does not itself grant permission to redistribute Google's scan derivative."
+          ],
+          "work_portion": {
+            "label": "Furnivall's parallel Bodley and Cotton witness texts with modernization",
+            "locators": ["printed pages 1-67", "PDF pages 14-80"],
+            "start_url": "https://books.google.com/books?id=8rULAQAAIAAJ&pg=PA1",
+            "end_url": "https://books.google.com/books?id=8rULAQAAIAAJ&pg=PA67",
+            "notes": [
+              "Text inspection locates the edition opening at PDF page 14/printed p. 1 and the concluding Cotton text at PDF page 80/printed p. 67; PDF page 81 is blank and the notes begin on PDF page 82."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "141-page full-view PDF, 4,446,300 bytes",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:google-books-hmaid-1922-download", "evidence:google-play-hmaid-1922"],
+      "notes": ["A download request can trigger an automated challenge even though the book is full view; the exact file was successfully retrieved through the provider-issued PDF response URL on the review date."]
+    },
+    {
       "id": "access:bsb-hmaid-1866",
       "entity": "edition:cockayne:1866",
       "provider_id": "agent:bayerische-staatsbibliothek",
@@ -1041,6 +1094,21 @@
       "notes": [
         "Provider terms can still govern use of a particular scan or interface even when the underlying edition is public domain."
       ]
+    },
+    {
+      "id": "rights:google-hmaid-1922-scan",
+      "entity": "edition:furnivall:1922",
+      "access_id": "access:google-hmaid-1922-pdf",
+      "component": "Google Books page images and downloadable PDF derivative",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The underlying 1922 edition is public domain in the United States, but the reviewed Google Books record and PDF response do not supply an item-specific open license for Google's scan derivative.",
+      "asserted_by_id": "agent:google-books",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:google-books-hmaid-1922-download", "evidence:us-copyright-circular-15a"],
+      "notes": ["Full-view access and successful local retrieval do not independently authorize redistribution of the scan file."]
     },
     {
       "id": "rights:cockayne-1866-us",
@@ -1332,6 +1400,22 @@
         "access:hathi-hmaid-1922"
       ],
       "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:google-books-hmaid-1922-download",
+      "type": "digital_surrogate",
+      "citation": "Google Books, full-view scan of Hali Meidenhad, EETS Original Series 18 (1922), item 8rULAQAAIAAJ.",
+      "url": "https://books.google.com/books?id=8rULAQAAIAAJ&printsec=frontcover",
+      "alternate_urls": [
+        "https://books.google.com/books/download/Hali_Meidenhad.pdf?id=8rULAQAAIAAJ&output=pdf",
+        "https://play.google.com/store/books/details?id=8rULAQAAIAAJ"
+      ],
+      "repository_path": "source-cache/HMaid/furnivall-hali-meidenhad-1922-google-complete.pdf",
+      "locator": "complete 141-page PDF; edited witness texts at PDF pages 14-80 / printed pages 1-67",
+      "summary": "The full-view item exposed a provider-issued 4,446,300-byte PDF that was retrieved and inspected. It preserves the complete scan, and page-boundary inspection locates the parallel Bodley/Cotton texts before notes and glossary; no item-specific open license was identified for the scan derivative.",
+      "supports": ["agent:google-books", "access:google-hmaid-1922-pdf", "rights:google-hmaid-1922-scan"],
+      "accessed_on": "2026-07-11",
+      "sha256": "3b2a6b7243dbedf50193bdef4ee82445ae17685308663db98cf196f1bd605d70"
     },
     {
       "id": "evidence:ddb-hmaid-1866",
