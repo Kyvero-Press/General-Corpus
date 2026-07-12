@@ -42,6 +42,18 @@ divisions, treat the divisions as representations of separate witnesses, not
 as intrinsic chapters or parts of the work. Record the layout transformation
 as an encoding practice.
 
+A witness-labeled stream can itself be composite when the editor supplies
+lacunae or selected passages from other manuscripts. Keep the stream's main
+witness edge, then add passage-scoped source relations for every explicitly
+supplied segment; a column heading is not proof that all its readings derive
+from one physical object.
+
+If every serialized witness stream stops at the same line even though the
+printed edition continues, test for a shared encoding cutoff before proposing
+parallel manuscript loss. Record the omitted edition pages and lines as an
+encoding boundary unless witness-specific evidence establishes genuine
+lacunae.
+
 ## Component records: Ayenbite
 
 The exact BL child record ends Ayenbite at folio 94r; later folios contain other
