@@ -26,6 +26,11 @@ Generic Mirador or IIIF interface chrome can also render on a discovery page
 that explicitly has no digital object. Require a resolvable Presentation
 manifest with canvases, an image inventory, or an item-specific institutional
 digital-content link before recording the manuscript as digitized.
+A generic legacy “digital images” link whose inventory cannot be audited proves
+at most unknown-extent image access. Do not infer cover-to-cover coverage or
+bypass CAPTCHA, login, or human-verification controls to enumerate it; retain
+the catalog claim, record the uncertainty, and use the provider's enquiry or
+reproduction route.
 
 A second repository's microfilm can be the best known scholarly reproduction
 route even when the holding library has no public images. Model it as a

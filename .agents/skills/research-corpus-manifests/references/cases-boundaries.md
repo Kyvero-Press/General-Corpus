@@ -30,6 +30,12 @@ work mappings and say that the boundary is shared. Do not crop the cached
 complete-codex surrogate or imply that the page belongs exclusively to either
 work.
 
+One historical codex can now survive as two or more separately held physical
+objects. Give every present shelfmark its own witness entity and do not join
+them with `same_as`. Request or cache the whole of each present object, then
+map the relevant work portion within each delivery; describe the historical
+join and unresolved current foliation separately.
+
 ## Parallel witnesses: HMaid
 
 An edition printing Bodley 34 and Cotton Titus D XVIII in parallel still

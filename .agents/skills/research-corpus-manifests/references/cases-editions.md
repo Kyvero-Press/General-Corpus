@@ -32,6 +32,13 @@ prior edition, connect the prior edition with `consulted` at the supported
 scope. Do not make it the transcription source merely because it influenced
 later discussion or selected emendations.
 
+Conversely, a separately printed manuscript specimen inside an edition does
+not make that manuscript the base of the edition's continuous text. Model the
+specimen with its own narrow `transcribes` scope, then establish the main text's
+actual base edition or witness independently. An electronic selection ending
+at the same boundary as the manuscript specimen or fragment is not evidence
+that all selected text was keyed from that manuscript.
+
 ## Source author versus translator: ChaucerBo
 
 Separate Boethius as source author, Chaucer as Middle English translator and
