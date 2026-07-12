@@ -128,7 +128,10 @@ Audit encoded notes and appendices as their own source layer. A quoted,
 collated, or transcribed passage taken through another printed edition may
 introduce that edition and its deeper witness as passage-scoped lineage;
 a bibliographic citation that supplies no reading does not by itself create a
-derivation edge.
+derivation edge. When an editor names a manuscript siglum but identifies its
+text through an earlier printed edition, route the comparison through that
+edition unless direct codex consultation is evidenced; concordance line
+numbers and variant citations alone do not prove physical consultation.
 
 For serial publications, inspect the issue wrapper or issue title page, the
 completed-volume title page, and current catalog metadata independently. They
