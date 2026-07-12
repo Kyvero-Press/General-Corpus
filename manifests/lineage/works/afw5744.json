@@ -984,15 +984,50 @@
       "alternate_urls": [
         "https://iiif.bodleian.ox.ac.uk/iiif/manifest/90a06f70-880a-4b5b-bd30-798710afff11.json"
       ],
+      "local_copies": [
+        {
+          "label": "Complete Digital Bodleian MS Junius 1 IIIF facsimile bundle",
+          "path": "source-cache/afw5744/bodleian-ms-junius-1-complete-iiif.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/90a06f70-880a-4b5b-bd30-798710afff11.json",
+          "sha256": "dd678eb41f676aa3333b282d4f317e867e2322472f0a860135c13b4a6350d498",
+          "bytes": 380773681,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 263,
+          "notes": [
+            "Complete canvas coverage of the 263-image IIIF Presentation manifest; images are service derivatives requested at a maximum width of 1200 pixels, not preservation masters.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 263 canvas images listed when retrieved.",
+            "All 263 images use the effective IIIF image request profile '1200,' in JPEG format."
+          ],
+          "work_portion": {
+            "label": "The surviving Ormulum in its autograph manuscript proper",
+            "locators": [
+              "Bodleian Library MS Junius 1, fols. 3r-118v and [119]r-[119]v",
+              "IIIF canvases 9-255 (viewer indices 8-254)"
+            ],
+            "start_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a2980d0a-ac52-4383-ba1b-bc0a6a6f567a.json",
+            "end_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/b524f4af-6f07-42cd-a36d-84f1a2ea8e01.json",
+            "notes": [
+              "The holding metadata identifies fols. 3-118 and [119] as the manuscript proper; fols. 1-2 are a thirteenth-century bifolium not necessarily integral to the codex. The bundle nevertheless retains every canvas in the complete digital object.",
+              "Direct inspection confirmed that canvas 9 is the opening manuscript-proper leaf fol. 3r and canvas 255 is the surviving terminal fragment fol. [119]v."
+            ]
+          }
+        }
+      ],
       "cost": "free",
-      "format": "High-resolution IIIF page images",
+      "format": "IIIF Presentation 2 and Image API JPEG derivatives",
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:bodleian-junius1-manifest",
-        "evidence:oxford-ormulum-announcement"
+        "evidence:oxford-ormulum-announcement",
+        "evidence:bodleian-junius1-boundary-inspection"
       ],
       "notes": [
-        "Free access does not authorize commercial reuse; the item attribution specifies CC BY-NC 4.0 and the Digital Bodleian terms require separate permission for commercial use."
+        "Free access does not authorize commercial reuse; the item attribution specifies CC BY-NC 4.0 and the Digital Bodleian terms require separate permission for commercial use.",
+        "The ignored local cache is a research copy and is not itself evidence of permission to redistribute the Bodleian photographs."
       ]
     },
     {
@@ -1362,6 +1397,16 @@
       "notes": [
         "The complete object has 263 canvases. A different Digital Bodleian object, 8d37b5d4-27ec-4da0-8a9e-dc3cba62c212, has only two 35mm images and must not be linked as the complete facsimile."
       ]
+    },
+    {
+      "id": "evidence:bodleian-junius1-boundary-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the cached Digital Bodleian MS Junius 1 IIIF manifest and boundary images.",
+      "repository_path": "source-cache/afw5744/bodleian-ms-junius-1-complete-iiif.zip",
+      "locator": "manifest canvases 9 and 255; images/000009.jpg and images/000255.jpg",
+      "summary": "The 263-canvas manifest labels canvas 9 as fol. 3r and canvas 255 as fol. [119]v. Image inspection confirms that these are respectively the opening leaf of the manuscript proper and its surviving terminal text fragment; the complete bundle also preserves the non-work fols. 1-2, covers, flyleaves, spine, fore-edge, head, and tail.",
+      "accessed_on": "2026-07-11",
+      "sha256": "dd678eb41f676aa3333b282d4f317e867e2322472f0a860135c13b4a6350d498"
     },
     {
       "id": "evidence:oxford-ormulum-announcement",
