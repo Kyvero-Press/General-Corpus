@@ -1,0 +1,580 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00038",
+  "work_id": "CME00038",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00038",
+    "unit_type": "composite",
+    "label": "The Romaunt of the Rose",
+    "scope_note": "The cataloging unit is the extant Middle English verse translation/adaptation traditionally called The Romaunt of the Rose. It is transmitted as a continuous poem but comprises three durable scholarly attribution units produced by different or disputed translators. It excludes the French Roman de la Rose, the Hunter 409 codex as physical object, Kaluza's bilingual edition and apparatus, the U-M encoding, and repository XML."
+  },
+  "catalog_summary": {
+    "title": "The Romaunt of the Rose",
+    "author": "Geoffrey Chaucer (Fragment A, almost certainly); anonymous or disputed translators (Fragments B–C)",
+    "editor": "Max Kaluza",
+    "date": "Fragment A often dated to the 1360s and before 1372; Fragments B–C undated here; first printed in 1532",
+    "region": "England; Fragment B has Northern English dialect features",
+    "genres": ["Dream vision", "Allegorical narrative poem", "Courtly-love literature", "Translation and adaptation", "Social satire"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": ["middle-english", "dream-vision", "allegory", "courtly-love", "translation-and-adaptation", "rhyming-couplets", "social-satire"]
+  },
+  "identifiers": [
+    {"scheme": "General Corpus work ID", "value": "CME00038"},
+    {"scheme": "University of Michigan Corpus of Middle English", "value": "CME00038", "uri": "https://name.umdl.umich.edu/CME00038"},
+    {"scheme": "DIMEV", "value": "3403"},
+    {"scheme": "IMEV/NIMEV", "value": "2092"},
+    {"scheme": "Middle English Dictionary bibliography", "value": "BIB3055", "uri": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB3055?rid=HYP.1327.19981211T105002"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Romaunt of the Rose",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich-item", "evidence:kaluza-edition", "evidence:mec-bibliography"]}
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Romaunt of the Rose",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml", "evidence:mec-bibliography"]}
+    },
+    {
+      "id": "title:incipit",
+      "type": "incipit",
+      "value": "[MANY men sayn that in sweueninges",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml", "evidence:kaluza-edition"]},
+      "notes": ["The opening is absent from current Hunter 409 and is supplied in Kaluza's text from Thynne's 1532 print; it is an incipit of the represented work, not a surviving Hunter 409 incipit."]
+    },
+    {
+      "id": "title:explicit",
+      "type": "explicit",
+      "value": "Here endeth the Romaunt of the Rose",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml"]},
+      "notes": ["The XML's final trailer derives from the printed representation and continues with notice of Troilus and Criseyde; that following work is outside CME00038."]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:geoffrey-chaucer",
+      "type": "person",
+      "name": "Geoffrey Chaucer",
+      "alternate_names": ["Geffray Chaucer"],
+      "identifiers": [
+        {"scheme": "VIAF", "value": "100185203", "uri": "https://viaf.org/viaf/100185203"}
+      ],
+      "notes": ["Current consensus represented by the University of Oklahoma Press edition attributes Fragment A, lines 1–1705, almost certainly to Chaucer. Chaucer's responsibility for Fragment C remains disputed; Fragment B is not attributed to him here."]
+    },
+    {
+      "id": "agent:max-kaluza",
+      "type": "person",
+      "name": "Max Kaluza",
+      "notes": ["Editor and collator of the 1891 source representation, not a medieval author or translator of the cataloged work."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:chaucer-fragment-a",
+      "agent_id": "agent:geoffrey-chaucer",
+      "display_name": "Geoffrey Chaucer",
+      "role": "translator",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-a"], "description": "Fragment A, traditional lines 1–1705"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:oupress-dahlberg", "evidence:glasgow-pilot"],
+        "notes": "The modern edition page characterizes the current consensus as almost certain rather than absolutely proved."
+      },
+      "notes": ["Translation includes adaptive treatment of the French source; 'translator' does not imply word-for-word rendering."]
+    },
+    {
+      "id": "responsibility:anonymous-fragment-b",
+      "display_name": "Anonymous translator of Fragment B",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-b"], "description": "Fragment B, traditional lines 1706–5810"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"]},
+      "notes": ["Northern forms and rhymes distinguish this translator's language from Fragment A; they are not treated as proof of a precise place of composition."]
+    },
+    {
+      "id": "responsibility:unidentified-fragment-c",
+      "display_name": "Unidentified translator of Fragment C",
+      "role": "translator",
+      "attribution_status": "unknown",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-c"], "description": "Fragment C, traditional lines 5811–7696"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"],
+        "notes": "The translator's identity is unresolved; this responsibility records the unknown agent rather than choosing between competing attributions."
+      }
+    },
+    {
+      "id": "responsibility:chaucer-fragment-c-disputed",
+      "agent_id": "agent:geoffrey-chaucer",
+      "display_name": "Geoffrey Chaucer",
+      "role": "translator",
+      "attribution_status": "disputed",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-c"], "description": "Possible responsibility for Fragment C, traditional lines 5811–7696"},
+      "assertion": {
+        "status": "tentative",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"],
+        "notes": "Some scholarship accepts Chaucer's authorship of Fragment C and other scholarship rejects it; this is an alternative disputed attribution, not a second translator claim."
+      }
+    },
+    {
+      "id": "responsibility:kaluza-editor",
+      "agent_id": "agent:max-kaluza",
+      "display_name": "Max Kaluza",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1891 printed source representation used by U-M"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-edition", "evidence:umich-item"]},
+      "notes": ["This is editorial responsibility for a source edition, not authorship of the medieval intellectual work."]
+    },
+    {
+      "id": "responsibility:kaluza-collator",
+      "agent_id": "agent:max-kaluza",
+      "display_name": "Max Kaluza",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1891 English and parallel French texts"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-edition", "evidence:glasgow-pilot"]},
+      "notes": ["Kaluza used Hunter 409, Thynne's 1532 print, prior English editions, Michel's French edition, and other French manuscripts in distinct editorial roles documented in the lineage manifest."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:fragment-a-translation",
+      "type": "translation",
+      "display": "often placed in the 1360s and before 1372, but debated",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-a"], "description": "Fragment A only"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"],
+        "notes": "No numeric range is normalized because the institutional summary presents a debated scholarly placement, not a securely bounded event."
+      }
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "1532",
+      "normalized": {"not_before": 1532, "not_after": 1532},
+      "scope": {"kind": "whole", "description": "First printed appearance in Thynne's collected Chaucer"},
+      "source_lineage_entity_id": "edition:thynne:1532",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:glasgow-pilot", "evidence:kaluza-edition"]},
+      "notes": ["Publication date is distinct from translation, manuscript copying, and modern edition dates."]
+    }
+  ],
+  "places": [
+    {
+      "id": "place:england",
+      "label": "England",
+      "kind": "country",
+      "identifiers": [{"scheme": "Wikidata", "value": "Q21", "uri": "https://www.wikidata.org/entity/Q21"}],
+      "notes": ["Used as a cultural-origin statement, not as an exact place of composition for every fragment."]
+    },
+    {
+      "id": "place:northern-england",
+      "label": "Northern England",
+      "kind": "dialect_region",
+      "broader_place_ids": ["place:england"],
+      "notes": ["A broad linguistic region reflecting Fragment B's Northern forms and rhymes; it is not normalized as a specific historical county or writing place."]
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england-cultural-origin",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"]},
+      "notes": ["The work belongs to the English Middle English translation tradition; this does not prove that all three fragments were composed in one location."]
+    },
+    {
+      "id": "place-statement:fragment-b-northern-dialect",
+      "place_id": "place:northern-england",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-b"], "description": "Fragment B only"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:glasgow-pilot"]},
+      "notes": ["Dialect evidence is not converted into an exact place-of-composition assertion."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml", "evidence:umich-item", "evidence:mec-bibliography"]},
+      "notes": ["Old French is the language of the related source work and Kaluza's excluded facing column; it is not assigned as a language of the cataloged CME00038 content."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "Continuous Middle English narrative verse, predominantly in octosyllabic rhyming couplets.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml", "evidence:kaluza-edition", "evidence:oupress-dahlberg"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:dream-vision",
+      "term": "dream-vision",
+      "label": "Dream vision",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:oupress-dahlberg", "evidence:cme00038-xml"]}
+    },
+    {
+      "id": "genre:allegorical-narrative-poem",
+      "term": "allegorical-narrative-poem",
+      "label": "Allegorical narrative poem",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:oupress-dahlberg", "evidence:kaluza-edition"]}
+    },
+    {
+      "id": "genre:courtly-love-literature",
+      "term": "courtly-love-literature",
+      "label": "Courtly-love literature",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:oupress-dahlberg"]}
+    },
+    {
+      "id": "genre:translation-adaptation",
+      "term": "translation-and-adaptation",
+      "label": "Translation and adaptation",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-edition", "evidence:oupress-dahlberg"]},
+      "notes": ["The three fragments translate and adapt portions of the French Roman de la Rose; the relation does not imply uniform literalness or common authorship."]
+    },
+    {
+      "id": "genre:social-satire",
+      "term": "social-satire",
+      "label": "Social satire",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:oupress-dahlberg"]},
+      "notes": ["Satirical force is especially prominent in the poem's social, clerical, and religious critique rather than equally dominant in every passage."]
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:courtly-love",
+      "term": "courtly-love",
+      "label": "Courtly love and desire",
+      "scheme": "General Corpus local subject",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:oupress-dahlberg", "evidence:kaluza-edition"]}
+    },
+    {
+      "id": "subject:dreams",
+      "term": "dreams",
+      "label": "Dreams and dream interpretation",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00038-xml", "evidence:oupress-dahlberg"]}
+    },
+    {
+      "id": "subject:allegorical-garden",
+      "term": "allegorical-garden",
+      "label": "Allegorical garden and personified figures",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-edition", "evidence:oupress-dahlberg"]}
+    },
+    {
+      "id": "subject:ethics-of-love",
+      "term": "ethics-of-love",
+      "label": "Ethics and instruction concerning love",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:oupress-dahlberg"]}
+    },
+    {
+      "id": "subject:religious-hypocrisy",
+      "term": "religious-hypocrisy",
+      "label": "Clerical and religious hypocrisy",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:fragment-c"], "description": "Especially the satirical continuation in Fragment C"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:oupress-dahlberg"]}
+    }
+  ],
+  "tags": ["middle-english", "dream-vision", "allegory", "courtly-love", "translation-and-adaptation", "rhyming-couplets", "social-satire"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A Middle English dream-vision translation and adaptation of part of Guillaume de Lorris and Jean de Meun's Roman de la Rose. A dreaming narrator enters a walled garden populated by allegorical figures, falls in love with a rose, receives instruction and opposition in his pursuit, and encounters extended reflection and satire concerning love, social conduct, and religious hypocrisy. The extant English poem is composite: Fragment A is now almost certainly attributed to Chaucer, Fragment B is anonymous and linguistically Northern, and Fragment C remains disputed.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:oupress-dahlberg", "evidence:glasgow-pilot", "evidence:kaluza-edition"]
+    },
+    {
+      "id": "summary:cataloging-scope",
+      "type": "scope_note",
+      "value": "CME00038 encodes only the Middle English text selected from Kaluza's 1891 bilingual edition. Kaluza's facing Old French column, the edition as a physical publication, Hunter 409 and the NLS leaf as witnesses, the U-M encoding, and the repository XML are related or lineage layers rather than parts of the cataloged intellectual work.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:umich-item", "evidence:kaluza-edition", "evidence:cme00038-xml"]
+    },
+    {
+      "id": "summary:fragment-model",
+      "type": "cataloging_note",
+      "value": "The A/B/C divisions are retained because they remain stable units for attribution, date, and dialect. They are not described as original manuscript sections: Hunter 409 presents a continuous poem, and Olivia Robinson argues that its mise-en-page does not support reifying the scholarly fragmentation.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:robinson-2015", "evidence:glasgow-pilot"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 1,
+    "sections": 3,
+    "prose_only_items": 0,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 196,
+    "verse_lines": 7696,
+    "description": "One continuous verse work represented through three scholarly attribution fragments. The XML contains 7,712 L elements and 199 LG elements in total; ancestor-aware counting yields 7,696 main-stream verse lines in 196 main-stream line groups, with 16 additional L elements in three apparatus notes. Traditional fragment line ranges total 7,696. Hunter 409 itself ends at manuscript line 7692, so terminal manuscript, edition, and encoding lineation remain distinct.",
+    "evidence_ids": ["evidence:xml-computation", "evidence:cme00038-xml", "evidence:glasgow-pilot", "evidence:kaluza-edition"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:fragment-a",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "fragment",
+      "label": "Fragment A",
+      "summary": "Traditional lines 1–1705, opening the dream framework, walled garden, fountain and rose quest; now almost certainly attributed to Chaucer.",
+      "item_count": null,
+      "textual_form": "verse",
+      "metrics": {"verse_lines": 1705},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00038", "scheme": "traditional lineation", "value": "lines 1–1705"},
+        {"lineage_entity_id": "edition:kaluza:1891", "scheme": "traditional lineation", "value": "lines 1–1705"},
+        {"lineage_entity_id": "witness:glasgow:Hunter-409", "scheme": "surviving manuscript lineation", "value": "line 45 through line 1705, with additional internal loss at lines 333–380"}
+      ],
+      "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg", "evidence:cme00038-xml"],
+      "notes": ["Lines 1–44 and 333–380 are absent from current Hunter 409 and are supplied by Kaluza from Thynne; smaller defects also occur near lines 45–48, 69–72, 94–96, and 117–120.", "The part boundary is scholarly and attributional, not a visible manuscript division."]
+    },
+    {
+      "id": "part:fragment-b",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "fragment",
+      "label": "Fragment B",
+      "summary": "Traditional lines 1706–5810, a continuation by an anonymous translator whose forms and rhymes show Northern English linguistic features.",
+      "item_count": null,
+      "textual_form": "verse",
+      "metrics": {"verse_lines": 4105},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00038", "scheme": "traditional lineation", "value": "lines 1706–5810"},
+        {"lineage_entity_id": "edition:kaluza:1891", "scheme": "traditional lineation", "value": "lines 1706–5810"},
+        {"lineage_entity_id": "witness:glasgow:Hunter-409", "scheme": "surviving manuscript lineation", "value": "lines 1706–5810, with losses at 2395–2442 and 3595–3690"},
+        {"lineage_entity_id": "witness:nls:Acc-10225-romaunt-leaf", "scheme": "reported lineation", "value": "lines 2403–2450"}
+      ],
+      "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg", "evidence:cme00038-xml"],
+      "notes": ["The NLS leaf overlaps the Hunter lacuna at lines 2403–2442 and also preserves lines 2443–2450, which survive in Hunter 409; its exact component identifier and date remain unresolved.", "The part boundary is scholarly and attributional, not a visible manuscript division."]
+    },
+    {
+      "id": "part:fragment-c",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "fragment",
+      "label": "Fragment C",
+      "summary": "Traditional lines 5811–7696, a continuation whose authorship remains disputed; some scholars accept Chaucer's responsibility and others reject it.",
+      "item_count": null,
+      "textual_form": "verse",
+      "metrics": {"verse_lines": 1886},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00038", "scheme": "traditional lineation", "value": "lines 5811–7696"},
+        {"lineage_entity_id": "edition:kaluza:1891", "scheme": "traditional lineation", "value": "lines 5811–7696"},
+        {"lineage_entity_id": "witness:glasgow:Hunter-409", "scheme": "surviving manuscript lineation", "value": "lines 5811–7692, with loss at 7383–7574 and a displaced sequence around 7013–7302"}
+      ],
+      "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg", "evidence:cme00038-xml", "evidence:kaluza-edition"],
+      "notes": ["The traditional endpoint 7696 does not map without qualification to Hunter 409's terminal line 7692 or to every terminal alternative represented in Kaluza's apparatus and the XML.", "The part boundary is scholarly and attributional, not a visible manuscript division."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:roman-de-la-rose",
+      "title": "Le Roman de la Rose",
+      "relation": "translation_of",
+      "evidence_ids": ["evidence:kaluza-edition", "evidence:oupress-dahlberg"],
+      "notes": ["The thirteenth-century Old French source is conventionally associated with Guillaume de Lorris and Jean de Meun. The Middle English Romaunt translates and adapts only part of it and does so through three distinct attribution units.", "Kaluza's printed facing French text is a source-edition component excluded from CME00038, not embedded French language in the cataloged work."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00038",
+    "manifest_path": "manifests/lineage/works/CME00038.json",
+    "bindings": [
+      {"metadata_target": "work:CME00038", "lineage_entity_id": "artifact:general-corpus:CME00038", "role": "repository_representation"},
+      {"metadata_target": "work:CME00038", "lineage_entity_id": "encoding:umich-cme:CME00038", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00038", "lineage_entity_id": "edition:kaluza:1891", "role": "source_edition"},
+      {"metadata_target": "work:CME00038", "lineage_entity_id": "edition:thynne:1532", "role": "source_edition"},
+      {"metadata_target": "work:CME00038", "lineage_entity_id": "witness:glasgow:Hunter-409", "role": "source_witness"},
+      {"metadata_target": "part:fragment-a", "lineage_entity_id": "witness:glasgow:Hunter-409", "role": "source_witness"},
+      {"metadata_target": "part:fragment-b", "lineage_entity_id": "witness:glasgow:Hunter-409", "role": "source_witness"},
+      {"metadata_target": "part:fragment-b", "lineage_entity_id": "witness:nls:Acc-10225-romaunt-leaf", "role": "source_witness"},
+      {"metadata_target": "part:fragment-c", "lineage_entity_id": "witness:glasgow:Hunter-409", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:cme00038-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_3/CME00038.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00038.xml",
+      "locator": "IDG; title pages; poem headnote; BODY/DIV1[3]; MILESTONE, LG, L, NOTE, PB; final TRAILER",
+      "summary": "Primary evidence for repository identity, inherited title, Middle English language, verse form, incipit, explicit, lineation, apparatus, content, and structural extent.",
+      "accessed_on": "2026-07-12",
+      "sha256": "06dc5037abe14748318c78ea670e3169cbde31a997ebc678869dbadcd76f5e95"
+    },
+    {
+      "id": "evidence:xml-computation",
+      "type": "computational_inspection",
+      "citation": "Local structural computation over CME00038.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00038.xml",
+      "locator": "ancestor-aware counts of DIV1, LG, L, NOTE, PB, P, and MILESTONE",
+      "summary": "Confirmed three top-level representation units and distinguished 7,696 main-stream L elements in 196 main-stream LG elements from 16 L elements and three LG elements nested in notes; raw totals are 7,712 L and 199 LG. It also confirmed 221 PB, 2,546 MILESTONE, 1,475 NOTE, and 20 P elements.",
+      "accessed_on": "2026-07-12",
+      "sha256": "06dc5037abe14748318c78ea670e3169cbde31a997ebc678869dbadcd76f5e95"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "linked_manifest_evidence",
+      "citation": "University of Michigan Corpus of Middle English, CME00038 item record",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00038",
+      "source_evidence_id": "evidence:umich-item",
+      "summary": "Companion-lineage evidence for the item title, explicit '[ME text only]' selection, 1891 source edition, stable identifier, and three representation-level contents.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:kaluza-edition",
+      "type": "linked_manifest_evidence",
+      "citation": "Max Kaluza, ed., The Romaunt of the Rose, Part I—The Texts (1891)",
+      "url": "https://archive.org/details/romauntrosefrom00chaugoog",
+      "source_evidence_id": "evidence:kaluza-scan",
+      "summary": "Companion-lineage evidence for the work title, continuous Middle English verse, traditional lineation, source relation to the French Roman, English/French parallel structure, manuscript transcription, Thynne supplies, and terminal text.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:glasgow-pilot",
+      "type": "linked_manifest_evidence",
+      "citation": "University of Glasgow, The Romaunt of the Rose Project: Background and Pilot Project",
+      "url": "https://www.gla.ac.uk/myglasgow/library/files/special/Rose/html/pilot.htm",
+      "source_evidence_id": "evidence:glasgow-pilot",
+      "summary": "Companion-lineage evidence for Fragment A/B/C line ranges, part-specific authorship claims and debate, proposed dating of Fragment A, Fragment B's Northern features, continuous manuscript transmission, Hunter lacunae, NLS leaf, and Thynne use.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:oupress-dahlberg",
+      "type": "official_webpage",
+      "citation": "University of Oklahoma Press, The Romaunt of the Rose, translated and edited by Charles Dahlberg",
+      "url": "https://www.oupress.com/9780806131474/the-romaunt-of-the-rose/",
+      "summary": "Current university-press description characterizing the poem as a dream vision, part romance and part satire, and reporting the current consensus that Chaucer almost certainly wrote the first 1,705 lines while the remaining attribution questions continue to be debated.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:robinson-2015",
+      "type": "scholarly_source",
+      "citation": "Olivia Robinson, ‘Recontextualising the Romaunt of the Rose: Glasgow University Library, MS Hunter 409’, English 64 (2015), doi:10.1093/english/efu036",
+      "url": "https://research.birmingham.ac.uk/en/publications/recontextualising-the-romaunt-of-the-rose-glasgow-university-libr/",
+      "alternate_urls": ["https://doi.org/10.1093/english/efu036"],
+      "summary": "Peer-reviewed study describing Hunter 409 as the most complete surviving manuscript and arguing that its mise-en-page does not support reifying the inherited three-fragment scholarly division as manuscript structure.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:mec-bibliography",
+      "type": "official_catalog",
+      "citation": "Middle English Compendium bibliography, BIB3055, Romaunt of the Rose",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB3055?rid=HYP.1327.19981211T105002",
+      "summary": "Provides the work bibliography and cross-identifiers DIMEV 3403 and IMEV/NIMEV 2092, identifies Hunter 409 and Thynne 1532 as witnesses, and cites Kaluza's Chaucer Society First Series 83 edition. Its dating stencil is retained as catalog evidence rather than converted into a composition date.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:fragment-bc-authorship-and-dates",
+      "question": "Who translated Fragments B and C, is Chaucer responsible for any of Fragment C, and when were those fragments composed or translated?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Review current stylometric, linguistic, textual, and source studies for both fragments.", "Record alternative author and date claims with claim-specific confidence rather than assigning one whole-work author or date."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg", "evidence:robinson-2015"]
+    },
+    {
+      "id": "question:fragment-a-date",
+      "question": "What date range for Fragment A is supported by current scholarship beyond the traditional 1360s or pre-1372 placement?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult recent Chaucer chronology and source studies.", "Keep translation date distinct from witness copying and first publication."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:glasgow-pilot", "evidence:oupress-dahlberg"]
+    },
+    {
+      "id": "question:terminal-lineation",
+      "question": "How should the 7,696-line traditional work extent be reconciled with Hunter 409's terminal line 7692 and the XML's terminal apparatus and main-stream line count?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Collate Hunter f. 150r, Kaluza's final English pages, milestones, line elements, and nested terminal notes.", "Preserve separate manuscript, edition, and encoding lineation if they cannot be reduced to one count."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cme00038-xml", "evidence:xml-computation", "evidence:kaluza-edition", "evidence:glasgow-pilot"]
+    },
+    {
+      "id": "question:nls-leaf-description",
+      "question": "What exact catalog component, date, dialect, physical features, and textual readings characterize the detached Romaunt leaf in NLS Acc.10225?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Obtain an exact NLS component record and complete recto/verso reproduction.", "Collate lines 2403–2450 against Hunter 409, Thynne 1532, and Kaluza only after identifying the leaf securely."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:glasgow-pilot"]
+    },
+    {
+      "id": "question:fragment-b-dialect",
+      "question": "Can Fragment B's broad Northern English dialect assignment be refined without conflating textual dialect, scribal language, and place of translation?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare current dialectological analysis with the forms and rhymes cited by the Glasgow project.", "Model composition place only if evidence independent of witness language supports it."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:glasgow-pilot"]
+    }
+  ],
+  "notes": [
+    "The three fragments are modeled as attribution and linguistic parts of one continuously transmitted composite work, not as three visibly separated manuscript works.",
+    "Geoffrey Chaucer is not assigned blanket authorship of the whole poem. Fragment A receives the strong modern consensus attribution; Fragment C records both an unidentified translator and the disputed Chaucer alternative.",
+    "Guillaume de Lorris and Jean de Meun belong to the related French source-work layer and are not assigned direct authorship of the Middle English Romaunt.",
+    "William Thynne and Max Kaluza are edition-layer agents. Kaluza appears in the catalog summary because CME00038 is represented through his edition; Thynne's supplied passages and all edition ancestry remain explicit in the linked lineage graph.",
+    "The eleven leaves missing from current Hunter 409 are physical-witness losses, not missing content in the represented work: Kaluza supplies their principal line ranges from Thynne's 1532 print.",
+    "Title pages and the closing notice of Troilus and Criseyde belong to the source representation; they do not turn Kaluza's volume or the following work into the cataloging subject."
+  ]
+}
