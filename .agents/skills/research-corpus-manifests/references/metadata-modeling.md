@@ -95,7 +95,11 @@ separately; do not treat them as interchangeable extent measures.
 
 Derive `catalog_summary` from detailed records. Preserve detailed-record order
 in summary language, genre, and tag arrays. Maintain exactly one preferred
-whole title and one whole discovery form.
+whole title and one whole discovery form. Every reviewed record must also have
+an `abstract` summary scoped to the whole cataloged unit; part-scoped abstracts
+are supplemental and are intentionally ignored by viewer cards. Briefly account
+for any retained editorial framing in the whole abstract so the scope remains
+honest rather than falling back to the viewer's missing-summary placeholder.
 
 ## Metadata checklist
 

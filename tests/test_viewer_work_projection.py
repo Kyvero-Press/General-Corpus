@@ -67,6 +67,21 @@ class ViewerWorkProjectionTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "case-insensitive work_id collision"):
                 validate_viewer_work.validate_projection(fixture.root, fixture.work_id)
 
+    def test_rejects_metadata_without_a_whole_scoped_abstract(self) -> None:
+        with tempfile.TemporaryDirectory() as directory, fake_pdfinfo():
+            fixture = CatalogFixture(Path(directory))
+            fixture.lineage["primary_subject"] = "edition:test"
+            fixture.metadata["summaries"][0]["scope"] = {
+                "kind": "part",
+                "part_ids": ["part:test"],
+            }
+            fixture.write_manifests()
+            pdf = fixture.add_pdf()
+            fixture.write_publication_inventory(pdf)
+
+            with self.assertRaisesRegex(RuntimeError, "no whole-scoped abstract"):
+                validate_viewer_work.validate_projection(fixture.root, fixture.work_id)
+
 
 if __name__ == "__main__":
     unittest.main()

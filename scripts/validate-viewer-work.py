@@ -95,6 +95,10 @@ def validate_projection(repo_root: Path, work_id: str) -> dict[str, Any]:
     builder._reject_cross_source_case_collisions(*checked_sources)
 
     card = builder._metadata_card(work_id, metadata, lineage, publication)
+    if card["summary"] == "Descriptive summary not yet supplied.":
+        raise builder.CatalogError(
+            f"metadata manifest {work_id} has no whole-scoped abstract for the viewer"
+        )
     detail = {
         "schemaVersion": "1.0.0",
         "work": card,
