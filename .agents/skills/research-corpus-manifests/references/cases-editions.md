@@ -48,6 +48,14 @@ Do not call a reset reprint a facsimile merely because it reproduces an earlier
 title page or retains the text. Compare type, pagination, preliminaries, and
 printing colophons to establish the reset and its edition-specific scope.
 
+## Recurring serial installments
+
+When one editor publishes several installments under a recurring title in
+different journal issues or years, model each independently published article
+as its own scholarly-edition entity. Scope the encoding to the exact selected
+pages in each installment; a shared series title does not turn the articles
+into one homogeneous edition object.
+
 ## Later transcript and indirect readings: afw5744
 
 Van Vliet's partial seventeenth-century transcript preserves now-lost Ormulum

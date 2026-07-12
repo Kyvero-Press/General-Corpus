@@ -112,6 +112,14 @@ list in the ZIP, and does not expose machine-local reuse paths. Confirm from
 provider evidence that the list covers the whole physical object before using
 `coverage=complete`.
 
+A provider's complete facsimile project may aggregate the main codex with
+detached leaves or fragments now held elsewhere. Cache the complete published
+project inventory, but state that its coverage is project-level rather than a
+claim that every image belongs to one currently bound physical codex. Map
+discontiguous work portions by the provider's item numbers and each holding
+repository's foliation; do not replace them with one invented continuous
+range.
+
 Add the emitted object to the access record's `local_copies` array. Its
 `source_url` must also appear as `access.url` or in `alternate_urls`, while the
 landing page remains available as a human-readable route. Use one array item
