@@ -75,6 +75,13 @@ before assigning it to the encoding. Model a companion notes volume or later
 reprint as its own entity even when the repository title and author strings
 make the objects look interchangeable.
 
+A later society or series issue can reuse an earlier publication's printing
+plates while adding a new title page, series statement, date, or preliminaries.
+Model the plate-derived issue as a distinct immediate edition linked through
+`version_of`; verify its retained and added matter independently rather than
+skipping directly from the encoding to the manuscript or treating both issues
+as one bibliographic object.
+
 ## Recurring serial installments
 
 When one editor publishes several installments under a recurring title in
