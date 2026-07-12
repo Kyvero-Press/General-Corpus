@@ -131,6 +131,14 @@ Never infer redistribution permission from local caching, and never copy the
 cache into a public web build without an independently supported right to do
 so.
 
+When the exact same downloaded object is relevant to several corpus works,
+keep one work-local path per manifest but avoid storing or downloading the
+bytes repeatedly. After verifying identical exact source URL, byte count, and
+SHA-256, create a hard link (or filesystem reflink) under each required
+`source-cache/WORK_ID/` directory and re-run validation. Each manifest still
+records its own path and work-specific `work_portion`. Do not reuse a merely
+similar scan or independently generated IIIF ZIP whose checksum differs.
+
 For manuscript images, download the provider's complete physical manuscript
 when it is publicly obtainable and practical, even when the cataloged work
 occupies only part of it. `coverage=complete` means the cached file covers that
