@@ -1202,17 +1202,35 @@
       ],
       "local_copies": [
         {
-          "label": "BSB IIIF manifest for Stephens 1847",
-          "path": "source-cache/CME00099/stephens-1847-bsb-iiif.json",
+          "label": "Complete BSB Stephens 1847 catalogue IIIF bundle",
+          "path": "source-cache/CME00099/stephens-1847-bsb-complete-iiif.zip",
           "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10800271/manifest",
-          "sha256": "127cee9fea91924cb1612d0793abc9d001d8569dcb2feac14ee237ae344c3a50",
-          "bytes": 194619,
-          "media_type": "application/json",
+          "sha256": "36f4f749dacfba615046ecbabff1de1e97148addab5bff7c3af7fc4feb4748ec",
+          "bytes": 77393957,
+          "media_type": "application/zip",
           "downloaded_on": "2026-07-11",
-          "coverage": "metadata_only",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 226,
           "notes": [
-            "This is the IIIF presentation manifest only; its 226 remote image canvases have not been cached locally."
-          ]
+            "ZIP contains the exact BSB presentation manifest, an exact-source inventory, and every one of its 226 full-size canvas images.",
+            "The complete catalogue is retained; the two CME00099-related manuscript descriptions are mapped below instead of being extracted as isolated pages.",
+            "Effective IIIF image request profile is full-size JPEG."
+          ],
+          "work_portion": {
+            "label": "Stephens catalogue descriptions of the two Stockholm manuscripts used by Holthausen",
+            "locators": [
+              "Historical Miscellany VII: printed page 25, IIIF canvas 41",
+              "Medical Miscellany XIV (now KB X 90): printed pages 40-43, IIIF canvases 56-59"
+            ],
+            "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10800271/canvas/41",
+            "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10800271/canvas/59",
+            "notes": [
+              "The two relevant portions are discontiguous: canvas 41 alone describes Historical Miscellany VII, while canvases 56-59 describe Medical Miscellany XIV/X 90; intervening catalogue pages concern other manuscripts.",
+              "Boundary inspection confirms that printed p. 44/canvas 60 begins the separately numbered Medical Tracts XV entry."
+            ]
+          }
         }
       ],
       "cost": "free",
