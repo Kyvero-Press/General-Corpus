@@ -100,6 +100,9 @@ page can be cited by two adjacent structural divisions when the first text
 ends and the next begins on that same page. Compare the ordered unique page
 references and inspect the shared boundary before diagnosing a missing or
 duplicate page; preserve both structural milestones when both are meaningful.
+Parallel source-language and editorial-translation streams can likewise repeat
+the same page/image milestones. Deduplicate locators only for physical coverage
+audits; keep the language streams and their editorial responsibilities separate.
 
 ## Scholarly fragments and detached witnesses: CME00038
 
