@@ -451,6 +451,14 @@
       ]
     },
     {
+      "id": "agent:bayerische-staatsbibliothek",
+      "type": "organization",
+      "name": "Bayerische Staatsbibliothek",
+      "alternate_names": ["Bavarian State Library", "BSB"],
+      "urls": ["https://www.bsb-muenchen.de/"],
+      "evidence_ids": ["evidence:ddb-hmaid-1866"]
+    },
+    {
       "id": "agent:bodleian-libraries",
       "type": "organization",
       "name": "Bodleian Libraries, University of Oxford",
@@ -768,12 +776,46 @@
     {
       "id": "access:bsb-hmaid-1866",
       "entity": "edition:cockayne:1866",
+      "provider_id": "agent:bayerische-staatsbibliothek",
       "resource_kind": "page_images",
       "status": "publicly_available",
-      "access_method": "Open or download the Bayerische Staatsbibliothek digitization through the Deutsche Digitale Bibliothek record.",
+      "access_method": "Open the BSB digitization through Deutsche Digitale Bibliothek or the stable BSB URN; use the exact IIIF manifest for all page images.",
       "url": "https://www.deutsche-digitale-bibliothek.de/item/7SP2BDJIDHXTKANYOSVEU34ORO6NRWIH",
+      "alternate_urls": [
+        "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10748405-0",
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748405/manifest"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete BSB Cockayne Hali Meidenhad 1866 IIIF bundle",
+          "path": "source-cache/HMaid/cockayne-hali-meidenhad-1866-bsb-complete-iiif.zip",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748405/manifest",
+          "sha256": "124520212e22ecd80c5f2500ca2d03cd56819b1a927d2c54c46b4a6d064b45f2",
+          "bytes": 26400126,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 60,
+          "notes": [
+            "ZIP contains the exact BSB presentation manifest, an exact-source inventory, and all 60 full-size canvas images in the complete digital object.",
+            "The full digitized volume is retained alongside the independent Internet Archive scan; it is not reduced to the edition's text pages.",
+            "Local caching does not override the provider's No Copyright-Non-Commercial Use Only statement."
+          ],
+          "work_portion": {
+            "label": "Cockayne's Middle English text with facing modernization",
+            "locators": ["printed pages 1-47", "IIIF canvases 11-57"],
+            "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748405/canvas/11",
+            "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748405/canvas/57",
+            "notes": [
+              "Manifest labels and page inspection locate printed p. 1 at canvas 11 and the final Middle English text at printed p. 47/canvas 57; the glossary begins on the following pages."
+            ]
+          }
+        }
+      ],
       "cost": "free",
-      "format": "Digitized page images",
+      "format": "60-canvas IIIF digital object",
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:ddb-hmaid-1866"
