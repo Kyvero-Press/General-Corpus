@@ -98,6 +98,10 @@ object erase the dated finding that no whole-codex surrogate was available.
 If an official selection exposes no leaf occupied by the corpus work, do not
 invent a `work_portion`: state the zero overlap, retain the selection only as
 supporting witness evidence, and keep the work-image request route open.
+When the provider's own manuscript list distinguishes “Images” from “Digital
+Facsimile,” preserve that item-level label as coverage evidence: inventory all
+published images, but do not upgrade an “Images” item to a complete facsimile
+without an audited whole-object sequence.
 
 ## Conflicting derivative-provider claims: Purity
 
