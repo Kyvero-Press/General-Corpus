@@ -9,6 +9,11 @@ Use an established work title as the preferred whole-work title. Retain a
 source edition's long title as an alternative when it describes a different
 layer.
 
+Keep a catalog-supplied or inherited attribution heading distinct from a
+title or rubric visibly present in the witness. Do not call catalog wording a
+manuscript rubric unless direct image evidence or an explicit catalog
+statement locates that wording on the physical page.
+
 Assign roles from intellectual responsibility, not an inherited `AUTHOR`
 field. Distinguish source author, translator, adapter, compiler, medieval
 scribe, editor, collator, and digital contributor. Model anonymous, attributed,
