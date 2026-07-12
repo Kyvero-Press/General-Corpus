@@ -104,6 +104,13 @@ Parallel source-language and editorial-translation streams can likewise repeat
 the same page/image milestones. Deduplicate locators only for physical coverage
 audits; keep the language streams and their editorial responsibilities separate.
 
+Two independent texts can also continue simultaneously in different zones of
+the same printed pages—for example, one stream below and an addendum above.
+Preserve the overlapping page range in both scoped parts and record the spatial
+layout. Do not treat the repeated page breaks as duplicate pagination, force the
+streams into one false linear sequence, or assign either stream exclusive
+ownership of the shared physical pages.
+
 ## Scholarly fragments and detached witnesses: CME00038
 
 Stable attribution, dialect, or source fragments can be useful descriptive
