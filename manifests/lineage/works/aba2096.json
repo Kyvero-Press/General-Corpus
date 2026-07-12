@@ -414,7 +414,52 @@
       "format": "Web page images linked to 600-dpi TIFF source milestones",
       "last_checked": "2026-07-11",
       "evidence_ids": ["evidence:umich-aba2096", "evidence:aba2096-xml"],
-      "notes": ["The interface exposed page-view links, but direct automated retrieval was blocked with HTTP 403 during review; no bulk image download was verified."]
+      "notes": ["The U-M interface exposes page-view links but blocked direct automated retrieval during review; a separate Internet Archive access record below preserves U-M's complete raw package as an anonymous bulk download."]
+    },
+    {
+      "id": "access:ia-umich-raw-package",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete U-M raw book package directly from Internet Archive.",
+      "url": "https://archive.org/download/aba2096.0001.001.umich.edu/aba2096.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": [
+        "https://archive.org/details/aba2096.0001.001.umich.edu",
+        "https://archive.org/metadata/aba2096.0001.001.umich.edu"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete U-M ABA2096 raw book package",
+          "path": "source-cache/aba2096/umich-aba2096-raw-book.zip",
+          "source_url": "https://archive.org/download/aba2096.0001.001.umich.edu/aba2096.0001.001.umich.edu_umichbook.zip",
+          "sha256": "5bc98ea1803b9fbff2fdf6c10561cf92faef0bc8b6322d21ce9ff478ca329ecd",
+          "bytes": 63825960,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "ZIP integrity was verified; the package contains all 946 sequential U-M TIFF images plus pageview.dat, the U-M header, XML and text derivatives, and a load log.",
+            "The cache retains both complete scanned 1810 source volumes and all surrounding matter rather than extracting the 341-page medieval work."
+          ],
+          "work_portion": {
+            "label": "Robert Mannyng's Part II within the complete two-volume U-M image package",
+            "locators": [
+              "volume III printed pages 1-230: TIFF files 00000229.tif-00000458.tif, U-M sequences 233-462",
+              "volume IV printed pages 235-341: TIFF files 00000463.tif-00000569.tif, U-M sequences 463-569"
+            ],
+            "notes": [
+              "The work is discontiguous across the two bound source volumes; U-M's pageview.dat and XML page milestones independently confirm both filename, sequence, and printed-page ranges.",
+              "TIFF files 00000459.tif-00000462.tif are volume-IV title/front leaves and remain in the complete package even though they are outside the work text."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP, 63,825,960 bytes; 946 TIFF images plus U-M metadata and text derivatives",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:ia-umich-raw-package", "evidence:aba2096-xml", "evidence:umich-aba2096"]
     },
     {
       "id": "access:ia-1810",
@@ -703,6 +748,21 @@
       "notes": ["This historical notice is recorded separately from U-M's current NoC-US label rather than silently treated as superseded."]
     },
     {
+      "id": "rights:ia-umich-raw-package-unknown",
+      "entity": "encoding:umich-cme:ABA2096.0001.001",
+      "access_id": "access:ia-umich-raw-package",
+      "component": "Internet Archive-hosted raw U-M page-image and derivative package",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "Internet Archive exposes the ZIP as a public original file, but the reviewed item metadata provides neither a rights statement nor a license URL. Public downloadability is not itself reuse permission.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-umich-raw-package"],
+      "notes": ["The separate U-M No Copyright-United States assertion and the public-domain status of the 1810 content do not silently become an Internet Archive license for every packaged derivative."]
+    },
+    {
       "id": "rights:local-artifact",
       "entity": "artifact:general-corpus:aba2096",
       "access_id": "access:repo-xml",
@@ -835,6 +895,19 @@
       "url": "https://quod.lib.umich.edu/c/cme/ABA2096.0001.001/1:3?rgn=div1&view=fulltext",
       "alternate_urls": ["https://name.umdl.umich.edu/ABA2096.0001.001"],
       "summary": "Confirms current public HTML text, page-view actions, the 1810 source, stable identifier, U-M public-domain statement, and No Copyright-United States label.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-umich-raw-package",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata and original-file listing for aba2096.0001.001.umich.edu.",
+      "url": "https://archive.org/metadata/aba2096.0001.001.umich.edu",
+      "alternate_urls": [
+        "https://archive.org/details/aba2096.0001.001.umich.edu",
+        "https://archive.org/download/aba2096.0001.001.umich.edu/aba2096.0001.001.umich.edu_umichbook.zip"
+      ],
+      "locator": "original file aba2096.0001.001.umich.edu_umichbook.zip",
+      "summary": "Identifies the 63,825,960-byte raw U-M ZIP as an original public file. Local integrity and inventory checks confirm 946 TIFF page images plus five U-M metadata, XML, text, and log files; the item metadata supplies no rights or license field.",
       "accessed_on": "2026-07-11"
     },
     {
