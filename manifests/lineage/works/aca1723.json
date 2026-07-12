@@ -414,8 +414,79 @@
   "access": [
     {"id": "access:aca1723-repo", "entity": "artifact:general-corpus:aca1723", "provider_id": "agent:kyvero", "resource_kind": "repository_file", "status": "local_only", "access_method": "Read the checked-out CME submodule path", "repository_path": "CME/source/CME_phase_1-2/aca1723.xml", "cost": "not_applicable", "format": "XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:aca1723-xml"]},
     {"id": "access:aca1723-umich", "entity": "encoding:umich-cme:ACA1723.0001.001", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item page and full-text view", "url": "https://quod.lib.umich.edu/c/cme/ACA1723.0001.001", "alternate_urls": ["https://name.umdl.umich.edu/ACA1723.0001.001"], "cost": "free", "format": "HTML digital text with linked page images", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-aca1723"]},
-    {"id": "access:umich-raw-package", "entity": "facsimile:umich:aca1723-460-images", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "access_method": "Direct anonymous ZIP download from the U-M Internet Archive item", "url": "https://archive.org/download/aca1723.0001.001.umich.edu/aca1723.0001.001.umich.edu_umichbook.zip", "alternate_urls": ["https://archive.org/details/aca1723.0001.001.umich.edu"], "cost": "free", "format": "ZIP containing 460 TIFF images, OCR text, pageview data, header data, and XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-raw-package"]},
-    {"id": "access:pims-volumes", "entity": "facsimile:ia:pims-stonor-1919", "provider_id": "agent:internet-archive", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Internet Archive viewers and downloadable files for both volumes", "url": "https://archive.org/details/stonorletterspap01king", "alternate_urls": ["https://archive.org/details/stonorletterspap02king"], "cost": "free", "format": "Page images, PDF, OCR text, and derived formats", "last_checked": "2026-07-11", "evidence_ids": ["evidence:kingsford-volumes"]},
+    {
+      "id": "access:umich-raw-package",
+      "entity": "facsimile:umich:aca1723-460-images",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct anonymous ZIP download from the U-M Internet Archive item",
+      "url": "https://archive.org/download/aca1723.0001.001.umich.edu/aca1723.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": ["https://archive.org/details/aca1723.0001.001.umich.edu"],
+      "local_copies": [
+        {
+          "label": "Complete U-M ACA1723 raw book package",
+          "path": "source-cache/aca1723/umich-raw-book.zip",
+          "source_url": "https://archive.org/download/aca1723.0001.001.umich.edu/aca1723.0001.001.umich.edu_umichbook.zip",
+          "sha256": "2b93624244300760a587116081ed45b6fbc3f52ec023b97c6cf204dfed7d4ef4",
+          "bytes": 35177644,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "Archive integrity inspection confirms all 460 TIFF page images plus U-M pageview, OCR, header, XML, and ingest derivatives described by the provider."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP containing 460 TIFF images, OCR text, pageview data, header data, and XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:umich-raw-package"],
+      "notes": ["The ignored cache is a research copy and does not independently grant redistribution rights."]
+    },
+    {
+      "id": "access:pims-volumes",
+      "entity": "facsimile:ia:pims-stonor-1919",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Internet Archive viewers and exact direct PDF downloads for both complete volumes",
+      "url": "https://archive.org/details/stonorletterspap01king",
+      "alternate_urls": [
+        "https://archive.org/details/stonorletterspap02king",
+        "https://archive.org/download/stonorletterspap01king/stonorletterspap01king.pdf",
+        "https://archive.org/download/stonorletterspap02king/stonorletterspap02king.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Kingsford Stonor Letters 1919 volume I complete scan",
+          "path": "source-cache/aca1723/kingsford-stonor-1919-vol-1.pdf",
+          "source_url": "https://archive.org/download/stonorletterspap01king/stonorletterspap01king.pdf",
+          "sha256": "ef111ed424c2cb1fbdb9c60b676c1e63bfbc6ee76a1d82a6332465d9765d8880",
+          "bytes": 17112457,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": ["Complete provider PDF of volume I; 238 PDF pages, while the provider's page-image object additionally counts two foldout images."]
+        },
+        {
+          "label": "Kingsford Stonor Letters 1919 volume II complete scan",
+          "path": "source-cache/aca1723/kingsford-stonor-1919-vol-2.pdf",
+          "source_url": "https://archive.org/download/stonorletterspap02king/stonorletterspap02king.pdf",
+          "sha256": "b66682a2923ce23d677c566624f7afeb06e124bcda93fe7932ce07c37363a613",
+          "bytes": 17914093,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": ["Complete provider PDF of volume II; 244 PDF pages."]
+        }
+      ],
+      "cost": "free",
+      "format": "Page images, exact direct PDFs, OCR text, and derived formats",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:kingsford-volumes"],
+      "notes": ["The ignored cache preserves both complete printed volumes; it is not a facsimile of the dispersed medieval documents and does not independently grant image reuse rights."]
+    },
     {"id": "access:tna-sc1-catalog", "entity": "witness:tna:SC1-stonor-correspondence", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Current SC 1/46 subgroup and item-level Discovery records", "url": "https://discovery.nationalarchives.gov.uk/details/r/C2601947", "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C12228065", "https://discovery.nationalarchives.gov.uk/details/r/C12228166"], "cost": "free", "format": "Catalog records; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-sc1"]},
     {"id": "access:tna-c47-selected-catalog", "entity": "witness:tna:C47-37-selected", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Discovery component records for C 47/37; consult exact item references in Kingsford's headnotes and appendix", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5908066", "alternate_urls": ["https://discovery.nationalarchives.gov.uk/details/r/C5908067"], "cost": "free", "format": "Catalog records; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c47-selected"]},
     {"id": "access:tna-c146-catalog", "entity": "witness:tna:C146-selected-deeds", "provider_id": "agent:tna", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Discovery record for C 146/221 and item-level searches for other deed references", "url": "https://discovery.nationalarchives.gov.uk/details/r/C5884680", "cost": "free", "format": "Catalog record; no complete public facsimile found", "last_checked": "2026-07-11", "evidence_ids": ["evidence:tna-c146"]},
