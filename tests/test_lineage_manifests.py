@@ -131,6 +131,10 @@ class LineageManifestTests(unittest.TestCase):
             "retrieval_method": "iiif_bundle",
             "source_file_count": 496,
             "bundle_source_kind": "iiif_presentation_manifest",
+            "work_portion": {
+                "label": "The cataloged work",
+                "locators": ["folios 10r–20v", "IIIF canvases 21–42"],
+            },
         }]
 
         self.assertEqual(
@@ -150,6 +154,16 @@ class LineageManifestTests(unittest.TestCase):
                 changed,
             ),
         )
+
+        work_portion = access["local_copies"][0].pop("work_portion")
+        errors = validate_lineage_manifests._schema_errors(
+            changed,
+            schema,
+            schema,
+            "CME00099",
+        )
+        self.assertTrue(any("work_portion" in item and "required" in item for item in errors))
+        access["local_copies"][0]["work_portion"] = work_portion
 
         del access["local_copies"][0]["source_file_count"]
         errors = validate_lineage_manifests._schema_errors(

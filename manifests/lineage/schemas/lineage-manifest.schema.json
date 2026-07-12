@@ -225,6 +225,27 @@
               "bundle_source_kind"
             ]
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "coverage": {
+                "const": "complete"
+              },
+              "retrieval_method": {
+                "const": "iiif_bundle"
+              }
+            },
+            "required": [
+              "coverage",
+              "retrieval_method"
+            ]
+          },
+          "then": {
+            "required": [
+              "work_portion"
+            ]
+          }
         }
       ]
     },
