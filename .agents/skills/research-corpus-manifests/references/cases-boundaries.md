@@ -151,9 +151,12 @@ When extracting a large hierarchical catalog, traverse every entry container
 rather than assuming all child IDs share one prefix; audit per-series citation
 and IIIF counts so an identifier-family change cannot silently omit a section.
 Follow explicit cross-references to their target catalog groups and do not
-invent duplicate unavailable witnesses for the referring rows. When canvas
-labels are generic, claim only a complete provider-published inventory and
-leave physical-side completeness open.
+invent duplicate unavailable witnesses for the referring rows. Test an
+edition citation against each copy-level or digital-object record inside the
+target group: a citation attached to one copy does not make every sibling copy
+a source for that edition. When canvas labels are generic, claim only a
+complete provider-published inventory and leave physical-side completeness
+open.
 
 ## Current digital versus legacy foliation: CME00026
 
