@@ -126,6 +126,13 @@ may legitimately carry different years, imprints, publishers, or places;
 record each at its own issue/volume/catalog layer instead of forcing one
 synthetic citation.
 
+If an institutional manuscript catalog cites a source with a year, volume, or
+page detail contradicted by the inspected source's own title page and
+pagination, do not copy the catalog error into the edition entity. Use the
+primary bibliographic evidence for the edition, preserve the catalog's wording
+as a separately attributed assertion, and explain the correction so later
+researchers can still reproduce the catalog search.
+
 Scanned-book OCR and inherited TEI division labels can be misleading. Compare
 markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open
