@@ -22,10 +22,13 @@ Verified downloadable facsimiles and supporting files are cached locally under
 the Git-ignored `source-cache/<work_id>/` directory. Each cached file is linked
 from its access record through `local_copies`, including its exact download
 URL, relative path, SHA-256, byte count, media type, and download date. These
-records remain useful when a clone does not contain the ignored files. Prefer
-a complete manuscript codex when it is obtainable; `work_portion` records the
+records remain useful when a clone does not contain the ignored files. For a
+manuscript facsimile, download the complete digitized physical codex whenever
+it is publicly obtainable and practical, including covers, endleaves, blanks,
+and adjacent works exposed by the provider. `work_portion` records the
 folios/pages/canvases occupied by this work without mislabeling selected
-leaves—or a metadata-only IIIF manifest—as a complete facsimile.
+leaves—or a metadata-only IIIF manifest—as a complete facsimile. Never replace
+an obtainable whole-codex object with a work-only excerpt.
 When the complete codex is available as IIIF canvases, one `iiif_bundle` local
 copy holds the provider manifest, all canvas images, and an exact-source
 inventory; `source_file_count` reports the number of captured canvas images.

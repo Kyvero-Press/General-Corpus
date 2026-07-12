@@ -118,13 +118,16 @@ for a previously downloaded local image; machine-local reuse paths are removed
 from the ZIP. Use `coverage=complete` only after verifying that the provider's
 list covers the whole physical object.
 
-For a manuscript witness, prefer the provider's complete physical codex rather
-than downloading only the leaves that contain the cataloged work. Here,
-`coverage` describes the completeness of the cached source object: use
+For a manuscript witness, download the provider's complete digitized physical
+codex whenever it is publicly obtainable and practical rather than downloading
+only the leaves that contain the cataloged work. Retain all surfaces exposed as
+part of that object, including covers, endleaves, blanks, and adjacent works.
+Here, `coverage` describes the completeness of the cached source object: use
 `complete` for the whole codex and `partial` for selected leaves. The optional
 `work_portion` then maps this manifest's work back into that larger source with
 one or more physical and digital locators and, when available, deep links to
-its first and final page or canvas. Do not call an IIIF presentation manifest
+its first and final page or canvas. Never substitute an excerpt for an
+obtainable whole-codex object, and do not call an IIIF presentation manifest
 alone a complete image cache.
 
 The cache is research storage, not a redistribution channel. It is never
