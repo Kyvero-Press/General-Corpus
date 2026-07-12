@@ -56,6 +56,15 @@ cache those images. Technical reachability does not override an explicit
 provider restriction; pursue a repository-supplied whole-codex copy through
 the recorded request route instead.
 
+## Complete viewer with no systematic extraction: CME00025
+
+A provider can expose every manuscript image for private viewing while its
+terms prohibit systematic extraction or reuse of a substantial portion. Record
+the complete viewer, exact work folios/images, and terms, but do not turn the
+public sequence into a local bulk bundle merely because every request is
+technically reachable. Use the repository's authorized reproduction route for
+a retained complete copy and keep separately permitted printed plates partial.
+
 ## Direct IIIF rights: JulianRev
 
 The Sloane 2499 IIIF manifest states public domain in most countries other than
