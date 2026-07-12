@@ -70,6 +70,20 @@ For fragmentary witnesses bound into composite volumes, distinguish the leaves
 carrying the cataloged work from adjacent leaves carrying other fragments.
 Report total codex extent only at the physical-object layer.
 
+## Fluid proverb compilations: CME00074
+
+A proverb sequence can be a manuscript-specific compilation rather than one
+stable authorial work. Catalog the exact witnessed sequence, preserve directly
+legible internal units such as separately rubricated components, and describe
+finer proposed strata as scholarly analysis unless the boundaries are secure.
+Do not silently reconcile conflicting catalog line counts or witness censuses:
+retain each as a versioned, attributed claim and open a reconciliation question.
+
+Keep authorial dialect localization, scribal language, manuscript production,
+and compilation place separate. Rhyme evidence that tentatively associates a
+poet with a region supports a scoped `dialect_region` claim; it does not prove
+`place_of_composition` or the place where the surviving compilation was made.
+
 ## Candidate fragments: acb1675
 
 A scholarly proposal that a difficult fragment may preserve a related text is
