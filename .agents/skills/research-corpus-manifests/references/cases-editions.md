@@ -13,6 +13,10 @@ or date to the poem.
 When an eclectic edition's dependency is explicit, go beyond one aggregate
 edge: scope separate `transcribes` relations for the principal base and any
 supplied passages, then add `collated_against` edges for variant witnesses.
+A title page or editorial headline saying “printed from” one manuscript is
+only a summary claim: inspect the notes for continuous supplied spans and
+isolated borrowed readings. Give continuous supplies their own exact
+`transcribes` scopes, while isolated readings remain `collated_against`.
 
 If foreign-language witnesses were consulted only for notes or specimens,
 scope their `collated_against` relations to that apparatus. They are not base
