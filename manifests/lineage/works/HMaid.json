@@ -405,6 +405,13 @@
       ]
     },
     {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": ["https://archive.org/"],
+      "evidence_ids": ["evidence:ia-hmaid-1866"]
+    },
+    {
       "id": "agent:frederick-james-furnivall",
       "type": "person",
       "name": "Frederick James Furnivall",
@@ -776,6 +783,41 @@
       ]
     },
     {
+      "id": "access:ia-hmaid-1866",
+      "entity": "edition:cockayne:1866",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item and exact direct PDF download",
+      "url": "https://archive.org/details/cuahalimeidenhad00cock",
+      "alternate_urls": ["https://archive.org/download/cuahalimeidenhad00cock/cuahalimeidenhad00cock.pdf"],
+      "local_copies": [
+        {
+          "label": "Cockayne Hali Meidenhad 1866 complete scan",
+          "path": "source-cache/HMaid/cockayne-hali-meidenhad-1866-complete.pdf",
+          "source_url": "https://archive.org/download/cuahalimeidenhad00cock/cuahalimeidenhad00cock.pdf",
+          "sha256": "39d006175c6583cd36bfd7cc2800eb43ca6efd216329fb69102e8eb89d0076d0",
+          "bytes": 1670862,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": ["Complete 58-page provider PDF of Cockayne's printed volume, including title matter, foreword, parallel alternating modernization and Middle English transcription, glossary, and terminal matter."],
+          "work_portion": {
+            "label": "Cockayne's Middle English text with facing modernization",
+            "locators": ["PDF pages 10-55", "Middle English transcription on alternating pages 11-55"],
+            "start_url": "https://archive.org/download/cuahalimeidenhad00cock/cuahalimeidenhad00cock.pdf#page=10",
+            "end_url": "https://archive.org/download/cuahalimeidenhad00cock/cuahalimeidenhad00cock.pdf#page=55",
+            "notes": ["Direct inspection confirms the modernized presentation begins on PDF page 10, the Middle English transcription on PDF page 11, and the final Middle English text on PDF page 55; the glossary begins on PDF page 57."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Complete PDF page-image scan",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:ia-hmaid-1866"],
+      "notes": ["The Internet Archive item supplies no verified item-level reuse license; caching is not an independent reuse grant."]
+    },
+    {
       "id": "access:bodley34-physical",
       "entity": "witness:bodleian:Bodley34",
       "provider_id": "agent:bodleian-libraries",
@@ -991,6 +1033,20 @@
       "notes": [
         "NoC-NC is a rights statement, not an affirmative open license. It is safer to link to these images than redistribute them in a corpus that supports commercial print-on-demand use."
       ]
+    },
+    {
+      "id": "rights:ia-hmaid-1866-scan",
+      "entity": "edition:cockayne:1866",
+      "access_id": "access:ia-hmaid-1866",
+      "component": "Internet Archive scan images and PDF derivative for the 1866 edition",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The underlying 1866 edition is public domain in the United States, but the exact Internet Archive item exposes no item-level scan-image license or rights field.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-hmaid-1866"],
+      "notes": ["Public anonymous download and local caching do not themselves grant redistribution rights in the scan files."]
     },
     {
       "id": "rights:bodley34-underlying-text-us",
@@ -1252,6 +1308,19 @@
         "practice:cockayne-cotton-selection"
       ],
       "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-hmaid-1866",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, cuahalimeidenhad00cock, complete scan of Cockayne's Hali meidenhad (1866).",
+      "url": "https://archive.org/details/cuahalimeidenhad00cock",
+      "alternate_urls": ["https://archive.org/download/cuahalimeidenhad00cock/cuahalimeidenhad00cock.pdf"],
+      "repository_path": "source-cache/HMaid/cockayne-hali-meidenhad-1866-complete.pdf",
+      "locator": "Complete 58-page PDF; edited presentation at PDF pp. 10-55",
+      "summary": "The exact direct PDF was retrieved and inspected. It preserves Cockayne's title matter, foreword, alternating modernized and Middle English texts, glossary, and terminal matter; the item metadata provides no item-level rights or license field for the scan.",
+      "supports": ["agent:internet-archive", "access:ia-hmaid-1866", "rights:ia-hmaid-1866-scan"],
+      "accessed_on": "2026-07-11",
+      "sha256": "39d006175c6583cd36bfd7cc2800eb43ca6efd216329fb69102e8eb89d0076d0"
     },
     {
       "id": "evidence:bl-cotton-part-catalog",
