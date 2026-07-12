@@ -128,6 +128,11 @@ an IIIF manifest without its image files is not a complete manuscript cache.
 Do not list one `local_copies` object per canvas when a single bundle and exact
 source inventory can represent the complete set.
 
+The same rule applies when a work occupies almost the entire codex: retain the
+remaining covers, endleaves, blank or adjacent leaves in the complete cache,
+then map the work's slightly narrower folio range instead of treating “nearly
+all” as physically complete.
+
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields
