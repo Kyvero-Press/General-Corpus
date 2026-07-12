@@ -134,6 +134,19 @@ relation and current request route. Overlapping modern date ranges, old box
 labels, and broad parent descriptions do not justify inventing a one-to-one
 historical item crosswalk when exact child-record evidence is incomplete.
 
+For a large archival calendar, keep at least four counts distinct: the
+edition/XML's editorial units, current catalogue entry groups, separately held
+physical copies, and digital manifests/canvases. Give every identifiable roll
+or copy its own witness and exact edition-page relation; a parent series is not
+one physical manuscript.
+
+Audit an unbound roll by its applicable surfaces—face, dorse, membranes,
+schedules, tabs, and rolled views—not by codex furniture. A face-only inventory
+is `coverage=partial`. If one provider manifest mixes images from separately
+cataloged copies, retain the complete published digital inventory but keep the
+physical witnesses distinct, mark the affected coverage partial, and record
+the aggregation as an unresolved provider-layer fact.
+
 ## Current digital versus legacy foliation: CME00026
 
 A modern complete surrogate can label a work at current fols. 80r–93v while a
