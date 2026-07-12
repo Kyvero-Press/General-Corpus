@@ -98,6 +98,10 @@ object erase the dated finding that no whole-codex surrogate was available.
 If an official selection exposes no leaf occupied by the corpus work, do not
 invent a `work_portion`: state the zero overlap, retain the selection only as
 supporting witness evidence, and keep the work-image request route open.
+Apply the same rule to a completely cached source-analogue manuscript that
+does not contain the target text. Keep the full-object cache and downloaded
+access record, but put analogue folio/canvas ranges in scoped comparison
+relations and local-copy notes rather than mislabeling them as `work_portion`.
 When the provider's own manuscript list distinguishes “Images” from “Digital
 Facsimile,” preserve that item-level label as coverage evidence: inventory all
 published images, but do not upgrade an “Images” item to a complete facsimile
