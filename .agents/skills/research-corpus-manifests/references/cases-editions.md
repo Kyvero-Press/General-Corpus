@@ -84,6 +84,14 @@ material but was not upstream of White or Holt. Some van Vliet readings reached
 them through alterations in Junius 1 itself. Model the physical route of a
 reading; do not promote a related transcript into an editorial source.
 
+When an editor actually worked from a collaborator's transcript or collation
+rather than the codex, preserve that material intermediary and its maker.
+Model the edition as transcribing the working transcript and the transcript as
+transcribing the codex; if it supplied variants only, use `collated_against`
+at the appropriate link. Do not collapse the chain into a direct edition-to-
+codex edge, and disclose any schema type used provisionally for the
+intermediary.
+
 A witness discovered or identified after an edition appeared belongs in the
 broader tradition, not that edition's source chain, unless historical evidence
 shows the editor actually knew and used it.
