@@ -133,6 +133,12 @@ remaining covers, endleaves, blank or adjacent leaves in the complete cache,
 then map the work's slightly narrower folio range instead of treating “nearly
 all” as physically complete.
 
+A provider's “complete” bound object may also include later inserted leaves,
+replacement facsimiles, modern bindings, or other post-production material.
+Retain those canvases in the complete source cache, but exclude or separately
+scope them in `work_portion` rather than treating every digitized surface as
+an authentic leaf of the cataloged work.
+
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields

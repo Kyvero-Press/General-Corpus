@@ -56,6 +56,17 @@ to what it copied, but do not place it upstream of an edition unless that
 edition used it. Distinguish annotations made in the principal witness from a
 copyist's separate transcript.
 
+Keep a lost or unidentified physical exemplar distinct from a surviving close
+textual witness. Shared readings, likely family membership, or even very close
+agreement can support a comparison relation or an open identity question, but
+cannot make the surviving object the editor's, printer's, or translator's
+physical source without provenance evidence.
+
+When an edition interleaves parallel witnesses, replacement leaves, supplied
+passages, or another edition's text, create separately scoped relations for
+the evidenced ranges. Do not describe the composite result as a homogeneous
+transcription from whichever source supplies most pages.
+
 ## Parts and shared objects
 
 A codex can contain several works, and an edition can print several witnesses
