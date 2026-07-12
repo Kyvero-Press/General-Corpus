@@ -106,3 +106,11 @@ for the edited selection, but give each appended part its own scoped source
 relation and current request route. Overlapping modern date ranges, old box
 labels, and broad parent descriptions do not justify inventing a one-to-one
 historical item crosswalk when exact child-record evidence is incomplete.
+
+## Current digital versus legacy foliation: CME00026
+
+A modern complete surrogate can label a work at current fols. 80r–93v while a
+reliable older census cites the same leaves as 96r–109v. Record both as one
+witness's locator crosswalk, name each numbering system, and map digital
+canvases to the labels actually displayed by the current object. Do not shift
+the facsimile range to agree with the older citation or create two witnesses.
