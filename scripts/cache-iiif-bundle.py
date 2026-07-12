@@ -465,6 +465,11 @@ def bundle(
         raise BundleError("--image-format must be jpg, jpeg, png, or webp")
     if image_size is not None and not SAFE_IIIF_SIZE.fullmatch(image_size):
         raise BundleError("--image-size contains characters outside an IIIF size segment")
+    if image_size is not None and re.fullmatch(r"\d+", image_size):
+        raise BundleError(
+            "--image-size bare numeric widths are ambiguous; use a width-only "
+            "IIIF size such as '1800,'"
+        )
     if timeout <= 0 or retries < 0 or not 1 <= workers <= 32:
         raise BundleError(
             "timeout must be positive, retries cannot be negative, and workers must be 1–32"
@@ -707,7 +712,10 @@ def parser() -> argparse.ArgumentParser:
     )
     result.add_argument(
         "--image-size",
-        help="IIIF Image API size segment; defaults to full for v2 or max for v3",
+        help=(
+            "IIIF Image API size segment (for example 1800, for width-only); "
+            "defaults to full for v2 or max for v3"
+        ),
     )
     result.add_argument(
         "--image-format",

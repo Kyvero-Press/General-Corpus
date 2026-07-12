@@ -313,6 +313,30 @@ class IiifBundleCacheTests(unittest.TestCase):
         self.assertEqual(primary_url, item["requested_image_url"])
         self.assertEqual("1200,", item["requested_image_request_size"])
 
+    def test_bare_numeric_image_width_is_rejected_before_download(self) -> None:
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(
+            cache_iiif_bundle,
+            "urlopen",
+        ) as urlopen:
+            with self.assertRaisesRegex(
+                cache_iiif_bundle.BundleError,
+                "use a width-only IIIF size such as '1800,'",
+            ):
+                cache_iiif_bundle.bundle(
+                    repo_root=Path(directory),
+                    work_id="TestWork",
+                    source_url="https://example.test/manifest",
+                    filename="complete-manuscript.zip",
+                    label="Complete manuscript IIIF bundle",
+                    coverage="complete",
+                    image_size="1800",
+                    image_format="jpg",
+                    timeout=10,
+                    retries=0,
+                    force=False,
+                )
+        urlopen.assert_not_called()
+
     def test_work_portion_requires_label_and_locator(self) -> None:
         args = cache_iiif_bundle.parser().parse_args([
             "TestWork",
