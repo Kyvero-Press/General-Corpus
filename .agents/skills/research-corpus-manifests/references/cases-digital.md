@@ -19,7 +19,7 @@ expansions. Trace brackets, italics, expansions, supplies, and omissions across
 manuscript, edition, and encoding; normalized XML cannot reveal manuscript
 letterforms by itself.
 
-## Counts are representation metrics: Gawain and Pearl
+## Counts are representation metrics: Gawain, Pearl, and CME00039
 
 XML `L`, `LG`, and division totals can differ from canonical line or stanza
 counts because headings and grouping choices vary. State the counting method
@@ -29,6 +29,10 @@ headnotes, quotations, and apparatus. A raw `count(//L)` can equal a printed
 headline while still hiding omitted base lines and inserted variant-only
 lines; report both layers instead of letting apparatus determine work form or
 extent.
+If a scholarly 1,034-line extent coexists with 1,033 main-stream XML `L`
+elements and dozens of apparatus `L` elements, preserve all three measurements
+and open the one-line discrepancy. Do not manufacture the missing base line by
+folding variant-only apparatus into the work text.
 Apply the same hierarchy rule to prose or lexical items: count `ITEM` nodes
 inside the textual body separately from administrative `TEMPHEAD`, header, or
 workflow containers, and name the XPath or ancestor boundary used.
