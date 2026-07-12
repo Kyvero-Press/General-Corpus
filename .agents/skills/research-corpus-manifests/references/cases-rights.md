@@ -31,6 +31,15 @@ manuscripts “in full or in part” but does not identify this reel's extent,
 record coverage as unknown until the reel or an institutional answer is
 checked.
 
+## Complete edition, partial manuscript image: CME00006
+
+One cached PDF can be complete relative to its printed edition while the
+edition's frontispiece reproduces only one leaf of a manuscript. Keep the
+complete edition scan and its work-page mapping, but create a separately
+scoped manuscript-image access record with `coverage=partial` and the exact
+folio. Never let file-level completeness imply whole-codex coverage across a
+different entity layer.
+
 ## Public item page, restricted bitstream: AllitMA and Pearl
 
 OTA item records expose metadata, file names, previews, and CC labels while
