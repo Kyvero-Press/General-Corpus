@@ -95,6 +95,18 @@ ends and the next begins on that same page. Compare the ordered unique page
 references and inspect the shared boundary before diagnosing a missing or
 duplicate page; preserve both structural milestones when both are meaningful.
 
+## Scholarly fragments and detached witnesses: CME00038
+
+Stable attribution, dialect, or source fragments can be useful descriptive
+parts even when the manuscript copies one continuous text. Preserve those
+parts for scoped authorship and dating claims, but state that they are
+scholarly analysis rather than manuscript-imposed divisions.
+
+Likewise, qualify a claim that a work survives in a “unique manuscript” when a
+detached collateral leaf also preserves an overlapping passage. Distinguish
+the sole continuous or principal codex witness from the separate fragment;
+neither erase the leaf nor inflate it into a second complete witness.
+
 ## Acephalous text in an intact codex: CME00014
 
 A work can begin imperfectly even when the current manuscript collation is
