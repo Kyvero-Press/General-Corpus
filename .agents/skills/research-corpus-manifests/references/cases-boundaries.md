@@ -76,3 +76,12 @@ boundary against the complete edition page by page, then record every included
 run separately in the cataloging boundary and cached source's `work_portion`.
 Do not collapse printed pp. 1–73 and 76–145 into the false continuous range
 pp. 1–145; retain the omitted pp. 74–75 as part of the complete cached volume.
+
+## Acephalous text in an intact codex: CME00014
+
+A work can begin imperfectly even when the current manuscript collation is
+physically intact: the exemplar copied by the scribe may already have lacked
+its opening. Keep textual acephaly separate from present leaf loss, and do not
+invent a missing quire or earlier folio range without codicological evidence.
+A complete-codex facsimile is still needed to test the support, ruling, hand,
+and boundary with adjacent works.
