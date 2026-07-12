@@ -636,10 +636,41 @@
       "status": "publicly_available",
       "access_method": "Download the full PDF rendering exposed in the IIIF manifest.",
       "url": "https://collections.library.yale.edu/pdfs/14705200.pdf",
+      "alternate_urls": ["https://collections.library.yale.edu/manifests/14705200", "https://collections.library.yale.edu/manifests/oid/14705200/canvas/14715830"],
+      "local_copies": [
+        {
+          "label": "Complete Yale Takamiya MS 32 digital facsimile PDF",
+          "path": "source-cache/acb1675/yale-takamiya-ms-32-complete.pdf",
+          "source_url": "https://collections.library.yale.edu/pdfs/14705200.pdf",
+          "sha256": "d7c41c16fa9ab7f5349df6554559258c10b3cb589133adc1e3359d4361212930",
+          "bytes": 230627453,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "The provider-rendered PDF has 367 pages: a Yale-generated metadata title sheet followed by all 366 canvases in the complete IIIF object.",
+            "This ignored local cache is a research copy and is not itself evidence of permission to redistribute the Yale photographs."
+          ],
+          "work_portion": {
+            "label": "Candidate related Iacob and Iosep fragment",
+            "locators": [
+              "Takamiya MS 32, fol. 3r",
+              "IIIF canvas 11 (viewer index 10)",
+              "PDF page 12"
+            ],
+            "start_url": "https://collections.library.yale.edu/manifests/oid/14705200/canvas/14715830",
+            "end_url": "https://collections.library.yale.edu/manifests/oid/14705200/canvas/14715830",
+            "notes": [
+              "The proposed relationship to Iacob and Iosep is tentative; this mapping locates the candidate fragment without treating it as a confirmed witness.",
+              "The PDF's generated title sheet creates a one-page offset from the 366-canvas IIIF sequence: canvas 11 is PDF page 12."
+            ]
+          }
+        }
+      ],
       "cost": "free",
       "format": "PDF rendering of complete digitization",
       "last_checked": "2026-07-11",
-      "evidence_ids": ["evidence:yale-takamiya-32-manifest"]
+      "evidence_ids": ["evidence:yale-takamiya-32-manifest", "evidence:takamiya-pdf-inspection"]
     },
     {
       "id": "access:yale-physical",
@@ -1143,6 +1174,17 @@
       "locator": "fol. 3r",
       "summary": "Confirms that the proposed folio is publicly viewable and contains difficult faded or reused writing. Visual inspection alone does not securely identify a passage or prove descent from the Bodley text.",
       "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:takamiya-pdf-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of Yale's complete Takamiya MS 32 PDF rendering and its mapped candidate folio.",
+      "url": "https://collections.library.yale.edu/pdfs/14705200.pdf",
+      "repository_path": "source-cache/acb1675/yale-takamiya-ms-32-complete.pdf",
+      "locator": "PDF pages 1, 12, 366, and 367; fol. 3r at PDF page 12",
+      "summary": "PDF metadata and rendered-page inspection confirm a 367-page provider file consisting of one Yale title sheet plus the complete 366-canvas facsimile. PDF page 12 is labeled 3r and carries image ID 14715830; the final image pages preserve the spine and back cover.",
+      "accessed_on": "2026-07-11",
+      "sha256": "d7c41c16fa9ab7f5349df6554559258c10b3cb589133adc1e3359d4361212930"
     },
     {
       "id": "evidence:yale-request-items",
