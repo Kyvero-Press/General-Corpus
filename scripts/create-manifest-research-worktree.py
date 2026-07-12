@@ -89,9 +89,14 @@ def _parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
-    destination, branch = create(args.root.resolve(), args.work_id, args.base)
+    root = args.root.resolve()
+    destination, branch = create(root, args.work_id, args.base)
+    shared_source_cache = root / "source-cache" / args.work_id
+    shared_source_cache.mkdir(parents=True, exist_ok=True)
     print(f"worktree={destination}")
     print(f"branch={branch}")
+    print(f"cache_helper_root={root}")
+    print(f"shared_source_cache={shared_source_cache}")
     return 0
 
 
