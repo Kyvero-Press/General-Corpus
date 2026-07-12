@@ -61,6 +61,13 @@ later-printer colophon, attach the encoding to the reset reprint and connect
 the old edition through `version_of`; do not let the title-page imprint erase
 the immediate physical source.
 
+Repository metadata can also conflate companion parts, notes volumes, and
+later photographic or lithographic reprints. Inspect each scan's internal
+title page and verso, printed pagination, contents, and opening/closing matter
+before assigning it to the encoding. Model a companion notes volume or later
+reprint as its own entity even when the repository title and author strings
+make the objects look interchangeable.
+
 ## Recurring serial installments
 
 When one editor publishes several installments under a recurring title in

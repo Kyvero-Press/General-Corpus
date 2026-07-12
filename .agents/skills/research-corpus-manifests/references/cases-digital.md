@@ -46,6 +46,15 @@ Digital Bodleian exposes two Junius 1 objects, but only one has the complete
 start/end coverage, and item metadata before calling an object a complete
 facsimile.
 
+For IIIF Image API width requests, preserve the width-only comma in forms such
+as `1800,`. A bare `1800` can be interpreted differently or redirected to the
+native full image by some services. After retrieval, inspect the exact request
+URLs recorded in the bundle inventory and sample actual image dimensions; do
+not infer the effective profile from the command-line argument alone. A canvas
+with no resizable image service may legitimately require its provider-supplied
+`full` image, but record that per-canvas exception rather than silently treating
+the whole bundle as one uniform profile.
+
 ## Generic production language versus item facts
 
 A collection may describe manual keying and proofreading while one item says

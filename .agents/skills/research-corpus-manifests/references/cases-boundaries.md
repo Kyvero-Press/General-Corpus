@@ -89,6 +89,12 @@ run separately in the cataloging boundary and cached source's `work_portion`.
 Do not collapse printed pp. 1–73 and 76–145 into the false continuous range
 pp. 1–145; retain the omitted pp. 74–75 as part of the complete cached volume.
 
+Page-break element counts need not equal distinct source pages. One printed
+page can be cited by two adjacent structural divisions when the first text
+ends and the next begins on that same page. Compare the ordered unique page
+references and inspect the shared boundary before diagnosing a missing or
+duplicate page; preserve both structural milestones when both are meaningful.
+
 ## Acephalous text in an intact codex: CME00014
 
 A work can begin imperfectly even when the current manuscript collation is
