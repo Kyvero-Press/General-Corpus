@@ -120,6 +120,11 @@ at the appropriate link. Do not collapse the chain into a direct edition-to-
 codex edge, and disclose any schema type used provisionally for the
 intermediary.
 
+A passive statement that a collaborator's transcript “was compared with the
+original” supports edition-level collation, but not the identity of the
+collator. It also does not prove that the transcript's source photographs
+covered the complete physical object; keep both questions explicit.
+
 A witness discovered or identified after an edition appeared belongs in the
 broader tradition, not that edition's source chain, unless historical evidence
 shows the editor actually knew and used it.

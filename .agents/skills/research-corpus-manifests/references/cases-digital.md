@@ -11,6 +11,12 @@ stem with dot- or colon-delimited volume IDs. Validate the source's actual
 family and a structurally delimited case-insensitive extension. Never accept an
 undelimited prefix such as `TroilusExtra` for `Troilus`.
 
+When a pinned and current XML file differ in wrappers, headers, comments,
+stylesheets, or rights metadata, canonicalize and compare the actual textual
+subtree before declaring a new content version. Keep a newer item-level rights
+statement attached to its own distribution even when the encoded body is
+identical.
+
 ## Typography is editorial data: CME00099 and Ayenbite
 
 Italics can mark expanded abbreviations or supplied material rather than
