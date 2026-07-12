@@ -1,0 +1,760 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00010",
+  "work_id": "CME00010",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:CME00010",
+    "unit_type": "compilation",
+    "label": "The Middle-English Harrowing of Hell and Gospel of Nicodemus",
+    "scope_note": "The edition-level compilation represented by University of Michigan CME item CME00010: William Henry Hulme's seven separately presented manuscript versions of two anonymous Middle English verse works, together with encoded title matter and interleaved editorial apparatus from the 1907 EETS edition. This record does not collapse the two medieval works, their seven witness versions, the physical manuscripts, the complete 1907 volume, the U-M encoding, or the repository XML into one abstract medieval work."
+  },
+  "catalog_summary": {
+    "title": "The Middle-English Harrowing of Hell and Gospel of Nicodemus",
+    "author": "Anonymous Middle English poets and translator-adapters",
+    "editor": "William Henry Hulme",
+    "date": "Harrowing composed c. 1200–1250; Gospel composed c. 1300–1350; edition first published 1907",
+    "region": "England; the Gospel's authorial dialect is Northern English",
+    "genres": ["Scholarly edition", "Religious poetry", "Christian apocrypha", "Rhymed Gospel paraphrase"],
+    "form": "mixed",
+    "language_codes": ["enm", "eng", "lat"],
+    "tags": [
+      "middle-english",
+      "verse",
+      "scholarly-edition",
+      "parallel-witnesses",
+      "harrowing-of-hell",
+      "gospel-of-nicodemus",
+      "christian-apocrypha",
+      "religious-poetry",
+      "passion-and-resurrection",
+      "early-english-text-society",
+      "manuscript-variation",
+      "textual-criticism"
+    ]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00010", "uri": "https://name.umdl.umich.edu/CME00010"},
+    {"scheme": "Repository XML IDG/@ID", "value": "CME00010"},
+    {"scheme": "Early English Text Society Extra Series", "value": "100"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Middle-English Harrowing of Hell and Gospel of Nicodemus",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:umich"]}
+    },
+    {
+      "id": "title:original-full",
+      "type": "original",
+      "value": "The Middle-English Harrowing of Hell and Gospel of Nicodemus. Now First Edited from All the Known Manuscripts, with Introduction and Glossary",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme"]},
+      "notes": ["The title's claim to include an introduction and glossary describes the complete 1907 volume; those sections are not encoded in CME00010."]
+    },
+    {
+      "id": "title:harrowing",
+      "type": "uniform",
+      "value": "The Harrowing of Hell",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:pcmep-harrow"]}
+    },
+    {
+      "id": "title:gospel",
+      "type": "uniform",
+      "value": "The Strophic Gospel of Nicodemus",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:pcmep-gospel"]},
+      "notes": ["The supplied qualifier 'Strophic' distinguishes this verse rendition from the prose Gospel witnesses discussed but not edited by Hulme."]
+    },
+    {
+      "id": "title:add-explicit",
+      "type": "explicit",
+      "value": "Nichodemus de passione Christi",
+      "language": "lat",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:gospel-a"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:add"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-harrowing-poet",
+      "type": "person",
+      "name": "Anonymous author of The Harrowing of Hell",
+      "notes": ["No named medieval author is established; the three witness versions are not assigned separate authors without evidence."]
+    },
+    {
+      "id": "agent:anonymous-gospel-translator",
+      "type": "person",
+      "name": "Anonymous Middle English translator-adapter of the Strophic Gospel of Nicodemus",
+      "notes": ["The poem's fictional and textual frame names Nicodemus, Theodosius, and a clerk of England; none is treated as a securely identified historical Middle English author."]
+    },
+    {
+      "id": "agent:william-henry-hulme",
+      "type": "person",
+      "name": "William Henry Hulme"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:harrowing-author",
+      "agent_id": "agent:anonymous-harrowing-poet",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:harrowing-o", "part:harrowing-l", "part:harrowing-e"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-harrow", "evidence:hulme"]}
+    },
+    {
+      "id": "responsibility:gospel-translator",
+      "agent_id": "agent:anonymous-gospel-translator",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:gospel", "part:gospel-g", "part:gospel-h", "part:gospel-s", "part:gospel-a"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel", "evidence:hulme"]},
+      "notes": ["The role describes the anonymous Middle English rhymed rendition of the apocryphal Latin tradition, not a claim that Nicodemus personally composed the English poem."]
+    },
+    {
+      "id": "responsibility:hulme-editor",
+      "agent_id": "agent:william-henry-hulme",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:umich"]}
+    },
+    {
+      "id": "responsibility:hulme-collator",
+      "agent_id": "agent:william-henry-hulme",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"], "description": "All seven separately printed witness texts and their apparatus"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:edition-publication",
+      "type": "first_publication",
+      "display": "Hulme's edition-level compilation was first published in 1907",
+      "normalized": {"not_before": 1907, "not_after": 1907},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:umich"]},
+      "notes": ["This is the publication date of the cataloging subject, not a medieval composition date."]
+    },
+    {
+      "id": "date:harrowing-composition",
+      "type": "composition",
+      "display": "The Harrowing of Hell was probably composed c. 1200–1250; PCMEP suggests c. 1240",
+      "normalized": {"not_before": 1200, "not_after": 1250},
+      "scope": {"kind": "part", "part_ids": ["part:harrowing"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:pcmep-harrow"]}
+    },
+    {
+      "id": "date:harrowing-attestation",
+      "type": "first_known_attestation",
+      "display": "The earliest surviving Harrowing witness represented here is MS Digby 86, dated 1272–1282",
+      "normalized": {"not_before": 1272, "not_after": 1282},
+      "scope": {"kind": "part", "part_ids": ["part:harrowing-o"]},
+      "source_lineage_entity_id": "witness:bodleian:MSDigby86",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:digby"]}
+    },
+    {
+      "id": "date:gospel-composition",
+      "type": "composition",
+      "display": "The Strophic Gospel of Nicodemus was probably composed c. 1300–1350; PCMEP suggests c. 1340",
+      "normalized": {"not_before": 1300, "not_after": 1350},
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:pcmep-gospel"]}
+    },
+    {
+      "id": "date:gospel-attestation",
+      "type": "first_known_attestation",
+      "display": "The earliest surviving Gospel witnesses represented here are dated to the early 15th century, with Cotton MS Galba E IX cataloged to the first quarter of the century",
+      "normalized": {"not_before": 1401, "not_after": 1425},
+      "scope": {"kind": "part", "part_ids": ["part:gospel-g"]},
+      "source_lineage_entity_id": "witness:bl:CottonGalbaEIX",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cotton", "evidence:pcmep-gospel"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:northern-england", "label": "Northern England", "kind": "dialect_region"},
+    {"id": "place:london", "label": "London", "kind": "settlement"}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-harrow", "evidence:pcmep-gospel"]},
+      "notes": ["This broad origin does not transfer any witness's copying place to the lost authorial text."]
+    },
+    {
+      "id": "place-statement:gospel-dialect",
+      "place_id": "place:northern-england",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel"]}
+    },
+    {
+      "id": "place-statement:publication",
+      "place_id": "place:london",
+      "type": "associated_place",
+      "scope": {"kind": "whole", "description": "Publication place of Hulme's 1907 edition"},
+      "source_lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme"]},
+      "notes": ["London is not asserted as the composition place of either medieval work."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:pcmep-harrow", "evidence:pcmep-gospel"]}
+    },
+    {
+      "id": "language:english-editorial",
+      "code": "eng",
+      "label": "English",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:editorial-frame"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:hulme"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"], "description": "Rubrics, speech labels, explicit, and short phrases embedded in the Middle English witness texts"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:hulme"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole-mixed",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "Verse witness texts with prose title matter, notes, headings, and editorial apparatus",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:hulme"]}
+    },
+    {
+      "id": "form:medieval-verse",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:pcmep-harrow", "evidence:pcmep-gospel"]}
+    },
+    {
+      "id": "form:editorial-prose",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:editorial-frame"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:hulme"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:scholarly-edition",
+      "term": "scholarly-edition",
+      "label": "Scholarly edition",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:umich"]}
+    },
+    {
+      "id": "genre:religious-poetry",
+      "term": "religious-poetry",
+      "label": "Religious poetry",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-harrow", "evidence:pcmep-gospel"]}
+    },
+    {
+      "id": "genre:christian-apocrypha",
+      "term": "christian-apocrypha",
+      "label": "Christian apocrypha",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel", "evidence:hulme"]}
+    },
+    {
+      "id": "genre:gospel-paraphrase",
+      "term": "gospel-paraphrase",
+      "label": "Rhymed Gospel paraphrase",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:descent",
+      "term": "jesus-christ-descent-into-hell",
+      "label": "Jesus Christ—Descent into hell",
+      "scheme": "University of Michigan subject heading",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:harrowing", "part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich", "evidence:hulme"]}
+    },
+    {
+      "id": "subject:passion",
+      "term": "passion-of-christ",
+      "label": "Passion of Jesus Christ",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel", "evidence:hulme"]}
+    },
+    {
+      "id": "subject:resurrection",
+      "term": "resurrection-of-christ",
+      "label": "Resurrection of Jesus Christ",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pcmep-gospel", "evidence:hulme"]}
+    },
+    {
+      "id": "subject:pilate-trial",
+      "term": "trial-of-jesus",
+      "label": "Trial of Jesus before Pilate",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:gospel"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme"]}
+    },
+    {
+      "id": "subject:textual-tradition",
+      "term": "manuscript-variation",
+      "label": "Manuscript variation and textual transmission",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hulme", "evidence:xml"]}
+    }
+  ],
+  "tags": [
+    "middle-english",
+    "verse",
+    "scholarly-edition",
+    "parallel-witnesses",
+    "harrowing-of-hell",
+    "gospel-of-nicodemus",
+    "christian-apocrypha",
+    "religious-poetry",
+    "passion-and-resurrection",
+    "early-english-text-society",
+    "manuscript-variation",
+    "textual-criticism"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A seven-witness scholarly compilation of two anonymous Middle English verse works. Three short-couplet Harrowing versions dramatize Christ's descent to hell and liberation of the righteous. Four strophic Gospel versions narrate the trial, Passion, Resurrection, and descent tradition associated with the apocryphal Gospel of Nicodemus. Hulme prints the witnesses separately, largely follows manuscript readings, and supplies interleaved textual notes.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:hulme", "evidence:pcmep-harrow", "evidence:pcmep-gospel"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "CME00010 contains the main title, Harrowing part title, seven witness-text divisions, and local apparatus corresponding to printed pp. 2–136. It omits the 1907 preface and introduction (pp. i–lxx), glossary (pp. 137–148), index (pp. 149–150), and outer series matter. The prose Gospel versions listed in Hulme's introduction were deferred and are not part of the edited text or this encoding.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:hulme"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 7,
+    "sections": 2,
+    "prose_only_items": 0,
+    "verse_only_items": 7,
+    "mixed_items": 0,
+    "verse_groups": 586,
+    "verse_lines": 7728,
+    "description": "Seven XML DIV2 witness texts grouped under two medieval works: three Harrowing versions (704 L elements) and four Gospel versions (7,024 L elements in 586 LG stanza groups), plus encoded title matter and 431 NOTE elements. These are representation counts, not normalized canonical line totals.",
+    "evidence_ids": ["evidence:xml"]
+  },
+  "content_structure_status": "summary",
+  "content_parts": [
+    {
+      "id": "part:editorial-frame",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "commentary",
+      "label": "Encoded title matter and editorial apparatus",
+      "summary": "Main title page, Harrowing part title, witness labels, page summaries, line/stanza numbering, and interleaved textual notes retained from Hulme's edition; the long introduction and back matter are omitted.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed edition", "value": "main title; part title; local apparatus on pp. 2–136"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "front matter, DIV1/DIV2 headings, 431 NOTE elements"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme"]
+    },
+    {
+      "id": "part:harrowing",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "The Harrowing of Hell",
+      "summary": "Three separately lineated short-couplet manuscript versions, conventionally identified as O, L, and E.",
+      "item_count": null,
+      "textual_form": "verse",
+      "locators": [
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed edition", "value": "pp. 2–23, parallel columns; p. 23 shared with Gospel opening"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV1 The Harrowing of Hell; DIV2 1–3"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:pcmep-harrow"]
+    },
+    {
+      "id": "part:harrowing-o",
+      "parent_id": "part:harrowing",
+      "sequence": 1,
+      "type": "section",
+      "label": "Digby MS, text O",
+      "summary": "The Digby 86 Harrowing version, serialized from Hulme's parallel column.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 0, "verse_lines": 256},
+      "locators": [
+        {"lineage_entity_id": "witness:bodleian:MSDigby86", "scheme": "manuscript folios", "value": "119r–120v"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "4–22"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 1; 256 L; 28 NOTE"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:digby"]
+    },
+    {
+      "id": "part:harrowing-l",
+      "parent_id": "part:harrowing",
+      "sequence": 2,
+      "type": "section",
+      "label": "Harley MS, text L",
+      "summary": "The Harley 2253 Harrowing version, serialized from Hulme's parallel column.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 0, "verse_lines": 248},
+      "locators": [
+        {"lineage_entity_id": "witness:bl:Harley2253", "scheme": "manuscript folios", "value": "55v–56v"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "3–23"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 2; 248 L; 165 NOTE"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:harley2253"]
+    },
+    {
+      "id": "part:harrowing-e",
+      "parent_id": "part:harrowing",
+      "sequence": 3,
+      "type": "fragment",
+      "label": "Auchinleck MS, text E",
+      "summary": "The incomplete Auchinleck Harrowing version, serialized from Hulme's parallel column; both beginning and ending are defective.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 0, "verse_lines": 200},
+      "locators": [
+        {"lineage_entity_id": "witness:nls:Advocates19-2-1", "scheme": "manuscript folios", "value": "uncertain textual boundary ?35rb–?37rb or 37va stub; surviving images 35v–37r"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "3–21"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 3; 200 L; 20 NOTE"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:auchinleck"],
+      "notes": ["The exact damaged-stub boundary is preserved as uncertain; the 200 encoded line elements do not restore at least 75 lines the project says are lost."]
+    },
+    {
+      "id": "part:gospel",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "work",
+      "label": "The Strophic Gospel of Nicodemus",
+      "summary": "Four separately lineated stanzaic manuscript versions, conventionally identified as G, H, S, and A.",
+      "item_count": null,
+      "textual_form": "verse",
+      "locators": [
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed edition", "value": "pp. 22–136, parallel columns; pp. 22–23 shared with Harrowing endings"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV1 The Gospel of Nicodemus; DIV2 4–7"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:pcmep-gospel"]
+    },
+    {
+      "id": "part:gospel-g",
+      "parent_id": "part:gospel",
+      "sequence": 1,
+      "type": "section",
+      "label": "Galba MS, text G",
+      "summary": "The Cotton Galba E IX Gospel version in 147 encoded stanza groups.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 147, "verse_lines": 1763},
+      "locators": [
+        {"lineage_entity_id": "witness:bl:CottonGalbaEIX", "scheme": "manuscript folios", "value": "57v–66v"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "24–134"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 4; 1,763 L; 147 LG"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:cotton", "evidence:pcmep-gospel"]
+    },
+    {
+      "id": "part:gospel-h",
+      "parent_id": "part:gospel",
+      "sequence": 2,
+      "type": "section",
+      "label": "Harley MS, text H",
+      "summary": "The Harley 4196 Gospel version in 147 encoded stanza groups.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 147, "verse_lines": 1764},
+      "locators": [
+        {"lineage_entity_id": "witness:bl:Harley4196", "scheme": "manuscript folios", "value": "206r–215r"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "22–134"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 5; 1,764 L; 147 LG"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:harley4196", "evidence:pcmep-gospel"]
+    },
+    {
+      "id": "part:gospel-s",
+      "parent_id": "part:gospel",
+      "sequence": 3,
+      "type": "section",
+      "label": "Sion MS, text S",
+      "summary": "The Sion L40.2/E25 Gospel version in 142 encoded stanza groups; manuscript f. 31 is fragmentary.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 142, "verse_lines": 1691},
+      "locators": [
+        {"lineage_entity_id": "witness:lambeth:SionL40-2-E25", "scheme": "manuscript folios", "value": "13r–38v; f. 31 fragmentary"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "23–135"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 6; 1,691 L; 142 LG"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:sion", "evidence:pcmep-gospel"]
+    },
+    {
+      "id": "part:gospel-a",
+      "parent_id": "part:gospel",
+      "sequence": 4,
+      "type": "section",
+      "label": "Add MS, text A",
+      "summary": "The Add MS 32578 Gospel version in 150 encoded stanza groups, including four additional stanzas relative to the other witnesses.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 150, "verse_lines": 1806},
+      "locators": [
+        {"lineage_entity_id": "witness:bl:Add32578", "scheme": "manuscript folios", "value": "116v–140v"},
+        {"lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "scheme": "printed pages", "value": "23–136"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00010", "scheme": "XML", "value": "DIV2 7; 1,806 L; 150 LG"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:add", "evidence:pcmep-gospel"]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:evangelium-nicodemi",
+      "title": "Evangelium Nicodemi (Gospel of Nicodemus)",
+      "relation": "translation_of",
+      "identifiers": [{"scheme": "General tradition name", "value": "Evangelium Nicodemi"}],
+      "evidence_ids": ["evidence:pcmep-gospel", "evidence:hulme"],
+      "notes": ["This relation applies to part:gospel only and describes textual ancestry; it does not make a surviving Latin manuscript the direct physical source of the 1907 edition or U-M encoding."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00010",
+    "manifest_path": "manifests/lineage/works/CME00010.json",
+    "bindings": [
+      {"metadata_target": "work:CME00010", "lineage_entity_id": "edition:hulme:harrowing-nicodemus-1907", "role": "source_edition"},
+      {"metadata_target": "work:CME00010", "lineage_entity_id": "encoding:umich-cme:CME00010", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00010", "lineage_entity_id": "artifact:general-corpus:CME00010", "role": "repository_representation"},
+      {"metadata_target": "part:harrowing", "lineage_entity_id": "edition:varnhagen:harrowing-1898", "role": "related_source"},
+      {"metadata_target": "part:harrowing-o", "lineage_entity_id": "witness:bodleian:MSDigby86", "role": "source_witness"},
+      {"metadata_target": "part:harrowing-l", "lineage_entity_id": "witness:bl:Harley2253", "role": "source_witness"},
+      {"metadata_target": "part:harrowing-e", "lineage_entity_id": "witness:nls:Advocates19-2-1", "role": "source_witness"},
+      {"metadata_target": "part:gospel-g", "lineage_entity_id": "witness:bl:CottonGalbaEIX", "role": "source_witness"},
+      {"metadata_target": "part:gospel-h", "lineage_entity_id": "witness:bl:Harley4196", "role": "source_witness"},
+      {"metadata_target": "part:gospel-s", "lineage_entity_id": "witness:lambeth:SionL40-2-E25", "role": "source_witness"},
+      {"metadata_target": "part:gospel-a", "lineage_entity_id": "witness:bl:Add32578", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:xml",
+      "type": "computational_inspection",
+      "citation": "General Corpus CME00010 source XML and structural inspection",
+      "repository_path": "CME/source/CME_phase_3/CME00010.xml",
+      "summary": "Verifies identifiers, title matter, seven witness divisions, exact element counts, page/leaf milestones, notes, and the selection boundary relative to Hulme's edition.",
+      "accessed_on": "2026-07-11",
+      "sha256": "5d02d91f0b81c0f5a9ec5db56188468709b57aa3b69ff7312b1b4ed4e5da53b1"
+    },
+    {
+      "id": "evidence:umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, CME00010 item and About the Corpus of Middle English Prose and Verse",
+      "url": "https://name.umdl.umich.edu/CME00010",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/about.html"],
+      "source_evidence_id": "evidence:umich-item",
+      "summary": "Confirms title, item identity, 1907 edition, public access and rights; the About page identifies the 2016–2018 manually keyed/proofread batch and explicitly mentions Gospel of Nicodemus.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:hulme",
+      "type": "digital_surrogate",
+      "citation": "William Henry Hulme, ed., The Middle-English Harrowing of Hell and Gospel of Nicodemus (1907), complete cached scan",
+      "url": "https://archive.org/details/middleenglishha00hulmgoog",
+      "source_evidence_id": "evidence:hulme-scan",
+      "locator": "title page; preface pp. v–vi; introduction pp. vii–lxx; edited texts pp. 2–136; glossary pp. 137–148; index pp. 149–150",
+      "summary": "Verifies bibliographic identity, edition scope, seven witness texts, editorial method, folio/page locators, subject matter, and XML omissions.",
+      "accessed_on": "2026-07-11",
+      "sha256": "12b0fd2176b3d5dfb700c20cb90028e00a545a926fe16bea828dc8cc437bf7e3"
+    },
+    {
+      "id": "evidence:pcmep-harrow",
+      "type": "scholarly_source",
+      "citation": "PCMEP, The Harrowing of Hell text details",
+      "url": "https://pcmep.net/textdetails.php?poem_name=HarrowHell",
+      "source_evidence_id": "evidence:pcmep-harrow",
+      "summary": "Supports anonymous authorship, composition range, verse form, and DIMEV identity.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:pcmep-gospel",
+      "type": "scholarly_source",
+      "citation": "PCMEP, The Strophic Gospel of Nicodemus text details",
+      "url": "https://pcmep.net/textdetails.php?poem_name=Nicodemus",
+      "source_evidence_id": "evidence:pcmep-gospel",
+      "summary": "Supports anonymous translator-adapter modeling, composition range, Northern dialect, stanza form, four witnesses, dates, and folio loci.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:digby",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, MS Digby 86 catalog and complete Digital Bodleian object",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4426",
+      "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/2d6dfc9f-2ab9-46bf-9b32-e52f0e6eabb3/"],
+      "source_evidence_id": "evidence:bodleian-digby",
+      "summary": "Confirms the witness's date, origin, extent, ff. 119r–120v target, and complete digital object.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:harley2253",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 2253 and Harrowing component",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048084",
+      "source_evidence_id": "evidence:bl-harley2253",
+      "summary": "Confirms the c. 1330–1340 manuscript part, Ludlow association, whole-object extent, and target ff. 55v–56v.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:auchinleck",
+      "type": "official_catalog",
+      "citation": "NLS Auchinleck catalog and Harrowing project headnote",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/19334",
+      "alternate_urls": ["https://auchinleck.nls.uk/mss/heads/harrow_head.html"],
+      "source_evidence_id": "evidence:auchinleck-harrow",
+      "summary": "Confirms codex identity/date and the incomplete work's uncertain folio boundary, surviving images, 200-line project count, and lost-text warning.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:cotton",
+      "type": "official_catalog",
+      "citation": "British Library, Cotton MS Galba E IX, ff. 3–114",
+      "url": "https://searcharchives.bl.uk/catalog/041-001607569",
+      "source_evidence_id": "evidence:bl-cotton-galba",
+      "summary": "Confirms the first-quarter-15th-century witness and Gospel locus ff. 57v–66v.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:harley4196",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 4196",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050033",
+      "source_evidence_id": "evidence:bl-harley4196",
+      "summary": "Confirms the late-14th/early-15th-century witness and Gospel locus ff. 206r–215r.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:sion",
+      "type": "official_catalog",
+      "citation": "Lambeth Palace Library, Sion L40.2/E25",
+      "url": "https://archives.lambethpalacelibrary.org.uk/CalmView/Record.aspx?src=CalmView.Catalog&id=SionMSS/E/25",
+      "source_evidence_id": "evidence:lambeth-sion",
+      "summary": "Confirms date, physical object, Gospel locus ff. 13r–38v, fragmentary f. 31, and surrounding works.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:add",
+      "type": "official_catalog",
+      "citation": "British Library, Add MS 32578",
+      "url": "https://searcharchives.bl.uk/catalog/032-002026625",
+      "source_evidence_id": "evidence:bl-add32578",
+      "summary": "Confirms the 15th-century Gospel hand, title, and locus ff. 116v–140v.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:lineage",
+      "type": "linked_manifest_evidence",
+      "citation": "CME00010 source-lineage manifest",
+      "repository_path": "manifests/lineage/works/CME00010.json",
+      "summary": "Provides the full entity, relation, access, cache, rights, editorial-practice, and unresolved-question record underlying this work-level description.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:harrowing-lineation",
+      "question": "How should the differing XML, Hulme, Varnhagen, and current project line counts for the Harrowing witnesses be crosswalked?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Collate source-specific numbering without replacing any source's own lineation with an invented canonical total."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:xml", "evidence:hulme", "evidence:auchinleck"]
+    },
+    {
+      "id": "question:auchinleck-boundary",
+      "question": "Can the incomplete Auchinleck Harrowing's exact boundary around ff. 35–37 and the damaged stubs be resolved?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult codicological and conservation studies; retain ?35rb–?37rb or 37va stub until stronger evidence resolves it."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:auchinleck"]
+    },
+    {
+      "id": "question:encoding-selection",
+      "question": "What U-M production record explains the exact selection of title matter and pp. 2–136 and omission of the introduction, glossary, and index?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Ask U-M Digital Content and Collections for item-level production notes while preserving the directly observed source comparison."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:xml", "evidence:umich", "evidence:hulme"]
+    },
+    {
+      "id": "question:witness-digital-objects",
+      "question": "When will Harley MS 2253's complete images return, and can complete digital objects be obtained for Cotton Galba E IX, Harley 4196, and Add 32578?",
+      "status": "pending_external_response",
+      "impact": "high",
+      "next_steps": ["Monitor exact BL records and ask about mediated whole-manuscript copies or reproduction orders; keep any selected images explicitly partial."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:harley2253", "evidence:cotton", "evidence:harley4196", "evidence:add", "evidence:lineage"]
+    }
+  ],
+  "notes": [
+    "This record describes an edition-level compilation and gives the two medieval works and seven witness versions explicit part boundaries.",
+    "The XML's 7,728 L elements and 586 LG elements are representation metrics. They must not be presented as normalized critical counts without reconciling source-specific lineation.",
+    "Printed pp. 22–23 are shared by columns belonging to the ending Harrowing versions and opening Gospel versions; the physical edition boundary is overlapping, not a clean page break.",
+    "Hulme's preface says the volume edits the poetical Gospel versions; prose Gospel witnesses are bibliographic context for a deferred volume and are outside CME00010's content boundary.",
+    "Manuscript production dates, origins, and image rights remain in the linked lineage manifest rather than being transferred wholesale into abstract work metadata."
+  ]
+}
