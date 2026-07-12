@@ -22,6 +22,10 @@ jurisdiction. Ask the provider; do not choose the most permissive label.
 A library record can prove that a printed facsimile exists without proving a
 free online copy. Distinguish catalog, selected image, mediated copying,
 purchase, and complete public facsimile. Verify what can actually be opened.
+Generic Mirador or IIIF interface chrome can also render on a discovery page
+that explicitly has no digital object. Require a resolvable Presentation
+manifest with canvases, an image inventory, or an item-specific institutional
+digital-content link before recording the manuscript as digitized.
 
 A second repository's microfilm can be the best known scholarly reproduction
 route even when the holding library has no public images. Model it as a
