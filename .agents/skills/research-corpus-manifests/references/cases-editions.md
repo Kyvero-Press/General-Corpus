@@ -56,6 +56,14 @@ as its own scholarly-edition entity. Scope the encoding to the exact selected
 pages in each installment; a shared series title does not turn the articles
 into one homogeneous edition object.
 
+## Separately issued matter later bound together: CME00018
+
+A text, introduction, notes, or glossary can be issued in different years and
+later appear inside one bound scan. Model the dated issues and the later bound
+reproduction separately, then scope the encoding to the matter it actually
+includes. Do not assign the bound object's broad date range to every component
+or infer that a single present-day PDF proves simultaneous first publication.
+
 ## Later transcript and indirect readings: afw5744
 
 Van Vliet's partial seventeenth-century transcript preserves now-lost Ormulum
