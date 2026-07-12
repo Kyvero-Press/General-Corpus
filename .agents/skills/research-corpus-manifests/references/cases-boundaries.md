@@ -67,3 +67,12 @@ blanks. Preserve that repository assertion with its inference status, then
 use direct editorial or visual evidence to map the narrower written extent of
 the work. Do not silently convert total-object extent into text-bearing
 folios; the complete-facsimile request should still include those blanks.
+
+## Discontiguous edition selections: CME00012
+
+An encoding can resume after silently omitted editorial pages even when its
+included page milestones appear to describe one broad span. Compare the XML
+boundary against the complete edition page by page, then record every included
+run separately in the cataloging boundary and cached source's `work_portion`.
+Do not collapse printed pp. 1–73 and 76–145 into the false continuous range
+pp. 1–145; retain the omitted pp. 74–75 as part of the complete cached volume.
