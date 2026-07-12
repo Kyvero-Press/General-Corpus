@@ -24,6 +24,11 @@ letterforms by itself.
 XML `L`, `LG`, and division totals can differ from canonical line or stanza
 counts because headings and grouping choices vary. State the counting method
 and label totals as encoding metrics rather than properties of every edition.
+Also separate intrinsic work lines from `L` or `LG` descendants inside notes,
+headnotes, quotations, and apparatus. A raw `count(//L)` can equal a printed
+headline while still hiding omitted base lines and inserted variant-only
+lines; report both layers instead of letting apparatus determine work form or
+extent.
 
 ## Planned, extant, and encoded extent: afw5744
 
