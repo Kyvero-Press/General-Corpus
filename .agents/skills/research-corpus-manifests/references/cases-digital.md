@@ -29,6 +29,9 @@ headnotes, quotations, and apparatus. A raw `count(//L)` can equal a printed
 headline while still hiding omitted base lines and inserted variant-only
 lines; report both layers instead of letting apparatus determine work form or
 extent.
+Apply the same hierarchy rule to prose or lexical items: count `ITEM` nodes
+inside the textual body separately from administrative `TEMPHEAD`, header, or
+workflow containers, and name the XPath or ancestor boundary used.
 
 ## Planned, extant, and encoded extent: afw5744
 
