@@ -69,6 +69,15 @@ A sampled Calgary image carries a public-domain label alongside enumerated use
 categories. Do not generalize it across the collection or to commercial reuse.
 Use exact image records and leave collection-wide status unknown if necessary.
 
+## Multiple selected-image objects: CME00023
+
+One physical codex can have several public image objects—for example, one
+multi-canvas slide set and several single-image records—with different item-
+level licenses. Cache each complete published selection as its own bundle but
+mark coverage `partial` for the manuscript. Do not merge their licenses,
+invent one aggregate facsimile, or let complete capture of every selected
+object erase the dated finding that no whole-codex surrogate was available.
+
 ## Conflicting derivative-provider claims: Purity
 
 When one repository republishes another provider's derivative and applies a
