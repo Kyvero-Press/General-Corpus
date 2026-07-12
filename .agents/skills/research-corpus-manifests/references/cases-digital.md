@@ -57,6 +57,14 @@ inventories and work overlap, and retire the dated whole-object negative; never
 let the older partial selection conceal or stand in for the newer complete
 surrogate.
 
+Conversely, two live Presentation-manifest URLs can be alternate records for
+the same published image object. Compare every canvas ID, Image API service ID,
+sequence order, license, attribution, and effective request profile. When those
+are identical, preserve both exact manifest URLs but cache the images only once
+and record which manifest supplied the bundle. Treat them as separate digital
+objects if their inventories, order, rights, or attribution differ; matching
+canvas counts alone are not enough.
+
 For IIIF Image API width requests, preserve the width-only comma in forms such
 as `1800,`. A bare `1800` can be interpreted differently or redirected to the
 native full image by some services. After retrieval, inspect the exact request
