@@ -37,7 +37,7 @@ against Arundel 57. Model `version_of` the prior edition plus a distinct
 `collated_against` witness edge. Do not describe the 1965 edition date as a
 revision date of the medieval work.
 
-## Reprints: 3KCol and aba2096
+## Reprints: 3KCol, aba2096, and CME00022
 
 An explicitly described reprint is still a distinct edition entity linked to
 the earlier edition with scoped `version_of`. Verify the reprint's included and
@@ -47,6 +47,10 @@ separate rights analysis instead of inheriting every claim from the original.
 Do not call a reset reprint a facsimile merely because it reproduces an earlier
 title page or retains the text. Compare type, pagination, preliminaries, and
 printing colophons to establish the reset and its edition-specific scope.
+When an encoding includes the inherited old title page but also an interior
+later-printer colophon, attach the encoding to the reset reprint and connect
+the old edition through `version_of`; do not let the title-page imprint erase
+the immediate physical source.
 
 ## Recurring serial installments
 
