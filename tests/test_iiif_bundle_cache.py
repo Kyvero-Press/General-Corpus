@@ -54,6 +54,30 @@ def iiif_v2_manifest() -> dict[str, object]:
 
 
 class IiifBundleCacheTests(unittest.TestCase):
+    def test_concurrent_writer_for_same_bundle_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(
+            cache_iiif_bundle.fcntl,
+            "flock",
+            side_effect=BlockingIOError,
+        ):
+            with self.assertRaisesRegex(
+                cache_iiif_bundle.BundleError,
+                "another cache process is already writing TestWork/complete-manuscript.zip",
+            ):
+                cache_iiif_bundle.bundle(
+                    repo_root=Path(directory),
+                    work_id="TestWork",
+                    source_url="https://example.test/manifest",
+                    filename="complete-manuscript.zip",
+                    label="Complete manuscript IIIF bundle",
+                    coverage="complete",
+                    image_size="1800,",
+                    image_format="jpg",
+                    timeout=10,
+                    retries=0,
+                    force=False,
+                )
+
     def test_complete_v2_manifest_becomes_one_auditable_zip(self) -> None:
         manifest_url = "https://example.test/manifest"
         manifest_bytes = json.dumps(iiif_v2_manifest()).encode("utf-8")

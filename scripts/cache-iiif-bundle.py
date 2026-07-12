@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
+import functools
 import hashlib
 import json
 import os
@@ -33,6 +35,33 @@ USER_AGENT = (
 
 class BundleError(RuntimeError):
     """Raised when an IIIF source cannot be bundled safely and completely."""
+
+
+def exclusive_cache_destination(function: Any) -> Any:
+    """Reject concurrent writers targeting the same work-local bundle."""
+
+    @functools.wraps(function)
+    def locked(*args: Any, **kwargs: Any) -> Any:
+        repo_root = Path(kwargs["repo_root"])
+        work_id = str(kwargs["work_id"])
+        filename = str(kwargs["filename"])
+        lock_key = hashlib.sha256(f"{work_id}\0{filename}".encode("utf-8")).hexdigest()
+        lock_root = repo_root / "build/source-cache-locks"
+        lock_root.mkdir(parents=True, exist_ok=True)
+        lock_path = lock_root / f"{lock_key}.lock"
+        with lock_path.open("a+b") as lock_stream:
+            try:
+                fcntl.flock(lock_stream.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError as exc:
+                raise BundleError(
+                    f"another cache process is already writing {work_id}/{filename}"
+                ) from exc
+            try:
+                return function(*args, **kwargs)
+            finally:
+                fcntl.flock(lock_stream.fileno(), fcntl.LOCK_UN)
+
+    return locked
 
 
 def sha256(path: Path) -> str:
@@ -452,6 +481,7 @@ def work_portion_from_args(args: argparse.Namespace) -> dict[str, object] | None
     return work_portion
 
 
+@exclusive_cache_destination
 def bundle(
     *,
     repo_root: Path,
