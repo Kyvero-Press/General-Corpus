@@ -17,18 +17,24 @@ worktree.
    python3 scripts/rebuild-manifest-indexes.py
    ```
 
-6. Validate:
+6. Run the changed-scope gate against the remote branch:
 
    ```bash
-   python3 scripts/validate-lineage-manifests.py
-   python3 scripts/validate-work-metadata-manifests.py
-   python3 scripts/validate-manifest-pair.py WORK_ID
-   python3 -m unittest tests.test_lineage_manifests tests.test_work_metadata_manifests
-   python3 scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public
-   python3 /home/tay/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-     .agents/skills/research-corpus-manifests
-   git diff --check
+   python3 scripts/run-changed-gate.py --base origin/main
    ```
+
+   The normal one-book path validates each changed manifest pair and its
+   production viewer projection, checks that both indexes are deterministic,
+   checks corpus-wide normalized vocabulary labels, validates the skill only
+   when it changed, and runs `git diff --check`. It deliberately skips the
+   full catalog rebuild and unrelated unit suites. Use `--dry-run` to inspect
+   the selected commands.
+
+   Changes to shared schemas, manifest validators, the index generator, the CME
+   source checkout, or the publication-set manifest automatically escalate to
+   the full corpus gate. A deleted or renamed half of a manifest pair also
+   escalates. Force that gate with `--full` for a periodic batch audit or final
+   corpus-completion audit; do not run it before every one-book push.
 
 7. Stage only that work's pair, both indexes, and any narrowly required skill,
    validator, schema, documentation, or test change.

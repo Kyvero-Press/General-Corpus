@@ -37,6 +37,21 @@ The React, Vite, and TypeScript viewer under =viewer/= turns the metadata and li
 
 See the [[file:docs/corpus-viewer.md][corpus viewer guide]] for development, testing, catalog generation, and deployment commands.
 
+* Change-aware validation
+Before pushing manifest or viewer work, run the change-aware gate from the
+repository root:
+
+#+BEGIN_SRC bash
+  python3 scripts/run-changed-gate.py --base origin/main
+#+END_SRC
+
+For ordinary book-manifest changes it validates only the changed work pairs,
+their viewer projections, deterministic indexes, and shared vocabulary. It
+automatically selects the full corpus gate when shared schemas, validators,
+catalog infrastructure, source snapshots, or publication-wide inputs change.
+Use =--dry-run= to inspect the plan or =--full= to request a periodic complete
+audit explicitly.
+
 * Printing at home
 Home-print imposition and printer submission are unsupported. The repository does not maintain a safe, current printing recipe; use reviewed PDFs with an independently verified local print workflow.
 

@@ -120,8 +120,9 @@ Put the rule in the smallest matching reference, merge it with an existing
 rule when possible, and keep book-specific bibliography in manifests. Do not
 add a per-work changelog.
 
-The integrator follows [`references/integration.md`](references/integration.md)
-and validates the skill with:
+The integrator follows [`references/integration.md`](references/integration.md).
+Its changed-scope gate invokes the skill validator whenever skill files change.
+While iterating on the skill alone, validate it directly with:
 
 ```bash
 python3 /home/tay/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
