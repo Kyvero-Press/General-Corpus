@@ -506,7 +506,53 @@
       "format": "web page images linked from 78 PB milestones",
       "last_checked": "2026-07-11",
       "evidence_ids": ["evidence:umich-acb1675", "evidence:acb1675-xml"],
-      "notes": ["Page viewing is public, but the original 600 dpi TIFF set was not verified as an anonymous bulk download."]
+      "notes": ["Page viewing is public through U-M; a separate Internet Archive access record below preserves the complete 78-TIFF raw book package as an anonymous bulk download."]
+    },
+    {
+      "id": "access:ia-umich-raw-package",
+      "entity": "facsimile:umich:ACB1675.0001.001-pages",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete U-M raw book package directly from Internet Archive.",
+      "url": "https://archive.org/download/acb1675.0001.001.umich.edu/acb1675.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": [
+        "https://archive.org/details/acb1675.0001.001.umich.edu",
+        "https://archive.org/metadata/acb1675.0001.001.umich.edu"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete U-M ACB1675 raw book package",
+          "path": "source-cache/acb1675/umich-acb1675-raw-book.zip",
+          "source_url": "https://archive.org/download/acb1675.0001.001.umich.edu/acb1675.0001.001.umich.edu_umichbook.zip",
+          "sha256": "a4baf4e27d34e9558a27306729bbf0dc564b5a6f21602284e65d43538db852d6",
+          "bytes": 4202141,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "ZIP integrity was verified; it contains all 78 sequential U-M TIFF page images plus pageview.dat, the U-M header and text derivatives, and a load log.",
+            "This is the complete digitized printed volume, not a manuscript facsimile."
+          ],
+          "work_portion": {
+            "label": "Iacob and Iosep edition text",
+            "locators": [
+              "printed pages 1-18",
+              "TIFF sequences 00000033-00000040 and 00000045-00000054",
+              "four unnumbered inserted facsimile/blank images at TIFF sequences 00000041-00000044"
+            ],
+            "notes": [
+              "The poem text is discontiguous in the scan sequence because Napier inserted the two manuscript plates and their surrounding blank/image leaves between printed pages 8 and 9.",
+              "The work text itself occupies TIFF sequences 33-40 and 45-54; the complete cached package retains every other page of the volume as well."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP, 4,202,141 bytes; 78 TIFF page images plus U-M metadata and text derivatives",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:ia-umich-raw-package", "evidence:umich-acb1675"]
     },
     {
       "id": "access:ia-napier-item",
@@ -529,6 +575,31 @@
       "status": "publicly_available",
       "access_method": "Download the verified Text PDF directly.",
       "url": "https://archive.org/download/iacobandiosepedarthurnapier/iacobandiosepedarthurnapier.pdf",
+      "local_copies": [
+        {
+          "label": "Complete Napier 1916 Iacob and Iosep edition",
+          "path": "source-cache/acb1675/napier-iacob-iosep-1916-complete.pdf",
+          "source_url": "https://archive.org/download/iacobandiosepedarthurnapier/iacobandiosepedarthurnapier.pdf",
+          "sha256": "85efb8c67788baaa0e995d8d66573b999b089bf806edc4166a482f26b539424b",
+          "bytes": 3758460,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The 90-page PDF preserves the complete edition, including covers, front matter, text, inserted manuscript plates, notes, glossary, and terminal leaves."
+          ],
+          "work_portion": {
+            "label": "Iacob and Iosep edition text",
+            "locators": ["printed pages 1-18", "PDF pages 39-60"],
+            "start_url": "https://archive.org/download/iacobandiosepedarthurnapier/iacobandiosepedarthurnapier.pdf#page=39",
+            "end_url": "https://archive.org/download/iacobandiosepedarthurnapier/iacobandiosepedarthurnapier.pdf#page=60",
+            "notes": [
+              "PDF pages 47-50 are the unnumbered leaves containing Napier's two manuscript plates and surrounding blanks between printed text pages 8 and 9; the mapped span deliberately retains them within the edition's work section."
+            ]
+          }
+        }
+      ],
       "cost": "free",
       "format": "PDF, 3,758,460 bytes, 90 scan pages",
       "last_checked": "2026-07-11",
@@ -543,6 +614,29 @@
       "access_method": "Download the scanned Bonner Beiträge volume containing Heuser's article.",
       "url": "https://archive.org/download/dieschreibungeo00blgoog/dieschreibungeo00blgoog.pdf",
       "alternate_urls": ["https://archive.org/details/dieschreibungeo00blgoog"],
+      "local_copies": [
+        {
+          "label": "Complete Bonner Beiträge zur Anglistik volume 17",
+          "path": "source-cache/acb1675/bonner-beitraege-17-heuser-1905-complete.pdf",
+          "source_url": "https://archive.org/download/dieschreibungeo00blgoog/dieschreibungeo00blgoog.pdf",
+          "sha256": "77e7e5017880f60f811f4a5b09834364e87eafaff1701c05de61264b9b4e6dff",
+          "bytes": 4762223,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The 210-page PDF preserves the complete journal volume rather than extracting Heuser's article alone.",
+            "Visual boundary checks confirmed that PDF page 92 ends the preceding article and PDF page 132 begins the following article."
+          ],
+          "work_portion": {
+            "label": "Wilhelm Heuser, Das frühmittelenglische Josephlied",
+            "locators": ["printed pages 83-121", "PDF pages 93-131"],
+            "start_url": "https://archive.org/download/dieschreibungeo00blgoog/dieschreibungeo00blgoog.pdf#page=93",
+            "end_url": "https://archive.org/download/dieschreibungeo00blgoog/dieschreibungeo00blgoog.pdf#page=131"
+          }
+        }
+      ],
       "cost": "free",
       "format": "4,762,223-byte Image Container PDF; Heuser at pp. 83–121",
       "last_checked": "2026-07-11",
@@ -778,6 +872,21 @@
       "contract_terms_status": "provider_terms_apply",
       "confidence": "medium",
       "evidence_ids": ["evidence:umich-acb1675", "evidence:rightsstatements-nocus", "evidence:acb1675-xml"]
+    },
+    {
+      "id": "rights:ia-umich-raw-package-unknown",
+      "entity": "facsimile:umich:ACB1675.0001.001-pages",
+      "access_id": "access:ia-umich-raw-package",
+      "component": "Internet Archive-hosted raw U-M book package",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "Internet Archive exposes the raw ZIP as a public original file, but the reviewed item metadata supplies neither a rights statement nor a license URL. Public downloadability is not itself reuse permission.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-umich-raw-package"],
+      "notes": ["The separate U-M No Copyright-United States record documents U-M's item-level position; it is not silently reassigned as Internet Archive's own license for this package."]
     },
     {
       "id": "rights:ia-napier-pdm",
@@ -1023,6 +1132,19 @@
       "url": "https://www.copyright.gov/circs/circ15a.pdf",
       "alternate_urls": ["https://www.copyright.gov/title17/92chap3.html"],
       "summary": "Authoritative guidance on the duration framework for works created or published before 1978, including the 95-year maximum term for eligible pre-1978 published copyrights and the separate treatment of older unpublished works.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-umich-raw-package",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata and original-file listing for acb1675.0001.001.umich.edu.",
+      "url": "https://archive.org/metadata/acb1675.0001.001.umich.edu",
+      "alternate_urls": [
+        "https://archive.org/details/acb1675.0001.001.umich.edu",
+        "https://archive.org/download/acb1675.0001.001.umich.edu/acb1675.0001.001.umich.edu_umichbook.zip"
+      ],
+      "locator": "original file acb1675.0001.001.umich.edu_umichbook.zip",
+      "summary": "Identifies the 4,202,141-byte ZIP as an original file in the public item. Local archive inspection confirms 78 sequential TIFF page images and five U-M metadata/text/log files; the item metadata provides no rights or license field.",
       "accessed_on": "2026-07-11"
     },
     {
