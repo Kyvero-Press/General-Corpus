@@ -58,7 +58,8 @@ needed; do not load both complete schemas merely for orientation.
    when a complete source is exposed as IIIF canvases rather than one file.
    For manuscript facsimiles, download the complete physical codex whenever
    it is publicly obtainable and practical, then record this work's exact
-   folio/page/canvas range in `work_portion`. Never substitute a work-only
+   folio/page/canvas range in the mandatory `work_portion` of every complete
+   cached manuscript facsimile. Never substitute a work-only
    excerpt when a complete source is obtainable; if only selected leaves are
    available, mark them `coverage=partial` and preserve the negative
    whole-object finding. Record each direct

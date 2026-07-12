@@ -283,6 +283,68 @@ class LineageManifestTests(unittest.TestCase):
             self.assertTrue(any("must be one file under 'source-cache/TestWork'" in item for item in errors))
             self.assertTrue(any("exact source URL must also appear" in item for item in errors))
 
+    def test_complete_manuscript_facsimile_requires_work_portion(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest_path = root / "manifests/lineage/works/TestWork.json"
+            local_copy = {
+                "label": "Complete manuscript facsimile",
+                "path": "source-cache/TestWork/manuscript.pdf",
+                "source_url": "https://example.test/manuscript.pdf",
+                "sha256": "0" * 64,
+                "bytes": 1,
+                "media_type": "application/pdf",
+                "downloaded_on": "2026-07-11",
+                "coverage": "complete",
+                "retrieval_method": "direct_download",
+            }
+            manifest = {
+                "id": "lineage:TestWork",
+                "work_id": "TestWork",
+                "primary_subject": "facsimile:test",
+                "entities": [
+                    {"id": "witness:test", "type": "manuscript_witness"},
+                    {"id": "facsimile:test", "type": "facsimile"},
+                ],
+                "agents": [],
+                "relations": [{
+                    "id": "relation:facsimile-of-witness",
+                    "type": "facsimile_of",
+                    "subject": "facsimile:test",
+                    "object": "witness:test",
+                }],
+                "access": [{
+                    "id": "access:test",
+                    "entity": "facsimile:test",
+                    "url": "https://example.test/manuscript",
+                    "alternate_urls": ["https://example.test/manuscript.pdf"],
+                    "local_copies": [local_copy],
+                    "evidence_ids": ["evidence:test"],
+                }],
+                "rights": [],
+                "editorial_practices": [],
+                "evidence": [{"id": "evidence:test"}],
+                "open_questions": [],
+            }
+
+            errors = validate_lineage_manifests._semantic_manifest_errors(
+                root, manifest_path, manifest
+            )
+            self.assertTrue(
+                any("complete manuscript facsimile requires" in item for item in errors)
+            )
+
+            local_copy["work_portion"] = {
+                "label": "The work represented by TestWork",
+                "locators": ["folios 10r–20v", "pages 21–42"],
+            }
+            self.assertEqual(
+                [],
+                validate_lineage_manifests._semantic_manifest_errors(
+                    root, manifest_path, manifest
+                ),
+            )
+
     def test_present_iiif_bundle_inventory_is_cross_checked(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

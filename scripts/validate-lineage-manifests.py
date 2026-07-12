@@ -414,6 +414,11 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
     entity_ids = {
         item.get("id") for item in manifest.get("entities", []) if isinstance(item, dict)
     }
+    entities_by_id = {
+        item["id"]: item
+        for item in manifest.get("entities", [])
+        if isinstance(item, dict) and isinstance(item.get("id"), str)
+    }
     agent_ids = {
         item.get("id") for item in manifest.get("agents", []) if isinstance(item, dict)
     }
@@ -427,6 +432,21 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
     agent_ids.discard(None)
     evidence_ids.discard(None)
     access_ids.discard(None)
+
+    manuscript_witness_ids = {
+        entity_id
+        for entity_id, entity in entities_by_id.items()
+        if entity.get("type") == "manuscript_witness"
+    }
+    manuscript_facsimile_ids = {
+        relation.get("subject")
+        for relation in manifest.get("relations", [])
+        if isinstance(relation, dict)
+        and relation.get("type") == "facsimile_of"
+        and relation.get("object") in manuscript_witness_ids
+        and entities_by_id.get(relation.get("subject"), {}).get("type") == "facsimile"
+    }
+    manuscript_facsimile_ids.discard(None)
 
     _check_entity_ref(manifest.get("primary_subject"), entity_ids, f"{location}.primary_subject", errors)
 
@@ -499,6 +519,7 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
         if not isinstance(access, dict):
             continue
         item_location = f"{location}.access[{index}]"
+        is_manuscript_facsimile = access.get("entity") in manuscript_facsimile_ids
         _check_entity_ref(access.get("entity"), entity_ids, f"{item_location}.entity", errors)
         if "provider_id" in access:
             _check_agent_ref(access.get("provider_id"), agent_ids, f"{item_location}.provider_id", errors)
@@ -541,6 +562,15 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                         errors.append(
                             f"{copy_location}.media_type: IIIF bundle must use application/zip"
                         )
+                if (
+                    is_manuscript_facsimile
+                    and local_copy.get("coverage") == "complete"
+                    and not isinstance(local_copy.get("work_portion"), dict)
+                ):
+                    errors.append(
+                        f"{copy_location}.work_portion: complete manuscript facsimile "
+                        "requires the corpus work's physical or digital locators"
+                    )
                 if cache_path is not None:
                     expected_bytes = local_copy.get("bytes")
                     if isinstance(expected_bytes, int) and cache_path.stat().st_size != expected_bytes:
