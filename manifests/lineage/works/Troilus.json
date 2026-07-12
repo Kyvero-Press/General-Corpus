@@ -138,7 +138,49 @@
     {"id": "access:troilus-repo", "entity": "artifact:general-corpus:Troilus", "provider_id": "agent:kyvero", "resource_kind": "repository_file", "status": "local_only", "access_method": "Read the checked-out CME submodule path", "repository_path": "CME/source/CME_from_OTA/Troilus.xml", "cost": "not_applicable", "format": "XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:troilus-xml"]},
     {"id": "access:troilus-umich", "entity": "encoding:umich-cme:Troilus", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item and full-text view", "url": "https://name.umdl.umich.edu/Troilus", "cost": "free", "format": "HTML digital text", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-troilus"]},
     {"id": "access:windeatt-catalog", "entity": "edition:windeatt:troilus-1984", "resource_kind": "catalog_record", "status": "purchasable", "access_method": "Library catalogue and commercial second-hand channels", "url": "https://iucat.iu.edu/iue/1703887", "alternate_urls": ["https://books.google.com/books?id=V25aAAAAMAAJ"], "cost": "fee", "format": "Print book; limited Google Books record", "last_checked": "2026-07-11", "evidence_ids": ["evidence:windeatt-catalog"]},
-    {"id": "access:morgan-m817-images", "entity": "witness:morgan:M817", "provider_id": "agent:morgan", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Morgan catalogue with selected manuscript images", "url": "https://www.themorgan.org/manuscript/147148", "alternate_urls": ["https://ica.themorgan.org/manuscript/147148"], "cost": "free", "format": "Catalogue and selected images", "last_checked": "2026-07-11", "evidence_ids": ["evidence:morgan-m817"]},
+    {
+      "id": "access:morgan-m817-images",
+      "entity": "witness:morgan:M817",
+      "provider_id": "agent:morgan",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Morgan catalogue and image viewer for the selected opening leaf",
+      "url": "https://www.themorgan.org/manuscript/147148",
+      "alternate_urls": [
+        "https://ica.themorgan.org/manuscript/147148",
+        "https://ica.themorgan.org/manuscript/page/1/147148",
+        "https://ica.themorgan.org/icaimages/8/m817.001r.jpg"
+      ],
+      "local_copies": [
+        {
+          "label": "Morgan selected opening image, MS M.817 fol. 1r",
+          "path": "source-cache/Troilus/morgan-m817-fol-001r-selected.jpg",
+          "source_url": "https://ica.themorgan.org/icaimages/8/m817.001r.jpg",
+          "sha256": "8873c6a6c520821e5950522d178cdde0f84664a0f33b98d489005c7de01e37a3",
+          "bytes": 82416,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Opening of Troilus and Criseyde",
+            "locators": ["current Morgan fol. 1r", "Furnivall historical leaf 2"],
+            "start_url": "https://ica.themorgan.org/manuscript/page/1/147148",
+            "end_url": "https://ica.themorgan.org/manuscript/page/1/147148",
+            "notes": ["This is one selected leaf from the work, not the whole work and not the complete 120-leaf manuscript."]
+          },
+          "notes": ["Cached only because it is the sole verified public manuscript image; it is explicitly not substituted for a full-codex facsimile."]
+        }
+      ],
+      "cost": "free",
+      "format": "Catalogue plus one selected JPEG manuscript image",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:morgan-m817", "evidence:morgan-m817-selected-image-inspection"],
+      "notes": [
+        "The public thumbnail viewer exposed only fol. 1r during direct inspection; no complete public 120-leaf facsimile or bulk download was verified.",
+        "The ignored local cache is a research copy and does not independently grant redistribution rights."
+      ]
+    },
     {"id": "access:add12044-catalog", "entity": "witness:bl:Add12044", "provider_id": "agent:bl", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "British Library Archives and Manuscripts catalogue", "url": "https://searcharchives.bl.uk/catalog/040-002041751", "cost": "free", "format": "Catalogue record", "last_checked": "2026-07-11", "evidence_ids": ["evidence:bl-add12044"]}
   ],
   "rights": [
@@ -157,7 +199,19 @@
     {"id": "evidence:umich-troilus", "type": "official_webpage", "citation": "University of Michigan Library, ‘Geoffrey Chaucer's Troilus and Criseyde,’ CME item Troilus.", "url": "https://quod.lib.umich.edu/c/cme/Troilus?view=toc", "summary": "Supplies title, authorship, 1984 imprint, OTA identifier, public access, NoC-US statement, and five-book contents.", "accessed_on": "2026-07-11"},
     {"id": "evidence:windeatt-catalog", "type": "official_catalog", "citation": "Indiana University Libraries, Troilus & Criseyde: a new edition of Chaucer's The Book of Troilus, PR1895 .W56 1984.", "url": "https://iucat.iu.edu/iue/1703887", "alternate_urls": ["https://books.google.com/books?id=V25aAAAAMAAJ"], "summary": "Confirms editor Barry A. Windeatt (1950–), Longman 1984 imprint, extent, and ISBN.", "accessed_on": "2026-07-11"},
     {"id": "evidence:cambridge-editions", "type": "scholarly_source", "citation": "University of Cambridge Faculty of English, ‘Recommended Editions,’ Troilus & Criseyde: Translation & Commentary.", "url": "https://www.english.cam.ac.uk/troilus/?page_id=155", "summary": "Describes Windeatt 1984 as including critical notes, extant-manuscript variants, and parallel Il Filostrato.", "accessed_on": "2026-07-11"},
-    {"id": "evidence:morgan-m817", "type": "official_catalog", "citation": "Morgan Library & Museum, MS M.817, Troilus and Criseyde.", "url": "https://www.themorgan.org/manuscript/147148", "summary": "Catalogues a 120-leaf parchment witness made probably in London between 1403 and 1413 and provides selected images.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:morgan-m817", "type": "official_catalog", "citation": "Morgan Library & Museum, MS M.817, Troilus and Criseyde.", "url": "https://www.themorgan.org/manuscript/147148", "summary": "Catalogues a 120-leaf parchment witness made probably in London between 1403 and 1413 and links to a selected-image viewer.", "accessed_on": "2026-07-11"},
+    {
+      "id": "evidence:morgan-m817-selected-image-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the Morgan MS M.817 thumbnail viewer and selected fol. 1r JPEG.",
+      "url": "https://ica.themorgan.org/manuscript/thumbs/147148",
+      "alternate_urls": ["https://ica.themorgan.org/icaimages/8/m817.001r.jpg"],
+      "repository_path": "source-cache/Troilus/morgan-m817-fol-001r-selected.jpg",
+      "locator": "MS M.817, fol. 1r",
+      "summary": "The public thumbnail route exposed one image, fol. 1r, rather than a complete manuscript sequence. The selected JPEG visibly reproduces the opening leaf and must not be represented as a whole-codex facsimile.",
+      "accessed_on": "2026-07-11",
+      "sha256": "8873c6a6c520821e5950522d178cdde0f84664a0f33b98d489005c7de01e37a3"
+    },
     {"id": "evidence:bl-add12044", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Add MS 12044: Geoffrey Chaucer, Troilus and Criseyde.", "url": "https://searcharchives.bl.uk/catalog/040-002041751", "summary": "Describes an imperfect five-book manuscript witness and its missing portions.", "accessed_on": "2026-07-11"},
     {"id": "evidence:copyright-office", "type": "law", "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.", "url": "https://www.copyright.gov/circs/circ15a.pdf", "summary": "Provides the U.S. duration framework used to distinguish the medieval work from a 1984 editorial contribution.", "accessed_on": "2026-07-11"}
   ],
