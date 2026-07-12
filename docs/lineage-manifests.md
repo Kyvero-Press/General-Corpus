@@ -93,6 +93,10 @@ height, or bounding-box requests, canvases smaller than the requested size use
 the Image API's native `full`/`max` form instead of requesting an unsupported
 upscale; every effective request profile remains recorded in the inventory and
 bundle notes.
+If a provider rejects an otherwise plausible derivative, Presentation mode
+retries that canvas at service-native `full`/`max`. The inventory then records
+both the failed requested URL/profile and the exact fallback URL/profile that
+supplied the cached bytes.
 
 Some providers publish a complete facsimile as individual Image API services
 without a Presentation manifest. In that case, pass the official whole-

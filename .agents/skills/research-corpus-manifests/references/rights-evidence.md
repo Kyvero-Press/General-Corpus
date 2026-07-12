@@ -89,6 +89,10 @@ Retain the original Presentation manifest even when retrieval must percent-
 encode literal spaces in provider service URLs. Do not force an upscale of
 narrow canvases: use their native `full`/`max` response and preserve mixed
 effective request profiles in the bundle inventory.
+When a provider rejects a plausible derivative for an individual canvas, keep
+Presentation-manifest mode and retry that canvas at service-native size. Audit
+both the requested and successful exact URLs in the inventory rather than
+inventing a separate image list merely to work around the service failure.
 
 If the provider publishes every Image API surface but no Presentation
 manifest, do not invent canvases or downgrade an obtainable whole codex to a

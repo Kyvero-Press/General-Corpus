@@ -7,6 +7,7 @@ import unittest
 import zipfile
 from pathlib import Path
 from unittest import mock
+from urllib.error import HTTPError
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -265,6 +266,52 @@ class IiifBundleCacheTests(unittest.TestCase):
             "https://example.test/image/2/full/1600,/0/default.jpg",
             sources[1]["image_url"],
         )
+
+    def test_failed_derivative_falls_back_to_native_service_size(self) -> None:
+        manifest_url = "https://example.test/manifest"
+        manifest = iiif_v2_manifest()
+        canvases = manifest["sequences"][0]["canvases"]  # type: ignore[index]
+        del canvases[1:]
+        canvases[0]["width"] = 2263
+        primary_url = "https://example.test/image/1/full/1200,/0/default.jpg"
+        fallback_url = "https://example.test/image/1/full/full/0/default.jpg"
+
+        def fake_urlopen(request: object, **_kwargs: object) -> Response:
+            url = request.full_url  # type: ignore[attr-defined]
+            if url == manifest_url:
+                return Response(json.dumps(manifest).encode("utf-8"))
+            if url == primary_url:
+                raise HTTPError(url, 403, "unsupported derivative", None, None)
+            self.assertEqual(fallback_url, url)
+            return Response(b"\xff\xd8\xff\xe0native-image")
+
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(
+            cache_iiif_bundle,
+            "urlopen",
+            side_effect=fake_urlopen,
+        ):
+            root = Path(directory)
+            cache_iiif_bundle.bundle(
+                repo_root=root,
+                work_id="TestWork",
+                source_url=manifest_url,
+                filename="fallback.zip",
+                label="Fallback bundle",
+                coverage="complete",
+                image_size="1200,",
+                image_format="jpg",
+                timeout=10,
+                retries=0,
+                force=False,
+            )
+            with zipfile.ZipFile(root / "source-cache/TestWork/fallback.zip") as archive:
+                inventory = json.loads(archive.read("inventory.json"))
+
+        item = inventory["items"][0]
+        self.assertEqual(fallback_url, item["image_url"])
+        self.assertEqual("full", item["image_request_size"])
+        self.assertEqual(primary_url, item["requested_image_url"])
+        self.assertEqual("1200,", item["requested_image_request_size"])
 
     def test_work_portion_requires_label_and_locator(self) -> None:
         args = cache_iiif_bundle.parser().parse_args([

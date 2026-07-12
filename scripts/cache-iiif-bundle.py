@@ -85,7 +85,12 @@ def fetch_bytes(url: str, *, timeout: float, retries: int) -> bytes:
             if not payload:
                 raise BundleError(f"empty response from {url}")
             return payload
-        except (HTTPError, URLError, TimeoutError, OSError, BundleError) as exc:
+        except HTTPError as exc:
+            exc.close()
+            last_error = exc
+            if attempt < retries:
+                time.sleep(min(2**attempt, 8))
+        except (URLError, TimeoutError, OSError, BundleError) as exc:
             last_error = exc
             if attempt < retries:
                 time.sleep(min(2**attempt, 8))
@@ -262,16 +267,25 @@ def extract_canvas_sources(
         canvas_url = canvas.get("id") or canvas.get("@id")
         if not isinstance(canvas_url, str) or not canvas_url:
             raise BundleError(f"canvas {index} has no identifier URL")
-        sources.append(
-            {
-                "index": index,
-                "label": _label(canvas.get("label"), f"Canvas {index}"),
-                "canvas_url": normalize_provider_url(canvas_url),
-                "image_url": normalize_provider_url(image_url),
-                "image_request_size": request_size,
-                "presentation_version": presentation_version,
-            }
-        )
+        source = {
+            "index": index,
+            "label": _label(canvas.get("label"), f"Canvas {index}"),
+            "canvas_url": normalize_provider_url(canvas_url),
+            "image_url": normalize_provider_url(image_url),
+            "image_request_size": request_size,
+            "presentation_version": presentation_version,
+        }
+        if image_size is not None and request_size == image_size:
+            fallback_url, fallback_size = _image_url(
+                body,
+                image_size=None,
+                image_format=image_format,
+            )
+            fallback_url = normalize_provider_url(fallback_url)
+            if fallback_url != source["image_url"]:
+                source["fallback_image_url"] = fallback_url
+                source["fallback_image_request_size"] = fallback_size
+        sources.append(source)
     return sources
 
 
@@ -366,7 +380,12 @@ def _download_to(
             os.replace(temp_path, destination)
             temp_path = None
             return
-        except (HTTPError, URLError, TimeoutError, OSError, BundleError) as exc:
+        except HTTPError as exc:
+            exc.close()
+            last_error = exc
+            if attempt < retries:
+                time.sleep(min(2**attempt, 8))
+        except (URLError, TimeoutError, OSError, BundleError) as exc:
             last_error = exc
             if attempt < retries:
                 time.sleep(min(2**attempt, 8))
@@ -504,11 +523,25 @@ def bundle(
         staged_image = staging / member_path
         staged_url = staged_image.with_suffix(f"{staged_image.suffix}.source-url")
         staged_image.parent.mkdir(parents=True, exist_ok=True)
-        staged_matches = (
-            staged_image.exists()
-            and staged_url.is_file()
-            and staged_url.read_text(encoding="utf-8").strip() == source["image_url"]
+        candidates = [
+            (source["image_url"], source["image_request_size"]),
+        ]
+        if source.get("fallback_image_url"):
+            candidates.append(
+                (
+                    source["fallback_image_url"],
+                    source["fallback_image_request_size"],
+                )
+            )
+        staged_source_url = (
+            staged_url.read_text(encoding="utf-8").strip() if staged_url.is_file() else None
         )
+        staged_candidate = next(
+            (candidate for candidate in candidates if candidate[0] == staged_source_url),
+            None,
+        )
+        staged_matches = staged_image.exists() and staged_candidate is not None
+        actual_url, actual_request_size = staged_candidate or candidates[0]
         if not staged_matches:
             staged_image.unlink(missing_ok=True)
             staged_url.unlink(missing_ok=True)
@@ -521,15 +554,40 @@ def bundle(
                 _verify_image(reusable, image_format)
                 shutil.copyfile(reusable, staged_image)
             else:
-                _download_to(
-                    source["image_url"],
-                    staged_image,
-                    timeout=timeout,
-                    retries=retries,
-                )
-            staged_url.write_text(f"{source['image_url']}\n", encoding="utf-8")
+                last_error: BundleError | None = None
+                for candidate_url, candidate_size in candidates:
+                    try:
+                        _download_to(
+                            candidate_url,
+                            staged_image,
+                            timeout=timeout,
+                            retries=retries,
+                        )
+                        actual_url = candidate_url
+                        actual_request_size = candidate_size
+                        break
+                    except BundleError as exc:
+                        last_error = exc
+                else:
+                    assert last_error is not None
+                    raise last_error
+            staged_url.write_text(f"{actual_url}\n", encoding="utf-8")
         _verify_image(staged_image, image_format)
-        public_source = {key: value for key, value in source.items() if key != "reuse_path"}
+        public_source = {
+            key: value
+            for key, value in source.items()
+            if key
+            not in {
+                "reuse_path",
+                "fallback_image_url",
+                "fallback_image_request_size",
+            }
+        }
+        if actual_url != source["image_url"]:
+            public_source["requested_image_url"] = source["image_url"]
+            public_source["requested_image_request_size"] = source["image_request_size"]
+            public_source["image_url"] = actual_url
+            public_source["image_request_size"] = actual_request_size
         return {
             **public_source,
             "member_path": member_path,
