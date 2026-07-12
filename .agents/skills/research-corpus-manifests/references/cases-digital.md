@@ -50,6 +50,13 @@ Digital Bodleian exposes two Junius 1 objects, but only one has the complete
 start/end coverage, and item metadata before calling an object a complete
 facsimile.
 
+Image-object availability can change. A current official catalog TEI record
+may link a newly published complete IIIF object while an older slide selection
+remains discoverable. Model both digital objects separately, re-audit their
+inventories and work overlap, and retire the dated whole-object negative; never
+let the older partial selection conceal or stand in for the newer complete
+surrogate.
+
 For IIIF Image API width requests, preserve the width-only comma in forms such
 as `1800,`. A bare `1800` can be interpreted differently or redirected to the
 native full image by some services. After retrieval, inspect the exact request
