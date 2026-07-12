@@ -1,0 +1,402 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00063",
+  "work_id": "CME00063",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00063",
+    "unit_type": "edited_selection",
+    "label": "Nachträge zu den Legenden (CME00063 selected serial blocks)",
+    "scope_note": "This record describes the University of Michigan/CME selection assembled from five independently published Carl Horstmann installments in Archiv volumes 62, 68, 74, 79, and 80. It is not one medieval work, one codex, or the complete serialized Nachträge sequence: the encoded portion of volume 68 omits an earlier continuation printed in that volume. Five serial parent blocks and twenty-seven leaf-level edited witness streams are therefore cataloged explicitly."
+  },
+  "catalog_summary": {
+    "title": "Nachträge zu den Legenden",
+    "author": "Anonymous medieval authors; John Lydgate (calendar attributed)",
+    "editor": "Carl Horstmann",
+    "date": "late thirteenth to fifteenth century texts; selected editions published 1879–1888",
+    "region": "England and Scotland, with part-specific dialect regions",
+    "genres": ["Hagiography", "Devotional literature", "Biblical and apocryphal narrative", "Romance", "Exemplum", "Verse calendar and prayer"],
+    "form": "mixed",
+    "language_codes": ["enm", "lat", "xno", "deu"],
+    "tags": ["hagiography", "religion", "devotional", "apocrypha", "biblical", "legend", "romance", "exemplum", "death", "hell", "calendar", "manuscript-versions", "serial-selection", "textual-criticism", "middle-english", "latin", "anglo-norman"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00063", "uri": "https://name.umdl.umich.edu/CME00063"},
+    {"scheme": "General Corpus work ID", "value": "CME00063"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Nachträge zu den Legenden",
+      "language": "deu",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-umich", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "title:translated",
+      "type": "translated",
+      "value": "Supplements to the Legends",
+      "language": "eng",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]},
+      "notes": ["A supplied English gloss, not a title printed by Horstmann."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:anonymous-medieval-authors", "type": "collective", "name": "Anonymous medieval authors", "notes": ["A cataloging collective for separately transmitted anonymous components; it does not imply common authorship."]},
+    {"id": "agent:john-lydgate", "type": "person", "name": "John Lydgate", "identifiers": [{"scheme": "VIAF", "value": "12321286", "uri": "https://viaf.org/viaf/12321286"}]},
+    {"id": "agent:carl-horstmann", "type": "person", "name": "Carl Horstmann", "alternate_names": ["C. Horstmann"]},
+    {"id": "agent:eugen-koelbing", "type": "person", "name": "Eugen Kölbing", "alternate_names": ["E. Kölbing"]},
+    {"id": "agent:frederick-furnivall", "type": "person", "name": "Frederick James Furnivall", "alternate_names": ["F. J. Furnivall"]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous",
+      "agent_id": "agent:anonymous-medieval-authors",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:alexius", "part:eleven-pains", "part:susanna-cotton", "part:erasmus", "part:robert-ii49", "part:robert-caius", "part:robert-ff238", "part:gospel-nicodemus", "part:childhood-jesus", "part:susanna-hm114", "part:adam-bodley596", "part:adam-harley4775", "part:margaret", "part:adultery", "part:incest-daughter", "part:charter-vernon", "part:charter-harley", "part:three-messengers", "part:all-saints-souls", "part:resurrection", "part:mother-seven", "part:lamentation", "part:vita-adae-latin", "part:ligno-crucis"], "description": "All medieval components except the three calendar witness streams attributed to John Lydgate."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+      "notes": ["The Alexius section is labeled by Horstmann as from 'Barbour's' legendary, but modern cataloging should not convert that collection label into secure authorship by John Barbour."]
+    },
+    {
+      "id": "responsibility:lydgate",
+      "agent_id": "agent:john-lydgate",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"], "description": "The three separately printed witness versions of A Kalendare."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:lydgate-bl"]},
+      "notes": ["The current British Library record describes the Harley copy as attributed to Lydgate; Horstmann presents the attribution more directly."]
+    },
+    {
+      "id": "responsibility:horstmann-editor",
+      "agent_id": "agent:carl-horstmann",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "All five encoded journal installments and their apparatus."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:linked-umich", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "responsibility:horstmann-compiler",
+      "agent_id": "agent:carl-horstmann",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The heterogeneous medieval texts and witness versions gathered under the recurring Nachträge title."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "responsibility:koelbing-transcriber",
+      "agent_id": "agent:eugen-koelbing",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:childhood-jesus", "part:susanna-hm114"], "description": "Transcripts of BL Add MS 31042 and former Cheltenham/Phillipps 8252 supplied to Horstmann."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "responsibility:furnivall-transcriber",
+      "agent_id": "agent:frederick-furnivall",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:adam-bodley596"], "description": "Transcript of the first Life of Adam version supplied to Horstmann."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:medieval-components",
+      "type": "composition",
+      "display": "chiefly late thirteenth through fifteenth century; part-specific dates differ",
+      "normalized": {"not_before": 1250, "not_after": 1500},
+      "scope": {"kind": "part", "part_ids": ["part:alexius", "part:eleven-pains", "part:susanna-cotton", "part:erasmus", "part:robert-ii49", "part:robert-caius", "part:robert-ff238", "part:gospel-nicodemus", "part:childhood-jesus", "part:susanna-hm114", "part:adam-bodley596", "part:adam-harley4775", "part:margaret", "part:adultery", "part:incest-daughter", "part:charter-vernon", "part:charter-harley", "part:three-messengers", "part:all-saints-souls", "part:resurrection", "part:mother-seven", "part:lamentation", "part:vita-adae-latin", "part:ligno-crucis", "part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"], "description": "Broad cataloging envelope for the medieval texts, not a single composition date."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:robert-dmr", "evidence:metrical-paraphrase-mets"]},
+      "notes": ["Witness production, composition, revision, and the nineteenth-century publication dates are separate layers."]
+    },
+    {
+      "id": "date:robert",
+      "type": "composition",
+      "display": "late fourteenth century",
+      "normalized": {"not_before": 1375, "not_after": 1400},
+      "scope": {"kind": "part", "part_ids": ["part:robert-ii49", "part:robert-caius", "part:robert-ff238"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:robert-dmr"]}
+    },
+    {
+      "id": "date:mother-seven",
+      "type": "composition",
+      "display": "about 1400–1410 for the Middle English Metrical Paraphrase",
+      "normalized": {"not_before": 1400, "not_after": 1410},
+      "scope": {"kind": "part", "part_ids": ["part:mother-seven"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metrical-paraphrase-mets"]}
+    },
+    {
+      "id": "date:serial-publication",
+      "type": "first_publication",
+      "display": "1879, 1882, 1885, 1887, and 1888",
+      "normalized": {"not_before": 1879, "not_after": 1888},
+      "scope": {"kind": "whole", "description": "Publication dates of the five selected Horstmann installments."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:linked-edition-scans", "evidence:linked-umich"]}
+    }
+  ],
+  "places": [
+    {"id": "place:scotland", "label": "Scotland", "kind": "country"},
+    {"id": "place:northern-england", "label": "Northern England", "kind": "dialect_region"},
+    {"id": "place:southeast-midlands", "label": "South-East Midlands", "kind": "dialect_region"},
+    {"id": "place:west-midlands", "label": "West Midlands", "kind": "dialect_region"},
+    {"id": "place:oxford", "label": "Oxford", "kind": "dialect_region"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:alexius-scots",
+      "place_id": "place:scotland",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:alexius"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml"]},
+      "notes": ["Horstmann labels the edited witness language Altschottisch; this is a dialect assertion about that textual witness, not the codex's present location."]
+    },
+    {
+      "id": "place:northern-components",
+      "place_id": "place:northern-england",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:childhood-jesus", "part:gospel-nicodemus", "part:mother-seven"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:metrical-paraphrase-mets"]}
+    },
+    {
+      "id": "place:robert-southeast-midlands",
+      "place_id": "place:southeast-midlands",
+      "type": "place_of_composition",
+      "scope": {"kind": "part", "part_ids": ["part:robert-ii49", "part:robert-caius", "part:robert-ff238"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:robert-dmr"]}
+    },
+    {
+      "id": "place:messengers-west-midlands",
+      "place_id": "place:west-midlands",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:three-messengers"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:three-messengers-mets"]}
+    },
+    {
+      "id": "place:calendar-oxford",
+      "place_id": "place:oxford",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:calendar-rawlinson"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml"]},
+      "notes": ["Horstmann describes the Rawlinson witness as in the dialect of Oxford; this does not establish the calendar's original place of composition."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:enm",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:alexius", "part:eleven-pains", "part:susanna-cotton", "part:erasmus", "part:robert-ii49", "part:robert-caius", "part:robert-ff238", "part:gospel-nicodemus", "part:childhood-jesus", "part:susanna-hm114", "part:adam-bodley596", "part:adam-harley4775", "part:margaret", "part:adultery", "part:incest-daughter", "part:charter-vernon", "part:charter-harley", "part:three-messengers", "part:all-saints-souls", "part:resurrection", "part:mother-seven", "part:lamentation", "part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"], "description": "Most medieval edited texts and all three calendar streams."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "language:lat",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "secondary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:vita-adae-latin", "part:ligno-crucis"], "description": "Two separately printed Latin prose texts, plus Latin headings and quotations elsewhere."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}
+    },
+    {
+      "id": "language:xno",
+      "code": "xno",
+      "label": "Anglo-Norman French",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:eleven-pains"], "description": "The opening sixteen lines before the Middle English text."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    },
+    {
+      "id": "language:deu",
+      "code": "deu",
+      "label": "German",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Titles, introductions, source notes, and textual apparatus."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole",
+      "value": "mixed",
+      "scope": {"kind": "whole", "description": "Twenty-two verse witness streams and five prose witness streams."},
+      "description": "A mixed-form edited selection, not an intrinsically mixed single medieval work.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:xml-computation"]}
+    },
+    {
+      "id": "form:verse-streams",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:alexius", "part:eleven-pains", "part:susanna-cotton", "part:erasmus", "part:robert-ii49", "part:robert-caius", "part:robert-ff238", "part:gospel-nicodemus", "part:childhood-jesus", "part:susanna-hm114", "part:margaret", "part:adultery", "part:incest-daughter", "part:charter-vernon", "part:charter-harley", "part:three-messengers", "part:all-saints-souls", "part:resurrection", "part:mother-seven", "part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}
+    },
+    {
+      "id": "form:prose-streams",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:adam-bodley596", "part:adam-harley4775", "part:lamentation", "part:vita-adae-latin", "part:ligno-crucis"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:hagiography", "term": "hagiography", "label": "Hagiography", "scheme": "General Corpus local genre", "primary": true, "scope": {"kind": "part", "part_ids": ["part:alexius", "part:erasmus", "part:margaret", "part:all-saints-souls", "part:resurrection"], "description": "Saints' lives and feast legends across several blocks."}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}},
+    {"id": "genre:devotional", "term": "devotional-literature", "label": "Devotional literature", "scheme": "General Corpus local genre", "scope": {"kind": "part", "part_ids": ["part:eleven-pains", "part:gospel-nicodemus", "part:three-messengers", "part:all-saints-souls", "part:lamentation", "part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"], "description": "Visions, death poems, Marian lament, calendars, and salvation narratives."}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}},
+    {"id": "genre:apocrypha", "term": "biblical-apocrypha", "label": "Biblical and apocryphal narrative", "scheme": "General Corpus local genre", "scope": {"kind": "part", "part_ids": ["part:susanna-cotton", "part:gospel-nicodemus", "part:childhood-jesus", "part:susanna-hm114", "part:mother-seven", "part:resurrection", "part:vita-adae-latin", "part:ligno-crucis"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}},
+    {"id": "genre:romance", "term": "romance", "label": "Romance", "scheme": "General Corpus local genre", "scope": {"kind": "part", "part_ids": ["part:robert-ii49", "part:robert-caius", "part:robert-ff238", "part:resurrection"]}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:robert-dmr"]}},
+    {"id": "genre:exemplum", "term": "exemplum", "label": "Exemplum", "scheme": "General Corpus local genre", "scope": {"kind": "part", "part_ids": ["part:adultery", "part:incest-daughter", "part:three-messengers"], "description": "Exempla and closely related moral tales."}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:three-messengers-mets"]}},
+    {"id": "genre:calendar", "term": "verse-calendar", "label": "Verse calendar and prayer", "scheme": "General Corpus local genre", "scope": {"kind": "part", "part_ids": ["part:calendar-harley", "part:calendar-douce", "part:calendar-rawlinson"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:lydgate-bl"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:saints", "term": "saints", "label": "Saints and feast days", "scheme": "General Corpus local subject", "scope": {"kind": "whole", "description": "Dominant but not exclusive subject."}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}},
+    {"id": "subject:death", "term": "death-and-afterlife", "label": "Death, hell, judgment, and the afterlife", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:eleven-pains", "part:three-messengers", "part:all-saints-souls"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}},
+    {"id": "subject:adam", "term": "adam-and-eve", "label": "Adam and Eve traditions", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:adam-bodley596", "part:adam-harley4775", "part:vita-adae-latin", "part:ligno-crucis"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}},
+    {"id": "subject:witness-versions", "term": "manuscript-versions", "label": "Parallel manuscript versions and textual transmission", "scheme": "General Corpus local subject", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}}
+  ],
+  "tags": ["hagiography", "religion", "devotional", "apocrypha", "biblical", "legend", "romance", "exemplum", "death", "hell", "calendar", "manuscript-versions", "serial-selection", "textual-criticism", "middle-english", "latin", "anglo-norman"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A selective digital compilation of five Carl Horstmann journal installments presenting saints' lives, biblical and apocryphal narratives, moral and devotional poems, three versions of Robert of Sicily, two Long Charter versions, two English and two Latin Adam traditions, and three witness versions of an attributed Lydgate calendar. The texts come from more than twenty physical manuscripts and several intermediary scholarly transcripts.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]
+    },
+    {
+      "id": "summary:boundary",
+      "type": "cataloging_note",
+      "value": "The recurring journal title does not establish one medieval work. The first XML DIV1 joins the 1879 volume-62 installment to only the final 1882 volume-68 installment; the earlier continuation on volume-68 p. 52 is not encoded. The twenty-seven counted leaf streams exclude Add MS 22283 variant apparatus while retaining independently printed witness versions.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:xml-computation"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 27,
+    "sections": 60,
+    "prose_only_items": 5,
+    "verse_only_items": 22,
+    "mixed_items": 0,
+    "verse_groups": 798,
+    "verse_lines": 9849,
+    "description": "Cataloger count of twenty-seven independently printed witness streams nested under five serial blocks. The XML contains 4 DIV1, 26 DIV2, and 30 DIV3 elements (60 structural divisions), 798 LG elements, and 9,849 L elements. These are encoding metrics: variant apparatus, parallel-column serialization, prose tables, and the three interleaved calendar streams mean raw XML totals are not canonical line or stanza counts for each intellectual work.",
+    "evidence_ids": ["evidence:xml-computation", "evidence:repo-xml"]
+  },
+  "content_structure_status": "partial",
+  "content_parts": [
+    {"id": "part:archiv62", "parent_id": null, "sequence": 1, "type": "section", "label": "Nachträge zu den Legenden, Archiv 62 (1879)", "summary": "First selected Horstmann installment: Alexius, Eleven Pains, an incomplete Cotton Susanna, Erasmus, and three complete Robert of Sicily witness versions.", "item_count": null, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "397–431"}, {"scheme": "XML structure", "value": "DIV1[1]/DIV2[1–5]"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:alexius", "parent_id": "part:archiv62", "sequence": 1, "type": "work", "label": "Alexius from the Scottish Legendary", "summary": "A Scots verse life of Saint Alexius, printed from CUL MS Gg.2.6.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "397–402"}, {"lineage_entity_id": "witness:cul:Gg-2-6", "scheme": "folios", "value": "163r–169r; last leaf shared with next item"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:eleven-pains", "parent_id": "part:archiv62", "sequence": 2, "type": "work", "label": "Les ounsse peines de enfer / The Eleven Pains of Hell", "summary": "A sixteen-line Anglo-Norman opening followed by a Middle English vision of hell, printed from MS Digby 86.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "403–406"}, {"lineage_entity_id": "witness:bodleian:Digby-86", "scheme": "folios", "value": "132r–134v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:susanna-cotton", "parent_id": "part:archiv62", "sequence": 3, "type": "fragment", "label": "The Pistill of Susan (Cotton Caligula A II version)", "summary": "An imperfect alliterative Susanna version whose opening 104 lines are lost; Add MS 22283 variants are apparatus rather than a separately counted stream.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "407–413"}, {"lineage_entity_id": "witness:bl:Cotton-Caligula-A-II", "scheme": "folios", "value": "current ff. 3r–5r; Horstmann old fol. 1"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:erasmus", "parent_id": "part:archiv62", "sequence": 4, "type": "work", "label": "Saint Erasmus", "summary": "The older complete Erasmus verse witness printed from CUL MS Dd.1.1, with unresolved modern/legacy foliation crosswalks.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "414–416"}, {"lineage_entity_id": "witness:cul:Dd-1-1", "scheme": "folios and pagination", "value": "scholarly ff. 295r–296v; 1856 catalog manuscript pp. 537–540; alternate handlist ff. 258r–259v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:robert-ii49", "parent_id": "part:archiv62", "sequence": 5, "type": "work", "label": "Robert of Sicily (CUL MS Ii.4.9 version)", "summary": "The first of three complete witness versions printed separately by Horstmann.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "417–421"}, {"lineage_entity_id": "witness:cul:Ii-4-9", "scheme": "folios", "value": "87v–93v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:robert-dmr"]},
+    {"id": "part:robert-caius", "parent_id": "part:archiv62", "sequence": 6, "type": "work", "label": "Robert of Sicily (Caius MS 174/95 version)", "summary": "The second complete witness version, from Gonville and Caius College MS 174/95.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "422–426"}, {"lineage_entity_id": "witness:caius:174-95", "scheme": "manuscript pages", "value": "456–468"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:robert-dmr"]},
+    {"id": "part:robert-ff238", "parent_id": "part:archiv62", "sequence": 7, "type": "work", "label": "Robert of Sicily (CUL MS Ff.2.38 version)", "summary": "The third complete witness version; Horstmann's legacy fol. 93ff. conflicts with the modern ff. 254r–257v locus.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "scheme": "printed pages", "value": "427–431"}, {"lineage_entity_id": "witness:cul:Ff-2-38", "scheme": "folios", "value": "modern ff. 254r–257v; Horstmann fol. 93ff."}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:robert-dmr"]},
+
+    {"id": "part:archiv68", "parent_id": null, "sequence": 2, "type": "section", "label": "Nachträge zu den Legenden (Schluß), Archiv 68 (1882)", "summary": "The encoded final installment from volume 68, containing the Sion witness of the Gospel of Nicodemus; an earlier continuation in the same volume is not encoded.", "item_count": null, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-68-1882", "scheme": "printed pages", "value": "207–224"}, {"scheme": "XML structure", "value": "DIV1[1]/DIV2[6]"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:gospel-nicodemus", "parent_id": "part:archiv68", "sequence": 1, "type": "work", "label": "Gospel of Nicodemus (Sion version)", "summary": "A northern Middle English verse Gospel of Nicodemus printed from former Sion College MS L40.2/E25, now at Lambeth Palace Library.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-68-1882", "scheme": "printed pages", "value": "207–224"}, {"lineage_entity_id": "witness:lambeth:Sion-L40-2-E25", "scheme": "folios", "value": "13r–38v; Horstmann 13–39"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+
+    {"id": "part:archiv74", "parent_id": null, "sequence": 3, "type": "section", "label": "Nachträge zu den Legenden, Archiv 74 (1885)", "summary": "A Childhood of Jesus, a Susanna witness, and two prose Life of Adam versions, including sections mediated by transcripts supplied to Horstmann.", "item_count": null, "textual_form": "mixed", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "scheme": "printed pages", "value": "327–365"}, {"scheme": "XML structure", "value": "DIV1[2]"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:childhood-jesus", "parent_id": "part:archiv74", "sequence": 1, "type": "work", "label": "Childhood of Jesus", "summary": "A northern verse childhood/apocryphal narrative printed from Kölbing's transcript of BL Add MS 31042.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "scheme": "printed pages", "value": "327–339"}, {"lineage_entity_id": "witness:bl:Add-31042", "scheme": "folios", "value": "163v–168v; ending inferred from next item at f. 169"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:susanna-hm114", "parent_id": "part:archiv74", "sequence": 2, "type": "work", "label": "Susanna (Huntington HM 114 version)", "summary": "A separately printed Susanna witness from former Cheltenham/Phillipps 8252, mediated by Kölbing's transcript.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "scheme": "printed pages", "value": "340–344"}, {"lineage_entity_id": "witness:huntington:HM-114", "scheme": "folios", "value": "184v–190v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:adam-bodley596", "parent_id": "part:archiv74", "sequence": 3, "type": "work", "label": "Life of Adam (Bodley 596 version)", "summary": "The first prose Adam version, printed through a Furnivall transcript; its terminal folio requires reconciliation.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "scheme": "printed pages", "value": "345–353"}, {"lineage_entity_id": "witness:bodleian:Bodley-596", "scheme": "folios", "value": "catalog ff. 1r–11v; XML milestones continue to f. 12"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:adam-harley4775", "parent_id": "part:archiv74", "sequence": 4, "type": "work", "label": "Life of Adam and Eve (Harley 4775 Gilte Legende version)", "summary": "The second prose version, incorporated into a Gilte Legende manuscript.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "scheme": "printed pages", "value": "354–365"}, {"lineage_entity_id": "witness:bl:Harley-4775", "scheme": "folios", "value": "scholarly ff. 258v–264r; cataloged Gilte Legende ends f. 262v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+
+    {"id": "part:archiv79", "parent_id": null, "sequence": 4, "type": "section", "label": "Nachträge zu den Legenden, Archiv 79 (1887)", "summary": "Twelve edited streams: saints' lives, moral tales, two parallel Long Charter versions, death and feast poems, an Old Testament episode, a Marian lament, and two Latin Adam/cross texts.", "item_count": null, "textual_form": "mixed", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "411–470"}, {"scheme": "XML structure", "value": "DIV1[3]"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:margaret", "parent_id": "part:archiv79", "sequence": 1, "type": "work", "label": "Seint Margarete þe holy virgine", "summary": "A younger South English Legendary life of Saint Margaret printed from MS Bodley 779.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "411–419"}, {"lineage_entity_id": "witness:bodleian:Bodley-779", "scheme": "folios", "value": "204v–208r"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:bodley779-linked"]},
+    {"id": "part:adultery", "parent_id": "part:archiv79", "sequence": 2, "type": "work", "label": "Punishment of Adultery", "summary": "A short moral tale printed from MS Rawlinson poetry 118.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "420–421"}, {"lineage_entity_id": "witness:bodleian:Rawl-poet-118", "scheme": "folios", "value": "113v–116r; abbreviated catalog appears to omit leading 11"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:incest-daughter", "parent_id": "part:archiv79", "sequence": 3, "type": "work", "label": "A Tale of an Incestuous Daughter", "summary": "A short moral tale following the adultery poem in MS Rawlinson poetry 118.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "422–424"}, {"lineage_entity_id": "witness:bodleian:Rawl-poet-118", "scheme": "folios", "value": "116r–118v; f. 116r shared with preceding item"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:charter-vernon", "parent_id": "part:archiv79", "sequence": 4, "type": "work", "label": "The Long Charter / Testamentum Christi (Vernon version)", "summary": "The Vernon text printed in parallel columns with the Harley version.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "424–432, parallel columns"}, {"lineage_entity_id": "witness:bodleian:Vernon", "scheme": "folios", "value": "317v–318r; Horstmann 317b"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:charter-harley", "parent_id": "part:archiv79", "sequence": 5, "type": "work", "label": "The Long Charter / Testamentum Christi (Harley 2382 version)", "summary": "The Harley text printed in parallel columns with the Vernon version.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "424–432, parallel columns"}, {"lineage_entity_id": "witness:bl:Harley-2382", "scheme": "folios", "value": "112r–118r"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:three-messengers", "parent_id": "part:archiv79", "sequence": 6, "type": "work", "label": "The Three Messengers of Death", "summary": "A short death poem from the Vernon Manuscript.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "433–434"}, {"lineage_entity_id": "witness:bodleian:Vernon", "scheme": "folios", "value": "297v–298r"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:three-messengers-mets"]},
+    {"id": "part:all-saints-souls", "parent_id": "part:archiv79", "sequence": 7, "type": "work", "label": "The Founding of the Feasts of All Saints and All Souls", "summary": "A corruptly transmitted feast legend printed from MS Ashmole 61.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "435–440"}, {"lineage_entity_id": "witness:bodleian:Ashmole-61", "scheme": "folios", "value": "73r–78v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:resurrection", "parent_id": "part:archiv79", "sequence": 8, "type": "work", "label": "Romance of Christ's Resurrection", "summary": "A unique, disordered, revised, and lacunose verse witness printed from MS Ashmole 61.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "441–447"}, {"lineage_entity_id": "witness:bodleian:Ashmole-61", "scheme": "folios", "value": "138v–144v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:mother-seven", "parent_id": "part:archiv79", "sequence": 9, "type": "fragment", "label": "De matre et VII pueris", "summary": "The mother and seven sons episode at the end of the Middle English Metrical Paraphrase of the Old Testament, printed from Longleat MS 257 through a friend's transcript.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "448–454"}, {"lineage_entity_id": "witness:longleat:MS-257", "scheme": "folios", "value": "209r–212r"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:metrical-paraphrase-mets"]},
+    {"id": "part:lamentation", "parent_id": "part:archiv79", "sequence": 10, "type": "work", "label": "Lamentation of Our Lady", "summary": "A Middle English prose Marian lament from MS Bodley 596.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "455–459"}, {"lineage_entity_id": "witness:bodleian:Bodley-596", "scheme": "folios", "value": "17r–21r"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:vita-adae-latin", "parent_id": "part:archiv79", "sequence": 11, "type": "work", "label": "Vita prothoplasti Adae", "summary": "A Latin prose Life of Adam printed directly from Queen's College Oxford MS 213; Horstmann's proposed ancestry for the English versions remains a historical editorial claim.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "460–465"}, {"lineage_entity_id": "witness:queens-oxford:MS-213", "scheme": "folios", "value": "1r–7v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:queen213-linked"]},
+    {"id": "part:ligno-crucis", "parent_id": "part:archiv79", "sequence": 12, "type": "work", "label": "De ligno sanctae crucis", "summary": "A Latin prose legend of the wood of the Cross printed in sequence with the Queen's MS 213 Adam text; the exact manuscript endpoint remains to be confirmed.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "scheme": "printed pages", "value": "466–470"}, {"lineage_entity_id": "witness:queens-oxford:MS-213", "scheme": "folios", "value": "begins f. 8; exact endpoint unresolved"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:queen213-linked"]},
+
+    {"id": "part:archiv80", "parent_id": null, "sequence": 5, "type": "section", "label": "Nachträge zu den Legenden, Archiv 80 (1888)", "summary": "Three separately serialized manuscript versions of the attributed Lydgate verse calendar, physically interleaved in the printed article.", "item_count": null, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-80-1888", "scheme": "printed pages", "value": "114–135"}, {"scheme": "XML structure", "value": "DIV1[4]"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:calendar-harley", "parent_id": "part:archiv80", "sequence": 1, "type": "fragment", "label": "A Kalendare (Harley 4011 version)", "summary": "The Harley reworking, lacking January and February because its opening leaf is missing.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-80-1888", "scheme": "printed pages", "value": "even pages 118–134"}, {"lineage_entity_id": "witness:bl:Harley-4011", "scheme": "folios", "value": "138r–142v; March–December only"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans", "evidence:lydgate-bl"]},
+    {"id": "part:calendar-douce", "parent_id": "part:archiv80", "sequence": 2, "type": "work", "label": "A Kalendare (Douce 322 version)", "summary": "Horstmann's preferred of the three surviving witness texts, serialized as January–February and March–December streams around the other versions.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-80-1888", "scheme": "printed pages", "value": "pp. 114, 116, and odd pages 119–135"}, {"lineage_entity_id": "witness:bodleian:Douce-322", "scheme": "folios", "value": "2r–7v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "part:calendar-rawlinson", "parent_id": "part:archiv80", "sequence": 3, "type": "work", "label": "A Kalendare (Rawlinson B. 408 version)", "summary": "The Oxford-dialect witness, serialized separately from the Douce text despite sharing the article's odd printed pages.", "item_count": 1, "textual_form": "verse", "locators": [{"lineage_entity_id": "edition:horstmann:nachtraege-80-1888", "scheme": "printed pages", "value": "pp. 115, 117, and repeated odd pages 119–135"}, {"lineage_entity_id": "witness:bodleian:Rawl-B-408", "scheme": "folios", "value": "7r–12v"}], "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]}
+  ],
+  "related_works": [
+    {"id": "related:golden-legend", "title": "Legenda aurea / The Golden Legend", "relation": "related_to", "evidence_ids": ["evidence:repo-xml"], "notes": ["Horstmann invokes the Legenda aurea for Alexius and the Gilte Legende Adam tradition; no single physical Latin exemplar is established for the entire selection."]},
+    {"id": "related:daniel-susanna", "title": "Daniel 13 / the story of Susanna", "relation": "adaptation_of", "evidence_ids": ["evidence:repo-xml"], "notes": ["Source tradition for the two independently printed Middle English Susanna witnesses."]},
+    {"id": "related:gospel-nicodemus", "title": "Evangelium Nicodemi", "relation": "version_of", "evidence_ids": ["evidence:repo-xml"]},
+    {"id": "related:metrical-paraphrase", "title": "Middle English Metrical Paraphrase of the Old Testament", "relation": "contained_in", "evidence_ids": ["evidence:metrical-paraphrase-mets"], "notes": ["De matre et VII pueris is the final episode, not an independent codex item."]},
+    {"id": "related:vita-adae", "title": "Vita Adae et Evae traditions", "relation": "related_to", "evidence_ids": ["evidence:repo-xml"], "notes": ["The two English prose versions and two Latin texts are related but should not be collapsed into one directly evidenced line of descent."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00063",
+    "manifest_path": "manifests/lineage/works/CME00063.json",
+    "bindings": [
+      {"metadata_target": "work:CME00063", "lineage_entity_id": "artifact:general-corpus:CME00063", "role": "repository_representation"},
+      {"metadata_target": "work:CME00063", "lineage_entity_id": "encoding:umich-cme:CME00063", "role": "digital_encoding"},
+      {"metadata_target": "part:archiv62", "lineage_entity_id": "edition:horstmann:nachtraege-62-1879", "role": "source_edition"},
+      {"metadata_target": "part:archiv68", "lineage_entity_id": "edition:horstmann:nachtraege-68-1882", "role": "source_edition"},
+      {"metadata_target": "part:archiv74", "lineage_entity_id": "edition:horstmann:nachtraege-74-1885", "role": "source_edition"},
+      {"metadata_target": "part:archiv79", "lineage_entity_id": "edition:horstmann:nachtraege-79-1887", "role": "source_edition"},
+      {"metadata_target": "part:archiv80", "lineage_entity_id": "edition:horstmann:nachtraege-80-1888", "role": "source_edition"},
+      {"metadata_target": "part:alexius", "lineage_entity_id": "witness:cul:Gg-2-6", "role": "source_witness"},
+      {"metadata_target": "part:eleven-pains", "lineage_entity_id": "witness:bodleian:Digby-86", "role": "source_witness"},
+      {"metadata_target": "part:susanna-cotton", "lineage_entity_id": "witness:bl:Cotton-Caligula-A-II", "role": "source_witness"},
+      {"metadata_target": "part:erasmus", "lineage_entity_id": "witness:cul:Dd-1-1", "role": "source_witness"},
+      {"metadata_target": "part:robert-ii49", "lineage_entity_id": "witness:cul:Ii-4-9", "role": "source_witness"},
+      {"metadata_target": "part:robert-caius", "lineage_entity_id": "witness:caius:174-95", "role": "source_witness"},
+      {"metadata_target": "part:robert-ff238", "lineage_entity_id": "witness:cul:Ff-2-38", "role": "source_witness"},
+      {"metadata_target": "part:gospel-nicodemus", "lineage_entity_id": "witness:lambeth:Sion-L40-2-E25", "role": "source_witness"},
+      {"metadata_target": "part:childhood-jesus", "lineage_entity_id": "witness:bl:Add-31042", "role": "source_witness"},
+      {"metadata_target": "part:susanna-hm114", "lineage_entity_id": "witness:huntington:HM-114", "role": "source_witness"},
+      {"metadata_target": "part:adam-bodley596", "lineage_entity_id": "witness:bodleian:Bodley-596", "role": "source_witness"},
+      {"metadata_target": "part:adam-harley4775", "lineage_entity_id": "witness:bl:Harley-4775", "role": "source_witness"},
+      {"metadata_target": "part:margaret", "lineage_entity_id": "witness:bodleian:Bodley-779", "role": "source_witness"},
+      {"metadata_target": "part:adultery", "lineage_entity_id": "witness:bodleian:Rawl-poet-118", "role": "source_witness"},
+      {"metadata_target": "part:incest-daughter", "lineage_entity_id": "witness:bodleian:Rawl-poet-118", "role": "source_witness"},
+      {"metadata_target": "part:charter-vernon", "lineage_entity_id": "witness:bodleian:Vernon", "role": "source_witness"},
+      {"metadata_target": "part:charter-harley", "lineage_entity_id": "witness:bl:Harley-2382", "role": "source_witness"},
+      {"metadata_target": "part:three-messengers", "lineage_entity_id": "witness:bodleian:Vernon", "role": "source_witness"},
+      {"metadata_target": "part:all-saints-souls", "lineage_entity_id": "witness:bodleian:Ashmole-61", "role": "source_witness"},
+      {"metadata_target": "part:resurrection", "lineage_entity_id": "witness:bodleian:Ashmole-61", "role": "source_witness"},
+      {"metadata_target": "part:mother-seven", "lineage_entity_id": "witness:longleat:MS-257", "role": "source_witness"},
+      {"metadata_target": "part:lamentation", "lineage_entity_id": "witness:bodleian:Bodley-596", "role": "source_witness"},
+      {"metadata_target": "part:vita-adae-latin", "lineage_entity_id": "witness:queens-oxford:MS-213", "role": "source_witness"},
+      {"metadata_target": "part:ligno-crucis", "lineage_entity_id": "witness:queens-oxford:MS-213", "role": "source_witness"},
+      {"metadata_target": "part:calendar-harley", "lineage_entity_id": "witness:bl:Harley-4011", "role": "source_witness"},
+      {"metadata_target": "part:calendar-douce", "lineage_entity_id": "witness:bodleian:Douce-322", "role": "source_witness"},
+      {"metadata_target": "part:calendar-rawlinson", "lineage_entity_id": "witness:bodleian:Rawl-B-408", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:repo-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_3/CME00063.xml.", "repository_path": "CME/source/CME_phase_3/CME00063.xml", "locator": "TEMPHEAD; IDG; complete BODY", "summary": "Identifies CME00063 and preserves the five selected serial blocks, source headings, texts, witness labels, page and folio milestones, editorial notes, languages, and apparatus.", "accessed_on": "2026-07-12", "sha256": "5f0efe2e6bbf6153d33827b9e2c515b65c6f7e3dc06701ecbb5e8a12ca59b860"},
+    {"id": "evidence:xml-computation", "type": "computational_inspection", "citation": "Reproducible structural audit of CME00063.xml.", "repository_path": "CME/source/CME_phase_3/CME00063.xml", "locator": "ETS/EEBO/TEXT element counts and division tree", "summary": "Counts 4 DIV1, 26 DIV2, 30 DIV3, 798 LG, 9,849 L, 62 P, 193 PB, 2,121 MILESTONE, 556 NOTE, 9,788 italic HI, 12 TABLE, 365 ROW, and 1,825 CELL elements; confirms repeated physical pages in parallel and serialized calendar streams.", "accessed_on": "2026-07-12", "sha256": "5f0efe2e6bbf6153d33827b9e2c515b65c6f7e3dc06701ecbb5e8a12ca59b860"},
+    {"id": "evidence:linked-umich", "type": "linked_manifest_evidence", "citation": "Linked lineage evidence for University of Michigan CME00063.", "url": "https://name.umdl.umich.edu/CME00063", "source_evidence_id": "evidence:umich", "summary": "Supports the public item title, editor attribution, publication range, and encoding identity.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:linked-edition-scans", "type": "linked_manifest_evidence", "citation": "Linked lineage evidence from complete scans of Archiv volumes 62, 68, 74, 79, and 80.", "url": "https://archive.org/details/ArchivFurDasStudiumDerNeuerenSprachen62", "source_evidence_id": "evidence:edition-scans", "summary": "Supports the five independent article identities, exact printed page ranges, source headings, physical parallel-column layout, serial boundary, and publication facts.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:robert-dmr", "type": "scholarly_source", "citation": "Database of Middle English Romance, Robert of Cisyle.", "url": "https://www.middleenglishromance.org.uk/romances/robert-cisyle", "summary": "Supports romance classification, approximate late-fourteenth-century and South-East Midlands composition, the three Horstmann witnesses, and modern Ff.2.38 and Ii.4.9 loci.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:three-messengers-mets", "type": "scholarly_source", "citation": "Middle English Texts Series, The Three Messengers of Death.", "url": "https://metseditions.org/read/p2B7XL8pfjlPmfQ2WhN20GclqYNl7q0b", "summary": "Supports title, West Midlands textual localization, Vernon/Simeon transmission, and modern witness context.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metrical-paraphrase-mets", "type": "scholarly_source", "citation": "Middle English Texts Series, Middle English Metrical Paraphrase of the Old Testament.", "url": "https://metseditions.org/read/07EPX0PhARDHLYgCVmPWFvv2pPBV30", "summary": "Identifies De matre et VII pueris as the closing episode of the larger paraphrase, supports the c. 1400–1410 northern composition, and distinguishes Longleat MS 257 from an independent work witness.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:lydgate-bl", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 4011.", "url": "https://searcharchives.bl.uk/catalog/040-002049848", "locator": "ff. 138r–142v", "summary": "Catalogs A Kalendare as attributed to John Lydgate and supplies the Harley witness locus and current unavailable-image status.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bodley779-linked", "type": "linked_manifest_evidence", "citation": "Linked lineage evidence for MS Bodley 779 and its complete 672-canvas surrogate.", "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_1764", "source_evidence_id": "evidence:bodley779", "summary": "Supports the current shelfmark, second-quarter fifteenth-century witness, complete object, and Margaret mapping at ff. 204v–208r.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:queen213-linked", "type": "linked_manifest_evidence", "citation": "Linked lineage evidence for Queen's College Oxford MS 213.", "url": "https://archive.org/details/cataloguscodicum01coxeuoft/page/n403/mode/2up", "source_evidence_id": "evidence:queens213", "summary": "Supports the 1449 codex, Vita prothoplasti Adae at ff. 1r–7v, and the following item beginning f. 8.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:cataloging-boundary", "question": "Should future cataloging expose each of the twenty-seven witness streams as a first-class child work record in addition to this edited-selection record?", "status": "unresolved", "impact": "medium", "next_steps": ["Assign stable child-work identifiers without implying that every witness version is an independent medieval composition.", "Preserve the five serial blocks as publication containers and the physical witnesses as lineage entities."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:repo-xml", "evidence:linked-edition-scans"]},
+    {"id": "question:composition-dates", "question": "What are the best current composition dates and dialect localizations for every separately transmitted component?", "status": "unresolved", "impact": "medium", "next_steps": ["Research each component against current critical editions and linguistic scholarship.", "Do not infer composition from a witness date or repository location."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:repo-xml", "evidence:robert-dmr", "evidence:metrical-paraphrase-mets"]},
+    {"id": "question:latin-english-adam-descent", "question": "Does Queen's College MS 213 represent the source tradition behind either English Life of Adam version, as Horstmann suggests?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare the English texts with modern Vita Adae scholarship and the Queen's witness.", "Retain the confirmed relation only for Horstmann's separately printed Latin section until textual descent is demonstrated."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:repo-xml", "evidence:queen213-linked"]}
+  ],
+  "notes": [
+    "The metadata intentionally avoids assigning one medieval author, date, region, or form to all components.",
+    "The twenty-seven item count treats separately printed complete or partial witness texts as leaf streams; it excludes Add MS 22283 variant apparatus and contextual comparison witnesses.",
+    "The XML's 193 PB elements exceed the number of physical article pages represented because Archiv 79 prints Long Charter witnesses in parallel and Archiv 80 interleaves three calendar versions; the encoding serializes those streams.",
+    "Horstmann's article in Archiv 80 begins on printed p. 114, despite some later summaries beginning it at p. 115."
+  ]
+}
