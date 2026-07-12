@@ -115,6 +115,12 @@ Whenever possible, open the actual book and inspect:
 - whether a later issue is a reprint, reset, corrected reissue, revision, or
   new edition.
 
+For serial publications, inspect the issue wrapper or issue title page, the
+completed-volume title page, and current catalog metadata independently. They
+may legitimately carry different years, imprints, publishers, or places;
+record each at its own issue/volume/catalog layer instead of forcing one
+synthetic citation.
+
 Scanned-book OCR and inherited TEI division labels can be misleading. Compare
 markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open

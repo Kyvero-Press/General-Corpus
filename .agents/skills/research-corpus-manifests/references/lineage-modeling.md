@@ -67,6 +67,12 @@ passages, or another edition's text, create separately scoped relations for
 the evidenced ranges. Do not describe the composite result as a homogeneous
 transcription from whichever source supplies most pages.
 
+A source-language text printed in parallel for comparison is not necessarily
+the translator's physical exemplar. Model the editor's comparison or
+alignment relation separately and leave the historical exemplar unidentified
+unless transmission evidence connects that exact source object to the
+translation.
+
 ## Parts and shared objects
 
 A codex can contain several works, and an edition can print several witnesses
