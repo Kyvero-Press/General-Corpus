@@ -22,6 +22,11 @@ If foreign-language witnesses were consulted only for notes or specimens,
 scope their `collated_against` relations to that apparatus. They are not base
 witnesses or intrinsic parallel parts of the cataloged work.
 
+An editor can describe or examine a manuscript without using any of its
+readings. If the apparatus never cites that witness's siglum or a supplied
+reading, record `consulted`, not `collated_against`; similarity of arrangement
+to a base witness is not evidence of collation.
+
 When an editor states that an independent manuscript transcript predates a
 prior edition, connect the prior edition with `consulted` at the supported
 scope. Do not make it the transcription source merely because it influenced
