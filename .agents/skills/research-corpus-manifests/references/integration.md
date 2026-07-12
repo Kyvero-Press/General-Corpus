@@ -50,6 +50,11 @@ python3 scripts/create-manifest-research-worktree.py WORK_ID
 ```
 
 The helper sparsely checks out only that work's XML from the CME submodule.
+Ignored `source-cache/` files are local to each worktree. Pass the main
+checkout as the cache helper's `--root`, or hard-link every completed cache
+artifact into the main checkout's `source-cache/WORK_ID/` before integration.
+Verify file counts, inodes, checksums, and main-checkout manifest validation;
+never remove a research worktree while it holds the only copy of a source.
 
 ## Skill update test
 
