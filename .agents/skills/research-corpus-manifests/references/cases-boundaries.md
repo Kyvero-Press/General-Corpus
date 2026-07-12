@@ -58,3 +58,12 @@ A scholarly proposal that a difficult fragment may preserve a related text is
 not a confirmed witness. Model the exact folio with a tentative, scoped
 relation and an open question; do not count the fragment—or its whole host
 codex—in the secure witness set until textual identity is demonstrated.
+
+## Catalog-inferred locus versus written extent: CME00008
+
+A repository TEI record may infer a sole `msItem` locus from the physical
+codex's first and last leaves even when its own collation identifies terminal
+blanks. Preserve that repository assertion with its inference status, then
+use direct editorial or visual evidence to map the narrower written extent of
+the work. Do not silently convert total-object extent into text-bearing
+folios; the complete-facsimile request should still include those blanks.
