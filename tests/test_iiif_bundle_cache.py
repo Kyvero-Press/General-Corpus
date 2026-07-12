@@ -238,6 +238,23 @@ class IiifBundleCacheTests(unittest.TestCase):
             sources[0]["image_url"],
         )
 
+    def test_nonconforming_v2_direct_canvas_sequence_is_fully_enumerated(self) -> None:
+        manifest = iiif_v2_manifest()
+        manifest["sequences"] = manifest["sequences"][0]["canvases"]  # type: ignore[index]
+
+        sources = cache_iiif_bundle.extract_canvas_sources(
+            manifest,
+            image_size="1800,",
+        )
+
+        self.assertEqual(2, len(sources))
+        self.assertEqual("folio 1r", sources[0]["label"])
+        self.assertEqual("folio 2r", sources[1]["label"])
+        self.assertEqual(
+            "https://example.test/image/2/full/1800,/0/default.jpg",
+            sources[1]["image_url"],
+        )
+
     def test_provider_spaces_are_encoded_and_narrow_canvases_are_not_upscaled(self) -> None:
         manifest = iiif_v2_manifest()
         canvases = manifest["sequences"][0]["canvases"]  # type: ignore[index]

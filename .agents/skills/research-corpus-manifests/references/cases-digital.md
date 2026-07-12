@@ -59,6 +59,14 @@ with no resizable image service may legitimately require its provider-supplied
 `full` image, but record that per-canvas exception rather than silently treating
 the whole bundle as one uniform profile.
 
+An official Presentation 2 document can be structurally nonconforming—for
+example, placing Canvas objects directly in `sequences` instead of under one
+Sequence's `canvases`. Preserve the exact provider document, enumerate every
+official canvas/image resource into one `image_url_inventory` bundle when the
+normal parser cannot consume it, and verify count, first/target/last mappings,
+request profiles, image dimensions, and ZIP integrity. Malformed structure is
+not permission to discard surrounding leaves or cache only the target range.
+
 ## Generic production language versus item facts
 
 A collection may describe manual keying and proofreading while one item says

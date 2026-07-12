@@ -170,10 +170,24 @@ def _v2_canvases(manifest: dict[str, Any]) -> list[dict[str, Any]]:
     sequences = manifest.get("sequences")
     if not isinstance(sequences, list) or not sequences:
         return []
-    sequence = _first_mapping(sequences)
-    if sequence is None or not isinstance(sequence.get("canvases"), list):
-        return []
-    return [item for item in sequence["canvases"] if isinstance(item, dict)]
+    nested_canvases = [
+        canvas
+        for sequence in sequences
+        if isinstance(sequence, dict) and isinstance(sequence.get("canvases"), list)
+        for canvas in sequence["canvases"]
+        if isinstance(canvas, dict)
+    ]
+    if nested_canvases:
+        return nested_canvases
+
+    # Some official Presentation 2 endpoints put Canvas objects directly in
+    # `sequences`. Retain the whole provider inventory instead of failing or
+    # encouraging callers to extract only a target range.
+    return [
+        item
+        for item in sequences
+        if isinstance(item, dict) and isinstance(item.get("images"), list)
+    ]
 
 
 def _v3_canvases(manifest: dict[str, Any]) -> list[dict[str, Any]]:
