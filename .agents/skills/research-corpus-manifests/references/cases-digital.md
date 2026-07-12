@@ -49,3 +49,8 @@ while its associated OCR or TEI encodes only selected text. Scope the
 facsimile relation to the whole edition and the encoding relation to the
 actually transcribed pages; do not infer textual completeness from image
 count alone.
+
+Likewise, verify a header claim that “all material” was included against the
+actual XML structure and the source volume. Indexes or plates may be absent,
+and a surviving figure caption is not evidence that the corresponding image
+was encoded.

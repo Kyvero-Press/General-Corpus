@@ -662,7 +662,8 @@ def bundle(
             f"all {len(inventory_items)} images in the verified full-object list."
         )
     local_notes.append(
-        f"IIIF image request size profile(s): {', '.join(request_profiles)}; "
+        "Effective IIIF image request profile(s): "
+        f"{', '.join(json.dumps(profile) for profile in request_profiles)}; "
         f"format: {extension}."
     )
     if reuse_pattern or any(source.get("reuse_path") for source in sources):
