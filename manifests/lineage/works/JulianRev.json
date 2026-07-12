@@ -466,17 +466,54 @@
       "provider_id": "agent:bl",
       "resource_kind": "page_images",
       "status": "publicly_available",
-      "access_method": "British Library Universal Viewer and IIIF presentation",
+      "access_method": "British Library Universal Viewer and the exact 135-canvas IIIF Presentation manifest",
       "url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
       "alternate_urls": [
         "https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001"
       ],
+      "local_copies": [
+        {
+          "label": "Complete British Library Sloane MS 2499 IIIF facsimile bundle",
+          "path": "source-cache/JulianRev/bl-sloane-ms-2499-complete-iiif.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
+          "sha256": "f60430b7133f096885227bc4f64089231a34e17e2d66291f2e625029b11ea938",
+          "bytes": 49316843,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 135,
+          "notes": [
+            "Complete canvas coverage of the 135-image IIIF Presentation manifest; images are service derivatives requested at a maximum width of 1200 pixels, not preservation masters.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 135 canvas images listed when retrieved.",
+            "Effective IIIF image request profiles: '1200,' for 134 canvases and 'full' for the spine canvas; format: JPEG. The inventory records both the refused requested spine URL and the successful exact URL."
+          ],
+          "work_portion": {
+            "label": "Julian of Norwich, A Revelation of Love (Long Text)",
+            "locators": [
+              "Sloane MS 2499, ff. 1r-57v",
+              "IIIF canvases 9-122 (viewer indices 8-121)"
+            ],
+            "start_url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001&c=0&m=0&s=0&cv=8",
+            "end_url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001&c=0&m=0&s=0&cv=121",
+            "notes": [
+              "Manifest labels map the official catalog range ff. 1r-57v to canvases 9-122; the complete bundle also preserves covers, preliminary and terminal flyleaves, and the spine image.",
+              "Direct inspection confirmed that canvas 9 is the opening text leaf f. 1r and canvas 122 is the concluding text leaf f. 57v."
+            ]
+          }
+        }
+      ],
       "cost": "free",
-      "format": "IIIF page images",
+      "format": "IIIF Presentation 3 and Image API JPEG derivatives",
       "last_checked": "2026-07-11",
       "evidence_ids": [
         "evidence:julian-sloane2499",
-        "evidence:julian-sloane2499-iiif"
+        "evidence:julian-sloane2499-iiif",
+        "evidence:julian-sloane2499-boundary-inspection"
+      ],
+      "notes": [
+        "The ignored local cache is a research copy and is not itself evidence of permission to redistribute the BL photographs."
       ]
     },
     {
@@ -661,6 +698,16 @@
       ],
       "summary": "Provides the full digital manuscript facsimile linked from the official BL catalog record and states item-level usage terms: Public Domain in most countries other than the UK, with a link to the British Library's unpublished-manuscript image reuse guidance.",
       "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-sloane2499-boundary-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the cached British Library Sloane MS 2499 IIIF manifest and boundary images.",
+      "repository_path": "source-cache/JulianRev/bl-sloane-ms-2499-complete-iiif.zip",
+      "locator": "manifest canvases 9 and 122; images/000009.jpg and images/000122.jpg",
+      "summary": "The 135-canvas manifest labels canvas 9 as f. 1r and canvas 122 as f. 57v. Image inspection confirms that these are respectively the opening and concluding text leaves of Julian's Long Text; covers, flyleaves, and spine remain outside the mapped work portion but inside the complete cached manuscript bundle.",
+      "accessed_on": "2026-07-11",
+      "sha256": "f60430b7133f096885227bc4f64089231a34e17e2d66291f2e625029b11ea938"
     },
     {
       "id": "evidence:julian-mets",
