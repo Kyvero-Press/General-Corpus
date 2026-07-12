@@ -56,6 +56,14 @@ Inspect language markup and the work itself. Scope embedded Latin, French, or
 other languages to the relevant parts; do not make the whole work multilingual
 because a title page, rubric, or surrounding codex is multilingual.
 
+Every code in `language_statements` is exposed through the work's summary and
+viewer language facets. When the cataloging subject is a medieval work, do not
+add modern editorial prose or apparatus quotations as work-level languages
+merely because the encoding retains them. Record those edition-layer languages
+in content-part descriptions, summaries, and lineage instead. Use a scoped
+language statement only when that language belongs to an intellectual part of
+the cataloged work and should be discoverable as a work facet.
+
 ## Form, genre, subject, and tags
 
 `form` describes expression: prose, verse, or mixed. Use whole-work `mixed`

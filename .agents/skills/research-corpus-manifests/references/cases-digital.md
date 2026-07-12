@@ -104,3 +104,10 @@ Likewise, verify a header claim that “all material” was included against the
 actual XML structure and the source volume. Indexes or plates may be absent,
 and a surviving figure caption is not evidence that the corresponding image
 was encoded.
+
+When XML page-reference numbering jumps inside an edition, inspect every
+intervening surface in the complete scan. The gap may represent unpaginated
+plate leaves and their blank backs rather than omitted numbered text. Map each
+surface, retain the complete carrier volume, and model manuscript plates as
+partial reproduction objects separate from the encoded textual selection;
+complete capture of an article's plates is not a complete manuscript facsimile.
