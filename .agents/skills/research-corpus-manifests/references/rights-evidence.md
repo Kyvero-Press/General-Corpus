@@ -88,6 +88,13 @@ Presentation-manifest URL to the access route. `coverage=complete` means all
 canvases in that physical-source manifest were captured, not that the image
 request necessarily reproduces the provider's preservation master. Preserve
 the recorded request-size profile in `notes`.
+For a large whole-codex bundle, normally request a practical non-upscaling
+access derivative around 1600–1800 pixels wide rather than service-native
+preservation-master files, unless the research question or user explicitly
+requires master resolution. Completeness is the presence of every exposed
+surface; resolution is a separate property. Record every effective request
+profile in the inventory and notes, including any native fallback retained for
+a canvas that cannot supply the chosen derivative.
 Interrupted bundles resume only from staging images whose recorded URL still
 matches. Keep the default single worker for fragile services; use a modest
 `--workers` value only when the provider can sustain parallel requests.
