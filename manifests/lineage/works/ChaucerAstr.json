@@ -44,7 +44,47 @@
   "access": [
     {"id": "access:astr-repo", "entity": "artifact:general-corpus:ChaucerAstr", "provider_id": "agent:kyvero", "resource_kind": "repository_file", "status": "local_only", "access_method": "Read checked-out CME submodule path", "repository_path": "CME/source/CME_phase_1-2/ChaucerAstr.xml", "cost": "not_applicable", "format": "XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:astr-xml"]},
     {"id": "access:astr-umich", "entity": "encoding:umich-cme:ChaucerAstr", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item and full text", "url": "https://name.umdl.umich.edu/ChaucerAstr", "cost": "free", "format": "HTML digital text", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-astr"]},
-    {"id": "access:skeat-scan", "entity": "edition:skeat:astrolabe-1872", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Public scan", "url": "https://books.google.com/books?id=rIINAAAAQAAJ", "alternate_urls": ["https://archive.org/details/onastrol00chautreatiserich"], "cost": "free", "format": "Page-image scan and derived formats", "last_checked": "2026-07-11", "evidence_ids": ["evidence:skeat-scan"]},
+    {
+      "id": "access:skeat-scan",
+      "entity": "edition:skeat:astrolabe-1872",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Public scan with exact direct PDF download",
+      "url": "https://books.google.com/books?id=rIINAAAAQAAJ",
+      "alternate_urls": [
+        "https://archive.org/details/onastrol00chautreatiserich",
+        "https://archive.org/download/onastrol00chautreatiserich/onastrol00chautreatiserich.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Skeat Astrolabe 1872 complete scan",
+          "path": "source-cache/ChaucerAstr/skeat-astrolabe-1872-complete.pdf",
+          "source_url": "https://archive.org/download/onastrol00chautreatiserich/onastrol00chautreatiserich.pdf",
+          "sha256": "4d728c89b68fb7d2f253e6ccd43fedf02c0803b33afb0ea0ed01caa31daea2bf",
+          "bytes": 15710387,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "Complete 220-page provider PDF, retaining scan matter, preface, edited Middle English text, critical and additional notes, Latin comparison text, glossary, publication lists, and library matter."
+          ],
+          "work_portion": {
+            "label": "Skeat's edited Middle English Treatise on the Astrolabe",
+            "locators": ["printed pp. 1-60", "PDF pages 89-148", "Prologue; Part I; Part II.1-46 with supplied sections"],
+            "start_url": "https://archive.org/download/onastrol00chautreatiserich/onastrol00chautreatiserich.pdf#page=89",
+            "end_url": "https://archive.org/download/onastrol00chautreatiserich/onastrol00chautreatiserich.pdf#page=148",
+            "notes": [
+              "Direct page inspection places the opening Prologue at PDF page 89 and the end of the edited Middle English text at PDF page 148; critical notes begin on PDF page 149."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Google Books/Internet Archive complete page-image PDF",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:skeat-scan"],
+      "notes": ["The ignored local cache is a complete scan of the printed edition, not a manuscript facsimile and not a separate grant of scan-image reuse rights."]
+    },
     {"id": "access:dd353-enquiry", "entity": "witness:cul:Dd3-53", "provider_id": "agent:cul", "resource_kind": "repository_enquiry", "status": "requestable", "access_method": "Contact Cambridge University Library Manuscripts Department using shelfmark Dd.3.53", "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives", "cost": "unknown", "last_checked": "2026-07-11", "evidence_ids": ["evidence:cul-manuscripts", "evidence:astr-xml"], "notes": ["No complete public facsimile was verified in this research pass."]},
     {"id": "access:e2-enquiry", "entity": "witness:stjohn:E2", "provider_id": "agent:stjohn", "resource_kind": "repository_enquiry", "status": "requestable", "access_method": "Email St John's Special Collections and request an appointment using shelfmark E.2", "url": "https://www.joh.cam.ac.uk/contact-us", "alternate_urls": ["https://www.joh.cam.ac.uk/research/library/old-library"], "cost": "unknown", "last_checked": "2026-07-11", "evidence_ids": ["evidence:stjohn-special-collections", "evidence:astr-xml"], "notes": ["No complete public facsimile or item-specific image terms were verified in this research pass."]},
     {"id": "access:digby72-enquiry", "entity": "witness:bodleian:Digby72", "provider_id": "agent:bodleian", "resource_kind": "repository_enquiry", "status": "requestable", "access_method": "Request or enquire through Bodleian Special Collections using shelfmark MS. Digby 72", "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using", "alternate_urls": ["https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/ordering/requests", "https://archives.bodleian.ox.ac.uk/repositories/2/resources/7554"], "cost": "unknown", "last_checked": "2026-07-11", "evidence_ids": ["evidence:bodleian-access", "evidence:bodleian-catalog", "evidence:astr-xml"], "notes": ["No complete public facsimile was verified in this research pass."]},
