@@ -86,6 +86,9 @@ level licenses. Cache each complete published selection as its own bundle but
 mark coverage `partial` for the manuscript. Do not merge their licenses,
 invent one aggregate facsimile, or let complete capture of every selected
 object erase the dated finding that no whole-codex surrogate was available.
+If an official selection exposes no leaf occupied by the corpus work, do not
+invent a `work_portion`: state the zero overlap, retain the selection only as
+supporting witness evidence, and keep the work-image request route open.
 
 ## Conflicting derivative-provider claims: Purity
 
