@@ -47,6 +47,15 @@ bitstreams deny anonymous access and download-all redirects to login. Model
 license assertion separately from practical access. Use
 `registration_required` or `unknown` until retrieval succeeds.
 
+## Public viewer with explicit no-download terms: CME00009
+
+A public image viewer can expose technically retrievable files while its
+item-specific terms expressly prohibit downloading. Record the selected
+view-only coverage, exact terms, and negative whole-object status, but do not
+cache those images. Technical reachability does not override an explicit
+provider restriction; pursue a repository-supplied whole-codex copy through
+the recorded request route instead.
+
 ## Direct IIIF rights: JulianRev
 
 The Sloane 2499 IIIF manifest states public domain in most countries other than
