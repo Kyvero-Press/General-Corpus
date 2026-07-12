@@ -124,6 +124,12 @@ Whenever possible, open the actual book and inspect:
 - whether a later issue is a reprint, reset, corrected reissue, revision, or
   new edition.
 
+Audit encoded notes and appendices as their own source layer. A quoted,
+collated, or transcribed passage taken through another printed edition may
+introduce that edition and its deeper witness as passage-scoped lineage;
+a bibliographic citation that supplies no reading does not by itself create a
+derivation edge.
+
 For serial publications, inspect the issue wrapper or issue title page, the
 completed-volume title page, and current catalog metadata independently. They
 may legitimately carry different years, imprints, publishers, or places;
