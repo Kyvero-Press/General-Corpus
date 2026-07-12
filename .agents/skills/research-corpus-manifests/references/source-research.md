@@ -102,6 +102,10 @@ An enclosing catalog title or inherited author heading can describe a whole
 miscellany while an exact contents entry rejects that attribution for one
 work. Prefer the component-level statement for work responsibility and retain
 the broader label only as attribution history or catalog context.
+That preference is not automatic when an exact component locator contradicts
+both its own parent contents and direct edition evidence. Preserve the
+conflicting loci, keep the work mapping provisional, and verify current
+foliation from the manuscript images or repository clarification.
 
 For archival series that have been reorganized or renumbered, establish a
 legacy-to-current crosswalk from matching parties, titles, dates, contents, and
