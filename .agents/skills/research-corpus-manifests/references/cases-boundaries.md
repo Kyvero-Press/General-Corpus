@@ -97,3 +97,12 @@ its opening. Keep textual acephaly separate from present leaf loss, and do not
 invent a missing quire or earlier folio range without codicological evidence.
 A complete-codex facsimile is still needed to test the support, ruling, hand,
 and boundary with adjacent works.
+
+## Archival selections across catalog records: CME00024
+
+A named edition centered on one archival series can append excerpts from
+separately cataloged court books, rolls, or accounts. Keep one cataloging unit
+for the edited selection, but give each appended part its own scoped source
+relation and current request route. Overlapping modern date ranges, old box
+labels, and broad parent descriptions do not justify inventing a one-to-one
+historical item crosswalk when exact child-record evidence is incomplete.
