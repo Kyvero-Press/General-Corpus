@@ -88,6 +88,11 @@ edition, and current institutional record. Use the repository's current exact
 shelfmark for the witness, but preserve malformed or legacy source forms in
 notes with the evidence that resolves them.
 
+Do not treat a microfilm, photostat, or reproduction-collection call number as
+the manuscript's shelfmark. Identify the surrogate as its own entity and
+verify which source objects and ranges it reproduces; one film number may
+contain several manuscripts or only selected leaves.
+
 Treat legacy and corrected foliation as a locator crosswalk for one physical
 witness unless evidence establishes distinct objects. Record both ranges and
 name which system each source uses; do not create a second witness merely
@@ -125,6 +130,12 @@ Scanned-book OCR and inherited TEI division labels can be misleading. Compare
 markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open
 question rather than normalizing it silently.
+
+When an editor's preliminary notice and final edition report different counts
+of leaves, omissions, recipes, items, or supplied passages, preserve both as
+dated assertions. Prefer the final edition for that edition's settled scope
+unless later evidence corrects it, while retaining the preliminary notice for
+provenance or physical-description details it uniquely supplies.
 
 ## Keep a claim ledger
 
