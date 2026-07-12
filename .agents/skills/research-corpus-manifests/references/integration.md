@@ -9,6 +9,9 @@ worktree.
 2. Bring in only the finished work's metadata and lineage files.
 3. Review the agent's direct sources, claims, uncertainty, access checks, and
    reusable lessons. Correct overstatement before indexing.
+   After any long-running cache transfer, replace stale future-tense notes with
+   the final byte count, checksum, integrity result, and internal inventory;
+   remove or resolve download-pending questions before committing the record.
 4. Improve the smallest matching skill reference only when the lesson changes
    a future decision. Merge with an existing rule when possible.
 5. Rebuild both discovery indexes deterministically:
