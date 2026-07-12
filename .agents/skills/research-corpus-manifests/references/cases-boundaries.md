@@ -172,3 +172,10 @@ reliable older census cites the same leaves as 96r–109v. Record both as one
 witness's locator crosswalk, name each numbering system, and map digital
 canvases to the labels actually displayed by the current object. Do not shift
 the facsimile range to agree with the older citation or create two witnesses.
+
+Do not extrapolate a constant folio offset across a lacuna or other large
+discontinuity. Align the cited passage's text against current folio labels and
+IIIF canvases, record the missing-leaf span, and retain both locator systems.
+Until a repository concordance or equivalent codicological source confirms the
+mapping, label the historical-to-current crosswalk inferential even when the
+textual alignment is strong.
