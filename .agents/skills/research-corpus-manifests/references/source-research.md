@@ -138,6 +138,13 @@ markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open
 question rather than normalizing it silently.
 
+Never resolve a manuscript shelfmark from OCR alone. Inspect the cited page
+image at high enough resolution to distinguish punctuation and adjacent
+digits, then test the reading against current candidate catalogs and their
+contents. If the OCR string names a different real manuscript, preserve it as
+an OCR-layer error; do not create an ambiguous or false witness edge merely
+because both identifiers resolve.
+
 When an editor's preliminary notice and final edition report different counts
 of leaves, omissions, recipes, items, or supplied passages, preserve both as
 dated assertions. Prefer the final edition for that edition's settled scope
