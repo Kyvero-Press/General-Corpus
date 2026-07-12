@@ -132,8 +132,9 @@ detached leaves or fragments now held elsewhere. Cache the complete published
 project inventory, but state that its coverage is project-level rather than a
 claim that every image belongs to one currently bound physical codex. Map
 discontiguous work portions by the provider's item numbers and each holding
-repository's foliation; do not replace them with one invented continuous
-range.
+repository's foliation. When those orders differ from the reconstructed
+textual sequence, retain both orders explicitly; do not replace either with
+one invented continuous range.
 
 Add the emitted object to the access record's `local_copies` array. Its
 `source_url` must also appear as `access.url` or in `alternate_urls`, while the
