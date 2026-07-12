@@ -56,6 +56,11 @@ needed; do not load both complete schemas merely for orientation.
    supporting source under `source-cache/WORK_ID/` with
    `scripts/cache-source-download.py`, or use `scripts/cache-iiif-bundle.py`
    when a complete source is exposed as IIIF canvases rather than one file.
+   Before downloading a large object, search `source-cache/` for the same
+   exact source URL and request profile. If a verified complete bundle already
+   exists at a practical resolution, create a true hard link under the new
+   work's cache directory and recheck its inode, inventory, checksum, and ZIP;
+   never use a symlink or redownload identical bytes.
    For manuscript facsimiles, download the complete physical codex whenever
    it is publicly obtainable and practical, then record this work's exact
    folio/page/canvas range in the mandatory `work_portion` of every complete
