@@ -139,6 +139,14 @@ Never infer redistribution permission from local caching, and never copy the
 cache into a public web build without an independently supported right to do
 so.
 
+When site terms expressly permit viewing or downloading for private purposes
+but reserve storage, reproduction, transmission, or publication for other
+purposes, a Git-ignored private research cache may record that narrow access;
+it is not a redistributable corpus asset. Cite the exact controlling clause,
+attach the restriction to that access object, and keep the bytes out of Git,
+the viewer's public tree, and publication packages unless separate permission
+is obtained.
+
 When the exact same downloaded object is relevant to several corpus works,
 keep one work-local path per manifest but avoid storing or downloading the
 bytes repeatedly. After verifying identical exact source URL, byte count, and
@@ -155,6 +163,11 @@ folio/page range, corresponding digital canvas or image range, and start/end
 deep links when exposed. If only selected leaves are obtainable, use
 `coverage=partial` and say so. A complete edition scan, a miniature cycle, or
 an IIIF manifest without its image files is not a complete manuscript cache.
+If a provider calls a recto-verso leaf run complete but exposes no covers,
+boards, spine, pastedowns, or flyleaves, qualify `coverage=complete` to the
+published leaf inventory in notes; do not call it complete physical-object
+coverage. Record the omitted exterior surfaces and a request route for a fuller
+surrogate.
 Do not list one `local_copies` object per canvas when a single bundle and exact
 source inventory can represent the complete set.
 
