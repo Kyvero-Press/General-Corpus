@@ -60,6 +60,13 @@ the earlier edition with scoped `version_of`. Verify the reprint's included and
 omitted matter independently, and give any new cover, preliminaries, or terms a
 separate rights analysis instead of inheriting every claim from the original.
 
+When a revised reissue changes the membership or numbering of an edited
+selection, a complete scan of the prior edition is not complete coverage of the
+immediate source. Keep the scan's source-object coverage complete, but scope its
+`work_portion` to the overlapping prior-version material and name additions,
+omissions, splits, mergers, and renumbering explicitly. Never map a newly added
+item onto the earlier pagination merely because the collection title persisted.
+
 Do not call a reset reprint a facsimile merely because it reproduces an earlier
 title page or retains the text. Compare type, pagination, preliminaries, and
 printing colophons to establish the reset and its edition-specific scope.
