@@ -786,6 +786,17 @@ class CorpusViewerCatalogTests(unittest.TestCase):
     def test_lineage_only_work_keeps_known_sources_while_metadata_is_pending(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir, fake_pdfinfo():
             fixture = CatalogFixture(Path(temp_dir))
+            fixture.lineage["primary_subject"] = "artifact:general-corpus:CME00099"
+            entities = fixture.lineage["entities"]
+            assert isinstance(entities, list)
+            entities.append(
+                {
+                    "id": "artifact:general-corpus:CME00099",
+                    "type": "repository_artifact",
+                    "label": "General Corpus source XML",
+                }
+            )
+            fixture.write_manifests()
             fixture.add_pdf()
             self._write_empty_metadata_index(fixture.root)
             output = fixture.root / "build" / "viewer"
@@ -808,6 +819,10 @@ class CorpusViewerCatalogTests(unittest.TestCase):
             )
             self.assertIsNone(detail["metadata"])
             self.assertEqual("lineage:CME00099", detail["lineage"]["manifestId"])
+            self.assertEqual(
+                "artifact:general-corpus:CME00099",
+                detail["lineage"]["primarySubjectId"],
+            )
             self.assertIsNotNone(detail["lineageManifestPath"])
 
     @staticmethod

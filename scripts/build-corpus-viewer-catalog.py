@@ -600,6 +600,7 @@ def _normalized_lineage(
 
     return {
         "manifestId": lineage.get("id"),
+        "primarySubjectId": lineage.get("primary_subject"),
         "recordStatus": lineage.get("record_status"),
         "lastReviewed": lineage.get("last_reviewed"),
         "summary": lineage.get("summary"),

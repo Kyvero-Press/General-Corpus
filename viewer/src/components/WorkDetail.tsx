@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 import { assetUrl, publicationLink, safeExternalHttpUrl } from "../catalog";
 import { humanizeToken } from "../filters";
+import { duplicateEntityLabelIds, partitionLineageRelations } from "../lineage";
+import { LineageDiagram } from "./LineageDiagram";
 import type {
   AccessRecord,
   ContentPart,
@@ -274,6 +276,7 @@ function AccessCard({ access }: { access: AccessRecord }) {
 }
 
 function EntityCard({ entity }: { entity: LineageEntity }) {
+  const headingId = `source-heading-${encodeURIComponent(entity.id)}`;
   const generalRights = entity.rights.filter((right) => !right.access_id);
   const citation =
     typeof entity.bibliographic?.citation === "string"
@@ -298,11 +301,16 @@ function EntityCard({ entity }: { entity: LineageEntity }) {
   const holdingNotes =
     typeof entity.holding?.notes === "string" ? [entity.holding.notes] : [];
   return (
-    <article className="entity-card" id={`source-${encodeURIComponent(entity.id)}`}>
+    <article
+      className="entity-card"
+      id={`source-${encodeURIComponent(entity.id)}`}
+      aria-labelledby={headingId}
+      tabIndex={-1}
+    >
       <div className="entity-heading">
         <div>
           <p className="eyebrow">{humanizeToken(entity.type)}</p>
-          <h3>{entity.label ?? entity.id}</h3>
+          <h3 id={headingId}>{entity.label ?? entity.id}</h3>
         </div>
         {entity.survivalStatus && <StatusBadge value={entity.survivalStatus} />}
       </div>
@@ -423,45 +431,64 @@ function partDescription(part: ContentPart): string | null {
   return part.summary ?? part.description ?? part.scope?.description ?? null;
 }
 
-function RelationRecord({ relation }: { relation: LineageRelation }) {
+function RelationRecord({
+  relation,
+  duplicateLabelIds,
+}: {
+  relation: LineageRelation;
+  duplicateLabelIds: ReadonlySet<string>;
+}) {
   const subjectScope = relation.scope?.subject;
   const objectScope = relation.scope?.object;
   const locators = [
     ...(subjectScope?.locators ?? []).map((value) => `Source side: ${value}`),
     ...(objectScope?.locators ?? []).map((value) => `Earlier source: ${value}`),
   ];
+  const hasDetails = Boolean(
+    subjectScope || objectScope || relation.assertion || relation.scope?.notes,
+  );
+  const endpoint = (id: string | null, label: string | null) => (
+    <>
+      <span>{label ?? id}</span>
+      {id && duplicateLabelIds.has(id) && <code className="relation-entity-id">{id}</code>}
+    </>
+  );
   return (
-    <article className="relation-record">
-      <div className="relation-row">
-        <span>{relation.subjectLabel ?? relation.subjectId}</span>
-        <strong>
+    <tbody className="relation-record">
+      <tr className="relation-table-summary">
+        <td data-label="From source">{endpoint(relation.subjectId, relation.subjectLabel)}</td>
+        <th data-label="Relationship" scope="row">
           <span aria-hidden="true">→</span> {humanizeToken(relation.type)} <span aria-hidden="true">→</span>
-        </strong>
-        <span>{relation.objectLabel ?? relation.objectId}</span>
-      </div>
-      {(subjectScope || objectScope || relation.assertion || relation.scope?.notes) && (
-        <div className="relation-details">
-          <div className="relation-scope-copy">
-            {subjectScope?.description && <p><strong>Derived material:</strong> {subjectScope.description}</p>}
-            {objectScope?.description && <p><strong>Source material:</strong> {objectScope.description}</p>}
-          </div>
-          <div className="relation-certainty">
-            {relation.assertion?.status && <StatusBadge value={relation.assertion.status} />}
-            {relation.assertion?.confidence && (
-              <StatusBadge value={`${relation.assertion.confidence} confidence`} />
-            )}
-          </div>
-          {locators.length > 0 && (
-            <details>
-              <summary>Scope locators ({locators.length})</summary>
-              <Notes notes={locators} />
-            </details>
-          )}
-          {relation.scope?.notes && <p className="relation-note">{relation.scope.notes}</p>}
-          {relation.assertion?.notes && <p className="relation-note">{relation.assertion.notes}</p>}
-        </div>
+        </th>
+        <td data-label="To source">{endpoint(relation.objectId, relation.objectLabel)}</td>
+      </tr>
+      {hasDetails && (
+        <tr className="relation-table-details-row">
+          <td colSpan={3}>
+            <div className="relation-details">
+              <div className="relation-scope-copy">
+                {subjectScope?.description && <p><strong>Derived material:</strong> {subjectScope.description}</p>}
+                {objectScope?.description && <p><strong>Source material:</strong> {objectScope.description}</p>}
+              </div>
+              <div className="relation-certainty">
+                {relation.assertion?.status && <StatusBadge value={relation.assertion.status} />}
+                {relation.assertion?.confidence && (
+                  <StatusBadge value={`${relation.assertion.confidence} confidence`} />
+                )}
+              </div>
+              {locators.length > 0 && (
+                <details>
+                  <summary>Scope locators ({locators.length})</summary>
+                  <Notes notes={locators} />
+                </details>
+              )}
+              {relation.scope?.notes && <p className="relation-note">{relation.scope.notes}</p>}
+              {relation.assertion?.notes && <p className="relation-note">{relation.assertion.notes}</p>}
+            </div>
+          </td>
+        </tr>
       )}
-    </article>
+    </tbody>
   );
 }
 
@@ -469,23 +496,46 @@ function RelationGroup({
   title,
   description,
   relations,
+  entities,
+  view,
 }: {
   title: string;
   description: string;
   relations: LineageRelation[];
+  entities: LineageEntity[];
+  view: "diagram" | "table";
 }) {
   if (!relations.length) return null;
+  const duplicateLabelIds = duplicateEntityLabelIds(entities);
   return (
     <div className="relation-group">
       <div className="relation-group-heading">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="provenance-path" aria-label={title}>
-        {relations.map((relation, index) => (
-          <RelationRecord relation={relation} key={relation.id ?? index} />
-        ))}
-      </div>
+      {view === "diagram" ? (
+        <LineageDiagram title={title} entities={entities} relations={relations} />
+      ) : (
+        <div className="provenance-table-scroll">
+          <table className="relation-table">
+            <caption className="visually-hidden">{title}</caption>
+            <thead>
+              <tr>
+                <th scope="col">From source</th>
+                <th scope="col">Relationship</th>
+                <th scope="col">To source</th>
+              </tr>
+            </thead>
+            {relations.map((relation, index) => (
+              <RelationRecord
+                relation={relation}
+                duplicateLabelIds={duplicateLabelIds}
+                key={relation.id ?? index}
+              />
+            ))}
+          </table>
+        </div>
+      )}
     </div>
   );
 }
@@ -700,6 +750,8 @@ function PublicationSection({ detail }: { detail: WorkDetailRecord }) {
 }
 
 function LineageSection({ detail }: { detail: WorkDetailRecord }) {
+  const [relationshipView, setRelationshipView] = useState<"diagram" | "table">("diagram");
+  const relationshipGroupsId = `lineage-relationship-groups-${detail.work.workId}`;
   const lineage = detail.lineage;
   if (!lineage) {
     return (
@@ -712,12 +764,10 @@ function LineageSection({ detail }: { detail: WorkDetailRecord }) {
       </section>
     );
   }
-  const primaryTypes = new Set(["copied_from", "encoded_from", "transcribes"]);
-  const primaryRelations = lineage.relations.filter((relation) =>
-    relation.type ? primaryTypes.has(relation.type) : false,
-  );
-  const supportingRelations = lineage.relations.filter(
-    (relation) => !relation.type || !primaryTypes.has(relation.type),
+  const partitionedRelations = partitionLineageRelations(
+    lineage.entities,
+    lineage.relations,
+    lineage.primarySubjectId,
   );
   return (
     <section className="detail-section" id="source-lineage">
@@ -729,16 +779,58 @@ function LineageSection({ detail }: { detail: WorkDetailRecord }) {
         <StatusBadge value={lineage.recordStatus} />
       </div>
       {lineage.summary && <p className="lead-copy">{lineage.summary}</p>}
-      <RelationGroup
-        title="Primary transmission paths"
-        description="Recorded copying, encoding, and transcription relationships leading toward the corpus text. Scope matters: separate sections may derive from different witnesses."
-        relations={primaryRelations}
-      />
-      <RelationGroup
-        title="Supporting relationships"
-        description="Collation, consultation, facsimile, catalog-description, and related scholarly connections. These do not automatically form the direct transmission path."
-        relations={supportingRelations}
-      />
+      {lineage.relations.length > 0 && (
+        <div className="lineage-view-toolbar">
+          <div>
+            <p className="eyebrow">Relationship view</p>
+            <p>
+              The diagram emphasizes paths and branches. The table preserves the full scope,
+              locators, certainty, and research notes for every relationship.
+            </p>
+          </div>
+          <div className="lineage-view-switch" role="group" aria-label="Lineage relationship view">
+            <button
+              type="button"
+              aria-pressed={relationshipView === "diagram"}
+              aria-controls={relationshipGroupsId}
+              onClick={() => setRelationshipView("diagram")}
+            >
+              Diagram
+            </button>
+            <button
+              type="button"
+              aria-pressed={relationshipView === "table"}
+              aria-controls={relationshipGroupsId}
+              onClick={() => setRelationshipView("table")}
+            >
+              Table
+            </button>
+          </div>
+        </div>
+      )}
+      <div id={relationshipGroupsId}>
+        <RelationGroup
+          title="Primary transmission paths"
+          description="Direct copying, encoding, transcription, and excerpting relationships that can be followed from the repository artifact—or an encoding directly linked to it—toward its sources. Scope matters: separate sections may derive from different witnesses."
+          relations={partitionedRelations.primary}
+          entities={lineage.entities}
+          view={relationshipView}
+        />
+        <RelationGroup
+          title="Other documented transmission paths"
+          description="Direct transcription or excerpting relationships recorded in this lineage but not connected to the repository artifact by a complete direct-edge chain. These often describe prior editions, comparison editions, or contextual textual ancestry."
+          relations={partitionedRelations.otherTransmission}
+          entities={lineage.entities}
+          view={relationshipView}
+        />
+        <RelationGroup
+          title="Supporting relationships"
+          description="Collation, consultation, facsimile, catalog-description, and related scholarly connections. These do not automatically form the direct transmission path."
+          relations={partitionedRelations.supporting}
+          entities={lineage.entities}
+          view={relationshipView}
+        />
+      </div>
 
       <div className="sources-heading">
         <h3>Known sources and access routes</h3>

@@ -120,6 +120,7 @@ const detail: WorkDetailRecord = {
   metadata: null,
   lineage: {
     manifestId: "lineage:CME00099",
+    primarySubjectId: null,
     recordStatus: "partial",
     lastReviewed: "2026-07-11",
     summary: "The repository XML was encoded from Holthausen’s 1897 edition.",
@@ -292,8 +293,22 @@ describe("App", () => {
       name: "Recipes, Blessings, and Charms from Two Stockholm Manuscripts",
     });
     expect(within(dialog).getByText("Known sources and access routes")).toBeInTheDocument();
+    const lineageView = within(dialog).getByRole("group", {
+      name: "Lineage relationship view",
+    });
+    expect(within(lineageView).getByRole("button", { name: "Diagram" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    expect(
+      within(dialog).getByRole("figure", { name: "Primary transmission paths" }),
+    ).toHaveTextContent("2 source records · 1 relationship");
+    expect(within(dialog).getByText("Encoded from")).toBeInTheDocument();
     expect(
       within(dialog).getByRole("heading", { name: "Holthausen’s 1897 edition" }),
+    ).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole("article", { name: "Holthausen’s 1897 edition" }),
     ).toBeInTheDocument();
     expect(within(dialog).getByRole("link", { name: /View page images/ })).toHaveAttribute(
       "href",
@@ -322,6 +337,16 @@ describe("App", () => {
         .getAllByRole("link", { name: /Open work start/ })
         .some((link) => link.getAttribute("href") === "https://example.test/x90/image/16"),
     ).toBe(true);
+    await user.click(within(lineageView).getByRole("button", { name: "Table" }));
+    expect(within(lineageView).getByRole("button", { name: "Table" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    const primaryTable = within(dialog).getByRole("table", {
+      name: "Primary transmission paths",
+    });
+    expect(within(primaryTable).getByRole("columnheader", { name: "From source" })).toBeInTheDocument();
+    expect(within(primaryTable).getByRole("rowheader", { name: "Encoded from" })).toBeInTheDocument();
     expect(within(dialog).getByText("The complete CME digital text")).toBeInTheDocument();
     expect(within(dialog).getByText("Holthausen’s printed pages 75–88")).toBeInTheDocument();
     expect(within(dialog).getByText("The 1897 edition and editorial text")).toBeInTheDocument();

@@ -300,6 +300,7 @@ export interface AssertionRecord {
 
 export interface LineageDetail {
   manifestId: string | null;
+  primarySubjectId: string | null;
   recordStatus: string | null;
   lastReviewed: string | null;
   summary: string | null;
