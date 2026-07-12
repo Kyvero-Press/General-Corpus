@@ -34,6 +34,12 @@ Test the exact deliverable, not only its landing page.
 - A facsimile bibliography proves existence, not online access.
 - A selected image is not a complete manuscript.
 
+When a provider exposes selected leaves but no obtainable whole codex, retain
+the selected-leaf access as `coverage=partial` and record the negative
+whole-object result explicitly in notes, a separate unavailable access route,
+or an open question. This prevents the viewer and later researchers from
+mistaking “some images exist” for complete digitization.
+
 When an edition publishes a few manuscript plates, model those plates as their
 own reproduction entity. A complete scan of that edition makes the plates
 viewable but still does not become a complete facsimile of the witness.
@@ -138,6 +144,12 @@ replacement facsimiles, modern bindings, or other post-production material.
 Retain those canvases in the complete source cache, but exclude or separately
 scope them in `work_portion` rather than treating every digitized surface as
 an authentic leaf of the cataloged work.
+
+For a mediated complete-codex reproduction request, name the physical
+surfaces required—covers or boards, spine, pastedowns, flyleaves, blanks,
+edges when offered, and every manuscript leaf—then give the work's folio range
+separately. A request for “the work” alone may otherwise be fulfilled as a
+cropped selection and cannot support a complete-source claim.
 
 Do not generalize a license sampled from one image to a whole collection. Use
 the exact image record proposed for reuse or leave collection-wide image terms
