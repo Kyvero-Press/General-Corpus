@@ -104,6 +104,14 @@ Parallel source-language and editorial-translation streams can likewise repeat
 the same page/image milestones. Deduplicate locators only for physical coverage
 audits; keep the language streams and their editorial responsibilities separate.
 
+A recurring article or series title across journal volumes does not establish
+one continuous or complete intellectual work. Inspect every encoded
+installment against its volume contents, opening and closing pages, and any
+earlier or later continuation in the same volume. Model the digital item as a
+selective compilation when appropriate, keep each issue- or volume-level
+edition distinct, and scope derivation only to the runs the encoding actually
+includes.
+
 Two independent texts can also continue simultaneously in different zones of
 the same printed pages—for example, one stream below and an addendum above.
 Preserve the overlapping page range in both scoped parts and record the spatial
