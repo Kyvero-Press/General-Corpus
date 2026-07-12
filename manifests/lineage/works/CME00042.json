@@ -1,0 +1,830 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00042",
+  "work_id": "CME00042",
+  "title": "How the Wise Man Taught His Son: texts alpha, beta, and gamma",
+  "primary_subject": "artifact:general-corpus:CME00042",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "CME00042 is the General Corpus copy of a University of Michigan electronic text derived from Rudolf Fischer's 1889 How the Wyse Man Taught Hys Sone: In drei Texten. The electronic selection contains Fischer's two title pages and printed pp. 27-49: alpha, based on Cambridge University Library MS Ff.2.38 and collated with Harley MS 5396; beta, based on Lambeth Palace Library MS 853 and collated with Balliol College MS 354; and gamma, based chiefly on Harley MS 2399 but supplemented through Frederick Furnivall's 1869 transcription of Bodleian MS Ashmole 61. Fischer worked from Hermann Varnhagen's transcripts for the first five witnesses rather than directly from those codices. Complete provider-exposed image sequences for Balliol MS 354 and Ashmole MS 61 have been cached privately, and each cache maps the poem's leaves inside the whole manuscript. No verified public complete facsimile was found for Ff.2.38, Harley 5396, Lambeth 853, or Harley 2399; request routes are recorded without converting those dated search results into claims that the manuscripts have never been digitized.",
+  "languages": ["enm", "deu", "eng"],
+  "review_notes": [
+    "Fischer's alpha, beta, and gamma are editorial groupings, not three independent works and not three extant codices.",
+    "Working transcripts are typed manuscript_witness because schema version 1.0.0 has no intermediary-transcript entity type; their labels, dates, survival status, and relation chains distinguish them from medieval witnesses.",
+    "Complete facsimile coverage is always relative to the provider's exposed IIIF inventory. The Balliol object lacks some physical exteriors and edges even though all 528 exposed canvases were cached; the Ashmole object contains all 358 exposed canvases.",
+    "A private, gitignored cache demonstrates download status but does not grant redistribution or publication rights."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00042",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00042",
+      "description": "The XML artifact consumed by this repository's conversion and publication workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "General Corpus work ID", "value": "CME00042"},
+        {"scheme": "git-blob", "value": "6983ef22e7e573549076770d4fc36383d903ece7"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00042.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "6983ef22e7e573549076770d4fc36383d903ece7",
+        "sha256": "b635e716100d4a662f1fb5b259dc847061cb653011c2045311a843a9898d4d95"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-inspection"],
+      "notes": ["IDG/@ID, BIBNO, and VID are CME00042. TEMPHEAD records a 2016-08-23 review, not the initial encoding date."]
+    },
+    {
+      "id": "encoding:umich-cme:CME00042",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item CME00042",
+      "description": "A manually keyed and proofread electronic selection from Fischer's 1889 edition, encoded with basic TEI semantics and 436 apparatus notes.",
+      "identifiers": [{"scheme": "University of Michigan CME item", "value": "CME00042", "uri": "https://name.umdl.umich.edu/CME00042"}],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-inspection", "evidence:umich-item"]
+    },
+    {
+      "id": "edition:fischer:1889",
+      "type": "scholarly_edition",
+      "label": "Rudolf Fischer, How the Wyse Man Taught Hys Sone: In drei Texten (1889)",
+      "creator_ids": ["agent:rudolf-fischer"],
+      "date_statements": [{"label": "publication", "value": "1889", "normalized": "1889", "certainty": "high", "evidence_ids": ["evidence:fischer-scan"]}],
+      "bibliographic": {
+        "citation": "Rudolf Fischer, ed., How the Wyse Man Taught Hys Sone: In drei Texten, Erlanger Beiträge zur Englischen Philologie 2 (Erlangen and Leipzig: A. Deichert'sche Verlagsbuchhandlung Nachf. (Georg Böhme), 1889), 64 pp.",
+        "title": "How the Wyse Man Taught Hys Sone: In drei Texten",
+        "series": "Erlanger Beiträge zur Englischen Philologie II",
+        "publisher": "A. Deichert'sche Verlagsbuchhandlung Nachf. (Georg Böhme)",
+        "publication_place": "Erlangen and Leipzig",
+        "date": "1889",
+        "pages": "64",
+        "languages": ["enm", "deu"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-scan", "evidence:fischer-editorial-method", "evidence:umich-item"]
+    },
+    {
+      "id": "facsimile:internet-archive:fischer-1889",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Fischer's 1889 edition",
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Complete downloadable PDF from a Google-digitized library copy",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-scan", "evidence:fischer-ia-metadata"]
+    },
+    {
+      "id": "witness:cul:Ff-2-38",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ff.2.38",
+      "description": "Fischer's C and base witness for alpha. Fischer gives fols. 45r-46r; the modern foliation places the poem at fols. 53r-54r.",
+      "identifiers": [{"scheme": "Cambridge University Library shelfmark", "value": "MS Ff.2.38"}],
+      "holding": {"institution_id": "agent:cambridge-university-library", "shelfmark": "MS Ff.2.38"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:cul-facsimile-and-foliation"]
+    },
+    {
+      "id": "witness:bl:Harley-5396",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 5396",
+      "description": "Fischer's H2, collated for alpha. The poem is at fols. 297r-300v within a poetry unit dated about 1456.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 5396", "uri": "https://searcharchives.bl.uk/catalog/040-002051242"}],
+      "date_statements": [{"label": "poetry unit", "value": "circa 1456", "normalized": "1450/1462", "certainty": "high", "evidence_ids": ["evidence:bl-harley5396"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 5396", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002051242"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:bl-harley5396"]
+    },
+    {
+      "id": "witness:lambeth:MS853",
+      "type": "manuscript_witness",
+      "label": "Lambeth Palace Library MS 853",
+      "description": "Fischer's L and base witness for beta. The poem occupies manuscript pp. 186-192 in the modern METS locator; Fischer gives pp. 186-193.",
+      "identifiers": [{"scheme": "Lambeth Palace Library shelfmark", "value": "MS 853"}],
+      "date_statements": [{"label": "manuscript date", "value": "circa 1430", "normalized": "1420/1440", "certainty": "medium", "evidence_ids": ["evidence:lambeth-furnivall", "evidence:salisbury"]}],
+      "holding": {"institution_id": "agent:lambeth-palace-library", "shelfmark": "MS 853", "catalog_url": "https://archives.lambethpalacelibrary.org.uk/", "notes": "The catalog homepage is supplied because an auditable exact current public item page could not be retrieved."},
+      "physical_description": {"support": "parchment", "format": "Manuscript codex"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:lambeth-furnivall", "evidence:salisbury"]
+    },
+    {
+      "id": "witness:balliol:MS354",
+      "type": "manuscript_witness",
+      "label": "Balliol College MS 354",
+      "alternate_labels": ["Richard Hill's commonplace book"],
+      "description": "Fischer's B, collated for beta. The poem begins on image page 335 and ends on page 337, corresponding to fols. 157r-158r; Stans puer ad mensam begins on page 338/f. 158v.",
+      "identifiers": [{"scheme": "Balliol College shelfmark", "value": "MS 354"}, {"scheme": "Digital Bodleian object", "value": "e0d10554-db39-4b58-a944-45da5e66248e", "uri": "https://digital.bodleian.ox.ac.uk/objects/e0d10554-db39-4b58-a944-45da5e66248e/"}],
+      "creator_ids": ["agent:richard-hill"],
+      "date_statements": [{"label": "current catalog date", "value": "1501-1533", "normalized": "1501/1533", "certainty": "high", "evidence_ids": ["evidence:balliol-manifest"]}],
+      "holding": {"institution_id": "agent:balliol-college", "shelfmark": "MS 354", "catalog_url": "https://archives.balliol.ox.ac.uk/Ancient%20MSS/ancientmsslist8.asp"},
+      "physical_description": {"support": "paper", "extent": "248 folios", "format": "Commonplace-book manuscript", "notes": ["Associated with the London grocer Richard Hill."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:balliol-manifest", "evidence:balliol-cache-audit", "evidence:dyboski-scan"]
+    },
+    {
+      "id": "witness:bl:Harley-2399",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 2399",
+      "description": "Fischer's incomplete H1 and principal base for gamma. The poem occupies fols. 61r-63v in a Bodmin/Cornwall production unit, perhaps written by John Arcuarius.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 2399", "uri": "https://searcharchives.bl.uk/catalog/040-002048230"}],
+      "date_statements": [{"label": "manuscript part", "value": "second half of the fifteenth century", "normalized": "1450/1500", "certainty": "high", "evidence_ids": ["evidence:bl-harley2399"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 2399", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048230"},
+      "physical_description": {"extent": "Composite manuscript of 102 folios", "format": "Manuscript codex", "notes": ["The relevant production unit is associated with Bodmin, Cornwall."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:bl-harley2399"]
+    },
+    {
+      "id": "witness:bodleian:Ashmole-61",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library, MS Ashmole 61",
+      "alternate_labels": ["The Rate manuscript"],
+      "description": "Fischer's A branch, used indirectly through Furnivall's transcription. The poem is item 3 at fol. 6r-v; it omits stanzas 6-11, the first half of stanza 13, and stanza 14 in the catalog's reckoning.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS Ashmole 61", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359"}, {"scheme": "Digital Bodleian object", "value": "69462c25-b481-4643-9942-34f7243ea921", "uri": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/"}],
+      "creator_ids": ["agent:rate"],
+      "date_statements": [{"label": "current catalog date", "value": "1490-1510", "normalized": "1490/1510", "certainty": "high", "evidence_ids": ["evidence:ashmole-catalog"]}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS Ashmole 61", "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359"},
+      "physical_description": {"support": "paper", "extent": "162 principal leaves plus endpapers", "format": "Tall quarto or holster manuscript", "dimensions": "417-418 × 138-141 mm", "notes": ["Made in England, perhaps Leicester; copied by the scribe who signs as Rate or Rathe.", "No significant decoration or rubrication; yellow wash is used selectively. Rebound in 1986."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fischer-editorial-method", "evidence:ashmole-catalog", "evidence:ashmole-cache-audit"]
+    },
+    {
+      "id": "intermediary:varnhagen-transcript:CUL-Ff-2-38",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's transcript of CUL MS Ff.2.38",
+      "description": "The modern working transcript from which Fischer printed alpha; it is not the medieval codex.",
+      "creator_ids": ["agent:hermann-varnhagen"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "intermediary:varnhagen-transcript:Harley-5396",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's transcript of Harley MS 5396",
+      "description": "The modern working transcript Fischer used to collate alpha; it is not the medieval codex.",
+      "creator_ids": ["agent:hermann-varnhagen"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "intermediary:varnhagen-transcript:Lambeth-853",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's transcript of Lambeth Palace Library MS 853",
+      "description": "The modern working transcript from which Fischer printed beta; it is not the medieval codex.",
+      "creator_ids": ["agent:hermann-varnhagen"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "intermediary:varnhagen-transcript:Balliol-354",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's transcript of Balliol College MS 354",
+      "description": "The modern working transcript Fischer used to collate beta; it is not the medieval codex.",
+      "creator_ids": ["agent:hermann-varnhagen"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "intermediary:varnhagen-transcript:Harley-2399",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's transcript of Harley MS 2399",
+      "description": "The modern working transcript from which Fischer printed the chief text of gamma; it is not the medieval codex.",
+      "creator_ids": ["agent:hermann-varnhagen"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "edition:furnivall:1869",
+      "type": "scholarly_edition",
+      "label": "Frederick J. Furnivall, Queene Elizabethes Achademy (1869)",
+      "description": "The printed intermediary from which Fischer obtained the Ashmole 61 text rather than inspecting the codex directly.",
+      "creator_ids": ["agent:frederick-furnivall"],
+      "date_statements": [{"label": "publication", "value": "1869", "normalized": "1869", "certainty": "high", "evidence_ids": ["evidence:furnivall-scan"]}],
+      "bibliographic": {"citation": "Frederick J. Furnivall, ed., Queene Elizabethes Achademy (by Sir Humphrey Gilbert); A Booke of Precedence; The Ordering of a Funerall, &c.; Varying Versions of The Good Wife, The Wise Man, &c. (London: Early English Text Society, 1869), pp. 52-55.", "title": "Queene Elizabethes Achademy", "publisher": "Early English Text Society", "publication_place": "London", "date": "1869", "pages": "52-55", "languages": ["enm", "eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:furnivall-scan", "evidence:fischer-editorial-method"]
+    },
+    {
+      "id": "facsimile:internet-archive:furnivall-1869",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Furnivall's 1869 edition",
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Complete downloadable PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:furnivall-scan"]
+    },
+    {
+      "id": "edition:dyboski:1907",
+      "type": "scholarly_edition",
+      "label": "Roman Dyboski, Songs, Carols, and Other Miscellaneous Poems from Balliol MS 354 (1907)",
+      "description": "A later scholarly description of Balliol MS 354. Its item 59 identifies the poem at fols. 157r-158r and notes that Fischer prints the Balliol readings only in beta's apparatus; it does not print a continuous Balliol text.",
+      "creator_ids": ["agent:roman-dyboski"],
+      "date_statements": [{"label": "title-page publication", "value": "1907", "normalized": "1907", "certainty": "high", "evidence_ids": ["evidence:dyboski-scan"]}],
+      "bibliographic": {"citation": "Roman Dyboski, ed., Songs, Carols, and Other Miscellaneous Poems from the Balliol MS. 354, Richard Hill's Commonplace-Book, EETS Extra Series 101 (London: Kegan Paul, Trench, Trübner & Co., 1907), pp. xlii-xliii.", "title": "Songs, Carols, and Other Miscellaneous Poems from the Balliol MS. 354, Richard Hill's Commonplace-Book", "series": "Early English Text Society, Extra Series 101", "publication_place": "London", "date": "1907", "pages": "xlii-xliii", "languages": ["enm", "eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dyboski-scan"]
+    },
+    {
+      "id": "facsimile:internet-archive:dyboski-1907",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Dyboski's Balliol MS 354 edition",
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Complete downloadable PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dyboski-scan"]
+    },
+    {
+      "id": "edition:salisbury:2002",
+      "type": "scholarly_edition",
+      "label": "Eve Salisbury, The Trials and Joys of Marriage (2002)",
+      "description": "A modern edition furnishing a readable text, notes, bibliography, and current witness locators for How the Wise Man Taught His Son on printed pp. 233-245.",
+      "creator_ids": ["agent:eve-salisbury"],
+      "date_statements": [{"label": "publication", "value": "2002", "normalized": "2002", "certainty": "high", "evidence_ids": ["evidence:salisbury"]}],
+      "bibliographic": {"citation": "Eve Salisbury, ed., The Trials and Joys of Marriage (Kalamazoo: Medieval Institute Publications, 2002), pp. 233-245.", "title": "The Trials and Joys of Marriage", "publisher": "Medieval Institute Publications", "publication_place": "Kalamazoo", "date": "2002", "pages": "233-245", "languages": ["enm", "eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:salisbury", "evidence:mets-terms"]
+    },
+    {
+      "id": "facsimile:digital-bodleian:Balliol-354",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete exposed image sequence for Balliol College MS 354",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "IIIF Presentation manifest with 528 canvases; locally cached as a ZIP of all exposed images",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:balliol-manifest", "evidence:balliol-cache-audit"]
+    },
+    {
+      "id": "facsimile:digital-bodleian:Ashmole-61",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete exposed image sequence for MS Ashmole 61",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "IIIF Presentation manifest with 358 canvases; locally cached as a ZIP of all exposed images at 1800-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole-manifest", "evidence:ashmole-cache-audit"]
+    },
+    {
+      "id": "facsimile:digital-bodleian:Ashmole-61-selected-slides",
+      "type": "facsimile",
+      "label": "Digital Bodleian selected 35mm slides for MS Ashmole 61",
+      "description": "An older eight-image partial object. None of its images shows the poem at fol. 6r-v; the separate 358-canvas object is the relevant complete exposed image sequence.",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "Eight selected IIIF images cached at 1800-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole-slides", "evidence:ashmole-cache-audit"]
+    },
+    {
+      "id": "facsimile:scolar:CUL-Ff-2-38-1979",
+      "type": "facsimile",
+      "label": "Printed facsimile of Cambridge University Library MS Ff.2.38 (1979)",
+      "creator_ids": ["agent:frances-mcsparran", "agent:p-r-robinson", "agent:scolar-press"],
+      "bibliographic": {"citation": "Frances McSparran and P. R. Robinson, Cambridge University Library MS Ff.2.38 (London: Scolar Press, 1979), xxv + 490 facsimile pages; ISBN 0-85967-471-1.", "title": "Cambridge University Library MS Ff.2.38", "publisher": "Scolar Press", "publication_place": "London", "date": "1979", "pages": "xxv + 490 facsimile pages"},
+      "reproduction_format": "Printed monochrome manuscript facsimile",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-facsimile-and-foliation"]
+    },
+    {
+      "id": "catalog:bodleian:Ashmole-61",
+      "type": "catalog_description",
+      "label": "Bodleian Medieval Manuscripts catalog description for MS Ashmole 61",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole-catalog"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press"},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library"},
+    {"id": "agent:rudolf-fischer", "type": "person", "name": "Rudolf Fischer"},
+    {"id": "agent:hermann-varnhagen", "type": "person", "name": "Hermann Varnhagen"},
+    {"id": "agent:frederick-furnivall", "type": "person", "name": "Frederick J. Furnivall", "dates": "1825-1910"},
+    {"id": "agent:roman-dyboski", "type": "person", "name": "Roman Dyboski", "dates": "1883-1945"},
+    {"id": "agent:eve-salisbury", "type": "person", "name": "Eve Salisbury"},
+    {"id": "agent:richard-hill", "type": "person", "name": "Richard Hill", "notes": ["London grocer associated with Balliol MS 354."]},
+    {"id": "agent:rate", "type": "person", "name": "Rate", "alternate_names": ["Rathe"], "notes": ["The principal scribe of Ashmole 61 signs this name."]},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library"},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library"},
+    {"id": "agent:lambeth-palace-library", "type": "organization", "name": "Lambeth Palace Library"},
+    {"id": "agent:balliol-college", "type": "organization", "name": "Balliol College, Oxford"},
+    {"id": "agent:bodleian-libraries", "type": "organization", "name": "Bodleian Libraries"},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive"},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series"},
+    {"id": "agent:frances-mcsparran", "type": "person", "name": "Frances McSparran"},
+    {"id": "agent:p-r-robinson", "type": "person", "name": "P. R. Robinson"},
+    {"id": "agent:scolar-press", "type": "organization", "name": "Scolar Press"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-encoded-from-umich",
+      "type": "encoded_from",
+      "subject": "artifact:general-corpus:CME00042",
+      "object": "encoding:umich-cme:CME00042",
+      "scope": {"subject": {"kind": "whole", "description": "Repository XML"}, "object": {"kind": "whole", "description": "U-M CME item"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-fischer",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00042",
+      "object": "edition:fischer:1889",
+      "scope": {"subject": {"kind": "whole", "description": "Complete electronic item"}, "object": {"kind": "selected_passages", "description": "Two title pages and printed pp. 27-49", "locators": ["title pages", "pp. 27-49"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-inspection", "evidence:fischer-scan", "evidence:umich-item"], "notes": "Fischer's introduction pp. 1-26 and notes/index pp. 50-64 are not encoded."}
+    },
+    {
+      "id": "relation:fischer-alpha-transcribes-cul-transcript",
+      "type": "transcribes",
+      "subject": "edition:fischer:1889",
+      "object": "intermediary:varnhagen-transcript:CUL-Ff-2-38",
+      "scope": {"subject": {"kind": "part", "description": "Text alpha", "locators": ["pp. 27-35"]}, "object": {"kind": "part", "description": "Transcript of the poem", "locators": ["modern codex fols. 53r-54r", "Fischer legacy fols. 45r-46r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]}
+    },
+    {
+      "id": "relation:cul-transcript-transcribes-witness",
+      "type": "transcribes",
+      "subject": "intermediary:varnhagen-transcript:CUL-Ff-2-38",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {"subject": {"kind": "whole", "description": "Working transcript of the poem"}, "object": {"kind": "part", "description": "Poem in the codex", "locators": ["fols. 53r-54r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:cul-facsimile-and-foliation"]}
+    },
+    {
+      "id": "relation:fischer-alpha-collated-harley5396-transcript",
+      "type": "collated_against",
+      "subject": "edition:fischer:1889",
+      "object": "intermediary:varnhagen-transcript:Harley-5396",
+      "scope": {"subject": {"kind": "part", "description": "Text alpha and apparatus", "locators": ["pp. 27-35"]}, "object": {"kind": "part", "description": "Transcript of the poem", "locators": ["Harley MS 5396, fols. 297r-300v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]}
+    },
+    {
+      "id": "relation:harley5396-transcript-transcribes-witness",
+      "type": "transcribes",
+      "subject": "intermediary:varnhagen-transcript:Harley-5396",
+      "object": "witness:bl:Harley-5396",
+      "scope": {"subject": {"kind": "whole", "description": "Working transcript of the poem"}, "object": {"kind": "part", "description": "Poem in the codex", "locators": ["fols. 297r-300v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:bl-harley5396"]}
+    },
+    {
+      "id": "relation:fischer-beta-transcribes-lambeth-transcript",
+      "type": "transcribes",
+      "subject": "edition:fischer:1889",
+      "object": "intermediary:varnhagen-transcript:Lambeth-853",
+      "scope": {"subject": {"kind": "part", "description": "Text beta", "locators": ["pp. 36-42"]}, "object": {"kind": "part", "description": "Transcript of the poem", "locators": ["MS pp. 186-192"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]}
+    },
+    {
+      "id": "relation:lambeth-transcript-transcribes-witness",
+      "type": "transcribes",
+      "subject": "intermediary:varnhagen-transcript:Lambeth-853",
+      "object": "witness:lambeth:MS853",
+      "scope": {"subject": {"kind": "whole", "description": "Working transcript of the poem"}, "object": {"kind": "part", "description": "Poem in the codex", "locators": ["pp. 186-192"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:salisbury"]}
+    },
+    {
+      "id": "relation:fischer-beta-collated-balliol-transcript",
+      "type": "collated_against",
+      "subject": "edition:fischer:1889",
+      "object": "intermediary:varnhagen-transcript:Balliol-354",
+      "scope": {"subject": {"kind": "part", "description": "Text beta and apparatus", "locators": ["pp. 36-42"]}, "object": {"kind": "part", "description": "Transcript of the poem", "locators": ["fols. 157r-158r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]}
+    },
+    {
+      "id": "relation:balliol-transcript-transcribes-witness",
+      "type": "transcribes",
+      "subject": "intermediary:varnhagen-transcript:Balliol-354",
+      "object": "witness:balliol:MS354",
+      "scope": {"subject": {"kind": "whole", "description": "Working transcript of the poem"}, "object": {"kind": "part", "description": "Poem in the codex", "locators": ["fols. 157r-158r", "image pp. 335-337"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:balliol-cache-audit", "evidence:dyboski-scan"]}
+    },
+    {
+      "id": "relation:fischer-gamma-transcribes-harley2399-transcript",
+      "type": "transcribes",
+      "subject": "edition:fischer:1889",
+      "object": "intermediary:varnhagen-transcript:Harley-2399",
+      "scope": {"subject": {"kind": "part", "description": "Chief text of gamma", "locators": ["pp. 43-49, excluding Ashmole-supplied stanzas 8, 12, and 13"]}, "object": {"kind": "part", "description": "Transcript of the incomplete poem", "locators": ["Harley MS 2399, fols. 61r-63v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]}
+    },
+    {
+      "id": "relation:harley2399-transcript-transcribes-witness",
+      "type": "transcribes",
+      "subject": "intermediary:varnhagen-transcript:Harley-2399",
+      "object": "witness:bl:Harley-2399",
+      "scope": {"subject": {"kind": "whole", "description": "Working transcript of the poem"}, "object": {"kind": "part", "description": "Incomplete poem in the codex", "locators": ["fols. 61r-63v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:bl-harley2399"]}
+    },
+    {
+      "id": "relation:furnivall-transcribes-ashmole",
+      "type": "transcribes",
+      "subject": "edition:furnivall:1869",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": {"subject": {"kind": "part", "description": "Printed Ashmole text", "locators": ["pp. 52-55"]}, "object": {"kind": "part", "description": "Poem in the manuscript", "locators": ["fol. 6r-v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:furnivall-scan", "evidence:ashmole-catalog", "evidence:ashmole-cache-audit"]}
+    },
+    {
+      "id": "relation:fischer-gamma-transcribes-furnivall",
+      "type": "transcribes",
+      "subject": "edition:fischer:1889",
+      "object": "edition:furnivall:1869",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Ashmole-only material inserted into gamma", "locators": ["gamma stanzas 8, 12, and 13"]}, "object": {"kind": "part", "description": "Furnivall's Ashmole transcription", "locators": ["pp. 52-55"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:furnivall-scan"]}
+    },
+    {
+      "id": "relation:fischer-gamma-collated-furnivall",
+      "type": "collated_against",
+      "subject": "edition:fischer:1889",
+      "object": "edition:furnivall:1869",
+      "scope": {"subject": {"kind": "part", "description": "Gamma and its apparatus", "locators": ["pp. 43-49"]}, "object": {"kind": "part", "description": "Furnivall's Ashmole transcription", "locators": ["pp. 52-55"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:furnivall-scan"]}
+    },
+    {
+      "id": "relation:fischer-scan-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:fischer-1889",
+      "object": "edition:fischer:1889",
+      "scope": {"subject": {"kind": "whole", "description": "Complete scan file"}, "object": {"kind": "whole", "description": "Complete printed edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fischer-scan"]}
+    },
+    {
+      "id": "relation:furnivall-scan-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:furnivall-1869",
+      "object": "edition:furnivall:1869",
+      "scope": {"subject": {"kind": "whole", "description": "Complete scan file"}, "object": {"kind": "whole", "description": "Complete printed edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:furnivall-scan"]}
+    },
+    {
+      "id": "relation:dyboski-describes-balliol",
+      "type": "describes",
+      "subject": "edition:dyboski:1907",
+      "object": "witness:balliol:MS354",
+      "scope": {"subject": {"kind": "part", "description": "Descriptive item 59", "locators": ["pp. xlii-xliii"]}, "object": {"kind": "part", "description": "Poem in Balliol MS 354", "locators": ["fols. 157r-158r"]}, "notes": "Dyboski points readers to Fischer's beta apparatus instead of printing a continuous Balliol text."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dyboski-scan"]}
+    },
+    {
+      "id": "relation:dyboski-scan-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:dyboski-1907",
+      "object": "edition:dyboski:1907",
+      "scope": {"subject": {"kind": "whole", "description": "Complete scan file"}, "object": {"kind": "whole", "description": "Complete printed edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dyboski-scan"]}
+    },
+    {
+      "id": "relation:balliol-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:digital-bodleian:Balliol-354",
+      "object": "witness:balliol:MS354",
+      "scope": {"subject": {"kind": "whole", "description": "All 528 exposed IIIF canvases"}, "object": {"kind": "whole", "description": "Whole codex relative to the provider inventory", "locators": ["Inside upper board through inside lower board"]}, "notes": "Sides/boards exteriors, spine, fore-edge, head, and tail are not present in the provider manifest."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:balliol-manifest", "evidence:balliol-cache-audit"]}
+    },
+    {
+      "id": "relation:ashmole-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:digital-bodleian:Ashmole-61",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": {"subject": {"kind": "whole", "description": "All 358 exposed IIIF canvases"}, "object": {"kind": "whole", "description": "Whole manuscript relative to the provider inventory", "locators": ["Upper board through former lower board"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ashmole-manifest", "evidence:ashmole-cache-audit"]}
+    },
+    {
+      "id": "relation:ashmole-slides-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:digital-bodleian:Ashmole-61-selected-slides",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": {"subject": {"kind": "whole", "description": "All eight images in the partial slide object"}, "object": {"kind": "selected_passages", "description": "Eight photographed details, none covering fol. 6r-v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ashmole-slides", "evidence:ashmole-cache-audit"]}
+    },
+    {
+      "id": "relation:cul-printed-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:scolar:CUL-Ff-2-38-1979",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {"subject": {"kind": "whole", "description": "Printed facsimile volume"}, "object": {"kind": "whole", "description": "Manuscript codex"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:cul-facsimile-and-foliation"]}
+    },
+    {
+      "id": "relation:ashmole-catalog-describes-witness",
+      "type": "describes",
+      "subject": "catalog:bodleian:Ashmole-61",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": {"subject": {"kind": "whole", "description": "Current TEI catalog description"}, "object": {"kind": "whole", "description": "Whole manuscript, including item 3 at fol. 6r-v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ashmole-catalog"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00042",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Clone this repository and initialize the CME submodule.",
+      "url": "https://github.com/Kyvero-Press/General-Corpus",
+      "repository_path": "CME/source/CME_phase_3/CME00042.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:CME00042",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the public CME item.",
+      "url": "https://name.umdl.umich.edu/CME00042",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/CME00042"],
+      "cost": "free",
+      "format": "HTML text derived from XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:fischer-scan",
+      "entity": "facsimile:internet-archive:fischer-1889",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete PDF from the exact Internet Archive file URL.",
+      "url": "https://archive.org/details/HowTheWyseManTaught",
+      "alternate_urls": ["https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught.pdf", "https://archive.org/metadata/HowTheWyseManTaught", "https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught_scandata.xml"],
+      "local_copies": [
+        {"label": "Complete Fischer edition PDF", "path": "source-cache/CME00042/fischer-1889-how-the-wyse-man-taught-complete.pdf", "source_url": "https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught.pdf", "sha256": "88587dada2e086d9c2ed2f5644a7c27fc4830c26367f50feaf7d1291dc04a7f5", "bytes": 2615146, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Matter encoded in CME00042", "locators": ["PDF pp. 12-13 / scan leaves n11-n12: two title pages", "PDF pp. 45-67 / scan leaves n44-n66: printed pp. 27-49"], "notes": ["The cache deliberately retains the entire 90-page scan, including Fischer's introduction, notes, index, covers, and adjacent copy matter."]}},
+        {"label": "Internet Archive item metadata", "path": "source-cache/CME00042/fischer-1889-internet-archive-metadata.json", "source_url": "https://archive.org/metadata/HowTheWyseManTaught", "sha256": "f0c266eadf7d30b1d201b794f25d43fd8f0178af4f33391a7e9c9ddafb555c79", "bytes": 5004, "media_type": "application/json", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive scan-data XML", "path": "source-cache/CME00042/fischer-1889-scandata.xml", "source_url": "https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught_scandata.xml", "sha256": "09c49cd47ec37680b76bd0d7207e13f4c7bd6d4f46fe2969250927328190a495", "bytes": 27131, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free",
+      "format": "PDF, JSON metadata, and scan-data XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:fischer-scan", "evidence:fischer-ia-metadata"]
+    },
+    {
+      "id": "access:furnivall-scan",
+      "entity": "facsimile:internet-archive:furnivall-1869",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete PDF from the exact Internet Archive file URL.",
+      "url": "https://archive.org/details/queeneelizabethe00furnuoft",
+      "alternate_urls": ["https://archive.org/download/queeneelizabethe00furnuoft/queeneelizabethe00furnuoft.pdf", "https://archive.org/metadata/queeneelizabethe00furnuoft"],
+      "local_copies": [
+        {"label": "Complete Furnivall edition PDF", "path": "source-cache/CME00042/furnivall-1869-queene-elizabethes-achademy-complete.pdf", "source_url": "https://archive.org/download/queeneelizabethe00furnuoft/queeneelizabethe00furnuoft.pdf", "sha256": "e9f22566038a0450c9947e16a5cf75bd2111c72afd4b0d596d4eef5f06bd0fd1", "bytes": 31481401, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Furnivall's transcription of the Ashmole witness", "locators": ["printed pp. 52-55", "PDF pp. 90-93", "scan leaves approximately n89-n92"], "notes": ["The complete 550-page PDF is retained, not an extracted four-page portion."]}},
+        {"label": "Internet Archive item metadata", "path": "source-cache/CME00042/furnivall-1869-internet-archive-metadata.json", "source_url": "https://archive.org/metadata/queeneelizabethe00furnuoft", "sha256": "47fc5543df05f689264cfa12ad02337e4188a3784559d552ad97e9400e19ac51", "bytes": 102795, "media_type": "application/json", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free",
+      "format": "PDF and JSON metadata",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:furnivall-scan"]
+    },
+    {
+      "id": "access:dyboski-scan",
+      "entity": "facsimile:internet-archive:dyboski-1907",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete PDF from the exact Internet Archive file URL.",
+      "url": "https://archive.org/details/songscarolsando00hillgoog",
+      "alternate_urls": ["https://archive.org/download/songscarolsando00hillgoog/songscarolsando00hillgoog.pdf", "https://archive.org/metadata/songscarolsando00hillgoog", "https://archive.org/download/songscarolsando00hillgoog/songscarolsando00hillgoog_scandata.xml"],
+      "local_copies": [
+        {"label": "Complete Dyboski edition PDF", "path": "source-cache/CME00042/dyboski-1907-balliol-ms-354-complete.pdf", "source_url": "https://archive.org/download/songscarolsando00hillgoog/songscarolsando00hillgoog.pdf", "sha256": "f2b3acf6dcb9a66935bb5e4a69649f97a8f5f4ce4a275feb2f18b22b3c4cce3d", "bytes": 7064411, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Descriptive record for the Balliol witness", "locators": ["printed pp. xlii-xliii", "PDF pp. 59-60"], "notes": ["This is a descriptive list entry, not a continuous edition of the Balliol text."]}},
+        {"label": "Internet Archive item metadata", "path": "source-cache/CME00042/dyboski-1907-internet-archive-metadata.json", "source_url": "https://archive.org/metadata/songscarolsando00hillgoog", "sha256": "8fb3e27f69a45c26e94415bd81fcc83ab4de1923a194c43e550b09b626fe0c98", "bytes": 6088, "media_type": "application/json", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive scan-data XML", "path": "source-cache/CME00042/dyboski-1907-scandata.xml", "source_url": "https://archive.org/download/songscarolsando00hillgoog/songscarolsando00hillgoog_scandata.xml", "sha256": "6ebecad4956bf84c6abe9654d5e96ea2536b01fcd545f8191d1a4b8d78e235c0", "bytes": 88028, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free",
+      "format": "PDF, JSON metadata, and scan-data XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:dyboski-scan"]
+    },
+    {
+      "id": "access:salisbury-edition",
+      "entity": "edition:salisbury:2002",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read online or download the complete edition PDF from the exact METS object-storage URL.",
+      "url": "https://metseditions.org/read/yzvRgARU7jyNCK6vtXzNDsvZ4Me5r7v",
+      "alternate_urls": ["https://metseditions.org/texts/aWg76v4ps5NNBUNAEizPeKfmRZ64WAP0", "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/89b2e379-b5b3-47af-83ca-3f297c52dd0b/downloadable_version/3461b61b03f99ed3b6758c40f153f8e9.pdf"],
+      "local_copies": [{"label": "Complete METS edition PDF", "path": "source-cache/CME00042/salisbury-trials-and-joys-of-marriage-complete.pdf", "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/89b2e379-b5b3-47af-83ca-3f297c52dd0b/downloadable_version/3461b61b03f99ed3b6758c40f153f8e9.pdf", "sha256": "eca4a1ae18c2e3e04e9cb807afe316693cbe5c162221a5ee42d3b3bba1f3767b", "bytes": 10652869, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "How the Wise Man Taught His Son and its notes", "locators": ["printed pp. 233-245", "PDF pp. 234-246"], "notes": ["The complete 277-page edition is retained privately; METS limits its digital editions to individual use and requires permission for reprinting."]}}],
+      "cost": "free",
+      "format": "HTML and PDF",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:salisbury", "evidence:mets-terms"]
+    },
+    {
+      "id": "access:balliol-images",
+      "entity": "facsimile:digital-bodleian:Balliol-354",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the Digital Bodleian viewer or consume the exact IIIF Presentation manifest. The local ZIP was built from every canvas in that manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e0d10554-db39-4b58-a944-45da5e66248e/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/e0d10554-db39-4b58-a944-45da5e66248e.json"],
+      "local_copies": [{"label": "Complete provider-exposed Balliol MS 354 image bundle", "path": "source-cache/CME00042/balliol-college-ms-354-complete-max.zip", "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e0d10554-db39-4b58-a944-45da5e66248e.json", "sha256": "f037d7ee3be077f0a7e165ce2a4c606f4a21fdb431408fe7207d9e0851eea156", "bytes": 63941507, "media_type": "application/zip", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "iiif_bundle", "source_file_count": 528, "bundle_source_kind": "iiif_presentation_manifest", "work_portion": {"label": "How the Wise Man Taught His Son in the complete manuscript", "locators": ["canvases 342-344 of 528", "image pp. 335-337", "fols. 157r-158r"], "start_url": "https://digital.bodleian.ox.ac.uk/objects/e0d10554-db39-4b58-a944-45da5e66248e/surfaces/1ae7abdf-6173-4b61-b0e6-c63084d050fc/", "end_url": "https://digital.bodleian.ox.ac.uk/objects/e0d10554-db39-4b58-a944-45da5e66248e/surfaces/18a5a2c9-3cf9-401f-a8a4-4f9e9cf1fe70/", "notes": ["The incipit is on p. 335 and the explicit on p. 337. Stans puer ad mensam begins on p. 338/f. 158v.", "All 528 provider canvases were downloaded. The manifest does not expose sides/boards exteriors, spine, fore-edge, head, or tail."]}}],
+      "cost": "free",
+      "format": "IIIF images and Presentation manifest",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:balliol-manifest", "evidence:balliol-cache-audit"]
+    },
+    {
+      "id": "access:ashmole-images",
+      "entity": "facsimile:digital-bodleian:Ashmole-61",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the Digital Bodleian viewer or consume the exact IIIF Presentation manifest. The local ZIP was built from every canvas in that manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json"],
+      "local_copies": [{"label": "Complete provider-exposed Ashmole MS 61 image bundle", "path": "source-cache/CME00042/bodleian-ms-ashmole-61-complete-1800.zip", "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json", "sha256": "a6945b6af77bca611a9c9d8fadce71565c1c2c5755321490327c9f12efed39dc", "bytes": 551390486, "media_type": "application/zip", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "iiif_bundle", "source_file_count": 358, "bundle_source_kind": "iiif_presentation_manifest", "work_portion": {"label": "How the Wise Man Taught His Son in the complete manuscript", "locators": ["canvases 27-28 of 358", "fol. 6r-v"], "start_url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/surfaces/a0f0750c-756d-44bf-912a-3ea2015a8ddd/", "end_url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/surfaces/5d570425-9efa-4d0a-a7d4-a042a992c298/", "notes": ["The poem begins eight lines down fol. 6r and ends on fol. 6v with 'Amen quod Rate' and a fish drawing.", "All 358 provider canvases, from upper board through former lower board, were downloaded at a uniform requested width of 1800 pixels."]}}],
+      "cost": "free",
+      "format": "IIIF images and Presentation manifest",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ashmole-manifest", "evidence:ashmole-cache-audit"]
+    },
+    {
+      "id": "access:ashmole-catalog",
+      "entity": "catalog:bodleian:Ashmole-61",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the public catalog or retrieve the pinned TEI source.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml"],
+      "local_copies": [{"label": "Pinned catalog TEI", "path": "source-cache/CME00042/bodleian-ms-ashmole-61-catalog-tei.xml", "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml", "sha256": "bbfe7d35f7d061abb19d29bbe41e820f454dfb4721c4fb4a95503fe8f5d6f748", "bytes": 42520, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"}],
+      "cost": "free",
+      "format": "HTML and TEI XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ashmole-catalog"]
+    },
+    {
+      "id": "access:ashmole-selected-slides",
+      "entity": "facsimile:digital-bodleian:Ashmole-61-selected-slides",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the separate eight-slide object or its exact IIIF manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/13230b1f-f5a2-4868-a05e-ff0c8ed8c5f8/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/13230b1f-f5a2-4868-a05e-ff0c8ed8c5f8.json"],
+      "local_copies": [{"label": "Complete eight-image slide-object bundle", "path": "source-cache/CME00042/bodleian-ms-ashmole-61-selected-images-1800.zip", "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/13230b1f-f5a2-4868-a05e-ff0c8ed8c5f8.json", "sha256": "82a7c8281131e56f01a26821e4c6d8f0c4122ca0b52c11f9ccedf380fbf36190", "bytes": 9620297, "media_type": "application/zip", "downloaded_on": "2026-07-12", "coverage": "partial", "retrieval_method": "iiif_bundle", "source_file_count": 8, "bundle_source_kind": "iiif_presentation_manifest", "work_portion": {"label": "Overlap with the poem", "locators": ["none"], "notes": ["No selected slide depicts fol. 6r-v. Use the separately recorded complete 358-canvas object."]}}],
+      "cost": "free",
+      "format": "Eight IIIF images",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ashmole-slides", "evidence:ashmole-cache-audit"]
+    },
+    {
+      "id": "access:cul-public-whole-search",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No official public complete digital facsimile was verified in current catalog and discovery searches; a 1979 printed facsimile exists separately.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cul-facsimile-and-foliation", "evidence:public-facsimile-searches"]
+    },
+    {
+      "id": "access:cul-reproduction-order",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use Cambridge's ordering-images route. Ask first for a digital reproduction of the complete physical manuscript—covers/boards, spine when photographable, pastedowns, flyleaves, blanks, every leaf recto and verso, and any separately imaged edges—and separately identify the poem at modern fols. 53r-54r. Request confirmation of omissions, resolution, color, delivery format, price, and publication/redistribution terms.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+      "alternate_urls": ["https://www.lib.cam.ac.uk/collections/departments/chil", "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction"],
+      "cost": "fee",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cul-imaging", "evidence:cul-terms"],
+      "notes": ["The published minimum charge is £25. Supplied copies are for research/private use by default; reproduction or online publication requires written permission."]
+    },
+    {
+      "id": "access:harley5396-public-whole-search",
+      "entity": "witness:bl:Harley-5396",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "The exact current catalog record exposes no Digitised Content link; this is dated search evidence, not proof that no internal or later digitization exists.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002051242",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley5396", "evidence:public-facsimile-searches"]
+    },
+    {
+      "id": "access:harley5396-enquiry",
+      "entity": "witness:bl:Harley-5396",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Use the catalog's Reference Services/contact route to ask whether a complete digital reproduction can be supplied. Define the requested physical coverage (boards/covers, spine if photographable, pastedowns, flyleaves, blanks, every leaf recto/verso, edges if separately imaged), then separately identify the poem at fols. 297r-300v and ask about price, format, omissions, and publication rights.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002051242",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley5396"]
+    },
+    {
+      "id": "access:harley2399-public-whole-search",
+      "entity": "witness:bl:Harley-2399",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "The exact current catalog record exposes no Digitised Content link; this is dated search evidence, not proof that no internal or later digitization exists.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048230",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley2399", "evidence:public-facsimile-searches"]
+    },
+    {
+      "id": "access:harley2399-enquiry",
+      "entity": "witness:bl:Harley-2399",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Use the catalog's Reference Services/contact route to ask whether a complete digital reproduction can be supplied. Define the requested physical coverage (boards/covers, spine if photographable, pastedowns, flyleaves, blanks, every leaf recto/verso, edges if separately imaged), then separately identify the poem at fols. 61r-63v and ask about price, format, omissions, and publication rights.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048230",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley2399"]
+    },
+    {
+      "id": "access:lambeth-public-whole-search",
+      "entity": "witness:lambeth:MS853",
+      "provider_id": "agent:lambeth-palace-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No auditable official complete public facsimile was verified. The current archive catalog endpoint was inaccessible during review and the LUNA interface presented an access-verification barrier; neither was bypassed.",
+      "url": "https://archives.lambethpalacelibrary.org.uk/",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:lambeth-public-search"]
+    },
+    {
+      "id": "access:lambeth-reproduction-order",
+      "entity": "witness:lambeth:MS853",
+      "provider_id": "agent:lambeth-palace-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use the online imaging-services order form. Ask first for a digital reproduction of the complete physical manuscript—covers/boards, spine when photographable, pastedowns, flyleaves, blanks, every page/leaf, and any separately imaged edges—and separately identify the poem at pp. 186-192. Request confirmation of omissions, resolution, color, delivery format, total price, and publication/redistribution terms.",
+      "url": "https://www.lambethpalacelibrary.info/services/imaging-services/",
+      "cost": "fee",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:lambeth-imaging"],
+      "notes": ["The posted price list gives £14.40 per high-resolution image; standard PDFs are £8.40 for the first image and £1.20 for each additional image, with a 40-image order limit. Permission to reproduce is separate and supplied rights are nontransferable."]
+    }
+  ],
+  "rights": [
+    {"id": "rights:umich-item", "entity": "encoding:umich-cme:CME00042", "access_id": "access:umich-text", "component": "U-M CME00042 text and presentation as offered", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The U-M item identifies the material as public domain for educational and research use and links the No Copyright - United States statement.", "asserted_by_id": "agent:umich-library", "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-item"], "notes": ["This statement does not grant rights in modern manuscript photography or unrelated modern editions."]},
+    {"id": "rights:fischer-edition", "entity": "edition:fischer:1889", "component": "Fischer's 1889 editorial text, arrangement, introduction, apparatus, and notes", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The edition was published in 1889 and the U-M derived item identifies its source material as public domain in the United States.", "asserted_by_id": "agent:umich-library", "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:fischer-scan", "evidence:umich-item"]},
+    {"id": "rights:medieval-text", "entity": "edition:fischer:1889", "component": "Underlying anonymous medieval text", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The underlying text is a fifteenth-century work; this assessment is separate from any modern edition, encoding, photograph, or contractual access condition.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:fischer-scan", "evidence:salisbury"]},
+    {"id": "rights:fischer-scan", "entity": "facsimile:internet-archive:fischer-1889", "access_id": "access:fischer-scan", "component": "Internet Archive/Google scan files and digital reproduction", "jurisdiction": "United States / provider terms", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The underlying edition is public domain and the files are openly downloadable, but the item provides no express reusable-file license; the Google usage page asks for noncommercial personal use, no automated queries, and retention of the watermark.", "asserted_by_id": "agent:internet-archive", "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:fischer-scan", "evidence:fischer-ia-metadata"], "notes": ["Public download access is not treated as permission to republish the scan derivative."]},
+    {"id": "rights:furnivall-edition", "entity": "edition:furnivall:1869", "component": "Furnivall's 1869 editorial and transcriptional layer", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The edition was published in 1869.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:furnivall-scan"]},
+    {"id": "rights:furnivall-scan", "entity": "facsimile:internet-archive:furnivall-1869", "access_id": "access:furnivall-scan", "component": "Internet Archive scan files and digital reproduction", "jurisdiction": "United States / provider terms", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The underlying edition is public domain and the PDF is openly downloadable, but current item metadata supplies no explicit reusable-file license for the derivative.", "asserted_by_id": "agent:internet-archive", "contract_terms_status": "unknown", "confidence": "medium", "evidence_ids": ["evidence:furnivall-scan"]},
+    {"id": "rights:dyboski-edition", "entity": "edition:dyboski:1907", "component": "Dyboski's 1907 editorial and descriptive layer", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The edition was published in 1907.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:dyboski-scan"]},
+    {"id": "rights:dyboski-scan", "entity": "facsimile:internet-archive:dyboski-1907", "access_id": "access:dyboski-scan", "component": "Internet Archive/Google scan files and digital reproduction", "jurisdiction": "United States / provider terms", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The underlying edition is public domain and the PDF is openly downloadable, but the item provides no express reusable-file license for the derivative.", "asserted_by_id": "agent:internet-archive", "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:dyboski-scan"]},
+    {"id": "rights:balliol-images", "entity": "facsimile:digital-bodleian:Balliol-354", "access_id": "access:balliol-images", "component": "Balliol MS 354 photography and Digital Bodleian delivery", "jurisdiction": "United Kingdom / provider terms", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The manifest attributes the photographs © The Master and Fellows of Balliol College, Oxford, marks all rights reserved, and requires permission to reproduce images including online.", "asserted_by_id": "agent:balliol-college", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:balliol-manifest", "evidence:balliol-terms"], "notes": ["Balliol permits downloading or printing one copy for private study or research; online or other publication requires written permission. The private cache is not redistributable on that basis."]},
+    {"id": "rights:ashmole-images", "entity": "facsimile:digital-bodleian:Ashmole-61", "access_id": "access:ashmole-images", "component": "Ashmole MS 61 photography and Digital Bodleian delivery", "jurisdiction": "United Kingdom / provider license", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "Digital Bodleian attributes the item under Creative Commons Attribution-NonCommercial 4.0 and identifies Bodleian Libraries as photographer/rightsholder.", "asserted_by_id": "agent:bodleian-libraries", "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"}, "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:ashmole-manifest"], "notes": ["Commercial reuse, including profit-oriented publication, falls outside this license unless separately permitted."]},
+    {"id": "rights:ashmole-slides", "entity": "facsimile:digital-bodleian:Ashmole-61-selected-slides", "access_id": "access:ashmole-selected-slides", "component": "Selected Ashmole MS 61 slide photography and Digital Bodleian delivery", "jurisdiction": "United Kingdom / provider license", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The separate Digital Bodleian slide object is offered under Creative Commons Attribution-NonCommercial 4.0.", "asserted_by_id": "agent:bodleian-libraries", "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"}, "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:ashmole-slides"]},
+    {"id": "rights:salisbury-digital-edition", "entity": "edition:salisbury:2002", "access_id": "access:salisbury-edition", "component": "METS digital edition, editorial text, notes, and downloadable PDF", "jurisdiction": "United States / provider terms", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "METS states that its digital editions are copyrighted and for individual use only, and that reprinting requires permission. Its CC BY-NC-SA 4.0 notice applies specifically to downloadable XML, not automatically to the PDF or complete edition.", "asserted_by_id": "agent:mets", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:mets-terms", "evidence:salisbury"], "notes": ["The locally cached PDF is for private research and must not be committed or redistributed without permission."]},
+    {"id": "rights:cul-requested-images", "entity": "witness:cul:Ff-2-38", "access_id": "access:cul-reproduction-order", "component": "Any newly supplied Cambridge manuscript photography", "jurisdiction": "United Kingdom / supply contract", "copyright_status": "copyright_may_apply", "as_of": "2026-07-12", "basis": "Cambridge's supply terms limit normal orders to research/private use and require written permission for reproduction, including online publication.", "asserted_by_id": "agent:cambridge-university-library", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:cul-terms"]},
+    {"id": "rights:lambeth-requested-images", "entity": "witness:lambeth:MS853", "access_id": "access:lambeth-reproduction-order", "component": "Any newly supplied Lambeth manuscript photography", "jurisdiction": "United Kingdom / supply contract", "copyright_status": "copyright_may_apply", "as_of": "2026-07-12", "basis": "Lambeth's imaging page separates supply from permission to reproduce and states that supplied rights are nontransferable.", "asserted_by_id": "agent:lambeth-palace-library", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:lambeth-imaging"]},
+    {"id": "rights:bl-requested-images", "entity": "witness:bl:Harley-2399", "access_id": "access:harley2399-enquiry", "component": "Any newly supplied British Library manuscript photography for Harley 2399 or Harley 5396", "jurisdiction": "United Kingdom / supply contract", "copyright_status": "unknown", "as_of": "2026-07-12", "basis": "No item-specific reproduction license was verified. Any quotation, publication, or repository redistribution must follow the terms supplied with an order or written response.", "asserted_by_id": "agent:british-library", "contract_terms_status": "unknown", "confidence": "medium", "evidence_ids": ["evidence:bl-harley2399", "evidence:bl-harley5396"]}
+  ],
+  "editorial_practices": [
+    {"id": "practice:fischer-collation", "entity": "edition:fischer:1889", "practice": "collation", "source_feature": "Six manuscript witnesses accessed through five Varnhagen transcripts and one Furnivall print transcription", "representation": "Three edited version-groups with paired-witness variants in footnotes", "description": "Fischer prints alpha from C with H2 variants, beta from L with B variants, and gamma chiefly from incomplete H1 with A material supplied through Furnivall. He corrects obvious errors from the paired witness, sometimes regularizes meter with paired support, and records variants extensively.", "scope": "Fischer's texts and apparatus on pp. 27-49", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]},
+    {"id": "practice:fischer-abbreviation-expansion", "entity": "edition:fischer:1889", "practice": "abbreviation_expansion", "source_feature": "Manuscript abbreviations", "representation": "Expanded without typographic italics", "description": "Fischer explicitly says manuscript abbreviations are expanded but not distinguished by italics; therefore italic type in the CME-derived text should not automatically be interpreted as a facsimile of scribal abbreviation marks.", "scope": "All three edited texts", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]},
+    {"id": "practice:fischer-letter-normalization", "entity": "edition:fischer:1889", "practice": "capitalization_normalization", "source_feature": "Manuscript i/j and u/v usage", "representation": "Modernized distribution", "description": "Fischer states that i/j and u/v are normalized. This practice is modeled under the closest schema enum; it is a letter-form normalization, not principally a capitalization claim.", "scope": "All three edited texts and apparatus", "confidence": "high", "evidence_ids": ["evidence:fischer-editorial-method"]},
+    {"id": "practice:umich-selection", "entity": "encoding:umich-cme:CME00042", "practice": "selection", "source_feature": "Complete 1889 Fischer edition", "representation": "Two title pages plus printed pp. 27-49", "description": "The electronic item omits Fischer's introduction pp. 1-26 and notes/index pp. 50-64 while retaining the three edited texts and their apparatus.", "scope": "Whole U-M item", "confidence": "high", "evidence_ids": ["evidence:repo-inspection", "evidence:fischer-scan"]}
+  ],
+  "evidence": [
+    {"id": "evidence:repo-xml", "type": "repository_file", "citation": "General Corpus source XML for CME00042", "repository_path": "CME/source/CME_phase_3/CME00042.xml", "summary": "Primary repository evidence for identifiers, title pages, encoded text, printed pagination, apparatus, and revision note.", "accessed_on": "2026-07-12", "sha256": "b635e716100d4a662f1fb5b259dc847061cb653011c2045311a843a9898d4d95"},
+    {"id": "evidence:repo-inspection", "type": "visual_inspection", "citation": "Structural inspection and element count of CME00042.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c", "repository_path": "CME/source/CME_phase_3/CME00042.xml", "locator": "BODY, three DIV2 version containers, title-page DIV1 elements, and PB/N milestone sequence", "summary": "Confirmed three version containers, 63 LG stanzas, 504 base L elements, 436 NOTE elements, 100 line-number milestones, 25 PB elements, and the discontinuous title-page/pp. 27-49 source scope.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:umich-item", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00042", "url": "https://name.umdl.umich.edu/CME00042", "alternate_urls": ["https://quod.lib.umich.edu/c/cme/CME00042"], "summary": "Identifies Fischer's 1889 source, lists alpha, beta, and gamma, and supplies the U-M public-domain rights statement.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:fischer-scan", "type": "edition_statement", "citation": "Rudolf Fischer, ed., How the Wyse Man Taught Hys Sone: In drei Texten (Erlangen and Leipzig, 1889)", "url": "https://archive.org/details/HowTheWyseManTaught", "alternate_urls": ["https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught.pdf"], "repository_path": "source-cache/CME00042/fischer-1889-how-the-wyse-man-taught-complete.pdf", "locator": "title pages; introduction pp. 1-26; edited texts pp. 27-49; notes and index pp. 50-64", "summary": "The complete primary source edition for bibliography, source scope, texts, apparatus, and Fischer's witness statements.", "accessed_on": "2026-07-12", "sha256": "88587dada2e086d9c2ed2f5644a7c27fc4830c26367f50feaf7d1291dc04a7f5"},
+    {"id": "evidence:fischer-editorial-method", "type": "edition_statement", "citation": "Fischer 1889, introduction and editorial statement", "url": "https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught.pdf", "repository_path": "source-cache/CME00042/fischer-1889-how-the-wyse-man-taught-complete.pdf", "locator": "printed pp. 1-26, especially the witness descriptions and editorial method immediately preceding p. 27", "summary": "States that Varnhagen supplied transcripts of C, H2, L, B, and H1; that Furnivall's 1869 text supplied A; that alpha uses C/H2, beta L/B, and gamma H1/A; and that Fischer corrects obvious errors, sometimes normalizes meter, expands abbreviations without italics, modernizes i/j and u/v, and records paired variants.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:fischer-ia-metadata", "type": "digital_surrogate", "citation": "Internet Archive metadata and scan-data for HowTheWyseManTaught", "url": "https://archive.org/metadata/HowTheWyseManTaught", "alternate_urls": ["https://archive.org/download/HowTheWyseManTaught/How_the_wyse_man_taught_scandata.xml"], "summary": "Supports exact file URLs, scan provenance, paging, and the absence of an explicit reusable-file license; the Google usage notice supplies noncommercial personal-use conditions.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-facsimile-and-foliation", "type": "scholarly_source", "citation": "Database of Middle English Romance, Cambridge University Library MS Ff.2.38; Frances McSparran and P. R. Robinson, facsimile (1979)", "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238", "summary": "Supplies the current poem locator fols. 53r-54r and bibliographic evidence for the complete 1979 printed facsimile, allowing Fischer's older fols. 45r-46r to be retained as a legacy locator.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-imaging", "type": "official_webpage", "citation": "Cambridge University Library, ordering images", "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images", "summary": "Provides the institutional route for ordering manuscript reproductions and current minimum-charge information.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-terms", "type": "official_webpage", "citation": "Cambridge University Library, terms and conditions for image supply and reproduction", "url": "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction", "summary": "Limits ordinary supplied images to private research/study and requires written permission for reproduction and publication.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-harley5396", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 5396", "url": "https://searcharchives.bl.uk/catalog/040-002051242", "locator": "poetry unit ff. 271r-311v; poem ff. 297r-300v from Fischer/METS cross-reference", "summary": "Supplies the exact current record, poetry-unit date about 1456, holding, and absence of an exposed Digitised Content link at review time.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-harley2399", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 2399", "url": "https://searcharchives.bl.uk/catalog/040-002048230", "locator": "fols. 61r-63v", "summary": "Identifies the incomplete poem, second-half-fifteenth-century relevant part, Bodmin/Cornwall association, possible scribe John Arcuarius, and absence of an exposed Digitised Content link at review time.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:lambeth-furnivall", "type": "scholarly_source", "citation": "Frederick J. Furnivall, ed., Early English Meals and Manners (1868), Lambeth MS 853 description", "url": "https://archive.org/details/earlyenglishmeal00furnuoft", "summary": "Historical scholarly evidence for the conventional circa-1430 date and parchment support of Lambeth MS 853; the date remains attributed rather than inferred from another witness.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:lambeth-imaging", "type": "official_webpage", "citation": "Lambeth Palace Library, Imaging Services", "url": "https://www.lambethpalacelibrary.info/services/imaging-services/", "summary": "Provides the online order route, current image/PDF prices and order limits, and separate nontransferable permission-to-reproduce conditions.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:lambeth-public-search", "type": "search_result", "citation": "Dated search of Lambeth archive catalog and image-discovery interfaces for MS 853", "url": "https://archives.lambethpalacelibrary.org.uk/", "summary": "No auditable official complete public image object was verified on 2026-07-12; the archive endpoint was inaccessible and the LUNA interface presented an access-verification barrier. This supports only a dated no-public-copy-found status.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:balliol-manifest", "type": "digital_surrogate", "citation": "Digital Bodleian IIIF manifest for Balliol College MS 354", "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e0d10554-db39-4b58-a944-45da5e66248e.json", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/e0d10554-db39-4b58-a944-45da5e66248e/", "https://archives.balliol.ox.ac.uk/Ancient%20MSS/ancientmsslist8.asp"], "summary": "Exposes 528 canvases, manuscript metadata, and an all-rights-reserved Balliol attribution requiring permission for online reproduction.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:balliol-cache-audit", "type": "visual_inspection", "citation": "Local audit of the complete provider-exposed Balliol MS 354 IIIF image bundle", "repository_path": "source-cache/CME00042/balliol-college-ms-354-complete-max.zip", "locator": "canvases 342-344 of 528; pp. 335-337; fols. 157r-158r", "summary": "Verified 528 of 528 exposed canvases, bundle integrity, and the poem's incipit and explicit within the full manuscript. The provider manifest runs from inside upper board to inside lower board but omits several physical exteriors and edges.", "accessed_on": "2026-07-12", "sha256": "f037d7ee3be077f0a7e165ce2a4c606f4a21fdb431408fe7207d9e0851eea156"},
+    {"id": "evidence:balliol-terms", "type": "official_webpage", "citation": "Balliol College Archives and Manuscripts, image use terms", "url": "https://archives.balliol.ox.ac.uk/Ancient%20MSS/ancientmsslist8.asp", "summary": "Allows one downloaded or printed copy for private study/research and requires written permission to publish manuscript images, including on a website.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ashmole-catalog", "type": "official_catalog", "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS Ashmole 61", "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359", "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml"], "repository_path": "source-cache/CME00042/bodleian-ms-ashmole-61-catalog-tei.xml", "locator": "item 3, fol. 6r-v", "summary": "Supplies exact contents, incipit/explicit, DIMEV number, omissions, date, tentative region, support, extent, dimensions, scribe, decoration, binding, and a link to the complete Digital Bodleian object.", "accessed_on": "2026-07-12", "sha256": "bbfe7d35f7d061abb19d29bbe41e820f454dfb4721c4fb4a95503fe8f5d6f748"},
+    {"id": "evidence:ashmole-manifest", "type": "digital_surrogate", "citation": "Digital Bodleian IIIF manifest for MS Ashmole 61", "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/"], "summary": "Exposes 358 canvases from upper board through former lower board, including fol. 6r-v at canvases 27-28, and applies CC BY-NC 4.0 to the digital images.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ashmole-cache-audit", "type": "visual_inspection", "citation": "Local audit of the complete provider-exposed Ashmole MS 61 IIIF image bundle and the separate selected-slide bundle", "repository_path": "source-cache/CME00042/bodleian-ms-ashmole-61-complete-1800.zip", "locator": "complete object canvases 27-28 of 358; fol. 6r-v", "summary": "Verified 358 of 358 exposed full-object canvases at the requested 1800-pixel width and visually located the poem. The eight-slide legacy object has no overlap with fol. 6r-v.", "accessed_on": "2026-07-12", "sha256": "a6945b6af77bca611a9c9d8fadce71565c1c2c5755321490327c9f12efed39dc"},
+    {"id": "evidence:ashmole-slides", "type": "digital_surrogate", "citation": "Digital Bodleian IIIF manifest for selected 35mm slides of MS Ashmole 61", "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/13230b1f-f5a2-4868-a05e-ff0c8ed8c5f8.json", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/13230b1f-f5a2-4868-a05e-ff0c8ed8c5f8/"], "summary": "A distinct eight-image partial object; it does not cover the poem, and must not be confused with the complete 358-canvas object.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:furnivall-scan", "type": "edition_statement", "citation": "Frederick J. Furnivall, ed., Queene Elizabethes Achademy (London, 1869)", "url": "https://archive.org/details/queeneelizabethe00furnuoft", "alternate_urls": ["https://archive.org/download/queeneelizabethe00furnuoft/queeneelizabethe00furnuoft.pdf", "https://archive.org/metadata/queeneelizabethe00furnuoft"], "repository_path": "source-cache/CME00042/furnivall-1869-queene-elizabethes-achademy-complete.pdf", "locator": "printed pp. 52-55; PDF pp. 90-93", "summary": "Prints the Ashmole 61 version used by Fischer as his indirect source for A.", "accessed_on": "2026-07-12", "sha256": "e9f22566038a0450c9947e16a5cf75bd2111c72afd4b0d596d4eef5f06bd0fd1"},
+    {"id": "evidence:dyboski-scan", "type": "scholarly_source", "citation": "Roman Dyboski, ed., Songs, Carols, and Other Miscellaneous Poems from the Balliol MS. 354 (London, 1907)", "url": "https://archive.org/details/songscarolsando00hillgoog", "alternate_urls": ["https://archive.org/download/songscarolsando00hillgoog/songscarolsando00hillgoog.pdf"], "repository_path": "source-cache/CME00042/dyboski-1907-balliol-ms-354-complete.pdf", "locator": "item 59, printed pp. xlii-xliii; PDF pp. 59-60", "summary": "Confirms Balliol fols. 157r-158r and explains that Fischer's beta footnotes contain the Balliol readings rather than a continuous Balliol edition.", "accessed_on": "2026-07-12", "sha256": "f2b3acf6dcb9a66935bb5e4a69649f97a8f5f4ce4a275feb2f18b22b3c4cce3d"},
+    {"id": "evidence:salisbury", "type": "scholarly_source", "citation": "Eve Salisbury, ed., The Trials and Joys of Marriage (Kalamazoo, 2002)", "url": "https://metseditions.org/read/yzvRgARU7jyNCK6vtXzNDsvZ4Me5r7v", "alternate_urls": ["https://metseditions.org/texts/aWg76v4ps5NNBUNAEizPeKfmRZ64WAP0", "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/89b2e379-b5b3-47af-83ca-3f297c52dd0b/downloadable_version/3461b61b03f99ed3b6758c40f153f8e9.pdf"], "repository_path": "source-cache/CME00042/salisbury-trials-and-joys-of-marriage-complete.pdf", "locator": "printed pp. 233-245; PDF pp. 234-246", "summary": "Provides a modern readable edition, notes, bibliography, DIMEV/NIMEV identifiers, witness census, current locators, and genre context.", "accessed_on": "2026-07-12", "sha256": "eca4a1ae18c2e3e04e9cb807afe316693cbe5c162221a5ee42d3b3bba1f3767b"},
+    {"id": "evidence:mets-terms", "type": "official_webpage", "citation": "Middle English Texts Series, Copyright and Citation", "url": "https://metseditions.org/copyright-citation", "summary": "States that digital editions are copyrighted and for individual use only, that reprinting requires permission, and that the CC BY-NC-SA 4.0 license applies to downloadable XML.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:public-facsimile-searches", "type": "search_result", "citation": "Dated official-catalog and public-viewer searches for complete facsimiles of CUL Ff.2.38, Harley 5396, and Harley 2399", "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238", "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002051242", "https://searcharchives.bl.uk/catalog/040-002048230"], "summary": "No official public complete digital object was verified for these manuscripts on 2026-07-12. These are search-result claims with request alternatives, not assertions that digitization is impossible or permanently absent.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:cul-complete-digital-copy", "question": "Can Cambridge supply a complete color digital reproduction of CUL MS Ff.2.38, and under what private-use, repository-publication, and commercial-publication terms?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Use the recorded Cambridge image-order route and request the whole physical manuscript before naming fols. 53r-54r as the work portion.", "Ask for covers/boards, spine if photographable, pastedowns, flyleaves, blanks, every leaf recto/verso, and any separately imaged edges; request an omissions list, resolution, color profile, file format, price, and delivery method.", "Ask separately whether the delivered files or derived reference crops may be placed in a public Git repository or used in profit-oriented print-on-demand research."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:cul-facsimile-and-foliation", "evidence:cul-imaging", "evidence:cul-terms", "evidence:public-facsimile-searches"]},
+    {"id": "question:bl-complete-digital-copies", "question": "Can the British Library supply complete digital reproductions of Harley MS 5396 and Harley MS 2399, and what reuse terms would attach?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Submit separate reference enquiries for both shelfmarks, defining complete physical coverage before identifying the work portions at Harley 5396 fols. 297r-300v and Harley 2399 fols. 61r-63v.", "Ask whether existing photography already covers the whole objects; if not, request a quotation and an explicit list of omitted boards, spine, pastedowns, flyleaves, blanks, leaves, or edges.", "Ask for written repository and commercial-publication terms before caching or redistributing any supplied files."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-harley5396", "evidence:bl-harley2399", "evidence:public-facsimile-searches"]},
+    {"id": "question:lambeth-complete-digital-copy", "question": "Can Lambeth Palace Library supply a complete digital reproduction of MS 853 despite the posted 40-image order limit, and what would the total cost and reuse terms be?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Use the imaging-services form to ask whether a multi-order or custom whole-manuscript project is possible, defining complete physical coverage first and pp. 186-192 second.", "Ask whether a pre-existing complete microfilm or digital surrogate can be supplied more economically than per-image photography.", "Obtain separate written permission terms for public Git hosting, scholarly quotation, and commercial print-on-demand research before redistributing supplied images."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:lambeth-imaging", "evidence:lambeth-public-search"]},
+    {"id": "question:varnhagen-transcripts", "question": "Do Hermann Varnhagen's five working transcripts survive, and can their readings be checked against the codices?", "status": "unresolved", "impact": "medium", "next_steps": ["Search Varnhagen archival papers, Fischer correspondence, and Erlangen editorial archives for transcripts of Ff.2.38, Harley 5396, Lambeth 853, Balliol 354, and Harley 2399.", "If found, catalog each transcript's shelfmark, completeness, date, and deviations from both codex and Fischer."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:fischer-editorial-method"]},
+    {"id": "question:cul-foliation-crosswalk", "question": "What exact physical change accounts for Fischer's fols. 45r-46r and the modern fols. 53r-54r in CUL MS Ff.2.38?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult the 1979 facsimile introduction and the current CUL catalog when accessible.", "Record any flyleaf or inserted-leaf counting rule that explains the eight-folio offset rather than silently replacing the historical citation."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:cul-facsimile-and-foliation"]},
+    {"id": "question:textual-relationships", "question": "How are the six manuscript witnesses and Fischer's alpha, beta, and gamma related beyond Fischer's unresolved grouping?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare complete diplomatic transcriptions or facsimiles of all six witnesses rather than inferring a stemma from Fischer's edited groupings.", "Review recent textual scholarship for a defensible relationship model and retain uncertainty where dependence or contamination cannot be established."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:fischer-editorial-method", "evidence:salisbury"]}
+  ]
+}
