@@ -147,6 +147,14 @@ cataloged copies, retain the complete published digital inventory but keep the
 physical witnesses distinct, mark the affected coverage partial, and record
 the aggregation as an unresolved provider-layer fact.
 
+When extracting a large hierarchical catalog, traverse every entry container
+rather than assuming all child IDs share one prefix; audit per-series citation
+and IIIF counts so an identifier-family change cannot silently omit a section.
+Follow explicit cross-references to their target catalog groups and do not
+invent duplicate unavailable witnesses for the referring rows. When canvas
+labels are generic, claim only a complete provider-published inventory and
+leave physical-side completeness open.
+
 ## Current digital versus legacy foliation: CME00026
 
 A modern complete surrogate can label a work at current fols. 80r–93v while a
