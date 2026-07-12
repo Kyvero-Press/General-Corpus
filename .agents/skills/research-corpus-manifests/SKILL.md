@@ -56,9 +56,12 @@ needed; do not load both complete schemas merely for orientation.
    supporting source under `source-cache/WORK_ID/` with
    `scripts/cache-source-download.py`, or use `scripts/cache-iiif-bundle.py`
    when a complete source is exposed as IIIF canvases rather than one file.
-   For manuscript facsimiles, prefer the complete physical codex and record
-   this work's folio/page/canvas range in `work_portion`; do not substitute a
-   work-only excerpt when a complete source is obtainable. Record each direct
+   For manuscript facsimiles, download the complete physical codex whenever
+   it is publicly obtainable and practical, then record this work's exact
+   folio/page/canvas range in `work_portion`. Never substitute a work-only
+   excerpt when a complete source is obtainable; if only selected leaves are
+   available, mark them `coverage=partial` and preserve the negative
+   whole-object finding. Record each direct
    file or IIIF bundle in the relevant access record's `local_copies`; keep
    the landing page and exact file, Presentation-manifest, or complete-
    facsimile source URL. An inventory-driven bundle retains every exact image
