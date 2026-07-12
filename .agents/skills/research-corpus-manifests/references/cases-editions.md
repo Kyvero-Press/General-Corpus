@@ -67,6 +67,16 @@ A witness discovered or identified after an edition appeared belongs in the
 broader tradition, not that edition's source chain, unless historical evidence
 shows the editor actually knew and used it.
 
+## Modern census expansion: CME00007
+
+A current witness census can add several securely identified manuscripts to
+the work's known tradition while the encoded historical edition used only two.
+Record the census release itself as versioned evidence, create the additional
+witnesses as collateral lineage entities, and keep edition-to-witness edges
+limited to the editor's preface and apparatus. Do not let better modern
+coverage retroactively turn collateral witnesses into sources of the encoded
+readings.
+
 ## Roles in a retained-text edition
 
 When an immediate source combines an earlier editor's retained text with a new
