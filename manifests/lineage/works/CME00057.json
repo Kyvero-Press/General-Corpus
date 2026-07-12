@@ -1,0 +1,639 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00057",
+  "work_id": "CME00057",
+  "title": "George Ashby's Poems",
+  "primary_subject": "artifact:general-corpus:CME00057",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The repository XML is copied from University of Michigan CME item CME00057 and selectively encodes Mary Bateson's 1899 EETS edition George Ashby's Poems: the edition title page and the three printed text divisions A Prisoner's Reflections, Active Policy of a Prince, and Dicta et Opiniones Diversorum Philosophorum on printed pp. 1-100. It omits Bateson's introduction, contents, and Furnivall's List of Words. Bateson transcribed the prison poem from Trinity College Cambridge MS R.3.19, ff. 41r-45v, and the other two printed divisions from Cambridge University Library MS Mm.IV.42, ff. 2r-48v. Current scholarship identifies Mm.IV.42 as Ashby's holograph and reads Active Policy and Dicta as two sections of one incomplete work, probably composed in 1461-62. Trinity R.3.19 is publicly digitized: the complete 522-canvas provider object is cached at 1600-pixel width, with the poem mapped to canvases 87-96. No open complete color facsimile of Mm.IV.42 was found. A legacy microfilm exists as British Manuscripts Project B971, Camb 30/5, and CUL accepts paid full-object imaging requests. Complete provider objects and exact links are cached for one full Bateson volume, one incomplete alternate scan, the Trinity IIIF object, CUL's printed catalog volume, two modern studies, and three access or publication inventories.",
+  "languages": ["enm", "lat", "eng"],
+  "review_notes": [
+    "Whole-object caching is used throughout: the Trinity bundle contains all 522 canvases and the complete Bateson scan includes covers, preliminaries, all 105 printed pages, blanks, and binding views exposed by the provider.",
+    "The work portion is a mapping inside each complete object, never a cropped substitute: Trinity R.3.19 ff. 41r-45v is canvases 87-96; Mm.IV.42 ff. 2r-48v contains the incomplete Active Policy and Dicta work, with Dicta beginning at f. 19r.",
+    "Complete means all provider-exposed canvases or pages. Trinity does not expose separate spine, head, tail, or fore-edge photographs, so the IIIF object is not a complete physical-surface study.",
+    "The Harvard/Google Bateson derivative is partial because printed pp. 1-3 are absent. Its PDF, OCR text, page XML, and scan data are retained because they remain useful independent derivatives; the Stanford/ARLIMA PDF supplies a complete volume scan.",
+    "Underlying medieval texts, Bateson's editorial text, modern scholarship, page-image derivatives, and provider contract or licensing terms are modeled as separate rights layers."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00057",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00057",
+      "description": "The XML artifact used by this repository's publication workflow through the pinned Kyvero-Press/CME submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "CME00057"},
+        {"scheme": "git-blob", "value": "70bec198a617881afa0205c412c796efe65e42b0"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00057.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "70bec198a617881afa0205c412c796efe65e42b0",
+        "sha256": "f15a4cb1ad8c228418c3395aaaa2fcb4703016b284b41ce202aaacb6ceed1bbe"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "encoding:umich-cme:CME00057",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item CME00057",
+      "description": "A public SGML/XML-derived encoding of Bateson's title page and Ashby texts, excluding the introduction, contents, List of Words, and other edition-level matter.",
+      "identifiers": [
+        {"scheme": "UMDL handle", "value": "CME00057", "uri": "https://name.umdl.umich.edu/CME00057"},
+        {"scheme": "BIBNO", "value": "CME00057"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:xml", "evidence:umich"]
+    },
+    {
+      "id": "edition:bateson:1899",
+      "type": "scholarly_edition",
+      "label": "Mary Bateson's George Ashby's Poems",
+      "description": "The immediate printed source of CME00057. Bateson presents three numbered divisions on pp. 1-100 and Furnivall's List of Words on pp. 101-105.",
+      "identifiers": [
+        {"scheme": "EETS", "value": "Extra Series 76"},
+        {"scheme": "ISBN", "value": "9780859917346"},
+        {"scheme": "Folger catalog", "value": "81215", "uri": "https://catalog.folger.edu/record/81215"}
+      ],
+      "creator_ids": ["agent:mary-bateson"],
+      "date_statements": [
+        {"label": "publication", "value": "1899", "normalized": "1899", "certainty": "high", "evidence_ids": ["evidence:bateson", "evidence:folger"]}
+      ],
+      "bibliographic": {
+        "citation": "George Ashby, George Ashby's Poems, ed. Mary Bateson, Early English Text Society, Extra Series 76 (London: Kegan Paul, Trench, Trübner & Co., 1899).",
+        "title": "George Ashby's Poems",
+        "series": "Early English Text Society, Extra Series 76",
+        "publisher": "Kegan Paul, Trench, Trübner & Co.",
+        "publication_place": "London",
+        "date": "1899",
+        "pages": "vii, [1], 105, [1] pages; texts 1-100; List of Words 101-105",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bateson", "evidence:folger", "evidence:xml"]
+    },
+    {
+      "id": "witness:trinity:R.3.19",
+      "type": "manuscript_witness",
+      "label": "Trinity College Cambridge MS R.3.19",
+      "alternate_labels": ["James MS 599"],
+      "description": "A paper anthology of Middle English verse. Its unique copy of A Prisoner's Reflections occupies ff. 41r-45v, between Guystard and Seiesmonde ending at f. 40v and three blank leaves at ff. 46r-48v.",
+      "identifiers": [
+        {"scheme": "Trinity shelfmark", "value": "R.3.19", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19"},
+        {"scheme": "James number", "value": "599"}
+      ],
+      "date_statements": [
+        {"label": "manuscript production", "value": "fifteenth and sixteenth centuries", "certainty": "high", "evidence_ids": ["evidence:trinity-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:trinity",
+        "shelfmark": "R.3.19",
+        "catalog_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19",
+        "notes": "Given by George Wilmer and formerly owned by John Stow."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "255 folios; target ff. 41r-45v",
+        "format": "Mostly 42 lines to a page; anthology in multiple hands",
+        "dimensions": "27.5 x 20 cm",
+        "notes": ["The provider image sequence exposes front and back boards, inside boards, flyleaves, fols. 1r-254v, rear flyleaves and stub, but no separate spine or edge views."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif", "evidence:trinity-visual"]
+    },
+    {
+      "id": "facsimile:trinity:R.3.19-iiif",
+      "type": "facsimile",
+      "label": "Complete Trinity R.3.19 IIIF provider object",
+      "description": "The full 522-canvas color sequence exposed by Trinity's IIIF Presentation 2 manifest. The poem is canvases 87-96; canvases 97-102 show the adjacent blank ff. 46r-48v.",
+      "identifiers": [
+        {"scheme": "IIIF Presentation manifest", "value": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json"}
+      ],
+      "creator_ids": ["agent:trinity"],
+      "reproduction_format": "522 IIIF color canvases; cached as a manifest plus 1600-pixel JPEG bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual"]
+    },
+    {
+      "id": "witness:cul:Mm.IV.42",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Mm.IV.42",
+      "alternate_labels": ["CUL MS Mm.4.42", "Royal Library MS Mm.IV.42"],
+      "description": "Ashby's parchment holograph of the incomplete Active Policy and Dicta work. The extant object has six complete quires of eight leaves; f. 1 is blank, the Latin preface begins at f. 2r, Dicta begins at f. 19r, and the text breaks off on f. 48v. At least one final quire is missing.",
+      "identifiers": [
+        {"scheme": "CUL shelfmark", "value": "Mm.IV.42"},
+        {"scheme": "CUL printed catalog number", "value": "2390"},
+        {"scheme": "British Manuscripts Project", "value": "B971; Camb 30/5"}
+      ],
+      "creator_ids": ["agent:george-ashby"],
+      "date_statements": [
+        {"label": "work and manuscript production", "value": "most likely April 1461 to the second half of 1462", "certainty": "medium", "evidence_ids": ["evidence:sobecki", "evidence:douma"]}
+      ],
+      "holding": {
+        "institution_id": "agent:cul",
+        "shelfmark": "Mm.IV.42",
+        "notes": "The current CUL search guide says most medieval manuscripts remain cataloged only in the five-volume nineteenth-century catalog; no exact modern public item record was found."
+      },
+      "physical_description": {
+        "support": "Parchment, with one twentieth-century rear paper flyleaf",
+        "extent": "48 leaves plus two binding leaves; collation 1-6^8; at least one final quire missing",
+        "format": "Single columns averaging 28 lines or four rhyme-royal stanzas per page; Signet Secretary hand",
+        "dimensions": "approximately 270 x 180 mm; written space approximately 190 x 100 mm",
+        "notes": [
+          "Quarter-bound twentieth-century binding by Douglas Cockerell & Son, December 1968, with leather spine and marbled-paper boards.",
+          "No completed decoration or rubrication; spaces for initials occur on ff. 2v, 4r, 5r, 6v, 9v, and 19r.",
+          "The first text page f. 2r is badly damaged and the final page f. 48v is worn."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-catalog", "evidence:douma", "evidence:sobecki", "evidence:scattergood"]
+    },
+    {
+      "id": "facsimile:bmp:Mm.IV.42",
+      "type": "facsimile",
+      "label": "British Manuscripts Project microfilm of CUL Mm.IV.42",
+      "alternate_labels": ["B971", "Camb 30/5"],
+      "description": "A wartime black-and-white microfilm surrogate identified by both the Library of Congress checklist and the later Harvester/Cengage inventory. Public inventories do not expose its frames, image count, binding coverage, or reuse terms.",
+      "identifiers": [
+        {"scheme": "British Manuscripts Project", "value": "B971"},
+        {"scheme": "reel/location code", "value": "Camb 30/5"}
+      ],
+      "creator_ids": ["agent:loc"],
+      "reproduction_format": "35 mm microfilm; frame coverage unverified",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bmp-checklist", "evidence:gale-inventory", "evidence:loc-microform"]
+    },
+    {
+      "id": "facsimile:bateson:stanford-arlima",
+      "type": "facsimile",
+      "label": "Complete Stanford/Google scan of Bateson's 1899 edition",
+      "description": "A complete 136-page PDF exposed by Internet Archive through ARLIMA. Visual inspection confirms front and back binding surfaces, preliminaries, printed pp. 1-105, blanks, and Stanford ownership matter.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "GeorgeAshbySPoems", "uri": "https://archive.org/details/GeorgeAshbySPoems"},
+        {"scheme": "ARK", "value": "ark:/13960/t16n0vx2w", "uri": "https://n2t.net/ark:/13960/t16n0vx2w"}
+      ],
+      "creator_ids": ["agent:google", "agent:arlima"],
+      "reproduction_format": "136-page color and grayscale Google Books PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-stanford", "evidence:bateson-visual"]
+    },
+    {
+      "id": "facsimile:bateson:harvard-google",
+      "type": "facsimile",
+      "label": "Partial Harvard/Google scan of Bateson's 1899 edition",
+      "description": "A 131-page Google Books derivative exposed by Internet Archive with PDF, OCR text, page XML, and scan-data files. Printed pp. 1-3 are missing, although pp. 4-105 and preliminaries are present.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "georgeashbyspoe01bategoog", "uri": "https://archive.org/details/georgeashbyspoe01bategoog"},
+        {"scheme": "ARK", "value": "ark:/13960/t6d22022g", "uri": "https://n2t.net/ark:/13960/t6d22022g"}
+      ],
+      "creator_ids": ["agent:google", "agent:harvard"],
+      "reproduction_format": "131-page PDF plus OCR and scan metadata; incomplete text sequence",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-harvard", "evidence:harvard-visual"]
+    },
+    {
+      "id": "edition:douma:2023",
+      "type": "scholarly_edition",
+      "label": "Aline Douma's 2023 Active Policy and Dicta edition",
+      "description": "A doctoral thesis containing a new critical edition, Latin translations, codicological description, biography, source study, and political interpretation based directly on Mm.IV.42. It is not upstream of CME00057.",
+      "identifiers": [
+        {"scheme": "DOI", "value": "10.33612/diss.649198467", "uri": "https://doi.org/10.33612/diss.649198467"}
+      ],
+      "creator_ids": ["agent:aline-douma"],
+      "date_statements": [
+        {"label": "publication", "value": "2023", "normalized": "2023", "certainty": "high", "evidence_ids": ["evidence:douma"]}
+      ],
+      "bibliographic": {
+        "citation": "Aline Douma, George Ashby's Active Policy of a Prince: Lancastrian Kingship and Political Advice in the Wars of the Roses (PhD diss., University of Groningen, 2023).",
+        "title": "George Ashby's Active Policy of a Prince: Lancastrian Kingship and Political Advice in the Wars of the Roses",
+        "publisher": "University of Groningen",
+        "publication_place": "Groningen",
+        "date": "2023",
+        "pages": "397 pages",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:douma"]
+    },
+    {
+      "id": "catalog:cul:1861-v4",
+      "type": "catalog_description",
+      "label": "CUL manuscript catalog, volume 4",
+      "description": "The complete public-domain printed catalog volume containing entry 2390 for Mm.IV.42 on printed pp. 299-300.",
+      "date_statements": [
+        {"label": "publication", "value": "1861", "normalized": "1861", "certainty": "high", "evidence_ids": ["evidence:cul-catalog"]}
+      ],
+      "bibliographic": {"citation": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge, vol. 4 (Cambridge: Cambridge University Press, 1861), 299-300."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-catalog", "evidence:cul-search"]
+    },
+    {
+      "id": "catalog:scattergood:1990",
+      "type": "catalog_description",
+      "label": "Scattergood, The Date and Composition of George Ashby's Poems",
+      "description": "A peer-reviewed study of date and work structure that directly inspected Mm.IV.42 and argued that Dicta is part of Active Policy.",
+      "creator_ids": ["agent:john-scattergood"],
+      "date_statements": [
+        {"label": "publication", "value": "1990", "normalized": "1990", "certainty": "high", "evidence_ids": ["evidence:scattergood"]}
+      ],
+      "bibliographic": {"citation": "John Scattergood, 'The Date and Composition of George Ashby's Poems,' Leeds Studies in English, n.s. 21 (1990): 167-176."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:scattergood"]
+    },
+    {
+      "id": "catalog:sobecki:2019",
+      "type": "catalog_description",
+      "label": "Sobecki, The Signet Self: George Ashby's Autograph Writing",
+      "description": "The current scholarly argument identifying Mm.IV.42 as Ashby's holograph, dating Active Policy and Dicta to 1461-62, and refining the prison poem's date.",
+      "creator_ids": ["agent:sebastian-sobecki"],
+      "date_statements": [
+        {"label": "publication", "value": "2019", "normalized": "2019", "certainty": "high", "evidence_ids": ["evidence:sobecki"]}
+      ],
+      "bibliographic": {"citation": "Sebastian Sobecki, 'The Signet Self: George Ashby's Autograph Writing,' in Last Words: The Public Self and the Social Author in Late Medieval England (Oxford: Oxford University Press, 2019), 159-191."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:sobecki"]
+    },
+    {
+      "id": "catalog:buhler:1950",
+      "type": "catalog_description",
+      "label": "Bühler, The Liber de Dictis Philosophorum Antiquorum and Common Proverbs in George Ashby's Poems",
+      "description": "A source study identifying the Liber as the basis of nearly all Dicta and eight passages of Active Policy, while distinguishing other proverbial sources.",
+      "creator_ids": ["agent:curt-buhler"],
+      "date_statements": [
+        {"label": "publication", "value": "1950", "normalized": "1950", "certainty": "high", "evidence_ids": ["evidence:buhler"]}
+      ],
+      "bibliographic": {"citation": "Curt F. Bühler, 'The Liber de Dictis Philosophorum Antiquorum and Common Proverbs in George Ashby's Poems,' PMLA 65, no. 2 (1950): 282-289, doi:10.2307/459469."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:buhler"]
+    },
+    {
+      "id": "catalog:bmp:1955",
+      "type": "catalog_description",
+      "label": "Library of Congress British Manuscripts Project checklist",
+      "description": "The complete 1955 checklist identifying Mm.IV.42 as microfilm item B971, Camb 30/5.",
+      "creator_ids": ["agent:loc"],
+      "date_statements": [
+        {"label": "publication", "value": "1955", "normalized": "1955", "certainty": "high", "evidence_ids": ["evidence:bmp-checklist"]}
+      ],
+      "bibliographic": {"citation": "Library of Congress, British Manuscripts Project: A Checklist of the Microfilms Prepared in England and Wales for the American Council of Learned Societies, 1941-1945 (Washington: Library of Congress, 1955), entry B971."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bmp-checklist"]
+    },
+    {
+      "id": "catalog:gale:medieval-inventory",
+      "type": "catalog_description",
+      "label": "British Literary Manuscripts from Cambridge University Library: The Medieval Age inventory",
+      "description": "The complete Harvester/Cengage inventory again lists Mm.IV.42 as B971, Camb 30/5, and provides the mediated commercial-series context.",
+      "creator_ids": ["agent:gale"],
+      "bibliographic": {"citation": "British Literary Manuscripts from Cambridge University Library, Series One: The Medieval Age, c. 1150-1500: An Inventory to Parts One, Two and Three (Harvester Microform/Primary Source Media, 1984), B971."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:gale-inventory"]
+    },
+    {
+      "id": "catalog:eets:2026-list",
+      "type": "catalog_description",
+      "label": "EETS List of All Publications 2026",
+      "description": "The complete current list records ES 76, ISBN 9780859917346, paperback, at GBP 25 / USD 45.",
+      "creator_ids": ["agent:eets"],
+      "date_statements": [
+        {"label": "publication", "value": "2026", "normalized": "2026", "certainty": "high", "evidence_ids": ["evidence:eets-list"]}
+      ],
+      "bibliographic": {"citation": "Early English Text Society, List of All Publications 2026, Extra Series 76 row."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eets-list"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich"]},
+    {"id": "agent:george-ashby", "type": "person", "name": "George Ashby", "dates": "circa 1385-1475", "evidence_ids": ["evidence:douma", "evidence:sobecki"]},
+    {"id": "agent:mary-bateson", "type": "person", "name": "Mary Bateson", "dates": "1865-1906", "evidence_ids": ["evidence:bateson", "evidence:folger"]},
+    {"id": "agent:eets", "type": "organization", "name": "Early English Text Society", "urls": ["https://users.ox.ac.uk/~eets/"], "evidence_ids": ["evidence:eets-list"]},
+    {"id": "agent:trinity", "type": "organization", "name": "Trinity College Cambridge Library", "urls": ["https://www.trin.cam.ac.uk/library/"], "evidence_ids": ["evidence:trinity-catalog"]},
+    {"id": "agent:cul", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/"], "evidence_ids": ["evidence:cul-search", "evidence:cul-ordering"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-stanford", "evidence:ia-harvard"]},
+    {"id": "agent:google", "type": "organization", "name": "Google Books", "urls": ["https://books.google.com/"], "evidence_ids": ["evidence:ia-stanford", "evidence:ia-harvard"]},
+    {"id": "agent:arlima", "type": "organization", "name": "ARLIMA", "urls": ["https://www.arlima.net/"], "evidence_ids": ["evidence:ia-stanford"]},
+    {"id": "agent:harvard", "type": "organization", "name": "Harvard University Library", "evidence_ids": ["evidence:ia-harvard"]},
+    {"id": "agent:john-scattergood", "type": "person", "name": "John Scattergood", "evidence_ids": ["evidence:scattergood"]},
+    {"id": "agent:university-leeds", "type": "organization", "name": "University of Leeds", "evidence_ids": ["evidence:scattergood"]},
+    {"id": "agent:aline-douma", "type": "person", "name": "Aline Douma", "identifiers": [{"scheme": "ORCID", "value": "0000-0001-9868-1980", "uri": "https://orcid.org/0000-0001-9868-1980"}], "evidence_ids": ["evidence:douma"]},
+    {"id": "agent:university-groningen", "type": "organization", "name": "University of Groningen", "evidence_ids": ["evidence:douma"]},
+    {"id": "agent:sebastian-sobecki", "type": "person", "name": "Sebastian Sobecki", "evidence_ids": ["evidence:sobecki"]},
+    {"id": "agent:curt-buhler", "type": "person", "name": "Curt F. Bühler", "dates": "1905-1985", "evidence_ids": ["evidence:buhler"]},
+    {"id": "agent:loc", "type": "organization", "name": "Library of Congress", "urls": ["https://www.loc.gov/"], "evidence_ids": ["evidence:bmp-checklist", "evidence:loc-microform"]},
+    {"id": "agent:gale", "type": "organization", "name": "Gale / Cengage", "urls": ["https://www.gale.com/primary-sources/british-literary-manuscripts-online"], "evidence_ids": ["evidence:gale-product", "evidence:gale-inventory"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich", "type": "copied_from", "subject": "artifact:general-corpus:CME00057", "object": "encoding:umich-cme:CME00057",
+      "scope": {"subject": {"kind": "whole", "description": "checked-in CME00057 XML"}, "object": {"kind": "whole", "description": "U-M CME00057 encoded text"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:umich"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-bateson", "type": "encoded_from", "subject": "encoding:umich-cme:CME00057", "object": "edition:bateson:1899",
+      "scope": {"subject": {"kind": "whole", "description": "edition title page and encoded Ashby texts"}, "object": {"kind": "selected_passages", "description": "title page and printed pp. 1-100", "locators": ["A Prisoner's Reflections, pp. 1-12", "Active Policy, pp. 12-41", "Dicta, pp. 42-100"]}, "notes": "Bateson's introduction, contents, and pp. 101-105 List of Words are omitted."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:bateson", "evidence:bateson-visual"]}
+    },
+    {
+      "id": "relation:bateson-transcribes-trinity", "type": "transcribes", "subject": "edition:bateson:1899", "object": "witness:trinity:R.3.19",
+      "scope": {"subject": {"kind": "part", "description": "A Prisoner's Reflections on printed pp. 1-12"}, "object": {"kind": "part", "description": "manuscript poem", "locators": ["ff. 41r-45v", "catalog fols. 41a-45b", "IIIF canvases 87-96"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bateson", "evidence:trinity-catalog", "evidence:trinity-visual"]}
+    },
+    {
+      "id": "relation:bateson-transcribes-cul", "type": "transcribes", "subject": "edition:bateson:1899", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "part", "description": "Active Policy and Dicta on printed pp. 12-100"}, "object": {"kind": "part", "description": "the entire extant incomplete work", "locators": ["ff. 2r-48v", "Dicta begins f. 19r"]}, "notes": "Bateson numbers Active Policy and Dicta separately; current scholarship treats them as two sections of one work."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bateson", "evidence:cul-catalog", "evidence:scattergood", "evidence:douma"]}
+    },
+    {
+      "id": "relation:trinity-iiif-facsimile", "type": "facsimile_of", "subject": "facsimile:trinity:R.3.19-iiif", "object": "witness:trinity:R.3.19",
+      "scope": {"subject": {"kind": "whole", "description": "all 522 provider canvases"}, "object": {"kind": "part", "description": "all provider-exposed surfaces, lacking separate spine and edge photography"}, "notes": "Target work ff. 41r-45v is canvases 87-96."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual"]}
+    },
+    {
+      "id": "relation:stanford-scan-facsimile", "type": "facsimile_of", "subject": "facsimile:bateson:stanford-arlima", "object": "edition:bateson:1899",
+      "scope": {"subject": {"kind": "whole", "description": "complete 136-page provider object"}, "object": {"kind": "whole", "description": "complete bound edition copy including all printed pages"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-stanford", "evidence:bateson-visual"]}
+    },
+    {
+      "id": "relation:harvard-scan-facsimile", "type": "facsimile_of", "subject": "facsimile:bateson:harvard-google", "object": "edition:bateson:1899",
+      "scope": {"subject": {"kind": "whole", "description": "complete exposed 131-page provider object"}, "object": {"kind": "selected_passages", "description": "preliminaries and printed pp. 4-105; printed pp. 1-3 absent"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-harvard", "evidence:harvard-visual"]}
+    },
+    {
+      "id": "relation:bmp-facsimile-of-cul", "type": "facsimile_of", "subject": "facsimile:bmp:Mm.IV.42", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "whole", "description": "cataloged microfilm item B971"}, "object": {"kind": "unknown", "description": "frame and physical-surface coverage not stated by the inventories"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:bmp-checklist", "evidence:gale-inventory"]}
+    },
+    {
+      "id": "relation:douma-transcribes-cul", "type": "transcribes", "subject": "edition:douma:2023", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "part", "description": "critical edition in thesis volume 1"}, "object": {"kind": "part", "description": "extant work on ff. 2r-48v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:douma"]}
+    },
+    {
+      "id": "relation:cul-catalog-describes-witness", "type": "describes", "subject": "catalog:cul:1861-v4", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "part", "description": "entry 2390 on printed pp. 299-300"}, "object": {"kind": "whole", "description": "manuscript and both text divisions"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cul-catalog"]}
+    },
+    {
+      "id": "relation:scattergood-describes-works", "type": "describes", "subject": "catalog:scattergood:1990", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "whole", "description": "article's date and composition argument"}, "object": {"kind": "whole", "description": "manuscript layout and work unity"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:scattergood"]}
+    },
+    {
+      "id": "relation:sobecki-describes-holograph", "type": "describes", "subject": "catalog:sobecki:2019", "object": "witness:cul:Mm.IV.42",
+      "scope": {"subject": {"kind": "whole", "description": "autograph and dating analysis"}, "object": {"kind": "whole", "description": "hand, production, and intended recipient"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:sobecki", "evidence:douma"]}
+    },
+    {
+      "id": "relation:buhler-describes-edition-sources", "type": "describes", "subject": "catalog:buhler:1950", "object": "edition:bateson:1899",
+      "scope": {"subject": {"kind": "whole", "description": "source study"}, "object": {"kind": "part", "description": "Active Policy and Dicta text"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:buhler", "evidence:douma"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:artifact", "entity": "artifact:general-corpus:CME00057", "resource_kind": "repository_file", "status": "local_only", "repository_path": "CME/source/CME_phase_3/CME00057.xml", "cost": "not_applicable", "last_checked": "2026-07-12", "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "access:umich", "entity": "encoding:umich-cme:CME00057", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M Digital Library Middle English Corpus item page", "url": "https://name.umdl.umich.edu/CME00057", "cost": "free", "format": "HTML/SGML-derived encoded text", "last_checked": "2026-07-12", "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "access:bateson-folger", "entity": "edition:bateson:1899", "resource_kind": "catalog_record", "status": "publicly_available", "url": "https://catalog.folger.edu/record/81215", "cost": "free", "last_checked": "2026-07-12", "evidence_ids": ["evidence:folger"]
+    },
+    {
+      "id": "access:bateson-purchase", "entity": "edition:bateson:1899", "provider_id": "agent:eets", "resource_kind": "download", "status": "purchasable", "access_method": "Order the current EETS paperback by ISBN through EETS/distributors", "url": "https://users.ox.ac.uk/~eets/", "cost": "fee", "format": "Paperback; 2026 list price GBP 25 / USD 45", "last_checked": "2026-07-12", "evidence_ids": ["evidence:eets-list"]
+    },
+    {
+      "id": "access:bateson-stanford", "entity": "facsimile:bateson:stanford-arlima", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "access_method": "Internet Archive item page or exact PDF download", "url": "https://archive.org/details/GeorgeAshbySPoems", "alternate_urls": ["https://archive.org/download/GeorgeAshbySPoems/George_Ashby_s_Poems.pdf"],
+      "local_copies": [
+        {
+          "label": "Complete Bateson 1899 George Ashby's Poems Stanford/ARLIMA facsimile",
+          "path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-arlima-scan.pdf",
+          "source_url": "https://archive.org/download/GeorgeAshbySPoems/George_Ashby_s_Poems.pdf",
+          "sha256": "36d3a69432e63d3c7fa09134197424cb94c3c24b61456bedeea94a9d270ef1b0",
+          "bytes": 5019642,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "CME00057 encoded title page and Ashby texts within the complete volume",
+            "locators": ["PDF p. 15: title page", "PDF pp. 21-32: A Prisoner's Reflections (printed pp. 1-12)", "PDF pp. 32-61: Active Policy (printed pp. 12-41)", "PDF pp. 62-120: Dicta (printed pp. 42-100)"],
+            "notes": ["The full volume also retains the introduction, contents, List of Words, blanks, covers, spine views, and ownership matter omitted from CME00057."]
+          },
+          "notes": ["Visual inspection audited the beginning, all printed-page transitions, and the final binding sequence; all printed pp. 1-105 are present."]
+        }
+      ],
+      "cost": "free", "format": "136-page PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:ia-stanford", "evidence:bateson-visual"]
+    },
+    {
+      "id": "access:bateson-harvard", "entity": "facsimile:bateson:harvard-google", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "access_method": "Internet Archive item page and exact derivative downloads", "url": "https://archive.org/details/georgeashbyspoe01bategoog", "alternate_urls": ["https://books.google.com/books/about/George_Ashby_s_Poems.html?id=79IKAAAAYAAJ", "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog.pdf", "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_djvu.txt", "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_djvu.xml", "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_scandata.xml"],
+      "local_copies": [
+        {
+          "label": "Partial Bateson 1899 Harvard/Google facsimile PDF", "path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-complete.pdf", "source_url": "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog.pdf", "sha256": "96183d48493af0c457dad0836a0f5e35ece4132832ba3c0cbd8fddfeae18c086", "bytes": 2933431, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "partial", "retrieval_method": "direct_download",
+          "work_portion": {"label": "CME00057 encoded content present in the incomplete scan", "locators": ["PDF p. 14: title page", "PDF pp. 21-29: surviving A Prisoner's Reflections printed pp. 4-12", "PDF pp. 29-58: Active Policy printed pp. 12-41", "PDF pp. 59-117: Dicta printed pp. 42-100"], "notes": ["Printed pp. 1-3, containing lines 1-84 of A Prisoner's Reflections, are absent."]}
+        },
+        {
+          "label": "Partial Bateson 1899 OCR text", "path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-ocr.txt", "source_url": "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_djvu.txt", "sha256": "6860f5d31ff14ca39b2d4e3531bd590ddbb14e71d5f2e9dd02e4cff8d9f0ac05", "bytes": 200760, "media_type": "text/plain", "downloaded_on": "2026-07-12", "coverage": "partial", "retrieval_method": "direct_download", "work_portion": {"label": "OCR for surviving scan pages", "locators": ["printed pp. 4-100 for encoded body; pp. 1-3 absent"]}
+        },
+        {
+          "label": "Partial Bateson 1899 page-structured OCR XML", "path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-ocr.xml", "source_url": "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_djvu.xml", "sha256": "75f36c03139aefdb30eac1b1c9447bc936a3643e7652f6b67c48617f20182950", "bytes": 1802074, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "partial", "retrieval_method": "direct_download", "work_portion": {"label": "Page OCR for surviving scan pages", "locators": ["printed pp. 4-100 for encoded body; pp. 1-3 absent"]}
+        },
+        {
+          "label": "Bateson 1899 Harvard scan data", "path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-scandata.xml", "source_url": "https://archive.org/download/georgeashbyspoe01bategoog/georgeashbyspoe01bategoog_scandata.xml", "sha256": "4855f9e242798d15fb663ed872f5ba335d5b2b5182423381e0d8a5254d22ddc8", "bytes": 39392, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only", "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free", "format": "PDF, OCR TXT, DjVu XML, scan data", "last_checked": "2026-07-12", "evidence_ids": ["evidence:ia-harvard", "evidence:harvard-visual"]
+    },
+    {
+      "id": "access:trinity-iiif", "entity": "facsimile:trinity:R.3.19-iiif", "provider_id": "agent:trinity", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Trinity catalog viewer, IIIF Presentation manifest, and Image API", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19", "alternate_urls": ["https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json", "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/UV"],
+      "local_copies": [
+        {
+          "label": "Trinity R.3.19 IIIF Presentation manifest", "path": "source-cache/CME00057/trinity-r-3-19-iiif-manifest.json", "source_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json", "sha256": "2203c7d3384393ad42c856d782ac59c09d61b7dfa1c5dcee685402c2441c6200", "bytes": 410351, "media_type": "application/json", "downloaded_on": "2026-07-11", "coverage": "metadata_only"
+        },
+        {
+          "label": "Complete Trinity R.3.19 IIIF facsimile bundle at 1600 pixels", "path": "source-cache/CME00057/trinity-r-3-19-complete-iiif-1600px.zip", "source_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json", "sha256": "af4c61829a5f82bc01ce884beb1a6e455fdca18a84baebd849d95d24842bc488", "bytes": 1137554078, "media_type": "application/zip", "downloaded_on": "2026-07-11", "coverage": "complete", "retrieval_method": "iiif_bundle", "bundle_source_kind": "iiif_presentation_manifest", "source_file_count": 522,
+          "work_portion": {
+            "label": "A Prisoner's Reflections within the complete manuscript provider object",
+            "locators": ["manuscript ff. 41r-45v", "catalog fols. 41a-45b", "IIIF canvases 87-96", "ZIP images/000087.jpg-images/000096.jpg"],
+            "start_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/UV#?c=0&m=0&s=0&cv=86",
+            "end_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/UV#?c=0&m=0&s=0&cv=95",
+            "notes": ["Canvas 86 is adjacent f. 40v; canvases 97-102 are the blank ff. 46r-48v following the poem."]
+          },
+          "notes": ["ZIP contains the exact provider manifest, inventory, and all 522 canvas images.", "Requested width 1600 pixels where supported; ZIP integrity and representative first, target, adjacent, and final canvases were visually audited.", "Coverage is complete for the provider inventory but omits physical spine and edge views not offered by the manifest."]
+        }
+      ],
+      "cost": "free", "format": "IIIF Presentation 2 and Image API 2", "last_checked": "2026-07-12", "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif", "evidence:trinity-visual"], "notes": ["Local caching does not authorize redistribution; the exact object is CC BY-NC 4.0 and Trinity also requests publication permission."]
+    },
+    {
+      "id": "access:trinity-physical", "entity": "witness:trinity:R.3.19", "provider_id": "agent:trinity", "resource_kind": "physical_manuscript", "status": "requestable", "access_method": "Contact the Wren Library about research access", "url": "https://www.trin.cam.ac.uk/library/manuscripts/", "contact": "wren.library@trin.cam.ac.uk", "cost": "unknown", "last_checked": "2026-07-12", "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-reproduction"]
+    },
+    {
+      "id": "access:cul-physical", "entity": "witness:cul:Mm.IV.42", "provider_id": "agent:cul", "resource_kind": "physical_manuscript", "status": "requestable", "access_method": "Contact CUL Special Collections and arrange Manuscripts Reading Room consultation", "url": "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search", "contact": "specialcollections@lib.cam.ac.uk", "cost": "unknown", "last_checked": "2026-07-12", "evidence_ids": ["evidence:cul-search"]
+    },
+    {
+      "id": "access:cul-reproduction", "entity": "witness:cul:Mm.IV.42", "provider_id": "agent:cul", "resource_kind": "reproduction_order", "status": "purchasable", "access_method": "Submit the online imaging and permissions form and request the whole physical manuscript: both boards and inside boards, spine, head/tail/fore edges, pastedowns, all flyleaves and blanks, and every recto and verso of ff. 1-48; identify ff. 2r-48v and Dicta from f. 19r only as the work mapping within that full object", "url": "https://imagingservices.lib.cam.ac.uk/", "alternate_urls": ["https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images", "https://www.lib.cam.ac.uk/collections/departments/chil/pricing"], "contact": "photo@lib.cam.ac.uk", "cost": "fee", "format": "Default 8-bit uncompressed JPEG, 600 ppi at 1:1 scale, RGB Adobe 1998; TIFF on request", "last_checked": "2026-07-12", "evidence_ids": ["evidence:cul-ordering", "evidence:cul-pricing", "evidence:cul-terms"],
+      "notes": ["The published 21-999-image rate is GBP 7.50 per image before VAT; approximately 100 or more images would therefore likely cost at least about GBP 750 before extra surfaces, VAT, specialist handling, or licensing, but only CUL can provide an item-specific quote.", "Ask first whether existing B971/Camb 30/5 microfilm or any complete internal photography can be supplied more economically.", "Image supply does not confer publication permission; public Git hosting or commercial downstream use requires a specific written licence."]
+    },
+    {
+      "id": "access:bmp-microfilm-loc", "entity": "facsimile:bmp:Mm.IV.42", "provider_id": "agent:loc", "resource_kind": "microfilm", "status": "requestable", "access_method": "Consult the Library of Congress Microform Reading Room or ask reference staff for access/reproduction options for British Manuscripts Project B971, Camb 30/5", "url": "https://www.loc.gov/resource/gdcmassbookdig.collectionsselec00libr_0/?sp=22", "cost": "unknown", "format": "35 mm microfilm", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bmp-checklist", "evidence:loc-microform"]
+    },
+    {
+      "id": "access:gale-mm442", "entity": "facsimile:bmp:Mm.IV.42", "provider_id": "agent:gale", "resource_kind": "page_images", "status": "subscription_required", "access_method": "Check institutional access to Gale British Literary Manuscripts Online, Medieval and Renaissance, or request a vendor trial; confirm exact B971 inclusion and frame coverage before treating it as a complete surrogate", "url": "https://www.gale.com/primary-sources/british-literary-manuscripts-online", "cost": "fee", "format": "Subscription page images derived from manuscript microfilm", "last_checked": "2026-07-12", "evidence_ids": ["evidence:gale-product", "evidence:gale-inventory"]
+    },
+    {
+      "id": "access:douma", "entity": "edition:douma:2023", "provider_id": "agent:university-groningen", "resource_kind": "download", "status": "publicly_available", "access_method": "University of Groningen repository landing page or exact legacy repository PDF", "url": "https://research.rug.nl/en/publications/george-ashbys-active-policy-of-a-prince-lancastrian-kingship-and-/", "alternate_urls": ["https://pure.rug.nl/ws/portalfiles/portal/649198469/Complete_thesis.pdf", "https://doi.org/10.33612/diss.649198467"],
+      "local_copies": [
+        {"label": "Douma 2023 complete thesis and critical edition", "path": "source-cache/CME00057/douma-2023-active-policy-prince-complete-thesis.pdf", "source_url": "https://pure.rug.nl/ws/portalfiles/portal/649198469/Complete_thesis.pdf", "sha256": "aaf560a5df430e596a557dc9b1cc260a9a74cccf28e9bc6448610b93aaaaf110", "bytes": 5686196, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Critical edition, translations, manuscript description, and analysis of Active Policy and Dicta", "locators": ["volume 1 introduction and edition", "manuscript description pp. 41-45 of thesis pagination"]}}
+      ],
+      "cost": "free", "format": "397-page PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:douma"]
+    },
+    {
+      "id": "access:scattergood", "entity": "catalog:scattergood:1990", "provider_id": "agent:university-leeds", "resource_kind": "download", "status": "publicly_available", "url": "https://digital.library.leeds.ac.uk/294/", "alternate_urls": ["https://digital.library.leeds.ac.uk/294/1/LSE1990_pp167-76_Scattergood_article.pdf"],
+      "local_copies": [
+        {"label": "Scattergood 1990 complete article", "path": "source-cache/CME00057/scattergood-1990-date-and-composition-george-ashby.pdf", "source_url": "https://digital.library.leeds.ac.uk/294/1/LSE1990_pp167-76_Scattergood_article.pdf", "sha256": "7d3b66833811b62a7238a8e3fc5da7521c56d045f6f95b225ed3b5ee8af4dfec", "bytes": 453621, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:scattergood"]
+    },
+    {
+      "id": "access:cul-catalog", "entity": "catalog:cul:1861-v4", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "url": "https://archive.org/details/catalogueofmanus04cambuoft", "alternate_urls": ["https://archive.org/download/catalogueofmanus04cambuoft/catalogueofmanus04cambuoft.pdf"],
+      "local_copies": [
+        {"label": "Complete CUL manuscript catalog volume 4 facsimile", "path": "source-cache/CME00057/cul-manuscript-catalogue-volume-4-complete.pdf", "source_url": "https://archive.org/download/catalogueofmanus04cambuoft/catalogueofmanus04cambuoft.pdf", "sha256": "fe36e232cb2c43f1be063c023c4f8b5a090321856e4dff63716e67ae52c7a6f1", "bytes": 34211527, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Catalog entry 2390 for CUL MS Mm.IV.42", "locators": ["printed pp. 299-300"]}}
+      ],
+      "cost": "free", "format": "576-page PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:cul-catalog"]
+    },
+    {
+      "id": "access:bmp-checklist", "entity": "catalog:bmp:1955", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "url": "https://archive.org/details/britishmanuscrip00libr", "alternate_urls": ["https://archive.org/download/britishmanuscrip00libr/britishmanuscrip00libr.pdf"],
+      "local_copies": [
+        {"label": "Complete Library of Congress British Manuscripts Project checklist", "path": "source-cache/CME00057/british-manuscripts-project-checklist-complete.pdf", "source_url": "https://archive.org/download/britishmanuscrip00libr/britishmanuscrip00libr.pdf", "sha256": "19c70de4f40e8ddaf8349406ae5e3176a66ccffafed594c8ad5b245265783c2b", "bytes": 19214387, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Entry B971 for CUL Mm.IV.42", "locators": ["B971", "Camb 30/5"]}}
+      ],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bmp-checklist"]
+    },
+    {
+      "id": "access:gale-inventory", "entity": "catalog:gale:medieval-inventory", "provider_id": "agent:gale", "resource_kind": "download", "status": "publicly_available", "url": "https://assets.cengage.com/gale/psm/9500776C.pdf",
+      "local_copies": [
+        {"label": "Complete British Literary Manuscripts Cambridge medieval inventory", "path": "source-cache/CME00057/british-literary-manuscripts-cambridge-medieval-inventory-complete.pdf", "source_url": "https://assets.cengage.com/gale/psm/9500776C.pdf", "sha256": "0b15d4790165f5b8fc68cc950e93ff32c608ba2ba7a8fc5e3e3006f814d14aeb", "bytes": 594213, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "CUL Mm.IV.42 inventory entry", "locators": ["B971", "Camb 30/5"]}}
+      ],
+      "cost": "free", "format": "PDF inventory", "last_checked": "2026-07-12", "evidence_ids": ["evidence:gale-inventory"]
+    },
+    {
+      "id": "access:eets-list", "entity": "catalog:eets:2026-list", "provider_id": "agent:eets", "resource_kind": "download", "status": "publicly_available", "url": "https://users.ox.ac.uk/~eets/list-of-all-publications-2026.pdf",
+      "local_copies": [
+        {"label": "Complete EETS List of All Publications 2026", "path": "source-cache/CME00057/eets-list-of-all-publications-2026.pdf", "source_url": "https://users.ox.ac.uk/~eets/list-of-all-publications-2026.pdf", "sha256": "6e2d67786da52ec99c42e12c9fc89d3eeacf1422b3c57a984572bfdb69c5b20c", "bytes": 375991, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "EETS ES 76 George Ashby's Poems listing", "locators": ["ES 76 row: 1899, ISBN 9780859917346, paperback, GBP 25 / USD 45"]}}
+      ],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-12", "evidence_ids": ["evidence:eets-list"]
+    },
+    {
+      "id": "access:buhler", "entity": "catalog:buhler:1950", "resource_kind": "download", "status": "subscription_required", "access_method": "Cambridge Core article page; the advertised PDF returned an access/challenge page during automated retrieval and was not cached", "url": "https://www.cambridge.org/core/journals/pmla/article/abs/liber-de-dictis-philosophorum-antiquorum-and-common-proverbs-in-george-ashbys-poems/B87F722B4D5F792E30CB57A3099F09D2", "alternate_urls": ["https://doi.org/10.2307/459469"], "cost": "fee", "format": "HTML extract; PDF subject to provider access", "last_checked": "2026-07-12", "evidence_ids": ["evidence:buhler"]
+    },
+    {
+      "id": "access:sobecki", "entity": "catalog:sobecki:2019", "resource_kind": "digital_text", "status": "subscription_required", "url": "https://academic.oup.com/book/32335/chapter-abstract/268581085", "alternate_urls": ["https://doi.org/10.1093/oso/9780198790778.003.0005"], "cost": "fee", "format": "Public abstract; subscribed chapter", "last_checked": "2026-07-12", "evidence_ids": ["evidence:sobecki"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:medieval-texts", "entity": "edition:bateson:1899", "component": "underlying fifteenth-century works by George Ashby", "jurisdiction": "United States and United Kingdom", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The works were composed in the fifteenth century and their author died in 1475.", "confidence": "high", "evidence_ids": ["evidence:bateson", "evidence:douma"], "notes": ["This statement does not govern modern editions, translations, page images, or provider contracts."]
+    },
+    {
+      "id": "rights:bateson-edition", "entity": "edition:bateson:1899", "component": "Bateson's 1899 editorial text and apparatus", "jurisdiction": "United States and United Kingdom", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "Published in 1899; Mary Bateson died in 1906, so the edition is beyond both US publication and UK life-plus-70 terms.", "confidence": "high", "evidence_ids": ["evidence:bateson", "evidence:folger"]
+    },
+    {
+      "id": "rights:stanford-scan", "entity": "facsimile:bateson:stanford-arlima", "access_id": "access:bateson-stanford", "component": "Internet Archive/ARLIMA PDF derived from a Google scan", "jurisdiction": "Provider statement; worldwide reuse requires jurisdictional review", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The Internet Archive item exposes Creative Commons Public Domain Mark 1.0 for the file and the underlying edition is public domain.", "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:ia-stanford", "evidence:bateson-visual"], "notes": ["The embedded Google notice requests personal noncommercial use and retention of the watermark; Public Domain Mark is a rights label rather than a licence. Review provider terms before redistributing the scan itself."]
+    },
+    {
+      "id": "rights:harvard-scan", "entity": "facsimile:bateson:harvard-google", "access_id": "access:bateson-harvard", "component": "Harvard/Google PDF, OCR, page XML, and scan data", "jurisdiction": "Provider statement; United States", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "Internet Archive metadata labels the item NOT_IN_COPYRIGHT; the file embeds Google's usage notice and no open reuse licence was found.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:ia-harvard", "evidence:harvard-visual"], "notes": ["Google requests personal noncommercial use, no automated querying, and retention of its watermark. Do not infer permission to redistribute the derivative files commercially."]
+    },
+    {
+      "id": "rights:trinity-iiif", "entity": "facsimile:trinity:R.3.19-iiif", "access_id": "access:trinity-iiif", "component": "IIIF manifest and manuscript images", "jurisdiction": "License terms worldwide", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The exact IIIF manifest and catalog specify Creative Commons Attribution-NonCommercial 4.0 International.", "asserted_by_id": "agent:trinity", "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"}, "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-catalog"], "notes": ["A repository enabling commercial print-on-demand must not redistribute the image bundle without separate permission."]
+    },
+    {
+      "id": "rights:trinity-publication", "entity": "facsimile:trinity:R.3.19-iiif", "access_id": "access:trinity-iiif", "component": "publication of Trinity collection images", "jurisdiction": "Provider policy", "copyright_status": "unknown", "as_of": "2026-07-12", "basis": "Trinity's Wren Digital Collections policy permits viewer downloads for personal study and asks researchers to apply for permission to publish.", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:trinity-reproduction"], "notes": ["The relationship between the general permission policy and the item-level CC BY-NC licence should be confirmed with Trinity for any proposed publication."]
+    },
+    {
+      "id": "rights:cul-supplied-images", "entity": "witness:cul:Mm.IV.42", "access_id": "access:cul-reproduction", "component": "any CUL-supplied photography, scan, or microfilm copy", "jurisdiction": "United Kingdom and item-specific agreement", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "CUL's current terms reserve supplied copies for research/evaluation and require a specific written licence for reproduction, including academic, personal, nonprofit, or commercial publication.", "asserted_by_id": "agent:cul", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:cul-ordering", "evidence:cul-terms", "evidence:cul-pricing"], "notes": ["A paid facsimile may be studied privately, but public Git hosting or reuse in commercial/POD projects is not authorized by purchase alone."]
+    },
+    {
+      "id": "rights:bmp-microfilm", "entity": "facsimile:bmp:Mm.IV.42", "access_id": "access:bmp-microfilm-loc", "component": "British Manuscripts Project microfilm frames and any supplied derivative", "jurisdiction": "Unknown; repository and vendor terms may apply", "copyright_status": "unknown", "as_of": "2026-07-12", "basis": "The public inventories identify the microfilm but provide no item-level reuse licence.", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:bmp-checklist", "evidence:gale-inventory", "evidence:loc-microform"], "notes": ["Underlying Ashby text is public domain; rights and contracts in the photographic surrogate remain separate."]
+    },
+    {
+      "id": "rights:douma", "entity": "edition:douma:2023", "access_id": "access:douma", "component": "2023 thesis, critical edition, translations, notes, and PDF", "jurisdiction": "Netherlands and international copyright", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The repository supplies the thesis openly but exposes no Creative Commons licence; the portal states general all-rights-reserved terms unless an open licence applies.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:douma"], "notes": ["Local research caching does not authorize republication of the thesis or modern edition."]
+    },
+    {
+      "id": "rights:scattergood", "entity": "catalog:scattergood:1990", "access_id": "access:scattergood", "component": "1990 article and Leeds PDF", "jurisdiction": "United Kingdom", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "Leeds identifies the article and says images are copyright University of Leeds; no open licence is shown.", "asserted_by_id": "agent:university-leeds", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:scattergood"]
+    },
+    {
+      "id": "rights:cul-catalog", "entity": "catalog:cul:1861-v4", "access_id": "access:cul-catalog", "component": "1861 catalog text and Internet Archive scan", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "Published in 1861; Internet Archive labels the item NOT_IN_COPYRIGHT and reports no visible copyright notice.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:cul-catalog"]
+    },
+    {
+      "id": "rights:bmp-checklist", "entity": "catalog:bmp:1955", "access_id": "access:bmp-checklist", "component": "1955 Library of Congress checklist text and scan", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The checklist was published by the United States Library of Congress as a federal government work.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:bmp-checklist"]
+    },
+    {
+      "id": "rights:gale-inventory", "entity": "catalog:gale:medieval-inventory", "access_id": "access:gale-inventory", "component": "Harvester/Cengage inventory PDF", "jurisdiction": "United Kingdom and provider terms", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The inventory carries a 1984 Harvester Press/Cambridge University Library copyright notice and all-rights-reserved statement.", "asserted_by_id": "agent:gale", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:gale-inventory"]
+    },
+    {
+      "id": "rights:eets-list", "entity": "catalog:eets:2026-list", "access_id": "access:eets-list", "component": "2026 EETS publication list PDF", "jurisdiction": "United Kingdom", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "A current 2026 organizational publication with no open reuse licence found.", "asserted_by_id": "agent:eets", "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:eets-list"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:encoding-selection", "entity": "encoding:umich-cme:CME00057", "practice": "selection", "source_feature": "Bateson's complete 1899 edition", "representation": "title page and printed text divisions only", "description": "CME00057 encodes the edition title page and printed pp. 1-100, while omitting Bateson's introduction, contents, Furnivall's List of Words on pp. 101-105, and other physical-volume matter.", "scope": "whole encoding", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:bateson", "evidence:bateson-visual"]
+    },
+    {
+      "id": "practice:bateson-expansions", "entity": "edition:bateson:1899", "practice": "abbreviation_expansion", "source_feature": "manuscript abbreviations and suspension marks", "representation": "editorially supplied expansion letters in italics, with some abbreviation forms retained", "description": "Bateson's body text repeatedly prints only the expanded letters in italics (for example within frutes, with, commyttyd, other, and seruyce); CME preserves these as HI REND=italic while separately retaining some ABBR elements. Italics elsewhere also mark titles, Latin headings, and other emphasis, so each occurrence must be interpreted in context.", "scope": "printed pp. 1-100 and corresponding encoding", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:bateson", "evidence:trinity-visual"]
+    },
+    {
+      "id": "practice:bateson-collation", "entity": "edition:bateson:1899", "practice": "collation", "source_feature": "two Cambridge manuscripts and editorial assistance", "representation": "edited transcription with footnotes, marginal summaries, emendations, and manuscript folio milestones", "description": "Bateson names the two manuscript sources. Her introduction credits K. Jex-Blake for interpreting and emending the scribe's Latin, J. E. Kennedy for English notes and corrections, and F. J. Furnivall for Dicta side-notes and the List of Words. Footnotes mark readings such as sic in MS, struck-out words, damage, and emendation.", "scope": "whole edited text", "confidence": "high", "evidence_ids": ["evidence:bateson", "evidence:xml"]
+    },
+    {
+      "id": "practice:bateson-rubrication", "entity": "edition:bateson:1899", "practice": "rubrication_representation", "source_feature": "Mm.IV.42's unexecuted rubrication and capital spaces", "representation": "headings and supplied display typography in print, without attempting to reproduce absent decoration", "description": "Modern codicology shows that Mm.IV.42 was never rubricated although spaces were left for capitals. Bateson's printed headings impose a legible typographic hierarchy; they must not be read as evidence of executed manuscript decoration.", "scope": "Active Policy and Dicta", "confidence": "high", "evidence_ids": ["evidence:douma", "evidence:scattergood", "evidence:bateson"]
+    }
+  ],
+  "evidence": [
+    {"id": "evidence:xml", "type": "repository_file", "citation": "General Corpus source XML for CME00057.", "repository_path": "CME/source/CME_phase_3/CME00057.xml", "locator": "IDG; title page; body DIV1-DIV4; PB, LG, L, MILESTONE, NOTE, HI, and ABBR elements", "summary": "Confirms IDs, immediate edition title page, three encoded printed divisions, source headnotes, structural hierarchy, 2,531 verse lines in 362 groups, 101 page breaks, and the selection boundary.", "accessed_on": "2026-07-12", "sha256": "f15a4cb1ad8c228418c3395aaaa2fcb4703016b284b41ce202aaacb6ceed1bbe"},
+    {"id": "evidence:umich", "type": "official_webpage", "citation": "University of Michigan Middle English Corpus, CME00057.", "url": "https://name.umdl.umich.edu/CME00057", "summary": "Public item-level access for the digital encoding identified as CME00057.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bateson", "type": "edition_statement", "citation": "George Ashby, George Ashby's Poems, ed. Mary Bateson, EETS Extra Series 76 (1899).", "url": "https://archive.org/details/GeorgeAshbySPoems", "repository_path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-arlima-scan.pdf", "locator": "title page; introduction pp. v-vii; contents; texts pp. 1-100; List of Words pp. 101-105", "summary": "Establishes bibliography, sources, text divisions, printed pagination, editor and contributors, Bateson's dating views, the role of the manuscripts, and edition-level notes.", "accessed_on": "2026-07-12", "sha256": "36d3a69432e63d3c7fa09134197424cb94c3c24b61456bedeea94a9d270ef1b0"},
+    {"id": "evidence:folger", "type": "official_catalog", "citation": "Folger Shakespeare Library catalog record 81215, George Ashby's Poems.", "url": "https://catalog.folger.edu/record/81215", "summary": "Confirms 1899 London publication, pagination vii, [1], 105, [1], EETS Extra Series 76, and bibliographic responsibility.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ia-stanford", "type": "digital_surrogate", "citation": "Internet Archive item GeorgeAshbySPoems.", "url": "https://archive.org/details/GeorgeAshbySPoems", "alternate_urls": ["https://archive.org/download/GeorgeAshbySPoems/George_Ashby_s_Poems.pdf"], "summary": "Identifies the ARLIMA-uploaded Google scan, exact PDF, ARK ark:/13960/t16n0vx2w, and Public Domain Mark 1.0.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bateson-visual", "type": "visual_inspection", "citation": "Direct visual inspection of the cached Stanford/ARLIMA Bateson facsimile.", "repository_path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-arlima-scan.pdf", "locator": "PDF pp. 1-25 and 112-136, with page-number crosswalk through printed pp. 1-105", "summary": "Confirms the 136-page provider sequence is a complete bound-volume scan, that printed p. 1 is PDF p. 21, and the exact CME work ranges.", "accessed_on": "2026-07-12", "sha256": "36d3a69432e63d3c7fa09134197424cb94c3c24b61456bedeea94a9d270ef1b0"},
+    {"id": "evidence:ia-harvard", "type": "digital_surrogate", "citation": "Internet Archive item georgeashbyspoe01bategoog.", "url": "https://archive.org/details/georgeashbyspoe01bategoog", "alternate_urls": ["https://archive.org/metadata/georgeashbyspoe01bategoog"], "summary": "Identifies the Harvard/Google source, exact PDF and OCR derivatives, ARK ark:/13960/t6d22022g, and NOT_IN_COPYRIGHT metadata.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:harvard-visual", "type": "visual_inspection", "citation": "Direct visual inspection of the cached Harvard/Google Bateson facsimile and derivatives.", "repository_path": "source-cache/CME00057/bateson-1899-george-ashbys-poems-complete.pdf", "locator": "PDF pp. 12-25 and embedded Google usage notice", "summary": "Confirms the title/preliminaries and wrapper, that PDF p. 21 begins at printed p. 4, and therefore that printed pp. 1-3 are absent; also records the embedded Google use requests.", "accessed_on": "2026-07-12", "sha256": "96183d48493af0c457dad0836a0f5e35ece4132832ba3c0cbd8fddfeae18c086"},
+    {"id": "evidence:eets-list", "type": "official_webpage", "citation": "Early English Text Society, List of All Publications 2026.", "url": "https://users.ox.ac.uk/~eets/list-of-all-publications-2026.pdf", "repository_path": "source-cache/CME00057/eets-list-of-all-publications-2026.pdf", "locator": "Extra Series 76 row", "summary": "Confirms current paperback availability, 1899 date, ISBN 9780859917346, and GBP 25 / USD 45 list price.", "accessed_on": "2026-07-12", "sha256": "6e2d67786da52ec99c42e12c9fc89d3eeacf1422b3c57a984572bfdb69c5b20c"},
+    {"id": "evidence:trinity-catalog", "type": "official_catalog", "citation": "Trinity College Cambridge, James Catalogue of Western Manuscripts, R.3.19.", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19", "locator": "Main details; contents at ff. 26-54; license footer", "summary": "Confirms shelfmark, date, paper support, 255 folios, dimensions, provenance, poem at ff. 41r-45v, adjacent blank ff. 46-48, IIIF manifest, and item-page licensing.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:trinity-iiif", "type": "digital_surrogate", "citation": "Trinity College Cambridge, IIIF Presentation manifest for MS R.3.19.", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19/manifest.json", "repository_path": "source-cache/CME00057/trinity-r-3-19-iiif-manifest.json", "locator": "522 canvases; canvases 87-96", "summary": "Provides all canvas labels, exact Image API services, attribution, CC BY-NC 4.0 license, and the digital crosswalk from f. 41r to f. 45v.", "accessed_on": "2026-07-12", "sha256": "2203c7d3384393ad42c856d782ac59c09d61b7dfa1c5dcee685402c2441c6200"},
+    {"id": "evidence:trinity-visual", "type": "visual_inspection", "citation": "Integrity and representative visual audit of the cached complete Trinity R.3.19 IIIF bundle.", "repository_path": "source-cache/CME00057/trinity-r-3-19-complete-iiif-1600px.zip", "locator": "front cover, inside front, f. 40v, ff. 41r and 45v, blank ff. 46r and 48v, f. 49r, back cover; ZIP inventory and integrity test", "summary": "Confirms 522 of 522 images, target start/end, adjacent matter, complete provider sequence, and absence of distinct spine/edge canvases.", "accessed_on": "2026-07-12", "sha256": "af4c61829a5f82bc01ce884beb1a6e455fdca18a84baebd849d95d24842bc488"},
+    {"id": "evidence:trinity-reproduction", "type": "official_webpage", "citation": "Trinity College Cambridge, Wren Digital Collections: Digital Photography, Image Supply and Licensing.", "url": "https://www.trin.cam.ac.uk/library/wren-digital-library/", "summary": "Offers quoted on-demand photography, permits viewer downloads for personal study, and asks researchers to apply for permission to publish collection images.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-search", "type": "official_webpage", "citation": "Cambridge University Library, Search the Collections.", "url": "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search", "summary": "States that most medieval manuscripts remain cataloged in the five-volume printed catalog and supplies the Special Collections enquiry address.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-catalog", "type": "official_catalog", "citation": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge, vol. 4 (1861), entry 2390.", "url": "https://archive.org/details/catalogueofmanus04cambuoft", "repository_path": "source-cache/CME00057/cul-manuscript-catalogue-volume-4-complete.pdf", "locator": "printed pp. 299-300", "summary": "Confirms Mm.IV.42's parchment support, 48 extant leaves in six quires, lost final quire, about thirty lines per page, fifteenth-century date, Active Policy folio range, Dicta beginning f. 19r, Latin-before-English layout, and Ashby's authorial preface.", "accessed_on": "2026-07-12", "sha256": "fe36e232cb2c43f1be063c023c4f8b5a090321856e4dff63716e67ae52c7a6f1"},
+    {"id": "evidence:cul-ordering", "type": "official_webpage", "citation": "Cambridge University Library, Image Supply and Reproduction.", "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images", "summary": "Provides the online form, private-study and publication choices, default file specification, quoting/payment process, delivery, and separate licensing workflow.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-pricing", "type": "official_webpage", "citation": "Cambridge University Library, Cultural Heritage Imaging Laboratory Pricing.", "url": "https://www.lib.cam.ac.uk/collections/departments/chil/pricing", "summary": "Lists GBP 7.50 per special-collections image for 21-999 images, GBP 25 minimum, GBP 90 for a full microfilm reel, possible VAT and custom charges, and separate publication fees or licences.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:cul-terms", "type": "official_webpage", "citation": "Cambridge University Library, Terms and Conditions: Image Supply and Reproduction.", "url": "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction", "summary": "Requires written permission for reproduction, limits supplied copies to research/evaluation absent a licence, restricts electronic storage and secondary reproduction, and defines item-specific agreements.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bmp-checklist", "type": "official_catalog", "citation": "Library of Congress, British Manuscripts Project checklist (1955), B971.", "url": "https://archive.org/details/britishmanuscrip00libr", "repository_path": "source-cache/CME00057/british-manuscripts-project-checklist-complete.pdf", "locator": "B971; Camb 30/5", "summary": "Confirms that Mm.IV.42, Active Policy and Dicta, was microfilmed as B971 with code Camb 30/5.", "accessed_on": "2026-07-12", "sha256": "19c70de4f40e8ddaf8349406ae5e3176a66ccffafed594c8ad5b245265783c2b"},
+    {"id": "evidence:loc-microform", "type": "official_webpage", "citation": "Library of Congress, Microform Collections and Selected Titles in Microform, British Manuscripts Project.", "url": "https://www.loc.gov/resource/gdcmassbookdig.collectionsselec00libr_0/?sp=22", "summary": "Describes the Library of Congress British Manuscripts Project collection as 2,652 reels reproducing nearly five million manuscript pages and locates it in the Microform Reading Room.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:gale-inventory", "type": "official_catalog", "citation": "British Literary Manuscripts from Cambridge University Library, Series One: The Medieval Age inventory.", "url": "https://assets.cengage.com/gale/psm/9500776C.pdf", "repository_path": "source-cache/CME00057/british-literary-manuscripts-cambridge-medieval-inventory-complete.pdf", "locator": "B971; Camb 30/5", "summary": "Independently confirms the Mm.IV.42 microfilm item and its inclusion in the Harvester/Primary Source Media inventory; the guide does not state frame or physical-surface coverage.", "accessed_on": "2026-07-12", "sha256": "0b15d4790165f5b8fc68cc950e93ff32c608ba2ba7a8fc5e3e3006f814d14aeb"},
+    {"id": "evidence:gale-product", "type": "official_webpage", "citation": "Gale, British Literary Manuscripts Online, Medieval and Renaissance.", "url": "https://www.gale.com/primary-sources/british-literary-manuscripts-online", "alternate_urls": ["https://gale.com/product-catalog/247785"], "summary": "Describes a subscription archive of facsimile manuscript images and provides institutional access/trial routes; exact Mm.IV.42 frame availability was not independently audited behind the subscription interface.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:scattergood", "type": "scholarly_source", "citation": "John Scattergood, 'The Date and Composition of George Ashby's Poems,' Leeds Studies in English 21 (1990): 167-176.", "url": "https://digital.library.leeds.ac.uk/294/", "alternate_urls": ["https://digital.library.leeds.ac.uk/294/1/LSE1990_pp167-76_Scattergood_article.pdf"], "repository_path": "source-cache/CME00057/scattergood-1990-date-and-composition-george-ashby.pdf", "locator": "pp. 167-176, especially 171-174", "summary": "Argues for circa 1463, directly describes Mm.IV.42's 48 folios and layout, and demonstrates that Dicta is an integral continuation or appendix of Active Policy rather than a separate work.", "accessed_on": "2026-07-12", "sha256": "7d3b66833811b62a7238a8e3fc5da7521c56d045f6f95b225ed3b5ee8af4dfec"},
+    {"id": "evidence:sobecki", "type": "scholarly_source", "citation": "Sebastian Sobecki, 'The Signet Self: George Ashby's Autograph Writing,' in Last Words (Oxford University Press, 2019), 159-191.", "url": "https://academic.oup.com/book/32335/chapter-abstract/268581085", "alternate_urls": ["https://doi.org/10.1093/oso/9780198790778.003.0005"], "summary": "Identifies Mm.IV.42 as Ashby's holograph intended for Prince Edward, dates Active Policy and Dicta to 1461-62, and dates A Prisoner's Reflections between Michaelmas 1463 and 24 March 1464.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:douma", "type": "scholarly_source", "citation": "Aline Douma, George Ashby's Active Policy of a Prince (PhD diss., University of Groningen, 2023).", "url": "https://research.rug.nl/en/publications/george-ashbys-active-policy-of-a-prince-lancastrian-kingship-and-/", "alternate_urls": ["https://pure.rug.nl/ws/portalfiles/portal/649198469/Complete_thesis.pdf", "https://doi.org/10.33612/diss.649198467"], "repository_path": "source-cache/CME00057/douma-2023-active-policy-prince-complete-thesis.pdf", "locator": "volume 1, pp. 31-45 and critical edition", "summary": "Synthesizes modern dating, confirms a likely April 1461-second-half-1462 composition window, treats Active Policy and Dicta as one two-section work, identifies Mm.IV.42 as a holograph, and supplies the current codicological description and critical edition.", "accessed_on": "2026-07-12", "sha256": "aaf560a5df430e596a557dc9b1cc260a9a74cccf28e9bc6448610b93aaaaf110"},
+    {"id": "evidence:buhler", "type": "scholarly_source", "citation": "Curt F. Bühler, 'The Liber de Dictis Philosophorum Antiquorum and Common Proverbs in George Ashby's Poems,' PMLA 65.2 (1950): 282-289.", "url": "https://www.cambridge.org/core/journals/pmla/article/abs/liber-de-dictis-philosophorum-antiquorum-and-common-proverbs-in-george-ashbys-poems/B87F722B4D5F792E30CB57A3099F09D2", "alternate_urls": ["https://doi.org/10.2307/459469"], "summary": "Identifies the Liber de Dictis as the source of practically all Dicta, eight Active Policy extracts, and possible echoes in A Prisoner's Reflections; also distinguishes additional common proverbs.", "accessed_on": "2026-07-12", "notes": ["The provider advertised a PDF, but automated download returned a non-PDF access/challenge response, so no local copy was retained."]}
+  ],
+  "open_questions": [
+    {
+      "id": "question:cul-whole-object-copy", "question": "Can CUL supply a complete digital reproduction of Mm.IV.42 covering every leaf side, blanks, flyleaves, pastedowns, both boards, spine, all three edges, and any stubs, and can an existing internal or microfilm surrogate reduce the cost?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Submit the exact whole-object request through the CUL imaging form, with ff. 2r-48v and Dicta from f. 19r identified only as the work mapping.", "Ask for the complete image inventory and an explicit list of any surfaces that cannot be photographed.", "Ask separately for private-study supply terms, public Git hosting permission, and commercial/POD reuse terms."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:cul-ordering", "evidence:cul-pricing", "evidence:cul-terms", "evidence:douma"], "notes": ["No repository enquiry has yet been sent."]
+    },
+    {
+      "id": "question:mm442-microfilm-coverage", "question": "Does British Manuscripts Project B971 / Camb 30/5 contain the entire extant Mm.IV.42 object, and can its frames be obtained through the Library of Congress, CUL, or Gale with usable terms?", "status": "unresolved", "impact": "high", "next_steps": ["Ask Library of Congress reference staff for reel/frame metadata and reproduction options.", "Ask CUL whether it retains or can scan the original or a duplicate microfilm for GBP 90 per reel under the current rate card.", "Audit the Gale subscription item through an institution or trial before asserting complete coverage."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:bmp-checklist", "evidence:loc-microform", "evidence:gale-inventory", "evidence:gale-product", "evidence:cul-pricing"]
+    },
+    {
+      "id": "question:trinity-physical-surfaces", "question": "Can Trinity provide the physical spine and head, tail, and fore-edge views absent from the otherwise complete 522-canvas R.3.19 IIIF object, and how does its publication-permission policy interact with the exact CC BY-NC 4.0 licence?", "status": "unresolved", "impact": "medium", "next_steps": ["Ask the Wren Library for an item-specific interpretation and quote only if physical binding documentation or noncommercial publication is needed.", "Do not redistribute the cached bundle in a commercially enabled repository without written permission."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual", "evidence:trinity-reproduction"]
+    },
+    {
+      "id": "question:bateson-editorial-conventions", "question": "Did Bateson publish a fuller statement of her expansion, punctuation, capitalization, and emendation conventions than the brief acknowledgements and local notes in the 1899 volume?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare Bateson's print systematically with the complete R.3.19 IIIF images and any future Mm.IV.42 facsimile.", "Consult EETS correspondence or archival papers if exact intervention categories are important.", "Treat italics contextually because they mark both expansions and ordinary emphasis or headings."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:bateson", "evidence:xml", "evidence:trinity-visual"]
+    }
+  ]
+}
