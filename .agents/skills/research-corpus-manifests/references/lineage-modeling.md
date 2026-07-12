@@ -62,6 +62,11 @@ agreement can support a comparison relation or an open identity question, but
 cannot make the surviving object the editor's, printer's, or translator's
 physical source without provenance evidence.
 
+When an editor says that a passage was absent because a leaf had been lost
+from the surviving witness's exemplar, do not describe that leaf as missing
+from the surviving codex itself. Model the exemplar-level textual lacuna and
+the current physical object's completeness as separate claims.
+
 When an edition interleaves parallel witnesses, replacement leaves, supplied
 passages, or another edition's text, create separately scoped relations for
 the evidenced ranges. Do not describe the composite result as a homogeneous
