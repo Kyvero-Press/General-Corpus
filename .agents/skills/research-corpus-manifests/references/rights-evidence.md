@@ -112,6 +112,14 @@ list in the ZIP, and does not expose machine-local reuse paths. Confirm from
 provider evidence that the list covers the whole physical object before using
 `coverage=complete`.
 
+Treat a compound-book Presentation manifest with zero canvases the same way:
+it is metadata, not evidence that the page images are absent. Inspect the
+official book viewer or media endpoint for a declared complete page count,
+enumerate every provider page resource into an exact image inventory, and
+verify the first, target, and final surfaces before marking that inventory
+complete. Preserve the empty manifest as an alternate metadata route rather
+than presenting it as the image source.
+
 A provider's complete facsimile project may aggregate the main codex with
 detached leaves or fragments now held elsewhere. Cache the complete published
 project inventory, but state that its coverage is project-level rather than a
