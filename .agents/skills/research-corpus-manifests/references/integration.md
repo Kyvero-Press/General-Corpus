@@ -55,6 +55,9 @@ checkout as the cache helper's `--root`, or hard-link every completed cache
 artifact into the main checkout's `source-cache/WORK_ID/` before integration.
 Verify file counts, inodes, checksums, and main-checkout manifest validation;
 never remove a research worktree while it holds the only copy of a source.
+When validating the pair before cherry-pick, true-hard-link the canonical main
+cache back into the worktree's matching path so its repository-relative
+references resolve there too; remove that disposable mirror with the worktree.
 
 ## Skill update test
 
