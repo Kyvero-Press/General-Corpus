@@ -66,7 +66,10 @@ collated in scope notes and evidence.
 A later transcript may preserve material now lost from a witness. Connect it
 to what it copied, but do not place it upstream of an edition unless that
 edition used it. Distinguish annotations made in the principal witness from a
-copyist's separate transcript.
+copyist's separate transcript. When a provider sequence interleaves a later
+transcript with original leaves, inventory the actual canvas order and label
+both components; do not infer that every transcript page precedes its
+same-numbered original or collapse the bound object into one textual witness.
 
 Keep a lost or unidentified physical exemplar distinct from a surviving close
 textual witness. Shared readings, likely family membership, or even very close
