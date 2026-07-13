@@ -332,6 +332,22 @@ paragraph count, explain the crosswalk, and catalog at the intellectual depth
 the evidence supports. Verse quoted inside an editor's footnote remains
 paratext and does not make the medieval prose collection mixed-form.
 
+## Competing work boundaries and composite hosts: CME00138
+
+One article-level selection can combine a reconstructed version core, later
+stanza strata, a complete witness text, an editor-defined independent poem,
+and a short sample of another version. Preserve those intellectual units and
+their immediate transcription routes separately. If a current repertory joins
+material that the historical editor divides, record both analyses and leave
+the work boundary open rather than silently selecting one authority.
+
+A former standalone manuscript can now be one part of a larger composite
+host. Create separate entities for the current physical host and the historical
+component, relate the host as containing the component, and attach a complete
+whole-host facsimile to the host. Keep the work locus and textual transmission
+on the component; downloading the whole current object must not erase either
+physical level.
+
 ## Misidentified discovery records and mediated addenda: CME00139
 
 When a live provider header or suggested citation conflicts with the title,
