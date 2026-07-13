@@ -102,6 +102,13 @@ Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
 disagreement with a scholarly lineation as an explicit open question.
 
+Inspect the content of line-like XML elements before treating their count as
+verse extent. Speaker labels, editorial headings, and dotted rows that display
+an incomplete boundary may be encoded as `L` inside `LG` even though they are
+not medieval verse lines or complete stanzas. Report the raw XML count as a
+representation metric, then record the verified textual line count separately
+with the evidence used to exclude those display elements.
+
 In an edited archival collection, numbered editorial units may combine several
 physical documents, fragments, abstracts, or outside illustrative records.
 Report editorial-unit, XML-container, physical-object, and archive-size counts
