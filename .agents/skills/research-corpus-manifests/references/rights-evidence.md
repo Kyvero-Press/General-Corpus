@@ -24,6 +24,15 @@ legacy XML restriction conflicts with a current provider label, preserve both
 as distinct dated layers and open a question; do not silently choose the more
 permissive statement.
 
+Before marking the modern repository transcription or XML markup as
+unlicensed or unknown, inspect the exact pinned repository revision for a root
+license and any path- or file-specific notice. Cite the license at that
+revision and scope its effect only to the material its wording covers. A
+repository source license does not silently license the underlying historical
+text, a source edition, provider photographs, or third-party interface assets;
+if its application to data or markup is ambiguous, preserve that ambiguity
+instead of broadening a software-only grant.
+
 ## Verify practical access
 
 Test the exact deliverable, not only its landing page.
