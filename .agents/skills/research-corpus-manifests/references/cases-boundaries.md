@@ -80,6 +80,17 @@ parallel manuscript loss. Record the omitted edition pages and lines as an
 encoding boundary unless witness-specific evidence establishes genuine
 lacunae.
 
+## Parallel comparison text: CME00108
+
+Zupitza interleaves a Middle English manuscript transcription with Latin from
+Grässe for comparison, while the U-M encoding serializes the two languages as
+consecutive version streams. Catalog the surviving Middle English saint's life
+as the work and its sole intrinsic language; do not make it bilingual merely
+because the digital artifact also contains the Latin alignment text. Record
+the encoding's layout transformation, connect the Latin stream to Grässe with
+a part-scoped comparison or excerpt relation, and keep both the Latin source
+work and the translator's still-unidentified physical exemplar distinct.
+
 ## Component records: Ayenbite
 
 The exact BL child record ends Ayenbite at folio 94r; later folios contain other
