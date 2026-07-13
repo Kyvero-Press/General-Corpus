@@ -162,6 +162,12 @@ If a selected run begins or ends partway through a page shared with unencoded
 material, record the exact textual or spatial boundary in relation scope and
 `work_portion`; a terminal page number alone does not imply whole-page coverage.
 
+An encoder may also relocate a supplied article title or heading from an
+earlier page to sit before a later selected passage. Preserve the heading and
+passage as separate source loci even when the XML places the heading after the
+later passage's `PB`. Element adjacency establishes encoding order, not source-
+page provenance; cite the heading's original page and record the relocation.
+
 Page-break element counts need not equal distinct source pages. One printed
 page can be cited by two adjacent structural divisions when the first text
 ends and the next begins on that same page. Compare the ordered unique page
