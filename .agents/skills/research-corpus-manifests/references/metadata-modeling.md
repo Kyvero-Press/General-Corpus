@@ -97,6 +97,13 @@ affect them. Keep planned, composed-but-lost, extant, printed, and encoded
 extent separate. If markup is coarse or inconsistent, use `summary` or
 `partial` structure status and explain why.
 
+When the cataloging subject is one historical work but the encoded item also
+retains a modern editor's preface or commentary, model that paratext as a
+separate content part so the item boundary stays visible. Reconcile the whole-
+item `extent` totals with every modeled part, including prose paragraphs, but
+do not let those accounting totals make the historical work mixed-form,
+multilingual, or coauthored by the modern editor.
+
 Count structural nodes at the depth that represents the cataloged work.
 Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
