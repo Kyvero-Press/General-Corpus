@@ -45,6 +45,12 @@ work's first publication. Use qualified displays and normalized ranges only
 when the range itself is sourced. Do not normalize `c. 1385` to an exact 1385
 interval merely to satisfy a facet.
 
+When the earliest surviving witnesses have overlapping production ranges and
+the evidence does not establish which is earlier, model a joint qualified
+attestation window. Omit a singular `source_lineage_entity_id`, and use a
+supported, appropriately uncertain assertion rather than presenting either
+witness as the confirmed first attestation.
+
 ## Places and languages
 
 Type place claims as composition, translation, cultural origin, dialect,
@@ -118,3 +124,5 @@ honest rather than falling back to the viewer's missing-summary placeholder.
 - Use distinct genre, subject, and tag vocabularies.
 - Bind every lineage entity and evidence ID to the linked lineage manifest.
 - Use `partial`, qualified assertions, and open questions for real gaps.
+- Use `pending_external_response` only after an enquiry has actually been
+  submitted; planned outreach remains `unresolved`.
