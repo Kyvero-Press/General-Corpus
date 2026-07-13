@@ -287,3 +287,18 @@ reproduction of its stated edition. Audit the represented pages, not only file
 integrity and provider leaf count. Record provider-object completeness
 separately from source coverage, mark the facsimile relation partial when even
 one source page is absent, and name the missing page or passage explicitly.
+
+## Different causes of supplied text: CME00135
+
+Do not merge every editor-supplied passage into one generic lacuna. Distinguish
+an opening already absent from the surviving witness, a later passage omitted
+by that witness's copyist, and source material the translator never translated.
+Model each cause and supplied range separately, and do not infer physical leaf
+loss for a translator's omission merely because the edition prints source-
+language prose in its place.
+
+A bound scan can combine a historical text edition with a separately issued
+later study. If an encoding retains only the later study's series half-title,
+create a separate publication entity and paratext part for that leaf. Do not
+extend the earlier editor's responsibility or the medieval work's date,
+language, form, or extent across the retained carrier fragment.
