@@ -65,6 +65,15 @@ supporting source—such as a PDF, ZIP, image, or IIIF manifest—to the ignored
 saved when it is only an access route. Do not bypass authentication, access
 controls, or provider restrictions.
 
+Keep public availability and local cache state separate. A large deliverable
+is still cacheable when the task calls for the complete object, available disk
+is sufficient, and provider terms permit the intended private research copy;
+check those facts before declining it for size alone. If an exact public file
+cannot responsibly be cached, leave its access status publicly available,
+omit `local_copies`, and state the concrete reason—such as a bulk-download
+restriction, unresolved image terms, insufficient storage, or a reproducible
+transfer failure. Never turn a no-cache decision into an availability claim.
+
 Use the project helper so filenames, signatures, hashes, and sizes are
 reproducible:
 
