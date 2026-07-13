@@ -153,6 +153,13 @@ primary bibliographic evidence for the edition, preserve the catalog's wording
 as a separately attributed assertion, and explain the correction so later
 researchers can still reproduce the catalog search.
 
+When the immediate edition itself prints a demonstrably wrong volume, page, or
+shelfmark, preserve that literal target with a scoped `cites` relation. Model
+the evidence-supported source that actually supplies the reading as a separate
+transmission relation, and record the exact-text comparison and remaining
+uncertainty. Do not silently replace the printed citation or imply that a
+matching correction is documented by an erratum when it is only inferred.
+
 Scanned-book OCR and inherited TEI division labels can be misleading. Compare
 markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open
