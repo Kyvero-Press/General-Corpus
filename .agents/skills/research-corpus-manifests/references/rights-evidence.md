@@ -179,6 +179,11 @@ folio/page range, corresponding digital canvas or image range, and start/end
 deep links when exposed. If only selected leaves are obtainable, use
 `coverage=partial` and say so. A complete edition scan, a miniature cycle, or
 an IIIF manifest without its image files is not a complete manuscript cache.
+Test every human-facing boundary link with an unauthenticated request. When a
+provider publishes a Canvas identifier that does not dereference successfully,
+retain that identifier in the inventory or locators but use a working viewer
+deep link or exact Image API request for `start_url`, `end_url`, and access
+alternates.
 If a provider calls a recto-verso leaf run complete but exposes no covers,
 boards, spine, pastedowns, or flyleaves, qualify `coverage=complete` to the
 published leaf inventory in notes; do not call it complete physical-object
