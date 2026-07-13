@@ -272,3 +272,18 @@ IIIF canvases, record the missing-leaf span, and retain both locator systems.
 Until a repository concordance or equivalent codicological source confirms the
 mapping, label the historical-to-current crosswalk inferential even when the
 textual alignment is strong.
+
+## Displaced leaves and incomplete reproductions: CME00134
+
+An institutional component range can be continuous while the target work's
+current physical run is not. If codicological evidence places displaced leaves
+from another work inside that range, preserve the provider's broad component
+locator as its catalog claim, but give the target work a discontiguous current-
+folio and canvas sequence. Do not assign the intervening leaves to the target
+merely to make its range continuous.
+
+A downloaded provider object can be complete as delivered yet incomplete as a
+reproduction of its stated edition. Audit the represented pages, not only file
+integrity and provider leaf count. Record provider-object completeness
+separately from source coverage, mark the facsimile relation partial when even
+one source page is absent, and name the missing page or passage explicitly.
