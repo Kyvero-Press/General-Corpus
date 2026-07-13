@@ -131,6 +131,13 @@ not medieval verse lines or complete stanzas. Report the raw XML count as a
 representation metric, then record the verified textual line count separately
 with the evidence used to exclude those display elements.
 
+Do not assume one `LG` container equals one displayed stanza. An encoder may
+place two separately numbered stanzas in one `LG`, or may retain an incomplete
+stanza in its own container. When those structures occur, report `LG`
+containers, displayed stanzas, and direct textual `L` children as separate
+representation metrics; explain the mismatch instead of normalizing any count
+to an ideal stanza form.
+
 In an edited archival collection, numbered editorial units may combine several
 physical documents, fragments, abstracts, or outside illustrative records.
 Report editorial-unit, XML-container, physical-object, and archive-size counts
