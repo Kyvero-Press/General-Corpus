@@ -72,6 +72,12 @@ passages, or another edition's text, create separately scoped relations for
 the evidenced ranges. Do not describe the composite result as a homogeneous
 transcription from whichever source supplies most pages.
 
+If a scribe copied an omitted passage later in the same manuscript and marked
+its intended insertion point, create separate scoped `transcribes` relations
+to that one witness: one for the main physical run and one for the displaced
+supply. Record both the manuscript's physical loci and the edition's restored
+reading order instead of inventing a continuous manuscript range.
+
 A source-language text printed in parallel for comparison is not necessarily
 the translator's physical exemplar. Model the editor's comparison or
 alignment relation separately and leave the historical exemplar unidentified

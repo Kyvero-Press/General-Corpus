@@ -141,7 +141,10 @@ Add the emitted object to the access record's `local_copies` array. Its
 landing page remains available as a human-readable route. Use one array item
 per deliverable or volume. Label whether coverage is `complete`, `partial`,
 `metadata_only`, or `unknown`; a cached IIIF manifest alone is metadata, not a
-complete facsimile. The manifest records that a research copy was made;
+complete facsimile. Coverage is relative to the represented source: a fully
+downloaded order form, rate card, rights sheet, or catalog export is still
+`metadata_only` for manuscript-facsimile access. The manifest records that a
+research copy was made;
 the viewer checks whether the ignored file is present in the current checkout.
 Never infer redistribution permission from local caching, and never copy the
 cache into a public web build without an independently supported right to do
