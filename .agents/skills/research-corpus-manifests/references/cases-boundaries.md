@@ -30,6 +30,13 @@ work mappings and say that the boundary is shared. Do not crop the cached
 complete-codex surrogate or imply that the page belongs exclusively to either
 work.
 
+A modern census can describe a continuous manuscript run as one broad witness
+unit even when direct images show two separately rubricated works within it.
+Preserve the census unit as an attributed catalog claim, but let the visible
+rubric, incipit, explicit, and shared-surface evidence control the part
+mappings. Do not force the census record boundary onto the intellectual works
+or retroactively make the collateral facsimile a source of an older edition.
+
 One historical codex can now survive as two or more separately held physical
 objects. Give every present shelfmark its own witness entity and do not join
 them with `same_as`. Request or cache the whole of each present object, then
