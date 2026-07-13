@@ -68,6 +68,13 @@ printed base version. Record each collateral extent separately. A later
 edition that chooses a different base does not redefine the older encoding's
 extent, even when both editions represent the same abstract work.
 
+When an encoding serializes several complete witness versions of one abstract
+work, count the abstract work once. Model one parent work part with
+`item_count: 1`, give each witness-version child `item_count: 0`, and record
+the children's stanza, line, or prose metrics separately. Do not sum parallel
+versions into a fictitious whole-work length or let validator accounting turn
+the witnesses into multiple intellectual works.
+
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
 witness edge, then add passage-scoped source relations for every explicitly
