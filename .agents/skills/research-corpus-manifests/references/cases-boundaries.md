@@ -302,3 +302,17 @@ later study. If an encoding retains only the later study's series half-title,
 create a separate publication entity and paratext part for that leaf. Do not
 extend the earlier editor's responsibility or the medieval work's date,
 language, form, or extent across the retained carrier fragment.
+
+## Later-hand additions and competing unit counts: CME00137
+
+When a current component record explicitly excludes a target folio from the
+main scribe's work, do not inherit that scribe's date, dialect, or locality for
+the addition. Preserve older absolute dates, repertory dates, and modern
+relative hand chronology as separate assertions; a statement such as "not much
+later" does not justify inventing a normalized year range.
+
+An edition can divide one manuscript article into multiple procedural
+paragraphs. Retain both the manuscript-article count and the edition or XML
+paragraph count, explain the crosswalk, and catalog at the intellectual depth
+the evidence supports. Verse quoted inside an editor's footnote remains
+paratext and does not make the medieval prose collection mixed-form.
