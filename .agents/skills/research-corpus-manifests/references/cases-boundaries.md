@@ -101,6 +101,11 @@ For fragmentary witnesses bound into composite volumes, distinguish the leaves
 carrying the cataloged work from adjacent leaves carrying other fragments.
 Report total codex extent only at the physical-object layer.
 
+When a paper slip, letter, or other document is pasted or mounted onto a host
+leaf, keep the attached document and host folio as separate physical layers.
+Scope support, dimensions, recto/verso locators, and attachment evidence to the
+correct layer rather than transferring the host leaf's material to the target.
+
 ## Fluid proverb compilations: CME00074
 
 A proverb sequence can be a manuscript-specific compilation rather than one
