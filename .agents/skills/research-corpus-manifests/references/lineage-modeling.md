@@ -24,6 +24,13 @@ edition-to-witness relation while identifying the physical witness by its
 current repository and shelfmark; a letter such as `L` may name a collection
 or city different from the one a modern reader would guess.
 
+If the key or apparatus resolves a comparison siglum to a prior editor or
+printed edition, route the comparison through that printed intermediary. Do
+not create a direct edition-to-manuscript consultation edge merely because the
+prior edition can itself be traced to a known witness. Preserve the physical
+witness as the prior edition's source and state what evidence would be needed
+to establish direct consultation by the later editor.
+
 Add scans, facsimiles, prior editions, source works, translations, transcripts,
 or comparison editions only when their identity and relevance are evidenced.
 Do not leave contextual entities dangling: each lineage entity should

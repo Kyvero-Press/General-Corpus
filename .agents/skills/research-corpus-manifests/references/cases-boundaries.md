@@ -55,6 +55,13 @@ divisions, treat the divisions as representations of separate witnesses, not
 as intrinsic chapters or parts of the work. Record the layout transformation
 as an encoding practice.
 
+A repertory may assign a separate record to a witness version because it has
+an added preface, prologue, or other incipit-changing material. Preserve both
+record identifiers and model the forms as related versions unless the
+repertory or scholarship establishes separate intellectual works. Do not
+silently merge the records, but also do not multiply one encoded work merely
+because its collateral version has a separately indexed opening.
+
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
 witness edge, then add passage-scoped source relations for every explicitly
