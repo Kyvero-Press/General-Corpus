@@ -78,6 +78,13 @@ snippets as final evidence. When authorities disagree, preserve the competing
 claims with attribution and confidence; do not average dates or select the
 most precise one merely because it is precise.
 
+When an index or scholarly database points to a related record, open the
+target record and verify its title, incipit, witness, and claimed relationship
+before creating a lineage edge. A syntactically valid record ID can still lead
+to an unrelated work. Preserve a mistaken pointer as a source-data issue and
+use the verified target record, if one can be established, rather than silently
+propagating the bad cross-reference.
+
 Treat “lost,” “whereabouts unknown,” and former shelfmarks in an older edition
 as historical assertions. Search later accession reports and current catalogs;
 record both the older status and a verified modern identification instead of
