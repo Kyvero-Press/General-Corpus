@@ -91,6 +91,20 @@ not a confirmed witness. Model the exact folio with a tentative, scoped
 relation and an open question; do not count the fragment—or its whole host
 codex—in the secure witness set until textual identity is demonstrated.
 
+## Target lines interpolated in a host work: CME00079
+
+When lines of the cataloged work survive only as interpolations inside a
+different host work, keep both intellectual identities distinct. Model the
+physical manuscript as a collateral witness with the exact interpolated line
+runs, not as a source of the immediate edition unless the edition actually
+uses it and not as a complete independent copy of the target work.
+
+A published image of the host codex supplies target-work coverage only after a
+folio-to-line concordance proves that the pictured surface contains one of the
+interpolated runs. Until then, cache and describe the image at its physical
+folio scope, explicitly mark target overlap unverified, and retain a whole-
+object acquisition route for the complete codex.
+
 ## Catalog-inferred locus versus written extent: CME00008
 
 A repository TEI record may infer a sole `msItem` locus from the physical
