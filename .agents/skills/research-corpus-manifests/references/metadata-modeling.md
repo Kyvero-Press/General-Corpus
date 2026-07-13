@@ -109,6 +109,10 @@ separate content part so the item boundary stays visible. Reconcile the whole-
 item `extent` totals with every modeled part, including prose paragraphs, but
 do not let those accounting totals make the historical work mixed-form,
 multilingual, or coauthored by the modern editor.
+Likewise, keep the editor's language, `textual-apparatus` label, and generic
+philology or manuscript tags out of work discovery facets. Describe them in
+the paratext part and lineage unless the cataloging subject truly is the
+scholarly edition itself.
 
 Count structural nodes at the depth that represents the cataloged work.
 Exclude verse lines nested inside editorial notes, quotations, or apparatus
