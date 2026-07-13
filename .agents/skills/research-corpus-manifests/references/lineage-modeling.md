@@ -62,6 +62,12 @@ agreement can support a comparison relation or an open identity question, but
 cannot make the surviving object the editor's, printer's, or translator's
 physical source without provenance evidence.
 
+A repertory identifier for a source work, such as a BHL number, can support a
+part-scoped `version_of` relation even when the translator's physical exemplar
+is unknown. Model the repertory as describing that source work. Treat a later
+printed edition of the source text as a supporting version or comparison—not
+as the physical exemplar—unless transmission evidence establishes that use.
+
 When an editor says that a passage was absent because a leaf had been lost
 from the surviving witness's exemplar, do not describe that leaf as missing
 from the surviving codex itself. Model the exemplar-level textual lacuna and
