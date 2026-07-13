@@ -1,0 +1,2722 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00130",
+  "work_id": "CME00130",
+  "title": "The Disputisoun betwen the Bodi and the Soule",
+  "primary_subject": "artifact:cme00130-xml",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "The repository XML is a version of the University of Michigan CME00130 electronic text, which encodes Wilhelm Linow's 1889 parallel edition of four Middle English manuscript versions on printed pp. 24-105. Linow says that his edition was prepared from four intermediate working transcripts: Hermann Varnhagen supplied those of the Auchinleck and Digby versions, while an incompletely identified Mr. Parker of Oxford supplied Laud and Vernon. Complete public IIIF facsimiles of the Auchinleck, Laud, and Vernon codices and a complete scan of Linow's book are cached with exact work locators. Digital Bodleian exposes only one selected Digby 102 image, f. 11v, which has no overlap with the poem at ff. 136r-139v; no complete public Digby facsimile was found, but made-to-order reference scans can be requested.",
+  "languages": [
+    "enm",
+    "fro",
+    "lat",
+    "deu"
+  ],
+  "review_notes": [
+    "The primary transmission paths do not collapse Linow's named working transcripts: repository artifact -> U-M encoding -> Linow edition -> working transcript -> manuscript witness.",
+    "The four XML DIV2 streams are parallel witness representations serialized from an alternating-page print layout, not four abstract works. Raw XML counts include 34 empty one-line alignment groups; the descriptive manifest records nonempty verse metrics separately.",
+    "The complete cached manuscript bundles retain every image in the current public IIIF objects. Work-level locators point into those complete objects and preserve shared boundary surfaces rather than cropping them.",
+    "The Digby IIIF object is deliberately modeled as a selected-folio facsimile with partial coverage and zero target-work overlap. It is not evidence that the poem or the complete codex has been digitized.",
+    "DIMEV's French classification is supported only at the Laud-part level by that witness's unique Old French transition and four-line benediction; it is not generalized to the other versions.",
+    "Linow's legacy Vernon heading 'Bl. 285 v.' conflicts with the current Bodleian catalogue and direct canvas labels, which place the poem at ff. 286rc-287rb. The current locator is used and the conflict remains explicit."
+  ],
+  "entities": [
+    {
+      "id": "artifact:cme00130-xml",
+      "type": "repository_artifact",
+      "label": "General Corpus repository artifact CME00130.xml",
+      "description": "The fixed XML source artifact for CME00130 in the CME submodule.",
+      "identifiers": [
+        {
+          "scheme": "General Corpus work ID",
+          "value": "CME00130"
+        },
+        {
+          "scheme": "Git blob",
+          "value": "a0ef1c401e8279b7313d3e864d887cc9d29377e2"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00130.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "a0ef1c401e8279b7313d3e864d887cc9d29377e2",
+        "sha256": "740a1459c3c684f3bca7b57c0430404be22cb6e8bc3ef0428e8f6e7f8782e7b8"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:xml-cme00130",
+        "evidence:xml-structure-inspection"
+      ],
+      "notes": [
+        "IDG, BIBNO, and VID all identify CME00130.",
+        "The four witness streams contain Linow's page breaks and typographic distinctions; their 840 MILESTONE elements interleave editorial and manuscript line-number series and are not additional verse lines."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme00130",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse encoding CME00130",
+      "description": "The U-M keyed electronic text represented by stable item identifier CME00130 and preserved in the repository artifact.",
+      "identifiers": [
+        {
+          "scheme": "U-M Digital Collections item ID",
+          "value": "CME00130",
+          "uri": "https://name.umdl.umich.edu/CME00130"
+        }
+      ],
+      "creator_ids": [
+        "org:university-of-michigan-library"
+      ],
+      "reproduction_format": "SGML/XML transcription with structural, printed-page, manuscript-folio, typographic, and parallel line-number markup",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:umich-cme-collection",
+        "evidence:umich-cme00130-item",
+        "evidence:xml-cme00130",
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "The XML serializes the alternating parallel page streams into four consecutive DIV2 elements while retaining blank alignment groups inherited from the print layout.",
+        "The selected source range is Linow pp. 24-105. Linow's introduction, Simeon variants, and notes are not included."
+      ]
+    },
+    {
+      "id": "edition:linow-1889",
+      "type": "scholarly_edition",
+      "label": "Wilhelm Linow's 1889 edition of four Middle English body-and-soul debate versions",
+      "description": "A parallel scholarly edition of the Auchinleck, Laud, Vernon, and Digby versions, with introduction, witness descriptions, a separate Simeon apparatus, and textual notes.",
+      "identifiers": [
+        {
+          "scheme": "BSB digital object",
+          "value": "bsb11663733",
+          "uri": "https://www.digitale-sammlungen.de/en/details/bsb11663733"
+        },
+        {
+          "scheme": "URN",
+          "value": "urn:nbn:de:bvb:12-bsb11663733-5"
+        },
+        {
+          "scheme": "Internet Archive item",
+          "value": "11663733bsb",
+          "uri": "https://archive.org/details/11663733bsb"
+        }
+      ],
+      "creator_ids": [
+        "person:wilhelm-linow"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1889",
+          "normalized": "1889",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:linow-1889",
+            "evidence:bsb-linow-record"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Wilhelm Linow, Þe Desputisoun bitwen þe Bodi and þe Soule, Erlanger Beiträge zur englischen Philologie 1 (Erlangen and Leipzig: A. Deichert'sche Verlagsbuchhandlung Nachf. [Georg Böhme], 1889).",
+        "title": "Þe Desputisoun bitwen þe Bodi and þe Soule",
+        "container_title": "Erlanger Beiträge zur englischen Philologie",
+        "volume": "1",
+        "publisher": "A. Deichert'sche Verlagsbuchhandlung Nachf. (Georg Böhme)",
+        "publication_place": "Erlangen and Leipzig",
+        "date": "1889",
+        "pages": "vi + 209",
+        "languages": [
+          "deu",
+          "enm",
+          "fro",
+          "lat"
+        ]
+      },
+      "physical_description": {
+        "extent": "vi + 209 printed pages",
+        "format": "Printed scholarly monograph",
+        "notes": [
+          "Linow's Middle English study occupies pp. 1-112; the four witness texts encoded in CME00130 occupy pp. 24-105.",
+          "Hermann Varnhagen's Old French edition begins on p. 113 and Theodore Martin's later English adaptation begins on p. 197; neither is part of CME00130."
+        ]
+      },
+      "reproduction_format": "Parallel printed witness edition with editorial reordering, collation, emendation, and typographic signals",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:linow-1889",
+        "evidence:bsb-linow-record",
+        "evidence:linow-scan-metadata"
+      ],
+      "notes": [
+        "Linow explicitly rejects constructing a single synthetic critical text because of witness contamination and dialectal differences.",
+        "The Auchinleck and Laud versions alternate across printed pp. 24-65; Vernon and Digby alternate across pp. 66-105."
+      ]
+    },
+    {
+      "id": "transcript:varnhagen-auchinleck",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's working transcript of the Auchinleck version",
+      "description": "The intermediate transcript from which Linow says he prepared the Auchinleck text.",
+      "creator_ids": [
+        "person:hermann-varnhagen"
+      ],
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Modeled provisionally as manuscript_witness because the schema has no dedicated transcript entity type; it is a modern working transcript, not a medieval codex.",
+        "Its present location, medium, and survival have not been established."
+      ]
+    },
+    {
+      "id": "transcript:parker-laud",
+      "type": "manuscript_witness",
+      "label": "Mr. Parker's working transcript of the Laud Misc. 108 version",
+      "description": "The intermediate transcript from which Linow says he prepared the Laud text.",
+      "creator_ids": [
+        "person:mr-parker-oxford"
+      ],
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Modeled provisionally as manuscript_witness because the schema has no dedicated transcript entity type; it is a modern working transcript, not a medieval codex.",
+        "Its present location, medium, and survival have not been established."
+      ]
+    },
+    {
+      "id": "transcript:parker-vernon",
+      "type": "manuscript_witness",
+      "label": "Mr. Parker's working transcript of the Vernon version",
+      "description": "The intermediate transcript from which Linow says he prepared the Vernon text.",
+      "creator_ids": [
+        "person:mr-parker-oxford"
+      ],
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Modeled provisionally as manuscript_witness because the schema has no dedicated transcript entity type; it is a modern working transcript, not a medieval codex.",
+        "Its present location, medium, and survival have not been established."
+      ]
+    },
+    {
+      "id": "transcript:varnhagen-digby",
+      "type": "manuscript_witness",
+      "label": "Hermann Varnhagen's working transcript of the Digby 102 version",
+      "description": "The intermediate transcript from which Linow says he prepared the Digby text.",
+      "creator_ids": [
+        "person:hermann-varnhagen"
+      ],
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Modeled provisionally as manuscript_witness because the schema has no dedicated transcript entity type; it is a modern working transcript, not a medieval codex.",
+        "Its present location, medium, and survival have not been established."
+      ]
+    },
+    {
+      "id": "witness:nls-adv-ms-19-2-1",
+      "type": "manuscript_witness",
+      "label": "National Library of Scotland, Advocates MS 19.2.1 (Auchinleck Manuscript)",
+      "alternate_labels": [
+        "Adv.MS.19.2.1",
+        "Auchinleck Manuscript"
+      ],
+      "description": "A major Middle English literary codex produced in London in the 1330s; Scribe 1 copied the body-and-soul debate at ff. 31vb-35ra, ending on a mutilated stub.",
+      "identifiers": [
+        {
+          "scheme": "NLS shelfmark",
+          "value": "Adv.MS.19.2.1",
+          "uri": "https://manuscripts.nls.uk/repositories/2/resources/19334"
+        },
+        {
+          "scheme": "NLS digital record",
+          "value": "233337262",
+          "uri": "https://digital.nls.uk/233337262"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Production",
+          "value": "1331-1340",
+          "normalized": "1331/1340",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:nls-auchinleck-project"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "org:national-library-of-scotland",
+        "shelfmark": "Adv.MS.19.2.1",
+        "historical_designations": [
+          "Advocates W.4.1"
+        ],
+        "catalog_url": "https://manuscripts.nls.uk/repositories/2/resources/19334",
+        "notes": "The poem occupies ff. 31vb-35ra; the final folio survives as a damaged stub."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "i-viii + 334 + ix-xiv folios, with losses and detached fragments",
+        "format": "Codex",
+        "notes": [
+          "The debate is written in 74 eight-line abab abab stanzas by Scribe 1.",
+          "The final five stanzas survive only as line beginnings on the mutilated f. 35ra stub."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-headnote",
+        "evidence:nls-auchinleck-project",
+        "evidence:nls-auchinleck-iiif"
+      ],
+      "notes": [
+        "The NLS headnote counts 591 lines after excluding Latin speech labels and the English title; DIMEV and the nonempty XML L count yield 592. The discrepancy remains unresolved."
+      ]
+    },
+    {
+      "id": "witness:bodleian-laud-misc-108",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Laud Misc. 108",
+      "alternate_labels": [
+        "Laud Misc. 108"
+      ],
+      "description": "A composite English parchment codex; Hand B copied the debate at ff. 200v-203v, with a unique Old French prose transition and four-line benediction.",
+      "identifiers": [
+        {
+          "scheme": "Shelfmark",
+          "value": "MS. Laud Misc. 108",
+          "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917"
+        },
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "c5438c30-71dd-4cec-ac59-eb1e5a11f2a4",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Codex core and additions",
+          "value": "Late thirteenth or early fourteenth century, with additions through the fourteenth century",
+          "normalized": "1290/1400",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bodleian-laud-catalog"
+          ],
+          "notes": "Hand B, responsible for ff. 200v-203v, is somewhat later than hands A and C but remains within the catalogue's late-thirteenth- or early-fourteenth-century core description."
+        }
+      ],
+      "holding": {
+        "institution_id": "org:bodleian-libraries",
+        "shelfmark": "MS. Laud Misc. 108",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917",
+        "notes": "The debate begins partway down f. 200v after the preceding item and ends on f. 203v before the next item; both boundary surfaces are shared."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "240/243 leaves",
+        "format": "Codex",
+        "notes": [
+          "The Hand B dialect is localized by the current catalogue to the Isle of Ely or possibly west Norfolk or north-east Suffolk.",
+          "The manuscript may have been produced at Oxford; the catalogue preserves this as a possibility rather than a certainty."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-laud-catalog",
+        "evidence:bodleian-laud-iiif",
+        "evidence:dimev-record-605"
+      ]
+    },
+    {
+      "id": "witness:bodleian-eng-poet-a-1",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Eng. poet. a. 1 (Vernon Manuscript)",
+      "alternate_labels": [
+        "Vernon Manuscript",
+        "MS. Eng. poet. a. 1"
+      ],
+      "description": "A monumental Middle English religious and didactic anthology; Scribe 2 copied the debate at ff. 286rc-287rb.",
+      "identifiers": [
+        {
+          "scheme": "Shelfmark",
+          "value": "MS. Eng. poet. a. 1",
+          "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817"
+        },
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Production",
+          "value": "c. 1390-1400",
+          "normalized": "1390/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bodleian-vernon-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "org:bodleian-libraries",
+        "shelfmark": "MS. Eng. poet. a. 1",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+        "notes": "The debate starts in the third column of f. 286r after The Prick of Love, fills f. 286v, and ends in the second column of f. 287r before the next item."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "viii + 342 + i surviving leaves; originally viii + 413",
+        "format": "Codex",
+        "dimensions": "544 x 393 mm",
+        "notes": [
+          "The manuscript is associated with the West Midlands; Scribe 2's dialect is localized more specifically to Worcestershire (Linguistic Profile 7630).",
+          "Seventy-one original leaves are lost."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-catalog",
+        "evidence:bodleian-vernon-iiif",
+        "evidence:dimev-record-605"
+      ],
+      "notes": [
+        "The current catalogue and direct facsimile labels supersede Linow's legacy locator 'Bl. 285 v.' for present-day discovery, without silently erasing that historical foliation statement."
+      ]
+    },
+    {
+      "id": "witness:bodleian-digby-102",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Digby 102",
+      "alternate_labels": [
+        "Digby 102"
+      ],
+      "description": "A London parchment codex dated 1425-1450; the debate is a later addition in different ink at ff. 136r-139v and is written continuously as prose in the manuscript.",
+      "identifiers": [
+        {
+          "scheme": "Shelfmark",
+          "value": "MS. Digby 102",
+          "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224"
+        },
+        {
+          "scheme": "Bodleian Archives and Manuscripts record",
+          "value": "169507",
+          "uri": "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/169507"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Production",
+          "value": "1425-1450",
+          "normalized": "1425/1450",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bodleian-digby-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "org:bodleian-libraries",
+        "shelfmark": "MS. Digby 102",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224",
+        "notes": "The poem occupies ff. 136r-139v."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "ii + ii + 142 + ii leaves",
+        "format": "Codex",
+        "dimensions": "220 x 155 mm",
+        "notes": [
+          "The work is a later addition with different ink and a separate decoration scheme.",
+          "DIMEV records that the verse is written as prose; Linow restores lineation in print."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-digby-catalog",
+        "evidence:dimev-record-605",
+        "evidence:bodleian-digby-partial-iiif"
+      ],
+      "notes": [
+        "Linow's introductory description says f. 136v, but his text heading, the XML, DIMEV, and the current catalogue all give f. 136r; the current locus is used."
+      ]
+    },
+    {
+      "id": "facsimile:bsb-ia-linow-1889",
+      "type": "facsimile",
+      "label": "Complete BSB scan of Linow's 1889 monograph, distributed through BSB and Internet Archive",
+      "description": "A complete digitized copy of the printed volume, including Linow's Middle English edition and the later Old French and modern-English sections.",
+      "identifiers": [
+        {
+          "scheme": "BSB digital object",
+          "value": "bsb11663733",
+          "uri": "https://www.digitale-sammlungen.de/en/view/bsb11663733"
+        },
+        {
+          "scheme": "Internet Archive item",
+          "value": "11663733bsb",
+          "uri": "https://archive.org/details/11663733bsb"
+        }
+      ],
+      "creator_ids": [
+        "org:bavarian-state-library"
+      ],
+      "physical_description": {
+        "extent": "227 PDF pages representing the complete scanned volume",
+        "format": "Digital page images with derived OCR and structural metadata"
+      },
+      "reproduction_format": "PDF page-image scan with OCR derivatives",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bsb-linow-record",
+        "evidence:linow-scan-metadata",
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "facsimile:nls-auchinleck-complete",
+      "type": "facsimile",
+      "label": "National Library of Scotland complete IIIF facsimile of the Auchinleck Manuscript",
+      "description": "The current 734-canvas NLS digital object for Adv.MS.19.2.1. The debate occupies canvases 88-95, ff. 31v-35r.",
+      "identifiers": [
+        {
+          "scheme": "NLS digital record",
+          "value": "233337262",
+          "uri": "https://digital.nls.uk/233337262"
+        },
+        {
+          "scheme": "IIIF Presentation manifest",
+          "value": "233337262",
+          "uri": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json"
+        }
+      ],
+      "creator_ids": [
+        "org:national-library-of-scotland"
+      ],
+      "physical_description": {
+        "extent": "734 IIIF canvases",
+        "format": "Color digital images",
+        "notes": [
+          "The work's opening and closing folios are retained as complete surfaces, including material outside the poem's columns."
+        ]
+      },
+      "reproduction_format": "IIIF Presentation manifest and JPEG images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "facsimile:bodleian-laud-complete",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete IIIF facsimile of MS. Laud Misc. 108",
+      "description": "A 496-canvas digital object for the whole manuscript. The debate occupies canvases 416-422, ff. 200v-203v.",
+      "identifiers": [
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "c5438c30-71dd-4cec-ac59-eb1e5a11f2a4",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/"
+        },
+        {
+          "scheme": "IIIF Presentation manifest",
+          "value": "c5438c30-71dd-4cec-ac59-eb1e5a11f2a4",
+          "uri": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json"
+        }
+      ],
+      "creator_ids": [
+        "org:bodleian-libraries"
+      ],
+      "physical_description": {
+        "extent": "496 IIIF canvases",
+        "format": "Color digital images",
+        "notes": [
+          "The debate begins below the preceding item on f. 200v and ends above the next item on f. 203v; the complete shared surfaces are retained."
+        ]
+      },
+      "reproduction_format": "IIIF Presentation 2 manifest and JPEG images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-laud-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "facsimile:bodleian-vernon-complete",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete IIIF facsimile of the Vernon Manuscript",
+      "description": "A 710-canvas digital object spanning the complete currently exposed physical object. The debate occupies canvases 458-460, ff. 286r-287r.",
+      "identifiers": [
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"
+        },
+        {
+          "scheme": "IIIF Presentation manifest",
+          "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+          "uri": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json"
+        }
+      ],
+      "creator_ids": [
+        "org:bodleian-libraries"
+      ],
+      "physical_description": {
+        "extent": "710 IIIF canvases",
+        "format": "Color digital images",
+        "notes": [
+          "The debate begins after another item in the third column of f. 286r and ends before the next item in the second column of f. 287r; the complete shared surfaces are retained."
+        ]
+      },
+      "reproduction_format": "IIIF Presentation 2 manifest and JPEG images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "facsimile:bodleian-digby-selected-f11v",
+      "type": "facsimile",
+      "label": "Digital Bodleian selected image of MS. Digby 102, f. 11v",
+      "description": "A one-canvas Digital Bodleian object showing f. 11v. It has zero overlap with the body-and-soul debate at ff. 136r-139v and is not a facsimile of the target work or complete manuscript.",
+      "identifiers": [
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "d381d1c9-92c3-49cc-bc09-19ac6a53ffb5",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5/"
+        },
+        {
+          "scheme": "IIIF Presentation manifest",
+          "value": "d381d1c9-92c3-49cc-bc09-19ac6a53ffb5",
+          "uri": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5.json"
+        }
+      ],
+      "creator_ids": [
+        "org:bodleian-libraries"
+      ],
+      "physical_description": {
+        "extent": "1 IIIF canvas",
+        "format": "Color digital image",
+        "notes": [
+          "The sole image is f. 11v, whereas the target occupies ff. 136r-139v."
+        ]
+      },
+      "reproduction_format": "IIIF Presentation 2 manifest and one JPEG image",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-digby-partial-iiif"
+      ]
+    },
+    {
+      "id": "catalog:dimev-v1-record-605",
+      "type": "catalog_description",
+      "label": "Digital Index of Middle English Verse record 605",
+      "description": "DIMEV's work-level catalogue record grouping seven manuscript witnesses under IMEV/NIMEV 351; four of those witnesses are printed in Linow and encoded in CME00130.",
+      "identifiers": [
+        {
+          "scheme": "DIMEV",
+          "value": "605",
+          "uri": "https://www.dimev.net/record.php?recID=605"
+        },
+        {
+          "scheme": "IMEV",
+          "value": "351"
+        },
+        {
+          "scheme": "NIMEV",
+          "value": "351"
+        },
+        {
+          "scheme": "DOI",
+          "value": "10.5281/zenodo.14585961",
+          "uri": "https://doi.org/10.5281/zenodo.14585961"
+        }
+      ],
+      "creator_ids": [
+        "org:dimev-project"
+      ],
+      "date_statements": [
+        {
+          "label": "Version 1.0 release",
+          "value": "2025-01-01",
+          "normalized": "2025-01-01",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:dimev-v1-release"
+          ]
+        }
+      ],
+      "reproduction_format": "Online scholarly catalogue and downloadable XML dataset",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:dimev-record-605",
+        "evidence:dimev-v1-release"
+      ],
+      "notes": [
+        "The cached v1.0 ZIP comment fixes the dataset to Git commit 5ad5f592868471b44fc72f6e2f42db419780b42c."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "person:wilhelm-linow",
+      "type": "person",
+      "name": "Wilhelm Linow",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "person:hermann-varnhagen",
+      "type": "person",
+      "name": "Hermann Varnhagen",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Linow credits Varnhagen with the Auchinleck and Digby working transcripts."
+      ]
+    },
+    {
+      "id": "person:mr-parker-oxford",
+      "type": "person",
+      "name": "Mr. Parker (Oxford; identity unresolved)",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Linow credits this person with the Laud and Vernon working transcripts but supplies no fuller identification."
+      ]
+    },
+    {
+      "id": "org:university-of-michigan-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-cme-collection",
+        "evidence:umich-cme00130-item"
+      ]
+    },
+    {
+      "id": "org:national-library-of-scotland",
+      "type": "organization",
+      "name": "National Library of Scotland",
+      "urls": [
+        "https://www.nls.uk/",
+        "https://digital.nls.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:nls-auchinleck-project",
+        "evidence:nls-auchinleck-iiif"
+      ]
+    },
+    {
+      "id": "org:bodleian-libraries",
+      "type": "organization",
+      "name": "Bodleian Libraries",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/",
+        "https://digital.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bodleian-laud-catalog",
+        "evidence:bodleian-vernon-catalog",
+        "evidence:bodleian-digby-catalog",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "org:bavarian-state-library",
+      "type": "organization",
+      "name": "Bavarian State Library",
+      "alternate_names": [
+        "Bayerische Staatsbibliothek",
+        "BSB"
+      ],
+      "urls": [
+        "https://www.digitale-sammlungen.de/"
+      ],
+      "evidence_ids": [
+        "evidence:bsb-linow-record"
+      ]
+    },
+    {
+      "id": "org:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:linow-scan-metadata"
+      ]
+    },
+    {
+      "id": "org:dimev-project",
+      "type": "organization",
+      "name": "Digital Index of Middle English Verse",
+      "urls": [
+        "https://www.dimev.net/"
+      ],
+      "evidence_ids": [
+        "evidence:dimev-record-605",
+        "evidence:dimev-v1-release"
+      ]
+    },
+    {
+      "id": "org:zenodo",
+      "type": "organization",
+      "name": "Zenodo",
+      "urls": [
+        "https://zenodo.org/"
+      ],
+      "evidence_ids": [
+        "evidence:dimev-v1-release"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich-encoding",
+      "type": "version_of",
+      "subject": "artifact:cme00130-xml",
+      "object": "encoding:umich-cme00130",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete repository XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME00130 electronic text"
+        },
+        "notes": "The local artifact preserves the U-M identifier family and complete encoded text at the fixed CME commit."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:xml-cme00130",
+          "evidence:umich-cme00130-item",
+          "evidence:umich-cme-collection"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoding-from-linow",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme00130",
+      "object": "edition:linow-1889",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "All four serialized witness streams in CME00130"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Linow's four Middle English witness texts",
+          "locators": [
+            "printed pages 24-105",
+            "scan PDF pages 38-119",
+            "Auchinleck: p. 24 and even pp. 26-64",
+            "Laud: p. 25 and odd pp. 27-65",
+            "Vernon: p. 66 and even pp. 68-104",
+            "Digby: p. 67 and odd pp. 69-105"
+          ]
+        },
+        "notes": "The XML selects only the four main witness texts; Linow's introduction (pp. 1-23), Simeon variants (p. 106), and notes (pp. 107-112) are excluded."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:xml-cme00130",
+          "evidence:xml-structure-inspection",
+          "evidence:linow-1889"
+        ]
+      }
+    },
+    {
+      "id": "relation:linow-transcribes-varnhagen-auchinleck",
+      "type": "transcribes",
+      "subject": "edition:linow-1889",
+      "object": "transcript:varnhagen-auchinleck",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Auchinleck version",
+          "locators": [
+            "p. 24 and even-numbered pages 26-64"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Varnhagen's complete working transcript of the Auchinleck version as used by Linow"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889"
+        ]
+      }
+    },
+    {
+      "id": "relation:linow-transcribes-parker-laud",
+      "type": "transcribes",
+      "subject": "edition:linow-1889",
+      "object": "transcript:parker-laud",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Laud version",
+          "locators": [
+            "p. 25 and odd-numbered pages 27-65"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Parker's complete working transcript of the Laud version as used by Linow"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889"
+        ]
+      }
+    },
+    {
+      "id": "relation:linow-transcribes-parker-vernon",
+      "type": "transcribes",
+      "subject": "edition:linow-1889",
+      "object": "transcript:parker-vernon",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Vernon version",
+          "locators": [
+            "p. 66 and even-numbered pages 68-104"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Parker's complete working transcript of the Vernon version as used by Linow"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889"
+        ]
+      }
+    },
+    {
+      "id": "relation:linow-transcribes-varnhagen-digby",
+      "type": "transcribes",
+      "subject": "edition:linow-1889",
+      "object": "transcript:varnhagen-digby",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Digby version",
+          "locators": [
+            "p. 67 and odd-numbered pages 69-105"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Varnhagen's complete working transcript of the Digby version as used by Linow"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889"
+        ]
+      }
+    },
+    {
+      "id": "relation:varnhagen-auchinleck-transcript-from-witness",
+      "type": "transcribes",
+      "subject": "transcript:varnhagen-auchinleck",
+      "object": "witness:nls-adv-ms-19-2-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Working transcript used by Linow"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Auchinleck body-and-soul debate",
+          "locators": [
+            "folios 31vb-35ra stub",
+            "74 eight-line stanzas"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889",
+          "evidence:nls-auchinleck-headnote"
+        ]
+      }
+    },
+    {
+      "id": "relation:parker-laud-transcript-from-witness",
+      "type": "transcribes",
+      "subject": "transcript:parker-laud",
+      "object": "witness:bodleian-laud-misc-108",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Working transcript used by Linow"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Laud body-and-soul debate and unique French ending material",
+          "locators": [
+            "folios 200v-203v",
+            "61 Middle English eight-line stanzas, French transition, and four-line French benediction"
+          ]
+        },
+        "notes": "The opening and closing folios also contain adjacent works."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889",
+          "evidence:bodleian-laud-catalog",
+          "evidence:dimev-record-605"
+        ]
+      }
+    },
+    {
+      "id": "relation:parker-vernon-transcript-from-witness",
+      "type": "transcribes",
+      "subject": "transcript:parker-vernon",
+      "object": "witness:bodleian-eng-poet-a-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Working transcript used by Linow"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Vernon body-and-soul debate",
+          "locators": [
+            "folios 286rc-287rb",
+            "62 eight-line stanzas"
+          ]
+        },
+        "notes": "The current foliation is used; Linow's legacy heading reads 'Bl. 285 v.'"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889",
+          "evidence:bodleian-vernon-catalog",
+          "evidence:facsimile-visual-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:varnhagen-digby-transcript-from-witness",
+      "type": "transcribes",
+      "subject": "transcript:varnhagen-digby",
+      "object": "witness:bodleian-digby-102",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Working transcript used by Linow"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Digby body-and-soul debate written as prose",
+          "locators": [
+            "folios 136r-139v",
+            "67 reconstructed eight-line stanzas"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-1889",
+          "evidence:bodleian-digby-catalog",
+          "evidence:dimev-record-605"
+        ]
+      }
+    },
+    {
+      "id": "relation:linow-scan-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb-ia-linow-1889",
+      "object": "edition:linow-1889",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Linow's Middle English study and the selected CME source passage within the complete scan",
+          "locators": [
+            "study: printed pages 1-112, PDF pages 15-126",
+            "CME00130 source: printed pages 24-105, PDF pages 38-119"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Linow's complete Middle English study on printed pages 1-112"
+        },
+        "notes": "The cached scan covers the full 227-page digital object, not only the selected passage."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:linow-scan-metadata",
+          "evidence:linow-1889",
+          "evidence:bsb-linow-record"
+        ]
+      }
+    },
+    {
+      "id": "relation:nls-facsimile-of-auchinleck",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls-auchinleck-complete",
+      "object": "witness:nls-adv-ms-19-2-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete current 734-canvas IIIF object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete surviving codex as represented by the provider's digital object"
+        },
+        "notes": "The target work is associated by canvases 88-95 and ff. 31v-35r."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:nls-auchinleck-iiif",
+          "evidence:facsimile-visual-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:laud-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian-laud-complete",
+      "object": "witness:bodleian-laud-misc-108",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete current 496-canvas IIIF object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete manuscript as represented by the provider's digital object"
+        },
+        "notes": "The target work is associated by canvases 416-422 and ff. 200v-203v."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bodleian-laud-iiif",
+          "evidence:facsimile-visual-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:vernon-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian-vernon-complete",
+      "object": "witness:bodleian-eng-poet-a-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete current 710-canvas IIIF object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete surviving manuscript as represented by the provider's digital object"
+        },
+        "notes": "The target work is associated by canvases 458-460 and ff. 286r-287r."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bodleian-vernon-iiif",
+          "evidence:facsimile-visual-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:digby-selected-image-of-f11v",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian-digby-selected-f11v",
+      "object": "witness:bodleian-digby-102",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The single selected Digital Bodleian canvas"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Folio 11v only",
+          "locators": [
+            "f. 11v"
+          ]
+        },
+        "notes": "The relation is strictly to f. 11v. It does not cover, depict, or validate the body-and-soul debate at ff. 136r-139v."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bodleian-digby-partial-iiif",
+          "evidence:bodleian-digby-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-auchinleck",
+      "type": "describes",
+      "subject": "catalog:dimev-v1-record-605",
+      "object": "witness:nls-adv-ms-19-2-1",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Record 605 Auchinleck witness entry"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Debate at ff. 31vb-35ra"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-record-605",
+          "evidence:dimev-v1-release"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-laud",
+      "type": "describes",
+      "subject": "catalog:dimev-v1-record-605",
+      "object": "witness:bodleian-laud-misc-108",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Record 605 Laud witness entry"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Debate and unique French ending material at ff. 200v-203v"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-record-605",
+          "evidence:dimev-v1-release"
+        ],
+        "notes": "DIMEV's French content applies to the Laud witness's unique ending, not to every witness version."
+      }
+    },
+    {
+      "id": "relation:dimev-describes-vernon",
+      "type": "describes",
+      "subject": "catalog:dimev-v1-record-605",
+      "object": "witness:bodleian-eng-poet-a-1",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Record 605 Vernon witness entry"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Debate at ff. 286rc-287rb"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-record-605",
+          "evidence:dimev-v1-release",
+          "evidence:bodleian-vernon-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-digby",
+      "type": "describes",
+      "subject": "catalog:dimev-v1-record-605",
+      "object": "witness:bodleian-digby-102",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Record 605 Digby witness entry"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Debate at ff. 136r-139v"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-record-605",
+          "evidence:dimev-v1-release",
+          "evidence:bodleian-digby-catalog"
+        ],
+        "notes": "DIMEV records that this witness writes the poem as prose."
+      }
+    },
+    {
+      "id": "relation:dimev-cites-linow",
+      "type": "cites",
+      "subject": "catalog:dimev-v1-record-605",
+      "object": "edition:linow-1889",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Record 605 bibliography and witness edition references"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Four witness texts and related notes",
+          "locators": [
+            "printed pages 24-112"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-record-605"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:cme00130-xml",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Read the checked-out CME submodule path or retrieve the file at the fixed commit.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00130.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00130.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:xml-cme00130"
+      ]
+    },
+    {
+      "id": "access:umich-digital-text",
+      "entity": "encoding:umich-cme00130",
+      "provider_id": "org:university-of-michigan-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the stable item URL through the U-M Corpus of Middle English Prose and Verse interface.",
+      "url": "https://name.umdl.umich.edu/CME00130",
+      "alternate_urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "cost": "free",
+      "format": "Web text",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:umich-cme00130-item",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "access:linow-complete-scan",
+      "entity": "facsimile:bsb-ia-linow-1889",
+      "provider_id": "org:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Browse the exact BSB record or Internet Archive item, or retrieve the exact PDF and derivative endpoints.",
+      "url": "https://www.digitale-sammlungen.de/en/details/bsb11663733",
+      "alternate_urls": [
+        "https://www.digitale-sammlungen.de/en/view/bsb11663733",
+        "https://archive.org/details/11663733bsb",
+        "https://archive.org/download/11663733bsb/11663733bsb.pdf",
+        "https://archive.org/download/11663733bsb/11663733bsb_djvu.txt",
+        "https://archive.org/download/11663733bsb/11663733bsb_djvu.xml",
+        "https://archive.org/download/11663733bsb/11663733bsb_page_numbers.json",
+        "https://archive.org/download/11663733bsb/11663733bsb_scandata.xml",
+        "https://archive.org/metadata/11663733bsb"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Linow 1889 scanned volume PDF",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-complete.pdf",
+          "source_url": "https://archive.org/download/11663733bsb/11663733bsb.pdf",
+          "sha256": "8a8a3055b781876023860aa704e15820188453396dbefe0d410b7352052012bb",
+          "bytes": 95819526,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Linow's four Middle English witness texts encoded as CME00130",
+            "locators": [
+              "printed pages 24-105",
+              "PDF pages 38-119"
+            ],
+            "notes": [
+              "The complete 227-page scan is retained; the locators identify only the corpus item's immediate source passage."
+            ]
+          },
+          "notes": [
+            "qpdf --check completed without structural errors."
+          ]
+        },
+        {
+          "label": "Complete Linow scan OCR text",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-ocr.txt",
+          "source_url": "https://archive.org/download/11663733bsb/11663733bsb_djvu.txt",
+          "sha256": "e3b92b7dc2690be6a2d412d83d327977825a558df1cb92cae6e5365f937eeb46",
+          "bytes": 310291,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "OCR corresponding to the four Middle English witness texts",
+            "locators": [
+              "printed pages 24-105"
+            ]
+          },
+          "notes": [
+            "OCR is a search aid and is not treated as an authoritative transcription."
+          ]
+        },
+        {
+          "label": "Complete Linow scan OCR XML",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-ocr.xml",
+          "source_url": "https://archive.org/download/11663733bsb/11663733bsb_djvu.xml",
+          "sha256": "7ef5952787a7e064ba2a4c3c2e650eb4de001f99d38dea6a5bd56ce55cac7bae",
+          "bytes": 4542218,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "OCR structure corresponding to the four Middle English witness texts",
+            "locators": [
+              "printed pages 24-105"
+            ]
+          }
+        },
+        {
+          "label": "Linow scan Internet Archive item metadata",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/11663733bsb",
+          "sha256": "cf1ff000ab29d71240775594ac0b8c07195b6308b8828dea6e039aeae10378a3",
+          "bytes": 45644,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Linow scan page-number mapping",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-page-numbers.json",
+          "source_url": "https://archive.org/download/11663733bsb/11663733bsb_page_numbers.json",
+          "sha256": "7cca363563a917c52c8654462a48d4fef601c4fb7fe4bfc4b4624ae1eea2ffe5",
+          "bytes": 38885,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Linow scan structural scan data",
+          "path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-scandata.xml",
+          "source_url": "https://archive.org/download/11663733bsb/11663733bsb_scandata.xml",
+          "sha256": "aa82d8e1e6b27188486344f28a5e15fa58074ea899dfb11203719e1f7d13959c",
+          "bytes": 78711,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text/XML, and scan metadata",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bsb-linow-record",
+        "evidence:linow-scan-metadata",
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Internet Archive metadata does not state a license; BSB's exact object record supplies the controlling NoC-NC rights statement for this Google-digitized copy."
+      ]
+    },
+    {
+      "id": "access:dimev-online-record",
+      "entity": "catalog:dimev-v1-record-605",
+      "provider_id": "org:dimev-project",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open DIMEV record 605.",
+      "url": "https://www.dimev.net/record.php?recID=605",
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:dimev-record-605"
+      ]
+    },
+    {
+      "id": "access:dimev-v1-download",
+      "entity": "catalog:dimev-v1-record-605",
+      "provider_id": "org:zenodo",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open the Zenodo v1.0 record or retrieve its exact ZIP endpoint.",
+      "url": "https://zenodo.org/records/14585961",
+      "alternate_urls": [
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete DIMEV v1.0 release archive",
+          "path": "source-cache/CME00130/dimev-v1.0.zip",
+          "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+          "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c",
+          "bytes": 3891929,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "DIMEV entry for the work represented by CME00130",
+            "locators": [
+              "DIMEV record 605",
+              "IMEV 351",
+              "NIMEV 351"
+            ]
+          },
+          "notes": [
+            "ZIP integrity was verified locally; complete means the complete v1.0 dataset release."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP archive",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:dimev-v1-release"
+      ]
+    },
+    {
+      "id": "access:nls-auchinleck-digital-text",
+      "entity": "witness:nls-adv-ms-19-2-1",
+      "provider_id": "org:national-library-of-scotland",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the NLS Auchinleck Project headnote or complete manuscript transcription.",
+      "url": "https://auchinleck.nls.uk/mss/bodysoul.html",
+      "alternate_urls": [
+        "https://auchinleck.nls.uk/mss/heads/bodysoul_head.html",
+        "https://auchinleck.nls.uk/"
+      ],
+      "cost": "free",
+      "format": "HTML transcription and scholarly headnote",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-headnote",
+        "evidence:nls-auchinleck-project"
+      ]
+    },
+    {
+      "id": "access:nls-auchinleck-iiif",
+      "entity": "facsimile:nls-auchinleck-complete",
+      "provider_id": "org:national-library-of-scotland",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Browse the NLS digital object or open the exact IIIF Presentation manifest.",
+      "url": "https://digital.nls.uk/233337262",
+      "alternate_urls": [
+        "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete current NLS Auchinleck IIIF bundle at 1600-pixel width",
+          "path": "source-cache/CME00130/nls-adv-ms-19-2-1-auchinleck-complete-iiif-1600px.zip",
+          "source_url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+          "sha256": "8df1a90bd76ce08e8abbca46a945cb19a78b2f1e0dee4de1a920a55f3a7e4431",
+          "bytes": 328592287,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 734,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The Disputisoun bitven the Bodi and the Soule, Auchinleck version",
+            "locators": [
+              "folios 31vb-35ra stub",
+              "IIIF canvases 88-95 (f. 31v through f. 35r)"
+            ],
+            "start_url": "https://auchinleck.nls.uk/view/?url=https://dg-view.nls.uk/iiif/2/auchinleck%2F031v/info.json",
+            "end_url": "https://auchinleck.nls.uk/view/?url=https://dg-view.nls.uk/iiif/2/auchinleck%2F035r/info.json",
+            "notes": [
+              "The text begins in column b on f. 31v and ends on the damaged column a stub of f. 35r; complete bounding surfaces are retained."
+            ]
+          },
+          "notes": [
+            "ZIP retains the exact provider manifest, inventory metadata, and all 734 canvas images requested at 1600-pixel width.",
+            "Complete means complete coverage of the current public IIIF object, not preservation-master resolution."
+          ]
+        },
+        {
+          "label": "Exact NLS Auchinleck IIIF Presentation manifest",
+          "path": "source-cache/CME00130/nls-adv-ms-19-2-1-auchinleck-iiif-manifest.json",
+          "source_url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+          "sha256": "915c5120db85b016516de8508f2483bdc3b73c0efee5691df3897cbe6a15a8c8",
+          "bytes": 605908,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation JSON and JPEG images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "access:laud-catalog",
+      "entity": "witness:bodleian-laud-misc-108",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the current Bodleian medieval manuscript record.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Bodleian Laud Misc. 108 catalogue TEI",
+          "path": "source-cache/CME00130/bodleian-ms-laud-misc-108-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml",
+          "sha256": "2814905d145bf6fa0a3664f0f46ed3dce485fff73b3bbab5a3f043608511d74b",
+          "bytes": 55164,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and TEI XML catalogue description",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-laud-catalog"
+      ]
+    },
+    {
+      "id": "access:laud-iiif",
+      "entity": "facsimile:bodleian-laud-complete",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Browse Digital Bodleian or open the exact IIIF Presentation manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Laud Misc. 108 IIIF bundle at 1600-pixel width",
+          "path": "source-cache/CME00130/bodleian-laud-misc-108-complete-iiif-1600px.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+          "sha256": "06bd1270f190f1fa6111fa1b1ed946fc8cf1289b60cab73381e1d9bfe4f1268c",
+          "bytes": 588889461,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 496,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The body-and-soul debate, Laud version",
+            "locators": [
+              "folios 200v-203v",
+              "IIIF canvases 416-422"
+            ],
+            "start_url": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/surfaces/78eddc5b-d204-4cdc-bcdd-714a79c4e4a9/",
+            "end_url": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/surfaces/1d737d9c-c7f5-41b6-b447-c85e0d3133fa/",
+            "notes": [
+              "The start and end folios are shared with adjacent works; full surfaces are retained."
+            ]
+          },
+          "notes": [
+            "ZIP retains the exact provider manifest, inventory metadata, and all 496 canvas images requested at 1600-pixel width.",
+            "Complete means complete coverage of the current public IIIF object, not preservation-master resolution."
+          ]
+        },
+        {
+          "label": "Exact Laud Misc. 108 IIIF Presentation manifest",
+          "path": "source-cache/CME00130/bodleian-laud-misc-108-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+          "sha256": "ce8d05cfecb6f05778d6a0f72de48b9805e57f4844cd63b8569c1055395a3019",
+          "bytes": 447437,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Preserves the authoritative canvas identities, folio labels, image-service URLs, attribution, and rights statement independently of the image bundle."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 JSON and JPEG images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-laud-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "access:vernon-catalog",
+      "entity": "witness:bodleian-eng-poet-a-1",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the current Bodleian medieval manuscript record.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Eng_poet/MS_Eng_poet_a_1.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Bodleian Vernon Manuscript catalogue TEI",
+          "path": "source-cache/CME00130/bodleian-ms-eng-poet-a-1-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Eng_poet/MS_Eng_poet_a_1.xml",
+          "sha256": "1e168d01e877293baf1f05c615f6596f016fa925337084b1fb4769a377efa673",
+          "bytes": 294260,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and TEI XML catalogue description",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-catalog"
+      ]
+    },
+    {
+      "id": "access:vernon-iiif",
+      "entity": "facsimile:bodleian-vernon-complete",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Browse Digital Bodleian or open the exact IIIF Presentation manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Vernon Manuscript IIIF bundle at 1600-pixel width",
+          "path": "source-cache/CME00130/bodleian-vernon-ms-complete-iiif.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "be5c0740ec716bab26b571d751b3071416fcd285145acfbb233b2b31abd617e6",
+          "bytes": 961521599,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 710,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The body-and-soul debate, Vernon version",
+            "locators": [
+              "folios 286rc-287rb",
+              "IIIF canvases 458-460"
+            ],
+            "start_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/cf943963-0c6b-4033-9234-cc823a6bc22e/",
+            "end_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/62e8f0a3-f7bb-446e-a8cd-05895588837c/",
+            "notes": [
+              "The start and end folios are shared with adjacent works; full surfaces are retained."
+            ]
+          },
+          "notes": [
+            "ZIP retains the exact provider manifest, inventory metadata, and all 710 canvas images requested at 1600-pixel width.",
+            "The full current digital object runs from upper cover through spine/lower cover; coverage does not imply preservation-master resolution."
+          ]
+        },
+        {
+          "label": "Exact Vernon Manuscript IIIF Presentation manifest",
+          "path": "source-cache/CME00130/bodleian-vernon-ms-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc",
+          "bytes": 1014568,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-11",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 JSON and JPEG images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "access:digby-catalog",
+      "entity": "witness:bodleian-digby-102",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the current Bodleian medieval manuscript record.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224",
+      "alternate_urls": [
+        "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/169507",
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Digby/MS_Digby_102.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Bodleian Digby 102 catalogue TEI",
+          "path": "source-cache/CME00130/bodleian-ms-digby-102-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Digby/MS_Digby_102.xml",
+          "sha256": "525c18157ed46012fcac58e07971ae5ba7a7bb1e40158a88ed65ba372d0a076c",
+          "bytes": 26083,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and TEI XML catalogue description",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-digby-catalog"
+      ]
+    },
+    {
+      "id": "access:digby-selected-f11v-iiif",
+      "entity": "facsimile:bodleian-digby-selected-f11v",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the one-canvas Digital Bodleian object or its exact IIIF manifest.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Selected Digby 102 f. 11v IIIF bundle",
+          "path": "source-cache/CME00130/bodleian-ms-digby-102-selected-fol-11v-iiif.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5.json",
+          "sha256": "318e5d24a2a1306ab2b6f1ea25ff17261ea50368c676fa0f2680d291f5bcdc84",
+          "bytes": 992151,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "partial",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 1,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "notes": [
+            "The single public image is f. 11v. It has zero overlap with the target work at ff. 136r-139v.",
+            "Coverage is deliberately partial relative to the manuscript; this cache must not be presented as a target-work or whole-manuscript facsimile."
+          ]
+        },
+        {
+          "label": "Exact selected Digby 102 f. 11v IIIF Presentation manifest",
+          "path": "source-cache/CME00130/bodleian-ms-digby-102-selected-fol-11v-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5.json",
+          "sha256": "a9cda78f3deeb384998990420b7d85d2ce442eb8179ec0633df3b26a4d5b65fc",
+          "bytes": 4149,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Preserves the authoritative one-canvas identity, f. 11v label, image-service URL, attribution, and rights statement independently of the image bundle."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 JSON and one JPEG image",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-digby-partial-iiif"
+      ]
+    },
+    {
+      "id": "access:digby-target-page-images",
+      "entity": "witness:bodleian-digby-102",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No complete public facsimile or public target-folio images were found through the exact catalog, archives record, and Digital Bodleian object search.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224",
+      "alternate_urls": [
+        "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/169507",
+        "https://digital.bodleian.ox.ac.uk/objects/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5/"
+      ],
+      "cost": "unknown",
+      "format": "No public target-work images found",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-digby-catalog",
+        "evidence:bodleian-digby-partial-iiif",
+        "evidence:digby-facsimile-search"
+      ],
+      "notes": [
+        "The one public f. 11v image does not overlap ff. 136r-139v. This is a dated negative finding, not proof that no private surrogate exists."
+      ]
+    },
+    {
+      "id": "access:digby-reproduction-order",
+      "entity": "witness:bodleian-digby-102",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use Bodleian mediated copying to request either reference scans of ff. 136r-139v or a quote for the whole codex. For a whole-object facsimile, explicitly request covers, spine, pastedowns, flyleaves, blanks, edges if offered, and every leaf.",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using",
+        "https://digital.bodleian.ox.ac.uk/terms/",
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224"
+      ],
+      "contact": "mediated.copying@bodleian.ox.ac.uk",
+      "cost": "fee",
+      "format": "Made-to-order PDF reference scans, subject to condition and service assessment",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-copying",
+        "evidence:bodleian-using",
+        "evidence:bodleian-terms",
+        "evidence:bodleian-digby-catalog"
+      ],
+      "notes": [
+        "The current service page lists £1 per scan for non-Oxford users, a £10 minimum order, case-by-case assessment, and an approximate ten-working-day turnaround; obtain a current quote before relying on those figures.",
+        "Ordering scans and obtaining permission for redistribution or publication are separate questions. Record the quote, delivered-file notice, and written reuse terms if an order is fulfilled."
+      ]
+    },
+    {
+      "id": "access:digby-physical",
+      "entity": "witness:bodleian-digby-102",
+      "provider_id": "org:bodleian-libraries",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Register for a Bodleian Reader card, request the manuscript in advance, and consult current special-collections handling rules before travel.",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using",
+      "alternate_urls": [
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224"
+      ],
+      "cost": "free",
+      "format": "Original parchment codex",
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-using",
+        "evidence:bodleian-digby-catalog"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repository-artifact-license-scope",
+      "entity": "artifact:cme00130-xml",
+      "access_id": "access:repository-xml",
+      "component": "Repository XML artifact and its markup",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The CME submodule root LICENSE grants the Unlicense to 'software', but it does not expressly identify the encoded textual data in CME00130.xml as covered.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme-root-license",
+        "evidence:xml-cme00130"
+      ],
+      "notes": [
+        "The uncertainty concerns the digital artifact and markup, not the medieval wording or Linow's 1889 edition."
+      ]
+    },
+    {
+      "id": "rights:umich-digital-materials-us",
+      "entity": "encoding:umich-cme00130",
+      "access_id": "access:umich-digital-text",
+      "component": "U-M Corpus of Middle English Prose and Verse digital materials",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The U-M collection page identifies the collection content as public domain in the United States and exposes the DPLA No Copyright-United States statement.",
+      "asserted_by_id": "org:university-of-michigan-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "This is a United States provider assertion, not a worldwide license and not an image-reuse grant."
+      ]
+    },
+    {
+      "id": "rights:linow-edition-us",
+      "entity": "edition:linow-1889",
+      "component": "Linow's 1889 text, introduction, apparatus, and notes",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The monograph was published in 1889 and is in the United States public domain by publication date. This assessment is separate from provider terms on the BSB scan.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:linow-1889",
+        "evidence:bsb-linow-record"
+      ]
+    },
+    {
+      "id": "rights:bsb-linow-scan",
+      "entity": "facsimile:bsb-ia-linow-1889",
+      "access_id": "access:linow-complete-scan",
+      "component": "BSB/Google digital scan and derivatives distributed through BSB and Internet Archive",
+      "jurisdiction": "Provider statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The exact BSB object record applies the No Copyright-Non-Commercial Use Only 1.0 rights statement to this digitized copy; BSB guidance treats the stated noncommercial condition as binding for reuse of these Google scans.",
+      "asserted_by_id": "org:bavarian-state-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bsb-linow-record",
+        "evidence:linow-scan-metadata"
+      ],
+      "notes": [
+        "The underlying 1889 edition's United States public-domain status does not erase provider conditions attached to redistribution of this specific scan.",
+        "Internet Archive metadata contains no separate license grant."
+      ]
+    },
+    {
+      "id": "rights:dimev-v1-data",
+      "entity": "catalog:dimev-v1-record-605",
+      "access_id": "access:dimev-v1-download",
+      "component": "DIMEV v1.0 dataset and documentation",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The exact Zenodo record and LICENSE inside the cached v1.0 release specify Creative Commons Attribution 4.0 International.",
+      "asserted_by_id": "org:dimev-project",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:dimev-v1-release"
+      ]
+    },
+    {
+      "id": "rights:auchinleck-medieval-text",
+      "entity": "witness:nls-adv-ms-19-2-1",
+      "component": "Medieval textual content of the debate on ff. 31vb-35ra",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The witness was produced in 1331-1340. This assessment concerns the medieval wording only, not a modern transcription, catalogue description, or photograph.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-project",
+        "evidence:nls-auchinleck-headnote"
+      ]
+    },
+    {
+      "id": "rights:laud-medieval-text",
+      "entity": "witness:bodleian-laud-misc-108",
+      "component": "Medieval textual content of the debate and its witness-specific French material on ff. 200v-203v",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The relevant manuscript layer dates to the late thirteenth or early fourteenth century. This assessment concerns medieval wording only, not modern descriptions or photographs.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-laud-catalog"
+      ]
+    },
+    {
+      "id": "rights:vernon-medieval-text",
+      "entity": "witness:bodleian-eng-poet-a-1",
+      "component": "Medieval textual content of the debate on ff. 286rc-287rb",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The witness dates to c. 1390-1400. This assessment concerns medieval wording only, not modern descriptions or photographs.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-catalog"
+      ]
+    },
+    {
+      "id": "rights:digby-medieval-text",
+      "entity": "witness:bodleian-digby-102",
+      "component": "Medieval textual content of the debate on ff. 136r-139v",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The witness dates to 1425-1450. This assessment concerns medieval wording only, not modern descriptions, a supplied scan, or a photograph.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-digby-catalog"
+      ]
+    },
+    {
+      "id": "rights:nls-auchinleck-images",
+      "entity": "facsimile:nls-auchinleck-complete",
+      "access_id": "access:nls-auchinleck-iiif",
+      "component": "NLS IIIF images and manifest for digital object 233337262",
+      "jurisdiction": "Provider rights statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The exact current NLS IIIF manifest supplies the Creative Commons Public Domain Mark 1.0 rights statement.",
+      "asserted_by_id": "org:national-library-of-scotland",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nls-auchinleck-iiif"
+      ],
+      "notes": [
+        "This statement applies to the exact current NLS IIIF object. Separately authored Auchinleck Project transcriptions and essays may carry different terms."
+      ]
+    },
+    {
+      "id": "rights:laud-images",
+      "entity": "facsimile:bodleian-laud-complete",
+      "access_id": "access:laud-iiif",
+      "component": "Digital Bodleian manuscript photographs",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The exact IIIF manifest states Photo © Bodleian Libraries and identifies Creative Commons Attribution-NonCommercial 4.0 International.",
+      "asserted_by_id": "org:bodleian-libraries",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "spdx": "CC-BY-NC-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-laud-iiif",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "rights:vernon-images",
+      "entity": "facsimile:bodleian-vernon-complete",
+      "access_id": "access:vernon-iiif",
+      "component": "Digital Bodleian manuscript photographs",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The exact IIIF manifest states Photo © Bodleian Libraries and identifies Creative Commons Attribution-NonCommercial 4.0 International.",
+      "asserted_by_id": "org:bodleian-libraries",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "spdx": "CC-BY-NC-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-vernon-iiif",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "rights:digby-selected-image",
+      "entity": "facsimile:bodleian-digby-selected-f11v",
+      "access_id": "access:digby-selected-f11v-iiif",
+      "component": "Digital Bodleian photograph of Digby 102 f. 11v",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The exact IIIF manifest states Photo © Bodleian Libraries and identifies Creative Commons Attribution-NonCommercial 4.0 International.",
+      "asserted_by_id": "org:bodleian-libraries",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "spdx": "CC-BY-NC-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-digby-partial-iiif",
+        "evidence:bodleian-terms"
+      ],
+      "notes": [
+        "The licensed image does not depict the target work."
+      ]
+    },
+    {
+      "id": "rights:digby-ordered-images",
+      "entity": "witness:bodleian-digby-102",
+      "access_id": "access:digby-reproduction-order",
+      "component": "Any reference scans newly supplied by Bodleian mediated copying",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "The service and Digital Bodleian terms distinguish access or delivery from permission for publication and redistribution. Exact rights cannot be known until the quote, order conditions, delivered-file notice, and any written permission are obtained.",
+      "asserted_by_id": "org:bodleian-libraries",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-copying",
+        "evidence:bodleian-terms"
+      ],
+      "notes": [
+        "Do not infer image-level public-domain or repository-publication rights from the age of the manuscript wording.",
+        "Reassess this record against the terms actually supplied with any future order."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:linow-four-witness-selection",
+      "entity": "edition:linow-1889",
+      "practice": "selection",
+      "source_feature": "Several surviving manuscript versions of the same body-and-soul debate",
+      "representation": "Four separately printed witness texts, with a fifth Simeon witness represented only by variants",
+      "description": "Linow prints complete reconstructed text streams for Auchinleck, Laud, Vernon, and Digby on pp. 24-105. He does not print a fifth full Simeon text, giving only its variants on p. 106.",
+      "scope": "Middle English study on printed pp. 1-112",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "practice:linow-reordering-and-collation",
+      "entity": "edition:linow-1889",
+      "practice": "collation",
+      "source_feature": "Four witness texts with differing stanza order, contamination, dialect, and individual errors",
+      "representation": "Witness-specific texts reordered to Linow's reconstructed original sequence, with manuscript sequence numbers in parentheses and selected emendations",
+      "description": "Linow preserves separate witness versions rather than constructing a synthetic critical text, but reorders each witness's stanzas and corrects readings he considers obviously sense-disrupting through comparison with the others.",
+      "scope": "Four witness texts on printed pp. 24-105 and notes on pp. 107-112",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "The printed order is editorial and cannot be treated as a diplomatic record of physical manuscript sequence.",
+        "Linow supplies manuscript stanza and verse numbers in parentheses so that the reconstructed and manuscript sequences can be compared."
+      ]
+    },
+    {
+      "id": "practice:umich-source-selection",
+      "entity": "encoding:umich-cme00130",
+      "practice": "selection",
+      "source_feature": "Linow's monograph contains introduction, four main witness texts, Simeon variants, notes, Old French editions, and a later English adaptation",
+      "representation": "Only the four Middle English witness texts on pp. 24-105",
+      "description": "The U-M encoding selects Linow's four main Middle English text streams and excludes his introduction, Simeon apparatus, notes, Old French edition, and later adaptation.",
+      "scope": "Whole CME00130 electronic text",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:xml-cme00130",
+        "evidence:xml-structure-inspection",
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "practice:umich-parallel-layout-serialization",
+      "entity": "encoding:umich-cme00130",
+      "practice": "collation",
+      "source_feature": "Alternating parallel pages, blank vertical alignment spaces, and dual editorial/manuscript line-number sequences in Linow's print layout",
+      "representation": "Four consecutive DIV2 streams retaining 34 one-line empty LG/L alignment placeholders and interleaved MILESTONE number series",
+      "description": "The encoding serializes each witness as a separate stream while retaining the print edition's alignment machinery. The blank groups and duplicated number milestones are layout/collation signals, not missing stanzas or additional verse.",
+      "scope": "All four DIV2 elements in CME00130",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:xml-structure-inspection",
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "practice:umich-italic-retention",
+      "entity": "encoding:umich-cme00130",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Italic type in Linow's printed witness texts, including at least some editorially supplied or expansion-related letters",
+      "representation": "HI elements with REND='italic'",
+      "description": "The encoding preserves Linow's italic typography as explicit inline markup. Direct source inspection does not support treating every italic span as the expansion of a specific manuscript abbreviation, so the markup is retained as an inherited editorial signal rather than decoded globally.",
+      "scope": "Italic spans throughout the four encoded witness streams",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:xml-cme00130",
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "Linow's notes sometimes discuss uncertain expansion of particular abbreviations, including a Digby reading around line 136, but no global statement defining every italic occurrence was found.",
+        "A manuscript-by-manuscript image comparison is needed before assigning exact paleographical values to individual italic spans."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:xml-cme00130",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_3/CME00130.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00130.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00130.xml",
+      "locator": "IDG/BIBNO/VID; TEXT; DIV1/DIV2; PB; LG/L; MILESTONE; HI",
+      "summary": "The fixed artifact identifies CME00130 and encodes four witness-labeled streams with Linow page breaks, headings, verse lines, italic spans, and parallel editorial/manuscript line-number milestones.",
+      "accessed_on": "2026-07-13",
+      "sha256": "740a1459c3c684f3bca7b57c0430404be22cb6e8bc3ef0428e8f6e7f8782e7b8"
+    },
+    {
+      "id": "evidence:xml-structure-inspection",
+      "type": "visual_inspection",
+      "citation": "Structural and textual inspection of CME00130.xml, 2026-07-13",
+      "repository_path": "CME/source/CME_phase_3/CME00130.xml",
+      "locator": "complete file",
+      "summary": "Inspection counted one DIV1, four DIV2, 311 LG, 2,162 L, 82 PB, 840 MILESTONE, 314 HEAD, and five P elements. Per-version nonempty L counts are 592, 492, 496, and 536; the other 34 L elements are empty one-line LG alignment placeholders. Laud also contains an Old French prose P and four-line French LG.",
+      "accessed_on": "2026-07-13",
+      "sha256": "740a1459c3c684f3bca7b57c0430404be22cb6e8bc3ef0428e8f6e7f8782e7b8"
+    },
+    {
+      "id": "evidence:linow-1889",
+      "type": "edition_statement",
+      "citation": "Wilhelm Linow, Þe Desputisoun bitwen þe Bodi and þe Soule, Erlanger Beiträge zur englischen Philologie 1 (Erlangen and Leipzig: A. Deichert'sche Verlagsbuchhandlung Nachf. [Georg Böhme], 1889)",
+      "url": "https://www.digitale-sammlungen.de/en/view/bsb11663733",
+      "alternate_urls": [
+        "https://archive.org/details/11663733bsb",
+        "https://archive.org/download/11663733bsb/11663733bsb.pdf"
+      ],
+      "repository_path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-complete.pdf",
+      "locator": "preface pp. v-vi; introduction pp. 1-23; four witness texts pp. 24-105; Simeon variants p. 106; notes pp. 107-112",
+      "summary": "Direct inspection confirms the bibliographic record, Varnhagen and Parker transcript credits, four alternating-page witness streams, rejection of a synthetic critical text, stanza reordering, manuscript numbering in parentheses, comparative emendation, and the exact range represented by the XML.",
+      "accessed_on": "2026-07-13",
+      "sha256": "8a8a3055b781876023860aa704e15820188453396dbefe0d410b7352052012bb"
+    },
+    {
+      "id": "evidence:linow-scan-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata and derivatives for item 11663733bsb",
+      "url": "https://archive.org/metadata/11663733bsb",
+      "alternate_urls": [
+        "https://archive.org/details/11663733bsb",
+        "https://archive.org/download/11663733bsb/11663733bsb.pdf"
+      ],
+      "repository_path": "source-cache/CME00130/linow-desputisoun-bodi-soule-1889-internet-archive-metadata.json",
+      "summary": "The item record identifies the BSB source copy, shelfmark P.o.angl. 34 t-1/2, 1889 publication, complete downloadable PDF and OCR derivatives, and BSB/Google scan provenance. It contains no explicit license field.",
+      "accessed_on": "2026-07-13",
+      "sha256": "cf1ff000ab29d71240775594ac0b8c07195b6308b8828dea6e039aeae10378a3"
+    },
+    {
+      "id": "evidence:bsb-linow-record",
+      "type": "official_catalog",
+      "citation": "Bavarian State Library, digital object bsb11663733, Þe Desputisoun bitwen þe Bodi and þe Soule",
+      "url": "https://www.digitale-sammlungen.de/en/details/bsb11663733",
+      "alternate_urls": [
+        "https://www.digitale-sammlungen.de/en/view/bsb11663733",
+        "https://rightsstatements.org/vocab/NoC-NC/1.0/"
+      ],
+      "summary": "The exact BSB record identifies Linow, the 1889 imprint, series and volume, VI + 209-page extent, URN urn:nbn:de:bvb:12-bsb11663733-5, and the No Copyright-Non-Commercial Use Only 1.0 rights statement for the digital object.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection page",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "summary": "The official collection page describes the U-M corpus as manually keyed from public-domain editions and marks collection content No Copyright-United States.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:umich-cme00130-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Digital Collections stable item identifier CME00130",
+      "url": "https://name.umdl.umich.edu/CME00130",
+      "summary": "The stable U-M identifier names the digital item preserved by the repository artifact. The fixed XML and collection documentation provide the verifiable source identity used here.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:cme-root-license",
+      "type": "repository_file",
+      "citation": "CME/LICENSE at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "The root file contains the Unlicense dedication but scopes its operative declaration to 'software'; it does not expressly identify the XML textual corpus as licensed data.",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:nls-auchinleck-headnote",
+      "type": "official_webpage",
+      "citation": "National Library of Scotland Auchinleck Manuscript project, headnote for Þe Desputisoun Bitven þe Bodi and þe Soule",
+      "url": "https://auchinleck.nls.uk/mss/heads/bodysoul_head.html",
+      "alternate_urls": [
+        "https://auchinleck.nls.uk/mss/bodysoul.html"
+      ],
+      "summary": "The headnote identifies Scribe 1, eight-line abab abab stanzas, 591 counted lines excluding Latin labels and the English title, the damaged ending at f. 35ra, six other witnesses, and Linow's edition.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:nls-auchinleck-project",
+      "type": "official_webpage",
+      "citation": "National Library of Scotland, The Auchinleck Manuscript",
+      "url": "https://auchinleck.nls.uk/",
+      "alternate_urls": [
+        "https://auchinleck.nls.uk/editorial/history.html",
+        "https://auchinleck.nls.uk/editorial/physical.html"
+      ],
+      "summary": "The NLS project dates production to 1331-1340, localizes it to London, and explains the codex's physical losses, including the mutilated f. 35r stub.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:nls-auchinleck-iiif",
+      "type": "digital_surrogate",
+      "citation": "National Library of Scotland IIIF Presentation manifest for Adv.MS.19.2.1, digital object 233337262",
+      "url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+      "alternate_urls": [
+        "https://digital.nls.uk/233337262"
+      ],
+      "repository_path": "source-cache/CME00130/nls-adv-ms-19-2-1-auchinleck-iiif-manifest.json",
+      "locator": "734 canvases; target canvases 88-95, f. 31v through f. 35r",
+      "summary": "The manifest supplies a 734-canvas complete digital object, folio labels, image services, provider attribution, and Public Domain Mark 1.0. Local bundle inventory and ZIP integrity checks confirmed all 734 canvas images.",
+      "accessed_on": "2026-07-13",
+      "sha256": "915c5120db85b016516de8508f2483bdc3b73c0efee5691df3897cbe6a15a8c8"
+    },
+    {
+      "id": "evidence:bodleian-laud-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Western Medieval Manuscripts, MS. Laud Misc. 108",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-ms-laud-misc-108-catalog-tei.xml",
+      "locator": "MS_Laud_Misc_108-item2; origin, hand, layout, and history descriptions",
+      "summary": "The current component record places the debate at ff. 200v-203v, identifies Hand B, dates the codex core to the late thirteenth or early fourteenth century with later additions, and localizes Hand B's dialect to the Isle of Ely or possibly west Norfolk or north-east Suffolk.",
+      "accessed_on": "2026-07-13",
+      "sha256": "2814905d145bf6fa0a3664f0f46ed3dce485fff73b3bbab5a3f043608511d74b"
+    },
+    {
+      "id": "evidence:bodleian-laud-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF Presentation manifest for MS. Laud Misc. 108",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-laud-misc-108-iiif-manifest.json",
+      "locator": "496 canvases; target canvases 416-422, ff. 200v-203v",
+      "summary": "The manifest supplies the complete 496-canvas object, target folio labels and image services, Photo © Bodleian Libraries attribution, and CC BY-NC 4.0 terms. Local bundle inventory and ZIP integrity checks confirmed all 496 canvas images.",
+      "accessed_on": "2026-07-13",
+      "sha256": "ce8d05cfecb6f05778d6a0f72de48b9805e57f4844cd63b8569c1055395a3019"
+    },
+    {
+      "id": "evidence:bodleian-vernon-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Western Medieval Manuscripts, MS. Eng. poet. a. 1 (Vernon Manuscript)",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Eng_poet/MS_Eng_poet_a_1.xml"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-ms-eng-poet-a-1-catalog-tei.xml",
+      "locator": "item 317; origin and text-language descriptions",
+      "summary": "The current component record places the debate at ff. 286rc-287rb, gives its rubric, incipit, explicit, and language, dates the manuscript c. 1390-1400, and localizes Scribe 2's dialect to Worcestershire (LP 7630).",
+      "accessed_on": "2026-07-13",
+      "sha256": "1e168d01e877293baf1f05c615f6596f016fa925337084b1fb4769a377efa673"
+    },
+    {
+      "id": "evidence:bodleian-vernon-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF Presentation manifest for MS. Eng. poet. a. 1",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-vernon-ms-iiif-manifest.json",
+      "locator": "710 canvases; target canvases 458-460, ff. 286r-287r",
+      "summary": "The manifest supplies the complete 710-canvas object, target folio labels and image services, Photo © Bodleian Libraries attribution, and CC BY-NC 4.0 terms. Local bundle inventory and ZIP integrity checks confirmed all 710 canvas images.",
+      "accessed_on": "2026-07-13",
+      "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc"
+    },
+    {
+      "id": "evidence:bodleian-digby-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Western Medieval Manuscripts, MS. Digby 102",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Digby/MS_Digby_102.xml",
+        "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/169507"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-ms-digby-102-catalog-tei.xml",
+      "locator": "component at ff. 136r-139v; origin and physical description",
+      "summary": "The current component record places the debate at ff. 136r-139v, transcribes its rubric, incipit, and final rubric, identifies it as a later addition in different ink with a separate decoration scheme, and dates the London parchment codex to 1425-1450.",
+      "accessed_on": "2026-07-13",
+      "sha256": "525c18157ed46012fcac58e07971ae5ba7a7bb1e40158a88ed65ba372d0a076c"
+    },
+    {
+      "id": "evidence:bodleian-digby-partial-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian one-canvas IIIF object for MS. Digby 102, f. 11v",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5.json",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5/"
+      ],
+      "repository_path": "source-cache/CME00130/bodleian-ms-digby-102-selected-fol-11v-iiif-manifest.json",
+      "locator": "single canvas, f. 11v; zero overlap with target ff. 136r-139v",
+      "summary": "The only located Digital Bodleian object for this shelfmark exposes one f. 11v image, Photo © Bodleian Libraries under CC BY-NC 4.0. Its one-image bundle is valid but has no target-work coverage.",
+      "accessed_on": "2026-07-13",
+      "sha256": "a9cda78f3deeb384998990420b7d85d2ce442eb8179ec0633df3b26a4d5b65fc"
+    },
+    {
+      "id": "evidence:facsimile-visual-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of target boundary surfaces in the NLS Auchinleck, Digital Bodleian Laud, and Digital Bodleian Vernon facsimiles, 2026-07-13",
+      "url": "https://auchinleck.nls.uk/view/?url=https://dg-view.nls.uk/iiif/2/auchinleck%2F031v/info.json",
+      "alternate_urls": [
+        "https://auchinleck.nls.uk/view/?url=https://dg-view.nls.uk/iiif/2/auchinleck%2F035r/info.json",
+        "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/surfaces/78eddc5b-d204-4cdc-bcdd-714a79c4e4a9/",
+        "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/surfaces/1d737d9c-c7f5-41b6-b447-c85e0d3133fa/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/cf943963-0c6b-4033-9234-cc823a6bc22e/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/62e8f0a3-f7bb-446e-a8cd-05895588837c/"
+      ],
+      "summary": "Inspection confirmed the target canvas ranges, the Auchinleck damaged ending, the Laud shared opening and closing surfaces, the Vernon three-column opening and shared closing surface, and the current Vernon folio labels.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bodleian-copying",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Special collections mediated copying service",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "summary": "The service offers case-by-case PDF reference scans for remote users, currently lists £1 per scan for non-Oxford users with a £10 minimum, gives mediated.copying@bodleian.ox.ac.uk as the contact, and states an approximate ten-working-day completion target after acceptance.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bodleian-using",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Using special collections",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/using",
+      "summary": "The official guidance explains Reader card registration, advance ordering, reading-room consultation, and current handling and photography routes for special collections.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "summary": "The terms explain that individual Digital Bodleian objects carry their own rights statements, distinguish noncommercial access from commercial reuse, and direct users to seek permission where required.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:digby-facsimile-search",
+      "type": "search_result",
+      "citation": "Dated search for public page images of the Digby 102 body-and-soul debate, 2026-07-13",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4224",
+      "alternate_urls": [
+        "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/169507",
+        "https://digital.bodleian.ox.ac.uk/objects/d381d1c9-92c3-49cc-bc09-19ac6a53ffb5/"
+      ],
+      "summary": "The exact current catalogue and archives records expose no complete facsimile, and the only located Digital Bodleian object contains f. 11v rather than target ff. 136r-139v. No public target-folio or complete-codex images were found; mediated copying remains available.",
+      "accessed_on": "2026-07-13",
+      "notes": [
+        "This negative finding is qualified by date and search scope and is not proof that no unlinked, private, or future surrogate exists."
+      ]
+    },
+    {
+      "id": "evidence:dimev-record-605",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse, record 605 (IMEV/NIMEV 351)",
+      "url": "https://www.dimev.net/record.php?recID=605",
+      "locator": "work record and seven witness entries",
+      "summary": "The online record groups seven witnesses, identifies a body-and-soul dialogue in 61-74 eight-line abab abab stanzas, supplies exact loci for the four CME00130 witnesses, notes that Digby is written as prose, identifies Laud's unique French ending, and cites Linow.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:dimev-v1-release",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse, version 1.0, Zenodo record 14585961, DOI 10.5281/zenodo.14585961",
+      "url": "https://zenodo.org/records/14585961",
+      "alternate_urls": [
+        "https://doi.org/10.5281/zenodo.14585961",
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"
+      ],
+      "repository_path": "source-cache/CME00130/dimev-v1.0.zip",
+      "locator": "data/Records.xml, record-605",
+      "summary": "The exact release identifies v1.0, publication date, DOI, creators, and CC BY 4.0. The cached archive's ZIP comment identifies Git commit 5ad5f592868471b44fc72f6e2f42db419780b42c; local integrity testing passed.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:working-transcript-survival",
+      "question": "Do the four nineteenth-century working transcripts used by Linow survive, and if so where?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Search Linow and Varnhagen archival papers, publisher records, and relevant German and Oxford library catalogues for working transcripts or correspondence.",
+        "If a transcript is located, record its physical identifier and compare its corrections and italic conventions with Linow's print."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ],
+      "notes": [
+        "The paths are retained through the named transcripts because Linow explicitly identifies them as his immediate copy sources; survival and present location are not known."
+      ]
+    },
+    {
+      "id": "question:parker-identity",
+      "question": "Who was the Oxford 'Mr. Parker' whom Linow credits with the Laud and Vernon transcripts?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Check Linow's correspondence, Bodleian reader and copying records, Oxford directories, and Varnhagen papers for a full name.",
+        "Do not merge this person with a similarly named scholar without documentary support."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:linow-1889"
+      ]
+    },
+    {
+      "id": "question:digby-complete-facsimile",
+      "question": "Can a complete or target-folio facsimile of MS. Digby 102 be obtained?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask Bodleian mediated copying for reference scans of ff. 136r-139v and separately for a quote covering the complete physical object.",
+        "For a whole-object quote, explicitly request covers, spine, pastedowns, flyleaves, blanks, edges if offered, and every leaf.",
+        "Record the delivered-file rights notice and request written clarification before redistributing or publishing supplied images."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:bodleian-digby-catalog",
+        "evidence:bodleian-digby-partial-iiif",
+        "evidence:digby-facsimile-search",
+        "evidence:bodleian-copying",
+        "evidence:bodleian-terms"
+      ],
+      "notes": [
+        "The cached one-canvas f. 11v object has zero target-work overlap and must not be described as resolving this question."
+      ]
+    },
+    {
+      "id": "question:vernon-foliation-crosswalk",
+      "question": "What historical foliation system explains Linow's 'Bl. 285 v.' heading for a work now catalogued at ff. 286rc-287rb?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Compare Linow's complete manuscript description and any nineteenth-century Bodleian foliation with current flyleaf and folio numbering.",
+        "Retain both the legacy and current locators until the crosswalk is documented."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:linow-1889",
+        "evidence:bodleian-vernon-catalog",
+        "evidence:bodleian-vernon-iiif",
+        "evidence:facsimile-visual-inspection"
+      ]
+    },
+    {
+      "id": "question:linow-italic-semantics",
+      "question": "Which exact manuscript features are represented by each italic span inherited from Linow in CME00130?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Compare every XML HI REND='italic' span against the corresponding printed page and manuscript image.",
+        "Classify expansions, supplied letters, damaged readings, or other editorial uses individually rather than assigning one global meaning.",
+        "Obtain Digby target-folio images before attempting a complete four-witness assessment."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:xml-cme00130",
+        "evidence:linow-1889",
+        "evidence:nls-auchinleck-iiif",
+        "evidence:bodleian-laud-iiif",
+        "evidence:bodleian-vernon-iiif",
+        "evidence:digby-facsimile-search"
+      ],
+      "notes": [
+        "No global editorial statement defining every italic occurrence was found."
+      ]
+    },
+    {
+      "id": "question:repository-xml-license",
+      "question": "Does the CME submodule's Unlicense apply to XML textual data and markup, or only to software?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Seek an explicit repository statement identifying the licensed components.",
+        "Until clarified, do not treat the software-focused root license as an unambiguous open-data license for CME00130.xml."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": [
+        "evidence:cme-root-license",
+        "evidence:umich-cme-collection",
+        "evidence:xml-cme00130"
+      ]
+    }
+  ]
+}
