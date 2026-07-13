@@ -303,6 +303,21 @@ create a separate publication entity and paratext part for that leaf. Do not
 extend the earlier editor's responsibility or the medieval work's date,
 language, form, or extent across the retained carrier fragment.
 
+## Discontinuous recipe selections and serial dates: CME00136
+
+A recipe selection can contain a different number of intellectual units,
+edition or XML groups, and manuscript loci. Count each layer independently:
+a rubric and its procedure may be one recipe even when the encoding separates
+them, while one editorial group can join material copied at several
+discontinuous folios. Preserve the selected folio sequence instead of filling
+the gaps or treating the edition's grouping as manuscript structure.
+
+Localize only the portions supported by the linguistic evidence. A hand- or
+folio-specific dialect assignment does not become the origin of every recipe
+in a composite selection. For a serial publication, also keep the article or
+issue year separate from the date printed on the completed bound volume; cite
+each date for the publication layer it actually describes.
+
 ## Later-hand additions and competing unit counts: CME00137
 
 When a current component record explicitly excludes a target folio from the
