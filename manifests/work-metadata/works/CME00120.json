@@ -1,0 +1,165 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00120",
+  "work_id": "CME00120",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "cataloging_subject": {
+    "id": "work:CME00120",
+    "unit_type": "single_work",
+    "label": "The Boke of Curtesy",
+    "scope_note": "The cataloged subject is the anonymous Middle English courtesy poem together with the early line-aligned Middle French translation transmitted in the bilingual O/W/P branch. It is not NLS Adv.MS.19.3.1 as a physical manuscript, Karl Breul's 1886 article as a whole, the Internet Archive scan, the University of Michigan electronic text, or the checked-in XML artifact. CME00120 represents Breul's printed pp.58-63: an A-based 112-position Middle English text, Pynson-based French parallel, critical apparatus, and editorial closer."
+  },
+  "catalog_summary": {
+    "title": "The Boke of Curtesy",
+    "author": "Anonymous",
+    "editor": "Karl Hermann Breul",
+    "date": "Mid-fifteenth century according to Breul; first securely attested in late-fifteenth-century witnesses; source article published 1886",
+    "region": "England, probably the Midlands according to Breul; witness A was copied about 1480 in a North-Midland context",
+    "genres": ["Courtesy book", "Conduct literature", "Didactic poetry"],
+    "form": "verse",
+    "language_codes": ["enm", "frm"],
+    "tags": ["middle-english", "middle-french", "verse", "rhyming-couplets", "parallel-translation", "courtesy-book", "conduct-literature", "didactic-poetry", "table-manners", "child-instruction", "household-conduct", "anonymous", "midlands", "imev-1920"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00120", "uri": "https://name.umdl.umich.edu/CME00120"},
+    {"scheme": "DIMEV", "value": "3134", "uri": "https://www.dimev.net/record.php?recID=3134"},
+    {"scheme": "IMEV", "value": "1920"},
+    {"scheme": "NIMEV", "value": "1920"},
+    {"scheme": "NLS witness and current locus", "value": "Adv.MS.19.3.1, ff.84v-86v", "uri": "https://manuscripts.nls.uk/repositories/2/resources/15302"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "The Boke of Curtesy", "language": "enm", "script": "Latn", "supplied_by": "Breul's edition and titles in most witnesses", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-xml", "evidence:metadata-dimev"]},
+      "notes": ["Witness A has no opening title; Breul explains that the title is supported by the majority of the other versions."]
+    },
+    {"id": "title:alternate-childrenes", "type": "alternate", "value": "The Lytylle Childrenes Lytil Boke", "language": "enm", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "title:alternate-edyllys", "type": "alternate", "value": "Edyllys Be", "language": "enm", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-xml"]}, "notes": ["A title-like phrase reported from witness E rather than an authorial title."]},
+    {"id": "title:alternate-nls", "type": "alternate", "value": "The Little Children's Book", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-nls-catalog"]}, "notes": ["Current NLS catalog label for the component in Adv.MS.19.3.1."]},
+    {"id": "title:incipit-a", "type": "incipit", "value": "Lytyll chyldur, here may ye lere", "language": "enm", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:middle-english-edited-text"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-nls-visual", "evidence:metadata-dimev"]}},
+    {"id": "title:explicit-a", "type": "explicit", "value": "Explicit quod Hyheg", "language": "lat", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:middle-english-edited-text"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-nls-visual", "evidence:metadata-breul"]}}
+  ],
+  "agents": [
+    {"id": "agent:anonymous-boke-curtesy-poet", "type": "collective", "name": "Anonymous Boke of Curtesy poet", "notes": ["No inspected witness or scholarly source names the Middle English author."]},
+    {"id": "agent:anonymous-french-translator", "type": "collective", "name": "Anonymous Middle French translator", "notes": ["The translator and exact translation date are not identified by the inspected sources."]},
+    {"id": "agent:karl-hermann-breul", "type": "person", "name": "Karl Hermann Breul", "alternate_names": ["Karl Breul"], "identifiers": [{"scheme": "GND", "value": "116493534", "uri": "https://d-nb.info/gnd/116493534"}]}
+  ],
+  "responsibilities": [
+    {"id": "responsibility:anonymous-author", "agent_id": "agent:anonymous-boke-curtesy-poet", "display_name": "Anonymous", "role": "author", "attribution_status": "anonymous", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "responsibility:anonymous-french-translator", "agent_id": "agent:anonymous-french-translator", "display_name": "Anonymous", "role": "translator", "attribution_status": "anonymous", "scope": {"kind": "part", "part_ids": ["part:middle-french-parallel"]}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "responsibility:breul-editor", "agent_id": "agent:karl-hermann-breul", "role": "editor", "attribution_status": "known", "scope": {"kind": "selected_passages", "part_ids": ["part:middle-english-edited-text", "part:middle-french-parallel", "part:critical-apparatus", "part:editor-closer"], "description": "Modern edition layers represented by CME00120"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-xml", "evidence:metadata-dimev"]}}
+  ],
+  "date_statements": [
+    {"id": "date:composition", "type": "composition", "display": "Mid-fifteenth century according to Breul", "normalized": {"not_before": 1425, "not_after": 1475}, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "low", "evidence_ids": ["evidence:metadata-breul"]}, "notes": ["Breul's historical estimate is retained as a broad work date, not converted into the c.1480 date of witness A."]},
+    {"id": "date:first-attestation", "type": "first_known_attestation", "display": "Late fifteenth century; witness A is cataloged about 1480 and the early printed bilingual witnesses date about 1497-c.1500", "normalized": {"not_before": 1475, "not_after": 1500}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "witness:nls:Adv-MS-19-3-1", "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-nls-catalog", "evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "date:french-translation", "type": "translation", "display": "By the earliest bilingual manuscript and print witnesses of the late fifteenth century", "normalized": {"not_after": 1499}, "scope": {"kind": "part", "part_ids": ["part:middle-french-parallel"]}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]}}
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:english-midlands", "label": "Midlands of England", "kind": "cultural_region", "broader_place_ids": ["place:england"], "notes": ["A work-level localization reported by Breul; witness A's current NLS record more specifically describes a North-Midland copying context."]}
+  ],
+  "place_statements": [
+    {"id": "place:cultural-origin-england", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "place:composition-midlands", "place_id": "place:english-midlands", "type": "place_of_composition", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "low", "evidence_ids": ["evidence:metadata-breul"]}, "notes": ["Breul's dialectal inference, kept separate from the place of copying any particular witness."]}
+  ],
+  "language_statements": [
+    {"id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole", "description": "Original courtesy poem and the principal version represented by the edition"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]}},
+    {"id": "language:middle-french", "code": "frm", "label": "Middle French", "usage": "secondary", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:middle-french-parallel"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]}, "notes": ["The XML uses legacy LANG='fre'; frm is the normalized historical-language code."]}
+  ],
+  "form_statements": [
+    {"id": "form:verse", "value": "verse", "scope": {"kind": "whole"}, "description": "A didactic poem in rhyming couplets; DIMEV describes witness A as fifty-four couplets.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev", "evidence:metadata-nls-visual"]}},
+    {"id": "form:french-prose-representation", "value": "prose", "scope": {"kind": "part", "part_ids": ["part:middle-french-parallel"]}, "description": "Breul's line-aligned French translation is serialized in six XML paragraph elements with vertical bars separating translated positions.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation"]}}
+  ],
+  "genre_statements": [
+    {"id": "genre:courtesy-book", "term": "courtesy-book", "label": "Courtesy book", "scheme": "General Corpus genre taxonomy", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "genre:conduct-literature", "term": "conduct-literature", "label": "Conduct literature", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "genre:didactic-poetry", "term": "didactic-poetry", "label": "Didactic poetry", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:table-manners", "term": "table-manners", "label": "Table manners and dining conduct", "scheme": "General Corpus subject taxonomy", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "subject:children-conduct", "term": "childrens-behavior-and-instruction", "label": "Children's behavior and instruction", "scheme": "DIMEV", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "subject:courtesy-social-order", "term": "courtesy-and-social-order", "label": "Courtesy, reputation, and social hierarchy", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul"]}}
+  ],
+  "tags": ["middle-english", "middle-french", "verse", "rhyming-couplets", "parallel-translation", "courtesy-book", "conduct-literature", "didactic-poetry", "table-manners", "child-instruction", "household-conduct", "anonymous", "midlands", "imev-1920"],
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "An anonymous Middle English courtesy poem instructing children in cleanliness, restraint, table manners, deference, speech, charity, and conduct before, during, and after a meal. A late-medieval bilingual branch aligns the poem with a Middle French translation.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]},
+    {"id": "summary:scope", "type": "scope_note", "value": "CME00120 starts at the 'The Boke of Curtesy' edition heading partway down printed p.58 and continues through the French ending and Cambridge 12 June 1885 closer on p.63. It omits pp.51-57 and the source discussion at the top of p.58, as well as the rest of Englische Studien volume 9.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-umich"]},
+    {"id": "summary:line-accounting", "type": "cataloging_note", "value": "Breul prints 112 editorial Middle English line positions. His notes show that A lacks position 22 and positions 55-58, supplied from E, while A contains one later duplicate of line 37 that he does not print again. A therefore has 108 written lines, agreeing with DIMEV's fifty-four-couplet description; these are different measurements, not competing extents.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-xml", "evidence:metadata-dimev", "evidence:metadata-computation"]}
+  ],
+  "extent": {
+    "numbered_items": 136,
+    "sections": 2,
+    "prose_only_items": 7,
+    "verse_only_items": 1,
+    "mixed_items": 1,
+    "verse_groups": 1,
+    "verse_lines": 112,
+    "description": "The 136 modeled content items comprise one English poem, six French paragraphs, 128 apparatus notes, and one editor closer. The XML has one poem DIV1 containing two language-scoped DIV2 version units, not two numbered work sections. The English version's single LG has 112 L elements, 105 notes, six PB elements, 22 five-line milestones, one HEAD, and one TRAILER. The French version has six P elements, 23 notes, six PB elements, and 19 milestones; its paragraphs contain 107 nonempty bar-separated display segments, including printed omission markers. Across the file are 128 NOTE, 12 PB, 41 MILESTONE, 643 italic HI, and one editor CLOSER with DATELINE and SIGNED. The 112 XML lines are Breul's editorial positions; manuscript A has 108 written lines.",
+    "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:middle-english-edited-text", "parent_id": null, "sequence": 1, "type": "work", "label": "Middle English edited text", "summary": "Breul's A-based 112-position text, with line 22 and lines 55-58 supplied from E, A-only lines 95-98 bracketed, and a trailer naming Hyheg.", "item_count": 1, "textual_form": "verse", "metrics": {"verse_only_items": 1, "verse_groups": 1, "verse_lines": 112},
+      "locators": [{"lineage_entity_id": "edition:breul:boke-curtesy-1886", "scheme": "printed pages", "value": "pp.58-63; Internet Archive PDF pages 74-79"}, {"lineage_entity_id": "witness:nls:Adv-MS-19-3-1", "scheme": "current manuscript folios", "value": "ff.84v-86v; NLS canvases 184-188"}, {"lineage_entity_id": "artifact:general-corpus:CME00120", "scheme": "XML structure", "value": "first DIV2, LANG='enm'; one LG and 112 L"}],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-breul", "evidence:metadata-nls-visual"],
+      "notes": ["The heading and two version DIV2 elements are edition/encoding structures, not evidence for numbered medieval sections."]
+    },
+    {
+      "id": "part:middle-french-parallel", "parent_id": null, "sequence": 2, "type": "work", "label": "Middle French parallel translation", "summary": "Breul's Pynson-based French parallel, with nonorthographic Wynkyn de Worde variants noted beneath the text.", "item_count": 6, "textual_form": "prose", "metrics": {"prose_only_items": 6},
+      "locators": [{"lineage_entity_id": "edition:breul:boke-curtesy-1886", "scheme": "printed pages", "value": "French column on pp.58-63; Internet Archive PDF pages 74-79"}, {"lineage_entity_id": "print:pynson:STC-24867", "scheme": "printed leaves", "value": "ff.6v-10r"}, {"lineage_entity_id": "artifact:general-corpus:CME00120", "scheme": "XML structure", "value": "second DIV2, LANG='fre'; six P elements and 107 nonempty bar-separated display segments"}],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-breul", "evidence:metadata-dimev"],
+      "notes": ["The 107 segments include omission statements and are representation metrics, not a claim that the translation has 107 verse lines."]
+    },
+    {
+      "id": "part:critical-apparatus", "parent_id": null, "sequence": 3, "type": "commentary", "label": "Breul's critical apparatus", "summary": "One hundred twenty-eight interleaved notes recording readings of A, H, E, C, O, W, and P, editorial supplies and omissions, and French variants or corrections.", "item_count": 128, "textual_form": "mixed", "metrics": {"mixed_items": 1},
+      "locators": [{"lineage_entity_id": "edition:breul:boke-curtesy-1886", "scheme": "printed pages", "value": "foot-of-page apparatus on pp.58-63"}, {"lineage_entity_id": "artifact:general-corpus:CME00120", "scheme": "XML structure", "value": "128 NOTE elements; 105 in the English version and 23 in the French version"}],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-breul"]
+    },
+    {
+      "id": "part:editor-closer", "parent_id": null, "sequence": 4, "type": "other", "label": "Breul's dated closer", "summary": "The modern article closer 'CAMBRIDGE, 12. juni 1885.' and signature 'Karl Breul.'", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:breul:boke-curtesy-1886", "scheme": "printed page", "value": "p.63; Internet Archive PDF page 79"}, {"lineage_entity_id": "artifact:general-corpus:CME00120", "scheme": "XML structure", "value": "CLOSER/DATELINE/DATE and SIGNED after both DIV2 versions"}],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul"],
+      "notes": ["This date records completion of Breul's article, not composition, translation, copying, or publication of the medieval work."]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:CME00120",
+    "manifest_path": "manifests/lineage/works/CME00120.json",
+    "bindings": [
+      {"metadata_target": "work:CME00120", "lineage_entity_id": "work:middle-english:boke-of-curtesy", "role": "related_source"},
+      {"metadata_target": "work:CME00120", "lineage_entity_id": "edition:breul:boke-curtesy-1886", "role": "source_edition"},
+      {"metadata_target": "part:middle-english-edited-text", "lineage_entity_id": "witness:nls:Adv-MS-19-3-1", "role": "source_witness"},
+      {"metadata_target": "part:middle-french-parallel", "lineage_entity_id": "print:pynson:STC-24867", "role": "source_witness"},
+      {"metadata_target": "work:CME00120", "lineage_entity_id": "catalog:dimev:record-3134", "role": "related_source"},
+      {"metadata_target": "work:CME00120", "lineage_entity_id": "encoding:umich-cme:CME00120", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00120", "lineage_entity_id": "artifact:general-corpus:CME00120", "role": "repository_representation"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_3/CME00120.xml.", "repository_path": "CME/source/CME_phase_3/CME00120.xml", "locator": "TEMPHEAD, IDG, poem DIV1, two version DIV2 elements, and closer", "summary": "Direct evidence for identifiers, title, language-scoped versions, 112-position English text, six-paragraph French parallel, apparatus, page markers, italic typography, and editor closer.", "accessed_on": "2026-07-13", "sha256": "2cf0c5e7aa879128edac9f31ed300ad04a35bb6ecc9367d7dcb393644ed07dc4"},
+    {"id": "evidence:metadata-computation", "type": "computational_inspection", "citation": "Parent-aware lxml audit of CME00120.xml and bar-separated French display units.", "repository_path": "CME/source/CME_phase_3/CME00120.xml", "summary": "Confirmed 38,912 bytes; 1 DIV1, 2 DIV2, 1 LG, 112 L, 6 P, 128 NOTE, 12 PB, 41 MILESTONE, 643 italic HI, and one each HEAD, TRAILER, CLOSER, DATELINE, and SIGNED. English/French note counts are 105/23; the six French paragraphs contain 107 nonempty display segments including omission markers.", "accessed_on": "2026-07-13", "sha256": "2cf0c5e7aa879128edac9f31ed300ad04a35bb6ecc9367d7dcb393644ed07dc4"},
+    {"id": "evidence:metadata-breul", "type": "digital_surrogate", "citation": "Karl Breul, 'The Boke of Curtesy,' Englische Studien 9 (1886): 51-63, in the complete Internet Archive scan of volume 9 (1885-1886).", "url": "https://archive.org/download/englischestudien9188unse/englischestudien9188unse.pdf", "alternate_urls": ["https://archive.org/details/englischestudien9188unse"], "locator": "article printed pp.51-63 = PDF pages 67-79; encoded pp.58-63 = PDF pages 74-79", "summary": "Primary evidence for article title, editor, source descriptions and sigla, A-based editorial policy, E supplies, direct and mediated collations, P-based French column, witness titles, textual divisions, and Cambridge 12 June 1885 closer.", "accessed_on": "2026-07-13", "sha256": "6297997fdb59c07bd63c3a902b617ab4c7e209e82b2e3ae94f79e67839900082"},
+    {"id": "evidence:metadata-nls-catalog", "type": "official_catalog", "citation": "National Library of Scotland, Adv.MS.19.3.1 catalog record.", "url": "https://manuscripts.nls.uk/repositories/2/resources/15302", "locator": "Description, item (v), physical description, arrangement, and access", "summary": "Official evidence for current shelfmark, c.1480 date, paper codex, North-Midland context, Richard Heeg's hand, current component locus beginning at f.84, adjacent contents, physical extent, acquisition, microfilms, and digital-copy route.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:metadata-nls-visual", "type": "digital_surrogate", "citation": "National Library of Scotland, complete provider-published IIIF facsimile of Adv.MS.19.3.1.", "url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json", "locator": "canvases 184-188 = current ff.84v-86v; adjacent canvases 183 and 189 inspected", "summary": "Direct visual evidence that the work begins on f.84v at canvas 184 and ends with 'Explicit quod Hyheg' on shared-boundary f.86v at canvas 188; canvas 183 closes Sir Amadas, a recipe follows the explicit on canvas 188, and canvas 189 begins another work.", "accessed_on": "2026-07-13", "sha256": "8f28ae541b049198ee7581c1de9ce8da6ce910399a4c9e076d44022cf16fed4b"},
+    {"id": "evidence:metadata-dimev", "type": "scholarly_source", "citation": "Digital Index of Middle English Verse, v1.0, record 3134 / IMEV and NIMEV 1920, witness and bibliography records.", "url": "https://doi.org/10.5281/zenodo.14585961", "alternate_urls": ["https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0", "https://www.dimev.net/record.php?recID=3134"], "locator": "data/Records.xml record-3134; data/Bibliography.xml Breul1886b; linked manuscript and printed-book records", "summary": "Versioned evidence for normalized incipit, alternate title, fifty-four-couplet form, subjects, French language, nine witnesses and their loci or extents, Breul's article bibliography, and the witness-A edition span pp.58-63.", "accessed_on": "2026-07-13", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"},
+    {"id": "evidence:metadata-umich", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00120 item page.", "url": "https://quod.lib.umich.edu/c/cme/CME00120", "alternate_urls": ["https://name.umdl.umich.edu/CME00120"], "summary": "Official evidence for the Breul citation, stable identifier, item-level public-domain/NoC-US framing, and contents limited to the poem and its two versions.", "accessed_on": "2026-07-13"}
+  ],
+  "open_questions": [
+    {"id": "question:composition", "question": "What evidence beyond Breul's 1886 dialectal judgment can refine the poem's date and place of composition?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult current work-specific linguistic and courtesy-book scholarship.", "Keep work composition distinct from the c.1480 copying date and North-Midland context of witness A."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-nls-catalog", "evidence:metadata-dimev"]},
+    {"id": "question:french-translation", "question": "Who produced the Middle French translation, when and where was it made, and which English version or exemplar did it translate?", "status": "unresolved", "impact": "medium", "next_steps": ["Collate the complete bilingual O, W, and P texts and consult later phrasebook scholarship.", "Do not infer Pynson's surviving print as the translator's physical exemplar merely because Breul uses it for his French column."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]},
+    {"id": "question:transmission", "question": "What stemmatic or redactional relationships connect A, H, E, C, O, W, P, the Add.8151 witness, and the Wyer fragment?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult post-Breul editions and collations of all nine DIMEV witnesses.", "Preserve Breul's source use and later DIMEV witness discovery as separate evidence layers."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]},
+    {"id": "question:harley-locus", "question": "How should Breul's discontiguous Harley text at current or historical ff.210r-v and 207r-v be reconciled with DIMEV's shorter f.210r-v locus?", "status": "unresolved", "impact": "low", "next_steps": ["Inspect the current British Library manuscript and foliation directly.", "Treat DIMEV's locus as an indexed opening fragment until the continuation is verified against current foliation."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-dimev"]},
+    {"id": "question:repository-license-scope", "question": "Does the CME repository's software-worded root Unlicense intentionally apply to the XML markup and data in CME00120?", "status": "unresolved", "impact": "medium", "next_steps": ["Seek a path-specific data or XML rights statement from the repository maintainer.", "Until clarified, do not broaden the root software wording into a confirmed public-domain grant for markup or data."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:metadata-xml"]}
+  ],
+  "notes": [
+    "TEXT/@LANG='enm fre' describes the represented medieval language layers. German occurs in Breul's apparatus and modern editorial explanation but is not a language of the abstract work.",
+    "The XML proofing date 9-9-16 is repository encoding history, not a work, witness, edition, or publication date.",
+    "The two DIV2 elements are parallel language versions. They are not numbered work sections, and the closing dateline/signature is modern article paratext.",
+    "Current NLS foliation and direct visual boundaries are used for witness A. Breul's older foliation 84v-86v agrees in this case, but exact canvas boundaries are independently verified."
+  ]
+}
