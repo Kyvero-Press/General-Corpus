@@ -348,6 +348,30 @@ whole-host facsimile to the host. Keep the work locus and textual transmission
 on the component; downloading the whole current object must not erase either
 physical level.
 
+## Complete viewers, inherited attribution, and exact order routes: CME00140
+
+A provider can expose a demonstrably complete full-view object while blocking
+automated whole-file retrieval with CAPTCHA or anti-bot controls. Model the
+complete viewer as public access, but omit `local_copies`, cache any exact
+retrievable metadata response separately, and record the failed transfer and
+next step. Do not downgrade verified whole-object coverage merely because the
+private cache is absent, and do not claim that an advertised download was
+obtained.
+
+Catalog records for an adaptation's edition may promote the source work's
+traditional author into the author field. Keep the anonymous target work, the
+source work and its attributed author, the modern editor, and the inherited
+catalog heading distinct. Likewise, keep a generic remote-reading enquiry
+separate from the repository's exact imaging-and-permissions form; attach image
+supply terms to the latter so a researcher can actually order the reproduction.
+
+If an official landing page exposes an exact public supporting file but the
+provider serves a broken TLS certificate chain, verify the file link through
+the official page before considering a private-cache retrieval with certificate
+verification disabled. Validate the resulting signature, media type, size, and
+fixity, and record the abnormal transfer condition. This narrow recovery does
+not justify bypassing authentication, authorization, or other access controls.
+
 ## Misidentified discovery records and mediated addenda: CME00139
 
 When a live provider header or suggested citation conflicts with the title,

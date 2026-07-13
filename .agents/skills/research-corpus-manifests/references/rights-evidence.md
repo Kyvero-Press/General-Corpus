@@ -71,6 +71,13 @@ complete public object, record the rights uncertainty or permission requirement
 separately, and do not commit or redistribute the cached bytes without an
 applicable grant.
 
+Treat a provider TLS failure as a security condition, not as evidence that the
+file is absent. Only when the official landing page independently exposes the
+exact file URL may a private research cache use a transfer with certificate
+verification disabled; then validate the delivered file's signature, media
+type, size, and fixity and record the condition. Never use this exception to
+bypass authentication, authorization, or an access restriction.
+
 Keep public availability and local cache state separate. A large deliverable
 is still cacheable when the task calls for the complete object, available disk
 is sufficient, and provider terms permit the intended private research copy;
