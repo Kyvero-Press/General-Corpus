@@ -95,6 +95,13 @@ edition, and current institutional record. Use the repository's current exact
 shelfmark for the witness, but preserve malformed or legacy source forms in
 notes with the evidence that resolves them.
 
+An official repository publication of an older handwritten, unpublished, or
+legacy catalog description is authoritative evidence for what that attributed
+description says, but it is not automatically the repository's current
+manuscript record. Identify its author and historical status, preserve its
+claims at that layer, and continue looking for current institutional catalog,
+access, and reproduction guidance.
+
 Do not treat a microfilm, photostat, or reproduction-collection call number as
 the manuscript's shelfmark. Identify the surrogate as its own entity and
 verify which source objects and ranges it reproduces; one film number may

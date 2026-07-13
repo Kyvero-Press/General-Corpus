@@ -118,6 +118,11 @@ Count structural nodes at the depth that represents the cataloged work.
 Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
 disagreement with a scholarly lineation as an explicit open question.
+Do not infer verse extent from the final printed or encoded line-number
+milestone. Compare every milestone with positional line counts: duplicated,
+skipped, or reset numbers can create a persistent offset. Record both the
+verified textual line count and the source's numbering anomaly so locators
+remain reproducible without silently "correcting" the edition.
 
 Inspect the content of line-like XML elements before treating their count as
 verse extent. Speaker labels, editorial headings, and dotted rows that display
