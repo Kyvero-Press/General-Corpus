@@ -62,6 +62,12 @@ repertory or scholarship establishes separate intellectual works. Do not
 silently merge the records, but also do not multiply one encoded work merely
 because its collateral version has a separately indexed opening.
 
+When an edition prints one complete witness version and collates shorter or
+longer collateral copies, derive encoded stanza and line extent from the
+printed base version. Record each collateral extent separately. A later
+edition that chooses a different base does not redefine the older encoding's
+extent, even when both editions represent the same abstract work.
+
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
 witness edge, then add passage-scoped source relations for every explicitly
