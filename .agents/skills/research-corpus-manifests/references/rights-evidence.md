@@ -88,6 +88,11 @@ Presentation-manifest URL to the access route. `coverage=complete` means all
 canvases in that physical-source manifest were captured, not that the image
 request necessarily reproduces the provider's preservation master. Preserve
 the recorded request-size profile in `notes`.
+Do not relabel or mechanically repack an arbitrary TAR or image directory as
+an IIIF ZIP. The validator expects the helper's canonical root
+`manifest.json`, `inventory.json`, and `images/` structure, with the inventory
+matching the exact source URLs and archived bytes; rebuild through the helper
+when an older cache lacks that structure.
 For a large whole-codex bundle, normally request a practical non-upscaling
 access derivative around 1600–1800 pixels wide rather than service-native
 preservation-master files, unless the research question or user explicitly
