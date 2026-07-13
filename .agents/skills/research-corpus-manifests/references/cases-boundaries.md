@@ -153,6 +153,9 @@ boundary against the complete edition page by page, then record every included
 run separately in the cataloging boundary and cached source's `work_portion`.
 Do not collapse printed pp. 1–73 and 76–145 into the false continuous range
 pp. 1–145; retain the omitted pp. 74–75 as part of the complete cached volume.
+If a selected run begins or ends partway through a page shared with unencoded
+material, record the exact textual or spatial boundary in relation scope and
+`work_portion`; a terminal page number alone does not imply whole-page coverage.
 
 Page-break element counts need not equal distinct source pages. One printed
 page can be cited by two adjacent structural divisions when the first text
