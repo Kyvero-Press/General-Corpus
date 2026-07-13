@@ -114,6 +114,13 @@ philology or manuscript tags out of work discovery facets. Describe them in
 the paratext part and lineage unless the cataloging subject truly is the
 scholarly edition itself.
 
+Inspect a numbered edition or XML unit before treating it as a work section.
+A heading followed by an empty paragraph can preserve manuscript paratext such
+as a catchword, gathering number, ownership note, or marginal cue rather than
+the opening of another chapter. Keep the raw numbered-unit count as an encoding
+metric, model the paratext separately, and use manuscript or edition evidence
+to explain what it shows about a damaged or incomplete boundary.
+
 Count structural nodes at the depth that represents the cataloged work.
 Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
