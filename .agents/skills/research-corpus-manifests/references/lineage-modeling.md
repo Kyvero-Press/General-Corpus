@@ -18,6 +18,11 @@ edition full bibliographic facts. Give a witness its current shelfmark,
 repository, item/component catalog record, date, and supported locators.
 Preserve historical shelfmarks separately.
 
+Set the lineage manifest's `primary_subject` to that repository-artifact
+entity, which must carry `repository_file.path`; the discovery index depends
+on this contract. An abstract work may remain a related entity and metadata
+binding, but it is not the lineage manifest's `primary_subject`.
+
 Resolve an editor's witness sigla from that edition's explicit manuscript key,
 not from an intuitive expansion of a letter. Record the siglum with the
 edition-to-witness relation while identifying the physical witness by its
