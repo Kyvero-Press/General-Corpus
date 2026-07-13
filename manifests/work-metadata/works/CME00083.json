@@ -1,0 +1,509 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00083",
+  "work_id": "CME00083",
+  "record_status": "reviewed",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00083",
+    "unit_type": "single_work",
+    "label": "The Northern Version of Cato's Distichs",
+    "scope_note": "The cataloged subject is the anonymous fourteenth-century Northern Middle English verse translation and adaptation of the Latin Disticha Catonis represented by the Thott, Sidney, and Rawlinson witnesses. It is one work with divergent witness versions, not a three-part compilation. It is distinct from the Latin source work, each physical codex, Förster's 1906 German study and two-witness edition, Brusendorff's 1929 Thott selections, U-M's electronic encoding, and the checked-in XML. CME00083 contains only Förster's Sidney and Rawlinson streams; the third Thott witness belongs to the wider work lineage but is not an encoded source."
+  },
+  "catalog_summary": {
+    "title": "The Northern Version of Cato's Distichs",
+    "author": "Anonymous translator-adapter",
+    "editor": "Max Förster",
+    "date": "Fourteenth century; earliest-witness dating disputed between the late fourteenth and fifteenth centuries",
+    "region": "Northern England by rhyme and vocabulary; surviving witness spellings are mixed",
+    "genres": ["Didactic poetry", "Wisdom literature", "Advice literature"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": [
+      "middle-english",
+      "verse",
+      "didactic-poetry",
+      "wisdom-literature",
+      "advice-literature",
+      "moral-instruction",
+      "conduct-of-life",
+      "education",
+      "school-text",
+      "translation",
+      "latin-source",
+      "disticha-catonis",
+      "pseudo-cato",
+      "northern-middle-english",
+      "rhyming-couplets",
+      "four-stress-line",
+      "father-son-instruction",
+      "anonymous",
+      "witness-variation",
+      "dimev-6324"
+    ]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00083", "uri": "https://name.umdl.umich.edu/CME00083"},
+    {"scheme": "DIMEV", "value": "6324", "uri": "https://www.dimev.net/record.php?recID=6324"},
+    {"scheme": "IMEV/NIMEV", "value": "3957"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Northern Version of Cato's Distichs",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-forster"],
+        "notes": "A normalized discovery title based on DIMEV's description and Förster's established title; no authorial medieval title is known."
+      }
+    },
+    {
+      "id": "title:dimev",
+      "type": "uniform",
+      "value": "The Northern version of Cato's Distiches",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev"]}
+    },
+    {
+      "id": "title:forster",
+      "type": "alternate",
+      "value": "Eine nordenglische Cato-Version",
+      "language": "deu",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Förster's article and edition title, not a medieval rubric"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "title:incipit-normalized",
+      "type": "incipit",
+      "value": "When I bethink me heartily",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "DIMEV normalized incipit; witness spellings differ"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-forster"]}
+    },
+    {
+      "id": "title:sidney-catalog",
+      "type": "supplied",
+      "value": "Catonis disticha cum versione Anglica",
+      "language": "lat",
+      "script": "Latn",
+      "supplied_by": "M. R. James's 1895 catalog description",
+      "scope": {"kind": "whole", "description": "Historical catalog description of the Sidney manuscript item"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-james"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-translator",
+      "type": "person",
+      "name": "Anonymous translator-adapter of the Northern Middle English Cato",
+      "notes": ["Förster explicitly describes the creator as unknown; no named attribution is supported."]
+    },
+    {"id": "agent:max-forster", "type": "person", "name": "Max Förster"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-translator",
+      "agent_id": "agent:anonymous-translator",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff", "evidence:metadata-dimev"]},
+      "notes": ["The translation is a free verse adaptation: normally two, sometimes four or five, rhyme pairs render one Latin distich."]
+    },
+    {
+      "id": "responsibility:anonymous-adapter",
+      "agent_id": "agent:anonymous-translator",
+      "role": "adapter",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"]}
+    },
+    {
+      "id": "responsibility:forster-editor",
+      "agent_id": "agent:max-forster",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Immediate 1906 source edition represented by CME00083"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-xml"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:translation",
+      "type": "translation",
+      "display": "Fourteenth century, on Förster's linguistic and rhyme analysis",
+      "normalized": {"not_before": 1300, "not_after": 1399},
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"],
+        "notes": "A work-level estimate, not the production date of any one surviving copy."
+      }
+    },
+    {
+      "id": "date:first-attestation",
+      "type": "first_known_attestation",
+      "display": "Earliest surviving attestation window: late fourteenth to fifteenth century; Brusendorff called Thott 306 earlier, but its current broad dating overlaps the other witnesses",
+      "normalized": {"not_before": 1375, "not_after": 1499},
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-brusendorff", "evidence:metadata-rdl"],
+        "notes": "The broad normalized range preserves the unresolved dating conflict. Brusendorff calls Thott earlier than Sidney and Rawlinson, but the current catalog's broad fifteenth-century date does not independently prove exact priority."
+      }
+    },
+    {
+      "id": "date:first-complete-publication",
+      "type": "first_publication",
+      "display": "First complete scholarly publication: 1906",
+      "normalized": {"not_before": 1906, "not_after": 1906},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:forster:englische-studien-36-1906",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"],
+        "notes": "Förster notes an earlier brief notice of Rawlinson G. 59 by Napier; the 1906 article is the first complete edition verified here."
+      }
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {
+      "id": "place:northern-england",
+      "label": "Northern England",
+      "kind": "dialect_region",
+      "broader_place_ids": ["place:england"],
+      "notes": ["A work-level rhyme and vocabulary localization; surviving copies show mixed or separately localized scribal spellings."]
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:northern-dialect",
+      "place_id": "place:northern-england",
+      "type": "dialect_region",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-dimev"],
+        "notes": "Förster bases this on rhymes, morphology, and Scandinavian vocabulary; DIMEV retains 'Northern' in its work description."
+      }
+    },
+    {
+      "id": "place-statement:northern-composition",
+      "place_id": "place:northern-england",
+      "type": "place_of_composition",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "tentative",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-forster"],
+        "notes": "Förster calls Northern England the place of origin, but dialect evidence alone is not independent documentary proof of where the translation was made."
+      }
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-forster", "evidence:metadata-dimev"]},
+      "notes": ["The Latin Disticha is the related source work. Förster's German introduction and notes and his Latin references are edition-level languages and are not promoted to primary languages of the cataloged medieval work."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "Paired-rhyming four-stress verse, with some witness-specific variation and six Sidney tail-rhyme stanzas whose originality Förster leaves unresolved.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-dimev", "evidence:metadata-brusendorff"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:didactic-poetry",
+      "term": "didactic-poetry",
+      "label": "Didactic poetry",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-forster", "evidence:metadata-brusendorff"]}
+    },
+    {
+      "id": "genre:wisdom-literature",
+      "term": "wisdom-literature",
+      "label": "Wisdom literature",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-brusendorff"]}
+    },
+    {
+      "id": "genre:advice-literature",
+      "term": "advice-literature",
+      "label": "Advice literature",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-forster"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:moral-advice",
+      "term": "moral-advice",
+      "label": "Moral advice and conduct of life",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-forster"]}
+    },
+    {
+      "id": "subject:virtue",
+      "term": "virtue-and-vice",
+      "label": "Virtue and vice",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"]}
+    },
+    {
+      "id": "subject:education",
+      "term": "moral-education",
+      "label": "Moral education and father-to-son instruction",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"]}
+    }
+  ],
+  "tags": [
+    "middle-english",
+    "verse",
+    "didactic-poetry",
+    "wisdom-literature",
+    "advice-literature",
+    "moral-instruction",
+    "conduct-of-life",
+    "education",
+    "school-text",
+    "translation",
+    "latin-source",
+    "disticha-catonis",
+    "pseudo-cato",
+    "northern-middle-english",
+    "rhyming-couplets",
+    "four-stress-line",
+    "father-son-instruction",
+    "anonymous",
+    "witness-variation",
+    "dimev-6324"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "An anonymous Northern Middle English verse translation and adaptation of the Latin Disticha Catonis, probably made in the fourteenth century. A father addresses a son with practical and moral instruction on virtue, speech, friendship, work, wealth, adversity, self-command, and conduct. The work survives in three divergent witnesses: the compact Thott manuscript, which interleaves each Latin distich with its English rendering; the Sidney Sussex copy following Confessio Amantis; and a strongly revised Rawlinson version. Förster's 1906 edition prints the Sidney and Rawlinson texts separately on alternating pages, while CME00083 serializes them as two consecutive streams.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff", "evidence:metadata-dimev", "evidence:metadata-xml"]
+    },
+    {
+      "id": "summary:witness-model",
+      "type": "cataloging_note",
+      "value": "The 297 LG and 1,265 L elements in CME00083 aggregate two representations of one work: Sidney has 153 LG and 654 L; Rawlinson has 144 LG and 611 L. These are encoding metrics, not an authored extent of 297 sequential stanzas or 1,265 lines. The unencoded Thott witness is the third witness in the current DIMEV census.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev", "evidence:metadata-forster"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 1,
+    "sections": 2,
+    "prose_only_items": 0,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 297,
+    "verse_lines": 1265,
+    "description": "One verse work represented in two complete CME witness streams. Sidney contributes 153 LG and 654 L; Rawlinson contributes 144 LG and 611 L. The 297-group and 1,265-line totals are repository-encoding metrics across parallel versions. Förster's separate German introduction occupies printed pp. 1–3 and is edition framing, not another medieval work or intrinsic section.",
+    "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-forster"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:northern-cato",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "work",
+      "label": "The Northern Version of Cato's Distichs",
+      "summary": "The complete anonymous Middle English moral and educational poem as transmitted through divergent witness versions; the witness streams are representations of this one work, not sequential constituent parts.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_groups": 297, "verse_lines": 1265},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-cme:CME00083", "scheme": "XML divisions", "value": "BODY/DIV1/DIV2[2] Sidney and DIV2[3] Rawlinson; 297 LG and 1,265 L aggregate"},
+        {"lineage_entity_id": "edition:forster:englische-studien-36-1906", "scheme": "printed pages", "value": "Sidney pp. 4–54 even; Rawlinson pp. 5–55 odd"},
+        {"lineage_entity_id": "witness:sidney-sussex:MS63", "scheme": "folios and columns", "value": "ff. 202vb–208rb"},
+        {"lineage_entity_id": "witness:bodleian:Rawl-G-59", "scheme": "folios", "value": "Förster/CME ff. 1r–11v; DIMEV ff. 1–13; current catalog item inferred ff. 1r–16v"},
+        {"lineage_entity_id": "witness:royal-danish-library:Thott-306-folio", "scheme": "folios", "value": "ff. 1–14, complete manuscript"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-forster", "evidence:metadata-dimev", "evidence:metadata-brusendorff", "evidence:metadata-bodleian", "evidence:metadata-sidney", "evidence:metadata-rdl"],
+      "notes": [
+        "Förster judges Sidney closer to the original wording and Rawlinson strongly revised, while Brusendorff calls Thott earlier and better; no direct-copy stemma among the three surviving codices is asserted.",
+        "The Thott witness is not present in CME00083 and must not be implied to have been a source for U-M or Förster."
+      ]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:disticha-catonis",
+      "title": "Disticha Catonis",
+      "relation": "translation_of",
+      "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff", "evidence:metadata-rdl"],
+      "notes": [
+        "Förster argues that this Northern version translates directly from Latin rather than through a French intermediary.",
+        "The exact medieval Latin exemplar is unknown. Baehrens's nineteenth-century edition supplies Förster's reference numbering and is not the translator's physical source.",
+        "Benedict Burgh's Cato and the Vernon and Fairfax Cato traditions are distinct Middle English versions and are not merged into this work."
+      ]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00083",
+    "manifest_path": "manifests/lineage/works/CME00083.json",
+    "bindings": [
+      {"metadata_target": "work:CME00083", "lineage_entity_id": "artifact:general-corpus:CME00083", "role": "repository_representation"},
+      {"metadata_target": "work:CME00083", "lineage_entity_id": "encoding:umich-cme:CME00083", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00083", "lineage_entity_id": "edition:forster:englische-studien-36-1906", "role": "source_edition"},
+      {"metadata_target": "part:northern-cato", "lineage_entity_id": "witness:sidney-sussex:MS63", "role": "source_witness"},
+      {"metadata_target": "part:northern-cato", "lineage_entity_id": "witness:bodleian:Rawl-G-59", "role": "source_witness"},
+      {"metadata_target": "part:northern-cato", "lineage_entity_id": "witness:royal-danish-library:Thott-306-folio", "role": "related_source"},
+      {"metadata_target": "work:CME00083", "lineage_entity_id": "work:latin:disticha-catonis", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:metadata-xml",
+      "type": "computational_inspection",
+      "citation": "CME00083 XML source in the pinned CME submodule, structurally inspected 2026-07-12.",
+      "repository_path": "CME/source/CME_phase_3/CME00083.xml",
+      "locator": "BODY/DIV1 with introduction and two version DIV2 elements; HEAD, LG, L, NOTE, PB, MILESTONE, HI",
+      "summary": "Confirms complete article boundary, edition title and editor, German introduction, two serialized witness streams, exact XML metrics, page and folio milestones, incipits, explicit, notes, and italics.",
+      "accessed_on": "2026-07-12",
+      "sha256": "9ac5f016b68b3e52ec8cf7ad1eb0f41faba655765675d56ece7f15715fe05614"
+    },
+    {
+      "id": "evidence:metadata-forster",
+      "type": "linked_manifest_evidence",
+      "citation": "Max Förster, 'Eine nordenglische Cato-Version,' Englische Studien 36 (1906): 1–55.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:forster-edition-audit",
+      "summary": "Supports work boundary, anonymous translation, direct Latin source, tentative fourteenth-century date, Northern localization, verse form, witness relationship, loci, and complete two-witness edition structure."
+    },
+    {
+      "id": "evidence:metadata-dimev",
+      "type": "linked_manifest_evidence",
+      "citation": "Digital Index of Middle English Verse v1.0, record 6324.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:dimev-release",
+      "summary": "Supports the normalized incipit, Northern work identity, advice and moral subjects, aa couplets, all three witnesses, loci, and edition page mappings."
+    },
+    {
+      "id": "evidence:metadata-brusendorff",
+      "type": "linked_manifest_evidence",
+      "citation": "Aage Brusendorff, 'He Knew Nat Catoun for His Wit Was Rude,' Studies in English Philology (1929): 320–339.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:brusendorff-edition-audit",
+      "summary": "Supports the Thott third witness, late-fourteenth-century historical dating, material and extent, Latin-English structure, comparative textual judgment, source-work context, and selected-publication boundary."
+    },
+    {
+      "id": "evidence:metadata-bodleian",
+      "type": "linked_manifest_evidence",
+      "citation": "Bodleian Libraries, current catalog record for MS. Rawl. G. 59.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:bodleian-rawl-catalog",
+      "summary": "Supports current shelfmark, date, support, extent, languages, broad item boundary, dimensions, and provenance of the Rawlinson witness."
+    },
+    {
+      "id": "evidence:metadata-james",
+      "type": "linked_manifest_evidence",
+      "citation": "M. R. James, A Descriptive Catalogue of the Manuscripts in the Library of Sidney Sussex College, Cambridge (1895), 45.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:james-sidney-catalog",
+      "summary": "Supports the historical Sidney item title, dimensions, material, extent, former shelfmark, work locus, and incipit."
+    },
+    {
+      "id": "evidence:metadata-sidney",
+      "type": "linked_manifest_evidence",
+      "citation": "Derek Pearsall and Linne R. Mooney, 'Cambridge, Sidney Sussex College, MS 63' (2021), 58–62.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:pearsall-mooney-sidney",
+      "summary": "Supports the current shelfmark, late second-quarter fifteenth-century date, paper support, codex context, and modern Cato locus ff. 202vb–208rb."
+    },
+    {
+      "id": "evidence:metadata-rdl",
+      "type": "linked_manifest_evidence",
+      "citation": "Royal Danish Library, current catalog record for Thott 306 folio.",
+      "repository_path": "manifests/lineage/works/CME00083.json",
+      "source_evidence_id": "evidence:rdl-thott-catalog",
+      "summary": "Supports current shelfmark, Pseudo-Cato association, Latin, fifteenth-century current dating, parchment, 14-leaf extent, and holding."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:thott-date",
+      "question": "Can a current specialist description resolve Brusendorff's close-fourteenth-century dating of Thott 306 against the Royal Danish Library's current fifteenth-century record?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Request the library's current detailed manuscript description or paleographical assessment.", "Keep both datings attributed until resolved."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:metadata-brusendorff", "evidence:metadata-rdl"]
+    },
+    {
+      "id": "question:composition-date",
+      "question": "What composition or translation date does current scholarship support beyond Förster's fourteenth-century linguistic estimate?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult a current critical study of DIMEV 6324 and the three-witness tradition.", "Do not convert witness production dates into a precise composition date."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"]
+    },
+    {
+      "id": "question:rawlinson-boundary",
+      "question": "How do the three Rawlinson boundaries—Förster/CME ff. 1r–11v, DIMEV ff. 1–13, and the current catalog's inferred ff. 1r–16v item—map to the physical text?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Ask the Bodleian to confirm current foliation and the exact first and last Middle English lines.", "Reconcile the locators against a complete facsimile when obtained without deleting the historical claims."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-dimev", "evidence:metadata-bodleian"]
+    },
+    {
+      "id": "question:critical-stemma",
+      "question": "What current stemma best explains the Thott, Sidney, and strongly revised Rawlinson versions?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Locate a modern critical edition or textual study of the Northern Cato.", "Treat Förster's and Brusendorff's judgments as attributed analyses rather than direct-copy relations among extant manuscripts."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:metadata-forster", "evidence:metadata-brusendorff"]
+    }
+  ],
+  "notes": [
+    "The work-level Northern localization and the Sidney witness's eLALME Ely scribal localization belong to different layers and are not contradictory claims about one event.",
+    "German is the language of Förster's introduction and notes, not the primary language of the cataloged medieval work; Latin belongs chiefly to the related source work and witness framing.",
+    "Förster's 677 encoded italics preserve edition typography, not the manuscripts' original abbreviation marks. Whole-codex images are required before reconstructing those source features.",
+    "The Thott witness is a related source for the work record but not a source witness for the CME/Förster encoding."
+  ]
+}
