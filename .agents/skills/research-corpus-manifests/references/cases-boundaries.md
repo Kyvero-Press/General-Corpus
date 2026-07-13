@@ -331,3 +331,19 @@ paragraphs. Retain both the manuscript-article count and the edition or XML
 paragraph count, explain the crosswalk, and catalog at the intellectual depth
 the evidence supports. Verse quoted inside an editor's footnote remains
 paratext and does not make the medieval prose collection mixed-form.
+
+## Misidentified discovery records and mediated addenda: CME00139
+
+When a live provider header or suggested citation conflicts with the title,
+byline, and carrier verified inside the encoded item and source scan, record
+the header as a discovery-layer mismatch. Do not turn it into an alternate
+edition or let it replace the verified immediate source; pin the raw encoding
+and cite the carrier pages that resolve the conflict.
+
+An editor's addenda can quote passages through a second scholarly edition
+whose base and comparison witnesses differ from those of the main selection.
+Trace the addenda first to that immediate printed intermediary, then model its
+transcription and collation relationships to the witnesses. Do not infer that
+the later editor directly consulted every manuscript named in inherited
+apparatus. Keep editorial item counts separate from repertory record counts,
+including repeated witness occurrences of one repertory record.
