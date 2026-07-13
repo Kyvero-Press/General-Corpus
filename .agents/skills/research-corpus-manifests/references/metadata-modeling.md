@@ -62,6 +62,12 @@ Inspect language markup and the work itself. Scope embedded Latin, French, or
 other languages to the relevant parts; do not make the whole work multilingual
 because a title page, rubric, or surrounding codex is multilingual.
 
+Treat aggregate-catalog language flags as discovery leads, not direct evidence
+for every witness. A record-level flag may come from a benediction, rubric, or
+other feature unique to one collateral witness. Verify the encoded witness and
+scope the language to the witness or part that actually contains it before
+adding a work-level language facet.
+
 Every code in `language_statements` is exposed through the work's summary and
 viewer language facets. When the cataloging subject is a medieval work, do not
 add modern editorial prose or apparatus quotations as work-level languages
