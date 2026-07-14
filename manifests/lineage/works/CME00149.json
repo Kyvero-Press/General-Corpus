@@ -1,0 +1,1131 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00149",
+  "work_id": "CME00149",
+  "title": "Mappula Angliae and Ueber Zeitrechnung",
+  "primary_subject": "artifact:general-corpus:CME00149",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "The repository XML copies University of Michigan CME item CME00149, a selective encoding of two adjacent Carl Horstmann contributions in Englische Studien 10 (1887). The Mappula stream retains a title and source line from printed p. 1, omits Horstmann's German introduction on pp. 1–5, and then encodes the abbreviation statement and medieval text on pp. 6–34; the anonymous almanac is encoded completely on pp. 34–41. Horstmann transcribed both from British Library, Harley MS 4011: Osbern Bokenham's Mappula Anglie at ff. 144r–163r and an anonymous almanac composed in 1445 at ff. 164r–169r. Mappula translates and adapts the final England chapters of Ranulf Higden's Polychronicon Book I, but no physical source exemplar is known. A complete 1887 journal scan, OCR, item metadata, a supporting Oxford thesis, and the metadata-only official preview for a purchasable 2019 modern Mappula presentation are cached. The British Library currently says manuscript images are unavailable; the former LARK/IIIF route fails, so the manifest records physical consultation and whole-codex paid-reproduction routes without pretending a public manuscript facsimile exists.",
+  "languages": ["enm", "lat", "deu"],
+  "review_notes": [
+    "Mappula and the almanac are separate works. Adjacency and a shared scribal hand do not transfer Bokenham's authorship to the almanac.",
+    "Horstmann's 1885 signature dates editorial preparation; the carrier title page establishes publication in 1887.",
+    "Internet Archive's generic serial metadata says 1877 and Leipzig, but the inspected volume title page says Englische Studien, X Band, Heilbronn, Gebrüder Henninger, 1887.",
+    "Access and rights statements remain component-specific. Public digital access to an 1887 scan does not itself provide a license for the scan derivatives, and British Library catalog-text licensing does not license manuscript photography.",
+    "Negative facsimile findings are date-bounded to 2026-07-13."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00149",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00149",
+      "description": "The checked-out XML artifact consumed by this repository's conversion and publication workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00149"},
+        {"scheme": "git-blob", "value": "3107eb78dcf7b29f2b9c040fcf12dccad2e0e971"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00149.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "3107eb78dcf7b29f2b9c040fcf12dccad2e0e971",
+        "sha256": "0cfcb9e415430b3ac19e80bf1b9ed3ffab99a32640373d0eaf5881ded347ceac"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-structure"],
+      "notes": ["TEMPHEAD records a 2016 structural-proofing pass; it is not ordinary bibliographic metadata."]
+    },
+    {
+      "id": "encoding:umich-cme:CME00149",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item CME00149",
+      "description": "The public keyed electronic text from which the repository artifact derives. Its item title and author field inherit mixed editorial and historical responsibilities and must not be read as common authorship of both medieval works.",
+      "identifiers": [{"scheme": "CME/UMDL", "value": "CME00149", "uri": "https://name.umdl.umich.edu/CME00149"}],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-item", "evidence:repo-xml"]
+    },
+    {
+      "id": "work:middle-english:mappula-anglie",
+      "type": "catalog_description",
+      "label": "Mappula Anglie",
+      "alternate_labels": ["Mappula Angliae"],
+      "description": "Osbern Bokenham's seventeen-chapter Middle English prose geography of England, created as a reference companion to an English book of saints and translated and adaptively compiled from the final England chapters of Ranulf Higden's Polychronicon Book I.",
+      "creator_ids": ["agent:osbern-bokenham"],
+      "date_statements": [
+        {"label": "composition", "value": "circa 1440; in the 1440s and before the 1445 almanac", "certainty": "medium", "evidence_ids": ["evidence:horstmann-scan", "evidence:laferriere-thesis"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:laferriere-thesis"],
+      "notes": ["Bokenham identifies himself through the chapter-initial acrostic and a closing Latin couplet.", "No physical Polychronicon exemplar has been identified."]
+    },
+    {
+      "id": "work:middle-english:harley-4011-almanac",
+      "type": "catalog_description",
+      "label": "Anonymous Harley MS 4011 almanac",
+      "alternate_labels": ["An Almanac", "Ueber Zeitrechnung"],
+      "description": "An anonymous Middle English prose computistical treatise defining divisions of time, discussing daily and annual cycles and calendar drift, and providing two January–December sequences of daylight and changing day length.",
+      "creator_ids": ["agent:anonymous-almanac-compiler"],
+      "date_statements": [
+        {"label": "composition", "value": "1445", "normalized": "1445", "certainty": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:bl-catalog"],
+      "notes": ["The internal statement that 1,444 years had elapsed by the preceding Christmas supports the 1445 date.", "Horstmann's German title is editorial; the British Library supplies An Almanac."]
+    },
+    {
+      "id": "work:latin:higden-polychronicon-book1-england",
+      "type": "catalog_description",
+      "label": "Ranulf Higden's Polychronicon, Book I, final England chapters",
+      "description": "The Latin geographical source tradition that Bokenham says he drew into fifteen English chapters. Horstmann identifies the source as the final twenty-two chapters of Book I, condensed and supplemented by Bokenham.",
+      "creator_ids": ["agent:ranulf-higden"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:laferriere-thesis"],
+      "notes": ["This abstract source-work entity is not a claim that any surviving Polychronicon codex was Bokenham's exemplar."]
+    },
+    {
+      "id": "edition:horstmann:mappula-angliae-1887",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann, Mappula Angliae, von Osbern Bokenham (1887)",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [{"label": "publication", "value": "1887", "normalized": "1887", "certainty": "high", "evidence_ids": ["evidence:horstmann-scan"]}],
+      "bibliographic": {
+        "citation": "Carl Horstmann, ‘Mappula Angliae, von Osbern Bokenham,’ Englische Studien 10 (Heilbronn: Gebrüder Henninger, 1887), 1–34.",
+        "title": "Mappula Angliae, von Osbern Bokenham",
+        "container_title": "Englische Studien",
+        "volume": "10",
+        "publisher": "Gebrüder Henninger",
+        "publication_place": "Heilbronn",
+        "date": "1887",
+        "pages": "1–34",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"],
+      "notes": ["The medieval transcription begins on printed p. 6 after a German introduction on pp. 1–5.", "Horstmann signs the contribution Berlin, August 1885; the publication date remains 1887."]
+    },
+    {
+      "id": "edition:horstmann:ueber-zeitrechnung-1887",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann, Ueber Zeitrechnung (1887)",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [{"label": "publication", "value": "1887", "normalized": "1887", "certainty": "high", "evidence_ids": ["evidence:horstmann-scan"]}],
+      "bibliographic": {
+        "citation": "Carl Horstmann, ‘Ueber Zeitrechnung,’ Englische Studien 10 (Heilbronn: Gebrüder Henninger, 1887), 34–41.",
+        "title": "Ueber Zeitrechnung",
+        "container_title": "Englische Studien",
+        "volume": "10",
+        "publisher": "Gebrüder Henninger",
+        "publication_place": "Heilbronn",
+        "date": "1887",
+        "pages": "34–41",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"],
+      "notes": ["This separately headed and signed contribution begins on the same printed page on which Mappula ends; it is not listed separately in the volume contents."]
+    },
+    {
+      "id": "edition:bale-sobecki:mappula-2019",
+      "type": "scholarly_edition",
+      "label": "Mappula Angliae in Medieval English Travel (2019)",
+      "description": "A modern Mappula presentation in Anthony Bale and Sebastian Sobecki's critical anthology. The official preview supplies the volume title page, copyright statement, contents, and book-wide editorial conventions but omits the target chapter itself, so completeness and its exact base text remain to be checked.",
+      "creator_ids": ["agent:anthony-bale", "agent:sebastian-sobecki"],
+      "identifiers": [{"scheme": "ISBN", "value": "978-0-19-873378-2"}],
+      "date_statements": [{"label": "publication", "value": "2019", "normalized": "2019", "certainty": "high", "evidence_ids": ["evidence:bale-sobecki-preview"]}],
+      "bibliographic": {
+        "citation": "Osbern Bokenham, ‘Mappula Angliae,’ in Medieval English Travel: A Critical Anthology, ed. Anthony Bale and Sebastian Sobecki (Oxford: Oxford University Press, 2019), 352–385.",
+        "title": "Mappula Angliae",
+        "container_title": "Medieval English Travel: A Critical Anthology",
+        "publisher": "Oxford University Press",
+        "publication_place": "Oxford",
+        "date": "2019",
+        "pages": "352–385",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bale-sobecki-preview"],
+      "notes": ["The ending page is inferred from the next contents entry beginning on p. 386; the preview does not expose pp. 352–385.", "The chapter is a modern supporting edition, not the immediate source of CME00149."]
+    },
+    {
+      "id": "publication:englische-studien:10-1887",
+      "type": "scholarly_edition",
+      "label": "Englische Studien, volume 10 (1887)",
+      "creator_ids": ["agent:eugen-kolbing"],
+      "date_statements": [{"label": "publication", "value": "1887", "normalized": "1887", "certainty": "high", "evidence_ids": ["evidence:horstmann-scan"]}],
+      "bibliographic": {
+        "citation": "Englische Studien: Organ für englische Philologie, unter Mitberücksichtigung des englischen Unterrichts auf höheren Schulen, ed. Eugen Kölbing, vol. 10 (Heilbronn: Gebrüder Henninger, 1887).",
+        "title": "Englische Studien",
+        "volume": "10",
+        "publisher": "Gebrüder Henninger",
+        "publication_place": "Heilbronn",
+        "date": "1887",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"]
+    },
+    {
+      "id": "facsimile:internet-archive:englische-studien-10-1887",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Englische Studien 10 (1887)",
+      "description": "A complete 556-page PDF scan of the journal volume, with full OCR and item metadata derivatives.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "englischestudien10leipuoft", "uri": "https://archive.org/details/englischestudien10leipuoft"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "556-page PDF with OCR text and item metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"],
+      "notes": ["The source scan was contributed by the University of Toronto's Robarts Library and sponsored by MSN, according to Internet Archive metadata."]
+    },
+    {
+      "id": "witness:bl:Harley-MS-4011",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 4011",
+      "alternate_labels": ["British Museum, Harley MS 4011", "English miscellany"],
+      "description": "A paper English miscellany cataloged to 1445–1455, containing the Mappula at ff. 144r–163r and the almanac at ff. 164r–169r.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Harley MS 4011"},
+        {"scheme": "British Library catalog", "value": "040-002049848", "uri": "https://searcharchives.bl.uk/catalog/040-002049848"},
+        {"scheme": "British Library LARK", "value": "ark:/81055/vdc_100161515695.0x000001"}
+      ],
+      "date_statements": [{"label": "manuscript production", "value": "1445–1455 (circa 1450)", "certainty": "high", "evidence_ids": ["evidence:bl-catalog"]}],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 4011",
+        "historical_designations": ["British Museum, Harley MS 4011"],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002049848"
+      },
+      "physical_description": {
+        "support": "paper",
+        "extent": "189 folios, plus 3 unfoliated paper flyleaves at the beginning and 3 at the end",
+        "format": "codex; each leaf now mounted on a paper guard; British Museum binding dated 1885",
+        "dimensions": "280 × 190 mm; written area approximately 210 × 130 mm",
+        "notes": ["Gothic cursive script.", "The catalog associates William Grauell and William Brewyn with parts of the manuscript; their names or marks occur at ff. 163 and 145 within the target region. Horstmann instead describes two hands and says the later hand continues through the almanac; exact reconciliation remains open."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:horstmann-scan"],
+      "notes": ["Origin: England.", "Horstmann reports a missing leaf at the start of Mappula chapter XV; current images are unavailable for direct codicological verification."]
+    },
+    {
+      "id": "study:laferriere:austin-friars-2017",
+      "type": "catalog_description",
+      "label": "Anik Laferrière, The Austin Friars in Pre-Reformation English Society (2017)",
+      "creator_ids": ["agent:anik-laferriere"],
+      "identifiers": [
+        {"scheme": "DOI", "value": "10.5287/ora-zbebbxog0", "uri": "https://doi.org/10.5287/ora-zbebbxog0"},
+        {"scheme": "ORA UUID", "value": "5f927d01-ce0b-4c17-83d8-b5346a9c22e5", "uri": "https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5"},
+        {"scheme": "ARK", "value": "ark:/29072/ora_5f927d01ce0b4c1783d8b5346a9c22e5", "uri": "https://n2t.net/ark:/29072/ora_5f927d01ce0b4c1783d8b5346a9c22e5"}
+      ],
+      "date_statements": [{"label": "publication", "value": "2017", "normalized": "2017", "certainty": "high", "evidence_ids": ["evidence:laferriere-thesis"]}],
+      "bibliographic": {
+        "citation": "Anik Laferrière, The Austin Friars in Pre-Reformation English Society (DPhil thesis, University of Oxford, 2017).",
+        "title": "The Austin Friars in Pre-Reformation English Society",
+        "publisher": "University of Oxford",
+        "publication_place": "Oxford",
+        "date": "2017",
+        "languages": ["eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:laferriere-thesis"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus", "evidence_ids": ["evidence:repo-xml"]},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"], "evidence_ids": ["evidence:repo-xml", "evidence:cme-license"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-item"]},
+    {"id": "agent:osbern-bokenham", "type": "person", "name": "Osbern Bokenham", "alternate_names": ["Osbern Bokenam", "Osbern Bokenham of Clare"], "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:laferriere-thesis"]},
+    {"id": "agent:anonymous-almanac-compiler", "type": "person", "name": "Anonymous compiler of the Harley MS 4011 almanac", "evidence_ids": ["evidence:repo-xml", "evidence:bl-catalog"]},
+    {"id": "agent:ranulf-higden", "type": "person", "name": "Ranulf Higden", "alternate_names": ["Ranulph Higden", "Ranulphus Cestrensis"], "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan"]},
+    {"id": "agent:carl-horstmann", "type": "person", "name": "Carl Horstmann", "alternate_names": ["Karl Horstmann"], "evidence_ids": ["evidence:horstmann-scan"]},
+    {"id": "agent:eugen-kolbing", "type": "person", "name": "Eugen Kölbing", "evidence_ids": ["evidence:horstmann-scan"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"], "evidence_ids": ["evidence:bl-catalog", "evidence:bl-imaging"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-metadata"]},
+    {"id": "agent:anik-laferriere", "type": "person", "name": "Anik Laferrière", "evidence_ids": ["evidence:laferriere-thesis"]},
+    {"id": "agent:university-oxford", "type": "organization", "name": "University of Oxford", "urls": ["https://www.ox.ac.uk/"], "evidence_ids": ["evidence:laferriere-thesis"]},
+    {"id": "agent:anthony-bale", "type": "person", "name": "Anthony Bale", "evidence_ids": ["evidence:bale-sobecki-preview"]},
+    {"id": "agent:sebastian-sobecki", "type": "person", "name": "Sebastian Sobecki", "evidence_ids": ["evidence:bale-sobecki-preview"]},
+    {"id": "agent:oxford-university-press", "type": "organization", "name": "Oxford University Press", "urls": ["https://global.oup.com/"], "evidence_ids": ["evidence:bale-sobecki-preview"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00149",
+      "object": "encoding:umich-cme:CME00149",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Repository XML artifact"},
+        "object": {"kind": "whole", "description": "University of Michigan CME item"},
+        "notes": "Matching identifiers, text, page markers, and revision metadata support derivation; the exact repository transfer event is not documented."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:encoding-from-mappula-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00149",
+      "object": "edition:horstmann:mappula-angliae-1887",
+      "scope": {
+        "subject": {"kind": "part", "description": "First DIV1: retained Mappula editorial frame and medieval text", "locators": ["XML DIV1[1]", "PB 6–34"]},
+        "object": {"kind": "selected_passages", "description": "Discontinuous selection from Horstmann's contribution", "locators": ["title and source line on printed p. 1 / PDF p. 19", "abbreviation note and medieval text on printed pp. 6–34 / PDF pp. 24–52"]},
+        "notes": "The German introduction on printed pp. 1–5 is omitted apart from the retained and relocated title/source lines."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:xml-structure"]}
+    },
+    {
+      "id": "relation:encoding-from-almanac-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00149",
+      "object": "edition:horstmann:ueber-zeitrechnung-1887",
+      "scope": {
+        "subject": {"kind": "part", "description": "Second DIV1: complete almanac contribution", "locators": ["XML DIV1[2]", "heading begins on printed p. 34 before PB 35", "PB 35–41"]},
+        "object": {"kind": "whole", "description": "Complete separately headed Horstmann contribution", "locators": ["printed pp. 34–41", "PDF pp. 52–59"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:xml-structure"]}
+    },
+    {
+      "id": "relation:mappula-edition-transcribes-harley",
+      "type": "transcribes",
+      "subject": "edition:horstmann:mappula-angliae-1887",
+      "object": "witness:bl:Harley-MS-4011",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Edited medieval Mappula text and manuscript apparatus", "locators": ["printed pp. 6–34"]},
+        "object": {"kind": "selected_passages", "description": "Mappula Anglie witness", "locators": ["ff. 144r–163r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan", "evidence:bl-catalog"]}
+    },
+    {
+      "id": "relation:almanac-edition-transcribes-harley",
+      "type": "transcribes",
+      "subject": "edition:horstmann:ueber-zeitrechnung-1887",
+      "object": "witness:bl:Harley-MS-4011",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete edited almanac contribution", "locators": ["printed pp. 34–41"]},
+        "object": {"kind": "selected_passages", "description": "Anonymous almanac", "locators": ["ff. 164r–169r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan", "evidence:bl-catalog"]}
+    },
+    {
+      "id": "relation:mappula-edition-version",
+      "type": "version_of",
+      "subject": "edition:horstmann:mappula-angliae-1887",
+      "object": "work:middle-english:mappula-anglie",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Horstmann's edited medieval text", "locators": ["printed pp. 6–34"]},
+        "object": {"kind": "whole", "description": "Mappula Anglie abstract work"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:bale-sobecki-mappula-version",
+      "type": "version_of",
+      "subject": "edition:bale-sobecki:mappula-2019",
+      "object": "work:middle-english:mappula-anglie",
+      "scope": {
+        "subject": {"kind": "unknown", "description": "Modern anthology presentation listed at pp. 352–385; the preview omits those pages, so its completeness and precise editorial base are unverified", "locators": ["anthology pp. 352–385"]},
+        "object": {"kind": "whole", "description": "Mappula Anglie abstract work"},
+        "notes": "The contents securely identifies the chapter with Bokenham's Mappula; this relation does not assert that the anthology prints the complete work or derives directly from Harley MS 4011."
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:bale-sobecki-preview"]}
+    },
+    {
+      "id": "relation:almanac-edition-version",
+      "type": "version_of",
+      "subject": "edition:horstmann:ueber-zeitrechnung-1887",
+      "object": "work:middle-english:harley-4011-almanac",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Horstmann's complete edited contribution"},
+        "object": {"kind": "whole", "description": "Anonymous almanac abstract work"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:mappula-version-of-polychronicon",
+      "type": "version_of",
+      "subject": "work:middle-english:mappula-anglie",
+      "object": "work:latin:higden-polychronicon-book1-england",
+      "scope": {
+        "subject": {"kind": "part", "description": "Fifteen translated and adapted core chapters, excluding Bokenham's prologue and epilogue"},
+        "object": {"kind": "selected_passages", "description": "Final England chapters of Polychronicon Book I", "locators": ["Horstmann identifies Book I, chapters 39 onward / final 22 chapters"]},
+        "notes": "version_of represents translation and adaptive compilation at the abstract-work layer; it does not identify a physical exemplar."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:laferriere-thesis"]}
+    },
+    {
+      "id": "relation:harley-contains-mappula",
+      "type": "contains",
+      "subject": "witness:bl:Harley-MS-4011",
+      "object": "work:middle-english:mappula-anglie",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Mappula witness locus", "locators": ["ff. 144r–163r"]},
+        "object": {"kind": "whole", "description": "Surviving Mappula text, with Horstmann's reported loss at chapter XV"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-catalog", "evidence:horstmann-scan"]}
+    },
+    {
+      "id": "relation:harley-contains-almanac",
+      "type": "contains",
+      "subject": "witness:bl:Harley-MS-4011",
+      "object": "work:middle-english:harley-4011-almanac",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Almanac locus", "locators": ["ff. 164r–169r"]},
+        "object": {"kind": "whole", "description": "Complete known almanac text"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-catalog", "evidence:horstmann-scan"]}
+    },
+    {
+      "id": "relation:volume-contains-mappula-edition",
+      "type": "contains",
+      "subject": "publication:englische-studien:10-1887",
+      "object": "edition:horstmann:mappula-angliae-1887",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Mappula contribution", "locators": ["printed pp. 1–34", "PDF pp. 19–52"]},
+        "object": {"kind": "whole", "description": "Complete contribution"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan"]}
+    },
+    {
+      "id": "relation:volume-contains-almanac-edition",
+      "type": "contains",
+      "subject": "publication:englische-studien:10-1887",
+      "object": "edition:horstmann:ueber-zeitrechnung-1887",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Almanac contribution", "locators": ["printed pp. 34–41", "PDF pp. 52–59"]},
+        "object": {"kind": "whole", "description": "Complete contribution"},
+        "notes": "Printed p. 34 is shared with the end of Mappula; p. 41 also begins the following Zupitza article."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan"]}
+    },
+    {
+      "id": "relation:ia-facsimile-of-volume",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:englische-studien-10-1887",
+      "object": "publication:englische-studien:10-1887",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 556-page provider PDF scan with derivatives"},
+        "object": {"kind": "whole", "description": "Complete bound journal volume"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"]}
+    },
+    {
+      "id": "relation:laferriere-describes-mappula",
+      "type": "describes",
+      "subject": "study:laferriere:austin-friars-2017",
+      "object": "work:middle-english:mappula-anglie",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Discussion of Bokenham and Mappula", "locators": ["thesis p. 39 / PDF p. 54", "thesis pp. 57–58 / PDF pp. 72–73", "thesis pp. 68–70 / PDF pp. 83–85"]},
+        "object": {"kind": "whole", "description": "Mappula Anglie"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:laferriere-thesis"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00149",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Repository checkout or pinned GitHub blob",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00149.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00149.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-license"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:CME00149",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the exact CME item; browse the two DIV1 sections or use the stable UMDL name URL.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00149",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00149"],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:horstmann-mappula",
+      "entity": "edition:horstmann:mappula-angliae-1887",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the complete volume scan at PDF pp. 19–52; the medieval text begins at PDF p. 24.",
+      "url": "https://archive.org/details/englischestudien10leipuoft",
+      "alternate_urls": ["https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf"],
+      "cost": "free",
+      "format": "Contribution inside complete-volume PDF",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"],
+      "notes": ["The complete local carrier scan is attached to access:ia-volume-facsimile."]
+    },
+    {
+      "id": "access:horstmann-almanac",
+      "entity": "edition:horstmann:ueber-zeitrechnung-1887",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Open the complete volume scan at PDF pp. 52–59.",
+      "url": "https://archive.org/details/englischestudien10leipuoft",
+      "alternate_urls": ["https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf"],
+      "cost": "free",
+      "format": "Contribution inside complete-volume PDF",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"],
+      "notes": ["The complete local carrier scan is attached to access:ia-volume-facsimile."]
+    },
+    {
+      "id": "access:ia-volume-facsimile",
+      "entity": "facsimile:internet-archive:englische-studien-10-1887",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Use the item page or exact derivative links; all three cached files preserve their source URLs and fixity.",
+      "url": "https://archive.org/details/englischestudien10leipuoft",
+      "alternate_urls": [
+        "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf",
+        "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft_djvu.txt",
+        "https://archive.org/metadata/englischestudien10leipuoft"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Englische Studien 10 (1887) scan",
+          "path": "source-cache/CME00149/horstmann-englische-studien-10-1887-complete.pdf",
+          "source_url": "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf",
+          "sha256": "299383c648ac4e42c8ca91fece1ca6ca4399be9d8b76d5bb80ca92a2eecd5d56",
+          "bytes": 35273842,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "CME00149 source contributions within the complete volume",
+            "locators": ["Mappula heading printed p. 1 / PDF p. 19", "Mappula medieval text printed pp. 6–34 / PDF pp. 24–52", "almanac printed pp. 34–41 / PDF pp. 52–59"],
+            "notes": ["Printed p. 34 is shared by both contributions; PDF p. 59 also begins the following article."]
+          },
+          "notes": ["Complete relative to the 556-page provider PDF and physical journal carrier, not a manuscript facsimile."]
+        },
+        {
+          "label": "Complete Internet Archive OCR for Englische Studien 10",
+          "path": "source-cache/CME00149/horstmann-englische-studien-10-1887-ocr.txt",
+          "source_url": "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft_djvu.txt",
+          "sha256": "000d5d9804db2b508ed5f257b1c3c1a3444c3c2608047ace5d2b788af253fbfa",
+          "bytes": 1975379,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "OCR corresponding to the two CME00149 source contributions",
+            "locators": ["printed pp. 1–41"],
+            "notes": ["OCR is discovery support and must be checked against the scan; it is not the lineage source used in place of the printed pages."]
+          }
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/CME00149/internet-archive-englische-studien-10-metadata.json",
+          "source_url": "https://archive.org/metadata/englischestudien10leipuoft",
+          "sha256": "cbaf1fe6373f8867442cb28764a744853e2f7bfa4497ce482041cb4f01cc54e6",
+          "bytes": 103973,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": ["The generic serial metadata's 1877 date and Leipzig publisher do not describe the internally inspected volume 10 title page."]
+        }
+      ],
+      "cost": "free",
+      "format": "Complete PDF, OCR text, and JSON item metadata",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:ia-metadata"]
+    },
+    {
+      "id": "access:bl-catalog",
+      "entity": "witness:bl:Harley-MS-4011",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the exact Archives and Manuscripts catalog record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002049848",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog"]
+    },
+    {
+      "id": "access:bl-former-images",
+      "entity": "witness:bl:Harley-MS-4011",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The catalog's former LARK identifier no longer resolves to public images; the tested Digirati IIIF route returns HTTP 403 and the catalog explicitly says digital images are currently unavailable.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100161515695.0x000001",
+      "alternate_urls": ["http://access.bl.uk/item/viewer/ark:/81055/vdc_100161515695.0x000001"],
+      "cost": "unknown",
+      "format": "Former LARK/IIIF manuscript image object",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-former-image-route"],
+      "notes": ["No local manuscript facsimile was created. Wayback queries for the former viewer and manifest found no usable archived complete object on 2026-07-13."]
+    },
+    {
+      "id": "access:bl-physical-consultation",
+      "entity": "witness:bl:Harley-MS-4011",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request the manuscript with the catalog's online form for consultation in the British Library's London reading rooms; a valid Reader Pass and collection conditions apply.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002049848"],
+      "cost": "unknown",
+      "format": "Onsite consultation of the physical codex",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog"]
+    },
+    {
+      "id": "access:bl-reproduction-order",
+      "entity": "witness:bl:Harley-MS-4011",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the British Library digitisation order form using shelfmark Harley MS 4011. Ask for a quote for the complete physical object—including covers, spine, pastedowns, all flyleaves and blanks, and every recto and verso where handling permits—and separately identify Mappula ff. 144r–163r and the almanac ff. 164r–169r for later mapping. Request new full-color photography rather than a black-and-white surrogate if that distinction matters.",
+      "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/terms/imaging-services",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "British Library Digitisation Services rate card 2025–26",
+          "path": "source-cache/CME00149/british-library-digitisation-rate-card-2025-26.pdf",
+          "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+          "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+          "bytes": 181286,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": ["The rate card supports cost planning but is not a manuscript reproduction. Whole-codex, fragile, or complex orders are individually quoted."]
+        }
+      ],
+      "cost": "fee",
+      "format": "New digital photography or an existing surrogate, depending on availability and the order specification",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-imaging", "evidence:bl-rate-card"],
+      "notes": ["Image supply and permission to reproduce or redistribute are separate. Obtain written permission before publishing supplied images in the Git repository or elsewhere."]
+    },
+    {
+      "id": "access:bale-sobecki-mappula",
+      "entity": "edition:bale-sobecki:mappula-2019",
+      "provider_id": "agent:oxford-university-press",
+      "resource_kind": "download",
+      "status": "purchasable",
+      "access_method": "Purchase or borrow Medieval English Travel: A Critical Anthology and consult anthology pp. 352–385; the freely downloadable official preview supplies only bibliographic, rights, contents, and book-wide editorial-convention evidence, not the Mappula chapter.",
+      "url": "https://global.oup.com/academic/product/medieval-english-travel-9780198733782",
+      "alternate_urls": [
+        "https://books.google.com/books?id=Ph0gEAAAQBAJ",
+        "https://api.pageplace.de/preview/DT0400.9780192662057_A41276495/preview-9780192662057_A41276495.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Official metadata-only preview of Medieval English Travel",
+          "path": "source-cache/CME00149/bale-sobecki-medieval-english-travel-2019-official-preview.pdf",
+          "source_url": "https://api.pageplace.de/preview/DT0400.9780192662057_A41276495/preview-9780192662057_A41276495.pdf",
+          "sha256": "8763f87fb55950e34dc8c781c17a69b88b5e06ddc12956f7ac6621c4c0f4d3ec",
+          "bytes": 19140233,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Bibliographic pointer and anthology-wide conventions for the Mappula chapter",
+            "locators": ["copyright page at PDF p. 5", "contents at PDF pp. 10–11", "editorial conventions at PDF pp. 13–14", "Mappula listed at anthology p. 352; the next item begins at p. 386"],
+            "notes": ["The 52-page preview contains no page from the target Mappula chapter and therefore cannot establish its headnote, base witness, exact extent, readings, or chapter-specific exceptions to the general conventions."]
+          },
+          "notes": ["Metadata-only coverage is relative to the modern Mappula edition entity, even though the downloaded preview file itself is complete as supplied."]
+        }
+      ],
+      "cost": "fee",
+      "format": "Commercial print or ebook anthology; freely accessible 52-page official preview without the target chapter",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bale-sobecki-preview"]
+    },
+    {
+      "id": "access:laferriere-thesis",
+      "entity": "study:laferriere:austin-friars-2017",
+      "provider_id": "agent:university-oxford",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open the ORA record or exact PDF file.",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5",
+      "alternate_urls": ["https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5/files/m9118d3fabaa69e5cdf610e46a075a3db"],
+      "local_copies": [
+        {
+          "label": "Complete Laferrière Oxford DPhil thesis",
+          "path": "source-cache/CME00149/laferriere-2017-austin-friars-thesis-complete.pdf",
+          "source_url": "https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5/files/m9118d3fabaa69e5cdf610e46a075a3db",
+          "sha256": "277cb4368495f13f063bf733b84ed5c9e6b88391ffbca8e1a90ab4e061959c17",
+          "bytes": 2842481,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Mappula discussion within the complete thesis",
+            "locators": ["thesis p. 39 / PDF p. 54", "thesis pp. 57–58 / PDF pp. 72–73", "thesis pp. 68–70 / PDF pp. 83–85"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Complete PDF thesis",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:laferriere-thesis"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:mappula-medieval-text-us",
+      "entity": "work:middle-english:mappula-anglie",
+      "component": "Fifteenth-century Mappula Anglie textual work",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The work was composed and attested in the fifteenth century, and the official U-M item carrying its text is marked Public Domain / No Copyright–United States.",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:horstmann-scan", "evidence:umich-item"],
+      "notes": ["This concerns medieval wording, not modern manuscript photographs, catalog descriptions, or interfaces."]
+    },
+    {
+      "id": "rights:almanac-medieval-text-us",
+      "entity": "work:middle-english:harley-4011-almanac",
+      "component": "Anonymous almanac composed in 1445",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The text internally dates its composition to 1445, survives in a fifteenth-century witness, and the official U-M item carrying it is marked Public Domain / No Copyright–United States.",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:bl-catalog", "evidence:umich-item"],
+      "notes": ["This concerns medieval wording, not modern manuscript photography."]
+    },
+    {
+      "id": "rights:horstmann-mappula-edition-us",
+      "entity": "edition:horstmann:mappula-angliae-1887",
+      "component": "Horstmann's Mappula edition, German introduction, apparatus, and arrangement",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The contribution was published in 1887, and the official U-M derivative item identifies its represented source material as Public Domain / No Copyright–United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:umich-item"]
+    },
+    {
+      "id": "rights:horstmann-almanac-edition-us",
+      "entity": "edition:horstmann:ueber-zeitrechnung-1887",
+      "component": "Horstmann's almanac edition, apparatus, and arrangement",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The contribution was published in 1887, and the official U-M derivative item identifies its represented source material as Public Domain / No Copyright–United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:umich-item"]
+    },
+    {
+      "id": "rights:volume-us",
+      "entity": "publication:englische-studien:10-1887",
+      "component": "Englische Studien volume 10 printed carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The journal volume was published in 1887.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-scan"]
+    },
+    {
+      "id": "rights:umich-encoding-us",
+      "entity": "encoding:umich-cme:CME00149",
+      "access_id": "access:umich-text",
+      "component": "U-M electronic text and represented public-domain edition content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The exact U-M item marks the material Public Domain and links No Copyright–United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"],
+      "notes": ["NoC-US is a jurisdiction-specific rights statement, not a universal reuse license, and it does not license unrelated manuscript photographs."]
+    },
+    {
+      "id": "rights:repository-artifact-us",
+      "entity": "artifact:general-corpus:CME00149",
+      "component": "Repository XML artifact as a copy of the U-M electronic item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The artifact is textually and structurally copied from the exact U-M item that is marked Public Domain / No Copyright–United States; the sparse submodule also has a software-worded Unlicense file whose application to XML data is not separately documented.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:cme-license"],
+      "notes": ["The U-M assertion is the substantive basis; the software wording of the submodule license is not broadened silently to manuscripts, scans, or third-party scholarship."]
+    },
+    {
+      "id": "rights:ia-facsimile",
+      "entity": "facsimile:internet-archive:englische-studien-10-1887",
+      "access_id": "access:ia-volume-facsimile",
+      "component": "Internet Archive scan, OCR, and metadata derivatives",
+      "jurisdiction": "United States provider statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "Internet Archive's exact item metadata records possible-copyright-status NOT_IN_COPYRIGHT and copyright-region US, based on the stated 1887 date and no visible copyright notice; it supplies no separate open-content license for the derivative files.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-metadata"],
+      "notes": ["NOT_IN_COPYRIGHT is a provider status assertion rather than a worldwide dedication or an open-content license; provider terms and independent jurisdiction review may still matter."]
+    },
+    {
+      "id": "rights:harley-physical-carrier",
+      "entity": "witness:bl:Harley-MS-4011",
+      "component": "Physical manuscript carrier",
+      "jurisdiction": "Not applicable",
+      "copyright_status": "not_applicable",
+      "as_of": "2026-07-13",
+      "basis": "Ownership and access to a fifteenth-century physical codex are not themselves a copyright license; copyright and contract questions attach separately to modern descriptions and reproductions.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-imaging"]
+    },
+    {
+      "id": "rights:bl-catalog-text",
+      "entity": "witness:bl:Harley-MS-4011",
+      "access_id": "access:bl-catalog",
+      "component": "British Library catalog description text",
+      "jurisdiction": "Provider statement",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The catalog page licenses its catalog description under Creative Commons Attribution 4.0.",
+      "asserted_by_id": "agent:british-library",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalog"],
+      "notes": ["This license covers catalog-description text, not the manuscript, future commissioned photography, or unrelated British Library web content."]
+    },
+    {
+      "id": "rights:bl-ordered-images",
+      "entity": "witness:bl:Harley-MS-4011",
+      "access_id": "access:bl-reproduction-order",
+      "component": "Any newly supplied British Library manuscript images",
+      "jurisdiction": "Contract and applicable copyright jurisdictions",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "British Library imaging terms state that supplied material may carry rights and that copying, publication, or reproduction requires written permission; image supply and reproduction permission are separate.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-imaging"],
+      "notes": ["Secure order-specific written permission before putting commissioned images in the Git repository or using them in any publication. Research consultation of the images does not by itself authorize redistribution."]
+    },
+    {
+      "id": "rights:bale-sobecki-mappula",
+      "entity": "edition:bale-sobecki:mappula-2019",
+      "access_id": "access:bale-sobecki-mappula",
+      "component": "2019 anthology edition, editorial presentation, notes, and preview PDF",
+      "jurisdiction": "United Kingdom, United States, and other applicable jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The inspected copyright page states © the several contributors 2019, asserts authors' moral rights, and reserves all rights; it directs reproduction requests outside statutory or licensed exceptions to Oxford University Press.",
+      "asserted_by_id": "agent:oxford-university-press",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bale-sobecki-preview"],
+      "notes": ["The copyright statement applies to the modern anthology content and presentation, not to Bokenham's fifteenth-century wording as such. Public preview access is not authorization to redistribute the PDF or the modern edition."]
+    },
+    {
+      "id": "rights:laferriere-thesis",
+      "entity": "study:laferriere:austin-friars-2017",
+      "access_id": "access:laferriere-thesis",
+      "component": "Anik Laferrière's 2017 thesis text and PDF",
+      "jurisdiction": "United Kingdom and other applicable jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "A 2017 authored thesis remains copyrighted; public repository download is access evidence and no open-content reuse license was found on the inspected record or PDF.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:laferriere-thesis"],
+      "notes": ["The local copy is retained for research verification, not redistribution."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:horstmann-abbreviation-expansion",
+      "entity": "edition:horstmann:mappula-angliae-1887",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviation marks, including uncommon superscript forms and overlines",
+      "representation": "Expanded letters are printed in italics; Horstmann explains specific resolutions such as the overlined -on stroke expanded as -oun.",
+      "description": "Horstmann explicitly states his expansion policy immediately before the medieval Mappula text. Consequently, XML italics can encode editorially supplied or expanded letters rather than manuscript emphasis.",
+      "scope": "Mappula transcription and retained policy statement on printed p. 6 and in the first XML DIV1 HEADNOTE and HI REND=italic elements",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:CME00149",
+      "practice": "selection",
+      "source_feature": "Two Horstmann contributions occupying printed pp. 1–41",
+      "representation": "Discontinuous Mappula heading/source material from p. 1 plus p. 6–34, followed by the complete p. 34–41 almanac contribution",
+      "description": "Michigan omits the Mappula article's German introduction on pp. 1–5 while retaining and relocating its title/source lines, then encodes the medieval text and complete almanac.",
+      "scope": "Complete CME00149 encoding, DIV1[1–2] and PB 6–41",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:xml-structure"]
+    },
+    {
+      "id": "practice:horstmann-collation",
+      "entity": "edition:horstmann:mappula-angliae-1887",
+      "practice": "collation",
+      "source_feature": "Harley MS 4011 readings and Latin Polychronicon comparison",
+      "representation": "Footnotes report manuscript readings, corrections, omissions, additions, and Latin parallels.",
+      "description": "The printed Mappula is an edited transcription with apparatus, not a neutral photographic facsimile or unmediated diplomatic copy.",
+      "scope": "Mappula medieval text and notes on printed pp. 6–34",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:repo-xml"]
+    },
+    {
+      "id": "practice:bale-sobecki-abbreviation-expansion",
+      "entity": "edition:bale-sobecki:mappula-2019",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Abbreviations in Middle English source text",
+      "representation": "The anthology's general conventions say abbreviations are silently expanded.",
+      "description": "This is a book-wide stated convention and a useful comparison point with Horstmann's italicized expansions, but the Mappula pages and headnote are absent from the preview and could state an exception.",
+      "scope": "Anthology-wide convention potentially applying to Mappula on pp. 352–385; exact chapter implementation unverified",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:bale-sobecki-preview"]
+    },
+    {
+      "id": "practice:bale-sobecki-punctuation",
+      "entity": "edition:bale-sobecki:mappula-2019",
+      "practice": "punctuation_normalization",
+      "source_feature": "Punctuation of the edited Middle English source",
+      "representation": "The anthology states that punctuation is modern and editorial.",
+      "description": "This is a book-wide stated convention, not direct observation of the Mappula chapter; any chapter-specific qualification remains unavailable in the preview.",
+      "scope": "Anthology-wide convention potentially applying to Mappula on pp. 352–385; exact chapter implementation unverified",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:bale-sobecki-preview"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus source XML CME00149 at pinned Kyvero-Press/CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_3/CME00149.xml",
+      "locator": "TEMPHEAD; IDG; TEXT; BODY; DIV1[1–2]; PB 6–41",
+      "summary": "Primary artifact evidence for identifiers, encoded texts, page markers, retained editorial framing, internal Mappula authorship and source statements, the almanac's internal 1445 calculation, and XML revision history.",
+      "accessed_on": "2026-07-13",
+      "sha256": "0cfcb9e415430b3ac19e80bf1b9ed3ffab99a32640373d0eaf5881ded347ceac"
+    },
+    {
+      "id": "evidence:xml-structure",
+      "type": "visual_inspection",
+      "citation": "Local structural and text-layer inspection of the pinned CME00149 XML against Horstmann's scanned edition.",
+      "repository_path": "CME/source/CME_phase_3/CME00149.xml",
+      "summary": "Confirms two DIV1 units, 41 DIV2 units, 53 P, 209 NOTE, 36 PB, 2 LG, and 23 L elements; maps the discontinuous Mappula selection and complete almanac; identifies the chapter XVII epilogue's erroneous DIV2 N=2 and the second almanac sequence's absent month heads.",
+      "accessed_on": "2026-07-13",
+      "sha256": "0cfcb9e415430b3ac19e80bf1b9ed3ffab99a32640373d0eaf5881ded347ceac"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, CME00149 item record.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00149",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00149", "http://rightsstatements.org/vocab/NoC-US/1.0/"],
+      "summary": "Supports the public item title and mixed author heading, carrier citation, stable identifier, public digital-text access, and Public Domain / No Copyright–United States assertion.",
+      "accessed_on": "2026-07-13",
+      "notes": ["The mixed item heading is inherited bibliographic metadata, not evidence that Horstmann coauthored the medieval texts or that Bokenham authored the almanac."]
+    },
+    {
+      "id": "evidence:horstmann-scan",
+      "type": "edition_statement",
+      "citation": "Carl Horstmann, ‘Mappula Angliae, von Osbern Bokenham’ and ‘Ueber Zeitrechnung,’ Englische Studien 10 (Heilbronn: Gebrüder Henninger, 1887), 1–41.",
+      "url": "https://archive.org/details/englischestudien10leipuoft",
+      "alternate_urls": ["https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf"],
+      "repository_path": "source-cache/CME00149/horstmann-englische-studien-10-1887-complete.pdf",
+      "locator": "volume title PDF p. 7; Mappula printed pp. 1–34 / PDF pp. 19–52; medieval text begins printed p. 6 / PDF p. 24; almanac printed pp. 34–41 / PDF pp. 52–59",
+      "summary": "Complete immediate-edition and carrier evidence for the 1887 title page, publication data, contribution boundaries, manuscript loci, Bokenham authorship and Polychronicon source analysis, circa-1440 dating, scribal hands and Suffolk dialect proposal, abbreviation-expansion policy, apparatus, and complete almanac text.",
+      "accessed_on": "2026-07-13",
+      "sha256": "299383c648ac4e42c8ca91fece1ca6ca4399be9d8b76d5bb80ca92a2eecd5d56",
+      "notes": ["The internally inspected title page controls over generic Internet Archive serial metadata that reports 1877 and Leipzig."]
+    },
+    {
+      "id": "evidence:ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for englischestudien10leipuoft.",
+      "url": "https://archive.org/metadata/englischestudien10leipuoft",
+      "alternate_urls": [
+        "https://archive.org/details/englischestudien10leipuoft",
+        "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft.pdf",
+        "https://archive.org/download/englischestudien10leipuoft/englischestudien10leipuoft_djvu.txt"
+      ],
+      "repository_path": "source-cache/CME00149/internet-archive-englische-studien-10-metadata.json",
+      "summary": "Supports exact item identity, file inventory, public derivative URLs, University of Toronto/Robarts contribution, MSN sponsorship, and the item-level United States possible-copyright-status NOT_IN_COPYRIGHT based on an 1887 date and no visible copyright notice. No separate licenseurl field is supplied.",
+      "accessed_on": "2026-07-13",
+      "sha256": "cbaf1fe6373f8867442cb28764a744853e2f7bfa4497ce482041cb4f01cc54e6",
+      "notes": ["Its generic serial date/publisher metadata does not supersede the scanned volume title page."]
+    },
+    {
+      "id": "evidence:bl-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts, Harley MS 4011, English miscellany.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002049848",
+      "alternate_urls": ["https://forms.office.com/e/SbCAGb201x"],
+      "locator": "Mappula ff. 144r–163r; An Almanac ff. 164r–169r; whole-codex description",
+      "summary": "Authoritative current evidence for shelfmark, exact target loci, supplied almanac title, 1445–1455 date, English origin, paper support, dimensions, extent, scripts and named scribes, mounting and binding, physical request route, current digital-image unavailability, and CC BY 4.0 catalog-description license.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-former-image-route",
+      "type": "digital_surrogate",
+      "citation": "British Library former LARK/Digirati route for Harley MS 4011, ark:/81055/vdc_100161515695.0x000001.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100161515695.0x000001",
+      "alternate_urls": ["http://access.bl.uk/item/viewer/ark:/81055/vdc_100161515695.0x000001"],
+      "summary": "The tested Digirati endpoint returned HTTP 403 application/xml; the former access.bl.uk viewer host did not resolve, and the current catalog states that digital images are unavailable. No complete public manuscript facsimile was verified or cached.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-imaging",
+      "type": "official_webpage",
+      "citation": "British Library Digitisation Services and Imaging Services terms.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+        "https://www.bl.uk/terms/imaging-services",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"
+      ],
+      "summary": "Supports the direct order route, need for precise shelfmark/folio/side specifications, possible use of existing black-and-white surrogates unless color is requested, individual quotation for large or difficult orders, and separation of image supply from reproduction permission.",
+      "accessed_on": "2026-07-13",
+      "notes": ["Terms inspected were marked updated January 2026."]
+    },
+    {
+      "id": "evidence:bl-rate-card",
+      "type": "official_webpage",
+      "citation": "British Library Digitisation Services price list, 2025–26.",
+      "url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+      "repository_path": "source-cache/CME00149/british-library-digitisation-rate-card-2025-26.pdf",
+      "summary": "Official current rate-card evidence for cost planning; a complete 189-folio manuscript order is a large order and remains subject to quotation, handling feasibility, and potential surrogate availability.",
+      "accessed_on": "2026-07-13",
+      "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597"
+    },
+    {
+      "id": "evidence:laferriere-thesis",
+      "type": "scholarly_source",
+      "citation": "Anik Laferrière, The Austin Friars in Pre-Reformation English Society (DPhil thesis, University of Oxford, 2017).",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5",
+      "alternate_urls": ["https://ora.ox.ac.uk/objects/uuid%3A5f927d01-ce0b-4c17-83d8-b5346a9c22e5/files/m9118d3fabaa69e5cdf610e46a075a3db"],
+      "repository_path": "source-cache/CME00149/laferriere-2017-austin-friars-thesis-complete.pdf",
+      "locator": "thesis p. 39 / PDF p. 54; thesis pp. 57–58 / PDF pp. 72–73; thesis pp. 68–70 / PDF pp. 83–85",
+      "summary": "Supports the Polychronicon basis, Mappula's composition at Clare, its translation in the 1440s, the name acrostic, and current scholarship attributing the referenced English legendary to Bokenham in the Abbotsford manuscript. The record names Anik Laferrière as 2017 copyright holder and distinguishes CC0 record metadata from the thesis file; the complete thesis is cached for research verification.",
+      "accessed_on": "2026-07-13",
+      "sha256": "277cb4368495f13f063bf733b84ed5c9e6b88391ffbca8e1a90ab4e061959c17"
+    },
+    {
+      "id": "evidence:bale-sobecki-preview",
+      "type": "digital_surrogate",
+      "citation": "Anthony Bale and Sebastian Sobecki, eds., Medieval English Travel: A Critical Anthology (Oxford: Oxford University Press, 2019), official preview.",
+      "url": "https://api.pageplace.de/preview/DT0400.9780192662057_A41276495/preview-9780192662057_A41276495.pdf",
+      "alternate_urls": [
+        "https://global.oup.com/academic/product/medieval-english-travel-9780198733782",
+        "https://books.google.com/books?id=Ph0gEAAAQBAJ"
+      ],
+      "repository_path": "source-cache/CME00149/bale-sobecki-medieval-english-travel-2019-official-preview.pdf",
+      "locator": "copyright PDF p. 5; contents PDF pp. 10–11; About This Book and Editorial Conventions PDF pp. 13–14; target chapter listed at anthology p. 352 and omitted from preview",
+      "summary": "The 52-page official preview verifies the anthology title, editors, Oxford University Press imprint, 2019 first-edition date, ISBN 978-0-19-873378-2, all-rights-reserved statement, and the contents entry placing ‘Osbern Bokenham, Mappula Angliae’ at p. 352 before the next item at p. 386. It also states book-wide modernization, silent abbreviation expansion, and modern editorial punctuation. Because it contains no target-chapter page, it is evidence only for the bibliographic pointer, rights, inferred page span, and general conventions—not for the Mappula text, headnote, completeness, base witness, or actual readings.",
+      "accessed_on": "2026-07-13",
+      "sha256": "8763f87fb55950e34dc8c781c17a69b88b5e06ddc12956f7ac6621c4c0f4d3ec"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME LICENSE at pinned submodule commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "The pinned submodule has Unlicense-style public-domain software wording. Its application to XML text/data/markup is not explicit, so it is recorded as contextual repository evidence rather than expanded to unrelated source layers.",
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:mappula-exemplar",
+      "question": "Which Polychronicon exemplar, recension, and additional sources underlie Bokenham's fifteen-chapter adaptation?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Collate Mappula against critical editions and representative manuscripts of the final England chapters of Polychronicon Book I.", "Distinguish direct dependence, common authorities, Bokenham's rearrangements, and local Clare additions."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:laferriere-thesis"]
+    },
+    {
+      "id": "question:almanac-origin",
+      "question": "Who compiled the 1445 almanac, where was it composed, and what source texts or calculation tables were used?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Compare its computistical definitions, calendar-drift calculation, and paired monthly sequences against manuscript almanac traditions.", "Do not infer Bokenham's authorship or Clare composition from adjacency or shared scribal hand alone."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-scan", "evidence:bl-catalog"]
+    },
+    {
+      "id": "question:scribes-and-loss",
+      "question": "How do Horstmann's two Mappula hands and reported lost leaf at chapter XV correspond to the current catalog's named scribes, paper-guard mounting, foliation, and physical state?",
+      "status": "pending_external_response",
+      "impact": "medium",
+      "next_steps": ["Inspect complete color images or the physical manuscript around ff. 144–169.", "Reconcile William Brewyn and William Grauell with Horstmann's hand change, and document the chapter XV lacuna and any historical refoliation."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:horstmann-scan", "evidence:bl-catalog"]
+    },
+    {
+      "id": "question:complete-harley-facsimile",
+      "question": "Can a complete, reusable color facsimile of Harley MS 4011 be obtained after the former public LARK image route became unavailable?",
+      "status": "pending_external_response",
+      "impact": "high",
+      "next_steps": ["Ask the British Library whether an unpublished complete surrogate exists and request or order the complete physical object rather than only target folios.", "Include covers, spine, pastedowns, flyleaves, blanks, and all leaves where feasible; then map Mappula ff. 144r–163r and the almanac ff. 164r–169r within the supplied sequence.", "Secure written permission before redistributing supplied images in Git or elsewhere."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-former-image-route", "evidence:bl-imaging", "evidence:bl-rate-card"]
+    },
+    {
+      "id": "question:bale-sobecki-edition",
+      "question": "What text, manuscript or prior edition, selection boundaries, headnote, and chapter-specific editorial interventions underlie the 2019 Mappula presentation?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Obtain anthology pp. 352–385 and inspect the Mappula headnote, source statement, text, notes, and any exceptions to the book-wide editorial conventions.", "Compare its readings and handling of abbreviations, punctuation, lost material, and embedded Latin verse against Horstmann's 1887 edition and, when available, Harley MS 4011."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bale-sobecki-preview"]
+    },
+    {
+      "id": "question:encoding-provenance",
+      "question": "What production documentation explains the original keying, selection, and quality-control history of the U-M encoding before the recorded 2016 structural revision?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Search U-M CME project documentation and archived technical files for item-level creation metadata.", "Compare XML line by line against printed pp. 1, 6–41 and record any keying errors separately from Horstmann's interventions."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:horstmann-scan"]
+    }
+  ]
+}
