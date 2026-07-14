@@ -93,6 +93,14 @@ and record which manifest supplied the bundle. Treat them as separate digital
 objects if their inventories, order, rights, or attribution differ; matching
 canvas counts alone are not enough.
 
+A viewer's page or slot count is not necessarily a count of unique manuscript
+images. Parallel transcription panes can repeat one full-folio JPEG in several
+left/right slots, and separately paginated sequences can overlap. Compare
+canvas or slot identifiers, image-service URLs, order, and image fixity across
+every sequence. Record both the published slot count and the deduplicated image
+inventory, name overlaps and repetitions, and never infer physical coverage
+from the larger number alone.
+
 A provider-generated PDF can add a cover or metadata page that is absent from
 the IIIF canvas sequence. Compare total PDF pages with manifest canvases and
 inspect the first, target, and last pages before mapping them. When an offset

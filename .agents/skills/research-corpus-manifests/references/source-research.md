@@ -107,6 +107,13 @@ the manuscript's shelfmark. Identify the surrogate as its own entity and
 verify which source objects and ranges it reproduces; one film number may
 contain several manuscripts or only selected leaves.
 
+First test whether apparently different foliation is only a notation
+crosswalk: `a/b` and `r/v` commonly name the same recto/verso sides. Normalize
+that equivalence before alleging historical refoliation. If one source then
+ends at `75a` while direct milestones, a catalog, or an image-supported source
+continue through `75b`/`75v`, preserve the first value as a source-layer
+endpoint conflict rather than inventing a second foliation system.
+
 Treat legacy and corrected foliation as a locator crosswalk for one physical
 witness unless evidence establishes distinct objects. Record both ranges and
 name which system each source uses; do not create a second witness merely
