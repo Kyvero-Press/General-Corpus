@@ -94,7 +94,11 @@ plates while adding a new title page, series statement, date, or preliminaries.
 Model the plate-derived issue as a distinct immediate edition linked through
 `version_of`; verify its retained and added matter independently rather than
 skipping directly from the encoding to the manuscript or treating both issues
-as one bibliographic object.
+as one bibliographic object. A dated correction notice retained in a later
+carrier can expose an otherwise easy-to-miss intermediate plate issue; verify
+that issue against an independent bibliographic record. If the later carrier
+preserves the notice and its named additions but has not itself been inspected,
+record descent through that issue as supported rather than confirmed.
 
 ## Recurring serial installments
 
