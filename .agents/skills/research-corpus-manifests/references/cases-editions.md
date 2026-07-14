@@ -112,6 +112,14 @@ material but was not upstream of White or Holt. Some van Vliet readings reached
 them through alterations in Junius 1 itself. Model the physical route of a
 reading; do not promote a related transcript into an editorial source.
 
+Likewise, a thesis or edition that later prints and studies a machine-readable
+transcription cannot be the source of an earlier archive deposit. Keep the
+deposit date, the later title-page date, and any still later repository issue
+date distinct. Bind the later publication as a `related_source` unless direct
+comparison or project documentation proves a revision or version relation;
+shared title, witness, author, and line count alone do not establish the exact
+file history.
+
 When an editor actually worked from a collaborator's transcript or collation
 rather than the codex, preserve that material intermediary and its maker.
 Model the edition as transcribing the working transcript and the transcript as
