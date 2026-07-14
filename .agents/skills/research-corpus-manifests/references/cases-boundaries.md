@@ -419,3 +419,20 @@ transcription and collation relationships to the witnesses. Do not infer that
 the later editor directly consulted every manuscript named in inherited
 apparatus. Keep editorial item counts separate from repertory record counts,
 including repeated witness occurrences of one repertory record.
+
+## Whole-item omissions and selection languages: HarLyr
+
+Compute an edited selection's language facets from the items actually retained,
+not from its numbering gaps, excluded neighboring texts, or the host codex's
+aggregate language inventory. When a numbered multilingual poem is omitted in
+full, preserve the missing number and explain the item-level boundary; do not
+describe the selection as a language-filtered excerpt merely because the
+excluded poem ends with lines in the selected collection's primary language.
+
+Conversely, inspect every included item before declaring the selection
+monolingual. A retained lyric that systematically alternates Middle English
+and Anglo-Norman makes both languages intrinsic to that selected item even
+when the root XML declaration names only Middle English. Scope that secondary
+language to the included lyric, while keeping Latin, French, or English found
+only in excluded items or surrounding manuscript material out of the work's
+language facets.
