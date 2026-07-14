@@ -1,0 +1,1504 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:HenMino",
+  "work_id": "HenMino",
+  "title": "The Minor Poems of Robert Henryson (twelve-poem selection)",
+  "primary_subject": "artifact:general-corpus:HenMino",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The repository artifact is a copy or version of University of Michigan/Oxford Text Archive electronic item U-243-A, made in 1993 from G. Gregory Smith's 1908 Scottish Text Society edition. The electronic item is an edited selection of twelve separately headed shorter poems, not one poem and not every work that Smith or a modern complete edition groups among Henryson's shorter poems. Smith's selected texts derive from ten passages in the Bannatyne manuscript, the sole Gray-manuscript copy of The Annunciation, and the 1508 Chepman and Myllar print of The Prais of Aige; his apparatus and parallel texts also use Bannatyne alternatives, the Maitland Folio, and the Makculloch manuscript. Authorship is not uniform: several selected witnesses name Henryson, some selected versions are anonymous but have attributed collateral versions, The Prayer for the Pest has a later-hand Henryson ascription, and the selected Bannatyne text of The Thre Deid Pollis names Patrick Johnstoun while the Maitland version names Henryson.",
+  "languages": ["sco"],
+  "review_notes": [
+    "The cataloging boundary is the twelve DIV1 units actually present in the pinned XML. Smith also prints collateral versions and other shorter poems, including The Want of Wise Men, that are not in HenMino.",
+    "Bannatyne draft and main-text passages are parts of one surviving codex, NLS Adv.MS.1.1.6; the codex's current two-volume binding and two digital manifests are facsimile divisions, not separate textual witnesses.",
+    "Exact folio, historical page, canvas, and tested image-API links are recorded for every selected manuscript passage. Page images can include text before or after the selected poem at shared boundaries.",
+    "For The Thre Deid Pollis, direct inspection places the selected text at current fols. 57v-59r, historical pages 174-177, canvases 192-195. CELM's combined folio/page locator is internally inconsistent because page 178 is the following work.",
+    "Gray-manuscript foliation is stated in both current NLS form (fols. 71r-72v) and the historical form used by Smith and CELM (fols. 70r-71v).",
+    "Access, the public-domain status of underlying historical texts, licenses or rights statements for modern files, and provider reproduction terms are separate assertions. Public viewing does not by itself establish permission to redistribute images.",
+    "The XML's c. 1480 creation date and blanket Henryson heading are legacy collection-level assertions; they are not allowed to erase poem-level date and authorship uncertainty."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:HenMino",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for HenMino",
+      "description": "The pinned XML artifact consumed by this repository and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "HenMino"},
+        {"scheme": "git-blob", "value": "ff090e361802ad0551fd7bb1f8fc6eaba5b1e400"},
+        {"scheme": "CME git commit", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/HenMino.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "ff090e361802ad0551fd7bb1f8fc6eaba5b1e400",
+        "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:cme-git-state"],
+      "notes": ["File size is 47,552 bytes at the reviewed commit."]
+    },
+    {
+      "id": "encoding:umich-ota:U-243-A-HenMino",
+      "type": "digital_encoding",
+      "label": "University of Michigan / Oxford Text Archive electronic item HenMino, U-243-A",
+      "alternate_labels": ["U-M CME item HenMino"],
+      "description": "A 1993 electronic edition of twelve selected minor poems. Its header identifies the broader OTA accession U*-243-A, Smith's three-volume Poems of Robert Henryson as source, Scottish Text Society number 58 as the source volume, and the omission of printed front matter, back matter, and editorial notes.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "U-243-A"},
+        {"scheme": "CME/UMDL", "value": "HenMino", "uri": "https://name.umdl.umich.edu/HenMino"}
+      ],
+      "creator_ids": ["agent:umich", "agent:ota"],
+      "date_statements": [
+        {"label": "electronic edition", "value": "1993", "normalized": "1993", "certainty": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino"],
+      "notes": [
+        "The shared OTA identifier does not establish that every U-243-A item is one encoding entity; HenMino is modeled as the identified U-M item.",
+        "No current standalone OTA accession record giving a more granular production history for this 1993 item was verified."
+      ]
+    },
+    {
+      "id": "edition:smith:henryson-vol3-1908",
+      "type": "scholarly_edition",
+      "label": "G. Gregory Smith, The Poems of Robert Henryson, volume III (1908)",
+      "description": "Scottish Text Society number 58, volume III overall and text volume II. Smith prints separately labeled witness versions, identifies the selected sources in a prefatory table, and supplies the page sequence reproduced imperfectly by HenMino's PB milestones.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "ThePoemsOfRobertHenrysonVol3", "uri": "https://archive.org/details/ThePoemsOfRobertHenrysonVol3"},
+        {"scheme": "Scottish Text Society", "value": "58"}
+      ],
+      "creator_ids": ["agent:g-gregory-smith", "agent:george-stevenson"],
+      "date_statements": [
+        {"label": "publication", "value": "1908", "normalized": "1908", "certainty": "high", "evidence_ids": ["evidence:smith-1908-scan"]}
+      ],
+      "bibliographic": {
+        "citation": "The Poems of Robert Henryson, ed. G. Gregory Smith, vol. III, Text vol. II, Scottish Text Society 58 (Edinburgh and London: William Blackwood and Sons, 1908).",
+        "title": "The Poems of Robert Henryson",
+        "volume": "III (Text vol. II)",
+        "series": "Scottish Text Society 58",
+        "publisher": "William Blackwood and Sons",
+        "publication_place": "Edinburgh; London",
+        "date": "1908",
+        "pages": "HenMino selections: 90-94, 96-100, 102-103, 107-108, 118-120, 126-127, 136-138, 140-142, 146-148, 150-153, 156-158, 165-168",
+        "languages": ["sco", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-source-table", "evidence:smith-xml-comparison"],
+      "notes": [
+        "Smith thanks George Stevenson for transcribing and collating texts; Stevenson is therefore an edition-layer transcriber and collator, not a creator of the medieval works.",
+        "The source table counts Sum Practysis of Medecyne as 90 lines, but the printed text and XML contain a final five-line tail numbered through 91; the XML's numbered line 91 is not an extra subscription.",
+        "Smith's source table and printed headings distinguish selected versions from collateral variants."
+      ]
+    },
+    {
+      "id": "edition:smith:henryson-vol1-1914",
+      "type": "scholarly_edition",
+      "label": "G. Gregory Smith, The Poems of Robert Henryson, volume I (1914)",
+      "description": "The introduction, appendix, notes, glossary, and indexes volume of Smith's edition. It supplies source and authorship discussion omitted from the HenMino electronic item.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "poemsofroberthen01henr", "uri": "https://archive.org/details/poemsofroberthen01henr"}],
+      "creator_ids": ["agent:g-gregory-smith"],
+      "date_statements": [{"label": "publication", "value": "1914", "normalized": "1914", "certainty": "high", "evidence_ids": ["evidence:smith-1914-scan"]}],
+      "bibliographic": {
+        "citation": "The Poems of Robert Henryson, ed. G. Gregory Smith, vol. I, Introduction, Appendix, Notes, Index of Words and Glossary, General Index (Edinburgh and London: William Blackwood and Sons, 1914).",
+        "title": "The Poems of Robert Henryson",
+        "volume": "I",
+        "publisher": "William Blackwood and Sons",
+        "publication_place": "Edinburgh; London",
+        "date": "1914",
+        "languages": ["eng", "sco"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1914-scan", "evidence:smith-critical-notes"]
+    },
+    {
+      "id": "facsimile:ia:smith-vol3-1908",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Smith volume III (1908)",
+      "description": "A complete 232-page public PDF with OCR, scan metadata, and item metadata cached for source verification.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "ThePoemsOfRobertHenrysonVol3", "uri": "https://archive.org/details/ThePoemsOfRobertHenrysonVol3"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "PDF, OCR text, and scan-data XML",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-1908-ia-metadata"]
+    },
+    {
+      "id": "facsimile:ia:smith-vol1-1914",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Smith volume I (1914)",
+      "description": "A complete 360-page public PDF with OCR, scan metadata, and item metadata cached for critical-note verification.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "poemsofroberthen01henr", "uri": "https://archive.org/details/poemsofroberthen01henr"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "PDF, OCR text, and scan-data XML",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1914-scan", "evidence:smith-1914-ia-metadata"]
+    },
+    {
+      "id": "witness:nls:Adv-MS-1-1-6",
+      "type": "manuscript_witness",
+      "label": "Bannatyne manuscript, NLS Adv.MS.1.1.6",
+      "description": "George Bannatyne's 1568 paper anthology. The current codex has a sixty-page draft section followed by the main manuscript and was rebound into two physical volumes around 1823. HenMino's selected Smith texts use ten passages across the draft, main volume I, and main volume II.",
+      "identifiers": [{"scheme": "NLS shelfmark", "value": "Adv.MS.1.1.6", "uri": "https://manuscripts.nls.uk/repositories/2/resources/14976"}],
+      "creator_ids": ["agent:george-bannatyne"],
+      "date_statements": [{"label": "compilation and copying", "value": "1568", "normalized": "1568", "certainty": "high", "evidence_ids": ["evidence:nls-bannatyne-catalog"]}],
+      "holding": {
+        "institution_id": "agent:nls",
+        "shelfmark": "Adv.MS.1.1.6",
+        "historical_designations": ["Bannatyne manuscript"],
+        "catalog_url": "https://manuscripts.nls.uk/repositories/2/resources/14976",
+        "notes": "The present two-volume arrangement is a nineteenth-century physical intervention; draft and main sections are textual strata within this single codex."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "375 folios plus sixty draft pages in the catalog description; present volume I has 192 leaves and volume II 205 leaves",
+        "format": "Composite poetry anthology now bound in two volumes",
+        "notes": ["The main manuscript has current foliation 1-370 and later pagination 1-796; that pagination is also used to locate the draft pages."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-bannatyne-catalog", "evidence:celm-henryson", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "facsimile:nls:bannatyne-vol1",
+      "type": "facsimile",
+      "label": "NLS digital facsimile of Bannatyne manuscript volume I",
+      "description": "The complete 424-canvas IIIF object for current physical volume I, covering the full draft and the first part of the main manuscript.",
+      "identifiers": [
+        {"scheme": "NLS digital object", "value": "232641635", "uri": "https://digital.nls.uk/232641635"},
+        {"scheme": "NLS shelfmark", "value": "Adv.MS.1.1.6(i)"}
+      ],
+      "creator_ids": ["agent:nls"],
+      "reproduction_format": "IIIF Presentation 2 manifest and 424 JPEG derivatives at 1600-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-bannatyne-vol1-iiif", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "facsimile:nls:bannatyne-vol2",
+      "type": "facsimile",
+      "label": "NLS digital facsimile of Bannatyne manuscript volume II",
+      "description": "The complete 454-canvas IIIF object for current physical volume II, the latter part of the main manuscript.",
+      "identifiers": [
+        {"scheme": "NLS digital object", "value": "232641636", "uri": "https://digital.nls.uk/232641636"},
+        {"scheme": "NLS shelfmark", "value": "Adv.MS.1.1.6(ii)"}
+      ],
+      "creator_ids": ["agent:nls"],
+      "reproduction_format": "IIIF Presentation 2 manifest and 454 JPEG derivatives at 1600-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-bannatyne-vol2-iiif", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "witness:nls:Adv-MS-34-7-3",
+      "type": "manuscript_witness",
+      "label": "Gray manuscript, NLS Adv.MS.34.7.3",
+      "description": "A late-fifteenth-century Scottish composite commonplace book associated with James Gray and written in several hands. It is the sole known witness for The Annunciation and supplies Smith's selected text.",
+      "identifiers": [{"scheme": "NLS shelfmark", "value": "Adv.MS.34.7.3", "uri": "https://manuscripts.nls.uk/repositories/2/resources/19367"}],
+      "creator_ids": ["agent:james-gray"],
+      "date_statements": [{"label": "manuscript production", "value": "late fifteenth century, probably c. 1500", "certainty": "medium", "evidence_ids": ["evidence:nls-gray-catalog"]}],
+      "holding": {
+        "institution_id": "agent:nls",
+        "shelfmark": "Adv.MS.34.7.3",
+        "historical_designations": ["Gray manuscript"],
+        "catalog_url": "https://manuscripts.nls.uk/repositories/2/resources/19367",
+        "notes": "The Annunciation is at current fols. 71r-72v; Smith and CELM use historical fols. 70r-71v."
+      },
+      "physical_description": {
+        "support": "Paper and vellum",
+        "extent": "84 folios plus modern flyleaves",
+        "format": "Composite commonplace book",
+        "notes": ["Several hands contribute to the manuscript; association with James Gray is a compilation/provenance statement, not automatic authorship of its contents."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-gray-catalog", "evidence:celm-henryson", "evidence:gray-direct-inspection"]
+    },
+    {
+      "id": "facsimile:nls:gray",
+      "type": "facsimile",
+      "label": "NLS digital facsimile of the Gray manuscript",
+      "description": "The complete 242-canvas IIIF digital object. The manifest assigns RightsStatements.org In Copyright - Rights-holder(s) Unlocatable or Unidentifiable, not a public-domain mark.",
+      "identifiers": [{"scheme": "NLS digital object", "value": "212467260", "uri": "https://digital.nls.uk/212467260"}],
+      "creator_ids": ["agent:nls"],
+      "reproduction_format": "IIIF Presentation 2 manifest and 242 JPEG derivatives at 1600-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-gray-iiif", "evidence:gray-direct-inspection"]
+    },
+    {
+      "id": "edition:chepman-myllar:prais-aige-1508",
+      "type": "scholarly_edition",
+      "label": "Chepman and Myllar's 1508 print containing The Prais of Aige",
+      "description": "The anonymous thirty-two-line print version selected by Smith, published in Edinburgh in the unique NLS collection of Chepman and Myllar prints. The schema has no dedicated historical-print-witness type, so this source print is represented as a scholarly-edition entity with that limitation made explicit.",
+      "identifiers": [{"scheme": "historical NLS pressmark", "value": "19.1.16", "uri": "https://digital.nls.uk/firstscottishbooks/items.html"}],
+      "creator_ids": ["agent:walter-chepman", "agent:androw-myllar"],
+      "date_statements": [{"label": "publication", "value": "1508", "normalized": "1508", "certainty": "high", "evidence_ids": ["evidence:nls-chepman-project", "evidence:chepman-direct-inspection"]}],
+      "bibliographic": {
+        "citation": "The Prais of Aige, in the Chepman and Myllar prints (Edinburgh: Walter Chepman and Androw Myllar, 1508), tract 7.",
+        "title": "The Prais of Aige",
+        "publisher": "Walter Chepman and Androw Myllar",
+        "publication_place": "Edinburgh",
+        "date": "1508",
+        "pages": "facsimile images 144-145",
+        "languages": ["sco"]
+      },
+      "holding": {
+        "institution_id": "agent:nls",
+        "shelfmark": null,
+        "historical_designations": ["Advocates Library pressmark 19.1.16"],
+        "catalog_url": "https://digital.nls.uk/firstscottishbooks/items.html",
+        "notes": "The current precise shelfmark was not established from the reviewed public project pages; the unique surviving collection was rebound and its leaves separately mounted in the twentieth century."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-chepman-project", "evidence:chepman-direct-inspection", "evidence:smith-source-table"]
+    },
+    {
+      "id": "facsimile:commons:chepman-myllar",
+      "type": "facsimile",
+      "label": "Complete 220-image public derivative of the Chepman and Myllar prints",
+      "description": "A complete 220-image DjVu derivative publicly served by Wikimedia Commons. Complete refers to the published facsimile image sequence, not to physical boards or flyleaves absent from that sequence.",
+      "identifiers": [{"scheme": "Wikimedia Commons", "value": "File:Chepman and Myllar.djvu", "uri": "https://commons.wikimedia.org/wiki/File:Chepman_and_Myllar.djvu"}],
+      "creator_ids": ["agent:wikimedia-commons", "agent:nls"],
+      "reproduction_format": "220-image DjVu",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:commons-chepman", "evidence:chepman-direct-inspection"]
+    },
+    {
+      "id": "witness:magdalene:Pepys-MS-2553",
+      "type": "manuscript_witness",
+      "label": "Maitland Folio, Magdalene College Pepys MS 2553",
+      "description": "A c. 1570-1585 Scots poetry anthology associated with Sir Richard Maitland. Smith prints or collates collateral versions of The Abbey Walk, Aganis Haisty Credence of Titlaris, The Ressoning betuix Aige and Zowth, and The Thre Deid Pollis; none is HenMino's selected base version.",
+      "identifiers": [{"scheme": "Magdalene College shelfmark", "value": "Pepys MS 2553", "uri": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/catalogues-and-research-tools"}],
+      "creator_ids": ["agent:sir-richard-maitland"],
+      "date_statements": [{"label": "compilation", "value": "c. 1570-1585", "certainty": "medium", "evidence_ids": ["evidence:celm-henryson"]}],
+      "holding": {
+        "institution_id": "agent:magdalene-college",
+        "shelfmark": "Pepys MS 2553",
+        "historical_designations": ["Maitland Folio"],
+        "catalog_url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/catalogues-and-research-tools",
+        "notes": "The complete manuscript is not in the current online digital selection; research access is by advance contact, and the Pepys Library is closed to general visitors during refurbishment until 2027."
+      },
+      "physical_description": {"extent": "366 pages", "format": "Poetry anthology", "notes": ["Several hands copied the collection."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:celm-henryson", "evidence:magdalene-pepys-access"]
+    },
+    {
+      "id": "witness:eul:MS-205",
+      "type": "manuscript_witness",
+      "label": "Makculloch manuscript, University of Edinburgh MS 205",
+      "description": "A composite manuscript whose 1477 Leuven logic notes belong to an earlier host layer; early-sixteenth-century Scots verse was added later on flyleaves and blanks. Smith prints or collates collateral versions of The Prais of Aige at fol. 87r and The Ressoning betuix Aige and Zowth at fol. 181v.",
+      "identifiers": [{"scheme": "University of Edinburgh shelfmark", "value": "MS 205", "uri": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177058"}],
+      "creator_ids": ["agent:magnus-makculloch"],
+      "date_statements": [
+        {"label": "host manuscript", "value": "1477", "normalized": "1477", "certainty": "high", "evidence_ids": ["evidence:eul-ms205"]},
+        {"label": "Scots verse additions", "value": "early sixteenth century", "certainty": "medium", "evidence_ids": ["evidence:eul-ms205", "evidence:celm-henryson"]}
+      ],
+      "holding": {
+        "institution_id": "agent:eul",
+        "shelfmark": "MS 205",
+        "historical_designations": ["Borl. 205", "Laing 149", "Makculloch manuscript"],
+        "catalog_url": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177058",
+        "notes": "Open to consultation in the Centre for Research Collections; the public record exposes only selected images, not a complete digital facsimile."
+      },
+      "physical_description": {"support": "Paper with two vellum flyleaves", "extent": "202 folios plus three flyleaves", "format": "Composite manuscript"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eul-ms205", "evidence:celm-henryson"]
+    },
+    {
+      "id": "witness:riddell:abbey-walk-copy",
+      "type": "manuscript_witness",
+      "label": "Untraced Abbey Walk copy reported by David Riddell in 1636",
+      "description": "CELM records an additional copy of The Abbey Walk reported in David Riddell's 1636 list but not presently traced. It is evidence of a reported witness, not an extant text available for collation.",
+      "date_statements": [{"label": "documented", "value": "1636", "normalized": "1636", "certainty": "high", "evidence_ids": ["evidence:celm-henryson"]}],
+      "survival_status": "reported_lost",
+      "evidence_ids": ["evidence:celm-henryson"],
+      "notes": ["Its former holding, text, and relationship to the extant Bannatyne and Maitland versions remain unknown."]
+    },
+    {
+      "id": "catalog:celm:henryson-witnesses",
+      "type": "catalog_description",
+      "label": "CELM catalogue and introduction for Robert Henryson",
+      "description": "A current scholarly witness census with manuscript locations and source descriptions, used to distinguish selected and collateral versions and to identify untraced evidence.",
+      "creator_ids": ["agent:celm"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:celm-henryson"]
+    },
+    {
+      "id": "edition:mets:complete-works-current",
+      "type": "scholarly_edition",
+      "label": "METS current complete edition of Robert Henryson",
+      "description": "A current Middle English Texts Series edition consulted for language, scope, witnesses, interpretation, and authorship cautions. It is not the source of the 1993 encoding and does not necessarily select the same version for every poem.",
+      "identifiers": [{"scheme": "METS edition download", "value": "1e813610-5cea-48de-b40d-1313059be430", "uri": "https://metseditions.org/read/3z5VNPXU44PVtyvXSMwAzuM1Ry1X4Rq"}],
+      "creator_ids": ["agent:mets"],
+      "reproduction_format": "153-page downloadable PDF and web reading edition",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:mets-general", "evidence:mets-shorter-introduction", "evidence:mets-shorter-text"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus"},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Humanities Text Initiative", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:ota", "type": "organization", "name": "Oxford Text Archive"},
+    {"id": "agent:g-gregory-smith", "type": "person", "name": "G. Gregory Smith", "alternate_names": ["George Gregory Smith"]},
+    {"id": "agent:george-stevenson", "type": "person", "name": "George Stevenson", "notes": ["Credited by Smith for transcribing and collating texts for the edition."]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:robert-henryson", "type": "person", "name": "Robert Henryson", "dates": "active late fifteenth century; died before or by 1506?", "notes": ["Exact life dates are uncertain; older catalog formulas such as 1430?-1506? are not treated as established facts."]},
+    {"id": "agent:george-bannatyne", "type": "person", "name": "George Bannatyne", "dates": "1545-1608?"},
+    {"id": "agent:nls", "type": "organization", "name": "National Library of Scotland", "urls": ["https://www.nls.uk/"]},
+    {"id": "agent:james-gray", "type": "person", "name": "James Gray", "notes": ["Associated compiler of the Gray manuscript; not assigned authorship of The Annunciation."]},
+    {"id": "agent:walter-chepman", "type": "person", "name": "Walter Chepman"},
+    {"id": "agent:androw-myllar", "type": "person", "name": "Androw Myllar", "alternate_names": ["Andrew Myllar"]},
+    {"id": "agent:wikimedia-commons", "type": "organization", "name": "Wikimedia Commons", "urls": ["https://commons.wikimedia.org/"]},
+    {"id": "agent:magdalene-college", "type": "organization", "name": "Magdalene College, Cambridge", "urls": ["https://www.magd.cam.ac.uk/"]},
+    {"id": "agent:sir-richard-maitland", "type": "person", "name": "Sir Richard Maitland", "dates": "1496-1586"},
+    {"id": "agent:eul", "type": "organization", "name": "University of Edinburgh Library, Centre for Research Collections", "urls": ["https://archives.collections.ed.ac.uk/"]},
+    {"id": "agent:magnus-makculloch", "type": "person", "name": "Magnus Makculloch", "notes": ["Copied the 1477 logical-text host layer; not thereby the copyist or author of every later Scots addition."]},
+    {"id": "agent:celm", "type": "organization", "name": "Catalogue of English Literary Manuscripts 1450-1700", "urls": ["https://celm.folger.edu/"]},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:HenMino",
+      "object": "encoding:umich-ota:U-243-A-HenMino",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Entire pinned repository XML"},
+        "object": {"kind": "whole", "description": "U-M/CME electronic item HenMino"},
+        "notes": "Repository identity, U-M item ID, header, and text agree; no intervening substantive revision was evidenced."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino", "evidence:cme-git-state"]}
+    },
+    {
+      "id": "relation:encoding-from-smith-vol3",
+      "type": "encoded_from",
+      "subject": "encoding:umich-ota:U-243-A-HenMino",
+      "object": "edition:smith:henryson-vol3-1908",
+      "scope": {
+        "subject": {"kind": "whole", "description": "All twelve DIV1 poems in HenMino", "locators": ["HenMino:1-HenMino:12"]},
+        "object": {"kind": "selected_passages", "description": "Smith's selected versions of the twelve poems", "locators": ["pp. 90-94, 96-100, 102-103, 107-108, 118-120, 126-127, 136-138, 140-142, 146-148, 150-153, 156-158, 165-168"]},
+        "notes": "The header expressly names Smith's edition and volume 58. Front and back matter, notes, collateral versions, and other shorter poems were omitted."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:smith-1908-scan", "evidence:smith-xml-comparison"]}
+    },
+    {
+      "id": "relation:smith-vol3-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:smith-vol3-1908",
+      "object": "edition:smith:henryson-vol3-1908",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 232-page scan"}, "object": {"kind": "whole", "description": "Complete published volume III"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-1908-ia-metadata"]}
+    },
+    {
+      "id": "relation:smith-vol1-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:smith-vol1-1914",
+      "object": "edition:smith:henryson-vol1-1914",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 360-page scan"}, "object": {"kind": "whole", "description": "Complete published volume I"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-1914-scan", "evidence:smith-1914-ia-metadata"]}
+    },
+    {
+      "id": "relation:smith-vol1-describes-vol3",
+      "type": "describes",
+      "subject": "edition:smith:henryson-vol1-1914",
+      "object": "edition:smith:henryson-vol3-1908",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Introduction and notes on the shorter poems"}, "object": {"kind": "selected_passages", "description": "The twelve selected poems and their printed witness versions"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-critical-notes"]}
+    },
+    {
+      "id": "relation:smith-transcribes-bannatyne-selected",
+      "type": "transcribes",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "witness:nls:Adv-MS-1-1-6",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Ten selected Bannatyne versions", "locators": ["Robene and Makyne pp. 90-94", "The Bludy Serk pp. 96-100", "The Garmont of Gud Ladeis pp. 102-103", "The Ressoning betuix Aige and Zowth version C pp. 118-120", "The Abbey Walk version A pp. 126-127", "The Ressoning betuix Deth and Man version B pp. 136-138", "Aganis Haisty Credence of Titlaris version A pp. 140-142", "Sum Practysis of Medecyne pp. 150-153", "The Thre Deid Pollis version A pp. 156-158", "Ane Prayer for the Pest version B pp. 165-168"]},
+        "object": {"kind": "selected_passages", "description": "Exact Bannatyne passages selected by Smith", "locators": [
+          "Abbey Walk draft A: vol. I manuscript pp. 30-32, canvases 48-50; start https://dg-view.nls.uk/iiif/2/2328%2F2361%2F232823615.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2363%2F232823639.5/full/1600,/0/default.jpg",
+          "Prayer for the Pest main B: vol. I fols. 24r-25v, pp. 107-110, canvases 125-128; start https://dg-view.nls.uk/iiif/2/2328%2F2453%2F232824539.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2457%2F232824575.5/full/1600,/0/default.jpg",
+          "Ressoning betuix Aige and Zowth main C: vol. I fols. 55r-56r, pp. 169-171, canvases 187-189; start https://dg-view.nls.uk/iiif/2/2328%2F2528%2F232825283.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2530%2F232825307.5/full/1600,/0/default.jpg",
+          "Ressoning betuix Deth and Man main B: vol. I fols. 56r-57r, pp. 171-173, canvases 189-191; start https://dg-view.nls.uk/iiif/2/2328%2F2530%2F232825307.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2533%2F232825331.5/full/1600,/0/default.jpg",
+          "Thre Deid Pollis main A: visually verified vol. I fols. 57v-59r, pp. 174-177, canvases 192-195; start https://dg-view.nls.uk/iiif/2/2328%2F2534%2F232825343.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2537%2F232825379.5/full/1600,/0/default.jpg",
+          "Aganis Haisty Credence main A: vol. I fols. 67v-68r, pp. 196-197, canvases 214-215; start https://dg-view.nls.uk/iiif/2/2328%2F2560%2F232825607.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2561%2F232825619.5/full/1600,/0/default.jpg",
+          "Sum Practysis of Medecyne: vol. I fols. 141v-142v, pp. 342-344, canvases 360-362; start https://dg-view.nls.uk/iiif/2/2328%2F2735%2F232827359.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2738%2F232827383.5/full/1600,/0/default.jpg",
+          "Garmont of Gud Ladeis: vol. II fol. 215r-v, pp. 489-490, canvases 123-124; start https://dg-view.nls.uk/iiif/2/2328%2F2960%2F232829603.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F2961%2F232829615.5/full/1600,/0/default.jpg",
+          "Bludy Serk: vol. II fols. 325r-326v, pp. 699-702, canvases 333-336; start https://dg-view.nls.uk/iiif/2/2328%2F3212%2F232832123.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F3215%2F232832159.5/full/1600,/0/default.jpg",
+          "Robene and Makyne: vol. II fols. 365r-366v, pp. 779-782, canvases 413-416; start https://dg-view.nls.uk/iiif/2/2328%2F3308%2F232833083.5/full/1600,/0/default.jpg ; end https://dg-view.nls.uk/iiif/2/2328%2F3311%2F232833119.5/full/1600,/0/default.jpg"
+        ]},
+        "notes": "Selected pages can share adjacent works. The Smith order differs from codex order."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:celm-henryson", "evidence:bannatyne-direct-inspection"]}
+    },
+    {
+      "id": "relation:smith-collates-bannatyne-alternatives",
+      "type": "collated_against",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "witness:nls:Adv-MS-1-1-6",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Parallel texts and apparatus for poems with multiple Bannatyne versions", "locators": ["Prais of Aige versions C-D pp. 108-111", "Ressoning betuix Aige and Zowth version B pp. 115-117", "Abbey Walk version B pp. 128-129", "Ressoning betuix Deth and Man version A pp. 134-136", "Prayer for the Pest version A pp. 162-165"]},
+        "object": {"kind": "selected_passages", "description": "Unselected Bannatyne draft or main variants"},
+        "notes": "These collateral versions inform Smith's edition but are omitted as separate texts from HenMino."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:smith-transcribes-gray",
+      "type": "transcribes",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "witness:nls:Adv-MS-34-7-3",
+      "scope": {
+        "subject": {"kind": "part", "description": "The Annunciation", "locators": ["pp. 146-148"]},
+        "object": {"kind": "part", "description": "Sole Gray-manuscript copy", "locators": ["current fols. 71r-72v; historical fols. 70r-71v; canvases 175-178", "start https://dg-view.nls.uk/iiif/2/2125%2F1130%2F212511308.5/full/1600,/0/default.jpg", "end https://dg-view.nls.uk/iiif/2/2125%2F1134%2F212511347.5/full/1600,/0/default.jpg"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:celm-henryson", "evidence:gray-direct-inspection"]}
+    },
+    {
+      "id": "relation:smith-transcribes-chepman",
+      "type": "transcribes",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "edition:chepman-myllar:prais-aige-1508",
+      "scope": {
+        "subject": {"kind": "part", "description": "The Prais of Aige, version B", "locators": ["pp. 107-108"]},
+        "object": {"kind": "part", "description": "Anonymous thirty-two-line print text", "locators": ["tract 7; facsimile image 144 lower portion through image 145 upper portion", "start https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/144", "end https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/145", "official viewer https://digital.nls.uk/firstscottishbooks/page/?folio=144 through https://digital.nls.uk/firstscottishbooks/page/?folio=145"]},
+        "notes": "Image 145 continues after line 32 with the next work."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:chepman-direct-inspection"]}
+    },
+    {
+      "id": "relation:smith-collates-maitland",
+      "type": "collated_against",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "witness:magdalene:Pepys-MS-2553",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Four parallel or collateral Maitland versions", "locators": ["Ressoning betuix Aige and Zowth version D pp. 121-123", "Abbey Walk version C pp. 130-131", "Aganis Haisty Credence version B pp. 142-144", "Thre Deid Pollis version B pp. 158-160"]},
+        "object": {"kind": "selected_passages", "description": "Maitland Folio texts", "locators": ["Aige and Zowth pp. 176-178", "Abbey Walk pp. 296-297", "Aganis pp. 309-310", "Thre Deid Pollis pp. 327-329 in Smith's historical pagination/citation context"]},
+        "notes": "The Maitland passages are collateral sources in Smith, not the versions encoded in HenMino."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:smith-collates-makculloch",
+      "type": "collated_against",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "witness:eul:MS-205",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Two parallel Makculloch versions", "locators": ["Prais of Aige version A pp. 106-107", "Ressoning betuix Aige and Zowth version A pp. 114-115"]},
+        "object": {"kind": "selected_passages", "description": "Later Scots additions to MS 205", "locators": ["Prais of Aige fol. 87r", "Ressoning betuix Aige and Zowth fol. 181v"]},
+        "notes": "The 1477 date belongs to the manuscript's logical-text host layer, not to these later Scots verse copies."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-source-table", "evidence:celm-henryson", "evidence:eul-ms205"]}
+    },
+    {
+      "id": "relation:bannatyne-vol1-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:bannatyne-vol1",
+      "object": "witness:nls:Adv-MS-1-1-6",
+      "scope": {"subject": {"kind": "whole", "description": "All 424 canvases of digital volume I"}, "object": {"kind": "part", "description": "Current physical volume I, including draft and main fols. 1-?"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nls-bannatyne-catalog", "evidence:nls-bannatyne-vol1-iiif"]}
+    },
+    {
+      "id": "relation:bannatyne-vol2-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:bannatyne-vol2",
+      "object": "witness:nls:Adv-MS-1-1-6",
+      "scope": {"subject": {"kind": "whole", "description": "All 454 canvases of digital volume II"}, "object": {"kind": "part", "description": "Current physical volume II and latter portion of the main manuscript"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nls-bannatyne-catalog", "evidence:nls-bannatyne-vol2-iiif"]}
+    },
+    {
+      "id": "relation:gray-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:gray",
+      "object": "witness:nls:Adv-MS-34-7-3",
+      "scope": {"subject": {"kind": "whole", "description": "All 242 canvases"}, "object": {"kind": "whole", "description": "Complete digitized Gray manuscript object"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nls-gray-catalog", "evidence:nls-gray-iiif"]}
+    },
+    {
+      "id": "relation:chepman-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:commons:chepman-myllar",
+      "object": "edition:chepman-myllar:prais-aige-1508",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Images 144-145 within complete 220-image derivative"},
+        "object": {"kind": "part", "description": "The Prais of Aige tract, lines 1-32"},
+        "notes": "The facsimile entity covers the full published image sequence, while this relation's work scope identifies the selected tract."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:commons-chepman", "evidence:chepman-direct-inspection"]}
+    },
+    {
+      "id": "relation:celm-describes-bannatyne",
+      "type": "describes",
+      "subject": "catalog:celm:henryson-witnesses",
+      "object": "witness:nls:Adv-MS-1-1-6",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Henryson entries and introduction"}, "object": {"kind": "selected_passages", "description": "Selected and collateral shorter-poem copies"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:celm-describes-gray",
+      "type": "describes",
+      "subject": "catalog:celm:henryson-witnesses",
+      "object": "witness:nls:Adv-MS-34-7-3",
+      "scope": {"subject": {"kind": "part", "description": "Annunciation witness entry"}, "object": {"kind": "part", "description": "The Annunciation copy"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:celm-describes-maitland",
+      "type": "describes",
+      "subject": "catalog:celm:henryson-witnesses",
+      "object": "witness:magdalene:Pepys-MS-2553",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Maitland Folio entries"}, "object": {"kind": "selected_passages", "description": "Four collateral shorter-poem versions"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:celm-describes-makculloch",
+      "type": "describes",
+      "subject": "catalog:celm:henryson-witnesses",
+      "object": "witness:eul:MS-205",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Makculloch entries"}, "object": {"kind": "selected_passages", "description": "Prais of Aige and Aige and Zowth copies"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celm-henryson"]}
+    },
+    {
+      "id": "relation:celm-describes-riddell",
+      "type": "describes",
+      "subject": "catalog:celm:henryson-witnesses",
+      "object": "witness:riddell:abbey-walk-copy",
+      "scope": {"subject": {"kind": "part", "description": "Abbey Walk witness note"}, "object": {"kind": "whole", "description": "Reported untraced copy"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:celm-henryson"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:HenMino",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Pinned CME submodule path in the General Corpus checkout",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:cme-git-state"]
+    },
+    {
+      "id": "access:umich-encoding",
+      "entity": "encoding:umich-ota:U-243-A-HenMino",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M Library Digital Collections item page and table-of-contents view",
+      "url": "https://quod.lib.umich.edu/c/cme/HenMino?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/HenMino"],
+      "cost": "free",
+      "format": "HTML-rendered structured text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:umich-henmino"]
+    },
+    {
+      "id": "access:smith-vol3-download",
+      "entity": "facsimile:ia:smith-vol3-1908",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item files",
+      "url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/ThePoemsOfRobertHenrysonVol3",
+        "https://archive.org/metadata/ThePoemsOfRobertHenrysonVol3",
+        "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3_djvu.txt",
+        "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3_scandata.xml"
+      ],
+      "local_copies": [
+        {"label": "Complete Smith 1908 volume III PDF", "path": "source-cache/HenMino/smith-1908-poems-of-robert-henryson-vol3.pdf", "source_url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf", "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656", "bytes": 2750942, "media_type": "application/pdf", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Twelve HenMino selected versions", "locators": ["printed pp. 90-94, 96-100, 102-103, 107-108, 118-120, 126-127, 136-138, 140-142, 146-148, 150-153, 156-158, 165-168"]}},
+        {"label": "Internet Archive metadata for Smith volume III", "path": "source-cache/HenMino/smith-1908-internet-archive-metadata.json", "source_url": "https://archive.org/metadata/ThePoemsOfRobertHenrysonVol3", "sha256": "b26a548c6a1815fb8b3b29eca8f91a988e00b3ef5e33f22baec4b39184fadf00", "bytes": 5321, "media_type": "application/json", "downloaded_on": "2026-07-14", "coverage": "metadata_only", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive OCR for Smith volume III", "path": "source-cache/HenMino/smith-1908-vol3-ocr.txt", "source_url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3_djvu.txt", "sha256": "0fb3b331942b6443acde8cab7272a5cdbdded5bb4edae990b2700acaa8c0aa49", "bytes": 224304, "media_type": "text/plain", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive scan data for Smith volume III", "path": "source-cache/HenMino/smith-1908-vol3-scandata.xml", "source_url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3_scandata.xml", "sha256": "43a87f47ccb8f4f9e2e18a41bf732cca830df102a81359b0c2bb05672e5b2657", "bytes": 69731, "media_type": "application/xml", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, metadata JSON, scan-data XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-1908-ia-metadata"]
+    },
+    {
+      "id": "access:smith-vol1-download",
+      "entity": "facsimile:ia:smith-vol1-1914",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item files",
+      "url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/poemsofroberthen01henr",
+        "https://archive.org/metadata/poemsofroberthen01henr",
+        "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr_djvu.txt",
+        "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr_scandata.xml"
+      ],
+      "local_copies": [
+        {"label": "Complete Smith 1914 volume I PDF", "path": "source-cache/HenMino/smith-poems-of-robert-henryson-vol1-introduction-notes.pdf", "source_url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr.pdf", "sha256": "3857d1368cc2aa8b16f54f4116c5f340ecbb8c62bd52d32f4fac6478ebe34645", "bytes": 24127691, "media_type": "application/pdf", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Critical discussion of the shorter poems", "locators": ["Introduction, source discussions, and notes for the twelve selected poems"]}},
+        {"label": "Internet Archive metadata for Smith volume I", "path": "source-cache/HenMino/smith-vol1-internet-archive-metadata.json", "source_url": "https://archive.org/metadata/poemsofroberthen01henr", "sha256": "0f93ea0b25e16ab1e3cae430a2986e9043e854b804a0adf58b9c4fdfb2232e67", "bytes": 71212, "media_type": "application/json", "downloaded_on": "2026-07-14", "coverage": "metadata_only", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive OCR for Smith volume I", "path": "source-cache/HenMino/smith-vol1-introduction-notes-ocr.txt", "source_url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr_djvu.txt", "sha256": "9ebfc22e2ab21ec5a010911592335ace95e9f278e1774f5a57ea9952166b8b8e", "bytes": 948157, "media_type": "text/plain", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download"},
+        {"label": "Internet Archive scan data for Smith volume I", "path": "source-cache/HenMino/smith-vol1-introduction-notes-scandata.xml", "source_url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr_scandata.xml", "sha256": "ce54b496a9aa41c31a8524da31c80acf3daec1699069b548294de5d9b761e869", "bytes": 478879, "media_type": "application/xml", "downloaded_on": "2026-07-14", "coverage": "complete", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, metadata JSON, scan-data XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-1914-scan", "evidence:smith-1914-ia-metadata"]
+    },
+    {
+      "id": "access:bannatyne-physical",
+      "entity": "witness:nls:Adv-MS-1-1-6",
+      "provider_id": "agent:nls",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "NLS special-collections consultation subject to the catalog's access restriction and repository approval; use the digital surrogate where sufficient",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/14976",
+      "contact": "National Library of Scotland manuscripts service",
+      "cost": "unknown",
+      "format": "Two bound physical volumes",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-bannatyne-catalog"]
+    },
+    {
+      "id": "access:bannatyne-vol1-digital",
+      "entity": "facsimile:nls:bannatyne-vol1",
+      "provider_id": "agent:nls",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "NLS viewer and IIIF Presentation manifest",
+      "url": "https://digital.nls.uk/232641635",
+      "alternate_urls": ["https://view.nls.uk/manifest/2326/4163/232641635/manifest.json"],
+      "local_copies": [{
+        "label": "Complete NLS Bannatyne manuscript volume I IIIF bundle",
+        "path": "source-cache/HenMino/bannatyne-volume-1-complete-iiif-1600px.zip",
+        "source_url": "https://view.nls.uk/manifest/2326/4163/232641635/manifest.json",
+        "sha256": "fc592dd0f2a8739d66ca3014985eae43846ac2147be68ee88008a4d159ce4ac2",
+        "bytes": 189705739,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 424,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "Seven HenMino selected source passages in volume I",
+          "locators": [
+            "Abbey Walk draft A: manuscript pp. 30-32, canvases 48-50",
+            "Prayer for the Pest main B: fols. 24r-25v, pp. 107-110, canvases 125-128",
+            "Ressoning betuix Aige and Zowth main C: fols. 55r-56r, pp. 169-171, canvases 187-189",
+            "Ressoning betuix Deth and Man main B: fols. 56r-57r, pp. 171-173, canvases 189-191",
+            "Thre Deid Pollis main A: visually verified fols. 57v-59r, pp. 174-177, canvases 192-195",
+            "Aganis Haisty Credence main A: fols. 67v-68r, pp. 196-197, canvases 214-215",
+            "Sum Practysis of Medecyne: fols. 141v-142v, pp. 342-344, canvases 360-362"
+          ],
+          "start_url": "https://dg-view.nls.uk/iiif/2/2328%2F2361%2F232823615.5/full/1600,/0/default.jpg",
+          "end_url": "https://dg-view.nls.uk/iiif/2/2328%2F2738%2F232827383.5/full/1600,/0/default.jpg",
+          "notes": [
+            "The start and end URLs bound the span containing the volume-I selected passages; intervening canvases do not all belong to HenMino."
+          ]
+        },
+        "notes": ["ZIP integrity and all 424 inventory-to-manifest canvas, label, byte, SHA-256, and JPEG-boundary mappings were independently audited after download."]
+      }],
+      "cost": "free",
+      "format": "424-canvas IIIF object",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-bannatyne-vol1-iiif", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "access:bannatyne-vol2-digital",
+      "entity": "facsimile:nls:bannatyne-vol2",
+      "provider_id": "agent:nls",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "NLS viewer and IIIF Presentation manifest",
+      "url": "https://digital.nls.uk/232641636",
+      "alternate_urls": ["https://view.nls.uk/manifest/2326/4163/232641636/manifest.json"],
+      "local_copies": [{
+        "label": "Complete NLS Bannatyne manuscript volume II IIIF bundle",
+        "path": "source-cache/HenMino/bannatyne-volume-2-complete-iiif-1600px.zip",
+        "source_url": "https://view.nls.uk/manifest/2326/4163/232641636/manifest.json",
+        "sha256": "7f722b4fd646d8c7e37bdf89763d41c1c1ac4f3e21ca5c841e612f9703c995d3",
+        "bytes": 205741401,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 454,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "Three HenMino selected source passages in volume II",
+          "locators": ["Garmont: fol. 215r-v, pp. 489-490, canvases 123-124", "Bludy Serk: fols. 325r-326v, pp. 699-702, canvases 333-336", "Robene and Makyne: fols. 365r-366v, pp. 779-782, canvases 413-416"],
+          "start_url": "https://dg-view.nls.uk/iiif/2/2328%2F2960%2F232829603.5/full/1600,/0/default.jpg",
+          "end_url": "https://dg-view.nls.uk/iiif/2/2328%2F3311%2F232833119.5/full/1600,/0/default.jpg",
+          "notes": ["Start and end URLs bound the volume span containing the selected passages; intervening canvases do not all belong to HenMino."]
+        }
+      }],
+      "cost": "free",
+      "format": "454-canvas IIIF object",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-bannatyne-vol2-iiif", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "access:gray-physical",
+      "entity": "witness:nls:Adv-MS-34-7-3",
+      "provider_id": "agent:nls",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "NLS special-collections enquiry; current availability must be confirmed with the repository",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/19367",
+      "contact": "National Library of Scotland manuscripts service",
+      "cost": "unknown",
+      "format": "Physical composite manuscript",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-gray-catalog"],
+      "notes": ["The catalog still displays an exhibition-unavailability notice ending in May 2025. Because that date has passed, the notice is not treated as evidence of current unavailability."]
+    },
+    {
+      "id": "access:gray-digital",
+      "entity": "facsimile:nls:gray",
+      "provider_id": "agent:nls",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "NLS viewer and IIIF Presentation manifest; use and redistribution remain subject to the recorded rights statement",
+      "url": "https://digital.nls.uk/212467260",
+      "alternate_urls": ["https://view.nls.uk/manifest/2124/6726/212467260/manifest.json"],
+      "local_copies": [{
+        "label": "Complete NLS Gray manuscript IIIF bundle",
+        "path": "source-cache/HenMino/gray-manuscript-adv-ms-34-7-3-complete-iiif-1600px.zip",
+        "source_url": "https://view.nls.uk/manifest/2124/6726/212467260/manifest.json",
+        "sha256": "b5b291172dadba43205f76778b136151b8ed044a6ce9b0582f44c065b0a8769a",
+        "bytes": 105735372,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 242,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "The Annunciation",
+          "locators": ["current fols. 71r-72v", "historical fols. 70r-71v", "canvases 175-178"],
+          "start_url": "https://dg-view.nls.uk/iiif/2/2125%2F1130%2F212511308.5/full/1600,/0/default.jpg",
+          "end_url": "https://dg-view.nls.uk/iiif/2/2125%2F1134%2F212511347.5/full/1600,/0/default.jpg",
+          "notes": ["Canvas 175 begins the decorated poem; canvas 178 ends it and then begins the following legal entry."]
+        }
+      }],
+      "cost": "free",
+      "format": "242-canvas IIIF object",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-gray-iiif", "evidence:gray-direct-inspection"]
+    },
+    {
+      "id": "access:chepman-physical",
+      "entity": "edition:chepman-myllar:prais-aige-1508",
+      "provider_id": "agent:nls",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Contact NLS rare-books staff; consult the public First Scottish Books facsimile first",
+      "url": "https://digital.nls.uk/firstscottishbooks/items.html",
+      "contact": "National Library of Scotland rare books service",
+      "cost": "unknown",
+      "format": "Unique mounted printed leaves",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-chepman-project"]
+    },
+    {
+      "id": "access:chepman-digital",
+      "entity": "facsimile:commons:chepman-myllar",
+      "provider_id": "agent:wikimedia-commons",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct Wikimedia Commons DjVu download; NLS also supplies an official page viewer",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Chepman_and_Myllar.djvu",
+      "alternate_urls": ["https://commons.wikimedia.org/wiki/File:Chepman_and_Myllar.djvu", "https://digital.nls.uk/firstscottishbooks/page/?folio=144", "https://digital.nls.uk/firstscottishbooks/page/?folio=145"],
+      "local_copies": [{
+        "label": "Chepman and Myllar Prints complete 220-image published sequence",
+        "path": "source-cache/HenMino/chepman-myllar-prints-complete-220-images.djvu",
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Chepman_and_Myllar.djvu",
+        "sha256": "de0791b775c1ab34d86e117ac9806245861fd455ab3b4f7a3294164f86621f3b",
+        "bytes": 14649578,
+        "media_type": "image/vnd.djvu",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "work_portion": {
+          "label": "The Prais of Aige",
+          "locators": ["facsimile images 144-145", "image 144 lower portion through image 145 upper portion"],
+          "start_url": "https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/144",
+          "end_url": "https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/145",
+          "notes": ["Direct inspection identifies lines 1-18 on image 144 and lines 19-32 on image 145; image 145 then begins Devise, Prowess and eke Humility.", "Complete here means all 220 published facsimile images in this public derivative, not unrepresented exterior boards or physical flyleaves."]
+        }
+      }],
+      "cost": "free",
+      "format": "220-image DjVu and web page viewer",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:commons-chepman", "evidence:chepman-direct-inspection"]
+    },
+    {
+      "id": "access:maitland-physical",
+      "entity": "witness:magdalene:Pepys-MS-2553",
+      "provider_id": "agent:magdalene-college",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Advance research enquiry to the Pepys Library; general public visits are suspended during refurbishment until 2027",
+      "url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library",
+      "alternate_urls": ["https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/catalogues-and-research-tools"],
+      "contact": "Pepys Librarian, Magdalene College",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:magdalene-pepys-access"],
+      "notes": ["No complete public digital facsimile of Pepys MS 2553 was verified."]
+    },
+    {
+      "id": "access:makculloch-physical",
+      "entity": "witness:eul:MS-205",
+      "provider_id": "agent:eul",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Open to all in the Centre for Research Collections reading room, subject to normal booking and handling procedures",
+      "url": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177058",
+      "contact": "University of Edinburgh Centre for Research Collections",
+      "cost": "free",
+      "format": "Physical manuscript; selected catalog images only",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:eul-ms205"],
+      "notes": ["No complete public digital facsimile was verified, so no image bundle was cached."]
+    },
+    {
+      "id": "access:riddell-copy",
+      "entity": "witness:riddell:abbey-walk-copy",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "No present location is known",
+      "cost": "unknown",
+      "format": "Untraced reported copy",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:celm-henryson"]
+    },
+    {
+      "id": "access:celm-catalog",
+      "entity": "catalog:celm:henryson-witnesses",
+      "provider_id": "agent:celm",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public web catalogue and author introduction",
+      "url": "https://celm.folger.edu/authors/henrysonrobert.html",
+      "alternate_urls": ["https://celm.folger.edu/introductions/HenrysonRobert.html"],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:celm-henryson"]
+    },
+    {
+      "id": "access:mets-edition",
+      "entity": "edition:mets:complete-works-current",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "METS web reading edition and direct downloadable PDF",
+      "url": "https://metseditions.org/read/3z5VNPXU44PVtyvXSMwAzuM1Ry1X4Rq",
+      "alternate_urls": ["https://metseditions.org/read/7P9Wxlmtav4CNA3cRv1BUzgvD0lb5B", "https://metseditions.org/read/89747zXC82YNSj8Vt1R4GiYPwVN41DP", "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/1e813610-5cea-48de-b40d-1313059be430/downloadable_version/baab666259cbc48538726490d2f16b8a.pdf"],
+      "local_copies": [{
+        "label": "METS current complete edition of Robert Henryson",
+        "path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+        "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/1e813610-5cea-48de-b40d-1313059be430/downloadable_version/baab666259cbc48538726490d2f16b8a.pdf",
+        "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2",
+        "bytes": 77405238,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "work_portion": {"label": "Shorter Poems and introductions", "locators": ["General Introduction; Introduction to Shorter Poems; Shorter Poems"], "notes": ["Used as current scholarship for Older Scots language, collection scope, individual poem interpretation, source variants, and authorship cautions."]}
+      }],
+      "cost": "free",
+      "format": "Web edition and 153-page PDF",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-general", "evidence:mets-shorter-introduction", "evidence:mets-shorter-text"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-selection",
+      "entity": "artifact:general-corpus:HenMino",
+      "component": "Underlying late-fifteenth-century poem texts",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The underlying works and all identified early witnesses and prints long predate modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:smith-source-table", "evidence:nls-bannatyne-catalog", "evidence:nls-gray-catalog", "evidence:nls-chepman-project"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-ota:U-243-A-HenMino",
+      "access_id": "access:umich-encoding",
+      "component": "U-M digital item and electronic text",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-14",
+      "basis": "The current U-M item displays a public-domain/No Copyright - United States rights designation.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-henmino"],
+      "notes": ["This is a provider assertion for the digital item; it is distinct from the public-domain basis of the medieval texts."]
+    },
+    {
+      "id": "rights:smith-vol3",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "access_id": "access:smith-vol3-download",
+      "component": "1908 edition and scan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "Published in 1908 and publicly distributed as a full-view Internet Archive item.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-1908-ia-metadata"]
+    },
+    {
+      "id": "rights:smith-vol1",
+      "entity": "edition:smith:henryson-vol1-1914",
+      "access_id": "access:smith-vol1-download",
+      "component": "1914 critical volume and scan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "Published in 1914 and publicly distributed as a full-view Internet Archive item.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-1914-scan", "evidence:smith-1914-ia-metadata"]
+    },
+    {
+      "id": "rights:bannatyne-images-vol1",
+      "entity": "facsimile:nls:bannatyne-vol1",
+      "access_id": "access:bannatyne-vol1-digital",
+      "component": "NLS digital page images and IIIF object",
+      "jurisdiction": "Provider statement; worldwide web access",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The item-specific NLS IIIF manifest marks the work Public Domain and links the Creative Commons Public Domain Mark. Current NLS copyright guidance states that faithful copies retain the original's copyright status and waives any residual digitization-layer copyright or related rights through CC0.",
+      "asserted_by_id": "agent:nls",
+      "license": {"name": "Creative Commons Public Domain Mark 1.0", "uri": "https://creativecommons.org/publicdomain/mark/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-bannatyne-vol1-iiif", "evidence:nls-copyright-guidance"],
+      "notes": ["No item-specific contractual restriction is stated; this does not override non-copyright limits that might apply to a different service or supplied reproduction."]
+    },
+    {
+      "id": "rights:bannatyne-images-vol2",
+      "entity": "facsimile:nls:bannatyne-vol2",
+      "access_id": "access:bannatyne-vol2-digital",
+      "component": "NLS digital page images and IIIF object",
+      "jurisdiction": "Provider statement; worldwide web access",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The item-specific NLS IIIF manifest marks the work Public Domain and links the Creative Commons Public Domain Mark. Current NLS copyright guidance states that faithful copies retain the original's copyright status and waives any residual digitization-layer copyright or related rights through CC0.",
+      "asserted_by_id": "agent:nls",
+      "license": {"name": "Creative Commons Public Domain Mark 1.0", "uri": "https://creativecommons.org/publicdomain/mark/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-bannatyne-vol2-iiif", "evidence:nls-copyright-guidance"],
+      "notes": ["No item-specific contractual restriction is stated; this does not override non-copyright limits that might apply to a different service or supplied reproduction."]
+    },
+    {
+      "id": "rights:gray-underlying",
+      "entity": "witness:nls:Adv-MS-34-7-3",
+      "component": "Underlying manuscript text and material witness",
+      "jurisdiction": "United States and United Kingdom historical-work analysis",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The manuscript and its text date from the late fifteenth century.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-gray-catalog"]
+    },
+    {
+      "id": "rights:gray-images",
+      "entity": "facsimile:nls:gray",
+      "access_id": "access:gray-digital",
+      "component": "NLS digital page images and IIIF object",
+      "jurisdiction": "Provider statement; worldwide web access",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The exact NLS IIIF manifest assigns RightsStatements.org In Copyright - Rights-holder(s) Unlocatable or Unidentifiable (InC-RUU).",
+      "asserted_by_id": "agent:nls",
+      "rights_statement_uri": "https://rightsstatements.org/page/InC-RUU/1.0/",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-gray-iiif"],
+      "notes": ["Public viewing and a private research cache do not establish an open license for redistribution or publication."]
+    },
+    {
+      "id": "rights:chepman-underlying",
+      "entity": "edition:chepman-myllar:prais-aige-1508",
+      "component": "1508 printed text and historical object",
+      "jurisdiction": "United States and United Kingdom historical-work analysis",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The print was published in 1508.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-chepman-project"]
+    },
+    {
+      "id": "rights:chepman-commons-file",
+      "entity": "facsimile:commons:chepman-myllar",
+      "access_id": "access:chepman-digital",
+      "component": "Wikimedia Commons DjVu derivative",
+      "jurisdiction": "Provider statement; worldwide web access",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The Commons file page identifies the reproduction as public domain; the underlying 1508 print is independently public domain.",
+      "asserted_by_id": "agent:wikimedia-commons",
+      "license": {"name": "Public domain", "uri": "https://commons.wikimedia.org/wiki/File:Chepman_and_Myllar.djvu"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:commons-chepman"],
+      "notes": ["This statement applies to the exact Commons-served derivative; separate NLS reproduction terms may apply to use obtained through NLS services."]
+    },
+    {
+      "id": "rights:maitland-underlying",
+      "entity": "witness:magdalene:Pepys-MS-2553",
+      "component": "Underlying sixteenth-century manuscript texts",
+      "jurisdiction": "United States and United Kingdom historical-work analysis",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The manuscript and copied texts date from the sixteenth century.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:celm-henryson", "evidence:magdalene-pepys-access"]
+    },
+    {
+      "id": "rights:makculloch-underlying",
+      "entity": "witness:eul:MS-205",
+      "component": "Underlying manuscript texts",
+      "jurisdiction": "United States and United Kingdom historical-work analysis",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The host manuscript dates to 1477 and the relevant Scots additions to the early sixteenth century.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:eul-ms205"]
+    },
+    {
+      "id": "rights:mets-current",
+      "entity": "edition:mets:complete-works-current",
+      "access_id": "access:mets-edition",
+      "component": "Modern editorial text, introductions, notes, and downloadable PDF",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The current modern edition is publicly readable and downloadable, but no open redistribution license was verified on the reviewed pages or file.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:mets-general", "evidence:mets-shorter-introduction", "evidence:mets-shorter-text"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:smith-selection",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "practice": "selection",
+      "source_feature": "Multiple manuscript and print versions of individual shorter poems",
+      "representation": "One labeled version is selected for each HenMino poem while other versions are printed separately or collated",
+      "description": "Smith's prefatory source table fixes the version represented by each HenMino text: ten Bannatyne passages, one Gray-manuscript passage, and one Chepman and Myllar print passage.",
+      "scope": "The twelve texts encoded in HenMino",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-source-table", "evidence:smith-1908-scan"]
+    },
+    {
+      "id": "practice:smith-collation",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "practice": "collation",
+      "source_feature": "Variant copies in Bannatyne, Maitland, and Makculloch manuscripts",
+      "representation": "Parallel versions, comparison, and editorial apparatus",
+      "description": "Smith and credited transcriber/collator George Stevenson use collateral versions without making every collateral copy an ancestor of the selected electronic text.",
+      "scope": "Prais of Aige, Aige and Zowth, Abbey Walk, Deth and Man, Aganis, Thre Deid Pollis, and Prayer for the Pest",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-source-table", "evidence:smith-critical-notes"]
+    },
+    {
+      "id": "practice:encoding-selection",
+      "entity": "encoding:umich-ota:U-243-A-HenMino",
+      "practice": "selection",
+      "source_feature": "Smith's full volume, including front matter, back matter, notes, collateral versions, and other shorter poems",
+      "representation": "Twelve DIV1 texts only",
+      "description": "The electronic edition omits printed front and back matter and editorial notes and does not encode all texts or all variants in the source volume.",
+      "scope": "Entire HenMino encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:smith-xml-comparison"],
+      "notes": ["The selection contains a nested Moralitas in The Bludy Serk but otherwise twelve top-level poem divisions."]
+    },
+    {
+      "id": "practice:encoding-line-structure",
+      "entity": "encoding:umich-ota:U-243-A-HenMino",
+      "practice": "selection",
+      "source_feature": "Verse lines, speaker labels, medicine subheadings, subscriptions, and one empty display line",
+      "representation": "All are represented with L elements; most verse lines have N attributes",
+      "description": "The XML has 893 L elements, but 25 are unnumbered labels, subscriptions, subheadings, or an empty display line, and The Bludy Serk's subscription is incorrectly numbered 121. The intellectual verse total is therefore 867 lines, not 893 or 868.",
+      "scope": "All twelve DIV1 units",
+      "confidence": "high",
+      "evidence_ids": ["evidence:henmino-structure"]
+    },
+    {
+      "id": "practice:encoding-pagination",
+      "entity": "encoding:umich-ota:U-243-A-HenMino",
+      "practice": "selection",
+      "source_feature": "Smith printed-page changes",
+      "representation": "PB milestones",
+      "description": "PB values follow Smith's selected-page sequence but are incomplete and anomalous: the initial Robene page 90 is absent, page 91 appears twice around lines 1-24, and Sum Practysis of Medecyne and The Thre Deid Pollis have no internal PB milestones.",
+      "scope": "Pagination across the twelve texts",
+      "confidence": "high",
+      "evidence_ids": ["evidence:henmino-structure", "evidence:smith-xml-comparison"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:henmino-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HenMino.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "HEADER; DIV1/DIV2/HEAD/LG/L/PB elements",
+      "summary": "Supplies the electronic title, blanket Henryson attribution, 1993 date, OTA identifier, Smith source statement, omission declaration, c. 1480 legacy creation assertion, twelve-text boundary, headings, and encoded text.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+    },
+    {
+      "id": "evidence:henmino-structure",
+      "type": "visual_inspection",
+      "citation": "Element, numbering, and page-milestone audit of the pinned HenMino XML.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "All DIV1/DIV2/HEAD/LG/L/PB elements and N/NODE attributes",
+      "summary": "Counts 12 DIV1, one nested DIV2 Moralitas, 13 HEAD, 106 LG, 893 L, 868 numbered L, four P, two header NOTE, and 33 PB elements. One numbered L is the Bludy Serk subscription, yielding 867 verse lines; 25 unnumbered L elements are labels, subscriptions, medicine subheads, or an empty line.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Pinned Kyvero-Press/CME submodule state and git object inspection.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob ff090e361802ad0551fd7bb1f8fc6eaba5b1e400",
+      "summary": "Fixes the repository provenance and exact XML object used for this review.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-henmino",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, HenMino, Robert Henryson's The minor poems of Robert Henryson.",
+      "url": "https://quod.lib.umich.edu/c/cme/HenMino?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/HenMino"],
+      "summary": "Confirms the current public item, U-M identifier, contents, and No Copyright - United States/public-domain access designation.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:smith-1908-scan",
+      "type": "edition_statement",
+      "citation": "G. Gregory Smith, ed., The Poems of Robert Henryson, vol. III, Text vol. II, Scottish Text Society 58 (Edinburgh and London: William Blackwood and Sons, 1908).",
+      "url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf",
+      "repository_path": "source-cache/HenMino/smith-1908-poems-of-robert-henryson-vol3.pdf",
+      "locator": "title page; preface pp. vii-x; selected texts pp. 90-168",
+      "summary": "Complete source-edition scan supporting the bibliographic record, source-version table, page ranges, texts, subscriptions, and collateral versions.",
+      "accessed_on": "2026-07-14",
+      "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656"
+    },
+    {
+      "id": "evidence:smith-1908-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for ThePoemsOfRobertHenrysonVol3.",
+      "url": "https://archive.org/metadata/ThePoemsOfRobertHenrysonVol3",
+      "repository_path": "source-cache/HenMino/smith-1908-internet-archive-metadata.json",
+      "summary": "Supplies exact public filenames, PDF checksum metadata, file inventory, and item identity for the cached volume III derivatives.",
+      "accessed_on": "2026-07-14",
+      "sha256": "b26a548c6a1815fb8b3b29eca8f91a988e00b3ef5e33f22baec4b39184fadf00"
+    },
+    {
+      "id": "evidence:smith-source-table",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of Smith volume III source and textual-ascription tables and the twelve selected texts.",
+      "url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf",
+      "repository_path": "source-cache/HenMino/smith-1908-poems-of-robert-henryson-vol3.pdf",
+      "locator": "preface pp. vii-x; printed pp. 90-168",
+      "summary": "Identifies the exact selected version, source witness, page range, line count, and printed source subscription for every HenMino text and separates unselected parallel versions.",
+      "accessed_on": "2026-07-14",
+      "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656"
+    },
+    {
+      "id": "evidence:smith-xml-comparison",
+      "type": "visual_inspection",
+      "citation": "Line, heading, subscription, and page-milestone comparison between HenMino.xml and Smith volume III.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "HenMino:1-HenMino:12 compared with Smith pp. 90-168",
+      "summary": "Confirms Smith as the immediate source and documents the twelve selected versions, omissions, PB anomalies, title typo, display-line encoding, and the genuine 91-line Medecyne text despite Smith's 90-line table entry.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+    },
+    {
+      "id": "evidence:smith-1914-scan",
+      "type": "edition_statement",
+      "citation": "G. Gregory Smith, ed., The Poems of Robert Henryson, vol. I (Edinburgh and London: William Blackwood and Sons, 1914).",
+      "url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr.pdf",
+      "repository_path": "source-cache/HenMino/smith-poems-of-robert-henryson-vol1-introduction-notes.pdf",
+      "locator": "title page; introduction; notes on shorter poems",
+      "summary": "Complete critical volume supplying Smith's historical source and authorship discussions omitted from the electronic item.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3857d1368cc2aa8b16f54f4116c5f340ecbb8c62bd52d32f4fac6478ebe34645"
+    },
+    {
+      "id": "evidence:smith-1914-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for poemsofroberthen01henr.",
+      "url": "https://archive.org/metadata/poemsofroberthen01henr",
+      "repository_path": "source-cache/HenMino/smith-vol1-internet-archive-metadata.json",
+      "summary": "Supplies exact public filenames, file inventory, and item identity for the cached volume I derivatives.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0f93ea0b25e16ab1e3cae430a2986e9043e854b804a0adf58b9c4fdfb2232e67"
+    },
+    {
+      "id": "evidence:smith-critical-notes",
+      "type": "scholarly_source",
+      "citation": "Smith, The Poems of Robert Henryson, vol. I (1914), introduction and notes on the shorter poems.",
+      "url": "https://archive.org/download/poemsofroberthen01henr/poemsofroberthen01henr.pdf",
+      "repository_path": "source-cache/HenMino/smith-poems-of-robert-henryson-vol1-introduction-notes.pdf",
+      "summary": "Discusses source uniqueness and attribution, including the Gray sole witness, Bannatyne/Maitland conflict for The Thre Deid Pollis, the later-hand Prayer ascription, and the Bannatyne source for Medecyne.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3857d1368cc2aa8b16f54f4116c5f340ecbb8c62bd52d32f4fac6478ebe34645"
+    },
+    {
+      "id": "evidence:nls-bannatyne-catalog",
+      "type": "official_catalog",
+      "citation": "National Library of Scotland, Adv.MS.1.1.6, Bannatyne manuscript.",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/14976",
+      "summary": "Confirms shelfmark, date, George Bannatyne's compilation, codex contents and structure, physical description, current two-volume arrangement, digital-surrogate availability, and restricted physical access.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nls-bannatyne-vol1-iiif",
+      "type": "digital_surrogate",
+      "citation": "NLS IIIF Presentation manifest for Bannatyne manuscript volume I, digital object 232641635.",
+      "url": "https://view.nls.uk/manifest/2326/4163/232641635/manifest.json",
+      "alternate_urls": ["https://digital.nls.uk/232641635"],
+      "repository_path": "source-cache/HenMino/bannatyne-volume-1-complete-iiif-1600px.zip",
+      "summary": "Complete 424-canvas manifest and image bundle identifying Adv.MS.1.1.6(i), exact image services, metadata, and Public Domain Mark statement.",
+      "accessed_on": "2026-07-14",
+      "sha256": "fc592dd0f2a8739d66ca3014985eae43846ac2147be68ee88008a4d159ce4ac2"
+    },
+    {
+      "id": "evidence:nls-bannatyne-vol2-iiif",
+      "type": "digital_surrogate",
+      "citation": "NLS IIIF Presentation manifest for Bannatyne manuscript volume II, digital object 232641636.",
+      "url": "https://view.nls.uk/manifest/2326/4163/232641636/manifest.json",
+      "alternate_urls": ["https://digital.nls.uk/232641636"],
+      "repository_path": "source-cache/HenMino/bannatyne-volume-2-complete-iiif-1600px.zip",
+      "summary": "Complete 454-canvas manifest and image bundle identifying Adv.MS.1.1.6(ii), exact image services, metadata, and Public Domain Mark statement.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7f722b4fd646d8c7e37bdf89763d41c1c1ac4f3e21ca5c841e612f9703c995d3"
+    },
+    {
+      "id": "evidence:nls-copyright-guidance",
+      "type": "official_webpage",
+      "citation": "National Library of Scotland, Copyright guide, Statements and licences: Digitisations.",
+      "url": "https://www.nls.uk/tools-for-research/copyright/",
+      "locator": "Statements and licences; Copyright statuses of items in our collections; Digitisations",
+      "summary": "Current guidance states that faithful digitizations have the same copyright status as the original and that NLS waives any copyright or related rights in the digitization layer through the Creative Commons Public Domain Dedication (CC0). It also distinguishes item-specific Public Domain Mark and InC-RUU statements.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bannatyne-direct-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct canvas-by-canvas inspection of the NLS Bannatyne volume I and II IIIF objects against Smith and CELM locators.",
+      "url": "https://digital.nls.uk/232641635",
+      "alternate_urls": ["https://digital.nls.uk/232641636"],
+      "locator": "volume I canvases 48-50, 125-128, 187-195, 214-215, 360-362; volume II canvases 123-124, 333-336, 413-416",
+      "summary": "Verifies all ten selected passage boundaries and direct image URLs. It also corrects The Thre Deid Pollis to fols. 57v-59r/pages 174-177/canvases 192-195 because page 178 contains the next work.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nls-gray-catalog",
+      "type": "official_catalog",
+      "citation": "National Library of Scotland, Adv.MS.34.7.3, Gray manuscript.",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/19367",
+      "summary": "Confirms shelfmark, late-fifteenth-century date, composite codex, James Gray association, physical description, current Annunciation foliation, and digital-surrogate link.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nls-gray-iiif",
+      "type": "digital_surrogate",
+      "citation": "NLS IIIF Presentation manifest for Gray manuscript Adv.MS.34.7.3, digital object 212467260.",
+      "url": "https://view.nls.uk/manifest/2124/6726/212467260/manifest.json",
+      "alternate_urls": ["https://digital.nls.uk/212467260"],
+      "repository_path": "source-cache/HenMino/gray-manuscript-adv-ms-34-7-3-complete-iiif-1600px.zip",
+      "summary": "Complete 242-canvas manifest and image bundle with exact image services and the InC-RUU rights statement.",
+      "accessed_on": "2026-07-14",
+      "sha256": "b5b291172dadba43205f76778b136151b8ed044a6ce9b0582f44c065b0a8769a"
+    },
+    {
+      "id": "evidence:gray-direct-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of NLS Gray manuscript canvases 175-178.",
+      "url": "https://digital.nls.uk/212467260",
+      "locator": "current fols. 71r-72v; historical fols. 70r-71v; canvases 175-178",
+      "summary": "Canvas 175 begins The Annunciation, canvas 178 finishes it before the next legal entry, and the sequence reconciles current NLS foliation with Smith/CELM's historical foliation.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nls-chepman-project",
+      "type": "official_webpage",
+      "citation": "National Library of Scotland, First Scottish Books: Chepman and Myllar prints.",
+      "url": "https://digital.nls.uk/firstscottishbooks/items.html",
+      "summary": "Identifies the unique 1508 Edinburgh print collection, tract sequence, printers, NLS holding context, and official image viewer.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:commons-chepman",
+      "type": "digital_surrogate",
+      "citation": "Wikimedia Commons, File:Chepman and Myllar.djvu.",
+      "url": "https://commons.wikimedia.org/wiki/File:Chepman_and_Myllar.djvu",
+      "repository_path": "source-cache/HenMino/chepman-myllar-prints-complete-220-images.djvu",
+      "summary": "Supplies the exact complete 220-image public DjVu derivative and its public-domain file-page assertion.",
+      "accessed_on": "2026-07-14",
+      "sha256": "de0791b775c1ab34d86e117ac9806245861fd455ab3b4f7a3294164f86621f3b"
+    },
+    {
+      "id": "evidence:chepman-direct-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of Chepman and Myllar facsimile images 144-145.",
+      "url": "https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/144",
+      "alternate_urls": ["https://en.wikisource.org/wiki/Page:Chepman_and_Myllar.djvu/145", "https://digital.nls.uk/firstscottishbooks/page/?folio=144", "https://digital.nls.uk/firstscottishbooks/page/?folio=145"],
+      "summary": "Locates The Prais of Aige lines 1-18 on image 144 and lines 19-32 on image 145; the latter then begins Devise, Prowess and eke Humility.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:celm-henryson",
+      "type": "scholarly_source",
+      "citation": "Catalogue of English Literary Manuscripts 1450-1700, Robert Henryson author entries and introduction.",
+      "url": "https://celm.folger.edu/authors/henrysonrobert.html",
+      "alternate_urls": ["https://celm.folger.edu/introductions/HenrysonRobert.html"],
+      "summary": "Provides the current scholarly witness census and loci for Bannatyne, Gray, Maitland, Makculloch, the 1508 print, and Riddell's untraced Abbey Walk copy. Direct images supersede one internally inconsistent Pollis endpoint.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:magdalene-pepys-access",
+      "type": "official_webpage",
+      "citation": "Magdalene College, Pepys Library visitor information and catalogues and research tools.",
+      "url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library",
+      "alternate_urls": ["https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/catalogues-and-research-tools"],
+      "summary": "Confirms advance research contact, the temporary closure to general visitors through 2027, and the absence of a complete online Pepys manuscript catalog or facsimile.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:eul-ms205",
+      "type": "official_catalog",
+      "citation": "University of Edinburgh Archives Online, Makculloch manuscript, MS 205.",
+      "url": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177058",
+      "summary": "Confirms shelfmark, historical designations, 1477 Leuven host text, later Scots additions, physical extent and support, reading-room access, and limited rather than complete online images.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-general",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current General Introduction to the Complete Works of Robert Henryson.",
+      "url": "https://metseditions.org/read/3z5VNPXU44PVtyvXSMwAzuM1Ry1X4Rq",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supports the Older Scots literary context, biographical uncertainty, witness overview, and warning against treating every shorter poem as unquestionably Henryson's.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    },
+    {
+      "id": "evidence:mets-shorter-introduction",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current Introduction to the Shorter Poems.",
+      "url": "https://metseditions.org/read/7P9Wxlmtav4CNA3cRv1BUzgvD0lb5B",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supports poem-level source, genre, and attribution cautions, including the later-hand Prayer ascription and conflicting Pollis attributions.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    },
+    {
+      "id": "evidence:mets-shorter-text",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current Shorter Poems texts and notes.",
+      "url": "https://metseditions.org/read/89747zXC82YNSj8Vt1R4GiYPwVN41DP",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supplies current readings and interpretive notes used to check the twelve poem summaries while remaining distinct from the 1993 encoding's source edition.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ota-production-history",
+      "question": "Can a surviving OTA deposit record identify the exact production workflow and granularity of U-243-A beyond the 1993 U-M header?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Ask the Oxford Text Archive or U-M for legacy accession documentation if production-level provenance becomes necessary."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino"]
+    },
+    {
+      "id": "question:pollis-authorship",
+      "question": "Who wrote The Thre Deid Pollis?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Preserve both witness ascriptions and consult future attribution scholarship; do not normalize the conflict into a single certain author."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-source-table", "evidence:smith-critical-notes", "evidence:mets-shorter-introduction"],
+      "notes": ["The selected Bannatyne version ends quod patrik Iohnistoun; the Maitland version ends quod Mr Robert Henrysoun."]
+    },
+    {
+      "id": "question:other-attributions",
+      "question": "How confidently should The Prais of Aige, The Abbey Walk, and Ane Prayer for the Pest be assigned to Henryson?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Keep attribution scoped to each poem and transmission layer; review new attribution studies rather than upgrading legacy collection headings."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-source-table", "evidence:smith-critical-notes", "evidence:mets-shorter-introduction"]
+    },
+    {
+      "id": "question:composition-dates",
+      "question": "What are the individual composition dates and places of the twelve poems?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Retain broad late-fifteenth-century Scottish context unless poem-specific evidence emerges; do not treat the XML's collection-level c. 1480 as exact."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:mets-general"]
+    },
+    {
+      "id": "question:medecyne-line-count",
+      "question": "Why does Smith's source table report 90 lines for Sum Practysis of Medecyne when Smith's printed text and the XML run through line 91?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Check Bannatyne directly against a diplomatic transcription and any errata; retain 91 as the inspected text count in the meantime."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-source-table", "evidence:smith-xml-comparison", "evidence:bannatyne-direct-inspection"]
+    },
+    {
+      "id": "question:gray-reproduction",
+      "question": "What reuse permission, if any, will NLS grant for the Gray manuscript images marked InC-RUU?",
+      "status": "pending_external_response",
+      "impact": "medium",
+      "next_steps": ["Seek written permission from NLS before publishing or redistributing the cached Gray images; retain the cache for private research validation only."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-gray-iiif", "evidence:nls-gray-catalog"]
+    },
+    {
+      "id": "question:chepman-shelfmark",
+      "question": "What is the current precise NLS shelfmark for the mounted Chepman and Myllar print collection formerly designated Advocates Library 19.1.16?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Ask NLS rare-books staff or consult the current rare-books catalog before citing a present shelfmark."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-chepman-project"]
+    },
+    {
+      "id": "question:riddell-copy",
+      "question": "Does the Abbey Walk copy reported by David Riddell in 1636 survive under an unidentified shelfmark?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Follow future CELM revisions and search Riddell-related catalog records; do not infer readings or a stemmatic position without the copy."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:celm-henryson"]
+    }
+  ]
+}
