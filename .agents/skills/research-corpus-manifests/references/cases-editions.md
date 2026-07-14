@@ -145,6 +145,21 @@ limited to the editor's preface and apparatus. Do not let better modern
 coverage retroactively turn collateral witnesses into sources of the encoded
 readings.
 
+## Repertory occurrences versus physical witnesses: CME00142
+
+Do not report a repertory's active occurrence-row count as a physical-witness
+count. One codex can contain two separately indexed copies of the same work:
+retain one physical witness entity, add one scoped `describes` relation for
+each occurrence and locator, and state both totals explicitly. Conversely,
+exclude ghost, commented-out, deleted, or otherwise inactive rows from an
+active-occurrence total; preserve them as attributed catalog history or an
+open reconciliation question when they may explain older scholarship.
+
+Keep a modern repertory census collateral to the historical edition unless
+the editor demonstrably used those witnesses. If an occurrence locator is
+malformed, retain the exact source expression, flag the defect, and do not
+silently repair it without manuscript-specific evidence.
+
 ## Roles in a retained-text edition
 
 When an immediate source combines an earlier editor's retained text with a new
