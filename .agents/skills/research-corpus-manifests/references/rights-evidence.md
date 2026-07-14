@@ -267,6 +267,14 @@ the exact image record proposed for reuse or leave collection-wide image terms
 unknown. Inspect IIIF manifests directly: their rights and attribution fields
 can be more precise than the viewer page, including geographic limits.
 
+When a provider's current guidance explicitly warns that older blanket
+Creative Commons labels may be obsolete, prefer the exact object's current
+rights statement. If that guidance also says faithful digitizations retain the
+original's status and waives residual digitization-layer rights, record those
+two propositions separately instead of carrying forward the obsolete blanket
+license. Date both pieces of evidence and retain an open conflict only when the
+item statement and current policy genuinely disagree.
+
 Describe a facsimile's color and visual fidelity from representative page
 inspection, including ordinary text and any painted leaves. Do not infer that
 an object is monochrome from a “microfilm” provenance label, or that it is
