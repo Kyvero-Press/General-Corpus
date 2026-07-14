@@ -154,6 +154,12 @@ A witness discovered or identified after an edition appeared belongs in the
 broader tradition, not that edition's source chain, unless historical evidence
 shows the editor actually knew and used it.
 
+When an encoding takes its continuous readings from one witness or edition but
+imports page milestones from another, keep those functions separate. Use
+`encoded_from` for the textual base and a narrowly scoped `consulted` relation
+for the pagination source; matching page breaks do not make that second source
+the blanket source of the encoded wording.
+
 ## Modern census expansion: CME00007
 
 A current witness census can add several securely identified manuscripts to
