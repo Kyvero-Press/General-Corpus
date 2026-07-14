@@ -25,6 +25,13 @@ subtree before declaring a new content version. Keep a newer item-level rights
 statement attached to its own distribution even when the encoded body is
 identical.
 
+An archive item's inherited `sourceDesc` can conflict with its deposited
+text's title page, edition statement, creator/depositor record, or explicit
+`isVersionOf` link. Inspect both the metadata wrapper and the actual payload.
+Preserve the archive-confirmed version relation, but qualify any source-edition
+relation whose only contradictory support is the inherited `sourceDesc`; expose
+the conflict as an open question instead of silently choosing one statement.
+
 ## Typography is editorial data: CME00099 and Ayenbite
 
 Italics can mark expanded abbreviations or supplied material rather than

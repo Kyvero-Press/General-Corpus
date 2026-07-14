@@ -67,6 +67,10 @@ never remove a research worktree while it holds the only copy of a source.
 When validating the pair before cherry-pick, true-hard-link the canonical main
 cache back into the worktree's matching path so its repository-relative
 references resolve there too; remove that disposable mirror with the worktree.
+If a downloaded contextual source should appear as downloaded in the viewer,
+do not rely on an evidence record's `repository_path` alone. Give the source an
+entity, an access record, and a checksummed `local_copies` entry; keep the
+evidence record as the claim-level citation.
 
 ## Skill update test
 
