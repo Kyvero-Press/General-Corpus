@@ -120,6 +120,12 @@ at the appropriate link. Do not collapse the chain into a direct edition-to-
 codex edge, and disclose any schema type used provisionally for the
 intermediary.
 
+When one source statement credits the same collaborator with copies of several
+sigla, one aggregate working-copy entity can keep the graph manageable only if
+separate scoped `transcribes` relations preserve every copy-to-witness mapping.
+Connect the edition to that intermediary and remove parallel direct edition-
+to-codex edges; keeping both paths would falsely imply independent autopsy.
+
 A passive statement that a collaborator's transcript “was compared with the
 original” supports edition-level collation, but not the identity of the
 collator. It also does not prove that the transcript's source photographs
