@@ -98,6 +98,23 @@ the encoding's layout transformation, connect the Latin stream to Grässe with
 a part-scoped comparison or excerpt relation, and keep both the Latin source
 work and the translator's still-unidentified physical exemplar distinct.
 
+## Distinct work quoted inside apparatus: CME00148
+
+A modern footnote can contain a coherent passage from a separately identified
+medieval work rather than a few incidental comparison lines. When the passage
+has its own repertory identity, exact witness locus, and reproducible extent,
+model it as a nested content part under the apparatus and bind its work,
+witness, edition, and facsimile evidence only to that part. If the containing
+note is already counted, give the nested quotation `item_count: 0` while still
+recording its line or paragraph metrics; explain whole-item totals separately
+from the cataloged target work's intrinsic extent.
+
+Do not turn the quoted work into a section, language facet, or form component
+of the cataloged medieval target merely because the XML nests it there. Scope
+any detailed quotation-language statement to the nested part and apply the
+cataloging-subject rules in `metadata-modeling.md` before exposing that language
+through discovery facets.
+
 ## Component records: Ayenbite
 
 The exact BL child record ends Ayenbite at folio 94r; later folios contain other
