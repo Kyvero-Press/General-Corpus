@@ -78,6 +78,14 @@ verification disabled; then validate the delivered file's signature, media
 type, size, and fixity and record the condition. Never use this exception to
 bypass authentication, authorization, or an access restriction.
 
+An exact provider PDF can be usable while retaining recoverable structural
+defects. If independent tools confirm the expected page tree and successfully
+extract every page but an integrity checker reports recoverable object-offset
+warnings or a simpler file-identification tool miscounts pages, preserve the
+download byte-for-byte. Record the tools, results, and no-repair decision in
+the local-copy notes; do not silently rewrite the file or call it incomplete
+from one parser's result alone.
+
 Keep public availability and local cache state separate. A large deliverable
 is still cacheable when the task calls for the complete object, available disk
 is sufficient, and provider terms permit the intended private research copy;
