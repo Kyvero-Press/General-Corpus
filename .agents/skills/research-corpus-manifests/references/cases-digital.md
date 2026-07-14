@@ -19,6 +19,12 @@ delimiter rule, but do not require every identifier family to match and do not
 invent a general zero-stripping heuristic. Prefer `VID`, then `IDNO`, then
 `IDG/@ID`, when constructing a U-M resolver URL from the source itself.
 
+DIMEV's live `recID` is the DIMEV record number encoded in identifiers such as
+`record-2973`; it is not necessarily the same as an IMEV or NIMEV number cited
+inside that record. Verify all three fields in the versioned data before
+building a URL. A substituted IMEV/NIMEV number can resolve successfully to a
+different, unrelated DIMEV record and therefore evade a simple HTTP check.
+
 When a pinned and current XML file differ in wrappers, headers, comments,
 stylesheets, or rights metadata, canonicalize and compare the actual textual
 subtree before declaring a new content version. Keep a newer item-level rights
