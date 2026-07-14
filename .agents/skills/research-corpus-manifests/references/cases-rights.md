@@ -10,6 +10,15 @@ facsimile have different access and reuse layers. Record request routes even
 when redistribution permission remains unresolved; never propagate one
 layer's status to another.
 
+## Restricted originals and substitute microfilm: EEWills
+
+When an exact archive record marks the original unavailable but directs users
+to microfilm, create separate access records for the restricted original and
+the substitute surrogate; do not describe the original as normally orderable
+onsite. If item-detail URLs are session-bound, cite the stable catalog entry
+point together with the exact reference and any persistent internal record
+number, and tell researchers how to reproduce the search.
+
 ## Conflicting provider and edition signals: Troilus
 
 U-M labels its item No Copyright–United States while the keyed source is a

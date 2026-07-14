@@ -270,6 +270,21 @@ a source for that edition. When canvas labels are generic, claim only a
 complete provider-published inventory and leave physical-side completeness
 open.
 
+## Numbered testamentary selections and probate copies: EEWills
+
+An edition's title count and numbered-unit count need not equal either one
+another or the number of historical instruments: an appended will can exceed
+the advertised total, while one numbered unit can join a will, codicil, or
+related act. Preserve title wording, editorial units, register entries,
+testamentary acts, and surviving physical documents as separate counts until
+complete source images support an item-level crosswalk.
+
+An editor's “original registers” can identify the volumes directly consulted
+without making their entries testators' original documents. Verify the archive
+record type and distinguish registered probate copies from signed, sealed, or
+otherwise original testamentary instruments; do not infer autograph status or
+one-to-one physical-document identity from direct editorial collation.
+
 ## Current digital versus legacy foliation: CME00026
 
 A modern complete surrogate can label a work at current fols. 80r–93v while a
