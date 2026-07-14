@@ -287,6 +287,11 @@ holding institution's online catalog.
 
 Test URLs during substantive review. Replace dead legacy paths with current
 official routes while retaining useful persistent identifiers as alternates.
+When a dead legacy viewer is evidence that a complete surrogate once existed,
+keep it as a separately dated `unavailable` access route and add current
+catalog, request, subscription, or reproduction routes independently. An
+archived viewer shell or license record does not make its missing image payload
+currently public or cacheable.
 
 ## Handle incomplete evidence
 

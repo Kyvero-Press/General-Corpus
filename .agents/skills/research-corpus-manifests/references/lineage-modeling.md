@@ -18,6 +18,11 @@ edition full bibliographic facts. Give a witness its current shelfmark,
 repository, item/component catalog record, date, and supported locators.
 Preserve historical shelfmarks separately.
 
+When a catalog or older editor calls a witness “unique,” check current
+repertories for complete and fragmentary holdings. Record “unique complete
+copy” separately from surviving fragments; do not turn it into “only surviving
+material” or collapse fragments held elsewhere into the complete carrier.
+
 Set the lineage manifest's `primary_subject` to that repository-artifact
 entity, which must carry `repository_file.path`; the discovery index depends
 on this contract. An abstract work may remain a related entity and metadata
