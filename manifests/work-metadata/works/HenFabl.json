@@ -1,0 +1,670 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:HenFabl",
+  "work_id": "HenFabl",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "cataloging_subject": {
+    "id": "work:HenFabl",
+    "unit_type": "single_work",
+    "label": "The Morall Fabillis of Esope the Phrygian",
+    "scope_note": "The late-medieval Middle Scots verse work conventionally attributed to Robert Henryson and represented as a 13-fable sequence with two prologues and a Moralitas after every narrative. Single_work treats that sequence as the present cataloging unit; it does not decide the scholarly debate over whether all 13 fables were conceived as one authorially ordered collection. The abstract work remains distinct from its early prints and manuscripts, Smith's five-stream 1906 edition, the OTA and U-M encodings, and the repository XML."
+  },
+  "catalog_summary": {
+    "title": "The Morall Fabillis of Esope the Phrygian",
+    "author": "Robert Henryson",
+    "editor": "G. Gregory Smith (1906 source edition); George Stevenson transcribed and collated its five source streams",
+    "date": "Late fifteenth century, perhaps the 1470s-1480s",
+    "region": "Scotland; Henryson is associated with Dunfermline, but the exact place of composition is unproved",
+    "genres": ["Beast fable", "Moral-didactic poetry", "Allegorical satire"],
+    "form": "verse",
+    "language_codes": ["sco", "lat"],
+    "tags": ["middle-scots", "beast-fable", "moral-poetry", "allegory", "satire", "rhyme-royal", "animals", "ethics", "social-criticism", "justice"]
+  },
+  "identifiers": [
+    {"scheme": "General Corpus work ID", "value": "HenFabl"},
+    {"scheme": "Oxford Text Archive", "value": "0243", "uri": "http://purl.ox.ac.uk/ota/0243"},
+    {"scheme": "U-M DLPS ID", "value": "HenFabl", "uri": "https://quod.lib.umich.edu/c/cme/HenFabl"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Morall Fabillis of Esope the Phrygian",
+      "language": "sco",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:smith", "evidence:mets"]},
+      "notes": ["The spelling follows the established early-print and encoded title tradition; it is not claimed as an authorial autograph title."]
+    },
+    {
+      "id": "title:alternate-morall-fabillis",
+      "type": "alternate",
+      "value": "The Morall Fabillis",
+      "language": "sco",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:arlima"]}
+    },
+    {
+      "id": "title:alternate-fables",
+      "type": "alternate",
+      "value": "The Fables of Robert Henryson",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:smith", "evidence:mets"]}
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Morall Fabillis",
+      "language": "sco",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:robert-henryson", "type": "person", "name": "Robert Henryson", "alternate_names": ["Robert Henrisone"], "notes": ["A poet and notary associated with Dunfermline; biographical evidence is sparse, and he was dead by about 1500."]},
+    {"id": "agent:g-gregory-smith", "type": "person", "name": "G. Gregory Smith", "alternate_names": ["George Gregory Smith"]},
+    {"id": "agent:george-stevenson", "type": "person", "name": "George Stevenson"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:author",
+      "agent_id": "agent:robert-henryson",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:smith", "evidence:early-witnesses"]},
+      "notes": ["The attribution is sustained across early witnesses and prints and accepted by current scholarship. Aesop is a named traditional authority and source association, not a coauthor of the Middle Scots work."]
+    },
+    {
+      "id": "responsibility:smith-editor",
+      "agent_id": "agent:g-gregory-smith",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "1906 printed source representation, not medieval authorship"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith", "evidence:lineage"]},
+      "notes": ["Smith edited the five early source streams printed in the edition from which the electronic lineage descends."]
+    },
+    {
+      "id": "responsibility:stevenson-collator",
+      "agent_id": "agent:george-stevenson",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "source transcription and collation for Smith's 1906 edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith", "evidence:lineage"]},
+      "notes": ["Smith states that Stevenson transcribed and collated all five texts."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Late fifteenth century, perhaps the 1470s-1480s",
+      "normalized": {"not_before": 1470, "not_after": 1489},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets", "evidence:arlima", "evidence:ota"]},
+      "notes": ["The range is deliberately conservative. The repository XML's unsupported legacy date 1450 is not adopted; OTA's 1480-1489 record is useful but not by itself conclusive."]
+    },
+    {
+      "id": "date:first-attestation",
+      "type": "first_known_attestation",
+      "display": "Fragments survive in witnesses written or augmented in the early sixteenth century",
+      "normalized": {"not_before": 1500, "not_after": 1525},
+      "scope": {"kind": "selected_passages", "part_ids": ["part:general-prologue", "part:fable-01", "part:moral-01", "part:fable-02", "part:moral-02"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets", "evidence:early-witnesses"]},
+      "notes": ["Makculloch preserves the prologue and Cock and Jasp material; Asloan preserves The Two Mice. This is a witness date, not a composition date."]
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "The earliest surviving edition has a colophon dated 16 December 1569 and a title page dated 1570",
+      "normalized": {"not_before": 1569, "not_after": 1570},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:charteris-lekpreuik:1569-1570",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith", "evidence:mets", "evidence:lineage"]},
+      "notes": ["Smith speculated about a lost earlier Chepman and Myllar printing but stated that evidence was entirely wanting; it is not promoted to an event here."]
+    }
+  ],
+  "places": [
+    {"id": "place:scotland", "label": "Scotland", "kind": "country"},
+    {"id": "place:dunfermline", "label": "Dunfermline", "kind": "settlement", "broader_place_ids": ["place:fife", "place:scotland"]},
+    {"id": "place:fife", "label": "Fife", "kind": "region", "broader_place_ids": ["place:scotland"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place:cultural-origin",
+      "place_id": "place:scotland",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:glasgow", "evidence:language"]}
+    },
+    {
+      "id": "place:henryson-associated",
+      "place_id": "place:dunfermline",
+      "type": "associated_place",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:smith"]},
+      "notes": ["Henryson is documented as a notary and teacher at Dunfermline in 1477-1478. This association is not automatically a place-of-composition claim."]
+    },
+    {
+      "id": "place:possible-composition",
+      "place_id": "place:fife",
+      "type": "place_of_composition",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:ota", "evidence:mets"]},
+      "notes": ["OTA's legacy code gives ?FIFE, and Henryson's Dunfermline association makes Fife plausible, but no direct composition evidence was found."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-scots",
+      "code": "sco",
+      "label": "Older Scots",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets", "evidence:glasgow", "evidence:language"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "quoted",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "short maxims, names, and embedded learned phrases scattered through the work"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "The work is stanzaic verse, predominantly seven-line rhyme royal (ababbcc); the encoded base also contains seven eight-line stanzas.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:oxford-form", "evidence:bl-harley"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:beast-fable",
+      "term": "beast-fable",
+      "label": "Beast fable",
+      "scheme": "General Corpus local genre vocabulary",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:arlima", "evidence:glasgow"]}
+    },
+    {
+      "id": "genre:moral-didactic-poetry",
+      "term": "moral-didactic-poetry",
+      "label": "Moral-didactic poetry",
+      "scheme": "General Corpus local genre vocabulary",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "genre:allegorical-satire",
+      "term": "allegorical-satire",
+      "label": "Allegorical satire",
+      "scheme": "General Corpus local genre vocabulary",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets", "evidence:xml"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:animals",
+      "term": "animals",
+      "label": "Animals as human social and moral figures",
+      "scheme": "General Corpus local subject vocabulary",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "subject:ethics",
+      "term": "ethics",
+      "label": "Ethical instruction and prudence",
+      "scheme": "General Corpus local subject vocabulary",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "subject:social-criticism",
+      "term": "social-criticism",
+      "label": "Social estates, law, exploitation, and institutional corruption",
+      "scheme": "General Corpus local subject vocabulary",
+      "primary": false,
+      "scope": {"kind": "selected_passages", "part_ids": ["part:fable-04", "part:moral-04", "part:fable-05", "part:moral-05", "part:fable-06", "part:moral-06", "part:fable-12", "part:moral-12"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "subject:justice",
+      "term": "justice",
+      "label": "Justice and righteous judgment",
+      "scheme": "General Corpus local subject vocabulary",
+      "primary": false,
+      "scope": {"kind": "selected_passages", "part_ids": ["part:fable-05", "part:moral-05", "part:fable-06", "part:moral-06", "part:fable-07", "part:moral-07", "part:fable-12", "part:moral-12"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    }
+  ],
+  "tags": ["middle-scots", "beast-fable", "moral-poetry", "allegory", "satire", "rhyme-royal", "animals", "ethics", "social-criticism", "justice"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A sequence of thirteen Middle Scots beast fables in which animal narratives open into explicit moral interpretation. Henryson combines Aesopic storytelling with satire, theology, legal and social criticism, and reflection on prudence, power, poverty, justice, and human appetite. A general prologue explains the value of mingling serious doctrine with merry fiction, and a second prologue before The Lion and the Mouse stages an encounter with Aesop.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:mets", "evidence:glasgow"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "The represented order is: general prologue; Cock and Jasp; Two Mice; Cock and Fox; Fox's Confession to Friar Wolf; Trial or Parliament of Beasts; Sheep and Dog; second prologue and Lion and Mouse; Preaching of the Swallow; Fox, Wolf, and Cadger; Fox, Wolf, and Shadow of the Moon; Wolf and Wether; Wolf and Lamb; and Paddock and Mouse. Every fable narrative is followed by a Moralitas.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:mets"]
+    },
+    {
+      "id": "summary:representation",
+      "type": "cataloging_note",
+      "value": "The repository representation is one continuous 2,975-line text whose 109 page markers follow Smith's Harleian odd pages 3-219, but its title is Bassandyne 1571 and at least one unnumbered stanza comes from a stream absent in Harleian. Counts describe the XML and its inherited lineation, not a new critical edition.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:lineage", "evidence:smith"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 28,
+    "sections": 28,
+    "prose_only_items": 0,
+    "verse_only_items": 28,
+    "mixed_items": 0,
+    "verse_groups": 424,
+    "verse_lines": 2975,
+    "description": "The XML represents 13 fable narratives, 13 moralities, and 2 prologues: 28 intellectual sections containing 424 stanza groups and 2,975 line elements. Of these, 2,968 lines carry inherited numbers; a seven-line stanza in the Cock and Fox Moralitas is unnumbered. Two numbered lines sit directly outside LG. The intellectual allocation is 21 prologue stanzas/147 lines, 324 narrative stanzas/2,268 lines, and 79 morality stanzas/560 lines.",
+    "evidence_ids": ["evidence:xml"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:general-prologue", "parent_id": null, "sequence": 1, "type": "prologue", "label": "General Prologue",
+      "summary": "A defense of morally useful fiction and a declaration of translation from Aesop into the mother tongue.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 63},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:1; lines 1-63"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-01", "parent_id": null, "sequence": 2, "type": "work", "label": "The Cock and the Jasp",
+      "summary": "A cock finds a jewel but values food above a treasure he cannot use.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 63},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:2 narrative; lines 64-126"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-01", "parent_id": "part:fable-01", "sequence": 3, "type": "commentary", "label": "Moralitas: The Cock and the Jasp",
+      "summary": "The jewel signifies prudence and learning, while the cock figures contempt for knowledge.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 5, "verse_lines": 35},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:2.1; lines 127-161"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-02", "parent_id": null, "sequence": 4, "type": "work", "label": "The Uponland Mouse and the Burgess Mouse (The Two Mice)",
+      "summary": "Country and town mice test one another's ways of life and contrast humble security with anxious abundance.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 29, "verse_lines": 203},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:3 narrative; lines 162-364"},
+        {"lineage_entity_id": "witness:nls:MS-16500", "scheme": "manuscript folios / IIIF canvases", "value": "fols. 236r-240r; canvases 485-493 (narrative and Moralitas together)"}
+      ], "evidence_ids": ["evidence:xml", "evidence:early-witnesses", "evidence:lineage"]
+    },
+    {
+      "id": "part:moral-02", "parent_id": "part:fable-02", "sequence": 5, "type": "commentary", "label": "Moralitas: The Two Mice",
+      "summary": "The safer contentment of a simple life is preferred to wealth exposed to continual fear.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 32},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:3.1; lines 365-396"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-03", "parent_id": null, "sequence": 6, "type": "work", "label": "Schir Chantecleir and the Fox",
+      "summary": "A fox captures a cock through flattery and loses him when tricked into speaking.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 27, "verse_lines": 189},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:4 narrative; lines 397-585"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-03", "parent_id": "part:fable-03", "sequence": 7, "type": "commentary", "label": "Moralitas: Schir Chantecleir and the Fox",
+      "summary": "The tale warns against flattery, pride, and heedless speech.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 28},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:4.1; numbered lines 586-606 plus one unnumbered seven-line stanza"}], "evidence_ids": ["evidence:xml"],
+      "notes": ["The unnumbered stanza beginning 'Fy puft vp pryde' is present in the Charteris column of Smith but absent from the facing Harleian column, exposing cross-stream supplementation in the electronic text."]
+    },
+    {
+      "id": "part:fable-04", "parent_id": null, "sequence": 8, "type": "work", "label": "The Fox's Confession to Friar Wolf Waitskaith",
+      "summary": "The fox confesses to a corrupt wolf friar whose counsel fails to reform appetite or predation.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 23, "verse_lines": 161},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:5 narrative; lines 607-767"}], "evidence_ids": ["evidence:xml"],
+      "notes": ["Line 615 is a direct DIV1 child outside an LG, an encoding boundary anomaly rather than evidence of prose."]
+    },
+    {
+      "id": "part:moral-04", "parent_id": "part:fable-04", "sequence": 9, "type": "commentary", "label": "Moralitas: The Fox's Confession",
+      "summary": "The morality attacks hypocritical confession and corrupt spiritual guidance.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 3, "verse_lines": 21},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:5.1; lines 768-788"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-05", "parent_id": null, "sequence": 10, "type": "work", "label": "The Trial of the Fox / Parliament of Four-footed Beasts",
+      "summary": "The fox's heir is summoned before the lion's parliament in an extended satire of law, court, and predatory power.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 43, "verse_lines": 301},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:6 narrative; lines 789-1089"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-05", "parent_id": "part:fable-05", "sequence": 11, "type": "commentary", "label": "Moralitas: The Trial of the Fox",
+      "summary": "The animal court is applied to human estates, false counsel, and institutional injustice.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 7, "verse_lines": 49},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:6.1; lines 1090-1138"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-06", "parent_id": null, "sequence": 12, "type": "work", "label": "The Sheep and the Dog",
+      "summary": "A sheep loses a legal case to a dog through false witnesses and a corrupt court.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 16, "verse_lines": 112},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:7 narrative; lines 1139-1250"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-06", "parent_id": "part:fable-06", "sequence": 13, "type": "commentary", "label": "Moralitas: The Sheep and the Dog",
+      "summary": "The morality condemns perverted law, bribery, oppression, and false testimony.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 63},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:7.1; lines 1251-1313"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:second-prologue", "parent_id": null, "sequence": 14, "type": "prologue", "label": "Prologue to The Lion and the Mouse",
+      "summary": "A dream-vision encounter with Aesop introduces the following fable and reflects on poetic authority.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 12, "verse_lines": 84},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:8.1; lines 1314-1397"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-07", "parent_id": null, "sequence": 15, "type": "work", "label": "The Lion and the Mouse",
+      "summary": "A mouse spared by a lion later frees the lion from a net, demonstrating reciprocal mercy across unequal power.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 24, "verse_lines": 168},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:8.2; lines 1398-1565"}], "evidence_ids": ["evidence:xml"],
+      "notes": ["The XML mislabels HenFabl:8.2 as a second prologue; its contents are the fable narrative."]
+    },
+    {
+      "id": "part:moral-07", "parent_id": "part:fable-07", "sequence": 16, "type": "commentary", "label": "Moralitas: The Lion and the Mouse",
+      "summary": "The morality commends mercy and warns rulers not to despise the weak.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 7, "verse_lines": 49},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:8.3; lines 1566-1614"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-08", "parent_id": null, "sequence": 17, "type": "work", "label": "The Preaching of the Swallow",
+      "summary": "A swallow's repeatedly ignored warnings about flax and snares culminate in the destruction of the other birds.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 38, "verse_lines": 266},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:9 narrative; lines 1615-1880"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-08", "parent_id": "part:fable-08", "sequence": 18, "type": "commentary", "label": "Moralitas: The Preaching of the Swallow",
+      "summary": "The morality urges timely attention to wise teaching and spiritual warning.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 63},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:9.1; lines 1881-1943"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-09", "parent_id": null, "sequence": 19, "type": "work", "label": "The Fox, the Wolf, and the Cadger's Nekhering",
+      "summary": "The fox tricks a wolf into pursuing a herring cart, and the wolf suffers for greed and credulity.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 36, "verse_lines": 252},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:10 narrative; lines 1944-2195"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-09", "parent_id": "part:fable-09", "sequence": 20, "type": "commentary", "label": "Moralitas: The Nekhering",
+      "summary": "The morality exposes appetite, deception, and the hazards of corrupt companionship.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 28},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:10.1; lines 2196-2223"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-10", "parent_id": null, "sequence": 21, "type": "work", "label": "The Fox, the Wolf, and the Shadow of the Moon",
+      "summary": "The fox persuades the hungry wolf that the moon's reflection is cheese and exploits his gullibility.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 28, "verse_lines": 196},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:11 narrative; lines 2224-2419"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-10", "parent_id": "part:fable-10", "sequence": 22, "type": "commentary", "label": "Moralitas: The Shadow of the Moon",
+      "summary": "The morality warns against fantasy, greed, and reliance on deceitful advisers.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 28},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:11.1; lines 2420-2447"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-11", "parent_id": null, "sequence": 23, "type": "work", "label": "The Wolf and the Wether",
+      "summary": "A wether wearing a dog's skin briefly frightens a wolf before his disguise and weakness are exposed.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 19, "verse_lines": 133},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:12 narrative; lines 2448-2580"}], "evidence_ids": ["evidence:xml"],
+      "notes": ["Line 2475 is a direct DIV1 child outside an LG, an encoding boundary anomaly rather than prose."]
+    },
+    {
+      "id": "part:moral-11", "parent_id": "part:fable-11", "sequence": 24, "type": "commentary", "label": "Moralitas: The Wolf and the Wether",
+      "summary": "The morality attacks false appearance, presumption, and those who assume offices beyond their capacity.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 28},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:12.1; lines 2581-2608"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-12", "parent_id": null, "sequence": 25, "type": "work", "label": "The Wolf and the Lamb",
+      "summary": "A wolf invents successive accusations against an innocent lamb and kills him despite reasoned legal defense.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 13, "verse_lines": 91},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:13 narrative; lines 2609-2699"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-12", "parent_id": "part:fable-12", "sequence": 26, "type": "commentary", "label": "Moralitas: The Wolf and the Lamb",
+      "summary": "The lamb figures laborers and the poor, while wolves figure corrupt lawyers, lords, landlords, and extortioners.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 10, "verse_lines": 70},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:13.1; lines 2700-2769"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:fable-13", "parent_id": null, "sequence": 27, "type": "work", "label": "The Paddock and the Mouse",
+      "summary": "A deceitful frog binds herself to a mouse in crossing water; a kite seizes and kills both adversaries.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 19, "verse_lines": 133},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:14 narrative; lines 2770-2902"}], "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "part:moral-13", "parent_id": "part:fable-13", "sequence": 28, "type": "commentary", "label": "Moralitas: The Paddock and the Mouse",
+      "summary": "The concluding morality warns against false fellowship and allegorizes body, soul, world, and sudden death.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 66},
+      "locators": [{"lineage_entity_id": "artifact:general-corpus:HenFabl", "scheme": "XML node and inherited lines", "value": "HenFabl:14.1; lines 2903-2968"}], "evidence_ids": ["evidence:xml"]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:aesopic-tradition",
+      "title": "The Aesopic fable tradition",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "Conventional authority", "value": "Aesop / Aesopic fables"}],
+      "evidence_ids": ["evidence:xml", "evidence:mets", "evidence:mets-older"],
+      "notes": ["Henryson explicitly names Aesop as his authority, and scholarship identifies multiple Latin and vernacular analogues. This broad relation avoids falsely selecting one surviving physical exemplar as the direct source for the entire collection."]
+    },
+    {
+      "id": "related:gualterus-romulus",
+      "title": "Verse Romulus / Isopet associated with Gualterus Anglicus",
+      "relation": "adaptation_of",
+      "evidence_ids": ["evidence:mets-older"],
+      "notes": ["A major source tradition for several fables, not an assertion that all thirteen derive directly and exclusively from one fixed copy or recension."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:HenFabl",
+    "manifest_path": "manifests/lineage/works/HenFabl.json",
+    "bindings": [
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "edition:smith:1906-text-volume-1", "role": "source_edition"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "encoding:ota:0243", "role": "digital_encoding"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "encoding:umich-cme:HenFabl", "role": "digital_encoding"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "artifact:general-corpus:HenFabl", "role": "repository_representation"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "edition:charteris-lekpreuik:1569-1570", "role": "source_witness"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "witness:bl:Harley-MS-3865", "role": "source_witness"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "witness:edinburgh:Laing-III-149", "role": "source_witness"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:fable-02", "lineage_entity_id": "witness:nls:MS-16500", "role": "source_witness"},
+      {"metadata_target": "part:fable-02", "lineage_entity_id": "witness:edinburgh:Laing-III-450", "role": "source_witness"},
+      {"metadata_target": "work:HenFabl", "lineage_entity_id": "edition:bassandyne:1571", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:xml",
+      "type": "computational_inspection",
+      "citation": "General Corpus HenFabl source XML and structural inspection",
+      "repository_path": "CME/source/CME_phase_1-2/HenFabl.xml",
+      "summary": "Verifies work title, represented order, 13 narratives, 13 moralities, two prologues, section labels, exact stanza and line counts, language, themes, malformed local nesting, page markers, and the unnumbered cross-stream stanza.",
+      "accessed_on": "2026-07-14",
+      "sha256": "27e0333cdad81da8d9a544537ce41918c202bcc4915bd3a2932d8317082c714d"
+    },
+    {
+      "id": "evidence:lineage",
+      "type": "linked_manifest_evidence",
+      "citation": "HenFabl source-lineage manifest",
+      "repository_path": "manifests/lineage/works/HenFabl.json",
+      "source_evidence_id": "evidence:repo-xml",
+      "summary": "Binds abstract-work claims to the repository XML, U-M and OTA encodings, Smith edition, early prints, manuscripts, transcripts, complete digital objects, access states, and rights layers.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:smith",
+      "type": "digital_surrogate",
+      "citation": "G. Gregory Smith, ed., The Poems of Robert Henryson, Text—Vol. I (Scottish Text Society 55, 1906), 1968 Johnson facsimile reprint",
+      "url": "https://archive.org/details/poemsofroberthen0002ggre",
+      "repository_path": "source-cache/HenFabl/smith-1906-poems-of-robert-henryson-text-volume-1.pdf",
+      "locator": "prefatory note pp. vii-xiv; contents pp. xx-xxi; Fables pp. 2-327",
+      "summary": "Verifies Henryson attribution, five early source streams, their contents and extent, Smith and Stevenson's roles, early-print dates, represented 13-fable order, and U-M page mapping.",
+      "accessed_on": "2026-07-14",
+      "sha256": "17e40eca7eb3f7d53410ab0c62efe9c192eeb08cdc18c0656eb7a314f16ca276"
+    },
+    {
+      "id": "evidence:mets",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, The Morall Fabillis: Introduction",
+      "url": "https://metseditions.org/read/ezwGwmGVTWD0GT53eWS4QbGTNVGdwy8qp",
+      "source_evidence_id": "evidence:mets-introduction",
+      "summary": "Provides current scholarship on Henryson, date context, title and genre, all principal witnesses and prints, textual relationships, contents, and the debate over collection unity and order.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-older",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, earlier scholarly introduction to The Morall Fabillis",
+      "url": "https://metseditions.org/read/Q00zzwA3TQWmBs7yXua1zpIbQxVvdz4Z",
+      "summary": "Surveys possible Latin and vernacular source traditions, including Gualterus Anglicus, Lydgate, Caxton, Petrus Alfonsi, Roman de Renart, Chaucer, and Odo, without establishing one direct exemplar for the whole work.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:arlima",
+      "type": "scholarly_source",
+      "citation": "ARLIMA, Robert Henryson, The Morall Fabillis of Esope",
+      "url": "https://arlima.net/qt/robert_henryson/the_morall_fabillis_of_esope.html",
+      "source_evidence_id": "evidence:arlima",
+      "summary": "Confirms conventional title and attribution, Scots fable classification, late-fifteenth-century dating, 13-fable and 2,975-line extent, and early-print bibliography.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:glasgow",
+      "type": "scholarly_source",
+      "citation": "University of Glasgow, The Moral Fables: Introduction",
+      "url": "https://www.gla.ac.uk/myglasgow/library/files/special/exhibns/month/june2005.html",
+      "summary": "Supports Middle Scots language, 13-tale design with moralities, beast-fable genre, and broad mid-to-late-fifteenth-century context.",
+      "accessed_on": "2026-07-14",
+      "notes": ["The exact current University of Glasgow page route should be rechecked if this citation is refreshed; claims are corroborated independently by METS and the XML."]
+    },
+    {
+      "id": "evidence:oxford-form",
+      "type": "scholarly_source",
+      "citation": "University of Oxford Faculty of English, Ten-Minute Book Club: Henryson's Cock and Jasp from the Morall Fabillis",
+      "url": "https://www.english.ox.ac.uk/ten-minute-book-club/henryson-cock-and-jasp-morall-fabillis",
+      "summary": "Supports the rhyme-royal description and literary framing of the Cock and Jasp within the Morall Fabillis.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:early-witnesses",
+      "type": "linked_manifest_evidence",
+      "citation": "HenFabl lineage evidence for Makculloch, Bannatyne, Asloan, Gibb, Harley, Charteris, and Bassandyne",
+      "repository_path": "manifests/lineage/works/HenFabl.json",
+      "source_evidence_id": "evidence:mets-introduction",
+      "summary": "Supports early attestation, attribution, survival boundaries, source-content limits, and the distinction between the Asloan original and Gibb's transcript.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota",
+      "type": "linked_manifest_evidence",
+      "citation": "Oxford Text Archive item 0243 record and cached TEI header",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0243",
+      "repository_path": "manifests/lineage/works/HenFabl.json",
+      "source_evidence_id": "evidence:ota-header",
+      "summary": "Supports the legacy 1480-1489 date, Scots language, tentative Fife code, source-edition boundary, normalization history, and explicit uncertainty about the constructed base text.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-harley",
+      "type": "linked_manifest_evidence",
+      "citation": "British Library catalog record for Harley MS 3865",
+      "url": "https://searcharchives.bl.uk/catalog/040-002049701",
+      "source_evidence_id": "evidence:bl-harley",
+      "summary": "Supports 13-fable contents, two prologues, 2,968 numbered lines, 416 seven-line and seven eight-line stanzas, manuscript date, and physical source boundary.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:language",
+      "type": "computational_inspection",
+      "citation": "Direct comparison of OTA plain text, U-M XML, and Smith/Bassandyne representations",
+      "repository_path": "source-cache/HenFabl/ota-0243-henfable.txt",
+      "summary": "Confirms Middle Scots primary language, embedded Latin phrases, case conversion, inherited spellings, and the distinction between textual language and modern English metadata.",
+      "accessed_on": "2026-07-14",
+      "sha256": "88b64dba822766baacb0b425d33cd604f6288bc5a48cc2f26c7fea869671c933"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:composition-date-place",
+      "question": "Can the work's composition be dated more tightly than the late fifteenth century or securely localized to Dunfermline/Fife?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Prefer a current specialist argument grounded in internal allusions, Henryson's documented career, and witness chronology before narrowing either range or place."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets", "evidence:arlima", "evidence:ota"]
+    },
+    {
+      "id": "question:collection-unity-order",
+      "question": "Do the thirteen fables constitute one authorially unified and ordered collection, or does the familiar sequence partly reflect early print transmission and editorial compilation?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Retain the represented 13-fable sequence as the cataloging unit while tracking new stemmatic or codicological scholarship on independent circulation, witness order, and print editorial intervention."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets", "evidence:smith", "evidence:early-witnesses"],
+      "notes": ["content_structure_status complete means all sections of the represented sequence are enumerated, not that the unity debate is resolved."]
+    },
+    {
+      "id": "question:electronic-base",
+      "question": "Which Smith stream supplied each reading in OTA 0243 and the U-M continuous text?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Locate OSTA/DOST production notes or perform a systematic machine collation against all five Smith streams and the Bassandyne facsimile."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:xml", "evidence:ota", "evidence:smith", "evidence:lineage"],
+      "notes": ["The current evidence combines a BASS PR label and Bassandyne title, Harleian odd-page markers, and a Charteris-only unnumbered stanza."]
+    },
+    {
+      "id": "question:direct-sources",
+      "question": "Which exact Latin and vernacular exemplars did Henryson use for each individual fable?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Model individual analogue relations only when supported by fable-specific textual comparison; do not turn broad Aesopic affiliation into direct physical lineage."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-older", "evidence:mets"]
+    }
+  ],
+  "notes": [
+    "Henryson's authorship is modeled separately from Aesop's traditional authority and from the modern editor, transcribers, printers, scribes, encoders, and repositories.",
+    "The preferred date is late fifteenth century, perhaps 1470s-1480s. The XML's 1450 and OTA's 1480-1489 are legacy metadata points, not interchangeable certainties.",
+    "Dunfermline is a well-supported associated place for Henryson, while Fife as a place of composition remains tentative.",
+    "The 2,975-line total is an XML count: 2,968 inherited numbered lines plus one unnumbered seven-line stanza. It should not be mistaken for a newly established canonical lineation.",
+    "The XML's second DIV2 labeled prologue inside The Lion and the Mouse is the 168-line narrative; this manifest repairs the intellectual labeling without modifying the source.",
+    "Complete source-object caches are recorded in lineage: Bassandyne's unique print, Smith's full reprint volume, the 454-canvas Bannatyne main manuscript, and the 628-canvas surviving Asloan manuscript. Their work portions and historical losses remain explicit.",
+    "No reusable source-evaluation or modeling problem was found beyond the project skill's existing rules on mixed electronic bases, provider-relative completeness, witness/transcript separation, discontinuous work portions, and rights-layer separation."
+  ]
+}
