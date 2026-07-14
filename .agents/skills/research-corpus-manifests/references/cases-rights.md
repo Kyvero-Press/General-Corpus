@@ -31,6 +31,11 @@ jurisdiction. Ask the provider; do not choose the most permissive label.
 A library record can prove that a printed facsimile exists without proving a
 free online copy. Distinguish catalog, selected image, mediated copying,
 purchase, and complete public facsimile. Verify what can actually be opened.
+Likewise, a DOI or DataCite record whose description says “digitized version”
+is still `metadata_only` when it exposes no content URL, rights statement,
+manifest, or auditable image inventory. Cache the structured record if useful,
+but do not create a facsimile entity merely because the landing page belongs
+to a digital-collections repository.
 Generic Mirador or IIIF interface chrome can also render on a discovery page
 that explicitly has no digital object. Require a resolvable Presentation
 manifest with canvases, an image inventory, or an item-specific institutional
