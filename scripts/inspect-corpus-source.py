@@ -100,6 +100,15 @@ def inspect(root: Path, work_id: str) -> dict[str, Any]:
 
     raw = path.read_bytes()
     relative_path = path.relative_to(root)
+    umich_identifier = next(
+        (
+            identifier["value"]
+            for kind in ("VID", "IDNO", "IDG/@ID")
+            for identifier in identifiers
+            if identifier["kind"] == kind
+        ),
+        work_id,
+    )
     return {
         "work_id": work_id,
         "source_path": str(relative_path),
@@ -126,7 +135,8 @@ def inspect(root: Path, work_id: str) -> dict[str, Any]:
         "structure_counts": {
             tag: tag_counts[tag] for tag in sorted(COUNT_TAGS) if tag_counts[tag]
         },
-        "umich_url": f"https://name.umdl.umich.edu/{work_id}",
+        "umich_url": f"https://name.umdl.umich.edu/{umich_identifier}",
+        "umich_identifier": umich_identifier,
         "notes": [
             "Header fields are compact diagnostic excerpts, not independent authority records.",
             "Structure counts describe this XML representation and may not equal canonical work units.",

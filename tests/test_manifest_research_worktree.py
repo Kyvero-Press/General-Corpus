@@ -270,6 +270,10 @@ class ManifestResearchWorktreeTests(unittest.TestCase):
             "6a910352adc2d7b2974e1a9b59abf2a773c70b7a216a261126401cc5c29c8dd7",
             packet["sha256"],
         )
+        self.assertEqual("CME00301", packet["umich_identifier"])
+        self.assertEqual(
+            "https://name.umdl.umich.edu/CME00301", packet["umich_url"]
+        )
 
     def test_main_reports_and_creates_shared_source_cache(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

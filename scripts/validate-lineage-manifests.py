@@ -349,28 +349,23 @@ def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[
             for delimiter in (".", ":")
         )
 
-    legacy_identifiers = (
+    identifiers = (
         ("IDG/@ID", values_for("IDG", "ID")),
         ("BIBNO", values_for("BIBNO")),
         ("VID", values_for("VID")),
+        ("IDNO", values_for("IDNO")),
     )
-    present_legacy = [(label, values) for label, values in legacy_identifiers if values]
-    if present_legacy:
-        for label, values in present_legacy:
-            if not any(matches(value) for value in values):
-                errors.append(
-                    f"{location}: XML {label} does not identify manifest work_id {work_id!r}; "
-                    f"found {values!r}"
-                )
-        return
-
-    idno_values = values_for("IDNO")
-    if any(matches(value) for value in idno_values):
+    present_identifiers = [(label, values) for label, values in identifiers if values]
+    if any(
+        matches(value)
+        for _label, values in present_identifiers
+        for value in values
+    ):
         return
 
     errors.append(
-        f"{location}: XML has no matching IDG/BIBNO/VID or IDNO identifier for manifest "
-        f"work_id {work_id!r}; found IDNO values {idno_values!r}"
+        f"{location}: XML has no matching IDG/@ID, BIBNO, VID, or IDNO identifier "
+        f"for manifest work_id {work_id!r}; found {present_identifiers!r}"
     )
 
 

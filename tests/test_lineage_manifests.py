@@ -453,6 +453,33 @@ class LineageManifestTests(unittest.TestCase):
 
         self.assertEqual([], errors)
 
+    def test_xml_identifier_accepts_publication_idno_with_legacy_cme_aliases(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<ETS><HEADER><IDNO>CME301</IDNO></HEADER><IDG ID='CME00301'>"
+            "<BIBNO>CME00301</BIBNO><VID>CME00301</VID></IDG></ETS>",
+            "CME301",
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_accepts_matching_idg_with_upstream_bibno_alias(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<ETS><HEADER><IDNO>CME90022</IDNO></HEADER><IDG ID='CME90022'>"
+            "<BIBNO>OTA0022</BIBNO><VID>CME90022</VID></IDG></ETS>",
+            "CME90022",
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_rejects_when_every_identifier_is_an_alias(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<ETS><HEADER><IDNO>Different</IDNO></HEADER><IDG ID='CME00301'>"
+            "<BIBNO>OTA0022</BIBNO><VID>Legacy</VID></IDG></ETS>",
+            "CME301",
+        )
+
+        self.assertTrue(any("no matching" in item for item in errors))
+
     def test_xml_identifier_rejects_undelimited_prefix(self) -> None:
         errors = self._xml_identifier_errors(
             "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>TroilusExtra</IDNO>"

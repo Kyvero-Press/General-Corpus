@@ -10,6 +10,14 @@ DLPSTEXTCLASS and OTA-derived files use `IDNO`; scanned books can extend a work
 stem with dot- or colon-delimited volume IDs. Validate the source's actual
 family and a structurally delimited case-insensitive extension. Never accept an
 undelimited prefix such as `TroilusExtra` for `Troilus`.
+Repaired headers can legitimately mix identifier schemes: an item-level
+`IDNO` or `VID` may identify the current CME publication while `BIBNO` retains
+an upstream OTA number, or a current short ID may coexist with a zero-padded
+legacy CME handle. Treat those values as explicit aliases. Require at least one
+recognized identifier to match the work ID exactly or by the permitted
+delimiter rule, but do not require every identifier family to match and do not
+invent a general zero-stripping heuristic. Prefer `VID`, then `IDNO`, then
+`IDG/@ID`, when constructing a U-M resolver URL from the source itself.
 
 When a pinned and current XML file differ in wrappers, headers, comments,
 stylesheets, or rights metadata, canonicalize and compare the actual textual
