@@ -60,6 +60,13 @@ the earlier edition with scoped `version_of`. Verify the reprint's included and
 omitted matter independently, and give any new cover, preliminaries, or terms a
 separate rights analysis instead of inheriting every claim from the original.
 
+A current publisher or learned-society backlist entry can establish that a
+title is purchasable without identifying the sold carrier with the historical
+issue named by an encoding. Model the current paperback, print-on-demand copy,
+or other offered carrier separately; record its ISBN, price, and purchase route,
+but leave its printing ancestry, collation, and carrier-specific rights
+unverified until a copy or explicit publisher statement establishes them.
+
 When a revised reissue changes the membership or numbering of an edited
 selection, a complete scan of the prior edition is not complete coverage of the
 immediate source. Keep the scan's source-object coverage complete, but scope its
