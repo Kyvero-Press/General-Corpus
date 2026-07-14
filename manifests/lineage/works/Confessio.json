@@ -1,0 +1,1217 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Confessio",
+  "work_id": "Confessio",
+  "title": "Confessio Amantis",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "primary_subject": "artifact:general-corpus:Confessio",
+  "summary": "The General Corpus XML is a pinned repository copy of the University of Michigan Corpus of Middle English item Confessio. Its 33,444 numbered Middle English lines descend through U-M's 1993 encoding from Oxford Text Archive U-1677-C/current item 1677, an SGML-tagged version of OTA 0063. OTA 0063 identifies its immediate source as G. C. Macaulay's two-volume EETS English Works of John Gower (1900-1901), Extra Series 81-82. Macaulay used Bodleian Library MS. Fairfax 3 as the running copytext for the third-recension text and collated it against a much wider manuscript tradition. The U-M/OTA stream omits the first- and second-recension passages, Latin verses and glosses, apparatus, notes, and print paratext. A complete 408-canvas color facsimile of Fairfax 3 and complete scans of both EETS source volumes and the parallel Clarendon Complete Works volumes II-III are cached with exact work mappings. Rights are recorded by layer because the medieval text and Macaulay edition are public domain in the United States, while OTA encodings, U-M assertions, Google scan terms, the repository Unlicense, and Digital Bodleian images carry distinct or conflicting statements.",
+  "review_notes": [
+    "The primary derivation chain is repository XML -> U-M CME -> OTA 1677 -> OTA 0063 -> Macaulay EETS English Works volumes I-II -> Fairfax 3 as running copytext, with Macaulay's wider collation represented separately.",
+    "The repository XML's source note says Complete Works volumes 3-4, but Confessio actually occupies Complete Works volumes II-III; the OTA record identifies the separately issued EETS English Works volumes I-II as the immediate source.",
+    "Fairfax 3 is a material base witness, not the sole source of Macaulay's eclectic apparatus. Macaulay says the running text follows Fairfax and every deviation is noted while numerous witnesses were collated.",
+    "The conventional three-recension vocabulary is preserved as an editorial classification with caveats: Macaulay himself warns that the so-called second recension is not a simple chronological middle stage.",
+    "The complete facsimile cache contains the whole codex. The work mapping was corrected from the acquisition command's provisional f. 186v/canvas 380 endpoint to the official catalog and visually verified f. 186r/canvas 379 endpoint; f. 186v begins Traitié."
+  ],
+  "languages": ["enm", "lat", "eng"],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Confessio",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Confessio",
+      "description": "The XML artifact consumed by this repository's conversion and publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "General Corpus work ID", "value": "Confessio"},
+        {"scheme": "git-blob", "value": "f653180d5919c71ab563f7c22b3bf328dd02a5f0"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/Confessio.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f653180d5919c71ab563f7c22b3bf328dd02a5f0",
+        "sha256": "160712cf3bea1f89ab9d98b00bccf6e88573c731c9fc1a9b1ca5560ca6fd63f8"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-commit"],
+      "notes": [
+        "The one-line XML contains a DLPSTEXTCLASS wrapper, nine DIV1 units, 339 supplied 100-line DIV2 groups, 33,444 L elements, and 934 PB milestones.",
+        "The pinned submodule commit is dated 2024-11-24 and titled 'add source texts'."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Confessio",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item Confessio",
+      "description": "The 1993 U-M Humanities Text Initiative encoding of the English numbered verse stream inherited from OTA U-1677-C. It supplies book and 100-line grouping structure while omitting print front and back matter, editorial notes, Latin material, and variant-recension passages.",
+      "identifiers": [
+        {"scheme": "University of Michigan CME item", "value": "Confessio", "uri": "https://quod.lib.umich.edu/c/cme/confessio"},
+        {"scheme": "Oxford Text Archive legacy number", "value": "U-1677-C"}
+      ],
+      "creator_ids": ["agent:umich-library"],
+      "date_statements": [{
+        "label": "electronic publication",
+        "value": "1993",
+        "normalized": "1993",
+        "certainty": "high",
+        "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:encoding-comparison"],
+      "notes": [
+        "The repository header inherits a legacy 'personal scholarly use only' statement even though the current U-M item says the materials are public domain and applies RightsStatements.org No Copyright - United States.",
+        "A normalized line-by-line comparison with the cached OTA 0063/1677 stream found matching identifiers and order; 63 line strings differ, chiefly where U-M repaired closing-bracket or control-character corruption to punctuation."
+      ]
+    },
+    {
+      "id": "encoding:ota:1677",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 1677, Confessio Amantis",
+      "description": "John Dawson's SGML-tagged version of OTA text 0063, deposited in 1992 and named U-1677-C in the U-M wrapper. The current OTA record says it was superseded by revised item 3255.",
+      "identifiers": [
+        {"scheme": "OTA persistent identifier", "value": "20.500.12024/1677", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1677"},
+        {"scheme": "OTA legacy number", "value": "U-1677-C"}
+      ],
+      "creator_ids": ["agent:john-dawson", "agent:cambridge-llcc"],
+      "date_statements": [{
+        "label": "OTA deposit",
+        "value": "1992-04-03",
+        "normalized": "1992-04-03",
+        "certainty": "high",
+        "evidence_ids": ["evidence:ota-1677"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1677", "evidence:ota-1677-payload"],
+      "notes": [
+        "The current catalog identifies the EETS English Works as the source, while the SGML payload's Edition wrapper names The Complete Works, Oxford, Clarendon Press, 1901. The conflict is preserved rather than silently harmonized."
+      ]
+    },
+    {
+      "id": "encoding:ota:0063",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 0063, Confessio Amantis plain-text encoding",
+      "description": "The 1977 plain-text electronic edition deposited by John Dawson. OTA says it contains the English text only, excluding first- and second-recension material, and identifies Macaulay's EETS English Works volumes I-II as its source.",
+      "identifiers": [{"scheme": "OTA persistent identifier", "value": "20.500.12024/0063", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0063"}],
+      "creator_ids": ["agent:john-dawson", "agent:cambridge-llcc"],
+      "date_statements": [{
+        "label": "OTA deposit",
+        "value": "1977-06-27",
+        "normalized": "1977-06-27",
+        "certainty": "high",
+        "evidence_ids": ["evidence:ota-0063"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-0063", "evidence:ota-0063-payload"]
+    },
+    {
+      "id": "encoding:ota:3255",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 3255, revised Confessio Amantis encoding",
+      "description": "The current revised digital version that replaces OTA 1677, distributed as XML, plain text, HTML, EPUB, and MOBI. It is later supporting evidence and is not upstream of U-M's 1993 item.",
+      "identifiers": [{"scheme": "OTA persistent identifier", "value": "20.500.12024/3255", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3255"}],
+      "creator_ids": ["agent:oxford-text-archive"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-3255"]
+    },
+    {
+      "id": "edition:macaulay:eets-english-works-1900-1901",
+      "type": "scholarly_edition",
+      "label": "G. C. Macaulay, The English Works of John Gower, volumes I-II (EETS, 1900-1901)",
+      "description": "The two-volume EETS issue used by OTA 0063: volume I prints the Prologue through Book V line 1970; volume II prints Book V line 1971 through Book VIII and In Praise of Peace. Macaulay's running third-recension text follows Fairfax 3, with every departure reported, while the apparatus draws on a much wider collation.",
+      "identifiers": [
+        {"scheme": "EETS Extra Series", "value": "81"},
+        {"scheme": "EETS Extra Series", "value": "82"}
+      ],
+      "creator_ids": ["agent:g-c-macaulay", "agent:early-english-text-society"],
+      "date_statements": [
+        {"label": "volume I publication", "value": "1900", "normalized": "1900", "certainty": "high", "evidence_ids": ["evidence:eets-scans", "evidence:ota-0063"]},
+        {"label": "volume II publication", "value": "1901", "normalized": "1901", "certainty": "high", "evidence_ids": ["evidence:eets-scans", "evidence:ota-0063"]}
+      ],
+      "bibliographic": {
+        "citation": "John Gower, The English Works of John Gower, edited by G. C. Macaulay, 2 vols., Early English Text Society, Extra Series 81-82 (London: Kegan Paul, Trench, Trübner & Co., 1900-1901).",
+        "title": "The English Works of John Gower",
+        "volume": "I-II",
+        "series": "Early English Text Society, Extra Series 81-82",
+        "publisher": "Kegan Paul, Trench, Trübner & Co. for the Early English Text Society",
+        "publication_place": "London",
+        "date": "1900-1901",
+        "pages": "Confessio Amantis: vol. I, pp. 1-456; vol. II, pp. 1-478",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "physical_description": {
+        "extent": "2 volumes; Confessio split after Book V line 1970",
+        "format": "Critical scholarly edition",
+        "notes": ["Volume II also contains In Praise of Peace after Confessio Amantis."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-0063", "evidence:eets-scans", "evidence:macaulay-introduction", "evidence:jgs-online-editions"]
+    },
+    {
+      "id": "edition:macaulay:complete-works-volumes-2-3",
+      "type": "scholarly_edition",
+      "label": "G. C. Macaulay, The Complete Works of John Gower, volumes II-III (Clarendon Press, 1901)",
+      "description": "The Clarendon Complete Works issue containing the same editorial division of Confessio: volume II has the Prologue through Book V line 1970 and volume III has Book V line 1971 through Book VIII plus In Praise of Peace. It is retained as a parallel publication and to correct the repository header's mistaken volumes 3-4 statement, not asserted as the immediate OTA exemplar.",
+      "creator_ids": ["agent:g-c-macaulay", "agent:clarendon-press"],
+      "date_statements": [{"label": "publication", "value": "1901", "normalized": "1901", "certainty": "high", "evidence_ids": ["evidence:complete-works-scans", "evidence:jgs-online-editions"]}],
+      "bibliographic": {
+        "citation": "John Gower, The Complete Works of John Gower, edited by G. C. Macaulay, vols. II-III, The English Works (Oxford: Clarendon Press, 1901).",
+        "title": "The Complete Works of John Gower: The English Works",
+        "volume": "II-III",
+        "publisher": "Clarendon Press",
+        "publication_place": "Oxford",
+        "date": "1901",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:complete-works-scans", "evidence:jgs-online-editions", "evidence:macaulay-introduction"]
+    },
+    {
+      "id": "catalog:macaulay:confessio-manuscript-tradition",
+      "type": "catalog_description",
+      "label": "Macaulay's aggregate Confessio Amantis manuscript-collation record",
+      "description": "A modeling entity for the wider first-, second-, and third-recension manuscript tradition Macaulay describes and collates. It prevents the Fairfax running copytext from being mistaken for the sole source of his eclectic readings without requiring every manuscript witness to be modeled as a separate facsimile target in this record.",
+      "creator_ids": ["agent:g-c-macaulay"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:macaulay-introduction", "evidence:teams-introduction"],
+      "notes": [
+        "Macaulay reports full collation of Bodley 902, Corpus Christi College Oxford 67, and Bodley 294 alongside Fairfax 3 and selective checking of at least fourteen further witnesses wherever variation appeared.",
+        "This is a description of an editorial source set, not a physical manuscript or lost intermediary."
+      ]
+    },
+    {
+      "id": "witness:bodleian:Fairfax3",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS. Fairfax 3",
+      "alternate_labels": ["Oxford, Bodleian Library, MS Fairfax 3", "MS. Fairfax 3"],
+      "description": "A late-fourteenth- to early-fifteenth-century English parchment codex containing Confessio Amantis and other poems. Confessio occupies fols. 2r-186r and represents the third-recension text used by Macaulay as his running copytext. The manuscript is not an autograph and includes one main late-fourteenth-century hand and two early-fifteenth-century interventions.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Fairfax 3"},
+        {"scheme": "Digital Bodleian UUID", "value": "b248e552-650b-47bc-aac2-e1184896f924", "uri": "https://digital.bodleian.ox.ac.uk/objects/b248e552-650b-47bc-aac2-e1184896f924/"}
+      ],
+      "date_statements": [{
+        "label": "manuscript production",
+        "value": "Late fourteenth to early fifteenth century",
+        "normalized": "late 14th-early 15th century",
+        "certainty": "high",
+        "evidence_ids": ["evidence:bodleian-catalog"]
+      }],
+      "holding": {
+        "institution_id": "agent:bodleian-library",
+        "shelfmark": "MS. Fairfax 3",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4864",
+        "notes": "Confessio Amantis is cataloged at fols. 2r-186r."
+      },
+      "physical_description": {
+        "support": "Parchment, with paper flyleaves",
+        "extent": "ff. ii (paper) + 1 + 193 + 1 + i (paper)",
+        "format": "Composite literary codex",
+        "dimensions": "390 x 235 mm",
+        "notes": [
+          "Fols. 2 and 185 are replacement leaves. The main scribe writes through f. 185v apart from interventions; a later hand writes the first replacement leaf and fols. 186-194.",
+          "F. 186r is a shared boundary surface: Confessio ends there with its explicit and associated Latin verse; Traitié begins on f. 186v."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-catalog", "evidence:jgs-fairfax", "evidence:macaulay-introduction"]
+    },
+    {
+      "id": "facsimile:digital-bodleian:Fairfax3",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian facsimile of MS. Fairfax 3",
+      "description": "A public 408-canvas color facsimile covering the whole physical object from upper board through tail. The cached research bundle preserves the IIIF manifest, inventory, and 1600-pixel JPEG derivative for every canvas.",
+      "creator_ids": ["agent:bodleian-library"],
+      "reproduction_format": "IIIF Presentation 2 manifest and 408 color JPEG page images",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-iiif", "evidence:fairfax-bundle-audit"]
+    },
+    {
+      "id": "catalog:usco:circular-15a",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A",
+      "description": "Current U.S. Copyright Office duration guidance consulted for the status of the 1900-1901 editions; it is rights evidence, not a textual source.",
+      "creator_ids": ["agent:us-copyright-office"],
+      "date_statements": [{"label": "revision", "value": "April 2026", "normalized": "2026-04", "certainty": "high", "evidence_ids": ["evidence:usco-circular"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:usco-circular"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:john-gower", "type": "person", "name": "John Gower", "dates": "c. 1330-1408", "identifiers": [{"scheme": "VIAF", "value": "120695167", "uri": "https://viaf.org/viaf/120695167"}, {"scheme": "LCNAF", "value": "n81039793", "uri": "https://id.loc.gov/authorities/names/n81039793"}]},
+    {"id": "agent:g-c-macaulay", "type": "person", "name": "G. C. Macaulay", "alternate_names": ["George Campbell Macaulay"], "dates": "1852-1915"},
+    {"id": "agent:john-dawson", "type": "person", "name": "John Dawson"},
+    {"id": "agent:cambridge-llcc", "type": "organization", "name": "Literary and Linguistic Computing Centre, University of Cambridge"},
+    {"id": "agent:oxford-text-archive", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"]},
+    {"id": "agent:early-english-text-society", "type": "organization", "name": "Early English Text Society"},
+    {"id": "agent:kegan-paul", "type": "organization", "name": "Kegan Paul, Trench, Trübner & Co."},
+    {"id": "agent:clarendon-press", "type": "organization", "name": "Clarendon Press", "alternate_names": ["Oxford University Press"]},
+    {"id": "agent:bodleian-library", "type": "organization", "name": "Bodleian Libraries, University of Oxford", "urls": ["https://www.bodleian.ox.ac.uk/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:google-books", "type": "organization", "name": "Google Books"},
+    {"id": "agent:project-gutenberg", "type": "organization", "name": "Project Gutenberg", "urls": ["https://www.gutenberg.org/"]},
+    {"id": "agent:us-copyright-office", "type": "organization", "name": "United States Copyright Office", "urls": ["https://www.copyright.gov/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Confessio",
+      "object": "encoding:umich-cme:Confessio",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Pinned repository XML"},
+        "object": {"kind": "whole", "description": "U-M CME item as represented by the inherited XML wrapper and text"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-1677",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Confessio",
+      "object": "encoding:ota:1677",
+      "scope": {
+        "subject": {"kind": "whole", "description": "U-M's 33,444-line English electronic text"},
+        "object": {"kind": "whole", "description": "OTA U-1677-C SGML text"},
+        "notes": "The U-M wrapper explicitly names U-1677-C; matching line identifiers/order and limited correction differences corroborate the chain."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:ota-1677", "evidence:encoding-comparison"]}
+    },
+    {
+      "id": "relation:1677-encoded-from-0063",
+      "type": "encoded_from",
+      "subject": "encoding:ota:1677",
+      "object": "encoding:ota:0063",
+      "scope": {
+        "subject": {"kind": "whole", "description": "SGML-tagged electronic text"},
+        "object": {"kind": "whole", "description": "Plain-text electronic text"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1677", "evidence:ota-0063"]}
+    },
+    {
+      "id": "relation:0063-encoded-from-eets",
+      "type": "encoded_from",
+      "subject": "encoding:ota:0063",
+      "object": "edition:macaulay:eets-english-works-1900-1901",
+      "scope": {
+        "subject": {"kind": "whole", "description": "English-only plain-text encoding, excluding first- and second-recension material"},
+        "object": {"kind": "part", "description": "Confessio Amantis English running text", "locators": ["vol. I, pp. 1-456", "vol. II, pp. 1-478"]},
+        "notes": "The OTA catalog explicitly names the EETS two-volume issue and the division at Book V line 1970/1971."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-0063", "evidence:eets-scans"]}
+    },
+    {
+      "id": "relation:3255-version-of-1677",
+      "type": "version_of",
+      "subject": "encoding:ota:3255",
+      "object": "encoding:ota:1677",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Current revised multi-format encoding"},
+        "object": {"kind": "whole", "description": "Superseded SGML encoding"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1677", "evidence:ota-3255"]}
+    },
+    {
+      "id": "relation:complete-works-parallel-to-eets",
+      "type": "version_of",
+      "subject": "edition:macaulay:complete-works-volumes-2-3",
+      "object": "edition:macaulay:eets-english-works-1900-1901",
+      "scope": {
+        "subject": {"kind": "part", "description": "Complete Works volumes II-III, English Works"},
+        "object": {"kind": "whole", "description": "EETS English Works volumes I-II"},
+        "notes": "The two publications preserve the same Macaulay editorial division; exact plate or exemplar identity was not assumed."
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:jgs-online-editions", "evidence:eets-scans", "evidence:complete-works-scans"]}
+    },
+    {
+      "id": "relation:eets-transcribes-fairfax",
+      "type": "transcribes",
+      "subject": "edition:macaulay:eets-english-works-1900-1901",
+      "object": "witness:bodleian:Fairfax3",
+      "scope": {
+        "subject": {"kind": "part", "description": "Running third-recension Confessio text, apart from documented editorial departures"},
+        "object": {"kind": "part", "description": "Confessio Amantis", "locators": ["fols. 2r-186r"]},
+        "notes": "Macaulay states that Fairfax 3 forms the basis of the text and that every deviation from it is noted."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:macaulay-introduction", "evidence:bodleian-catalog"]}
+    },
+    {
+      "id": "relation:eets-collated-against-tradition",
+      "type": "collated_against",
+      "subject": "edition:macaulay:eets-english-works-1900-1901",
+      "object": "catalog:macaulay:confessio-manuscript-tradition",
+      "scope": {
+        "subject": {"kind": "part", "description": "Textual apparatus, recension material, and documented departures from the Fairfax copytext"},
+        "object": {"kind": "whole", "description": "Macaulay's described multi-witness collation set"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:macaulay-introduction"]}
+    },
+    {
+      "id": "relation:tradition-describes-fairfax",
+      "type": "describes",
+      "subject": "catalog:macaulay:confessio-manuscript-tradition",
+      "object": "witness:bodleian:Fairfax3",
+      "scope": {
+        "subject": {"kind": "part", "description": "Macaulay's siglum F and third-recension base-witness discussion"},
+        "object": {"kind": "part", "description": "Confessio Amantis at fols. 2r-186r"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:macaulay-introduction", "evidence:bodleian-catalog"]}
+    },
+    {
+      "id": "relation:facsimile-of-fairfax",
+      "type": "facsimile_of",
+      "subject": "facsimile:digital-bodleian:Fairfax3",
+      "object": "witness:bodleian:Fairfax3",
+      "scope": {
+        "subject": {"kind": "whole", "description": "408-canvas complete digital facsimile"},
+        "object": {"kind": "whole", "description": "Complete physical codex, boards through tail"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-iiif", "evidence:fairfax-bundle-audit"]}
+    },
+    {
+      "id": "relation:facsimile-describes-work-boundary",
+      "type": "describes",
+      "subject": "facsimile:digital-bodleian:Fairfax3",
+      "object": "witness:bodleian:Fairfax3",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Canvas labels and visible work boundary", "locators": ["canvases 11-379"]},
+        "object": {"kind": "part", "description": "Confessio Amantis", "locators": ["fols. 2r-186r"]},
+        "notes": "This supporting relation records the image-to-folio boundary mapping; the separate facsimile_of relation records the whole-object reproduction."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-iiif", "evidence:fairfax-bundle-audit"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:Confessio",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Pinned file in the CME git submodule",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/Confessio.xml",
+      "alternate_urls": ["https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/Confessio.xml"],
+      "repository_path": "CME/source/CME_phase_1-2/Confessio.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-commit"]
+    },
+    {
+      "id": "access:umich-item",
+      "entity": "encoding:umich-cme:Confessio",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M Corpus of Middle English item interface",
+      "url": "https://quod.lib.umich.edu/c/cme/confessio",
+      "cost": "free",
+      "format": "HTML text interface",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:ota-0063",
+      "entity": "encoding:ota:0063",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "OTA record, direct bitstreams, or all-local-files ZIP",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0063",
+      "alternate_urls": [
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0063/gower-0063.txt?sequence=3&isAllowed=y",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0063/header0063.xml?sequence=4&isAllowed=y",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0063/allzip"
+      ],
+      "local_copies": [
+        {
+          "label": "OTA 0063 plain-text file",
+          "path": "source-cache/Confessio/ota-0063-gower.txt",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0063/gower-0063.txt?sequence=3&isAllowed=y",
+          "sha256": "025ed25b92c7f0939bbebdd616050f03cd759229c35bd8a6ee786c4bd51c9791",
+          "bytes": 1342580,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "OTA 0063 header XML",
+          "path": "source-cache/Confessio/ota-0063-header.xml",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0063/header0063.xml?sequence=4&isAllowed=y",
+          "sha256": "32a74f47cb299a4ad1bf4ddedf96ce2cd861ecc2fa9f5220aa08209004c7e574",
+          "bytes": 6092,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "OTA 0063 all-local-files ZIP",
+          "path": "source-cache/Confessio/ota-0063-all-local-files.zip",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0063/allzip",
+          "sha256": "2008fe359d5294c2d9604e77c6211ab93e079f2b2c247418f6f68e7a189cc19b",
+          "bytes": 1349206,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Plain text, XML header, and ZIP",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ota-0063", "evidence:ota-0063-payload"]
+    },
+    {
+      "id": "access:ota-1677",
+      "entity": "encoding:ota:1677",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "OTA record or all-local-files ZIP",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1677",
+      "alternate_urls": ["https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1677/allzip"],
+      "local_copies": [{
+        "label": "OTA 1677 all-local-files ZIP",
+        "path": "source-cache/Confessio/ota-1677-all-local-files.zip",
+        "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1677/allzip",
+        "sha256": "bca0f471d6cc9eaef4fc492d913203f619205182e0f28fe36d4409fdbeb81c5a",
+        "bytes": 1607125,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "direct_download"
+      }],
+      "cost": "free",
+      "format": "SGML/plain-text package and metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ota-1677", "evidence:ota-1677-payload"]
+    },
+    {
+      "id": "access:ota-3255",
+      "entity": "encoding:ota:3255",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "OTA record or all-local-files ZIP",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3255",
+      "alternate_urls": ["https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3255/allzip"],
+      "local_copies": [{
+        "label": "OTA 3255 all-local-files ZIP",
+        "path": "source-cache/Confessio/ota-3255-all-local-files.zip",
+        "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3255/allzip",
+        "sha256": "77bdacb9d1efd6df6b004c1a43fca2c8bb2a4d1a0150f48be737548fb79cd5f6",
+        "bytes": 8353736,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "direct_download"
+      }],
+      "cost": "free",
+      "format": "XML, text, HTML, EPUB, MOBI, and metadata ZIP",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ota-3255"]
+    },
+    {
+      "id": "access:eets-scans",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Complete Google/Harvard volume scans hosted by Internet Archive",
+      "url": "https://archive.org/details/englishworksjoh02macagoog",
+      "alternate_urls": [
+        "https://archive.org/download/englishworksjoh02macagoog/englishworksjoh02macagoog.pdf",
+        "https://archive.org/details/englishworksjoh03macagoog",
+        "https://archive.org/download/englishworksjoh03macagoog/englishworksjoh03macagoog.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Macaulay EETS English Works volume I scan",
+          "path": "source-cache/Confessio/macaulay-eets-english-works-volume-1.pdf",
+          "source_url": "https://archive.org/download/englishworksjoh02macagoog/englishworksjoh02macagoog.pdf",
+          "sha256": "78474b133ba6bf0378830479eac1eff4f7de9a5e519c991b45805e06da76c074",
+          "bytes": 17726339,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Confessio Amantis, Prologue through Book V line 1970",
+            "locators": ["printed pp. 1-456", "PDF pages 197-652 of 722"],
+            "notes": ["The PDF is a complete scan of the represented EETS volume I; the work_portion locates the relevant text within it."]
+          }
+        },
+        {
+          "label": "Macaulay EETS English Works volume II scan",
+          "path": "source-cache/Confessio/macaulay-eets-english-works-volume-2.pdf",
+          "source_url": "https://archive.org/download/englishworksjoh03macagoog/englishworksjoh03macagoog.pdf",
+          "sha256": "a3d935d2a411f14a9b86bfb75490472aefebe4addac9d586a17bb289b88bac41",
+          "bytes": 16534812,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Confessio Amantis, Book V line 1971 through Book VIII line 3172",
+            "locators": ["printed pp. 1-478", "PDF pages 29-506 of 690"],
+            "notes": ["In Praise of Peace follows Confessio in this complete volume scan and is outside the target work portion."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Two PDF scans, 722 and 690 PDF pages",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:eets-scans", "evidence:scan-wrappers"]
+    },
+    {
+      "id": "access:complete-works-scans",
+      "entity": "edition:macaulay:complete-works-volumes-2-3",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Complete University of Toronto volume scans hosted by Internet Archive",
+      "url": "https://archive.org/details/completeworksofj02goweuoft",
+      "alternate_urls": [
+        "https://archive.org/download/completeworksofj02goweuoft/completeworksofj02goweuoft.pdf",
+        "https://archive.org/details/completeworksofj03goweuoft",
+        "https://archive.org/download/completeworksofj03goweuoft/completeworksofj03goweuoft.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Macaulay Complete Works volume II scan",
+          "path": "source-cache/Confessio/macaulay-complete-works-volume-2.pdf",
+          "source_url": "https://archive.org/download/completeworksofj02goweuoft/completeworksofj02goweuoft.pdf",
+          "sha256": "0d2b4037f1f0af3cffad1691bfcd78ec4410ba18dc886e1600c420e154f0c505",
+          "bytes": 40938036,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Confessio Amantis, Prologue through Book V line 1970", "locators": ["printed pp. 1-456"], "notes": ["The PDF is a complete scan of Complete Works volume II."]}
+        },
+        {
+          "label": "Macaulay Complete Works volume III scan",
+          "path": "source-cache/Confessio/macaulay-complete-works-volume-3.pdf",
+          "source_url": "https://archive.org/download/completeworksofj03goweuoft/completeworksofj03goweuoft.pdf",
+          "sha256": "18de738374acf3e28aad78adeadb4e686b32aed93085542e9a2fb0b0091ebcbb",
+          "bytes": 30225945,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Confessio Amantis, Book V line 1971 through Book VIII line 3172", "locators": ["printed pp. 1-478"], "notes": ["In Praise of Peace follows Confessio and is outside the target work portion."]}
+        }
+      ],
+      "cost": "free",
+      "format": "Two complete PDF volume scans",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:complete-works-scans", "evidence:jgs-online-editions"]
+    },
+    {
+      "id": "access:fairfax-catalog",
+      "entity": "witness:bodleian:Fairfax3",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Bodleian Medieval Manuscripts in Oxford Libraries catalog",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4864",
+      "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/b248e552-650b-47bc-aac2-e1184896f924/"],
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bodleian-catalog"]
+    },
+    {
+      "id": "access:fairfax-facsimile",
+      "entity": "facsimile:digital-bodleian:Fairfax3",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian viewer or exact IIIF Presentation manifest",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/b248e552-650b-47bc-aac2-e1184896f924/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/b248e552-650b-47bc-aac2-e1184896f924.json"],
+      "local_copies": [{
+        "label": "Complete Digital Bodleian Fairfax 3 facsimile",
+        "path": "source-cache/Confessio/bodleian-fairfax-3-complete-iiif-1600px.zip",
+        "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/b248e552-650b-47bc-aac2-e1184896f924.json",
+        "sha256": "f331927a19795515e7f0f361be4d01645fa8bf9e704c0c7e744402bcad2697a2",
+        "bytes": 378593256,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 408,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "Confessio Amantis inside the complete Fairfax 3 codex",
+          "locators": ["fols. 2r-186r", "IIIF canvases 11-379 of 408", "ZIP members images/000011.jpg-images/000379.jpg"],
+          "start_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c850c174-ee77-4a51-8a2e-899551b0e684.json",
+          "end_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8bb2abe0-0fff-47e2-80b1-30ecf7187bbf.json",
+          "notes": [
+            "All 408 canvases, including binding and non-Confessio contents, remain in the ZIP; the locators only associate the target work with its portion.",
+            "The acquisition command provisionally recorded f. 186v/canvas 380. The official catalog and visual audit show that Confessio ends on f. 186r/canvas 379 and Traitié begins on f. 186v/canvas 380."
+          ]
+        },
+        "notes": [
+          "ZIP integrity and all 408 image entries were checked; the archive also contains manifest.json and inventory.json.",
+          "Images are 1600-pixel-wide color JPEG derivatives with scale/color targets where photographed. They are practical research images, not preservation masters."
+        ]
+      }],
+      "cost": "free",
+      "format": "408 color IIIF canvases and JPEG derivatives",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bodleian-iiif", "evidence:fairfax-bundle-audit"]
+    },
+    {
+      "id": "access:bodleian-reproduction",
+      "entity": "witness:bodleian:Fairfax3",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Contact Imaging Services for higher-resolution files or commercial/publication licensing and quote MS. Fairfax 3 and the Digital Bodleian UUID",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "contact": "imaging@bodleian.ox.ac.uk",
+      "cost": "fee",
+      "format": "Higher-resolution digital images and licensing by request",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bodleian-terms"]
+    },
+    {
+      "id": "access:usco-circular",
+      "entity": "catalog:usco:circular-15a",
+      "provider_id": "agent:us-copyright-office",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct PDF from the U.S. Copyright Office",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies": [{
+        "label": "U.S. Copyright Office Circular 15A PDF",
+        "path": "source-cache/Confessio/us-copyright-office-circular-15a-2026.pdf",
+        "source_url": "https://www.copyright.gov/circs/circ15a.pdf",
+        "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+        "bytes": 273867,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-14",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "notes": [
+          "qpdf --check completed with non-fatal hint-table/shared-object warnings; pdfinfo and page rendering remain readable. The exact Copyright Office bytes were retained without repair."
+        ]
+      }],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:usco-circular"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-medieval-work-us",
+      "entity": "witness:bodleian:Fairfax3",
+      "component": "Underlying medieval text of Confessio Amantis",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The work was composed and circulated in manuscript in the late fourteenth century, centuries before modern copyright.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-catalog", "evidence:teams-introduction"]
+    },
+    {
+      "id": "rights:eets-edition-us",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "component": "1900-1901 editorial text, apparatus, and typography as published",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "Both volumes were published before 1931 and are in the U.S. public domain under current Copyright Office duration guidance.",
+      "asserted_by_id": "agent:us-copyright-office",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:eets-scans", "evidence:usco-circular"]
+    },
+    {
+      "id": "rights:complete-works-edition-us",
+      "entity": "edition:macaulay:complete-works-volumes-2-3",
+      "component": "1901 editorial text, apparatus, and typography as published",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The two relevant volumes were published in 1901, before 1931.",
+      "asserted_by_id": "agent:us-copyright-office",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:complete-works-scans", "evidence:usco-circular"]
+    },
+    {
+      "id": "rights:eets-scan-files",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "access_id": "access:eets-scans",
+      "component": "Google-digitized page-image PDF files hosted by Internet Archive",
+      "jurisdiction": "Provider/platform terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The underlying edition is public domain in the United States, but the Google scan wrapper requests noncommercial personal use and no independent open reuse grant for the files was verified.",
+      "asserted_by_id": "agent:google-books",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:scan-wrappers"],
+      "notes": ["Provider conditions are recorded separately from copyright in the underlying edition."]
+    },
+    {
+      "id": "rights:ota-0063-encoding",
+      "entity": "encoding:ota:0063",
+      "component": "OTA 0063 digital encoding and package",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The current OTA item assigns Creative Commons Attribution-NonCommercial-ShareAlike 3.0.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported", "spdx": "CC-BY-NC-SA-3.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-0063"]
+    },
+    {
+      "id": "rights:ota-1677-encoding",
+      "entity": "encoding:ota:1677",
+      "component": "OTA 1677 SGML encoding and package",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The current OTA item assigns Creative Commons Attribution-NonCommercial-ShareAlike 3.0.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported", "spdx": "CC-BY-NC-SA-3.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-1677"]
+    },
+    {
+      "id": "rights:ota-3255-encoding",
+      "entity": "encoding:ota:3255",
+      "component": "OTA 3255 revised encoding and package",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The current OTA item assigns Creative Commons Attribution-ShareAlike 3.0.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-ShareAlike 3.0 Unported", "spdx": "CC-BY-SA-3.0", "uri": "https://creativecommons.org/licenses/by-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-3255"]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich-cme:Confessio",
+      "access_id": "access:umich-item",
+      "component": "Current U-M CME digital item",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-14",
+      "basis": "The current item page says the materials are in the public domain and applies RightsStatements.org No Copyright - United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"],
+      "notes": ["This current assertion conflicts with the embedded 1993 legacy availability statement and with the current OTA licenses on the upstream electronic encodings."]
+    },
+    {
+      "id": "rights:umich-legacy-availability",
+      "entity": "encoding:umich-cme:Confessio",
+      "component": "Legacy availability statement embedded in the repository/U-M XML wrapper",
+      "jurisdiction": "Provider statement",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The XML says the OTA text was made available for 'personal scholarly use only'; it does not state a license or clarify whether that restriction remains operative.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": ["Commercial redistribution of this encoding should not rely on the current NoC-US statement alone without resolving the OTA/U-M conflict."]
+    },
+    {
+      "id": "rights:repository-unlicense-scope",
+      "entity": "artifact:general-corpus:Confessio",
+      "component": "Pinned CME repository artifact and repository license wrapper",
+      "jurisdiction": "Repository assertion",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The pinned CME root LICENSE uses the Unlicense and refers to 'software'; its intended scope over inherited XML data and third-party transcription layers is not explicit.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-license"],
+      "notes": ["Do not use this repository-level statement to erase the separately recorded OTA, U-M, edition, manuscript-image, or provider layers."]
+    },
+    {
+      "id": "rights:fairfax-images",
+      "entity": "facsimile:digital-bodleian:Fairfax3",
+      "access_id": "access:fairfax-facsimile",
+      "component": "Digital Bodleian manuscript page images and IIIF derivatives",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "Digital Bodleian attributes the images under Creative Commons Attribution-NonCommercial 4.0 and its terms require permission and possible fees for commercial use.",
+      "asserted_by_id": "agent:bodleian-library",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-iiif", "evidence:bodleian-terms"],
+      "notes": ["The license applies to the image files, not the medieval text itself. The local bundle is for research/reference and should not be committed or redistributed commercially without permission."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:macaulay-base-text-selection",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "practice": "selection",
+      "source_feature": "Multiple first-, second-, and third-recension witnesses with Fairfax 3 as the chosen running copytext",
+      "representation": "Third-recension running text follows Fairfax 3; departures and other-recension lines are documented in the edition",
+      "description": "Macaulay selected Fairfax 3 as the basis of the running text but did not reproduce it diplomatically or treat it as the sole authority.",
+      "scope": "Entire Confessio Amantis edition",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macaulay-introduction", "evidence:bodleian-catalog"]
+    },
+    {
+      "id": "practice:macaulay-collation",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "practice": "collation",
+      "source_feature": "Variant readings and recension differences across a large manuscript tradition",
+      "representation": "Critical apparatus, noted departures from Fairfax, and asterisked lines belonging to other recensions",
+      "description": "Macaulay collated three manuscripts throughout beside Fairfax and checked at least fourteen further manuscripts wherever variation appeared.",
+      "scope": "Entire edition, especially apparatus and recension passages",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macaulay-introduction"]
+    },
+    {
+      "id": "practice:macaulay-abbreviation-expansion",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations, including final -oun contractions",
+      "representation": "Abbreviations silently expanded according to Macaulay's stated conventions",
+      "description": "Macaulay expands manuscript abbreviations and regularizes selected scribal letter forms for print.",
+      "scope": "Running Middle English and Latin text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macaulay-introduction"]
+    },
+    {
+      "id": "practice:macaulay-capitalization",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "practice": "capitalization_normalization",
+      "source_feature": "Inconsistent manuscript capitals and letter-form distinctions",
+      "representation": "Proper names and sentence-level capitals normalized; i/j, u/v, long s, thorn, and yogh rendered by stated print conventions",
+      "description": "The print edition normalizes capitalization and several paleographic letter distinctions rather than reproducing Fairfax's graphic forms.",
+      "scope": "Running text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macaulay-introduction"]
+    },
+    {
+      "id": "practice:macaulay-punctuation",
+      "entity": "edition:macaulay:eets-english-works-1900-1901",
+      "practice": "punctuation_normalization",
+      "source_feature": "Fairfax manuscript punctuation",
+      "representation": "Punctuation generally follows Fairfax but is made more consistent for modern print",
+      "description": "Macaulay states that he follows the manuscript punctuation in general while adding modern consistency.",
+      "scope": "Running text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macaulay-introduction"]
+    },
+    {
+      "id": "practice:ota-0063-selection",
+      "entity": "encoding:ota:0063",
+      "practice": "selection",
+      "source_feature": "Macaulay's English and Latin running text, apparatus, notes, and first-/second-recension variant passages",
+      "representation": "Numbered English third-recension running text only",
+      "description": "OTA explicitly says the file contains the text only and excludes first- and second-recension material; inspection also shows the Latin and apparatus are absent.",
+      "scope": "Entire encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-0063", "evidence:ota-0063-payload", "evidence:eets-scans"]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:Confessio",
+      "practice": "selection",
+      "source_feature": "Printed front/back matter, editorial notes, Latin verses and glosses, apparatus, and variant-recension passages",
+      "representation": "Nine English verse divisions with supplied 100-line groups and print page milestones",
+      "description": "The U-M/repository encoding preserves the English numbered line stream while its header explicitly says print front/back matter and editorial notes were omitted.",
+      "scope": "Entire encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:encoding-comparison"]
+    },
+    {
+      "id": "practice:umich-punctuation-correction",
+      "entity": "encoding:umich-cme:Confessio",
+      "practice": "punctuation_normalization",
+      "source_feature": "Corrupt closing brackets and control characters in the OTA line stream",
+      "representation": "Punctuation marks such as exclamation points in the U-M XML",
+      "description": "A normalized line comparison found 63 string differences, predominantly clear repairs of OTA transcription corruption rather than substantive re-editing.",
+      "scope": "Selected lines across the work",
+      "confidence": "high",
+      "evidence_ids": ["evidence:encoding-comparison"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned CME source, Confessio.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Confessio.xml",
+      "locator": "HEADER and complete TEXT",
+      "summary": "Supplies the repository artifact, U-M/HTI 1993 provenance, legacy U-1677-C availability statement, mistaken Complete Works volume note, omission declaration, creation date, and the complete encoded structure.",
+      "accessed_on": "2026-07-14",
+      "sha256": "160712cf3bea1f89ab9d98b00bccf6e88573c731c9fc1a9b1ca5560ca6fd63f8"
+    },
+    {
+      "id": "evidence:repo-commit",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c, 24 November 2024.",
+      "url": "https://github.com/Kyvero-Press/CME/commit/e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "summary": "Pins the repository source to the commit titled 'add source texts' and corroborates the artifact's git provenance.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:repo-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "Contains the Unlicense public-domain dedication and permission wording, framed in terms of software; it does not expressly resolve inherited XML data or third-party encoding layers.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English, John Gower's Confessio amantis.",
+      "url": "https://quod.lib.umich.edu/c/cme/confessio",
+      "summary": "Confirms the current public item, Gower title/author, 1993 electronic publication context, OTA U-1677-C relationship, public access, and current public-domain/NoC-US assertion.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-0063",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 0063, Confessio Amantis.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0063",
+      "summary": "Identifies John Dawson and the Cambridge Literary and Linguistic Computing Centre, the 1977-06-27 deposit, the exact EETS 1900-1901 two-volume source and volume split, exclusion of first-/second-recension material, available files, and CC BY-NC-SA 3.0 license.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-0063-payload",
+      "type": "digital_surrogate",
+      "citation": "Cached OTA 0063 plain text, header XML, and all-local-files package.",
+      "repository_path": "source-cache/Confessio/ota-0063-all-local-files.zip",
+      "summary": "Preserves the complete downloaded encoding package and header; inspection confirms the English numbered line stream and source metadata.",
+      "accessed_on": "2026-07-14",
+      "sha256": "2008fe359d5294c2d9604e77c6211ab93e079f2b2c247418f6f68e7a189cc19b"
+    },
+    {
+      "id": "evidence:ota-1677",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 1677, Confessio Amantis.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1677",
+      "summary": "States that 1677 is an SGML-tagged version of text 0063, gives the 1992-04-03 deposit and Dawson provenance, records CC BY-NC-SA 3.0, and points to revised replacement item 3255.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-1677-payload",
+      "type": "digital_surrogate",
+      "citation": "Cached OTA 1677 all-local-files package.",
+      "repository_path": "source-cache/Confessio/ota-1677-all-local-files.zip",
+      "summary": "Preserves the complete SGML package and exposes the payload's conflicting Clarendon Complete Works Edition wrapper while retaining the line stream inherited by U-M.",
+      "accessed_on": "2026-07-14",
+      "sha256": "bca0f471d6cc9eaef4fc492d913203f619205182e0f28fe36d4409fdbeb81c5a"
+    },
+    {
+      "id": "evidence:ota-3255",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 3255, Confessio Amantis.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3255",
+      "summary": "Documents the later revised replacement for 1677, its XML/text/HTML/ebook formats, and current CC BY-SA 3.0 license.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:encoding-comparison",
+      "type": "visual_inspection",
+      "citation": "Computational and manual comparison of repository Confessio.xml with cached OTA 0063 and 1677 payloads, 14 July 2026.",
+      "repository_path": "source-cache/Confessio/ota-1677-all-local-files.zip",
+      "summary": "All streams contain 33,444 matching line identifiers in the same order. Sixty-three normalized U-M line strings differ from OTA, predominantly repairs of bracket/control-character corruption to punctuation; examples include lines 1.616, 1.959, and 6.60.",
+      "accessed_on": "2026-07-14",
+      "notes": ["This supports corrected re-encoding from U-1677-C, not byte-for-byte copying."]
+    },
+    {
+      "id": "evidence:eets-scans",
+      "type": "digital_surrogate",
+      "citation": "G. C. Macaulay, ed., The English Works of John Gower, EETS Extra Series 81-82 (1900-1901), complete Harvard/Google scans hosted by Internet Archive.",
+      "url": "https://archive.org/details/englishworksjoh02macagoog",
+      "alternate_urls": ["https://archive.org/details/englishworksjoh03macagoog"],
+      "locator": "vol. I, printed pp. 1-456; vol. II, printed pp. 1-478",
+      "summary": "Confirms exact EETS title pages, volume/series numbering, imprint, editorial division, print pagination, third-recension running text, Latin and apparatus omitted by OTA, and co-publication of In Praise of Peace in volume II.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:complete-works-scans",
+      "type": "digital_surrogate",
+      "citation": "G. C. Macaulay, ed., The Complete Works of John Gower, vols. II-III, The English Works (Clarendon Press, 1901), complete scans hosted by Internet Archive.",
+      "url": "https://archive.org/details/completeworksofj02goweuoft",
+      "alternate_urls": ["https://archive.org/details/completeworksofj03goweuoft"],
+      "summary": "Confirms that Confessio occupies Complete Works volumes II-III, not III-IV, and preserves the parallel Clarendon issue for comparison.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:scan-wrappers",
+      "type": "visual_inspection",
+      "citation": "Google Books frontmatter embedded in the cached Harvard scans of Macaulay's EETS volumes I-II.",
+      "repository_path": "source-cache/Confessio/macaulay-eets-english-works-volume-1.pdf",
+      "summary": "The wrapper states Google's public-domain belief while requesting noncommercial personal use; this provider condition is distinct from the public-domain status of the 1900-1901 edition in the United States.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:macaulay-introduction",
+      "type": "edition_statement",
+      "citation": "G. C. Macaulay, introduction to The Complete Works of John Gower, vol. II, The English Works (1901), searchable Project Gutenberg transcription no. 71162.",
+      "url": "https://www.gutenberg.org/files/71162/71162-h/71162-h.htm",
+      "locator": "textual history, recension scheme, manuscripts, and editorial method",
+      "summary": "Macaulay explains the three-recension scheme and its caveats; says Fairfax 3 forms the basis of the text and every deviation is noted; names the manuscripts collated throughout and wider checking; and states conventions for abbreviation expansion, letter forms, capitalization, punctuation, line numbering, and other-recension asterisks.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:jgs-online-editions",
+      "type": "scholarly_source",
+      "citation": "John Gower Society, Online Editions.",
+      "url": "https://johngower.org/online-editions/",
+      "summary": "Confirms the four-volume Complete Works sequence: French works I, English Works/Confessio II-III, and Latin works IV, and links the Macaulay volumes.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:jgs-fairfax",
+      "type": "scholarly_source",
+      "citation": "John Gower Society, manuscript description of Oxford, Bodleian Library, Fairfax 3.",
+      "url": "https://johngower.org/scholarship/PearsallMS/MSS/Fairfax3.html",
+      "summary": "Provides specialist description of Fairfax as a c. 1400 third-recension Confessio manuscript and discusses the replacement leaves, revision layers, and scribal hands.",
+      "accessed_on": "2026-07-14",
+      "notes": ["The official Bodleian component record is preferred for the exact endpoint f. 186r."]
+    },
+    {
+      "id": "evidence:teams-introduction",
+      "type": "scholarly_source",
+      "citation": "John Gower, Confessio Amantis, ed. Russell A. Peck with Latin translations by Andrew Galloway, TEAMS Middle English Texts Series, introduction.",
+      "url": "https://metseditions.org/read/RaN27j0h1kaQTbkVTvL3RUN3bplyLYd",
+      "summary": "Supports composition c. 1386-1390, later revision through 1392/1393, the conventional recension groupings, and Fairfax's place in the third-recension tradition while showing that revision history is more complex than a simple linear three-stage model.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bodleian-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS. Fairfax 3, manuscript 4864.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4864",
+      "locator": "whole codex and Confessio Amantis component",
+      "summary": "Confirms shelfmark, date, English origin, parchment support, extent, dimensions, scribal layers, exact Confessio locus ff. 2r-186r, third-recension status, and Macaulay's use of Fairfax as copytext.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bodleian-iiif",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, John Gower, Confessio Amantis and other poems, MS. Fairfax 3, IIIF manifest.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/b248e552-650b-47bc-aac2-e1184896f924.json",
+      "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/b248e552-650b-47bc-aac2-e1184896f924/"],
+      "summary": "Provides the complete 408-canvas color facsimile, canvas labels/URLs, image services, attribution, and CC BY-NC 4.0 image statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:fairfax-bundle-audit",
+      "type": "visual_inspection",
+      "citation": "Local integrity and visual audit of the complete Digital Bodleian Fairfax 3 IIIF bundle, 14 July 2026.",
+      "repository_path": "source-cache/Confessio/bodleian-fairfax-3-complete-iiif-1600px.zip",
+      "locator": "manifest.json, inventory.json, and images/000001.jpg-images/000408.jpg",
+      "summary": "ZIP integrity is clean; manifest and inventory each account for all 408 source canvases from Upper board through Tail. Canvas 11 is f. 2r, canvas 379 is f. 186r and ends Confessio, and canvas 380 is f. 186v and begins Traitié.",
+      "accessed_on": "2026-07-14",
+      "sha256": "f331927a19795515e7f0f361be4d01645fa8bf9e704c0c7e744402bcad2697a2"
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use.",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "summary": "States CC BY-NC 4.0 for Digital Bodleian images, explains noncommercial and limited academic-publication use, and directs commercial/high-resolution licensing enquiries to Imaging Services.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:usco-circular",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Copyright Term and the Public Domain, Circular 15A, revised April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "p. 2, works first published in the United States",
+      "summary": "States that works published before 1931 are in the public domain in the United States as of 2026.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+      "notes": [
+        "qpdf --check reported recoverable hint-table/shared-object warnings while succeeding; the provider file was retained byte-for-byte rather than rewritten."
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-ota-rights-conflict",
+      "question": "Which current terms govern redistribution, including commercial reuse, of the U-M XML line stream inherited from OTA 1677/0063?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask U-M whether NoC-US is intended to cover the electronic encoding or only the underlying public-domain work.",
+        "Ask OTA whether the current CC BY-NC-SA 3.0 statements apply retroactively to 0063/1677 and whether commercial licensing is available.",
+        "Keep generated-text publishing decisions separate from reuse of Digital Bodleian images."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:ota-0063", "evidence:ota-1677"]
+    },
+    {
+      "id": "question:exact-print-exemplar",
+      "question": "Was OTA 0063 keyed from the separately titled EETS English Works issue, the parallel Clarendon Complete Works issue, or a hybrid bibliographic description?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Seek surviving Cambridge LLCC/OTA accession documentation for 0063 and 1677.",
+        "Compare page-break and typographic anomalies against both cached issue scans.",
+        "Do not treat the repository header's volumes 3-4 claim as evidence; it is demonstrably incorrect."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:repo-xml", "evidence:ota-0063", "evidence:ota-1677-payload", "evidence:eets-scans", "evidence:complete-works-scans"]
+    },
+    {
+      "id": "question:parallel-issue-identity",
+      "question": "Are the 1900-1901 EETS English Works and 1901 Clarendon Complete Works English volumes bibliographically identical impressions or merely parallel issues of the same editorial setting?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Collate title/half-title sheets, signatures, typography, and representative textual pages across the cached scans or consult a bibliographic study."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:eets-scans", "evidence:complete-works-scans", "evidence:jgs-online-editions"]
+    },
+    {
+      "id": "question:recension-model",
+      "question": "How should a future version-aware corpus represent Confessio's authorial revision history beyond Macaulay's conventional first/second/third-recension scheme?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult current textual scholarship on Confessio revision and manuscript groupings.",
+        "Represent individual variant passages and witness states before labeling the sequence as strictly chronological.",
+        "Retain the present record's narrower claim that the encoded running text is the third-recension Fairfax-based stream."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:macaulay-introduction", "evidence:teams-introduction", "evidence:bodleian-catalog"]
+    },
+    {
+      "id": "question:repository-license-scope",
+      "question": "Does the pinned CME repository's Unlicense intentionally cover inherited XML text data, or only software and repository-authored wrapper material?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Request a written scope clarification from the CME repository owner and preserve upstream OTA/U-M terms independently."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:repo-license", "evidence:repo-xml"]
+    }
+  ]
+}
