@@ -67,6 +67,16 @@ inventories and work overlap, and retire the dated whole-object negative; never
 let the older partial selection conceal or stand in for the newer complete
 surrogate.
 
+LUNA searches can mix `mediaType: Image` records with compound `mediaType:
+Book` records. Audit the complete result set by media type and open every Book
+manifest; an image-only loop can capture dozens of single folios while silently
+missing multi-canvas published selections. Model distinct compound Books as
+separate facsimile objects, cache every canvas of each published object, and
+state both selection-level completeness and physical-manuscript partiality.
+Do not infer that a named provider ZIP exists from a Book descriptor: verify
+that any archive response is nonempty and valid, and otherwise use an audited
+IIIF bundle with the exact manifest and image requests preserved.
+
 Conversely, two live Presentation-manifest URLs can be alternate records for
 the same published image object. Compare every canvas ID, Image API service ID,
 sequence order, license, attribution, and effective request profile. When those
