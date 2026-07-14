@@ -57,6 +57,13 @@ Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
 checks with `last_checked`.
 
+Do not reject an official bitstream solely because a `HEAD` response reports
+HTML or another generic content type. Some repository routes describe the
+landing response on `HEAD` but return the advertised PDF or image on `GET`.
+Retrieve the exact public URL without bypassing access controls, then validate
+the final bytes by signature, parser, size, and expected contents; record the
+final URL and actual media type rather than trusting request-method metadata.
+
 ## Cache verified file deliverables
 
 Download every exact public file used as a manuscript/book facsimile or
