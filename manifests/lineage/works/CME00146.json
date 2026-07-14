@@ -1,0 +1,1547 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00146",
+  "work_id": "CME00146",
+  "title": "Liber Cure Cocorum",
+  "primary_subject": "artifact:general-corpus:CME00146",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "CME00146 is the General Corpus copy of the University of Michigan electronic text keyed from Richard Morris's 1862 Liber Cure Cocorum. Morris says that he printed the work from a transcript of British Library Sloane MS 1986, but he does not identify the transcript's maker, present location, or whether it was made directly from the codex; that intermediary is therefore modeled separately rather than silently collapsing the edition into the manuscript. The encoded selection retains the source title page, fourteen-line prologue, table of contents, complete verse recipe collection, index, final editorial note, and printing colophon, while omitting Morris's two-page preface and nontextual scan matter. Sloane MS 1986 contains the full work at ff. 27r-56v. Magdalene College Pepys MS 1047 independently preserves four excerpts at ff. 15r-16v; a complete 55-canvas CUDL image object is cached from the exact official manifest preserved by the Internet Archive on 2025-06-14 because the live manifest and metadata endpoints returned server errors during review. No verified public facsimile was found for Sloane MS 1986; physical consultation and a paid whole-object photography route are recorded. DIMEV v1.0, Morris's complete edition scan, the Pepys image object, Hodgett's controlled-lending 1972 Pepys facsimile, and the British Library rate card have complete or metadata-complete private cache records without implying redistribution rights.",
+  "languages": ["enm", "lat", "eng"],
+  "review_notes": [
+    "The anonymous Middle English culinary work, two manuscript witnesses, Morris's unidentified working transcript, Morris's printed edition, the U-M encoding, and the repository XML are separate entities.",
+    "Morris's title page says copied and edited from Sloane MS 1986, but his preface more precisely says first printed from a transcript; the transcript maker, directness, and survival are unresolved.",
+    "Pepys MS 1047 contains four excerpts, not a complete second copy: DIMEV records 5104, 1420, 6721, and 5106, and direct images place them across ff. 15r-16v.",
+    "Complete Pepys cache coverage means every one of the 55 canvases exposed by the archived official provider manifest, including covers and all imaged leaves; it does not assert capture of unexposed physical edges or other surfaces.",
+    "The archived CUDL manifest licenses downloadable images CC BY-NC 3.0, while the current Magdalene page says publication requires purchase and permission. Both statements are retained, and the more conservative permission route governs any proposed publication or commercial reuse.",
+    "A private, gitignored cache documents research access and fixity but does not itself grant public redistribution, publication, or commercial reuse."
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00146",
+      "object": "encoding:umich-cme:CME00146",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete checked-in XML repository copy"},
+        "object": {"kind": "whole", "description": "Complete U-M item content represented by the keyed text"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:xml-audit"]
+      }
+    },
+    {
+      "id": "relation:encoding-morris",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00146",
+      "object": "edition:morris:liber-cure-cocorum-1862",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Entire CME00146 electronic text"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Source title page, then prologue through printing colophon; Morris's preface and nontextual scan matter omitted",
+          "locators": [
+            "PDF p. 7 = source title page = XML PB REF 1",
+            "PDF pp. 11-71 = printed p. 1 through p. 61 = XML PB REF 2-62 plus final note and colophon"
+          ]
+        },
+        "notes": "The encoded source portions are noncontiguous because PDF pp. 8-10, including the complete two-page preface, intervene between the title page and prologue."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit", "evidence:morris-edition", "evidence:umich-item"]
+      }
+    },
+    {
+      "id": "relation:ia-facsimile-morris",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:morris-1862",
+      "object": "edition:morris:liber-cure-cocorum-1862",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 96-page Internet Archive PDF object"},
+        "object": {"kind": "whole", "description": "Complete Morris tract plus the bound-copy carrier matter exposed by the provider"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata"]
+      }
+    },
+    {
+      "id": "relation:morris-version-work",
+      "type": "version_of",
+      "subject": "edition:morris:liber-cure-cocorum-1862",
+      "object": "work:middle-english:liber-cure-cocorum",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Fourteen-line prologue, table, full verse recipe collection, and medieval explicit; modern title page, preface, index, note, and colophon excluded from the abstract work"
+        },
+        "object": {"kind": "whole", "description": "Liber Cure Cocorum"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:morris-edition", "evidence:dimev-release", "evidence:repo-xml"]
+      }
+    },
+    {
+      "id": "relation:morris-transcribes-working-transcript",
+      "type": "transcribes",
+      "subject": "edition:morris:liber-cure-cocorum-1862",
+      "object": "intermediary:unidentified-transcript:sloane-1986-lcc",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Printed prologue, table, verse recipe text, and manuscript-derived explicit and readings",
+          "locators": ["printed pp. 1-55"]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Unidentified transcript of the complete Sloane Liber Cure Cocorum work portion"
+        },
+        "notes": "Morris's editorial index, final note, and printing colophon are not treated as transcript content."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:morris-edition", "evidence:transcript-source-audit"],
+        "notes": "The preface expressly says the poem was first printed from a transcript."
+      }
+    },
+    {
+      "id": "relation:working-transcript-sloane",
+      "type": "transcribes",
+      "subject": "intermediary:unidentified-transcript:sloane-1986-lcc",
+      "object": "witness:bl:Sloane-MS-1986",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Working transcript as represented by Morris's edition"},
+        "object": {
+          "kind": "part",
+          "description": "Liber Cure Cocorum work portion",
+          "locators": ["ff. 27r-56v"]
+        },
+        "notes": "The textual source is identified, but neither the transcript maker nor the physical or copying route from codex to transcript is known."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:morris-edition", "evidence:bl-sloane-catalog", "evidence:dimev-release", "evidence:transcript-source-audit"],
+        "notes": "Morris identifies the transcript as a transcript of Sloane MS 1986, while leaving the production method undocumented."
+      }
+    },
+    {
+      "id": "relation:sloane-contains-work",
+      "type": "contains",
+      "subject": "witness:bl:Sloane-MS-1986",
+      "object": "work:middle-english:liber-cure-cocorum",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Full witness of Liber Cure Cocorum",
+          "locators": ["ff. 27r-56v", "principal recipe text begins f. 29r"]
+        },
+        "object": {"kind": "whole", "description": "Complete work, including prologue and table"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:dimev-release", "evidence:morris-edition"]
+      }
+    },
+    {
+      "id": "relation:pepys-excerpted-from-work",
+      "type": "excerpted_from",
+      "subject": "witness:magdalene:Pepys-MS-1047",
+      "object": "work:middle-english:liber-cure-cocorum",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Four culinary verse excerpts",
+          "locators": [
+            "ff. 15r-16v",
+            "CUDL canvases 33-36",
+            "DIMEV 5104, 1420, 6721, and 5106"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Sauce for roast mallard; woodcock, snipe, curlew, bittern, and cormorant; fritters; and pot herbs"
+        },
+        "notes": "No direct copying edge from Pepys MS 1047 to Sloane MS 1986 is asserted."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release", "evidence:pepys-cudl-manifest", "evidence:pepys-visual"]
+      }
+    },
+    {
+      "id": "relation:cudl-facsimile-pepys",
+      "type": "facsimile_of",
+      "subject": "facsimile:cudl:Pepys-MS-1047",
+      "object": "witness:magdalene:Pepys-MS-1047",
+      "scope": {
+        "subject": {"kind": "whole", "description": "All 55 canvases exposed by the official archived CUDL manifest"},
+        "object": {
+          "kind": "whole",
+          "description": "Complete manuscript object as imaged by CUDL, including front and rear exteriors and spine"
+        },
+        "notes": "Completeness is relative to the provider's 55-canvas inventory, not to unoffered edges or hidden binding structures."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:pepys-visual"]
+      }
+    },
+    {
+      "id": "relation:hodgett-facsimile-pepys",
+      "type": "facsimile_of",
+      "subject": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "object": "witness:magdalene:Pepys-MS-1047",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Published parallel facsimile and modern English volume"},
+        "object": {
+          "kind": "part",
+          "description": "The manuscript-page sequence reproduced in the 1972 volume; exact exterior and binding coverage unverified"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:hodgett-nla", "evidence:dimev-release", "evidence:pepys-cudl-manifest"]
+      }
+    },
+    {
+      "id": "relation:dimev-work",
+      "type": "describes",
+      "subject": "catalog:dimev:record-3799",
+      "object": "work:middle-english:liber-cure-cocorum",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Record 3799, including linked excerpt records"},
+        "object": {"kind": "whole", "description": "Liber Cure Cocorum"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release"]
+      }
+    },
+    {
+      "id": "relation:dimev-sloane",
+      "type": "describes",
+      "subject": "catalog:dimev:record-3799",
+      "object": "witness:bl:Sloane-MS-1986",
+      "scope": {
+        "subject": {"kind": "part", "description": "Record 3799 witness wit-3799-2 and Manuscripts.xml BLSl1986"},
+        "object": {"kind": "part", "description": "Full work at ff. 27r-56v"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release"]
+      }
+    },
+    {
+      "id": "relation:dimev-pepys",
+      "type": "describes",
+      "subject": "catalog:dimev:record-3799",
+      "object": "witness:magdalene:Pepys-MS-1047",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Record 3799 witness wit-3799-1 and excerpt records 5104, 1420, 6721, and 5106"
+        },
+        "object": {"kind": "part", "description": "Four excerpts at ff. 15r-16v"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release"]
+      }
+    },
+    {
+      "id": "relation:dimev-cites-morris",
+      "type": "cites",
+      "subject": "catalog:dimev:record-3799",
+      "object": "edition:morris:liber-cure-cocorum-1862",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Sloane witness edition reference and Bibliography.xml Morris1862"},
+        "object": {"kind": "whole", "description": "Morris's 1862 edition"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release"]
+      }
+    },
+    {
+      "id": "relation:dimev-cites-hodgett",
+      "type": "cites",
+      "subject": "catalog:dimev:record-3799",
+      "object": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Pepys witness and four excerpt facsimile references plus Bibliography.xml Hodgett1972"},
+        "object": {"kind": "whole", "description": "Hodgett's 1972 facsimile volume"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:dimev-release"]
+      }
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:encoding-selection",
+      "entity": "encoding:umich-cme:CME00146",
+      "practice": "selection",
+      "source_feature": "Complete Morris tract within a 96-page bound-volume scan",
+      "representation": "Source title page and printed p. 1 through the colophon, with the two-page preface omitted",
+      "description": "The XML preserves the intellectual work and later editorial index and note but does not reproduce the preface in which Morris states the transcript-based source method.",
+      "scope": "Complete CME00146 encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit", "evidence:morris-edition", "evidence:umich-item"]
+    },
+    {
+      "id": "practice:pepys-excerpt-selection",
+      "entity": "witness:magdalene:Pepys-MS-1047",
+      "practice": "selection",
+      "source_feature": "Liber Cure Cocorum as a 127-recipe verse collection",
+      "representation": "Four selected culinary verse passages on ff. 15r-16v",
+      "description": "The later Pepys witness preserves only sauce for mallard, bird-roasting instructions, fritters, and pot herbs; it is not used to fill or replace the full Sloane text.",
+      "scope": "Pepys MS 1047, ff. 15r-16v",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-release", "evidence:pepys-cudl-manifest", "evidence:pepys-visual"]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": ["https://github.com/Kyvero-Press/CME"]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": ["https://quod.lib.umich.edu/c/cme"]
+    },
+    {
+      "id": "agent:richard-morris",
+      "type": "person",
+      "name": "Richard Morris",
+      "dates": "1833-1894",
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata"]
+    },
+    {
+      "id": "agent:philological-society",
+      "type": "organization",
+      "name": "Philological Society of London",
+      "alternate_names": ["Philological Society (Great Britain)"],
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata"]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": ["https://archive.org/"]
+    },
+    {
+      "id": "agent:university-of-leeds-library",
+      "type": "organization",
+      "name": "University of Leeds Library",
+      "evidence_ids": ["evidence:morris-ia-metadata"]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": ["https://www.bl.uk/"]
+    },
+    {
+      "id": "agent:pepys-library-magdalene",
+      "type": "organization",
+      "name": "Pepys Library, Magdalene College, Cambridge",
+      "urls": ["https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library"]
+    },
+    {
+      "id": "agent:cambridge-university-library",
+      "type": "organization",
+      "name": "Cambridge University Library",
+      "urls": ["https://www.lib.cam.ac.uk/"]
+    },
+    {
+      "id": "agent:gerald-hodgett",
+      "type": "person",
+      "name": "Gerald A. J. Hodgett",
+      "evidence_ids": ["evidence:hodgett-nla", "evidence:dimev-release"]
+    },
+    {
+      "id": "agent:delia-smith",
+      "type": "person",
+      "name": "Delia Smith",
+      "evidence_ids": ["evidence:hodgett-nla", "evidence:pepys-cudl-manifest"]
+    },
+    {
+      "id": "agent:dimev",
+      "type": "organization",
+      "name": "Digital Index of Middle English Verse",
+      "urls": ["https://www.dimev.net/", "https://github.com/digital-index-of-middle-english-verse/dimev"]
+    }
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00146",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00146",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00146"},
+        {"scheme": "git-blob", "value": "d161da6811e718b34c78bdf9afb9cd9f3cc165a9"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00146.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "d161da6811e718b34c78bdf9afb9cd9f3cc165a9",
+        "sha256": "166256a5a42c7b2e8a166568550689c1876189a3c4a291d77afca096b5ee5b2a"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit"],
+      "notes": [
+        "IDG/@ID, BIBNO, and VID all identify CME00146; the file is 107,737 bytes.",
+        "The single TEMPHEAD/ITEM is an encoding-workflow note and is not one of the culinary recipes or index entries."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME00146",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item CME00146",
+      "description": "A manually keyed electronic selection from Morris's 1862 edition. The represented source layers are the title page; fourteen-line prologue; table of contents; complete verse text; index of words and dishes; final editorial note; and printing colophon.",
+      "identifiers": [
+        {"scheme": "U-M name", "value": "CME00146", "uri": "https://name.umdl.umich.edu/CME00146"}
+      ],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit", "evidence:umich-item", "evidence:morris-edition"]
+    },
+    {
+      "id": "work:middle-english:liber-cure-cocorum",
+      "type": "catalog_description",
+      "label": "Liber Cure Cocorum",
+      "alternate_labels": ["The Slyghtes of Cure"],
+      "description": "An anonymous Middle English culinary recipe collection in rhyming couplets. DIMEV v1.0 describes 127 recipes in 1,429 lines plus a fourteen-line prologue. Its exact composition date and place remain insecure; the full Sloane witness is fifteenth century, and Pepys MS 1047 transmits four later-fifteenth-century excerpts.",
+      "identifiers": [
+        {"scheme": "DIMEV", "value": "3799", "uri": "https://www.dimev.net/record.php?recID=3799"},
+        {"scheme": "IMEV", "value": "2361"},
+        {"scheme": "NIMEV", "value": "2361"}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:morris-edition", "evidence:dimev-release", "evidence:bl-sloane-catalog", "evidence:pepys-cudl-manifest"],
+      "notes": [
+        "Morris's North-West Lancashire claim is an 1862 linguistic inference; DIMEV's LALME/eLALME localization to Cheshire describes the Sloane witness language and is not treated as proof of the work's composition place.",
+        "No consulted primary or scholarly catalog source names the author."
+      ]
+    },
+    {
+      "id": "edition:morris:liber-cure-cocorum-1862",
+      "type": "scholarly_edition",
+      "label": "Richard Morris, Liber Cure Cocorum (1862)",
+      "description": "The first printed edition of the poem, with source title page, two-page preface, fourteen-line prologue, table of contents, verse text, footnotes, index of words and dishes, final editorial note, and colophon. Morris says it was printed from a transcript of Sloane MS 1986, takes responsibility for bracketed words, and says textual alterations are acknowledged in footnotes.",
+      "creator_ids": ["agent:richard-morris", "agent:philological-society"],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1862",
+          "normalized": "1862",
+          "certainty": "high",
+          "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata", "evidence:dimev-release"]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Richard Morris, ed., Liber Cure Cocorum, Copied and Edited from the Sloane MS. 1986 (Berlin: published for the Philological Society by A. Asher & Co., 1862), iv + 61 pp.",
+        "title": "Liber Cure Cocorum",
+        "publisher": "A. Asher & Co., for the Philological Society",
+        "publication_place": "Berlin",
+        "date": "1862",
+        "pages": "iv, 61",
+        "languages": ["enm", "eng", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata", "evidence:dimev-release", "evidence:repo-xml"],
+      "notes": [
+        "The title-page phrase copied and edited from the manuscript does not override the preface's more precise statement that the edition was printed from a transcript.",
+        "The edition's preface occupies PDF pp. 9-10 in the cached Internet Archive file and is not encoded in CME00146."
+      ]
+    },
+    {
+      "id": "facsimile:internet-archive:morris-1862",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Morris's 1862 Liber Cure Cocorum",
+      "description": "A 96-page complete PDF scan of the University of Leeds copy, including bound-volume carrier matter and the complete Morris tract. The encoded title page is PDF p. 7; the encoded prologue through colophon is PDF pp. 11-71.",
+      "creator_ids": ["agent:internet-archive", "agent:university-of-leeds-library"],
+      "reproduction_format": "Complete downloadable PDF with derived OCR and item metadata",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata"]
+    },
+    {
+      "id": "intermediary:unidentified-transcript:sloane-1986-lcc",
+      "type": "manuscript_witness",
+      "label": "Unidentified working transcript of Sloane MS 1986 used by Morris",
+      "description": "The modern working transcript from which Morris says the 1862 edition was first printed. It is not the medieval codex. Morris does not identify its maker, date, location, survival, or whether it was copied directly from the original manuscript.",
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:morris-edition", "evidence:transcript-source-audit"],
+      "notes": [
+        "Typed as manuscript_witness because lineage schema 1.0.0 has no dedicated transcript-intermediary entity type.",
+        "No creator_id is assigned: the title page shows Morris's editorial responsibility, but the preface does not establish that he personally made the transcript."
+      ]
+    },
+    {
+      "id": "witness:bl:Sloane-MS-1986",
+      "type": "manuscript_witness",
+      "label": "British Library, Sloane MS 1986",
+      "description": "A fifteenth-century parchment quarto of 110 folios containing Middle English and Latin texts. The Boke of Curtasye occupies ff. 12r-27r, and the full Liber Cure Cocorum follows at ff. 27r-56v; its fourteen-line prologue begins on f. 27r, its table follows, and its principal recipe text begins on f. 29r.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Sloane MS 1986", "uri": "https://searcharchives.bl.uk/catalog/040-002114345"},
+        {"scheme": "British Library ARK component", "value": "ark:/81055/vdc_100000000603.0x000296"}
+      ],
+      "date_statements": [
+        {
+          "label": "Manuscript production",
+          "value": "Fifteenth century",
+          "normalized": "1400/1499",
+          "certainty": "high",
+          "evidence_ids": ["evidence:bl-sloane-catalog"]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Sloane MS 1986",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002114345"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "110 folios; Liber Cure Cocorum at ff. 27r-56v",
+        "format": "Quarto manuscript codex",
+        "notes": [
+          "The current BL record describes the work as English verse and gives the terminal folio as 56b.",
+          "DIMEV v1.0 localizes this manuscript's language as LALME/eLALME LP 43, grid 406 400, Cheshire; that witness-level localization is not a composition-place assertion."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:dimev-release", "evidence:morris-edition", "evidence:bl-public-facsimile-audit"]
+    },
+    {
+      "id": "witness:magdalene:Pepys-MS-1047",
+      "type": "manuscript_witness",
+      "label": "Magdalene College, Pepys MS 1047",
+      "alternate_labels": ["Cambridge, Magdalene College, Pepys MS 1047"],
+      "description": "A late-fifteenth-century paper recipe and instructional miscellany copied by one Anglicana-formata scribe. Four Liber Cure Cocorum excerpts occupy ff. 15r-16v: sauce for roast mallard, woodcock and related birds, fritters, and pot herbs. They form a partial witness, not a complete copy of the 127-recipe work.",
+      "identifiers": [
+        {"scheme": "Pepys Library shelfmark", "value": "Pepys MS 1047", "uri": "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1"},
+        {"scheme": "CUDL item", "value": "MS-MAGDALENE-PEPYS-01047"}
+      ],
+      "date_statements": [
+        {
+          "label": "Manuscript production",
+          "value": "Late fifteenth century, certainly in or after 1470/1471",
+          "normalized": "1470/1499",
+          "certainty": "high",
+          "evidence_ids": ["evidence:pepys-cudl-manifest"]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:pepys-library-magdalene",
+        "shelfmark": "Pepys MS 1047",
+        "catalog_url": "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1",
+        "notes": "The official digital record was created and served by Cambridge University Library, but custodianship is the Pepys Library at Magdalene College."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "i + 23 + i leaves; Liber Cure Cocorum excerpts at ff. 15r-16v",
+        "format": "Quarto manuscript codex",
+        "dimensions": "180 x 135 mm",
+        "notes": [
+          "Single columns, usually twenty lines to the page, copied by a single scribe in Anglicana formata.",
+          "The lower parts of ff. 13 and 14 are cut away, and one leaf is missing after f. 13; these losses precede the target excerpt leaves."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:pepys-visual", "evidence:dimev-release", "evidence:hodgett-nla"]
+    },
+    {
+      "id": "facsimile:cudl:Pepys-MS-1047",
+      "type": "facsimile",
+      "label": "CUDL complete provider-published image object for Pepys MS 1047",
+      "description": "The complete 55-canvas object exposed by Cambridge Digital Library's official IIIF manifest, from front cover through rear cover and spine. The live manifest and metadata endpoints returned HTTP 500 with an S3 NoSuchKey error during review, so the cache was built from the exact official manifest archived on 2025-06-14; the underlying CUL IIIF Image API files remained publicly retrievable. Liber Cure Cocorum occupies canvases 33-36, ff. 15r-16v.",
+      "creator_ids": ["agent:cambridge-university-library"],
+      "reproduction_format": "IIIF Presentation 2 manifest with 55 color canvases, preserved as a complete 1600-pixel ZIP bundle",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:pepys-visual", "evidence:cudl-live-endpoint-audit"]
+    },
+    {
+      "id": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "type": "facsimile",
+      "label": "Gerald A. J. Hodgett, Stere Htt Well (1972)",
+      "description": "A printed reproduction of Pepys MS 1047 with parallel facsimile and modern English transcription or translation, a foreword by Gerald A. J. Hodgett, and an introduction by Delia Smith. The exact physical-surface coverage beyond the published manuscript-page sequence was not verified.",
+      "creator_ids": ["agent:gerald-hodgett", "agent:delia-smith"],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1972",
+          "normalized": "1972",
+          "certainty": "high",
+          "evidence_ids": ["evidence:hodgett-nla", "evidence:hodgett-ia-metadata", "evidence:dimev-release"]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Gerald A. J. Hodgett, Stere Htt Well: A Book of Medieval Refinements, Recipes and Remedies, from a Manuscript in Samuel Pepys's Library, introduction by Delia Smith (London: Cornmarket Press, 1972), [7], 48 [i.e. 96] pp.",
+        "title": "Stere Htt Well: A Book of Medieval Refinements, Recipes and Remedies, from a Manuscript in Samuel Pepys's Library",
+        "publisher": "Cornmarket Press",
+        "publication_place": "London",
+        "date": "1972",
+        "pages": "[7], 48 [i.e. 96]",
+        "languages": ["enm", "eng"]
+      },
+      "reproduction_format": "Printed parallel facsimile and modern English text; complete digital scan available only through controlled lending",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hodgett-nla", "evidence:hodgett-ia-metadata", "evidence:hodgett-access-audit", "evidence:dimev-release"]
+    },
+    {
+      "id": "catalog:dimev:record-3799",
+      "type": "catalog_description",
+      "label": "DIMEV v1.0 record 3799 / IMEV 2361",
+      "description": "A versioned scholarly catalog record describing Liber Cure Cocorum as 127 culinary recipes in 1,429 couplet lines plus a fourteen-line prologue, the complete Sloane witness, and four excerpts in Pepys MS 1047. Separate linked records 5104, 1420, 6721, and 5106 describe those excerpts.",
+      "identifiers": [
+        {"scheme": "DIMEV", "value": "3799", "uri": "https://www.dimev.net/record.php?recID=3799"},
+        {"scheme": "IMEV", "value": "2361"},
+        {"scheme": "NIMEV", "value": "2361"},
+        {"scheme": "DIMEV excerpt", "value": "5104", "uri": "https://www.dimev.net/record.php?recID=5104"},
+        {"scheme": "DIMEV excerpt", "value": "1420", "uri": "https://www.dimev.net/record.php?recID=1420"},
+        {"scheme": "DIMEV excerpt", "value": "6721", "uri": "https://www.dimev.net/record.php?recID=6721"},
+        {"scheme": "DIMEV excerpt", "value": "5106", "uri": "https://www.dimev.net/record.php?recID=5106"}
+      ],
+      "creator_ids": ["agent:dimev"],
+      "date_statements": [
+        {
+          "label": "Version 1.0 publication",
+          "value": "2025-01-01",
+          "normalized": "2025-01-01",
+          "certainty": "high",
+          "evidence_ids": ["evidence:dimev-release"]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:dimev-release"],
+      "notes": [
+        "DIMEV's 1,429-line main-text count differs by eight from the 1,437 L elements in the XML's main poem division; the measurements are preserved separately pending a line-by-line reconciliation.",
+        "DIMEV's Pepys folio locators were refined through direct image inspection: 5104 crosses 15r-15v; 1420 crosses 15v-16r; 6721 is on 16r; and 5106 crosses 16r-16v."
+      ]
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00146",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Repository checkout or pinned GitHub blob",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00146.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00146.xml",
+      "cost": "free",
+      "format": "application/xml",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]
+    },
+    {
+      "id": "access:umich-item",
+      "entity": "encoding:umich-cme:CME00146",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page and stable name URL",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00146",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00146"],
+      "cost": "free",
+      "format": "Web text",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:umich-item", "evidence:umich-collection"],
+      "notes": [
+        "The public interface is the documented access route; automated requests returned HTTP 403 during review without establishing ordinary browser unavailability."
+      ]
+    },
+    {
+      "id": "access:morris-ia",
+      "entity": "facsimile:internet-archive:morris-1862",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item page, complete PDF, metadata API, and derived OCR",
+      "url": "https://archive.org/details/b21505044",
+      "alternate_urls": [
+        "https://archive.org/download/b21505044/b21505044.pdf",
+        "https://archive.org/metadata/b21505044",
+        "https://archive.org/download/b21505044/b21505044_djvu.txt"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Internet Archive PDF of Morris 1862",
+          "path": "source-cache/CME00146/morris-liber-cure-cocorum-1862-complete.pdf",
+          "source_url": "https://archive.org/download/b21505044/b21505044.pdf",
+          "sha256": "46d5bc76433d606b2f5a3b9d91bf85828a1bb473933fe65db03831be38b9f59e",
+          "bytes": 4683494,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Noncontiguous CME00146 source portions in the complete Morris scan",
+            "locators": [
+              "PDF p. 7 = title page = XML PB REF 1",
+              "PDF pp. 11-71 = printed pp. 1-61 = XML PB REF 2-62 plus final note and colophon",
+              "PDF pp. 9-10 = Morris preface, retained in cache but omitted from CME00146"
+            ],
+            "start_url": "https://archive.org/download/b21505044/b21505044.pdf#page=7",
+            "end_url": "https://archive.org/download/b21505044/b21505044.pdf#page=71",
+            "notes": [
+              "The start and end delimit an envelope containing two encoded selections; intervening PDF pp. 8-10 are cached but not encoded.",
+              "The 96-page file is complete relative to the Internet Archive PDF object and includes bound-volume carrier matter outside the Morris tract."
+            ]
+          }
+        },
+        {
+          "label": "Complete Internet Archive metadata response for Morris 1862",
+          "path": "source-cache/CME00146/morris-liber-cure-cocorum-1862-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/b21505044",
+          "sha256": "1b0bc41734239494b1b3b120c1b87ff9cab279f1dfbe49ca82d225f96dc74660",
+          "bytes": 26843,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Complete provider-derived OCR for the Morris scan",
+          "path": "source-cache/CME00146/morris-liber-cure-cocorum-1862-ocr.txt",
+          "source_url": "https://archive.org/download/b21505044/b21505044_djvu.txt",
+          "sha256": "ed8cb2a2e90a71f1556e90b305259d33ad29857ee0969effcbdf111bbad06699",
+          "bytes": 95571,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": ["OCR is a complete provider derivative, not a substitute for the checked page images or XML transcription."]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, and JSON metadata",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata"]
+    },
+    {
+      "id": "access:bl-sloane-catalog",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114345",
+      "cost": "free",
+      "format": "HTML catalog record with JSON representation",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-sloane-catalog"]
+    },
+    {
+      "id": "access:bl-sloane-physical",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request through the British Library Archives and Manuscripts appointment form; consult in London with a valid Reader Pass and subject to current collection conditions",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002114345",
+        "https://bl.libanswers.com/form?queue_id=2371"
+      ],
+      "contact": "British Library Reference Services: https://bl.libanswers.com/form?queue_id=2371",
+      "cost": "unknown",
+      "format": "Physical parchment codex",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:bl-public-facsimile-audit"]
+    },
+    {
+      "id": "access:bl-sloane-reproduction",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the British Library digitisation order form and request photography of the complete current physical object",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "local_copies": [
+        {
+          "label": "British Library Imaging Services rate card 2025-26",
+          "path": "source-cache/CME00146/british-library-digitisation-rate-card-2025-26.pdf",
+          "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+          "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+          "bytes": 181286,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "contact": "British Library Imaging Services via the online order form",
+      "cost": "fee",
+      "format": "Photography of an original manuscript; exact deliverables and price subject to quotation and condition",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-rate-card", "evidence:bl-imaging-terms"],
+      "notes": [
+        "Request covers or boards, spine where photographable, pastedowns, every flyleaf and blank, both sides of ff. 1-110, any stubs or detached matter, and edges where offered; identify Liber Cure Cocorum at ff. 27r-56v only as the work mapping.",
+        "Ask for a complete delivered-file inventory and any omissions before treating a commissioned set as whole-object complete.",
+        "Publication or further reproduction permission is separate from private-study image supply."
+      ]
+    },
+    {
+      "id": "access:bl-sloane-public-facsimile",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated audit of the exact current record, its Digitised Content field and URL, official BL digital routes, and public bibliographic searches",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114345",
+      "cost": "unknown",
+      "format": "Complete public digital facsimile not located",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:bl-public-facsimile-audit"],
+      "notes": [
+        "The exact current record reports Digitised Content as No and supplies no digital-object URL. This is a dated negative finding for the routes checked, not proof that no private, internal, microfilm, or future surrogate exists."
+      ]
+    },
+    {
+      "id": "access:pepys-cudl",
+      "entity": "facsimile:cudl:Pepys-MS-1047",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Archived exact official CUDL IIIF manifest with live CUL IIIF Image API derivatives and current CUDL item route",
+      "url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+      "alternate_urls": [
+        "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1",
+        "https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047",
+        "https://services.cudl.lib.cam.ac.uk/v1/metadata/json/MS-MAGDALENE-PEPYS-01047"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete provider-published Pepys MS 1047 IIIF bundle",
+          "path": "source-cache/CME00146/pepys-ms-1047-complete-iiif-1600px.zip",
+          "source_url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+          "sha256": "c3ab7df51d4d2d05400f35f2a6a4d6fb4774bd130663b82deef2b7a7df18e5cd",
+          "bytes": 17165917,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 55,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Four Liber Cure Cocorum excerpts in Pepys MS 1047",
+            "locators": [
+              "ff. 15r-16v",
+              "IIIF canvases 33-36",
+              "ZIP members images/000033.jpg-images/000036.jpg",
+              "DIMEV 5104 begins on 15r and ends at the top of 15v",
+              "DIMEV 1420 runs from 15v through the top of 16r",
+              "DIMEV 6721 is on 16r",
+              "DIMEV 5106 begins on 16r and ends at the top of 16v"
+            ],
+            "start_url": "https://images.lib.cam.ac.uk/iiif/MS-MAGDALENE-COLLEGE-PEPYS-01047-000-00033.jp2/full/1600,/0/default.jpg",
+            "end_url": "https://images.lib.cam.ac.uk/iiif/MS-MAGDALENE-COLLEGE-PEPYS-01047-000-00036.jp2/full/1600,/0/default.jpg",
+            "notes": [
+              "Archived manifest range ITEM-10 labels canvases 33-36 Collection of culinary recipes in verse.",
+              "Canvas 33 overlaps a preceding prose-recipe range and canvas 36 also contains following prose recipes; the exact verse boundaries were checked visually rather than inferred from canvas inclusion alone.",
+              "The bundle contains manifest.json, inventory.json, and all 55 provider images from front cover through rear cover and spine; ZIP integrity and inventory completeness were verified."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF manifest and JPEG images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:pepys-visual", "evidence:cudl-live-endpoint-audit"],
+      "notes": [
+        "The live manifest and JSON metadata endpoints returned HTTP 500 with an S3 NoSuchKey response during review, and the current viewer route returned HTTP 403 to automated retrieval. The exact official manifest is preserved at the dated archive URL, and its 55 image URLs remained retrievable from the provider's image service.",
+        "Public technical access is distinct from permission to publish or commercially reuse the images."
+      ]
+    },
+    {
+      "id": "access:pepys-physical",
+      "entity": "witness:magdalene:Pepys-MS-1047",
+      "provider_id": "agent:pepys-library-magdalene",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Contact the Pepys Library in advance with academic credentials and a shelfmark-specific research request",
+      "url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/pepys-library-information-researchers",
+      "contact": "pepyslibrary@magd.cam.ac.uk",
+      "cost": "unknown",
+      "format": "Physical manuscript consultation subject to condition and library hours",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:pepys-research-access"]
+    },
+    {
+      "id": "access:pepys-reproduction-rights",
+      "entity": "witness:magdalene:Pepys-MS-1047",
+      "provider_id": "agent:pepys-library-magdalene",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Seek image supply and publication or reuse permission through the current Pepys Library and Cambridge University Library imaging routes",
+      "url": "https://imagingservices.lib.cam.ac.uk/",
+      "alternate_urls": [
+        "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/pepys-digital-library"
+      ],
+      "contact": "Pepys Library: pepyslibrary@magd.cam.ac.uk",
+      "cost": "fee",
+      "format": "Provider images and a purpose-specific permission decision",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:pepys-current-rights", "evidence:cambridge-imaging"],
+      "notes": [
+        "The current Magdalene page says publication images must be purchased and permission obtained. Obtain written clarification before relying on the archived manifest's CC BY-NC 3.0 wording for any public or commercial use."
+      ]
+    },
+    {
+      "id": "access:hodgett-nla-catalog",
+      "entity": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "National Library of Australia catalog record",
+      "url": "https://catalogue.nla.gov.au/catalog/258284",
+      "cost": "free",
+      "format": "HTML bibliographic record",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:hodgett-nla"]
+    },
+    {
+      "id": "access:hodgett-controlled-lending",
+      "entity": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Internet Archive and Open Library controlled digital lending; borrow with an eligible account under current platform rules",
+      "url": "https://archive.org/details/sterehttwellbook0000pepy",
+      "alternate_urls": [
+        "https://openlibrary.org/works/OL4052175W/Stere_htt_well",
+        "https://archive.org/metadata/sterehttwellbook0000pepy"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Internet Archive metadata response for Hodgett 1972",
+          "path": "source-cache/CME00146/hodgett-1972-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/sterehttwellbook0000pepy",
+          "sha256": "5c01da9b5caf0434190c0c2ea217998dc277cb8d7a36a46b60b05c555ee114f5",
+          "bytes": 13223,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The metadata inventory identifies private source and derivative files plus encrypted lending derivatives; no unencrypted complete content file was downloaded or cached."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "Controlled-lending encrypted digital book; public metadata",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:hodgett-ia-metadata", "evidence:hodgett-access-audit"],
+      "notes": [
+        "Open Library reports ebook_access as borrowable, while Internet Archive's metadata lists the unencrypted PDF, EPUB, OCR, and JP2 sources as private. This is restricted access, not an openly downloadable public copy."
+      ]
+    },
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:record-3799",
+      "provider_id": "agent:dimev",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Zenodo versioned release and GitHub v1.0 tag",
+      "url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+      "alternate_urls": [
+        "https://doi.org/10.5281/zenodo.14585961",
+        "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete DIMEV v1.0 release",
+          "path": "source-cache/CME00146/dimev-v1.0.zip",
+          "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+          "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c",
+          "bytes": 3891929,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Liber Cure Cocorum records, witnesses, and bibliography",
+            "locators": [
+              "data/Records.xml record-3799",
+              "data/Records.xml records 5104, 1420, 6721, and 5106",
+              "data/Manuscripts.xml BLSl1986 and CamMagPep1047",
+              "data/Bibliography.xml Morris1862 and Hodgett1972"
+            ],
+            "notes": ["The complete versioned release is cached, not exported record fragments."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP archive of XML data and project files",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:dimev-release"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repository-xml",
+      "entity": "artifact:general-corpus:CME00146",
+      "access_id": "access:repository-xml",
+      "component": "Modern repository XML structure and markup",
+      "jurisdiction": "Repository license declaration",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The pinned CME repository's root LICENSE dedicates its software and source material to the public domain under the Unlicense. This claim concerns the modern repository layer; underlying medieval text, Morris edition, and image rights are recorded separately.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]
+    },
+    {
+      "id": "rights:umich-cme-nocus",
+      "entity": "encoding:umich-cme:CME00146",
+      "access_id": "access:umich-item",
+      "component": "U-M electronic text and represented public-domain source material",
+      "jurisdiction": "United States provider statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The U-M item and collection apply No Copyright - United States to public CME content. This is a rights statement, not a license, and institutional service terms may still apply.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item", "evidence:umich-collection"]
+    },
+    {
+      "id": "rights:morris-edition-underlying",
+      "entity": "edition:morris:liber-cure-cocorum-1862",
+      "component": "Morris's 1862 edition, typography, notes, index, and underlying medieval text; later digital reproduction excluded",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The edition was published in 1862 and predates the current United States public-domain cutoff by many decades. This does not determine provider terms for a modern digital reproduction.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:morris-edition", "evidence:morris-ia-metadata", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:morris-ia-pdm",
+      "entity": "facsimile:internet-archive:morris-1862",
+      "access_id": "access:morris-ia",
+      "component": "Internet Archive digital reproduction of the University of Leeds copy",
+      "jurisdiction": "Provider item statement; worldwide mark",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The exact Internet Archive item metadata links Creative Commons Public Domain Mark 1.0. The mark reports no known copyright but is not a license; platform and source-institution terms remain distinct.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:morris-ia-metadata", "evidence:pdm-1"]
+    },
+    {
+      "id": "rights:sloane-medieval-text",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "component": "Underlying medieval Liber Cure Cocorum text in Sloane MS 1986; physical ownership and any supplied photography excluded",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The anonymous text is embodied in a fifteenth-century manuscript and predates modern copyright by centuries. British Library access and image-supply terms remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:dimev-release", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:bl-requested-images",
+      "entity": "witness:bl:Sloane-MS-1986",
+      "access_id": "access:bl-sloane-reproduction",
+      "component": "Any newly supplied British Library photography of Sloane MS 1986 only",
+      "jurisdiction": "United Kingdom provider and supply terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "British Library Imaging Services supplies files under purpose-specific terms, makes the customer responsible for rights clearance, and requires separate permission for publication or further reproduction. No open license for a future commissioned set is assumed.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-rate-card", "evidence:bl-imaging-terms"]
+    },
+    {
+      "id": "rights:pepys-medieval-text",
+      "entity": "witness:magdalene:Pepys-MS-1047",
+      "component": "Underlying medieval Liber Cure Cocorum excerpts in Pepys MS 1047; physical ownership and digital images excluded",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The anonymous excerpts are embodied in a late-fifteenth-century manuscript and predate modern copyright by centuries. Pepys Library ownership, consultation rules, and image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:dimev-release", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:cudl-pepys-archived-download-license",
+      "entity": "facsimile:cudl:Pepys-MS-1047",
+      "access_id": "access:pepys-cudl",
+      "component": "CUDL downloadable page images in the archived exact IIIF object",
+      "jurisdiction": "Archived provider attribution and license statement",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The exact official manifest archived on 2025-06-14 states that zooming images are copyright Cambridge University Library and that images made available for download are licensed CC BY-NC 3.0. It provides no machine-readable license field. The statement is preserved as source evidence but must be read with the current Magdalene publication-permission policy.",
+      "asserted_by_id": "agent:cambridge-university-library",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+        "spdx": "CC-BY-NC-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:cc-by-nc-3"]
+    },
+    {
+      "id": "rights:pepys-current-publication-permission",
+      "entity": "facsimile:cudl:Pepys-MS-1047",
+      "access_id": "access:pepys-cudl",
+      "component": "Publication or reproduction of Pepys Library manuscript images",
+      "jurisdiction": "Current Pepys Library provider policy",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The current Magdalene digital-library page says all images are copyright the Pepys Library and that images for publication must be purchased and permission obtained; it separately identifies CUL zooming images as all rights reserved. Because this current statement is stricter than the archived manifest's download license, publication and commercial reuse require written clarification and permission.",
+      "asserted_by_id": "agent:pepys-library-magdalene",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:pepys-current-rights", "evidence:cambridge-imaging"]
+    },
+    {
+      "id": "rights:hodgett-1972",
+      "entity": "facsimile:hodgett:Pepys-MS-1047-1972",
+      "access_id": "access:hodgett-controlled-lending",
+      "component": "1972 facsimile volume, modern English text, foreword, introduction, design, and its digital scan",
+      "jurisdiction": "National Library of Australia catalog and controlled-lending provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The NLA catalog marks the publication In Copyright. No open license was found, and Internet Archive exposes only encrypted lending derivatives while unencrypted content files remain private.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hodgett-nla", "evidence:hodgett-ia-metadata", "evidence:hodgett-access-audit"]
+    },
+    {
+      "id": "rights:dimev-ccby",
+      "entity": "catalog:dimev:record-3799",
+      "access_id": "access:dimev-release",
+      "component": "DIMEV v1.0 data and project files",
+      "jurisdiction": "License grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The versioned release README and LICENSE identify Creative Commons Attribution 4.0 International.",
+      "asserted_by_id": "agent:dimev",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-release", "evidence:cc-by-4"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_3/CME00146.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_3/CME00146.xml",
+      "locator": "Complete XML document",
+      "summary": "Direct evidence for the CME identifiers, Morris source citation, retained title page, prologue, table, main poem, index, final note, colophon, page milestones, and repository artifact fixity.",
+      "supports": ["artifact:general-corpus:CME00146", "encoding:umich-cme:CME00146", "relation:repo-encoding", "relation:encoding-morris"],
+      "accessed_on": "2026-07-13",
+      "sha256": "166256a5a42c7b2e8a166568550689c1876189a3c4a291d77afca096b5ee5b2a"
+    },
+    {
+      "id": "evidence:repo-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, root LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "The pinned repository license dedicates its software and source material to the public domain under the Unlicense; underlying medieval, editorial, and image layers remain separately modeled.",
+      "supports": ["access:repository-xml", "rights:repository-xml"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:xml-audit",
+      "type": "visual_inspection",
+      "citation": "Structural, textual, and page-boundary audit of the exact CME00146 XML.",
+      "repository_path": "CME/source/CME_phase_3/CME00146.xml",
+      "summary": "Confirmed 107,737 bytes; git blob d161da6811e718b34c78bdf9afb9cd9f3cc165a9; 7 DIV1, 135 HEAD, 1,453 L, 141 LG, 75 NOTE, 8 P, 62 PB, 414 ITEM, 181 ROW, 334 CELL, 26 TABLE, and 3 TRAILER. Parent-aware counting assigns 14 lines to the prologue, 1,437 to the main poem, and 2 to a final editorial quotation; 413 ITEM nodes belong to the index and one to TEMPHEAD workflow history. It maps REF 1 to the title page, REF 2 to the prologue, REF 3-4 to the table, REF 5-56 to the main poem, and REF 57-62 to the index.",
+      "supports": ["artifact:general-corpus:CME00146", "relation:encoding-morris", "practice:encoding-selection"],
+      "accessed_on": "2026-07-13",
+      "sha256": "166256a5a42c7b2e8a166568550689c1876189a3c4a291d77afca096b5ee5b2a"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00146 item page.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00146",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00146"],
+      "summary": "Official item route for the Morris 1862 source citation, stable identifier, encoded content, and U-M rights framing.",
+      "supports": ["encoding:umich-cme:CME00146", "relation:repo-encoding", "relation:encoding-morris", "rights:umich-cme-nocus"],
+      "accessed_on": "2026-07-13",
+      "notes": ["Automated requests returned HTTP 403 during review; the stable public route and checked-in item content are retained without interpreting anti-bot behavior as item removal."]
+    },
+    {
+      "id": "evidence:umich-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse collection information.",
+      "url": "https://quod.lib.umich.edu/c/cme",
+      "summary": "Collection-level evidence for keyed public-domain editions, TEI-oriented encoding, and the current No Copyright - United States framing.",
+      "supports": ["encoding:umich-cme:CME00146", "rights:umich-cme-nocus"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:morris-edition",
+      "type": "digital_surrogate",
+      "citation": "Richard Morris, ed., Liber Cure Cocorum (Berlin: A. Asher & Co. for the Philological Society, 1862), complete Internet Archive scan of the University of Leeds copy.",
+      "url": "https://archive.org/download/b21505044/b21505044.pdf",
+      "alternate_urls": ["https://archive.org/details/b21505044"],
+      "repository_path": "source-cache/CME00146/morris-liber-cure-cocorum-1862-complete.pdf",
+      "locator": "PDF p. 7 title page; pp. 9-10 preface; pp. 11-71 printed pp. 1-61 and colophon",
+      "summary": "Primary evidence for the 1862 publication, title-page wording, the unidentified-transcript source statement, Morris's responsibility for bracketed words and footnoted changes, Northern-dialect claim, complete printed work and paratext, and exact XML-to-page mapping.",
+      "supports": ["edition:morris:liber-cure-cocorum-1862", "facsimile:internet-archive:morris-1862", "intermediary:unidentified-transcript:sloane-1986-lcc", "relation:encoding-morris", "relation:morris-transcribes-working-transcript", "relation:working-transcript-sloane"],
+      "accessed_on": "2026-07-13",
+      "sha256": "46d5bc76433d606b2f5a3b9d91bf85828a1bb473933fe65db03831be38b9f59e"
+    },
+    {
+      "id": "evidence:morris-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for item b21505044, Liber cure cocorum.",
+      "url": "https://archive.org/metadata/b21505044",
+      "alternate_urls": ["https://archive.org/details/b21505044"],
+      "repository_path": "source-cache/CME00146/morris-liber-cure-cocorum-1862-internet-archive-metadata.json",
+      "summary": "Provider evidence for title, creators, date, Berlin imprint, University of Leeds source copy, complete PDF and OCR derivatives, exact file sizes and hashes, and Public Domain Mark statement.",
+      "supports": ["edition:morris:liber-cure-cocorum-1862", "facsimile:internet-archive:morris-1862", "access:morris-ia", "rights:morris-ia-pdm"],
+      "accessed_on": "2026-07-13",
+      "sha256": "1b0bc41734239494b1b3b120c1b87ff9cab279f1dfbe49ca82d225f96dc74660"
+    },
+    {
+      "id": "evidence:transcript-source-audit",
+      "type": "search_result",
+      "citation": "Source-method audit of Morris's title page, preface, DIMEV bibliography, and public bibliographic searches for the working transcript.",
+      "url": "https://archive.org/download/b21505044/b21505044.pdf",
+      "locator": "PDF pp. 7 and 9-10",
+      "summary": "Morris calls himself copier and editor on the title page but says only that the poem was first printed from a transcript in the preface. No consulted primary statement identifies who made that transcript, whether it was copied directly from Sloane MS 1986, or where it survives.",
+      "supports": ["intermediary:unidentified-transcript:sloane-1986-lcc", "relation:morris-transcribes-working-transcript", "relation:working-transcript-sloane", "question:morris-transcript"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-sloane-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Sloane MS 1986, record 040-002114345.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114345",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002114345.json"],
+      "locator": "Reference, Date, Physical Description, Scope and Content, Digitised Content, and Access",
+      "summary": "Official evidence for shelfmark, fifteenth-century date, parchment quarto format, 110-folio extent, English and Latin contents, Boke of Curtasye at ff. 12-27, Liber Cure Cocorum at ff. 27-56b, current holding, London consultation route, and Digitised Content reported as No.",
+      "supports": ["witness:bl:Sloane-MS-1986", "relation:working-transcript-sloane", "relation:sloane-contains-work", "access:bl-sloane-catalog", "access:bl-sloane-physical", "access:bl-sloane-public-facsimile"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-public-facsimile-audit",
+      "type": "search_result",
+      "citation": "Dated public-facsimile and access-route audit for British Library Sloane MS 1986.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114345",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://bl.libanswers.com/form?queue_id=2371"
+      ],
+      "summary": "The exact current catalog record resolves and identifies the item, but its Digitised Content value is No and its digital URL is blank. No complete public facsimile was verified through the checked official and bibliographic routes. Current physical-request, reference-enquiry, and paid digitisation routes remain available.",
+      "supports": ["witness:bl:Sloane-MS-1986", "access:bl-sloane-physical", "access:bl-sloane-public-facsimile", "question:sloane-public-facsimile"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation services.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu"],
+      "summary": "Official route to request a quotation for original-manuscript photography by supplying the shelfmark and required physical coverage.",
+      "supports": ["access:bl-sloane-reproduction", "rights:bl-requested-images"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-rate-card",
+      "type": "digital_surrogate",
+      "citation": "British Library Imaging Services rate card 2025-26.",
+      "url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+      "repository_path": "source-cache/CME00146/british-library-digitisation-rate-card-2025-26.pdf",
+      "summary": "Current cached price and service evidence for quotation-based imaging; the rate card does not guarantee whole-object feasibility or grant publication rights.",
+      "supports": ["access:bl-sloane-reproduction", "rights:bl-requested-images"],
+      "accessed_on": "2026-07-13",
+      "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Imaging Services terms and conditions, updated January 2026.",
+      "url": "https://www.bl.uk/terms/imaging-services",
+      "summary": "The current terms distinguish image supply from rights clearance and require separate permission for publication or further reproduction of supplied material.",
+      "supports": ["access:bl-sloane-reproduction", "rights:bl-requested-images"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:dimev-release",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse v1.0, record 3799, excerpt records 5104, 1420, 6721, and 5106, manuscript entries BLSl1986 and CamMagPep1047, and bibliography entries Morris1862 and Hodgett1972.",
+      "url": "https://doi.org/10.5281/zenodo.14585961",
+      "alternate_urls": [
+        "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0",
+        "https://www.dimev.net/record.php?recID=3799"
+      ],
+      "repository_path": "source-cache/CME00146/dimev-v1.0.zip",
+      "locator": "data/Records.xml records 3799, 5104, 1420, 6721, 5106; data/Manuscripts.xml BLSl1986 and CamMagPep1047; data/Bibliography.xml Morris1862 and Hodgett1972; README and LICENSE",
+      "summary": "Versioned evidence for title, anonymous culinary work, 127 recipes, 1,429 couplet lines plus a fourteen-line prologue, the full Sloane witness, four Pepys excerpts, exact incipits and explicits, LALME/eLALME localization of the Sloane witness, bibliographic sources, and CC BY 4.0 license.",
+      "supports": ["catalog:dimev:record-3799", "work:middle-english:liber-cure-cocorum", "witness:bl:Sloane-MS-1986", "witness:magdalene:Pepys-MS-1047", "relation:dimev-work", "relation:dimev-sloane", "relation:dimev-pepys", "rights:dimev-ccby"],
+      "accessed_on": "2026-07-13",
+      "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"
+    },
+    {
+      "id": "evidence:pepys-cudl-manifest",
+      "type": "digital_surrogate",
+      "citation": "Cambridge Digital Library, official IIIF manifest for Medical and culinary recipes, Magdalene College Pepys MS 1047, preserved by the Internet Archive on 2025-06-14.",
+      "url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+      "alternate_urls": [
+        "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1",
+        "https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047"
+      ],
+      "repository_path": "source-cache/CME00146/pepys-ms-1047-complete-iiif-1600px.zip",
+      "locator": "Complete 55-canvas object; range ITEM-10 and canvases 33-36 = ff. 15r-16v",
+      "summary": "Exact provider evidence for shelfmark, title, late-fifteenth-century date after 1470/1471, England origin, paper quarto format, i + 23 + i leaves, dimensions, one Anglicana-formata scribe, layout, missing leaf, language, complete canvas sequence, verse-recipe range, bibliography, and archived image-license attribution.",
+      "supports": ["witness:magdalene:Pepys-MS-1047", "facsimile:cudl:Pepys-MS-1047", "relation:cudl-facsimile-pepys", "access:pepys-cudl", "rights:cudl-pepys-archived-download-license"],
+      "accessed_on": "2026-07-13",
+      "sha256": "c3ab7df51d4d2d05400f35f2a6a4d6fb4774bd130663b82deef2b7a7df18e5cd",
+      "notes": ["SHA-256 is for the complete 55-image IIIF bundle containing the archived canonical manifest and inventory."]
+    },
+    {
+      "id": "evidence:pepys-visual",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the complete cached Pepys MS 1047 image object, especially canvases 32-37.",
+      "url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+      "repository_path": "source-cache/CME00146/pepys-ms-1047-complete-iiif-1600px.zip",
+      "locator": "images/000033.jpg through images/000036.jpg, ff. 15r-16v; adjacent images 000032 and 000037 checked",
+      "summary": "Confirmed the four verse-excerpt boundaries within overlapping prose-recipe canvases: mallard sauce begins on 15r and ends atop 15v; the woodcock excerpt runs 15v-16r; fritters is on 16r; and pot herbs runs 16r-top of 16v. Canvas 36 then continues with prose recipes.",
+      "supports": ["witness:magdalene:Pepys-MS-1047", "facsimile:cudl:Pepys-MS-1047", "relation:pepys-excerpted-from-work", "relation:cudl-facsimile-pepys"],
+      "accessed_on": "2026-07-13",
+      "sha256": "c3ab7df51d4d2d05400f35f2a6a4d6fb4774bd130663b82deef2b7a7df18e5cd"
+    },
+    {
+      "id": "evidence:cudl-live-endpoint-audit",
+      "type": "search_result",
+      "citation": "Dated service audit of the live CUDL IIIF and JSON metadata endpoints for MS-MAGDALENE-PEPYS-01047.",
+      "url": "https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047",
+      "alternate_urls": [
+        "https://services.cudl.lib.cam.ac.uk/v1/metadata/json/MS-MAGDALENE-PEPYS-01047",
+        "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1"
+      ],
+      "summary": "On 2026-07-13 the live manifest and JSON metadata endpoints returned HTTP 500 with an S3 NoSuchKey response, and the current viewer route returned HTTP 403 to automated retrieval. The exact manifest was retrievable from the dated web archive and its provider image URLs remained live. These responses are recorded without treating the official digital object as permanently withdrawn or ordinary browser access as conclusively unavailable.",
+      "supports": ["facsimile:cudl:Pepys-MS-1047", "access:pepys-cudl", "question:cudl-service-and-rights"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:pepys-current-rights",
+      "type": "official_webpage",
+      "citation": "Magdalene College, Pepys Digital Library.",
+      "url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/pepys-digital-library",
+      "summary": "Current official policy says all images are copyright the Pepys Library, images for publication must be purchased and permission obtained, and CUL zooming images are all rights reserved.",
+      "supports": ["access:pepys-reproduction-rights", "rights:pepys-current-publication-permission", "question:cudl-service-and-rights"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:pepys-research-access",
+      "type": "official_webpage",
+      "citation": "Magdalene College, Pepys Library information for researchers.",
+      "url": "https://www.magd.cam.ac.uk/visitors-and-conferencing/pepys-library/pepys-library-information-researchers",
+      "summary": "Current official route for advance manuscript requests, academic credentials, opening hours, collection-condition limits, and contact with the Pepys Librarian.",
+      "supports": ["access:pepys-physical"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:cambridge-imaging",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Imaging Services.",
+      "url": "https://imagingservices.lib.cam.ac.uk/",
+      "summary": "Current official route for image orders and rights or publication requests linked from Cambridge digital-library services.",
+      "supports": ["access:pepys-reproduction-rights", "rights:pepys-current-publication-permission"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:hodgett-nla",
+      "type": "official_catalog",
+      "citation": "National Library of Australia, Stere htt well, catalog record 258284.",
+      "url": "https://catalogue.nla.gov.au/catalog/258284",
+      "summary": "Authoritative bibliographic evidence for the 1972 Cornmarket Press publication, ISBN 071911487X, [7], 48 [i.e. 96]-page extent, late-fifteenth-century Pepys MS 1047 source, parallel facsimile and modern English text, Hodgett and Smith responsibilities, and In Copyright status.",
+      "supports": ["facsimile:hodgett:Pepys-MS-1047-1972", "relation:hodgett-facsimile-pepys", "access:hodgett-nla-catalog", "rights:hodgett-1972"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:hodgett-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for item sterehttwellbook0000pepy.",
+      "url": "https://archive.org/metadata/sterehttwellbook0000pepy",
+      "alternate_urls": ["https://archive.org/details/sterehttwellbook0000pepy"],
+      "repository_path": "source-cache/CME00146/hodgett-1972-internet-archive-metadata.json",
+      "summary": "Provider evidence for the 1972 title, printdisabled and inlibrary collections, encrypted lending derivatives, and private status of the unencrypted PDF, EPUB, OCR, and page-image sources.",
+      "supports": ["facsimile:hodgett:Pepys-MS-1047-1972", "access:hodgett-controlled-lending", "rights:hodgett-1972"],
+      "accessed_on": "2026-07-13",
+      "sha256": "5c01da9b5caf0434190c0c2ea217998dc277cb8d7a36a46b60b05c555ee114f5"
+    },
+    {
+      "id": "evidence:hodgett-access-audit",
+      "type": "search_result",
+      "citation": "Dated public-copy search for Gerald A. J. Hodgett, Stere Htt Well (1972).",
+      "url": "https://openlibrary.org/works/OL4052175W/Stere_htt_well",
+      "alternate_urls": [
+        "https://archive.org/details/sterehttwellbook0000pepy",
+        "https://catalogue.nla.gov.au/catalog/258284"
+      ],
+      "summary": "Internet Archive Advanced Search found item sterehttwellbook0000pepy, and Open Library reports it as borrowable. The complete scan is available through controlled lending rather than as an open unencrypted download; no separate open complete copy was verified.",
+      "supports": ["access:hodgett-controlled-lending", "rights:hodgett-1972"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:cc-by-nc-3",
+      "type": "official_webpage",
+      "citation": "Creative Commons, Attribution-NonCommercial 3.0 Unported.",
+      "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "summary": "Authoritative text of the image-download license named in the archived exact CUDL manifest.",
+      "supports": ["rights:cudl-pepys-archived-download-license"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:cc-by-4",
+      "type": "official_webpage",
+      "citation": "Creative Commons, Attribution 4.0 International.",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "summary": "Authoritative text of the license declared by DIMEV v1.0.",
+      "supports": ["rights:dimev-ccby"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:pdm-1",
+      "type": "official_webpage",
+      "citation": "Creative Commons, Public Domain Mark 1.0.",
+      "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "summary": "Defines the no-known-copyright mark linked by the exact Internet Archive Morris item; it is not a license.",
+      "supports": ["rights:morris-ia-pdm"],
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:us-copyright-duration",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Copyright Term and the Public Domain, Circular 15A.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Authoritative duration guidance supporting United States public-domain conclusions for the 1862 edition and centuries-old anonymous medieval texts.",
+      "supports": ["rights:morris-edition-underlying", "rights:sloane-medieval-text", "rights:pepys-medieval-text"],
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:morris-transcript",
+      "question": "Who made the working transcript used by Morris, was it copied directly from Sloane MS 1986, and does it survive?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Search surviving Richard Morris and Philological Society correspondence, minutes, and papers for the 1862 project.",
+        "Ask the British Library and University of Leeds whether the transcript is cataloged with Morris papers or the Leeds source copy.",
+        "Continue to model the transcript as an unidentified intermediary unless primary evidence establishes maker, route, and survival."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:morris-edition", "evidence:transcript-source-audit"]
+    },
+    {
+      "id": "question:sloane-public-facsimile",
+      "question": "Does a complete public or restricted digital facsimile of Sloane MS 1986 exist outside the current British Library routes checked on 2026-07-13?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Submit the recorded British Library Reference Services enquiry with shelfmark Sloane MS 1986 and target ff. 27r-56v.",
+        "Ask whether an internal, legacy, or microfilm surrogate exists before commissioning new photography.",
+        "If no existing surrogate can be supplied, request a whole-object quotation and record exact image inventory, omissions, terms, and work boundaries before caching."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-sloane-catalog", "evidence:bl-public-facsimile-audit", "evidence:bl-digitisation"]
+    },
+    {
+      "id": "question:cudl-service-and-rights",
+      "question": "Will CUDL restore the live Pepys MS 1047 manifest and metadata, and how should the archived CC BY-NC 3.0 download statement be reconciled with the current Pepys Library publication-permission policy?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask Cambridge University Library to restore or redirect the live IIIF and JSON endpoints and confirm the canonical item identifier.",
+        "Ask the Pepys Library and Cambridge University Library in writing whether noncommercial public republication may rely on the archived manifest license.",
+        "Require purpose-specific written permission before commercial or publication reuse; keep the private research cache nonpublic meanwhile."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:pepys-cudl-manifest", "evidence:cudl-live-endpoint-audit", "evidence:pepys-current-rights", "evidence:cambridge-imaging"]
+    },
+    {
+      "id": "question:line-count",
+      "question": "Why does DIMEV v1.0 report 1,429 main-text lines while the XML main poem division contains 1,437 L elements?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Collate DIMEV's counting rule against Morris printed pp. 5-55 and XML DIV1[4] line by line.",
+        "Keep the fourteen-line prologue and two-line final editorial quotation outside the main-text comparison.",
+        "Do not normalize either count silently until the eight-line difference is explained."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:dimev-release", "evidence:xml-audit", "evidence:morris-edition"]
+    },
+    {
+      "id": "question:witness-relationship",
+      "question": "What textual relationship connects the four Pepys MS 1047 excerpts to the full Sloane MS 1986 tradition?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Collate the four excerpt passages diplomatically against Sloane MS 1986 once complete images or direct consultation are available.",
+        "Consult modern textual scholarship on Middle English culinary recipe circulation.",
+        "Do not assert that Pepys MS 1047 copied directly from Sloane MS 1986 or vice versa without stemmatic evidence."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:dimev-release", "evidence:pepys-visual", "evidence:bl-sloane-catalog"]
+    }
+  ]
+}
