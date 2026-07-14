@@ -92,6 +92,17 @@ normal parser cannot consume it, and verify count, first/target/last mappings,
 request profiles, image dimensions, and ZIP integrity. Malformed structure is
 not permission to discard surrounding leaves or cache only the target range.
 
+An exact provider manifest may survive only in a dated web archive while the
+provider's Image API resources remain live. In that case, model the archived
+Presentation document, the current manifest failure, and the live image
+delivery as separate dated facts. A complete private bundle may be reconstructed
+from the archived official inventory only after every listed image is retrieved
+and count, order, target boundaries, first/last surfaces, fixity, and archive
+integrity are checked. Keep the archived manifest URL as the bundle source and
+the live image URLs in its inventory; do not imply that the current manifest
+endpoint works merely because the images do. Re-audit current rights statements
+separately from any license wording preserved in the archived manifest.
+
 ## Generic production language versus item facts
 
 A collection may describe manual keying and proofreading while one item says
