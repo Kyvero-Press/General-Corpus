@@ -86,6 +86,13 @@ download byte-for-byte. Record the tools, results, and no-repair decision in
 the local-copy notes; do not silently rewrite the file or call it incomplete
 from one parser's result alone.
 
+An official journal or repository PDF and an aggregator mirror can be
+byte-distinct even when they represent the same article and pagination. Compare
+their hashes, sizes, internal title pages, and rights metadata; retain both as
+separate local copies when each is useful, and prefer the official item page
+for the license assertion. Do not transfer an official copy's open license to
+a mirror unless the mirror itself or the license scope supports that result.
+
 Keep public availability and local cache state separate. A large deliverable
 is still cacheable when the task calls for the complete object, available disk
 is sufficient, and provider terms permit the intended private research copy;
