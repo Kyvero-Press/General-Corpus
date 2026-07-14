@@ -75,6 +75,13 @@ and record which manifest supplied the bundle. Treat them as separate digital
 objects if their inventories, order, rights, or attribution differ; matching
 canvas counts alone are not enough.
 
+A provider-generated PDF can add a cover or metadata page that is absent from
+the IIIF canvas sequence. Compare total PDF pages with manifest canvases and
+inspect the first, target, and last pages before mapping them. When an offset
+exists, record both the exact canvas range and the shifted PDF-page range,
+state which generated pages cause the offset, and describe coverage at both
+levels; never assume canvas number *n* equals PDF page *n*.
+
 For IIIF Image API width requests, preserve the width-only comma in forms such
 as `1800,`. A bare `1800` can be interpreted differently or redirected to the
 native full image by some services. After retrieval, inspect the exact request
