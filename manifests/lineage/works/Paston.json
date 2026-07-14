@@ -1,0 +1,686 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Paston",
+  "work_id": "Paston",
+  "title": "Paston Letters and Papers of the Fifteenth Century, Part I",
+  "primary_subject": "artifact:general-corpus:Paston",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The approved General Corpus artifact is the exact Paston.xml file recorded in the generated PDF colophon. It is a repository copy of the University of Michigan Corpus of Middle English Prose and Verse text, whose header identifies Oxford Text Archive U-1685-C and Norman Davis's 1971 Part I edition. Current OTA 1685 exposes a complete SGML text and identifies itself as a revised version of the still-public three-file OTA 0395 encoding; neither OTA representation is byte-equivalent to the U-M/CME XML. Both OTA headers contain a conflicting E. V. Gordon 1953 source description even though the deposited texts and U-M/CME artifact identify Davis 1971, so that inherited header claim is recorded but not used as the textual source. Davis's edition transcribes a dispersed archive, not one manuscript: eleven major British Library bound volumes are recorded here, while an exhaustive document-to-witness concordance remains future work. Complete legacy digital coverage is reported for several Paston volumes, but current British Library catalog records say those images are unavailable. The complete OTA 0395 and 1685 source objects, a complete scholarly article, a partial 2004-edition preview, and supporting metadata are cached; no complete manuscript-volume facsimile was obtainable on 2026-07-14.",
+  "languages": ["enm", "xno", "lat", "eng"],
+  "review_notes": [
+    "The XML's 423 top-level editorial containers, the scholarly count of 422 authored documents, and the number of physical medieval documents are separate metrics.",
+    "The eleven British Library witness entities are major bound volumes with catalog-confirmed Davis-number content, not an exhaustive inventory of every Part I source.",
+    "The exact U-M-to-OTA conversion history is not documented; current files demonstrate related textual content but materially different SGML/XML structures and orderings. OTA itself confirms only that 1685 revises 0395.",
+    "The OTA 0395 and 1685 headers inherit an E. V. Gordon 1953 source description that conflicts with their deposited Paston text files, depositor/creator metadata, and the U-M/CME source statement naming Norman Davis's 1971 edition.",
+    "Rights claims conflict across layers: U-M presents the collection as No Copyright–United States, the Paston item embeds older personal-scholarly-use language, OTA 0395 asserts CC BY-NC-SA 3.0, and OTA 1685 states non-commercial/prior-permission restrictions."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Paston",
+      "type": "repository_artifact",
+      "label": "General Corpus approved source XML for Paston",
+      "description": "The exact XML artifact consumed by this repository's publication workflow, supplied through the pinned Kyvero-Press/CME git submodule and selected by the publication source override.",
+      "identifiers": [
+        {"scheme": "CME", "value": "Paston"},
+        {"scheme": "git-blob", "value": "e501034b9d2ae761017509c8029e4cc00a02474a"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/recent_changes/repairs_2023/Paston.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "e501034b9d2ae761017509c8029e4cc00a02474a",
+        "sha256": "9beb744dda19edb24c8ad443ffce0c57bdec3b402843f7251f701bae994167a5"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-paston-xml", "evidence:publication-source-override"],
+      "notes": [
+        "The file is 1,389,245 bytes at the recorded CME submodule commit.",
+        "CME/source/CME_from_OTA/Paston.xml is byte-identical at that commit, but the approved PDF colophon names the recent_changes/repairs_2023 path; exact-path provenance is therefore preserved.",
+        "It contains 15 DIV1, 423 DIV2, 9 DIV3, 670 PB, 200 FOREIGN, 715 DEL, and 589 UNCLEAR elements."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Paston",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME digital text Paston",
+      "description": "The public U-M structured text of Davis's Part I, with author-group and document navigation and page milestones through printed p. 670.",
+      "identifiers": [
+        {"scheme": "UMDL", "value": "Paston", "uri": "https://name.umdl.umich.edu/Paston"},
+        {"scheme": "legacy OTA", "value": "U-1685-C"}
+      ],
+      "creator_ids": ["agent:university-of-michigan"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-paston", "evidence:repo-paston-xml", "evidence:umich-cme-collection"],
+      "notes": [
+        "The XML editorial statement says printed front and back matter and printed editorial notes were omitted.",
+        "The representation retains the edition title page, document text, headings, deletions, unclear readings, foreign-language spans, and page milestones for pp. 1–670.",
+        "U-M's collection history says its initial mid-1990s texts came from OTA, U-M transcription, or faculty contributions; this item's embedded U-1685-C identifier supports an OTA connection but does not by itself document each transformation step."
+      ]
+    },
+    {
+      "id": "encoding:ota:1685",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive ota:1685 SGML text",
+      "alternate_labels": ["Paston letters and papers of the fifteenth century: Volume 1"],
+      "description": "The current OTA Core Collection object exposing a complete SGML text and separate metadata header for the Part I collection.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "ota:1685", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1685"},
+        {"scheme": "Handle", "value": "20.500.12024/1685", "uri": "https://hdl.handle.net/20.500.12024/1685"}
+      ],
+      "creator_ids": ["agent:oxford-text-archive"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1685", "evidence:ota-1685-files", "evidence:ota-0395"],
+      "notes": [
+        "The SGML is 1,381,115 bytes and is not byte-identical to the U-M/CME XML; it uses a different structure and begins its author-group sequence differently.",
+        "The current record dates the collection 1425–1503 and identifies Middle English and the Paston Family.",
+        "Its header calls 1685 a revised version of OTA 0395 and records a 1992-04-03 deposit by Norman Davis.",
+        "The header sourceDesc instead names an E. V. Gordon 1953 two-volume edition. That conflicts with the SGML's opening edition statement naming Norman Davis, Oxford, Clarendon Press, 1971, and is preserved as unresolved inherited metadata rather than accepted as the source."
+      ]
+    },
+    {
+      "id": "encoding:ota:0395",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive ota:0395 three-part legacy text",
+      "alternate_labels": ["Paston letters and papers of the fifteenth century: Volume 1"],
+      "description": "The public older OTA representation of the Part I collection in three plain-text files with COCOA references and undocumented legacy conventions; OTA 1685 identifies itself as this object's revised SGML version.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "ota:0395", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0395"},
+        {"scheme": "Handle", "value": "20.500.12024/0395", "uri": "https://hdl.handle.net/20.500.12024/0395"}
+      ],
+      "creator_ids": ["agent:norman-davis", "agent:oxford-text-archive"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-0395", "evidence:ota-0395-files"],
+      "notes": [
+        "The header records Norman Davis as creator of the machine-readable version, a 1984-10-30 deposit, and three files totaling 1,307,131 bytes.",
+        "The header calls the representation legacy, duplicate, and superseded by OTA 1685; its three files begin with Agnes Paston and retain COCOA-style conventions.",
+        "Like the 1685 header, its sourceDesc names E. V. Gordon and 1953. The actual text, creator/depositor metadata, U-M/CME artifact, and later reissue evidence instead identify Davis's 1971 Part I, so the conflicting sourceDesc is not promoted to a source-edition entity."
+      ]
+    },
+    {
+      "id": "edition:davis:paston-part-i:1971",
+      "type": "scholarly_edition",
+      "label": "Norman Davis, Paston Letters and Papers, Part I (1971)",
+      "description": "Davis's edited Part I collection of documents produced by the Pastons, arranged in fifteen family-member groups and numbered 1–421 with additional items 122A and 354A.",
+      "creator_ids": ["agent:norman-davis", "agent:clarendon-press"],
+      "date_statements": [
+        {"label":"publication","value":"1971","normalized":"1971","certainty":"high","evidence_ids":["evidence:davis-1971"]}
+      ],
+      "bibliographic": {
+        "citation": "Norman Davis, ed., Paston Letters and Papers of the Fifteenth Century, Part I (Oxford: Clarendon Press, 1971).",
+        "title": "Paston Letters and Papers of the Fifteenth Century, Part I",
+        "publisher": "Clarendon Press",
+        "publication_place": "Oxford",
+        "date": "1971",
+        "pages": "lxxxvii, 670 pp., 12 plates",
+        "languages": ["enm", "xno", "lat", "eng"]
+      },
+      "identifiers": [{"scheme":"ISBN","value":"0-19-812415-5"}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:davis-1971", "evidence:repo-paston-xml", "evidence:hernandez-campoy-2019", "evidence:carpenter-2008"],
+      "notes": [
+        "The U-M/CME text tracks printed pp. 1–670 but omits the print front and back matter and editorial notes.",
+        "Davis differentiates autographs, drafts, dictated texts, and scribal copies; authorship, scribal hand, and physical object are not interchangeable."
+      ]
+    },
+    {
+      "id": "edition:eets:paston-part-i:2004",
+      "type": "scholarly_edition",
+      "label": "EETS corrected reissue of Davis's Paston Part I (2004)",
+      "description": "The Early English Text Society Supplementary Series 20 reissue of Davis's Part I, published by Oxford University Press in 2004 with corrections.",
+      "creator_ids": ["agent:norman-davis", "agent:early-english-text-society", "agent:oxford-university-press"],
+      "date_statements": [
+        {"label":"publication","value":"2004","normalized":"2004","certainty":"high","evidence_ids":["evidence:eets-publications", "evidence:gbv-preview"]}
+      ],
+      "bibliographic": {
+        "citation": "Norman Davis, ed., Paston Letters and Papers of the Fifteenth Century, Part I, EETS Supplementary Series 20 (Oxford: Oxford University Press for the Early English Text Society, 2004), reprinted with corrections.",
+        "title": "Paston Letters and Papers of the Fifteenth Century, Part I",
+        "series": "Early English Text Society, Supplementary Series 20",
+        "publisher": "Oxford University Press for the Early English Text Society",
+        "publication_place": "Oxford",
+        "date": "2004",
+        "pages": "lxxxvii, 670 pp., xii plates",
+        "languages": ["enm", "xno", "lat", "eng"]
+      },
+      "identifiers": [
+        {"scheme":"ISBN-10","value":"0-19-722421-0"},
+        {"scheme":"ISBN-13","value":"9780197224212"}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eets-publications", "evidence:gbv-preview", "evidence:carpenter-2008"],
+      "notes": ["This is a corrected reissue, not the exact 1971 print artifact named in the U-M source header."]
+    },
+    {
+      "id": "facsimile:ia:paston-1971",
+      "type": "facsimile",
+      "label": "Internet Archive controlled scan of Davis's 1971 Part I",
+      "description": "A digitized copy of the 1971 printed edition whose item metadata is public but whose PDF, DjVu, and EPUB access files required authorization during review.",
+      "identifiers": [{"scheme":"Internet Archive item","value":"pastonletterspap0000unse_s3q1","uri":"https://archive.org/details/pastonletterspap0000unse_s3q1"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Controlled digital book scan; complete access object appears to exist, but downloadable book files returned HTTP 401 during review",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-paston-metadata"],
+      "notes": ["The item is marked inlibrary and printdisabled; a registered borrowing workflow may provide temporary reading access."]
+    },
+    {
+      "id": "facsimile:gbv:paston-2004-preview",
+      "type": "facsimile",
+      "label": "GBV preview of the 2004 corrected reissue",
+      "description": "A 14-page bibliographic preview containing title and contents matter from the 2004 EETS reissue; it is not a complete scan of the edition.",
+      "creator_ids": ["agent:gbv"],
+      "reproduction_format": "14-page PDF preview",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:gbv-preview"],
+      "notes": ["Coverage is partial and cannot establish the text or full set of corrections in the 2004 reissue."]
+    },
+    {
+      "id": "description:hernandez-campoy-et-al:2019",
+      "type": "catalog_description",
+      "label": "Hernández-Campoy, Conde-Silvestre, and García-Vidal on the electronic Paston collection",
+      "description": "A peer-reviewed linguistic study that describes the U-M/OTA electronic edition, its size and chronology, Davis's documentary-state distinctions, and selected transcription conventions.",
+      "creator_ids": ["agent:juan-hernandez-campoy", "agent:camilo-conde-silvestre", "agent:tamara-garcia-vidal"],
+      "date_statements": [
+        {"label":"publication","value":"2019","normalized":"2019","certainty":"high","evidence_ids":["evidence:hernandez-campoy-2019"]}
+      ],
+      "bibliographic": {
+        "citation": "Juan M. Hernández-Campoy, J. Camilo Conde-Silvestre, and Tamara García-Vidal, 'Tracing Patterns of Intra-Speaker Variation in Early English Correspondence: A Change from Above in the Paston Letters,' Studia Anglica Posnaniensia 54s1 (2019): 287–314, doi:10.2478/stap-2019-0014.",
+        "title": "Tracing Patterns of Intra-Speaker Variation in Early English Correspondence: A Change from Above in the Paston Letters",
+        "container_title": "Studia Anglica Posnaniensia",
+        "volume": "54s1",
+        "date": "2019",
+        "pages": "287–314"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hernandez-campoy-2019"]
+    },
+    {
+      "id": "description:bl:digitised-manuscripts-list-2026",
+      "type": "catalog_description",
+      "label": "British Library current Digitised Manuscripts list",
+      "description": "The complete current 261-page institutional list used to check whether the unavailable legacy Paston image objects had been restored through the replacement discovery surface.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-digital-status"]
+    },
+    {
+      "id": "description:bl:digitisation-price-list-2025-26",
+      "type": "catalog_description",
+      "label": "British Library Digitisation Services price list 2025/26",
+      "description": "The complete current two-page standard rate card used to contextualize, but not predict, the cost of complete-object imaging requests for the eleven volumes.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-imaging-prices"]
+    },
+    {
+      "id": "description:usco:circular-15a-2026",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A (2026)",
+      "description": "Current official duration guidance used only for the conservative U.S. maximum-term analysis of Davis's 1971 editorial layer.",
+      "creator_ids": ["agent:us-copyright-office"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:usco-circular15a"]
+    },
+    {
+      "id": "witness:bl:AddMS27443",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 27443",
+      "alternate_labels": ["Fenn volume V, part 1"],
+      "description": "A bound volume of Paston letters and papers whose catalog record enumerates Davis Part I documents among its contents.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 27443","catalog_url":"https://searcharchives.bl.uk/catalog/040-002030883"},
+      "date_statements": [{"label":"documents","value":"c. 1425–1466","certainty":"medium","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper, with a few documents on parchment","extent":"122 folios plus 3 unfoliated front and 4 final paper flyleaves","format":"bound letters and papers","dimensions":"455 x 355 mm; individual documents vary","notes":["Request a complete-object reproduction, including covers, binding, flyleaves, blanks, rectos and versos, endorsements, seals, labels, and adjacent non-Part-I material."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS27444",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 27444",
+      "alternate_labels": ["Fenn volume V, part 2"],
+      "description": "A bound volume of Paston letters and papers with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 27444","catalog_url":"https://searcharchives.bl.uk/catalog/040-002030884"},
+      "date_statements": [{"label":"documents","value":"c. 1450–1466","certainty":"medium","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper, with a few documents on parchment","extent":"150 folios plus 4 unfoliated paper flyleaves at each end","format":"bound letters and papers","dimensions":"455 x 355 mm; individual documents vary"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS27445",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 27445",
+      "alternate_labels": ["Fenn volume V, part 3"],
+      "description": "A bound volume of Paston letters and papers with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 27445","catalog_url":"https://searcharchives.bl.uk/catalog/040-002030885"},
+      "date_statements": [{"label":"documents","value":"c. 1445–1500","certainty":"medium","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper, with a few documents on parchment","extent":"113 folios plus 3 unfoliated front and 4 final paper flyleaves","format":"bound letters and papers","dimensions":"455 x 355 mm; individual documents vary"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS27446",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 27446",
+      "alternate_labels": ["Fenn volume V, part 4"],
+      "description": "A bound volume of Paston letters and papers with cataloged Davis-number correspondences and material extending beyond Part I's principal date range.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 27446","catalog_url":"https://searcharchives.bl.uk/catalog/040-002030886"},
+      "date_statements": [{"label":"documents","value":"c. 1455–1520","certainty":"medium","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper, with some documents on parchment","extent":"127 folios plus 3 unfoliated front and 4 final paper flyleaves","format":"bound letters and papers","dimensions":"455 x 355 mm; individual documents vary"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS33597",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 33597",
+      "description": "A bound volume containing twenty-nine letters and a land transaction across a broader date range, including several documents represented in Davis Part I.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 33597","catalog_url":"https://searcharchives.bl.uk/catalog/032-002024449"},
+      "date_statements": [{"label":"documents","value":"1422–1597","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"extent":"41 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS34888",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 34888",
+      "alternate_labels": ["Fenn volume III"],
+      "description": "A fifteenth-century bound volume of Paston letters and papers whose current record maps contents to Davis numbers.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 34888","catalog_url":"https://searcharchives.bl.uk/catalog/040-002087893"},
+      "date_statements": [{"label":"documents","value":"fifteenth century","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"extent":"221 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS34889",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 34889",
+      "alternate_labels": ["Fenn volume IV"],
+      "description": "A fifteenth-century paper codex of Paston letters and papers whose current record maps contents to Davis numbers.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 34889","catalog_url":"https://searcharchives.bl.uk/catalog/040-002087894"},
+      "date_statements": [{"label":"documents","value":"fifteenth century","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper","extent":"232 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS43488",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 43488",
+      "alternate_labels": ["Fenn volume I, part 1"],
+      "description": "The first of four bound Fenn volumes of Paston letters and papers, with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 43488","catalog_url":"https://searcharchives.bl.uk/catalog/040-002056402"},
+      "date_statements": [{"label":"documents","value":"1440–1478","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"support":"paper","extent":"59 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS43489",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 43489",
+      "alternate_labels": ["Fenn volume I, part 2"],
+      "description": "The second of four bound Fenn volumes of Paston letters and papers, with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 43489","catalog_url":"https://searcharchives.bl.uk/catalog/040-002056403","notes":"The current record may require a letter of introduction for consultation; confirm current conditions with Reference Services."},
+      "date_statements": [{"label":"documents","value":"1440–1489","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"extent":"58 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS43490",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 43490",
+      "alternate_labels": ["Fenn volume II, part 1"],
+      "description": "The third of four bound Fenn volumes of Paston letters and papers, with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 43490","catalog_url":"https://searcharchives.bl.uk/catalog/040-002056404"},
+      "date_statements": [{"label":"documents","value":"1440–1489","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"extent":"58 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    },
+    {
+      "id": "witness:bl:AddMS43491",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 43491",
+      "alternate_labels": ["Fenn volume II, part 2"],
+      "description": "The fourth of four bound Fenn volumes of Paston letters and papers, with cataloged Davis-number correspondences.",
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 43491","catalog_url":"https://searcharchives.bl.uk/catalog/040-002056405"},
+      "date_statements": [{"label":"documents","value":"1440–1489","certainty":"high","evidence_ids":["evidence:bl-paston-volumes"]}],
+      "physical_description": {"extent":"27 folios","format":"bound letters and papers"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-paston-volumes"]
+    }
+  ],
+  "agents": [
+    {"id":"agent:kyvero-press","type":"organization","name":"Kyvero Press","urls":["https://github.com/Kyvero-Press"],"evidence_ids":["evidence:repo-paston-xml"]},
+    {"id":"agent:university-of-michigan","type":"organization","name":"University of Michigan Library","urls":["https://www.lib.umich.edu/"],"evidence_ids":["evidence:umich-paston","evidence:umich-cme-collection"]},
+    {"id":"agent:oxford-text-archive","type":"organization","name":"Oxford Text Archive","urls":["https://ota.bodleian.ox.ac.uk/"],"evidence_ids":["evidence:ota-1685"]},
+    {"id":"agent:norman-davis","type":"person","name":"Norman Davis","dates":"1913–1989","evidence_ids":["evidence:davis-1971","evidence:carpenter-2008"]},
+    {"id":"agent:clarendon-press","type":"organization","name":"Clarendon Press","evidence_ids":["evidence:davis-1971"]},
+    {"id":"agent:oxford-university-press","type":"organization","name":"Oxford University Press","urls":["https://global.oup.com/"],"evidence_ids":["evidence:eets-publications"]},
+    {"id":"agent:early-english-text-society","type":"organization","name":"Early English Text Society","urls":["https://users.ox.ac.uk/~eets/"],"evidence_ids":["evidence:eets-publications"]},
+    {"id":"agent:british-library","type":"organization","name":"British Library","urls":["https://www.bl.uk/","https://searcharchives.bl.uk/"],"evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"agent:us-copyright-office","type":"organization","name":"United States Copyright Office","urls":["https://www.copyright.gov/"],"evidence_ids":["evidence:usco-circular15a"]},
+    {"id":"agent:internet-archive","type":"organization","name":"Internet Archive","urls":["https://archive.org/"],"evidence_ids":["evidence:ia-paston-metadata"]},
+    {"id":"agent:gbv","type":"organization","name":"Gemeinsamer Bibliotheksverbund","urls":["https://www.gbv.de/"],"evidence_ids":["evidence:gbv-preview"]},
+    {"id":"agent:juan-hernandez-campoy","type":"person","name":"Juan M. Hernández-Campoy","evidence_ids":["evidence:hernandez-campoy-2019"]},
+    {"id":"agent:camilo-conde-silvestre","type":"person","name":"J. Camilo Conde-Silvestre","evidence_ids":["evidence:hernandez-campoy-2019"]},
+    {"id":"agent:tamara-garcia-vidal","type":"person","name":"Tamara García-Vidal","evidence_ids":["evidence:hernandez-campoy-2019"]}
+  ],
+  "relations": [
+    {
+      "id":"relation:repo-copied-from-umich","type":"copied_from","subject":"artifact:general-corpus:Paston","object":"encoding:umich-cme:Paston",
+      "scope":{"subject":{"kind":"whole","description":"Exact approved repository XML"},"object":{"kind":"whole","description":"U-M Paston digital text"},"notes":"Content, identifiers, edition statement, structure, and page milestones align; the exact transfer date is undocumented."},
+      "assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:repo-paston-xml","evidence:umich-paston","evidence:publication-source-override"]}
+    },
+    {
+      "id":"relation:umich-version-of-ota","type":"version_of","subject":"encoding:umich-cme:Paston","object":"encoding:ota:1685",
+      "scope":{"subject":{"kind":"whole","description":"U-M XML representation"},"object":{"kind":"whole","description":"Current OTA SGML representation"},"notes":"The U-M header cites OTA U-1685-C and U-M says initial collection texts included OTA contributions, but the current files differ in ordering and structure and no exact conversion log was found."},
+      "assertion":{"status":"supported","confidence":"medium","evidence_ids":["evidence:repo-paston-xml","evidence:ota-1685-files","evidence:umich-cme-collection"]}
+    },
+    {
+      "id":"relation:ota1685-version-of-ota0395","type":"version_of","subject":"encoding:ota:1685","object":"encoding:ota:0395",
+      "scope":{"subject":{"kind":"whole","description":"Single SGML Paston text and its header"},"object":{"kind":"whole","description":"Three-file COCOA-style legacy Paston text and its header"},"notes":"The 1685 header calls itself a revised version of 0395; the 0395 header calls itself superseded by 1685. This relation does not resolve the later U-M transformation."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ota-1685-files","evidence:ota-0395","evidence:ota-0395-files"]}
+    },
+    {
+      "id":"relation:umich-encoded-from-davis","type":"encoded_from","subject":"encoding:umich-cme:Paston","object":"edition:davis:paston-part-i:1971",
+      "scope":{"subject":{"kind":"whole","description":"Title page and historical text in the U-M representation"},"object":{"kind":"selected_passages","description":"Edition title page and printed pp. 1–670","locators":["title page","pp. 1–670"]},"notes":"Printed front/back matter and printed editorial notes are explicitly omitted."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:repo-paston-xml","evidence:davis-1971","evidence:umich-paston"]}
+    },
+    {
+      "id":"relation:ota-encoded-from-davis","type":"encoded_from","subject":"encoding:ota:1685","object":"edition:davis:paston-part-i:1971",
+      "scope":{"subject":{"kind":"whole","description":"OTA SGML text"},"object":{"kind":"selected_passages","description":"Davis Part I historical text"},"notes":"The SGML opens with an edition statement naming Norman Davis, Clarendon Press, 1971. The separate OTA header's inherited E. V. Gordon 1953 sourceDesc conflicts and is not treated as controlling evidence; exact omitted apparatus still requires file-to-print collation."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ota-1685","evidence:ota-1685-files","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:ota0395-encoded-from-davis","type":"encoded_from","subject":"encoding:ota:0395","object":"edition:davis:paston-part-i:1971",
+      "scope":{"subject":{"kind":"whole","description":"Three legacy plain-text files"},"object":{"kind":"selected_passages","description":"Davis Part I historical text"},"notes":"The 0395 header names Norman Davis as creator of the machine-readable version and depositor and its files use Davis numbers and text represented by the later Davis-identified 1685 SGML. Because the same header also contains a conflicting E. V. Gordon 1953 sourceDesc, the relation remains supported rather than treated as a clean header assertion."},
+      "assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:ota-0395","evidence:ota-0395-files","evidence:ota-1685-files","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:2004-version-of-1971","type":"version_of","subject":"edition:eets:paston-part-i:2004","object":"edition:davis:paston-part-i:1971",
+      "scope":{"subject":{"kind":"whole","description":"2004 EETS corrected reissue"},"object":{"kind":"whole","description":"1971 Clarendon Press edition"},"notes":"The 2004 volume states that it is reprinted with corrections; the exact correction set was not fully inspected."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:eets-publications","evidence:gbv-preview","evidence:carpenter-2008"]}
+    },
+    {
+      "id":"relation:ia-facsimile-of-1971","type":"facsimile_of","subject":"facsimile:ia:paston-1971","object":"edition:davis:paston-part-i:1971",
+      "scope":{"subject":{"kind":"whole","description":"Controlled digital scan object"},"object":{"kind":"whole","description":"A bound copy of the 1971 Part I edition"},"notes":"The complete book files were not downloadable without authorization, so visual completeness was not independently verified."},
+      "assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:ia-paston-metadata","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:gbv-preview-of-2004","type":"facsimile_of","subject":"facsimile:gbv:paston-2004-preview","object":"edition:eets:paston-part-i:2004",
+      "scope":{"subject":{"kind":"whole","description":"All 14 pages in the preview PDF"},"object":{"kind":"selected_passages","description":"Title and contents matter from the 2004 book"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:gbv-preview"]}
+    },
+    {
+      "id":"relation:article-describes-electronic-collection","type":"describes","subject":"description:hernandez-campoy-et-al:2019","object":"encoding:umich-cme:Paston",
+      "scope":{"subject":{"kind":"part","description":"Collection and transcription discussion on pp. 291–292"},"object":{"kind":"whole","description":"U-M/OTA electronic Paston corpus"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:hernandez-campoy-2019"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add27443","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS27443","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add27444","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS27444","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add27445","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS27445","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add27446","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS27446","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add33597","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS33597","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents including nos. 85, 92, 149, and 325"},"object":{"kind":"selected_passages","description":"Corresponding letters among the volume's broader contents"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add34888","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS34888","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add34889","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS34889","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents including nos. 118, 119, 177, 180, and 182"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add43488","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS43488","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add43489","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS43489","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add43490","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS43490","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents including nos. 273, 275, and 281"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    },
+    {
+      "id":"relation:davis-transcribes-add43491","type":"transcribes","subject":"edition:davis:paston-part-i:1971","object":"witness:bl:AddMS43491","scope":{"subject":{"kind":"selected_passages","description":"Davis Part I documents identified by number in the catalog"},"object":{"kind":"selected_passages","description":"Corresponding letters and papers within the complete volume"}},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:bl-paston-volumes","evidence:davis-1971"]}
+    }
+  ],
+  "access": [
+    {
+      "id":"access:repo-paston-xml","entity":"artifact:general-corpus:Paston","provider_id":"agent:kyvero-press","resource_kind":"repository_file","status":"publicly_available","access_method":"Read the exact pinned source as raw XML, in the GitHub blob view, or in the checked-out CME submodule","url":"https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/repairs_2023/Paston.xml","alternate_urls":["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/repairs_2023/Paston.xml"],"repository_path":"CME/source/recent_changes/repairs_2023/Paston.xml","cost":"not_applicable","format":"application/xml","last_checked":"2026-07-14","evidence_ids":["evidence:repo-paston-xml","evidence:publication-source-override"]
+    },
+    {
+      "id":"access:umich-paston","entity":"encoding:umich-cme:Paston","provider_id":"agent:university-of-michigan","resource_kind":"digital_text","status":"publicly_available","access_method":"U-M item page, table of contents, and full-text section browser","url":"https://name.umdl.umich.edu/Paston","alternate_urls":["https://quod.lib.umich.edu/c/cme/Paston?view=toc"],"cost":"free","format":"HTML full text","last_checked":"2026-07-14","evidence_ids":["evidence:umich-paston"]
+    },
+    {
+      "id":"access:ota-1685-files","entity":"encoding:ota:1685","provider_id":"agent:oxford-text-archive","resource_kind":"download","status":"publicly_available","access_method":"OTA item page and direct SGML/header downloads","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1685","alternate_urls":["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/paston1685.sgm?sequence=4&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/header1685.xml?sequence=3&isAllowed=y"],
+      "local_copies":[
+        {"label":"Complete OTA 1685 Paston SGML text","path":"source-cache/Paston/ota-1685-paston.sgm","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/paston1685.sgm?sequence=4&isAllowed=y","sha256":"9551a086e2d6d125f02c8ceebd7a70bf3728d9c0233a0c3a7a82d4e7c4a5f83e","bytes":1381115,"media_type":"text/sgml","downloaded_on":"2026-07-14","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"The entire Part I SGML collection","locators":["complete file"]}},
+        {"label":"OTA 1685 metadata header","path":"source-cache/Paston/ota-1685-header.xml","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/header1685.xml?sequence=3&isAllowed=y","sha256":"f5f265829fb7c689de4200a00bef9af70556f8c6d87d655bd00688b1ca683a9c","bytes":5684,"media_type":"application/xml","downloaded_on":"2026-07-14","coverage":"metadata_only","retrieval_method":"direct_download"}
+      ],
+      "cost":"free","format":"SGML text and XML metadata header","last_checked":"2026-07-14","evidence_ids":["evidence:ota-1685","evidence:ota-1685-files"]
+    },
+    {
+      "id":"access:ota-0395-files","entity":"encoding:ota:0395","provider_id":"agent:oxford-text-archive","resource_kind":"download","status":"publicly_available","access_method":"OTA item page and direct downloads of the complete three-part legacy text plus metadata header","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0395","alternate_urls":["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/header0395.xml?sequence=3&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons1-0395.txt?sequence=4&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons2-0395.txt?sequence=5&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons3-0395.txt?sequence=6&isAllowed=y"],
+      "local_copies":[
+        {"label":"OTA 0395 metadata header","path":"source-cache/Paston/header0395.xml","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/header0395.xml?sequence=3&isAllowed=y","sha256":"08f31b684d6b381c299762f90f4b76c57c2366ad3a1552807f8feb76b3c2ca8a","bytes":6130,"media_type":"application/xml","downloaded_on":"2026-07-14","coverage":"metadata_only","retrieval_method":"direct_download"},
+        {"label":"OTA 0395 Paston text, part 1 of 3","path":"source-cache/Paston/ota-0395-pastons-part-1.txt","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons1-0395.txt?sequence=4&isAllowed=y","sha256":"a447df9dda6018fc24ebdde10c7aebc667b221f089e147b45e4c4d6f6d51fed8","bytes":553963,"media_type":"text/plain","downloaded_on":"2026-07-14","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Part 1 of the complete three-file encoding","locators":["Agnes Paston through the first portion of John Paston III"]}},
+        {"label":"OTA 0395 Paston text, part 2 of 3","path":"source-cache/Paston/ota-0395-pastons-part-2.txt","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons2-0395.txt?sequence=5&isAllowed=y","sha256":"cc6a71230b59a8e3372d2c5d790684a1c896df751f21260c8d6da7d88c96e519","bytes":573310,"media_type":"text/plain","downloaded_on":"2026-07-14","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Part 2 of the complete three-file encoding","locators":["Continuation of John Paston III"]}},
+        {"label":"OTA 0395 Paston text, part 3 of 3","path":"source-cache/Paston/ota-0395-pastons-part-3.txt","source_url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons3-0395.txt?sequence=6&isAllowed=y","sha256":"46c033e76bf979d1cb1e72a9f6eb55e77d979b14aed5bf82e0837262bd9b725e","bytes":179858,"media_type":"text/plain","downloaded_on":"2026-07-14","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Part 3 of the complete three-file encoding","locators":["Margery Paston and William Paston IV"]}}
+      ],
+      "cost":"free","format":"Three text/plain files and one XML metadata header","last_checked":"2026-07-14","evidence_ids":["evidence:ota-0395","evidence:ota-0395-files"],"notes":["The three text files together are the complete published OTA 0395 text object; no one file is a complete standalone representation of the collection."]
+    },
+    {
+      "id":"access:ia-paston-1971","entity":"facsimile:ia:paston-1971","provider_id":"agent:internet-archive","resource_kind":"page_images","status":"registration_required","access_method":"Internet Archive controlled digital lending item; sign in and borrow if available","url":"https://archive.org/details/pastonletterspap0000unse_s3q1","alternate_urls":["https://archive.org/metadata/pastonletterspap0000unse_s3q1"],
+      "local_copies":[{"label":"Internet Archive item metadata snapshot","path":"source-cache/Paston/internet-archive-paston-1971-metadata.json","source_url":"https://archive.org/metadata/pastonletterspap0000unse_s3q1","sha256":"1e5794a0340dea883e50c2da1f69ccc0c831dfe2c27b8d8f69313d2d89606e17","bytes":15968,"media_type":"application/json","downloaded_on":"2026-07-14","coverage":"metadata_only","retrieval_method":"direct_download"}],
+      "cost":"free","format":"Controlled book scan; public metadata JSON","last_checked":"2026-07-14","evidence_ids":["evidence:ia-paston-metadata"],"notes":["Direct PDF, DjVu, and EPUB requests returned HTTP 401 during review; no book-image file was cached."]
+    },
+    {
+      "id":"access:gbv-paston-preview","entity":"facsimile:gbv:paston-2004-preview","provider_id":"agent:gbv","resource_kind":"download","status":"publicly_available","access_method":"Direct public PDF preview","url":"https://www.gbv.de/dms/goettingen/473232154.pdf",
+      "local_copies":[{"label":"Partial 2004 EETS Part I frontmatter preview","path":"source-cache/Paston/davis-paston-part-i-2004-frontmatter-preview.pdf","source_url":"https://www.gbv.de/dms/goettingen/473232154.pdf","sha256":"1ae8c9e7d5813ed3360d8a2cac1673c6105a50c6213b70dbc99437295e963926","bytes":434963,"media_type":"application/pdf","downloaded_on":"2026-07-14","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Title and contents/frontmatter preview only","locators":["14-page PDF"]},"notes":["Not a complete edition scan."]}],
+      "cost":"free","format":"14-page PDF","last_checked":"2026-07-14","evidence_ids":["evidence:gbv-preview"]
+    },
+    {
+      "id":"access:eets-paston-2004-purchase","entity":"edition:eets:paston-part-i:2004","provider_id":"agent:early-english-text-society","resource_kind":"catalog_record","status":"purchasable","access_method":"Order the in-print or print-on-demand volume through EETS/Oxford University Press; EETS members may have a discounted order route","url":"https://users.ox.ac.uk/~eets/publications.html","alternate_urls":["https://users.ox.ac.uk/~eets/list-of-all-publications-2026.pdf","https://users.ox.ac.uk/~eets/contact.html"],"contact":"eets@ell.ox.ac.uk","cost":"fee","format":"Printed or print-on-demand book","last_checked":"2026-07-14","evidence_ids":["evidence:eets-publications"]
+    },
+    {
+      "id":"access:hernandez-campoy-article","entity":"description:hernandez-campoy-et-al:2019","resource_kind":"download","status":"publicly_available","access_method":"Direct public article PDF","url":"https://reference-global.com/2/v2/download/article/10.2478/stap-2019-0014.pdf",
+      "local_copies":[{"label":"Complete Hernández-Campoy, Conde-Silvestre, and García-Vidal article","path":"source-cache/Paston/moskowich-montoya-reyes-2019-paston-intra-speaker-variation.pdf","source_url":"https://reference-global.com/2/v2/download/article/10.2478/stap-2019-0014.pdf","sha256":"3dd5ac4a05d5e8eafdd97910165438da56629e48b2927cbfe8765c07be699c29","bytes":1033076,"media_type":"application/pdf","downloaded_on":"2026-07-14","coverage":"complete","retrieval_method":"direct_download","notes":["The cache filename predates full bibliographic verification; the citation in this manifest gives the correct authors."]}],
+      "cost":"free","format":"28-page PDF","last_checked":"2026-07-14","evidence_ids":["evidence:hernandez-campoy-2019"]
+    },
+    {
+      "id":"access:bl-digitised-manuscripts-list","entity":"description:bl:digitised-manuscripts-list-2026","provider_id":"agent:british-library","resource_kind":"download","status":"publicly_available","access_method":"Direct public institutional PDF","url":"https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl=",
+      "local_copies":[{"label":"Complete current British Library Digitised Manuscripts list","path":"source-cache/Paston/british-library-digitised-manuscripts-list.pdf","source_url":"https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl=","sha256":"22c3da6d07a30b0b4d95d143d77dfc8ecfb330cbc14191b92930b1f635f29311","bytes":2931179,"media_type":"application/pdf","downloaded_on":"2026-07-14","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"Paston restoration check","locators":["complete 261-page list"],"notes":["The list does not supply a restored complete image route for the eleven exact Paston volumes."]}}],
+      "cost":"free","format":"261-page PDF","last_checked":"2026-07-14","evidence_ids":["evidence:bl-digital-status"]
+    },
+    {
+      "id":"access:bl-imaging-price-list","entity":"description:bl:digitisation-price-list-2025-26","provider_id":"agent:british-library","resource_kind":"download","status":"publicly_available","access_method":"Direct public institutional PDF","url":"https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+      "local_copies":[{"label":"Complete British Library Digitisation Services 2025/26 price list","path":"source-cache/Paston/british-library-digitisation-prices-2026.pdf","source_url":"https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","sha256":"93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597","bytes":181286,"media_type":"application/pdf","downloaded_on":"2026-07-14","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"Standard-price context for Paston volume requests","locators":["complete two-page rate card"],"notes":["This is not an item-specific quote and large complete-object orders may be bespoke."]}}],
+      "cost":"free","format":"two-page PDF","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-prices"]
+    },
+    {
+      "id":"access:usco-circular15a","entity":"description:usco:circular-15a-2026","provider_id":"agent:us-copyright-office","resource_kind":"download","status":"publicly_available","access_method":"Direct public official PDF","url":"https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies":[{"label":"Complete U.S. Copyright Office Circular 15A (2026)","path":"source-cache/Paston/us-copyright-office-circular-15a-2026.pdf","source_url":"https://www.copyright.gov/circs/circ15a.pdf","sha256":"6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef","bytes":273867,"media_type":"application/pdf","downloaded_on":"2026-07-14","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"Duration rule used in this record","locators":["works first published or registered before January 1, 1978"]}}],
+      "cost":"free","format":"four-page PDF","last_checked":"2026-07-14","evidence_ids":["evidence:usco-circular15a"]
+    },
+    {"id":"access:bl-add27443","entity":"witness:bl:AddMS27443","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002030883","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add27444","entity":"witness:bl:AddMS27444","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002030884","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add27445","entity":"witness:bl:AddMS27445","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002030885","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add27446","entity":"witness:bl:AddMS27446","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002030886","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add33597","entity":"witness:bl:AddMS33597","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/032-002024449","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add34888","entity":"witness:bl:AddMS34888","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002087893","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add34889","entity":"witness:bl:AddMS34889","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002087894","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add43488","entity":"witness:bl:AddMS43488","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002056402","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add43489","entity":"witness:bl:AddMS43489","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition, consultation requirements, and fees","url":"https://searcharchives.bl.uk/catalog/040-002056403","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add43490","entity":"witness:bl:AddMS43490","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002056404","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add43491","entity":"witness:bl:AddMS43491","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available","access_method":"Exact catalog record; originals onsite and complete reproduction may be requested subject to condition and fees","url":"https://searcharchives.bl.uk/catalog/040-002056405","alternate_urls":["https://www.bl.uk/services/digitisation","https://www.bl.uk/terms/imaging-services"],"cost":"free","format":"HTML catalog; legacy full images currently unavailable","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status","evidence:bl-imaging-services"]},
+    {"id":"access:bl-add27443-images","entity":"witness:bl:AddMS27443","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002030883","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add27444-images","entity":"witness:bl:AddMS27444","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002030884","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add27445-images","entity":"witness:bl:AddMS27445","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002030885","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add27446-images","entity":"witness:bl:AddMS27446","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002030886","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add33597-images","entity":"witness:bl:AddMS33597","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/032-002024449","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add34888-images","entity":"witness:bl:AddMS34888","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002087893","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add34889-images","entity":"witness:bl:AddMS34889","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002087894","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add43488-images","entity":"witness:bl:AddMS43488","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002056402","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add43489-images","entity":"witness:bl:AddMS43489","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002056403","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add43490-images","entity":"witness:bl:AddMS43490","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002056404","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add43491-images","entity":"witness:bl:AddMS43491","provider_id":"agent:british-library","resource_kind":"page_images","status":"unavailable","access_method":"Legacy Digitised Manuscripts coverage reported by the exact catalog record; current image service unavailable","url":"https://searcharchives.bl.uk/catalog/040-002056405","cost":"not_applicable","format":"Complete digital coverage exists but is not currently delivered","last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:bl-digital-status"]},
+    {"id":"access:bl-add27443-reproduction","entity":"witness:bl:AddMS27443","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 27443 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add27444-reproduction","entity":"witness:bl:AddMS27444","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 27444 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add27445-reproduction","entity":"witness:bl:AddMS27445","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 27445 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add27446-reproduction","entity":"witness:bl:AddMS27446","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 27446 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add33597-reproduction","entity":"witness:bl:AddMS33597","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 33597 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add34888-reproduction","entity":"witness:bl:AddMS34888","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 34888 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add34889-reproduction","entity":"witness:bl:AddMS34889","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 34889 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add43488-reproduction","entity":"witness:bl:AddMS43488","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 43488 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add43489-reproduction","entity":"witness:bl:AddMS43489","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 43489 and requesting every physical surface, subject also to consultation restrictions; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add43490-reproduction","entity":"witness:bl:AddMS43490","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 43490 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]},
+    {"id":"access:bl-add43491-reproduction","entity":"witness:bl:AddMS43491","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable","access_method":"Submit the individual order form for a condition-assessed complete-object colour digitisation quotation, citing Add MS 43491 and requesting every physical surface; obtain separate written reuse permission","url":"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","alternate_urls":["https://www.bl.uk/services/digitisation","https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","https://www.bl.uk/terms/imaging-services"],"contact":"licensing@bl.uk for the service; permissions@bl.uk for written reuse permission","cost":"fee","format":"Repository-supplied digital images, subject to feasibility and written reuse terms","last_checked":"2026-07-14","evidence_ids":["evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:bl-paston-volumes"]}
+  ],
+  "rights": [
+    {
+      "id":"rights:repo-paston-unknown","entity":"artifact:general-corpus:Paston","component":"The repository XML artifact as a distinct digital file","jurisdiction":"Unspecified","copyright_status":"unknown","as_of":"2026-07-14","basis":"The file itself contains legacy use language but no clear file-specific license grant; the CME repository's Unlicense text is framed for software and was not assumed to license this modern transcription or edition-derived markup.","contract_terms_status":"unknown","confidence":"high","evidence_ids":["evidence:repo-paston-xml"],"notes":["Do not infer rights in the 1971 editorial transcription from the public-domain status of the medieval documents."]
+    },
+    {
+      "id":"rights:medieval-text-us","entity":"edition:davis:paston-part-i:1971","component":"Underlying fifteenth-century documentary wording, excluding Davis's modern selection, transcription choices, notes, and typography","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-14","basis":"The historical documents were created in the fifteenth and early sixteenth centuries; U-M also applies No Copyright–United States to its collection presentation.","contract_terms_status":"none_known","confidence":"high","evidence_ids":["evidence:umich-cme-collection","evidence:usco-circular15a"],"notes":["This finding does not extend to modern editorial reconstruction, markup, or manuscript photography."]
+    },
+    {
+      "id":"rights:davis-1971-editorial-us","entity":"edition:davis:paston-part-i:1971","component":"Davis's 1971 selection, arrangement, modern editorial transcription, notes, and other protectable editorial matter","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-14","effective_until":"2066-12-31","basis":"A work first published in 1971 can have a maximum U.S. term of 95 years from publication if copyright was secured and maintained; no item-specific clearance or renewal analysis was completed.","contract_terms_status":"unknown","confidence":"medium","evidence_ids":["evidence:davis-1971","evidence:usco-circular15a","evidence:ia-paston-metadata"],"notes":["2066 is the conservative maximum-term endpoint, not a finding that every feature is protected until then."]
+    },
+    {
+      "id":"rights:umich-paston-us","entity":"encoding:umich-cme:Paston","access_id":"access:umich-paston","component":"The Paston digital text and materials presented in the current U-M CME collection","jurisdiction":"United States","copyright_status":"no_known_copyright","as_of":"2026-07-14","basis":"The current U-M collection page states that collection materials are public domain in the United States and applies the DPLA No Copyright–United States statement.","asserted_by_id":"agent:university-of-michigan","rights_statement_uri":"https://rightsstatements.org/page/NoC-US/1.0/","contract_terms_status":"provider_terms_apply","confidence":"medium","evidence_ids":["evidence:umich-cme-collection","evidence:umich-paston"],"notes":["The individual Paston text embeds older personal-scholarly-use language. That conflict should be resolved with U-M before redistribution of the complete encoding.","No Copyright–United States is not an affirmative worldwide license."]
+    },
+    {
+      "id":"rights:ota-1685-terms","entity":"encoding:ota:1685","access_id":"access:ota-1685-files","component":"OTA 1685 SGML text and header","jurisdiction":"Unspecified","copyright_status":"copyright_may_apply","as_of":"2026-07-14","basis":"The current OTA rights metadata says use is restricted, usually to non-commercial use with prior depositor permission and inclusion of the complete header with distributed copies.","asserted_by_id":"agent:oxford-text-archive","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:ota-1685","evidence:ota-1685-files"],"notes":["Public download availability does not itself grant unrestricted redistribution or commercial reuse."]
+    },
+    {
+      "id":"rights:ota-0395-license","entity":"encoding:ota:0395","access_id":"access:ota-0395-files","component":"OTA 0395 metadata header and three-part legacy text as distributed by Oxford","jurisdiction":"Provider-stated worldwide license","copyright_status":"copyrighted","as_of":"2026-07-14","basis":"The exact OTA 0395 header states distribution by the University of Oxford under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported.","asserted_by_id":"agent:oxford-text-archive","contract_terms_status":"provider_terms_apply","confidence":"high","license":{"name":"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","spdx":"CC-BY-NC-SA-3.0","uri":"https://creativecommons.org/licenses/by-nc-sa/3.0/"},"evidence_ids":["evidence:ota-0395","evidence:ota-0395-files"],"notes":["The NonCommercial condition matters for profit-oriented print-on-demand use.","This provider assertion does not resolve rights in Davis's 1971 editorial contributions, and it conflicts operationally with OTA 1685's later prior-permission wording; do not merge the two access layers."]
+    },
+    {
+      "id":"rights:eets-2004","entity":"edition:eets:paston-part-i:2004","component":"The 2004 corrected reissue, including corrections, typography, and presentation","jurisdiction":"United States and United Kingdom","copyright_status":"copyrighted","as_of":"2026-07-14","basis":"The corrected reissue was published by Oxford University Press for EETS in 2004 and remains commercially available; no open license was found.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:eets-publications","evidence:gbv-preview"]
+    },
+    {
+      "id":"rights:gbv-preview","entity":"facsimile:gbv:paston-2004-preview","access_id":"access:gbv-paston-preview","component":"The 14-page GBV preview PDF","jurisdiction":"Unspecified","copyright_status":"copyright_may_apply","as_of":"2026-07-14","basis":"The preview reproduces pages of a 2004 copyrighted publication and no open redistribution license was found.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:gbv-preview"],"notes":["Caching for source verification does not grant republication rights."]
+    },
+    {
+      "id":"rights:article","entity":"description:hernandez-campoy-et-al:2019","access_id":"access:hernandez-campoy-article","component":"The 2019 scholarly article and provider PDF","jurisdiction":"Unspecified","copyright_status":"copyrighted","as_of":"2026-07-14","basis":"The article is a modern scholarly publication; public PDF access was found, but no rights statement supporting repository redistribution was verified.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:hernandez-campoy-2019"]
+    },
+    {
+      "id":"rights:bl-images","entity":"witness:bl:AddMS43488","component":"Any British Library-supplied manuscript photography, representative of the separate image-rights question for each listed witness volume","jurisdiction":"United Kingdom","copyright_status":"unknown","as_of":"2026-07-14","basis":"The underlying medieval documents and newly supplied photography are distinct. British Library imaging terms require written permission before copying or reproducing supplied material.","asserted_by_id":"agent:british-library","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:bl-imaging-services"],"notes":["Apply the same object-by-object permission check to photography of every other listed British Library witness; this record is not a copyright claim over the medieval wording."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id":"practice:davis-abbreviations","entity":"edition:davis:paston-part-i:1971","practice":"abbreviation_expansion","source_feature":"Manuscript abbreviations, suspension marks, curls, flourishes, and thorn-like letterforms","representation":"Some abbreviations expanded; nonalphabetic curls and flourishes omitted; occasional printed y interpreted as thorn in the linguistic study's quotations","description":"The scholarly study reports several Davis transcription interventions relevant to comparing italicized or supplied forms against manuscript images. Item-level expansion conventions must be checked in Davis's introduction and individual documents.","scope":"Part I documentary text","confidence":"medium","evidence_ids":["evidence:hernandez-campoy-2019"],"notes":["The article's own y-to-thorn display choice should not be confused with a universal Davis policy without checking the edition."]
+    },
+    {
+      "id":"practice:davis-documentary-state","entity":"edition:davis:paston-part-i:1971","practice":"collation","source_feature":"Autographs, drafts, dictated texts, scribal copies, and documents transmitted in multiple states or hands","representation":"Editorially differentiated and discussed documentary states within the numbered Part I collection","description":"Davis does not treat family-member heading, authorial agency, scribal hand, and surviving physical object as the same category.","scope":"Part I collection and item apparatus","confidence":"high","evidence_ids":["evidence:hernandez-campoy-2019","evidence:bl-paston-volumes"]
+    },
+    {
+      "id":"practice:umich-selection","entity":"encoding:umich-cme:Paston","practice":"selection","source_feature":"A printed volume with front matter, historical text, editorial notes, back matter, and plates","representation":"Edition title page and printed historical text pp. 1–670 encoded; print front/back matter and printed editorial notes omitted","description":"The U-M/CME digital text is narrower than the complete printed book even though it represents all 670 numbered text pages.","scope":"Entire U-M Paston encoding","confidence":"high","evidence_ids":["evidence:repo-paston-xml","evidence:davis-1971"]
+    },
+    {
+      "id":"practice:umich-structural-markup","entity":"encoding:umich-cme:Paston","practice":"selection","source_feature":"Davis's author groups, document units, page sequence, deletions, uncertain readings, and foreign-language spans","representation":"15 DIV1, 423 DIV2, 9 DIV3, 670 PB, 715 DEL, 589 UNCLEAR, and 200 FOREIGN elements","description":"The XML makes edition-derived structural and palaeographic features machine-readable, but element counts are representation metrics rather than physical-document counts.","scope":"Entire repository/U-M XML representation","confidence":"high","evidence_ids":["evidence:repo-paston-structure"]
+    },
+    {
+      "id":"practice:ota-umich-restructuring","entity":"encoding:umich-cme:Paston","practice":"selection","source_feature":"A related OTA SGML collection with different ordering and structural markup","representation":"A U-M XML representation arranged in fifteen Davis author groups with edition page milestones","description":"The current OTA and U-M files share the collection but are materially different digital representations. Exact reordering, conversion, and normalization steps remain undocumented.","scope":"Entire digital collection","confidence":"medium","evidence_ids":["evidence:ota-1685-files","evidence:repo-paston-structure","evidence:umich-cme-collection"]
+    }
+  ],
+  "evidence": [
+    {
+      "id":"evidence:repo-paston-xml","type":"repository_file","citation":"General Corpus, CME/source/recent_changes/repairs_2023/Paston.xml.","repository_path":"CME/source/recent_changes/repairs_2023/Paston.xml","locator":"HEADER; editorial declaration; edition statement; BODY author groups, document heads, and page milestones","summary":"Identifies the Paston U-M item, legacy OTA U-1685-C source, Davis 1971 source edition, omitted print matter, fifteen author groups, document numbering, languages, and printed pp. 1–670.","accessed_on":"2026-07-14","sha256":"9beb744dda19edb24c8ad443ffce0c57bdec3b402843f7251f701bae994167a5"
+    },
+    {
+      "id":"evidence:repo-paston-structure","type":"repository_file","citation":"Structured inspection of the approved Paston.xml repository artifact.","repository_path":"CME/source/recent_changes/repairs_2023/Paston.xml","locator":"DIV1, DIV2, DIV3, HEAD, PB, FOREIGN, DEL, UNCLEAR, LG, and L; document headings 1–421, 122A, and 354A","summary":"Counts 15 author groups, 423 document containers, 9 nested subdivisions, 670 printed-page milestones, 200 foreign spans, 715 deletions, and 589 unclear spans, with no structured verse. Confirms the author-group counts and headings through probably after April 1503.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:publication-source-override","type":"repository_file","citation":"General Corpus publication source override for Paston.","repository_path":"manifests/publication-set/source-overrides.json","locator":"items.Paston","summary":"Records Paston.pdf's exact SOURCE colophon path as CME/source/recent_changes/repairs_2023/Paston.xml and its SHA-256, while separately noting the byte-identical CME_from_OTA alternate.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:umich-paston","type":"official_webpage","citation":"University of Michigan Library Digital Collections, 'Paston letters and papers of the fifteenth century, Part I.'","url":"https://name.umdl.umich.edu/Paston","alternate_urls":["https://quod.lib.umich.edu/c/cme/Paston?view=toc"],"locator":"About this Item; source-edition statement; table of contents; full-text section browser; rights display","summary":"Confirms the public digital text, stable Paston identifier, Paston family author heading, Oxford/Clarendon 1971 source edition, fifteen author groups, personal-scholarly-use legacy statement, and current collection rights presentation.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:umich-cme-collection","type":"official_webpage","citation":"University of Michigan Library Digital Collections, Corpus of Middle English Prose and Verse collection home.","url":"https://quod.lib.umich.edu/c/cme/","locator":"About the collection; production history; rights and permissions","summary":"States that initial mid-1990s texts came from OTA, U-M transcription, or faculty contributions; describes basic TEI and bulk XML; and says collection materials are public domain in the United States with No Copyright–United States rights labeling.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:ota-1685","type":"official_catalog","citation":"Oxford Text Archive, ota:1685, 'Paston letters and papers of the fifteenth century: [Volume 1].'","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1685","locator":"Title, author, date, language, identifier, file list, and rights metadata","summary":"Identifies Paston Family, 1425–1503, Middle English, Core Collection object ota:1685, downloadable header and SGML files, and current restricted-use wording normally requiring non-commercial use, prior depositor permission, and header inclusion.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:ota-1685-files","type":"digital_surrogate","citation":"Oxford Text Archive ota:1685 downloadable SGML text and XML header.","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/paston1685.sgm?sequence=4&isAllowed=y","alternate_urls":["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1685/header1685.xml?sequence=3&isAllowed=y"],"locator":"Complete files","summary":"The complete SGML text is 1,381,115 bytes and has SHA-256 9551a086...; the 5,684-byte header has SHA-256 f5f26582.... The SGML identifies Norman Davis's 1971 edition and the header identifies 1685 as a revised version of 0395, while the header's separate E. V. Gordon 1953 sourceDesc conflicts with those exact files and U-M/CME.","accessed_on":"2026-07-14","sha256":"9551a086e2d6d125f02c8ceebd7a70bf3728d9c0233a0c3a7a82d4e7c4a5f83e"
+    },
+    {
+      "id":"evidence:ota-0395","type":"official_catalog","citation":"Oxford Text Archive, ota:0395, 'Paston letters and papers of the fifteenth century: [Volume 1].'","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0395","locator":"Title, creator, deposit, extent, file list, relation to 1685, encoding description, and license","summary":"Identifies Norman Davis as creator of the machine-readable version, records a 1984-10-30 deposit, exposes three text files and a header, describes legacy COCOA references, calls the item superseded by OTA 1685, and asserts CC BY-NC-SA 3.0. Its inherited E. V. Gordon 1953 sourceDesc conflicts with the actual digital-text lineage and is not accepted as the source edition.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:ota-0395-files","type":"digital_surrogate","citation":"Oxford Text Archive ota:0395 complete three-part legacy text and XML header.","url":"https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/header0395.xml?sequence=3&isAllowed=y","alternate_urls":["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons1-0395.txt?sequence=4&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons2-0395.txt?sequence=5&isAllowed=y","https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0395/pastons3-0395.txt?sequence=6&isAllowed=y"],"repository_path":"source-cache/Paston/header0395.xml","locator":"Complete four-file published object","summary":"The 6,130-byte header and all three text parts are cached. The text parts total 1,307,131 bytes and preserve the full older collection representation from Agnes Paston through William Paston IV; their SHA-256 values are recorded in the access local-copy entries.","accessed_on":"2026-07-14","sha256":"08f31b684d6b381c299762f90f4b76c57c2366ad3a1552807f8feb76b3c2ca8a"
+    },
+    {
+      "id":"evidence:davis-1971","type":"edition_statement","citation":"Norman Davis, ed., Paston Letters and Papers of the Fifteenth Century, Part I (Oxford: Clarendon Press, 1971).","url":"https://archive.org/details/pastonletterspap0000unse_s3q1","locator":"Bibliographic metadata; U-M edition statement; 2004 reissue title and copyright matter","summary":"Establishes the 1971 Part I edition, Norman Davis as editor, Oxford Clarendon Press imprint, lxxxvii + 670 pages and 12 plates, and ISBN 0-19-812415-5. The controlled Internet Archive item provides metadata but not unauthenticated complete file access.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:eets-publications","type":"official_webpage","citation":"Early English Text Society, List of Publications (2026), Supplementary Series 20–22.","url":"https://users.ox.ac.uk/~eets/list-of-all-publications-2026.pdf","locator":"Supplementary Series 20","summary":"Lists Paston Letters and Papers of the Fifteenth Century, Volume I, ed. Norman Davis, as Supplementary Series 20, published 2004, ISBN 9780197224212, and gives current price and availability alongside Parts II and III.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:gbv-preview","type":"digital_surrogate","citation":"GBV bibliographic PDF preview of Norman Davis, Paston Letters and Papers, Part I, EETS Supplementary Series 20 (2004).","url":"https://www.gbv.de/dms/goettingen/473232154.pdf","locator":"14-page preview, title and contents matter","summary":"Confirms the 2004 Oxford University Press/EETS corrected reissue, series number, pagination, plate count, and ISBN; its 14 pages are only a partial preview.","accessed_on":"2026-07-14","sha256":"1ae8c9e7d5813ed3360d8a2cac1673c6105a50c6213b70dbc99437295e963926"
+    },
+    {
+      "id":"evidence:ia-paston-metadata","type":"official_webpage","citation":"Internet Archive metadata for pastonletterspap0000unse_s3q1.","url":"https://archive.org/metadata/pastonletterspap0000unse_s3q1","locator":"metadata and files arrays; collection, lending, and access fields","summary":"Identifies a 1971 scanned book object in the internetarchivebooks/inlibrary collections with print-disabled controlled access. PDF, DjVu, and EPUB attempts returned HTTP 401 during review; only metadata was cached.","accessed_on":"2026-07-14","sha256":"1e5794a0340dea883e50c2da1f69ccc0c831dfe2c27b8d8f69313d2d89606e17"
+    },
+    {
+      "id":"evidence:hernandez-campoy-2019","type":"scholarly_source","citation":"Juan M. Hernández-Campoy, J. Camilo Conde-Silvestre, and Tamara García-Vidal, 'Tracing Patterns of Intra-Speaker Variation in Early English Correspondence: A Change from Above in the Paston Letters,' Studia Anglica Posnaniensia 54s1 (2019): 287–314.","url":"https://doi.org/10.2478/stap-2019-0014","alternate_urls":["https://reference-global.com/2/v2/download/article/10.2478/stap-2019-0014.pdf"],"locator":"pp. 291–292","summary":"Describes the U-M/OTA electronic edition as roughly 246,353 words and 422 authored documents by fifteen family members, mainly 1425–1503; discusses Davis's autograph/draft/dictated/scribed distinctions and selected expansion and letterform interventions.","accessed_on":"2026-07-14","sha256":"3dd5ac4a05d5e8eafdd97910165438da56629e48b2927cbfe8765c07be699c29"
+    },
+    {
+      "id":"evidence:carpenter-2008","type":"scholarly_source","citation":"Christine Carpenter, review of Paston Letters and Papers of the Fifteenth Century, Part III, English Historical Review 123.500 (2008): 180–183, doi:10.1093/ehr/cem392.","url":"https://academic.oup.com/ehr/article-abstract/CXXIII/500/180/584958","locator":"Published extract","summary":"States that Part I consists of letters and papers produced by the Pastons, Part II of those addressed to them, and Part III of indexes, concordances, corrections, and miscellaneous documents; notes that Part III supplies a complete concordance to surviving originals.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:bl-paston-volumes","type":"official_catalog","citation":"British Library Archives and Manuscripts Catalogue, principal bound volumes of Paston Letters and Papers: Add MSS 27443–27446, 33597, 34888–34889, and 43488–43491.","url":"https://searcharchives.bl.uk/catalog/032-002056401","alternate_urls":["https://searcharchives.bl.uk/catalog/040-002030883","https://searcharchives.bl.uk/catalog/040-002030884","https://searcharchives.bl.uk/catalog/040-002030885","https://searcharchives.bl.uk/catalog/040-002030886","https://searcharchives.bl.uk/catalog/032-002024449","https://searcharchives.bl.uk/catalog/040-002087893","https://searcharchives.bl.uk/catalog/040-002087894","https://searcharchives.bl.uk/catalog/040-002056402","https://searcharchives.bl.uk/catalog/040-002056403","https://searcharchives.bl.uk/catalog/040-002056404","https://searcharchives.bl.uk/catalog/040-002056405"],"locator":"Exact volume records; scope and content; Davis-number parenthetical references; date, extent, access, and image status","summary":"Locates eleven major extant Paston witness volumes at the British Library, supplies dates and extents, and enumerates contents with Davis numbers. The records prove a dispersed many-document archive and identify Part I source portions without supporting a complete crosswalk from this review alone.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:bl-digital-status","type":"official_webpage","citation":"British Library, current catalog recovery and digitised-manuscript access status, plus the current Digitised Manuscripts list.","url":"https://www.bl.uk/stories/news/introducing-our-new-catalogues","alternate_urls":["https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl="],"repository_path":"source-cache/Paston/british-library-digitised-manuscripts-list.pdf","locator":"Recovery notice; exact Paston volume records marked Images currently unavailable; current 261-page list","summary":"Explains post-cyberattack catalog recovery and continuing unavailability for some digitized manuscripts. Exact Paston records report legacy full digital coverage while currently displaying images as unavailable; the current downloadable master list does not restore these complete volumes.","accessed_on":"2026-07-14","sha256":"22c3da6d07a30b0b4d95d143d77dfc8ecfb330cbc14191b92930b1f635f29311"
+    },
+    {
+      "id":"evidence:bl-imaging-services","type":"official_webpage","citation":"British Library, Digitisation Services, individual order form, and Imaging Services terms and conditions.","url":"https://www.bl.uk/services/digitisation","alternate_urls":["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u","https://www.bl.uk/terms/imaging-services"],"locator":"Individual order form; colour and complete-object request guidance; use and reproduction terms","summary":"Provides the exact paid, preservation-dependent order route, asks for shelfmark and folio information, distinguishes reference supply from reproduction, identifies licensing@bl.uk for the service, and states that written permission through permissions@bl.uk is required before copying or reproducing supplied material. Research supply and permission to publish or redistribute remain separate decisions.","accessed_on":"2026-07-14"
+    },
+    {
+      "id":"evidence:bl-imaging-prices","type":"official_webpage","citation":"British Library, Digitisation Services price list, 2025/26.","url":"https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf","repository_path":"source-cache/Paston/british-library-digitisation-prices-2026.pdf","locator":"Complete two-page rate card","summary":"Current published standard imaging charges and service categories. Eleven complete manuscript volumes would require item-specific condition and feasibility review and may be treated as bespoke or large orders; the rate card is not itself a quote.","accessed_on":"2026-07-14","sha256":"93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597"
+    },
+    {
+      "id":"evidence:usco-circular15a","type":"law","citation":"U.S. Copyright Office, Circular 15A, Duration of Copyright (rev. 2026).","url":"https://www.copyright.gov/circs/circ15a.pdf","repository_path":"source-cache/Paston/us-copyright-office-circular-15a-2026.pdf","locator":"Works first published or registered before January 1, 1978","summary":"Explains the 95-year maximum term for qualifying works first published in 1964–1977, supporting a conservative 2066 endpoint for any protected 1971 editorial matter.","accessed_on":"2026-07-14","sha256":"6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef"
+    },
+    {
+      "id":"evidence:negative-complete-facsimiles","type":"search_result","citation":"Public complete-facsimile search for Paston Part I source manuscripts, 2026-07-14.","url":"https://searcharchives.bl.uk/catalog/032-002056401","alternate_urls":["https://searcharchives.bl.uk/catalog/040-002030883","https://searcharchives.bl.uk/catalog/040-002087893","https://searcharchives.bl.uk/catalog/040-002056402","https://www.bl.uk/services/digitisation"],"summary":"Checks of the eleven exact British Library records, their hierarchy and legacy image notices, the restored Digitised Manuscripts list, U-M, OTA, Internet Archive, and general public discovery surfaces found selected-leaf images and print-edition surrogates but no currently retrievable complete digital surrogate of any whole principal manuscript volume. Several exact BL records state that full digital coverage exists but images are currently unavailable, so the result is unavailable rather than no known digitization.","accessed_on":"2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id":"question:complete-witness-crosswalk","question":"What is the exhaustive document-to-current-shelfmark and folio concordance for every Part I unit, including dispersed, missing, copied, and multi-state documents?","status":"unresolved","impact":"high","next_steps":["Consult Beadle and Richmond's Part III complete concordance and Davis's Part I manuscript apparatus.","Verify every concordance entry against current British Library and other repository catalogs before adding item-level relations.","Represent many-to-many mappings rather than assuming one Davis number equals one physical document."],"last_checked":"2026-07-14","evidence_ids":["evidence:carpenter-2008","evidence:bl-paston-volumes","evidence:repo-paston-structure"]
+    },
+    {
+      "id":"question:complete-manuscript-facsimiles","question":"When will complete page-image access to the digitized Paston manuscript volumes be restored, or can the British Library supply complete lawful research reproductions now?","status":"unresolved","impact":"high","next_steps":["Ask British Library Reference Services to confirm which complete volumes were digitized and the restoration timetable.","Submit the exact order form and request condition and fee quotations for each complete physical volume, including bindings, flyleaves, blanks, every surface, endorsements, seals, labels, and adjacent non-Part-I content.","Seek separate written terms from the published service and permissions contacts for private research, repository linking, publication, and redistribution before sharing any supplied images."],"last_checked":"2026-07-14","evidence_ids":["evidence:bl-digital-status","evidence:bl-imaging-services","evidence:bl-imaging-prices","evidence:negative-complete-facsimiles"],"notes":["No enquiry or order response is recorded in this manifest, so this question is unresolved rather than pending an evidenced external response."]
+    },
+    {
+      "id":"question:umich-ota-production","question":"What exact file, date, and transformation process connect OTA 0395, OTA U-1685-C/current 1685, the U-M CME item, and the byte-identical CME repository siblings?","status":"unresolved","impact":"medium","next_steps":["Request production records or archived headers from U-M and OTA.","Perform a document-level structural and textual diff among all three OTA 0395 parts, current OTA 1685 SGML, U-M output, and both CME paths.","Treat OTA's confirmed 0395-to-1685 revision separately from the still-undocumented 1685-to-U-M transformation.","Do not upgrade version_of to copied_from or encoded_from between U-M and OTA until direction and intermediates are documented."],"last_checked":"2026-07-14","evidence_ids":["evidence:repo-paston-xml","evidence:ota-0395","evidence:ota-0395-files","evidence:ota-1685-files","evidence:umich-cme-collection"]
+    },
+    {
+      "id":"question:ota-source-description-conflict","question":"Why do the OTA 0395 and 1685 headers name an E. V. Gordon 1953 two-volume source when their creator/depositor metadata, digital text, and U-M/CME representation identify Norman Davis's 1971 Part I edition?","status":"unresolved","impact":"high","next_steps":["Ask OTA whether the Gordon sourceDesc was inherited from an unrelated or superseded catalog record and request corrected item metadata.","Compare the cached 0395 and 1685 files against a lawful Davis 1971 copy before asserting exact textual coverage at line level.","Do not add an E. V. Gordon source-edition node unless independent bibliographic and textual evidence establishes one."],"last_checked":"2026-07-14","evidence_ids":["evidence:ota-0395","evidence:ota-0395-files","evidence:ota-1685-files","evidence:repo-paston-xml","evidence:davis-1971"]
+    },
+    {
+      "id":"question:rights-conflict","question":"Which current terms govern redistribution and commercial reuse of the U-M and OTA Paston encodings given U-M's No Copyright–United States collection statement, embedded legacy restrictions, OTA 0395's CC BY-NC-SA 3.0 assertion, OTA 1685's prior-permission language, and the potentially protected 1971 edition?","status":"unresolved","impact":"high","next_steps":["Ask U-M and OTA for item-specific written clarification covering source code repositories, non-commercial research, print-on-demand, and commercial reuse.","Ask OTA which terms govern transformed or combined use across 0395 and 1685 rather than assuming the older license overrides the later record.","Separate underlying medieval wording, Davis's editorial contributions, U-M/OTA markup, and provider-supplied scans in every permission request.","Do not publish cached OTA or controlled edition files merely because they are technically downloadable."],"last_checked":"2026-07-14","evidence_ids":["evidence:umich-paston","evidence:umich-cme-collection","evidence:ota-0395","evidence:ota-1685","evidence:usco-circular15a"]
+    },
+    {
+      "id":"question:other-repositories","question":"Which Part I originals or supporting documents are held outside the eleven major British Library volumes, including Norfolk Record Office Walter Rye MS 38 and scattered British Library charters and manuscripts?","status":"unresolved","impact":"medium","next_steps":["Use Part III's concordance to enumerate every non-major-volume holding and current shelfmark.","Locate an exact current Norfolk Record Office catalog record before modeling Walter Rye MS 38.","Add lost or unlocated witnesses explicitly rather than forcing them into the major-volume entities."],"last_checked":"2026-07-14","evidence_ids":["evidence:bl-paston-volumes","evidence:carpenter-2008"]
+    }
+  ]
+}

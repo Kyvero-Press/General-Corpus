@@ -1,0 +1,620 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:Paston",
+  "work_id": "Paston",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "cataloging_subject": {
+    "id": "work:Paston",
+    "unit_type": "collection",
+    "label": "Paston Letters and Papers of the Fifteenth Century, Part I",
+    "scope_note": "Norman Davis's Part I editorial collection of letters and papers produced by members of the Paston family and their associated clerks and documentary creators, represented by 423 top-level document containers in the repository XML. The cataloging subject is not one letter, one authorial work, one physical manuscript, the whole surviving Paston archive, Part II (documents addressed to the Pastons), or Part III. The medieval documents, Davis's edition, the Oxford Text Archive and University of Michigan encodings, the repository XML, and the many surviving manuscript volumes remain distinct layers."
+  },
+  "catalog_summary": {
+    "title": "Paston Letters and Papers of the Fifteenth Century, Part I",
+    "author": "Paston family members and associated clerks and documentary creators",
+    "editor": "Norman Davis",
+    "date": "Documents chiefly 1425–1503; Part I first published 1971",
+    "region": "Norfolk and East Anglia, England, with London and other English locations",
+    "genres": [
+      "Edited documentary collection",
+      "Correspondence",
+      "Legal and administrative records",
+      "Household and estate papers"
+    ],
+    "form": "prose",
+    "language_codes": ["enm", "xno", "lat", "eng"],
+    "tags": [
+      "middle-english",
+      "anglo-norman",
+      "latin",
+      "edited-selection",
+      "documentary-collection",
+      "correspondence",
+      "family-letters",
+      "paston-family",
+      "gentry",
+      "late-medieval-england",
+      "east-anglia",
+      "norfolk",
+      "london",
+      "estate-management",
+      "household-administration",
+      "legal-documents",
+      "wills",
+      "inventories",
+      "petitions",
+      "wars-of-the-roses",
+      "social-history",
+      "political-history",
+      "linguistic-history"
+    ]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "Paston",
+      "uri": "https://name.umdl.umich.edu/Paston"
+    },
+    {
+      "scheme": "OTA",
+      "value": "1685",
+      "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1685"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Paston Letters and Papers of the Fifteenth Century, Part I",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-davis-edition"]
+      }
+    },
+    {
+      "id": "title:umich-display",
+      "type": "alternate",
+      "value": "Paston letters and papers of the fifteenth century, Part I",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-umich"]
+      }
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:paston-family",
+      "type": "collective",
+      "name": "Paston family",
+      "notes": [
+        "A conventional collective heading for the fifteen family-member groupings in Davis's Part I; it does not imply that every document was personally written or authored by a Paston."
+      ]
+    },
+    {
+      "id": "agent:associated-documentary-creators",
+      "type": "collective",
+      "name": "Associated clerks, copyists, legal writers, and documentary creators",
+      "notes": [
+        "A cataloging collective for documents drafted, copied, issued, or mediated by non-family hands, including the royal writ numbered 122A and the letter drafted in James Arblaster's name numbered 354A."
+      ]
+    },
+    {
+      "id": "agent:norman-davis",
+      "type": "person",
+      "name": "Norman Davis",
+      "notes": ["Editor of Parts I and II of Paston Letters and Papers of the Fifteenth Century."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:paston-family-author",
+      "agent_id": "agent:paston-family",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": [
+          "part:william-paston-i", "part:agnes-paston", "part:john-paston-i", "part:edmond-paston",
+          "part:william-paston-ii", "part:clement-paston", "part:elizabeth-poynings-browne",
+          "part:margaret-paston", "part:john-paston-ii", "part:john-paston-iii", "part:edmond-paston-ii",
+          "part:walter-paston", "part:william-paston-iii", "part:margery-paston", "part:william-paston-iv"
+        ],
+        "description": "Documents produced by, for, or in the names of the family members under whom Davis groups Part I"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-structure", "evidence:paston-hernandez-campoy"]
+      },
+      "notes": [
+        "The schema role author is broad documentary responsibility. Davis distinguishes autographs, drafts, dictated letters, and scribal copies; the collection also includes non-family documentary matter."
+      ]
+    },
+    {
+      "id": "responsibility:associated-creators-author",
+      "agent_id": "agent:associated-documentary-creators",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": ["part:elizabeth-poynings-browne", "part:john-paston-iii"],
+        "description": "Copied, drafted, issued, or mediated documentary texts not safely reducible to personal Paston authorship"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]
+      }
+    },
+    {
+      "id": "responsibility:davis-editor",
+      "agent_id": "agent:norman-davis",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Selection, arrangement, transcription, annotation, and publication of Part I"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-davis-edition", "evidence:paston-eets", "evidence:paston-part-iii-review"]
+      }
+    },
+    {
+      "id": "responsibility:davis-compiler",
+      "agent_id": "agent:norman-davis",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Part I boundary, author-group arrangement, document numbering, and dating"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-davis-edition", "evidence:paston-part-iii-review"]
+      }
+    },
+    {
+      "id": "responsibility:davis-transcriber",
+      "agent_id": "agent:norman-davis",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The historical-document text of Davis nos. 1–421 plus 122A and 354A, as distinct from editorial apparatus"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-davis-edition", "evidence:paston-hernandez-campoy", "evidence:paston-bl-catalogs"]
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:documents",
+      "type": "composition",
+      "display": "chiefly 1425–1503",
+      "normalized": {"not_before": 1425, "not_after": 1503},
+      "scope": {"kind": "whole", "description": "Dates of the historical documents represented in Part I"},
+      "source_lineage_entity_id": "edition:davis:paston-part-i:1971",
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-ota", "evidence:paston-hernandez-campoy"]
+      },
+      "notes": [
+        "The U-M header's 1425–1496 note is too narrow: Davis no. 391 is headed 1500? and no. 392 probably after April 1503. The final numbered item is earlier because the edition is grouped by family member rather than strict chronology."
+      ]
+    },
+    {
+      "id": "date:compilation",
+      "type": "compilation",
+      "display": "1971",
+      "normalized": {"not_before": 1971, "not_after": 1971},
+      "scope": {"kind": "whole", "description": "Davis's editorial compilation and arrangement of Part I"},
+      "source_lineage_entity_id": "edition:davis:paston-part-i:1971",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-xml", "evidence:paston-davis-edition"]
+      }
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "1971",
+      "normalized": {"not_before": 1971, "not_after": 1971},
+      "scope": {"kind": "whole", "description": "First publication of Davis's Part I edition"},
+      "source_lineage_entity_id": "edition:davis:paston-part-i:1971",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:paston-davis-edition"]
+      }
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:east-anglia", "label": "East Anglia", "kind": "historical_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:norfolk", "label": "Norfolk", "kind": "region", "broader_place_ids": ["place:east-anglia"]},
+    {"id": "place:london", "label": "London", "kind": "settlement", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:norfolk",
+      "place_id": "place:norfolk",
+      "type": "historical_setting",
+      "scope": {"kind": "whole", "description": "Principal family, estate, household, and political setting"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]}
+    },
+    {
+      "id": "place-statement:east-anglia",
+      "place_id": "place:east-anglia",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole", "description": "Regional context of the Paston family archive and its language"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:paston-hernandez-campoy", "evidence:paston-bl-catalogs"]}
+    },
+    {
+      "id": "place-statement:london",
+      "place_id": "place:london",
+      "type": "associated_place",
+      "scope": {"kind": "whole", "description": "London is a recurring associated place across the collection, although not every document concerns or was produced there"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml"]}
+    },
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "historical_setting",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-bl-catalogs"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Principal language of the correspondence and documentary texts"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-ota"]}
+    },
+    {
+      "id": "language:anglo-norman",
+      "code": "xno",
+      "label": "Anglo-Norman French",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "French occurs as embedded words, phrases, and documentary passages across the collection rather than as the language of every item"},
+      "assertion": {"status": "confirmed", "confidence": "medium", "evidence_ids": ["evidence:paston-xml", "evidence:paston-structure"]},
+      "notes": ["The XML has 33 FOREIGN elements explicitly labeled FR; individual passages require item-level review before finer linguistic classification."]
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Latin occurs as embedded legal formulae, documentary passages, words, and phrases across the collection"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-structure"]},
+      "notes": ["The XML has 19 FOREIGN elements labeled LAT and many additional unlabelled foreign-language spans; the unlabelled spans are not automatically classified here."]
+    },
+    {
+      "id": "language:modern-english-editorial",
+      "code": "eng",
+      "label": "English",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Modern editorial headings, notes, expansions, and descriptive apparatus"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-davis-edition"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A predominantly prose documentary collection. A short verse draft occurs within a document, but the XML contains no structured verse groups or lines and the incidental passage does not make the whole collection mixed-form.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-structure"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:edited-documentary-collection",
+      "term": "edited-documentary-collection",
+      "label": "Edited documentary collection",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-davis-edition", "evidence:paston-part-iii-review"]}
+    },
+    {
+      "id": "genre:correspondence",
+      "term": "correspondence",
+      "label": "Correspondence",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]}
+    },
+    {
+      "id": "genre:legal-administrative-records",
+      "term": "legal-and-administrative-records",
+      "label": "Legal and administrative records",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole", "description": "Legal and administrative records are recurrent components of the collection, not a claim that every item has this genre"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml"]}
+    },
+    {
+      "id": "genre:household-estate-papers",
+      "term": "household-and-estate-papers",
+      "label": "Household and estate papers",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole", "description": "Household and estate papers are recurrent components of the collection, not a claim that every item has this genre"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:paston-family",
+      "term": "paston-family-life-and-affairs",
+      "label": "Paston family life and affairs",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]}
+    },
+    {
+      "id": "subject:estate-household",
+      "term": "estate-and-household-management",
+      "label": "Estate and household management",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml"]}
+    },
+    {
+      "id": "subject:politics-law",
+      "term": "late-medieval-politics-and-law",
+      "label": "Late medieval politics and law",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]}
+    },
+    {
+      "id": "subject:language-change",
+      "term": "late-middle-english-language-and-scribal-variation",
+      "label": "Late Middle English language and scribal variation",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:paston-hernandez-campoy"]}
+    }
+  ],
+  "tags": [
+    "middle-english", "anglo-norman", "latin", "edited-selection", "documentary-collection",
+    "correspondence", "family-letters", "paston-family", "gentry", "late-medieval-england",
+    "east-anglia", "norfolk", "london", "estate-management", "household-administration",
+    "legal-documents", "wills", "inventories", "petitions", "wars-of-the-roses",
+    "social-history", "political-history", "linguistic-history"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Davis's Part I gathers letters and papers produced by the Pastons, a Norfolk gentry family, and by associated clerks and documentary creators. Its correspondence, memoranda, wills, inventories, petitions, legal instruments, estate papers, and household records illuminate family relationships, property management, litigation, local and royal politics, war, travel, material life, and changes in fifteenth-century written English. The documents are arranged in fifteen family-member groups rather than a single chronology and run chiefly from 1425 to 1503. The collection is a modern scholarly construction from a dispersed archive: its 423 XML containers and Davis numbers should not be mistaken for 423 uniform authored letters or physical manuscripts.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:paston-xml", "evidence:paston-structure", "evidence:paston-hernandez-campoy", "evidence:paston-part-iii-review"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "The repository XML contains fifteen top-level author-group sections and 423 document containers: Davis nos. 1–421 plus 122A and 354A. The groups are William Paston I (12), Agnes Paston (22), John Paston I (44), Edmond Paston (2), William Paston II (33), Clement Paston (7), Elizabeth Poynings or Browne, née Paston (4), Margaret Paston (107), John Paston II (86), John Paston III (78), Edmond Paston II (8), Walter Paston (4), William Paston III (9), Margery Paston (6), and William Paston IV (1).",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:paston-structure", "evidence:paston-xml"]
+    },
+    {
+      "id": "summary:cataloging-scope",
+      "type": "scope_note",
+      "value": "The 423 top-level XML containers are editorial and encoding units. A linguistic study describes 422 authored documents, and the surviving archive is distributed among many individual documents and bound volumes. The discrepancy is preserved because 122A is a copied royal writ and 354A is a mediated draft, while other editorial units may also differ from physical-object or authorship counts. Item-level manuscript shelfmarks and creator roles therefore require a concordance rather than arithmetic inference.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:paston-structure", "evidence:paston-hernandez-campoy", "evidence:paston-bl-catalogs"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 423,
+    "sections": 15,
+    "prose_only_items": null,
+    "verse_only_items": 0,
+    "mixed_items": null,
+    "verse_groups": 0,
+    "verse_lines": 0,
+    "description": "The repository XML has 15 DIV1 author groups, 423 DIV2 document containers, 9 nested DIV3 subdivisions, and page milestones for printed pp. 1–670. Its labels comprise integer Davis nos. 1–421 plus 122A and 354A, with no missing integers. This is an editorial/encoding extent, not a physical-document count or a clean authored-letter count; a scholarly linguistic study independently reports 422 authored documents. No LG or L elements occur, although one document contains a short verse draft embedded in prose-oriented documentary markup.",
+    "evidence_ids": ["evidence:paston-structure", "evidence:paston-xml", "evidence:paston-hernandez-campoy"]
+  },
+  "content_structure_status": "summary",
+  "content_parts": [
+    {"id":"part:william-paston-i","parent_id":null,"sequence":1,"type":"section","label":"William Paston I","summary":"Documents grouped by Davis under William Paston I.","item_count":12,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"1–12"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:agnes-paston","parent_id":null,"sequence":2,"type":"section","label":"Agnes Paston","summary":"Documents grouped by Davis under Agnes Paston.","item_count":22,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"13–34"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:john-paston-i","parent_id":null,"sequence":3,"type":"section","label":"John Paston I","summary":"Documents grouped by Davis under John Paston I.","item_count":44,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"35–78"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:edmond-paston","parent_id":null,"sequence":4,"type":"section","label":"Edmond Paston","summary":"Documents grouped by Davis under Edmond Paston.","item_count":2,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"79–80"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:william-paston-ii","parent_id":null,"sequence":5,"type":"section","label":"William Paston II","summary":"Documents grouped by Davis under William Paston II.","item_count":33,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"81–113"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:clement-paston","parent_id":null,"sequence":6,"type":"section","label":"Clement Paston","summary":"Documents grouped by Davis under Clement Paston.","item_count":7,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"114–120"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:elizabeth-poynings-browne","parent_id":null,"sequence":7,"type":"section","label":"Elizabeth Poynings or Browne, née Paston","summary":"Documents grouped by Davis under Elizabeth Poynings or Browne, including the copied royal writ numbered 122A.","item_count":4,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"121–123, including 122A"}],"evidence_ids":["evidence:paston-structure","evidence:paston-xml"]},
+    {"id":"part:margaret-paston","parent_id":null,"sequence":8,"type":"section","label":"Margaret Paston","summary":"Documents grouped by Davis under Margaret Paston.","item_count":107,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"124–230"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:john-paston-ii","parent_id":null,"sequence":9,"type":"section","label":"John Paston II","summary":"Documents grouped by Davis under John Paston II.","item_count":86,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"231–316"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:john-paston-iii","parent_id":null,"sequence":10,"type":"section","label":"John Paston III","summary":"Documents grouped by Davis under John Paston III, including the draft in James Arblaster's name numbered 354A.","item_count":78,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"317–393, including 354A"}],"evidence_ids":["evidence:paston-structure","evidence:paston-xml"]},
+    {"id":"part:edmond-paston-ii","parent_id":null,"sequence":11,"type":"section","label":"Edmond Paston II","summary":"Documents grouped by Davis under Edmond Paston II.","item_count":8,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"394–401"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:walter-paston","parent_id":null,"sequence":12,"type":"section","label":"Walter Paston","summary":"Documents grouped by Davis under Walter Paston.","item_count":4,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"402–405"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:william-paston-iii","parent_id":null,"sequence":13,"type":"section","label":"William Paston III","summary":"Documents grouped by Davis under William Paston III.","item_count":9,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"406–414"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:margery-paston","parent_id":null,"sequence":14,"type":"section","label":"Margery Paston","summary":"Documents grouped by Davis under Margery Paston.","item_count":6,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis numbers","value":"415–420"}],"evidence_ids":["evidence:paston-structure"]},
+    {"id":"part:william-paston-iv","parent_id":null,"sequence":15,"type":"section","label":"William Paston IV","summary":"The single document grouped by Davis under William Paston IV.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"edition:davis:paston-part-i:1971","scheme":"Davis number","value":"421"}],"evidence_ids":["evidence:paston-structure"]}
+  ],
+  "related_works": [
+    {
+      "id": "related:paston-part-ii",
+      "title": "Paston Letters and Papers of the Fifteenth Century, Part II",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "ISBN", "value": "9780197224229"}],
+      "evidence_ids": ["evidence:paston-part-iii-review", "evidence:paston-eets"],
+      "notes": ["Part II contains letters and papers addressed to the Pastons and is outside this manifest's cataloging subject."]
+    },
+    {
+      "id": "related:paston-part-iii",
+      "title": "Paston Letters and Papers of the Fifteenth Century, Part III",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "ISBN", "value": "9780197224236"}],
+      "evidence_ids": ["evidence:paston-part-iii-review", "evidence:paston-eets"],
+      "notes": ["Part III supplies indexes, concordances, additions and corrections, and miscellaneous documents; its complete manuscript concordance is needed for future item-level lineage work."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:Paston",
+    "manifest_path": "manifests/lineage/works/Paston.json",
+    "bindings": [
+      {"metadata_target":"work:Paston","lineage_entity_id":"edition:davis:paston-part-i:1971","role":"source_edition"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"encoding:umich-cme:Paston","role":"digital_encoding"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"encoding:ota:1685","role":"related_source"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"encoding:ota:0395","role":"related_source"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"artifact:general-corpus:Paston","role":"repository_representation"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS27444","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS27445","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS27446","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS33597","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS34889","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS43488","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS43489","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS43490","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS43491","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS34888","role":"source_witness"},
+      {"metadata_target":"work:Paston","lineage_entity_id":"witness:bl:AddMS27443","role":"source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:paston-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/recent_changes/repairs_2023/Paston.xml.",
+      "repository_path": "CME/source/recent_changes/repairs_2023/Paston.xml",
+      "locator": "HEADER; FRONT; BODY author-group DIV1 divisions; DIV2 document heads; PB milestones",
+      "summary": "Identifies the U-M item and Davis source edition; supplies title, family author heading, 1971 imprint, fifteen author groups, numbered document heads and dates, Middle English base language, French and Latin passages, and printed pages 1–670.",
+      "accessed_on": "2026-07-14",
+      "sha256": "9beb744dda19edb24c8ad443ffce0c57bdec3b402843f7251f701bae994167a5"
+    },
+    {
+      "id": "evidence:paston-structure",
+      "type": "computational_inspection",
+      "citation": "Element, heading, number, language-attribute, and page-milestone inspection of repository Paston.xml.",
+      "repository_path": "CME/source/recent_changes/repairs_2023/Paston.xml",
+      "locator": "BODY DIV1, DIV2, DIV3, HEAD, PB, FOREIGN, DEL, UNCLEAR, LG, and L elements",
+      "summary": "Counts 15 DIV1 author groups, 423 DIV2 containers, 9 DIV3 subdivisions, 670 PB, 200 FOREIGN, 715 DEL, and 589 UNCLEAR elements, with no LG or L. Confirms Davis numbers 1–421 plus 122A and 354A, the fifteen group counts, and document headings extending to probably after April 1503.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:paston-umich",
+      "type": "linked_manifest_evidence",
+      "citation": "University of Michigan Library Digital Collections, Paston item record and full text.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:umich-paston",
+      "summary": "Confirms the public U-M electronic item, stable identifier, title, Paston family heading, Davis source-edition statement, and author-group navigation."
+    },
+    {
+      "id": "evidence:paston-ota",
+      "type": "linked_manifest_evidence",
+      "citation": "Oxford Text Archive, ota:1685 and predecessor ota:0395, Paston letters and papers, Volume 1.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:ota-1685",
+      "summary": "Confirms the current 1685 record, 1425–1503 descriptive date, Middle English language, Paston Family author heading, and downloadable SGML and header files. Its header identifies 1685 as a revision of still-public three-part OTA 0395; both exact headers carry a conflicting E. V. Gordon 1953 sourceDesc that the lineage manifest preserves without accepting over the Davis 1971 evidence."
+    },
+    {
+      "id": "evidence:paston-davis-edition",
+      "type": "linked_manifest_evidence",
+      "citation": "Norman Davis, ed., Paston Letters and Papers of the Fifteenth Century, Part I (Oxford: Clarendon Press, 1971).",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:davis-1971",
+      "summary": "Establishes the source edition's title, editor, imprint, pagination, plate count, ISBN, Part I boundary, and 1971 publication."
+    },
+    {
+      "id": "evidence:paston-hernandez-campoy",
+      "type": "linked_manifest_evidence",
+      "citation": "Juan M. Hernández-Campoy, J. Camilo Conde-Silvestre, and Tamara García-Vidal, 'Tracing Patterns of Intra-Speaker Variation in Early English Correspondence,' Studia Anglica Posnaniensia 54s1 (2019): 287–314.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:hernandez-campoy-2019",
+      "summary": "Describes the U-M/OTA electronic Paston collection as 422 authored documents by fifteen family members, chiefly 1425–1503, and discusses Davis's distinctions among autographs, drafts, dictated texts, and scribal copies and several transcription interventions."
+    },
+    {
+      "id": "evidence:paston-part-iii-review",
+      "type": "linked_manifest_evidence",
+      "citation": "Christine Carpenter, review of Paston Letters and Papers of the Fifteenth Century, Part III, English Historical Review 123.500 (2008): 180–183.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:carpenter-2008",
+      "summary": "Distinguishes Part I as letters and papers produced by the Pastons, Part II as those addressed to them, and Part III as indexes, concordances, corrections, and miscellaneous documents."
+    },
+    {
+      "id": "evidence:paston-eets",
+      "type": "linked_manifest_evidence",
+      "citation": "Early English Text Society, List of Publications (2026), Supplementary Series 20–22.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:eets-publications",
+      "summary": "Confirms the 2004 Part I reissue, editor Norman Davis, Supplementary Series 20, ISBN 9780197224212, and its relationship to Parts II and III."
+    },
+    {
+      "id": "evidence:paston-bl-catalogs",
+      "type": "linked_manifest_evidence",
+      "citation": "British Library Archives and Manuscripts Catalogue records for the principal Paston Letters and Papers volumes.",
+      "repository_path": "manifests/lineage/works/Paston.json",
+      "source_evidence_id": "evidence:bl-paston-volumes",
+      "summary": "Locates eleven major bound witness volumes, supplies physical extents and dates, and maps their contents to Davis numbers; the records demonstrate that Part I derives from a dispersed archive rather than one manuscript."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:document-counts",
+      "question": "How should the XML's 423 editorial containers, the scholarly count of 422 authored documents, and the count of surviving or lost physical documents be reconciled item by item?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Use the complete concordance in Part III and Davis's Part I introductions and notes to assign stable item records.",
+        "Record authorial, scribal, editorial, and physical-object counts separately, especially for 122A, 354A, copies, drafts, and multi-part documents."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:paston-structure", "evidence:paston-hernandez-campoy", "evidence:paston-bl-catalogs"]
+    },
+    {
+      "id": "question:item-witness-crosswalk",
+      "question": "What is the exhaustive current shelfmark and folio crosswalk for every Part I editorial unit, including surviving, missing, and dispersed originals?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Consult Part III's complete concordance to the original manuscripts and reconcile every entry against current repository catalogs.",
+        "Add item-level many-to-many mappings without assuming that one Davis number equals one physical object."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:paston-part-iii-review", "evidence:paston-bl-catalogs"]
+    },
+    {
+      "id": "question:item-languages-creators",
+      "question": "What are the exact item-level languages, creators, scribes, documentary states, and composition dates?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Review Davis's item notes and complete manuscript images before propagating collective authorship or language labels.",
+        "Distinguish personal composition, dictation, clerkly drafting, copying, issuance, and later endorsement."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:paston-xml", "evidence:paston-hernandez-campoy"]
+    }
+  ],
+  "notes": [
+    "The exact approved publication source is CME/source/recent_changes/repairs_2023/Paston.xml. A byte-identical CME_from_OTA/Paston.xml sibling exists at the pinned submodule commit, but it is not substituted for the colophon-recorded source path.",
+    "The full public OTA 1685 SGML/header and predecessor OTA 0395 header/three-part text, a complete public research article, a partial 2004 edition preview, Internet Archive metadata, the British Library price list, and supporting rights material are cached under source-cache/Paston/. No complete manuscript-volume facsimile could be downloaded because the British Library's legacy full digital coverage is currently unavailable.",
+    "The OTA headers' E. V. Gordon 1953 source description conflicts with their own Davis creator/depositor data, the OTA 1685 SGML edition statement, and the U-M/CME source statement. It is retained only as unresolved digital-catalog history and does not alter the cataloged Davis 1971 source edition.",
+    "Part I is treated as a collection and its fifteen author-group sections as a summary structure; this manifest is not an item-level catalog of all 423 editorial containers."
+  ]
+}
