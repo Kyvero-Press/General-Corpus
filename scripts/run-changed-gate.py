@@ -52,7 +52,9 @@ VIEWER_FILES = {
 TARGETED_TESTS = {
     "scripts/cache-iiif-bundle.py": "tests.test_iiif_bundle_cache",
     "scripts/cache-source-download.py": "tests.test_source_cache",
+    "scripts/corpus_source_resolution.py": "tests.test_manifest_research_worktree",
     "scripts/create-manifest-research-worktree.py": "tests.test_manifest_research_worktree",
+    "scripts/inspect-corpus-source.py": "tests.test_manifest_research_worktree",
     "tests/test_iiif_bundle_cache.py": "tests.test_iiif_bundle_cache",
     "tests/test_lineage_manifests.py": "tests.test_lineage_manifests",
     "tests/test_manifest_research_worktree.py": "tests.test_manifest_research_worktree",

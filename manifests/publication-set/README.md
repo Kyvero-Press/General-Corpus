@@ -17,7 +17,10 @@ cd viewer
 npm run build
 ```
 
-The snapshot identifies publication files, not their canonical XML source
-choices. Source mappings and duplicate-stem decisions remain part of the
-publication refresh evidence; work-specific scholarly derivation belongs in
-the lineage manifests.
+The snapshot identifies publication files, not their complete canonical XML
+source mapping. [`source-overrides.json`](source-overrides.json) records the
+explicit decisions needed for the nine duplicate stems in this snapshot. Each
+decision is bound to the approved PDF and both XML candidates by SHA-256 and to
+the exact `SOURCE XML` value printed in the PDF colophon. Unique-stem mappings
+remain implicit in the source inventory; work-specific scholarly derivation
+belongs in the lineage manifests.

@@ -8,6 +8,8 @@ import re
 import subprocess
 from pathlib import Path
 
+from corpus_source_resolution import resolve_source
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,10 +26,7 @@ def _slug(work_id: str) -> str:
 
 
 def create(root: Path, work_id: str, base: str) -> tuple[Path, str]:
-    sources = sorted((root / "CME/source").rglob(f"{work_id}.xml"))
-    if len(sources) != 1:
-        raise ValueError(f"expected one source for {work_id!r}, found {sources!r}")
-    source_in_cme = sources[0].relative_to(root / "CME")
+    source_in_cme = resolve_source(root, work_id).path.relative_to(root / "CME")
     destination = root / "build/research-worktrees" / work_id
     branch = f"research/{_slug(work_id)}"
     if destination.exists():

@@ -12,6 +12,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from corpus_source_resolution import resolve_source
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TEXT_TAGS = {
@@ -65,15 +67,9 @@ def _git(*args: str, cwd: Path) -> str:
     return result.stdout.strip()
 
 
-def _source_path(root: Path, work_id: str) -> Path:
-    matches = sorted((root / "CME" / "source").rglob(f"{work_id}.xml"))
-    if len(matches) != 1:
-        raise ValueError(f"expected one source for {work_id!r}, found {matches!r}")
-    return matches[0]
-
-
 def inspect(root: Path, work_id: str) -> dict[str, Any]:
-    path = _source_path(root, work_id)
+    resolution = resolve_source(root, work_id)
+    path = resolution.path
     tree = ET.parse(path)
     root_node = tree.getroot()
     elements = list(root_node.iter())
@@ -107,6 +103,18 @@ def inspect(root: Path, work_id: str) -> dict[str, Any]:
     return {
         "work_id": work_id,
         "source_path": str(relative_path),
+        "source_resolution": {
+            "mode": resolution.mode,
+            "available_candidates": [
+                str(candidate.relative_to(root)) for candidate in resolution.candidates
+            ],
+            "override_manifest": (
+                str(resolution.override_manifest.relative_to(root))
+                if resolution.override_manifest is not None
+                else None
+            ),
+            "basis": resolution.basis,
+        },
         "root_element": _local_name(root_node.tag),
         "bytes": len(raw),
         "sha256": hashlib.sha256(raw).hexdigest(),
