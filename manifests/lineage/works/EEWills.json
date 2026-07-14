@@ -1,0 +1,1982 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:EEWills",
+  "work_id": "EEWills",
+  "title": "The Fifty Earliest English Wills in the Court of Probate, London",
+  "primary_subject": "artifact:general-corpus:EEWills",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The repository XML descends from a University of Michigan electronic text dated 1999 and keyed from Oxford University Press's 1964 EETS reprint. That reprint reproduces Frederick J. Furnivall's 1882 editorial compilation of 51 numbered English testamentary units dated 1387–1439 and 1454. Furnivall copied registered wills and related instruments from three Commissary Court of London registers and four Prerogative Court of Canterbury register volumes; those registered copies are distinct from the original testamentary instruments, the edited compilation, both print manifestations, the Google/Internet Archive scan of an Oxford copy of the 1882 edition, the U-M encoding, and the checked-in XML artifact.",
+  "languages": [
+    "enm",
+    "lat",
+    "eng"
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:eewills-xml"
+      ]
+    },
+    {
+      "id": "agent:university-of-michigan",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-eewills",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "agent:frederick-j-furnivall",
+      "type": "person",
+      "name": "Frederick James Furnivall",
+      "alternate_names": [
+        "Frederick J. Furnivall"
+      ],
+      "dates": "1825–1910",
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition"
+      ]
+    },
+    {
+      "id": "agent:early-english-text-society",
+      "type": "organization",
+      "name": "Early English Text Society",
+      "urls": [
+        "https://www.english.ox.ac.uk/early-english-text-society"
+      ],
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition",
+        "evidence:eewills-xml"
+      ]
+    },
+    {
+      "id": "agent:oxford-university-press",
+      "type": "organization",
+      "name": "Oxford University Press",
+      "evidence_ids": [
+        "evidence:eewills-xml"
+      ]
+    },
+    {
+      "id": "agent:google",
+      "type": "organization",
+      "name": "Google",
+      "urls": [
+        "https://books.google.com/"
+      ],
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata",
+        "evidence:furnivall-1882-visual"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata"
+      ]
+    },
+    {
+      "id": "agent:university-of-oxford",
+      "type": "organization",
+      "name": "University of Oxford",
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata"
+      ]
+    },
+    {
+      "id": "agent:the-london-archives",
+      "type": "organization",
+      "name": "The London Archives",
+      "alternate_names": [
+        "London Metropolitan Archives",
+        "Guildhall Library Manuscripts Section"
+      ],
+      "urls": [
+        "https://www.thelondonarchives.org/",
+        "https://search.lma.gov.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:tla-wills-guide",
+        "evidence:tla-copying"
+      ]
+    },
+    {
+      "id": "agent:the-national-archives",
+      "type": "organization",
+      "name": "The National Archives",
+      "alternate_names": [
+        "The National Archives, Kew"
+      ],
+      "urls": [
+        "https://www.nationalarchives.gov.uk/",
+        "https://discovery.nationalarchives.gov.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:tna-prob11-registers",
+        "evidence:tna-wills-guide",
+        "evidence:tna-copying"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:EEWills",
+      "object": "encoding:umich-cme:EEWills",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The checked-in EEWills XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The U-M CME electronic text identified as EEWills"
+        },
+        "notes": "The shared identifier, header, and content establish provenance; byte identity with every historical U-M export is not asserted."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:eewills-xml",
+          "evidence:umich-eewills"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-1964",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:EEWills",
+      "object": "edition:oup-eets:english-wills:1964",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The full U-M electronic text as exposed, including edition-derived front and back matter"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The 1964 reprint except its List of Names and Places and List of Words and Subjects",
+          "locators": [
+            "title and preliminary matter",
+            "Additions and Corrections pp. 1–4",
+            "main text pp. 1–143"
+          ]
+        },
+        "notes": "The omitted indexes occupy printed pp. 145–200; the XML editorial declaration explicitly records the omission."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:eewills-xml",
+          "evidence:umich-eewills"
+        ]
+      }
+    },
+    {
+      "id": "relation:1964-version-of-1882",
+      "type": "version_of",
+      "subject": "edition:oup-eets:english-wills:1964",
+      "object": "edition:furnivall:english-wills:1882",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The 1964 EETS Original Series 78 reprint"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The 1882 EETS Original Series 78 first edition"
+        },
+        "notes": "The encoded 1964 verso explicitly says first published 1882 and reprinted 1964. Exact manifestation-level differences await inspection of a physical 1964 copy."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:eewills-xml",
+          "evidence:furnivall-1882-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-scan-facsimile-of-1882",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:fiftyearliesten00probgoog",
+      "object": "edition:furnivall:english-wills:1882",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete 228-page exposed PDF scan of the bound Oxford copy"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Furnivall's complete 1882 printed volume through p. 200, with preliminaries and both indexes"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-eewills-metadata",
+          "evidence:furnivall-1882-visual"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-courtney",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tla:courtney-register",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 1–2",
+          "locators": [
+            "printed pp. 1–4"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Registered copies of the wills of Robert Corn and John Pyncheon",
+          "locators": [
+            "Courtney fol. 198v and following entry"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tla-wills-guide"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-brown",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tla:brown-register",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 4–7 and 9",
+          "locators": [
+            "printed pp. 10–18",
+            "printed pp. 21–22"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Five registered copy wills selected from Broun (called Brown in some edition-level descriptions)",
+          "locators": [
+            "fols. 21v, 75v, 138, 199v, and 263"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tla-wills-guide"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-more",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tla:more-register",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 16, 17, 23, 24, 27–29, 31–34, and 36–44"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Twenty registered copy wills selected from More",
+          "locators": [
+            "fols. 50v, 73v, 170v, 228, 202v, 203v, 209, 258v, 262, 265v, 285v, 296v, 340v, 353, 380, 410v, 412, 414, 431v, and 379v"
+          ]
+        },
+        "notes": "The relation preserves Furnivall's stated source folios without inferring that the edition order matches register order."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tla-wills-guide"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-rous",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tna:PROB-11-1",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 3 and 51 plus the reference note of other English wills in Rous",
+          "locators": [
+            "printed pp. 4–10",
+            "printed pp. 131–134"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Registered copy entries for Alice West and Nicholas Sturgeon, plus other entries cited but not transcribed",
+          "locators": [
+            "Rous fols. 29v and 76v",
+            "PROB 11/1/82 and PROB 11/1/265"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tna-prob11-registers",
+          "evidence:tna-wills-guide"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-marche-a",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tna:PROB-11-2A",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Numbered will 8, Sir William Langeford",
+          "locators": [
+            "printed pp. 18–21"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "William Langeford registered will",
+          "locators": [
+            "Marche fol. 187, quire 24",
+            "PROB 11/2A/380"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tna-prob11-registers"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-marche-b",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tna:PROB-11-2B",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 10–15 and 18–21"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Ten registered copy wills selected from Marche quires 30–55",
+          "locators": [
+            "fols. 253, 316v, 337, 335v, 346v, 358, 408, 433, 429v, and 437v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tna-prob11-registers"
+        ]
+      }
+    },
+    {
+      "id": "relation:furnivall-transcribes-luffenam",
+      "type": "transcribes",
+      "subject": "edition:furnivall:english-wills:1882",
+      "object": "witness:tna:PROB-11-3",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Numbered wills 22, 25, 26, 30, 35, and 45–50 plus the list of other English wills in Luffenam"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Eleven registered copy wills and additional entries cited but not transcribed",
+          "locators": [
+            "fols. 69, 45, 46v, 78v, 106v, 162, 191v, 202v, 212v, 215v, and 217v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:furnivall-1882-edition",
+          "evidence:tna-prob11-registers",
+          "evidence:tna-wills-guide"
+        ]
+      }
+    }
+  ],
+  "review_notes": [
+    "The primary cataloging subject is Furnivall's edition-level compilation, not a single medieval work and not the institutional author heading inherited from U-M.",
+    "The 51 numbered edition units do not necessarily equal 51 independent physical documents: several contain a will plus codicil, testament, or related instrument, and all surviving PCC sources identified here are registered copies rather than original signed wills.",
+    "The complete cached facsimile is the 1882 first edition. It must not be described as a scan of the 1964 reprint, whose reprint-specific title-page verso is visible only through the encoded source transcription.",
+    "Current U-M public-domain language, the XML's restrictive 1999 availability statement, Google access notices, repository software licensing, and archive-image terms are recorded as separate layer-specific claims."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:EEWills",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for EEWills",
+      "description": "The XML artifact consumed by this repository's conversion workflow, supplied through the pinned Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "EEWills"
+        },
+        {
+          "scheme": "XML IDNO dlps",
+          "value": "EEWills"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero-press"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/EEWills.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "672916cd3c9265f014bf93e26322818345ad1491",
+        "sha256": "5b7502892fe63ff06116bb7ba8637429ac30614709999448f3528093e6e86c8c"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:eewills-structure"
+      ],
+      "notes": [
+        "The file is 424,161 bytes at the recorded CME submodule commit.",
+        "Its DLPSTEXTCLASS structure contains 58 DIV1, 16 DIV2, 3 DIV3, 295 P, 54 L, 161 PB, 84 MILESTONE, 115 FOREIGN, 395 NOTE1, and 137 BIBL elements.",
+        "The header declares only Latin, but direct inspection identifies Middle English as the primary documentary language, Latin as a secondary documentary language, and modern English as the editorial language."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:EEWills",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME digital text EEWills",
+      "description": "A manually keyed, page-oriented electronic representation of the 1964 EETS reprint, produced by the University of Michigan Humanities Text Initiative and dated 1999.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL handle",
+          "value": "EEWills",
+          "uri": "https://name.umdl.umich.edu/EEWills"
+        }
+      ],
+      "creator_ids": [
+        "agent:university-of-michigan"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic publication",
+          "value": "1999",
+          "normalized": "1999",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:eewills-xml",
+            "evidence:umich-eewills"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:umich-eewills",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "The XML editorial declaration names a keyboarding contractor rendered as 'Chrisian' and reports an error rate within 1 in 20,000 characters based on review of 5 percent of the text.",
+        "The encoding retains the edition title pages, contents, dedication, forewords, figure division, additions and corrections, 51 numbered will units, register-reference lists, and endnotes.",
+        "It explicitly omits the List of Names and Places and the List of Words and Subjects, printed on pp. 145–200, while retaining the edition's duplicated Arabic pagination for corrections and main text.",
+        "The 54 L elements occur in editorial framing and endnote material, including a Handlyng Synne quotation and a Latin antiphon with English translation; they do not make the testamentary collection a verse work."
+      ]
+    },
+    {
+      "id": "edition:oup-eets:english-wills:1964",
+      "type": "scholarly_edition",
+      "label": "Oxford University Press 1964 EETS reprint of Furnivall's Fifty Earliest English Wills",
+      "alternate_labels": [
+        "Early English Text Society, Original Series 78 (1964 reprint)"
+      ],
+      "description": "The immediate printed source declared by the U-M electronic text: an OUP reprint of Furnivall's 1882 EETS edition, with reprint-specific imprint matter.",
+      "creator_ids": [
+        "agent:frederick-j-furnivall",
+        "agent:early-english-text-society",
+        "agent:oxford-university-press"
+      ],
+      "date_statements": [
+        {
+          "label": "reprint publication",
+          "value": "1964",
+          "normalized": "1964",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:eewills-xml",
+            "evidence:umich-eewills"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Fifty Earliest English Wills in the Court of Probate, London, A.D. 1387–1439; with a Priest's of 1454, copied and edited by Frederick J. Furnivall, Early English Text Society, Original Series 78 (London, New York, and Toronto: Oxford University Press, 1964; first published 1882).",
+        "title": "The Fifty Earliest English Wills in the Court of Probate, London, A.D. 1387–1439; with a Priest's of 1454",
+        "series": "Early English Text Society, Original Series 78",
+        "publisher": "Oxford University Press",
+        "publication_place": "London; New York; Toronto",
+        "date": "1964",
+        "languages": [
+          "enm",
+          "lat",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:umich-eewills"
+      ],
+      "notes": [
+        "The encoded verso states 'FIRST PUBLISHED 1882 / REPRINTED 1964' and identifies Vivian Ridler, Printer to the University, as printer of the reprint at Oxford.",
+        "No complete public scan of this exact 1964 manifestation was located during the dated search. The cached 1882 scan cannot establish all reprint-specific physical or typographic differences."
+      ]
+    },
+    {
+      "id": "edition:furnivall:english-wills:1882",
+      "type": "scholarly_edition",
+      "label": "Frederick J. Furnivall's 1882 Fifty Earliest English Wills",
+      "alternate_labels": [
+        "Early English Text Society, Original Series 78"
+      ],
+      "description": "Furnivall's editorially selected and ordered compilation of 51 numbered English testamentary units copied chiefly in 1881 from registered wills in the Commissary Court of London and Prerogative Court of Canterbury registers, with dedication, forewords, corrections, notes, and indexes.",
+      "creator_ids": [
+        "agent:frederick-j-furnivall",
+        "agent:early-english-text-society"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1882",
+          "normalized": "1882",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:furnivall-1882-edition",
+            "evidence:furnivall-1882-visual"
+          ]
+        },
+        {
+          "label": "principal transcription work",
+          "value": "spring 1881–December 1882",
+          "normalized": "1881/1882",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:furnivall-1882-edition"
+          ],
+          "notes": "Furnivall's dedication describes copying during work begun in spring 1881; it is dated 4 December 1882, and the forewords are dated 5 December 1882."
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Fifty Earliest English Wills in the Court of Probate, London, A.D. 1387–1439; with a Priest's of 1454, copied and edited from the original registers in Somerset House by Frederick J. Furnivall, Early English Text Society, Original Series 78 (London: published for the Early English Text Society by Trübner & Co., 1882).",
+        "title": "The Fifty Earliest English Wills in the Court of Probate, London, A.D. 1387–1439; with a Priest's of 1454",
+        "series": "Early English Text Society, Original Series 78",
+        "publisher": "Trübner & Co. for the Early English Text Society",
+        "publication_place": "London",
+        "date": "1882",
+        "pages": "xv, 200 pp.",
+        "languages": [
+          "enm",
+          "lat",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition",
+        "evidence:furnivall-1882-visual"
+      ],
+      "notes": [
+        "Furnivall's phrase 'original registers' means the probate register volumes he consulted, not necessarily the testators' signed originals. The National Archives identifies PROB 11 as registered copy wills.",
+        "The edition's title says 'Fifty' but the contents and text number 51 units because the 1454 will of Nicholas Sturgeon is added after the sequence dated through 1439.",
+        "Its 51 units include compound documentary presentations such as a will and codicil or testamentary supplements; edition numbering is not a physical-document count.",
+        "The main text occupies duplicated printed pp. 1–134 after four pages of Additions and Corrections; endnotes occupy pp. 135–143, followed by the List of Names and Places on pp. 145–169 and List of Words and Subjects on pp. 170–200."
+      ]
+    },
+    {
+      "id": "facsimile:internet-archive:fiftyearliesten00probgoog",
+      "type": "facsimile",
+      "label": "Google/Internet Archive scan of Furnivall's 1882 volume",
+      "description": "A complete image-only PDF of an Oxford University library copy of the 1882 first edition, digitized by Google in 2007 and made available through Internet Archive in 2008, together with OCR and item metadata.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive item",
+          "value": "fiftyearliesten00probgoog",
+          "uri": "https://archive.org/details/fiftyearliesten00probgoog"
+        },
+        {
+          "scheme": "Google Books ID",
+          "value": "SoINAAAAQAAJ",
+          "uri": "https://books.google.com/books?id=SoINAAAAQAAJ"
+        },
+        {
+          "scheme": "Internet Archive ARK",
+          "value": "ark:/13960/t16m3b83f",
+          "uri": "https://n2t.net/ark:/13960/t16m3b83f"
+        }
+      ],
+      "creator_ids": [
+        "agent:google",
+        "agent:internet-archive",
+        "agent:university-of-oxford"
+      ],
+      "date_statements": [
+        {
+          "label": "Google scan date",
+          "value": "31 August 2007",
+          "normalized": "2007-08-31",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ia-eewills-metadata"
+          ]
+        },
+        {
+          "label": "Internet Archive public date",
+          "value": "18 May 2008",
+          "normalized": "2008-05-18",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ia-eewills-metadata"
+          ]
+        }
+      ],
+      "reproduction_format": "228-page, letter-size, image-only PDF 1.4 with plain-text OCR and JSON item metadata; the scan includes Google notices, library marks, preliminaries, the complete 1882 text and both indexes through printed p. 200",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata",
+        "evidence:furnivall-1882-visual"
+      ],
+      "notes": [
+        "Visual inspection confirmed the 1882 title page, complete editorial matter and numbered texts, endnotes through printed p. 143, both indexes on pp. 145–200, and the final printed page.",
+        "The scan contains no 1964 reprint title-page verso and is not evidence of the exact 1964 physical manifestation."
+      ]
+    },
+    {
+      "id": "witness:tla:courtney-register",
+      "type": "manuscript_witness",
+      "label": "Commissary Court of London Courtney register",
+      "alternate_labels": [
+        "First Commissary Court register",
+        "Guildhall Library MS 9171/1",
+        "DL/C/B/004/MS09171/001"
+      ],
+      "description": "The first register of the Commissary Court of London, containing registered testamentary copies. Furnivall selected Robert Corn and John Pyncheon from this volume.",
+      "date_statements": [
+        {
+          "label": "register coverage",
+          "value": "1374–1400",
+          "normalized": "1374/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tla-wills-guide",
+            "evidence:furnivall-1882-edition"
+          ]
+        }
+      ],
+      "identifiers": [
+        {
+          "scheme": "The London Archives reference",
+          "value": "DL/C/B/004/MS09171/001"
+        },
+        {
+          "scheme": "The London Archives internal record number",
+          "value": "1867812"
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-london-archives",
+        "shelfmark": "DL/C/B/004/MS09171/001",
+        "historical_designations": [
+          "Guildhall Library MS 9171/1",
+          "MS 09171",
+          "Courtney"
+        ],
+        "catalog_url": "https://search.lma.gov.uk/",
+        "notes": "Search the exact reference in The London Archives catalogue. The record says to use microfilm and marks the original not available for general access."
+      },
+      "physical_description": {
+        "format": "bound probate register of registered copy wills"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The corpus work portion comprises edition wills 1 and 2, cited by Furnivall as Courtney fol. 198v and the following registered entry respectively.",
+        "The register is an aggregate witness containing many entries beyond the two selected texts."
+      ]
+    },
+    {
+      "id": "witness:tla:brown-register",
+      "type": "manuscript_witness",
+      "label": "Commissary Court of London Broun register",
+      "alternate_labels": [
+        "Second Commissary Court register",
+        "Brown register",
+        "Guildhall Library MS 9171/2",
+        "DL/C/B/004/MS09171/002"
+      ],
+      "description": "The second register of the Commissary Court of London, containing registered testamentary copies. Furnivall selected five numbered units from this volume.",
+      "date_statements": [
+        {
+          "label": "register coverage",
+          "value": "1400–1418",
+          "normalized": "1400/1418",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tla-wills-guide",
+            "evidence:furnivall-1882-edition"
+          ]
+        }
+      ],
+      "identifiers": [
+        {
+          "scheme": "The London Archives reference",
+          "value": "DL/C/B/004/MS09171/002"
+        },
+        {
+          "scheme": "The London Archives internal record number",
+          "value": "1867811"
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-london-archives",
+        "shelfmark": "DL/C/B/004/MS09171/002",
+        "historical_designations": [
+          "Guildhall Library MS 9171/2",
+          "MS 09171",
+          "Broun",
+          "Brown"
+        ],
+        "catalog_url": "https://search.lma.gov.uk/",
+        "notes": "Search the exact reference in The London Archives catalogue. The record spells the register name 'Broun', says to use microfilm, and marks the original not available for general access."
+      },
+      "physical_description": {
+        "format": "bound probate register of registered copy wills"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The corpus work portion comprises edition wills 4–7 and 9: John Girdeler fol. 21v, Richard Roos fol. 75v, John Plot fol. 138, Robert Averay fol. 199v, and Richard Yonge fol. 263.",
+        "The register contains many entries outside Furnivall's selection."
+      ]
+    },
+    {
+      "id": "witness:tla:more-register",
+      "type": "manuscript_witness",
+      "label": "Commissary Court of London More register",
+      "alternate_labels": [
+        "Third Commissary Court register",
+        "Guildhall Library MS 9171/3",
+        "DL/C/B/004/MS09171/003"
+      ],
+      "description": "The third register of the Commissary Court of London, containing registered testamentary copies. Furnivall selected twenty numbered units from this volume.",
+      "date_statements": [
+        {
+          "label": "register coverage",
+          "value": "1418–1438",
+          "normalized": "1418/1438",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tla-register-catalog"
+          ]
+        }
+      ],
+      "identifiers": [
+        {
+          "scheme": "The London Archives reference",
+          "value": "DL/C/B/004/MS09171/003"
+        },
+        {
+          "scheme": "The London Archives internal record number",
+          "value": "1867810"
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-london-archives",
+        "shelfmark": "DL/C/B/004/MS09171/003",
+        "historical_designations": [
+          "Guildhall Library MS 9171/3",
+          "MS 09171",
+          "More"
+        ],
+        "catalog_url": "https://search.lma.gov.uk/",
+        "notes": "Search the exact reference in The London Archives catalogue. The record says to use microfilm, marks the original not available for general access, and records the original's physical condition as unfit for consultation."
+      },
+      "physical_description": {
+        "format": "bound probate register of registered copy wills"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The corpus work portion comprises edition wills 16, 17, 23, 24, 27–29, 31–34, and 36–44, cited at More fols. 50v, 73v, 170v, 228, 202v, 203v, 209, 258v, 262, 265v, 285v, 296v, 340v, 353, 380, 410v, 412, 414, 431v, and 379v.",
+        "Furnivall's editorial order is chronological and does not reproduce register folio order."
+      ]
+    },
+    {
+      "id": "witness:tna:PROB-11-1",
+      "type": "manuscript_witness",
+      "label": "The National Archives PROB 11/1, Rous register",
+      "alternate_labels": [
+        "Rous"
+      ],
+      "description": "A Prerogative Court of Canterbury register of registered copy wills. Furnivall selected Lady Alice West and Nicholas Sturgeon and also printed a reference list of other English wills in the register.",
+      "identifiers": [
+        {
+          "scheme": "TNA reference",
+          "value": "PROB 11/1",
+          "uri": "https://discovery.nationalarchives.gov.uk/details/r/C1903302"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog coverage",
+          "value": "1384–1452",
+          "normalized": "1384/1452",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tna-prob11-registers"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-national-archives",
+        "shelfmark": "PROB 11/1",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C1903302",
+        "notes": "Held at The National Archives, Kew; the catalog marks the register open, digitised, and a public record."
+      },
+      "physical_description": {
+        "format": "Prerogative Court of Canterbury registered copy will volume"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers",
+        "evidence:tna-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The selected numbered units are edition will 3, Alice West at Rous fol. 29v and TNA item PROB 11/1/82, and will 51, Nicholas Sturgeon at fol. 76v and TNA item PROB 11/1/265.",
+        "PROB 11 contains registered copies, not necessarily original signed or sealed testamentary documents."
+      ]
+    },
+    {
+      "id": "witness:tna:PROB-11-2A",
+      "type": "manuscript_witness",
+      "label": "The National Archives PROB 11/2A, Marche register, quires 1–29",
+      "alternate_labels": [
+        "Marche, part A"
+      ],
+      "description": "The first catalog unit of the PCC Marche register, containing quires 1–29. Furnivall's selected work portion is Sir William Langeford's registered will.",
+      "identifiers": [
+        {
+          "scheme": "TNA reference",
+          "value": "PROB 11/2A",
+          "uri": "https://discovery.nationalarchives.gov.uk/details/r/C1903303"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog coverage",
+          "value": "1401–1413",
+          "normalized": "1401/1413",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tna-prob11-registers"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-national-archives",
+        "shelfmark": "PROB 11/2A",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C1903303",
+        "notes": "Held at The National Archives, Kew; the catalog marks the unit open, digitised, and a public record."
+      },
+      "physical_description": {
+        "extent": "quires 1–29",
+        "format": "Prerogative Court of Canterbury registered copy will volume"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers",
+        "evidence:tna-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The selected unit is edition will 8, William Langeford at Marche fol. 187, quire 24, corresponding to TNA item PROB 11/2A/380."
+      ]
+    },
+    {
+      "id": "witness:tna:PROB-11-2B",
+      "type": "manuscript_witness",
+      "label": "The National Archives PROB 11/2B, Marche register, quires 30–55",
+      "alternate_labels": [
+        "Marche, part B"
+      ],
+      "description": "The second catalog unit of the PCC Marche register, containing quires 30–55. Furnivall selected ten numbered units from this portion.",
+      "identifiers": [
+        {
+          "scheme": "TNA reference",
+          "value": "PROB 11/2B",
+          "uri": "https://discovery.nationalarchives.gov.uk/details/r/C1903304"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog coverage",
+          "value": "1414–1423",
+          "normalized": "1414/1423",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tna-prob11-registers"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-national-archives",
+        "shelfmark": "PROB 11/2B",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C1903304",
+        "notes": "Held at The National Archives, Kew; the catalog marks the unit open, digitised, and a public record."
+      },
+      "physical_description": {
+        "extent": "quires 30–55",
+        "format": "Prerogative Court of Canterbury registered copy will volume"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers",
+        "evidence:tna-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The selected units are edition wills 10–15 and 18–21: Thomas Walwayn fol. 253, Richard Broke fol. 316v, John Solas fol. 337, John Chelmyswyk fol. 335v, Thomas Tvoky fol. 346v, Stephen Thomas fol. 358, John Bathe fol. 408, John Olney fol. 433, Peryne Clanbowe fol. 429v, and Roger Salwayn fol. 437v.",
+        "Known exact item records include PROB 11/2B/193 (Broke), /209 (Solas), /231 (Chelmyswyk), /403 (Bathe), and /424 (Olney). The edition's correction changes the Bathe testator's forename from Thomas to John."
+      ]
+    },
+    {
+      "id": "witness:tna:PROB-11-3",
+      "type": "manuscript_witness",
+      "label": "The National Archives PROB 11/3, Luffenam register",
+      "alternate_labels": [
+        "Luffenam"
+      ],
+      "description": "A Prerogative Court of Canterbury register of registered copy wills. Furnivall selected eleven numbered units and also printed a list of other English wills in the register.",
+      "identifiers": [
+        {
+          "scheme": "TNA reference",
+          "value": "PROB 11/3",
+          "uri": "https://discovery.nationalarchives.gov.uk/details/r/C1903305"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog coverage",
+          "value": "1423–1449",
+          "normalized": "1423/1449",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:tna-prob11-registers"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:the-national-archives",
+        "shelfmark": "PROB 11/3",
+        "catalog_url": "https://discovery.nationalarchives.gov.uk/details/r/C1903305",
+        "notes": "Held at The National Archives, Kew; the catalog marks the register open, digitised, and a public record."
+      },
+      "physical_description": {
+        "format": "Prerogative Court of Canterbury registered copy will volume"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers",
+        "evidence:tna-wills-guide",
+        "evidence:furnivall-1882-edition"
+      ],
+      "notes": [
+        "The selected units are edition wills 22, 25, 26, 30, 35, and 45–50: Roger Flore fol. 69, William Hanyngfeld fol. 45, John Credy fol. 46v, Walter Newent fol. 78v, Richard Tyrell fol. 106v, Richard Bokeland fol. 162, Richard Dixton fol. 191v, Nicholas Charleton fol. 202v, Isabel Countess of Warwick fol. 212v, Ralph Rochefort fol. 215v, and Thomas Brook fol. 217v.",
+        "Known exact item records include PROB 11/3/174 (Flore), /121 (Hanyngfeld), /108 (Credy), /189 (Newent), /265 (Tyrell), /389 (Bokeland), /428 (Dixton), /466 (Warwick), /470 (Rochefort), and /469 (Brook)."
+      ]
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-eewills-xml",
+      "entity": "artifact:general-corpus:EEWills",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path",
+      "repository_path": "CME/source/CME_phase_1-2/EEWills.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:eewills-xml"
+      ]
+    },
+    {
+      "id": "access:umich-eewills-text",
+      "entity": "encoding:umich-cme:EEWills",
+      "provider_id": "agent:university-of-michigan",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page and full-text section browser",
+      "url": "https://quod.lib.umich.edu/c/cme/EEWills/1:1?rgn=div1;view=fulltext",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/EEWills",
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "cost": "free",
+      "format": "HTML full text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:umich-eewills",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "access:1964-complete-facsimile",
+      "entity": "edition:oup-eets:english-wills:1964",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated search of U-M, Internet Archive, Google Books, library discovery surfaces, and general web indexes for the exact 1964 reprint",
+      "url": "https://quod.lib.umich.edu/c/cme/EEWills/1:1?rgn=div1;view=fulltext",
+      "cost": "not_applicable",
+      "format": "No public complete scan of the exact 1964 manifestation located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates"
+      ],
+      "notes": [
+        "The public U-M text is an encoding from the 1964 edition, not a page-image facsimile.",
+        "The cached Google/Internet Archive PDF is a complete scan of the 1882 first edition and must not be substituted as manifestation-level evidence for 1964."
+      ]
+    },
+    {
+      "id": "access:ia-eewills-scan",
+      "entity": "facsimile:internet-archive:fiftyearliesten00probgoog",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item viewer and direct file downloads",
+      "url": "https://archive.org/details/fiftyearliesten00probgoog",
+      "alternate_urls": [
+        "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog.pdf",
+        "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog_djvu.txt",
+        "https://archive.org/metadata/fiftyearliesten00probgoog",
+        "https://books.google.com/books?id=SoINAAAAQAAJ"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Google/Internet Archive PDF of Furnivall's 1882 volume",
+          "path": "source-cache/EEWills/furnivall-1882-fifty-earliest-english-wills.pdf",
+          "source_url": "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog.pdf",
+          "sha256": "c735573762eeb54cd9feb341964baff33eb4b5b1b2455406aefd8f721027af27",
+          "bytes": 11321575,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "EEWills encoded portion: 1882 title and preliminary matter through endnotes on printed p. 143",
+            "locators": [
+              "PDF p. 9: 1882 edition title page",
+              "printed corrections pp. 1–4",
+              "printed main-text pp. 1–143"
+            ],
+            "notes": [
+              "The complete cached volume additionally preserves the List of Names and Places on pp. 145–169 and List of Words and Subjects on pp. 170–200, both omitted from the XML."
+            ]
+          },
+          "notes": [
+            "Complete means the provider's entire 228-page bound-volume PDF, including notices, library matter, preliminaries, the full edition, both indexes, and the final printed page. Separate spine, edge, and covers-as-objects views are not supplied."
+          ]
+        },
+        {
+          "label": "Internet Archive plain-text OCR for Furnivall's 1882 volume",
+          "path": "source-cache/EEWills/furnivall-1882-fifty-earliest-english-wills-ocr.txt",
+          "source_url": "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog_djvu.txt",
+          "sha256": "f1af23a3294528b1c176924f0097b8dbad7b25b431c33ba6690c7ea6202a349a",
+          "bytes": 506402,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The OCR spans the volume but is an error-prone derivative and cannot represent page images or material features; use the PDF for visual evidence."
+          ]
+        },
+        {
+          "label": "Internet Archive item metadata snapshot",
+          "path": "source-cache/EEWills/internet-archive-fiftyearliesten00probgoog-metadata.json",
+          "source_url": "https://archive.org/metadata/fiftyearliesten00probgoog",
+          "sha256": "a67c905ba7fa0500f87cb26854a3d78c177b906eee0b890d2072f2d47d4ab5ef",
+          "bytes": 5470,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, 228 pages; plain-text OCR; JSON item metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata",
+        "evidence:furnivall-1882-visual"
+      ]
+    },
+    {
+      "id": "access:tla-courtney-original",
+      "entity": "witness:tla:courtney-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "Search exact reference DL/C/B/004/MS09171/001 in The London Archives catalogue",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "Original register; catalog directs researchers to microfilm",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog"
+      ],
+      "notes": [
+        "The original is marked 'Not available for general access'; this record does not imply that the original can be ordered onsite."
+      ]
+    },
+    {
+      "id": "access:tla-courtney-microfilm",
+      "entity": "witness:tla:courtney-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "microfilm",
+      "status": "onsite_only",
+      "access_method": "Use the microfilm specified in the exact catalogue record; confirm reel and booking details with The London Archives before visiting",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "free",
+      "format": "Repository microfilm; completeness and reel boundaries not independently audited",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide"
+      ]
+    },
+    {
+      "id": "access:tla-courtney-public-facsimile",
+      "entity": "witness:tla:courtney-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of the exact TLA record, TLA guide and stated online coverage, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "No public complete register facsimile located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates"
+      ]
+    },
+    {
+      "id": "access:tla-broun-original",
+      "entity": "witness:tla:brown-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "Search exact reference DL/C/B/004/MS09171/002 in The London Archives catalogue",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "Original register; catalog directs researchers to microfilm",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog"
+      ],
+      "notes": [
+        "The original is marked 'Not available for general access'; this record does not imply that the original can be ordered onsite."
+      ]
+    },
+    {
+      "id": "access:tla-broun-microfilm",
+      "entity": "witness:tla:brown-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "microfilm",
+      "status": "onsite_only",
+      "access_method": "Use the microfilm specified in the exact catalogue record; confirm reel and booking details with The London Archives before visiting",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "free",
+      "format": "Repository microfilm; completeness and reel boundaries not independently audited",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide"
+      ]
+    },
+    {
+      "id": "access:tla-broun-public-facsimile",
+      "entity": "witness:tla:brown-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of the exact TLA record, TLA guide and stated online coverage, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "No public complete register facsimile located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates"
+      ]
+    },
+    {
+      "id": "access:tla-more-original",
+      "entity": "witness:tla:more-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "Search exact reference DL/C/B/004/MS09171/003 in The London Archives catalogue",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "Original register; catalog directs researchers to microfilm",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog"
+      ],
+      "notes": [
+        "The original is marked 'Not available for general access' and 'Unfit for Consultation'; this record does not imply that the original can be ordered onsite."
+      ]
+    },
+    {
+      "id": "access:tla-more-microfilm",
+      "entity": "witness:tla:more-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "microfilm",
+      "status": "onsite_only",
+      "access_method": "Use the microfilm specified in the exact catalogue record; confirm reel and booking details with The London Archives before visiting",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "free",
+      "format": "Repository microfilm; completeness and reel boundaries not independently audited",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-wills-guide"
+      ]
+    },
+    {
+      "id": "access:tla-more-public-facsimile",
+      "entity": "witness:tla:more-register",
+      "provider_id": "agent:the-london-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of the exact TLA record, TLA guide and stated online coverage, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://search.lma.gov.uk/",
+      "cost": "not_applicable",
+      "format": "No public complete register facsimile located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates"
+      ]
+    },
+    {
+      "id": "access:tna-rous-catalog",
+      "entity": "witness:tna:PROB-11-1",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Discovery register-level catalog record",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903302",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-rous-selected-images",
+      "entity": "witness:tna:PROB-11-1",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Open individual Discovery will records, add the digital record to the basket, sign in, and download",
+      "url": "https://discovery.nationalarchives.gov.uk/results/r?_q=PROB%2011%2F1%2F82",
+      "alternate_urls": [
+        "https://discovery.nationalarchives.gov.uk/results/r?_q=PROB%2011%2F1%2F265"
+      ],
+      "cost": "free",
+      "format": "Item-level registered-will image downloads for PROB 11/1/82 and PROB 11/1/265; not a confirmed complete-volume package",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-wills-guide",
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-rous-complete-facsimile",
+      "entity": "witness:tna:PROB-11-1",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of register-level Discovery, item downloads, TNA guidance, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903302",
+      "alternate_urls": [
+        "https://www.nationalarchives.gov.uk/recordcopying/"
+      ],
+      "cost": "unknown",
+      "format": "No public anonymous complete-register bundle located; a complete reproduction may be requested and condition/fees assessed",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates",
+        "evidence:tna-copying"
+      ]
+    },
+    {
+      "id": "access:tna-marche-a-catalog",
+      "entity": "witness:tna:PROB-11-2A",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Discovery register-level catalog record",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903303",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-marche-a-selected-images",
+      "entity": "witness:tna:PROB-11-2A",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Use the individual Discovery record for PROB 11/2A/380, sign in, and download through the basket",
+      "url": "https://discovery.nationalarchives.gov.uk/",
+      "cost": "free",
+      "format": "Item-level registered-will image download; not a confirmed complete-volume package",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-wills-guide",
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-marche-a-complete-facsimile",
+      "entity": "witness:tna:PROB-11-2A",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of register-level Discovery, item downloads, TNA guidance, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903303",
+      "alternate_urls": [
+        "https://www.nationalarchives.gov.uk/recordcopying/"
+      ],
+      "cost": "unknown",
+      "format": "No public anonymous complete-register bundle located; a complete reproduction may be requested and condition/fees assessed",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates",
+        "evidence:tna-copying"
+      ]
+    },
+    {
+      "id": "access:tna-marche-b-catalog",
+      "entity": "witness:tna:PROB-11-2B",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Discovery register-level catalog record",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903304",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-marche-b-selected-images",
+      "entity": "witness:tna:PROB-11-2B",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Use individual Discovery will records, sign in, and download through the basket",
+      "url": "https://discovery.nationalarchives.gov.uk/",
+      "cost": "free",
+      "format": "Item-level registered-will image downloads for selected entries; not a confirmed complete-volume package",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-wills-guide",
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-marche-b-complete-facsimile",
+      "entity": "witness:tna:PROB-11-2B",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of register-level Discovery, item downloads, TNA guidance, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903304",
+      "alternate_urls": [
+        "https://www.nationalarchives.gov.uk/recordcopying/"
+      ],
+      "cost": "unknown",
+      "format": "No public anonymous complete-register bundle located; a complete reproduction may be requested and condition/fees assessed",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates",
+        "evidence:tna-copying"
+      ]
+    },
+    {
+      "id": "access:tna-luffenam-catalog",
+      "entity": "witness:tna:PROB-11-3",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Discovery register-level catalog record",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903305",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-luffenam-selected-images",
+      "entity": "witness:tna:PROB-11-3",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Use individual Discovery will records, sign in, and download through the basket",
+      "url": "https://discovery.nationalarchives.gov.uk/",
+      "cost": "free",
+      "format": "Item-level registered-will image downloads for selected entries; not a confirmed complete-volume package",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tna-wills-guide",
+        "evidence:tna-prob11-registers"
+      ]
+    },
+    {
+      "id": "access:tna-luffenam-complete-facsimile",
+      "entity": "witness:tna:PROB-11-3",
+      "provider_id": "agent:the-national-archives",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Dated check of register-level Discovery, item downloads, TNA guidance, U-M, Internet Archive, Google Books, and general search",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903305",
+      "alternate_urls": [
+        "https://www.nationalarchives.gov.uk/recordcopying/"
+      ],
+      "cost": "unknown",
+      "format": "No public anonymous complete-register bundle located; a complete reproduction may be requested and condition/fees assessed",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:negative-complete-surrogates",
+        "evidence:tna-copying"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repo-eewills-license-scope",
+      "entity": "artifact:general-corpus:EEWills",
+      "access_id": "access:repo-eewills-xml",
+      "component": "Checked-in XML markup and data artifact",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The pinned CME repository includes an Unlicense text introduced as applying to software, but it does not expressly resolve the scope of that dedication for imported U-M text, XML data, edition content, or third-party source material.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:eewills-xml"
+      ],
+      "notes": [
+        "Do not extend a repository software license automatically to the medieval texts, Furnivall's edition, OUP's 1964 manifestation, U-M's encoding, or archive images."
+      ]
+    },
+    {
+      "id": "rights:umich-current-public-domain",
+      "entity": "encoding:umich-cme:EEWills",
+      "access_id": "access:umich-eewills-text",
+      "component": "Current U-M CME electronic item and displayed text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The current U-M item labels the materials public domain and links the No Copyright–United States rights statement; the CME collection page says its texts are public domain in the United States.",
+      "asserted_by_id": "agent:university-of-michigan",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-eewills",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "This is an attributed, current U.S. rights statement. It does not by itself decide copyright status in other jurisdictions or erase separately stated access terms attached to older exports."
+      ]
+    },
+    {
+      "id": "rights:umich-1999-availability",
+      "entity": "encoding:umich-cme:EEWills",
+      "component": "Legacy 1999 electronic text distribution terms embedded in the XML",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The XML permits individual copying for personal use, research, and teaching with the statement retained, permits links, and expressly forbids redistribution by commercial or not-for-profit content providers.",
+      "asserted_by_id": "agent:university-of-michigan",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:eewills-xml"
+      ],
+      "notes": [
+        "The legacy availability notice conflicts in practical effect with the current public-domain/NoC-US presentation. Both claims are preserved rather than silently reconciling them."
+      ]
+    },
+    {
+      "id": "rights:furnivall-1882-us",
+      "entity": "edition:furnivall:english-wills:1882",
+      "component": "1882 edition text, editorial apparatus, and typography",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The edition was published in 1882, and Internet Archive marks the U.S. item NOT_IN_COPYRIGHT; U-M also presents the inherited text as No Copyright–United States.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata",
+        "evidence:umich-eewills",
+        "evidence:furnivall-1882-edition"
+      ]
+    },
+    {
+      "id": "rights:1964-reprint",
+      "entity": "edition:oup-eets:english-wills:1964",
+      "component": "1964 reprint-specific manifestation, including new imprint matter and any resetting or typographic contribution",
+      "jurisdiction": "worldwide",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The 1964 manifestation inherits public-domain 1882 content but may contain reprint-specific matter or typography; no complete physical copy or explicit OUP rights statement was inspected.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:negative-complete-surrogates"
+      ],
+      "notes": [
+        "Do not transfer U-M's current U.S. public-domain statement to every manifestation-specific component or jurisdiction without further review."
+      ]
+    },
+    {
+      "id": "rights:ia-google-scan",
+      "entity": "facsimile:internet-archive:fiftyearliesten00probgoog",
+      "access_id": "access:ia-eewills-scan",
+      "component": "Google page images, Internet Archive PDF and OCR derivatives, and item metadata",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-14",
+      "basis": "Internet Archive records possible-copyright-status NOT_IN_COPYRIGHT and copyright-region US; the PDF also contains Google provider notices governing use of the digitized copy.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-eewills-metadata",
+        "evidence:furnivall-1882-visual"
+      ],
+      "notes": [
+        "The provider's access notice and automated-query restrictions are not the same thing as copyright in Furnivall's 1882 text."
+      ]
+    },
+    {
+      "id": "rights:tla-register-reproductions",
+      "entity": "witness:tla:more-register",
+      "component": "Repository microfilm, research copies, and publication-quality images of the three TLA register witnesses",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The London Archives separates private-study copying from publication use and requires a separate publication licence; condition, access restrictions, and repository terms also apply.",
+      "asserted_by_id": "agent:the-london-archives",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:tla-copying",
+        "evidence:tla-register-catalog"
+      ],
+      "notes": [
+        "This entry applies by analogy to Courtney, Broun, and More image services; it does not assert copyright in the fifteenth-century testamentary words themselves."
+      ]
+    },
+    {
+      "id": "rights:tna-register-reproductions",
+      "entity": "witness:tna:PROB-11-1",
+      "component": "TNA digital downloads and commissioned reproductions of the four PCC register witnesses",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "TNA's record-copying terms and Crown copyright guidance govern supplied images and publication uses; the public-record status of the physical register is not treated as an unrestricted image licence.",
+      "asserted_by_id": "agent:the-national-archives",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:tna-copying",
+        "evidence:tna-wills-guide"
+      ],
+      "notes": [
+        "This entry applies by analogy to PROB 11/1, 11/2A, 11/2B, and 11/3 reproductions; determine terms for the specific supplied image set before redistribution or publication."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:furnivall-selection",
+      "entity": "edition:furnivall:english-wills:1882",
+      "practice": "selection",
+      "source_feature": "English-language testamentary entries in several London and PCC register volumes",
+      "representation": "Fifty-one numbered edition units ordered chronologically, followed by reference lists of other English wills and editorial endnotes",
+      "description": "Furnivall selected what he and J. Challenor Smith understood as the earliest English wills available in the probate registry, rather than editing every entry in any source register. The appended 1454 Nicholas Sturgeon will produces 51 numbered units despite the title's 'Fifty.'",
+      "scope": "The whole 1882 compilation and its relationship to seven aggregate register witnesses",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition",
+        "evidence:furnivall-1882-visual"
+      ]
+    },
+    {
+      "id": "practice:furnivall-expansion",
+      "entity": "edition:furnivall:english-wills:1882",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Latin contractions in the registered copies",
+      "representation": "Expanded Latin forms in the printed transcription",
+      "description": "Furnivall's forewords explicitly acknowledge that expansions of Latin contractions sometimes went astray and direct readers to corrections in the notes; the edition should therefore not be treated as a purely diplomatic rendering.",
+      "scope": "Latin forms within the selected registered wills and associated editorial corrections",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition"
+      ]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:EEWills",
+      "practice": "selection",
+      "source_feature": "The complete 1964 printed reprint, including two concluding indexes",
+      "representation": "All stated material except the List of Names and Places and List of Words and Subjects",
+      "description": "The U-M editorial declaration identifies the two omitted indexes and otherwise aims to represent the print edition as closely as possible, retaining duplicated pagination and multiple source-register milestone sequences.",
+      "scope": "The 1999 electronic encoding",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:eewills-xml"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:eewills-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/EEWills.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/EEWills.xml",
+      "locator": "HEADER; TITLEPAGE; FRONT/DIV1; BODY/DIV1; BACK/DIV1",
+      "summary": "Supplies the U-M identifier and 1999 publication statement, restrictive legacy availability statement, 1964 source-edition description and reprint verso, U-M encoding declaration, edition-derived framing, 51 numbered will units, source-register milestones, and endnotes.",
+      "accessed_on": "2026-07-14",
+      "sha256": "5b7502892fe63ff06116bb7ba8637429ac30614709999448f3528093e6e86c8c"
+    },
+    {
+      "id": "evidence:eewills-structure",
+      "type": "visual_inspection",
+      "citation": "Element, attribute, and source-structure inspection of repository EEWills.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/EEWills.xml",
+      "locator": "DIV1, DIV2, DIV3, P, L, PB, MILESTONE, FOREIGN, NOTE1, BIBL, and TYPE attributes",
+      "summary": "Counts 58 DIV1, 16 DIV2, 3 DIV3, 295 P, 54 L, 161 PB, 84 MILESTONE, 115 FOREIGN, 395 NOTE1, and 137 BIBL elements; confirms 51 consecutive edition will units despite case variants, one 'wil' typo, and a section label; distinguishes editorial verse lines from the prose testamentary contents.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-eewills",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, EEWills item and full-text record.",
+      "url": "https://quod.lib.umich.edu/c/cme/EEWills/1:1?rgn=div1;view=fulltext",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/EEWills"
+      ],
+      "locator": "bibliographic header, rights panel, table of contents, and full-text divisions",
+      "summary": "Confirms the current public EEWills item, stable identifier, inherited institutional author heading, Furnivall editor statement, OUP 1964 source edition, all 51 table-of-contents entries, and current public-domain/NoC-US rights presentation.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection description.",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "locator": "About the collection; rights and permissions; encoding description",
+      "summary": "Describes manual keying from public-domain editions, in-house proofreading, TEI-lite encoding, public XML availability, and a present U.S. public-domain assertion for the collection texts.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:furnivall-1882-edition",
+      "type": "digital_surrogate",
+      "citation": "Frederick J. Furnivall, ed., The Fifty Earliest English Wills in the Court of Probate, London, EETS Original Series 78 (London: Trübner & Co., 1882), complete Google/Internet Archive scan and OCR.",
+      "url": "https://archive.org/details/fiftyearliesten00probgoog",
+      "alternate_urls": [
+        "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog.pdf",
+        "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog_djvu.txt",
+        "https://books.google.com/books?id=SoINAAAAQAAJ"
+      ],
+      "repository_path": "source-cache/EEWills/furnivall-1882-fifty-earliest-english-wills.pdf",
+      "locator": "title page; contents pp. v–vii; dedication pp. viii–x; forewords pp. xi–xv; corrections pp. 1–4; numbered wills pp. 1–134; notes pp. 135–143; indexes pp. 145–200",
+      "summary": "Primary edition evidence for title, publication, selection rationale, transcription history, source register names and folios, 51-unit contents, editorial practices, dates, languages, framing, notes, and both indexes.",
+      "accessed_on": "2026-07-14",
+      "sha256": "c735573762eeb54cd9feb341964baff33eb4b5b1b2455406aefd8f721027af27"
+    },
+    {
+      "id": "evidence:furnivall-1882-visual",
+      "type": "visual_inspection",
+      "citation": "Visual and technical inspection of the cached 1882 Google/Internet Archive PDF.",
+      "url": "https://archive.org/download/fiftyearliesten00probgoog/fiftyearliesten00probgoog.pdf",
+      "repository_path": "source-cache/EEWills/furnivall-1882-fifty-earliest-english-wills.pdf",
+      "locator": "228 PDF pages, including PDF p. 9 title page and final printed p. 200",
+      "summary": "Confirms a readable, non-encrypted, 228-page image-only PDF containing Google and Oxford library matter, the 1882 title and preliminaries, the entire edited text and endnotes, both omitted-from-XML indexes, and the final page; confirms that no 1964 reprint verso is present.",
+      "accessed_on": "2026-07-14",
+      "sha256": "c735573762eeb54cd9feb341964baff33eb4b5b1b2455406aefd8f721027af27"
+    },
+    {
+      "id": "evidence:ia-eewills-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata snapshot for item fiftyearliesten00probgoog.",
+      "url": "https://archive.org/metadata/fiftyearliesten00probgoog",
+      "repository_path": "source-cache/EEWills/internet-archive-fiftyearliesten00probgoog-metadata.json",
+      "locator": "metadata and files arrays",
+      "summary": "Identifies the 1882 Trübner/EETS edition, Oxford University contributor, Google sponsor and scanner, 31 August 2007 scan date, 18 May 2008 public date, 228 images, source Google Books ID SoINAAAAQAAJ, PDF and OCR byte sizes, and U.S. NOT_IN_COPYRIGHT assertion.",
+      "accessed_on": "2026-07-14",
+      "sha256": "a67c905ba7fa0500f87cb26854a3d78c177b906eee0b890d2072f2d47d4ab5ef"
+    },
+    {
+      "id": "evidence:tla-register-catalog",
+      "type": "official_catalog",
+      "citation": "The London Archives catalogue, exact records DL/C/B/004/MS09171/001–003, Registers of wills Courtney, Broun, and More.",
+      "url": "https://search.lma.gov.uk/",
+      "locator": "Exact reference searches for DL/C/B/004/MS09171/001, /002, and /003; internal records 1867812, 1867811, and 1867810",
+      "summary": "Confirms /001 Courtney (1374–1400), /002 Broun (1400–1418), and /003 More (1418–1438), each with former reference MS 09171 and instruction to use microfilm. All originals are not available for general access; More is additionally marked unfit for consultation. The catalog records Latin and English.",
+      "accessed_on": "2026-07-14",
+      "notes": [
+        "The catalogue uses a MINISIS session flow; cite the stable search entry point and reproduce exact references rather than preserving expiring session-token URLs."
+      ]
+    },
+    {
+      "id": "evidence:tla-wills-guide",
+      "type": "official_webpage",
+      "citation": "The London Archives, Wills in London, Middlesex and Surrey before 1858 research guide.",
+      "url": "https://www.thelondonarchives.org/your-research/research-guides/wills-in-london-middlesex-and-surrey-before-1858",
+      "locator": "Commissary Court of London Division; online records and onsite research sections",
+      "summary": "Maps Commissary Court of London registers to series DL/C/B and describes access routes. Its stated online Ancestry coverage for this court begins in 1523, so it does not establish online images for the 1374–1438 Courtney, Broun, and More registers.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:tla-copying",
+      "type": "official_webpage",
+      "citation": "The London Archives, Copying services for documents and images.",
+      "url": "https://www.thelondonarchives.org/our-services/copying-services-for-documents-and-images",
+      "summary": "Describes copying assessments and fees, large-order arrangements, whole-reel microfilm digitization, private-study restrictions, and separate publication licensing. It does not guarantee that restricted or unfit originals can be copied.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:tna-prob11-registers",
+      "type": "official_catalog",
+      "citation": "The National Archives, Discovery records for PROB 11/1 (Rous), PROB 11/2A and 11/2B (Marche), and PROB 11/3 (Luffenam), with selected item records.",
+      "url": "https://discovery.nationalarchives.gov.uk/details/r/C1903302",
+      "alternate_urls": [
+        "https://discovery.nationalarchives.gov.uk/details/r/C1903303",
+        "https://discovery.nationalarchives.gov.uk/details/r/C1903304",
+        "https://discovery.nationalarchives.gov.uk/details/r/C1903305",
+        "https://discovery.nationalarchives.gov.uk/results/r?_q=PROB%2011%2F1%2F82"
+      ],
+      "locator": "register titles, date ranges, quire ranges, open/digitised/public-record fields, and selected exact will-reference searches",
+      "summary": "Confirms Rous as PROB 11/1 (1384–1452), Marche quires 1–29 as PROB 11/2A (1401–1413), Marche quires 30–55 as PROB 11/2B (1414–1423), and Luffenam as PROB 11/3 (1423–1449), all held at Kew and marked open, digitised, and public records. Selected item searches corroborate Furnivall's register-to-will mapping.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:tna-wills-guide",
+      "type": "official_webpage",
+      "citation": "The National Archives, Wills 1384–1858 research guide.",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/wills-1384-1858/",
+      "locator": "PROB 11 registered wills; online access and download guidance",
+      "summary": "Explains that PROB 11 consists of registered copies of wills rather than originals and directs researchers to indexed online records and digital downloads.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:tna-copying",
+      "type": "official_webpage",
+      "citation": "The National Archives, record copying and record-copying terms and conditions.",
+      "url": "https://www.nationalarchives.gov.uk/recordcopying/",
+      "alternate_urls": [
+        "https://www.nationalarchives.gov.uk/terms-and-conditions/record-copying/"
+      ],
+      "summary": "Provides the route for requesting higher-volume or whole-document digital reproduction subject to assessment, condition, fees, copyright, and provider terms; distinguishes research supply from unrestricted publication use.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:negative-complete-surrogates",
+      "type": "search_result",
+      "citation": "Dated complete-surrogate search for the 1964 reprint and seven probate register witnesses.",
+      "url": "https://search.lma.gov.uk/",
+      "alternate_urls": [
+        "https://discovery.nationalarchives.gov.uk/",
+        "https://archive.org/advancedsearch.php",
+        "https://books.google.com/",
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "summary": "No public complete page-image copy of the exact 1964 reprint, any of the three early TLA register volumes, or any of the four complete PCC register units was located. TLA directs users to microfilm; TNA exposes item-level registered-will downloads and a reproduction-order route, but no anonymous complete-register bundle was confirmed.",
+      "accessed_on": "2026-07-14",
+      "notes": [
+        "Search scope included exact and variant register names and shelfmarks, official repository catalogs and guidance, U-M, Internet Archive, Google Books, and general web discovery. This is a dated negative finding, not proof that no private, subscription, or subsequently published surrogate exists."
+      ]
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "official_webpage",
+      "citation": "Kyvero-Press/CME repository LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "opening scope sentence and Unlicense text",
+      "summary": "Contains the Unlicense and introduces it as applying to software; it does not expressly resolve rights in imported source texts, editions, XML data, or page images.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:testamentary-unit-crosswalk",
+      "question": "What is the exact many-to-many crosswalk among Furnivall's 51 numbered units, individual wills, codicils or testaments, register entries, and any surviving original testamentary instruments?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Inspect complete images for every selected TLA and TNA register entry, recording entry boundaries, endorsements, foliation, language, named testator, date, and relationships among will, testament, codicil, and probate act.",
+        "Search archive catalogs for surviving original wills separately; do not treat a PROB 11 registered copy or one edition number as an original or as exactly one physical document.",
+        "Reconcile edition corrections and current catalog headings, including John versus Thomas Bathe and Brown versus Broun."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:furnivall-1882-edition",
+        "evidence:tna-wills-guide",
+        "evidence:tla-register-catalog"
+      ]
+    },
+    {
+      "id": "question:1964-manifestation",
+      "question": "What manifestation-level changes, if any, distinguish OUP's 1964 reprint from the complete 1882 edition, and was U-M keyed directly from a particular physical 1964 copy?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect a complete physical or scanned 1964 copy, including covers, title leaf, verso, all preliminaries, pp. 1–200, and colophon.",
+        "Compare it page by page with the cached 1882 scan and the U-M milestones; request U-M production documentation or copy-specific metadata if available."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:furnivall-1882-visual",
+        "evidence:negative-complete-surrogates"
+      ]
+    },
+    {
+      "id": "question:complete-register-surrogates",
+      "question": "Can complete, reusable digital surrogates be obtained for Courtney, Broun, More, Rous, Marche 2A, Marche 2B, and Luffenam, with every register surface rather than only Furnivall's passages?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask The London Archives for microfilm reel identifiers, reel boundaries, completeness, and an assessment for digitizing the complete microfilm of each register; preserve the distinction between a microfilm surrogate and restricted originals.",
+        "Ask The National Archives whether complete-volume digital packages already exist for PROB 11/1, 11/2A, 11/2B, and 11/3 or commission condition-assessed reproductions through record copying.",
+        "Specify covers or bindings where available, pastedowns, flyleaves, blanks, every folio recto and verso, attachments, labels, and all neighboring entries; identify the corpus work portions only after securing complete objects."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:tla-register-catalog",
+        "evidence:tla-copying",
+        "evidence:tna-copying",
+        "evidence:negative-complete-surrogates"
+      ]
+    },
+    {
+      "id": "question:rights-conflict",
+      "question": "How should reuse of the EEWills XML be governed when current U-M pages assert No Copyright–United States, the 1999 XML forbids redistribution by content providers, and the CME repository's Unlicense is introduced as a software licence?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Request a written U-M clarification identifying which current rights statement controls bulk XML redistribution and whether the 1999 availability text has been superseded.",
+        "Request a repository-maintainer statement defining whether the Unlicense covers XML data and imported encoded texts, not just software.",
+        "Continue to preserve the 1882 edition, 1964 manifestation, electronic encoding, repository artifact, and archive-image rights as separate components."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:eewills-xml",
+        "evidence:umich-eewills",
+        "evidence:umich-cme-collection",
+        "evidence:cme-license"
+      ]
+    }
+  ]
+}
