@@ -33,6 +33,13 @@ text, a source edition, provider photographs, or third-party interface assets;
 if its application to data or markup is ambiguous, preserve that ambiguity
 instead of broadening a software-only grant.
 
+In a sparse research worktree, an absent filesystem path does not prove that a
+license is absent from the pinned revision. Inspect the pinned tree with
+`git ls-tree` and `git show`, and record the license blob, byte count, and
+checksum when those details support the finding. If the grant names only
+software, do not silently extend it to inherited XML, data, transcription, or
+markup whose coverage remains uncertain.
+
 ## Verify practical access
 
 Test the exact deliverable, not only its landing page.
@@ -49,9 +56,11 @@ whole-object result explicitly in notes, a separate unavailable access route,
 or an open question. This prevents the viewer and later researchers from
 mistaking “some images exist” for complete digitization.
 
-When an edition publishes a few manuscript plates, model those plates as their
-own reproduction entity. A complete scan of that edition makes the plates
-viewable but still does not become a complete facsimile of the witness.
+When an edition publishes a few manuscript plates, model the downloaded scan
+as one reproduction or delivery entity and record its local path only once.
+The complete scan can be `facsimile_of` the edition while a selected-page
+relation is separately `facsimile_of` the witness. It still does not become a
+complete facsimile of that witness.
 
 Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
