@@ -88,6 +88,13 @@ is unknown. Model the repertory as describing that source work. Treat a later
 printed edition of the source text as a supporting version or comparison—not
 as the physical exemplar—unless transmission evidence establishes that use.
 
+When authorities propose mutually incompatible source works or recensions,
+model each evidenced conceptual alternative with a separately scoped,
+appropriately tentative `version_of` relation and say that the edges compete.
+Do not choose one, invent a physical exemplar, or leave confirmed source
+lineage only in summaries; retain a reconciliation question until the evidence
+resolves the alternatives.
+
 When an editor says that a passage was absent because a leaf had been lost
 from the surviving witness's exemplar, do not describe that leaf as missing
 from the surviving codex itself. Model the exemplar-level textual lacuna and
