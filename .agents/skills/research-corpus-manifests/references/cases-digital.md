@@ -98,7 +98,9 @@ lacuna-marker rows, and supplied or omitted terminal lines. Report each
 version's raw tagged count, conventional numbered positions, and positions
 containing verbal text separately. Name observed repairs, but use `version_of`
 and leave their direction, date, and authorship unassigned unless production
-evidence establishes them.
+evidence establishes them. Compare line strings with page images when
+available: marginal folio, column, or other navigation labels can be keyed
+inside `L`, but they are not automatically verse or evidence of a textual gap.
 Apply the same hierarchy rule to prose or lexical items: count `ITEM` nodes
 inside the textual body separately from administrative `TEMPHEAD`, header, or
 workflow containers, and name the XPath or ancestor boundary used.
