@@ -89,6 +89,16 @@ witness edge, then add passage-scoped source relations for every explicitly
 supplied segment; a column heading is not proof that all its readings derive
 from one physical object.
 
+Audit encoded line streams against the printed pages before reporting an
+intellectual line count. Running heads, navigation labels, or other page
+furniture may be keyed as `L`, while a genuine terminal word, prayer, explicit,
+or amen may survive outside that stream in `CLOSER`. Report the raw element
+count and the audited verse-line count separately, retain non-line terminal
+content without manufacturing a verse line, and record any resulting number
+shift. Likewise, verify supplied line-range headings against their actual child
+nodes; a heading that says “101 through 200” is not evidence that the encoded
+group stops at line 200.
+
 If every serialized witness stream stops at the same line even though the
 printed edition continues, test for a shared encoding cutoff before proposing
 parallel manuscript loss. Record the omitted edition pages and lines as an
