@@ -51,6 +51,14 @@ participate in an evidenced relation or have a practical access/rights role.
 Keep broader source context used only for description in metadata
 `related_works` instead.
 
+Do not type a supporting study as a `scholarly_edition` when it contains no
+target text, or as a facsimile when it reproduces no target witness. If that
+study needs its own current-schema entity because it has a distinct delivery,
+access, or rights layer, use `catalog_description` provisionally and explain
+the workaround. Keep the study expression separate from both its delivery
+scan and the physical witness it discusses; verified zero target-text overlap
+must remain explicit in the local-copy presence record.
+
 An access, rights, or evidence role does not make a modern research source part
 of the historical object's own citation graph. Do not invent a `cites` edge
 from the repository artifact to a price list, legal guide, catalog, or

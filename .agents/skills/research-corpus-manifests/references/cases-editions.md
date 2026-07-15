@@ -154,6 +154,13 @@ at the appropriate link. Do not collapse the chain into a direct edition-to-
 codex edge, and disclose any schema type used provisionally for the
 intermediary.
 
+Under the current entity vocabulary, use `manuscript_witness` provisionally
+for a material handwritten working transcript when no dedicated transcript
+type exists; `repository_artifact` is reserved for a project-held repository
+file, not an unlocated historical research carrier. State explicitly that the
+transcript is modern rather than a medieval witness, identify its maker and
+function, and keep its location and survival status unknown unless evidenced.
+
 When one source statement credits the same collaborator with copies of several
 sigla, one aggregate working-copy entity can keep the graph manageable only if
 separate scoped `transcribes` relations preserve every copy-to-witness mapping.

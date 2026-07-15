@@ -338,6 +338,11 @@ scholarly reproduction” merely because a quick public search failed.
 
 - Resolve every evidence and `supports` reference.
 - Ensure rights attach to the correct entity and access record.
+- Diff the complete entity-ID set against `rights[].entity`: every modeled
+  entity, including each separately cached scan, OCR, catalog expression, and
+  other delivery layer, must have at least one conservatively scoped rights
+  record. `unknown` is acceptable when evidenced certainty is unavailable;
+  omission is not.
 - Keep copyright status separate from contract terms.
 - Preserve jurisdiction and item-level attribution.
 - Confirm catalog, preview, download, and reuse statements independently.
