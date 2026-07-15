@@ -1,0 +1,2824 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Everyman",
+  "work_id": "Everyman",
+  "title": "Everyman",
+  "primary_subject": "artifact:general-corpus:Everyman",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository artifact copies a 1993 University of Michigan/Oxford Text Archive encoding identified as U-1350-A and later as ota:1679. Its header explicitly names A. C. Cawley's 1961 Manchester edition as the source and says that prefatory and critical matter was omitted and that Ian Lancashire supplied acts and scenes. Current evidence indicates that Cawley's text is an eclectic edition based primarily on the complete Huntington/Britwell Skot printing, with readings from the four early print states known to him; it is not a transcription of the Huth copy alone. The English work survives in four early printed states and no known manuscript witness, but those states occupy five physical objects because Q1 is divided between the separately preserved Douce and Bandinel fragments. The Bandinel leaves were reported only in 2008 and are collateral evidence, not a source Cawley could have consulted in 1961. A complete 1912 facsimile volume containing Huth 32 and the surviving British Library Q2 fragment, the complete OTA 3034 replacement encoding, complete METS and EMOTHE editions, and a complete but rights-restricted Cawley anthology scan are cached privately for verification. Each historical print object, scholarly edition, encoding, repository file, facsimile, access route, and rights statement remains a distinct layer.",
+  "languages": [
+    "enm",
+    "eng",
+    "lat",
+    "nld"
+  ],
+  "review_notes": [
+    "The repository XML's exact 1485 creation date is a legacy assertion, not a securely established composition date.",
+    "The eighteen DIV1 containers and supplied Scene headings were added by Ian Lancashire; their numbering omits Scene 4 and the first DIV1 contains an inherited ‘French scene’ label. They are encoding navigation, not an intrinsic scene hierarchy.",
+    "Current USTC numbering and dating differ from the older STC sequence printed in the 2007 METS introduction. Both are preserved without forcing false agreement.",
+    "The cached Greg/Farmer volume reproduces all of British Library Huth 32 and the surviving latter two-thirds of British Library C.21.c.17. It does not reproduce the Huntington/Britwell Skot base copy or the Bodleian Pynson fragment.",
+    "The Digital Library of India metadata applies ‘1922’ and public-domain fields to a modern Cawley anthology. The scan does contain the inherited series-history line ‘First published in Everyman's Library 1922,’ but its title page and second-edition prefaces establish a later Cawley carrier. The provider has misapplied the inherited line as this carrier's date, and its public-domain field is not accepted as rights clearance.",
+    "Q1 is not a single unique physical survivor: the Douce fragment preserves four leaves, signature C, lines 684–922, while the separately recovered Bandinel fragment preserves two leaves, signatures B3–B4, lines 429–552. Together they preserve 325 lines from one print state.",
+    "The Bandinel leaves were reported in 2008, after Cawley's 1961 edition. As of 2009 they were held by Arthur and Janet Ing Freeman; their current location and access status remain unverified, so no Cawley-to-Bandinel collation edge is asserted.",
+    "The lineage schema has no dedicated historical-printed-witness entity type. Its nearest class, scholarly_edition, is therefore used for each early print object or fragment; that technical classification does not claim modern critical editing.",
+    "Cawley's 1961 editorial text and apparatus are treated as copyright protected. Public-domain and open-license statements for other digital layers do not transfer to that edition.",
+    "The complete METS provider PDF is retained byte-for-byte. It renders and extracts all 106 pages, although qpdf reports recoverable object-offset warnings."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Everyman",
+      "type": "repository_artifact",
+      "label": "General Corpus pinned repository copy of Everyman.xml",
+      "description": "The 60,504-byte XML artifact used by this repository, pinned through the CME submodule. It contains the complete 921-line text and legacy U-M/OTA header metadata.",
+      "identifiers": [
+        {
+          "scheme": "General Corpus work ID",
+          "value": "Everyman"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/Everyman.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "e435b723e4eda3c020498c9846e8c8ce4e3a5928",
+        "sha256": "6427b7a696e6738d5a6ffbc82aced744d7c061b25d30df6e0f47e29074044980"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "encoding:umich-ota:U-1350-A",
+      "type": "digital_encoding",
+      "label": "University of Michigan / Oxford Text Archive Everyman encoding U-1350-A",
+      "alternate_labels": [
+        "ota:1679",
+        "U-M item Everyman"
+      ],
+      "description": "Legacy electronic text distributed by U-M in 1993 and through OTA. The source statement names Cawley 1961; the encoding omits the print preface, contents, introduction, bibliography, alternate readings, and notes, and adds acts/scenes attributed to Ian Lancashire. OTA item 1679 identifies itself as replaced by ota:3034.",
+      "identifiers": [
+        {
+          "scheme": "OTA legacy number",
+          "value": "U-1350-A"
+        },
+        {
+          "scheme": "OTA repository",
+          "value": "ota:1679",
+          "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1679"
+        },
+        {
+          "scheme": "UMDL",
+          "value": "Everyman",
+          "uri": "https://name.umdl.umich.edu/Everyman"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich",
+        "agent:ota",
+        "agent:ian-lancashire"
+      ],
+      "date_statements": [
+        {
+          "label": "U-M electronic publication",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-xml"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman, electronic text U-1350-A / ota:1679 (University of Michigan Humanities Text Initiative and Oxford Text Archive, 1993), encoded from A. C. Cawley, ed., Everyman (Manchester, 1961).",
+        "title": "Everyman",
+        "date": "1993",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-item",
+        "evidence:ota-1679"
+      ],
+      "notes": [
+        "The U-M identifier and OTA legacy number are treated as identifiers for one legacy encoding family rather than as evidence for two independent textual transcriptions.",
+        "The current U-M and OTA rights statements differ from the restriction preserved in the legacy XML; all are recorded at their own layer."
+      ]
+    },
+    {
+      "id": "encoding:ota:3034",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive revised Everyman encoding ota:3034",
+      "description": "The current OTA replacement for ota:1679. Its TEI header says it is a revised version, names Cawley's 1961 edition, and applies CC BY-SA 3.0. Its body has 991 l elements because rubrics, stage matter, split lines, and other units are represented differently; that count is not a revised work-level verse extent.",
+      "identifiers": [
+        {
+          "scheme": "OTA repository",
+          "value": "ota:3034",
+          "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3034"
+        }
+      ],
+      "creator_ids": [
+        "agent:ota"
+      ],
+      "date_statements": [
+        {
+          "label": "header normalization revision",
+          "value": "2010-09-27",
+          "normalized": "2010-09-27",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-3034-source"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman, ota:3034, revised TEI version of ota:1679 (Oxford Text Archive).",
+        "title": "Everyman",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-3034-record",
+        "evidence:ota-3034-source"
+      ]
+    },
+    {
+      "id": "edition:cawley:everyman-1961",
+      "type": "scholarly_edition",
+      "label": "A. C. Cawley's 1961 edition of Everyman",
+      "description": "The immediate print source named in the repository XML and OTA replacement. Cawley's edited text occupies 47 pages after xxxviii pages of front matter and includes a facsimile. Evidence reviewed here supports an eclectic text based primarily on the Huntington/Britwell Skot copy rather than Huth alone; the exact 1961 volume itself was not publicly digitized and was not directly inspected.",
+      "identifiers": [
+        {
+          "scheme": "OBNB",
+          "value": "GB6111852",
+          "uri": "https://obnb.uk/p12211736-everyman"
+        },
+        {
+          "scheme": "ISBN-10 (later issue/reprint)",
+          "value": "0719001153"
+        }
+      ],
+      "creator_ids": [
+        "agent:a-c-cawley",
+        "agent:manchester-up"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1961",
+          "normalized": "1961",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-xml",
+            "evidence:obnb-cawley"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman, ed. A. C. Cawley, Old and Middle English Texts (Manchester: Manchester University Press, 1961), xxxviii + 47 pp.",
+        "title": "Everyman",
+        "series": "Old and Middle English Texts",
+        "publisher": "Manchester University Press",
+        "publication_place": "Manchester",
+        "date": "1961",
+        "pages": "xxxviii, 47",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:xml-source-statement",
+        "evidence:obnb-cawley",
+        "evidence:mets-edition",
+        "evidence:cawley-anthology-inspection"
+      ],
+      "notes": [
+        "A corrected 1977 reprint with additional bibliography has ISBN 0719001153 and xl + 47 pages; it must not be silently substituted for the exact 1961 carrier named by the XML.",
+        "The XML says series number 1, while a Folger record for a 1965 issue says number 3. This manifest does not force one reissue's series numbering onto the 1961 source."
+      ]
+    },
+    {
+      "id": "edition:cawley:anthology-1959-60",
+      "type": "scholarly_edition",
+      "label": "Cawley, Everyman and Medieval Miracle Plays, second-edition carrier (c. 1959–1960)",
+      "description": "A complete scanned Everyman's Library anthology edited by A. C. Cawley. Its undated title page and second-edition preface do not establish an exact issue date; catalogs place the Cawley edition around 1959–1960. The direct Everyman source note states that its text is based on the Huntington Skot copy with readings from the other three print objects then known. It is a collateral Cawley edition, not the immediate 1961 Manchester source, and it predates recovery of the Bandinel Q1 leaves.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive",
+          "value": "in.ernet.dli.2015.458516",
+          "uri": "https://archive.org/details/in.ernet.dli.2015.458516"
+        },
+        {
+          "scheme": "Everyman's Library",
+          "value": "381"
+        }
+      ],
+      "creator_ids": [
+        "agent:a-c-cawley",
+        "agent:dent"
+      ],
+      "date_statements": [
+        {
+          "label": "second-edition issue",
+          "value": "c. 1959–1960; exact scanned issue undetermined",
+          "normalized": "1959/1960",
+          "certainty": "low",
+          "evidence_ids": [
+            "evidence:cawley-anthology-inspection",
+            "evidence:cawley-anthology-catalogs"
+          ],
+          "notes": "The scan's ‘First published in Everyman's Library 1922’ statement belongs to series/publication history and cannot date Cawley's modern editorial carrier."
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman and Medieval Miracle Plays, ed. A. C. Cawley, Everyman's Library 381, 2nd ed. (London: J. M. Dent; New York: E. P. Dutton, c. 1959–1960), Everyman at printed pp. 205–234.",
+        "title": "Everyman and Medieval Miracle Plays",
+        "series": "Everyman's Library 381",
+        "publisher": "J. M. Dent / E. P. Dutton",
+        "publication_place": "London / New York",
+        "date": "c. 1959–1960",
+        "pages": "Everyman: 205–234",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cawley-anthology-inspection",
+        "evidence:cawley-anthology-catalogs",
+        "evidence:dli-cawley-metadata"
+      ],
+      "notes": [
+        "The scan literally says ‘First published in Everyman's Library 1922,’ an inherited series/publication-history line that the provider misapplies as the date of this undated modern Cawley carrier. The provider's public-domain field is not used for rights analysis.",
+        "The anthology modernizes presentation and is useful evidence for Cawley's base-copy statement, but it is not assumed to be textually identical with the 1961 original-spelling Manchester edition."
+      ]
+    },
+    {
+      "id": "edition:pynson:bodleian-1515",
+      "type": "scholarly_edition",
+      "label": "Richard Pynson Q1 Douce fragment, Bodleian Library (USTC 501308)",
+      "alternate_labels": [
+        "Bodleian Douce Fragment"
+      ],
+      "description": "One of two detached physical survivors of the earliest Pynson print state, Q1. The Bodleian Douce fragment contains four leaves of signature C and preserves lines 684–922, with the top six lines of each leaf lost through trimming. The separately modeled Bandinel leaves preserve another portion of the same state. Current USTC assigns STC 10604 and ESTC S114635 but lists only the Bodleian holding; the 2007 METS edition predates recovery of the Bandinel leaves.",
+      "identifiers": [
+        {
+          "scheme": "USTC",
+          "value": "501308",
+          "uri": "https://ustc.ac.uk/editions/501308"
+        },
+        {
+          "scheme": "ESTC",
+          "value": "S114635",
+          "uri": "https://datb.cerl.org/estc/S114635"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "10604"
+        }
+      ],
+      "creator_ids": [
+        "agent:richard-pynson"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "[London, Richard Pynson, c. 1515]",
+          "normalized": "1515",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:ustc-early-prints"
+          ]
+        },
+        {
+          "label": "competing scholarly dating",
+          "value": "[London, Richard Pynson, c. 1518–1519]",
+          "normalized": "1518/1519",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:freeman-bandinel",
+            "evidence:emothe-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "[Everyman] ([London]: Richard Pynson, c. 1515), surviving Bodleian fragment; USTC 501308, STC 10604, ESTC S114635.",
+        "title": "Everyman",
+        "publisher": "Richard Pynson",
+        "publication_place": "London",
+        "date": "c. 1515",
+        "pages": "four leaves, signature C; lines 684–922",
+        "languages": [
+          "enm"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:bodleian",
+        "shelfmark": null,
+        "historical_designations": [
+          "Douce Fragment"
+        ],
+        "catalog_url": "https://ustc.ac.uk/editions/501308",
+        "notes": "The reviewed public USTC record names the Bodleian but leaves its shelfmark blank; ‘Douce Fragment’ is the designation used by METS and EMOTHE. No shelfmark is invented."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Four leaves, signature C; lines 684–922 survive, with the top six lines of each leaf trimmed away",
+        "format": "quarto"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition",
+        "evidence:arlima",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The Douce and Bandinel fragments together preserve 325 lines of Q1; they are two physical objects from one print state, not two editions."
+      ]
+    },
+    {
+      "id": "edition:pynson:bandinel-q1",
+      "type": "scholarly_edition",
+      "label": "Richard Pynson Q1 Bandinel fragment (signatures B3–B4)",
+      "alternate_labels": [
+        "Bandinel Fragment"
+      ],
+      "description": "A separately preserved two-leaf survivor of the same earliest Pynson state as the Bodleian Douce fragment. The Bandinel leaves are signatures B3–B4 and preserve lines 429–552. Arthur Freeman reported them in 2008 among the recovered Bandinel fragments; they were held by Arthur and Janet Ing Freeman as of 2009, but their current location is unverified. Because their recovery postdates Cawley's 1961 edition, they are collateral Q1 evidence and not a source for Cawley's text.",
+      "identifiers": [
+        {
+          "scheme": "USTC print-state identifier",
+          "value": "501308",
+          "uri": "https://ustc.ac.uk/editions/501308"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "10604"
+        }
+      ],
+      "creator_ids": [
+        "agent:richard-pynson"
+      ],
+      "date_statements": [
+        {
+          "label": "current USTC dating of print state",
+          "value": "[London, Richard Pynson, c. 1515]",
+          "normalized": "1515",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:ustc-early-prints"
+          ],
+          "notes": "USTC 501308 currently lists only the Bodleian survivor; this date is applied at state level, not as a cataloged holding record for the Bandinel object."
+        },
+        {
+          "label": "Freeman/EMOTHE dating",
+          "value": "[London, Richard Pynson, c. 1518–1519]",
+          "normalized": "1518/1519",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:freeman-bandinel",
+            "evidence:emothe-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "[Everyman] ([London]: Richard Pynson, c. 1515 or c. 1518–1519), Bandinel fragment, signatures B3–B4, lines 429–552; Q1 / STC 10604 / USTC state 501308.",
+        "title": "Everyman",
+        "publisher": "Richard Pynson",
+        "publication_place": "London",
+        "date": "c. 1515 or c. 1518–1519",
+        "pages": "two leaves, signatures B3–B4; lines 429–552",
+        "languages": [
+          "enm"
+        ]
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Two leaves, signatures B3–B4; lines 429–552",
+        "format": "quarto fragment"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "Together with the four Douce leaves, the Bandinel leaves bring Q1's surviving extent to 325 lines.",
+        "No current institutional holding, shelfmark, catalog record, or public facsimile was verified."
+      ]
+    },
+    {
+      "id": "edition:pynson:bl-1526",
+      "type": "scholarly_edition",
+      "label": "Richard Pynson Everyman fragment, British Library C.21.c.17 (USTC 501897)",
+      "description": "An incomplete Pynson print preserving roughly the latter two-thirds of the play. Current USTC dates it c. 1526 and assigns STC 10604.5 and ESTC S4670. The entire surviving fragment is reproduced in the cached Greg/Farmer facsimile.",
+      "identifiers": [
+        {
+          "scheme": "USTC",
+          "value": "501897",
+          "uri": "https://ustc.ac.uk/editions/501897"
+        },
+        {
+          "scheme": "ESTC",
+          "value": "S4670",
+          "uri": "https://datb.cerl.org/estc/S4670"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "10604.5"
+        },
+        {
+          "scheme": "British Library shelfmark",
+          "value": "C.21.c.17"
+        }
+      ],
+      "creator_ids": [
+        "agent:richard-pynson"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "[London: Richard Pynson, c. 1526]",
+          "normalized": "1526",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:ustc-early-prints"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "[Everyman] ([London]: Richard Pynson, c. 1526), British Library C.21.c.17; USTC 501897, STC 10604.5, ESTC S4670.",
+        "title": "Everyman",
+        "publisher": "Richard Pynson",
+        "publication_place": "London",
+        "date": "c. 1526",
+        "pages": "[20+] pages surviving",
+        "languages": [
+          "enm"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "C.21.c.17",
+        "historical_designations": [
+          "British Museum Pynson fragment"
+        ],
+        "catalog_url": "https://ustc.ac.uk/editions/501897"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Incomplete; roughly the latter two-thirds of the play",
+        "format": "early printed fragment"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition",
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "edition:skot:huntington-1528",
+      "type": "scholarly_edition",
+      "label": "John Skot complete Everyman, Huntington Library 14195 (USTC 502061)",
+      "alternate_labels": [
+        "Britwell copy"
+      ],
+      "description": "A complete Skot printing, formerly at Britwell Court. Current USTC dates it c. 1528 and assigns STC 10606 and ESTC S105555. Cawley's collateral anthology expressly identifies the Huntington Skot copy as its base; the 1961 source and XML readings support it as the principal base for the immediate Cawley lineage as well.",
+      "identifiers": [
+        {
+          "scheme": "USTC",
+          "value": "502061",
+          "uri": "https://ustc.ac.uk/editions/502061"
+        },
+        {
+          "scheme": "ESTC",
+          "value": "S105555",
+          "uri": "https://datb.cerl.org/estc/S105555"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "10606"
+        },
+        {
+          "scheme": "Huntington Library shelfmark",
+          "value": "14195"
+        }
+      ],
+      "creator_ids": [
+        "agent:john-skot"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "[London: John Skot, c. 1528]",
+          "normalized": "1528",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:ustc-early-prints"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Somonynge of Everyman ([London]: John Skot, c. 1528), Huntington Library 14195; USTC 502061, STC 10606, ESTC S105555.",
+        "title": "The Somonynge of Everyman",
+        "publisher": "John Skot",
+        "publication_place": "London",
+        "date": "c. 1528",
+        "pages": "[32] pages",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:huntington",
+        "shelfmark": "14195",
+        "historical_designations": [
+          "Britwell Court copy"
+        ],
+        "catalog_url": "https://ustc.ac.uk/editions/502061"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Complete; [32] pages",
+        "format": "quarto"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:cawley-anthology-inspection",
+        "evidence:mets-edition",
+        "evidence:mets-textual-comparison"
+      ],
+      "notes": [
+        "The 2007 METS early-edition list assigns this same Huntington/Britwell state a broader c. 1530–1535 date; current USTC gives 1528."
+      ]
+    },
+    {
+      "id": "edition:skot:huth-1535",
+      "type": "scholarly_edition",
+      "label": "John Skot complete Everyman, British Library Huth 32 (USTC 502713)",
+      "description": "A complete Skot printing held as Huth 32. Current USTC dates it c. 1535 and assigns STC 10606.5 and ESTC S114637. It is the base text of the 2007 METS edition and is reproduced completely in the cached 1912 facsimile, but it is not Cawley's sole or principal base.",
+      "identifiers": [
+        {
+          "scheme": "USTC",
+          "value": "502713",
+          "uri": "https://ustc.ac.uk/editions/502713"
+        },
+        {
+          "scheme": "ESTC",
+          "value": "S114637",
+          "uri": "https://datb.cerl.org/estc/S114637"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "10606.5"
+        },
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Huth.32"
+        }
+      ],
+      "creator_ids": [
+        "agent:john-skot"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "[London: John Skot, c. 1535]",
+          "normalized": "1535",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:ustc-early-prints"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Somonyng of Everyman ([London]: John Skot, c. 1535), British Library Huth 32; USTC 502713, STC 10606.5, ESTC S114637.",
+        "title": "The Somonyng of Everyman",
+        "publisher": "John Skot",
+        "publication_place": "London",
+        "date": "c. 1535",
+        "pages": "[32] pages",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Huth.32",
+        "historical_designations": [
+          "Huth copy"
+        ],
+        "catalog_url": "https://ustc.ac.uk/editions/502713"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Complete; [32] pages",
+        "format": "quarto"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition",
+        "evidence:greg-facsimile-inspection"
+      ],
+      "notes": [
+        "The 2007 METS volume used older STC 10605 and c. 1530–1535 for Huth; the current USTC maps the copy to STC 10606.5 and 1535."
+      ]
+    },
+    {
+      "id": "facsimile:greg-farmer:everyman-1912",
+      "type": "facsimile",
+      "label": "Greg and Farmer's 1912 facsimile of the Huth Skot print and British Library Pynson fragment",
+      "description": "A complete scan of the 1912 facsimile volume. It reproduces the complete Huth 32 Skot printing and the complete surviving British Library C.21.c.17 Pynson fragment, including blank/interleaf surfaces. The scan is a historical monochrome facsimile publication, not a modern full-color direct digital surrogate of either original.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive",
+          "value": "cu31924013324276",
+          "uri": "https://archive.org/details/cu31924013324276"
+        }
+      ],
+      "creator_ids": [
+        "agent:w-w-greg",
+        "agent:j-s-farmer"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1912",
+          "normalized": "1912",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:greg-facsimile-inspection",
+            "evidence:greg-ia-metadata"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman: A Facsimile Reproduction of the Editions of John Skot and Richard Pynson, ed. W. W. Greg, with a note by John S. Farmer (London, 1912).",
+        "title": "Everyman: A Facsimile Reproduction of the Editions of John Skot and Richard Pynson",
+        "publisher": "T. C. & E. C. Jack / Tudor Facsimile Texts",
+        "publication_place": "London",
+        "date": "1912",
+        "pages": "138 scan pages",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "reproduction_format": "Historical photographic facsimile digitized as a 138-page PDF and a 138-image JP2 ZIP",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:greg-facsimile-inspection",
+        "evidence:greg-ia-metadata"
+      ]
+    },
+    {
+      "id": "edition:mets:everyman-elckerlijc-2007",
+      "type": "scholarly_edition",
+      "label": "METS Everyman and Its Dutch Original, Elckerlijc (2007)",
+      "description": "A modern parallel scholarly edition edited by Clifford Davidson, Martin W. Walsh, and Ton J. Broos. Its English copytext is British Library Huth 32, corrected from the Huntington Skot copy and the two then-known Pynson state representatives, British Library C.21.c.17 and the Douce fragment. Published in 2007, it predates Freeman's report of the separate Bandinel Q1 leaves. It supplies strong scholarly comparison for source direction, early-print census as then known, editorial readings, and the distinction between Huth and Cawley's eclectic text.",
+      "identifiers": [
+        {
+          "scheme": "METS reader",
+          "value": "e0M1G2gFWVKGs7lRT4YpQcyYEXXM2za",
+          "uri": "https://metseditions.org/read/e0M1G2gFWVKGs7lRT4YpQcyYEXXM2za"
+        }
+      ],
+      "creator_ids": [
+        "agent:clifford-davidson",
+        "agent:martin-walsh",
+        "agent:ton-broos",
+        "agent:mets"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "2007",
+          "normalized": "2007",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:mets-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Everyman and Its Dutch Original, Elckerlijc, ed. Clifford Davidson, Martin W. Walsh, and Ton J. Broos (Kalamazoo: Medieval Institute Publications, 2007).",
+        "title": "Everyman and Its Dutch Original, Elckerlijc",
+        "series": "Middle English Texts Series",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo, Michigan",
+        "date": "2007",
+        "pages": "106-page downloadable edition; English Everyman on printed pp. 17–77",
+        "languages": [
+          "enm",
+          "nld",
+          "eng",
+          "lat"
+        ]
+      },
+      "reproduction_format": "Born-digital reading edition and complete downloadable PDF derived from the print edition",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:mets-edition",
+        "evidence:mets-pdf-inspection",
+        "evidence:mets-rights"
+      ]
+    },
+    {
+      "id": "edition:emothe:everyman-2019",
+      "type": "scholarly_edition",
+      "label": "EMOTHE critical modernized edition of The Summoning of Everyman (2019)",
+      "description": "Jesús Tronch Pérez's public critical modernized edition based on Q3, the complete Huntington Skot copy, with a TEI apparatus recording Q1, Q2, Q3, and Q4 readings and modern editorial sources. Its witness analysis incorporates the post-Cawley Bandinel discovery and distinguishes the two physical fragments of Q1.",
+      "identifiers": [
+        {
+          "scheme": "EMOTHE",
+          "value": "0460",
+          "uri": "https://emothe.uv.es/biblioteca/textosEMOTHE/EMOTHE0460_TheSummoningOfEveryman.php"
+        },
+        {
+          "scheme": "DOI stated in TEI",
+          "value": "10.5281/zenodo.3958901",
+          "uri": "https://doi.org/10.5281/zenodo.3958901"
+        }
+      ],
+      "creator_ids": [
+        "agent:jesus-tronch",
+        "agent:emothe"
+      ],
+      "date_statements": [
+        {
+          "label": "text-only edition first publication",
+          "value": "2018",
+          "normalized": "2018",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:emothe-edition"
+          ]
+        },
+        {
+          "label": "critical modernized edition publication",
+          "value": "2019",
+          "normalized": "2019",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:emothe-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Summoning of Everyman: A Critical, Modernized Edition Based on the Third Quarto, ed. Jesús Tronch Pérez (Valencia: ARTELOPE–EMOTHE, Universitat de València, 2019; text-only edition first published 2018), EMOTHE 0460.",
+        "title": "The Summoning of Everyman: A Critical, Modernized Edition Based on the Third Quarto",
+        "publisher": "ARTELOPE–EMOTHE, Universitat de València",
+        "publication_place": "Valencia",
+        "date": "2019; text-only edition first published 2018",
+        "languages": [
+          "eng",
+          "enm",
+          "lat"
+        ]
+      },
+      "reproduction_format": "Born-digital critical modernized reading edition with a complete downloadable TEI apparatus",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The TEI embeds DOI 10.5281/zenodo.3958901, but that DOI returned an unregistered-identifier response during review; the live EMOTHE landing page and exact TEI URL remain authoritative access routes."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-item"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://ota.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ota-1679",
+        "evidence:ota-3034-record"
+      ]
+    },
+    {
+      "id": "agent:ian-lancashire",
+      "type": "person",
+      "name": "Ian Lancashire",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ota-3034-source"
+      ]
+    },
+    {
+      "id": "agent:a-c-cawley",
+      "type": "person",
+      "name": "A. C. Cawley",
+      "alternate_names": [
+        "Arthur Clare Cawley"
+      ],
+      "evidence_ids": [
+        "evidence:obnb-cawley",
+        "evidence:cawley-anthology-inspection"
+      ]
+    },
+    {
+      "id": "agent:manchester-up",
+      "type": "organization",
+      "name": "Manchester University Press",
+      "urls": [
+        "https://manchesteruniversitypress.co.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:obnb-cawley"
+      ]
+    },
+    {
+      "id": "agent:dent",
+      "type": "organization",
+      "name": "J. M. Dent & Sons",
+      "evidence_ids": [
+        "evidence:cawley-anthology-inspection"
+      ]
+    },
+    {
+      "id": "agent:richard-pynson",
+      "type": "person",
+      "name": "Richard Pynson",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "agent:john-skot",
+      "type": "person",
+      "name": "John Skot",
+      "alternate_names": [
+        "John Scott"
+      ],
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "agent:bodleian",
+      "type": "organization",
+      "name": "Bodleian Libraries",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "agent:bl",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "agent:huntington",
+      "type": "organization",
+      "name": "The Huntington Library",
+      "urls": [
+        "https://www.huntington.org/library"
+      ],
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "agent:w-w-greg",
+      "type": "person",
+      "name": "W. W. Greg",
+      "dates": "1875–1959",
+      "evidence_ids": [
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "agent:j-s-farmer",
+      "type": "person",
+      "name": "John S. Farmer",
+      "evidence_ids": [
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:greg-ia-metadata",
+        "evidence:dli-cawley-metadata"
+      ]
+    },
+    {
+      "id": "agent:dli",
+      "type": "organization",
+      "name": "Digital Library of India",
+      "evidence_ids": [
+        "evidence:dli-cawley-metadata"
+      ]
+    },
+    {
+      "id": "agent:mets",
+      "type": "organization",
+      "name": "Middle English Texts Series",
+      "urls": [
+        "https://metseditions.org/"
+      ],
+      "evidence_ids": [
+        "evidence:mets-edition",
+        "evidence:mets-rights"
+      ]
+    },
+    {
+      "id": "agent:clifford-davidson",
+      "type": "person",
+      "name": "Clifford Davidson",
+      "evidence_ids": [
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "agent:martin-walsh",
+      "type": "person",
+      "name": "Martin W. Walsh",
+      "evidence_ids": [
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "agent:ton-broos",
+      "type": "person",
+      "name": "Ton J. Broos",
+      "evidence_ids": [
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "agent:jesus-tronch",
+      "type": "person",
+      "name": "Jesús Tronch Pérez",
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ]
+    },
+    {
+      "id": "agent:emothe",
+      "type": "organization",
+      "name": "ARTELOPE–EMOTHE, Universitat de València",
+      "urls": [
+        "https://emothe.uv.es/biblioteca/"
+      ],
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-from-u1350a",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Everyman",
+      "object": "encoding:umich-ota:U-1350-A",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Pinned repository Everyman.xml"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M/OTA legacy electronic text U-1350-A"
+        },
+        "notes": "Matching identifiers, header, structure, title, and complete 921-line content establish the relationship; the exact repository import date is undocumented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml",
+          "evidence:umich-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:u1350a-from-cawley",
+      "type": "encoded_from",
+      "subject": "encoding:umich-ota:U-1350-A",
+      "object": "edition:cawley:everyman-1961",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete encoded play text, excluding omitted print apparatus"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Cawley's edited Everyman text",
+          "locators": [
+            "printed pp. 1–47"
+          ]
+        },
+        "notes": "The XML source description names this edition exactly and separately records omitted prefatory and critical components."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:xml-source-statement",
+          "evidence:ota-3034-source"
+        ]
+      }
+    },
+    {
+      "id": "relation:ota3034-version",
+      "type": "version_of",
+      "subject": "encoding:ota:3034",
+      "object": "encoding:umich-ota:U-1350-A",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Revised OTA 3034 TEI encoding"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Legacy ota:1679 / U-1350-A encoding"
+        },
+        "notes": "OTA 3034's TEI header calls itself a revised version of ota:1679, and the old item record points to 3034 as its replacement."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-1679",
+          "evidence:ota-3034-source"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley1961-from-huntington",
+      "type": "transcribes",
+      "subject": "edition:cawley:everyman-1961",
+      "object": "edition:skot:huntington-1528",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Cawley's edited play text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Huntington/Britwell Skot copy"
+        },
+        "notes": "The exact 1961 preface was not publicly inspected. The OTA header says the Manchester text was drawn from a Skot edition; Cawley's related anthology explicitly names the Huntington Skot copy as its base; and diagnostic Cawley readings align with an eclectic Huntington-based text rather than a Huth transcription."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ota-3034-source",
+          "evidence:cawley-anthology-inspection",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley1961-collated-huth",
+      "type": "collated_against",
+      "subject": "edition:cawley:everyman-1961",
+      "object": "edition:skot:huth-1535",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Cawley's eclectic edited text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Huth 32 Skot copy"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:cawley-anthology-inspection",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley1961-collated-bl-pynson",
+      "type": "collated_against",
+      "subject": "edition:cawley:everyman-1961",
+      "object": "edition:pynson:bl-1526",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Cawley readings where the Pynson fragment survives"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving British Library Pynson fragment"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:cawley-anthology-inspection",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley1961-collated-douce",
+      "type": "collated_against",
+      "subject": "edition:cawley:everyman-1961",
+      "object": "edition:pynson:bodleian-1515",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Cawley readings where the Bodleian fragment survives"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving Bodleian Pynson fragment"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:cawley-anthology-inspection",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley-anthology-from-huntington",
+      "type": "transcribes",
+      "subject": "edition:cawley:anthology-1959-60",
+      "object": "edition:skot:huntington-1528",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Everyman in the anthology",
+          "locators": [
+            "printed pp. 205–234",
+            "PDF pp. 224–253"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Huntington/Britwell Skot copy"
+        },
+        "notes": "Cawley's source note says directly that the following text is based on the Huntington Library Skot copy."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cawley-anthology-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:cawley-anthology-collation",
+      "type": "collated_against",
+      "subject": "edition:cawley:anthology-1959-60",
+      "object": "edition:skot:huth-1535",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Everyman anthology text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Huth Skot comparison copy"
+        },
+        "notes": "The source note says a few readings were taken from the other then-known copies; Huth is one of the four enumerated print objects, and the later-recovered Bandinel leaves are not implied."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:cawley-anthology-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:greg-facsimile-huth",
+      "type": "facsimile_of",
+      "subject": "facsimile:greg-farmer:everyman-1912",
+      "object": "edition:skot:huth-1535",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Complete Huth/Skot facsimile section",
+          "locators": [
+            "PDF pp. 13–74",
+            "text-bearing PDF pp. 17–18, 21–22, 25–26, 29–30, 33–34, 37–38, 41–42, 45–46, 49–50, 53–54, 57–58, 61–62, 65–66, 69–70, 73–74"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Huth 32 Skot printing"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:greg-facsimile-inspection",
+          "evidence:greg-ia-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:greg-facsimile-pynson",
+      "type": "facsimile_of",
+      "subject": "facsimile:greg-farmer:everyman-1912",
+      "object": "edition:pynson:bl-1526",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Complete facsimile of the surviving British Library Pynson fragment",
+          "locators": [
+            "PDF pp. 79–116",
+            "text-bearing PDF pp. 79–80, 83–84, 87–88, 91–92, 95–96, 99–100, 103–104, 107–108, 111–112, 115–116"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving C.21.c.17 fragment"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:greg-facsimile-inspection",
+          "evidence:greg-ia-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-from-huth",
+      "type": "transcribes",
+      "subject": "edition:mets:everyman-elckerlijc-2007",
+      "object": "edition:skot:huth-1535",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Edited English Everyman text",
+          "locators": [
+            "printed pp. 17–77"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Huth 32 copytext"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-collated-huntington",
+      "type": "collated_against",
+      "subject": "edition:mets:everyman-elckerlijc-2007",
+      "object": "edition:skot:huntington-1528",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Edited English Everyman text and textual notes"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Huntington comparison copy"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-edition",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-collated-bl-pynson",
+      "type": "collated_against",
+      "subject": "edition:mets:everyman-elckerlijc-2007",
+      "object": "edition:pynson:bl-1526",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Text and apparatus where the British Library fragment survives"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving British Library Pynson fragment"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-edition",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-collated-douce",
+      "type": "collated_against",
+      "subject": "edition:mets:everyman-elckerlijc-2007",
+      "object": "edition:pynson:bodleian-1515",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Text and apparatus where the Bodleian fragment survives"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving Bodleian Pynson fragment"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-edition",
+          "evidence:mets-textual-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:emothe-from-huntington-q3",
+      "type": "transcribes",
+      "subject": "edition:emothe:everyman-2019",
+      "object": "edition:skot:huntington-1528",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete critical modernized Everyman reading text and apparatus"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Q3, the complete Huntington Skot base copy"
+        },
+        "notes": "The edition title and TEI witness list identify Q3 as the base; modernization means this is an edited transcription rather than a diplomatic one."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:emothe-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:emothe-collated-douce-q1",
+      "type": "collated_against",
+      "subject": "edition:emothe:everyman-2019",
+      "object": "edition:pynson:bodleian-1515",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Critical apparatus where Q1's Douce leaves survive"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Four Douce leaves, signature C, preserving lines 684–922"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:emothe-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:emothe-collated-bandinel-q1",
+      "type": "collated_against",
+      "subject": "edition:emothe:everyman-2019",
+      "object": "edition:pynson:bandinel-q1",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Critical apparatus where Q1's Bandinel leaves survive"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Two Bandinel leaves, signatures B3–B4, preserving lines 429–552"
+        },
+        "notes": "The edition incorporates Q1 readings and identifies the Bandinel leaves through Freeman and later scholarship; direct autopsy of the physical leaves is not documented in the inspected TEI."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:freeman-bandinel",
+          "evidence:emothe-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:emothe-collated-bl-q2",
+      "type": "collated_against",
+      "subject": "edition:emothe:everyman-2019",
+      "object": "edition:pynson:bl-1526",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Critical apparatus where Q2 survives"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Entire surviving British Library Q2 fragment"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:emothe-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:emothe-collated-huth-q4",
+      "type": "collated_against",
+      "subject": "edition:emothe:everyman-2019",
+      "object": "edition:skot:huth-1535",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Critical reading text and apparatus"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Q4, the complete Huth Skot comparison copy"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:emothe-edition"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-file",
+      "entity": "artifact:general-corpus:Everyman",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the pinned submodule path in the repository checkout.",
+      "repository_path": "CME/source/CME_from_OTA/Everyman.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the U-M item page and select ‘View entire text.’",
+      "url": "https://quod.lib.umich.edu/c/cme/Everyman",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Everyman"
+      ],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:umich-item"
+      ]
+    },
+    {
+      "id": "access:ota1679-record",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "provider_id": "agent:ota",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the OTA legacy item record. Listed bitstream requests redirected back to the item page during review and were not anonymously downloadable.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1679",
+      "cost": "free",
+      "format": "Repository metadata record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ota-1679"
+      ],
+      "notes": [
+        "The record says the item was replaced by ota:3034. The old PURL currently passes through a broken legacy route, so the stable current handle is recorded."
+      ]
+    },
+    {
+      "id": "access:ota3034-xml",
+      "entity": "encoding:ota:3034",
+      "provider_id": "agent:ota",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Directly download the original TEI XML from the OTA bitstream endpoint; HTML, text, EPUB, and MOBI derivatives are also listed on the item page.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/3034/3034.xml?sequence=9&isAllowed=y",
+      "alternate_urls": [
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3034"
+      ],
+      "cost": "free",
+      "format": "TEI XML",
+      "local_copies": [
+        {
+          "label": "Complete OTA 3034 TEI XML",
+          "path": "source-cache/Everyman/ota-3034-everyman-tei.xml",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/3034/3034.xml?sequence=9&isAllowed=y",
+          "sha256": "b72ce07a28d78ea730564615ce9a8008b11fdedf7c251d1fa5d4ee3bc5e90fbc",
+          "bytes": 77514,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete Everyman text",
+            "locators": [
+              "TEI text/body; entire encoded work",
+              "991 l elements under the provider's representation; not equivalent to 991 intrinsic verse lines"
+            ]
+          }
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ota-3034-record",
+        "evidence:ota-3034-source"
+      ]
+    },
+    {
+      "id": "access:cawley1961-catalog",
+      "entity": "edition:cawley:everyman-1961",
+      "provider_id": "agent:manchester-up",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult bibliographic records or obtain a physical copy through a library or used-book market. No authorized public complete digital facsimile of the exact 1961 source was verified.",
+      "url": "https://obnb.uk/p12211736-everyman",
+      "alternate_urls": [
+        "https://catalog.folger.edu/record/31514",
+        "https://ci.nii.ac.jp/ncid/BA20924946"
+      ],
+      "cost": "unknown",
+      "format": "Catalog records; physical book",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:obnb-cawley",
+        "evidence:folger-cawley",
+        "evidence:cinii-cawley"
+      ]
+    },
+    {
+      "id": "access:cawley1961-purchase",
+      "entity": "edition:cawley:everyman-1961",
+      "resource_kind": "download",
+      "status": "purchasable",
+      "access_method": "Purchase a used physical copy; availability, issue date, condition, and price vary by seller.",
+      "url": "https://www.abebooks.com/9780719001154/Everyman-A.C-Cawley-0719001153/plp",
+      "cost": "fee",
+      "format": "Used physical book listings",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:abebooks-cawley"
+      ],
+      "notes": [
+        "The ISBN is commonly attached to later issues and the 1977 corrected reprint. Confirm that a listing is the exact 1961 edition before treating it as the source carrier."
+      ]
+    },
+    {
+      "id": "access:cawley-anthology-dli",
+      "entity": "edition:cawley:anthology-1959-60",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Directly download the full provider PDF or OCR; retain only in the ignored private source cache because the provider misapplies an inherited 1922 series-history line as this modern Cawley carrier's date and its public-domain field does not clear the editorial layer.",
+      "url": "https://archive.org/download/in.ernet.dli.2015.458516/2015.458516.Everyman-And-Medieval-Miracle-Plays.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/in.ernet.dli.2015.458516",
+        "https://archive.org/download/in.ernet.dli.2015.458516/2015.458516.Everyman-And-Medieval-Miracle-Plays_djvu.txt",
+        "https://archive.org/metadata/in.ernet.dli.2015.458516"
+      ],
+      "cost": "free",
+      "format": "285-page PDF, OCR text, and provider metadata",
+      "local_copies": [
+        {
+          "label": "Complete DLI anthology PDF",
+          "path": "source-cache/Everyman/cawley-everyman-and-medieval-miracle-plays-dli-scan.pdf",
+          "source_url": "https://archive.org/download/in.ernet.dli.2015.458516/2015.458516.Everyman-And-Medieval-Miracle-Plays.pdf",
+          "sha256": "ad2081aa9ba1effe7943c33d5c8e38a6d2cccedbdba47c7709c7d810cbd48898",
+          "bytes": 11257511,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "The Moral Play of Everyman",
+            "locators": [
+              "PDF pp. 224–253",
+              "printed pp. 205–234"
+            ],
+            "notes": [
+              "The full 285-page anthology was downloaded, not a cropped Everyman extract."
+            ]
+          }
+        },
+        {
+          "label": "Complete provider OCR text",
+          "path": "source-cache/Everyman/cawley-everyman-and-medieval-miracle-plays-dli-ocr.txt",
+          "source_url": "https://archive.org/download/in.ernet.dli.2015.458516/2015.458516.Everyman-And-Medieval-Miracle-Plays_djvu.txt",
+          "sha256": "7ef0c97db982daa66d7e291ca42b168fc2430a2183903b17d6180f36b318244a",
+          "bytes": 436547,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Everyman OCR segment",
+            "locators": [
+              "OCR corresponding to scan PDF pp. 224–253 / printed pp. 205–234"
+            ]
+          },
+          "notes": [
+            "OCR quality is imperfect; page-image inspection controls bibliographic and source-note assertions."
+          ]
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/Everyman/cawley-anthology-dli-ia-metadata.json",
+          "source_url": "https://archive.org/metadata/in.ernet.dli.2015.458516",
+          "sha256": "f3d3ca081f471eb2aa7b2aaec7a74b1a488b0a06c469a3c087226daf7a6ae1a3",
+          "bytes": 9692,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Preserved to document—not endorse—the provider's conflicting 1922/public-domain fields."
+          ]
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:cawley-anthology-inspection",
+        "evidence:dli-cawley-metadata"
+      ]
+    },
+    {
+      "id": "access:bodleian-pynson-catalog",
+      "entity": "edition:pynson:bodleian-1515",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use the USTC record for current bibliographic identity and holding; the reviewed record does not expose a free complete image set or exact shelfmark.",
+      "url": "https://ustc.ac.uk/editions/501308",
+      "cost": "free",
+      "format": "Bibliographic record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "access:bodleian-pynson-eebo",
+      "entity": "edition:pynson:bodleian-1515",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Open the EEBO/ProQuest record linked by USTC through an entitled library subscription.",
+      "url": "https://search.proquest.com/docview/2240875954",
+      "cost": "unknown",
+      "format": "EEBO digital images",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "access:bl-pynson-eebo",
+      "entity": "edition:pynson:bl-1526",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Open the EEBO/ProQuest record linked by USTC through an entitled library subscription. A free historical facsimile of the complete surviving fragment is separately recorded.",
+      "url": "https://search.proquest.com/docview/2240908350",
+      "cost": "unknown",
+      "format": "EEBO digital images",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "access:huntington-skot-eebo",
+      "entity": "edition:skot:huntington-1528",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Open the EEBO/ProQuest record linked by USTC through an entitled library subscription. No free complete facsimile of this exact Cawley base copy was verified.",
+      "url": "https://search.proquest.com/docview/2240857043",
+      "alternate_urls": [
+        "https://ustc.ac.uk/editions/502061"
+      ],
+      "cost": "unknown",
+      "format": "EEBO digital images",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "access:huth-skot-eebo",
+      "entity": "edition:skot:huth-1535",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Open the EEBO/ProQuest record linked by USTC through an entitled library subscription. A free complete historical facsimile is separately recorded.",
+      "url": "https://search.proquest.com/docview/2240852680",
+      "cost": "unknown",
+      "format": "EEBO digital images",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "access:greg-facsimile",
+      "entity": "facsimile:greg-farmer:everyman-1912",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete PDF or complete JP2 ZIP directly from Internet Archive; retain the provider metadata for file and item auditing.",
+      "url": "https://archive.org/download/cu31924013324276/cu31924013324276.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/cu31924013324276",
+        "https://archive.org/download/cu31924013324276/cu31924013324276_jp2.zip",
+        "https://archive.org/metadata/cu31924013324276"
+      ],
+      "cost": "free",
+      "format": "138-page PDF, 138-image JP2 ZIP, and provider metadata",
+      "local_copies": [
+        {
+          "label": "Complete 1912 facsimile PDF",
+          "path": "source-cache/Everyman/greg-1912-everyman-skot-pynson-facsimile.pdf",
+          "source_url": "https://archive.org/download/cu31924013324276/cu31924013324276.pdf",
+          "sha256": "6b5293e297255cd2bf9704a5fe0b485c57d4ed989d0bc464f215a65944c709f3",
+          "bytes": 3951968,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete Huth Skot print and complete surviving British Library Pynson fragment",
+            "locators": [
+              "Huth/Skot facsimile section: PDF pp. 13–74; section label at p. 11",
+              "Huth/Skot text-bearing surfaces: PDF pp. 17–18, 21–22, 25–26, 29–30, 33–34, 37–38, 41–42, 45–46, 49–50, 53–54, 57–58, 61–62, 65–66, 69–70, 73–74",
+              "British Library Pynson fragment: PDF pp. 79–116; section label at p. 77",
+              "Pynson text-bearing surfaces: PDF pp. 79–80, 83–84, 87–88, 91–92, 95–96, 99–100, 103–104, 107–108, 111–112, 115–116"
+            ],
+            "notes": [
+              "The entire 138-page carrier was cached, including preliminaries, blank leaves, and interleaves; these locators associate the work-bearing portions without cropping the object."
+            ]
+          }
+        },
+        {
+          "label": "Complete 138-image JP2 source bundle",
+          "path": "source-cache/Everyman/greg-1912-everyman-skot-pynson-facsimile-jp2.zip",
+          "source_url": "https://archive.org/download/cu31924013324276/cu31924013324276_jp2.zip",
+          "sha256": "c41b67c671ea35202300ce4be4e0bb3fdf558d49c8f842cf4e0c7d5583ef454e",
+          "bytes": 33523325,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 138,
+          "work_portion": {
+            "label": "Same complete Huth and surviving Pynson sections as the PDF",
+            "locators": [
+              "JP2 sequence images corresponding one-for-one to PDF pp. 13–74 for Huth",
+              "JP2 sequence images corresponding one-for-one to PDF pp. 79–116 for the British Library Pynson fragment"
+            ]
+          }
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/Everyman/greg-1912-everyman-ia-metadata.json",
+          "source_url": "https://archive.org/metadata/cu31924013324276",
+          "sha256": "ce543e01a35adee78aeab6f6c584ebe22a06400963f1fe5852175181d4007fac",
+          "bytes": 32673,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:greg-facsimile-inspection",
+        "evidence:greg-ia-metadata"
+      ]
+    },
+    {
+      "id": "access:mets-edition",
+      "entity": "edition:mets:everyman-elckerlijc-2007",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read the edition online or download the complete provider PDF. The public access does not waive METS copyright or its individual-use condition.",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/e9016d0b-4ac4-4047-a1e8-531792c36524/downloadable_version/535f50ca3ce47c7a3eb3310d3d5d8311.pdf",
+      "alternate_urls": [
+        "https://metseditions.org/read/e0M1G2gFWVKGs7lRT4YpQcyYEXXM2za",
+        "https://metseditions.org/copyright-citation"
+      ],
+      "cost": "free",
+      "format": "106-page PDF and web reading edition",
+      "local_copies": [
+        {
+          "label": "Complete METS downloadable edition PDF",
+          "path": "source-cache/Everyman/mets-2007-everyman-and-elckerlijc.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/e9016d0b-4ac4-4047-a1e8-531792c36524/downloadable_version/535f50ca3ce47c7a3eb3310d3d5d8311.pdf",
+          "sha256": "a2b6bea0eec511bab23f2a2431fcf6d0b995955bac3174336297eea4b6248e8e",
+          "bytes": 5660381,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "English Everyman text in the complete parallel edition",
+            "locators": [
+              "PDF p. 17: Huth title-page image",
+              "English text begins PDF p. 19 and occupies every odd PDF page through p. 79",
+              "printed English-text pages 17–77; intervening even PDF pages carry the Dutch parallel text",
+              "introduction PDF pp. 3–16; explanatory notes pp. 81–95; textual notes pp. 96–98; bibliography pp. 101–106"
+            ]
+          },
+          "notes": [
+            "Every page renders and extracts. qpdf --check reports recoverable ‘object has offset 0’ warnings; the provider bytes were preserved unchanged."
+          ]
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:mets-edition",
+        "evidence:mets-pdf-inspection",
+        "evidence:mets-rights"
+      ]
+    },
+    {
+      "id": "access:bandinel-description",
+      "entity": "edition:pynson:bandinel-q1",
+      "provider_id": "agent:emothe",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult Freeman's peer-reviewed article and EMOTHE's public witness analysis. These describe the fragment but do not provide a verified current object catalog or complete public facsimile.",
+      "url": "https://emothe.uv.es/biblioteca/textosEMOTHE/EMOTHE0460_TheSummoningOfEveryman.php",
+      "alternate_urls": [
+        "https://doi.org/10.1093/library/9.4.397"
+      ],
+      "cost": "free",
+      "format": "Public scholarly description; article access may depend on subscription",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The Bandinel leaves were held by Arthur and Janet Ing Freeman as of 2009. Current ownership, holding, shelfmark, image access, and reproduction terms were not verified."
+      ]
+    },
+    {
+      "id": "access:bandinel-images",
+      "entity": "edition:pynson:bandinel-q1",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No complete public page-image set or direct object-download route was verified. The last reviewed provenance places the leaves with Arthur and Janet Ing Freeman in 2009; their current holder and location are unknown.",
+      "cost": "unknown",
+      "format": "Original leaves or digital page images",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The publicly available description record is separate and does not imply access to the physical fragment or its images."
+      ]
+    },
+    {
+      "id": "access:emothe-edition",
+      "entity": "edition:emothe:everyman-2019",
+      "provider_id": "agent:emothe",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read the public web edition or download the complete TEI XML from the exact EMOTHE text endpoint.",
+      "url": "https://emothe.uv.es/biblioteca/textosXML/EMOTHE0460_TheSummoningOfEveryman.xml",
+      "alternate_urls": [
+        "https://emothe.uv.es/biblioteca/textosEMOTHE/EMOTHE0460_TheSummoningOfEveryman.php"
+      ],
+      "cost": "free",
+      "format": "UTF-16LE TEI XML and HTML reading edition",
+      "local_copies": [
+        {
+          "label": "Complete EMOTHE critical TEI edition",
+          "path": "source-cache/Everyman/emothe-2019-everyman-critical-tei.xml",
+          "source_url": "https://emothe.uv.es/biblioteca/textosXML/EMOTHE0460_TheSummoningOfEveryman.xml",
+          "sha256": "51e8c743fb1545e0bb97faaddbc696912e00e867788afe6401510a5b3e73387a",
+          "bytes": 283636,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete modernized Everyman reading text and critical apparatus",
+            "locators": [
+              "TEI teiHeader/listWit; complete text/front and text/body",
+              "921 numbered l elements plus encoded apparatus and witness readings"
+            ]
+          }
+        }
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The DOI embedded in the TEI did not resolve during review, so the working EMOTHE landing and XML URLs are used for access."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repo-unlicense",
+      "entity": "artifact:general-corpus:Everyman",
+      "access_id": "access:repo-file",
+      "component": "Repository-authored XML/code layer insofar as copyright is controlled by the CME repository contributors",
+      "jurisdiction": "Worldwide dedication; legal effect may vary by jurisdiction",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The exact pinned CME LICENSE dedicates the software/source to the public domain under the Unlicense.",
+      "asserted_by_id": "agent:kyvero",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:cme-git-state"
+      ],
+      "notes": [
+        "This dedication cannot license copyright that the repository contributors do not own. In particular, it does not clear Cawley's modern editorial contribution or METS content."
+      ]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "access_id": "access:umich-text",
+      "component": "Current U-M digital item and encoded text as presented by the provider",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The current U-M item page expressly marks the materials public domain and links the DPLA No Copyright–United States statement.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:umich-item"
+      ],
+      "notes": [
+        "U-M also describes access as for educational and research purposes. The assertion conflicts with the modern Cawley source layer and the legacy personal-scholarly-use statement; it is not transferred to Cawley's edition."
+      ]
+    },
+    {
+      "id": "rights:u1350a-legacy-restriction",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "access_id": "access:repo-file",
+      "component": "Legacy U-1350-A distribution represented by the pinned XML header",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The legacy XML availability statement says the text was made available through OTA ‘for personal scholarly use only.’",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml"
+      ],
+      "notes": [
+        "This is a historical use condition, not a Creative Commons license. It is recorded alongside, not silently replaced by, later provider statements."
+      ]
+    },
+    {
+      "id": "rights:ota1679-ccby",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "access_id": "access:ota1679-record",
+      "component": "OTA repository item ota:1679 encoding and item metadata",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The official OTA 1679 item record displays Creative Commons Attribution 3.0.",
+      "asserted_by_id": "agent:ota",
+      "license": {
+        "name": "Creative Commons Attribution 3.0 Unported",
+        "spdx": "CC-BY-3.0",
+        "uri": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-1679"
+      ],
+      "notes": [
+        "License scope is the OTA digital item, not Cawley's 1961 editorial work."
+      ]
+    },
+    {
+      "id": "rights:ota3034-ccbysa",
+      "entity": "encoding:ota:3034",
+      "access_id": "access:ota3034-xml",
+      "component": "OTA 3034 revised digital encoding",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "Both the OTA item record and the cached TEI header identify Creative Commons Attribution-ShareAlike 3.0.",
+      "asserted_by_id": "agent:ota",
+      "license": {
+        "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-3034-record",
+        "evidence:ota-3034-source"
+      ],
+      "notes": [
+        "The open license applies to the revised encoding layer and does not independently clear protected editorial readings inherited from Cawley."
+      ]
+    },
+    {
+      "id": "rights:cawley1961",
+      "entity": "edition:cawley:everyman-1961",
+      "access_id": "access:cawley1961-catalog",
+      "component": "A. C. Cawley's 1961 editorial text, introduction, apparatus, notes, and selection",
+      "jurisdiction": "United Kingdom, United States, and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The carrier is a modern 1961 scholarly edition, and no public-domain basis, open license, or rights waiver for Cawley's original editorial contribution was found. It is conservatively treated as protected.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:obnb-cawley",
+        "evidence:cinii-cawley"
+      ],
+      "notes": [
+        "The underlying medieval work and early print content are public domain, but Cawley's original editorial contribution is a separate protected layer."
+      ]
+    },
+    {
+      "id": "rights:cawley-anthology",
+      "entity": "edition:cawley:anthology-1959-60",
+      "access_id": "access:cawley-anthology-dli",
+      "component": "Cawley's modern editorial text, notes, arrangement, and prefatory matter in the anthology",
+      "jurisdiction": "United Kingdom, United States, and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "Direct inspection identifies a modern A. C. Cawley second edition. Its literal ‘First published in Everyman's Library 1922’ line is inherited publication history, not the date of this undated modern carrier, and Cawley's editorial contribution remains within ordinary copyright terms.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cawley-anthology-inspection",
+        "evidence:dli-cawley-metadata"
+      ],
+      "notes": [
+        "The provider has misapplied the scan's inherited 1922 line as the carrier date and labels the item public domain. Those metadata fields do not clear the modern Cawley layer. Keep the scan private and ignored; do not redistribute it from the repository."
+      ]
+    },
+    {
+      "id": "rights:pynson-bodleian-content",
+      "entity": "edition:pynson:bodleian-1515",
+      "component": "Historical printed text and typography of the c. 1515 fragment",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The printing dates to the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ],
+      "notes": [
+        "This does not override contractual terms or separate rights in modern photographs and subscription databases."
+      ]
+    },
+    {
+      "id": "rights:pynson-bandinel-content",
+      "entity": "edition:pynson:bandinel-q1",
+      "component": "Historical printed text and typography of the early-sixteenth-century Bandinel fragment",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The printing dates to the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "This conclusion concerns the historical printed content only. Current ownership, access conditions, and any rights or terms applying to modern photographs remain unknown."
+      ]
+    },
+    {
+      "id": "rights:pynson-bl-content",
+      "entity": "edition:pynson:bl-1526",
+      "component": "Historical printed text and typography of the c. 1526 fragment",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The printing dates to the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "rights:skot-huntington-content",
+      "entity": "edition:skot:huntington-1528",
+      "component": "Historical printed text and typography of the c. 1528 complete print",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The printing dates to the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ustc-early-prints"
+      ]
+    },
+    {
+      "id": "rights:skot-huth-content",
+      "entity": "edition:skot:huth-1535",
+      "component": "Historical printed text and typography of the c. 1535 complete print",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The printing dates to the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:greg-facsimile-inspection"
+      ]
+    },
+    {
+      "id": "rights:greg-facsimile",
+      "entity": "facsimile:greg-farmer:everyman-1912",
+      "access_id": "access:greg-facsimile",
+      "component": "1912 facsimile publication, editorial arrangement, and reproductions as digitized",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The facsimile volume was published in 1912 and is public domain in the United States by publication date.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:greg-facsimile-inspection",
+        "evidence:greg-ia-metadata"
+      ],
+      "notes": [
+        "Internet Archive provides free access but the reviewed item metadata does not supply a specific modern open license. Public-domain status is based on the 1912 publication date, not an inferred provider license."
+      ]
+    },
+    {
+      "id": "rights:mets2007",
+      "entity": "edition:mets:everyman-elckerlijc-2007",
+      "access_id": "access:mets-edition",
+      "component": "2007 METS edition, including edited English and Dutch texts, translation, introduction, notes, and downloadable PDF",
+      "jurisdiction": "United States and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "METS expressly states that all editions are under copyright and that current digital editions are for individual use only; reprinting requires permission.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-rights",
+        "evidence:mets-edition"
+      ],
+      "notes": [
+        "METS separately licenses its XML as CC BY-NC-SA 4.0. That XML-specific license is not transferred to the cached PDF or to all edition content."
+      ]
+    },
+    {
+      "id": "rights:emothe-tei",
+      "entity": "edition:emothe:everyman-2019",
+      "access_id": "access:emothe-edition",
+      "component": "EMOTHE's distributed TEI encoding of the critical modernized edition",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The complete TEI header expressly licenses the encoding under Creative Commons Attribution–NonCommercial–NoDerivatives 4.0 International.",
+      "asserted_by_id": "agent:emothe",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+        "spdx": "CC-BY-NC-ND-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "The license does not change the public-domain status of the underlying early printed text, does not independently clear third-party editions cited in the apparatus, and its no-derivatives condition matters for redistribution of modified TEI."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:u1350a-selection",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "practice": "selection",
+      "source_feature": "Cawley 1961 preface, table of contents, introduction, bibliography, alternate readings, and notes",
+      "representation": "Omitted; only the edited play text and selected source/header information are encoded",
+      "description": "The XML editorial declaration explicitly enumerates the print components excluded from the digital item.",
+      "scope": "Entire encoded item relative to the 1961 source edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ota-3034-source"
+      ]
+    },
+    {
+      "id": "practice:u1350a-scenes",
+      "entity": "encoding:umich-ota:U-1350-A",
+      "practice": "selection",
+      "source_feature": "Continuous print play without the encoded acts/scenes",
+      "representation": "Eighteen DIV1 scene containers and supplied visible Scene headings attributed to Ian Lancashire",
+      "description": "The navigation hierarchy is a modern encoding intervention. Its numbering skips Scene 4 and runs through Scene 19; the first DIV1 additionally preserves an anomalous ‘French scene’ heading.",
+      "scope": "Complete 921-line play",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:xml-structure"
+      ]
+    },
+    {
+      "id": "practice:cawley-collation",
+      "entity": "edition:cawley:everyman-1961",
+      "practice": "collation",
+      "source_feature": "Four early print states as represented by the two complete Skot copies and two Pynson fragment objects known to Cawley; the separate Bandinel Q1 leaves were not recovered until decades later",
+      "representation": "Eclectic edited text based primarily on the Huntington/Britwell Skot copy, with readings and emendations from comparison copies",
+      "description": "The exact 1961 preface remains uninspected, so the base-copy claim is supported from the OTA header, Cawley's directly inspected related anthology, and diagnostic textual variants rather than asserted as an exact quotation from the 1961 volume. No relation to the post-1961 Bandinel discovery is implied.",
+      "scope": "Cawley's 47-page Everyman text",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ota-3034-source",
+        "evidence:cawley-anthology-inspection",
+        "evidence:mets-textual-comparison"
+      ]
+    },
+    {
+      "id": "practice:ota3034-line-model",
+      "entity": "encoding:ota:3034",
+      "practice": "rubrication_representation",
+      "source_feature": "Verse lines, prose title rubric, speakers, stage directions, blank or split lines, and colophon",
+      "representation": "991 TEI l elements across nine signature-based divs",
+      "description": "The replacement encoding models more source units as l than the legacy XML's 921 numbered verse lines. The metric is encoding-specific and must not be promoted to the work's verse extent.",
+      "scope": "Complete OTA 3034 TEI body",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-3034-source",
+        "evidence:ota3034-structure"
+      ]
+    },
+    {
+      "id": "practice:mets-collation",
+      "entity": "edition:mets:everyman-elckerlijc-2007",
+      "practice": "collation",
+      "source_feature": "Huth 32 copytext with readings from Huntington, British Library Q2, and the Douce Q1 fragment; the 2007 edition predates Freeman's Bandinel report",
+      "representation": "Huth-based reading text corrected where warranted, with principal variants in textual notes",
+      "description": "The editors explicitly identify Huth 32 as copytext and the other three print-state representatives then known as comparison witnesses. The edition cannot evidence consultation of the Bandinel leaves discovered afterward.",
+      "scope": "English Everyman and textual notes",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-edition",
+        "evidence:mets-textual-comparison"
+      ]
+    },
+    {
+      "id": "practice:mets-normalization",
+      "entity": "edition:mets:everyman-elckerlijc-2007",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Huth abbreviations and early-print letter/speech-heading variation",
+      "representation": "Abbreviations expanded; speech headings and u/v and i/j regularized",
+      "description": "The introduction states these reader-oriented normalizations directly, distinguishing the edition from a diplomatic facsimile.",
+      "scope": "Edited English Everyman text",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-edition"
+      ]
+    },
+    {
+      "id": "practice:emothe-collation",
+      "entity": "edition:emothe:everyman-2019",
+      "practice": "collation",
+      "source_feature": "Q3 Huntington base text with readings from Q1's Douce and Bandinel fragments, Q2 British Library, Q4 Huth, and modern editions",
+      "representation": "Modernized reading text with an internal TEI critical apparatus keyed to Q1–Q4 and modern-edition sigla",
+      "description": "The complete TEI identifies Q3 as its base, separately describes the two physical Q1 fragments, and encodes substantive and other variant readings. Its witness dates preserve a scholarly chronology that differs from current USTC.",
+      "scope": "Complete 921-line modernized Everyman text and critical apparatus",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:emothe-edition"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned CME source file Everyman.xml, CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "repository_path": "CME/source/CME_from_OTA/Everyman.xml",
+      "locator": "HEADER and complete TEXT/BODY",
+      "summary": "Primary evidence for the repository artifact, U-M/OTA identifiers and 1993 date, legacy use restriction, Cawley 1961 source, omitted apparatus, supplied Lancashire scene divisions, legacy 1485 date, complete 921-line text, and Skot colophon.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6427b7a696e6738d5a6ffbc82aced744d7c061b25d30df6e0f47e29074044980"
+    },
+    {
+      "id": "evidence:xml-source-statement",
+      "type": "edition_statement",
+      "citation": "Everyman.xml SOURCEDESC and ENCODINGDESC",
+      "repository_path": "CME/source/CME_from_OTA/Everyman.xml",
+      "locator": "HEADER/FILEDESC/SOURCEDESC and HEADER/ENCODINGDESC/EDITORIALDECL",
+      "summary": "Names A. C. Cawley's Everyman (Manchester University Press, 1961), xxxviii + 47 pages, as source; states that prefatory, bibliographic, alternate-reading, and note matter is omitted and that Ian Lancashire added acts/scenes absent from print.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6427b7a696e6738d5a6ffbc82aced744d7c061b25d30df6e0f47e29074044980"
+    },
+    {
+      "id": "evidence:xml-structure",
+      "type": "visual_inspection",
+      "citation": "Structural and textual audit of pinned Everyman.xml",
+      "repository_path": "CME/source/CME_from_OTA/Everyman.xml",
+      "locator": "Complete XML tag, numbering, opener, and closer audit",
+      "summary": "Verified 18 DIV1, 19 HEAD, 921 L, 28 PB, 211 SP/SPEAKER, four STAGE, nine signature MILESTONE, and three FOREIGN elements; confirmed the missing supplied Scene 4 and first-DIV ‘French scene’ anomaly.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6427b7a696e6738d5a6ffbc82aced744d7c061b25d30df6e0f47e29074044980"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Pinned CME Git object state for Everyman.xml",
+      "repository_path": "CME/source/CME_from_OTA/Everyman.xml",
+      "locator": "commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob e435b723e4eda3c020498c9846e8c8ce4e3a5928",
+      "summary": "Fixes the repository path, source-submodule commit, blob object, byte size, and SHA-256 used by the manifest.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "CME LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "repository_path": "CME/LICENSE",
+      "summary": "Exact Unlicense text dedicating repository-controlled software/source contributions to the public domain, with warranty disclaimer.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, ‘Everyman,’ Corpus of Middle English Prose and Verse",
+      "url": "https://quod.lib.umich.edu/c/cme/Everyman",
+      "summary": "Official current access page for Everyman / U-1350-A; identifies Anonymous, Manchester University Press 1961, public access, educational/research purpose, public-domain assertion, and No Copyright–United States rights statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-1679",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive item ota:1679, Everyman",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1679",
+      "summary": "Official legacy item record identifying public availability, CC BY 3.0, SGML/header files, and replacement by ota:3034. Direct bitstream attempts redirected to the landing page during review.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-3034-record",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive item ota:3034, Everyman",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/3034",
+      "summary": "Official replacement record providing XML, HTML, text, EPUB, and MOBI derivatives and displaying CC BY-SA 3.0.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-3034-source",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive ota:3034 original TEI XML",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/3034/3034.xml?sequence=9&isAllowed=y",
+      "repository_path": "source-cache/Everyman/ota-3034-everyman-tei.xml",
+      "locator": "teiHeader and complete text/body",
+      "summary": "Complete cached replacement encoding. Its header says it revises ota:1679, names Cawley 1961 and Ian Lancashire, describes the Manchester edition as drawn from a Skot print, records the 2010 header normalization, and states CC BY-SA 3.0.",
+      "accessed_on": "2026-07-14",
+      "sha256": "b72ce07a28d78ea730564615ce9a8008b11fdedf7c251d1fa5d4ee3bc5e90fbc"
+    },
+    {
+      "id": "evidence:ota3034-structure",
+      "type": "visual_inspection",
+      "citation": "Local structural audit of cached ota:3034 TEI XML",
+      "repository_path": "source-cache/Everyman/ota-3034-everyman-tei.xml",
+      "locator": "TEI body tag and line-unit counts",
+      "summary": "Verified nine signature-based divs and 991 l elements; inspected how prose rubric, speech/stage matter, split lines, and colophon are represented, establishing that 991 is an encoding-unit count rather than the work's verse-line extent.",
+      "accessed_on": "2026-07-14",
+      "sha256": "b72ce07a28d78ea730564615ce9a8008b11fdedf7c251d1fa5d4ee3bc5e90fbc"
+    },
+    {
+      "id": "evidence:obnb-cawley",
+      "type": "official_catalog",
+      "citation": "Open British National Bibliography, Everyman, OBNB GB6111852",
+      "url": "https://obnb.uk/p12211736-everyman",
+      "summary": "National bibliographic data confirming Manchester University Press, 1961, English language, and 47-page extent for the source edition.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:folger-cawley",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog record 31514, Everyman, ed. A. C. Cawley",
+      "url": "https://catalog.folger.edu/record/31514",
+      "summary": "Catalog record for a 1965 Manchester issue, xxxviii + 47 pages, call number PR2411 .E8 1965; used to distinguish later issues from the exact 1961 carrier.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cinii-cawley",
+      "type": "official_catalog",
+      "citation": "CiNii Books BA20924946, Everyman, ed. A. C. Cawley",
+      "url": "https://ci.nii.ac.jp/ncid/BA20924946",
+      "summary": "Catalog evidence for the corrected 1977 reprint, ISBN 0719001153, xl + 47 pages, with additional bibliography; prevents conflation with the 1961 source.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:abebooks-cawley",
+      "type": "search_result",
+      "citation": "AbeBooks used-copy aggregation for ISBN 9780719001154 / 0719001153",
+      "url": "https://www.abebooks.com/9780719001154/Everyman-A.C-Cawley-0719001153/plp",
+      "summary": "Current used-copy purchase route. Listings mix publication years and issues, so each seller copy requires verification before use as the exact 1961 source.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cawley-anthology-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the complete DLI scan of A. C. Cawley, ed., Everyman and Medieval Miracle Plays, second edition",
+      "url": "https://archive.org/download/in.ernet.dli.2015.458516/2015.458516.Everyman-And-Medieval-Miracle-Plays.pdf",
+      "repository_path": "source-cache/Everyman/cawley-everyman-and-medieval-miracle-plays-dli-scan.pdf",
+      "locator": "PDF pp. 1–5 and 224–253; printed pp. 205–234",
+      "summary": "Verified Cawley's title and second-edition prefaces, the undated modern carrier, the literal inherited line ‘First published in Everyman's Library 1922,’ the Everyman work boundaries, and the direct source note: four early print states then represented by two Pynson fragment objects and two complete Skot copies, with the text based on the Huntington Skot copy and a few readings from the other then-known copies.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ad2081aa9ba1effe7943c33d5c8e38a6d2cccedbdba47c7709c7d810cbd48898"
+    },
+    {
+      "id": "evidence:dli-cawley-metadata",
+      "type": "official_catalog",
+      "citation": "Internet Archive / Digital Library of India metadata for in.ernet.dli.2015.458516",
+      "url": "https://archive.org/metadata/in.ernet.dli.2015.458516",
+      "repository_path": "source-cache/Everyman/cawley-anthology-dli-ia-metadata.json",
+      "summary": "Preserves provider file inventory and the provider's 1922/public-domain fields. The 1922 text is genuinely present in the scan as inherited Everyman's Library publication history, but the provider misapplies it as the date of Cawley's undated modern second-edition carrier; neither field supplies rights clearance for that layer.",
+      "accessed_on": "2026-07-15",
+      "sha256": "f3d3ca081f471eb2aa7b2aaec7a74b1a488b0a06c469a3c087226daf7a6ae1a3"
+    },
+    {
+      "id": "evidence:cawley-anthology-catalogs",
+      "type": "official_catalog",
+      "citation": "WorldCat OCLC 368406 and Google Books catalog records for Cawley's Everyman and Medieval Miracle Plays issues",
+      "url": "https://search.worldcat.org/title/Everyman-and-medieval-miracle-plays/oclc/368406",
+      "alternate_urls": [
+        "https://books.google.com/books/about/Everyman.html?id=FiaaAAAAIAAJ",
+        "https://books.google.com/books/about/Everyman_and_Medieval_Miracle_Plays.html?id=699XAAAAYAAJ"
+      ],
+      "summary": "Catalog evidence for closely matching Cawley second-edition carriers: a 1959 Dutton issue and 1959/1960 Dent issues, all 266 pages. Combined with the scan's Darnell Professor title page and second-edition preface, these records support the cautious c. 1959–1960 date without identifying the exact undated issue conclusively.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ustc-early-prints",
+      "type": "official_catalog",
+      "citation": "Universal Short Title Catalogue records for the four early English Everyman printings",
+      "url": "https://ustc.ac.uk/editions/501308",
+      "alternate_urls": [
+        "https://ustc.ac.uk/editions/501897",
+        "https://ustc.ac.uk/editions/502061",
+        "https://ustc.ac.uk/editions/502713"
+      ],
+      "summary": "Current bibliographic evidence for Pynson c. 1515 / USTC 501308 / Bodleian, Pynson c. 1526 / 501897 / British Library, Skot c. 1528 / 502061 / Huntington 14195, and Skot c. 1535 / 502713 / British Library Huth 32, including ESTC/STC identifiers, format, extent, and EEBO links. USTC 501308 currently names only the Bodleian survivor and does not separately locate the Bandinel leaves of the same Q1 state.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:arlima",
+      "type": "scholarly_source",
+      "citation": "ARLIMA, ‘Everyman’",
+      "url": "https://www.arlima.net/eh/everyman.html",
+      "summary": "Scholarly repertory census reporting 921 verse lines, morality genre, four early print states, and no English manuscript witness. It is used as state-level bibliography, not to infer that each state survives in only one physical object.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:freeman-bandinel",
+      "type": "scholarly_source",
+      "citation": "Arthur Freeman, ‘Everyman and Others, Part II: The Bandinel Fragments,’ The Library 9, no. 4 (December 2008): 397–427",
+      "url": "https://doi.org/10.1093/library/9.4.397",
+      "locator": "Abstract and article bibliographic record; Everyman fragment discussion",
+      "summary": "Peer-reviewed report of two hitherto unknown leaves from the first Pynson edition of Everyman among the recovered Bandinel fragments. Freeman dates the state c. 1518–1519; later EMOTHE witness analysis maps the leaves to signatures B3–B4 and lines 429–552.",
+      "accessed_on": "2026-07-15",
+      "notes": [
+        "The article is the discovery report; a complete freely accessible article copy was not verified, so claims beyond its public abstract are cross-checked against the open EMOTHE edition."
+      ]
+    },
+    {
+      "id": "evidence:emothe-edition",
+      "type": "digital_surrogate",
+      "citation": "Jesús Tronch Pérez, ed., The Summoning of Everyman: A Critical, Modernized Edition Based on the Third Quarto (Valencia: ARTELOPE–EMOTHE, Universitat de València, 2019; text-only edition first published 2018), EMOTHE 0460",
+      "url": "https://emothe.uv.es/biblioteca/textosEMOTHE/EMOTHE0460_TheSummoningOfEveryman.php",
+      "alternate_urls": [
+        "https://emothe.uv.es/biblioteca/textosXML/EMOTHE0460_TheSummoningOfEveryman.xml",
+        "https://doi.org/10.5281/zenodo.3958901"
+      ],
+      "repository_path": "source-cache/Everyman/emothe-2019-everyman-critical-tei.xml",
+      "locator": "Complete TEI header, listWit, edition introduction, 921-line text, and critical apparatus",
+      "summary": "Complete open critical modernized edition based on Q3 with Q1–Q4 and modern-edition apparatus. Its witness analysis distinguishes four Douce leaves (signature C, lines 684–922) from two Bandinel leaves (B3–B4, lines 429–552), reports 325 surviving Q1 lines across the two objects, records Arthur and Janet Ing Freeman as the Bandinel holders in 2009, and dates Q1 c. 1518–1519. The TEI header licenses the encoding CC BY-NC-ND 4.0.",
+      "accessed_on": "2026-07-15",
+      "sha256": "51e8c743fb1545e0bb97faaddbc696912e00e867788afe6401510a5b3e73387a",
+      "notes": [
+        "The TEI's embedded DOI 10.5281/zenodo.3958901 returned an unregistered-identifier response during review; the live EMOTHE page and exact XML URL remained accessible."
+      ]
+    },
+    {
+      "id": "evidence:greg-facsimile-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct visual and structural inspection of W. W. Greg and John S. Farmer, Everyman facsimile (1912), Internet Archive PDF",
+      "url": "https://archive.org/download/cu31924013324276/cu31924013324276.pdf",
+      "repository_path": "source-cache/Everyman/greg-1912-everyman-skot-pynson-facsimile.pdf",
+      "locator": "Complete 138-page PDF; Huth pp. 13–74; Pynson pp. 79–116",
+      "summary": "Verified the complete 1912 volume, Farmer's source note, section boundaries, blank/interleaf structure, complete Huth text and device, entire surviving British Library Pynson fragment and colophon, and exact work-bearing page sequences.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6b5293e297255cd2bf9704a5fe0b485c57d4ed989d0bc464f215a65944c709f3"
+    },
+    {
+      "id": "evidence:greg-ia-metadata",
+      "type": "official_catalog",
+      "citation": "Internet Archive metadata for cu31924013324276",
+      "url": "https://archive.org/metadata/cu31924013324276",
+      "repository_path": "source-cache/Everyman/greg-1912-everyman-ia-metadata.json",
+      "summary": "Provider metadata and file inventory for the 1912 Greg/Farmer facsimile, including direct PDF and JP2 ZIP objects and checksums.",
+      "accessed_on": "2026-07-14",
+      "sha256": "ce543e01a35adee78aeab6f6c584ebe22a06400963f1fe5852175181d4007fac"
+    },
+    {
+      "id": "evidence:mets-edition",
+      "type": "scholarly_source",
+      "citation": "Clifford Davidson, Martin W. Walsh, and Ton J. Broos, eds., Everyman and Its Dutch Original, Elckerlijc (2007)",
+      "url": "https://metseditions.org/read/e0M1G2gFWVKGs7lRT4YpQcyYEXXM2za",
+      "alternate_urls": [
+        "https://mets-client.vercel.app/read/vbq2Z1bfM0eaSv52tmbXMu4pmvzL4lb"
+      ],
+      "locator": "Introduction pp. 1–11; Early Editions; English text; textual notes",
+      "summary": "Scholarly evidence for English translation-adaptation from Elckerlijc, unknown exact exemplar, four early print states, Huth copytext, Huntington and then-known Pynson comparison objects, normalization practices, and significant variants. Published in 2007, it predates Freeman's report of the separate Bandinel Q1 leaves.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-textual-comparison",
+      "type": "scholarly_source",
+      "citation": "METS 2007 textual notes to Everyman compared with pinned Everyman.xml",
+      "url": "https://metseditions.org/read/e0M1G2gFWVKGs7lRT4YpQcyYEXXM2za",
+      "locator": "Textual Notes to Everyman, especially variants at lines 14, 111, 301, 317, 656, and 666",
+      "summary": "Shows the XML/Cawley line taking Huntington readings and explicit Cawley emendations rather than following Huth alone: for example ‘the soule,’ ‘Haue ado that thou,’ ‘endynge,’ omission of witness ‘go,’ and Knowledge speaker headings.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-pdf-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the complete METS downloadable PDF",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/e9016d0b-4ac4-4047-a1e8-531792c36524/downloadable_version/535f50ca3ce47c7a3eb3310d3d5d8311.pdf",
+      "repository_path": "source-cache/Everyman/mets-2007-everyman-and-elckerlijc.pdf",
+      "locator": "All 106 PDF pages; English text PDF pp. 19, 21, 23 … 79",
+      "summary": "Verified complete edition coverage and exact work portion, facing-page English/Dutch layout, title image, introduction, explanatory notes, textual notes, and bibliography. All pages render and extract; qpdf's recoverable object-offset warnings were documented without modifying provider bytes.",
+      "accessed_on": "2026-07-14",
+      "sha256": "a2b6bea0eec511bab23f2a2431fcf6d0b995955bac3174336297eea4b6248e8e"
+    },
+    {
+      "id": "evidence:mets-rights",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, ‘Copyright & Citation’",
+      "url": "https://metseditions.org/copyright-citation",
+      "alternate_urls": [
+        "https://metseditions.org/editions"
+      ],
+      "summary": "States that METS editions are copyrighted, digital editions are for individual use only, reprinting requires permission, and METS XML is separately licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:cawley1961-copy",
+      "question": "Can the exact 1961 Manchester volume be inspected to verify its preface, base-copy declaration, apparatus, corrections, and differences from Cawley's anthology and later reprints?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Obtain or borrow the exact 1961 edition rather than a 1965 issue or corrected 1977 reprint.",
+        "Photograph or transcribe its title verso, preface, textual principles, and apparatus within applicable law and provider terms.",
+        "Compare diagnostic XML readings with the 1961 text and all four early states, while keeping the post-1961 Bandinel leaves collateral rather than imputing them to Cawley."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:xml-source-statement",
+        "evidence:obnb-cawley",
+        "evidence:cinii-cawley",
+        "evidence:cawley-anthology-inspection"
+      ],
+      "notes": [
+        "The present Huntington-base edge is deliberately supported/medium rather than confirmed/high until the immediate volume is checked."
+      ]
+    },
+    {
+      "id": "question:huntington-facsimile",
+      "question": "Is a free, complete, directly downloadable whole-object facsimile available for Huntington Library 14195, Cawley's principal Skot base copy?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Check Huntington's current digital catalog by shelfmark 14195 and USTC 502061.",
+        "Use the linked EEBO record through an entitled institution if available.",
+        "Ask Huntington imaging services whether a complete color reproduction can be ordered and what publication terms apply."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:cawley-anthology-inspection",
+        "evidence:emothe-edition"
+      ],
+      "notes": [
+        "A current Huntington Digital Library search by title and shelfmark did not expose a matching public object. Huntington states that only a fraction of its holdings are digitized and offers imaging or virtual reading-room routes, so absence from public search is not evidence that no images exist."
+      ]
+    },
+    {
+      "id": "question:bodleian-shelfmark-facsimile",
+      "question": "What is the current exact Bodleian shelfmark for the Pynson ‘Douce Fragment,’ and can the complete surviving object be obtained as a public or requestable facsimile?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Ask Bodleian Special Collections to resolve the historical ‘Douce Fragment’ designation against current catalog data.",
+        "Request a complete-object image quotation and an exact work/surface inventory.",
+        "Retain the USTC record and METS designation without inventing a shelfmark."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition",
+        "evidence:emothe-edition"
+      ]
+    },
+    {
+      "id": "question:bandinel-current-holding",
+      "question": "Where are the Bandinel Q1 leaves now held, and can the complete two-leaf object be accessed or reproduced?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Trace ownership after Arthur and Janet Ing Freeman's reported 2009 holding through provenance scholarship and current institutional catalogs.",
+        "Ask Freeman's publisher, relevant rare-book repositories, or the editors who facilitated EMOTHE materials for a current holding and shelfmark.",
+        "Do not infer current ownership or image rights from the 2008 discovery article or 2009 EMOTHE provenance note."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ]
+    },
+    {
+      "id": "question:rights-conflict",
+      "question": "How should the current U-M NoC-US assertion, OTA Creative Commons licenses, legacy personal-scholarly-use restriction, and protected Cawley source be reconciled for downstream redistribution?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Keep each statement scoped to its own carrier and contribution layer.",
+        "Do not treat U-M, OTA, or repository licensing as clearance for Cawley's modern editorial choices.",
+        "Seek qualified legal advice or rights-holder permission before redistributing a close reproduction of protected editorial matter."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-item",
+        "evidence:ota-1679",
+        "evidence:ota-3034-source",
+        "evidence:obnb-cawley"
+      ]
+    },
+    {
+      "id": "question:early-print-chronology",
+      "question": "Can the c. 1515 USTC date and c. 1518–1519 Freeman/EMOTHE date for Q1 be reconciled, and will revised cataloging represent both physical Q1 fragments while retaining one print-state identity?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Recheck USTC, ESTC/CERL, holding-library records, and new bibliographical studies during future reviews.",
+        "Preserve Freeman/EMOTHE and old METS/STC chronologies as competing scholarly evidence while using current USTC identifiers for discovery.",
+        "Keep four print states distinct from five surviving physical objects even if catalogs continue to list only the Douce holding for USTC 501308."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ustc-early-prints",
+        "evidence:mets-edition",
+        "evidence:freeman-bandinel",
+        "evidence:emothe-edition"
+      ]
+    },
+    {
+      "id": "question:cawley-anthology-issue-date",
+      "question": "Which exact Dent/Dutton issue is represented by the undated DLI Cawley anthology scan?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Compare collation, binding, title verso, and second-edition preface with authenticated 1959 and 1960 cataloged copies.",
+        "Continue to label the cached carrier c. 1959–1960 and do not apply its inherited ‘First published in Everyman's Library 1922’ line as the date of Cawley's edition."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cawley-anthology-inspection",
+        "evidence:dli-cawley-metadata"
+      ]
+    }
+  ]
+}
