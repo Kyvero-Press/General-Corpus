@@ -121,6 +121,14 @@ the opening of another chapter. Keep the raw numbered-unit count as an encoding
 metric, model the paratext separately, and use manuscript or edition evidence
 to explain what it shows about a damaged or incomplete boundary.
 
+When a printer or editor explicitly announces an intended chapter total but
+the surviving body or XML merges, omits, or leaves some headings unlisted,
+keep three counts separate: the announced intellectual chapters, their larger
+book or section framework, and the actual encoding containers. Use the
+announced total as intellectual extent only when the cataloging subject is
+that exact recension, document the exceptional books or ranges, and do not
+force the container count to agree by inventing or splitting units.
+
 Count structural nodes at the depth that represents the cataloged work.
 Exclude verse lines nested inside editorial notes, quotations, or apparatus
 from the direct poem-line count, report them separately, and preserve any
