@@ -61,13 +61,16 @@ needed; do not load both complete schemas merely for orientation.
    exists at a practical resolution, create a true hard link under the new
    work's cache directory and recheck its inode, inventory, checksum, and ZIP;
    never use a symlink or redownload identical bytes.
-   For manuscript facsimiles, download the complete physical codex whenever
-   it is publicly obtainable and practical, then record this work's exact
-   folio/page/canvas range in `work_portion` for every complete cached
-   manuscript facsimile that contains it. If a completely cached supporting
-   or analogue object is verified not to contain the cataloged work, set
-   `target_work_presence=absent` and omit `work_portion`; do not turn zero
-   overlap into an invented locator. Never substitute a work-only
+   Classify every cached object explicitly after inspection: set
+   `target_work_presence=present` and supply a reproducible `work_portion`
+   when it contains the cataloged text or image representation; set
+   `target_work_presence=absent` and omit `work_portion` when it does not.
+   Do not leave presence implicit merely because schema validation accepts a
+   locator. For manuscript facsimiles, download the complete physical codex
+   whenever it is publicly obtainable and practical, then record this work's
+   exact folio/page/canvas range in `work_portion` for every complete cached
+   manuscript facsimile that contains it. Do not turn zero overlap into an
+   invented locator. Never substitute a work-only
    excerpt when a complete source is obtainable; if only selected leaves are
    available, mark them `coverage=partial` and preserve the negative
    whole-object finding. Record each direct

@@ -122,6 +122,12 @@ inside `L`, but they are not automatically verse or evidence of a textual gap.
 Apply the same hierarchy rule to prose or lexical items: count `ITEM` nodes
 inside the textual body separately from administrative `TEMPHEAD`, header, or
 workflow containers, and name the XPath or ancestor boundary used.
+When a lineage evidence record combines manual inspection with XPath or other
+structural computation, use the schema-supported `visual_inspection` type and
+name both methods in its locator or summary; the lineage schema does not
+currently admit metadata's `computational_inspection` type. Keep the separate
+`repository_file` record for the inspected artifact instead of mislabeling the
+inspection itself as another file.
 
 ## Planned, extant, and encoded extent: afw5744
 
