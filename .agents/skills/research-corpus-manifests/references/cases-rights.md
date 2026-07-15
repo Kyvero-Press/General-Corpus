@@ -95,6 +95,19 @@ the UK. Record the provider's geographic qualification, preserve UK
 uncertainty separately, and link its reuse terms. Do not restate the assertion
 as a worldwide open license.
 
+## Medieval does not automatically mean UK public domain: afw1075
+
+Do not infer a worldwide or United Kingdom public-domain status merely from a
+manuscript text's medieval date. UK Intellectual Property Office guidance says
+that some literary works unpublished at the end of 1988 remain protected
+through 31 December 2039 even when their authors died centuries ago. Determine
+whether the exact witness text was validly made available to the public, not
+just whether some version of the work appeared in print. Until that
+publication history is established, keep any supported United States
+public-domain conclusion jurisdiction-specific and record UK status as an open
+question separate from rights in modern editions, catalog descriptions, and
+manuscript photography. See the official [duration guidance](https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term).
+
 ## Representative-image trap: Gawain and Pearl
 
 A sampled Calgary image carries a public-domain label alongside enumerated use

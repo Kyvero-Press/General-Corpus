@@ -84,6 +84,15 @@ usable image request or complete bundle can be verified, retain the historical
 facsimile entity but set current access and survival conservatively, date the
 negative check, and record what a human or provider enquiry must still test.
 
+Do not equate serialized page-break occurrences with distinct source images.
+Parallel witness columns or alternative-version layouts can repeat one source
+page several times in the XML, and a current image bundle can likewise expose
+repeated positions backed by byte-identical files. Compare the header extent,
+the count of unique page-image references, occurrence counts, provider canvas
+positions, and image hashes. Record each of those layers explicitly instead of
+calling the header wrong or inflating the historical carrier to the raw `PB`
+or canvas count.
+
 ## Typography is editorial data: CME00099 and Ayenbite
 
 Italics can mark expanded abbreviations or supplied material rather than
