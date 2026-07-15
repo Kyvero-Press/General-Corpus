@@ -72,6 +72,13 @@ supporting source—such as a PDF, ZIP, image, or IIIF manifest—to the ignored
 saved when it is only an access route. Do not bypass authentication, access
 controls, or provider restrictions.
 
+Inspect the delivered file's own cover pages, colophon, metadata, and usage or
+rights notices as well as its landing-page metadata. Attach embedded provider
+terms to the scan or delivery-file layer, not to the historical edition or
+underlying work, and retain them even when the item record supplies no license.
+This is especially important when an old public-domain edition is delivered
+with a modern noncommercial-use request or other provider condition.
+
 Unclear redistribution rights do not by themselves prevent an ignored private
 research cache of files that the provider makes directly public. Cache the
 complete public object, record the rights uncertainty or permission requirement
