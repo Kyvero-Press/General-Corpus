@@ -75,6 +75,14 @@ the children's stanza, line, or prose metrics separately. Do not sum parallel
 versions into a fictitious whole-work length or let validator accounting turn
 the witnesses into multiple intellectual works.
 
+Apply the same accounting to internal sections. When one counted poem or prose
+work contains a nested moralitas, prologue, epilogue, or other non-independent
+section, give the parent `item_count: 1` and the nested section `item_count: 0`.
+Make `prose_only_items`, `verse_only_items`, and `mixed_items` count those same
+intellectual items; never use them for stanza or line-group totals. Preserve
+structural extent in `verse_groups`, `verse_lines`, and the section count so
+parent and child metrics reconcile without double-counting the work.
+
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
 witness edge, then add passage-scoped source relations for every explicitly
