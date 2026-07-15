@@ -51,6 +51,13 @@ participate in an evidenced relation or have a practical access/rights role.
 Keep broader source context used only for description in metadata
 `related_works` instead.
 
+An access, rights, or evidence role does not make a modern research source part
+of the historical object's own citation graph. Do not invent a `cites` edge
+from the repository artifact to a price list, legal guide, catalog, or
+scholarly source merely because the manifest researcher consulted it. Keep
+that dependency in evidence, access, or rights unless the relation's subject
+actually contains the citation.
+
 ## Relations and direction
 
 State exactly what derived from what and at what scope.
