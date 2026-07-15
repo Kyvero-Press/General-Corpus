@@ -139,6 +139,15 @@ skipped, or reset numbers can create a persistent offset. Record both the
 verified textual line count and the source's numbering anomaly so locators
 remain reproducible without silently "correcting" the edition.
 
+Parallel-text encodings may also attach a pointer to every line for an
+editorial concordance or cross-version alignment. Treat those pointers as
+representation apparatus, not as line numbers: audit zero or unmatched
+targets, duplicate targets, and the overlap between companion files, but use
+the text's own line positions and specialist source descriptions for extent.
+If the pointer namespace or matching rules are undocumented, keep their exact
+semantics open; a maximum or unique-target count must not be used to reconcile
+conflicting catalog line counts or extra blank and fragmentary positions.
+
 The inverse encoding problem also occurs: prose containers do not prove that
 their contents are prose. When direct textual inspection and scholarship
 identify a brief intentional rhyme inside `P` elements, record the verse at
