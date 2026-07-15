@@ -1,0 +1,482 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Metham",
+  "work_id": "Metham",
+  "title": "The Works of John Metham (Craig/U-M encoded collection)",
+  "primary_subject": "artifact:general-corpus:Metham",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository artifact is a pinned copy of the University of Michigan Humanities Text Initiative Metham encoding, created in 1999 from the 1974 Kraus reprint of Hardin Craig's 1916 EETS OS 132 edition. Craig transcribed Garrett MS 141 for Amoryus and Cleopes and the prose works, and printed Palmistry in parallel from Garrett and All Souls College MS 81. The pinned encoding contains Craig's front matter, a 2,211-line four-book romance, and six prose witness representations, but omits the printed glossary and index and integrates printed notes. Garrett 141 has a complete public 180-image Princeton facsimile. No complete public facsimile of All Souls MS 81 was verified; the current foliation crosswalk is established through Watson's complete 1997 catalogue. A current May 2026 MEDictionary XML is a descendant of the U-M item, not an upstream source of the pinned artifact.",
+  "languages": ["enm", "eng", "lat"],
+  "review_notes": [
+    "Five medieval abstract works are represented by seven encoded texts: one Amoryus and Cleopes, two Palmistry witnesses, one Physiognomy, two Christmas-Day versions, and one Days of the Moon.",
+    "Craig's title pages, preface, contents, introduction, notes, glossary, and index are editorial publication layers. The pinned XML encodes the front matter, folds Craig's pp. 159-166 notes into the main text, and omits the glossary and index.",
+    "All Souls locators preserve both systems: Craig/Coxe old fols. 202r-212v correspond by textual boundaries to Watson current fols. 175v-185v. This is not treated as a simple arithmetic folio offset.",
+    "The Garrett cache is the complete 180-image Princeton IIIF object, not a crop to Metham's leaves. The work-specific canvas spans are locators inside that complete bundle.",
+    "Access, copyright status, rights statements, and provider reproduction terms are kept separate. Public viewing does not by itself establish open image rights.",
+    "Current MEDictionary XML preserves the core structure and counts but modernizes markup and differs substantively in two corrected readings; it is modeled as a later version of the U-M encoding."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Metham",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Metham",
+      "description": "The pinned XML artifact consumed by this repository and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "Metham"},
+        {"scheme": "git-blob", "value": "48f0d5ecbe4e7175d93f398e0d58cd42cf50fb61"},
+        {"scheme": "CME git commit", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/Metham.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "48f0d5ecbe4e7175d93f398e0d58cd42cf50fb61",
+        "sha256": "03ddc949efd150063d8e34d359f9c43f4e865897dcb3a0ddff1540b7235c1d49"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:metham-xml", "evidence:cme-git-state"],
+      "notes": ["Reviewed file size is 452,660 bytes."]
+    },
+    {
+      "id": "encoding:umich-cme:Metham",
+      "type": "digital_encoding",
+      "label": "University of Michigan Humanities Text Initiative Metham electronic edition",
+      "alternate_labels": ["U-M CME item Metham"],
+      "description": "A 1999 electronic encoding whose header identifies the 1974 Kraus reprint of Craig's EETS OS 132 edition as its source. It includes front matter, silently joins words broken across page or leaf boundaries, supplies a conjectural book division after line 723, omits poem marginalia and glosses, and incorporates Craig's printed notes from pp. 159-166 into the main text.",
+      "identifiers": [{"scheme": "CME/UMDL", "value": "Metham", "uri": "https://name.umdl.umich.edu/Metham"}],
+      "creator_ids": ["agent:umich-hti"],
+      "date_statements": [{"label": "electronic edition", "value": "1999", "normalized": "1999", "certainty": "high", "evidence_ids": ["evidence:metham-xml", "evidence:umich-metham"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:metham-xml", "evidence:umich-metham"]
+    },
+    {
+      "id": "encoding:medictionary:Metham-2026-05",
+      "type": "digital_encoding",
+      "label": "MEDictionary current Metham XML, May 2026",
+      "description": "The current public descendant XML. It retains the same core division and content-node counts as the pinned encoding while replacing legacy SGML-style structures, normalizing correction markup and note elements, and changing two substantive corrected readings.",
+      "identifiers": [{"scheme": "MEDictionary text", "value": "Metham.xml", "uri": "https://www.medictionary.info/texts/Metham.xml"}],
+      "creator_ids": ["agent:medictionary"],
+      "date_statements": [{"label": "last updated", "value": "May 2026", "normalized": "2026-05", "certainty": "high", "evidence_ids": ["evidence:medictionary-downloads", "evidence:encoding-comparison"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:medictionary-downloads", "evidence:encoding-comparison"]
+    },
+    {
+      "id": "edition:kraus:eets-os132:1974",
+      "type": "scholarly_edition",
+      "label": "Kraus reprint of The Works of John Metham (1974)",
+      "description": "The 1974 Kraus reprint of Craig's 1916 EETS OS 132 volume and the print carrier expressly named by the U-M encoding header.",
+      "identifiers": [
+        {"scheme": "OCLC", "value": "1130734"},
+        {"scheme": "HathiTrust record", "value": "002227260", "uri": "https://catalog.hathitrust.org/Record/002227260"}
+      ],
+      "creator_ids": ["agent:hardin-craig", "agent:kraus-reprint"],
+      "date_statements": [{"label": "publication", "value": "1974", "normalized": "1974", "certainty": "high", "evidence_ids": ["evidence:hathi-kraus"]}],
+      "bibliographic": {
+        "citation": "John Metham, The Works of John Metham, ed. Hardin Craig, EETS OS 132 (New York: Kraus Reprint, 1974); reprint of the 1916 edition.",
+        "title": "The Works of John Metham",
+        "series": "Early English Text Society, Original Series 132",
+        "publisher": "Kraus Reprint",
+        "publication_place": "New York",
+        "date": "1974",
+        "pages": "xlii, 184 pages",
+        "languages": ["enm", "eng", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:metham-xml", "evidence:hathi-kraus"]
+    },
+    {
+      "id": "edition:craig:eets-os132:1916",
+      "type": "scholarly_edition",
+      "label": "Hardin Craig, The Works of John Metham (1916)",
+      "description": "The first scholarly edition and immediate textual ancestor of the 1974 reprint. It prints Amoryus and Cleopes and the prose works from Garrett MS 141, with the All Souls Palmistry version on parallel pages.",
+      "identifiers": [
+        {"scheme": "EETS", "value": "Original Series 132"},
+        {"scheme": "Internet Archive", "value": "worksofjohnmetha00methuoft", "uri": "https://archive.org/details/worksofjohnmetha00methuoft"}
+      ],
+      "creator_ids": ["agent:hardin-craig", "agent:eets"],
+      "date_statements": [{"label": "publication", "value": "1916", "normalized": "1916", "certainty": "high", "evidence_ids": ["evidence:craig-1916"]}],
+      "bibliographic": {
+        "citation": "John Metham, The Works of John Metham, ed. Hardin Craig, EETS OS 132 (London: Kegan Paul, Trench, Trubner & Co., 1916).",
+        "title": "The Works of John Metham",
+        "series": "Early English Text Society, Original Series 132",
+        "publisher": "Kegan Paul, Trench, Trubner & Co.",
+        "publication_place": "London",
+        "date": "1916",
+        "pages": "xlii, 184 pages",
+        "languages": ["enm", "eng", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:craig-1916", "evidence:craig-direct-inspection"]
+    },
+    {
+      "id": "facsimile:hathi:kraus-1974-michigan",
+      "type": "facsimile",
+      "label": "HathiTrust full-view scan of the 1974 Kraus reprint",
+      "description": "The University of Michigan carrier of the exact 1974 reprint, publicly viewable in full. A second Harvard carrier confirms the same reprint and extent.",
+      "identifiers": [
+        {"scheme": "HathiTrust item", "value": "mdp.39015018941032", "uri": "https://babel.hathitrust.org/cgi/pt?id=mdp.39015018941032"},
+        {"scheme": "HathiTrust record", "value": "002227260", "uri": "https://catalog.hathitrust.org/Record/002227260"}
+      ],
+      "creator_ids": ["agent:hathitrust", "agent:university-michigan"],
+      "reproduction_format": "HathiTrust page-image viewer",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hathi-kraus"]
+    },
+    {
+      "id": "facsimile:ia:craig-1916",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Craig's 1916 edition",
+      "description": "A complete 236-page scan with public PDF, OCR text, and scan-data XML cached for direct verification.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "worksofjohnmetha00methuoft", "uri": "https://archive.org/details/worksofjohnmetha00methuoft"}],
+      "creator_ids": ["agent:internet-archive", "agent:university-toronto"],
+      "reproduction_format": "PDF, OCR text, and scan-data XML",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:craig-1916", "evidence:craig-direct-inspection"]
+    },
+    {
+      "id": "edition:page:amoryus-cleopes:1999",
+      "type": "scholarly_edition",
+      "label": "Stephen F. Page, Amoryus and Cleopes (1999)",
+      "description": "A later Middle English Texts Series edition of Amoryus and Cleopes, consulted as a collateral scholarly edition rather than an ancestor of the U-M encoding.",
+      "creator_ids": ["agent:stephen-page", "agent:mets"],
+      "date_statements": [{"label": "publication", "value": "1999", "normalized": "1999", "certainty": "high", "evidence_ids": ["evidence:mets-amoryus"]}],
+      "bibliographic": {
+        "citation": "John Metham, Amoryus and Cleopes, ed. Stephen F. Page (Kalamazoo: Medieval Institute Publications, 1999).",
+        "title": "Amoryus and Cleopes",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo",
+        "date": "1999",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:mets-amoryus", "evidence:page-pdf-inspection"]
+    },
+    {
+      "id": "facsimile:mets:page-1999-pdf",
+      "type": "facsimile",
+      "label": "METS downloadable PDF scan of Page's 1999 Amoryus and Cleopes",
+      "description": "A complete 143-page image PDF of the 1999 print edition. It is distinct from the current METS web reading edition, which may incorporate later recovery of erased manuscript text.",
+      "creator_ids": ["agent:mets"],
+      "reproduction_format": "143-page image PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:mets-amoryus", "evidence:page-pdf-inspection"]
+    },
+    {
+      "id": "witness:princeton:Garrett-141",
+      "type": "manuscript_witness",
+      "label": "Princeton University Library, Garrett MS 141",
+      "description": "A composite Middle English manuscript of 87 parchment leaves containing Palmistry, Amoryus and Cleopes, Physiognomy, the complete Christmas-Day prognostication, The Days of the Moon, and the flyleaf Christmas-Day fragment. The catalog dates it to 1448-1470? and locates it in Norfolk.",
+      "identifiers": [
+        {"scheme": "Princeton shelfmark", "value": "Garrett MS 141", "uri": "https://catalog.princeton.edu/catalog/99108872923506421"},
+        {"scheme": "Princeton ARK", "value": "ark:/88435/8k71nn092", "uri": "http://arks.princeton.edu/ark:/88435/8k71nn092"}
+      ],
+      "date_statements": [{"label": "manuscript production", "value": "between 1448 and 1470?", "certainty": "medium", "evidence_ids": ["evidence:garrett-catalog"]}],
+      "holding": {
+        "institution_id": "agent:princeton-library",
+        "shelfmark": "Garrett MS 141",
+        "historical_designations": ["Robert Garrett Collection, Garrett 141"],
+        "catalog_url": "https://catalog.princeton.edu/catalog/99108872923506421",
+        "notes": "The complete digital object contains 180 images, including covers and flyleaves."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "87 leaves",
+        "dimensions": "approximately 240 x 165 mm",
+        "format": "Composite illustrated codex",
+        "notes": ["Craig associates the principal text hand with Metham, but author, scribe, and codex-production claims remain distinct."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:garrett-catalog", "evidence:garrett-iiif", "evidence:garrett-direct-inspection"]
+    },
+    {
+      "id": "facsimile:princeton:Garrett-141",
+      "type": "facsimile",
+      "label": "Princeton complete digital facsimile of Garrett MS 141",
+      "description": "The complete public 180-canvas IIIF object, cached as all 180 image derivatives at 1600-pixel width.",
+      "identifiers": [{"scheme": "Princeton digital item", "value": "812a0b80-1010-4547-b3a1-063857a1acfc", "uri": "https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc"}],
+      "creator_ids": ["agent:princeton-library"],
+      "reproduction_format": "IIIF Presentation manifest and 180 JPEG derivatives at 1600-pixel width",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:garrett-iiif", "evidence:garrett-direct-inspection"]
+    },
+    {
+      "id": "witness:all-souls:MS-81",
+      "type": "manuscript_witness",
+      "label": "All Souls College, Oxford, MS 81",
+      "alternate_labels": ["Alchemica, astrologica, medica, etc."],
+      "description": "A composite paper manuscript of fifteenth- and sixteenth-century scientific and medical materials. Metham's Palmistry is item E(iii), current fols. 175v-185v; Craig and the older Coxe description cite the same text as old fols. 202r-212v.",
+      "identifiers": [{"scheme": "All Souls shelfmark", "value": "MS 81", "uri": "https://library.asc.ox.ac.uk/manuscripts/catalogue_of_manuscripts_asc.html#081"}],
+      "date_statements": [{"label": "composite manuscript", "value": "fifteenth and sixteenth centuries", "certainty": "high", "evidence_ids": ["evidence:all-souls-catalog", "evidence:watson-catalog"]}],
+      "holding": {
+        "institution_id": "agent:all-souls-library",
+        "shelfmark": "MS 81",
+        "historical_designations": ["Coxe MS 81"],
+        "catalog_url": "https://library.asc.ox.ac.uk/manuscripts/catalogue_of_manuscripts_asc.html#081",
+        "notes": "Palmistry uses current fols. 175v-185v and historical fols. 202r-212v."
+      },
+      "physical_description": {
+        "support": "Primarily paper",
+        "extent": "247 written leaves plus modern flyleaves in Watson's description",
+        "format": "Composite scientific, astrological, alchemical, and medical miscellany",
+        "notes": ["Section E is in an anglicana formata hand influenced by secretary and has Norfolk linguistic features."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:all-souls-catalog", "evidence:watson-catalog"]
+    },
+    {
+      "id": "catalog:watson:all-souls-1997",
+      "type": "catalog_description",
+      "label": "Watson's 1997 catalogue description of All Souls MS 81",
+      "description": "The complete public catalogue supplies current foliation, codicological sections, hand and language descriptions, and an explicit identification of item E(iii) as Metham's Palmistry.",
+      "creator_ids": ["agent:andrew-watson", "agent:all-souls-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:watson-catalog"]
+    },
+    {
+      "id": "catalog:coxe:all-souls-2022-online",
+      "type": "catalog_description",
+      "label": "All Souls online Catalogue of Manuscripts, MS 81 (2022 edition)",
+      "description": "The official online catalogue preserves the older foliation and places Palmistry at item 11 beginning on old fol. 202, followed by item 12 at old fol. 213b.",
+      "creator_ids": ["agent:all-souls-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:all-souls-catalog"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus"},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"]},
+    {"id": "agent:umich-hti", "type": "organization", "name": "University of Michigan Humanities Text Initiative", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:university-michigan", "type": "organization", "name": "University of Michigan"},
+    {"id": "agent:medictionary", "type": "organization", "name": "MEDictionary", "urls": ["https://www.medictionary.info/"]},
+    {"id": "agent:hardin-craig", "type": "person", "name": "Hardin Craig"},
+    {"id": "agent:eets", "type": "organization", "name": "Early English Text Society"},
+    {"id": "agent:kraus-reprint", "type": "organization", "name": "Kraus Reprint"},
+    {"id": "agent:hathitrust", "type": "organization", "name": "HathiTrust Digital Library", "urls": ["https://www.hathitrust.org/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:university-toronto", "type": "organization", "name": "University of Toronto Libraries"},
+    {"id": "agent:stephen-page", "type": "person", "name": "Stephen F. Page"},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"]},
+    {"id": "agent:princeton-library", "type": "organization", "name": "Princeton University Library", "urls": ["https://library.princeton.edu/"]},
+    {"id": "agent:all-souls-library", "type": "organization", "name": "All Souls College Library", "urls": ["https://library.asc.ox.ac.uk/"]},
+    {"id": "agent:andrew-watson", "type": "person", "name": "Andrew G. Watson"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich", "type": "copied_from", "subject": "artifact:general-corpus:Metham", "object": "encoding:umich-cme:Metham",
+      "scope": {"subject": {"kind": "whole", "description": "Entire pinned repository XML"}, "object": {"kind": "whole", "description": "U-M CME electronic item Metham"}, "notes": "Identifier, header, content, and structure align; the repository artifact is pinned at a specific CME git commit."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:umich-metham", "evidence:cme-git-state"]}
+    },
+    {
+      "id": "relation:current-version-of-umich", "type": "version_of", "subject": "encoding:medictionary:Metham-2026-05", "object": "encoding:umich-cme:Metham",
+      "scope": {"subject": {"kind": "whole", "description": "Current May 2026 XML"}, "object": {"kind": "whole", "description": "U-M electronic edition"}, "notes": "Core counts and divisions are unchanged, but markup has been modernized and two corrected readings differ."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:medictionary-downloads", "evidence:encoding-comparison"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-kraus", "type": "encoded_from", "subject": "encoding:umich-cme:Metham", "object": "edition:kraus:eets-os132:1974",
+      "scope": {"subject": {"kind": "whole", "description": "Encoded title, front matter, romance, and prose works"}, "object": {"kind": "selected_passages", "description": "Title and front matter through p. xliv; pp. 1-158, with notes from pp. 159-166 incorporated"}, "notes": "The XML header expressly names the Kraus 1974 reprint; glossary pp. 167-177 and index pp. 178-184 are not encoded."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:hathi-kraus", "evidence:craig-direct-inspection"]}
+    },
+    {
+      "id": "relation:kraus-version-of-craig", "type": "version_of", "subject": "edition:kraus:eets-os132:1974", "object": "edition:craig:eets-os132:1916",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 1974 reprint"}, "object": {"kind": "whole", "description": "Complete 1916 EETS OS 132 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hathi-kraus", "evidence:craig-1916"]}
+    },
+    {
+      "id": "relation:hathi-facsimile-kraus", "type": "facsimile_of", "subject": "facsimile:hathi:kraus-1974-michigan", "object": "edition:kraus:eets-os132:1974",
+      "scope": {"subject": {"kind": "whole", "description": "Full-view University of Michigan HathiTrust carrier"}, "object": {"kind": "whole", "description": "Complete 1974 reprint"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hathi-kraus"]}
+    },
+    {
+      "id": "relation:ia-facsimile-craig", "type": "facsimile_of", "subject": "facsimile:ia:craig-1916", "object": "edition:craig:eets-os132:1916",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 236-page scan and derivatives"}, "object": {"kind": "whole", "description": "Complete 1916 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:craig-direct-inspection"]}
+    },
+    {
+      "id": "relation:craig-transcribes-garrett", "type": "transcribes", "subject": "edition:craig:eets-os132:1916", "object": "witness:princeton:Garrett-141",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Garrett-derived texts", "locators": ["Amoryus and Cleopes pp. 1-81", "Palmistry even pp. 86-116", "Physiognomy pp. 118-145", "Christmas-Day complete pp. 146-147", "Days of the Moon pp. 148-156", "Christmas-Day fragment pp. 157-158"]},
+        "object": {"kind": "selected_passages", "description": "Corresponding Garrett passages", "locators": ["Palmistry fols. 1r-11v", "Amoryus and Cleopes fols. 17r-56v", "Physiognomy fols. 57r-75v", "Christmas-Day complete fol. 78r-v", "Days of the Moon fols. 79r-83v", "Christmas-Day fragment fol. 87r-v"]},
+        "notes": "Craig prints the Garrett Palmistry on even pages opposite the All Souls version."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog", "evidence:garrett-direct-inspection"]}
+    },
+    {
+      "id": "relation:craig-transcribes-all-souls", "type": "transcribes", "subject": "edition:craig:eets-os132:1916", "object": "witness:all-souls:MS-81",
+      "scope": {
+        "subject": {"kind": "part", "description": "All Souls Palmistry parallel version", "locators": ["odd pp. 85-117"]},
+        "object": {"kind": "part", "description": "Metham Palmistry item E(iii)", "locators": ["historical fols. 202r-212v", "current fols. 175v-185v"]},
+        "notes": "Craig transcribes the All Souls version as a separate full text rather than silently using it to emend Garrett."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:all-souls-catalog", "evidence:watson-catalog"]}
+    },
+    {
+      "id": "relation:page-transcribes-garrett", "type": "transcribes", "subject": "edition:page:amoryus-cleopes:1999", "object": "witness:princeton:Garrett-141",
+      "scope": {"subject": {"kind": "whole", "description": "Amoryus and Cleopes edition"}, "object": {"kind": "part", "description": "Amoryus and Cleopes", "locators": ["fols. 17r-56v"]}, "notes": "Collateral modern edition, not an ancestor of the U-M encoding."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-amoryus", "evidence:page-pdf-inspection", "evidence:garrett-catalog"]}
+    },
+    {
+      "id": "relation:mets-pdf-facsimile-page", "type": "facsimile_of", "subject": "facsimile:mets:page-1999-pdf", "object": "edition:page:amoryus-cleopes:1999",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 143-page downloadable scan"}, "object": {"kind": "whole", "description": "Complete 1999 print edition"}, "notes": "The scan is not conflated with the current mutable web reading edition."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:page-pdf-inspection", "evidence:mets-amoryus"]}
+    },
+    {
+      "id": "relation:princeton-facsimile-garrett", "type": "facsimile_of", "subject": "facsimile:princeton:Garrett-141", "object": "witness:princeton:Garrett-141",
+      "scope": {"subject": {"kind": "whole", "description": "All 180 IIIF canvases"}, "object": {"kind": "whole", "description": "Complete digitized codex including covers and flyleaves"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:garrett-iiif", "evidence:garrett-direct-inspection"]}
+    },
+    {
+      "id": "relation:watson-describes-all-souls", "type": "describes", "subject": "catalog:watson:all-souls-1997", "object": "witness:all-souls:MS-81",
+      "scope": {"subject": {"kind": "part", "description": "MS 81 entry and item E(iii)", "locators": ["PDF viewer pp. 186-193"]}, "object": {"kind": "whole", "description": "Complete composite codex, with Palmistry at current fols. 175v-185v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:watson-catalog"]}
+    },
+    {
+      "id": "relation:coxe-describes-all-souls", "type": "describes", "subject": "catalog:coxe:all-souls-2022-online", "object": "witness:all-souls:MS-81",
+      "scope": {"subject": {"kind": "part", "description": "MS 81 entry, item 11"}, "object": {"kind": "whole", "description": "Complete composite codex, with Palmistry at old fols. 202r-212v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:all-souls-catalog"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-artifact", "entity": "artifact:general-corpus:Metham", "provider_id": "agent:general-corpus", "resource_kind": "repository_file", "status": "publicly_available", "access_method": "Pinned git submodule file", "repository_path": "CME/source/CME_phase_1-2/Metham.xml", "cost": "free", "format": "XML", "last_checked": "2026-07-15", "evidence_ids": ["evidence:metham-xml", "evidence:cme-git-state"]
+    },
+    {
+      "id": "access:umich-encoding", "entity": "encoding:umich-cme:Metham", "provider_id": "agent:umich-hti", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M table of contents, HTML text, and persistent item URL", "url": "https://quod.lib.umich.edu/c/cme/Metham?view=toc", "alternate_urls": ["https://name.umdl.umich.edu/Metham"], "cost": "free", "format": "HTML digital text", "last_checked": "2026-07-15", "evidence_ids": ["evidence:umich-metham"]
+    },
+    {
+      "id": "access:medictionary-current", "entity": "encoding:medictionary:Metham-2026-05", "provider_id": "agent:medictionary", "resource_kind": "download", "status": "publicly_available", "access_method": "Direct public XML download", "url": "https://www.medictionary.info/texts/Metham.xml", "alternate_urls": ["https://www.medictionary.info/pages/CME_downloads.html"],
+      "local_copies": [{"label": "MEDictionary current Metham XML, May 2026", "path": "source-cache/Metham/medictionary-metham-current-2026-05.xml", "source_url": "https://www.medictionary.info/texts/Metham.xml", "sha256": "edd71b9f1e593b71e51a67a4b13f8b18c9a4832c272b91f98ba5e79baf61b472", "bytes": 470175, "media_type": "application/xml", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download"}],
+      "cost": "free", "format": "XML", "last_checked": "2026-07-15", "evidence_ids": ["evidence:medictionary-downloads", "evidence:encoding-comparison"]
+    },
+    {
+      "id": "access:kraus-hathi", "entity": "facsimile:hathi:kraus-1974-michigan", "provider_id": "agent:hathitrust", "resource_kind": "page_images", "status": "publicly_available", "access_method": "HathiTrust full-view page-image viewer", "url": "https://babel.hathitrust.org/cgi/pt?id=mdp.39015018941032", "alternate_urls": ["https://catalog.hathitrust.org/Record/002227260", "https://catalog.hathitrust.org/Record/102682259", "https://babel.hathitrust.org/cgi/pt?id=hvd.32044083608455"], "cost": "free", "format": "Full-view page images", "last_checked": "2026-07-15", "evidence_ids": ["evidence:hathi-kraus"], "notes": ["Full public viewing was verified. A reusable whole-volume direct file endpoint was not established, so no partial crop was cached."]
+    },
+    {
+      "id": "access:craig-1916-download", "entity": "facsimile:ia:craig-1916", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available", "access_method": "Internet Archive item and direct derivative downloads", "url": "https://archive.org/details/worksofjohnmetha00methuoft",
+      "alternate_urls": ["https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft.pdf", "https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft_djvu.txt", "https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft_scandata.xml"],
+      "local_copies": [
+        {"label": "Craig 1916 complete edition scan", "path": "source-cache/Metham/craig-works-of-john-metham-1916-complete.pdf", "source_url": "https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft.pdf", "sha256": "2b242e6d3ee664719d5dfb1fd9734dbf7a91c1c7234db104a5b473129e6e4fa5", "bytes": 13180787, "media_type": "application/pdf", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Encoded collection and omitted back matter", "locators": ["front matter through p. xliv", "medieval texts pp. 1-158", "notes pp. 159-166", "glossary pp. 167-177", "index pp. 178-184"], "notes": ["The whole volume is cached so encoded and omitted portions can be distinguished directly."]}},
+        {"label": "Craig 1916 complete OCR text", "path": "source-cache/Metham/craig-works-of-john-metham-1916-ocr.txt", "source_url": "https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft_djvu.txt", "sha256": "762f1a1f50affe06a5fc2d723c0d2d665e5a4a51106d77e12dfd02e183162de3", "bytes": 540300, "media_type": "text/plain", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download"},
+        {"label": "Craig 1916 complete scan-data XML", "path": "source-cache/Metham/craig-works-of-john-metham-1916-scandata.xml", "source_url": "https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft_scandata.xml", "sha256": "a875c12d3014539e9e3ab0296923815c4bfeb9958d4424a5ec46b545354aa548", "bytes": 126532, "media_type": "application/xml", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download"}
+      ],
+      "cost": "free", "format": "236-page PDF, OCR, and scan metadata", "last_checked": "2026-07-15", "evidence_ids": ["evidence:craig-1916", "evidence:craig-direct-inspection"]
+    },
+    {
+      "id": "access:page-mets-pdf", "entity": "facsimile:mets:page-1999-pdf", "provider_id": "agent:mets", "resource_kind": "download", "status": "publicly_available", "access_method": "Direct METS downloadable-version PDF", "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/ba33d3e2-44a6-4958-87c2-70b1cb11ea2a/downloadable_version/26c576fdd68fd7a07eccd463512f6923.pdf", "alternate_urls": ["https://metseditions.org/editions/3lwg1BLefANgTya3UMDL5fwXQb9glZR"],
+      "local_copies": [{"label": "Page 1999 Amoryus and Cleopes complete METS PDF", "path": "source-cache/Metham/page-amoryus-and-cleopes-mets-complete.pdf", "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/ba33d3e2-44a6-4958-87c2-70b1cb11ea2a/downloadable_version/26c576fdd68fd7a07eccd463512f6923.pdf", "sha256": "dbb2534d053154d2b0e2e085d01f91800497750cc605192a8316b0f5ea977bbd", "bytes": 6169217, "media_type": "application/pdf", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download", "notes": ["Complete image scan of the 1999 edition; it should not be used to infer that later web-edition additions are present."]}],
+      "cost": "free", "format": "143-page image PDF", "last_checked": "2026-07-15", "evidence_ids": ["evidence:mets-amoryus", "evidence:page-pdf-inspection"]
+    },
+    {
+      "id": "access:garrett-physical", "entity": "witness:princeton:Garrett-141", "provider_id": "agent:princeton-library", "resource_kind": "physical_manuscript", "status": "onsite_only", "access_method": "Princeton Special Collections reading room; all researchers are welcome, with registration and advance requests recommended", "url": "https://library.princeton.edu/services/special-collections/visit-special-collections", "contact": "Princeton University Library Special Collections", "cost": "free", "format": "Physical manuscript", "last_checked": "2026-07-15", "evidence_ids": ["evidence:princeton-access"]
+    },
+    {
+      "id": "access:garrett-digital", "entity": "facsimile:princeton:Garrett-141", "provider_id": "agent:princeton-library", "resource_kind": "page_images", "status": "publicly_available", "access_method": "Princeton digital viewer and IIIF Presentation manifest", "url": "https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc", "alternate_urls": ["https://figgy.princeton.edu/concern/scanned_resources/812a0b80-1010-4547-b3a1-063857a1acfc/manifest"],
+      "local_copies": [{
+        "label": "Complete Princeton Garrett MS 141 IIIF bundle", "path": "source-cache/Metham/princeton-garrett-ms-141-complete-iiif-1600px.zip", "source_url": "https://figgy.princeton.edu/concern/scanned_resources/812a0b80-1010-4547-b3a1-063857a1acfc/manifest", "sha256": "23e3286e68af821831000d852f367c73bafdecf8ca6c20670fda8bf045a2ae3c", "bytes": 103946697, "media_type": "application/zip", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "iiif_bundle", "source_file_count": 180, "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {"label": "All six Garrett textual representations used by Craig", "locators": ["Palmistry fols. 1r-11v, canvases 5-26", "Amoryus and Cleopes fols. 17r-56v, canvases 37-116", "Physiognomy fols. 57r-75v, canvases 117-154", "Christmas-Day complete fol. 78r-v, canvases 159-160", "Days of the Moon fols. 79r-83v, canvases 161-170", "Christmas-Day fragment fol. 87r-v, canvases 177-178"], "start_url": "https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc/viewer/5", "end_url": "https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc/viewer/178", "notes": ["The complete 180-image object is cached; gaps between work spans, covers, blank leaves, and flyleaves are retained."]}
+      }],
+      "cost": "free", "format": "180-canvas IIIF object", "last_checked": "2026-07-15", "evidence_ids": ["evidence:garrett-iiif", "evidence:garrett-direct-inspection"]
+    },
+    {
+      "id": "access:garrett-reproduction", "entity": "witness:princeton:Garrett-141", "provider_id": "agent:princeton-library", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Ask Special Collections; current digitization service states an outside-Princeton rate of $2 per image, a 300-page per six-month limit, and a typical six-to-eight-week turnaround, subject to condition and restrictions", "url": "https://library.princeton.edu/services/special-collections/explore-special-collections", "contact": "Princeton University Library Special Collections", "cost": "fee", "format": "Repository-supplied digital images", "last_checked": "2026-07-15", "evidence_ids": ["evidence:princeton-access"]
+    },
+    {
+      "id": "access:all-souls-physical", "entity": "witness:all-souls:MS-81", "provider_id": "agent:all-souls-library", "resource_kind": "physical_manuscript", "status": "requestable", "access_method": "Special-collections consultation by appointment requested at least two weeks in advance", "url": "https://www.asc.ox.ac.uk/library-and-archives/special-collections", "contact": "special.collections@all-souls.ox.ac.uk", "cost": "free", "format": "Physical manuscript", "last_checked": "2026-07-15", "evidence_ids": ["evidence:all-souls-access"]
+    },
+    {
+      "id": "access:all-souls-reproduction", "entity": "witness:all-souls:MS-81", "provider_id": "agent:all-souls-library", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Free imaging request by form or email, normally submitted at least two weeks in advance and subject to condition and staff approval", "url": "https://forms.office.com/r/FXbbzyYTf8", "alternate_urls": ["https://www.asc.ox.ac.uk/library-and-archives/special-collections"], "contact": "special.collections@all-souls.ox.ac.uk", "cost": "free", "format": "Repository-supplied digital images if approved", "last_checked": "2026-07-15", "evidence_ids": ["evidence:all-souls-access"], "notes": ["No request was submitted during this research; availability of a complete MS 81 reproduction remains unconfirmed."]
+    },
+    {
+      "id": "access:watson-catalog", "entity": "catalog:watson:all-souls-1997", "provider_id": "agent:all-souls-library", "resource_kind": "download", "status": "publicly_available", "access_method": "Direct complete PDF download", "url": "https://library.asc.ox.ac.uk/manuscripts/Watson%20Scan%20Full.pdf",
+      "local_copies": [{"label": "Watson 1997 complete All Souls manuscripts catalogue", "path": "source-cache/Metham/all-souls-watson-1997-complete-catalogue.pdf", "source_url": "https://library.asc.ox.ac.uk/manuscripts/Watson%20Scan%20Full.pdf", "sha256": "e3a8d0d632b7b714f8645d4acd34babde9676c6e0cd0abcb5281308ffff965f3", "bytes": 27669129, "media_type": "application/pdf", "downloaded_on": "2026-07-15", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "MS 81 catalogue entry", "locators": ["PDF viewer pp. 186-193", "Palmistry item E(iii), current fols. 175v-185v"], "notes": ["This is a complete catalogue PDF and metadata evidence, not a manuscript facsimile."]}}],
+      "cost": "free", "format": "320-page PDF", "last_checked": "2026-07-15", "evidence_ids": ["evidence:watson-catalog"]
+    },
+    {
+      "id": "access:coxe-catalog", "entity": "catalog:coxe:all-souls-2022-online", "provider_id": "agent:all-souls-library", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "Public official HTML manuscript catalogue", "url": "https://library.asc.ox.ac.uk/manuscripts/catalogue_of_manuscripts_asc.html#081", "cost": "free", "format": "HTML/XML-derived catalogue", "last_checked": "2026-07-15", "evidence_ids": ["evidence:all-souls-catalog"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-medieval-works", "entity": "artifact:general-corpus:Metham", "component": "Underlying fifteenth-century Middle English works and manuscript texts", "jurisdiction": "United States and United Kingdom historical-work analysis", "copyright_status": "public_domain", "as_of": "2026-07-15", "basis": "The works and identified manuscript witnesses date from the fifteenth century.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog", "evidence:all-souls-catalog"]
+    },
+    {
+      "id": "rights:pinned-encoding-legacy-terms", "entity": "artifact:general-corpus:Metham", "access_id": "access:repository-artifact", "component": "Pinned electronic encoding and its legacy header availability statement", "jurisdiction": "Provider statement", "copyright_status": "unknown", "as_of": "2026-07-15", "basis": "The pinned header permits personal, research, and teaching copies and links but forbids redistribution by commercial and nonprofit providers. That legacy statement is preserved rather than silently replaced by current U-M or MEDictionary terms.", "asserted_by_id": "agent:umich-hti", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:metham-xml"], "notes": ["This statement concerns the encoding layer, not the public-domain medieval works."]
+    },
+    {
+      "id": "rights:umich-current", "entity": "encoding:umich-cme:Metham", "access_id": "access:umich-encoding", "component": "Current U-M digital item and electronic text", "jurisdiction": "United States", "copyright_status": "no_known_copyright", "as_of": "2026-07-15", "basis": "The current U-M item displays a No Copyright - United States/public-domain designation.", "asserted_by_id": "agent:umich-hti", "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-metham"], "notes": ["The current provider statement and the pinned legacy header are separate dated assertions."]
+    },
+    {
+      "id": "rights:medictionary-current", "entity": "encoding:medictionary:Metham-2026-05", "access_id": "access:medictionary-current", "component": "Current raw XML download", "jurisdiction": "Provider statement", "copyright_status": "unknown", "as_of": "2026-07-15", "basis": "The current download page expressly says the raw files are free to use and reuse but does not identify a named license in the reviewed statement.", "asserted_by_id": "agent:medictionary", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:medictionary-downloads"], "notes": ["A reuse permission is recorded without inferring a broader copyright status or named license."]
+    },
+    {
+      "id": "rights:craig-1916", "entity": "edition:craig:eets-os132:1916", "access_id": "access:craig-1916-download", "component": "1916 edition and Internet Archive scan", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-15", "basis": "Published in 1916; the Internet Archive item identifies the scan as public domain/not in copyright.", "asserted_by_id": "agent:internet-archive", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]
+    },
+    {
+      "id": "rights:kraus-1974-hathi", "entity": "edition:kraus:eets-os132:1974", "access_id": "access:kraus-hathi", "component": "1974 reprint as represented by HathiTrust carriers", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-15", "basis": "HathiTrust marks the exact 1974 carriers full view with rights code pdus and describes them as reprints of the 1916 edition.", "asserted_by_id": "agent:hathitrust", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:hathi-kraus"], "notes": ["This records the provider's item-level assertion and does not generalize to unrelated modern reprint matter."]
+    },
+    {
+      "id": "rights:page-1999", "entity": "edition:page:amoryus-cleopes:1999", "access_id": "access:page-mets-pdf", "component": "1999 scholarly edition and METS PDF scan", "jurisdiction": "United States", "copyright_status": "copyrighted", "as_of": "2026-07-15", "basis": "The modern editorial work was published in 1999; public download does not by itself establish an open license.", "asserted_by_id": "agent:mets", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:mets-amoryus", "evidence:page-pdf-inspection"]
+    },
+    {
+      "id": "rights:garrett-underlying", "entity": "witness:princeton:Garrett-141", "component": "Fifteenth-century material witness and texts", "jurisdiction": "United States historical-work analysis", "copyright_status": "public_domain", "as_of": "2026-07-15", "basis": "The codex and texts date from the fifteenth century.", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:garrett-catalog"]
+    },
+    {
+      "id": "rights:garrett-images", "entity": "facsimile:princeton:Garrett-141", "access_id": "access:garrett-digital", "component": "Princeton digital page images and IIIF object", "jurisdiction": "Provider statement; worldwide web access", "copyright_status": "unknown", "as_of": "2026-07-15", "basis": "The item-level digital record assigns RightsStatements.org Copyright Not Evaluated.", "asserted_by_id": "agent:princeton-library", "rights_statement_uri": "http://rightsstatements.org/vocab/CNE/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:garrett-iiif", "evidence:princeton-rights"], "notes": ["Princeton currently charges no permission or use fees for publication and requests credit, but that policy does not convert CNE into an open license."]
+    },
+    {
+      "id": "rights:all-souls-underlying", "entity": "witness:all-souls:MS-81", "component": "Fifteenth- and sixteenth-century manuscript materials and underlying texts", "jurisdiction": "United Kingdom and United States historical-work analysis", "copyright_status": "public_domain", "as_of": "2026-07-15", "basis": "The physical manuscript and its underlying historical texts predate modern copyright terms.", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:all-souls-catalog", "evidence:watson-catalog"]
+    },
+    {
+      "id": "rights:all-souls-requested-images", "entity": "witness:all-souls:MS-81", "access_id": "access:all-souls-reproduction", "component": "Any future repository-supplied manuscript images", "jurisdiction": "Provider statement not yet obtained", "copyright_status": "unknown", "as_of": "2026-07-15", "basis": "No item-specific image set or terms were supplied. The general statement that fully digitized images are freely reproducible with attribution is not applied prospectively to unmade or condition-dependent images.", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:all-souls-access"]
+    },
+    {
+      "id": "rights:watson-catalog", "entity": "catalog:watson:all-souls-1997", "access_id": "access:watson-catalog", "component": "Watson's 1997 catalogue text and PDF scan", "jurisdiction": "United Kingdom", "copyright_status": "copyrighted", "as_of": "2026-07-15", "basis": "The modern scholarly catalogue was published in 1997; public access supports research consultation but no open license was identified.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:watson-catalog"]
+    },
+    {
+      "id": "rights:coxe-online", "entity": "catalog:coxe:all-souls-2022-online", "access_id": "access:coxe-catalog", "component": "All Souls online manuscript catalogue XML/HTML content", "jurisdiction": "Provider statement", "copyright_status": "copyrighted", "as_of": "2026-07-15", "basis": "The catalogue site licenses its XML content under Creative Commons Attribution-ShareAlike 4.0.", "asserted_by_id": "agent:all-souls-library", "license": {"name": "Creative Commons Attribution-ShareAlike 4.0 International", "uri": "https://creativecommons.org/licenses/by-sa/4.0/"}, "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:all-souls-catalog"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection", "entity": "encoding:umich-cme:Metham", "practice": "selection", "source_feature": "Craig's complete 1916/1974 volume", "representation": "Front matter and medieval texts encoded; printed notes incorporated; glossary and index omitted", "description": "U-M attempted broad inclusion of front matter but omitted poem marginalia and glosses, incorporated Craig's pp. 159-166 notes into the main text, and did not encode pp. 167-184.", "scope": "Whole digital item", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:craig-direct-inspection"]
+    },
+    {
+      "id": "practice:craig-palmistry-collation", "entity": "edition:craig:eets-os132:1916", "practice": "collation", "source_feature": "Two complete Palmistry witness versions", "representation": "All Souls on odd pages and Garrett on even pages", "description": "Craig prints both witnesses as full parallel texts and discusses their close relation, orthographic differences, and All Souls omissions.", "scope": "Palmistry, pp. 85-117", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:craig-direct-inspection"]
+    },
+    {
+      "id": "practice:umich-book-division", "entity": "encoding:umich-cme:Metham", "practice": "selection", "source_feature": "Continuous manuscript/edition sequence around line 723", "representation": "Conjectural Book I/II division following Craig", "description": "The encoding explicitly marks the division after line 723 as conjectural rather than an authorial or manuscript certainty.", "scope": "Amoryus and Cleopes", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:craig-1916"]
+    }
+  ],
+  "evidence": [
+    {"id": "evidence:metham-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_1-2/Metham.xml.", "repository_path": "CME/source/CME_phase_1-2/Metham.xml", "locator": "HEADER; FRONT and BODY", "summary": "Primary artifact and evidence for U-M production date, 1974 source carrier, editorial practices, division structure, locators, and legacy availability terms.", "accessed_on": "2026-07-15", "sha256": "03ddc949efd150063d8e34d359f9c43f4e865897dcb3a0ddff1540b7235c1d49"},
+    {"id": "evidence:cme-git-state", "type": "repository_file", "citation": "Pinned CME submodule state for the Metham source artifact.", "repository_path": "CME/source/CME_phase_1-2/Metham.xml", "summary": "Git inspection establishes CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c and Metham git blob 48f0d5ecbe4e7175d93f398e0d58cd42cf50fb61.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:umich-metham", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, Metham.", "url": "https://quod.lib.umich.edu/c/cme/Metham?view=toc", "alternate_urls": ["https://name.umdl.umich.edu/Metham"], "summary": "Current public digital item, table of contents, persistent identifier, and NoC-US rights statement.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:medictionary-downloads", "type": "official_webpage", "citation": "MEDictionary CME downloads page and current Metham XML.", "url": "https://www.medictionary.info/pages/CME_downloads.html", "alternate_urls": ["https://www.medictionary.info/texts/Metham.xml"], "summary": "Identifies the current file as updated May 2026 and states that raw XML files are free to use and reuse.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:encoding-comparison", "type": "visual_inspection", "citation": "Direct structural and text comparison of pinned Metham.xml and current May 2026 MEDictionary Metham.xml.", "repository_path": "source-cache/Metham/medictionary-metham-current-2026-05.xml", "summary": "Verified unchanged core counts and divisions; documented header and schema modernization; identified insertion of literal 'of' near an illegible Garrett Palmistry gap and removal of a duplicated 'than' in Physiognomy.", "accessed_on": "2026-07-15", "sha256": "edd71b9f1e593b71e51a67a4b13f8b18c9a4832c272b91f98ba5e79baf61b472"},
+    {"id": "evidence:craig-1916", "type": "digital_surrogate", "citation": "John Metham, The Works of John Metham, ed. Hardin Craig, EETS OS 132 (London, 1916), Internet Archive scan.", "url": "https://archive.org/details/worksofjohnmetha00methuoft", "alternate_urls": ["https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft.pdf"], "summary": "Complete source edition, manuscript statements, parallel Palmistry texts, work boundaries, poem extent, notes, glossary, index, and Internet Archive public-domain designation.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:craig-direct-inspection", "type": "visual_inspection", "citation": "Direct inspection of the complete cached Craig 1916 PDF, OCR, and scan data.", "repository_path": "source-cache/Metham/craig-works-of-john-metham-1916-complete.pdf", "locator": "236 PDF pages; printed pp. i-xliv and 1-184", "summary": "Confirmed the complete volume, page boundaries, 2,211-line statement, four-book organization, work titles and loci, All Souls/Garrett parallel layout, and encoded versus omitted material.", "accessed_on": "2026-07-15", "sha256": "2b242e6d3ee664719d5dfb1fd9734dbf7a91c1c7234db104a5b473129e6e4fa5"},
+    {"id": "evidence:hathi-kraus", "type": "digital_surrogate", "citation": "HathiTrust records and full-view carriers for The Works of John Metham, Kraus Reprint, 1974.", "url": "https://catalog.hathitrust.org/Record/002227260", "alternate_urls": ["https://babel.hathitrust.org/cgi/pt?id=mdp.39015018941032", "https://catalog.hathitrust.org/Record/102682259", "https://babel.hathitrust.org/cgi/pt?id=hvd.32044083608455"], "summary": "Confirms the exact 1974 New York Kraus reprint, OCLC 1130734, xlii plus 184-page extent, reprint relation to 1916, full-view status, and HathiTrust pdus rights code.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:garrett-catalog", "type": "official_catalog", "citation": "Princeton University Library catalog record for Garrett MS 141.", "url": "https://catalog.princeton.edu/catalog/99108872923506421", "alternate_urls": ["http://arks.princeton.edu/ark:/88435/8k71nn092", "https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc"], "summary": "Official shelfmark, full contents, support, extent, date, place, and language for the principal manuscript witness.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:garrett-iiif", "type": "digital_surrogate", "citation": "Princeton IIIF Presentation manifest for Garrett MS 141.", "url": "https://figgy.princeton.edu/concern/scanned_resources/812a0b80-1010-4547-b3a1-063857a1acfc/manifest", "summary": "Complete 180-canvas object, image-service inventory, labels, and item-level Copyright Not Evaluated rights statement.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:garrett-direct-inspection", "type": "visual_inspection", "citation": "Direct audit of the complete cached Garrett MS 141 IIIF bundle.", "repository_path": "source-cache/Metham/princeton-garrett-ms-141-complete-iiif-1600px.zip", "summary": "Verified 180 cached source images and mapped all six Craig-used Garrett passages to folio and canvas spans without cropping the codex.", "accessed_on": "2026-07-15", "sha256": "23e3286e68af821831000d852f367c73bafdecf8ca6c20670fda8bf045a2ae3c"},
+    {"id": "evidence:princeton-access", "type": "official_webpage", "citation": "Princeton University Library Special Collections visit and digitization service pages.", "url": "https://library.princeton.edu/services/special-collections/visit-special-collections", "alternate_urls": ["https://library.princeton.edu/services/special-collections/explore-special-collections"], "summary": "Current reading-room eligibility, registration and request guidance, personal-photography policy, digitization fees, limits, and turnaround.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:princeton-rights", "type": "official_webpage", "citation": "Princeton University Library Special Collections copyright, credit, and citation guidelines.", "url": "https://library.princeton.edu/about/policies/special-collections-copyright-credit-and-citation-guidelines", "summary": "States that Princeton charges no permission or use fees for publication, places copyright assessment on researchers, and requests credit; it does not override item-level CNE.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:all-souls-catalog", "type": "official_catalog", "citation": "All Souls College Library, Catalogue of Manuscripts, MS 81, online edition (2022).", "url": "https://library.asc.ox.ac.uk/manuscripts/catalogue_of_manuscripts_asc.html#081", "locator": "MS 81, item 11", "summary": "Official codex description, old foliation, work boundary, and CC BY-SA 4.0 statement for catalogue XML content.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:watson-catalog", "type": "digital_surrogate", "citation": "Andrew G. Watson, A Descriptive Catalogue of the Medieval Manuscripts of All Souls College, Oxford (1997), complete public PDF.", "url": "https://library.asc.ox.ac.uk/manuscripts/Watson%20Scan%20Full.pdf#page=186", "locator": "PDF viewer pp. 186-193; item E(iii)", "summary": "Current foliation, codicological structure, hand and language, and explicit identification of Palmistry at fols. 175v-185v with reference to Craig's odd pp. 85-117.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:all-souls-access", "type": "official_webpage", "citation": "All Souls College Library special-collections access and imaging guidance.", "url": "https://www.asc.ox.ac.uk/library-and-archives/special-collections", "alternate_urls": ["https://forms.office.com/r/FXbbzyYTf8"], "summary": "Current appointment lead time, contact route, free imaging request service, condition caveat, and general reuse guidance for already digitized images.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:all-souls-image-search", "type": "search_result", "citation": "Dated search of All Souls official manuscript-image list and MS 81 catalogue entry.", "url": "https://library.asc.ox.ac.uk/manuscripts/", "summary": "No complete public MS 81 facsimile or item-specific image link was found on the reviewed official pages as of 2026-07-15.", "accessed_on": "2026-07-15", "notes": ["This is a dated negative finding, not a claim that the manuscript has never been photographed or digitized."]},
+    {"id": "evidence:mets-amoryus", "type": "scholarly_source", "citation": "Middle English Texts Series, current Amoryus and Cleopes edition and introduction.", "url": "https://metseditions.org/editions/3lwg1BLefANgTya3UMDL5fwXQb9glZR", "alternate_urls": ["https://metseditions.org/read/V2292E1fGyRf5k5hlbV2CQeK95bPEk", "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/ba33d3e2-44a6-4958-87c2-70b1cb11ea2a/downloadable_version/26c576fdd68fd7a07eccd463512f6923.pdf"], "summary": "Current collateral edition, 1999 print-edition PDF, scholarly introduction, and notice of later imaging-based recovery of erased manuscript text.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:page-pdf-inspection", "type": "visual_inspection", "citation": "Direct inspection of the cached METS PDF of Stephen F. Page's 1999 Amoryus and Cleopes.", "repository_path": "source-cache/Metham/page-amoryus-and-cleopes-mets-complete.pdf", "summary": "Verified a complete 143-page image PDF of the 1999 print edition and distinguished it from the evolving current web reader.", "accessed_on": "2026-07-15", "sha256": "dbb2534d053154d2b0e2e085d01f91800497750cc605192a8316b0f5ea977bbd"}
+  ],
+  "open_questions": [
+    {
+      "id": "question:all-souls-public-facsimile", "question": "Is a complete public digital facsimile of All Souls College MS 81 available through an official or partner platform not exposed by the current catalogue and digitized-manuscripts list?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Ask All Souls Special Collections whether a complete digital surrogate exists and whether it can be made available.", "If supplied, cache the complete codex rather than only fols. 175v-185v and record item-specific rights and reproduction terms."], "last_checked": "2026-07-15", "evidence_ids": ["evidence:all-souls-catalog", "evidence:all-souls-access", "evidence:all-souls-image-search"], "notes": ["No repository enquiry was sent during this research, so the status is no_public_source_found rather than pending_external_response."]
+    },
+    {
+      "id": "question:all-souls-image-rights", "question": "What item-specific rights and reuse terms would apply to a newly supplied complete image set for MS 81?", "status": "unresolved", "impact": "medium", "next_steps": ["Request terms together with any future imaging order and do not infer them from the general policy for already fully digitized manuscripts."], "last_checked": "2026-07-15", "evidence_ids": ["evidence:all-souls-access"]
+    }
+  ]
+}
