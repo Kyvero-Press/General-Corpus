@@ -110,9 +110,19 @@ When working as a one-book subagent in an isolated worktree:
 - do not edit indexes, shared schemas, validators, documentation, or the skill;
 - place downloaded research files only in the ignored
   `source-cache/WORK_ID/` directory and never stage them;
+- reject duplicate JSON object keys before ordinary schema validation, because
+  common parsers silently keep the last duplicate value:
+
+  ```bash
+  python3 .agents/skills/research-corpus-manifests/scripts/check-json-duplicate-keys.py \
+    manifests/work-metadata/works/WORK_ID.json \
+    manifests/lineage/works/WORK_ID.json
+  ```
+
 - validate JSON and the pair as far as the worktree permits;
 - run `python3 scripts/validate-manifest-pair.py WORK_ID`;
-- commit the two manifest files on the assigned research branch; and
+- send a detailed PRECOMMIT report and wait for exact-file authorization before
+  staging or committing the two manifest files on the assigned branch; and
 - report sources used, validation results, unresolved questions, and at most
   three genuinely reusable skill lessons.
 

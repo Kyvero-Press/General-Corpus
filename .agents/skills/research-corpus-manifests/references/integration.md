@@ -9,6 +9,9 @@ worktree.
 2. Bring in only the finished work's metadata and lineage files.
 3. Review the agent's direct sources, claims, uncertainty, access checks, and
    reusable lessons. Correct overstatement before indexing.
+   Run the skill's duplicate-key checker on both exact JSON files before
+   authorizing a commit; `jq`, ordinary JSON loading, and downstream schema
+   validation may all hide an earlier duplicate by retaining its last value.
    After any long-running cache transfer, replace stale future-tense notes with
    the final byte count, checksum, integrity result, and internal inventory;
    remove or resolve download-pending questions before committing the record.

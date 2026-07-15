@@ -25,8 +25,11 @@ material” or collapse fragments held elsewhere into the complete carrier.
 
 Set the lineage manifest's `primary_subject` to that repository-artifact
 entity, which must carry `repository_file.path`; the discovery index depends
-on this contract. An abstract work may remain a related entity and metadata
-binding, but it is not the lineage manifest's `primary_subject`.
+on this contract. An abstract work may remain a related lineage entity and a
+metadata `related_works` record, but it is not the lineage manifest's
+`primary_subject`. Under the current metadata validator, lineage bindings may
+target only the cataloging subject or modeled content parts; do not bind a
+`related_works` ID.
 
 Resolve an editor's witness sigla from that edition's explicit manuscript key,
 not from an intuitive expansion of a letter. Record the siglum with the
