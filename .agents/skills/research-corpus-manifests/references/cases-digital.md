@@ -154,11 +154,13 @@ canvas counts alone are not enough.
 
 A viewer's page or slot count is not necessarily a count of unique manuscript
 images. Parallel transcription panes can repeat one full-folio JPEG in several
-left/right slots, and separately paginated sequences can overlap. Compare
-canvas or slot identifiers, image-service URLs, order, and image fixity across
-every sequence. Record both the published slot count and the deduplicated image
-inventory, name overlaps and repetitions, and never infer physical coverage
-from the larger number alone.
+left/right slots, separately paginated sequences can overlap, and advertised
+gallery slots can contain null image URLs or placeholders. Compare canvas or
+slot identifiers, image-service URLs, order, and image fixity across every
+sequence. Cache every retrievable resource in the published selection, but
+record the advertised slot count, non-null resource count, and deduplicated
+image inventory separately; name nulls, overlaps, and repetitions, and never
+infer physical coverage from the larger number alone.
 
 A provider-generated PDF can add a cover or metadata page that is absent from
 the IIIF canvas sequence. Compare total PDF pages with manifest canvases and
