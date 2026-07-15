@@ -340,12 +340,13 @@ def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[
         return values
 
     def matches(value: str) -> bool:
-        """Accept the exact ID or a case-insensitive, structurally delimited extension."""
+        """Accept exact IDs or case-insensitive, structurally delimited variants."""
 
         normalized_value = value.casefold()
         normalized_work_id = work_id.casefold()
         return normalized_value == normalized_work_id or any(
             normalized_value.startswith(f"{normalized_work_id}{delimiter}")
+            or normalized_work_id.startswith(f"{normalized_value}{delimiter}")
             for delimiter in (".", ":")
         )
 

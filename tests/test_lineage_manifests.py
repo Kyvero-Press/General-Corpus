@@ -453,6 +453,15 @@ class LineageManifestTests(unittest.TestCase):
 
         self.assertEqual([], errors)
 
+    def test_xml_identifier_accepts_delimited_publication_id_extension(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>LayCal</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "laycal.lineated",
+        )
+
+        self.assertEqual([], errors)
+
     def test_xml_identifier_accepts_publication_idno_with_legacy_cme_aliases(self) -> None:
         errors = self._xml_identifier_errors(
             "<ETS><HEADER><IDNO>CME301</IDNO></HEADER><IDG ID='CME00301'>"
@@ -485,6 +494,15 @@ class LineageManifestTests(unittest.TestCase):
             "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>TroilusExtra</IDNO>"
             "</HEADER></DLPSTEXTCLASS>",
             "Troilus",
+        )
+
+        self.assertTrue(any("no matching" in item for item in errors))
+
+    def test_xml_identifier_rejects_undelimited_publication_id_extension(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>LayCal</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "LayCalibration",
         )
 
         self.assertTrue(any("no matching" in item for item in errors))
