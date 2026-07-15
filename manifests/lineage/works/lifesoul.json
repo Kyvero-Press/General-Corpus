@@ -1,0 +1,1835 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:lifesoul",
+  "work_id": "lifesoul",
+  "title": "Life of Soul (version L)",
+  "primary_subject": "artifact:general-corpus:lifesoul",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository artifact is the pinned CME serialization of University of Michigan item lifesoul, Paul F. Schaffner's version-L transcription of Oxford, Bodleian Library, MS. Laud Misc. 210, fols. 114r-132v. Its TEXT subtree is byte-identical under XPath serialization to Schaffner's live 2016 XML, while the headers differ materially: the pinned artifact retains a restrictive 1999 availability notice and the live file dedicates the transcription and markup to the public domain. The 2016 XML descends through Schaffner's 2003 readable TEI P3 SGML and 1999 TEI P3 SGML layers from his 1997 HTML transcription, which he made from an unidentified film of Laud. Life of Soul is an abstract anonymous work with three separately modeled textual versions, each currently represented by one manuscript: L in Laud Misc. 210, A in British Library Arundel MS 286, and H in Huntington HM 502. Moon's 1978 edition is Laud-based and collates A and H; Schaffner consulted Moon but did not transcribe from it. No complete public Laud facsimile or IIIF manifest was found in the dated Digital Bodleian audit, Arundel has no linked digitised content, and the HM 502 page advertises twenty labeled gallery slots but currently supplies only five retrievable image resources, three of which overlap or bound Life of Soul.",
+  "languages": ["enm"],
+  "review_notes": [
+    "Abstract work, textual versions, physical witnesses, reproduction medium, scholarly editions, electronic encodings, repository artifact, catalog descriptions, and supporting scholarship are distinct entities.",
+    "The exact TEXT match between the pinned artifact and 2016 XML does not collapse the serializations because their headers, availability statements, byte counts, and file identities differ.",
+    "Schaffner's 1997/1999 transcription is the direct editorial ancestor; Moon's edition was consulted, not used as the transcription base.",
+    "The unidentified film through which Schaffner read Laud is represented as a facsimile/reproduction medium with unknown present survival and provenance.",
+    "A dated search finding no Digital Bodleian target is evidence of no public object found, not proof that the manuscript has never been photographed or digitized.",
+    "Huntington's public record advertises twenty labeled gallery slots, but its page data currently supplies only five non-null image URLs; three overlap or bound Life of Soul, and neither the five-image resource set nor the advertised gallery is a complete codex.",
+    "The current U-M No Copyright-United States statement, Schaffner's current public-domain dedication, the pinned XML's restrictive notice, and the CME repository Unlicense are retained as separate rights assertions rather than silently reconciled."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:lifesoul",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for lifesoul",
+      "description": "The exact pinned XML artifact consumed by General Corpus and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "lifesoul"},
+        {"scheme": "git-blob", "value": "fa1ef3f812ac0e02325c836f38455cceabbe7841"},
+        {"scheme": "CME git commit", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/lifesoul.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "fa1ef3f812ac0e02325c836f38455cceabbe7841",
+        "sha256": "96f720d6417b7115946836c002a1467dd69391e719139cce437f041b66620c56"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-git-state"],
+      "notes": ["File size is 81,942 bytes at the reviewed commit; the file was introduced at the pinned commit on 2024-11-24."]
+    },
+    {
+      "id": "encoding:umich-cme:lifesoul",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item lifesoul",
+      "alternate_labels": ["Life of soul: an edition from MS Laud Misc. 210"],
+      "description": "The U-M/DLPS digital-item identity associated with Schaffner's version-L transcription. The inherited header dates the electronic publication to 2003, while Schaffner identifies the UTF-8 XML underlying the current online version as a 2016 file.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "lifesoul", "uri": "https://name.umdl.umich.edu/lifesoul"},
+        {"scheme": "DLPS IDNO", "value": "lifesoul"}
+      ],
+      "creator_ids": ["agent:paul-schaffner", "agent:umich-library"],
+      "date_statements": [
+        {"label": "header publication date", "value": "2003", "normalized": "2003", "certainty": "high", "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-tei-2003"]},
+        {"label": "current online XML layer", "value": "2016", "normalized": "2016", "certainty": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-xml-2016"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:schaffner-index"],
+      "notes": ["The item identity persists across serializations and should not be mistaken for one immutable byte stream."]
+    },
+    {
+      "id": "encoding:schaffner:xml-2016",
+      "type": "digital_encoding",
+      "label": "Paul Schaffner's 2016 UTF-8 XML encoding of Life of Soul",
+      "description": "The local TEI-based DLPSTEXTCLASS XML file that Schaffner says underlies the online version. Its complete TEXT subtree matches the pinned repository artifact, while its availability header replaces the pinned restriction with a public-domain dedication.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "date_statements": [{"label": "serialization", "value": "2016", "normalized": "2016", "certainty": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-xml-2016"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-xml-2016", "evidence:text-subtree-comparison"]
+    },
+    {
+      "id": "encoding:schaffner:tei-p3-2003",
+      "type": "digital_encoding",
+      "label": "Paul Schaffner's 2003 readable TEI P3 SGML encoding",
+      "description": "A revised TEI P3 SGML serialization that removes most line breaks, makes abbreviation expansion silent, introduces translation-based paragraphing and biblical notes, and adjusts folio breaks to avoid splitting words.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "date_statements": [{"label": "revision", "value": "2003", "normalized": "2003", "certainty": "high", "evidence_ids": ["evidence:schaffner-tei-2003"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-tei-2003", "evidence:schaffner-index"]
+    },
+    {
+      "id": "encoding:schaffner:tei-p3-1999",
+      "type": "digital_encoding",
+      "label": "Paul Schaffner's 1999 TEI P3 SGML encoding",
+      "description": "The TEI P3 SGML conversion of Schaffner's HTML transcription, retaining marked abbreviation expansions and within-word line breaks. It was prepared as the basis for the normalized extract and translation published in Cultures of Piety.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "date_statements": [{"label": "conversion", "value": "October 1999", "normalized": "1999-10", "certainty": "high", "evidence_ids": ["evidence:schaffner-tei-1999"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-tei-1999", "evidence:schaffner-index"]
+    },
+    {
+      "id": "encoding:schaffner:html-1997",
+      "type": "digital_encoding",
+      "label": "Paul Schaffner's complete HTML transcription of Laud Misc. 210",
+      "alternate_labels": ["A Transcription of MS Oxf. Bodl. Laud Misc. 210"],
+      "description": "The complete near-diplomatic HTML transcription of version L, first submitted in March 1997 and revised through 15 March 1999. It records manuscript folios and explicit markup conventions.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "date_statements": [
+        {"label": "first submitted", "value": "March 1997", "normalized": "1997-03", "certainty": "high", "evidence_ids": ["evidence:schaffner-index"]},
+        {"label": "document revision", "value": "15 March 1999", "normalized": "1999-03-15", "certainty": "high", "evidence_ids": ["evidence:schaffner-html-transcription"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-html-transcription", "evidence:schaffner-index"]
+    },
+    {
+      "id": "work:anonymous:life-of-soul",
+      "type": "catalog_description",
+      "label": "Life of Soul (abstract work)",
+      "description": "The anonymous Middle English catechetical and devotional prose work shared across versions L, A, and H, distinguished from every physical copy, edition, encoding, and modern description.",
+      "identifiers": [
+        {"scheme": "MED bibliography", "value": "BIB2110", "uri": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2110?rid=hyp.242.19981211t105002"},
+        {"scheme": "Jolliffe", "value": "H.4(c)"}
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:med-bib2110", "evidence:macmillan-2020"],
+      "notes": ["The schema has no abstract-work entity type; catalog_description keeps the intellectual work visible without making it the primary physical/digital artifact."]
+    },
+    {
+      "id": "version:life-of-soul:L",
+      "type": "catalog_description",
+      "label": "Life of Soul, version L",
+      "description": "The Laud textual version represented by the repository artifact and Schaffner's transcription, distinct from versions A and H.",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-tei-1999", "evidence:schaffner-headnote"],
+      "notes": ["The schema has no textual-version entity type; catalog_description is used for the version boundary."]
+    },
+    {
+      "id": "version:life-of-soul:A",
+      "type": "catalog_description",
+      "label": "Life of Soul, version A",
+      "description": "The textual version preserved in British Library Arundel MS 286, fols. 115r-129r.",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:bl-arundel-286"],
+      "notes": ["The schema has no textual-version entity type; catalog_description is used for the version boundary."]
+    },
+    {
+      "id": "version:life-of-soul:H",
+      "type": "catalog_description",
+      "label": "Life of Soul, version H",
+      "description": "The textual version preserved in Huntington Library HM 502, fols. 35r-60v.",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:huntington-hm502"],
+      "notes": ["The schema has no textual-version entity type; catalog_description is used for the version boundary."]
+    },
+    {
+      "id": "facsimile:unidentified:laud-misc-210-film",
+      "type": "facsimile",
+      "label": "Unidentified film reproduction of Bodleian MS Laud Misc. 210",
+      "description": "The film or microfilm reproduction from which Schaffner says he transcribed and translated version L. No call number, producer, date, generation, completeness statement, or present access copy was identified.",
+      "reproduction_format": "Film or microfilm; exact format and coverage unknown",
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote"],
+      "notes": ["It is not equated with the independently cataloged Queen's University Belfast Medieval Manuscripts on Microfilm reel because Schaffner did not identify his film."]
+    },
+    {
+      "id": "witness:bodleian:MS-Laud-Misc-210",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Laud Misc. 210",
+      "description": "A composite fifteenth-century English parchment devotional codex in two parts and contemporary binding. Version L occupies fols. 114r-132v according to Schaffner; the current summary catalog groups relevant contents only under the generic item Religious treatises and does not name Life of Soul or its folios.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Laud Misc. 210", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7019"},
+        {"scheme": "Bodleian intellectual-entity ARK", "value": "ark:29072/x0d791sg384h"},
+        {"scheme": "Bodleian content-resource ARK", "value": "ark:29072/x0bg257f61r3"},
+        {"scheme": "Bodleian Summary Catalogue", "value": "1292"}
+      ],
+      "date_statements": [{"label": "manuscript production", "value": "fifteenth century", "normalized": "1400/1500", "certainty": "high", "evidence_ids": ["evidence:bodleian-catalog"]}],
+      "holding": {
+        "institution_id": "agent:bodleian-libraries",
+        "shelfmark": "MS. Laud Misc. 210",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7019",
+        "notes": "Life of Soul version L is at fols. 114r-132v according to Schaffner; this locus is not itemized in the current abbreviated Bodleian record."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "format": "Composite codex in two parts with contemporary binding",
+        "notes": ["Both cataloged parts are dated fifteenth century and localized to England."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-catalog", "evidence:repo-xml", "evidence:schaffner-headnote"],
+      "notes": ["The generic catalog work key work_14353 is not treated as an exact authority identifier for Life of Soul."]
+    },
+    {
+      "id": "witness:bl:Arundel-286",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Arundel MS 286",
+      "description": "A fifteenth-century vellum devotional manuscript of 191 folios. Version A occupies fols. 115r-129r and begins under the rubric Here bygynneth a tretis that is cleput the lyfe of soule, secundum doctores.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Arundel MS 286", "uri": "https://searcharchives.bl.uk/catalog/040-002039569"}],
+      "date_statements": [{"label": "manuscript production", "value": "fifteenth century", "normalized": "1400/1499", "certainty": "high", "evidence_ids": ["evidence:bl-arundel-286"]}],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Arundel MS 286",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002039569",
+        "notes": "Life of Soul version A is at fols. 115r-129r."
+      },
+      "physical_description": {"support": "Vellum", "extent": "191 folios", "format": "Devotional manuscript"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-arundel-286", "evidence:schaffner-headnote"]
+    },
+    {
+      "id": "witness:huntington:HM-502",
+      "type": "manuscript_witness",
+      "label": "San Marino, Huntington Library, HM 502",
+      "description": "An English devotional miscellany dated between 1400 and 1450. Version H occupies fols. 35r-60v; the official record gives its incipit, explicit, Jolliffe classification, and Moon edition history.",
+      "identifiers": [
+        {"scheme": "Huntington call number", "value": "mssHM 502", "uri": "https://www.huntington.org/collections/lib-p15150coll7-49132"},
+        {"scheme": "Huntington digital object", "value": "p15150coll7/id/49132", "uri": "https://hdl.huntington.org/digital/collection/p15150coll7/id/49132/"},
+        {"scheme": "Jolliffe", "value": "H.4(c)"}
+      ],
+      "date_statements": [{"label": "manuscript production", "value": "between 1400 and 1450", "normalized": "1400/1450", "certainty": "high", "evidence_ids": ["evidence:huntington-hm502"]}],
+      "holding": {
+        "institution_id": "agent:huntington-library",
+        "shelfmark": "HM 502",
+        "catalog_url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+        "notes": "Life of Soul version H is at fols. 35r-60v; physical consultation is restricted and requires curatorial approval."
+      },
+      "physical_description": {"dimensions": "150 x 145 mm", "format": "Devotional miscellany"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm502", "evidence:huntington-opening-image", "evidence:schaffner-headnote"]
+    },
+    {
+      "id": "facsimile:huntington:HM-502-published-selection",
+      "type": "facsimile",
+      "label": "Huntington HM 502 published image selection",
+      "description": "A partial digital surrogate represented by the five non-null IIIF Image API resources exposed in the official page's twenty-slot gallery data on 2026-07-15. Gallery slots 3-5 show fols. 34v-35r, 58v-59r, and 60v-61r, respectively; these openings overlap or bound Life of Soul version H but do not supply its intervening folios or a complete codex.",
+      "reproduction_format": "Five selected color JPEG images delivered through IIIF Image API v3; 1200-pixel derivatives cached",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm502", "evidence:huntington-opening-image", "evidence:huntington-published-selection-bundle"]
+    },
+    {
+      "id": "edition:pimpl:lyfe-of-soule-1963",
+      "type": "scholarly_edition",
+      "label": "Sister Mary Leonella Pimpl, The Lyfe of Soule: An Edition with Commentary (1963 dissertation)",
+      "alternate_labels": ["Helen M. Pimpl dissertation", "UMI 64-2408"],
+      "description": "The Fordham University doctoral dissertation later published under the name Helen M. Moon. Schaffner calls it the only full edition known to him but criticizes its errors.",
+      "identifiers": [
+        {"scheme": "ProQuest/UMI", "value": "6402408"},
+        {"scheme": "Fordham repository", "value": "AAI6402408", "uri": "https://research.library.fordham.edu/dissertations/AAI6402408/"}
+      ],
+      "creator_ids": ["agent:helen-pimpl-moon"],
+      "date_statements": [{"label": "doctoral dissertation", "value": "1963", "normalized": "1963", "certainty": "high", "evidence_ids": ["evidence:fordham-pimpl", "evidence:schaffner-headnote"]}],
+      "bibliographic": {
+        "citation": "Sister Mary Leonella Pimpl, O.S.F., The Lyfe of Soule: An Edition with Commentary (PhD diss., Fordham University, 1963), UMI 64-2408.",
+        "title": "The Lyfe of Soule: An Edition with Commentary",
+        "publisher": "Fordham University",
+        "publication_place": "New York",
+        "date": "1963",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fordham-pimpl", "evidence:schaffner-headnote"]
+    },
+    {
+      "id": "edition:moon:lyfe-of-soule-1978",
+      "type": "scholarly_edition",
+      "label": "Helen M. Moon, The Lyfe of Soule: An Edition with Commentary (1978)",
+      "description": "The published full edition based on Laud Misc. 210 and collated against Arundel MS 286 and HM 502, derived from Pimpl's 1963 dissertation.",
+      "creator_ids": ["agent:helen-pimpl-moon"],
+      "date_statements": [{"label": "publication", "value": "1978", "normalized": "1978", "certainty": "high", "evidence_ids": ["evidence:huntington-hm502", "evidence:schaffner-headnote"]}],
+      "bibliographic": {
+        "citation": "Helen M. Moon, The Lyfe of Soule: An Edition with Commentary, Salzburg Studies in English Literature, Elizabethan and Renaissance Studies 75 (Salzburg: Institut für englische Sprache und Literatur, Universität Salzburg, 1978).",
+        "title": "The Lyfe of Soule: An Edition with Commentary",
+        "series": "Salzburg Studies in English Literature, Elizabethan and Renaissance Studies 75",
+        "publisher": "Institut für englische Sprache und Literatur, Universität Salzburg",
+        "publication_place": "Salzburg",
+        "date": "1978",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm502", "evidence:schaffner-headnote"]
+    },
+    {
+      "id": "edition:schaffner:cultures-of-piety-1999",
+      "type": "scholarly_edition",
+      "label": "Paul F. Schaffner, Life of Soul, in Cultures of Piety (1999)",
+      "description": "The abridged, normalized version-L transcription and modern English translation published in an anthology. It is a derivative presentation, not the source of the complete repository transcription.",
+      "identifiers": [{"scheme": "DOI", "value": "10.7591/9781501726767-007", "uri": "https://doi.org/10.7591/9781501726767-007"}],
+      "creator_ids": ["agent:paul-schaffner", "agent:anne-clark-bartlett", "agent:thomas-bestul"],
+      "date_statements": [{"label": "publication", "value": "1999", "normalized": "1999", "certainty": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-tei-1999", "evidence:cornell-schaffner-1999"]}],
+      "bibliographic": {
+        "citation": "Paul F. Schaffner, 'Life of Soul,' in Cultures of Piety: Medieval English Devotional Literature in Translation, ed. Anne Clark Bartlett and Thomas H. Bestul (Ithaca, NY: Cornell University Press, 1999).",
+        "title": "Life of Soul",
+        "container_title": "Cultures of Piety: Medieval English Devotional Literature in Translation",
+        "publisher": "Cornell University Press",
+        "publication_place": "Ithaca, New York",
+        "date": "1999",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-tei-1999", "evidence:cornell-schaffner-1999"]
+    },
+    {
+      "id": "catalog:schaffner:electronic-edition-index",
+      "type": "catalog_description",
+      "label": "Paul Schaffner's Life of Soul electronic-edition index",
+      "description": "The exact deposit directory index enumerating complete and abridged deliverables, revision history, and current file-specific conditions of use.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-index"]
+    },
+    {
+      "id": "catalog:schaffner:headnote",
+      "type": "catalog_description",
+      "label": "Paul Schaffner's editorial headnote to Life of Soul",
+      "description": "A substantial editorial introduction describing the work, structure, contents, manuscripts, audience, catechetical tradition, biblical sources, possible Wycliffite sympathy, and edition history.",
+      "creator_ids": ["agent:paul-schaffner"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:schaffner-headnote"]
+    },
+    {
+      "id": "catalog:bodleian:MS-Laud-Misc-210",
+      "type": "catalog_description",
+      "label": "Bodleian summary catalog record for MS. Laud Misc. 210",
+      "description": "The official manuscript-level TEI catalog description, abbreviated from Coxe's Laudian catalog and updated through August 2024.",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-catalog"]
+    },
+    {
+      "id": "catalog:bl:Arundel-286",
+      "type": "catalog_description",
+      "label": "British Library catalog record for Arundel MS 286",
+      "description": "The current official item record identifying Life of Soul version A, its folio range, rubric, incipit, and explicit.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-arundel-286"]
+    },
+    {
+      "id": "catalog:huntington:HM-502",
+      "type": "catalog_description",
+      "label": "Huntington Library catalog record for HM 502",
+      "description": "The current official catalog and selected-image record for the devotional miscellany containing version H.",
+      "creator_ids": ["agent:huntington-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm502"]
+    },
+    {
+      "id": "catalog:med:BIB2110",
+      "type": "catalog_description",
+      "label": "Middle English Dictionary bibliography record BIB2110",
+      "alternate_labels": ["c1400 Life Soul (LdMisc 210)"],
+      "description": "The MED repertory identity and citation stencil for the Laud text.",
+      "identifiers": [{"scheme": "MED bibliography", "value": "BIB2110", "uri": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2110?rid=hyp.242.19981211t105002"}],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:med-bib2110", "evidence:med-dictionary-citation"]
+    },
+    {
+      "id": "scholarship:macmillan:well-saved-2017",
+      "type": "catalog_description",
+      "label": "Sarah Macmillan, Well saved in suffering (2017)",
+      "description": "A peer-reviewed article on late-medieval tribulation texts that calls Life of Soul a late-fourteenth-century treatise and discusses its Arundel 286 context and commandment of love.",
+      "creator_ids": ["agent:sarah-macmillan"],
+      "bibliographic": {
+        "citation": "Sarah Macmillan, 'Well saved in suffering': male piety in late-medieval tribulation texts, Reading Medieval Studies 43 (2017): 55-78.",
+        "title": "'Well saved in suffering': male piety in late-medieval tribulation texts",
+        "container_title": "Reading Medieval Studies",
+        "volume": "43",
+        "date": "2017",
+        "pages": "55-78",
+        "languages": ["eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:macmillan-2017"]
+    },
+    {
+      "id": "scholarship:macmillan:suffering-for-love-2020",
+      "type": "catalog_description",
+      "label": "Sarah Macmillan, Suffering for Love: Compilation and Asceticism in Life of Soul (2020)",
+      "description": "A peer-reviewed chapter specifically devoted to Life of Soul. Public university metadata was verified, but the full chapter was not publicly retrieved during this review.",
+      "creator_ids": ["agent:sarah-macmillan"],
+      "bibliographic": {
+        "citation": "Sarah Macmillan, 'Suffering for Love: Compilation and Asceticism in Life of Soul,' in Late Medieval Devotional Compilations in England (Brepols, 2020), 171-192.",
+        "title": "Suffering for Love: Compilation and Asceticism in Life of Soul",
+        "container_title": "Late Medieval Devotional Compilations in England",
+        "publisher": "Brepols Publishers",
+        "date": "2020",
+        "pages": "171-192",
+        "languages": ["eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:macmillan-2020"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/", "https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:paul-schaffner", "type": "person", "name": "Paul F. Schaffner", "alternate_names": ["Paul Schaffner"], "urls": ["http://www-personal.umich.edu/~pfs/"]},
+    {"id": "agent:bodleian-libraries", "type": "organization", "name": "Bodleian Libraries, University of Oxford", "urls": ["https://www.bodleian.ox.ac.uk/", "https://medieval.bodleian.ox.ac.uk/"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/", "https://searcharchives.bl.uk/"]},
+    {"id": "agent:huntington-library", "type": "organization", "name": "The Huntington Library", "urls": ["https://www.huntington.org/"]},
+    {"id": "agent:helen-pimpl-moon", "type": "person", "name": "Helen M. Pimpl", "alternate_names": ["Sister Mary Leonella Pimpl, O.S.F.", "Helen M. Moon"]},
+    {"id": "agent:fordham-university", "type": "organization", "name": "Fordham University", "urls": ["https://www.fordham.edu/", "https://research.library.fordham.edu/"]},
+    {"id": "agent:anne-clark-bartlett", "type": "person", "name": "Anne Clark Bartlett"},
+    {"id": "agent:thomas-bestul", "type": "person", "name": "Thomas H. Bestul"},
+    {"id": "agent:cornell-up", "type": "organization", "name": "Cornell University Press", "urls": ["https://www.cornellpress.cornell.edu/"]},
+    {"id": "agent:sarah-macmillan", "type": "person", "name": "Sarah Macmillan"},
+    {"id": "agent:university-reading", "type": "organization", "name": "University of Reading", "urls": ["https://www.reading.ac.uk/", "https://centaur.reading.ac.uk/"]},
+    {"id": "agent:university-birmingham", "type": "organization", "name": "University of Birmingham", "urls": ["https://www.birmingham.ac.uk/", "https://research.birmingham.ac.uk/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:lifesoul",
+      "object": "encoding:umich-cme:lifesoul",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete pinned repository XML"},
+        "object": {"kind": "whole", "description": "U-M item lifesoul"},
+        "notes": "Item identifiers, DLPS header, title, and content establish the source identity; the exact export event into CME is undocumented."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:cme-git-state"]}
+    },
+    {
+      "id": "relation:repo-version-of-2016",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:lifesoul",
+      "object": "encoding:schaffner:xml-2016",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Pinned 81,942-byte XML artifact"},
+        "object": {"kind": "whole", "description": "Live 82,260-byte 2016 XML file"},
+        "notes": "The serialized TEXT subtrees have identical SHA-256 a7465206c43eac56d296fef026019fdc09e5192473a4d9b628f8b6473ee538c2. Headers differ, especially availability terms, so same_as is not asserted."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-xml-2016", "evidence:text-subtree-comparison"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-2016",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:lifesoul",
+      "object": "encoding:schaffner:xml-2016",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Current U-M online item presentation"},
+        "object": {"kind": "whole", "description": "UTF-8 XML file identified by Schaffner as underlying the online version"},
+        "notes": "The item persists from a 2003 DLPS record, but Schaffner's index explicitly identifies this 2016 XML as the file underlying the online version."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-xml-2016", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:2016-version-of-2003",
+      "type": "version_of",
+      "subject": "encoding:schaffner:xml-2016",
+      "object": "encoding:schaffner:tei-p3-2003",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 2016 local TEI-based XML"},
+        "object": {"kind": "whole", "description": "Complete 2003 readable TEI P3 SGML"},
+        "notes": "Both carry the 2003 editorial declaration and text; the 2016 serialization changes markup syntax and availability wording."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-tei-2003", "evidence:schaffner-xml-2016"]}
+    },
+    {
+      "id": "relation:2003-version-of-1999",
+      "type": "version_of",
+      "subject": "encoding:schaffner:tei-p3-2003",
+      "object": "encoding:schaffner:tei-p3-1999",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Revised 2003 readable encoding"},
+        "object": {"kind": "whole", "description": "1999 TEI P3 encoding"},
+        "notes": "The 2003 revision statement says line breaks were removed, abbreviation expansion made silent, and notes and paragraphing introduced."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-tei-2003", "evidence:schaffner-tei-1999"]}
+    },
+    {
+      "id": "relation:1999-encoded-from-html",
+      "type": "encoded_from",
+      "subject": "encoding:schaffner:tei-p3-1999",
+      "object": "encoding:schaffner:html-1997",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 1999 TEI P3 SGML encoding"},
+        "object": {"kind": "whole", "description": "Complete HTML transcription"},
+        "notes": "The 1999 header explicitly says the ASCII transcription was converted to HTML and then converted from HTML using TEI equivalents."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-tei-1999", "evidence:schaffner-html-transcription"]}
+    },
+    {
+      "id": "relation:html-transcribes-film",
+      "type": "transcribes",
+      "subject": "encoding:schaffner:html-1997",
+      "object": "facsimile:unidentified:laud-misc-210-film",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete version-L transcription"},
+        "object": {"kind": "selected_passages", "description": "Film images of Laud Misc. 210 fols. 114r-132v", "locators": ["folios 114r-132v"]},
+        "notes": "Schaffner repeatedly identifies a film or microfilm reproduction as his direct visual source; no edition intervenes."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote", "evidence:schaffner-html-transcription"]}
+    },
+    {
+      "id": "relation:film-facsimile-of-laud",
+      "type": "facsimile_of",
+      "subject": "facsimile:unidentified:laud-misc-210-film",
+      "object": "witness:bodleian:MS-Laud-Misc-210",
+      "scope": {
+        "subject": {"kind": "unknown", "description": "Unidentified film reproduction; total coverage unknown"},
+        "object": {"kind": "selected_passages", "description": "At minimum version L at fols. 114r-132v", "locators": ["folios 114r-132v"]},
+        "notes": "Only the target-work coverage needed for Schaffner's transcription is established; complete-codex film coverage is not inferred."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:laud-contains-version-l",
+      "type": "contains",
+      "subject": "witness:bodleian:MS-Laud-Misc-210",
+      "object": "version:life-of-soul:L",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Fols. 114r-132v", "locators": ["folios 114r-132v"]},
+        "object": {"kind": "whole", "description": "Complete version L as transcribed by Schaffner"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:arundel-contains-version-a",
+      "type": "contains",
+      "subject": "witness:bl:Arundel-286",
+      "object": "version:life-of-soul:A",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Fols. 115r-129r", "locators": ["folios 115r-129r"]},
+        "object": {"kind": "whole", "description": "Complete version A"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-arundel-286", "evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:huntington-contains-version-h",
+      "type": "contains",
+      "subject": "witness:huntington:HM-502",
+      "object": "version:life-of-soul:H",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Fols. 35r-60v", "locators": ["folios 35r-60v"]},
+        "object": {"kind": "whole", "description": "Complete version H"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502", "evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:huntington-selection-facsimile-of-hm502",
+      "type": "facsimile_of",
+      "subject": "facsimile:huntington:HM-502-published-selection",
+      "object": "witness:huntington:HM-502",
+      "scope": {
+        "subject": {"kind": "whole", "description": "All five currently retrievable images in the published selection"},
+        "object": {"kind": "selected_passages", "description": "Five selected manuscript openings and surfaces, including three that overlap or bound Life of Soul", "locators": ["f. 1r", "fols. 34v-35r", "fols. 58v-59r", "fols. 60v-61r", "front cover"]},
+        "notes": "The official page advertises twenty labeled slots, but fifteen are null Image not found placeholders; the modeled facsimile comprises only the five actual image resources and is partial relative to the codex."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502", "evidence:huntington-published-selection-bundle"]}
+    },
+    {
+      "id": "relation:version-l-version-of-work",
+      "type": "version_of",
+      "subject": "version:life-of-soul:L",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "whole", "description": "Textual version L"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-headnote", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:version-a-version-of-work",
+      "type": "version_of",
+      "subject": "version:life-of-soul:A",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "whole", "description": "Textual version A"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-headnote", "evidence:bl-arundel-286"]}
+    },
+    {
+      "id": "relation:version-h-version-of-work",
+      "type": "version_of",
+      "subject": "version:life-of-soul:H",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "whole", "description": "Textual version H"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-headnote", "evidence:huntington-hm502"]}
+    },
+    {
+      "id": "relation:html-version-of-version-l",
+      "type": "version_of",
+      "subject": "encoding:schaffner:html-1997",
+      "object": "version:life-of-soul:L",
+      "scope": {"subject": {"kind": "whole", "description": "Complete HTML transcription"}, "object": {"kind": "whole", "description": "Textual version L"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-html-transcription", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:moon-version-of-pimpl",
+      "type": "version_of",
+      "subject": "edition:moon:lyfe-of-soule-1978",
+      "object": "edition:pimpl:lyfe-of-soule-1963",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Published 1978 edition"},
+        "object": {"kind": "whole", "description": "1963 doctoral dissertation edition"},
+        "notes": "Pimpl and Moon are the same scholar under different names; exact revisions between dissertation and publication were not inspected."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:fordham-pimpl", "evidence:schaffner-headnote", "evidence:huntington-hm502"]}
+    },
+    {
+      "id": "relation:moon-transcribes-laud",
+      "type": "transcribes",
+      "subject": "edition:moon:lyfe-of-soule-1978",
+      "object": "witness:bodleian:MS-Laud-Misc-210",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Laud-based edited text"},
+        "object": {"kind": "selected_passages", "description": "Life of Soul version L, fols. 114r-132v", "locators": ["folios 114r-132v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502", "evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:moon-collated-arundel",
+      "type": "collated_against",
+      "subject": "edition:moon:lyfe-of-soule-1978",
+      "object": "witness:bl:Arundel-286",
+      "scope": {"subject": {"kind": "whole", "description": "Critical edition and commentary"}, "object": {"kind": "selected_passages", "description": "Version A, fols. 115r-129r", "locators": ["folios 115r-129r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502"]}
+    },
+    {
+      "id": "relation:moon-collated-huntington",
+      "type": "collated_against",
+      "subject": "edition:moon:lyfe-of-soule-1978",
+      "object": "witness:huntington:HM-502",
+      "scope": {"subject": {"kind": "whole", "description": "Critical edition and commentary"}, "object": {"kind": "selected_passages", "description": "Version H, fols. 35r-60v", "locators": ["folios 35r-60v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502"]}
+    },
+    {
+      "id": "relation:html-consulted-moon",
+      "type": "consulted",
+      "subject": "encoding:schaffner:html-1997",
+      "object": "edition:moon:lyfe-of-soule-1978",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Schaffner's transcription and editorial work"},
+        "object": {"kind": "whole", "description": "Moon's full edition"},
+        "notes": "Schaffner explicitly says he consulted Moon but translated version L directly from microfilm. This is not a copied_from or transcribes relation."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:cultures-excerpted-from-html",
+      "type": "excerpted_from",
+      "subject": "edition:schaffner:cultures-of-piety-1999",
+      "object": "encoding:schaffner:html-1997",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Abridged normalized transcription and translation"},
+        "object": {"kind": "whole", "description": "Complete version-L HTML transcription"},
+        "notes": "Schaffner's index labels the published version abridged; the complete electronic transcription remains a distinct source."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-tei-1999", "evidence:cornell-schaffner-1999"]}
+    },
+    {
+      "id": "relation:schaffner-index-describes-encodings",
+      "type": "describes",
+      "subject": "catalog:schaffner:electronic-edition-index",
+      "object": "encoding:schaffner:xml-2016",
+      "scope": {"subject": {"kind": "whole", "description": "File list, revision history, and conditions"}, "object": {"kind": "whole", "description": "2016 XML and its preceding electronic layers"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-index"]}
+    },
+    {
+      "id": "relation:schaffner-headnote-describes-work",
+      "type": "describes",
+      "subject": "catalog:schaffner:headnote",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "whole", "description": "Complete editorial headnote"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work and its three versions"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:schaffner-headnote"]}
+    },
+    {
+      "id": "relation:bodleian-catalog-describes-laud",
+      "type": "describes",
+      "subject": "catalog:bodleian:MS-Laud-Misc-210",
+      "object": "witness:bodleian:MS-Laud-Misc-210",
+      "scope": {"subject": {"kind": "whole", "description": "Complete summary catalog record"}, "object": {"kind": "whole", "description": "Complete composite codex"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-catalog"]}
+    },
+    {
+      "id": "relation:bl-catalog-describes-arundel",
+      "type": "describes",
+      "subject": "catalog:bl:Arundel-286",
+      "object": "witness:bl:Arundel-286",
+      "scope": {"subject": {"kind": "whole", "description": "Current official catalog record"}, "object": {"kind": "whole", "description": "Arundel MS 286"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-arundel-286"]}
+    },
+    {
+      "id": "relation:huntington-catalog-describes-hm502",
+      "type": "describes",
+      "subject": "catalog:huntington:HM-502",
+      "object": "witness:huntington:HM-502",
+      "scope": {"subject": {"kind": "whole", "description": "Current official catalog and selected-image record"}, "object": {"kind": "whole", "description": "HM 502"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-hm502"]}
+    },
+    {
+      "id": "relation:med-describes-version-l",
+      "type": "describes",
+      "subject": "catalog:med:BIB2110",
+      "object": "version:life-of-soul:L",
+      "scope": {"subject": {"kind": "whole", "description": "BIB2110 and linked citation stencil"}, "object": {"kind": "whole", "description": "Laud version L"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:med-bib2110", "evidence:med-dictionary-citation"]}
+    },
+    {
+      "id": "relation:macmillan-2017-describes-work",
+      "type": "describes",
+      "subject": "scholarship:macmillan:well-saved-2017",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Discussion of Life of Soul and Arundel 286"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:macmillan-2017"]}
+    },
+    {
+      "id": "relation:macmillan-2020-describes-work",
+      "type": "describes",
+      "subject": "scholarship:macmillan:suffering-for-love-2020",
+      "object": "work:anonymous:life-of-soul",
+      "scope": {"subject": {"kind": "whole", "description": "Work-specific peer-reviewed chapter"}, "object": {"kind": "whole", "description": "Abstract Life of Soul work"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:macmillan-2020"], "notes": "The chapter's identity and scope are confirmed from official metadata; its full argument was not inspected in this review."}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo",
+      "entity": "artifact:general-corpus:lifesoul",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Pinned CME git submodule checkout",
+      "repository_path": "CME/source/CME_phase_1-2/lifesoul.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-git-state"]
+    },
+    {
+      "id": "access:umich-item",
+      "entity": "encoding:umich-cme:lifesoul",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public U-M CME item and stable resolver",
+      "url": "https://quod.lib.umich.edu/c/cme/lifesoul",
+      "alternate_urls": ["https://name.umdl.umich.edu/lifesoul", "https://quod.lib.umich.edu/c/cme/"],
+      "cost": "free",
+      "format": "HTML digital text and item metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:umich-item"],
+      "notes": ["The current page exposes a public-domain statement and DPLA No Copyright-United States label while also displaying a 1999 Schaffner copyright line; the pinned XML retains more restrictive terms."]
+    },
+    {
+      "id": "access:schaffner-index",
+      "entity": "catalog:schaffner:electronic-edition-index",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public HTTP directory index",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/index.html",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner Life of Soul electronic edition index",
+          "path": "source-cache/lifesoul/schaffner-index.html",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/index.html",
+          "sha256": "dce3d005d117fa20f071287a30110e3b186f6ffe6d4c1954e04eeee89aff0b75",
+          "bytes": 4730,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Life of Soul electronic-edition resource index",
+            "locators": ["entire HTML page; electronic-version list, revision history, and rights paragraphs"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-index"]
+    },
+    {
+      "id": "access:schaffner-html",
+      "entity": "encoding:schaffner:html-1997",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct public HTTP file",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/ls-xr.html",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner complete HTML manuscript transcription",
+          "path": "source-cache/lifesoul/schaffner-transcription-1997.html",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/ls-xr.html",
+          "sha256": "1412e894d20f01100d1c43adeebb5fb53b81277a8d9fddd60052b42697e11258",
+          "bytes": 167633,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete Life of Soul version-L transcription",
+            "locators": ["entire HTML transcription", "Bodleian MS Laud Misc. 210, fols. 114r-132v"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "HTML transcription",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-html-transcription"]
+    },
+    {
+      "id": "access:schaffner-tei-1999",
+      "entity": "encoding:schaffner:tei-p3-1999",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct public HTTP file",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei-b.sgm",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner 1999 TEI P3 SGML encoding",
+          "path": "source-cache/lifesoul/schaffner-tei-p3-1999.sgm",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei-b.sgm",
+          "sha256": "ebd80a444f4796b4b645546c9774c91cc25325fb587ac7233fcecba038fce575",
+          "bytes": 116826,
+          "media_type": "application/sgml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete Life of Soul version-L transcription and TEI P3 encoding",
+            "locators": ["complete TEXT element", "Bodleian MS Laud Misc. 210, fols. 114r-132v"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "TEI P3 SGML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-tei-1999"]
+    },
+    {
+      "id": "access:schaffner-tei-2003",
+      "entity": "encoding:schaffner:tei-p3-2003",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct public HTTP file",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei.sgm",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner 2003 readable TEI P3 SGML encoding",
+          "path": "source-cache/lifesoul/schaffner-tei-p3-2003.sgm",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei.sgm",
+          "sha256": "25bb297338ad9f13837e829de1dba0478653479eef77654d2c3657fc2e98239f",
+          "bytes": 100185,
+          "media_type": "application/sgml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete Life of Soul version-L transcription and readable TEI P3 encoding",
+            "locators": ["complete TEXT element", "Bodleian MS Laud Misc. 210, fols. 114r-132v"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "TEI P3 SGML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-tei-2003"]
+    },
+    {
+      "id": "access:schaffner-xml-2016",
+      "entity": "encoding:schaffner:xml-2016",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct public HTTP file",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.xml",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner 2016 XML encoding",
+          "path": "source-cache/lifesoul/schaffner-xml-2016.xml",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.xml",
+          "sha256": "f1b6048558a5ac7858da696a565cc4242dcbb242f98f2fd1de5128cd8c926ce9",
+          "bytes": 82260,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete Life of Soul version-L transcription and XML encoding",
+            "locators": ["complete TEXT element", "Bodleian MS Laud Misc. 210, fols. 114r-132v"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "UTF-8 XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-xml-2016", "evidence:text-subtree-comparison"]
+    },
+    {
+      "id": "access:schaffner-headnote",
+      "entity": "catalog:schaffner:headnote",
+      "provider_id": "agent:paul-schaffner",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public HTTP page; private research cache retained under stated educational/research terms",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/shc-intr.html",
+      "local_copies": [
+        {
+          "label": "Paul Schaffner editorial headnote to Life of Soul",
+          "path": "source-cache/lifesoul/schaffner-headnote.html",
+          "source_url": "http://www-personal.umich.edu/~pfs/lifesoul/shc-intr.html",
+          "sha256": "a5a83b137b86878b26761b01b1dc2321ec0f820f13801dae6dbf886d92ab0dfa",
+          "bytes": 15330,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Editorial introduction to Life of Soul",
+            "locators": ["Work description", "Catechetical Manuals", "Orthodoxy?", "Text and Manuscript Context", "Selected Bibliography"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-headnote"],
+      "notes": ["The headnote remains copyrighted; Schaffner permits research and educational use but requires permission for redistribution and print publication."]
+    },
+    {
+      "id": "access:bodleian-catalog",
+      "entity": "catalog:bodleian:MS-Laud-Misc-210",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public manuscript catalog and pinned official GitHub TEI record",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7019",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_210.xml"],
+      "local_copies": [
+        {
+          "label": "Bodleian TEI manuscript catalog record for MS Laud Misc. 210",
+          "path": "source-cache/lifesoul/bodleian-ms-laud-misc-210-catalog.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_210.xml",
+          "sha256": "25f79f86a99910106bb6253228547f53b601e09edc964fb5cd41bf42ff2fc403",
+          "bytes": 7733,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and TEI XML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bodleian-catalog"]
+    },
+    {
+      "id": "access:laud-page-images",
+      "entity": "witness:bodleian:MS-Laud-Misc-210",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Digital Bodleian exact-title, exact-shelfmark, and broad API searches",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=%22Laud+Misc.+210%22",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22MS.+Laud+Misc.+210%22",
+        "https://digital.bodleian.ox.ac.uk/search/?q=Laud+AND+210"
+      ],
+      "cost": "unknown",
+      "format": "No target IIIF manifest or digital object found",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:digital-bodleian-search", "evidence:digital-bodleian-faq"],
+      "notes": [
+        "Exact title and shelfmark searches returned zero items; the broad query returned seven other Laud objects and no target.",
+        "Digital Bodleian states that not all manuscripts are digitized. The negative result therefore does not prove that no photography or internal surrogate exists.",
+        "No whole-codex image cache was created because no public source object or complete inventory was found."
+      ]
+    },
+    {
+      "id": "access:laud-physical",
+      "entity": "witness:bodleian:MS-Laud-Misc-210",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Bodleian Special Collections consultation subject to reader registration and item availability",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7019",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bodleian-catalog", "evidence:digital-bodleian-faq"]
+    },
+    {
+      "id": "access:laud-reproduction-order",
+      "entity": "witness:bodleian:MS-Laud-Misc-210",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request basic research scans through mediated copying or professional images through Bodleian Imaging Services, quoting the exact shelfmark and desired full-object coverage",
+      "url": "https://digital.bodleian.ox.ac.uk/faq/",
+      "contact": "Bodleian Special Collections / Imaging Services",
+      "cost": "fee",
+      "format": "Reference scans or professional photography subject to preservation and service review",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:digital-bodleian-faq", "evidence:bodleian-catalog"],
+      "notes": ["A complete-object request should separately inventory boards, spine if offered, pastedowns, all flyleaves and blanks, and every recto and verso in both composite parts; map Life of Soul specifically to fols. 114r-132v."]
+    },
+    {
+      "id": "access:schaffner-film",
+      "entity": "facsimile:unidentified:laud-misc-210-film",
+      "resource_kind": "microfilm",
+      "status": "no_public_copy_found",
+      "access_method": "No identifying call number or provider was supplied in Schaffner's files",
+      "cost": "unknown",
+      "format": "Film or microfilm, exact format unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote"],
+      "notes": ["Do not infer that the Queen's University Belfast MS 59/48 reel was Schaffner's source without identifying evidence."]
+    },
+    {
+      "id": "access:arundel-catalog",
+      "entity": "witness:bl:Arundel-286",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public British Library Archives and Manuscripts Catalogue record",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039569",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-arundel-286"]
+    },
+    {
+      "id": "access:arundel-images",
+      "entity": "witness:bl:Arundel-286",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Checked exact official catalog record and digitised-content field",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039569",
+      "cost": "unknown",
+      "format": "No linked digital object",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-arundel-286"],
+      "notes": ["The record's Digitised Content field was blank. No complete public object or selected Life of Soul leaves were found or cached."]
+    },
+    {
+      "id": "access:arundel-physical",
+      "entity": "witness:bl:Arundel-286",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Request through the official collection-item form for consultation in London",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039569",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-arundel-286"]
+    },
+    {
+      "id": "access:huntington-catalog",
+      "entity": "witness:huntington:HM-502",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public Huntington collection record",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "alternate_urls": ["https://hdl.huntington.org/digital/collection/p15150coll7/id/49132/"],
+      "cost": "free",
+      "format": "HTML catalog record with selected images",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:huntington-hm502"]
+    },
+    {
+      "id": "access:huntington-selected-images",
+      "entity": "facsimile:huntington:HM-502-published-selection",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Five retrievable IIIF Image API resources exposed among twenty labeled gallery slots in the public collection record",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "local_copies": [
+        {
+          "label": "Huntington HM 502 complete currently retrievable five-image selection",
+          "path": "source-cache/lifesoul/huntington-hm-502-published-selection-5-images-1200px.zip",
+          "source_url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+          "sha256": "73a6fa813080a48cd0aa8e70d95ca08ca640ca3844427be256790be6419ee98f",
+          "bytes": 986665,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "partial",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "image_url_inventory",
+          "source_file_count": 5,
+          "target_work_presence": "present",
+          "notes": [
+            "The official page advertises twenty labeled gallery slots, but fifteen carry null image URLs and Image not found placeholders; all five non-null resources were retained.",
+            "The bundle is complete for the five currently retrievable resources but partial for the advertised gallery and for the physical codex.",
+            "ZIP contains the normalized source URL list, exact-source inventory, and five verified 1200-pixel JPEG derivatives."
+          ],
+          "work_portion": {
+            "label": "Life of Soul, version H",
+            "locators": ["published gallery slots 3-5", "fols. 34v-35r, 58v-59r, and 60v-61r; target text is fols. 35r-60v"],
+            "start_url": "https://rail.huntington.org/IIIF3/Image/22APN4KP4488/full/1200,/0/default.jpg",
+            "end_url": "https://rail.huntington.org/IIIF3/Image/22APN4KP563I/full/1200,/0/default.jpg",
+            "notes": ["Three selected openings overlap or bound the target; they do not reproduce the intervening folios or the complete Life of Soul."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Five retrievable selected JPEG images among twenty labeled slots; not a complete codex",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:huntington-hm502", "evidence:huntington-opening-image", "evidence:huntington-published-selection-bundle", "evidence:huntington-reproduction-policy"],
+      "notes": [
+        "Slot 3 shows fols. 34v-35r and the opening of version H; slot 4 shows fols. 58v-59r; slot 5 shows the f. 60v boundary.",
+        "The page's React data contains five non-null image URLs (slots 1, 3, 4, 5, and 20) and fifteen null placeholders, so twenty labels must not be reported as twenty downloadable images."
+      ]
+    },
+    {
+      "id": "access:huntington-complete-images",
+      "entity": "witness:huntington:HM-502",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Audited the official record, all twenty labeled gallery slots, and the five retrievable image resources for a complete manifest or inventory",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "cost": "unknown",
+      "format": "No complete public codex object found",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:huntington-hm502", "evidence:huntington-published-selection-bundle"],
+      "notes": ["Five public selected images must not be generalized into complete-codex access; fifteen of the twenty advertised slots are null placeholders."]
+    },
+    {
+      "id": "access:huntington-physical",
+      "entity": "witness:huntington:HM-502",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Restricted consultation with curatorial approval; extended retrieval and delivery time required",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:huntington-hm502"]
+    },
+    {
+      "id": "access:pimpl-catalog",
+      "entity": "edition:pimpl:lyfe-of-soule-1963",
+      "provider_id": "agent:fordham-university",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public Fordham dissertation repository record",
+      "url": "https://research.library.fordham.edu/dissertations/AAI6402408/",
+      "cost": "free",
+      "format": "HTML metadata record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:fordham-pimpl"]
+    },
+    {
+      "id": "access:pimpl-download",
+      "entity": "edition:pimpl:lyfe-of-soule-1963",
+      "provider_id": "agent:fordham-university",
+      "resource_kind": "download",
+      "status": "unavailable",
+      "access_method": "Repository download link returned HTTP 403 during review",
+      "url": "https://research.library.fordham.edu/dissertations/AAI6402408/",
+      "cost": "unknown",
+      "format": "Dissertation PDF not retrieved",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:fordham-pimpl"],
+      "notes": ["No cached dissertation copy was created and no claim is made that the dissertation is permanently unavailable through institutional access or ProQuest."]
+    },
+    {
+      "id": "access:moon-edition",
+      "entity": "edition:moon:lyfe-of-soule-1978",
+      "resource_kind": "download",
+      "status": "no_public_copy_found",
+      "access_method": "Verified bibliographic references in Schaffner and Huntington; no authorized open full text found",
+      "cost": "unknown",
+      "format": "Printed scholarly monograph or library copy",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:huntington-hm502"]
+    },
+    {
+      "id": "access:cultures-of-piety",
+      "entity": "edition:schaffner:cultures-of-piety-1999",
+      "provider_id": "agent:cornell-up",
+      "resource_kind": "digital_text",
+      "status": "subscription_required",
+      "access_method": "Publisher/DOI metadata and library e-book platforms; Schaffner separately exposes electronic working versions under his own conditions",
+      "url": "https://doi.org/10.7591/9781501726767-007",
+      "cost": "fee",
+      "format": "Published anthology chapter",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cornell-schaffner-1999", "evidence:schaffner-index"]
+    },
+    {
+      "id": "access:med",
+      "entity": "catalog:med:BIB2110",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public MED bibliography and dictionary citation links",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2110?rid=hyp.242.19981211t105002",
+      "alternate_urls": ["https://quod.lib.umich.edu/m/middle-english-dictionary/dictionary/MED51969"],
+      "cost": "free",
+      "format": "HTML repertory record and citation",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:med-bib2110", "evidence:med-dictionary-citation"]
+    },
+    {
+      "id": "access:macmillan-2017",
+      "entity": "scholarship:macmillan:well-saved-2017",
+      "provider_id": "agent:university-reading",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct public CentAUR accepted/published-version PDF",
+      "url": "https://centaur.reading.ac.uk/83242/1/RMS_2017_04_S_Macmillan_Well_saved_in_suffering.pdf",
+      "local_copies": [
+        {
+          "label": "Sarah Macmillan, Well saved in suffering",
+          "path": "source-cache/lifesoul/macmillan-2017-well-saved-in-suffering.pdf",
+          "source_url": "https://centaur.reading.ac.uk/83242/1/RMS_2017_04_S_Macmillan_Well_saved_in_suffering.pdf",
+          "sha256": "6de4d852d4e4c061bbaee19c758abacb8c38b54784815dd53116f6c6ccda8f32",
+          "bytes": 266876,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Discussion and citation of Life of Soul",
+            "locators": ["printed p. 68 (PDF page 15)", "note 71 on printed pp. 76-77 (PDF pages 23-24)"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "25-page PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:macmillan-2017", "evidence:macmillan-2017-pdf-integrity"]
+    },
+    {
+      "id": "access:macmillan-2020",
+      "entity": "scholarship:macmillan:suffering-for-love-2020",
+      "provider_id": "agent:university-birmingham",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public university research-output metadata page",
+      "url": "https://research.birmingham.ac.uk/en/publications/suffering-for-love-compilation-and-asceticism-in-life-of-soul/",
+      "cost": "free",
+      "format": "HTML bibliographic metadata; no full chapter retrieved",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:macmillan-2020"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:abstract-work",
+      "entity": "work:anonymous:life-of-soul",
+      "component": "The medieval Life of Soul text as an abstract work",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The work was composed and transmitted in the late fourteenth or early fifteenth century and has no modern authorial layer in its underlying text.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:bodleian-catalog", "evidence:bl-arundel-286", "evidence:huntington-hm502"]
+    },
+    {
+      "id": "rights:schaffner-html-public-domain",
+      "entity": "encoding:schaffner:html-1997",
+      "access_id": "access:schaffner-html",
+      "component": "The complete transcription, interpretative decisions, notes, and markup in the current hosted file",
+      "jurisdiction": "Worldwide to the extent legally possible",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current file says the transcription is public domain and that Schaffner and U-M dedicate and waive rights in interpretative decisions, notes, and markup using a Creative Commons Public Domain Dedication.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "license": {"name": "Creative Commons Public Domain Dedication", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-html-transcription"],
+      "notes": ["The file's wording names a Creative Commons Public Domain Dedication without an explicit versioned URL; CC0 1.0 is supplied as the current standard dedication URI, not as proof of the historical instrument's exact version."]
+    },
+    {
+      "id": "rights:schaffner-tei-1999-public-domain",
+      "entity": "encoding:schaffner:tei-p3-1999",
+      "access_id": "access:schaffner-tei-1999",
+      "component": "The 1999 TEI P3 transcription, interpretative decisions, notes, and markup in the current hosted file",
+      "jurisdiction": "Worldwide to the extent legally possible",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current 1999 file's availability statement dedicates the transcription and any protectable interpretative decisions, notes, and markup to the public domain.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "license": {"name": "Creative Commons Public Domain Dedication", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-tei-1999"]
+    },
+    {
+      "id": "rights:schaffner-tei-2003-public-domain",
+      "entity": "encoding:schaffner:tei-p3-2003",
+      "access_id": "access:schaffner-tei-2003",
+      "component": "The 2003 TEI P3 transcription, interpretative decisions, notes, and markup in the current hosted file",
+      "jurisdiction": "Worldwide to the extent legally possible",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current 2003 file's availability statement dedicates the transcription and any protectable interpretative decisions, notes, and markup to the public domain.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "license": {"name": "Creative Commons Public Domain Dedication", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-tei-2003"]
+    },
+    {
+      "id": "rights:schaffner-xml-2016-public-domain",
+      "entity": "encoding:schaffner:xml-2016",
+      "access_id": "access:schaffner-xml-2016",
+      "component": "The 2016 XML transcription, interpretative decisions, notes, and markup in the current hosted file",
+      "jurisdiction": "Worldwide to the extent legally possible",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current 2016 XML availability statement dedicates the transcription and any protectable interpretative decisions, notes, and markup to the public domain.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "license": {"name": "Creative Commons Public Domain Dedication", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-xml-2016"]
+    },
+    {
+      "id": "rights:umich-current-noc-us",
+      "entity": "encoding:umich-cme:lifesoul",
+      "access_id": "access:umich-item",
+      "component": "The current U-M digital item and encoding in the United States",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The current U-M item describes the materials as public domain and displays the DPLA/RightsStatements.org No Copyright-United States designation.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"],
+      "notes": ["NoC-US is jurisdiction-specific and is not silently treated as cancellation of the embedded legacy redistribution restriction."]
+    },
+    {
+      "id": "rights:artifact-legacy-availability",
+      "entity": "artifact:general-corpus:lifesoul",
+      "access_id": "access:repo",
+      "component": "The availability statement embedded in the pinned repository XML",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The pinned XML says Copyright 1999 Paul F. Schaffner, permits copying for personal use, research, teaching, and linking with the notice retained, and expressly forbids redistribution by commercial or not-for-profit content providers.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": ["This is a provider-term record, not proof that copyright subsists in the medieval text or every markup feature.", "The live 2016 file and current U-M item supply materially different rights statements; the conflict remains unresolved."]
+    },
+    {
+      "id": "rights:artifact-cme-unlicense",
+      "entity": "artifact:general-corpus:lifesoul",
+      "access_id": "access:repo",
+      "component": "The CME repository distribution under its root LICENSE",
+      "jurisdiction": "Worldwide to the extent legally possible",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The pinned CME repository's root LICENSE is the Unlicense/public-domain dedication and permits unrestricted use of the software in source or binary form.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:cme-git-state"],
+      "notes": ["The license's own wording speaks of software. Its application to third-party source texts and embedded item-level notices is not assumed to supersede the restrictive lifesoul header."]
+    },
+    {
+      "id": "rights:schaffner-headnote",
+      "entity": "catalog:schaffner:headnote",
+      "access_id": "access:schaffner-headnote",
+      "component": "Schaffner's modern editorial headnote",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "Schaffner's index says the introduction/headnote remains copyrighted, licensed for most uses, but requires permission for redistribution and print publication.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-headnote"],
+      "notes": ["The local ignored cache is retained for research verification; it is not proposed for repository distribution."]
+    },
+    {
+      "id": "rights:cultures-of-piety",
+      "entity": "edition:schaffner:cultures-of-piety-1999",
+      "access_id": "access:cultures-of-piety",
+      "component": "The normalized transcription, translation, and anthology presentation",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The anthology was published in 1999, and Schaffner's index distinguishes the copyrighted translation, normalization, introduction, and notes from the public-domain transcription files.",
+      "asserted_by_id": "agent:paul-schaffner",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-index", "evidence:cornell-schaffner-1999"]
+    },
+    {
+      "id": "rights:macmillan-2017",
+      "entity": "scholarship:macmillan:well-saved-2017",
+      "access_id": "access:macmillan-2017",
+      "component": "The 2017 scholarly article and CentAUR PDF",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The PDF cover sheet states that copyright and intellectual-property rights are retained by creators or other rightsholders and that repository end-user terms apply.",
+      "asserted_by_id": "agent:university-reading",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:macmillan-2017"]
+    },
+    {
+      "id": "rights:huntington-published-selection",
+      "entity": "facsimile:huntington:HM-502-published-selection",
+      "access_id": "access:huntington-selected-images",
+      "component": "The five modern digital photographs in the published HM 502 selection",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The manuscript's medieval intellectual content is public domain by age, but neither the selected-image page nor the inspected IIIF Image API response assigns an item-specific rights statement to the modern photographs. Huntington's official reproduction policy says it generally does not own the intellectual content or copyright in library holdings, places clearance responsibility on users, authorizes reproductions for private study, scholarship, or research within applicable law, and asks for appropriate credit.",
+      "asserted_by_id": "agent:huntington-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:huntington-reproduction-policy", "evidence:huntington-hm502", "evidence:huntington-published-selection-bundle"],
+      "notes": ["The research cache preserves public 1200-pixel derivatives and provider identifiers; it does not assert that the photographs themselves are public domain or authorize repository redistribution."]
+    },
+    {
+      "id": "rights:manuscript-images-unassigned",
+      "entity": "witness:bodleian:MS-Laud-Misc-210",
+      "access_id": "access:laud-page-images",
+      "component": "Any modern digital or commissioned images of the physical Laud manuscript",
+      "jurisdiction": "Provider terms and applicable law",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "No public Laud facsimile or item-level image-rights statement was found. The public-domain medieval text does not itself determine rights or contractual conditions for modern photography.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:digital-bodleian-search", "evidence:digital-bodleian-faq"],
+      "notes": ["No manuscript image is proposed for redistribution or cached as a facsimile."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:1999-marked-expansions",
+      "entity": "encoding:schaffner:tei-p3-1999",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations in the Laud transcription",
+      "representation": "Expanded text remains marked with EXPAN-style TEI P3 markup, and within-word line breaks remain visible",
+      "description": "The 1999 layer preserves explicit editorial marking of abbreviation expansion inherited from the near-diplomatic transcription.",
+      "scope": "Complete version-L transcription",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-tei-1999", "evidence:schaffner-html-transcription"]
+    },
+    {
+      "id": "practice:2003-silent-expansions",
+      "entity": "encoding:schaffner:tei-p3-2003",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Marked abbreviation expansions in the 1999 encoding",
+      "representation": "Expansion text retained but EXPAN tags removed to facilitate searching",
+      "description": "The 2003 revision deliberately makes abbreviation expansion silent. It also removes most line breaks, retains within-word breaks as pipes, moves folio breaks away from split words, adds translation-based paragraphs, and adds biblical notes.",
+      "scope": "Complete version-L transcription",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-tei-2003", "evidence:repo-xml"]
+    },
+    {
+      "id": "practice:cultures-abridgment",
+      "entity": "edition:schaffner:cultures-of-piety-1999",
+      "practice": "selection",
+      "source_feature": "Complete version-L transcription",
+      "representation": "Abridged and semi-modernized source transcription paired with a modern English translation",
+      "description": "The published anthology version is explicitly an abridgment. It is not substituted for the complete electronic transcription or treated as the repository source.",
+      "scope": "Published Life of Soul chapter in Cultures of Piety",
+      "confidence": "high",
+      "evidence_ids": ["evidence:schaffner-index", "evidence:schaffner-tei-1999", "evidence:cornell-schaffner-1999"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/lifesoul.xml, pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/lifesoul.xml",
+      "locator": "Complete file; especially FILEDESC, AVAILABILITY, SOURCEDESC, ENCODINGDESC, PROFILEDESC, and TEXT/BODY/DIV1",
+      "summary": "The 81,942-byte file identifies U-M/DLPS item lifesoul, Paul F. Schaffner as editor, a 2003 electronic publication, version L transcribed from a film of Laud Misc. 210 fols. 114r-132v, and six question/answer turns. It retains a restrictive 1999 availability statement and incorrectly maps the physical manuscript into AUTHOR.",
+      "accessed_on": "2026-07-15",
+      "sha256": "96f720d6417b7115946836c002a1467dd69391e719139cce437f041b66620c56"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME git object state for lifesoul.xml.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/lifesoul.xml",
+      "locator": "Commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob fa1ef3f812ac0e02325c836f38455cceabbe7841",
+      "summary": "The pinned submodule resolves to the expected commit and blob. Git history shows the file introduced once at that commit on 2024-11-24 with message add source texts.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME root LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "Complete Unlicense text",
+      "summary": "The repository root license dedicates free and unencumbered software to the public domain and permits unrestricted use. Its software wording does not itself resolve the conflicting item-level lifesoul availability notice.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:xml-structural-audit",
+      "type": "visual_inspection",
+      "citation": "Direct structural and textual inspection of the pinned lifesoul.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/lifesoul.xml",
+      "locator": "TEXT/BODY/DIV1 and complete descendant sequence",
+      "summary": "The file has one unheaded DIV1, 12 alternating SP/SPEAKER elements representing six questions and six answers, 62 body paragraphs, and 38 continuous folio milestones 114r-132v. It also contains 121 NOTE1, 49 ADD, 30 DEL, 29 SUPPLIED, 17 UNCLEAR, 7 ITEM, 4 SIC, 2 CORR, and 2 GAP elements.",
+      "accessed_on": "2026-07-15",
+      "sha256": "96f720d6417b7115946836c002a1467dd69391e719139cce437f041b66620c56"
+    },
+    {
+      "id": "evidence:schaffner-index",
+      "type": "official_webpage",
+      "citation": "Paul F. Schaffner, Life of Soul electronic-edition index.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/index.html",
+      "repository_path": "source-cache/lifesoul/schaffner-index.html",
+      "locator": "Complete Version, Abridged Version, Revision History, and Conditions of Use",
+      "summary": "Enumerates the complete translation, HTML transcription, 1999 TEI P3 file, 2003 readable TEI P3 file, and 2016 XML underlying the online version, as well as abridged anthology files. Gives March-May 1997 revision history and distinguishes public-domain transcriptions from copyrighted normalization, translation, headnote, and notes.",
+      "accessed_on": "2026-07-15",
+      "sha256": "dce3d005d117fa20f071287a30110e3b186f6ffe6d4c1954e04eeee89aff0b75"
+    },
+    {
+      "id": "evidence:schaffner-html-transcription",
+      "type": "edition_statement",
+      "citation": "Paul F. Schaffner, A Transcription of MS Oxf. Bodl. Laud Misc. 210, complete HTML file.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/ls-xr.html",
+      "repository_path": "source-cache/lifesoul/schaffner-transcription-1997.html",
+      "locator": "Conditions of use, transcription key, complete text, and closing revision statement",
+      "summary": "Provides the complete marked transcription, folio sequence, markup key, revision date of 15 March 1999, and current public-domain dedication. It is the HTML source named by the later TEI encodings.",
+      "accessed_on": "2026-07-15",
+      "sha256": "1412e894d20f01100d1c43adeebb5fb53b81277a8d9fddd60052b42697e11258"
+    },
+    {
+      "id": "evidence:schaffner-tei-1999",
+      "type": "edition_statement",
+      "citation": "Paul F. Schaffner, Life of Soul (version L), 1999 TEI P3 SGML encoding.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei-b.sgm",
+      "repository_path": "source-cache/lifesoul/schaffner-tei-p3-1999.sgm",
+      "locator": "TEIHEADER and complete TEXT",
+      "summary": "Names Life of Soul version L, anonymous fl. c1400, Schaffner as editor, Middle English Compendium/U-M distribution, and direct ASCII transcription from Laud Misc. 210 converted to HTML and then TEI P3 in October 1999. It retains marked expansions and says it was prepared for the Cultures of Piety extract and translation.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ebd80a444f4796b4b645546c9774c91cc25325fb587ac7233fcecba038fce575"
+    },
+    {
+      "id": "evidence:schaffner-tei-2003",
+      "type": "edition_statement",
+      "citation": "Paul F. Schaffner, 2003 readable TEI P3 SGML encoding of Life of Soul.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.tei.sgm",
+      "repository_path": "source-cache/lifesoul/schaffner-tei-p3-2003.sgm",
+      "locator": "TEIHEADER, EDITORIALDECL, REVISIONDESC, and complete TEXT",
+      "summary": "Credits Schaffner with transcription, editing, and markup; identifies the unidentified film of Laud fols. 114r-132v; and records the 1999 proprietary-to-HTML-to-SGML creation followed by 2003 removal of line breaks, silent expansion, and addition of notes and translation-based paragraphing.",
+      "accessed_on": "2026-07-15",
+      "sha256": "25bb297338ad9f13837e829de1dba0478653479eef77654d2c3657fc2e98239f"
+    },
+    {
+      "id": "evidence:schaffner-xml-2016",
+      "type": "edition_statement",
+      "citation": "Paul F. Schaffner, 2016 local TEI-based DLPSTEXTCLASS XML encoding of Life of Soul.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.xml",
+      "repository_path": "source-cache/lifesoul/schaffner-xml-2016.xml",
+      "locator": "Complete XML; especially AVAILABILITY and TEXT",
+      "summary": "The 82,260-byte UTF-8 XML carries the same text and editorial declaration as the pinned file but substitutes a public-domain dedication for the restrictive availability notice. Schaffner's index says it underlies the online version.",
+      "accessed_on": "2026-07-15",
+      "sha256": "f1b6048558a5ac7858da696a565cc4242dcbb242f98f2fd1de5128cd8c926ce9"
+    },
+    {
+      "id": "evidence:text-subtree-comparison",
+      "type": "visual_inspection",
+      "citation": "Direct XPath serialization and SHA-256 comparison of the pinned and live 2016 XML TEXT subtrees.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/lifesoul.xml",
+      "repository_path": "CME/source/CME_phase_1-2/lifesoul.xml",
+      "locator": "//TEXT in both files",
+      "summary": "The serialized TEXT subtree from each file has SHA-256 a7465206c43eac56d296fef026019fdc09e5192473a4d9b628f8b6473ee538c2, confirming exact text-layer identity. The complete files differ because the headers and rights statements differ.",
+      "accessed_on": "2026-07-15",
+      "sha256": "96f720d6417b7115946836c002a1467dd69391e719139cce437f041b66620c56",
+      "notes": ["The evidence-level SHA-256 is the pinned complete file; the compared subtree digest is stated in the summary and independently reproducible."]
+    },
+    {
+      "id": "evidence:schaffner-headnote",
+      "type": "scholarly_source",
+      "citation": "Paul F. Schaffner, editorial headnote to Life of Soul.",
+      "url": "http://www-personal.umich.edu/~pfs/lifesoul/shc-intr.html",
+      "repository_path": "source-cache/lifesoul/schaffner-headnote.html",
+      "locator": "Work description; Catechetical Manuals; Orthodoxy?; Text and Manuscript Context; Selected Bibliography",
+      "summary": "Describes an anonymous Midlands prose tract about 1400 or earlier, six questions and answers, catechetical and devotional contents, biblical saturation, possible but inconclusive Wycliffite sympathy, versions L/A/H and their manuscript loci, Moon/Pimpl's edition, and Schaffner's direct use of an unidentified microfilm after consulting Moon.",
+      "accessed_on": "2026-07-15",
+      "sha256": "a5a83b137b86878b26761b01b1dc2321ec0f820f13801dae6dbf886d92ab0dfa",
+      "notes": ["Its interlocutor-role mapping for versions A and H conflicts with direct catalog/image evidence and is not repeated as settled fact."]
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, Life of soul, item lifesoul.",
+      "url": "https://quod.lib.umich.edu/c/cme/lifesoul",
+      "alternate_urls": ["https://name.umdl.umich.edu/lifesoul", "https://quod.lib.umich.edu/c/cme/"],
+      "locator": "Item identity, bibliographic display, public text, copyright line, and rights badge",
+      "summary": "Confirms the current public item identity and Schaffner/Laud description. The page labels the materials public domain and No Copyright-United States while also displaying Copyright 1999 Paul F. Schaffner.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bodleian-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS. Laud Misc. 210, official TEI record at commit cd36dce9a104617f960dab2c97ea78f95f917496.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7019",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_210.xml"],
+      "repository_path": "source-cache/lifesoul/bodleian-ms-laud-misc-210-catalog.xml",
+      "locator": "msDesc MS_Laud_Misc_210; both msPart elements; record history",
+      "summary": "Supplies the exact shelfmark, ARKs, SCN 1292, composite two-part structure, parchment support, contemporary binding, fifteenth-century English origin, contents summary, first online publication in 2017, and binding update in 2024. It does not separately name Life of Soul or fols. 114r-132v.",
+      "accessed_on": "2026-07-15",
+      "sha256": "25f79f86a99910106bb6253228547f53b601e09edc964fb5cd41bf42ff2fc403"
+    },
+    {
+      "id": "evidence:digital-bodleian-search",
+      "type": "search_result",
+      "citation": "Digital Bodleian search API audit for MS. Laud Misc. 210.",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=%22Laud+Misc.+210%22",
+      "alternate_urls": ["https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22MS.+Laud+Misc.+210%22", "https://digital.bodleian.ox.ac.uk/search/?q=Laud+AND+210"],
+      "locator": "Content-negotiated application/ld+json responses; totalItems fields and broad-query result shelfmarks",
+      "summary": "On 2026-07-15 exact quoted-title and exact shelfmark searches each returned totalItems 0. A broad Laud AND 210 search returned seven other objects, including Laud Misc. 177 and Laud Or. 210, but not MS. Laud Misc. 210. No target IIIF manifest or image inventory was found.",
+      "accessed_on": "2026-07-15",
+      "notes": ["The response required an Accept application/ld+json header and was not cached with the direct-download helper, which cannot supply content-negotiation headers."]
+    },
+    {
+      "id": "evidence:digital-bodleian-faq",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Frequently Asked Questions and developer data documentation.",
+      "url": "https://digital.bodleian.ox.ac.uk/faq/",
+      "alternate_urls": ["https://digital.bodleian.ox.ac.uk/developer/data/"],
+      "locator": "Digitized-collection coverage, catalog guidance, copying, and Imaging Services",
+      "summary": "States that Digital Bodleian represents full and partial digitizations rather than every manuscript, recommends the main catalogs for current descriptions, and distinguishes mediated basic research copying from professional Imaging Services.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-arundel-286",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Arundel MS 286.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039569",
+      "locator": "Whole-manuscript description and Life of Soul item at fols. 115r-129r",
+      "summary": "Describes a fifteenth-century vellum manuscript of 191 folios and identifies Life of Soul at fols. 115r-129r under its rubric, beginning Dere fader. The Digitised Content field exposed no linked object, and the record supplies a form for physical consultation in London.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:huntington-hm502",
+      "type": "official_catalog",
+      "citation": "The Huntington Library, Devotional miscellany, mssHM 502.",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "alternate_urls": ["https://hdl.huntington.org/digital/collection/p15150coll7/id/49132/"],
+      "locator": "Date, call number, restrictions, dimensions, Life of Soul item, and twenty-slot selected-image gallery",
+      "summary": "Dates HM 502 between 1400 and 1450, gives dimensions 150 x 145 mm and restricted access, and identifies þe Lyfe of Soule at fols. 35r-60v with incipit, explicit, and Jolliffe H.4(c). It says Moon 1978 is based on Laud and collated against Arundel 286 and HM 502. The page advertises View all images (20), but its embedded gallery data provides only five non-null image URLs and fifteen Image not found placeholders; neither set is a complete codex.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:huntington-opening-image",
+      "type": "visual_inspection",
+      "citation": "Visual inspection of Huntington HM 502 selected image 3, fols. 34v-35r, image identifier 22APN4KP4488.",
+      "url": "https://rail.huntington.org/IIIF3/Image/22APN4KP4488/full/max/0/default.jpg",
+      "locator": "Right-hand leaf, f. 35r, opening of Life of Soul version H",
+      "summary": "The opening is visible on f. 35r and begins Broþer, consistent with the Huntington catalog. A later response visible in the selected target images addresses Dere suster. This primary evidence conflicts with Schaffner's simple description of H as a father-and-son dialogue.",
+      "accessed_on": "2026-07-15",
+      "notes": ["The opening image is one of five public 1200-pixel derivatives retained in the ignored research bundle; partial coverage and unresolved modern-image copyright are recorded separately."]
+    },
+    {
+      "id": "evidence:huntington-published-selection-bundle",
+      "type": "visual_inspection",
+      "citation": "Complete inventory and integrity inspection of the five non-null image resources currently published in the Huntington HM 502 gallery.",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-49132",
+      "repository_path": "source-cache/lifesoul/huntington-hm-502-published-selection-5-images-1200px.zip",
+      "locator": "ZIP source-list.json, inventory.json, and images/000001.jpg-images/000005.jpg",
+      "summary": "The 986,665-byte ZIP retains all five non-null public image resources in gallery order at non-upscaled 1200-pixel width, with exact source URLs, per-image SHA-256 values, and labels. The JPEGs are valid and measure 1200 x 1130, 1200 x 1112, 1200 x 1069, 1200 x 1046, and 1200 x 1163 pixels. Published slots 3-5 overlap or bound Life of Soul; slots 1 and 20 show another text opening and the front cover. Fifteen additional labeled gallery slots contain null URLs rather than retrievable images.",
+      "accessed_on": "2026-07-15",
+      "sha256": "73a6fa813080a48cd0aa8e70d95ca08ca640ca3844427be256790be6419ee98f",
+      "notes": ["The bundle is complete only for currently retrievable published resources and partial relative to both the advertised twenty-slot gallery and the physical codex."]
+    },
+    {
+      "id": "evidence:huntington-reproduction-policy",
+      "type": "official_webpage",
+      "citation": "Huntington Digital Library, Use of Materials and Reproductions.",
+      "url": "https://hdl.huntington.org/digital/about",
+      "repository_path": "source-cache/lifesoul/huntington-use-of-materials-and-reproductions.html",
+      "locator": "Reproductions of Huntington Library Holdings; Quoting or Reproducing Huntington Library Materials; Warning Concerning Copyright Restrictions; Crediting The Huntington",
+      "summary": "The official policy says Huntington supplies reproductions for scholarly and general use subject to format, condition, and restrictions; generally cannot grant or deny permission for intellectual content it does not own; places rights-clearance responsibility on requesters; describes private study, scholarship, and research as the statutory condition for library reproductions; and asks users to credit the institution and source item.",
+      "accessed_on": "2026-07-15",
+      "sha256": "644ef48c331a49fd65750bf831efb1e1443e61a60f2c15e8495c95449277598e"
+    },
+    {
+      "id": "evidence:fordham-pimpl",
+      "type": "official_catalog",
+      "citation": "Fordham University, The Lyfe of Soule: An Edition with Commentary, dissertation record AAI6402408.",
+      "url": "https://research.library.fordham.edu/dissertations/AAI6402408/",
+      "locator": "Title, author, date, dissertation metadata, and download route",
+      "summary": "Confirms Sister Mary Leonella Pimpl's 1963 Fordham dissertation title and UMI identifier 64-2408. The linked download returned HTTP 403 during review, so the dissertation text was not inspected or cached.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:med-bib2110",
+      "type": "authority_record",
+      "citation": "Middle English Dictionary bibliography, BIB2110.",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2110?rid=hyp.242.19981211t105002",
+      "locator": "Stable bibliography identifier reached from MED quotation links",
+      "summary": "Establishes the exact MED bibliography identifier for Life Soul (LdMisc 210). Automated access was challenged during review, but the stable identifier and route were verified through MED dictionary links.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:med-dictionary-citation",
+      "type": "official_webpage",
+      "citation": "Middle English Dictionary, MED51969 quotation citing c1400 Life Soul (LdMisc 210) 20/9.",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/dictionary/MED51969",
+      "locator": "Quotation citation and bibliography link",
+      "summary": "Supplies the official c1400 Life Soul (LdMisc 210) citation stencil and links it to BIB2110.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cornell-schaffner-1999",
+      "type": "edition_statement",
+      "citation": "Paul F. Schaffner, Life of Soul, in Cultures of Piety: Medieval English Devotional Literature in Translation (Cornell University Press, 1999).",
+      "url": "https://doi.org/10.7591/9781501726767-007",
+      "alternate_urls": ["https://www.jstor.org/stable/10.7591/j.ctv5qdjfb"],
+      "locator": "Chapter identity and anthology publication metadata",
+      "summary": "Confirms the published anthology context for Schaffner's abridged version-L transcription and translation. Current e-book platforms may display later digital dates; 1999 is the source publication date documented by Schaffner's files.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:macmillan-2017",
+      "type": "scholarly_source",
+      "citation": "Sarah Macmillan, 'Well saved in suffering': male piety in late-medieval tribulation texts, Reading Medieval Studies 43 (2017): 55-78.",
+      "url": "https://centaur.reading.ac.uk/83242/1/RMS_2017_04_S_Macmillan_Well_saved_in_suffering.pdf",
+      "repository_path": "source-cache/lifesoul/macmillan-2017-well-saved-in-suffering.pdf",
+      "locator": "PDF pp. 1-25; especially printed p. 68 and note 71",
+      "summary": "Calls Life of Soul a late-fourteenth-century treatise, places it alongside The Book of Tribulation in Arundel 286, and quotes its commandment of love. The article is contextual evidence rather than an ancestor of the repository text.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6de4d852d4e4c061bbaee19c758abacb8c38b54784815dd53116f6c6ccda8f32"
+    },
+    {
+      "id": "evidence:macmillan-2017-pdf-integrity",
+      "type": "visual_inspection",
+      "citation": "Integrity and text inspection of the cached Macmillan 2017 PDF.",
+      "url": "https://centaur.reading.ac.uk/83242/1/RMS_2017_04_S_Macmillan_Well_saved_in_suffering.pdf",
+      "repository_path": "source-cache/lifesoul/macmillan-2017-well-saved-in-suffering.pdf",
+      "locator": "PDF metadata, all 25 pages, extracted text around Life of Soul",
+      "summary": "The 266,876-byte file has a valid PDF 1.6 header, 25 readable pages, no encryption, and extractable text. Its cover sheet identifies the article, publication, repository, and retained copyright terms.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6de4d852d4e4c061bbaee19c758abacb8c38b54784815dd53116f6c6ccda8f32",
+      "notes": ["qpdf reports a missing xref entry for the xref stream, describes it as a common error handled correctly, and completes with warnings; pdfinfo, pdftotext, and full-page inspection still succeed."]
+    },
+    {
+      "id": "evidence:macmillan-2020",
+      "type": "scholarly_source",
+      "citation": "Sarah Macmillan, Suffering for Love: Compilation and Asceticism in Life of Soul, in Late Medieval Devotional Compilations in England (Brepols, 2020), 171-192.",
+      "url": "https://research.birmingham.ac.uk/en/publications/suffering-for-love-compilation-and-asceticism-in-life-of-soul/",
+      "locator": "Official title, author, peer-reviewed chapter type, book title, publisher, date, ISBN, and pages",
+      "summary": "The University of Birmingham record confirms a peer-reviewed chapter devoted specifically to Life of Soul, published by Brepols in 2020 on pages 171-192, ISBN 9782503574776. The full chapter was not retrieved, so its detailed arguments are not attributed here.",
+      "accessed_on": "2026-07-15"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-rights-conflict",
+      "question": "Do U-M and Schaffner consider the restrictive redistribution statement embedded in the pinned 2003-style XML superseded by the current No Copyright-United States label and public-domain dedication, and how does the CME repository Unlicense apply to this item?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Request written clarification from U-M Library and, if needed, Paul Schaffner addressing the transcription, markup, notes, nonprofit redistribution, commercial redistribution, and the older embedded terms separately.",
+        "Ask Kyvero Press whether the CME Unlicense is intended to cover imported source-text files despite the license's software wording.",
+        "Until clarified, retain all rights layers and do not select the most permissive statement as automatically controlling."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-xml-2016", "evidence:schaffner-index", "evidence:umich-item", "evidence:cme-license"]
+    },
+    {
+      "id": "question:unidentified-film",
+      "question": "What exact film or microfilm copy of Laud Misc. 210 did Schaffner use, and did it cover the full codex or only fols. 114r-132v?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask Schaffner or U-M whether project files retain a reel identifier, vendor, date, provenance, or frame list.",
+        "Ask Bodleian Special Collections whether a historical reproduction order or institutional microfilm exists for the shelfmark.",
+        "Compare any identified film with the Queen's University Belfast MS 59/48 listing without assuming identity."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:schaffner-headnote", "evidence:schaffner-html-transcription"]
+    },
+    {
+      "id": "question:laud-complete-facsimile",
+      "question": "Is there a complete authorized digital or photographic surrogate of MS. Laud Misc. 210 that is absent from the public Digital Bodleian search index?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Submit a shelfmark-specific enquiry to Bodleian Special Collections asking about internal scans, legacy films, reproduction history, and any forthcoming digitization.",
+        "If no complete object exists, request a preservation-approved full-codex reproduction and an explicit image inventory.",
+        "Re-run exact Digital Bodleian API and catalog searches before changing access status."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bodleian-catalog", "evidence:digital-bodleian-search", "evidence:digital-bodleian-faq"]
+    },
+    {
+      "id": "question:interlocutor-role-mapping",
+      "question": "How should the interlocutor roles in versions A and H be described when Schaffner's headnote says A is sister/brother and H father/son, but Arundel A opens Dere fader and inspected HM 502 H opens Broþer and later addresses Dere suster?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect complete versions A and H from the manuscripts or Moon edition, recording every vocative and speaker transition.",
+        "Determine whether Schaffner transposed version labels, summarized shifting roles, or relied on a variant passage.",
+        "Until resolved, describe only the directly attested incipits and avoid assigning fixed pair labels to A or H."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:schaffner-headnote", "evidence:bl-arundel-286", "evidence:huntington-hm502", "evidence:huntington-opening-image"]
+    },
+    {
+      "id": "question:moon-dissertation-revision",
+      "question": "What textual and critical revisions distinguish Pimpl's 1963 dissertation from Moon's 1978 publication, and what exact apparatus does each supply for L, A, and H?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Obtain authorized copies through Fordham, ProQuest, or a research library.",
+        "Collate their title matter, base-text statements, apparatus, commentary, witness descriptions, and interlocutor-role analysis.",
+        "Do not treat the 1978 publication as byte- or page-identical to the dissertation until compared."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:fordham-pimpl", "evidence:schaffner-headnote", "evidence:huntington-hm502"]
+    }
+  ]
+}
