@@ -1,0 +1,673 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:SSecr",
+  "work_id": "SSecr",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "cataloging_subject": {
+    "id": "work:SSecr",
+    "unit_type": "compilation",
+    "label": "Three Prose Versions of the Secreta Secretorum",
+    "scope_note": "The edition-bounded publication set represented by the pinned U-M/CME XML: Robert Steele's short introductory Note followed by three distinct Middle English prose versions of the pseudo-Aristotelian Secretum secretorum. The three versions are separate intellectual units with different translators, source traditions, witnesses, dates, and regional contexts. They are not collapsed into one generic medieval work, and Steele's 1898 edition, its manuscript witnesses, the U-M encoding, and the checked-in XML remain separate lineage layers."
+  },
+  "catalog_summary": {
+    "title": "Three Prose Versions of the Secreta Secretorum",
+    "author": "Pseudo-Aristotle (traditional attribution); anonymous translators of the first two versions; James Yonge (third version)",
+    "editor": "Robert Steele",
+    "date": "c. 1400–1422; the first version is first securely attested in a manuscript dated 1430–1470",
+    "region": "The English Pale in Ireland for James Yonge's version; the first two versions' composition places remain unresolved",
+    "genres": ["Mirror for princes", "Advice literature", "Didactic prose", "Translation and adaptation", "Wisdom literature"],
+    "form": "prose",
+    "language_codes": ["enm", "lat"],
+    "tags": ["middle-english", "secretum-secretorum", "pseudo-aristotle", "mirror-for-princes", "advice-literature", "kingship", "governance", "political-counsel", "medicine", "dietetics", "physiognomy", "astrology", "translation", "james-yonge", "english-pale", "ireland", "fifteenth-century", "three-version-compilation", "manuscript-witnesses"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "SSecr", "uri": "https://name.umdl.umich.edu/SSecr"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Three Prose Versions of the Secreta Secretorum",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]}
+    },
+    {
+      "id": "title:first-version",
+      "type": "original",
+      "value": "The Secrete of Secretes",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:first-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:bl-royal-18-a-vii"]}
+    },
+    {
+      "id": "title:second-version",
+      "type": "original",
+      "value": "The Governance of Lordschipes",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:second-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:james-1932"]}
+    },
+    {
+      "id": "title:third-version",
+      "type": "original",
+      "value": "The Governaunce of Prynces or Pryvete of Pryveteis",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:james-1932"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:pseudo-aristotle",
+      "type": "person",
+      "name": "Pseudo-Aristotle",
+      "notes": ["Conventional pseudo-author designation for the Secretum secretorum tradition; not the historical Aristotle."]
+    },
+    {
+      "id": "agent:robert-steele",
+      "type": "person",
+      "name": "Robert Steele",
+      "notes": ["Editor of the 1898 EETS volume and author of the encoded introductory Note."]
+    },
+    {
+      "id": "agent:james-yonge",
+      "type": "person",
+      "name": "James Yonge",
+      "alternate_names": ["James Young"],
+      "notes": ["Anglo-Irish translator and adapter who dedicated his 1422 version to James Butler, earl of Ormond."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:pseudo-aristotle",
+      "agent_id": "agent:pseudo-aristotle",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "whole", "description": "Traditional attribution inherited by all three English versions"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:steele-1920"]},
+      "notes": ["This is a conventional pseudo-author designation, not an attribution to the historical Aristotle accepted as genuine authorship."]
+    },
+    {
+      "id": "responsibility:first-anonymous-translator",
+      "display_name": "Anonymous translator of the first version",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:first-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:bl-royal-18-a-vii", "evidence:steele-1920"]}
+    },
+    {
+      "id": "responsibility:second-anonymous-translator",
+      "display_name": "Anonymous translator of the second version",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:second-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:james-1932", "evidence:laing-1978"]}
+    },
+    {
+      "id": "responsibility:yonge-translator",
+      "agent_id": "agent:james-yonge",
+      "role": "translator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:james-1932", "evidence:bodleian-rawl-b-490", "evidence:ferster-review"]}
+    },
+    {
+      "id": "responsibility:yonge-adapter",
+      "agent_id": "agent:james-yonge",
+      "role": "adapter",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"], "description": "Adaptation of the Secretum tradition with Irish and contemporary political material; Steele identifies the greater portion as a direct translation of Jofroi of Waterford's French version"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920", "evidence:ferster-review"]}
+    },
+    {
+      "id": "responsibility:steele-editor",
+      "agent_id": "agent:robert-steele",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The three-version edition and its encoded introductory Note"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]},
+      "notes": ["T. Henderson's glossary belongs to the complete 1898 print volume but is outside the U-M/XML selection."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:first-version-attestation",
+      "type": "first_known_attestation",
+      "display": "1430–1470 (date of British Library Royal MS 18 A VII)",
+      "normalized": {"not_before": 1430, "not_after": 1470},
+      "scope": {"kind": "part", "part_ids": ["part:first-version"]},
+      "source_lineage_entity_id": "witness:bl:Royal-18-A-VII",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-royal-18-a-vii"]},
+      "notes": ["This dates the extant witness, not the otherwise undated act of translation."]
+    },
+    {
+      "id": "date:second-version-translation",
+      "type": "translation",
+      "display": "Soon after 1400",
+      "scope": {"kind": "part", "part_ids": ["part:second-version"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:steele-1898", "evidence:ferster-review"]},
+      "notes": ["Steele prints 'Soon after 1400'; the modern review of Ferster describes the version as written about 1400. The surviving Lambeth and Laud copies are fifteenth-century witnesses and do not themselves fix the translation date more narrowly."]
+    },
+    {
+      "id": "date:third-version-translation",
+      "type": "translation",
+      "display": "1422",
+      "normalized": {"not_before": 1422, "not_after": 1422},
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:james-1932", "evidence:ferster-review", "evidence:steele-1920"]}
+    }
+  ],
+  "places": [
+    {"id": "place:ireland", "label": "Ireland", "kind": "country"},
+    {"id": "place:english-pale", "label": "English Pale in Ireland", "kind": "historical_region", "broader_place_ids": ["place:ireland"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place:third-version-pale",
+      "place_id": "place:english-pale",
+      "type": "cultural_origin",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]},
+      "notes": ["Steele calls the work English of the Pale; Yonge addresses James Butler in his Irish lieutenancy and adds Irish historical and contemporary material. This statement does not transfer the later Rawlinson or Lambeth witnesses' holding places to the work's origin."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:bl-royal-18-a-vii", "evidence:bodleian-laud-685", "evidence:bodleian-rawl-b-490"]},
+      "notes": ["The XML PROFILEDESC lists Latin and French but omits the document's primary Middle English language. Direct text inspection confirms scoped embedded Latin in the second and third versions; no embedded-French statement is asserted without textual evidence."]
+    },
+    {
+      "id": "language:latin-embedded",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:second-version", "part:third-version"],
+        "description": "One FOREIGN element occurs in the second version and 81 occur in the third; the third version also contains nine L elements, chiefly Latin verse and its closing epigraph."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ssecr-structure"]},
+      "notes": ["All 82 FOREIGN elements were inspected as Latin. This embedded material does not make Latin a co-primary language of the three-version publication set."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose-compilation",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "Three prose versions plus Steele's prose Note. The XML's nine L elements include embedded verse and a two-line closing epigraph in the third version; they do not constitute a separate verse work or make the compilation mixed-form.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-structure", "evidence:steele-1898"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:mirror-for-princes",
+      "term": "mirror-for-princes",
+      "label": "Mirror for princes",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review", "evidence:steele-1920"]}
+    },
+    {
+      "id": "genre:advice-literature",
+      "term": "advice-literature",
+      "label": "Advice literature",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]}
+    },
+    {
+      "id": "genre:didactic-prose",
+      "term": "didactic-prose",
+      "label": "Didactic prose",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:first-version", "part:second-version", "part:third-version"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]}
+    },
+    {
+      "id": "genre:translation-adaptation",
+      "term": "translation-adaptation",
+      "label": "Translation and adaptation",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:first-version", "part:second-version", "part:third-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920", "evidence:zamuner-2005"]},
+      "notes": ["The immediate source family of the second version remains disputed; the classification does not settle whether it descends directly from Latin or French F3."]
+    },
+    {
+      "id": "genre:wisdom-literature",
+      "term": "wisdom-literature",
+      "label": "Wisdom literature",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:kingship-governance",
+      "term": "kingship-and-governance",
+      "label": "Kingship and governance",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]}
+    },
+    {
+      "id": "subject:political-counsel",
+      "term": "kingship-and-political-counsel",
+      "label": "Kingship and political counsel",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]}
+    },
+    {
+      "id": "subject:princely-conduct",
+      "term": "princely-conduct",
+      "label": "Princely conduct and moral governance",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]}
+    },
+    {
+      "id": "subject:medicine",
+      "term": "medicine",
+      "label": "Medicine",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920"]}
+    },
+    {
+      "id": "subject:dietetics",
+      "term": "dietetics-and-bloodletting",
+      "label": "Dietetics and bloodletting",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]}
+    },
+    {
+      "id": "subject:physiognomy",
+      "term": "physiognomy",
+      "label": "Physiognomy",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"]}
+    },
+    {
+      "id": "subject:astrology",
+      "term": "astrology-and-prognostication",
+      "label": "Astrology and prognostication",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920"]}
+    },
+    {
+      "id": "subject:ethics",
+      "term": "ethics",
+      "label": "Ethical instruction and prudence",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]}
+    },
+    {
+      "id": "subject:english-colony-ireland",
+      "term": "english-colony-in-ireland",
+      "label": "English colonial community and identity in medieval Ireland",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]}
+    },
+    {
+      "id": "subject:lancastrian-kingship",
+      "term": "lancastrian-kingship",
+      "label": "Reigns of Henry IV, Henry V, and Henry VI",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:third-version"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:ssecr-xml", "evidence:ferster-review"]},
+      "notes": ["The version is dedicated to James Butler in the context of Henry V's Irish lieutenancy and includes contemporary political material."]
+    }
+  ],
+  "tags": ["middle-english", "secretum-secretorum", "pseudo-aristotle", "mirror-for-princes", "advice-literature", "kingship", "governance", "political-counsel", "medicine", "dietetics", "physiognomy", "astrology", "translation", "james-yonge", "english-pale", "ireland", "fifteenth-century", "three-version-compilation", "manuscript-witnesses"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Three separately witnessed Middle English prose versions present pseudo-Aristotle's advice to Alexander on royal conduct, counsel, justice, health, diet, astrology, physiognomy, and practical wisdom. The first is an anonymous rendering from a shortened French source; the second anonymous version survives in closely related Lambeth 501 and Laud Misc. 685 copies and has a disputed Latin-versus-French-F3 source path; the third is James Yonge's 1422 Anglo-Irish translation and adaptation for James Butler, earl of Ormond, largely based on Jofroi of Waterford's French version and augmented with Irish political material.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:steele-1920", "evidence:laing-1978", "evidence:zamuner-2005", "evidence:ferster-review"]
+    },
+    {
+      "id": "summary:cataloging-note",
+      "type": "cataloging_note",
+      "value": "The cataloging unit follows the exact electronic publication set rather than inventing one homogeneous medieval work. Steele's encoded Note is paratext with zero medieval-work items. The three version parts retain separate manuscript and source bindings. The electronic selection includes the Note and printed text through p. 248, but omits the edition's other front matter and Henderson glossary; those print omissions do not erase the three-work boundary.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:ssecr-structure", "evidence:steele-1898", "evidence:lineage-manifest"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 3,
+    "sections": null,
+    "prose_only_items": 3,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": null,
+    "verse_lines": null,
+    "description": "Three prose intellectual units plus Steele's editorial Note. The XML has 148 DIV1, 183 DIV2, 8 DIV3, 359 HEAD, 354 P, 9 L, 248 PB, and 379 MILESTONE elements. These are encoding metrics across uneven edition structures, not canonical chapter counts. The first printed table enumerates 62 entries but its chapters 55–56 are absent from the manuscript; the second table retains entries for chapter 62 and chapters 70–75 although those chapters were not translated in its manuscript and are absent from print/XML.",
+    "evidence_ids": ["evidence:ssecr-structure", "evidence:ssecr-xml", "evidence:steele-1898"]
+  },
+  "content_structure_status": "summary",
+  "content_parts": [
+    {
+      "id": "part:steele-note",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "preface",
+      "label": "Robert Steele's Note",
+      "summary": "A short editorial note defining the volume's three versions, identifying the first as French-derived and second as Latin-derived, characterizing the third as English of the Pale, and reporting late discovery of its extensive dependence on Jofroi of Waterford.",
+      "item_count": 0,
+      "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-cme:SSecr", "scheme": "XML path", "value": "TEXT/FRONT/DIV1[@NODE='SSecr:1']"},
+        {"lineage_entity_id": "edition:steele:eets-es74:1898", "scheme": "printed matter", "value": "unnumbered Note before p. 1"}
+      ],
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898"],
+      "notes": ["This paratext is included because it is encoded, but it is not counted as a fourth medieval intellectual work."]
+    },
+    {
+      "id": "part:first-version",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "The Secrete of Secretes (Royal 18 A VII version)",
+      "summary": "An anonymous Middle English version rendered from a shortened French source and printed from British Library Royal MS 18 A VII.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:steele:eets-es74:1898", "scheme": "printed pages", "value": "pp. 1–39"},
+        {"lineage_entity_id": "witness:bl:Royal-18-A-VII", "scheme": "folios", "value": "f. 1r through f. 26r; the next work begins f. 26v"},
+        {"lineage_entity_id": "encoding:umich-cme:SSecr", "scheme": "XML path", "value": "TEXT/GROUP/TEXT[1]"}
+      ],
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:bl-royal-18-a-vii", "evidence:steele-1920"],
+      "notes": ["The table retains chapters 55 and 56 but states that they were missing from Steele's manuscript copy; the body therefore does not supply them."]
+    },
+    {
+      "id": "part:second-version",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "work",
+      "label": "The Governance of Lordschipes (Lambeth 501 version)",
+      "summary": "An anonymous Middle English version printed chiefly from Lambeth Palace Library MS 501, with a mutilated passage on Lambeth f. 18 supplied from Bodleian MS Laud Misc. 685. The two surviving copies independently descend from a proximate common exemplar and preserve layered scribal language.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:steele:eets-es74:1898", "scheme": "printed pages", "value": "pp. 41–118"},
+        {"lineage_entity_id": "witness:lambeth:MS-501", "scheme": "folios", "value": "ff. 1r–42r; text begins after prefatory material and ends at 42a in James's recto/verso notation"},
+        {"lineage_entity_id": "witness:bodleian:MS-Laud-Misc-685", "scheme": "folios", "value": "Secretum text ff. 1r–57v; a corresponding passage supplies the mutilated Lambeth f. 18"},
+        {"lineage_entity_id": "encoding:umich-cme:SSecr", "scheme": "XML path", "value": "TEXT/GROUP/TEXT[2]"}
+      ],
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:lambeth-501", "evidence:james-1932", "evidence:bodleian-laud-685", "evidence:laing-1978"],
+      "notes": ["The table retains chapter 62 and chapters 70–75, but the source manuscript did not translate them and they are absent from print/XML.", "Laing localizes both surviving scribal texts mainly to southwest Lincolnshire, with a short more southerly section and a later West-Midland component. That witness-level mixture is not projected as a composition place for the intellectual version."]
+    },
+    {
+      "id": "part:third-version",
+      "parent_id": null,
+      "sequence": 4,
+      "type": "work",
+      "label": "The Governaunce of Prynces or Pryvete of Pryveteis (James Yonge version)",
+      "summary": "James Yonge's 1422 Anglo-Irish translation and adaptation for James Butler, earl of Ormond, printed chiefly from Bodleian MS Rawl. B. 490 and supplied for one lacuna from Lambeth MS 633. Steele reports that the greater portion directly translates Jofroi of Waterford's French version.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:steele:eets-es74:1898", "scheme": "printed pages", "value": "pp. 121–248"},
+        {"lineage_entity_id": "witness:bodleian:MS-Rawl-B-490", "scheme": "folios", "value": "f. 28v through f. 72r in Steele's milestone sequence"},
+        {"lineage_entity_id": "witness:lambeth:MS-633", "scheme": "folios", "value": "full collateral copy, ending f. 84r; Steele supplies printed p. 191 through p. 196 line 5 from Lambeth f. 46 line 21 while Rawlinson is defective"},
+        {"lineage_entity_id": "encoding:umich-cme:SSecr", "scheme": "XML path", "value": "TEXT/GROUP/TEXT[3]"}
+      ],
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1898", "evidence:james-1932", "evidence:bodleian-rawl-b-490", "evidence:ferster-review", "evidence:steele-1920"],
+      "notes": ["The XML retains a second folio-milestone sequence marked L, running approximately 3r–84r. Its editorial declaration says this likely represents Lambeth 633 but has not confirmed the identification.", "Lambeth 633's ending differs from the Rawlinson-based printed closing; it is an independent collateral copy, not merely a fragment used to patch one passage."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:secretum-secretorum",
+      "title": "Pseudo-Aristotle, Secretum secretorum",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920"],
+      "notes": ["The three child parts are separate English versions of this pseudo-Aristotelian work tradition; the compilation itself is not treated as one abstract version."]
+    },
+    {
+      "id": "related:french-f3",
+      "title": "Anonymous Anglo-Norman F3 version of the Secretum secretorum",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:steele-1920", "evidence:zamuner-2005"],
+      "notes": ["Steele identifies F3 as the source of the first English version. Manzalaoui, as reported by Zamuner, also derives the Lambeth 501/Laud 685 English version directly from F3; this conflicts with Steele's Latin-vulgate account for that second version."]
+    },
+    {
+      "id": "related:latin-vulgate",
+      "title": "Latin vulgate Secretum secretorum associated with Philip of Tripoli",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920", "evidence:zamuner-2005"],
+      "notes": ["Steele calls this the source of the second English version; Manzalaoui instead proposes direct descent from French F3. No exact exemplar is identified."]
+    },
+    {
+      "id": "related:jofroi-french",
+      "title": "Jofroi of Waterford's French version of the Secretum secretorum",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920"],
+      "notes": ["Applies to James Yonge's third part: Steele says the greater portion is a direct translation, while Yonge also adapts and interpolates material."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:SSecr",
+    "manifest_path": "manifests/lineage/works/SSecr.json",
+    "bindings": [
+      {"metadata_target": "work:SSecr", "lineage_entity_id": "edition:steele:eets-es74:1898", "role": "source_edition"},
+      {"metadata_target": "work:SSecr", "lineage_entity_id": "encoding:umich-cme:SSecr", "role": "digital_encoding"},
+      {"metadata_target": "work:SSecr", "lineage_entity_id": "artifact:general-corpus:SSecr", "role": "repository_representation"},
+      {"metadata_target": "part:first-version", "lineage_entity_id": "witness:bl:Royal-18-A-VII", "role": "source_witness"},
+      {"metadata_target": "part:second-version", "lineage_entity_id": "witness:lambeth:MS-501", "role": "source_witness"},
+      {"metadata_target": "part:second-version", "lineage_entity_id": "witness:bodleian:MS-Laud-Misc-685", "role": "source_witness"},
+      {"metadata_target": "part:third-version", "lineage_entity_id": "witness:bodleian:MS-Rawl-B-490", "role": "source_witness"},
+      {"metadata_target": "part:third-version", "lineage_entity_id": "witness:lambeth:MS-633", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:ssecr-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/SSecr.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/SSecr.xml",
+      "locator": "HEADER; outer FRONT; three grouped TEXT children",
+      "summary": "Primary publication-bound artifact; supplies the exact three-version boundary, U-M production and availability statements, source edition, editorial declaration, titles, text, notes, printed pages, manuscript folio milestones, Yonge dedication, and edition omissions.",
+      "accessed_on": "2026-07-15",
+      "sha256": "b6dd234961056b4bcf58700b4ea9fbafb595a86ab547e0bb6052db3c2d892956"
+    },
+    {
+      "id": "evidence:ssecr-structure",
+      "type": "computational_inspection",
+      "citation": "Computational inspection of the pinned SSecr XML against Steele's complete 1898 scan.",
+      "repository_path": "CME/source/CME_phase_1-2/SSecr.xml",
+      "summary": "Established three grouped prose units, one encoded Steele Note, element totals, printed-page ranges, Royal/Lambeth/Rawlinson milestone spans, the second L-marked milestone sequence, missing chapters, and the front-matter/glossary selection boundary."
+    },
+    {
+      "id": "evidence:steele-1898",
+      "type": "digital_surrogate",
+      "citation": "Three Prose Versions of the Secreta Secretorum, ed. Robert Steele, with a glossary by T. Henderson, vol. I, EETS Extra Series 74 (London: Kegan Paul, Trench, Trübner & Co., 1898).",
+      "url": "https://archive.org/details/threeproseversio01steeuoft",
+      "alternate_urls": ["https://archive.org/download/threeproseversio01steeuoft/threeproseversio01steeuoft.pdf"],
+      "repository_path": "source-cache/SSecr/steele-1898-three-prose-versions.pdf",
+      "locator": "complete volume; especially Note and pp. 1–293",
+      "summary": "Immediate print source and full edition context: three version texts on pp. 1–248, editorial witness notes and supply passages, and the omitted glossary on pp. 249–293.",
+      "accessed_on": "2026-07-15",
+      "sha256": "d4983be9fecd3159db89b7d242f27504b2e9f32f7b0ffcd16bb7fe04b514a6d4"
+    },
+    {
+      "id": "evidence:bl-royal-18-a-vii",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Royal MS 18 A VII.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107423",
+      "locator": "item 1, f. 1; item 2 begins f. 26v",
+      "summary": "Current shelfmark, f. 1–26r target boundary, shortened-French source characterization, text incipit and explicit, 30-folio parchment codex, mid-fifteenth-century date range 1430–1470, language, Lumley provenance, and physical-request route.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lambeth-501",
+      "type": "official_catalog",
+      "citation": "Lambeth Palace Library CalmView, MSS/501, Secreta Secretorum.",
+      "url": "https://archives.lambethpalacelibrary.org.uk/calmview/Record.aspx?src=CalmView.Catalog&id=MSS%2F501",
+      "summary": "Current catalog record based on M. R. James, including the late-fifteenth-century witness description, mutilated f. 18, text ending f. 42r, and microfilm reference Film 1228.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:james-1932",
+      "type": "digital_surrogate",
+      "citation": "Montague Rhodes James, A Descriptive Catalogue of the Manuscripts in the Library of Lambeth Palace: The Mediaeval Manuscripts (Cambridge: Cambridge University Press, 1932).",
+      "url": "https://digi.ub.uni-heidelberg.de/diglit/james1932",
+      "alternate_urls": ["https://digi.ub.uni-heidelberg.de/diglit/iiif/james1932/manifest"],
+      "repository_path": "source-cache/SSecr/james-1932-lambeth-medieval-manuscripts-catalogue.pdf",
+      "locator": "MS 501 at printed pp. 703–704; MS 633 at printed pp. 780–781",
+      "summary": "Detailed current-source catalog basis for Lambeth 501 and 633: physical descriptions, contents, folio bounds, mutilation and divergent ending, former letter designations, and Steele edition references.",
+      "accessed_on": "2026-07-15",
+      "sha256": "392d961362cde2dec84faa3caff98eaf180b56f7da5f1aaf412ccfe8cac6b206"
+    },
+    {
+      "id": "evidence:bodleian-laud-685",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Medieval Manuscripts, MS. Laud Misc. 685, current TEI record.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7467",
+      "summary": "Official shelfmark and ARKs, Middle English Secretum item, other codex contents, parchment support, fifteenth-century date, and absence of a surrogate link in the current TEI record.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bodleian-rawl-b-490",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Medieval Manuscripts, MS. Rawl. B. 490, current TEI record.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_8060",
+      "summary": "Official shelfmark and ARKs, two-item codex contents, James Young attribution, Middle English language, parchment support, Rawlinson provenance, current 1400–1410 whole-codex date, and absence of a surrogate link.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:laing-1978",
+      "type": "scholarly_source",
+      "citation": "Margaret Laing, Studies in the Dialect Material of Mediaeval Lincolnshire (PhD thesis, University of Edinburgh, 1978), vol. 1, pp. 292–311.",
+      "url": "https://era.ed.ac.uk/handle/1842/7336",
+      "repository_path": "source-cache/SSecr/laing-1978-lincolnshire-dialects-vol1-extracted.txt",
+      "locator": "vol. 1, pp. 292–311; manuscript index entries",
+      "summary": "Demonstrates that Lambeth 501 and Laud Misc. 685 share textual omissions, errors, and a proximate common exemplar rather than copying one another; localizes both scribal texts mainly to southwest Lincolnshire and analyzes layered southern and West-Midland components.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6e6d77e11e5c2297fd3015c24095fbc45e349871bd07528d79a2a74de973dd23"
+    },
+    {
+      "id": "evidence:zamuner-2005",
+      "type": "scholarly_source",
+      "citation": "Ilaria Zamuner, ‘La tradizione romanza del Secretum secretorum pseudo-aristotelico: Regesto delle versioni e dei manoscritti,’ Studi Medievali 46.1 (2005): 31–116.",
+      "url": "https://ricerca.unich.it/handle/11564/225929",
+      "alternate_urls": ["https://www.researchgate.net/publication/296802890_La_tradizione_romanza_del_Secretum_secretorum_pseudo-aristotelico"],
+      "locator": "p. 52 n. 82 (article lines corresponding to the Lambeth 501/Laud 685 source discussion)",
+      "summary": "Reports Manzalaoui's conclusion that the English version in Lambeth 501 and Laud 685 descends directly from French F3 rather than Latin, preserving a direct scholarly conflict with Steele's source claim.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ferster-review",
+      "type": "scholarly_source",
+      "citation": "Lorraine Attreed, review of Judith Ferster, Fictions of Advice: The Literature and Politics of Counsel in Late Medieval England, The Medieval Review 96.12.01 (1996).",
+      "url": "https://scholarworks.iu.edu/journals/index.php/tmr/article/view/14439",
+      "summary": "Scholarly synthesis of Ferster's account: Governance of Lordschipes about 1400; Yonge's 1422 translation for James Butler; its Irish and Lancastrian political context; and the mirror-for-princes/advice function.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:steele-1920",
+      "type": "digital_surrogate",
+      "citation": "Pseudo-Aristotle, Secretum secretorum cum glossis et notulis, ed. Robert Steele, Opera hactenus inedita Rogeri Baconi, fasc. 5 (Oxford: Clarendon Press, 1920).",
+      "url": "https://archive.org/details/operahactenusine05baco",
+      "alternate_urls": ["https://archive.org/download/operahactenusine05baco/operahactenusine05baco.pdf"],
+      "repository_path": "source-cache/SSecr/steele-1920-secretum-secretorum-cum-glossis.pdf",
+      "locator": "English manuscript versions census in the introduction",
+      "summary": "Steele's later source-family census identifies Royal 18 A VII as translated from French version 3, Lambeth 501/Laud 685 as Latin-vulgate-derived, and Yonge's Rawlinson/Lambeth tradition as translated from Jofroi's French version in 1422; its erroneous or ambiguous 'Lamb. Carew 596' designation is not adopted over James's MS 633 evidence.",
+      "accessed_on": "2026-07-15",
+      "sha256": "dcf39d0b49675d98073cb990613935e64fc4258290b9aac6831b3c16fe56bca6"
+    },
+    {
+      "id": "evidence:lineage-manifest",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage manifest for SSecr.",
+      "repository_path": "manifests/lineage/works/SSecr.json",
+      "source_evidence_id": "evidence:ssecr-xml",
+      "summary": "Provides manuscript, edition, encoding, access, rights, facsimile-search, supply-passage, and local-cache layers bound to these descriptive parts."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:second-version-source",
+      "question": "Does the Lambeth 501/Laud 685 English version descend directly from the Latin vulgate, as Steele states, or from Anglo-Norman French F3, as Manzalaoui argues?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult Manzalaoui's full 1977 introduction at p. xlvii and later stemmatic work.", "Compare shared innovations in Lambeth 501 and Laud 685 against Latin-vulgate and F3 witnesses before strengthening either tentative conceptual version_of relation or identifying a source-language witness."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920", "evidence:zamuner-2005"]
+    },
+    {
+      "id": "question:third-milestone-set",
+      "question": "Does the XML's second, L-marked folio-milestone sequence in James Yonge's version represent Lambeth MS 633 throughout?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare the complete Lambeth 633 microfilm or manuscript against each L-marked milestone.", "Request U-M production notes explaining the retained dual milestone sequence."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:james-1932"]
+    },
+    {
+      "id": "question:first-version-origin",
+      "question": "Who made the first English version, when and where was it translated, and which exact French exemplar underlies its shortened text?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult Manzalaoui's full edition and later work on the F3 tradition.", "Distinguish the Royal witness's 1430–1470 date and scribal language from the lost translation event."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-royal-18-a-vii", "evidence:steele-1920", "evidence:zamuner-2005"]
+    },
+    {
+      "id": "question:rawl-date",
+      "question": "How should the current Bodleian whole-codex date of 1400–1410 for Rawl. B. 490 be reconciled with the securely dated 1422 James Yonge translation preserved as its second item?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult the full Quarto Catalogue description and obtain a codicological dating for the second item or hand specifically.", "Ask Bodleian Special Collections whether the summary TEI date is a whole-volume legacy value requiring correction or part-level qualification."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bodleian-rawl-b-490", "evidence:ssecr-xml", "evidence:james-1932"]
+    },
+    {
+      "id": "question:yonge-source-extent",
+      "question": "Which exact portions of Yonge's version derive from Jofroi of Waterford, and what sources underlie its remaining translations, adaptations, and Irish interpolations?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult Manzalaoui's textual apparatus and later scholarship on Yonge and Jofroi.", "Map Yonge's chapter sequence and Irish additions against Jofroi and the Latin traditions."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ssecr-xml", "evidence:steele-1920", "evidence:ferster-review"]
+    }
+  ],
+  "notes": [
+    "The first, second, and third version labels are editorially convenient only; each child part retains its own witnessed title and source history.",
+    "Lambeth 501 and Laud Misc. 685 are sibling descendants of a reconstructed proximate common exemplar. Laud is also the supply witness for Lambeth's mutilated f. 18 in Steele's edition.",
+    "Lambeth 633 is a complete collateral copy of Yonge's version ending f. 84r, not merely the source of Steele's p. 191–196 patch. Its different closing and the unconfirmed L milestones are preserved as separate facts.",
+    "Steele's introductory Note says the second version has a Latin source. This remains a historical editorial claim, not a silently upgraded modern consensus.",
+    "The complete 1898 volume labels itself vol. I; no second volume was verified. The encoded selection omits the promised/postponed introduction and notes, other front matter, and Henderson's glossary."
+  ]
+}
