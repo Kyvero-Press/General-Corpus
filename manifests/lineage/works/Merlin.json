@@ -1,0 +1,2172 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Merlin",
+  "work_id": "Merlin",
+  "title": "Middle English Prose Merlin",
+  "primary_subject": "artifact:general-corpus:Merlin",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository artifact is a pinned 1997 University of Michigan CME XML representation of Henry B. Wheatley's four-part EETS edition of the Middle English Prose Merlin. The U-M header and call number indicate that the immediate physical carrier was probably the 1969 Greenwood photo-reprint, while Wheatley's text was printed in four parts from 1865 through the completed 1899 issue. Cambridge University Library MS Ff.3.11 is the principal nearly complete Middle English witness; Bodleian MS Rawl. D. 913, fol. 43r-v preserves a second short fragment. Wheatley supplied three narrowly bounded kinds of material from the Old French Vulgate Merlin in British Library Add MS 10292: text lost through burning at Cambridge ff. 137-138, one phrase at a blank, and the terminal continuation after the Cambridge manuscript breaks off. The last continuation is Wheatley's modern English translation, not text transmitted by the Middle English witness. Public scans, partial manuscript images, request routes, and reuse terms are recorded per entity rather than treated as one undifferentiated source.",
+  "languages": [
+    "enm",
+    "fro",
+    "eng"
+  ],
+  "review_notes": [
+    "The anonymous Middle English work, the physical witnesses, Wheatley's edition, U-M's encoding, and the repository XML are separate layers.",
+    "The current U-M XML and the pinned repository XML preserve the same broad printed-page scope and structure but are not byte-identical. The current file restores richer CHOICE/CORR/SIC markup at loci where the pinned transformation flattened or rearranged elements.",
+    "The U-M source header lists EETS numbers 10 and 112, but U-M's own collection list and external catalogs identify the complete four-part edition as Original Series 10, 21, 36, and 112.",
+    "The U-M call number ends in 1969, supporting but not conclusively proving the Greenwood reprint as the keyed physical carrier. The relation is therefore supported rather than confirmed.",
+    "Rawlinson D. 913 is a 129-leaf nineteenth-century guardbook. Its Merlin fragment occupies physical fol. 43r-v; the Digital Bodleian object exposes only fol. 43r of that work and only ten selected images from the guardbook overall.",
+    "British Library Add MS 10292 is modeled only as passage-scoped French support used by Wheatley. No evidence establishes it as the anonymous Middle English translator's exemplar.",
+    "Pink and the current METS introduction say three final Cambridge leaves are lost, whereas Wheatley's 1865 advertisement says two. Both assertions are preserved as an unresolved historical-description conflict.",
+    "Local cache completeness describes the downloaded provider object, not completeness of the physical codex or of the work."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Merlin",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Merlin",
+      "description": "The pinned XML artifact consumed by this repository's conversion workflow through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "Merlin"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "654399922a863e5e855801350a19ad8df3ecaa91"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/Merlin.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "654399922a863e5e855801350a19ad8df3ecaa91",
+        "sha256": "122af16f12ea6e98c4c4bb5ff976b03a433d582b59cb0fd6b66c7d0dfc35d226"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml"
+      ],
+      "notes": [
+        "The file contains print pages 1-699, 33 editor-created chapter divisions, 699 page-break markers, and 49 retained footnotes.",
+        "The source submodule is a separate repository and is not modified by this manifest."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Merlin",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME digital text Merlin",
+      "description": "The 1997 U-M Humanities Text Initiative keyed and structurally marked-up text, currently distributed through the Middle English Dictionary text server and Quod interface.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "Merlin",
+          "uri": "https://name.umdl.umich.edu/Merlin"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic publication",
+          "value": "1997",
+          "normalized": "1997",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:umich-current-xml",
+            "evidence:merlin-repository-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:umich-item",
+        "evidence:umich-current-xml",
+        "evidence:umich-cme-list"
+      ],
+      "notes": [
+        "The current XML identifies the source as Wheatley's edition and retains a call number ending in 1969.",
+        "The current XML omits printed front matter and the Old French transcription on printed pages 700-701; it includes Wheatley's English terminal continuation on pages 697-699.",
+        "The header says editorial notes were not included, but 49 NOTE1 elements remain. That statement should be read as selective or imprecise rather than as a literal zero-note claim."
+      ]
+    },
+    {
+      "id": "edition:greenwood:wheatley-merlin-1969",
+      "type": "scholarly_edition",
+      "label": "Greenwood Press 1969 photo-reprint of Wheatley's Merlin",
+      "creator_ids": [
+        "agent:henry-wheatley",
+        "agent:greenwood"
+      ],
+      "date_statements": [
+        {
+          "label": "reprint publication",
+          "value": "1969",
+          "normalized": "1969",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:umich-current-xml",
+            "evidence:umich-cme-list"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Henry B. Wheatley, ed., Merlin; or, The Early History of King Arthur: A Prose Romance (about 1450-1460 A.D.), 2 vols., Early English Text Society, Original Series 10, 21, 36, 112 (Westport, Conn.: Greenwood Press, 1969), photo-reprint of the completed EETS edition.",
+        "title": "Merlin; or, The Early History of King Arthur",
+        "volume": "2 vols.",
+        "series": "Early English Text Society, Original Series 10, 21, 36, 112",
+        "publisher": "Greenwood Press",
+        "publication_place": "Westport, Connecticut",
+        "date": "1969",
+        "languages": [
+          "enm",
+          "eng",
+          "fro"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:umich-current-xml",
+        "evidence:umich-cme-list"
+      ],
+      "notes": [
+        "This is the probable immediate U-M carrier, inferred from the 1969 call number and complete-series listing. The U-M publisher field itself reproduces the original London title-page data rather than naming Greenwood."
+      ]
+    },
+    {
+      "id": "edition:wheatley:merlin-1865-1899",
+      "type": "scholarly_edition",
+      "label": "Henry B. Wheatley's EETS edition of Merlin",
+      "creator_ids": [
+        "agent:henry-wheatley",
+        "agent:eets"
+      ],
+      "date_statements": [
+        {
+          "label": "serial publication and completed issue",
+          "value": "Parts published 1865, 1866, 1869, and 1898/1899; completed two-volume title issue 1899",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bnf-wheatley",
+            "evidence:mdz-wheatley-volume-2",
+            "evidence:ia-wheatley-volume-1",
+            "evidence:ia-wheatley-volume-2"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Merlin; or, The Early History of King Arthur: A Prose Romance (about 1450-1460 A.D.), ed. Henry B. Wheatley, 4 parts, Early English Text Society, Original Series 10, 21, 36, 112 (London: Trubner; Kegan Paul, Trench, Trubner & Co., 1865-1899).",
+        "title": "Merlin; or, The Early History of King Arthur: A Prose Romance (about 1450-1460 A.D.)",
+        "volume": "4 parts; later bound and titled in 2 volumes",
+        "series": "Early English Text Society, Original Series 10, 21, 36, 112",
+        "publisher": "Trubner & Co.; later Kegan Paul, Trench, Trubner & Co.",
+        "publication_place": "London",
+        "date": "1865-1899",
+        "pages": "Middle English and supplied English text pp. 1-699; Old French source transcription pp. 700-701; index pp. 703-749; glossary pp. 751-776",
+        "languages": [
+          "enm",
+          "eng",
+          "fro"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bnf-wheatley",
+        "evidence:mdz-wheatley-volume-2",
+        "evidence:ia-wheatley-volume-1",
+        "evidence:ia-wheatley-volume-2",
+        "evidence:merlin-repository-xml"
+      ],
+      "notes": [
+        "Wheatley imposed chapter divisions on a manuscript organized by paragraphs rather than chapters.",
+        "The Cambridge witness breaks off on printed page 697. Wheatley's English continuation through page 699 is translated from BL Add MS 10292; the following Old French source transcription on pages 700-701 is not present in the repository XML.",
+        "At printed pages 387-392 Wheatley translated text from Add MS 10292 to fill damage in Cambridge ff. 137-138; note 48 uses the French manuscript for one phrase at printed page 650."
+      ]
+    },
+    {
+      "id": "witness:cul:Ff-3-11",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ff.3.11",
+      "description": "The principal and only continuous Middle English witness of the Prose Merlin, nearly complete but damaged and ending imperfectly.",
+      "identifiers": [
+        {
+          "scheme": "Cambridge University Library shelfmark",
+          "value": "MS Ff.3.11"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript date",
+          "value": "fifteenth century",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:cul-pink",
+            "evidence:mets-introduction"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:cul",
+        "shelfmark": "MS Ff.3.11",
+        "catalog_url": "https://www.repository.cam.ac.uk/items/f426efda-4c41-41b4-81ee-c5c9c9e97745",
+        "notes": "The linked Apollo item is H. L. Pink's manuscript description, not a full manuscript facsimile."
+      },
+      "physical_description": {
+        "support": "Vellum",
+        "extent": "245 extant leaves from an original 248; Prose Merlin at ff. 1r-245v, ending imperfectly",
+        "format": "Single column; 33-36 lines per page",
+        "dimensions": "approximately 13.5 x 11 inches",
+        "notes": [
+          "Pink records ff. 246-248 as lost and ff. 137-138 as damaged by burning.",
+          "Wheatley's older advertisement instead says two leaves were missing at the end."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cul-pink",
+        "evidence:mets-introduction",
+        "evidence:ia-wheatley-volume-2"
+      ],
+      "notes": [
+        "The phrase 'unique manuscript' in Wheatley and U-M means the unique continuous witness; Rawl. D. 913 preserves a separate single-leaf fragment."
+      ]
+    },
+    {
+      "id": "witness:bodleian:Rawl-D-913",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Rawl. D. 913, fol. 43r-v",
+      "description": "A late-fifteenth-century single-leaf Middle English Prose Merlin fragment bound into a nineteenth-century guardbook of unrelated fragments.",
+      "identifiers": [
+        {
+          "scheme": "Bodleian shelfmark",
+          "value": "MS Rawl. D. 913",
+          "uri": "https://marco.ox.ac.uk/ark:/29072/x0wd375v74wr"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Merlin fragment date",
+          "value": "late fifteenth century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:mets-introduction",
+            "evidence:bodleian-catalog"
+          ]
+        },
+        {
+          "label": "current guardbook assembly",
+          "value": "circa 1861",
+          "normalized": "1861",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bodleian-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian",
+        "shelfmark": "MS Rawl. D. 913",
+        "historical_designations": [
+          "Rawlinson Misc. 1370",
+          "Rawlinson Misc. 1390 (erroneous quarto-catalog number)"
+        ],
+        "catalog_url": "https://marco.ox.ac.uk/ark:/29072/x0wd375v74wr"
+      },
+      "physical_description": {
+        "support": "Paper and parchment guardbook; support of the Merlin leaf not independently established in this review",
+        "extent": "Guardbook of 129 leaves; Romance of Merlin at fol. 43r-v",
+        "format": "Composite collection of fragments bound together circa 1861",
+        "notes": [
+          "The Merlin fragment overlaps Wheatley's printed text approximately pp. 315.15-317.24.",
+          "The Digital Bodleian object is not complete for either the guardbook or the two-sided Merlin fragment."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-catalog",
+        "evidence:mets-introduction",
+        "evidence:bodleian-iiif"
+      ]
+    },
+    {
+      "id": "witness:bl:Add-MS-10292",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 10292",
+      "description": "A richly illuminated 1316 Old French Lancelot-Grail volume containing L'estoire del Saint Graal and L'estoire de Merlin. Wheatley used narrowly identified passages of its Merlin text to repair, compare, and continue his Middle English edition.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Add MS 10292",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002108087"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript date",
+          "value": "1316",
+          "normalized": "1316",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-add-10292"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Add MS 10292",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002108087"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "216 folios plus four unfoliated paper flyleaves; L'estoire de Merlin at ff. 76r-216v",
+        "format": "Three columns of 50 lines; Gothic script; 233 miniatures",
+        "dimensions": "400 x 295 mm; text space 295 x 240 mm",
+        "notes": [
+          "Origin: northern France, Saint-Omer or Tournai.",
+          "The Wheatley supplement loci are only a tiny part of the complete French Merlin section."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-add-10292",
+        "evidence:ia-wheatley-volume-2",
+        "evidence:merlin-repository-xml"
+      ],
+      "notes": [
+        "This record does not assert that Add MS 10292 was the physical exemplar used by the anonymous Middle English translator."
+      ]
+    },
+    {
+      "id": "facsimile:mdz:bsb10748429",
+      "type": "facsimile",
+      "label": "MDZ scan of Wheatley's 1899 volume II composite",
+      "description": "A 628-canvas BSB/MDZ page-image object, also downloadable as a 629-page provider PDF with an added metadata page. The copy retains green Part III (1869) and Part IV (1899) wrappers and an 1899 Vol. II title page.",
+      "identifiers": [
+        {
+          "scheme": "BSB digital object",
+          "value": "bsb10748429",
+          "uri": "https://www.digitale-sammlungen.de/de/details/bsb10748429"
+        },
+        {
+          "scheme": "URN",
+          "value": "urn:nbn:de:bvb:12-bsb10748429-6",
+          "uri": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10748429-6"
+        }
+      ],
+      "creator_ids": [
+        "agent:bsb"
+      ],
+      "reproduction_format": "IIIF page images and provider-generated PDF",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:mdz-wheatley-volume-2"
+      ],
+      "notes": [
+        "Provider metadata catalogs the object as 'Merlin ... 3,' dates it 1869, and gives extent pp. 189-776 plus 15 pages. Visual inspection shows the composite wrappers and 1899 Vol. II title page.",
+        "The Middle English/source passage relevant to the repository extends from printed p. 189 through p. 701; pp. 702-776 are apparatus and end matter."
+      ]
+    },
+    {
+      "id": "facsimile:ia:MerlinOrTheEarlyHistory1",
+      "type": "facsimile",
+      "label": "Internet Archive scan MerlinOrTheEarlyHistory1",
+      "description": "A Google-digitized, ARLIMA-uploaded scan of the 1899 first-volume/Part I carrier containing the Middle English text at printed pp. 1-188.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "MerlinOrTheEarlyHistory1",
+          "uri": "https://archive.org/details/MerlinOrTheEarlyHistory1"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "PDF page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-1"
+      ]
+    },
+    {
+      "id": "facsimile:ia:MerlinOrTheEarlyHistory2",
+      "type": "facsimile",
+      "label": "Internet Archive scan MerlinOrTheEarlyHistory2",
+      "description": "A Google-digitized, ARLIMA-uploaded scan titled Vol. II whose continuous Middle English body sequence begins at printed p. 379 and continues through Wheatley's English and French terminal supplements at pp. 697-701.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "MerlinOrTheEarlyHistory2",
+          "uri": "https://archive.org/details/MerlinOrTheEarlyHistory2"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "PDF page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-2"
+      ],
+      "notes": [
+        "This provider file does not supply printed pp. 189-378; the MDZ volume-II composite does."
+      ]
+    },
+    {
+      "id": "facsimile:bodleian:Rawl-D-913-partial",
+      "type": "facsimile",
+      "label": "Partial Digital Bodleian image set for Rawl. D. 913",
+      "description": "The complete ten-image Digital Bodleian provider object for a physically much larger guardbook. Image 10 is Merlin fol. 43r; fol. 43v is absent.",
+      "identifiers": [
+        {
+          "scheme": "Digital Bodleian object UUID",
+          "value": "e587f7ee-c786-4659-8486-c104d5633fe9",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/e587f7ee-c786-4659-8486-c104d5633fe9/"
+        }
+      ],
+      "creator_ids": [
+        "agent:bodleian"
+      ],
+      "reproduction_format": "Ten IIIF JPEG images bundled with presentation manifest and checksum inventory",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-iiif"
+      ],
+      "notes": [
+        "Completeness of the local ZIP means all ten currently exposed provider images were captured; it does not mean the 129-leaf guardbook or the two-sided Merlin leaf is fully digitized."
+      ]
+    },
+    {
+      "id": "description:cul:pink-Ff-3-11",
+      "type": "catalog_description",
+      "label": "H. L. Pink description of CUL MS Ff.3.11",
+      "description": "A one-page image PDF of H. L. Pink's unpublished manuscript description, deposited in Cambridge's Apollo repository in 2021.",
+      "identifiers": [
+        {
+          "scheme": "DOI",
+          "value": "10.17863/CAM.67037",
+          "uri": "https://doi.org/10.17863/CAM.67037"
+        }
+      ],
+      "creator_ids": [
+        "agent:hl-pink"
+      ],
+      "date_statements": [
+        {
+          "label": "repository publication",
+          "value": "2021",
+          "normalized": "2021",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:cul-pink"
+          ]
+        }
+      ],
+      "reproduction_format": "One-page PDF image",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cul-pink"
+      ]
+    },
+    {
+      "id": "facsimile:irht:MF28722",
+      "type": "facsimile",
+      "label": "IRHT microfilm MF 28722 of BL Add MS 10292",
+      "description": "A complete black-and-white analog microfilm surrogate of the whole manuscript, recorded as 38 double-page exposures from the shelfmark and upper-board reverse through ff. 1-216v.",
+      "identifiers": [
+        {
+          "scheme": "IRHT film number",
+          "value": "MF 28722",
+          "uri": "https://arca.irht.cnrs.fr/ark%3A/63955/md009w032b8d"
+        }
+      ],
+      "creator_ids": [
+        "agent:irht"
+      ],
+      "date_statements": [
+        {
+          "label": "microfilm acquisition",
+          "value": "1980",
+          "normalized": "1980",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:irht-add-10292"
+          ]
+        }
+      ],
+      "reproduction_format": "Black-and-white analog microfilm, 38 exposures",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:irht-add-10292"
+      ],
+      "notes": [
+        "The ARCA record is public metadata, but no public downloadable digital copy of the microfilm was found. Consultation and reproduction ordering are separate routes."
+      ]
+    },
+    {
+      "id": "edition:mets:conlee-prose-merlin",
+      "type": "scholarly_edition",
+      "label": "John Conlee's METS edition of Prose Merlin",
+      "creator_ids": [
+        "agent:john-conlee",
+        "agent:mets"
+      ],
+      "bibliographic": {
+        "citation": "Prose Merlin, ed. John Conlee, Middle English Texts Series, University of Rochester, digital edition.",
+        "title": "Prose Merlin",
+        "publisher": "Middle English Texts Series",
+        "publication_place": "Rochester, New York",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:mets-landing",
+        "evidence:mets-introduction"
+      ],
+      "notes": [
+        "The METS presentation has 25 editorial sections. They are not the same segmentation as Wheatley's 33 chapters and neither count is treated as intrinsic medieval work structure.",
+        "The edition is a supporting modern scholarly resource, not an upstream source for the repository XML."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:henry-wheatley",
+      "type": "person",
+      "name": "Henry Benjamin Wheatley",
+      "alternate_names": [
+        "Henry B. Wheatley"
+      ],
+      "dates": "1838-1917",
+      "evidence_ids": [
+        "evidence:bnf-wheatley",
+        "evidence:ia-wheatley-volume-1"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "alternate_names": [
+        "University of Michigan Humanities Text Initiative"
+      ],
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ]
+    },
+    {
+      "id": "agent:eets",
+      "type": "organization",
+      "name": "Early English Text Society"
+    },
+    {
+      "id": "agent:greenwood",
+      "type": "organization",
+      "name": "Greenwood Press"
+    },
+    {
+      "id": "agent:cul",
+      "type": "organization",
+      "name": "Cambridge University Library",
+      "urls": [
+        "https://www.lib.cam.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:bodleian",
+      "type": "organization",
+      "name": "Bodleian Libraries, University of Oxford",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:bl",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ]
+    },
+    {
+      "id": "agent:bsb",
+      "type": "organization",
+      "name": "Bayerische Staatsbibliothek",
+      "alternate_names": [
+        "Bavarian State Library"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive"
+    },
+    {
+      "id": "agent:irht",
+      "type": "organization",
+      "name": "Institut de recherche et d'histoire des textes",
+      "alternate_names": [
+        "IRHT-CNRS"
+      ]
+    },
+    {
+      "id": "agent:hl-pink",
+      "type": "person",
+      "name": "H. L. Pink",
+      "alternate_names": [
+        "Harold Leslie Pink"
+      ]
+    },
+    {
+      "id": "agent:john-conlee",
+      "type": "person",
+      "name": "John Conlee"
+    },
+    {
+      "id": "agent:mets",
+      "type": "organization",
+      "name": "Middle English Texts Series",
+      "alternate_names": [
+        "METS"
+      ],
+      "urls": [
+        "https://metseditions.org/"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repository-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:Merlin",
+      "object": "encoding:umich-cme:Merlin",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete pinned repository XML item"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete current public U-M item"
+        },
+        "notes": "Both represent the same 1997 CME item and printed-page scope, with wrapper and editorial-markup differences."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:merlin-repository-xml",
+          "evidence:umich-current-xml"
+        ],
+        "notes": "This is a version relation, not a byte-identity claim."
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-greenwood",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Merlin",
+      "object": "edition:greenwood:wheatley-merlin-1969",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete U-M electronic item"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Probable keyed physical carrier for the selected English reading text",
+          "locators": [
+            "printed pp. 1-699; front matter and printed French pp. 700-701 excluded"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:umich-current-xml",
+          "evidence:umich-cme-list"
+        ],
+        "notes": "The 1969 call number supports the inference, but no encoding-production log naming the exact copy was found."
+      }
+    },
+    {
+      "id": "relation:greenwood-version-of-wheatley",
+      "type": "version_of",
+      "subject": "edition:greenwood:wheatley-merlin-1969",
+      "object": "edition:wheatley:merlin-1865-1899",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 1969 photographic reprint"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Completed Wheatley EETS edition"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:umich-cme-list",
+          "evidence:bnf-wheatley"
+        ]
+      }
+    },
+    {
+      "id": "relation:wheatley-transcribes-cul",
+      "type": "transcribes",
+      "subject": "edition:wheatley:merlin-1865-1899",
+      "object": "witness:cul:Ff-3-11",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Wheatley's Middle English transcription through the manuscript break, excluding French-derived repairs",
+          "locators": [
+            "Wheatley pp. 1-697",
+            "repository XML print-page markers 1-697",
+            "exceptions at Wheatley pp. 387-392 and p. 650"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The Middle English Prose Merlin text in the principal witness",
+          "locators": [
+            "CUL Ff.3.11 ff. 1r-245v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:merlin-repository-xml",
+          "evidence:cul-pink",
+          "evidence:ia-wheatley-volume-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:wheatley-consults-add-10292-damage",
+      "type": "consulted",
+      "subject": "edition:wheatley:merlin-1865-1899",
+      "object": "witness:bl:Add-MS-10292",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "English replacements translated by Wheatley for burned or blank Cambridge text",
+          "locators": [
+            "Wheatley pp. 387-392 / repository note.11-note.47",
+            "Wheatley p. 650 / repository note.48"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Old French source passages consulted for the English replacements",
+          "locators": [
+            "BL Add MS 10292 ff. 154-155",
+            "BL Add MS 10292 f. 206 col. 2"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:merlin-repository-xml",
+          "evidence:ia-wheatley-volume-2",
+          "evidence:bl-add-10292"
+        ],
+        "notes": "This relation is passage-scoped and editorial. It does not identify the French manuscript as the Middle English translator's exemplar."
+      }
+    },
+    {
+      "id": "relation:wheatley-consults-add-10292-ending",
+      "type": "consulted",
+      "subject": "edition:wheatley:merlin-1865-1899",
+      "object": "witness:bl:Add-MS-10292",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Wheatley's modern English terminal continuation retained in the repository XML",
+          "locators": [
+            "Wheatley pp. 697-699"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Old French source passage consulted for the translation",
+          "locators": [
+            "BL Add MS 10292 f. 216r col. 3-216v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-wheatley-volume-2",
+          "evidence:merlin-repository-xml",
+          "evidence:bl-add-10292"
+        ],
+        "notes": "The encoded pp. 697-699 continuation is Wheatley's translation, not a Middle English witness transcription."
+      }
+    },
+    {
+      "id": "relation:wheatley-transcribes-add-10292-ending-french",
+      "type": "transcribes",
+      "subject": "edition:wheatley:merlin-1865-1899",
+      "object": "witness:bl:Add-MS-10292",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Printed Old French transcription omitted from the repository XML",
+          "locators": [
+            "Wheatley pp. 700-701"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The corresponding Old French manuscript passage",
+          "locators": [
+            "BL Add MS 10292 f. 216r col. 3-216v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-wheatley-volume-2",
+          "evidence:bl-add-10292"
+        ],
+        "notes": "This transcription is present in Wheatley's print but outside the U-M and repository XML scope."
+      }
+    },
+    {
+      "id": "relation:mdz-facsimile-of-wheatley",
+      "type": "facsimile_of",
+      "subject": "facsimile:mdz:bsb10748429",
+      "object": "edition:wheatley:merlin-1865-1899",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 628-canvas provider object and generated PDF"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Composite 1899 volume II carrier with preliminary wrappers/title matter",
+          "locators": [
+            "Printed pages 189-776",
+            "Repository-relevant text pp. 189-699; French comparison pp. 700-701"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mdz-wheatley-volume-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-volume-1-facsimile-of-wheatley",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:MerlinOrTheEarlyHistory1",
+      "object": "edition:wheatley:merlin-1865-1899",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete Internet Archive provider file"
+        },
+        "object": {
+          "kind": "part",
+          "description": "First continuous text segment",
+          "locators": [
+            "Printed pp. 1-188"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-wheatley-volume-1"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-volume-2-facsimile-of-wheatley",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:MerlinOrTheEarlyHistory2",
+      "object": "edition:wheatley:merlin-1865-1899",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete Internet Archive provider file"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Later text and apparatus sequence",
+          "locators": [
+            "Continuous body text visible from printed p. 379 through p. 701",
+            "Includes terminal Middle English-witness break and Wheatley supplements pp. 697-701"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-wheatley-volume-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:bodleian-images-facsimile-of-rawlinson",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Rawl-D-913-partial",
+      "object": "witness:bodleian:Rawl-D-913",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete ten-image Digital Bodleian provider object"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Selected guardbook leaves; only the recto of the Merlin leaf is included",
+          "locators": [
+            "Digital object images 1-10",
+            "Merlin work portion: image 10, physical fol. 43r",
+            "Physical fol. 43v is absent"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bodleian-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:pink-describes-cul",
+      "type": "describes",
+      "subject": "description:cul:pink-Ff-3-11",
+      "object": "witness:cul:Ff-3-11",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete one-page Pink description"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Physical and contents description of the codex"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cul-pink"
+        ]
+      }
+    },
+    {
+      "id": "relation:irht-facsimile-of-add-10292",
+      "type": "facsimile_of",
+      "subject": "facsimile:irht:MF28722",
+      "object": "witness:bl:Add-MS-10292",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 38-exposure analog microfilm"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete codex",
+          "locators": [
+            "shelfmark, upper-board reverse, guards, ff. 1-216v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:irht-add-10292"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-transcribes-cul",
+      "type": "transcribes",
+      "subject": "edition:mets:conlee-prose-merlin",
+      "object": "witness:cul:Ff-3-11",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Modern reading text based on Cambridge, with a separately supplied summary/continuation for the lost ending"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Nearly complete Cambridge Middle English text"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mets-landing",
+          "evidence:mets-introduction"
+        ]
+      }
+    },
+    {
+      "id": "relation:mets-consults-rawlinson",
+      "type": "consulted",
+      "subject": "edition:mets:conlee-prose-merlin",
+      "object": "witness:bodleian:Rawl-D-913",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The edition's manuscript account; exact use in establishing readings was not documented"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Single-leaf Middle English fragment",
+          "locators": [
+            "Rawl. D. 913 fol. 43r-v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:mets-introduction"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:Merlin",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Read the pinned submodule file locally or open the exact public GitHub blob at the recorded CME commit.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/Merlin.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/Merlin.xml"
+      ],
+      "repository_path": "CME/source/CME_phase_1-2/Merlin.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml"
+      ]
+    },
+    {
+      "id": "access:umich-current",
+      "entity": "encoding:umich-cme:Merlin",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the persistent item resolver for reading/search, or use the exact XML download URL.",
+      "url": "https://name.umdl.umich.edu/Merlin",
+      "alternate_urls": [
+        "https://quod.lib.umich.edu/c/cme/",
+        "https://www.medictionary.info/texts/Merlin.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Current public U-M/MED XML",
+          "path": "source-cache/Merlin/umich-medictionary-current-Merlin.xml",
+          "source_url": "https://www.medictionary.info/texts/Merlin.xml",
+          "sha256": "b2c2e406eab9de44cf7e0df2997252e32a1065c84236dd47339679ace3d041fd",
+          "bytes": 1613244,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete current public electronic item",
+            "locators": [
+              "Printed-page markers 1-699",
+              "33 editorial DIV1 chapters",
+              "Old French printed pp. 700-701 absent"
+            ]
+          },
+          "notes": [
+            "XML parses successfully. It is a later public version of the same item, not a byte match to the pinned repository artifact."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "HTML reading interface and XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-item",
+        "evidence:umich-current-xml"
+      ]
+    },
+    {
+      "id": "access:greenwood-reprint",
+      "entity": "edition:greenwood:wheatley-merlin-1969",
+      "resource_kind": "catalog_record",
+      "status": "no_public_copy_found",
+      "access_method": "Search library and secondhand-book catalogs for the two-volume 1969 Greenwood Press reprint; the public scans below reproduce the older edition directly.",
+      "cost": "unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-cme-list"
+      ],
+      "notes": [
+        "No stable publisher purchase page or open scan specifically identified as the Greenwood impression was verified."
+      ]
+    },
+    {
+      "id": "access:cul-pink",
+      "entity": "description:cul:pink-Ff-3-11",
+      "provider_id": "agent:cul",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://www.repository.cam.ac.uk/items/f426efda-4c41-41b4-81ee-c5c9c9e97745",
+      "alternate_urls": [
+        "https://www.repository.cam.ac.uk/bitstreams/5399daa4-f977-437e-b87c-321a98fd12cc/download"
+      ],
+      "local_copies": [
+        {
+          "label": "Pink description PDF",
+          "path": "source-cache/Merlin/pink-cul-ff-3-11-description.pdf",
+          "source_url": "https://www.repository.cam.ac.uk/bitstreams/5399daa4-f977-437e-b87c-321a98fd12cc/download",
+          "sha256": "e163d68f4189d364442019cf33098191c39130600d6718b37dd0d6bdaa504709",
+          "bytes": 262538,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete one-page manuscript description",
+            "locators": [
+              "single PDF page"
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "PDF image",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-pink"
+      ]
+    },
+    {
+      "id": "access:cul-manuscript",
+      "entity": "witness:cul:Ff-3-11",
+      "provider_id": "agent:cul",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Consult Cambridge Special Collections guidance and request reader access to the original codex.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search",
+      "contact": "specialcollections@lib.cam.ac.uk",
+      "cost": "unknown",
+      "format": "Original manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-pink",
+        "evidence:cul-order-images"
+      ]
+    },
+    {
+      "id": "access:cul-whole-facsimile-negative",
+      "entity": "witness:cul:Ff-3-11",
+      "provider_id": "agent:cul",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No public whole-codex page-image object was located in the Cambridge manuscript-description and access routes checked. This is a dated negative search result, not a claim that no institutional photography exists; use the separate imaging-order route to ask about existing or new complete photography.",
+      "cost": "not_applicable",
+      "format": "No public whole-manuscript facsimile found",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-pink",
+        "evidence:cul-order-images"
+      ],
+      "notes": [
+        "The downloadable Pink item is a one-page manuscript description, not manuscript page images.",
+        "No Cambridge imaging enquiry for this manuscript is recorded as submitted in this manifest."
+      ]
+    },
+    {
+      "id": "access:cul-imaging-order",
+      "entity": "witness:cul:Ff-3-11",
+      "provider_id": "agent:cul",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the online imaging and permissions request form. A whole-codex order requires a feasibility, conservation, and price quotation.",
+      "url": "https://imagingservices.lib.cam.ac.uk/",
+      "alternate_urls": [
+        "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+        "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction"
+      ],
+      "cost": "fee",
+      "format": "Normally uncompressed JPEG, 600 ppi or best possible, 1:1 RGB; TIFF by request",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-order-images",
+        "evidence:cul-image-terms"
+      ],
+      "notes": [
+        "CUL states a minimum order fee of GBP 25 excluding VAT. Imaging fees and permission-to-use fees are separate."
+      ]
+    },
+    {
+      "id": "access:bodleian-catalog",
+      "entity": "witness:bodleian:Rawl-D-913",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://marco.ox.ac.uk/ark:/29072/x0wd375v74wr",
+      "cost": "free",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bodleian-catalog"
+      ]
+    },
+    {
+      "id": "access:bodleian-partial-images",
+      "entity": "facsimile:bodleian:Rawl-D-913-partial",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e587f7ee-c786-4659-8486-c104d5633fe9/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e587f7ee-c786-4659-8486-c104d5633fe9.json",
+        "https://iiif.bodleian.ox.ac.uk/iiif/image/7c146672-3ffa-4ebd-a7d9-13a7ecf04fe5/full/full/0/default.jpg"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete ten-image Digital Bodleian provider object bundle",
+          "path": "source-cache/Merlin/rawlinson-d-913-partial-digital-bodleian.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e587f7ee-c786-4659-8486-c104d5633fe9.json",
+          "sha256": "29e20e11f37302d88730484b983be654b29e53890531b4348e68bd0335953f9c",
+          "bytes": 26523846,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 10,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Only the recto of the physical two-sided Merlin fragment",
+            "locators": [
+              "images/000010.jpg",
+              "physical fol. 43r",
+              "physical fol. 43v absent from provider object"
+            ],
+            "start_url": "https://iiif.bodleian.ox.ac.uk/iiif/image/7c146672-3ffa-4ebd-a7d9-13a7ecf04fe5/full/full/0/default.jpg",
+            "end_url": "https://iiif.bodleian.ox.ac.uk/iiif/image/7c146672-3ffa-4ebd-a7d9-13a7ecf04fe5/full/full/0/default.jpg"
+          },
+          "notes": [
+            "ZIP integrity, manifest JSON, inventory checksums, and all ten image members were verified. Complete refers only to the provider's ten-canvas selection."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF/JPEG",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bodleian-iiif"
+      ]
+    },
+    {
+      "id": "access:bl-add-10292-catalog",
+      "entity": "witness:bl:Add-MS-10292",
+      "provider_id": "agent:bl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002108087",
+      "cost": "free",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-add-10292"
+      ]
+    },
+    {
+      "id": "access:bl-add-10292-images",
+      "entity": "witness:bl:Add-MS-10292",
+      "provider_id": "agent:bl",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The current catalogue retains a legacy full-coverage statement but explicitly marks digital images unavailable during service recovery. Use the catalogue/request route or the IRHT microfilm record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002108087",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-add-10292"
+      ]
+    },
+    {
+      "id": "access:irht-microfilm",
+      "entity": "facsimile:irht:MF28722",
+      "provider_id": "agent:irht",
+      "resource_kind": "microfilm",
+      "status": "onsite_only",
+      "access_method": "Consult the complete analog microfilm at IRHT; use the separate reproduction service for copy requests.",
+      "url": "https://arca.irht.cnrs.fr/ark%3A/63955/md009w032b8d",
+      "cost": "free",
+      "format": "Analog black-and-white microfilm",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:irht-add-10292"
+      ]
+    },
+    {
+      "id": "access:irht-reproduction-order",
+      "entity": "facsimile:irht:MF28722",
+      "provider_id": "agent:irht",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Email the IRHT reproduction service with the ARCA record and film number; availability, holding-institution authorization, format, and fees require a quote.",
+      "url": "https://www.irht.cnrs.fr/fr/commander-des-reproductions",
+      "contact": "reproductions.irht@cnrs-orleans.fr",
+      "cost": "fee",
+      "format": "Quoted reproduction from microfilm",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:irht-add-10292",
+        "evidence:irht-reproduction-service"
+      ]
+    },
+    {
+      "id": "access:mdz-volume-2",
+      "entity": "facsimile:mdz:bsb10748429",
+      "provider_id": "agent:bsb",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://www.digitale-sammlungen.de/de/details/bsb10748429",
+      "alternate_urls": [
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748429/manifest",
+        "https://download.digitale-sammlungen.de/pdf/17841075598888bsb10748429.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Provider-generated complete PDF of BSB object bsb10748429",
+          "path": "source-cache/Merlin/wheatley-1899-volume-2-mdz-bsb10748429.pdf",
+          "source_url": "https://download.digitale-sammlungen.de/pdf/17841075598888bsb10748429.pdf",
+          "sha256": "31efe1a0c18ebb0dd40dcf501ea8bd1a18314db6ab839273511d4d512a7fda62",
+          "bytes": 305783676,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "work_portion": {
+            "label": "Repository-relevant source text in the complete scanned carrier",
+            "locators": [
+              "PDF pages 14-526 correspond to printed pp. 189-701",
+              "printed pp. 189-699 are represented in repository XML",
+              "printed pp. 700-701 are the omitted Old French transcription"
+            ]
+          },
+          "notes": [
+            "The 629-page PDF opens and renders. qpdf --check reports two offset-0 object warnings and exits with 'operation succeeded with warnings'; record integrity is usable-with-qpdf-warnings, not pristine.",
+            "The generated download URL includes a provider token-like numeric component and may be less stable than the details page and IIIF manifest."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF/JPEG and PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:mdz-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "access:ia-volume-1",
+      "entity": "facsimile:ia:MerlinOrTheEarlyHistory1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/MerlinOrTheEarlyHistory1",
+      "alternate_urls": [
+        "https://archive.org/download/MerlinOrTheEarlyHistory1/Merlin_Or_the_Early_History_1.pdf",
+        "https://archive.org/metadata/MerlinOrTheEarlyHistory1",
+        "https://archive.org/download/MerlinOrTheEarlyHistory1/Merlin_Or_the_Early_History_1_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Internet Archive volume 1 PDF",
+          "path": "source-cache/Merlin/wheatley-1899-volume-1.pdf",
+          "source_url": "https://archive.org/download/MerlinOrTheEarlyHistory1/Merlin_Or_the_Early_History_1.pdf",
+          "sha256": "79b014e6afc7fac5627c966bbb49ef6dbb2ca53684152ffedf3224acd0e4d22e",
+          "bytes": 17237949,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "First continuous source-text segment",
+            "locators": [
+              "PDF pages 437-624 correspond to printed pp. 1-188"
+            ]
+          },
+          "notes": [
+            "PDF integrity check passed."
+          ]
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/Merlin/wheatley-1899-volume-1-metadata.json",
+          "source_url": "https://archive.org/metadata/MerlinOrTheEarlyHistory1",
+          "sha256": "e1cc9aba25c6920109d9667f5ef8d7c9bdc1b82492088e9e193c6c82bf73ef2f",
+          "bytes": 5493,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive volume 1 scandata",
+          "path": "source-cache/Merlin/wheatley-1899-volume-1-scandata.xml",
+          "source_url": "https://archive.org/download/MerlinOrTheEarlyHistory1/Merlin_Or_the_Early_History_1_scandata.xml",
+          "sha256": "565eaab1efe74bb4ca39939ccfa9ea9b90d7f3b759d1b6b5088a5de9564319ad",
+          "bytes": 189127,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF and derivative formats",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-1"
+      ]
+    },
+    {
+      "id": "access:ia-volume-2",
+      "entity": "facsimile:ia:MerlinOrTheEarlyHistory2",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/MerlinOrTheEarlyHistory2",
+      "alternate_urls": [
+        "https://archive.org/download/MerlinOrTheEarlyHistory2/Merlin_Or_the_Early_History_2.pdf",
+        "https://archive.org/metadata/MerlinOrTheEarlyHistory2",
+        "https://archive.org/download/MerlinOrTheEarlyHistory2/Merlin_Or_the_Early_History_2_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Internet Archive volume 2 PDF",
+          "path": "source-cache/Merlin/wheatley-1899-volume-2.pdf",
+          "source_url": "https://archive.org/download/MerlinOrTheEarlyHistory2/Merlin_Or_the_Early_History_2.pdf",
+          "sha256": "1857008191774957521ea55a0ba464722608e2b171c5e8737822a2a89a0e9b37",
+          "bytes": 39135736,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Later continuous source-text segment and terminal supplements",
+            "locators": [
+              "PDF page 439 is printed p. 379",
+              "PDF page 757 is printed p. 697",
+              "PDF pages 760-761 are printed pp. 700-701"
+            ]
+          },
+          "notes": [
+            "PDF integrity check passed. The carrier is titled Vol. II but the body sequence in this provider file begins at printed p. 379."
+          ]
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/Merlin/wheatley-1899-volume-2-metadata.json",
+          "source_url": "https://archive.org/metadata/MerlinOrTheEarlyHistory2",
+          "sha256": "25dbfa071860b20e36ba5bc69d6e8aaa2d6ac9f8db31145120633ba2d6f42095",
+          "bytes": 5164,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive volume 2 scandata",
+          "path": "source-cache/Merlin/wheatley-1899-volume-2-scandata.xml",
+          "source_url": "https://archive.org/download/MerlinOrTheEarlyHistory2/Merlin_Or_the_Early_History_2_scandata.xml",
+          "sha256": "6661fd36f97c30afb644c1bd5a97238074dddeae3ea204a0db8f98ff59f5d4e6",
+          "bytes": 254527,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF and derivative formats",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "access:mets-edition",
+      "entity": "edition:mets:conlee-prose-merlin",
+      "provider_id": "agent:mets",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://metseditions.org/editions/lbqPD7z5u64RKcy19tlpmKspE8P1YeWr",
+      "alternate_urls": [
+        "https://metseditions.org/read/zlrMB9DF6lA8imAdVTvr9RfvVjEBPwAL"
+      ],
+      "cost": "free",
+      "format": "HTML reading edition and downloadable PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:mets-landing",
+        "evidence:mets-introduction"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repository-xml-legacy-umich",
+      "entity": "artifact:general-corpus:Merlin",
+      "access_id": "access:repository-xml",
+      "component": "Pinned U-M-derived XML text and markup",
+      "jurisdiction": "Provider statement; copyright jurisdiction not conclusively analyzed",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The pinned XML retains U-M's older availability statement permitting individual personal, research, and teaching copies with notice, while requiring U-M Press contact for commercial or nonprofit server distribution and substantive new editions.",
+      "asserted_by_id": "agent:umich",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml"
+      ],
+      "notes": [
+        "The current U-M file now makes a broader public-domain assertion. This record preserves rather than silently reconciles the two provider statements.",
+        "The medieval text and Wheatley's 1899 edition are separately public-domain layers."
+      ]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich-cme:Merlin",
+      "access_id": "access:umich-current",
+      "component": "Current public U-M digital item",
+      "jurisdiction": "United States provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current exact XML and Quod item state that the work is in the public domain, free of known copyright restrictions, and may be copied, modified, distributed, and performed including commercially.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-current-xml",
+        "evidence:umich-item"
+      ],
+      "notes": [
+        "No Copyright-United States is jurisdictional and does not license separately supplied manuscript photographs."
+      ]
+    },
+    {
+      "id": "rights:wheatley-edition",
+      "entity": "edition:wheatley:merlin-1865-1899",
+      "component": "Wheatley's nineteenth-century text, notes, translation, and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition and completed issue were published no later than 1899 and are outside the U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bnf-wheatley",
+        "evidence:ia-wheatley-volume-1",
+        "evidence:ia-wheatley-volume-2"
+      ],
+      "notes": [
+        "This assessment does not override provider conditions on particular scan files."
+      ]
+    },
+    {
+      "id": "rights:greenwood-reprint",
+      "entity": "edition:greenwood:wheatley-merlin-1969",
+      "component": "1969 reprint-specific arrangement, production, and any new matter",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The underlying Wheatley edition is public domain, but no work-specific review of copyright notices, registrations, renewals, or original new matter in the 1969 reprint was completed.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:umich-current-xml",
+        "evidence:umich-cme-list"
+      ]
+    },
+    {
+      "id": "rights:cul-manuscript-text",
+      "entity": "witness:cul:Ff-3-11",
+      "component": "Medieval manuscript text",
+      "jurisdiction": "United States and United Kingdom term assessment",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The manuscript and its text are fifteenth century and far outside modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cul-pink"
+      ],
+      "notes": [
+        "CUL-supplied modern images are governed separately by imaging and permission terms."
+      ]
+    },
+    {
+      "id": "rights:cul-requested-images",
+      "entity": "witness:cul:Ff-3-11",
+      "access_id": "access:cul-imaging-order",
+      "component": "New images supplied by Cambridge University Library",
+      "jurisdiction": "Cambridge University Library service and licensing terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "CUL supplies research copies for limited purposes and requires prior written permission and, where applicable, a paid license for reproduction in publications, websites, or other projects.",
+      "asserted_by_id": "agent:cul",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cul-order-images",
+        "evidence:cul-image-terms"
+      ],
+      "notes": [
+        "Receiving a research facsimile would not by itself authorize uploading it to the repository."
+      ]
+    },
+    {
+      "id": "rights:pink-description",
+      "entity": "description:cul:pink-Ff-3-11",
+      "access_id": "access:cul-pink",
+      "component": "Apollo repository description PDF",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The exact Apollo item applies Creative Commons Attribution 4.0 International.",
+      "asserted_by_id": "agent:cul",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cul-pink"
+      ]
+    },
+    {
+      "id": "rights:rawlinson-manuscript-text",
+      "entity": "witness:bodleian:Rawl-D-913",
+      "component": "Medieval Merlin fragment text",
+      "jurisdiction": "United States and United Kingdom term assessment",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The fragment is late medieval and outside modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-catalog"
+      ]
+    },
+    {
+      "id": "rights:bodleian-images",
+      "entity": "facsimile:bodleian:Rawl-D-913-partial",
+      "access_id": "access:bodleian-partial-images",
+      "component": "Digital Bodleian image files",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The exact IIIF manifest credits Bodleian Libraries and applies CC BY-NC 4.0; Digital Bodleian's terms restrict commercial use and define attribution requirements.",
+      "asserted_by_id": "agent:bodleian",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "spdx": "CC-BY-NC-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-iiif",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "rights:add-10292-manuscript-text",
+      "entity": "witness:bl:Add-MS-10292",
+      "component": "1316 Old French manuscript text",
+      "jurisdiction": "United States and United Kingdom term assessment",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The manuscript text dates from 1316 and is far outside modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-10292"
+      ],
+      "notes": [
+        "Modern photographs, catalog text, and reproduction-service deliverables are separate components."
+      ]
+    },
+    {
+      "id": "rights:irht-microfilm",
+      "entity": "facsimile:irht:MF28722",
+      "access_id": "access:irht-reproduction-order",
+      "component": "IRHT microfilm and supplied reproductions",
+      "jurisdiction": "IRHT and holding-institution reproduction terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The ARCA record exposes metadata but no open image license. Reproductions are supplied through a quoted service and may require holding-institution authorization.",
+      "asserted_by_id": "agent:irht",
+      "contract_terms_status": "permission_required",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:irht-add-10292",
+        "evidence:irht-reproduction-service"
+      ]
+    },
+    {
+      "id": "rights:mdz-scan",
+      "entity": "facsimile:mdz:bsb10748429",
+      "access_id": "access:mdz-volume-2",
+      "component": "BSB/MDZ digital images and generated PDF",
+      "jurisdiction": "Provider rights statement",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The exact IIIF manifest applies RightsStatements.org No Copyright-NonCommercial Use Only 1.0; metadata are separately identified by BSB as reusable under its stated metadata policy.",
+      "asserted_by_id": "agent:bsb",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mdz-wheatley-volume-2"
+      ],
+      "notes": [
+        "NoC-NC is a rights statement, not an open Creative Commons license, and it does not permit commercial reuse."
+      ]
+    },
+    {
+      "id": "rights:ia-volume-1",
+      "entity": "facsimile:ia:MerlinOrTheEarlyHistory1",
+      "access_id": "access:ia-volume-1",
+      "component": "Internet Archive item and scan file",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The exact Internet Archive metadata applies the Creative Commons Public Domain Mark 1.0.",
+      "asserted_by_id": "agent:internet-archive",
+      "license": {
+        "name": "Creative Commons Public Domain Mark 1.0",
+        "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-1"
+      ],
+      "notes": [
+        "The Public Domain Mark is a status label rather than a license."
+      ]
+    },
+    {
+      "id": "rights:ia-volume-2",
+      "entity": "facsimile:ia:MerlinOrTheEarlyHistory2",
+      "access_id": "access:ia-volume-2",
+      "component": "Internet Archive item and scan file",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The exact Internet Archive metadata applies the Creative Commons Public Domain Mark 1.0.",
+      "asserted_by_id": "agent:internet-archive",
+      "license": {
+        "name": "Creative Commons Public Domain Mark 1.0",
+        "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "rights:mets-digital-edition",
+      "entity": "edition:mets:conlee-prose-merlin",
+      "access_id": "access:mets-edition",
+      "component": "METS digital reading edition",
+      "jurisdiction": "Provider copyright and use policy",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "METS states that current digital editions are for individual use and that reprinting the digital text requires contacting the Executive Director; XML is separately licensed CC BY-NC-SA 4.0.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-copyright"
+      ],
+      "notes": [
+        "No METS XML file was downloaded or modeled as a local copy here; the XML license must not be generalized to all display text or PDF output."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:Merlin",
+      "practice": "selection",
+      "source_feature": "Wheatley's complete printed carrier",
+      "representation": "Encoded printed pp. 1-699; omitted front matter and printed Old French pp. 700-701",
+      "description": "U-M selected the continuous English reading text and did not encode the terminal French transcription or print front matter.",
+      "scope": "Electronic item: encoded printed pp. 1-699",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-current-xml",
+        "evidence:merlin-repository-xml",
+        "evidence:ia-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "practice:wheatley-collation-and-supply",
+      "entity": "edition:wheatley:merlin-1865-1899",
+      "practice": "collation",
+      "source_feature": "Burned holes and blanks in CUL Ff.3.11, plus the lost terminal leaves",
+      "representation": "Bracketed or otherwise marked English material translated from BL Add MS 10292, with French comparison notes and a terminal French transcription",
+      "description": "Wheatley used the Old French witness at three bounded locations rather than treating it as a whole-text replacement for the Middle English manuscript.",
+      "scope": "Selected passages: printed pp. 387-392, p. 650, and pp. 697-701; repository notes note.11-note.49",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml",
+        "evidence:ia-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "practice:wheatley-chapters",
+      "entity": "edition:wheatley:merlin-1865-1899",
+      "practice": "selection",
+      "source_feature": "Paragraph-based manuscript text",
+      "representation": "Thirty-three numbered editorial chapters with descriptive headings",
+      "description": "The chapter divisions are Wheatley's navigational structure and are retained in U-M XML; they are not intrinsic manuscript divisions or separate works.",
+      "scope": "Whole Wheatley edition reading text, printed pp. 1-699",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml",
+        "evidence:cul-pink"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:merlin-repository-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned source XML, CME/source/CME_phase_1-2/Merlin.xml, U-M item Merlin.",
+      "repository_path": "CME/source/CME_phase_1-2/Merlin.xml",
+      "locator": "HEADER; PB 1-699; DIV1.1-DIV1.33; note.11-note.49",
+      "summary": "Identifies the U-M item, Wheatley source edition, 1969 call number, selection policy, legacy availability terms, 33 chapter divisions, printed-page scope, and the French-derived supplements. Computational inspection found 33 DIV1, 699 PB, 603 P, and 49 NOTE1 elements.",
+      "accessed_on": "2026-07-15",
+      "sha256": "122af16f12ea6e98c4c4bb5ff976b03a433d582b59cb0fd6b66c7d0dfc35d226"
+    },
+    {
+      "id": "evidence:umich-current-xml",
+      "type": "digital_surrogate",
+      "citation": "University of Michigan Library, current XML for CME item Merlin.",
+      "url": "https://www.medictionary.info/texts/Merlin.xml",
+      "repository_path": "source-cache/Merlin/umich-medictionary-current-Merlin.xml",
+      "locator": "HEADER; AVAILABILITY; EDITORIALDECL; PB 1-699",
+      "summary": "Confirms the 1997 item identity, source-edition header, 1969 call number, current public-domain assertion, printed-page scope, and richer current CHOICE/CORR/SIC markup.",
+      "accessed_on": "2026-07-15",
+      "sha256": "b2c2e406eab9de44cf7e0df2997252e32a1065c84236dd47339679ace3d041fd"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, Merlin item resolver and Quod record.",
+      "url": "https://name.umdl.umich.edu/Merlin",
+      "summary": "Provides the persistent public item route and current No Copyright-United States/public-domain presentation.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:umich-cme-list",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse title list with URLs.",
+      "url": "https://websites.umich.edu/~pfs/mec/med/CME_with_URLs.html",
+      "locator": "Merlin entry",
+      "summary": "Lists Merlin with EETS Original Series numbers 10, 21, 36, and 112 and the completed 1899 title, correcting the abbreviated series statement in the XML header.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bnf-wheatley",
+      "type": "official_catalog",
+      "citation": "Bibliotheque nationale de France, catalog record for Wheatley's Merlin; or, The Early History of King Arthur.",
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb31643096z",
+      "summary": "Confirms the four-part EETS edition, Wheatley's editorial responsibility, and nineteenth-century publication sequence.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-pink",
+      "type": "official_catalog",
+      "citation": "H. L. Pink, Unpublished description of Cambridge University Library MS Ff.3.11 (Merlin), Apollo, DOI 10.17863/CAM.67037.",
+      "url": "https://www.repository.cam.ac.uk/items/f426efda-4c41-41b4-81ee-c5c9c9e97745",
+      "alternate_urls": [
+        "https://www.repository.cam.ac.uk/bitstreams/5399daa4-f977-437e-b87c-321a98fd12cc/download"
+      ],
+      "repository_path": "source-cache/Merlin/pink-cul-ff-3-11-description.pdf",
+      "locator": "single description page",
+      "summary": "Describes the fifteenth-century vellum codex, its dimensions, single-column layout, 245 extant leaves from 248, burned ff. 137-138, lost ff. 246-248, and the Prose Merlin ending imperfectly at f. 245v. The item applies CC BY 4.0.",
+      "accessed_on": "2026-07-15",
+      "sha256": "e163d68f4189d364442019cf33098191c39130600d6718b37dd0d6bdaa504709"
+    },
+    {
+      "id": "evidence:cul-order-images",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Ordering images and arranging for permission to use them.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+      "summary": "Provides the online request form, private-study and publication routes, standard 600 ppi JPEG specification, minimum GBP 25 charge, and distinction between image supply and permission to use.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-image-terms",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Terms and conditions of image supply and reproduction.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction",
+      "summary": "States that supplied material may not be reproduced without prior written permission and sets separate conditions for research/evaluation copies and licensed publication use.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bodleian-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, MARCO catalog record for MS Rawl. D. 913.",
+      "url": "https://marco.ox.ac.uk/ark:/29072/x0wd375v74wr",
+      "locator": "fols. 43r-v; physical description and binding history",
+      "summary": "Identifies the Romance of Merlin at fols. 43r-v, the 129-leaf composite guardbook, its circa-1861 assembly, and former shelfmarks.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bodleian-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian, IIIF Presentation 2 manifest for MS Rawl. D. 913, object e587f7ee-c786-4659-8486-c104d5633fe9.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e587f7ee-c786-4659-8486-c104d5633fe9.json",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/e587f7ee-c786-4659-8486-c104d5633fe9/"
+      ],
+      "repository_path": "source-cache/Merlin/rawlinson-d-913-partial-digital-bodleian.zip",
+      "locator": "10 canvases; canvas/image 10 = fol. 43r",
+      "summary": "Exposes ten selected images, with only fol. 43r for the Merlin fragment and no fol. 43v. The manifest attribution applies CC BY-NC 4.0. The local bundle contains all ten images, manifest, and checksum inventory.",
+      "accessed_on": "2026-07-15",
+      "sha256": "29e20e11f37302d88730484b983be654b29e53890531b4348e68bd0335953f9c"
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use.",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "summary": "Explains CC BY-NC 4.0 attribution and noncommercial-use conditions and routes commercial licensing or high-resolution requests to Bodleian Imaging Services.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-add-10292",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Add MS 10292.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002108087",
+      "locator": "scope and content; physical characteristics; origin; digital-availability notice",
+      "summary": "Identifies the 1316 northern-French parchment codex, L'estoire de Merlin at ff. 76r-216v, 216 folios, three-column layout, dimensions, decoration, and current unavailability of digital images.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:irht-add-10292",
+      "type": "official_catalog",
+      "citation": "IRHT ARCA, London, British Library, Additional MS 10292, film MF 28722.",
+      "url": "https://arca.irht.cnrs.fr/ark%3A/63955/md009w032b8d",
+      "locator": "microfilm record",
+      "summary": "Records a complete analog microfilm of the codex, 38 double-page exposures covering shelfmark, guards, and ff. 1-216v, acquired in 1980.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:irht-reproduction-service",
+      "type": "official_webpage",
+      "citation": "IRHT, Commander des reproductions.",
+      "url": "https://www.irht.cnrs.fr/fr/commander-des-reproductions",
+      "summary": "Provides the reproduction-order route, forms, rate information, and service contact for IRHT-held surrogates.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:mdz-wheatley-volume-2",
+      "type": "digital_surrogate",
+      "citation": "Bayerische Staatsbibliothek/MDZ, Merlin or the Early History of King Arthur. 3, digital object bsb10748429.",
+      "url": "https://www.digitale-sammlungen.de/de/details/bsb10748429",
+      "alternate_urls": [
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10748429/manifest"
+      ],
+      "repository_path": "source-cache/Merlin/wheatley-1899-volume-2-mdz-bsb10748429.pdf",
+      "locator": "628 canvases; provider extent pp. 189-776 plus 15 pages; scan PDF pages 6, 8, 12, 14, and terminal apparatus",
+      "summary": "Provider metadata names Part 3/1869 and pp. 189-776; visual inspection confirms retained Part III and Part IV wrappers, an 1899 Vol. II title page, and printed p. 189 as the first body page. The IIIF manifest applies NoC-NC 1.0.",
+      "accessed_on": "2026-07-15",
+      "sha256": "31efe1a0c18ebb0dd40dcf501ea8bd1a18314db6ab839273511d4d512a7fda62",
+      "notes": [
+        "qpdf reports two handled offset-0 warnings; rendering and sampled page inspection succeeded."
+      ]
+    },
+    {
+      "id": "evidence:ia-wheatley-volume-1",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, MerlinOrTheEarlyHistory1, 1899 volume 1 scan.",
+      "url": "https://archive.org/details/MerlinOrTheEarlyHistory1",
+      "repository_path": "source-cache/Merlin/wheatley-1899-volume-1.pdf",
+      "locator": "PDF pp. 437-624 = printed pp. 1-188",
+      "summary": "Supplies a clean public scan of the first continuous Middle English text segment and item metadata applying Public Domain Mark 1.0.",
+      "accessed_on": "2026-07-15",
+      "sha256": "79b014e6afc7fac5627c966bbb49ef6dbb2ca53684152ffedf3224acd0e4d22e"
+    },
+    {
+      "id": "evidence:ia-wheatley-volume-2",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, MerlinOrTheEarlyHistory2, 1899 volume II scan.",
+      "url": "https://archive.org/details/MerlinOrTheEarlyHistory2",
+      "repository_path": "source-cache/Merlin/wheatley-1899-volume-2.pdf",
+      "locator": "PDF p. 439 = printed p. 379; PDF pp. 757-761 = printed pp. 697-701",
+      "summary": "Supplies the late continuous text, the Cambridge-break note, Wheatley's English terminal translation, and the Old French source transcription. Item metadata applies Public Domain Mark 1.0.",
+      "accessed_on": "2026-07-15",
+      "sha256": "1857008191774957521ea55a0ba464722608e2b171c5e8737822a2a89a0e9b37"
+    },
+    {
+      "id": "evidence:mets-landing",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Prose Merlin, ed. John Conlee.",
+      "url": "https://metseditions.org/editions/lbqPD7z5u64RKcy19tlpmKspE8P1YeWr",
+      "summary": "Identifies the modern edition, editor, 25-section contents, mid-fifteenth-century date, Arthurian prose-romance context, and public reading/PDF routes.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:mets-introduction",
+      "type": "scholarly_source",
+      "citation": "John Conlee, Introduction to Prose Merlin, Middle English Texts Series.",
+      "url": "https://metseditions.org/read/zlrMB9DF6lA8imAdVTvr9RfvVjEBPwAL",
+      "summary": "Describes the work as a mid-fifteenth-century Middle English prose translation/adaptation of the Old French Vulgate Merlin, analyzes its Robert de Boron and Vulgate-sequel sections, identifies CUL Ff.3.11 and Rawl. D. 913, and states that three final Cambridge leaves are lost.",
+      "accessed_on": "2026-07-15",
+      "notes": [
+        "Its bibliography abbreviates the EETS sequence inconsistently; the U-M list and BnF catalog control the edition-number statement here."
+      ]
+    },
+    {
+      "id": "evidence:mets-copyright",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright and Citation.",
+      "url": "https://metseditions.org/copyright-citation",
+      "summary": "States that digital editions are for individual use, reprinting the digital text requires contact, and XML is separately licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-15"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:exact-umich-carrier",
+      "question": "Was the 1969 Greenwood photo-reprint the exact physical copy keyed for the U-M encoding?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Seek U-M digitization-production notes or a catalog record tied to call number 820.6 E13 no.10, 112 1969."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-current-xml",
+        "evidence:umich-cme-list"
+      ],
+      "notes": [
+        "The current evidence makes Greenwood probable but does not identify a barcode or copy-specific source."
+      ]
+    },
+    {
+      "id": "question:cul-missing-leaf-count",
+      "question": "Why does Wheatley's 1865 statement say two final leaves are missing while Pink and current METS report three?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Compare Wheatley's advertisements across issues with current CUL collation records.",
+        "If possible, inspect the final quire physically or through commissioned images."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-pink",
+        "evidence:mets-introduction",
+        "evidence:ia-wheatley-volume-1"
+      ]
+    },
+    {
+      "id": "question:cul-full-facsimile",
+      "question": "Can Cambridge supply or expose a complete color facsimile of MS Ff.3.11, and under what price and publication terms?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Submit a Cambridge imaging request if the user chooses to seek a whole-codex facsimile.",
+        "Record any quotation, conservation feasibility decision, permitted uses, and exact deliverable when received."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cul-order-images",
+        "evidence:cul-image-terms"
+      ]
+    },
+    {
+      "id": "question:translator-exemplar",
+      "question": "Which physical Old French Vulgate Merlin exemplar, if any surviving manuscript, lay behind the anonymous Middle English translation?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Consult specialist textual studies comparing the Middle English version with the Vulgate Merlin manuscript tradition.",
+        "Do not promote Add MS 10292 from Wheatley's editorial support source to translator exemplar without evidence."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:mets-introduction",
+        "evidence:ia-wheatley-volume-2"
+      ]
+    },
+    {
+      "id": "question:bl-images-recovery",
+      "question": "Will the British Library restore public full digital coverage for Add MS 10292?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Recheck the current BL catalogue and digitized-manuscripts services.",
+        "Meanwhile use the BL request route or IRHT MF 28722."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-add-10292",
+        "evidence:irht-add-10292"
+      ]
+    },
+    {
+      "id": "question:umich-rights-history",
+      "question": "How should downstream redistribution reconcile the pinned XML's legacy U-M permission statement with the current U-M public-domain assertion?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Treat each statement as applying to its documented item and version.",
+        "Seek written U-M clarification before relying on the current statement to override legacy contractual language for the pinned file."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:merlin-repository-xml",
+        "evidence:umich-current-xml"
+      ]
+    }
+  ]
+}
