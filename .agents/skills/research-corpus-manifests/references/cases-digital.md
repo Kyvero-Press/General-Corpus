@@ -75,6 +75,15 @@ Record unresolved contradictions instead of forcing a chronology. Keep the
 archive's license on the deposited digital resource; it does not flow upstream
 to the source edition, witness, or historical work.
 
+Legacy XML page-break references, image filenames, resolution fields, and
+advertised image counts can establish that a page-image production layer
+existed historically. They do not establish that those images remain
+retrievable now. Test an exact current image request without inventing a route
+from an old filename. If the landing page is challenged or migrated and no
+usable image request or complete bundle can be verified, retain the historical
+facsimile entity but set current access and survival conservatively, date the
+negative check, and record what a human or provider enquiry must still test.
+
 ## Typography is editorial data: CME00099 and Ayenbite
 
 Italics can mark expanded abbreviations or supplied material rather than
