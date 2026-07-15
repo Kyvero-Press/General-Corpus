@@ -89,6 +89,16 @@ before assigning it to the encoding. Model a companion notes volume or later
 reprint as its own entity even when the repository title and author strings
 make the objects look interchangeable.
 
+## Complete work inside an unfinished publication plan
+
+A volume labeled `Part I` can still contain the complete intellectual work
+when a projected later part was limited to an introduction, facsimiles,
+glossary, notes, or other apparatus. Verify the text's opening and ending,
+contents, colophon, and contemporary publication plans independently. Preserve
+the part label as bibliographic evidence, but model textual completeness and
+publication-package completeness separately; do not report a missing narrative
+continuation merely because the apparatus plan was never completed.
+
 A later society or series issue can reuse an earlier publication's printing
 plates while adding a new title page, series statement, date, or preliminaries.
 Model the plate-derived issue as a distinct immediate edition linked through
