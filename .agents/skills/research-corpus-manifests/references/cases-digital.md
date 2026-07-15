@@ -92,6 +92,13 @@ When an edition numbers a blank, dotted, or otherwise contentless row as a
 missing line, distinguish numbered line positions from positions containing
 verbal text. Likewise, keep any post-explicit saying or scribal tag separate
 from the preceding work even when the encoding places every row in one `LG`.
+Across encoding generations, also inspect line-like text outside `L`, headings
+moved into or out of `L`, duplicates later replaced by empty nodes,
+lacuna-marker rows, and supplied or omitted terminal lines. Report each
+version's raw tagged count, conventional numbered positions, and positions
+containing verbal text separately. Name observed repairs, but use `version_of`
+and leave their direction, date, and authorship unassigned unless production
+evidence establishes them.
 Apply the same hierarchy rule to prose or lexical items: count `ITEM` nodes
 inside the textual body separately from administrative `TEMPHEAD`, header, or
 workflow containers, and name the XPath or ancestor boundary used.
