@@ -128,6 +128,14 @@ both its own parent contents and direct edition evidence. Preserve the
 conflicting loci, keep the work mapping provisional, and verify current
 foliation from the manuscript images or repository clarification.
 
+Apply the same separation within one edition when a source caption conflicts
+with inline folio marks, and again when a later encoding introduces a third
+locator. Preserve the caption, inline marks, and encoding milestone as
+layer-specific claims. Sequence, chronology, or neighboring entries may
+support a preferred candidate, but they do not authorize silently correcting
+the edition or declaring the conflict resolved without witness images or
+repository confirmation.
+
 For archival series that have been reorganized or renumbered, establish a
 legacy-to-current crosswalk from matching parties, titles, dates, contents, and
 context—not number resemblance alone. Preserve unresolved reference history
