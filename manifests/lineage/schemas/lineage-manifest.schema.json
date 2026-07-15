@@ -423,6 +423,16 @@
           "type": "string",
           "pattern": "^[0-9a-f]{40}$"
         },
+        "xml_identifier_aliases": {
+          "description": "Exact source-level XML identifiers that are documented aliases of the canonical manifest work_id. Use only when no IDG/@ID, BIBNO, VID, or IDNO value matches the canonical ID under the normal delimiter rule.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
         "sha256": {
           "type": "string",
           "pattern": "^[0-9a-f]{64}$"

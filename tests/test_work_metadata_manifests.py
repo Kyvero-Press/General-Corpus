@@ -89,6 +89,33 @@ class WorkMetadataManifestTests(unittest.TestCase):
 
         self.assertIn("CME00099: unexpected property 'unscoped_region'", errors)
 
+    def test_xml_identifier_aliases_come_from_matching_lineage_repository_file(self) -> None:
+        lineage_data = {
+            "entities": [
+                {
+                    "repository_file": {
+                        "path": "CME/source/RuleServLd.xml",
+                        "xml_identifier_aliases": ["RuleServeLd"],
+                    }
+                },
+                {
+                    "repository_file": {
+                        "path": "CME/source/Other.xml",
+                        "xml_identifier_aliases": ["Other"],
+                    }
+                },
+            ]
+        }
+
+        aliases = (
+            validate_work_metadata_manifests._xml_identifier_aliases_for_repository_path(
+                lineage_data,
+                "CME/source/RuleServLd.xml",
+            )
+        )
+
+        self.assertEqual(["RuleServeLd"], aliases)
+
     def test_composite_editor_display_may_name_every_editor(self) -> None:
         changed = copy.deepcopy(self.manifest)
         changed["agents"].append(

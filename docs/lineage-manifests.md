@@ -34,6 +34,14 @@ manifests/lineage/
 `incremental`: the repository has many more works than researched manifests.
 Do not create empty or speculative manifests merely to increase the count.
 
+Repository XML normally contains an `IDG/@ID`, `BIBNO`, `VID`, or `IDNO` that
+matches the canonical manifest `work_id` exactly or through a dot/colon
+extension. If a pinned source instead preserves a documented undelimited typo,
+truncation, or spelling variant, keep the canonical publication ID and list the
+exact source value in that artifact's
+`repository_file.xml_identifier_aliases`. The validator accepts only an alias
+actually present in the XML; this field is not a fuzzy-prefix escape hatch.
+
 ## Local source cache
 
 Exact downloadable facsimiles and supporting research files live outside Git
@@ -289,7 +297,8 @@ It enforces the committed JSON Schemas and additionally checks:
   from the leaves or canvases occupied by this work;
 - SHA-256 and git-blob hashes for repository artifacts;
 - agreement between a manifest work ID and the XML identifier family used by
-  that source (`IDG`/`BIBNO`/`VID` or `IDNO`);
+  that source (`IDG`/`BIBNO`/`VID` or `IDNO`), or an exact documented
+  `repository_file.xml_identifier_aliases` value present in that family;
   and
 - agreement between index fields and their work manifest.
 

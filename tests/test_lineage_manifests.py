@@ -442,7 +442,12 @@ class LineageManifestTests(unittest.TestCase):
             self.assertTrue(any("file count does not match" in item for item in errors))
             self.assertTrue(any("item count is inconsistent" in item for item in errors))
 
-    def _xml_identifier_errors(self, xml: str, work_id: str) -> list[str]:
+    def _xml_identifier_errors(
+        self,
+        xml: str,
+        work_id: str,
+        xml_identifier_aliases: list[str] | None = None,
+    ) -> list[str]:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "source.xml"
             path.write_text(xml, encoding="utf-8")
@@ -452,6 +457,7 @@ class LineageManifestTests(unittest.TestCase):
                 work_id,
                 "fixture",
                 errors,
+                xml_identifier_aliases,
             )
             return errors
 
@@ -532,6 +538,36 @@ class LineageManifestTests(unittest.TestCase):
             "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>LayCal</IDNO>"
             "</HEADER></DLPSTEXTCLASS>",
             "LayCalibration",
+        )
+
+        self.assertTrue(any("no matching" in item for item in errors))
+
+    def test_xml_identifier_accepts_explicit_undelimited_alias(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>RuleServeLd</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "RuleServLd",
+            ["RuleServeLd"],
+        )
+
+        self.assertEqual([], errors)
+
+    def test_xml_identifier_rejects_alias_absent_from_source(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>Different</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "RuleServLd",
+            ["RuleServeLd"],
+        )
+
+        self.assertTrue(any("no matching" in item for item in errors))
+
+    def test_xml_identifier_alias_must_match_source_value_exactly(self) -> None:
+        errors = self._xml_identifier_errors(
+            "<DLPSTEXTCLASS><HEADER><IDNO TYPE='dlps'>RuleServeLd.variant</IDNO>"
+            "</HEADER></DLPSTEXTCLASS>",
+            "RuleServLd",
+            ["RuleServeLd"],
         )
 
         self.assertTrue(any("no matching" in item for item in errors))

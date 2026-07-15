@@ -21,6 +21,15 @@ delimiter rule, but do not require every identifier family to match and do not
 invent a general zero-stripping heuristic. Prefer `VID`, then `IDNO`, then
 `IDG/@ID`, when constructing a U-M resolver URL from the source itself.
 
+Do not relax that rule when a canonical publication filename and its pinned
+XML differ by an undelimited typo, truncation, or spelling variant. Preserve
+the canonical `work_id`, record the exact source value in the artifact
+`repository_file.xml_identifier_aliases`, and explain the discrepancy with
+file evidence. Validation accepts an explicit alias only when that value is
+actually present in the XML identifier family; it is not fuzzy matching and
+must not be used merely because an unrelated upstream or sibling identifier
+appears in the header.
+
 DIMEV's live `recID` is the DIMEV record number encoded in identifiers such as
 `record-2973`; it is not necessarily the same as an IMEV or NIMEV number cited
 inside that record. Verify all three fields in the versioned data before

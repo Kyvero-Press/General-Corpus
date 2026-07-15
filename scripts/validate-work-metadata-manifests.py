@@ -157,6 +157,30 @@ def _lineage_data(
     return lineage_data, lineage_path
 
 
+def _xml_identifier_aliases_for_repository_path(
+    lineage_data: dict[str, Any] | None,
+    repository_path: Any,
+) -> list[str]:
+    """Return explicit XML aliases declared by linked lineage repository files."""
+
+    if not isinstance(lineage_data, dict) or not isinstance(repository_path, str):
+        return []
+    aliases: list[str] = []
+    for entity in lineage_data.get("entities", []):
+        if not isinstance(entity, dict):
+            continue
+        repository_file = entity.get("repository_file")
+        if (
+            not isinstance(repository_file, dict)
+            or repository_file.get("path") != repository_path
+        ):
+            continue
+        for alias in repository_file.get("xml_identifier_aliases", []):
+            if isinstance(alias, str) and alias and alias not in aliases:
+                aliases.append(alias)
+    return aliases
+
+
 def _check_part_graph(parts: list[Any], location: str, errors: list[str]) -> None:
     by_id = {
         part.get("id"): part
@@ -531,7 +555,14 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                     errors.append(f"{item_location}.sha256: checksum mismatch")
                 if evidence_path.suffix.lower() == ".xml" and isinstance(work_id, str):
                     _SCHEMA_SUPPORT._validate_xml_work_id(
-                        evidence_path, work_id, item_location, errors
+                        evidence_path,
+                        work_id,
+                        item_location,
+                        errors,
+                        _xml_identifier_aliases_for_repository_path(
+                            lineage_data,
+                            evidence.get("repository_path"),
+                        ),
                     )
         source_evidence_id = evidence.get("source_evidence_id")
         if isinstance(source_evidence_id, str) and lineage_data is not None:

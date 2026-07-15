@@ -328,7 +328,13 @@ def _check_agent_ref(ref: Any, agent_ids: set[str], location: str, errors: list[
         errors.append(f"{location}: unresolved agent reference {ref!r}")
 
 
-def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[str]) -> None:
+def _validate_xml_work_id(
+    path: Path,
+    work_id: str,
+    location: str,
+    errors: list[str],
+    xml_identifier_aliases: Any = None,
+) -> None:
     try:
         tree = ET.parse(path)
     except (ET.ParseError, OSError) as exc:
@@ -344,14 +350,14 @@ def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[
                 values.append(value)
         return values
 
-    def matches(value: str) -> bool:
+    def matches(value: str, candidate: str) -> bool:
         """Accept exact IDs or case-insensitive, structurally delimited variants."""
 
         normalized_value = value.casefold()
-        normalized_work_id = work_id.casefold()
-        return normalized_value == normalized_work_id or any(
-            normalized_value.startswith(f"{normalized_work_id}{delimiter}")
-            or normalized_work_id.startswith(f"{normalized_value}{delimiter}")
+        normalized_candidate = candidate.casefold()
+        return normalized_value == normalized_candidate or any(
+            normalized_value.startswith(f"{normalized_candidate}{delimiter}")
+            or normalized_candidate.startswith(f"{normalized_value}{delimiter}")
             for delimiter in (".", ":")
         )
 
@@ -363,15 +369,29 @@ def _validate_xml_work_id(path: Path, work_id: str, location: str, errors: list[
     )
     present_identifiers = [(label, values) for label, values in identifiers if values]
     if any(
-        matches(value)
+        matches(value, work_id)
         for _label, values in present_identifiers
         for value in values
     ):
         return
 
+    aliases = (
+        [value for value in xml_identifier_aliases if isinstance(value, str) and value]
+        if isinstance(xml_identifier_aliases, list)
+        else []
+    )
+    if any(
+        value.casefold() == alias.casefold()
+        for _label, values in present_identifiers
+        for value in values
+        for alias in aliases
+    ):
+        return
+
     errors.append(
         f"{location}: XML has no matching IDG/@ID, BIBNO, VID, or IDNO identifier "
-        f"for manifest work_id {work_id!r}; found {present_identifiers!r}"
+        f"for manifest work_id {work_id!r} or its explicit aliases {aliases!r}; "
+        f"found {present_identifiers!r}"
     )
 
 
@@ -490,7 +510,13 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 if isinstance(expected_blob, str) and _git_blob_hash(file_path) != expected_blob:
                     errors.append(f"{item_location}.repository_file.git_blob: git blob mismatch")
                 if file_path.suffix.lower() == ".xml" and isinstance(work_id, str):
-                    _validate_xml_work_id(file_path, work_id, item_location, errors)
+                    _validate_xml_work_id(
+                        file_path,
+                        work_id,
+                        item_location,
+                        errors,
+                        repository_file.get("xml_identifier_aliases"),
+                    )
 
     for index, agent in enumerate(manifest.get("agents", [])):
         if isinstance(agent, dict) and "evidence_ids" in agent:
