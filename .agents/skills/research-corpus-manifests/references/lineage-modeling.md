@@ -110,6 +110,14 @@ alignment relation separately and leave the historical exemplar unidentified
 unless transmission evidence connects that exact source object to the
 translation.
 
+When an editor translates a source-language witness to repair damaged text or
+continue beyond a base witness's break, use a passage-scoped `consulted`
+relation for that translation source when the schema has no `translated_from`
+relation. Do not call the translated supply a transcription or a collation. If
+the edition also prints the source-language passage verbatim, give that
+separate printed passage its own scoped `transcribes` relation and keep its
+inclusion or omission from the digital encoding explicit.
+
 ## Parts and shared objects
 
 A codex can contain several works, and an edition can print several witnesses
