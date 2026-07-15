@@ -138,6 +138,21 @@ leaf, keep the attached document and host folio as separate physical layers.
 Scope support, dimensions, recto/verso locators, and attachment evidence to the
 correct layer rather than transferring the host leaf's material to the target.
 
+## One print state, detached survivors
+
+A single bibliographic print state can survive in two or more separately held
+fragments. Keep the state-level identity and dating distinct from each physical
+object's holding, leaf or signature range, and access status. Do not count the
+fragments as separate editions, and do not collapse them into one fictional
+physical copy. If the lineage schema has no historical-printed-witness class,
+use its nearest controlled class only with an explicit modeling note.
+
+A fragment recovered after an older scholarly edition was published is
+collateral evidence, not a source that editor could have consulted. Connect it
+only to later editions that demonstrably use or describe it, and record the
+current object/facsimile negative separately from any publicly available
+article or catalog description.
+
 ## Fluid proverb compilations: CME00074
 
 A proverb sequence can be a manuscript-specific compilation rather than one
