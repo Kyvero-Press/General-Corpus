@@ -38,6 +38,32 @@ Preserve the archive-confirmed version relation, but qualify any source-edition
 relation whose only contradictory support is the inherited `sourceDesc`; expose
 the conflict as an open question instead of silently choosing one statement.
 
+## Hidden headers in migrated archives
+
+A repository migration can leave a TEI deposit header reachable as a direct
+bitstream while omitting it from the current landing page and `allzip`
+download. Check the predecessor handle namespace, the current namespace, and
+the exact bitstream sequences. Cache the header separately from the advertised
+data bundle, and retain both landing-page and direct-file URLs. In DSpace-style
+routes the sequence selects the bitstream; a plausible filename is not enough
+to establish that the returned bytes are the intended file.
+
+Hash current and legacy endpoints before treating them as aliases. If they are
+byte-identical, one local copy can cite both verified routes. If migration has
+changed the header, preserve each state under a distinct name, checksum, and
+source URL. A migrated header may drop the depositor, deposit date, identifiers,
+or revision history and can even become malformed through unmatched elements;
+do not replace a fuller valid legacy record with that damaged state merely
+because its namespace is newer. Use the current landing as the active access
+route while citing the exact header state that supports each provenance claim.
+
+Finally, test catalog dates against the payload and source edition. Embedded
+machine trailers can establish that a file passed through a system on a given
+date, but they are processing evidence rather than an automatic deposit date.
+Record unresolved contradictions instead of forcing a chronology. Keep the
+archive's license on the deposited digital resource; it does not flow upstream
+to the source edition, witness, or historical work.
+
 ## Typography is editorial data: CME00099 and Ayenbite
 
 Italics can mark expanded abbreviations or supplied material rather than
