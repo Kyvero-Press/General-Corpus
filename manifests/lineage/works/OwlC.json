@@ -1,0 +1,2473 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:OwlC",
+  "work_id": "OwlC",
+  "title": "The Owl and the Nightingale (Cotton manuscript version)",
+  "primary_subject": "artifact:general-corpus:OwlC",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The checked-in OwlC XML represents the Cotton Caligula A IX version of The Owl and the Nightingale as transmitted through University of Michigan, Middle English Compendium, and Oxford Text Archive digital layers. The current OTA bitstream bibliographically conflates J. W. H. Atkins's 1922 textual edition with its New York, Russell & Russell 1971 reissue; the 1971 physical carrier is therefore modeled separately as the likely, not proven, encoding carrier. The relevant textual stream is Atkins's Cotton transcription on even printed pages 2–150, based on British Library Cotton MS Caligula A IX, ff. 233r–246r. Atkins prints Jesus College MS 29 independently on the facing odd pages; both manuscripts descend independently from a lost exemplar X. Complete IIIF objects for both codices, a complete public scan of the 1922 edition, current digital bitstreams, 1971 carrier metadata and a controlled-borrow scan, and a current Jesus-based scholarly edition are linked with exact work-portion mappings.",
+  "languages": [
+    "enm",
+    "eng",
+    "lat",
+    "fra"
+  ],
+  "review_notes": [
+    "OwlC is the Cotton witness-specific electronic version. OwlJ and the Jesus manuscript are collateral, not upstream physical sources of the Cotton transcription.",
+    "Atkins's complete publication contains two parallel transcription streams: Cotton on even pp. 2–150 and Jesus on odd pp. 3–151. OwlC serializes only the Cotton stream.",
+    "The current OTA source line says ‘J. W. H. Atkins 1922 edition, NY: Russell and Russell.’ Library of Congress identifies that New York carrier as a 1971 reissue first published in 1922. Carrier dependence is likely but remains qualified until the encoding copy or production documentation is verified.",
+    "Current scholarship dates Cotton Caligula A IX to 1250–1299 and leaves the poem's composition date unresolved. The pinned XML's 1190–1210 field and Atkins's earlier manuscript dating are preserved as legacy assertions, not current certainties.",
+    "The British Library and Jesus College image licenses are not interchangeable. Jesus images are expressly CC BY 4.0; the British Library IIIF object says public domain in most countries other than the UK, with UK and intended commercial/Git reuse retained as a separate unresolved permissions question."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:OwlC",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for OwlC",
+      "description": "Pinned XML representation supplied through the CME Git submodule; its primary text is the Cotton-version electronic transcription.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "OwlC",
+          "uri": "https://name.umdl.umich.edu/OwlC"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "fa10df156f638822eea2e042221e625ccf7c9f5d"
+        }
+      ],
+      "creator_ids": [
+        "agent:general-corpus"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/OwlC.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "fa10df156f638822eea2e042221e625ccf7c9f5d",
+        "sha256": "ea8bb37df5599a649173c4a50a58a2e24782c3a4cce993db336a317bb9357c44"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:OwlC",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item OwlC",
+      "description": "Public digital text titled ‘The owl and the nightingale (MS Cotton),’ presenting lines 1–1794 in eighteen supplied navigation groups.",
+      "identifiers": [
+        {
+          "scheme": "UMDL handle",
+          "value": "OwlC",
+          "uri": "https://name.umdl.umich.edu/OwlC"
+        },
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1684-A"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic distribution date in the pinned header",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:owlc-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:umich-owlc",
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "encoding:medictionary:OwlC",
+      "type": "digital_encoding",
+      "label": "Current Middle English Compendium/MEDictionary OwlC XML",
+      "description": "Public ETS XML descendant or sibling version distributed by the Middle English Compendium. Its stripped L text and L attributes exactly match the pinned repaired OwlC stream, while its document wrapper, page-break placement, metadata, and availability statement differ.",
+      "identifiers": [
+        {
+          "scheme": "Middle English Compendium text ID",
+          "value": "OwlC",
+          "uri": "https://www.medictionary.info/texts/OwlC.xml"
+        },
+        {
+          "scheme": "DLPS ID",
+          "value": "OwlC"
+        }
+      ],
+      "creator_ids": [
+        "agent:middle-english-compendium",
+        "agent:umich"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:medictionary-owlc",
+        "evidence:digital-version-comparison"
+      ],
+      "notes": [
+        "The provider HTTP Last-Modified value, 2026-05-09, is recorded only as a retrieval-snapshot label; it is not treated as the creation or publication date of this encoding."
+      ]
+    },
+    {
+      "id": "encoding:ota:U-1684-A-OwlC",
+      "type": "digital_encoding",
+      "label": "Current OTA U-1684-A Cotton bitstream",
+      "description": "Current Oxford Text Archive Cotton SGML-like text file for the shared Owl and Nightingale deposit. It self-identifies Atkins as its source and carries page and folio-column locators, but it is structurally and textually distinct from the repaired MEDictionary/pinned branch.",
+      "identifiers": [
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1684-A",
+          "uri": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1684"
+        },
+        {
+          "scheme": "OTA bitstream filename",
+          "value": "owlc-1684.txt"
+        }
+      ],
+      "creator_ids": [
+        "agent:ota"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlc-bitstream"
+      ],
+      "notes": [
+        "The current bitstream has 1,793 tagged L elements plus untagged canonical line 335, duplicates ‘Þe niȝtingale at þisse worde’ where the repaired branch retains an empty node, omits the final canonical line, and contains malformed entity spellings.",
+        "Its second folio locator reads 233v.2; the pinned XML, MEDictionary XML, and manuscript sequence read 233r.2. These differences are preserved as version evidence rather than normalized silently."
+      ]
+    },
+    {
+      "id": "encoding:ota:U-1684-A-OwlJ",
+      "type": "digital_encoding",
+      "label": "Current OTA U-1684-A Jesus bitstream",
+      "description": "Current Oxford Text Archive parallel text file for the Jesus College MS 29 version, cached as collateral evidence because Atkins prints it beside the Cotton stream.",
+      "identifiers": [
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1684-A",
+          "uri": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1684"
+        },
+        {
+          "scheme": "OTA bitstream filename",
+          "value": "owlj-1684.txt"
+        }
+      ],
+      "creator_ids": [
+        "agent:ota"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlj-bitstream"
+      ]
+    },
+    {
+      "id": "edition:atkins:owl-nightingale-1922",
+      "type": "scholarly_edition",
+      "label": "Atkins 1922 edition of The Owl and the Nightingale",
+      "description": "The immediate source edition. It prints the Cotton and Jesus versions independently on facing pages, with Cotton on even pp. 2–150 and Jesus on odd pp. 3–151, followed by notes, translation, glossary, and appendices.",
+      "creator_ids": [
+        "agent:jwh-atkins"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1922",
+          "normalized": "1922",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:atkins-scan",
+            "evidence:owlc-xml"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "J. W. H. Atkins, ed., The Owl and the Nightingale: Edited with Introduction, Texts, Notes, Translation and Glossary (Cambridge: Cambridge University Press, 1922).",
+        "title": "The Owl and the Nightingale: Edited with Introduction, Texts, Notes, Translation and Glossary",
+        "publisher": "Cambridge University Press",
+        "publication_place": "Cambridge",
+        "date": "1922",
+        "pages": "xc + 231 pp.",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:atkins-scan",
+        "evidence:atkins-preface",
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "edition:atkins:russell-russell-1971",
+      "type": "scholarly_edition",
+      "label": "Atkins 1971 Russell & Russell reprint",
+      "description": "Distinct New York reprint edition of Atkins's 1922 edition, cataloged as first published in 1922 and retaining the same xc + 231-page extent and facing Cotton/Jesus texts. The current OTA source wording likely points to this carrier while calling the textual edition 1922; its exact physical reproduction method and any reprint-specific matter remain unverified because no copy was inspected.",
+      "identifiers": [
+        {
+          "scheme": "LCCN",
+          "value": "77139898",
+          "uri": "https://lccn.loc.gov/77139898"
+        },
+        {
+          "scheme": "Open Library edition",
+          "value": "OL4577146M",
+          "uri": "https://openlibrary.org/books/OL4577146M"
+        },
+        {
+          "scheme": "Internet Archive item",
+          "value": "bwb_T3-BGL-147",
+          "uri": "https://archive.org/details/bwb_T3-BGL-147"
+        }
+      ],
+      "creator_ids": [
+        "agent:jwh-atkins",
+        "agent:russell-russell"
+      ],
+      "date_statements": [
+        {
+          "label": "reissue publication",
+          "value": "1971",
+          "normalized": "1971",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:loc-atkins-1971"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "J. W. H. Atkins, ed., The Owl and the Nightingale (New York: Russell & Russell, 1971); first published 1922.",
+        "title": "The Owl and the Nightingale",
+        "publisher": "Russell & Russell",
+        "publication_place": "New York",
+        "date": "1971",
+        "pages": "xc + 231 pp.",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "physical_description": {
+        "extent": "xc + 231 pages",
+        "format": "Printed volume reissuing the 1922 edition",
+        "notes": [
+          "The Cotton and Jesus manuscript texts remain on opposite pages according to the Library of Congress record.",
+          "The exact encoding copy has not been inspected; carrier dependence is inferred from the OTA's New York Russell & Russell source line."
+        ]
+      },
+      "reproduction_format": "Printed reprint; controlled digital scan available for borrowing; exact reproduction method unverified",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:loc-atkins-1971",
+        "evidence:openlibrary-atkins-1971",
+        "evidence:ia-atkins-1971",
+        "evidence:ota-owlc-bitstream"
+      ]
+    },
+    {
+      "id": "facsimile:internet-archive:atkins-1922",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Atkins 1922",
+      "description": "Complete scan of the immediate source edition, including its front matter, facing Cotton and Jesus texts, notes, translation, glossary, and appendices.",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "physical_description": {
+        "extent": "342 PDF pages",
+        "format": "Complete volume scan",
+        "notes": [
+          "The scan contains two manuscript plates, but those plates are only partial manuscript reproduction; the separate 543- and 532-canvas IIIF bundles provide complete codex context."
+        ]
+      },
+      "reproduction_format": "PDF, OCR text, page images, and Internet Archive metadata",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:atkins-scan",
+        "evidence:ia-atkins-metadata"
+      ]
+    },
+    {
+      "id": "witness:bl:Cotton-Caligula-A-IX",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Caligula A IX",
+      "description": "Composite parchment codex containing the Cotton version of The Owl and the Nightingale at ff. 233r–246r. This is the base witness for the OwlC transcription stream.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Cotton MS Caligula A IX",
+          "uri": "https://searcharchives.bl.uk/catalog/040-001102334"
+        },
+        {
+          "scheme": "British Library LARK",
+          "value": "ark:/81055/vdc_100165157081.0x000001"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "second half of the thirteenth century",
+          "normalized": "1250/1299",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Caligula A IX",
+        "historical_designations": [
+          "Cotton Caligula A.ix"
+        ],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-001102334"
+      },
+      "physical_description": {
+        "support": "parchment",
+        "extent": "261 folios plus early modern endleaves and unfoliated flyleaves; 543 canvases in the complete current IIIF object",
+        "dimensions": "215 × 150 mm; text space 170 × 115 mm",
+        "notes": [
+          "Written in two columns; current catalog origin England, south-west Midlands.",
+          "The Owl and the Nightingale occupies ff. 233r–246r; its final surface is shared, with Death's Wither-Clench beginning on f. 246r after Owl ends."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-cotton-catalog",
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "facsimile:bl:Cotton-Caligula-A-IX",
+      "type": "facsimile",
+      "label": "British Library complete IIIF object for Cotton MS Caligula A IX",
+      "description": "Complete public color IIIF Presentation 3 object for the composite codex, preserving binding and adjacent-text context as well as the Owl portion.",
+      "creator_ids": [
+        "agent:british-library"
+      ],
+      "physical_description": {
+        "extent": "543 canvases",
+        "format": "IIIF Presentation 3 object",
+        "notes": [
+          "Published sequence begins with the front cover and ends with the spine.",
+          "The cached helper bundle requests 542 canvases at 1,200 pixels wide and uses the provider's full/max/0 fallback for the spine."
+        ]
+      },
+      "reproduction_format": "IIIF JPEG color page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-cotton-iiif",
+        "evidence:iiif-audit"
+      ]
+    },
+    {
+      "id": "witness:oxford-jesus:29",
+      "type": "manuscript_witness",
+      "label": "Jesus College, Oxford MS 29",
+      "alternate_labels": [
+        "Jesus College E.29",
+        "Jesus College Arch. E.29"
+      ],
+      "description": "Composite manuscript whose late-thirteenth-century Part II contains the parallel Jesus version of The Owl and the Nightingale at current ff. 156r–168v. It is collateral to OwlC and independently descends from exemplar X.",
+      "identifiers": [
+        {
+          "scheme": "Jesus College shelfmark",
+          "value": "MS 29",
+          "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_10575"
+        },
+        {
+          "scheme": "Digital Bodleian UUID",
+          "value": "432a9599-3dc1-40d8-b997-83dbb5ff8df6",
+          "uri": "https://digital.bodleian.ox.ac.uk/objects/432a9599-3dc1-40d8-b997-83dbb5ff8df6/"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Part II production",
+          "value": "late thirteenth century, possibly 1272 × 1290s",
+          "normalized": "1272/1299",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:jesus-29-catalog",
+            "evidence:fein-2022"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:jesus-college-oxford",
+        "shelfmark": "MS 29",
+        "historical_designations": [
+          "E.29",
+          "Arch. E.29"
+        ],
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_10575"
+      },
+      "physical_description": {
+        "support": "parchment",
+        "extent": "257 folios in the complete current digital object, with boards and flyleaves",
+        "notes": [
+          "The Owl and the Nightingale occupies current ff. 156r–168v, corresponding to legacy foliation 229r–241v used in older editions.",
+          "Part II is a trilingual poetic anthology associated with the West Midlands; physical object dates for other composite parts must not be transferred to the Owl copy."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:jesus-29-catalog",
+        "evidence:jesus-29-iiif",
+        "evidence:fein-2022"
+      ]
+    },
+    {
+      "id": "facsimile:bodleian:Jesus-29",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian object for Jesus College MS 29",
+      "description": "Complete public color IIIF object for the bound manuscript, preserving all 257 folios, binding surfaces, and adjacent contents.",
+      "creator_ids": [
+        "agent:jesus-college-oxford",
+        "agent:bodleian-libraries"
+      ],
+      "physical_description": {
+        "extent": "532 canvases",
+        "format": "IIIF Presentation object",
+        "notes": [
+          "Upper board through tail; boards and insides, four flyleaves, spine, fore-edge, head, tail, all ff. 1r–257v, adjacent contents, and a structure-marked blank at f. 155v are present."
+        ]
+      },
+      "reproduction_format": "IIIF JPEG color page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:jesus-29-iiif",
+        "evidence:iiif-audit"
+      ]
+    },
+    {
+      "id": "witness:lost:owl-exemplar-X",
+      "type": "manuscript_witness",
+      "label": "Lost exemplar X of The Owl and the Nightingale",
+      "description": "The lost common exemplar independently copied by the Cotton and Jesus scribes. It is a reconstructed transmission layer, not an extant third manuscript and not necessarily the author's original.",
+      "survival_status": "missing",
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:pc-mep"
+      ],
+      "notes": [
+        "A separately reported lost manuscript described as containing a conflict between the nightingale and owl should not be identified with exemplar X without evidence."
+      ]
+    },
+    {
+      "id": "edition:fein:owl-jesus29-2022",
+      "type": "scholarly_edition",
+      "label": "Fein 2022 edition of The Owl and the Nightingale and the English Poems of Jesus College MS 29 (II)",
+      "description": "Current Jesus-based scholarly edition and translation. It transcribes the Jesus Owl while adopting Cotton readings where they resolve problems, and supplies current transmission, date, authorship, and manuscript-context scholarship.",
+      "creator_ids": [
+        "agent:susanna-fein",
+        "agent:medieval-institute-publications"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "2022",
+          "normalized": "2022",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:fein-2022",
+            "evidence:fein-copyright"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Susanna Fein, ed. and trans., The Owl and the Nightingale and the English Poems of Oxford, Jesus College, MS 29 (II), Middle English Texts Series (Kalamazoo: Medieval Institute Publications, 2022).",
+        "title": "The Owl and the Nightingale and the English Poems of Oxford, Jesus College, MS 29 (II)",
+        "series": "Middle English Texts Series",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo, Michigan",
+        "date": "2022",
+        "languages": [
+          "enm",
+          "eng",
+          "lat",
+          "fra"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:mets-rights",
+        "evidence:fein-copyright"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:general-corpus",
+      "type": "organization",
+      "name": "General Corpus project",
+      "urls": [
+        "https://github.com/Kyvero-Press/General-Corpus"
+      ],
+      "evidence_ids": [
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/",
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-owlc"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/"
+      ],
+      "evidence_ids": [
+        "evidence:ota-1684"
+      ]
+    },
+    {
+      "id": "agent:middle-english-compendium",
+      "type": "organization",
+      "name": "Middle English Compendium",
+      "urls": [
+        "https://quod.lib.umich.edu/m/middle-english-dictionary/",
+        "https://www.medictionary.info/"
+      ],
+      "evidence_ids": [
+        "evidence:medictionary-owlc"
+      ]
+    },
+    {
+      "id": "agent:jwh-atkins",
+      "type": "person",
+      "name": "John William Hey Atkins",
+      "alternate_names": [
+        "J. W. H. Atkins"
+      ],
+      "evidence_ids": [
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "agent:cambridge-university-press",
+      "type": "organization",
+      "name": "Cambridge University Press",
+      "urls": [
+        "https://www.cambridge.org/"
+      ],
+      "evidence_ids": [
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "agent:russell-russell",
+      "type": "organization",
+      "name": "Russell & Russell",
+      "evidence_ids": [
+        "evidence:loc-atkins-1971"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:ia-atkins-metadata"
+      ]
+    },
+    {
+      "id": "agent:library-of-congress",
+      "type": "organization",
+      "name": "Library of Congress",
+      "urls": [
+        "https://www.loc.gov/",
+        "https://lccn.loc.gov/"
+      ],
+      "evidence_ids": [
+        "evidence:loc-atkins-1971"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-cotton-catalog",
+        "evidence:bl-cotton-iiif"
+      ]
+    },
+    {
+      "id": "agent:jesus-college-oxford",
+      "type": "organization",
+      "name": "Jesus College, University of Oxford",
+      "urls": [
+        "https://www.jesus.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:jesus-29-catalog",
+        "evidence:jesus-29-iiif"
+      ]
+    },
+    {
+      "id": "agent:bodleian-libraries",
+      "type": "organization",
+      "name": "Bodleian Libraries",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/",
+        "https://digital.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:jesus-29-catalog",
+        "evidence:jesus-29-iiif"
+      ]
+    },
+    {
+      "id": "agent:susanna-fein",
+      "type": "person",
+      "name": "Susanna Fein",
+      "evidence_ids": [
+        "evidence:fein-2022"
+      ]
+    },
+    {
+      "id": "agent:medieval-institute-publications",
+      "type": "organization",
+      "name": "Medieval Institute Publications",
+      "urls": [
+        "https://wmich.edu/medievalpublications",
+        "https://metseditions.org/"
+      ],
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:mets-rights"
+      ]
+    },
+    {
+      "id": "agent:us-copyright-office",
+      "type": "organization",
+      "name": "United States Copyright Office",
+      "urls": [
+        "https://www.copyright.gov/"
+      ],
+      "evidence_ids": [
+        "evidence:copyright-office"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:OwlC",
+      "object": "encoding:umich-cme:OwlC",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Pinned repository XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME item OwlC"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:owlc-xml",
+          "evidence:umich-owlc"
+        ],
+        "notes": "The repository file preserves U-M identifiers, header, and a repaired text stream associated with U-M, but no exact repository-ingest or transfer event was documented."
+      }
+    },
+    {
+      "id": "relation:medictionary-version-of-umich",
+      "type": "version_of",
+      "subject": "encoding:medictionary:OwlC",
+      "object": "encoding:umich-cme:OwlC",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Current MEDictionary/Middle English Compendium ETS XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME item OwlC"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:medictionary-owlc",
+          "evidence:umich-owlc",
+          "evidence:digital-version-comparison"
+        ],
+        "notes": "The file names U-M contacts, distributes the same OwlC item through the Middle English Compendium, and exactly shares the pinned repaired L stream. The exact publication and transfer sequence is not documented."
+      }
+    },
+    {
+      "id": "relation:umich-version-of-ota-cotton",
+      "type": "version_of",
+      "subject": "encoding:umich-cme:OwlC",
+      "object": "encoding:ota:U-1684-A-OwlC",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "U-M Cotton electronic text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Current OTA Cotton bitstream"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:owlc-xml",
+          "evidence:ota-1684",
+          "evidence:ota-owlc-bitstream"
+        ],
+        "notes": "The pinned U-M header says the text was made available through OTA U-1684-A, but the exact transfer, repair, and later migration direction are undocumented. Current OTA differs structurally and textually; MEDictionary and pinned OwlC share the repaired stream."
+      }
+    },
+    {
+      "id": "relation:ota-cotton-encoded-from-1971-carrier",
+      "type": "encoded_from",
+      "subject": "encoding:ota:U-1684-A-OwlC",
+      "object": "edition:atkins:russell-russell-1971",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Cotton electronic text and locators"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Cotton transcription stream in the likely Russell & Russell carrier",
+          "locators": [
+            "even printed pp. 2–150"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ota-owlc-bitstream",
+          "evidence:loc-atkins-1971",
+          "evidence:ia-atkins-1971"
+        ],
+        "notes": "The current OTA source line combines ‘J. W. H. Atkins 1922 edition’ with ‘NY: Russell and Russell,’ which identifies the 1971 reissue bibliographically. The exact encoding copy and production documentation were not inspected."
+      }
+    },
+    {
+      "id": "relation:ota-jesus-encoded-from-1971-carrier",
+      "type": "encoded_from",
+      "subject": "encoding:ota:U-1684-A-OwlJ",
+      "object": "edition:atkins:russell-russell-1971",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Jesus electronic text and locators"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Jesus transcription stream in the likely Russell & Russell carrier",
+          "locators": [
+            "odd printed pp. 3–151"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ota-owlj-bitstream",
+          "evidence:loc-atkins-1971",
+          "evidence:ia-atkins-1971"
+        ],
+        "notes": "The source wording supports the same likely 1971 physical carrier as OwlC, but the exact copy was not inspected."
+      }
+    },
+    {
+      "id": "relation:atkins-1971-version-of-1922",
+      "type": "version_of",
+      "subject": "edition:atkins:russell-russell-1971",
+      "object": "edition:atkins:owl-nightingale-1922",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Russell & Russell 1971 printed reissue"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Atkins's 1922 edition and textual state"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:loc-atkins-1971",
+          "evidence:openlibrary-atkins-1971"
+        ],
+        "notes": "Library of Congress codes the volume as a 1971 reprint of 1922 and records the same extent and facing-text arrangement. This scoped version relation does not imply photographic facsimile reproduction: the exact carrier was not inspected page by page, and its resetting or reproduction method remains unknown."
+      }
+    },
+    {
+      "id": "relation:atkins-transcribes-cotton",
+      "type": "transcribes",
+      "subject": "edition:atkins:owl-nightingale-1922",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Cotton text on even printed pages",
+          "locators": [
+            "pp. 2–150"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The Owl and the Nightingale",
+          "locators": [
+            "ff. 233r–246r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:atkins-preface",
+          "evidence:bl-cotton-catalog",
+          "evidence:pc-mep"
+        ]
+      }
+    },
+    {
+      "id": "relation:atkins-transcribes-jesus",
+      "type": "transcribes",
+      "subject": "edition:atkins:owl-nightingale-1922",
+      "object": "witness:oxford-jesus:29",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Parallel Jesus text on odd printed pages",
+          "locators": [
+            "pp. 3–151"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The Owl and the Nightingale",
+          "locators": [
+            "current ff. 156r–168v",
+            "legacy ff. 229r–241v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:atkins-preface",
+          "evidence:jesus-29-catalog",
+          "evidence:fein-2022"
+        ]
+      }
+    },
+    {
+      "id": "relation:atkins-collates-jesus-for-cotton",
+      "type": "collated_against",
+      "subject": "edition:atkins:owl-nightingale-1922",
+      "object": "witness:oxford-jesus:29",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Cotton transcription, emendations, and apparatus",
+          "locators": [
+            "even pp. 2–150 and corresponding notes"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Corresponding Jesus witness readings",
+          "locators": [
+            "current ff. 156r–168v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:atkins-preface",
+          "evidence:atkins-scan"
+        ],
+        "notes": "This supporting relation explains editorially supplied or compared Cotton readings; it does not make Jesus the physical source of the Cotton version."
+      }
+    },
+    {
+      "id": "relation:cotton-copied-from-X",
+      "type": "copied_from",
+      "subject": "witness:bl:Cotton-Caligula-A-IX",
+      "object": "witness:lost:owl-exemplar-X",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Cotton copy of The Owl and the Nightingale",
+          "locators": [
+            "ff. 233r–246r"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Corresponding text of reconstructed exemplar X"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:fein-2022",
+          "evidence:pc-mep"
+        ],
+        "notes": "Physical correspondences and shared errors support independent copying from X; X is not asserted to be the authorial original."
+      }
+    },
+    {
+      "id": "relation:jesus-copied-from-X",
+      "type": "copied_from",
+      "subject": "witness:oxford-jesus:29",
+      "object": "witness:lost:owl-exemplar-X",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Jesus copy of The Owl and the Nightingale",
+          "locators": [
+            "current ff. 156r–168v"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Corresponding text of reconstructed exemplar X"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:fein-2022",
+          "evidence:pc-mep"
+        ],
+        "notes": "The Jesus scribe independently copied and sometimes adapted difficult exemplar readings."
+      }
+    },
+    {
+      "id": "relation:bl-iiif-facsimile-of-cotton",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:Cotton-Caligula-A-IX",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 543-canvas digital object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete bound composite codex"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bl-cotton-iiif",
+          "evidence:iiif-audit"
+        ]
+      }
+    },
+    {
+      "id": "relation:bodleian-iiif-facsimile-of-jesus",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Jesus-29",
+      "object": "witness:oxford-jesus:29",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 532-canvas digital object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete bound composite manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:jesus-29-iiif",
+          "evidence:iiif-audit"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-scan-facsimile-of-atkins",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:atkins-1922",
+      "object": "edition:atkins:owl-nightingale-1922",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete Internet Archive scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 1922 printed edition"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:atkins-scan",
+          "evidence:ia-atkins-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:fein-transcribes-jesus",
+      "type": "transcribes",
+      "subject": "edition:fein:owl-jesus29-2022",
+      "object": "witness:oxford-jesus:29",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Article 2, Jesus-based Owl text",
+          "locators": [
+            "downloadable PDF pp. 74–157"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The Owl and the Nightingale",
+          "locators": [
+            "ff. 156ra–168vb"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:fein-2022"
+        ]
+      }
+    },
+    {
+      "id": "relation:fein-collates-cotton",
+      "type": "collated_against",
+      "subject": "edition:fein:owl-jesus29-2022",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Jesus-based Owl text and adopted readings",
+          "locators": [
+            "article 2"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Corresponding Cotton readings",
+          "locators": [
+            "ff. 233r–246r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:fein-2022"
+        ],
+        "notes": "Fein states that Cotton readings are adopted where they resolve problems in Jesus; the edition remains explicitly Jesus-based."
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:artifact-local",
+      "entity": "artifact:general-corpus:OwlC",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Read the checked-out CME submodule path or the immutable GitHub blob.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OwlC.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OwlC.xml"
+      ],
+      "repository_path": "CME/source/CME_phase_1-2/OwlC.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "access:umich-owlc",
+      "entity": "encoding:umich-cme:OwlC",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Use the U-M item page, contents navigation, or full-text display.",
+      "url": "https://quod.lib.umich.edu/c/cme/OwlC",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/OwlC"
+      ],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-owlc"
+      ]
+    },
+    {
+      "id": "access:medictionary-owlc",
+      "entity": "encoding:medictionary:OwlC",
+      "provider_id": "agent:middle-english-compendium",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the current raw ETS XML from MEDictionary/Middle English Compendium.",
+      "url": "https://www.medictionary.info/texts/OwlC.xml",
+      "local_copies": [
+        {
+          "label": "Current MEDictionary OwlC ETS XML",
+          "path": "source-cache/OwlC/medictionary-owlc-current.xml",
+          "source_url": "https://www.medictionary.info/texts/OwlC.xml",
+          "sha256": "61d349312b7ba94b26a7a35176bcee715ab534160edf79935cdb87e3e16fd74f",
+          "bytes": 84046,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Complete public OwlC XML; not a manuscript image facsimile.",
+            "Provider HTTP Last-Modified was Sat, 09 May 2026 19:11:32 GMT. This is retained only as retrieval-snapshot metadata, not a creation date."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "ETS XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:medictionary-owlc",
+        "evidence:digital-version-comparison",
+        "evidence:cache-integrity"
+      ]
+    },
+    {
+      "id": "access:ota-owlc",
+      "entity": "encoding:ota:U-1684-A-OwlC",
+      "provider_id": "agent:ota",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the Cotton text bitstream from the current OTA handle.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlc-1684.txt?sequence=4&isAllowed=y",
+      "alternate_urls": [
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1684"
+      ],
+      "local_copies": [
+        {
+          "label": "Current OTA Cotton text bitstream",
+          "path": "source-cache/OwlC/ota-1684-owlc-current-cotton-text.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlc-1684.txt?sequence=4&isAllowed=y",
+          "sha256": "4519202c4d9a2bd96a619bb3692fe39d2df68593f5b858f6e93273e4be849655",
+          "bytes": 80051,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Complete current Cotton bitstream; source markup is SGML-like plain text.",
+            "The second folio locator discrepancy relative to pinned XML is documented rather than normalized silently."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "SGML-like plain text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlc-bitstream"
+      ]
+    },
+    {
+      "id": "access:ota-owlj",
+      "entity": "encoding:ota:U-1684-A-OwlJ",
+      "provider_id": "agent:ota",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the collateral Jesus text bitstream from the same OTA handle.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlj-1684.txt?sequence=5&isAllowed=y",
+      "alternate_urls": [
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1684"
+      ],
+      "local_copies": [
+        {
+          "label": "Current OTA Jesus text bitstream",
+          "path": "source-cache/OwlC/ota-1684-owlj-current-jesus-text.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlj-1684.txt?sequence=5&isAllowed=y",
+          "sha256": "6ba5f946013f3e22b64a11a1a27965a3564a8b59a71dbc93b7b160ecc2d4c78b",
+          "bytes": 79101,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Complete current Jesus bitstream retained as collateral text-layer evidence."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "SGML-like plain text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlj-bitstream"
+      ]
+    },
+    {
+      "id": "access:atkins-1971-catalog",
+      "entity": "edition:atkins:russell-russell-1971",
+      "provider_id": "agent:library-of-congress",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use the Library of Congress LCCN record and MARCXML; Open Library supplies a secondary edition discovery record.",
+      "url": "https://lccn.loc.gov/77139898",
+      "alternate_urls": [
+        "https://lccn.loc.gov/77139898/marcxml",
+        "https://openlibrary.org/books/OL4577146M",
+        "https://openlibrary.org/books/OL4577146M.json",
+        "https://archive.org/metadata/bwb_T3-BGL-147"
+      ],
+      "local_copies": [
+        {
+          "label": "Library of Congress MARCXML for the 1971 Russell & Russell reissue",
+          "path": "source-cache/OwlC/atkins-1971-russell-russell-loc-marcxml.xml",
+          "source_url": "https://lccn.loc.gov/77139898/marcxml",
+          "sha256": "5e8f74ea713a6f73c0606df066782759df264a724e0a9e302c00f639c9e1d7de",
+          "bytes": 4774,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Open Library metadata for the 1971 Russell & Russell reissue",
+          "path": "source-cache/OwlC/atkins-1971-russell-russell-open-library.json",
+          "source_url": "https://openlibrary.org/books/OL4577146M.json",
+          "sha256": "817e96b8cc7df89a786dfea08aa1d56e6ff13dabf828f46287ed62ca9e7b8844",
+          "bytes": 1574,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive controlled-borrow item metadata for the 1971 reissue",
+          "path": "source-cache/OwlC/atkins-1971-russell-russell-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/bwb_T3-BGL-147",
+          "sha256": "ad3f9940c656e2a8755800693fcc02236fba5ef551a2315a5b03cc2a2eb29ebf",
+          "bytes": 11139,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Catalog HTML, MARCXML, and JSON metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:loc-atkins-1971",
+        "evidence:openlibrary-atkins-1971",
+        "evidence:ia-atkins-1971",
+        "evidence:cache-integrity"
+      ]
+    },
+    {
+      "id": "access:atkins-1971-borrow",
+      "entity": "edition:atkins:russell-russell-1971",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "digital_text",
+      "status": "registration_required",
+      "access_method": "Borrow the controlled digital scan through Internet Archive's in-library/print-disabled lending interface; downloadable derivatives are encrypted or private.",
+      "url": "https://archive.org/details/bwb_T3-BGL-147",
+      "cost": "free",
+      "format": "Controlled LCP-encrypted PDF/EPUB and online lending viewer",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ia-atkins-1971"
+      ],
+      "notes": [
+        "No unrestricted complete digital copy of the 1971 carrier was verified. The encrypted lending file was not cached as a reusable research facsimile.",
+        "The complete unrestricted 1922 scan is a comparison surrogate for the textual edition, not a scan of this 1971 physical carrier."
+      ]
+    },
+    {
+      "id": "access:atkins-internet-archive",
+      "entity": "facsimile:internet-archive:atkins-1922",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Use the Internet Archive item or direct PDF/OCR downloads.",
+      "url": "https://archive.org/details/owlandnightingal00atkiuoft",
+      "alternate_urls": [
+        "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft.pdf",
+        "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft_djvu.txt",
+        "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft_page_numbers.json",
+        "https://archive.org/metadata/owlandnightingal00atkiuoft"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Atkins 1922 scan",
+          "path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-complete.pdf",
+          "source_url": "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft.pdf",
+          "sha256": "cfe98dbc4c5c494dd2c69a249c55af2979eb5f114a08c2624d20a70557002acd",
+          "bytes": 28090572,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Atkins's parallel Cotton and Jesus texts",
+            "locators": [
+              "Cotton stream: even printed pp. 2–150",
+              "Jesus stream: odd printed pp. 3–151"
+            ],
+            "notes": [
+              "The complete volume, not a cropped text section, is cached."
+            ]
+          }
+        },
+        {
+          "label": "Internet Archive OCR for the complete Atkins volume",
+          "path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-complete-ocr.txt",
+          "source_url": "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft_djvu.txt",
+          "sha256": "d0dcc4bdaaf329dcca6fc1e89896759735d8b56474482c2e2f47781e266a8e6f",
+          "bytes": 912228,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Machine OCR is a search aid; it is not treated as an authoritative transcription."
+          ]
+        },
+        {
+          "label": "Internet Archive page-number mapping for Atkins 1922",
+          "path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-page-numbers.json",
+          "source_url": "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft_page_numbers.json",
+          "sha256": "e752f2e8356abc6554ab1e3b7464f5003eb64e210643932560c4ceb221b1ebeb",
+          "bytes": 58037,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive item metadata for Atkins 1922",
+          "path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/owlandnightingal00atkiuoft",
+          "sha256": "d84ae446edf3e7d4ab38c9cf186eb054111317ac798e8515cada1f1590951dbc",
+          "bytes": 68235,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Complete PDF scan, OCR, page map, and metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:atkins-scan",
+        "evidence:ia-atkins-metadata",
+        "evidence:cache-integrity"
+      ]
+    },
+    {
+      "id": "access:cotton-catalog",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use the British Library Archives and Manuscripts Catalogue record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102334",
+      "cost": "free",
+      "format": "Catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-cotton-catalog"
+      ]
+    },
+    {
+      "id": "access:cotton-physical",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request by shelfmark using the catalog-linked online form. Consultation is in London; the catalog requires a letter of introduction and a current reader pass.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102334",
+      "contact": "British Library Reference Services; quote Cotton MS Caligula A IX",
+      "cost": "unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-cotton-catalog"
+      ]
+    },
+    {
+      "id": "access:cotton-iiif",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use the British Library IIIF viewer or Presentation manifest.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "alternate_urls": [
+        "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete British Library IIIF facsimile of Cotton MS Caligula A IX",
+          "path": "source-cache/OwlC/cotton-caligula-a-ix-complete-iiif-1200px.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+          "sha256": "af7a3466b15540d12d12caa5148cc727db94c5d605021ba7b10aa5c78d5587e8",
+          "bytes": 301950000,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 543,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The Owl and the Nightingale in Cotton MS Caligula A IX",
+            "locators": [
+              "ff. 233r–246r",
+              "canvases 475–501 inclusive"
+            ],
+            "start_url": "https://bl.digirati.io/images/ark:/81055/vdc_100165331982.0x0001d1/canvas/c/475",
+            "end_url": "https://bl.digirati.io/images/ark:/81055/vdc_100165331982.0x0001eb/canvas/c/501",
+            "notes": [
+              "Canvas 501/f. 246r is shared: Owl ends in the left column and Death's Wither-Clench begins in the right column."
+            ]
+          },
+          "notes": [
+            "Whole 543-canvas provider object cached, not only the twenty-seven canvases containing Owl.",
+            "Effective width 1,200 pixels for 542 canvases; provider full-size fallback for the spine; JPEG."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "543-canvas color IIIF object",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-cotton-iiif",
+        "evidence:iiif-audit",
+        "evidence:cache-integrity"
+      ]
+    },
+    {
+      "id": "access:cotton-image-licensing",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Ask the British Library Licensing team about UK, publication, and commercial reuse of the manuscript photographs.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "contact": "licensing@bl.uk",
+      "cost": "unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-digitisation",
+        "evidence:bl-terms"
+      ]
+    },
+    {
+      "id": "access:jesus-catalog",
+      "entity": "witness:oxford-jesus:29",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use the Medieval Manuscripts in Oxford Libraries record and Digital Bodleian object page.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_10575",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/432a9599-3dc1-40d8-b997-83dbb5ff8df6/"
+      ],
+      "cost": "free",
+      "format": "Catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:jesus-29-catalog"
+      ]
+    },
+    {
+      "id": "access:jesus-iiif",
+      "entity": "facsimile:bodleian:Jesus-29",
+      "provider_id": "agent:jesus-college-oxford",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use Digital Bodleian or the IIIF Presentation manifest.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/432a9599-3dc1-40d8-b997-83dbb5ff8df6.json",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/432a9599-3dc1-40d8-b997-83dbb5ff8df6/"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Digital Bodleian facsimile of Jesus College MS 29",
+          "path": "source-cache/OwlC/jesus-college-oxford-ms-29-complete-1800.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/432a9599-3dc1-40d8-b997-83dbb5ff8df6.json",
+          "sha256": "100929da4f96187b742612458fb31a4ee70f1b18a1be2e16bdad297e130a9987",
+          "bytes": 604059620,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 532,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The Owl and the Nightingale in Jesus College MS 29",
+            "locators": [
+              "current ff. 156r–168v",
+              "legacy ff. 229r–241v",
+              "canvases 319–344 inclusive"
+            ],
+            "start_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a46d119f-c24f-4742-b6c2-5027dec8c6ee.json",
+            "end_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/792b1af8-e381-47ec-b3b7-f4655028944c.json",
+            "notes": [
+              "The current-to-legacy foliation crosswalk is +73 for this range."
+            ]
+          },
+          "notes": [
+            "Whole 532-canvas provider-exposed object cached under the item-specific Jesus College CC BY 4.0 attribution statement.",
+            "Effective IIIF width request 1,800 pixels; JPEG."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "532-canvas color IIIF object",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:jesus-29-iiif",
+        "evidence:iiif-audit",
+        "evidence:cache-integrity"
+      ]
+    },
+    {
+      "id": "access:jesus-enquiry",
+      "entity": "witness:oxford-jesus:29",
+      "provider_id": "agent:jesus-college-oxford",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Contact the Jesus College librarian about the physical manuscript or item-specific image attribution.",
+      "url": "https://www.jesus.ox.ac.uk/about-jesus-college/our-library-and-archives/",
+      "contact": "librarian@jesus.ox.ac.uk",
+      "cost": "unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:jesus-29-iiif",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "access:lost-exemplar",
+      "entity": "witness:lost:owl-exemplar-X",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "No extant physical exemplar or facsimile is known; X is reconstructed from the two surviving copies.",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:pc-mep"
+      ]
+    },
+    {
+      "id": "access:fein-2022",
+      "entity": "edition:fein:owl-jesus29-2022",
+      "provider_id": "agent:medieval-institute-publications",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read article 2 online or use the complete downloadable edition PDF.",
+      "url": "https://metseditions.org/read/gNmMZVdzSlya5C9erH9828s0q5BbpXZ9",
+      "alternate_urls": [
+        "https://metseditions.org/editions/Z9dDbXAruNMVwHbW1igm5zFl2wp5jDGL",
+        "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/f39d0362-cfe6-4138-9162-0bd8e24cbbf5/downloadable_version/48b91586aa06f0f85659d82bdcb9c27d.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Fein 2022 METS edition PDF",
+          "path": "source-cache/OwlC/fein-owl-and-english-poems-jesus-29-2022-complete.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/f39d0362-cfe6-4138-9162-0bd8e24cbbf5/downloadable_version/48b91586aa06f0f85659d82bdcb9c27d.pdf",
+          "sha256": "16d227951556062bb0e1136b936f62400a3803b7d7cfd3b7ba2b8ffe0e6912a4",
+          "bytes": 5433136,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Article 2, The Owl and the Nightingale",
+            "locators": [
+              "downloadable PDF pp. 74–157",
+              "Jesus ff. 156ra–168vb"
+            ],
+            "notes": [
+              "The complete 470-page edition is cached, not only the article."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "HTML edition and 470-page PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:cache-integrity"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-cotton-text-us",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "component": "The thirteenth-century manuscript text of The Owl and the Nightingale, excluding modern photography, metadata, and editorial work",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The underlying medieval writing predates modern copyright by centuries.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-catalog",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:underlying-jesus-text-us",
+      "entity": "witness:oxford-jesus:29",
+      "component": "The thirteenth-century manuscript text of The Owl and the Nightingale, excluding modern photography, metadata, and editorial work",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The underlying medieval writing predates modern copyright by centuries.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:jesus-29-catalog",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:atkins-edition-us",
+      "entity": "edition:atkins:owl-nightingale-1922",
+      "component": "Atkins's 1922 edition, introduction, notes, translation, glossary, and appendices",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1922; current U-M presentation expressly labels the materials public domain and No Copyright–United States, and current Copyright Office duration guidance places pre-1931 U.S.-published works in the public domain. This is a U.S.-focused assessment, not a warranty for every jurisdiction.",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:atkins-scan",
+        "evidence:umich-owlc",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:atkins-1971-carrier",
+      "entity": "edition:atkins:russell-russell-1971",
+      "access_id": "access:atkins-1971-borrow",
+      "component": "The 1971 carrier, any reissue-specific paratext or design, and the controlled Internet Archive scan, separate from Atkins's underlying 1922 edition",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The catalog records a 1971 reissue first published in 1922, but the exact carrier was not inspected for new matter or a copyright notice. The available digital copy is controlled-borrow and its derivatives are encrypted or private.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:loc-atkins-1971",
+        "evidence:ia-atkins-1971"
+      ],
+      "notes": [
+        "The separate U.S. public-domain assessment for the 1922 edition does not automatically establish reuse rights in any new 1971 matter or in the lending scan."
+      ]
+    },
+    {
+      "id": "rights:ia-atkins-scan",
+      "entity": "facsimile:internet-archive:atkins-1922",
+      "access_id": "access:atkins-internet-archive",
+      "component": "Internet Archive scan files and delivery metadata, separate from the underlying 1922 edition",
+      "jurisdiction": "United States provider assessment and provider terms",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "Internet Archive's item metadata expressly records possible-copyright-status NOT_IN_COPYRIGHT and copyright-region US. Its 2006 scanner evidence reports no visible copyright notice and a stated date of 1922; the underlying edition has a separate U.S. public-domain assessment.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-atkins-metadata",
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich-cme:OwlC",
+      "access_id": "access:umich-owlc",
+      "component": "Materials presented in current U-M CME item OwlC",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "U-M expressly says the materials are in the public domain and applies the No Copyright–United States statement.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-owlc"
+      ],
+      "notes": [
+        "This current provider statement is recorded separately from the personal-scholarly-use language embedded in the pinned historical header."
+      ]
+    },
+    {
+      "id": "rights:medictionary-current",
+      "entity": "encoding:medictionary:OwlC",
+      "access_id": "access:medictionary-owlc",
+      "component": "Current MEDictionary/Middle English Compendium OwlC XML as distributed at the recorded URL",
+      "jurisdiction": "United States provider statement",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The XML availability statement says the work has been identified as public domain, free of known copyright restrictions including related and neighboring rights, and may be copied, modified, distributed, performed, and used commercially without permission.",
+      "asserted_by_id": "agent:middle-english-compendium",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:medictionary-owlc"
+      ],
+      "notes": [
+        "This exact current-file statement is not transferred to the distinct current OTA SGML bitstream, manuscript photographs, or modern scholarly editions."
+      ]
+    },
+    {
+      "id": "rights:artifact-legacy-availability",
+      "entity": "artifact:general-corpus:OwlC",
+      "access_id": "access:artifact-local",
+      "component": "Pinned U-M/OTA-derived XML encoding and its embedded 1993-era availability statement",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The XML says the text was made available through OTA for personal scholarly use only; it does not state a redistribution license for the encoding.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:owlc-xml"
+      ],
+      "notes": [
+        "Whether U-M's current NoC-US statement supersedes the embedded restriction for redistribution of this exact XML is unresolved."
+      ]
+    },
+    {
+      "id": "rights:artifact-cme-unlicense",
+      "entity": "artifact:general-corpus:OwlC",
+      "component": "CME repository software or repository-authored markup to the extent covered by the repository LICENSE",
+      "jurisdiction": "Repository license grant",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The pinned CME repository contains the Unlicense text and calls its subject ‘software.’ Its application to third-party historical text, U-M/OTA encoding rights, edition content, and manuscript images is not explicit.",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:owlc-xml"
+      ],
+      "notes": [
+        "Do not propagate this repository license upstream to Atkins, the OTA/U-M encoding, manuscript text, or manuscript photographs."
+      ]
+    },
+    {
+      "id": "rights:ota-owlc-current",
+      "entity": "encoding:ota:U-1684-A-OwlC",
+      "access_id": "access:ota-owlc",
+      "component": "Current OTA U-1684-A Cotton bitstream and deposit-layer presentation",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current OTA item metadata distributes the dataset under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported.",
+      "asserted_by_id": "agent:ota",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlc-bitstream"
+      ]
+    },
+    {
+      "id": "rights:ota-owlj-current",
+      "entity": "encoding:ota:U-1684-A-OwlJ",
+      "access_id": "access:ota-owlj",
+      "component": "Current OTA U-1684-A Jesus bitstream and deposit-layer presentation",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current OTA item metadata distributes the dataset under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported.",
+      "asserted_by_id": "agent:ota",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-1684",
+        "evidence:ota-owlj-bitstream"
+      ]
+    },
+    {
+      "id": "rights:cotton-images-most-countries",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX",
+      "access_id": "access:cotton-iiif",
+      "component": "British Library manuscript photographs and IIIF presentation",
+      "jurisdiction": "Most countries other than the United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The IIIF manifest Usage field says ‘Public Domain in most countries other than the UK.’ Current BL terms explain that public-domain-marked content is believed public domain in most territories while leaving third-party and user responsibility intact.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:bl-cotton-iiif",
+        "evidence:bl-terms"
+      ]
+    },
+    {
+      "id": "rights:cotton-images-uk-commercial",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX",
+      "access_id": "access:cotton-image-licensing",
+      "component": "British Library manuscript photographs for UK, repository publication, print-on-demand, or commercial reuse",
+      "jurisdiction": "United Kingdom and intended place/purpose of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The manifest expressly excludes the UK from its public-domain statement, and current BL services direct image-reproduction questions to Licensing. No written permission for General Corpus redistribution was verified.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-iiif",
+        "evidence:bl-terms",
+        "evidence:bl-digitisation"
+      ],
+      "notes": [
+        "Local caching for research does not itself resolve permission to publish the image bundle or include the images in commercial or print-on-demand outputs."
+      ]
+    },
+    {
+      "id": "rights:jesus-images",
+      "entity": "facsimile:bodleian:Jesus-29",
+      "access_id": "access:jesus-iiif",
+      "component": "Jesus College manuscript photographs delivered through Digital Bodleian",
+      "jurisdiction": "Worldwide license grant, subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The item-specific IIIF attribution states © Jesus College, Oxford and permits reproduction under CC BY 4.0 with permalink and citation.",
+      "asserted_by_id": "agent:jesus-college-oxford",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:jesus-29-iiif",
+        "evidence:bodleian-terms"
+      ]
+    },
+    {
+      "id": "rights:fein-print-pdf",
+      "entity": "edition:fein:owl-jesus29-2022",
+      "access_id": "access:fein-2022",
+      "component": "Fein's 2022 print edition and the cached complete publisher PDF, including translation, introductions, and notes",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The publication preview states Copyright © 2022 by the Board of Trustees of Western Michigan University. METS says print use is governed by the edition's own guidelines and digital editions are for individual use only; the XML license is separate and does not license the PDF.",
+      "asserted_by_id": "agent:medieval-institute-publications",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:fein-copyright",
+        "evidence:mets-rights"
+      ],
+      "notes": [
+        "Free public access does not imply an open redistribution license. Do not republish the cached PDF or extensive editorial content without permission."
+      ]
+    },
+    {
+      "id": "rights:fein-rendered-html",
+      "entity": "edition:fein:owl-jesus29-2022",
+      "access_id": "access:fein-2022",
+      "component": "Rendered METS digital edition and web text",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current METS Copyright & Citation page says digital editions are provided for individual use only and directs requests to reprint the digital text to the Executive Director.",
+      "asserted_by_id": "agent:medieval-institute-publications",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-rights"
+      ]
+    },
+    {
+      "id": "rights:fein-xml",
+      "entity": "edition:fein:owl-jesus29-2022",
+      "component": "METS edition XML source code, when obtained from the provider",
+      "jurisdiction": "Provider statement",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current METS Copyright & Citation page licenses all XML source code under Creative Commons Attribution-NonCommercial-ShareAlike 4.0; that license is not extended to the PDF or rendered web edition.",
+      "asserted_by_id": "agent:medieval-institute-publications",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:mets-rights"
+      ],
+      "notes": [
+        "No METS XML source file is cached in this record."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:atkins-parallel-transcription",
+      "entity": "edition:atkins:owl-nightingale-1922",
+      "practice": "collation",
+      "source_feature": "Two independently copied manuscript versions",
+      "representation": "Cotton on even pages and Jesus on facing odd pages",
+      "description": "Atkins examined both manuscripts and prints their texts substantially as they stand on facing pages. The Cotton text is the principal study text; the Jesus text supports comparison and correction without being collapsed into a single reconstructed version.",
+      "scope": "Cotton even pp. 2–150 and Jesus odd pp. 3–151, with corresponding apparatus",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:atkins-preface",
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "practice:atkins-emendation",
+      "entity": "edition:atkins:owl-nightingale-1922",
+      "practice": "collation",
+      "source_feature": "Corrupt, missing, or difficult Cotton readings compared with Jesus and editorial judgment",
+      "representation": "Emended or supplied forms in square brackets; Cotton gaps represented by asterisk rows; departures discussed in notes",
+      "description": "Atkins says departures from the manuscripts are noted and emended forms are enclosed in square brackets. Cotton requires more emendation despite its generally conservative copying; OwlC retains bracketed editorial supplies and the visible lacuna markers at canonical line 86 and lines 770–771.",
+      "scope": "Cotton transcription on even pp. 2–150",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:atkins-preface",
+        "evidence:owlc-xml"
+      ]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:OwlC",
+      "practice": "selection",
+      "source_feature": "Complete Atkins volume with front/back matter, two facing text streams, notes, translation, glossary, appendices, and illustrations",
+      "representation": "Cotton text only, with supplied hundred-line navigation, printed-page and folio-column milestones",
+      "description": "The encoding omits the edition's front and back matter, editorial notes, Jesus facing text, translation, glossary, appendices, and illustrations, while retaining the Cotton poem and page/folio navigation.",
+      "scope": "Electronic OwlC item",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:owlc-xml",
+        "evidence:atkins-scan"
+      ]
+    },
+    {
+      "id": "practice:xml-supplied-divisions",
+      "entity": "artifact:general-corpus:OwlC",
+      "practice": "selection",
+      "source_feature": "One continuous conventional sequence of 1,794 line positions",
+      "representation": "Eighteen supplied DIV1 navigation groups nominally covering one hundred canonical lines each",
+      "description": "The DIV1 elements are access divisions, not medieval or authorial sections. One empty raw L node and inherited group placement produce 101-node DIV1 7 and 17 groups and shift DIV1 18 to canonical line 1702, while the conventional extent remains 1,794 positions: 1,791 verbal rows and three asterisk-only lacuna-marker positions.",
+      "scope": "BODY structure",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:xml-structure"
+      ],
+      "notes": [
+        "Sparse L/@N values are periodic canonical-line checkpoints, not consecutive numbering on every node."
+      ]
+    },
+    {
+      "id": "practice:ota-migration-discrepancy",
+      "entity": "encoding:ota:U-1684-A-OwlC",
+      "practice": "selection",
+      "source_feature": "Current OTA serialization: 1,793 tagged L elements; canonical line 335 outside an L tag; duplicated line-659 wording at the repair point; no final canonical line 1794; malformed ampersand/entity spellings in 30 aligned rows across 22 blocks; and opening locator 233v.2",
+      "representation": "Pinned and current MEDictionary repaired stream: 1,795 L nodes representing 1,794 nonempty conventional positions; line 335 wrapped; the duplicate replaced by an empty raw node; final line 1794 present; malformed spellings repaired; and opening locator corrected to 233r.2",
+      "description": "Three-way comparison establishes these serialization differences between the current OTA bitstream and the shared pinned/MEDictionary stream. It does not establish transfer direction, the date of repair, or who introduced the repairs, so the relationship is modeled as version-level evidence rather than byte or simple-copy identity.",
+      "scope": "Complete Cotton text, with differences at canonical line 335, the line-659/660 repair point, final line 1794, 22 malformed-entity blocks, and the opening folio locators",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-owlc-bitstream",
+        "evidence:owlc-xml",
+        "evidence:medictionary-owlc",
+        "evidence:digital-version-comparison"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:owlc-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/OwlC.xml, pinned CME submodule commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/OwlC.xml",
+      "locator": "HEADER; BODY; IDNO OwlC",
+      "summary": "Identifies the Cotton electronic text, U-M distribution, OTA U-1684-A, 1993 date, Atkins 1922 source, parallel Jesus edition context, omitted matter, legacy rights/date fields, and full encoded Cotton poem.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ea8bb37df5599a649173c4a50a58a2e24782c3a4cce993db336a317bb9357c44"
+    },
+    {
+      "id": "evidence:xml-structure",
+      "type": "visual_inspection",
+      "citation": "Structural inspection of pinned OwlC.xml, performed 2026-07-15.",
+      "repository_path": "CME/source/CME_phase_1-2/OwlC.xml",
+      "locator": "BODY/DIV1, L, PB, and MILESTONE",
+      "summary": "Found 1,795 raw L nodes representing 1,794 conventional line positions: 1,791 rows contain verbal text, three contain only asterisk lacuna markers, and raw position 660 is empty. DIV1 7 and 17 each have 101 nodes; DIV1 18 begins with canonical line 1702. The file also has eighteen supplied groups, seventy-five even printed-page milestones 2–150, and fifty-two Cotton folio-column milestones 233r.1–246r.1.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ea8bb37df5599a649173c4a50a58a2e24782c3a4cce993db336a317bb9357c44"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "Complete license text",
+      "summary": "Contains the Unlicense wording and expressly describes its subject as software. It does not clarify the scope over third-party text, edition, digital-encoding, or manuscript-image layers.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-owlc",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, item OwlC.",
+      "url": "https://quod.lib.umich.edu/c/cme/OwlC",
+      "locator": "Item information, rights, and contents",
+      "summary": "Confirms title, anonymous author, Cambridge 1922 publication, OTA U-1684-A, public access to lines 1–1794, public-domain statement, and DPLA No Copyright–United States URI.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:medictionary-owlc",
+      "type": "digital_surrogate",
+      "citation": "Middle English Compendium/MEDictionary, current raw OwlC ETS XML.",
+      "url": "https://www.medictionary.info/texts/OwlC.xml",
+      "repository_path": "source-cache/OwlC/medictionary-owlc-current.xml",
+      "locator": "Complete XML; HEADER availability and BODY",
+      "summary": "Public current OwlC descendant/sibling encoding with 1,795 L nodes, 1,794 nonempty conventional positions, corrected 233r.2 locator, repaired line 335, empty duplicate-removal node, restored final line, and an express public-domain/no-known-restrictions availability statement.",
+      "accessed_on": "2026-07-15",
+      "sha256": "61d349312b7ba94b26a7a35176bcee715ab534160edf79935cdb87e3e16fd74f"
+    },
+    {
+      "id": "evidence:digital-version-comparison",
+      "type": "visual_inspection",
+      "citation": "Three-way structural and normalized-text comparison of pinned OwlC XML, current MEDictionary OwlC XML, and current OTA OwlC SGML, performed 2026-07-15.",
+      "url": "https://www.medictionary.info/texts/OwlC.xml",
+      "alternate_urls": [
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlc-1684.txt?sequence=4&isAllowed=y",
+        "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OwlC.xml"
+      ],
+      "repository_path": "source-cache/OwlC/medictionary-owlc-current.xml",
+      "locator": "All L nodes, DIV1 counts, PB/MILESTONE structures, first/last lines, and source headers",
+      "summary": "Pinned and MEDictionary each have 18 DIV1, 1,795 L nodes, 1,794 nonempty positions, 52 MILESTONEs, identical stripped L text and L attributes, and the same alphanumeric normalized L-stream SHA-256 d8aa7cc49b8eb38ab9eab683a033a0ce1749b3f023899afdfe9b7e101a8edb99. They differ in wrappers and PB representation. Current OTA has only 1,793 tagged L elements: canonical line 335 is literal untagged text, the line at canonical 659 is duplicated where the repaired branch has an empty raw node, final line 1794 is absent, the opening 233r.2 locator is mistyped 233v.2, and 30 aligned rows in 22 blocks retain malformed ampersand/entity spellings after standard entity decoding. These facts locate repairs on the MEDictionary/pinned branch without proving repair authorship or transfer direction.",
+      "accessed_on": "2026-07-15",
+      "sha256": "61d349312b7ba94b26a7a35176bcee715ab534160edf79935cdb87e3e16fd74f"
+    },
+    {
+      "id": "evidence:ota-1684",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, handle 20.500.14106/1684, Owl and the nightingale (Middle English poem).",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1684?show=full",
+      "locator": "Full metadata and bitstream list",
+      "summary": "Current deposit page for the Cotton and Jesus files; embedded DC metadata identifies public access and Creative Commons BY-NC-SA 3.0 Unported distribution.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-owlc-bitstream",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive U-1684-A, current Cotton bitstream owlc-1684.txt.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlc-1684.txt?sequence=4&isAllowed=y",
+      "repository_path": "source-cache/OwlC/ota-1684-owlc-current-cotton-text.txt",
+      "locator": "Complete bitstream; opening source declaration and folio locators",
+      "summary": "Self-identifies the Cotton manuscript version as drawn from Atkins and preserves printed-page and folio-column markers. Three-way comparison found only 1,793 tagged L elements, canonical line 335 serialized outside an L tag, duplicated line-659 wording at the later repair point, omitted final line 1794, the 233v.2/233r.2 locator discrepancy, and malformed ampersand/entity spellings in 30 aligned rows across 22 blocks.",
+      "accessed_on": "2026-07-15",
+      "sha256": "4519202c4d9a2bd96a619bb3692fe39d2df68593f5b858f6e93273e4be849655"
+    },
+    {
+      "id": "evidence:ota-owlj-bitstream",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive U-1684-A, current Jesus bitstream owlj-1684.txt.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1684/owlj-1684.txt?sequence=5&isAllowed=y",
+      "repository_path": "source-cache/OwlC/ota-1684-owlj-current-jesus-text.txt",
+      "locator": "Complete bitstream and opening source declaration",
+      "summary": "Provides the collateral Jesus electronic stream from the same OTA deposit and identifies Atkins as its printed source.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6ba5f946013f3e22b64a11a1a27965a3564a8b59a71dbc93b7b160ecc2d4c78b"
+    },
+    {
+      "id": "evidence:loc-atkins-1971",
+      "type": "official_catalog",
+      "citation": "Library of Congress, LCCN 77139898, The Owl and the Nightingale, Russell & Russell reissue.",
+      "url": "https://lccn.loc.gov/77139898",
+      "alternate_urls": [
+        "https://lccn.loc.gov/77139898/marcxml"
+      ],
+      "repository_path": "source-cache/OwlC/atkins-1971-russell-russell-loc-marcxml.xml",
+      "locator": "MARC 008, 245, 260, 300, and 500 fields",
+      "summary": "Authoritative record codes the volume as a 1971 reprint of 1922, gives New York: Russell & Russell [1971], xc + 231 pages, states ‘First published in 1922,’ and confirms the facing Cotton and Jesus manuscript texts.",
+      "accessed_on": "2026-07-15",
+      "sha256": "5e8f74ea713a6f73c0606df066782759df264a724e0a9e302c00f639c9e1d7de"
+    },
+    {
+      "id": "evidence:openlibrary-atkins-1971",
+      "type": "official_catalog",
+      "citation": "Open Library, edition OL4577146M, The Owl and the Nightingale (Russell & Russell, 1971).",
+      "url": "https://openlibrary.org/books/OL4577146M",
+      "alternate_urls": [
+        "https://openlibrary.org/books/OL4577146M.json"
+      ],
+      "repository_path": "source-cache/OwlC/atkins-1971-russell-russell-open-library.json",
+      "locator": "Edition metadata",
+      "summary": "Secondary discovery record corroborating New York, Russell & Russell, 1971, xc + 231 pages, facing Cotton/Jesus texts, and first publication in 1922.",
+      "accessed_on": "2026-07-15",
+      "sha256": "817e96b8cc7df89a786dfea08aa1d56e6ff13dabf828f46287ed62ca9e7b8844"
+    },
+    {
+      "id": "evidence:ia-atkins-1971",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive controlled-borrow item bwb_T3-BGL-147, The Owl and the Nightingale, Russell & Russell, 1971.",
+      "url": "https://archive.org/details/bwb_T3-BGL-147",
+      "alternate_urls": [
+        "https://archive.org/metadata/bwb_T3-BGL-147"
+      ],
+      "repository_path": "source-cache/OwlC/atkins-1971-russell-russell-internet-archive-metadata.json",
+      "locator": "Item metadata and file inventory",
+      "summary": "Identifies an extant scan of the 1971 Russell & Russell carrier in Internet Archive's print-disabled/in-library collection. PDF/OCR/page-image derivatives are private or LCP-encrypted, so the item is borrowable but not an unrestricted reusable download.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ad3f9940c656e2a8755800693fcc02236fba5ef551a2315a5b03cc2a2eb29ebf"
+    },
+    {
+      "id": "evidence:atkins-scan",
+      "type": "digital_surrogate",
+      "citation": "J. W. H. Atkins, ed., The Owl and the Nightingale (Cambridge: Cambridge University Press, 1922), complete Internet Archive scan.",
+      "url": "https://archive.org/details/owlandnightingal00atkiuoft",
+      "alternate_urls": [
+        "https://archive.org/download/owlandnightingal00atkiuoft/owlandnightingal00atkiuoft.pdf"
+      ],
+      "repository_path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-complete.pdf",
+      "locator": "Complete 342-page scan; Cotton even pp. 2–150, Jesus odd pp. 3–151",
+      "summary": "Confirms title, editor, publisher, date, complete publication structure, parallel witness texts, notes, translation, glossary, and appendices.",
+      "accessed_on": "2026-07-15",
+      "sha256": "cfe98dbc4c5c494dd2c69a249c55af2979eb5f114a08c2624d20a70557002acd"
+    },
+    {
+      "id": "evidence:atkins-preface",
+      "type": "scholarly_source",
+      "citation": "Atkins 1922, Preface and textual introduction.",
+      "url": "https://archive.org/details/owlandnightingal00atkiuoft",
+      "repository_path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-complete.pdf",
+      "locator": "Preface and introduction; Cotton even pp. 2–150 and Jesus odd pp. 3–151",
+      "summary": "States that both manuscripts were carefully and independently examined, that the two versions are printed substantially as they stand, that departures are noted and emended forms bracketed, and that Cotton is earlier/more conservative in Atkins's now partly superseded assessment.",
+      "accessed_on": "2026-07-15",
+      "sha256": "cfe98dbc4c5c494dd2c69a249c55af2979eb5f114a08c2624d20a70557002acd"
+    },
+    {
+      "id": "evidence:ia-atkins-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for item owlandnightingal00atkiuoft.",
+      "url": "https://archive.org/metadata/owlandnightingal00atkiuoft",
+      "repository_path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-internet-archive-metadata.json",
+      "locator": "Item metadata and file inventory",
+      "summary": "Identifies the scanned item and downloadable derivatives and expressly records possible-copyright-status NOT_IN_COPYRIGHT, copyright-region US, and 2006 scanner evidence of no visible copyright notice with stated date 1922. This is a provider assessment scoped to the United States, not a worldwide reuse warranty.",
+      "accessed_on": "2026-07-15",
+      "sha256": "d84ae446edf3e7d4ab38c9cf186eb054111317ac798e8515cada1f1590951dbc"
+    },
+    {
+      "id": "evidence:bl-cotton-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Archives and Manuscripts Catalogue, Cotton MS Caligula A IX, record 040-001102334.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102334",
+      "locator": "Complete codex record; Owl item ff. 233r–246r; access and digitization fields",
+      "summary": "Dates the codex 1250–1299, gives south-west Midlands origin, 261-folio parchment extent, dimensions and layout, identifies Owl at ff. 233r–246r and the adjacent work at f. 246r, links full IIIF coverage, and supplies physical-request conditions.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-cotton-iiif",
+      "type": "digital_surrogate",
+      "citation": "British Library IIIF Presentation 3 object for Cotton MS Caligula A IX.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "locator": "Complete 543-canvas sequence; canvases 475–501 for Owl",
+      "summary": "Complete public object from front cover through spine. Manifest Usage says ‘Public Domain in most countries other than the UK.’",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:jesus-29-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, Jesus College MS 29.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_10575",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/432a9599-3dc1-40d8-b997-83dbb5ff8df6/"
+      ],
+      "locator": "Composite description, Part II, and current ff. 156r–168v",
+      "summary": "Official description of the trilingual chronicle and poetic anthology containing the parallel Owl version, with current foliation, composite-part context, and complete digital object.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:jesus-29-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF manifest 432a9599-3dc1-40d8-b997-83dbb5ff8df6, Jesus College MS 29.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/432a9599-3dc1-40d8-b997-83dbb5ff8df6.json",
+      "locator": "Complete 532-canvas object; Owl canvases 319–344",
+      "summary": "Complete manuscript object; item attribution states © Jesus College Oxford, reproduction under CC BY 4.0, and asks users to include the permalink and full citation.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:iiif-audit",
+      "type": "visual_inspection",
+      "citation": "Canvas-inventory and visual audit of the British Library Cotton Caligula A IX and Digital Bodleian Jesus College MS 29 IIIF objects, performed 2026-07-15.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/432a9599-3dc1-40d8-b997-83dbb5ff8df6.json"
+      ],
+      "locator": "Cotton canvases 475–501; Jesus canvases 319–344; first/last object surfaces",
+      "summary": "Verified complete object counts, exact work ranges and deep links, current/legacy Jesus foliation crosswalk, color image delivery, and the shared final Cotton surface where Owl ends before the next work begins.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Terms and conditions, Copyright and Use of Content.",
+      "url": "https://www.bl.uk/terms",
+      "locator": "Copyright, public-domain-marked content, and prohibited-use provisions",
+      "summary": "Explains the Library's public-domain marking as a belief about most territories rather than a warranty, places responsibility for third-party/use conditions on users, and restricts unlicensed commercial/database uses under provider terms.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation services.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "locator": "Manuscript reproduction and image-licensing guidance",
+      "summary": "Directs users seeking to reproduce British Library images to licensing@bl.uk and distinguishes reference images from images supplied for reproduction.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use and Imaging Services.",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/using/imaging-services"
+      ],
+      "summary": "Provides general provider terms and an imaging route; the item-specific Jesus manifest supplies the controlling CC BY 4.0 attribution statement for these images.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:fein-2022",
+      "type": "scholarly_source",
+      "citation": "Susanna Fein, ed. and trans., The Owl and the Nightingale and the English Poems of Oxford, Jesus College, MS 29 (II), Middle English Texts Series (2022).",
+      "url": "https://metseditions.org/read/gNmMZVdzSlya5C9erH9828s0q5BbpXZ9",
+      "repository_path": "source-cache/OwlC/fein-owl-and-english-poems-jesus-29-2022-complete.pdf",
+      "locator": "General introduction; article 2 introduction; article 2 text at downloadable PDF pp. 74–157",
+      "summary": "Current Jesus-based edition supporting exact manuscript loci, 1,794-line octosyllabic-couplet form, anonymous authorship, disputed date, independent descent from X, scribal behavior, and use of Cotton readings to resolve Jesus cruxes.",
+      "accessed_on": "2026-07-15",
+      "sha256": "16d227951556062bb0e1136b936f62400a3803b7d7cfd3b7ba2b8ffe0e6912a4"
+    },
+    {
+      "id": "evidence:mets-rights",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright & Citation page.",
+      "url": "https://metseditions.org/copyright-citation",
+      "locator": "Copyright section",
+      "summary": "Distinguishes format-specific rights: print is governed by the edition's guidelines; rendered digital editions are for individual use only and require contact with the Executive Director to reprint; XML source code is separately licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:fein-copyright",
+      "type": "digital_surrogate",
+      "citation": "Publisher preview of Fein 2022, copyright and cataloging page.",
+      "url": "https://api.pageplace.de/preview/DT0400.9781580445221_A47719408/preview-9781580445221_A47719408.pdf",
+      "locator": "Copyright page and Library of Congress cataloging data",
+      "summary": "States Copyright © 2022 by the Board of Trustees of Western Michigan University and confirms the 2022 bibliographic identity of the edition.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:pc-mep",
+      "type": "scholarly_source",
+      "citation": "Parsed Corpus of Middle English Poetry, text record ‘The Owl and the Nightingale.’",
+      "url": "https://pcmep.net/textdetails.php?poem_name=OwlNight",
+      "locator": "Date, dialect, versification, edition/manuscript base, and transmission sections",
+      "summary": "Documents the unresolved 1175–1285 date debate, southern original localization and uncertainty, 897 couplets/1,794 lines, Atkins's Cotton even pp. 2–150 and Jesus odd pp. 3–151 streams, Cotton ff. 233r–246r, Cotton-even-page electronic boundary, manuscript dialect, and shared-error argument for a common exemplar.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright (rev. 2026).",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "Pre-1978 works and public-domain cutoff guidance",
+      "summary": "Current official duration guidance used only for the U.S.-focused status assessment; it does not determine provider contract terms or rights in modern photographs and encodings.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cache-integrity",
+      "type": "visual_inspection",
+      "citation": "Local source-cache integrity audit for OwlC, performed 2026-07-15.",
+      "repository_path": "source-cache/OwlC/atkins-owl-and-nightingale-1922-complete.pdf",
+      "locator": "All local copies recorded by OwlC access entries",
+      "summary": "Verified declared byte sizes and SHA-256 values, complete PDF readability, ZIP integrity and inventories, JSON parsing, and hardlink identity between the isolated research worktree and canonical source-cache/OwlC paths.",
+      "accessed_on": "2026-07-15",
+      "sha256": "cfe98dbc4c5c494dd2c69a249c55af2979eb5f114a08c2624d20a70557002acd"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-ota-version-history",
+      "question": "What exact creation, transfer, migration, and repair sequence connects the 1993 U-M header, historical OTA U-1684-A deposit, current OTA bitstreams, current MEDictionary XML, the pinned repaired XML, and current U-M presentation, and who introduced the observed repairs?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Request deposit history or preservation metadata from OTA and U-M.",
+        "Compare checksummed historical exports if either institution can supply them.",
+        "Date the first appearance of the wrapped line 335, empty duplicate-removal node, restored final line, corrected entities, and 233r.2 locator without assigning repair authorship from similarity alone."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:owlc-xml",
+        "evidence:umich-owlc",
+        "evidence:ota-1684",
+        "evidence:ota-owlc-bitstream",
+        "evidence:medictionary-owlc",
+        "evidence:digital-version-comparison"
+      ]
+    },
+    {
+      "id": "question:atkins-interventions",
+      "question": "Which exact OwlC readings derive from Cotton, Jesus comparison, Atkins's conjecture, or later electronic intervention?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Collate OwlC line by line against Atkins's even-page Cotton transcription and apparatus.",
+        "Compare bracketed supplies and asterisk lacunae with both complete manuscript facsimiles.",
+        "Do not infer every bracketed character directly from Jesus without checking the corresponding note."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:owlc-xml",
+        "evidence:atkins-preface",
+        "evidence:bl-cotton-iiif",
+        "evidence:jesus-29-iiif"
+      ]
+    },
+    {
+      "id": "question:lost-exemplar",
+      "question": "How much of exemplar X's wording, layout, and compilation context can be reconstructed without conflating it with the original poem or the separately reported lost Owl manuscript?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult the full codicological arguments cited by Fein and the British Library catalog.",
+        "Keep X as a supported missing witness layer rather than an extant or authorial source."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:fein-2022",
+        "evidence:pc-mep"
+      ]
+    },
+    {
+      "id": "question:bl-image-reuse",
+      "question": "Will the British Library authorize redistribution of the Cotton IIIF images in the public Git repository or their use in print-on-demand/commercial outputs, especially in the UK?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask licensing@bl.uk with the exact IIIF manifest, proposed repository distribution, jurisdictions, and print-on-demand/commercial scenarios.",
+        "Until written clarification, keep the cached bundle gitignored and expose only manifest links and local-download status in the viewer."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-cotton-iiif",
+        "evidence:bl-terms",
+        "evidence:bl-digitisation"
+      ]
+    },
+    {
+      "id": "question:xml-rights-conflict",
+      "question": "Does U-M's current No Copyright–United States statement or the CME repository Unlicense supersede the pinned XML's personal-scholarly-use-only language for redistribution of the exact encoding?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Request written clarification from U-M and OTA before redistributing the XML or a close derivative commercially.",
+        "Treat repository license, provider terms, underlying medieval text, edition, and image rights as separate layers."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:owlc-xml",
+        "evidence:umich-owlc",
+        "evidence:cme-license",
+        "evidence:ota-1684"
+      ]
+    }
+  ]
+}
