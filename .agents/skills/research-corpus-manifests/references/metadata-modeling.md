@@ -171,10 +171,12 @@ containers, displayed stanzas, and direct textual `L` children as separate
 representation metrics; explain the mismatch instead of normalizing any count
 to an ideal stanza form.
 
-In an edited archival collection, numbered editorial units may combine several
-physical documents, fragments, abstracts, or outside illustrative records.
-Report editorial-unit, XML-container, physical-object, and archive-size counts
-separately; do not treat them as interchangeable extent measures.
+In an edited collection, one numbered editorial or XML container may combine
+several intellectual units, alternative textual branches, physical documents,
+fragments, abstracts, or outside illustrative records. Use nested parts when
+needed, and report intellectual-unit, editorial-container, XML-container,
+physical-object, and archive-size counts separately; do not treat them as
+interchangeable extent measures.
 
 Derive `catalog_summary` from detailed records. Preserve detailed-record order
 in summary language, genre, and tag arrays. Maintain exactly one preferred
