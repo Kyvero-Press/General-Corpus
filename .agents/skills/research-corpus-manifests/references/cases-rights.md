@@ -110,8 +110,11 @@ mark coverage `partial` for the manuscript. Do not merge their licenses,
 invent one aggregate facsimile, or let complete capture of every selected
 object erase the dated finding that no whole-codex surrogate was available.
 If an official selection exposes no leaf occupied by the corpus work, do not
-invent a `work_portion`: state the zero overlap, retain the selection only as
-supporting witness evidence, and keep the work-image request route open.
+invent a `work_portion`: set `target_work_presence=absent`, state the zero
+overlap, retain the selection only as supporting witness evidence, and keep the
+work-image request route open. This also permits `coverage=complete` when every
+canvas of the represented supporting object is cached; coverage and target-
+work presence are independent claims.
 Apply the same rule to a completely cached source-analogue manuscript that
 does not contain the target text. Keep the full-object cache and downloaded
 access record, but put analogue folio/canvas ranges in scoped comparison

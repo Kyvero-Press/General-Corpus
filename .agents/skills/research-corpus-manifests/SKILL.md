@@ -63,8 +63,11 @@ needed; do not load both complete schemas merely for orientation.
    never use a symlink or redownload identical bytes.
    For manuscript facsimiles, download the complete physical codex whenever
    it is publicly obtainable and practical, then record this work's exact
-   folio/page/canvas range in the mandatory `work_portion` of every complete
-   cached manuscript facsimile. Never substitute a work-only
+   folio/page/canvas range in `work_portion` for every complete cached
+   manuscript facsimile that contains it. If a completely cached supporting
+   or analogue object is verified not to contain the cataloged work, set
+   `target_work_presence=absent` and omit `work_portion`; do not turn zero
+   overlap into an invented locator. Never substitute a work-only
    excerpt when a complete source is obtainable; if only selected leaves are
    available, mark them `coverage=partial` and preserve the negative
    whole-object finding. Record each direct

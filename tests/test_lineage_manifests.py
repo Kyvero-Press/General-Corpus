@@ -162,8 +162,37 @@ class LineageManifestTests(unittest.TestCase):
             schema,
             "CME00099",
         )
-        self.assertTrue(any("work_portion" in item and "required" in item for item in errors))
+        self.assertTrue(errors)
+
+        access["local_copies"][0]["target_work_presence"] = "absent"
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._schema_errors(
+                changed,
+                schema,
+                schema,
+                "CME00099",
+            ),
+        )
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._semantic_manifest_errors(
+                REPO_ROOT,
+                manifest_path,
+                changed,
+            ),
+        )
+
         access["local_copies"][0]["work_portion"] = work_portion
+        errors = validate_lineage_manifests._schema_errors(
+            changed,
+            schema,
+            schema,
+            "CME00099",
+        )
+        self.assertTrue(errors)
+
+        del access["local_copies"][0]["target_work_presence"]
 
         del access["local_copies"][0]["source_file_count"]
         errors = validate_lineage_manifests._schema_errors(

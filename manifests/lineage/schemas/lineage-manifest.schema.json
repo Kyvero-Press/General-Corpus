@@ -201,6 +201,14 @@
           "description": "The corpus work's location inside the cached source object. These locators associate the work with the full cached object; they do not limit or crop what is downloaded.",
           "$ref": "#/$defs/workPortion"
         },
+        "target_work_presence": {
+          "description": "Whether the cataloged corpus work is physically or textually present in this cached source object. Use absent for a complete supporting or analogue object with verified zero target-work overlap; do not invent a work_portion for it.",
+          "enum": [
+            "present",
+            "absent",
+            "unknown"
+          ]
+        },
         "notes": {
           "type": "array",
           "items": {
@@ -244,9 +252,42 @@
             ]
           },
           "then": {
-            "required": [
-              "work_portion"
+            "anyOf": [
+              {
+                "required": [
+                  "work_portion"
+                ]
+              },
+              {
+                "properties": {
+                  "target_work_presence": {
+                    "const": "absent"
+                  }
+                },
+                "required": [
+                  "target_work_presence"
+                ]
+              }
             ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "target_work_presence": {
+                "const": "absent"
+              }
+            },
+            "required": [
+              "target_work_presence"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "work_portion"
+              ]
+            }
           }
         }
       ]

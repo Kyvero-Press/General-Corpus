@@ -29,7 +29,11 @@ and adjacent works exposed by the provider. `work_portion` records the
 folios/pages/canvases occupied by this work without mislabeling selected
 leaves—or a metadata-only IIIF manifest—as a complete facsimile. Never replace
 an obtainable whole-codex object with a work-only excerpt. Every cached
-manuscript facsimile marked `coverage=complete` must include `work_portion`.
+manuscript facsimile marked `coverage=complete` must include `work_portion`
+unless it is a supporting or analogue object verified not to contain the
+cataloged work. In that zero-overlap case, set
+`target_work_presence=absent` and omit `work_portion`; source completeness and
+target-work presence are separate claims.
 When the complete codex is available as IIIF canvases, one `iiif_bundle` local
 copy holds the provider manifest, all canvas images, and an exact-source
 inventory; `source_file_count` reports the number of captured canvas images.

@@ -158,6 +158,11 @@ def _schema_errors(
         if all(alternative_errors for alternative_errors in alternatives):
             errors.append(f"{location}: value does not satisfy any anyOf alternative")
 
+    if "not" in schema:
+        prohibited_errors = _schema_errors(value, schema["not"], root_schema, location)
+        if not prohibited_errors:
+            errors.append(f"{location}: value satisfies a prohibited schema")
+
     for requirement in schema.get("allOf", []):
         errors.extend(_schema_errors(value, requirement, root_schema, location))
 
@@ -561,6 +566,7 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 if (
                     is_manuscript_facsimile
                     and local_copy.get("coverage") == "complete"
+                    and local_copy.get("target_work_presence") != "absent"
                     and not isinstance(local_copy.get("work_portion"), dict)
                 ):
                     errors.append(

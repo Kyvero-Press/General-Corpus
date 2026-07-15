@@ -228,15 +228,19 @@ keep one work-local path per manifest but avoid storing or downloading the
 bytes repeatedly. After verifying identical exact source URL, byte count, and
 SHA-256, create a hard link (or filesystem reflink) under each required
 `source-cache/WORK_ID/` directory and re-run validation. Each manifest still
-records its own path and work-specific `work_portion`. Do not reuse a merely
-similar scan or independently generated IIIF ZIP whose checksum differs.
+records its own path and, when the target is present, work-specific
+`work_portion`; a verified zero-overlap supporting object instead records
+`target_work_presence=absent`. Do not reuse a merely similar scan or
+independently generated IIIF ZIP whose checksum differs.
 
 For manuscript images, download the provider's complete physical manuscript
 when it is publicly obtainable and practical, even when the cataloged work
 occupies only part of it. `coverage=complete` means the cached file covers that
 whole source object, not merely the work. Add `work_portion` with the verified
 folio/page range, corresponding digital canvas or image range, and start/end
-deep links when exposed. If only selected leaves are obtainable, use
+deep links when exposed. If the complete supporting or analogue object is
+verified not to contain the target work, set `target_work_presence=absent` and
+omit `work_portion`. If only selected leaves are obtainable, use
 `coverage=partial` and say so. A complete edition scan, a miniature cycle, or
 an IIIF manifest without its image files is not a complete manuscript cache.
 Test every human-facing boundary link with an unauthenticated request. When a
