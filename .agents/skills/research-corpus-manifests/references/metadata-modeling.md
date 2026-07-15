@@ -131,6 +131,15 @@ skipped, or reset numbers can create a persistent offset. Record both the
 verified textual line count and the source's numbering anomaly so locators
 remain reproducible without silently "correcting" the edition.
 
+The inverse encoding problem also occurs: prose containers do not prove that
+their contents are prose. When direct textual inspection and scholarship
+identify a brief intentional rhyme inside `P` elements, record the verse at
+the smallest defensible part or item scope while retaining `prose` as the
+whole-work discovery form when prose still overwhelmingly predominates. A
+grounded verse-group count may coexist with `verse_lines: null` when the
+edition and encoding suppress lineation; do not manufacture a line count from
+punctuation or inferred rhyme breaks.
+
 Inspect the content of line-like XML elements before treating their count as
 verse extent. Speaker labels, editorial headings, and dotted rows that display
 an incomplete boundary may be encoded as `L` inside `LG` even though they are
