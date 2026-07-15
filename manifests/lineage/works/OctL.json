@@ -1,0 +1,1096 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:OctL",
+  "work_id": "OctL",
+  "title": "Octavian (Lincoln Thornton manuscript version)",
+  "primary_subject": "artifact:general-corpus:OctL",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The pinned repository artifact is a version of University of Michigan CME item OctL, associated with the extant Oxford Text Archive record 1683/U-1683-A. The separately modeled current Middle English Compendium XML is a descendant serialization of the pinned layer, not the U-M encoding itself. The electronic text is Frances McSparran's direct transcription of the Octavian component in Lincoln Cathedral MS 91, not a transcription from her 1986 EETS edition; only EETS odd-page milestones were added for comparison. The Lincoln witness is physically incomplete through a missing leaf after f. 102 and loss of half of f. 108. McSparran's 1986 parallel edition, Hudson's 2006 Lincoln-based composite with Cambridge supplies, DIMEV, and the 1975 printed Thornton facsimile are modeled as distinct comparison, description, or access layers rather than silent upstream sources of OctL's wording.",
+  "languages": ["enm"],
+  "review_notes": [
+    "The primary subject is the exact pinned XML artifact; the cataloged intellectual boundary is the Lincoln witness-version, not Northern Octavian in the abstract.",
+    "The pinned artifact and current Middle English Compendium descendant retain the same BODY text-node stream after Unicode-alphanumeric normalization, but their wrappers, rights statements, and XPTR serialization differ; they are versions, not asserted byte-identical copies.",
+    "The pinned OctL and OctC files each contain 1,400 nonzero XPTR/@TO occurrences and 1,397 unique nonzero values, with an intersection of 1,180. These values show partial concordance behavior, not textual extent; their exact target namespace and intended application remain undocumented.",
+    "Line extent is kept as three attributed measurements: 1,634 XML L positions (five empty UNCLEAR positions), 1,629 verbal positions and DMER lines, and DIMEV's 1,628-line report.",
+    "No complete public image surrogate for Lincoln Cathedral MS 91 was verified. The one current catalog image is only part of f. 80r and does not overlap Octavian; the ignored cache records that limited access without presenting it as a work facsimile.",
+    "The exact current OTA record is public and lists three files, but its bitstream routes are marked isAllowed=n and require interactive terms. Those terms were not accepted, the bitstreams were not downloaded or compared, and the record's CC BY 3.0 metadata is kept separate from content-level rights."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:OctL",
+      "type": "repository_artifact",
+      "label": "General Corpus pinned source XML for OctL",
+      "description": "The exact XML artifact consumed from the pinned Kyvero-Press/CME source at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "OctL"},
+        {"scheme": "git-blob", "value": "37c33ddd84ab03845bd0b334fcb3e256a5316ffe"},
+        {"scheme": "SHA-256", "value": "ad86cd7f32363c8102e2968be0f58cbe9efcfbcdd8b63d131ddf00f157a46c30"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/OctL.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "37c33ddd84ab03845bd0b334fcb3e256a5316ffe",
+        "sha256": "ad86cd7f32363c8102e2968be0f58cbe9efcfbcdd8b63d131ddf00f157a46c30"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:cme-license"],
+      "notes": ["The file is 153,520 bytes and has DLPSTEXTCLASS as its root element.", "Its embedded OTA personal-scholarly-use notice is historical evidence and is not removed by current OTA-record, U-M, or MEDictionary statements."]
+    },
+    {
+      "id": "encoding:umich-cme:OctL",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item OctL",
+      "alternate_labels": ["Octovian, version L"],
+      "description": "Frances McSparran's direct electronic transcription of the Lincoln witness, distributed by U-M in 1993 and represented by the current U-M CME item. It expands abbreviations but otherwise states that it preserves manuscript text, spelling, capitalization, and punctuation.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "OctL", "uri": "https://name.umdl.umich.edu/OctL"},
+        {"scheme": "OTA association", "value": "U-1683-A"}
+      ],
+      "creator_ids": ["agent:frances-mcsparran", "agent:umich-library"],
+      "date_statements": [
+        {"label": "electronic distribution", "value": "1993", "normalized": "1993", "certainty": "high", "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:umich-octl"],
+      "notes": ["The encoding's source declaration explicitly calls it a transcription and not an edition."]
+    },
+    {
+      "id": "encoding:medictionary:OctL-2026-05",
+      "type": "digital_encoding",
+      "label": "Middle English Compendium OctL XML descendant, last modified 9 May 2026",
+      "alternate_labels": ["Current MEDictionary OctL.xml"],
+      "description": "The current ETS/EEBO serialization distributed from medictionary.info. Its medieval BODY text matches the pinned repository artifact after Unicode-alphanumeric text-node normalization, while its wrapper, public-domain statement, and commented XPTR serialization differ.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "OctL"},
+        {"scheme": "provider URL", "value": "https://www.medictionary.info/texts/OctL.xml", "uri": "https://www.medictionary.info/texts/OctL.xml"},
+        {"scheme": "SHA-256", "value": "384cf6f133b22ee3489c93df581f7b0599e520ff9647ce904edf1a92419d9553"}
+      ],
+      "creator_ids": ["agent:middle-english-compendium", "agent:umich-library"],
+      "date_statements": [
+        {"label": "HTTP resource last modified", "value": "2026-05-09", "normalized": "2026-05-09", "certainty": "high", "evidence_ids": ["evidence:current-octl-xml"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:current-octl-xml", "evidence:body-version-comparison"],
+      "notes": ["The entity's 2026-05 suffix is a research-local snapshot label derived from the provider's HTTP Last-Modified header, not a provider-assigned release number.", "This descendant is not conflated with the separate U-M HTML item or pinned DLPSTEXTCLASS artifact."]
+    },
+    {
+      "id": "encoding:ota:U-1683-A",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 1683: Octovian",
+      "description": "The extant OTA record corresponding to legacy U-1683-A. The current record identifies an SGML-tagged Octovian resource issued 3 April 1992 and lists header1683.xml, octc-1683.txt, and octl-1683.txt; its gated bitstreams were not downloaded or compared in this research run.",
+      "identifiers": [
+        {"scheme": "OTA persistent identifier", "value": "20.500.12024/1683", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683"},
+        {"scheme": "OTA current number", "value": "ota:1683"},
+        {"scheme": "OTA legacy number", "value": "U-1683-A"}
+      ],
+      "creator_ids": ["agent:oxford-text-archive"],
+      "date_statements": [
+        {"label": "OTA issue date", "value": "1992-04-03", "normalized": "1992-04-03", "certainty": "high", "evidence_ids": ["evidence:ota-u1683-record"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:ota-accession-history", "evidence:ota-u1683-record"],
+      "notes": ["The public record and file inventory establish survival and identity but not byte-level equivalence with the U-M or repository encodings.", "The bitstream links were marked isAllowed=n and prompted for interactive terms; those terms were not accepted."]
+    },
+    {
+      "id": "witness:lincoln:MS91-Octovian",
+      "type": "manuscript_witness",
+      "label": "Lincoln Cathedral MS 91, Octovian component",
+      "alternate_labels": ["Lincoln Thornton Manuscript, ff. 98va-109rb", "A. 5. 2, Octovyane"],
+      "description": "Robert Thornton's copy of the Northern Octavian romance in a large paper miscellany. The component begins and ends within shared folio surfaces and is textually incomplete because a leaf is wanting between ff. 102 and 103 and half of f. 108 is torn away.",
+      "identifiers": [
+        {"scheme": "current shelfmark", "value": "LINCOLN CATHEDRAL MS 91", "uri": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog"},
+        {"scheme": "historical shelfmark", "value": "A. 5. 2"},
+        {"scheme": "IMEV/NIMEV", "value": "1918"}
+      ],
+      "creator_ids": ["agent:robert-thornton"],
+      "date_statements": [
+        {"label": "manuscript production", "value": "c. 1430-1450", "normalized": "1430/1450", "certainty": "high", "evidence_ids": ["evidence:lincoln-ms91-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:lincoln-cathedral",
+        "shelfmark": "LINCOLN CATHEDRAL MS 91",
+        "historical_designations": ["A. 5. 2"],
+        "catalog_url": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog",
+        "notes": "The catalog component is item 5, Octovyane, ff. 98v-109; DIMEV refines the column span to ff. 98va-109rb."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "322 leaves in current nineteenth-century numbering, including 133A; original minimum approximately 340 leaves",
+        "dimensions": "290 x 210 mm",
+        "notes": ["Two columns from ff. 98v-153v, generally about 36-39 lines.", "The Octovian component shares f. 98v with the close of the Alliterative Morte Arthure and f. 109r with the opening of Sir Isumbras.", "A leaf is missing between ff. 102 and 103, and half of f. 108 is torn away."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lincoln-ms91-catalog", "evidence:dmer-ms91", "evidence:dimev-release"],
+      "notes": ["The official catalog states that the entire manuscript was written by one scribe, Robert Thornton, and was written by and for him at East Newton, North Yorkshire.", "DIMEV reports LALME/eLALME profile 1.98 (Lincolnshire); that linguistic localization is not substituted for the codex's North Yorkshire association."]
+    },
+    {
+      "id": "witness:cambridge:Ff2.38-Octavian",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ff.2.38, Octavian component",
+      "description": "A separate Northern Octavian witness at ff. 90rb-102vb, containing 1,731 lines. It supplies the facing even-page transcription in McSparran 1986 and passages used to repair Lincoln losses in Hudson 2006; it is not the textual source of OctL.",
+      "identifiers": [
+        {"scheme": "CUL shelfmark", "value": "MS Ff.2.38"},
+        {"scheme": "CME/UMDL", "value": "OctC", "uri": "https://name.umdl.umich.edu/OctC"},
+        {"scheme": "IMEV/NIMEV", "value": "1918"}
+      ],
+      "date_statements": [
+        {"label": "manuscript production", "value": "middle of the fifteenth century", "certainty": "medium", "evidence_ids": ["evidence:dmer-cambridge", "evidence:dimev-release"]}
+      ],
+      "holding": {
+        "institution_id": "agent:cambridge-university-library",
+        "shelfmark": "MS Ff.2.38",
+        "historical_designations": [],
+        "notes": "The consulted exact component descriptions were scholarly DMER and DIMEV records; no repository-owned exact online manuscript catalog URL was verified."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "dimensions": "297 x 206 mm",
+        "notes": ["DMER reports two scribes, with the second taking over in the middle of Octavian."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dmer-cambridge", "evidence:dimev-release"]
+    },
+    {
+      "id": "edition:mcsparran:Octovian-1986",
+      "type": "scholarly_edition",
+      "label": "Frances McSparran's Octovian (EETS o.s. 289, 1986)",
+      "description": "A parallel-text edition of the Lincoln and Cambridge Northern witnesses. Lincoln appears on odd pages 77-179 and Cambridge on even pages 76-178; the two transcriptions are not homogenized into the direct OctL text.",
+      "identifiers": [
+        {"scheme": "EETS Original Series", "value": "289"},
+        {"scheme": "ISBN", "value": "0197222919"},
+        {"scheme": "Internet Archive", "value": "octovian0000unse", "uri": "https://archive.org/details/octovian0000unse"}
+      ],
+      "creator_ids": ["agent:frances-mcsparran"],
+      "bibliographic": {
+        "citation": "Octovian, ed. Frances McSparran, Early English Text Society, Original Series 289 (London and New York: Oxford University Press for the Early English Text Society, 1986).",
+        "title": "Octovian",
+        "series": "Early English Text Society, Original Series 289",
+        "publisher": "Oxford University Press for the Early English Text Society",
+        "publication_place": "London; New York",
+        "date": "1986",
+        "pages": "244",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-mcsparran", "evidence:dimev-release", "evidence:ia-mcsparran"],
+      "notes": ["Lincoln's text occupies odd pages and Cambridge's text even pages.", "The Lincoln holding catalog miscites the series as 298; Folger, DIMEV, DMER, and the edition's cataloging identify o.s. 289."]
+    },
+    {
+      "id": "edition:hudson:Octavian-2006",
+      "type": "scholarly_edition",
+      "label": "Harriet Hudson's Octavian in Four Middle English Romances, 2nd edition",
+      "description": "A later normalized scholarly reading edition based on the Lincoln witness but supplying missing or badly damaged passages from Cambridge MS Ff.2.38. Its 1,848-line composite extent is not OctL's extent.",
+      "creator_ids": ["agent:harriet-hudson"],
+      "bibliographic": {
+        "citation": "Harriet Hudson, ed., Four Middle English Romances: Sir Isumbras, Octavian, Sir Eglamour of Artois, Sir Tryamour, 2nd ed. (Kalamazoo: Medieval Institute Publications, 2006), pp. 39-95.",
+        "title": "Four Middle English Romances: Sir Isumbras, Octavian, Sir Eglamour of Artois, Sir Tryamour",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo, Michigan",
+        "date": "2006",
+        "pages": "Octavian at printed pp. 39-95",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:mets-hudson", "evidence:hudson-pdf"],
+      "notes": ["First edition published in 1996; second edition in 2006.", "The cached source is the complete 206-page anthology PDF, not a crop of Octavian."]
+    },
+    {
+      "id": "facsimile:thornton:scolar-1975",
+      "type": "facsimile",
+      "label": "The Thornton Manuscript (Lincoln Cathedral MS 91), Scolar Press facsimile",
+      "description": "A printed photographic facsimile of the whole Thornton manuscript, with introductions by D. S. Brewer and A. E. B. Owen. It is a visual comparison source, not the source named by OctL's direct-transcription statement.",
+      "creator_ids": ["agent:derek-brewer", "agent:a-e-b-owen"],
+      "bibliographic": {
+        "citation": "The Thornton Manuscript (Lincoln Cathedral MS 91), introductions by D. S. Brewer and A. E. B. Owen (London: Scolar Press, 1975; revised ed. 1977).",
+        "title": "The Thornton Manuscript (Lincoln Cathedral MS 91)",
+        "publisher": "Scolar Press",
+        "publication_place": "London",
+        "date": "1975; revised 1977",
+        "languages": ["enm", "eng"]
+      },
+      "reproduction_format": "Printed photographic facsimile",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wellcome-facsimile", "evidence:dmer-ms91"]
+    },
+    {
+      "id": "catalog:dimev:2.0-alpha.1",
+      "type": "catalog_description",
+      "label": "DIMEV 2.0-alpha.1 data release",
+      "description": "Versioned CC BY 4.0 descriptive dataset containing Northern Octavian record 3132, Lincoln witness 3132-2, and manuscript record Lincoln91.",
+      "identifiers": [
+        {"scheme": "DOI", "value": "10.5281/zenodo.20850921", "uri": "https://doi.org/10.5281/zenodo.20850921"},
+        {"scheme": "version", "value": "2.0-alpha.1"}
+      ],
+      "creator_ids": ["agent:dimev"],
+      "date_statements": [
+        {"label": "release", "value": "2026-06-25", "normalized": "2026-06-25", "certainty": "high", "evidence_ids": ["evidence:dimev-release"]}
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:dimev-release"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:frances-mcsparran", "type": "person", "name": "Frances McSparran", "evidence_ids": ["evidence:repo-octl-xml", "evidence:folger-mcsparran"]},
+    {"id": "agent:robert-thornton", "type": "person", "name": "Robert Thornton", "dates": "d. 1456 x 1465", "evidence_ids": ["evidence:lincoln-ms91-catalog"], "notes": ["Scribe and compiler, not author of Octavian."]},
+    {"id": "agent:harriet-hudson", "type": "person", "name": "Harriet Hudson", "evidence_ids": ["evidence:mets-hudson"]},
+    {"id": "agent:derek-brewer", "type": "person", "name": "D. S. Brewer", "alternate_names": ["Derek Stanley Brewer"], "evidence_ids": ["evidence:wellcome-facsimile"]},
+    {"id": "agent:a-e-b-owen", "type": "person", "name": "A. E. B. Owen", "alternate_names": ["Arthur Ernest Bion Owen"], "evidence_ids": ["evidence:wellcome-facsimile"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-octl"]},
+    {"id": "agent:middle-english-compendium", "type": "organization", "name": "Middle English Compendium", "urls": ["https://www.medictionary.info/", "https://quod.lib.umich.edu/m/middle-english-dictionary"], "evidence_ids": ["evidence:current-octl-xml"]},
+    {"id": "agent:oxford-text-archive", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"], "evidence_ids": ["evidence:repo-octl-xml", "evidence:ota-u1683-record"]},
+    {"id": "agent:lincoln-cathedral", "type": "organization", "name": "Lincoln Cathedral Library", "urls": ["https://lincolncathedral.com/readers-and-researchers/"], "evidence_ids": ["evidence:lincoln-ms91-catalog", "evidence:lincoln-readers"]},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/"], "evidence_ids": ["evidence:dmer-cambridge"]},
+    {"id": "agent:early-english-text-society", "type": "organization", "name": "Early English Text Society", "urls": ["https://users.ox.ac.uk/~eets/"], "evidence_ids": ["evidence:folger-mcsparran"]},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"], "evidence_ids": ["evidence:mets-hudson", "evidence:mets-rights"]},
+    {"id": "agent:dimev", "type": "organization", "name": "Digital Index of Middle English Verse", "urls": ["https://www.dimev.net/"], "evidence_ids": ["evidence:dimev-release"]},
+    {"id": "agent:zenodo", "type": "organization", "name": "Zenodo", "urls": ["https://zenodo.org/"], "evidence_ids": ["evidence:dimev-release"]},
+    {"id": "agent:wellcome-collection", "type": "organization", "name": "Wellcome Collection", "urls": ["https://wellcomecollection.org/"], "evidence_ids": ["evidence:wellcome-facsimile"]},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:repo-octl-xml"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:OctL",
+      "object": "encoding:umich-cme:OctL",
+      "scope": {"subject": {"kind": "whole", "description": "Pinned DLPSTEXTCLASS repository XML"}, "object": {"kind": "whole", "description": "U-M CME item OctL"}, "notes": "The pinned header names U-M, McSparran, OctL, and the same title and source statement exposed by the U-M item. The exact transfer event into the CME git repository is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-octl-xml", "evidence:umich-octl"]}
+    },
+    {
+      "id": "relation:medictionary-version-of-pinned",
+      "type": "version_of",
+      "subject": "encoding:medictionary:OctL-2026-05",
+      "object": "artifact:general-corpus:OctL",
+      "scope": {"subject": {"kind": "whole", "description": "Current ETS/EEBO XML serialization"}, "object": {"kind": "whole", "description": "Pinned DLPSTEXTCLASS repository XML"}, "notes": "The normalized BODY text-node streams match, while wrapper, rights, and XPTR serialization differ. The exact transformation event and intervening versions remain undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml", "evidence:body-version-comparison"]}
+    },
+    {
+      "id": "relation:umich-version-of-ota",
+      "type": "version_of",
+      "subject": "encoding:umich-cme:OctL",
+      "object": "encoding:ota:U-1683-A",
+      "scope": {"subject": {"kind": "whole", "description": "U-M-distributed OctL encoding"}, "object": {"kind": "part", "description": "OctL component of OTA item 1683, listed as octl-1683.txt"}, "notes": "The U-M header names U-1683-A, while the extant OTA record 1683 lists an OctL bitstream and the accession history names Octovian with a Michigan depositor. The gated bitstream itself was not compared, so byte-level transfer direction is not asserted."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-octl-xml", "evidence:ota-accession-history", "evidence:ota-u1683-record"], "notes": "Use version_of rather than copied_from until the exact OTA bitstream can be compared under authorized access."}
+    },
+    {
+      "id": "relation:umich-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "encoding:umich-cme:OctL",
+      "object": "witness:lincoln:MS91-Octovian",
+      "scope": {"subject": {"kind": "whole", "description": "All 1,634 encoded line positions, including manuscript-loss markers"}, "object": {"kind": "part", "description": "Octovian component", "locators": ["ff. 98va-109rb"]}, "notes": "Abbreviations are expanded without notice; otherwise the source declaration says text, spelling, capitalization, and punctuation are those of the manuscript."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml", "evidence:lincoln-ms91-catalog", "evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:umich-consulted-eets-pagination",
+      "type": "consulted",
+      "subject": "encoding:umich-cme:OctL",
+      "object": "edition:mcsparran:Octovian-1986",
+      "scope": {"subject": {"kind": "part", "description": "Forty-nine PB milestones only", "locators": ["odd pages 77-179, with pages 115-119 absent across the manuscript lacuna"]}, "object": {"kind": "part", "description": "Lincoln-facing pagination", "locators": ["pp. 77-179, odd pages"]}, "notes": "The XML expressly says EETS pagination was supplied only to facilitate comparison; its wording comes from the manuscript transcription, not the edited reading text."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-octl-xml", "evidence:dimev-release", "evidence:folger-mcsparran"]}
+    },
+    {
+      "id": "relation:eets-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "edition:mcsparran:Octovian-1986",
+      "object": "witness:lincoln:MS91-Octovian",
+      "scope": {"subject": {"kind": "part", "description": "Lincoln parallel text", "locators": ["odd pages 77-179"]}, "object": {"kind": "part", "description": "Octovian component", "locators": ["ff. 98va-109rb"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:folger-mcsparran", "evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:eets-transcribes-cambridge",
+      "type": "transcribes",
+      "subject": "edition:mcsparran:Octovian-1986",
+      "object": "witness:cambridge:Ff2.38-Octavian",
+      "scope": {"subject": {"kind": "part", "description": "Cambridge parallel text", "locators": ["even pages 76-178"]}, "object": {"kind": "part", "description": "Octavian component", "locators": ["ff. 90rb-102vb"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:folger-mcsparran", "evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:hudson-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "edition:hudson:Octavian-2006",
+      "object": "witness:lincoln:MS91-Octovian",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Base text where the Lincoln witness survives", "locators": ["printed pp. 45-88; edition lines 1-1848 excluding Cambridge-supplied passages"]}, "object": {"kind": "part", "description": "Surviving Octovian component", "locators": ["ff. 98va-109rb, excluding physical lacunae"]}, "notes": "Hudson normalizes and edits the text; this edge records base-witness dependence, not diplomatic identity."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-hudson", "evidence:hudson-pdf"]}
+    },
+    {
+      "id": "relation:hudson-consulted-cambridge-supplies",
+      "type": "consulted",
+      "subject": "edition:hudson:Octavian-2006",
+      "object": "witness:cambridge:Ff2.38-Octavian",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Supplied passages replacing material absent or illegible in Lincoln", "locators": ["the lost leaf after Lincoln f. 102 and damage at f. 108"]}, "object": {"kind": "selected_passages", "description": "Corresponding Cambridge readings", "locators": ["within ff. 90rb-102vb"]}, "notes": "These supplies make Hudson's composite edition longer than OctL and must not be counted as Lincoln-transcription text."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-hudson", "evidence:hudson-pdf"]}
+    },
+    {
+      "id": "relation:scolar-facsimile-of-lincoln",
+      "type": "facsimile_of",
+      "subject": "facsimile:thornton:scolar-1975",
+      "object": "witness:lincoln:MS91-Octovian",
+      "scope": {"subject": {"kind": "whole", "description": "Printed whole-manuscript facsimile, including the Octovian folios"}, "object": {"kind": "part", "description": "Octovian component", "locators": ["ff. 98va-109rb"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wellcome-facsimile", "evidence:dmer-ms91"]}
+    },
+    {
+      "id": "relation:dimev-describes-lincoln",
+      "type": "describes",
+      "subject": "catalog:dimev:2.0-alpha.1",
+      "object": "witness:lincoln:MS91-Octovian",
+      "scope": {"subject": {"kind": "part", "description": "Record 3132 witness 3132-2 and manuscript record Lincoln91"}, "object": {"kind": "part", "description": "Octovian component and its manuscript context", "locators": ["ff. 98va-109rb"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-release"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-octl-local",
+      "entity": "artifact:general-corpus:OctL",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the exact path in the pinned CME submodule.",
+      "repository_path": "CME/source/CME_phase_1-2/OctL.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-octl-xml"]
+    },
+    {
+      "id": "access:umich-octl-item",
+      "entity": "encoding:umich-cme:OctL",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the complete item and its 17 line-range units online.",
+      "url": "https://quod.lib.umich.edu/c/cme/OctL",
+      "alternate_urls": ["https://name.umdl.umich.edu/OctL"],
+      "cost": "free",
+      "format": "HTML structured text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:umich-octl"]
+    },
+    {
+      "id": "access:medictionary-octl-xml",
+      "entity": "encoding:medictionary:OctL-2026-05",
+      "provider_id": "agent:middle-english-compendium",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete current raw XML directly.",
+      "url": "https://www.medictionary.info/texts/OctL.xml",
+      "local_copies": [
+        {
+          "label": "Current Middle English Compendium OctL XML",
+          "path": "source-cache/OctL/medictionary-OctL-current.xml",
+          "source_url": "https://www.medictionary.info/texts/OctL.xml",
+          "sha256": "384cf6f133b22ee3489c93df581f7b0599e520ff9647ce904edf1a92419d9553",
+          "bytes": 169079,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "OctL digital transcription", "locators": ["HEADER and EEBO/TEXT/BODY"], "notes": ["Complete current provider XML; the medieval BODY text matches the pinned repository XML after text-node normalization, while wrapper, rights, and pointer serialization differ."]}
+        }
+      ],
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:current-octl-xml", "evidence:body-version-comparison"]
+    },
+    {
+      "id": "access:ota-u1683-record",
+      "entity": "encoding:ota:U-1683-A",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the exact public OTA item record and its file inventory online.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683",
+      "alternate_urls": ["https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683?show=full", "http://purl.ox.ac.uk/ota/1683"],
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-u1683-record"]
+    },
+    {
+      "id": "access:ota-u1683-bitstreams",
+      "entity": "encoding:ota:U-1683-A",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "unknown",
+      "access_method": "The public record lists three bitstreams, but their routes are marked isAllowed=n and present an interactive terms gate. The terms were not accepted in this research run.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683",
+      "alternate_urls": ["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1683/header1683.xml?sequence=3&isAllowed=n", "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1683/octc-1683.txt?sequence=4&isAllowed=n", "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1683/octl-1683.txt?sequence=5&isAllowed=n"],
+      "cost": "unknown",
+      "format": "One XML metadata file and two plain-text Octovian files; 211.55 KB total reported by the record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-u1683-record"],
+      "notes": ["No OTA bitstream or all-files package was downloaded, cached, or compared.", "The status is kept unknown because the public record advertises the item as available while the actual bitstream routes require unaccepted interactive terms."]
+    },
+    {
+      "id": "access:lincoln-ms91-catalog",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "provider_id": "agent:lincoln-cathedral",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the official whole-codex description and exact content item online.",
+      "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog",
+      "alternate_urls": ["https://archive.lincolncathedral.com/Record.aspx?id=MS+91&src=Catalog"],
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:lincoln-ms91-catalog"]
+    },
+    {
+      "id": "access:lincoln-ms91-selected-image",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "provider_id": "agent:lincoln-cathedral",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "View or download the one image attached to the current MS 91 catalog record.",
+      "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/GetMultimedia.ashx?db=Catalog&type=default&fname=9c%5c6d5c96-a09e-4239-a88c-25691ff100e7.jpg",
+      "alternate_urls": ["https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog"],
+      "local_copies": [
+        {
+          "label": "Lincoln Cathedral MS 91 catalog image, f. 80r part",
+          "path": "source-cache/OctL/lincoln-ms91-catalog-f80r-part.jpg",
+          "source_url": "https://specialcollections.library.lincoln.ac.uk/CalmView/GetMultimedia.ashx?db=Catalog&type=default&fname=9c%5c6d5c96-a09e-4239-a88c-25691ff100e7.jpg",
+          "sha256": "edd77fd478457e69fb26c4bca5a741451a2e3a43fd46ab55df454b6dac5ddbb5",
+          "bytes": 442818,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-15",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "No Octovian overlap", "locators": ["f. 80r part; Octovian occupies ff. 98v-109r"], "notes": ["This single selected catalog image is outside Octovian and is not a work facsimile or complete-codex surrogate."]},
+          "notes": ["Direct inspection confirms a partial manuscript-text image at 1013 x 643 pixels.", "The ignored cache is a private research copy; caching does not grant redistribution rights."]
+        }
+      ],
+      "cost": "free",
+      "format": "One selected JPEG, 1013 x 643 pixels",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:lincoln-selected-image"],
+      "notes": ["The official page exposes only this one current multimedia object for MS 91. It does not overlap the cataloged work."]
+    },
+    {
+      "id": "access:lincoln-ms91-physical",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "provider_id": "agent:lincoln-cathedral",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Apply in writing with the subject and purpose of research, provide an academic letter of introduction, and book in advance; confirm current availability before travel.",
+      "url": "https://lincolncathedral.com/readers-and-researchers/",
+      "contact": "librarian@lincolncathedral.com; +44 (0)1522 561640",
+      "cost": "free",
+      "format": "Onsite consultation by appointment",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:lincoln-readers"],
+      "notes": ["The current page says manuscript resources are available for study but also notes temporary storage limitations during Wren Library repair work."]
+    },
+    {
+      "id": "access:lincoln-ms91-reproduction",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "provider_id": "agent:lincoln-cathedral",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request digital images or photocopies from the Cathedral librarian; charges apply and feasibility, resolution, delivery, and written reuse terms must be confirmed.",
+      "url": "https://lincolncathedral.com/readers-and-researchers/",
+      "contact": "librarian@lincolncathedral.com; +44 (0)1522 561640",
+      "cost": "fee",
+      "format": "Digital images or photocopies on request",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:lincoln-readers", "evidence:lincoln-terms"],
+      "notes": ["For a complete-source request, specify covers or boards, spine, pastedowns, flyleaves, blanks, and every manuscript leaf separately from the Octavian work portion ff. 98va-109rb."]
+    },
+    {
+      "id": "access:mcsparran-catalog",
+      "entity": "edition:mcsparran:Octovian-1986",
+      "provider_id": "agent:early-english-text-society",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the Folger catalog record and bibliographic details online.",
+      "url": "https://catalog.folger.edu/record/39975",
+      "cost": "free",
+      "format": "Library catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:folger-mcsparran"]
+    },
+    {
+      "id": "access:mcsparran-controlled-lending",
+      "entity": "edition:mcsparran:Octovian-1986",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Borrow the print-disabled Internet Archive scan through controlled digital lending; anonymous complete PDF and JP2 requests return 401, while encrypted lending files are exposed.",
+      "url": "https://archive.org/details/octovian0000unse",
+      "cost": "free",
+      "format": "Controlled-borrow scan; encrypted LCP/ACS derivatives",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ia-mcsparran"],
+      "notes": ["No access controls were bypassed and no restricted full scan was cached.", "Public preview leaves do not constitute a complete edition scan."]
+    },
+    {
+      "id": "access:hudson-mets",
+      "entity": "edition:hudson:Octavian-2006",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read the digital edition online or download the complete anthology PDF.",
+      "url": "https://metseditions.org/editions/YbyP0NRFYXQi9WZ3hZeMbc6A0gaEV87",
+      "alternate_urls": ["https://metseditions.org/read/3zWvB5Pt4kj9IvLjiMwvbH7rx1Mbk9D", "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf"],
+      "local_copies": [
+        {
+          "label": "Complete METS PDF of Hudson, Four Middle English Romances, 2nd edition",
+          "path": "source-cache/OctL/hudson-four-middle-english-romances-mets-2006.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf",
+          "sha256": "754939b49979a0a2e77ec129269a6c793464416101e36a14ef46a8529d6e0a17",
+          "bytes": 1355962,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Octavian introduction, edited text, and notes", "locators": ["PDF pages 40-96", "printed pages 39-95"], "notes": ["Introduction: PDF 40-44 (printed 39-43); blank separator: PDF 45; edited text: PDF 46-89 (printed 45-88); notes: PDF 90-96 (printed 89-95)."]},
+          "notes": ["pdfinfo confirms 206 pages and pdftotext extracts all pages. qpdf reports recoverable object-offset-zero warnings but completes; the simple file utility misreports eight pages. The provider bytes are retained unchanged rather than silently repaired."]
+        }
+      ],
+      "cost": "free",
+      "format": "HTML edition and complete PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:mets-hudson", "evidence:hudson-pdf", "evidence:mets-rights"]
+    },
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:2.0-alpha.1",
+      "provider_id": "agent:zenodo",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete versioned data release from Zenodo.",
+      "url": "https://zenodo.org/records/20850921/files/dimev-2.0-alpha.1.zip?download=1",
+      "alternate_urls": ["https://zenodo.org/records/20850921", "https://doi.org/10.5281/zenodo.20850921"],
+      "local_copies": [
+        {
+          "label": "Complete DIMEV 2.0-alpha.1 data release",
+          "path": "source-cache/OctL/dimev-2.0-alpha.1.zip",
+          "source_url": "https://zenodo.org/records/20850921/files/dimev-2.0-alpha.1.zip?download=1",
+          "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a",
+          "bytes": 3884746,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Northern Octavian record and Lincoln MS 91 witness description", "locators": ["dimev-2.0-alpha.1/data/Records.xml: record-3132, witness wit-3132-2", "dimev-2.0-alpha.1/data/Manuscripts.xml: msDesc Lincoln91"], "notes": ["The ZIP is the complete versioned dataset release; the locators identify the OctL research portion."]},
+          "notes": ["unzip -t verifies all 37 members without error."]
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP data release",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dimev-release"]
+    },
+    {
+      "id": "access:cambridge-description",
+      "entity": "witness:cambridge:Ff2.38-Octavian",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the scholarly manuscript and component description in DMER.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "cost": "free",
+      "format": "Scholarly manuscript description; not a holding-institution catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dmer-cambridge"]
+    },
+    {
+      "id": "access:scolar-facsimile-wellcome",
+      "entity": "facsimile:thornton:scolar-1975",
+      "provider_id": "agent:wellcome-collection",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Consult the printed facsimile in the Wellcome Collection Library; the catalog lists it on open shelves.",
+      "url": "https://wellcomecollection.org/works/c2fm7hzn",
+      "cost": "free",
+      "format": "Printed whole-manuscript photographic facsimile",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:wellcome-facsimile"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:umich-octl-us",
+      "entity": "encoding:umich-cme:OctL",
+      "access_id": "access:umich-octl-item",
+      "component": "Materials presented through U-M CME item OctL",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "U-M expressly labels the item public domain and applies the DPLA No Copyright-United States statement.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-octl"],
+      "notes": ["No Copyright-United States is jurisdiction-specific and does not itself license Lincoln Cathedral photographs or every modern editorial contribution."]
+    },
+    {
+      "id": "rights:medictionary-octl-current",
+      "entity": "encoding:medictionary:OctL-2026-05",
+      "access_id": "access:medictionary-octl-xml",
+      "component": "Current raw OctL XML as distributed by the Middle English Compendium",
+      "jurisdiction": "Provider statement; no jurisdiction stated",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current XML availability statement says the work has been identified as public domain and free of known copyright, related-right, and neighboring-right restrictions, and expressly permits copying, modification, distribution, performance, and commercial use without permission.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:current-octl-xml"],
+      "notes": ["This records the provider's assertion rather than an independent worldwide legal determination."]
+    },
+    {
+      "id": "rights:ota-u1683-record-metadata",
+      "entity": "encoding:ota:U-1683-A",
+      "access_id": "access:ota-u1683-record",
+      "component": "Public metadata in the current OTA item record 1683",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The exact current record assigns Creative Commons Attribution 3.0 Unported and exposes that descriptive metadata publicly.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution 3.0 Unported", "spdx": "CC-BY-3.0", "uri": "https://creativecommons.org/licenses/by/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-u1683-record"],
+      "notes": ["The page presents CC BY 3.0 at item level, but this record scopes the verified license conservatively to the publicly inspected catalog metadata because the content bitstreams remained behind unaccepted interactive terms."]
+    },
+    {
+      "id": "rights:ota-u1683-legacy",
+      "entity": "encoding:ota:U-1683-A",
+      "access_id": "access:ota-u1683-bitstreams",
+      "component": "Historical OTA-associated Octovian electronic text and currently listed content bitstreams",
+      "jurisdiction": "Historical provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The pinned XML says the text was made available through OTA for personal scholarly use only. The current exact record advertises CC BY 3.0, but the content routes are marked isAllowed=n and their interactive terms were not accepted, so the current bitstream-level scope was not verified.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:ota-u1683-record"],
+      "notes": ["The historical restriction conflicts in practical scope with the current OTA record metadata license, U-M's No Copyright-United States statement, and the MEDictionary descendant's public-domain assertion; the conflict remains unresolved."]
+    },
+    {
+      "id": "rights:repo-octl-artifact",
+      "entity": "artifact:general-corpus:OctL",
+      "access_id": "access:repo-octl-local",
+      "component": "Pinned XML transcription and structure",
+      "jurisdiction": "United States and applicable provider terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The artifact embeds OTA's personal-scholarly-use-only notice, while current U-M/Compendium sources assert public-domain status. The CME repository's root Unlicense text speaks of software; its application to inherited third-party transcription data and markup is not explicit.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:cme-license", "evidence:umich-octl", "evidence:current-octl-xml"],
+      "notes": ["This conservative component-specific status is not legal advice and does not narrow the medieval underlying text's public-domain status."]
+    },
+    {
+      "id": "rights:lincoln-medieval-text-us",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "component": "Medieval textual content embodied in the fifteenth-century witness",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The anonymous medieval text and fifteenth-century witness predate modern copyright by centuries.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lincoln-ms91-catalog"],
+      "notes": ["This does not cover modern manuscript photography, catalog prose, facsimile design, or provider contracts."]
+    },
+    {
+      "id": "rights:lincoln-selected-image",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "access_id": "access:lincoln-ms91-selected-image",
+      "component": "Current catalog photograph of part of MS 91 f. 80r",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The exact catalog record labels the image Copyright Lincoln Cathedral Library and states Permission of the Dean and Chapter of Lincoln Cathedral.",
+      "asserted_by_id": "agent:lincoln-cathedral",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lincoln-selected-image", "evidence:lincoln-terms"],
+      "notes": ["The site terms permit one personal-reference copy or extracts, bar separate use of photographs from accompanying context, and require a commercial license. The cached JPEG is not a redistributable corpus asset."]
+    },
+    {
+      "id": "rights:lincoln-future-reproductions",
+      "entity": "witness:lincoln:MS91-Octovian",
+      "access_id": "access:lincoln-ms91-reproduction",
+      "component": "Any manuscript images or photocopies supplied in response to a reproduction request",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The current reader page advertises charged digital images and photocopies but does not publish item-specific reuse terms for a requested MS 91 surrogate.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lincoln-readers", "evidence:lincoln-terms"],
+      "notes": ["Obtain written terms before placing supplied images in Git, a public viewer, a PDF publication, or another redistribution workflow."]
+    },
+    {
+      "id": "rights:mcsparran-1986",
+      "entity": "edition:mcsparran:Octovian-1986",
+      "access_id": "access:mcsparran-controlled-lending",
+      "component": "McSparran's 1986 introduction, edited presentation, apparatus, notes, layout, and any sufficiently original editorial contributions",
+      "jurisdiction": "United Kingdom, United States, and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The scholarly edition was published in 1986, is available through controlled lending, and no public-domain dedication or open license for its modern editorial content was verified.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:folger-mcsparran", "evidence:ia-mcsparran"],
+      "notes": ["This does not make the underlying medieval text copyrighted or imply that every diplomatic reading is independently protectable."]
+    },
+    {
+      "id": "rights:hudson-mets",
+      "entity": "edition:hudson:Octavian-2006",
+      "access_id": "access:hudson-mets",
+      "component": "Hudson's modern edited text, introduction, notes, PDF presentation, and METS digital edition",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "METS states that digital editions are provided for individual use only and directs users to contact the Executive Director to reprint the digital text. Its CC BY-NC-SA 4.0 statement is explicitly for XML and is not transferred to this downloaded PDF without component-level support.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-rights", "evidence:hudson-pdf"],
+      "notes": ["Public download is access, not a blanket republication license for the PDF or modern editorial material."]
+    },
+    {
+      "id": "rights:dimev-release",
+      "entity": "catalog:dimev:2.0-alpha.1",
+      "access_id": "access:dimev-release",
+      "component": "DIMEV 2.0-alpha.1 dataset release",
+      "jurisdiction": "Worldwide license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The Zenodo release applies Creative Commons Attribution 4.0 International.",
+      "asserted_by_id": "agent:dimev",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-release"]
+    },
+    {
+      "id": "rights:scolar-facsimile",
+      "entity": "facsimile:thornton:scolar-1975",
+      "access_id": "access:scolar-facsimile-wellcome",
+      "component": "Facsimile photographs, modern introductions, layout, and other modern contributions",
+      "jurisdiction": "United Kingdom, United States, and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The photographic facsimile and introductions were published in 1975, with a revised edition in 1977; no open license for its images or modern contributions was found.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wellcome-facsimile"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:abbreviation-expansion",
+      "entity": "encoding:umich-cme:OctL",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations",
+      "representation": "Expanded without notice at each occurrence",
+      "description": "The source statement says abbreviations were expanded, while other text, spelling, capitalization, and punctuation were retained from the manuscript.",
+      "scope": "Complete electronic transcription",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml"]
+    },
+    {
+      "id": "practice:paratext-omission",
+      "entity": "encoding:umich-cme:OctL",
+      "practice": "selection",
+      "source_feature": "Front and back matter and editorial notes from the printed comparison edition",
+      "representation": "Omitted from the electronic transcription",
+      "description": "Only the witness transcription and supplied comparison pagination are represented; the printed edition's paratext is excluded.",
+      "scope": "Electronic item boundary",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml"]
+    },
+    {
+      "id": "practice:eets-pagination",
+      "entity": "encoding:umich-cme:OctL",
+      "practice": "collation",
+      "source_feature": "Lincoln-facing odd-page sequence in McSparran 1986",
+      "representation": "Forty-nine PB milestones from page 77 through 179; pages 115-119 are absent across the missing-leaf gap",
+      "description": "Pagination was supplied to facilitate comparison with the final edited version and is not evidence that OctL was encoded from the EETS text.",
+      "scope": "Page milestones only",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:dimev-release", "evidence:folger-mcsparran"]
+    },
+    {
+      "id": "practice:xptr-partial-concordance",
+      "entity": "encoding:umich-cme:OctL",
+      "practice": "collation",
+      "source_feature": "Pinned XPTR/@TO values in the OctL and OctC companion transcriptions",
+      "representation": "One pointer per L position in the pinned files, with 0000 used for many unaligned positions and repeated nonzero values at a few positions; the current XML preserves the old pointers only as comments",
+      "description": "Direct comparison shows partial cross-witness concordance behavior: each file has 1,400 nonzero occurrences and 1,397 unique nonzero values, with 1,180 values in common. The values are not line totals or a documented external target namespace.",
+      "scope": "Pinned OctL and OctC line-level pointer serialization",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:xptr-audit", "evidence:folger-mcsparran", "evidence:current-octl-xml"],
+      "notes": ["Exact semantics remain an open question; the manifest does not label TO values as companion line numbers."]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-octl-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned source, CME/source/CME_phase_1-2/OctL.xml, CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/OctL.xml",
+      "locator": "HEADER and complete BODY",
+      "summary": "Identifies title, McSparran, U-M, 1993, OctL, OTA U-1683-A, historical terms, direct Lincoln-manuscript transcription, editorial practices, omitted paratext, EETS comparison pagination, and the complete pinned line-position representation.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ad86cd7f32363c8102e2968be0f58cbe9efcfbcdd8b63d131ddf00f157a46c30"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME root LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/LICENSE",
+      "locator": "complete file",
+      "summary": "Contains the Unlicense public-domain dedication framed as applying to software; it does not expressly resolve inherited third-party transcription, edition, or manuscript-image rights.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-octl",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, CME item OctL.",
+      "url": "https://quod.lib.umich.edu/c/cme/OctL",
+      "summary": "Confirms public item access, title, McSparran, OTA U-1683-A, 17 line-range units through 1634, public-domain label, and DPLA No Copyright-United States statement.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:current-octl-xml",
+      "type": "digital_surrogate",
+      "citation": "Middle English Compendium current raw OctL XML.",
+      "url": "https://www.medictionary.info/texts/OctL.xml",
+      "repository_path": "source-cache/OctL/medictionary-OctL-current.xml",
+      "locator": "HEADER and EEBO/TEXT/BODY",
+      "summary": "Provides the current ETS/EEBO serialization, direct-transcription statement, editorial practices, current broad public-domain assertion, and complete text; actual XPTR elements have become comments.",
+      "accessed_on": "2026-07-15",
+      "sha256": "384cf6f133b22ee3489c93df581f7b0599e520ff9647ce904edf1a92419d9553",
+      "notes": ["The HTTP Last-Modified header was Sat, 09 May 2026 19:11:14 GMT; the provider exposes no named release identifier."]
+    },
+    {
+      "id": "evidence:body-version-comparison",
+      "type": "repository_file",
+      "citation": "Target-scoped structural and text-node comparison of pinned OctL.xml with the cached current provider OctL.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/OctL.xml",
+      "url": "https://www.medictionary.info/texts/OctL.xml",
+      "locator": "BODY",
+      "summary": "Both files contain 17 DIV1, 1,634 L, 49 PB, 5 UNCLEAR, and 2 SUPPLIED nodes. Their BODY text-node streams have identical Unicode-alphanumeric-normalized SHA-256 0311704e8725ffeff9d91ce49fad859fb288febb32ecfd3f644ab1742c7ba2c2; wrapper, attributes, pointer serialization, and rights text differ.",
+      "accessed_on": "2026-07-15",
+      "notes": ["The normalized comparison excludes markup and comments and does not claim the XML files are byte-identical."]
+    },
+    {
+      "id": "evidence:xptr-audit",
+      "type": "repository_file",
+      "citation": "XPath audit of pinned OctL.xml and companion OctC.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/OctL.xml",
+      "locator": "BODY//L/XPTR/@TO; compared with source/CME_phase_1-2/OctC.xml",
+      "summary": "Each file has 1,400 nonzero TO occurrences and 1,397 unique nonzero values; 1,180 unique values occur in both sets. OctL duplicates 0141, 0156, and 1728; OctC duplicates 0144 and 0159. The observed values behave as a partial concordance and cannot be used as extent.",
+      "accessed_on": "2026-07-15",
+      "notes": ["The exact target namespace and intended software behavior were not documented in the XML headers or current U-M interface."]
+    },
+    {
+      "id": "evidence:ota-accession-history",
+      "type": "scholarly_source",
+      "citation": "Humanist Discussion Group archive, Oxford Text Archive accessions since April 1992, entry 1683 Octovian.",
+      "url": "https://dhhumanist.org/archives/Virginia/v06/0184.html",
+      "summary": "Documents historical OTA number 1683 for Octovian and a Michigan depositor, supporting association but not byte-level transfer direction.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-u1683-record",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 1683, 'Octovian,' current full record and public file inventory.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683?show=full",
+      "locator": "Full Dublin Core record and Files for this item",
+      "summary": "Confirms the extant exact record, ota:1683 identifier, 1992-04-03 issue date, SGML-tagged description, CC BY 3.0 record metadata, and three listed files: header1683.xml, octc-1683.txt, and octl-1683.txt. The bitstream routes are marked isAllowed=n and require interactive terms that were not accepted; no bitstream was downloaded or compared.",
+      "accessed_on": "2026-07-15",
+      "notes": ["The public record advertises the item as available, but content-level rights and access are kept separate from the inspected record metadata because the terms gate was not traversed."]
+    },
+    {
+      "id": "evidence:lincoln-ms91-catalog",
+      "type": "official_catalog",
+      "citation": "Lincoln Cathedral Library, LINCOLN CATHEDRAL MS 91, 'The Thornton romances.'",
+      "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog",
+      "locator": "Whole-codex description and content item 5",
+      "summary": "Supplies the current and alternate shelfmarks, c. 1430-1450 date, Thornton/East Newton provenance, one-scribe statement, physical description, Octovyane at ff. 98v-109, rubric/incipit/explicit, adjacent-work boundaries, and one selected f. 80r image with an explicit copyright/permission notice.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lincoln-selected-image",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the current Lincoln Cathedral MS 91 catalog image, labeled f. 80r part.",
+      "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/GetMultimedia.ashx?db=Catalog&type=default&fname=9c%5c6d5c96-a09e-4239-a88c-25691ff100e7.jpg",
+      "repository_path": "source-cache/OctL/lincoln-ms91-catalog-f80r-part.jpg",
+      "locator": "part of f. 80r",
+      "summary": "The 1013 x 643 JPEG visibly reproduces part of a manuscript text page but lies outside Octavian at ff. 98v-109r; it is neither a work image nor a complete manuscript facsimile. The official record claims Lincoln Cathedral Library copyright and Dean and Chapter permission.",
+      "accessed_on": "2026-07-15",
+      "sha256": "edd77fd478457e69fb26c4bca5a741451a2e3a43fd46ab55df454b6dac5ddbb5"
+    },
+    {
+      "id": "evidence:lincoln-readers",
+      "type": "official_webpage",
+      "citation": "Lincoln Cathedral, 'Readers and Researchers.'",
+      "url": "https://lincolncathedral.com/readers-and-researchers/",
+      "summary": "States that manuscript consultation is by advance application and appointment, provides the library contact route, notes current storage limitations, and says digital images and photocopies are available on request for a charge.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lincoln-terms",
+      "type": "official_webpage",
+      "citation": "Lincoln Cathedral, 'Terms Service Agreement,' Intellectual Property Rights.",
+      "url": "https://lincolncathedral.com/terms-service-agreement/",
+      "summary": "Reserves site rights, permits one personal-reference copy or extracts, prohibits separate use of illustrations or photographs from accompanying text, requires attribution, and requires a license for commercial use.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dmer-ms91",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Lincoln Cathedral Library MS 91.",
+      "url": "https://www.middleenglishromance.org.uk/index.php/manuscripts/lincoln-cathedral-library-ms-91-lincoln-thornton-manuscript",
+      "locator": "Octavian, ff. 98v-109r",
+      "summary": "Describes the paper manuscript as mid-fifteenth-century and North Yorkshire, reports Northern Octavian at ff. 98v-109r with 1,629 lines, and identifies the 1975 paper facsimile.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dmer-cambridge",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Cambridge University Library MS Ff.2.38.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "locator": "Octavian, ff. 90r-102v",
+      "summary": "Describes the paper manuscript as mid-fifteenth-century, gives dimensions, reports two scribes with a change during Octavian, and identifies the Northern Octavian component with 1,731 lines.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dimev-release",
+      "type": "digital_surrogate",
+      "citation": "DIMEV 2.0-alpha.1 data release, Zenodo record 20850921.",
+      "url": "https://zenodo.org/records/20850921",
+      "alternate_urls": ["https://doi.org/10.5281/zenodo.20850921", "https://www.dimev.net/record.php?recID=3132"],
+      "repository_path": "source-cache/OctL/dimev-2.0-alpha.1.zip",
+      "locator": "data/Records.xml record-3132 and wit-3132-2; data/Manuscripts.xml Lincoln91; data/Bibliography.rdf McSparran1986, Hudson1996, Brewer1975",
+      "summary": "Provides versioned Northern Octavian and witness descriptions, exact folio/column and EETS page locators, the 1,628-line report and physical losses, Cambridge parallel data, bibliography, release date, and CC BY 4.0 license.",
+      "accessed_on": "2026-07-15",
+      "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a"
+    },
+    {
+      "id": "evidence:folger-mcsparran",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog, Octovian, ed. Frances McSparran, EETS o.s. 289 (1986).",
+      "url": "https://catalog.folger.edu/record/39975",
+      "summary": "Confirms title, editor, 1986 OUP/EETS publication, 244 pages, Original Series 289, Lincoln and Cambridge source manuscripts, and parallel presentation of their transcriptions.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ia-mcsparran",
+      "type": "official_webpage",
+      "citation": "Internet Archive item octovian0000unse and public metadata response.",
+      "url": "https://archive.org/details/octovian0000unse",
+      "alternate_urls": ["https://archive.org/metadata/octovian0000unse"],
+      "summary": "Identifies the 1986 edition as an inlibrary/printdisabled item. The complete Text PDF and JP2 ZIP are private and anonymous requests return 401; public LCP/ACS derivatives are encrypted controlled-lending files.",
+      "accessed_on": "2026-07-15",
+      "notes": ["No authentication or access control was bypassed, and no restricted file was cached."]
+    },
+    {
+      "id": "evidence:mets-hudson",
+      "type": "scholarly_source",
+      "citation": "Harriet Hudson, Four Middle English Romances, 2nd ed., METS edition and Octavian introduction.",
+      "url": "https://metseditions.org/editions/YbyP0NRFYXQi9WZ3hZeMbc6A0gaEV87",
+      "alternate_urls": ["https://metseditions.org/read/3zWvB5Pt4kj9IvLjiMwvbH7rx1Mbk9D"],
+      "summary": "Confirms editor, 2006 second edition, Octavian pages, form/genre context, plot, Northern/Southern distinctions, and Lincoln base with Cambridge supplies for physical losses.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:hudson-pdf",
+      "type": "digital_surrogate",
+      "citation": "Complete METS PDF of Hudson, Four Middle English Romances, 2nd ed. (2006).",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf",
+      "repository_path": "source-cache/OctL/hudson-four-middle-english-romances-mets-2006.pdf",
+      "locator": "PDF pp. 40-96; printed pp. 39-95",
+      "summary": "Complete 206-page anthology PDF; its Octavian portion contains introduction, a 1,848-line edited text, and notes, explicitly presenting a Lincoln-based composite with Cambridge supplies.",
+      "accessed_on": "2026-07-15",
+      "sha256": "754939b49979a0a2e77ec129269a6c793464416101e36a14ef46a8529d6e0a17",
+      "notes": ["qpdf reports recoverable object-offset-zero warnings; pdfinfo and full pdftotext extraction confirm the expected 206-page tree. The file is preserved byte-for-byte without repair."]
+    },
+    {
+      "id": "evidence:mets-rights",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, 'Copyright & Citation.'",
+      "url": "https://metseditions.org/copyright-citation",
+      "summary": "States that current digital editions are for individual use only, reprinting digital text requires contact with the Executive Director, and XML is licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:wellcome-facsimile",
+      "type": "official_catalog",
+      "citation": "Wellcome Collection, The Thornton manuscript (Lincoln Cathedral MS. 91), Scolar Press, 1975.",
+      "url": "https://wellcomecollection.org/works/c2fm7hzn",
+      "summary": "Catalogs the 1975 Scolar Press facsimile with Brewer and Owen introductions, approximately 700 pages, and an open-shelf onsite holding; it exposes bibliographic access, not a public digital scan.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:public-facsimile-search",
+      "type": "search_result",
+      "citation": "Dated public-surrogate search for Lincoln Cathedral MS 91 and the Scolar Press Thornton facsimile.",
+      "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog",
+      "alternate_urls": ["https://wellcomecollection.org/works/c2fm7hzn", "https://openlibrary.org/books/OL21548787M/The_Thornton_manuscript_%28Lincoln_Cathedral_MS._91%29"],
+      "summary": "On 2026-07-15 the official catalog exposed one non-Octavian image only; no IIIF manifest, complete official image sequence, or public complete scan of the 1975/1977 facsimile was verified through the official catalog, repository image gallery, Wellcome record, Open Library, or exact-title Internet Archive search.",
+      "accessed_on": "2026-07-15",
+      "notes": ["This is a negative public-access result, not a claim that no internal digitization or requestable surrogate exists."]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:full-ms91-facsimile",
+      "question": "Does Lincoln Cathedral hold a complete digital surrogate of MS 91 that can be supplied or licensed, and can it include every physical surface as well as Octavian ff. 98va-109rb?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Ask the Cathedral librarian for availability, quote, resolution, delivery format, completeness, and written reuse terms.", "Specify boards or covers, spine, pastedowns, flyleaves, blanks, every manuscript leaf, and the narrower work portion separately.", "Use the 1975/1977 printed facsimile onsite for visual comparison if a digital surrogate is unavailable."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:lincoln-ms91-catalog", "evidence:lincoln-selected-image", "evidence:lincoln-readers", "evidence:wellcome-facsimile", "evidence:public-facsimile-search"]
+    },
+    {
+      "id": "question:rights-conflict",
+      "question": "How should OTA's embedded personal-scholarly-use-only notice be reconciled with the current OTA record's CC BY 3.0 metadata, U-M's No Copyright-United States label, and the MEDictionary descendant's broader public-domain assertion for redistribution of the exact transcription and markup?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Ask U-M and OTA for the U-1683-A deposit and permission record and the intended scope of the OTA item license, bitstream terms, U-M rights statement, and MEDictionary availability statement.", "Keep the medieval text, modern transcription/markup, catalog metadata, printed editions, and manuscript photographs as separate rights components.", "Do not rely on the CME software-framed Unlicense to resolve inherited third-party data without clarification."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:cme-license", "evidence:umich-octl", "evidence:current-octl-xml", "evidence:ota-u1683-record"]
+    },
+    {
+      "id": "question:xptr-semantics",
+      "question": "What external target namespace or comparison workflow did the pinned XPTR/@TO values serve, and how were their zero and repeated values intended to be interpreted?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask U-M whether historical conversion or parallel-text documentation survives.", "Compare the pointers with McSparran's facing-page alignment and any original OTA/SGML package if it becomes available.", "Continue treating the values only as observed partial concordance markers, never as line counts or documented companion line numbers."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:xptr-audit", "evidence:repo-octl-xml", "evidence:folger-mcsparran", "evidence:current-octl-xml"]
+    },
+    {
+      "id": "question:line-count-discrepancy",
+      "question": "Which counting convention explains DIMEV's 1,628 lines versus DMER's 1,629 and the pinned encoding's 1,629 verbal positions within 1,634 L containers?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Inspect the manuscript facsimile and McSparran's lineation around the final amen and damaged f. 108.", "Document whether one resource excludes a final formula, damaged fragment, or another display position before changing any extent."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:dmer-ms91", "evidence:dimev-release"]
+    },
+    {
+      "id": "question:ota-transfer-provenance",
+      "question": "What exact files and transformation steps connect McSparran's working transcription, OTA item 1683/U-1683-A (especially octl-1683.txt), U-M's 1993 DLPSTEXTCLASS serialization, the current MEDictionary ETS/EEBO serialization, and the CME git artifact?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Obtain the OTA bitstreams through an authorized route with their exact governing terms and request U-M conversion documentation.", "Compare exact files byte-for-byte if obtained, keeping wrapper conversion distinct from textual revision."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-octl-xml", "evidence:current-octl-xml", "evidence:body-version-comparison", "evidence:ota-accession-history", "evidence:ota-u1683-record"]
+    }
+  ]
+}
