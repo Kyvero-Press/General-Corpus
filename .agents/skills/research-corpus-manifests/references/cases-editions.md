@@ -53,6 +53,11 @@ against Arundel 57. Model `version_of` the prior edition plus a distinct
 `collated_against` witness edge. Do not describe the 1965 edition date as a
 revision date of the medieval work.
 
+Reading or correcting proof sheets against a manuscript likewise establishes
+collation, not necessarily a fresh continuous transcription. When the editor
+retains a prior edition as the textual base, preserve both relations and use
+`transcribes` only if the method statement independently supports it.
+
 ## Reprints: 3KCol, aba2096, and CME00022
 
 An explicitly described reprint is still a distinct edition entity linked to
