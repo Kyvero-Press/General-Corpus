@@ -29,6 +29,13 @@ manifests already contain competing aliases, prefer the most precise recent ID
 for new records and preserve the other identifiers as aliases or notes instead
 of creating a third spelling.
 
+If an edition announces an illustration or plate suite but checked carriers
+omit it, do not infer that the suite was never issued. Search later related or
+reissued carriers, tie any confirmed occurrence to the exact carrier that
+contains it, and keep the earlier carrier state unresolved. Count distinct
+physical designs separately from title leaves, tissue guards, and repeated
+scan states.
+
 When a catalog or older editor calls a witness “unique,” check current
 repertories for complete and fragmentary holdings. Record “unique complete
 copy” separately from surviving fragments; do not turn it into “only surviving
