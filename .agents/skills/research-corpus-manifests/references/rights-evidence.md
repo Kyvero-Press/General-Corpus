@@ -334,6 +334,12 @@ item/component record. Record an exact scholarly handlist as scholarly evidence
 and access, explicitly labeled as such, rather than making it look like the
 holding institution's online catalog.
 
+When an owner has deposited a manuscript with another institution, use the
+current custodian as the holding and physical-consultation provider only when an
+official deposit statement covers the item. Model the custodian's consultation
+and imaging routes separately from any owner-side permission enquiry, and do
+not assume that deposit transfers ownership or publication authority.
+
 Test URLs during substantive review. Replace dead legacy paths with current
 official routes while retaining useful persistent identifiers as alternates.
 When a dead legacy viewer is evidence that a complete surrogate once existed,
