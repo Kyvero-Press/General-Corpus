@@ -303,6 +303,26 @@ a source for that edition. When canvas labels are generic, claim only a
 complete provider-published inventory and leave physical-side completeness
 open.
 
+## Cartularies, registers, and documentary numbering
+
+Treat a cartulary or register as one intellectual compilation unless direct
+scholarship establishes independently cataloged works within it. Do not turn
+editorial deed numbers, title groups, cross-reference positions, XML divisions,
+table rows, or document dates into separate works. Make `numbered_items` and
+the prose/verse item totals count intellectual units; retain entry, group, and
+row counts as structural metrics, and leave physical instrument boundaries
+unverified until direct witness comparison supports a crosswalk. Preserve any
+independent prefixed fragment or poem as its own part rather than absorbing it
+into the register.
+
+Keep the documentary creators, medieval compiler, translator, source-language
+register, vernacular copy, physical composite host, modern working transcript
+or collation, edition, and encoding as distinct layers. Scope supplies and
+collation to the passages they demonstrably affect: Latin source material does
+not make a vernacular register intrinsically bilingual, and a mediated working
+transcript does not prove the editor directly inspected every named witness.
+Underlying acts' dates are not the compilation, translation, or copy date.
+
 ## Numbered testamentary selections and probate copies: EEWills
 
 An edition's title count and numbered-unit count need not equal either one
