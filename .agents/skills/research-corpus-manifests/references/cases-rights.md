@@ -108,6 +108,17 @@ public-domain conclusion jurisdiction-specific and record UK status as an open
 question separate from rights in modern editions, catalog descriptions, and
 manuscript photography. See the official [duration guidance](https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term).
 
+## Namesake lifespans are not rights evidence
+
+Never calculate a life-plus copyright term from a name-only lifespan match.
+Reconcile the person through authoritative identifiers, occupation,
+associated works, and compatible places and dates. If a plausible namesake
+owns the apparent death date, record the rejected identity and leave the
+target person's death date unknown. Publication-based or typographical-term
+conclusions may still be stated separately, but the authorial or editorial
+literary layer must remain unresolved until its own identity evidence supports
+the term calculation.
+
 ## Representative-image trap: Gawain and Pearl
 
 A sampled Calgary image carries a public-domain label alongside enumerated use
