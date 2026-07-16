@@ -83,6 +83,17 @@ intellectual items; never use them for stanza or line-group totals. Preserve
 structural extent in `verse_groups`, `verse_lines`, and the section count so
 parent and child metrics reconcile without double-counting the work.
 
+Large edited composites can have several simultaneously valid counts: selected
+XML divisions, edition-level parts, structural components, serialized text
+streams, count-once intellectual items, and manifest part records. Name and
+define every axis instead of presenting them as interchangeable totals. Set
+`numbered_items` from the intellectual-item axis, and make every content part
+carry an explicit `item_count` plus `prose_only_items`, `verse_only_items`,
+`mixed_items`, `verse_groups`, and `verse_lines`. Use zero for item-form metrics
+on zero-count structural or version records and `null` for unresolved or
+inapplicable structural extents. Mechanically verify that the part-level item
+and form sums reproduce the aggregate extent before integration.
+
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
 witness edge, then add passage-scoped source relations for every explicitly
