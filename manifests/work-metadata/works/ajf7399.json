@@ -1,0 +1,376 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:ajf7399",
+  "work_id": "ajf7399",
+  "record_status": "reviewed",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "cataloging_subject": {
+    "id": "work:ajf7399",
+    "unit_type": "single_work",
+    "label": "English Psalter",
+    "scope_note": "Richard Rolle's one medieval prose work comprising a Latin-lemma Psalter and seven Canticles with Middle English verse-by-verse translation and Middle English prose commentary. The repository XML represents Bramley's 1884 edition and also retains a separate anonymous sixty-line Middle English metrical preface as zero-item edition paratext. The 150 Psalm divisions and seven Canticle divisions are sections of the one Rolle work, not 157 independent works. The physical manuscripts, Bramley edition, U-M encoding, page-image carriers, and repository XML remain separate lineage layers."
+  },
+  "catalog_summary": {
+    "title": "English Psalter",
+    "author": "Richard Rolle",
+    "editor": "Henry Ramsden Bramley",
+    "date": "Before 1349; Bramley's narrower 1326-1327 proposal is attributed and uncertain",
+    "region": "England and Yorkshire are associations; exact composition place unknown",
+    "genres": ["Biblical commentary", "Scriptural exegesis", "Psalter translation", "Devotional prose"],
+    "form": "prose",
+    "language_codes": ["enm", "lat"],
+    "tags": ["biblical-commentary", "biblical-translation", "canticles", "devotional-literature", "latin", "middle-english", "northern-middle-english", "psalter", "richard-rolle", "vernacular-scripture"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "ajf7399", "uri": "https://name.umdl.umich.edu/AJF7399.0001.001"},
+    {"scheme": "U-M DLPS", "value": "AJF7399.0001.001", "uri": "https://quod.lib.umich.edu/c/cme/AJF7399.0001.001?view=toc"},
+    {"scheme": "Library of Congress call number", "value": "BS 1425 .L3 R75 1884"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "English Psalter",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-kuczynski", "evidence:metadata-bramley"], "notes": "Kuczynski explicitly uses English Psalter as a short editorial title to distinguish this work from Rolle's Latin Psalter with commentary."}
+    },
+    {
+      "id": "title:alternate-richard-rolle",
+      "type": "alternate",
+      "value": "Richard Rolle's English Psalter",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-kuczynski"]}
+    },
+    {
+      "id": "title:alternate-commentary",
+      "type": "alternate",
+      "value": "Commentary on the Psalter and Canticles",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-oxford-catalogs"], "notes": "This is current Oxford catalog wording for the manuscript contents, not an authorial medieval title."}
+    },
+    {
+      "id": "title:bramley-edition",
+      "type": "alternate",
+      "value": "The Psalter, or Psalms of David and Certain Canticles: With a Translation and Exposition in English by Richard Rolle of Hampole; Edited from Manuscripts by the Rev. H. R. Bramley, with an Introduction and Glossary",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "Henry Ramsden Bramley",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:english-psalter", "part:metrical-preface"], "description": "Bramley's 1884 edition-layer title, not the preferred abstract-work title"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:richard-rolle", "type": "person", "name": "Richard Rolle", "alternate_names": ["Richard Rolle of Hampole"], "notes": ["Died in 1349; the XML gives the legacy form 'Rolle, Richard, of Hampole, tr. 1290?-1349'."]},
+    {"id": "agent:henry-ramsden-bramley", "type": "person", "name": "Henry Ramsden Bramley", "alternate_names": ["H. R. Bramley"], "notes": ["1833-1917; editor of the 1884 Clarendon Press edition."]},
+    {"id": "agent:walter-w-skeat", "type": "person", "name": "Walter William Skeat", "alternate_names": ["Walter W. Skeat"], "notes": ["1835-1912; advised the choice of U, assessed specimen dialects, and revised and completed the glossary."]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:rolle-author",
+      "agent_id": "agent:richard-rolle",
+      "display_name": "Richard Rolle",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski", "evidence:metadata-oxford-catalogs"], "notes": "Authorship covers Rolle's Middle English exposition, not the underlying biblical Latin or the anonymous metrical preface."}
+    },
+    {
+      "id": "responsibility:rolle-translator",
+      "agent_id": "agent:richard-rolle",
+      "role": "translator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"], "notes": "Rolle translates the Latin Psalm and Canticle lemmata into Middle English verse by verse."}
+    },
+    {
+      "id": "responsibility:rolle-commentator",
+      "agent_id": "agent:richard-rolle",
+      "role": "commentator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"]}
+    },
+    {
+      "id": "responsibility:anonymous-preface-author",
+      "display_name": "Anonymous",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:metrical-preface"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"], "notes": "The sixty-line metrical preface is separate edition paratext copied from Laud Misc. 286 and is not by Rolle on the evidence inspected."}
+    },
+    {
+      "id": "responsibility:bramley-editor",
+      "agent_id": "agent:henry-ramsden-bramley",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"], "notes": "Bramley's responsibility belongs to the 1884 edition represented by the XML, not to the abstract medieval work."}
+    },
+    {
+      "id": "responsibility:bramley-collator",
+      "agent_id": "agent:henry-ramsden-bramley",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski"]}
+    },
+    {
+      "id": "responsibility:skeat-reviser",
+      "agent_id": "agent:walter-w-skeat",
+      "role": "reviser",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:english-psalter"], "description": "Edition glossary and dialect/base-text advice; the glossary is omitted from continuous XML transcription"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski"]}
+    },
+    {
+      "id": "responsibility:umich-transcriber",
+      "agent_id": "agent:umich-library",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-umich-package"], "notes": "The 2006 U-M Level-1 TEI text was produced by uncorrected OCR linked to page images and was not content-edited."}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition-before-1349",
+      "type": "composition",
+      "display": "Before 1349",
+      "normalized": {"not_after": 1349},
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-kuczynski", "evidence:metadata-oxford-catalogs"], "notes": "The secure terminus is Rolle's death in 1349; this is not a claim that composition occurred in 1349."}
+    },
+    {
+      "id": "date:bramley-1326-1327",
+      "type": "composition",
+      "display": "1326-1327 (Bramley's conjecture)",
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"]},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:metadata-bramley"], "notes": "Bramley infers this range from a reference after Walter Stapledon's death on 14 October 1326 and an apparent absence of reference to Edward II's murder on 21 September 1327. The range is deliberately not normalized as a confirmed discovery facet."}
+    },
+    {
+      "id": "date:first-publication-bramley",
+      "type": "first_publication",
+      "display": "1884 (Bramley edition represented by ajf7399)",
+      "normalized": {"not_before": 1884, "not_after": 1884},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:bramley:english-psalter-1884",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"], "notes": "This is the publication date of the source edition, not necessarily the first historical publication of any passage."}
+    }
+  ],
+  "places": [],
+  "place_statements": [],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-oxford-catalogs"]},
+      "notes": ["The prologue, verse-by-verse translations, prose commentary, and anonymous metrical preface are Middle English."]
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:english-psalter"], "description": "Latin Psalm and Canticle lemmata embedded throughout Rolle's work"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "The cataloged Rolle work is prose: Latin lemmata and Middle English translations are followed by continuous Middle English exposition. The separate anonymous sixty-line verse preface is zero-item edition paratext and does not make the work mixed-form.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley", "evidence:metadata-kuczynski"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:biblical-commentary", "term": "biblical-commentary", "label": "Biblical commentary", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski", "evidence:metadata-oxford-catalogs"]}},
+    {"id": "genre:scriptural-exegesis", "term": "scriptural-exegesis", "label": "Scriptural exegesis", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski"]}},
+    {"id": "genre:psalter-translation", "term": "psalter-translation", "label": "Psalter translation", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"]}},
+    {"id": "genre:devotional-prose", "term": "devotional-prose", "label": "Devotional prose", "scheme": "General Corpus controlled vocabulary", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:psalms", "term": "psalms", "label": "Psalms", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"]}},
+    {"id": "subject:canticles", "term": "canticles", "label": "Biblical Canticles", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "part", "part_ids": ["part:canticles"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"]}},
+    {"id": "subject:vernacular-scripture", "term": "vernacular-scripture", "label": "Vernacular scripture", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski"]}},
+    {"id": "subject:contemplative-theology", "term": "contemplative-theology", "label": "Contemplative theology", "scheme": "General Corpus controlled vocabulary", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski"]}},
+    {"id": "subject:moral-theology", "term": "moral-theology", "label": "Moral theology", "scheme": "General Corpus controlled vocabulary", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-kuczynski"]}},
+    {"id": "subject:richard-rolle", "term": "richard-rolle", "label": "Richard Rolle", "scheme": "General Corpus controlled vocabulary", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski", "evidence:metadata-oxford-catalogs"]}}
+  ],
+  "tags": ["biblical-commentary", "biblical-translation", "canticles", "devotional-literature", "latin", "middle-english", "northern-middle-english", "psalter", "richard-rolle", "vernacular-scripture"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Rolle presents each Latin Psalm or Canticle verse, translates it into Middle English, and expounds it in Middle English prose. The commentary combines literal explanation, moral instruction, Christological reading, and contemplative devotion. The work includes all 150 Psalms and seven Canticles and is preceded by Rolle's prose prologue.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley", "evidence:metadata-kuczynski"]
+    },
+    {
+      "id": "summary:representation-scope",
+      "type": "cataloging_note",
+      "value": "The XML represents Bramley's title page, an anonymous sixty-line verse preface on printed pages 1-2, Rolle's prose work on pages 3-526, and 1,286 count-once apparatus notes. It retains page milestones and omission placeholders rather than continuous transcription for most introductory matter and the glossary on pages 527-556. U-M sequence 23-548 and Robarts PDF 31-556 are the encoded target run including paratext; the Rolle work itself is U-M sequence 25-548 and PDF 33-556.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley", "evidence:metadata-umich-package"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 1,
+    "sections": 159,
+    "prose_only_items": 1,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": 1,
+    "verse_lines": 60,
+    "description": "One Rolle prose work: one prose prologue, 150 Psalm divisions with 2,612 verse/comment units, and seven Canticle divisions with 168 units. One additional zero-item anonymous metrical preface supplies one verse group and sixty verse lines as edition paratext. Thus the 159 section count is one paratext DIV2 + 158 Rolle-work DIV2 divisions. The raw XML has four DIV1, 159 DIV2, 2,780 DIV3, 2,786 P, 1 LG, 60 L, 1,286 count-once apparatus NOTE1 elements, 578 PB, and 579 EPB elements. The verse metric records representation extent only and does not alter the work's prose form or one-item count.",
+    "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley", "evidence:metadata-umich-package"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:metrical-preface",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "preface",
+      "label": "Anonymous metrical preface from Laud Misc. 286",
+      "summary": "A sixty-line Middle English verse preface praising the Psalter and Rolle, associating the work with Margaret Kirkby, warning against Lollard interpolation, and ending Amen.",
+      "item_count": 0,
+      "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 1, "verse_lines": 60},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:ajf7399", "scheme": "XML structure", "value": "BODY/DIV1[1]/DIV2[1]/LG; 60 L elements; DLPS1-DLPS3; U-M seq. 23-24"},
+        {"lineage_entity_id": "edition:bramley:english-psalter-1884", "scheme": "printed/PDF pages", "value": "printed pp. 1-2 = Robarts PDF pp. 31-32"},
+        {"lineage_entity_id": "witness:bodleian:LaudMisc286", "scheme": "source scope", "value": "Bramley identifies Laud Misc. 286 as the source; exact source folio endpoints remain unresolved"},
+        {"lineage_entity_id": "facsimile:digital-bodleian:LaudMisc286-selected", "scheme": "IIIF selected surface", "value": "f. 1r, one-canvas public selection showing the opening of this preface"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley", "evidence:metadata-oxford-catalogs"],
+      "notes": ["item_count 0 prevents edition paratext from becoming a second cataloged work or changing the one prose item's form totals.", "Claims in this preface about Margaret Kirkby and an autograph copy remain qualified rather than promoted to confirmed provenance."]
+    },
+    {
+      "id": "part:english-psalter",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "English Psalter",
+      "summary": "The complete cataloged Rolle work: prose prologue, 150 Psalm divisions, and seven Canticle divisions with Latin lemmata, Middle English translations, and prose exposition.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:ajf7399", "scheme": "XML structure", "value": "BODY/DIV1[1]/DIV2[2] through BODY/DIV1[2]; 2,781 P elements including prologue, 2,612 Psalm units, and 168 Canticle units"},
+        {"lineage_entity_id": "edition:bramley:english-psalter-1884", "scheme": "printed/PDF pages", "value": "printed pp. 3-526 = Robarts PDF pp. 33-556"},
+        {"lineage_entity_id": "facsimile:umich:AJF7399.0001.001-page-images", "scheme": "U-M sequence", "value": "seq. 25-548"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley", "evidence:metadata-umich-package"]
+    },
+    {
+      "id": "part:rolle-prologue",
+      "parent_id": "part:english-psalter",
+      "sequence": 1,
+      "type": "prologue",
+      "label": "Rolle's prose prologue",
+      "summary": "A prose account of the Psalter's spiritual benefits, organization, subject, method, and Rolle's literalizing translation practice.",
+      "item_count": 0,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:ajf7399", "scheme": "XML structure", "value": "BODY/DIV1[1]/DIV2[2], one P, DLPS4-DLPS10, beginning U-M seq. 25"},
+        {"lineage_entity_id": "edition:bramley:english-psalter-1884", "scheme": "printed/PDF pages", "value": "begins printed p. 3 = PDF p. 33"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bramley"]
+    },
+    {
+      "id": "part:psalms",
+      "parent_id": "part:english-psalter",
+      "sequence": 2,
+      "type": "section",
+      "label": "Psalms 1-150",
+      "summary": "All 150 Psalms represented in 2,612 verse/comment units, followed by the Psalter explicit.",
+      "item_count": 0,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:ajf7399", "scheme": "XML structure", "value": "BODY/DIV1[1]/DIV2[3-152]; 2,612 DIV3/P units; U-M seq. through 515"},
+        {"lineage_entity_id": "edition:bramley:english-psalter-1884", "scheme": "printed/PDF pages", "value": "within printed pp. 3-492 = PDF pp. 33-522"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley"]
+    },
+    {
+      "id": "part:canticles",
+      "parent_id": "part:english-psalter",
+      "sequence": 3,
+      "type": "section",
+      "label": "Seven Canticles",
+      "summary": "Seven Canticle commentaries represented by 168 verse/comment units in division sizes 7, 15, 16, 23, 32, 65, and 10.",
+      "item_count": 0,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:ajf7399", "scheme": "XML structure", "value": "BODY/DIV1[2], seven DIV2 and 168 DIV3/P units; U-M seq. 516-548"},
+        {"lineage_entity_id": "edition:bramley:english-psalter-1884", "scheme": "printed/PDF pages", "value": "printed pp. 493-526 = PDF pp. 523-556"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml-computation", "evidence:metadata-bramley"]
+    }
+  ],
+  "related_works": [
+    {"id": "related:gallican-psalter", "title": "Gallican Psalter", "relation": "translation_of", "evidence_ids": ["evidence:metadata-kuczynski"], "notes": ["Kuczynski identifies Rolle's Latin base as the Gallican Psalter in the Vetus Latina tradition; the physical exemplar is not identified."]},
+    {"id": "related:peter-lombard-commentary", "title": "Peter Lombard's Commentaria in Psalmos", "relation": "related_to", "evidence_ids": ["evidence:metadata-kuczynski"], "notes": ["Kuczynski identifies Lombard's commentary as a primary exegetical source; no physical exemplar or complete source mapping is asserted here."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:ajf7399",
+    "manifest_path": "manifests/lineage/works/ajf7399.json",
+    "bindings": [
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "work:richard-rolle:english-psalter", "role": "related_source"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "artifact:general-corpus:ajf7399", "role": "repository_representation"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "encoding:umich-cme:AJF7399.0001.001", "role": "digital_encoding"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "edition:bramley:english-psalter-1884", "role": "source_edition"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "witness:university-college:MS64", "role": "source_witness"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "witness:sidney-sussex:MS89", "role": "source_witness"},
+      {"metadata_target": "work:ajf7399", "lineage_entity_id": "intermediary:bramley-transcript:sidney-sussex-89", "role": "related_source"},
+      {"metadata_target": "part:metrical-preface", "lineage_entity_id": "witness:bodleian:LaudMisc286", "role": "source_witness"},
+      {"metadata_target": "part:metrical-preface", "lineage_entity_id": "facsimile:digital-bodleian:LaudMisc286-selected", "role": "related_source"},
+      {"metadata_target": "part:english-psalter", "lineage_entity_id": "facsimile:umich:AJF7399.0001.001-page-images", "role": "related_source"},
+      {"metadata_target": "part:english-psalter", "lineage_entity_id": "facsimile:internet-archive:psalterorpsalmso00roll", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "General Corpus pinned XML for University of Michigan CME item AJF7399.0001.001.", "repository_path": "CME/source/CME_phase_1-2/ajf7399.xml", "summary": "Primary evidence for the encoded title, responsibilities, languages, work/prologue/Psalm/Canticle structure, page milestones, editorial notes, and 2006 U-M encoding statement.", "accessed_on": "2026-07-16", "sha256": "a17bc9be2e82dbec2da2494c792b0244bb6e278922829845fb53afca3d1cb7d5"},
+    {"id": "evidence:metadata-xml-computation", "type": "computational_inspection", "citation": "Reproducible xmllint/XPath and ID-sequence audit of ajf7399.xml.", "repository_path": "CME/source/CME_phase_1-2/ajf7399.xml", "summary": "Confirms four DIV1, 159 DIV2, 2,780 DIV3, 2,786 P, one LG/60 L, 1,286 count-once apparatus NOTE1 elements, unique contiguous DLPS1-DLPS1287 note IDs, 578 continuous PB, 579 EPB, and all count arithmetic used in the extent and part descriptions.", "accessed_on": "2026-07-16", "notes": ["P 2,786 = header 3 + text 2,783; text = omitted-front 1 + prose prologue 1 + Psalm units 2,612 + Canticle units 168 + omitted-glossary 1.", "The nested NOTE2 is counted inside the 1,286 apparatus NOTE1 containers rather than as a second independent apparatus item."]},
+    {"id": "evidence:metadata-bramley", "type": "digital_surrogate", "citation": "Richard Rolle, The Psalter, or Psalms of David and Certain Canticles, ed. H. R. Bramley (Oxford: Clarendon Press, 1884), complete Robarts scan.", "url": "https://archive.org/details/psalterorpsalmso00roll", "alternate_urls": ["https://archive.org/download/psalterorpsalmso00roll/psalterorpsalmso00roll.pdf"], "repository_path": "source-cache/ajf7399/bramley-1884-robarts-complete.pdf", "locator": "title PDF 9; introduction PDF 11-30; specimens PDF 28-29; preface PDF 31-32; Rolle work PDF 33-556; glossary PDF 557-586; advertisements PDF 587-618", "summary": "Primary edition evidence for title, publication, date conjecture, manuscript key/specimens, base and supply witnesses, editorial practices, and exact work/paratext boundaries.", "accessed_on": "2026-07-16", "sha256": "30677d2f3012b1ae282b89e3a1bf2e156023246e96b7c38053665e2ecfe6c5cc"},
+    {"id": "evidence:metadata-kuczynski", "type": "scholarly_source", "citation": "Michael P. Kuczynski, 'Henry Ramsden Bramley: His Life and Edition of Richard Rolle's English Psalter,' Roczniki Humanistyczne 72.5 special issue (2024), 67-86, DOI 10.18290/rh24725.4s.", "url": "https://czasopisma.tnkul.pl/index.php/rh/article/view/1993", "alternate_urls": ["https://czasopisma.tnkul.pl/index.php/rh/article/download/1993/1453", "https://doi.org/10.18290/rh24725.4s"], "repository_path": "source-cache/ajf7399/kuczynski-2024-bramley-english-psalter.pdf", "locator": "complete article; especially preferred-title note, manuscript census, editorial history, and Fig. 5 on PDF p. 17 / printed p. 83", "summary": "Current scholarship for the short title, work structure and sources, surviving original/revision manuscript census, absence of a modern critical edition, Bramley's S transcript and late switch to U, Skeat's role, U/S/L relationships, and selected U fols. 74v-75r image.", "accessed_on": "2026-07-16", "sha256": "0e358e552c97d028ef0ec739e7d6024e612a0637233e4ac7975717cf1481d12e"},
+    {"id": "evidence:metadata-oxford-catalogs", "type": "official_catalog", "citation": "Catalogue of Western Medieval Manuscripts in Oxford Libraries, exact current records for University College MSS 64 and 56 and nine Bodleian Rolle Psalter witnesses, pinned at medieval-mss commit 30eeba18af5a67e9585a2477b48a0847607228a3.", "url": "https://marco.ox.ac.uk/ark:29072/h7m900ns12dk", "alternate_urls": ["https://marco.ox.ac.uk/ark:29072/h7jq085h79fr", "https://marco.ox.ac.uk/ark:29072/x09s161655fj", "https://marco.ox.ac.uk/ark:29072/x0qj72p6699s", "https://marco.ox.ac.uk/ark:29072/x06h440t0663", "https://marco.ox.ac.uk/ark:29072/x0gf06g2744d", "https://marco.ox.ac.uk/ark:29072/x0st74cp88n8", "https://marco.ox.ac.uk/ark:29072/x02514nm62mr", "https://marco.ox.ac.uk/ark:29072/x05m60qs78h0", "https://marco.ox.ac.uk/ark:29072/x0m326m175pw", "https://marco.ox.ac.uk/ark:29072/x0t722h840xf"], "summary": "Official current evidence for exact shelfmarks, identities, dates, supports, places of witness production where cataloged, Rolle contents, and selected-image object links. Each pinned TEI expression is modeled separately in the lineage manifest.", "accessed_on": "2026-07-16"},
+    {"id": "evidence:metadata-james", "type": "digital_surrogate", "citation": "M. R. James, A Descriptive Catalogue of the Manuscripts in the Library of Sidney Sussex College, Cambridge (1895), MS 89 entry.", "url": "https://archive.org/details/b29003088", "alternate_urls": ["https://archive.org/download/b29003088/b29003088.pdf"], "repository_path": "source-cache/ajf7399/james-1895-sidney-sussex-manuscripts-catalog.pdf", "locator": "printed p. 73 = PDF p. 85", "summary": "Describes former A.5.3/current Sidney Sussex MS 89 as 188 vellum folios, double columns of 36 lines, fourteenth/fifteenth century, with Rolle's verse-for-verse English paraphrase and Latin in large letters.", "accessed_on": "2026-07-16", "sha256": "bbb04233699eb744a10186bdd05f201210db56d36ac2edd83a93a03744608ded"},
+    {"id": "evidence:metadata-breeze", "type": "scholarly_source", "citation": "Andrew Breeze, 'Richard Rolle's tagild, entangled: Welsh tagu, choke, tagell, snare,' SELIM 5.1 (1995), 132-136, DOI 10.17811/selim.5.1995.132-136.", "url": "https://reunido.uniovi.es/index.php/SELIM/article/view/13589", "alternate_urls": ["https://reunido.uniovi.es/index.php/SELIM/article/download/13589/12302/28875", "https://doi.org/10.17811/selim.5.1995.132-136"], "repository_path": "source-cache/ajf7399/breeze-1995-newcastle-th1678.pdf", "locator": "complete five-page article", "summary": "Independently confirms the exact current-form shelfmark Newcastle upon Tyne Public Library MS TH.1678 and its English Psalter/Canticles content and northern dialect through selected discussion and quotation.", "accessed_on": "2026-07-16", "sha256": "0db44762bcff1130cc6e9c173f014dbc441aeef1c9de40f2841ecb266131e3ff"},
+    {"id": "evidence:metadata-umich-package", "type": "digital_surrogate", "citation": "Internet Archive raw Michigan Book package for University of Michigan item AJF7399.0001.001.", "url": "https://archive.org/details/ajf7399.0001.001.umich.edu", "alternate_urls": ["https://archive.org/download/ajf7399.0001.001.umich.edu/ajf7399.0001.001.umich.edu_umichbook.zip", "https://quod.lib.umich.edu/c/cme/AJF7399.0001.001?view=toc"], "repository_path": "source-cache/ajf7399/umich-ajf7399-raw-book.zip", "locator": "578 contiguous TIFFs plus XML/text/header/pageview/log; work seq. 25-548; preface seq. 23-24", "summary": "Complete provider package inventory and exact image-to-edition boundaries. The package is complete relative to U-M's 578-image published sequence but physically partial relative to the unidentified bound scan carrier.", "accessed_on": "2026-07-16", "sha256": "d70f7c98286e7abbbc95bcd6ca52cf53694f5d5b4c60396a15fa18873f11d665"}
+  ],
+  "open_questions": [
+    {"id": "question:composition-date-place", "question": "When and where exactly was the English Psalter composed?", "status": "unresolved", "impact": "medium", "next_steps": ["Treat 1326-1327 only as Bramley's conjecture unless stronger current source analysis confirms it.", "Do not convert Rolle's Yorkshire association or Northern dialect into a normalized composition place."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski"]},
+    {"id": "question:margaret-kirkby-autograph", "question": "What independent evidence supports composition for Margaret Kirkby or survival of an autograph copy?", "status": "unresolved", "impact": "medium", "next_steps": ["Test the anonymous metrical preface and Bramley's discussion against current Rolle scholarship and codicology before asserting patronage or autograph status."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-kuczynski"]},
+    {"id": "question:laud-supply-folios", "question": "Which exact Laud Misc. 286 folio surfaces supply Bramley's six finite gaps?", "status": "no_public_source_found", "impact": "medium", "next_steps": ["Compare the six printed/XML endpoints with a complete authorized Laud Misc. 286 surrogate or the codex itself."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-bramley", "evidence:metadata-oxford-catalogs"]},
+    {"id": "question:complete-witness-surrogates", "question": "Can complete authorized physical surrogates and exact target folio maps be obtained for U, S, L and the other historically consulted witnesses?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Use the request routes in the lineage manifest and request complete physical objects before narrowing to target folios.", "Keep selected provider objects explicitly partial."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-oxford-catalogs", "evidence:metadata-james", "evidence:metadata-breeze"]}
+  ],
+  "notes": [
+    "The 150 Psalms and seven Canticles are divisions of one Rolle work, not 157 works.",
+    "The anonymous sixty-line metrical preface is zero-item edition paratext. Its lines remain in representation metrics but do not change the cataloged work's prose form.",
+    "No normalized composition place is asserted. Witness production places, dialect regions, holdings, and Rolle's Yorkshire associations remain distinct.",
+    "Bramley's 1884 edition is still the standard edition of the original version according to Kuczynski, but it is not a modern critical edition and represents a historically layered U/S/L editorial construction.",
+    "Kuczynski's census of 25 original-version manuscripts, including four fragments or extracts, and 19 revision manuscripts describes the wider tradition rather than the number of direct sources for ajf7399."
+  ]
+}
