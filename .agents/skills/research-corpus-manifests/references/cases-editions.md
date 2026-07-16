@@ -131,6 +131,13 @@ reproduction separately, then scope the encoding to the matter it actually
 includes. Do not assign the bound object's broad date range to every component
 or infer that a single present-day PDF proves simultaneous first publication.
 
+When separately issued appendices or plate sets remain movable when later
+bound, do not infer intellectual issue order from one carrier's leaf order.
+Establish issue order from wrappers, part title pages, contents notices, or
+unbound sets, and record each inspected binding's physical sequence separately.
+A bound copy can place appendices or plates earlier or later without changing
+their publication relationship.
+
 ## Later transcript and indirect readings: afw5744
 
 Van Vliet's partial seventeenth-century transcript preserves now-lost Ormulum
