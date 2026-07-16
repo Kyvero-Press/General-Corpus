@@ -18,6 +18,17 @@ edition full bibliographic facts. Give a witness its current shelfmark,
 repository, item/component catalog record, date, and supported locators.
 Preserve historical shelfmarks separately.
 
+Before minting an entity ID, search the existing work manifests for the exact
+same physical or digital object. Reuse the established ID when the layer is
+identical, then restate this work's own scoped relations, access, rights, and
+evidence; shared identity does not make those work-specific assertions
+interchangeable. Do not reuse one ID across a witness and its facsimile, across
+complete and selected provider presentations, across distinct scan carriers,
+or across separately cataloged present-day manuscript parts. If legacy
+manifests already contain competing aliases, prefer the most precise recent ID
+for new records and preserve the other identifiers as aliases or notes instead
+of creating a third spelling.
+
 When a catalog or older editor calls a witness “unique,” check current
 repertories for complete and fragmentary holdings. Record “unique complete
 copy” separately from surviving fragments; do not turn it into “only surviving
