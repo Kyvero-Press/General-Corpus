@@ -68,6 +68,15 @@ other feature unique to one collateral witness. Verify the encoded witness and
 scope the language to the witness or part that actually contains it before
 adding a work-level language facet.
 
+When reliable sources disagree over a diachronic label for the same
+transitional vernacular text, such as Old English versus early Middle English,
+do not encode both labels as though the work were bilingual. Choose one
+discovery facet from the text's date, repository context, and current
+scholarship; use appropriately qualified confidence, and preserve the alternate
+classification and linguistic base in evidence and notes. Add multiple
+language facets only when distinct linguistic material or genuine
+code-switching belongs to the cataloged work.
+
 Every code in `language_statements` is exposed through the work's summary and
 viewer language facets. When the cataloging subject is a medieval work, do not
 add modern editorial prose or apparatus quotations as work-level languages
