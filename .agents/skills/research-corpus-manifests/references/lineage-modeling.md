@@ -29,6 +29,15 @@ manifests already contain competing aliases, prefer the most precise recent ID
 for new records and preserve the other identifiers as aliases or notes instead
 of creating a third spelling.
 
+Make every `facsimile_of` edge describe surfaces that the reproduction actually
+shows. When a public selection depicts non-target leaves of a composite codex,
+point it to an entity for that whole physical carrier (or another component
+that really includes those leaves) and scope the target witness separately to
+its own folio or fragment. Do not point non-target images at a folio-specific
+target entity they do not reproduce. Keep the selection's cached copy
+`target_work_presence=absent` even though it belongs to the same composite
+carrier.
+
 If an edition announces an illustration or plate suite but checked carriers
 omit it, do not infer that the suite was never issued. Search later related or
 reissued carriers, tie any confirmed occurrence to the exact carrier that
@@ -76,6 +85,17 @@ access, or rights layer, use `catalog_description` provisionally and explain
 the workaround. Keep the study expression separate from both its delivery
 scan and the physical witness it discusses; verified zero target-text overlap
 must remain explicit in the local-copy presence record.
+
+When the current schema needs conceptual nodes for an abstract work or its
+recensions, `catalog_description` may be used provisionally only with an
+explicit note that the node is not a material catalog record or carrier. If a
+physical witness carries or attests a recension, a part-scoped `version_of`
+edge may serve as the schema proxy, but its scope notes must say that only the
+witness's textual component participates—the codex itself is not an abstract
+textual version. Likewise, when an edition presents material from multiple
+recensions through a scoped `contains` edge, say that `contains` is a proxy for
+presents or embodies, not literal custody, ownership, or enclosure of the
+conceptual entity.
 
 An access, rights, or evidence role does not make a modern research source part
 of the historical object's own citation graph. Do not invent a `cites` edge
