@@ -242,6 +242,17 @@ records its own path and, when the target is present, work-specific
 `target_work_presence=absent`. Do not reuse a merely similar scan or
 independently generated IIIF ZIP whose checksum differs.
 
+If a previously verified cache object suddenly fails its checksum or archive
+CRC without a size or modification-time change, freeze cache writes and
+distinguish transient page-cache corruption from durable file corruption
+before replacing anything. Where supported, compare the ordinary buffered
+hash with a direct-I/O read; if direct I/O still matches the recorded hash,
+evict the affected clean page-cache pages and rerun the complete checksum,
+archive, and member-inventory audit. If the on-disk read also fails, preserve
+the bad inode under `build/`, reconstruct and fully verify a new object, then
+atomically repoint every live hard-link path and re-audit all of them. Never
+patch a shared cache inode in place.
+
 For manuscript images, download the provider's complete physical manuscript
 when it is publicly obtainable and practical, even when the cataloged work
 occupies only part of it. `coverage=complete` means the cached file covers that
