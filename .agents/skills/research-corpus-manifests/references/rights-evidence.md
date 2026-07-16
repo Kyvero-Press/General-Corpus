@@ -64,7 +64,10 @@ complete facsimile of that witness.
 
 Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
-checks with `last_checked`.
+checks with `last_checked`. Open each official form from its authoritative
+landing page and verify its stated purpose; do not reuse a reading-room item
+request as a digitization order, or a reproduction order as a consultation
+route, merely because both are labeled “request form.”
 
 Do not reject an official bitstream solely because a `HEAD` response reports
 HTML or another generic content type. Some repository routes describe the
