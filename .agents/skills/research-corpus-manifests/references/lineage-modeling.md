@@ -134,6 +134,13 @@ passages, or another edition's text, create separately scoped relations for
 the evidenced ranges. Do not describe the composite result as a homogeneous
 transcription from whichever source supplies most pages.
 
+Audit every supplied run through its final token and every internal folio,
+page, or canvas milestone. Do not assign a passage only to the surface on
+which it opens when the source continues across later surfaces or changes
+within a paragraph. If the edition proves the exact textual endpoint but no
+source-side endpoint is available, retain the edition line or token boundary
+and state explicitly that the source folio endpoint remains unavailable.
+
 If a scribe copied an omitted passage later in the same manuscript and marked
 its intended insertion point, create separate scoped `transcribes` relations
 to that one witness: one for the main physical run and one for the displaced
