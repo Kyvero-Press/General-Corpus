@@ -13,7 +13,7 @@
     "lat",
     "eng"
   ],
-  "summary": "aha2688 is the repository copy of the University of Michigan OCR/Level-1 TEI representation of selected Middle English source texts from Richard Morris's Old English Homilies and Homiletic Treatises, First Series (EETS Original Series 29 and 34, completed 1868). Morris compiled twenty-nine numbered print containers from Lambeth Palace Library MS 487, Cotton MSS Nero A XIV and Vespasian A XXII, Bodleian MS Bodley 34, Royal MS 17 A XXVII, Cotton MS Titus D XVIII, and Egerton MS 613. George Parker supplied the Bodley transcript and Royal/Titus collations behind Morris's Sawles Warde text. The U-M encoding omits Morris's introduction, facing modern-English translations, much apparatus, Appendix II, and back matter; it includes Appendix I and Appendix III. It also merges printed XX and XXI into XML division N=20 and represents the complete Nero Orison only partially, beginning at Morris p. 201 / Nero f. 124v after omitting its heading and p. 200 / f. 124r opening. The retained 710-page Internet Archive PDF is complete as a scan carrier, but only PDF pp. 5–398 reproduce the target First Series; a separately bound Second Series begins at PDF p. 399 and is not part of the target edition. Egerton MS 613 has a complete 197-canvas public IIIF object, mapped to the target at ff. 7r–12v / canvases 39–50, but it is not bulk-cached because the manifest limits its public-domain statement geographically and BL terms require caution about systematic extraction. No complete public facsimile was verified for the other six manuscripts. An exact official April 2026 U.S. Copyright Office Circular 15A PDF is cached separately as supporting United States rights evidence; it contains no aha2688 text or images and is not part of the substantive transmission chain.",
+  "summary": "aha2688 is the repository copy of the University of Michigan OCR/Level-1 TEI representation of selected Middle English source texts from Richard Morris's Old English Homilies and Homiletic Treatises, First Series (EETS Original Series 29 and 34, completed 1868). Morris compiled twenty-nine numbered print containers from Lambeth Palace Library MS 487, Cotton MSS Nero A XIV and Vespasian A XXII, Bodleian MS Bodley 34, Royal MS 17 A XXVII, Cotton MS Titus D XVIII, and Egerton MS 613. George Parker supplied the Bodley transcript and Royal/Titus collations behind Morris's Sawles Warde text. The U-M encoding omits Morris's introduction, facing modern-English translations, much apparatus, Appendix II, and back matter; it includes Appendix I and Appendix III. It also merges printed XX and XXI into XML division N=20 and represents the complete Nero Orison only partially, beginning at Morris p. 201 / Nero f. 124v after omitting its heading and p. 200 / f. 124r opening. The retained 710-page Internet Archive PDF is complete as a scan carrier, but only PDF pp. 5–398 reproduce the target First Series; a separately bound Second Series begins at PDF p. 399 and is not part of the target edition. Exact Internet Archive item-metadata, printed-page-map, and scan-data sidecars are retained separately as target-absent supporting files. Egerton MS 613 has a complete 197-canvas public IIIF object, mapped to the target at ff. 7r–12v / canvases 39–50, but it is not bulk-cached because the manifest limits its public-domain statement geographically and BL terms require caution about systematic extraction. No complete public facsimile was verified for the other six manuscripts. An exact official April 2026 U.S. Copyright Office Circular 15A PDF is cached separately as supporting United States rights evidence; it contains no aha2688 text or images and is not part of the substantive transmission chain.",
   "entities": [
     {
       "id": "artifact:general-corpus:aha2688",
@@ -102,7 +102,7 @@
       },
       "reproduction_format": "Digitized printed-volume page images with OCR text layer",
       "survival_status": "extant",
-      "evidence_ids": ["evidence:morris-edition", "evidence:ia-metadata", "evidence:ia-page-map", "evidence:scan-cache-audit"]
+      "evidence_ids": ["evidence:morris-edition", "evidence:ia-metadata", "evidence:ia-page-map", "evidence:ia-scandata", "evidence:scan-cache-audit"]
     },
     {
       "id": "witness:lambeth:487",
@@ -358,7 +358,7 @@
         "object": {"kind": "whole", "description": "Complete First Series edition, including preliminaries, texts, translations, appendices, glossary, and back matter"},
         "notes": "Local-file coverage is complete for the retained 710-page carrier. PDF pp. 399–710 are a separately bound Second Series component and are not part of this facsimile_of relation or the target edition."
       },
-      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:morris-edition", "evidence:scan-cache-audit", "evidence:ia-metadata"]}
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:morris-edition", "evidence:scan-cache-audit", "evidence:ia-metadata", "evidence:ia-page-map", "evidence:ia-scandata"]}
     },
     {
       "id": "relation:morris-transcribes-lambeth",
@@ -625,12 +625,59 @@
             "Coverage is complete relative to the retained 710-page PDF/carrier, not a claim that both bound series belong to the target edition.",
             "First Series is complete on PDF pp. 5–398; Second Series preliminaries begin at PDF p. 399 and its title page is PDF p. 405."
           ]
+        },
+        {
+          "label": "Internet Archive item metadata for the Morris bound carrier",
+          "path": "source-cache/aha2688/morris-bound-scan-ia-metadata.json",
+          "source_url": "https://archive.org/metadata/oldenglishhomili00morruoft",
+          "sha256": "a89e34201f36c005cdb0b6224478319be63f06662cdc4612cbc13cc52851b3e2",
+          "bytes": 130978,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Supporting item/file metadata only; the target text is not present in this JSON object.",
+            "The metadata object exposes neither a rights field nor a licenseurl value."
+          ]
+        },
+        {
+          "label": "Internet Archive printed-page map for the Morris bound carrier",
+          "path": "source-cache/aha2688/morris-bound-scan-page-numbers.json",
+          "source_url": "https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft_page_numbers.json",
+          "sha256": "dbbe89e34f123119da3fd810da8518c0a36f76fd97d784c564ea9f15ac3c5b54",
+          "bytes": 121011,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Supporting page-number metadata only; the target text is not present in this JSON object.",
+            "Used with direct PDF inspection to verify printed-page mappings and the binding boundary."
+          ]
+        },
+        {
+          "label": "Internet Archive scan-data sidecar for the Morris bound carrier",
+          "path": "source-cache/aha2688/morris-bound-scan-scandata.xml",
+          "source_url": "https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft_scandata.xml",
+          "sha256": "01f621d267175b92bf27e5ffae71bfc2c6cd177e9fff4ecf851537a22e56ca94",
+          "bytes": 373751,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Supporting leaf/page-structure metadata only; the target text is not present in this XML object."
+          ]
         }
       ],
       "cost": "free",
       "format": "710-page PDF",
       "last_checked": "2026-07-16",
-      "evidence_ids": ["evidence:ia-metadata", "evidence:ia-page-map", "evidence:scan-cache-audit", "evidence:morris-edition"]
+      "evidence_ids": ["evidence:ia-metadata", "evidence:ia-page-map", "evidence:ia-scandata", "evidence:scan-cache-audit", "evidence:morris-edition"]
     },
     {
       "id": "access:lambeth-enquiry",
@@ -1229,8 +1276,10 @@
       "type": "official_webpage",
       "citation": "Internet Archive metadata for oldenglishhomili00morruoft.",
       "url": "https://archive.org/metadata/oldenglishhomili00morruoft",
+      "repository_path": "source-cache/aha2688/morris-bound-scan-ia-metadata.json",
       "summary": "Provider metadata identifies the 1868 title, Robarts/University of Toronto contributor, and the exact PDF file size of 39,816,320 bytes. The rights, licenseurl, and possible_copyright_status fields are absent, so no scan-layer license is inferred.",
-      "accessed_on": "2026-07-16"
+      "accessed_on": "2026-07-16",
+      "sha256": "a89e34201f36c005cdb0b6224478319be63f06662cdc4612cbc13cc52851b3e2"
     },
     {
       "id": "evidence:scan-cache-audit",
@@ -1245,11 +1294,22 @@
     {
       "id": "evidence:ia-page-map",
       "type": "official_webpage",
-      "citation": "Internet Archive printed-page map and scan-data sidecar for oldenglishhomili00morruoft.",
+      "citation": "Internet Archive printed-page map for oldenglishhomili00morruoft.",
       "url": "https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft_page_numbers.json",
-      "alternate_urls": ["https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft_scandata.xml"],
-      "summary": "Provider sidecars used with direct PDF text inspection to verify the exact printed-page-to-PDF mappings, the two-page offset before printed p. 5, and the First/Second Series binding boundary. The sidecars are linked but not cached under aha2688.",
-      "accessed_on": "2026-07-16"
+      "repository_path": "source-cache/aha2688/morris-bound-scan-page-numbers.json",
+      "summary": "Provider page-number data used with direct PDF text inspection to verify the exact printed-page-to-PDF mappings, the two-page offset before printed p. 5, and the First/Second Series binding boundary.",
+      "accessed_on": "2026-07-16",
+      "sha256": "dbbe89e34f123119da3fd810da8518c0a36f76fd97d784c564ea9f15ac3c5b54"
+    },
+    {
+      "id": "evidence:ia-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scan-data sidecar for oldenglishhomili00morruoft.",
+      "url": "https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft_scandata.xml",
+      "repository_path": "source-cache/aha2688/morris-bound-scan-scandata.xml",
+      "summary": "Provider leaf and page-structure metadata used with the page-number map and direct PDF inspection to verify carrier structure and the First/Second Series binding boundary.",
+      "accessed_on": "2026-07-16",
+      "sha256": "01f621d267175b92bf27e5ffae71bfc2c6cd177e9fff4ecf851537a22e56ca94"
     },
     {
       "id": "evidence:lambeth-description",
@@ -1460,6 +1520,6 @@
     "Physical manuscripts, medieval textual works, nineteenth-century editorial products, digital facsimiles, U-M encoding, and repository artifact are modeled as separate layers.",
     "Morris legacy foliation for Cotton Vespasian A XXII is two folios higher than the current BL foliation: Morris legacy ff. 54r–59v = current BL ff. 52r–57v; current = legacy − 2.",
     "No current manuscript image was inferred from a legacy catalog statement or inaccessible viewer. Whole-object facsimile extent is distinguished from work presence and exact work loci.",
-    "The ignored cache contains two verified complete source objects: the 710-page Morris bound carrier with aha2688 present and the four-page USCO Circular 15A with target_work_presence absent. The circular supports rights analysis only and does not alter the substantive work chain."
+    "The ignored cache contains five verified files: the 710-page Morris bound carrier with aha2688 present; target-absent Internet Archive item-metadata, printed-page-map, and scan-data sidecars; and the target-absent four-page USCO Circular 15A. The circular supports rights analysis only and does not alter the substantive work chain."
   ]
 }
