@@ -1,0 +1,2716 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:ajd8171",
+  "work_id": "ajd8171",
+  "title": "Sammlung altenglischer Legenden",
+  "primary_subject": "artifact:general-corpus:ajd8171",
+  "record_status": "reviewed",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "summary": "The pinned General Corpus XML serializes U-M electronic item AJD8171.0001.001, an uncorrected-OCR/TEI representation of Carl Horstmann's 1878 eighteen-component anthology. Horstmann transcribed or collated fifteen physical manuscript witnesses, sometimes through Laing's print or working transcripts by Lucy Toulmin Smith, Eugen Kölbing, and F. J. Furnivall. Four components print two version streams. This graph keeps the unavailable sixteenth manuscript reference (CUL Ii.4.9), U-M page-image production, the collateral Boston Public Library scan, complete manuscript facsimiles, detached Auchinleck fragments, catalogs, rights statements, and repository artifact distinct.",
+  "languages": ["enm", "deu", "lat"],
+  "review_notes": [
+    "The cataloging subject is the complete 1878 edited selection: eighteen count-bearing components and twenty-two serialized streams.",
+    "No abstract-work entity is minted for each component; component identity and metrics live in work metadata, while relations are scoped to component labels and exact ranges.",
+    "Direct and mediated editorial routes are separated. No direct Horstmann-to-codex edge is asserted where Laing or a working transcript supplied the reading.",
+    "CUL Ii.4.9 is retained only to resolve the printed Cbr. Ji IV, 8 reference and is explicitly excluded from the 1878 source chain because Horstmann says it was unavailable.",
+    "Every cached object states target-work presence. The eight approved representation groups account for ten present local copies; the other twenty-seven local copies are absent and have no work_portion.",
+    "The older Auchinleck project is a 701-image reconstruction spanning the NLS codex and detached Edinburgh fragments, not one fictional physical carrier.",
+    "No death date is asserted for the correct Carl Horstmann authority."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:ajd8171",
+      "type": "repository_artifact",
+      "label": "General Corpus repository artifact ajd8171.xml",
+      "description": "The pinned XML file represented by this manifest.",
+      "identifiers": [
+        {"scheme":"General Corpus work_id","value":"ajd8171"},
+        {"scheme":"Git blob","value":"06a231b97a3afc9188d440bd3db71b90a3aabee2"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/ajd8171.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "06a231b97a3afc9188d440bd3db71b90a3aabee2",
+        "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:xml-structure", "evidence:cme-license"]
+    },
+    {
+      "id": "encoding:umich:AJD8171.0001.001",
+      "type": "digital_encoding",
+      "label": "U-M Corpus of Middle English Prose and Verse item AJD8171.0001.001",
+      "description": "The 2006 electronic item described as uncorrected OCR with no content editing, TEI Libraries Level 1 encoding, and links to 234 600-dpi TIFF G4 page images.",
+      "identifiers": [
+        {"scheme":"U-M IDNO","value":"AJD8171.0001.001","uri":"https://name.umdl.umich.edu/AJD8171.0001.001"}
+      ],
+      "creator_ids": ["agent:university-michigan-library"],
+      "date_statements": [
+        {"label":"Electronic encoding","value":"2006","normalized":"2006","certainty":"high","evidence_ids":["evidence:repository-xml","evidence:umich-item"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"]
+    },
+    {
+      "id": "facsimile:umich:AJD8171-page-images",
+      "type": "facsimile",
+      "label": "U-M AJD8171 historical 234-image page-image delivery",
+      "description": "The item-specific XML records 234 linked 600-dpi TIFF G4 page images. The physical copy used and a currently auditable complete image route were not identified.",
+      "creator_ids": ["agent:university-michigan-library"],
+      "reproduction_format": "234 600-dpi TIFF G4 page images recorded in the 2006 item header",
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"]
+    },
+    {
+      "id": "edition:horstmann:altenglische-legenden-1878",
+      "type": "scholarly_edition",
+      "label": "Horstmann, Sammlung altenglischer Legenden (1878)",
+      "description": "The immediate scholarly source: seven Vernon-derived components followed by eleven individual legends and an appendix, with German apparatus and Latin comparison material.",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [
+        {"label":"Publication","value":"1878","normalized":"1878","certainty":"high","evidence_ids":["evidence:horstmann-edition"]}
+      ],
+      "bibliographic": {
+        "citation": "Carl Horstmann, ed., Sammlung altenglischer Legenden, grösstentheils zum ersten Male herausgegeben (Heilbronn: Gebr. Henninger, 1878).",
+        "title": "Sammlung altenglischer Legenden",
+        "publisher": "Gebr. Henninger",
+        "publication_place": "Heilbronn",
+        "date": "1878",
+        "pages": "2 preliminary leaves, 227, [1] pages",
+        "languages": ["enm", "deu", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:source-mapping"]
+    },
+    {
+      "id": "facsimile:ia-bpl:horstmann-1878",
+      "type": "facsimile",
+      "label": "Internet Archive scan of the Boston Public Library Horstmann 1878 carrier",
+      "description": "A 2010 scan of a Boston Public Library copy. It is collateral evidence and is not identified as the physical carrier behind U-M's page images.",
+      "creator_ids": ["agent:internet-archive", "agent:boston-public-library"],
+      "identifiers": [{"scheme":"Internet Archive","value":"sammlungaltengli1878hors","uri":"https://archive.org/details/sammlungaltengli1878hors"}],
+      "reproduction_format": "PDF, OCR, scandata, and complete JP2 image ZIP",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-ia", "evidence:horstmann-edition"]
+    },
+    {
+      "id": "edition:graesse:legenda-aurea-1846",
+      "type": "scholarly_edition",
+      "label": "Grässe, Legenda aurea (1846)",
+      "description": "The Latin comparison edition Horstmann cites for the seven Part I chapters; it is comparison material, not the Middle English copy-text.",
+      "creator_ids": ["agent:theodor-graesse", "agent:jacobus-de-voragine"],
+      "date_statements": [{"label":"Publication","value":"1846","normalized":"1846","certainty":"high","evidence_ids":["evidence:graesse-edition"]}],
+      "bibliographic": {
+        "citation": "Theodor Grässe, ed., Jacobi a Voragine Legenda aurea, vulgo Historia Lombardica dicta (1846).",
+        "title": "Legenda aurea, vulgo Historia Lombardica dicta",
+        "date": "1846",
+        "languages": ["lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:graesse-edition", "evidence:graesse-ia-metadata", "evidence:source-mapping"]
+    },
+    {
+      "id": "edition:laing:penniworth-witte-1857",
+      "type": "scholarly_edition",
+      "label": "Laing, A Penni Worth of Witte (1857)",
+      "description": "The printed intermediary from which Horstmann took Canticum de Creatione Auchinleck-version lines 1–352.",
+      "creator_ids": ["agent:david-laing"],
+      "date_statements": [{"label":"Publication","value":"1857","normalized":"1857","certainty":"high","evidence_ids":["evidence:laing-edition"]}],
+      "bibliographic": {
+        "citation": "David Laing, ed., A Penni Worth of Witte: Florice and Blauncheflour and Other Pieces of Ancient English Poetry, Selected from the Auchinleck Manuscript (Edinburgh: Abbotsford Club, 1857).",
+        "title": "A Penni Worth of Witte",
+        "publication_place": "Edinburgh",
+        "date": "1857",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:laing-edition", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bodleian:Vernon",
+      "type": "manuscript_witness",
+      "label": "Vernon Manuscript",
+      "alternate_labels": ["Bodleian MS Eng. poet. a. 1"],
+      "description": "The principal Part I witness and the witness for Eufrosyne, the Christian-Jewish disputation, portions of Roberd of Cisyle, and the Adam-and-Eve appendix.",
+      "identifiers": [{"scheme":"Bodleian ARK","value":"ark:29072/x0zs25x773j3","uri":"https://marco.ox.ac.uk/ark:29072/x0zs25x773j3"}],
+      "date_statements": [{"label":"Manuscript production","value":"1381–1400, commonly c. 1390","certainty":"high","evidence_ids":["evidence:vernon-catalog"]}],
+      "holding": {"institution_id":"agent:bodleian-libraries","shelfmark":"MS. Eng. poet. a. 1","historical_designations":["Vernon MS"],"catalog_url":"https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-catalog", "evidence:vernon-iiif", "evidence:source-mapping"]
+    },
+    {
+      "id": "facsimile:bodleian:Vernon",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian facsimile of the Vernon Manuscript",
+      "identifiers": [{"scheme":"Digital Bodleian UUID","value":"52f0a31a-1478-40e4-b05b-fddb1ad076ff","uri":"https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"}],
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "710 IIIF canvases; complete private 1600-pixel access bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-iiif", "evidence:bodleian-terms"]
+    },
+    {
+      "id": "witness:bl:Harley-3954",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 3954",
+      "description": "Source of Kindheit Jesu version a, ff. 70r–74r.",
+      "date_statements": [{"label":"Manuscript production","value":"First half of the fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 3954","catalog_url":"https://searcharchives.bl.uk/catalog/040-002049791"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:harley3954-iiif", "evidence:source-mapping"]
+    },
+    {
+      "id": "facsimile:bl:Harley-3954",
+      "type": "facsimile",
+      "label": "British Library complete published facsimile of Harley MS 3954",
+      "creator_ids": ["agent:british-library"],
+      "reproduction_format": "269 IIIF canvases; complete private 1600-pixel access bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:harley3954-iiif"]
+    },
+    {
+      "id": "witness:bl:Harley-2399",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2399",
+      "description": "Composite manuscript whose fifth part, copied at Bodmin by Johannes Arcuarius, supplies Kindheit Jesu version b at ff. 47v–61r.",
+      "date_statements": [{"label":"Relevant part","value":"Second half of the fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 2399","catalog_url":"https://searcharchives.bl.uk/catalog/040-002048230"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:trinity-oxford:MS-57",
+      "type": "manuscript_witness",
+      "label": "Trinity College Oxford MS 57",
+      "description": "Source of the Canticum version at ff. 157v–165r and a principal source for Roberd of Cisyle at ff. 165r–167r.",
+      "date_statements": [{"label":"Manuscript production","value":"Fourth quarter of the fourteenth century, after 1375","certainty":"high","evidence_ids":["evidence:trinity57"]}],
+      "holding": {"institution_id":"agent:trinity-college-oxford","shelfmark":"MS 57","historical_designations":["Horstmann Canticum start: fol. 156"],"catalog_url":"https://medieval.bodleian.ox.ac.uk/pdfs/trinity/MS_57.pdf","notes":"Current catalog foliation places Canticum at 157v–165r and Roberd at 165r–167r."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity57", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:eul:MS-218",
+      "type": "manuscript_witness",
+      "label": "University of Edinburgh MS 218, detached Auchinleck fragment",
+      "description": "Two detached folios preserving Canticum Auchinleck-version lines 1–352.",
+      "date_statements": [{"label":"Manuscript production","value":"1330s","certainty":"high","evidence_ids":["evidence:eul-ms218"]}],
+      "holding": {"institution_id":"agent:university-edinburgh","shelfmark":"MS 218","historical_designations":["Laing private collection fragment"],"catalog_url":"https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177097"},
+      "physical_description": {"extent":"Two detached folios relevant here, ff. 1r–2v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eul-ms218", "evidence:laing-edition", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:nls:Adv-MS-19-2-1",
+      "type": "manuscript_witness",
+      "label": "Auchinleck Manuscript",
+      "alternate_labels": ["NLS Advocates MS 19.2.1"],
+      "description": "The main surviving Auchinleck codex; target portions are Canticum ff. 14r–16v and Magdalena ff. 62r–65v.",
+      "date_statements": [{"label":"Manuscript production","value":"1330s","certainty":"high","evidence_ids":["evidence:nls-catalog"]}],
+      "holding": {"institution_id":"agent:national-library-scotland","shelfmark":"Adv. MS 19.2.1","historical_designations":["Edinburgh Advocates' Library MS 19.2.1"],"catalog_url":"https://manuscripts.nls.uk/repositories/2/resources/19334"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-catalog", "evidence:nls-current-iiif", "evidence:nls-old-project", "evidence:source-mapping"]
+    },
+    {
+      "id": "facsimile:nls:auchinleck-current",
+      "type": "facsimile",
+      "label": "Current NLS complete IIIF facsimile of Adv. MS 19.2.1",
+      "creator_ids": ["agent:national-library-scotland"],
+      "identifiers": [{"scheme":"NLS digital object","value":"233337262","uri":"https://digital.nls.uk/233337262"}],
+      "reproduction_format": "734 IIIF canvases; complete private 1600-pixel access bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-current-iiif"]
+    },
+    {
+      "id": "facsimile:nls:auchinleck-project",
+      "type": "facsimile",
+      "label": "NLS Auchinleck Manuscript project reconstruction",
+      "description": "A 701-image published reconstruction combining the NLS codex with detached fragments held elsewhere. It is project-complete, not one physical witness.",
+      "creator_ids": ["agent:national-library-scotland"],
+      "reproduction_format": "701-image published project inventory",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:nls-old-project", "evidence:nls-old-terms"]
+    },
+    {
+      "id": "witness:bodleian:Laud-Misc-108",
+      "type": "manuscript_witness",
+      "label": "Bodleian MS Laud Misc. 108",
+      "description": "Source of the first Magdalena version at ff. 190r–197r.",
+      "date_statements": [{"label":"Manuscript production","value":"c. 1300, with additions","certainty":"high","evidence_ids":["evidence:laud-catalog"]}],
+      "holding": {"institution_id":"agent:bodleian-libraries","shelfmark":"MS. Laud Misc. 108","catalog_url":"https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:laud-catalog", "evidence:laud-iiif", "evidence:source-mapping"]
+    },
+    {
+      "id": "facsimile:bodleian:Laud-Misc-108",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian facsimile of MS Laud Misc. 108",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "identifiers": [{"scheme":"Digital Bodleian UUID","value":"c5438c30-71dd-4cec-ac59-eb1e5a11f2a4","uri":"https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/"}],
+      "reproduction_format": "496 IIIF canvases; complete private 1600-pixel access bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:laud-iiif", "evidence:bodleian-terms"]
+    },
+    {
+      "id": "witness:bl:Harley-2253",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2253",
+      "description": "Part II supplies Marina at ff. 64v–65v.",
+      "date_statements": [{"label":"Relevant part","value":"c. 1330–1340","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 2253","catalog_url":"https://searcharchives.bl.uk/catalog/041-002352751"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bl:Arundel-168",
+      "type": "manuscript_witness",
+      "label": "British Library Arundel MS 168",
+      "description": "Source of Cristine at ff. 2r–4v and a collated/supplying witness for Dorothe at ff. 5r–7r.",
+      "date_statements": [{"label":"Manuscript production","value":"Fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Arundel MS 168","catalog_url":"https://searcharchives.bl.uk/catalog/040-002039451"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"],
+      "notes": ["Cristine's f. 4v endpoint is inferred from Dorothe's cataloged start at f. 5r and remains explicitly qualified."]
+    },
+    {
+      "id": "witness:bl:Harley-5272",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 5272",
+      "description": "Principal Dorothe witness at ff. 99r–104v.",
+      "date_statements": [{"label":"Manuscript production","value":"Fourth quarter of the fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 5272","catalog_url":"https://searcharchives.bl.uk/catalog/040-002051117"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bl:Harley-2382",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2382",
+      "description": "Source of Erasmus version a at ff. 109r–111r.",
+      "date_statements": [{"label":"Manuscript production","value":"Fourth quarter of the fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 2382","catalog_url":"https://searcharchives.bl.uk/catalog/040-002048213"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bl:Add-36983",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 36983",
+      "alternate_labels": ["Bedford manuscript"],
+      "description": "Source of Erasmus version b at ff. 279v–280v.",
+      "date_statements": [{"label":"Manuscript production","value":"Mid-fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 36983","historical_designations":["Bedford MS"],"catalog_url":"https://searcharchives.bl.uk/catalog/032-002055502"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bl:Harley-1701",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 1701",
+      "description": "Roberd of Cisyle collation witness at ff. 92r–95r.",
+      "date_statements": [{"label":"Manuscript production","value":"c. 1400","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 1701","catalog_url":"https://searcharchives.bl.uk/catalog/040-002047532"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:bl:Harley-525",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 525",
+      "description": "Roberd of Cisyle collation witness at ff. 35r–43v.",
+      "date_statements": [{"label":"Manuscript production","value":"Second half of the fifteenth century","certainty":"high","evidence_ids":["evidence:bl-catalogs"]}],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Harley MS 525","catalog_url":"https://searcharchives.bl.uk/catalog/040-002046354"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:cul:Ff-2-38",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ff.2.38",
+      "description": "Occasional Roberd of Cisyle collation witness at ff. 254r–257v.",
+      "holding": {"institution_id":"agent:cambridge-university-library","shelfmark":"MS Ff.2.38","notes":"The current public evidence used is the Database of Middle English Romance manuscript record, not a CUL item-level digital facsimile."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-ff238", "evidence:source-mapping"]
+    },
+    {
+      "id": "witness:cul:Ii-4-9",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ii.4.9",
+      "alternate_labels": ["Horstmann's Cbr. Ji IV, 8 reference, probably this manuscript"],
+      "description": "Contains King Robert of Sicily at ff. 87v–93v, but Horstmann states that the cited copy was unavailable and did not use it in the 1878 text.",
+      "date_statements": [{"label":"Manuscript production","value":"Fifteenth century","certainty":"high","evidence_ids":["evidence:cul-ii49-james"]}],
+      "holding": {"institution_id":"agent:cambridge-university-library","shelfmark":"MS Ii.4.9","historical_designations":["Cbr. Ji IV, 8 in Horstmann 1878"],"notes":"No current item-level CUL catalog or facsimile was verified; the separately modeled repository-hosted James transcription is a historical catalog description."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-ii49-james", "evidence:source-mapping"],
+      "notes": ["No source relation connects this witness to the 1878 edition."]
+    },
+    {
+      "id": "catalog:cambridge:james-ii-4-9",
+      "type": "catalog_description",
+      "label": "M. R. James description of CUL MS Ii.4.9",
+      "description": "An unfinished historical manuscript description transcribed by Jayne Ringrose and published by Cambridge University Library; used to reconcile the shelfmark and folio range, not as target text.",
+      "creator_ids": ["agent:mr-james", "agent:jayne-ringrose"],
+      "bibliographic": {"citation":"M. R. James, unpublished description of Cambridge University Library MS Ii.4.9, transcription by Jayne Ringrose, Cambridge University Library repository.","title":"Unpublished description of Cambridge University Library MS Ii.4.9","languages":["eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-ii49-james"]
+    },
+    {
+      "id": "catalog:dnb:gnd-1153444186",
+      "type": "catalog_description",
+      "label": "GND authority record 1153444186 for Carl Horstmann",
+      "description": "The Deutsche Nationalbibliothek linked-data authority record used to identify the editor and distinguish him from the namesake ophthalmologist.",
+      "identifiers": [{"scheme":"GND","value":"1153444186","uri":"https://d-nb.info/gnd/1153444186"}],
+      "creator_ids": ["agent:deutsche-nationalbibliothek"],
+      "bibliographic": {"citation":"Deutsche Nationalbibliothek, GND 1153444186, Horstmann, Carl.","title":"GND 1153444186: Horstmann, Carl","languages":["deu"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-authority"]
+    },
+    {
+      "id": "catalog:usco:circular-15a",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A, Duration of Copyright",
+      "description": "The official April 2026 Copyright Office circular used for conservative U.S.-jurisdiction duration conclusions; it is supporting legal guidance, not target content.",
+      "creator_ids": ["agent:us-copyright-office"],
+      "date_statements": [{"label":"PDF revision","value":"April 2026","normalized":"2026-04","certainty":"high","evidence_ids":["evidence:us-copyright-duration"]}],
+      "bibliographic": {"citation":"U.S. Copyright Office, Circular 15A, Duration of Copyright, revised April 2026.","title":"Circular 15A: Duration of Copyright","date":"2026","languages":["eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:us-copyright-duration"]
+    },
+    {
+      "id": "transcript:lucy-toulmin-smith:auchinleck",
+      "type": "manuscript_witness",
+      "label": "Lucy Toulmin Smith working transcripts of Auchinleck fragments",
+      "description": "Modern handwritten working copies used by Horstmann for Canticum lines 353–end and the second Magdalena version. The schema type manuscript_witness is provisional for a research transcript, not a claim that it is medieval.",
+      "creator_ids": ["agent:lucy-toulmin-smith"],
+      "date_statements": [{"label":"Production","value":"Before publication in 1878","certainty":"high","evidence_ids":["evidence:source-mapping"]}],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:source-mapping"],
+      "notes": ["Current repository and survival status were not established."]
+    },
+    {
+      "id": "transcript:kolbing:magdalena",
+      "type": "manuscript_witness",
+      "label": "Eugen Kölbing working transcript of the Auchinleck Magdalena",
+      "description": "A modern working transcript Horstmann says he consulted for the second Magdalena version. The schema type manuscript_witness is provisional for a research transcript.",
+      "creator_ids": ["agent:eugen-kolbing"],
+      "date_statements": [{"label":"Production","value":"Before publication in 1878","certainty":"high","evidence_ids":["evidence:source-mapping"]}],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:source-mapping"],
+      "notes": ["Current repository and survival status were not established."]
+    },
+    {
+      "id": "transcript:furnivall:adam-eve",
+      "type": "manuscript_witness",
+      "label": "F. J. Furnivall working transcript of the Vernon Adam-and-Eve text",
+      "description": "The modern working transcript through which Horstmann received the appendix at Vernon f. 393r–v. The schema type manuscript_witness is provisional for a research transcript.",
+      "creator_ids": ["agent:frederick-james-furnivall"],
+      "date_statements": [{"label":"Production","value":"Before publication in 1878","certainty":"high","evidence_ids":["evidence:source-mapping"]}],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:source-mapping"],
+      "notes": ["Current repository and survival status were not established."]
+    }
+  ],
+  "agents": [
+    {"id":"agent:kyvero-press","type":"organization","name":"Kyvero Press","urls":["https://github.com/Kyvero-Press/CME"]},
+    {"id":"agent:university-michigan-library","type":"organization","name":"University of Michigan Library","urls":["https://quod.lib.umich.edu/c/cme"]},
+    {"id":"agent:carl-horstmann","type":"person","name":"Carl Horstmann","dates":"born 1851; death date unverified","identifiers":[{"scheme":"GND","value":"1153444186","uri":"https://d-nb.info/gnd/1153444186"}],"evidence_ids":["evidence:horstmann-authority"],"notes":["Not the ophthalmologist Carl Horstmann, GND 117531812, who died in 1912."]},
+    {"id":"agent:boston-public-library","type":"organization","name":"Boston Public Library"},
+    {"id":"agent:internet-archive","type":"organization","name":"Internet Archive","urls":["https://archive.org/"]},
+    {"id":"agent:theodor-graesse","type":"person","name":"Johann Georg Theodor Grässe"},
+    {"id":"agent:jacobus-de-voragine","type":"person","name":"Jacobus de Voragine","alternate_names":["Jacopo da Varazze"]},
+    {"id":"agent:david-laing","type":"person","name":"David Laing"},
+    {"id":"agent:bodleian-libraries","type":"organization","name":"Bodleian Libraries, University of Oxford","urls":["https://www.bodleian.ox.ac.uk/"]},
+    {"id":"agent:british-library","type":"organization","name":"British Library","urls":["https://www.bl.uk/"]},
+    {"id":"agent:trinity-college-oxford","type":"organization","name":"Trinity College, Oxford"},
+    {"id":"agent:university-edinburgh","type":"organization","name":"University of Edinburgh Library"},
+    {"id":"agent:national-library-scotland","type":"organization","name":"National Library of Scotland","urls":["https://www.nls.uk/"]},
+    {"id":"agent:cambridge-university-library","type":"organization","name":"Cambridge University Library"},
+    {"id":"agent:lucy-toulmin-smith","type":"person","name":"Lucy Toulmin Smith"},
+    {"id":"agent:eugen-kolbing","type":"person","name":"Eugen Kölbing"},
+    {"id":"agent:frederick-james-furnivall","type":"person","name":"Frederick James Furnivall"},
+    {"id":"agent:mr-james","type":"person","name":"M. R. James","alternate_names":["Montague Rhodes James"]},
+    {"id":"agent:jayne-ringrose","type":"person","name":"Jayne Ringrose"},
+    {"id":"agent:deutsche-nationalbibliothek","type":"organization","name":"Deutsche Nationalbibliothek","urls":["https://www.dnb.de/"]},
+    {"id":"agent:us-copyright-office","type":"organization","name":"United States Copyright Office","urls":["https://www.copyright.gov/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:ajd8171",
+      "object": "encoding:umich:AJD8171.0001.001",
+      "scope": {
+        "subject": {"kind":"whole","description":"Pinned General Corpus XML file"},
+        "object": {"kind":"whole","description":"U-M electronic item AJD8171.0001.001"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:repository-xml"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-horstmann",
+      "type": "encoded_from",
+      "subject": "encoding:umich:AJD8171.0001.001",
+      "object": "edition:horstmann:altenglische-legenden-1878",
+      "scope": {
+        "subject": {"kind":"whole","description":"Complete electronic text, including dedication and contents as representation-only matter"},
+        "object": {"kind":"whole","description":"Complete 1878 edition: title and dedication, printed pages 1–227, and unnumbered contents page"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:repository-xml","evidence:horstmann-edition"]}
+    },
+    {
+      "id": "relation:umich-contains-page-images",
+      "type": "contains",
+      "subject": "encoding:umich:AJD8171.0001.001",
+      "object": "facsimile:umich:AJD8171-page-images",
+      "scope": {
+        "subject": {"kind":"whole","description":"Electronic item header and image links"},
+        "object": {"kind":"whole","description":"234 historical U-M page-image links recorded by the item"},
+        "notes": "This is a representation relationship, not evidence that U-M used the Boston Public Library carrier."
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:repository-xml","evidence:umich-item"]}
+    },
+    {
+      "id": "relation:umich-page-images-facsimile-of-horstmann",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:AJD8171-page-images",
+      "object": "edition:horstmann:altenglische-legenden-1878",
+      "scope": {
+        "subject": {"kind":"whole","description":"All 234 historical U-M TIFF page-image surfaces recorded in the XML","locators":["PB SEQ 00000001–00000234"]},
+        "object": {"kind":"whole","description":"Edition surfaces represented by the PB sequence","locators":["SEQ 00000001–00000006: title, dedication, blank/verso, and unnumbered opening matter","SEQ 00000007–00000233: printed pages [1]–227","SEQ 00000234: unnumbered contents page"]},
+        "notes": "This relation identifies the represented 1878 edition surfaces only. The U-M image carrier remains unknown and is not identified with the Boston Public Library copy."
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:repository-xml","evidence:xml-structure"]}
+    },
+    {
+      "id": "relation:bpl-facsimile-of-horstmann",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia-bpl:horstmann-1878",
+      "object": "edition:horstmann:altenglische-legenden-1878",
+      "scope": {
+        "subject": {"kind":"part","description":"Scanned edition surfaces containing the target","locators":["scan leaves 3–5","scan leaves 7–234"]},
+        "object": {"kind":"whole","description":"Title and dedication leaves, printed pages 1–227, and unnumbered contents page"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-ia","evidence:horstmann-edition"]}
+    },
+    {
+      "id": "relation:horstmann-consulted-graesse-part-i",
+      "type": "consulted",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "edition:graesse:legenda-aurea-1846",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Latin comparison material for all seven Part I legends","locators":["Paula","Ambrose","Maiden of Antioch","Theodora","Bernard","Augustine","Savinian and Savina"]},
+        "object": {"kind":"selected_passages","description":"Corresponding Legenda aurea chapters cited by Horstmann"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:graesse-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:horstmann-transcribes-vernon-part-i",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"part","description":"Part I, seven count-bearing legend components","locators":["printed pages 1–96"]},
+        "object": {"kind":"part","description":"Seven corresponding Vernon texts","locators":["ff. 89r–100v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:vernon-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:kindheit-a-transcribes-harley-3954",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-3954",
+      "scope": {
+        "subject": {"kind":"part","description":"Kindheit Jesu version a","locators":["67 groups","694 lines"]},
+        "object": {"kind":"part","description":"Kindheit Jesu text","locators":["ff. 70r–74r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:kindheit-b-transcribes-harley-2399",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-2399",
+      "scope": {
+        "subject": {"kind":"part","description":"Kindheit Jesu version b","locators":["70 groups","844 lines"]},
+        "object": {"kind":"part","description":"Kindheit Jesu text in the Bodmin part","locators":["ff. 47v–61r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:canticum-a-transcribes-trinity-57",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:trinity-oxford:MS-57",
+      "scope": {
+        "subject": {"kind":"part","description":"Canticum de Creatione version a","locators":["200 groups","1200 lines"]},
+        "object": {"kind":"part","description":"Canticum text under current foliation","locators":["ff. 157v–165r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:trinity57","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:canticum-b-transcribes-laing",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "edition:laing:penniworth-witte-1857",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Canticum de Creatione version b, first portion","locators":["lines 1–352"]},
+        "object": {"kind":"selected_passages","description":"Laing's printed Canticum text","locators":["printed pages 49–61","PDF pages 91–103"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:laing-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:laing-transcribes-eul-ms218",
+      "type": "transcribes",
+      "subject": "edition:laing:penniworth-witte-1857",
+      "object": "witness:eul:MS-218",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Printed Canticum text","locators":["printed pages 49–61","lines corresponding to Horstmann 1–352"]},
+        "object": {"kind":"whole","description":"Canticum text on both detached leaves","locators":["ff. 1r–2v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:laing-edition","evidence:eul-ms218","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:canticum-b-transcribes-lucy-transcript",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "transcript:lucy-toulmin-smith:auchinleck",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Canticum de Creatione version b, continuation","locators":["lines 353–end"]},
+        "object": {"kind":"selected_passages","description":"Lucy Toulmin Smith working transcript of the surviving continuation"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:lucy-canticum-transcribes-nls",
+      "type": "transcribes",
+      "subject": "transcript:lucy-toulmin-smith:auchinleck",
+      "object": "witness:nls:Adv-MS-19-2-1",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Working transcript underlying Canticum lines 353–end"},
+        "object": {"kind":"part","description":"Surviving Canticum continuation in the NLS codex","locators":["ff. 14r–16v"]}
+      },
+      "assertion": {"status":"supported","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:nls-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:magdalena-a-transcribes-laud",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bodleian:Laud-Misc-108",
+      "scope": {
+        "subject": {"kind":"part","description":"Magdalena version a","locators":["1 group","643 lines"]},
+        "object": {"kind":"part","description":"Magdalena text","locators":["ff. 190r–197r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:laud-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:magdalena-b-transcribes-lucy-transcript",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "transcript:lucy-toulmin-smith:auchinleck",
+      "scope": {
+        "subject": {"kind":"part","description":"Magdalena version b","locators":["2 groups","682 lines"]},
+        "object": {"kind":"selected_passages","description":"Lucy Toulmin Smith working transcript of the Auchinleck Magdalena"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:lucy-magdalena-transcribes-nls",
+      "type": "transcribes",
+      "subject": "transcript:lucy-toulmin-smith:auchinleck",
+      "object": "witness:nls:Adv-MS-19-2-1",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Working transcript underlying Magdalena version b"},
+        "object": {"kind":"part","description":"Auchinleck Magdalena text","locators":["ff. 62r–65v"]}
+      },
+      "assertion": {"status":"supported","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:nls-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:horstmann-consulted-kolbing-magdalena",
+      "type": "consulted",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "transcript:kolbing:magdalena",
+      "scope": {
+        "subject": {"kind":"part","description":"Magdalena version b"},
+        "object": {"kind":"whole","description":"Kölbing working transcript of the Auchinleck Magdalena"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:kolbing-magdalena-transcribes-nls",
+      "type": "transcribes",
+      "subject": "transcript:kolbing:magdalena",
+      "object": "witness:nls:Adv-MS-19-2-1",
+      "scope": {
+        "subject": {"kind":"whole","description":"Kölbing working transcript of the Auchinleck Magdalena"},
+        "object": {"kind":"part","description":"Auchinleck Magdalena text","locators":["ff. 62r–65v"]}
+      },
+      "assertion": {"status":"supported","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:nls-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:marina-transcribes-harley-2253",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-2253",
+      "scope": {
+        "subject": {"kind":"part","description":"Marina","locators":["1 group","232 lines"]},
+        "object": {"kind":"part","description":"Marina text in Part II","locators":["ff. 64v–65v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:euphrosyne-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"part","description":"Eufrosyne","locators":["1 group","673 lines"]},
+        "object": {"kind":"part","description":"Eufrosyne text","locators":["ff. 103r–104v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:vernon-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:cristine-transcribes-arundel-168",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Arundel-168",
+      "scope": {
+        "subject": {"kind":"part","description":"Cristine","locators":["65 groups","529 lines"]},
+        "object": {"kind":"part","description":"Cristine text","locators":["ff. 2r–4v (endpoint inferred from Dorothe's cataloged start at f. 5r)"]}
+      },
+      "assertion": {"status":"supported","confidence":"medium","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"],"notes":"The source identity is secure; only the exact final folio endpoint is inferred."}
+    },
+    {
+      "id": "relation:dorothe-transcribes-harley-5272",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-5272",
+      "scope": {
+        "subject": {"kind":"part","description":"Dorothe, principal text"},
+        "object": {"kind":"part","description":"Dorothe text","locators":["ff. 99r–104v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:dorothe-collates-arundel-168",
+      "type": "collated_against",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Arundel-168",
+      "scope": {
+        "subject": {"kind":"part","description":"Dorothe, including verse and Latin/prayer material"},
+        "object": {"kind":"part","description":"Dorothe text","locators":["ff. 5r–7r","verse chiefly ff. 5r–6v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:dorothe-final-lines-transcribe-arundel-168",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Arundel-168",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Dorothe supplied ending","locators":["lines 335–344"]},
+        "object": {"kind":"selected_passages","description":"Arundel text supplying the final ten lines","locators":["within ff. 5r–7r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:erasmus-a-transcribes-harley-2382",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-2382",
+      "scope": {
+        "subject": {"kind":"part","description":"Erasmus version a","locators":["4 groups","174 lines"]},
+        "object": {"kind":"part","description":"Erasmus text","locators":["ff. 109r–111r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:erasmus-b-transcribes-add-36983",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Add-36983",
+      "scope": {
+        "subject": {"kind":"part","description":"Erasmus version b, mixed verse/prose/list stream","locators":["2 groups","50 verse lines","additional prose and list matter"]},
+        "object": {"kind":"part","description":"Erasmus text","locators":["ff. 279v–280v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:disputisoun-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"part","description":"Disputisoun bitwene a Cristene mon and a Jew","locators":["19 groups","319 lines"]},
+        "object": {"kind":"part","description":"Disputation text","locators":["ff. 301v–302r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:vernon-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:roberd-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Roberd of Cisyle readings in the eclectic printed text"},
+        "object": {"kind":"part","description":"Vernon Roberd text","locators":["ff. 300r–301r"]},
+        "notes": "The precise line-by-line partition between the two principal witnesses remains unresolved."
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:vernon-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:roberd-transcribes-trinity-57",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:trinity-oxford:MS-57",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Roberd of Cisyle readings in the eclectic printed text"},
+        "object": {"kind":"part","description":"Trinity Roberd text","locators":["ff. 165r–167r"]},
+        "notes": "The precise line-by-line partition between the two principal witnesses remains unresolved."
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:trinity57","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:roberd-collates-harley-1701",
+      "type": "collated_against",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-1701",
+      "scope": {
+        "subject": {"kind":"part","description":"Roberd of Cisyle"},
+        "object": {"kind":"part","description":"Roberd collation witness","locators":["ff. 92r–95r"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:roberd-collates-harley-525",
+      "type": "collated_against",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:bl:Harley-525",
+      "scope": {
+        "subject": {"kind":"part","description":"Roberd of Cisyle"},
+        "object": {"kind":"part","description":"Roberd collation witness","locators":["ff. 35r–43v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:bl-catalogs","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:roberd-collates-cul-ff238",
+      "type": "collated_against",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind":"part","description":"Roberd of Cisyle"},
+        "object": {"kind":"part","description":"Occasional Roberd collation witness","locators":["ff. 254r–257v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:cul-ff238","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:appendix-transcribes-furnivall-transcript",
+      "type": "transcribes",
+      "subject": "edition:horstmann:altenglische-legenden-1878",
+      "object": "transcript:furnivall:adam-eve",
+      "scope": {
+        "subject": {"kind":"part","description":"Prose appendix on Adam and Eve","locators":["15 paragraphs"]},
+        "object": {"kind":"whole","description":"Furnivall working transcript supplied to Horstmann"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:furnivall-transcribes-vernon-appendix",
+      "type": "transcribes",
+      "subject": "transcript:furnivall:adam-eve",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"whole","description":"Furnivall working transcript of the appendix"},
+        "object": {"kind":"part","description":"Vernon Adam-and-Eve prose text","locators":["f. 393r–v"]}
+      },
+      "assertion": {"status":"supported","confidence":"high","evidence_ids":["evidence:horstmann-edition","evidence:vernon-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:james-describes-cul-ii49",
+      "type": "describes",
+      "subject": "catalog:cambridge:james-ii-4-9",
+      "object": "witness:cul:Ii-4-9",
+      "scope": {
+        "subject": {"kind":"whole","description":"James's unfinished description"},
+        "object": {"kind":"whole","description":"CUL MS Ii.4.9, including King Robert of Sicily at ff. 87v–93v"},
+        "notes": "This catalog relation does not place the manuscript in Horstmann's source chain."
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:cul-ii49-james","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:vernon-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Vernon",
+      "object": "witness:bodleian:Vernon",
+      "scope": {
+        "subject": {"kind":"whole","description":"Complete 710-canvas published Digital Bodleian facsimile"},
+        "object": {"kind":"whole","description":"Complete Vernon Manuscript physical carrier"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:vernon-iiif","evidence:vernon-catalog"]}
+    },
+    {
+      "id": "relation:laud-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Laud-Misc-108",
+      "object": "witness:bodleian:Laud-Misc-108",
+      "scope": {
+        "subject": {"kind":"whole","description":"Complete 496-canvas published Digital Bodleian facsimile"},
+        "object": {"kind":"whole","description":"Complete MS Laud Misc. 108 physical carrier"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:laud-iiif","evidence:laud-catalog"]}
+    },
+    {
+      "id": "relation:harley3954-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:Harley-3954",
+      "object": "witness:bl:Harley-3954",
+      "scope": {
+        "subject": {"kind":"whole","description":"Complete 269-canvas published British Library facsimile"},
+        "object": {"kind":"whole","description":"Complete Harley MS 3954 physical carrier"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:harley3954-iiif","evidence:bl-catalogs"]}
+    },
+    {
+      "id": "relation:nls-current-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:auchinleck-current",
+      "object": "witness:nls:Adv-MS-19-2-1",
+      "scope": {
+        "subject": {"kind":"whole","description":"Complete 734-canvas current NLS facsimile"},
+        "object": {"kind":"whole","description":"Complete NLS Adv. MS 19.2.1 physical carrier"}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:nls-current-iiif","evidence:nls-catalog"]}
+    },
+    {
+      "id": "relation:nls-project-facsimile-of-nls-portions",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:auchinleck-project",
+      "object": "witness:nls:Adv-MS-19-2-1",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Published project images carrying target NLS portions","locators":["project items 27–32","project items 127–134"]},
+        "object": {"kind":"selected_passages","description":"Target portions in the NLS physical codex","locators":["ff. 14r–16v","ff. 62r–65v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:nls-old-project","evidence:nls-catalog","evidence:source-mapping"]}
+    },
+    {
+      "id": "relation:nls-project-facsimile-of-eul-portions",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:auchinleck-project",
+      "object": "witness:eul:MS-218",
+      "scope": {
+        "subject": {"kind":"selected_passages","description":"Published project images carrying the detached Edinburgh Canticum leaves","locators":["project items 686–689"]},
+        "object": {"kind":"whole","description":"Both detached Canticum leaves","locators":["ff. 1r–2v"]}
+      },
+      "assertion": {"status":"confirmed","confidence":"high","evidence_ids":["evidence:nls-old-project","evidence:eul-ms218","evidence:source-mapping"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:cme-pinned-files",
+      "entity": "artifact:general-corpus:ajd8171",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Pinned raw GitHub files at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ajd8171.xml",
+      "alternate_urls": ["https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE"],
+      "cost": "free",
+      "format": "XML and plain-text license",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml", "evidence:cme-license"],
+      "local_copies": [
+        {
+          "label": "Pinned CME ajd8171 XML",
+          "path": "source-cache/ajd8171/cme-ajd8171-e1d77c8.xml",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ajd8171.xml",
+          "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685",
+          "bytes": 885040,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Complete serialized anthology","locators":["IDNO AJD8171.0001.001","title/dedication and contents are representation-only; eighteen count-bearing components serialize as twenty-two streams"]}
+        },
+        {
+          "label": "Pinned CME repository license",
+          "path": "source-cache/ajd8171/cme-license-at-e1d77c8.txt",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+          "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+          "bytes": 1211,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Repository-level license evidence; it contains no target text."]
+        }
+      ]
+    },
+    {
+      "id": "access:umich-encoding-current",
+      "entity": "encoding:umich:AJD8171.0001.001",
+      "provider_id": "agent:university-michigan-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Current U-M Corpus of Middle English Prose and Verse item record and electronic text interface.",
+      "url": "https://name.umdl.umich.edu/AJD8171.0001.001",
+      "cost": "free",
+      "format": "HTML interface and electronic text",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:umich-item", "evidence:repository-xml"]
+    },
+    {
+      "id": "access:umich-page-images-historical",
+      "entity": "facsimile:umich:AJD8171-page-images",
+      "provider_id": "agent:university-michigan-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The 2006 XML records 234 linked TIFF page images, but a currently functioning complete page-image route could not be verified from the current item interface.",
+      "url": "https://name.umdl.umich.edu/AJD8171.0001.001",
+      "cost": "unknown",
+      "format": "Historical 600-dpi TIFF G4 links",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"],
+      "notes": ["The historical image carrier remains unidentified and is not assumed to be the Boston Public Library copy."]
+    },
+    {
+      "id": "access:horstmann-gnd",
+      "entity": "catalog:dnb:gnd-1153444186",
+      "provider_id": "agent:deutsche-nationalbibliothek",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Official GND authority landing page and linked-data JSON-LD endpoint.",
+      "url": "https://d-nb.info/gnd/1153444186",
+      "alternate_urls": ["https://d-nb.info/gnd/1153444186/about/lds.jsonld"],
+      "cost": "free",
+      "format": "JSON-LD",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:horstmann-authority"],
+      "local_copies": [
+        {
+          "label": "GND JSON-LD authority record for Carl Horstmann",
+          "path": "source-cache/ajd8171/horstmann-gnd-1153444186.jsonld",
+          "source_url": "https://d-nb.info/gnd/1153444186/about/lds.jsonld",
+          "sha256": "0c7990c6ec7ae90e5a49ebb32c45af4df700cf3e7764ef66ca1c1d95f463c8bd",
+          "bytes": 5471,
+          "media_type": "application/ld+json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Supporting authority metadata only; the target anthology is not present."]
+        }
+      ]
+    },
+    {
+      "id": "access:usco-circular-15a",
+      "entity": "catalog:usco:circular-15a",
+      "provider_id": "agent:us-copyright-office",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct official U.S. Copyright Office PDF.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:us-copyright-duration"],
+      "local_copies": [
+        {
+          "label": "U.S. Copyright Office Circular 15A, April 2026",
+          "path": "source-cache/ajd8171/us-copyright-office-circular-15a-2026.pdf",
+          "source_url": "https://www.copyright.gov/circs/circ15a.pdf",
+          "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+          "bytes": 273867,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Complete supporting legal guidance; the target anthology is not present."]
+        }
+      ]
+    },
+    {
+      "id": "access:horstmann-bpl-ia",
+      "entity": "facsimile:ia-bpl:horstmann-1878",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item and direct derivative downloads.",
+      "url": "https://archive.org/details/sammlungaltengli1878hors",
+      "alternate_urls": [
+        "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors.pdf",
+        "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_djvu.txt",
+        "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_scandata.xml",
+        "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_jp2.zip",
+        "https://archive.org/metadata/sammlungaltengli1878hors"
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, scandata XML, JP2 ZIP, and item metadata JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:horstmann-ia", "evidence:horstmann-edition"],
+      "notes": ["The Boston Public Library carrier is not conflated with the unidentified carrier behind the U-M page images."],
+      "local_copies": [
+        {
+          "label": "Complete BPL carrier PDF",
+          "path": "source-cache/ajd8171/horstmann-1878-bpl-complete.pdf",
+          "source_url": "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors.pdf",
+          "sha256": "bc9e3e433346502e7509c02336a71e2d99e4338d66cdcbb0829dd780c3cd24ae",
+          "bytes": 14829790,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Complete 1878 target edition","locators":["title and dedication","printed pages 1–227","unnumbered contents page"]}
+        },
+        {
+          "label": "Complete BPL carrier OCR",
+          "path": "source-cache/ajd8171/horstmann-1878-bpl-complete-ocr.txt",
+          "source_url": "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_djvu.txt",
+          "sha256": "0b1d4fef3921c0f89c0d5ac9030b580600fe6770d49c59d5377f2886c6c75bf4",
+          "bytes": 836263,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Complete OCR stream for the 1878 target edition","locators":["title and dedication","printed pages 1–227","unnumbered contents page"]}
+        },
+        {
+          "label": "Complete BPL carrier scandata",
+          "path": "source-cache/ajd8171/horstmann-1878-bpl-complete-scandata.xml",
+          "source_url": "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_scandata.xml",
+          "sha256": "7a1abf0b42f01185a8e43e9f0da719365b30315a9020772dc348de137a2ec91c",
+          "bytes": 126448,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Page-structure metadata only; no target text or page image is present."]
+        },
+        {
+          "label": "Complete BPL carrier JP2 image bundle",
+          "path": "source-cache/ajd8171/horstmann-1878-bpl-complete-jp2.zip",
+          "source_url": "https://archive.org/download/sammlungaltengli1878hors/sammlungaltengli1878hors_jp2.zip",
+          "sha256": "0874df250977c22e50a596931bbee3bc283ed07b1d84e0bc99ac48720d9f3dc9",
+          "bytes": 145560544,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Scanned surfaces bearing the complete 1878 target edition","locators":["scan leaves 3–5","scan leaves 7–234"],"notes":["The image bundle also includes non-target carrier surfaces."]}
+        },
+        {
+          "label": "Internet Archive BPL item metadata",
+          "path": "source-cache/ajd8171/horstmann-1878-bpl-ia-metadata.json",
+          "source_url": "https://archive.org/metadata/sammlungaltengli1878hors",
+          "sha256": "9b03eb095aca773e3c9bc0b5308a8638bfc256b5f95586548127840d1c16050e",
+          "bytes": 50431,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Item metadata only; no target text or page image is present."]
+        }
+      ]
+    },
+    {
+      "id": "access:graesse-ia",
+      "entity": "edition:graesse:legenda-aurea-1846",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive scan and derivative downloads.",
+      "url": "https://archive.org/details/LegendaAureaGraesse1846",
+      "alternate_urls": [
+        "https://archive.org/download/LegendaAureaGraesse1846/Legenda_aurea_Graesse_1846.pdf",
+        "https://archive.org/download/LegendaAureaGraesse1846/LegendaAureaGraesse1846_djvu.txt",
+        "https://archive.org/download/LegendaAureaGraesse1846/LegendaAureaGraesse1846_scandata.xml",
+        "https://archive.org/metadata/LegendaAureaGraesse1846"
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, scandata XML, and item metadata JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:graesse-ia-metadata", "evidence:graesse-edition"],
+      "local_copies": [
+        {
+          "label": "Complete Grässe 1846 PDF",
+          "path": "source-cache/ajd8171/graesse-legenda-aurea-1846-complete.pdf",
+          "source_url": "https://archive.org/download/LegendaAureaGraesse1846/Legenda_aurea_Graesse_1846.pdf",
+          "sha256": "4362418566b8337f71db76e9f2b75c6884bf67e3f3e20081cd9e355b529318e0",
+          "bytes": 45368943,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Complete comparison edition; the Middle English target anthology is not present."]
+        },
+        {
+          "label": "Complete Grässe 1846 OCR",
+          "path": "source-cache/ajd8171/graesse-legenda-aurea-1846-complete-ocr.txt",
+          "source_url": "https://archive.org/download/LegendaAureaGraesse1846/LegendaAureaGraesse1846_djvu.txt",
+          "sha256": "4d2028991807667d4c4417156d025bef9e00d6d15e0024c647a3ebc22955fbe5",
+          "bytes": 2734539,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Complete Latin comparison edition; the Middle English target anthology is not present."]
+        },
+        {
+          "label": "Complete Grässe 1846 scandata",
+          "path": "source-cache/ajd8171/graesse-legenda-aurea-1846-complete-scandata.xml",
+          "source_url": "https://archive.org/download/LegendaAureaGraesse1846/LegendaAureaGraesse1846_scandata.xml",
+          "sha256": "1842d558f49e4be290b61f5db5e55376c1bdd311c96fcedecd362479b9d927a7",
+          "bytes": 311565,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Internet Archive Grässe item metadata",
+          "path": "source-cache/ajd8171/graesse-legenda-aurea-1846-ia-metadata.json",
+          "source_url": "https://archive.org/metadata/LegendaAureaGraesse1846",
+          "sha256": "e7b5db211f1f9677abfbc1e549ef0cd4a70ec8394bbc07022d45ce100139316e",
+          "bytes": 5370,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    },
+    {
+      "id": "access:laing-nls-pdf",
+      "entity": "edition:laing:penniworth-witte-1857",
+      "provider_id": "agent:national-library-scotland",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct NLS PDF download.",
+      "url": "https://deriv.nls.uk/dcn23/8115/81156097.23.pdf",
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:laing-edition"],
+      "local_copies": [
+        {
+          "label": "Complete Laing 1857 volume",
+          "path": "source-cache/ajd8171/laing-penniworth-witte-1857-nls-complete.pdf",
+          "source_url": "https://deriv.nls.uk/dcn23/8115/81156097.23.pdf",
+          "sha256": "d998dc17d1404f11efc8f4af918c6520cc821b12e5427304c5d357cc26a28d67",
+          "bytes": 5355456,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Canticum de Creatione intermediary text underlying Horstmann lines 1–352","locators":["printed pages 49–61","PDF pages 91–103"]}
+        }
+      ]
+    },
+    {
+      "id": "access:vernon-digital-bodleian",
+      "entity": "facsimile:bodleian:Vernon",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian IIIF Presentation manifest and private 1600-pixel bundle assembled from all 710 published canvases.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+        "https://digital.bodleian.ox.ac.uk/terms/"
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation manifest and JPEG bundle",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:vernon-iiif", "evidence:bodleian-terms"],
+      "local_copies": [
+        {
+          "label": "Complete Vernon 1600-pixel IIIF bundle",
+          "path": "source-cache/ajd8171/bodleian-vernon-ms-complete-iiif-1600px.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "be5c0740ec716bab26b571d751b3071416fcd285145acfbb233b2b31abd617e6",
+          "bytes": 961521599,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 710,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label":"All Vernon target portions","locators":["ff. 89r–100v (canvases 163–186)","ff. 103r–104v (canvases 189–192)","ff. 300r–302r (canvases 486–490)","f. 393r–v (canvases 666–667)"]}
+        },
+        {
+          "label": "Complete Vernon IIIF manifest",
+          "path": "source-cache/ajd8171/bodleian-vernon-ms-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc",
+          "bytes": 1014568,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-11",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Manifest metadata and image-service links only; the target images are in the associated bundle."]
+        },
+        {
+          "label": "Digital Bodleian use terms",
+          "path": "source-cache/ajd8171/digital-bodleian-terms.html",
+          "source_url": "https://digital.bodleian.ox.ac.uk/terms/",
+          "sha256": "295f32b2397c43a57967a150814b9059913c98fa3303fce11da05aa5b2e8210a",
+          "bytes": 25570,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Provider-wide use terms; no target content is present."]
+        }
+      ]
+    },
+    {
+      "id": "access:laud-catalog",
+      "entity": "witness:bodleian:Laud-Misc-108",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Bodleian medieval manuscripts catalog and pinned TEI source.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_6917",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml"],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:laud-catalog"],
+      "local_copies": [
+        {
+          "label": "Pinned Laud Misc. 108 catalog TEI",
+          "path": "source-cache/ajd8171/bodleian-ms-laud-misc-108-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml",
+          "sha256": "2814905d145bf6fa0a3664f0f46ed3dce485fff73b3bbab5a3f043608511d74b",
+          "bytes": 55164,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    },
+    {
+      "id": "access:laud-digital-bodleian",
+      "entity": "facsimile:bodleian:Laud-Misc-108",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian IIIF Presentation manifest and private 1600-pixel bundle assembled from all 496 published canvases.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json"],
+      "cost": "free",
+      "format": "IIIF Presentation manifest and JPEG bundle",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:laud-iiif", "evidence:bodleian-terms"],
+      "local_copies": [
+        {
+          "label": "Complete Laud Misc. 108 1600-pixel IIIF bundle",
+          "path": "source-cache/ajd8171/bodleian-laud-misc-108-complete-iiif-1600px.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+          "sha256": "06bd1270f190f1fa6111fa1b1ed946fc8cf1289b60cab73381e1d9bfe4f1268c",
+          "bytes": 588889461,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 496,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Magdalena version a witness portion","locators":["ff. 190r–197r","canvases 395–409"]}
+        },
+        {
+          "label": "Complete Laud Misc. 108 IIIF manifest",
+          "path": "source-cache/ajd8171/bodleian-laud-misc-108-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+          "sha256": "ce8d05cfecb6f05778d6a0f72de48b9805e57f4844cd63b8569c1055395a3019",
+          "bytes": 447437,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    },
+    {
+      "id": "access:bl-add-36983-catalog",
+      "entity": "witness:bl:Add-36983",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/032-002055502",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/032-002055502.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Add MS 36983 catalog JSON","path":"source-cache/ajd8171/british-library-add-ms-36983-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/032-002055502.json","sha256":"a33d162729badc175688c9367b532c835c5aadad8e307f4e1137baff8157bb13","bytes":37124,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-arundel-168-catalog",
+      "entity": "witness:bl:Arundel-168",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039451",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002039451.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Arundel MS 168 catalog JSON","path":"source-cache/ajd8171/british-library-arundel-ms-168-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002039451.json","sha256":"abf5e1deb9d598243cec650c8a218bbd5c52deb0f1d0ae7a5a39d23f54802ec9","bytes":14515,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-1701-catalog",
+      "entity": "witness:bl:Harley-1701",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002047532",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002047532.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 1701 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-1701-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002047532.json","sha256":"df15938b0ba67e25101099039796de3995bbf270f5557c89b8e027acc2efb706","bytes":28318,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-2253-catalog",
+      "entity": "witness:bl:Harley-2253",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts parent catalog record, relevant Part II component record, and their JSON exports.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048084",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048084.json",
+        "https://searcharchives.bl.uk/catalog/041-002352751",
+        "https://searcharchives.bl.uk/catalog/041-002352751.json"
+      ],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 2253 parent catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-2253-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002048084.json","sha256":"287f266dcf3e7dcd6dba1e3b4f829a2a16930d8b6d75a3a0b4c625efc6fad148","bytes":28594,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"},
+        {"label":"BL Harley MS 2253 Part II catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-2253-part-ii-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/041-002352751.json","sha256":"439bae54742e036f07ebb9c10c4ec9f74bd5ff32aa58c1c3bc666287641df966","bytes":18518,"media_type":"application/json","downloaded_on":"2026-07-13","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-2382-catalog",
+      "entity": "witness:bl:Harley-2382",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048213",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002048213.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 2382 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-2382-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002048213.json","sha256":"582eb06a0e8f80c1e822b6bd2bea6f2670071d8c452c76c0b7720f36b535596f","bytes":17631,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-2399-catalog",
+      "entity": "witness:bl:Harley-2399",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048230",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002048230.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 2399 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-2399-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002048230.json","sha256":"631cb5a04eda31efe010d934d5156df864f49bc3990801e256ebd5eb5b057431","bytes":38378,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-3954-catalog",
+      "entity": "witness:bl:Harley-3954",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002049791",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002049791.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 3954 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-3954-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002049791.json","sha256":"1c0b9c79acd5b41b786b2e619109f830110ef4a86bbb4f24a371eea3a04e8a1b","bytes":29107,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-525-catalog",
+      "entity": "witness:bl:Harley-525",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046354",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002046354.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 525 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-525-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002046354.json","sha256":"f2bc349a2618ee4b127c85237dfa3b5d340377f3fc2dc9e00a9cb67f147e4d0e","bytes":22962,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-harley-5272-catalog",
+      "entity": "witness:bl:Harley-5272",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record and JSON export.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002051117",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002051117.json"],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs"],
+      "local_copies": [
+        {"label":"BL Harley MS 5272 catalog JSON","path":"source-cache/ajd8171/british-library-harley-ms-5272-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002051117.json","sha256":"af51c8f167a23e64f9fa0786b3e99d573c408c5465950bbe87a9d63d74b1a3df","bytes":14265,"media_type":"application/json","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ]
+    },
+    {
+      "id": "access:bl-add-36983-reproduction-order",
+      "entity": "witness:bl:Add-36983",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Add MS 36983; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-arundel-168-reproduction-order",
+      "entity": "witness:bl:Arundel-168",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Arundel MS 168; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-1701-reproduction-order",
+      "entity": "witness:bl:Harley-1701",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 1701; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-2253-reproduction-order",
+      "entity": "witness:bl:Harley-2253",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 2253; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-2382-reproduction-order",
+      "entity": "witness:bl:Harley-2382",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 2382; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-2399-reproduction-order",
+      "entity": "witness:bl:Harley-2399",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 2399; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-3954-reproduction-order",
+      "entity": "witness:bl:Harley-3954",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 3954; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested higher-quality digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service", "evidence:harley3954-iiif"],
+      "notes": ["A complete public IIIF facsimile already exists; paid ordering is an optional route for a different or higher-quality reproduction."]
+    },
+    {
+      "id": "access:bl-harley-525-reproduction-order",
+      "entity": "witness:bl:Harley-525",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 525; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:bl-harley-5272-reproduction-order",
+      "entity": "witness:bl:Harley-5272",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library beta digitisation order for shelfmark Harley MS 5272; specify required folios and image purpose. Orders are subject to service review, restrictions, delays, and quotation, so fulfillment is not guaranteed.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "cost": "fee",
+      "format": "Requested digital image; price by current service schedule or quotation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:harley3954-facsimile",
+      "entity": "facsimile:bl:Harley-3954",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "British Library IIIF Presentation manifest and private 1600-pixel bundle assembled from all 269 published canvases.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100057740181.0x000001",
+      "cost": "free",
+      "format": "IIIF Presentation manifest and JPEG bundle",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:harley3954-iiif"],
+      "local_copies": [
+        {
+          "label": "Complete Harley MS 3954 1600-pixel IIIF bundle",
+          "path": "source-cache/ajd8171/harley-ms-3954-complete-iiif-1600px.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100057740181.0x000001",
+          "sha256": "bd88531ddc3e899da0103b9d5c01232c776abac9cb5058eac729b30a8434a5ab",
+          "bytes": 256351325,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 269,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label":"Kindheit Jesu version a witness portion","locators":["ff. 70r–74r","canvases 147–155"]}
+        },
+        {
+          "label": "Complete Harley MS 3954 IIIF manifest",
+          "path": "source-cache/ajd8171/harley-ms-3954-iiif-manifest.json",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100057740181.0x000001",
+          "sha256": "f4274c667d632e55c574c07d03c4597b3abccd51766deda31bf1d51abeca3e66",
+          "bytes": 982709,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    },
+    {
+      "id": "access:trinity57-catalog",
+      "entity": "witness:trinity-oxford:MS-57",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "unavailable",
+      "access_method": "The exact official catalog PDF endpoint currently returns an Anubis verification page to direct retrieval and a 403 to the independent fetch check. No access control was bypassed and no verified PDF local copy was created.",
+      "url": "https://medieval.bodleian.ox.ac.uk/pdfs/trinity/MS_57.pdf",
+      "cost": "unknown",
+      "format": "PDF when successfully delivered",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:trinity57"],
+      "notes": ["The catalog content remains independently discoverable, but this route is not represented as a completed public download."]
+    },
+    {
+      "id": "access:eul-ms218-catalogs",
+      "entity": "witness:eul:MS-218",
+      "provider_id": "agent:university-edinburgh",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "University of Edinburgh Archives catalog HTML records.",
+      "url": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177097",
+      "alternate_urls": ["https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177137"],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:eul-ms218"],
+      "local_copies": [
+        {"label":"EUL MS 218 Auchinleck fragments catalog","path":"source-cache/ajd8171/edinburgh-ms-218-auchinleck-fragments-catalog.html","source_url":"https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177097","sha256":"5282b20bcff5cc9e23f4b1b1ba622cd7ba988c5d80d992c24482b0771673f2d9","bytes":29691,"media_type":"text/html","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"},
+        {"label":"EUL MS 218 Life of Adam and Eve fragment catalog","path":"source-cache/ajd8171/edinburgh-ms-218-life-adam-eve-catalog.html","source_url":"https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177137","sha256":"60c2d32e873618de632d5df5c7431c70cd2bac7055f60895683c307834567c84","bytes":21146,"media_type":"text/html","downloaded_on":"2026-07-16","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["A different detached-fragment catalog record used to audit the older project's multi-carrier inventory."]}
+      ]
+    },
+    {
+      "id": "access:cul-ff238-scholarly-record",
+      "entity": "witness:cul:Ff-2-38",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Scholarly Database of Middle English Romance manuscript record for Cambridge University Library MS Ff.2.38; this is not a CUL-owned item-level catalog or facsimile.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "cost": "free",
+      "format": "Scholarly HTML manuscript record",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:cul-ff238"],
+      "notes": ["Attached to the witness as scholarly access evidence without presenting the database as the holding repository's catalog."]
+    },
+    {
+      "id": "access:james-ii49-description",
+      "entity": "catalog:cambridge:james-ii-4-9",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Cambridge repository landing page and direct PDF bitstream.",
+      "url": "https://www.repository.cam.ac.uk/items/8991de06-1540-4afe-98bb-1ca151bacf6d",
+      "alternate_urls": ["https://api.repository.cam.ac.uk/server/api/core/bitstreams/20ad6596-3c51-4849-a250-bc682d5f7df1/content"],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:cul-ii49-james"],
+      "local_copies": [
+        {
+          "label": "James description of CUL MS Ii.4.9",
+          "path": "source-cache/ajd8171/james-cambridge-ms-ii-4-9-description.pdf",
+          "source_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/20ad6596-3c51-4849-a250-bc682d5f7df1/content",
+          "sha256": "c7a6b6f8ed4dd7fc3162cc0fc542f85d5bdb98c8db9971ce27545aeeb18621bc",
+          "bytes": 125427,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Catalog description only; Horstmann explicitly did not use the witness for the 1878 text."]
+        }
+      ]
+    },
+    {
+      "id": "access:nls-auchinleck-current",
+      "entity": "facsimile:nls:auchinleck-current",
+      "provider_id": "agent:national-library-scotland",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Current NLS IIIF Presentation manifest and private 1600-pixel bundle assembled from all 734 published canvases.",
+      "url": "https://digital.nls.uk/233337262",
+      "alternate_urls": ["https://view.nls.uk/manifest/2333/3726/233337262/manifest.json"],
+      "cost": "free",
+      "format": "IIIF Presentation manifest and JPEG bundle",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:nls-current-iiif"],
+      "local_copies": [
+        {
+          "label": "Complete current NLS Auchinleck 1600-pixel IIIF bundle",
+          "path": "source-cache/ajd8171/nls-adv-ms-19-2-1-auchinleck-complete-iiif-1600px.zip",
+          "source_url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+          "sha256": "8df1a90bd76ce08e8abbca46a945cb19a78b2f1e0dee4de1a920a55f3a7e4431",
+          "bytes": 328592287,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 734,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label":"NLS Auchinleck portions underlying Canticum and Magdalena","locators":["ff. 14r–16v (canvases 53–58)","ff. 62r–65v (canvases 149–156)"]}
+        },
+        {
+          "label": "Complete current NLS Auchinleck IIIF manifest",
+          "path": "source-cache/ajd8171/nls-adv-ms-19-2-1-auchinleck-iiif-manifest.json",
+          "source_url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+          "sha256": "915c5120db85b016516de8508f2483bdc3b73c0efee5691df3897cbe6a15a8c8",
+          "bytes": 605908,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    },
+    {
+      "id": "access:nls-auchinleck-old-project",
+      "entity": "facsimile:nls:auchinleck-project",
+      "provider_id": "agent:national-library-scotland",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Published 701-image project inventory and provider use-terms page; private complete bundle assembled from the inventory.",
+      "url": "https://auchinleck.nls.uk/",
+      "alternate_urls": ["https://auchinleck.nls.uk/editorial/refer_site.html"],
+      "cost": "free",
+      "format": "JPEG inventory bundle and HTML use terms",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:nls-old-project", "evidence:nls-old-terms"],
+      "notes": ["The project inventory crosses physical-carrier boundaries; exact target subsets are mapped separately in relations."],
+      "local_copies": [
+        {
+          "label": "Complete published NLS Auchinleck project image inventory",
+          "path": "source-cache/ajd8171/nls-auchinleck-complete-published-inventory.zip",
+          "source_url": "https://auchinleck.nls.uk/",
+          "sha256": "351e3b1a41bdf9a32b4cd846b30555e632239b867f9b11d6239f30844ca9c060",
+          "bytes": 802176284,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 701,
+          "bundle_source_kind": "image_url_inventory",
+          "target_work_presence": "present",
+          "work_portion": {"label":"All project images bearing target portions, split by physical carrier","locators":["NLS codex: project items 27–32 = ff. 14r–16v","NLS codex: project items 127–134 = ff. 62r–65v","EUL MS 218: project items 686–689 = ff. 1r–2v"]}
+        },
+        {
+          "label": "NLS Auchinleck project use terms",
+          "path": "source-cache/ajd8171/nls-auchinleck-project-use-terms.html",
+          "source_url": "https://auchinleck.nls.uk/editorial/refer_site.html",
+          "sha256": "e425606dcfedfd0b943c8566a536ed93a617ae2bd433cd7a39173b27ab2cece6",
+          "bytes": 11596,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:cme-artifact-repository-license",
+      "entity": "artifact:general-corpus:ajd8171",
+      "access_id": "access:cme-pinned-files",
+      "component": "Pinned repository XML artifact",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The pinned repository has an Unlicense file, but its wording identifies software and does not establish whether the XML/data are within scope.",
+      "license": {"name":"Unlicense (repository-level; XML/data scope unverified)","spdx":"Unlicense","uri":"https://unlicense.org/"},
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cme-license", "evidence:repository-xml"],
+      "notes": ["This records the available statement without upgrading it into an item-level rights conclusion."]
+    },
+    {
+      "id": "rights:umich-encoding-current",
+      "entity": "encoding:umich:AJD8171.0001.001",
+      "component": "Current U-M electronic text delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-16",
+      "basis": "The current U-M item record assigns RightsStatements.org NoC-US 1.0.",
+      "asserted_by_id": "agent:university-michigan-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "rights:umich-encoding-legacy",
+      "entity": "encoding:umich:AJD8171.0001.001",
+      "component": "Availability statement embedded in the 2006 XML",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The historical header says copyright may apply and other distribution restrictions may apply; it supplies no item license.",
+      "asserted_by_id": "agent:university-michigan-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repository-xml"],
+      "notes": ["This historical layer is preserved separately from the current NoC-US provider statement."]
+    },
+    {
+      "id": "rights:umich-page-images-current",
+      "entity": "facsimile:umich:AJD8171-page-images",
+      "component": "Historical U-M page-image delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-16",
+      "basis": "The current item-level U-M record applies NoC-US to the electronic item that describes and links these images; the image carrier and a current complete image route remain unverified.",
+      "asserted_by_id": "agent:university-michigan-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:umich-item", "evidence:repository-xml"]
+    },
+    {
+      "id": "rights:horstmann-edition-us",
+      "entity": "edition:horstmann:altenglische-legenden-1878",
+      "component": "1878 edition text and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "First published in 1878, well before the U.S. public-domain publication cutoff; no editor death-date calculation is needed.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:bpl-ia-scan",
+      "entity": "facsimile:ia-bpl:horstmann-1878",
+      "access_id": "access:horstmann-bpl-ia",
+      "component": "Internet Archive scan files of the Boston Public Library carrier",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The item exposes downloadable files but no item-level license was identified; public-domain status of the 1878 edition is recorded separately.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-ia", "evidence:horstmann-edition"]
+    },
+    {
+      "id": "rights:graesse-edition-us",
+      "entity": "edition:graesse:legenda-aurea-1846",
+      "component": "1846 edition text and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "First published in 1846, well before the U.S. public-domain publication cutoff; the Internet Archive item also carries a Public Domain Mark.",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:graesse-edition", "evidence:graesse-ia-metadata", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:laing-edition-us",
+      "entity": "edition:laing:penniworth-witte-1857",
+      "access_id": "access:laing-nls-pdf",
+      "component": "1857 edition text and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "First published in 1857, well before the U.S. public-domain publication cutoff.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:laing-edition", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:vernon-underlying-text",
+      "entity": "witness:bodleian:Vernon",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the late fourteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-catalog", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:vernon-digital-bodleian-images",
+      "entity": "facsimile:bodleian:Vernon",
+      "access_id": "access:vernon-digital-bodleian",
+      "component": "Digital Bodleian surrogate images",
+      "jurisdiction": "Provider terms; user must assess applicable law",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Digital Bodleian's general terms make most images available under CC BY-NC 4.0 and instruct users to check item-specific terms.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "license": {"name":"Creative Commons Attribution-NonCommercial 4.0 International","spdx":"CC-BY-NC-4.0","uri":"https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-iiif", "evidence:bodleian-terms"]
+    },
+    {
+      "id": "rights:harley3954-underlying-text",
+      "entity": "witness:bl:Harley-3954",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:harley3954-facsimile-images",
+      "entity": "facsimile:bl:Harley-3954",
+      "access_id": "access:harley3954-facsimile",
+      "component": "British Library published surrogate images",
+      "jurisdiction": "Worldwide, with a specific United Kingdom exception",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "The IIIF manifest states that the object is public domain in most countries other than the United Kingdom.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley3954-iiif"],
+      "notes": ["No broader worldwide public-domain conclusion is inferred from the provider's geographically qualified statement."]
+    },
+    {
+      "id": "rights:harley2399-underlying-text",
+      "entity": "witness:bl:Harley-2399",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:trinity57-underlying-text",
+      "entity": "witness:trinity-oxford:MS-57",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fourteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:trinity57", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:eul-ms218-underlying-text",
+      "entity": "witness:eul:MS-218",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fourteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:eul-ms218", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:nls-auchinleck-underlying-text",
+      "entity": "witness:nls:Adv-MS-19-2-1",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fourteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-catalog", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:nls-current-facsimile-images",
+      "entity": "facsimile:nls:auchinleck-current",
+      "access_id": "access:nls-auchinleck-current",
+      "component": "Current NLS published surrogate images",
+      "jurisdiction": "Worldwide provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The current IIIF manifest applies the Creative Commons Public Domain Mark 1.0 and says the work is free of known copyright restrictions.",
+      "asserted_by_id": "agent:national-library-scotland",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-current-iiif"]
+    },
+    {
+      "id": "rights:nls-old-project-materials",
+      "entity": "facsimile:nls:auchinleck-project",
+      "access_id": "access:nls-auchinleck-old-project",
+      "component": "Older Auchinleck project texts, essays, images, descriptions, and reference material",
+      "jurisdiction": "Provider terms; unspecified copyright jurisdiction",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The project use page declares all site materials copyrighted, permits personal use, and prohibits unauthorized commercial use or publication.",
+      "asserted_by_id": "agent:national-library-scotland",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:nls-old-terms", "evidence:nls-old-project"]
+    },
+    {
+      "id": "rights:laud108-underlying-text",
+      "entity": "witness:bodleian:Laud-Misc-108",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created around 1300; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:laud-catalog", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:laud108-digital-bodleian-images",
+      "entity": "facsimile:bodleian:Laud-Misc-108",
+      "access_id": "access:laud-digital-bodleian",
+      "component": "Digital Bodleian surrogate images",
+      "jurisdiction": "Provider terms; user must assess applicable law",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Digital Bodleian's general terms make most images available under CC BY-NC 4.0 and instruct users to check item-specific terms.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "license": {"name":"Creative Commons Attribution-NonCommercial 4.0 International","spdx":"CC-BY-NC-4.0","uri":"https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:laud-iiif", "evidence:bodleian-terms"]
+    },
+    {
+      "id": "rights:harley2253-underlying-text",
+      "entity": "witness:bl:Harley-2253",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fourteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:arundel168-underlying-text",
+      "entity": "witness:bl:Arundel-168",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:harley5272-underlying-text",
+      "entity": "witness:bl:Harley-5272",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:harley2382-underlying-text",
+      "entity": "witness:bl:Harley-2382",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:add36983-underlying-text",
+      "entity": "witness:bl:Add-36983",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:harley1701-underlying-text",
+      "entity": "witness:bl:Harley-1701",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created around 1400; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:harley525-underlying-text",
+      "entity": "witness:bl:Harley-525",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:cul-ff238-underlying-text",
+      "entity": "witness:cul:Ff-2-38",
+      "component": "Medieval manuscript text, excluding physical-property and surrogate-image rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The Middle English textual content is centuries old; any U.S. copyright in it has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-ff238", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:cul-ii49-underlying-text",
+      "entity": "witness:cul:Ii-4-9",
+      "component": "Medieval manuscript text, excluding physical-property, catalog, and surrogate rights",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The textual content was created in the fifteenth century; any U.S. copyright in this centuries-old content has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-ii49-james", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:james-catalog-description",
+      "entity": "catalog:cambridge:james-ii-4-9",
+      "access_id": "access:james-ii49-description",
+      "component": "Cambridge repository transcription and PDF publication of the James description",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The Cambridge repository landing page assigns Creative Commons Attribution 4.0 to the deposited description.",
+      "asserted_by_id": "agent:cambridge-university-library",
+      "license": {"name":"Creative Commons Attribution 4.0 International","spdx":"CC-BY-4.0","uri":"https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-ii49-james"]
+    },
+    {
+      "id": "rights:horstmann-gnd-metadata",
+      "entity": "catalog:dnb:gnd-1153444186",
+      "access_id": "access:horstmann-gnd",
+      "component": "GND linked-data authority metadata",
+      "jurisdiction": "Worldwide dedication",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The official JSON-LD record embeds a Creative Commons CC0 1.0 license URI.",
+      "asserted_by_id": "agent:deutsche-nationalbibliothek",
+      "license": {"name":"Creative Commons CC0 1.0 Universal","spdx":"CC0-1.0","uri":"http://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-authority"]
+    },
+    {
+      "id": "rights:usco-circular-15a",
+      "entity": "catalog:usco:circular-15a",
+      "access_id": "access:usco-circular-15a",
+      "component": "Official U.S. Copyright Office Circular 15A",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The circular is an official work of the United States government; 17 U.S.C. § 105 provides that U.S. copyright protection is not available for U.S. government works.",
+      "asserted_by_id": "agent:us-copyright-office",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:us-copyright-duration", "evidence:us-government-work-law"]
+    },
+    {
+      "id": "rights:lucy-working-transcripts",
+      "entity": "transcript:lucy-toulmin-smith:auchinleck",
+      "component": "Unlocated nineteenth-century working transcripts",
+      "jurisdiction": "Unknown",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The transcript repository, survival, publication history, and any repository terms have not been established.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:source-mapping"]
+    },
+    {
+      "id": "rights:kolbing-working-transcript",
+      "entity": "transcript:kolbing:magdalena",
+      "component": "Unlocated nineteenth-century working transcript",
+      "jurisdiction": "Unknown",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The transcript repository, survival, publication history, and any repository terms have not been established.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:source-mapping"]
+    },
+    {
+      "id": "rights:furnivall-working-transcript",
+      "entity": "transcript:furnivall:adam-eve",
+      "component": "Unlocated nineteenth-century working transcript",
+      "jurisdiction": "Unknown",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The transcript repository, survival, publication history, and any repository terms have not been established.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:source-mapping"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:horstmann-edited-selection",
+      "entity": "edition:horstmann:altenglische-legenden-1878",
+      "practice": "selection",
+      "source_feature": "A multi-witness body of Middle English legendary, devotional, romance, and prose material.",
+      "representation": "An eighteen-component anthology arranged as seven Vernon-derived Part I legends and eleven Part II components, with four components presenting two separately serialized versions.",
+      "description": "Catalog the volume as an edited selection, not as a single medieval work and not as twenty-two count-bearing works. The four dual-version components count once each at the parent level; their eight child streams own the line and group metrics.",
+      "scope": "Whole 1878 anthology",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:repository-xml", "evidence:xml-structure", "evidence:source-mapping"]
+    },
+    {
+      "id": "practice:representation-only-front-back",
+      "entity": "encoding:umich:AJD8171.0001.001",
+      "practice": "selection",
+      "source_feature": "The scanned edition includes title/dedication matter and an unnumbered contents page outside the eighteen textual components.",
+      "representation": "The U-M/CME encoding serializes those surfaces, but the work-metadata record treats them as representation-only rather than count-bearing items.",
+      "description": "Preserve the full electronic representation while excluding dedication and contents from item, form, and line/group totals.",
+      "scope": "Front matter and terminal contents surface",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repository-xml", "evidence:xml-structure", "evidence:horstmann-edition"]
+    },
+    {
+      "id": "practice:dorothe-collation",
+      "entity": "edition:horstmann:altenglische-legenden-1878",
+      "practice": "collation",
+      "source_feature": "Dorothe survives in Harley MS 5272 and Arundel MS 168 with verse and surrounding Latin/prayer material.",
+      "representation": "Harley MS 5272 supplies the principal text, Arundel MS 168 is collated, and Arundel supplies final lines 335–344.",
+      "description": "Model the principal transcription, general collation, and supplied ending as separate scoped relations.",
+      "scope": "Dorothe",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:bl-catalogs", "evidence:source-mapping"]
+    },
+    {
+      "id": "practice:roberd-eclectic-text",
+      "entity": "edition:horstmann:altenglische-legenden-1878",
+      "practice": "collation",
+      "source_feature": "Multiple manuscript versions of Roberd of Cisyle.",
+      "representation": "An eclectic printed text draws principally on Vernon and Trinity College Oxford MS 57 and collates Harley MSS 1701 and 525 plus CUL MS Ff.2.38.",
+      "description": "Retain two principal transcription edges and three collation edges; do not assign an unsupported exact line partition between Vernon and Trinity.",
+      "scope": "Roberd of Cisyle",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:source-mapping"]
+    },
+    {
+      "id": "practice:mediated-transcripts",
+      "entity": "edition:horstmann:altenglische-legenden-1878",
+      "practice": "collation",
+      "source_feature": "Auchinleck and Vernon readings reached Horstmann through Laing's 1857 edition or working transcripts by Lucy Toulmin Smith, Eugen Kölbing, and F. J. Furnivall.",
+      "representation": "Each intermediary is an explicit node, with separate intermediary-to-physical-witness relations where the route is supported.",
+      "description": "Do not flatten mediated transcription into direct edition-to-codex claims. Current repositories for the three working transcripts remain unresolved.",
+      "scope": "Canticum version b, Magdalena version b, and the Adam-and-Eve appendix",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:laing-edition", "evidence:source-mapping"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repository-xml",
+      "type": "repository_file",
+      "citation": "Kyvero Press, CME ajd8171.xml, pinned at Git commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ajd8171.xml",
+      "repository_path": "source-cache/ajd8171/cme-ajd8171-e1d77c8.xml",
+      "locator": "Complete file; IDNO AJD8171.0001.001; HEADER, FRONT, BODY, and BACK.",
+      "summary": "Pins the repository artifact, U-M source description, 2006 OCR/TEI statement, legacy availability statement, image count, and complete serialized text.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685"
+    },
+    {
+      "id": "evidence:xml-structure",
+      "type": "visual_inspection",
+      "citation": "Structural and metric inspection of the pinned CME ajd8171 XML.",
+      "repository_path": "source-cache/ajd8171/cme-ajd8171-e1d77c8.xml",
+      "locator": "Count-bearing DIV hierarchy, verse line elements, prose paragraphs, dedication, and contents.",
+      "summary": "Reconciles eighteen count-bearing components, twenty-two serialized streams, eight dual-version child streams, 670 line groups, 13,275 verse lines, and 15 prose paragraphs; dedication and contents are representation-only.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero Press CME repository LICENSE, pinned at Git commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "repository_path": "source-cache/ajd8171/cme-license-at-e1d77c8.txt",
+      "summary": "Contains Unlicense language framed around software; it does not expressly settle whether repository XML/data are included.",
+      "accessed_on": "2026-07-16",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, AJD8171.0001.001.",
+      "url": "https://name.umdl.umich.edu/AJD8171.0001.001",
+      "locator": "Bibliographic record, encoding statement, access links, and current rights statement.",
+      "summary": "Identifies the electronic item, its uncorrected OCR/TEI production, historical page-image delivery, and current NoC-US rights label.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:horstmann-edition",
+      "type": "digital_surrogate",
+      "citation": "Carl Horstmann, ed., Sammlung altenglischer Legenden, grösstentheils zum ersten Male herausgegeben (Heilbronn: Gebr. Henninger, 1878), Boston Public Library copy digitized by Internet Archive.",
+      "url": "https://archive.org/details/sammlungaltengli1878hors",
+      "repository_path": "source-cache/ajd8171/horstmann-1878-bpl-complete.pdf",
+      "locator": "Title and dedication; printed pages 1–227; unnumbered contents page.",
+      "summary": "Primary evidence for the anthology boundary, component/version structure, printed metrics, manuscript sigla, source acknowledgments, and editorial routes.",
+      "accessed_on": "2026-07-16",
+      "sha256": "bc9e3e433346502e7509c02336a71e2d99e4338d66cdcbb0829dd780c3cd24ae"
+    },
+    {
+      "id": "evidence:source-mapping",
+      "type": "edition_statement",
+      "citation": "Horstmann 1878 source statements, headnotes, apparatus, and terminal contents, checked against current manuscript catalogs and facsimiles.",
+      "url": "https://archive.org/details/sammlungaltengli1878hors",
+      "repository_path": "source-cache/ajd8171/horstmann-1878-bpl-complete.pdf",
+      "locator": "Part I heading and seven chapter divisions; Part II headnotes for Kindheit, Canticum, Magdalena, Marina, Euphrosyne, Cristine, Dorothe, Erasmus, Disputisoun, Roberd, and appendix.",
+      "summary": "Supports exact component-to-source scopes, mediated routes through Laing and the Smith/Kölbing/Furnivall transcripts, dual-version boundaries, the CUL Ii.4.9 exclusion, and the unresolved Roberd reading partition.",
+      "accessed_on": "2026-07-16",
+      "sha256": "bc9e3e433346502e7509c02336a71e2d99e4338d66cdcbb0829dd780c3cd24ae"
+    },
+    {
+      "id": "evidence:horstmann-ia",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for sammlungaltengli1878hors.",
+      "url": "https://archive.org/metadata/sammlungaltengli1878hors",
+      "repository_path": "source-cache/ajd8171/horstmann-1878-bpl-ia-metadata.json",
+      "summary": "Identifies the Boston Public Library carrier, scan provenance, available derivatives, and absence of an item-level reuse license in the audited metadata.",
+      "accessed_on": "2026-07-16",
+      "sha256": "9b03eb095aca773e3c9bc0b5308a8638bfc256b5f95586548127840d1c16050e"
+    },
+    {
+      "id": "evidence:horstmann-authority",
+      "type": "authority_record",
+      "citation": "Gemeinsame Normdatei, Carl Horstmann, GND 1153444186.",
+      "url": "https://d-nb.info/gnd/1153444186/about/lds.jsonld",
+      "alternate_urls": ["https://d-nb.info/gnd/1153444186"],
+      "repository_path": "source-cache/ajd8171/horstmann-gnd-1153444186.jsonld",
+      "locator": "Preferred name Horstmann, Carl; birth year 1851; biographical note distinguishing the 1847 namesake; embedded CC0 license URI.",
+      "summary": "Identifies the editor as the Carl Horstmann born in 1851 and distinguishes him from the namesake ophthalmologist; no death date is asserted for the editor.",
+      "accessed_on": "2026-07-16",
+      "sha256": "0c7990c6ec7ae90e5a49ebb32c45af4df700cf3e7764ef66ca1c1d95f463c8bd"
+    },
+    {
+      "id": "evidence:graesse-edition",
+      "type": "digital_surrogate",
+      "citation": "Theodor Grässe, ed., Jacobi a Voragine Legenda aurea, vulgo Historia Lombardica dicta (1846), Internet Archive scan.",
+      "url": "https://archive.org/details/LegendaAureaGraesse1846",
+      "repository_path": "source-cache/ajd8171/graesse-legenda-aurea-1846-complete.pdf",
+      "summary": "Confirms the Latin comparison edition cited for Part I; it is not a Middle English copy-text and contains none of the target anthology.",
+      "accessed_on": "2026-07-16",
+      "sha256": "4362418566b8337f71db76e9f2b75c6884bf67e3f3e20081cd9e355b529318e0"
+    },
+    {
+      "id": "evidence:graesse-ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for LegendaAureaGraesse1846.",
+      "url": "https://archive.org/metadata/LegendaAureaGraesse1846",
+      "repository_path": "source-cache/ajd8171/graesse-legenda-aurea-1846-ia-metadata.json",
+      "summary": "Identifies the digitized 1846 comparison edition, derivative files, and Public Domain Mark.",
+      "accessed_on": "2026-07-16",
+      "sha256": "e7b5db211f1f9677abfbc1e549ef0cd4a70ec8394bbc07022d45ce100139316e"
+    },
+    {
+      "id": "evidence:laing-edition",
+      "type": "digital_surrogate",
+      "citation": "David Laing, ed., A Penni Worth of Witte (Edinburgh: Abbotsford Club, 1857), NLS digital copy.",
+      "url": "https://deriv.nls.uk/dcn23/8115/81156097.23.pdf",
+      "repository_path": "source-cache/ajd8171/laing-penniworth-witte-1857-nls-complete.pdf",
+      "locator": "Printed pages 49–61; PDF pages 91–103.",
+      "summary": "Provides the printed intermediary from EUL MS 218 through which Horstmann took Canticum version-b lines 1–352.",
+      "accessed_on": "2026-07-16",
+      "sha256": "d998dc17d1404f11efc8f4af918c6520cc821b12e5427304c5d357cc26a28d67"
+    },
+    {
+      "id": "evidence:vernon-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Catalogue of Medieval Manuscripts, MS. Eng. poet. a. 1 (Vernon Manuscript).",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+      "summary": "Confirms the physical witness identity, date, contents, foliation, and target-text locations.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:vernon-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF Presentation manifest for the Vernon Manuscript, object 52f0a31a-1478-40e4-b05b-fddb1ad076ff.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+      "repository_path": "source-cache/ajd8171/bodleian-vernon-ms-iiif-manifest.json",
+      "summary": "Confirms a complete 710-canvas digital carrier and exact canvas mappings for all Vernon target portions.",
+      "accessed_on": "2026-07-16",
+      "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc"
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use.",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "repository_path": "source-cache/ajd8171/digital-bodleian-terms.html",
+      "summary": "States that most Digital Bodleian images are offered under CC BY-NC 4.0, subject to item-specific restrictions and provider conditions.",
+      "accessed_on": "2026-07-16",
+      "sha256": "295f32b2397c43a57967a150814b9059913c98fa3303fce11da05aa5b2e8210a"
+    },
+    {
+      "id": "evidence:bl-catalogs",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts catalog records for Arundel MS 168, Add MS 36983, and Harley MSS 525, 1701, 2253, 2382, 2399, 3954, and 5272.",
+      "url": "https://searcharchives.bl.uk/",
+      "locator": "Ten JSON records listed with exact hashes under nine witness-specific British Library catalog access records; Harley MS 2253 has parent and Part II records.",
+      "summary": "Confirms witness identities, dates, composite-part boundaries, contents, and target folio ranges; the catalog records contain no target text or images.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:bl-digitisation-service",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation Services, online ordering guidance and linked beta order form.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"],
+      "locator": "Online ordering; required shelfmark, title, folios, format, payment, delivery, restrictions, and beta-service caveats.",
+      "summary": "Confirms a fee-based request route for images from British Library collections. The service warns of possible delays and restrictions and does not guarantee that a specific manuscript order will be fulfilled.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:harley3954-iiif",
+      "type": "digital_surrogate",
+      "citation": "British Library IIIF Presentation manifest for Harley MS 3954.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100057740181.0x000001",
+      "repository_path": "source-cache/ajd8171/harley-ms-3954-iiif-manifest.json",
+      "summary": "Confirms the complete 269-canvas published facsimile, target mapping ff. 70r–74r to canvases 147–155, and the geographically qualified public-domain statement.",
+      "accessed_on": "2026-07-16",
+      "sha256": "f4274c667d632e55c574c07d03c4597b3abccd51766deda31bf1d51abeca3e66"
+    },
+    {
+      "id": "evidence:trinity57",
+      "type": "official_catalog",
+      "citation": "Trinity College Oxford MS 57 catalog description, hosted by the Bodleian Libraries.",
+      "url": "https://medieval.bodleian.ox.ac.uk/pdfs/trinity/MS_57.pdf",
+      "summary": "Confirms the witness identity, date, and current foliation: Canticum ff. 157v–165r and Roberd ff. 165r–167r; this corrects Horstmann's historical Canticum start reference.",
+      "accessed_on": "2026-07-16",
+      "notes": ["On 2026-07-16 the exact PDF route returned an Anubis verification page to direct retrieval and a 403 to an independent fetch. No access control was bypassed and no local PDF copy is claimed."]
+    },
+    {
+      "id": "evidence:eul-ms218",
+      "type": "official_catalog",
+      "citation": "University of Edinburgh Archives, MS 218 Auchinleck manuscript fragments.",
+      "url": "https://archives.collections.ed.ac.uk/repositories/2/archival_objects/177097",
+      "repository_path": "source-cache/ajd8171/edinburgh-ms-218-auchinleck-fragments-catalog.html",
+      "summary": "Confirms the detached Edinburgh fragment carrier and helps distinguish it from the main NLS codex and from other EUL MS 218 fragments.",
+      "accessed_on": "2026-07-16",
+      "sha256": "5282b20bcff5cc9e23f4b1b1ba622cd7ba988c5d80d992c24482b0771673f2d9"
+    },
+    {
+      "id": "evidence:nls-catalog",
+      "type": "official_catalog",
+      "citation": "National Library of Scotland manuscript catalog, Advocates MS 19.2.1 (Auchinleck Manuscript).",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/19334",
+      "summary": "Confirms the physical NLS carrier, date, foliation, and relevant Canticum and Magdalena portions.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:nls-current-iiif",
+      "type": "digital_surrogate",
+      "citation": "National Library of Scotland IIIF Presentation manifest for Adv. MS 19.2.1, digital object 233337262.",
+      "url": "https://view.nls.uk/manifest/2333/3726/233337262/manifest.json",
+      "repository_path": "source-cache/ajd8171/nls-adv-ms-19-2-1-auchinleck-iiif-manifest.json",
+      "summary": "Confirms the complete 734-canvas current facsimile, exact target canvas mappings, and the Public Domain Mark 1.0 statement.",
+      "accessed_on": "2026-07-16",
+      "sha256": "915c5120db85b016516de8508f2483bdc3b73c0efee5691df3897cbe6a15a8c8"
+    },
+    {
+      "id": "evidence:nls-old-project",
+      "type": "digital_surrogate",
+      "citation": "National Library of Scotland, Auchinleck Manuscript project, complete published 701-image inventory.",
+      "url": "https://auchinleck.nls.uk/",
+      "repository_path": "source-cache/ajd8171/nls-auchinleck-complete-published-inventory.zip",
+      "summary": "Confirms a project-level reconstruction spanning the NLS codex and detached fragments; target images split as NLS items 27–32 and 127–134 versus EUL MS 218 items 686–689.",
+      "accessed_on": "2026-07-16",
+      "sha256": "351e3b1a41bdf9a32b4cd846b30555e632239b867f9b11d6239f30844ca9c060"
+    },
+    {
+      "id": "evidence:nls-old-terms",
+      "type": "official_webpage",
+      "citation": "National Library of Scotland, Auchinleck Manuscript project, Copyright and use.",
+      "url": "https://auchinleck.nls.uk/editorial/refer_site.html",
+      "repository_path": "source-cache/ajd8171/nls-auchinleck-project-use-terms.html",
+      "summary": "Declares site materials copyrighted, permits personal use, and prohibits unauthorized commercial use or publication.",
+      "accessed_on": "2026-07-16",
+      "sha256": "e425606dcfedfd0b943c8566a536ed93a617ae2bd433cd7a39173b27ab2cece6"
+    },
+    {
+      "id": "evidence:laud-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, MS. Laud Misc. 108 catalog TEI, pinned at medieval-mss commit cd36dce9a104617f960dab2c97ea78f95f917496.",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Laud_Misc/MS_Laud_Misc_108.xml",
+      "repository_path": "source-cache/ajd8171/bodleian-ms-laud-misc-108-catalog-tei.xml",
+      "summary": "Confirms MS Laud Misc. 108, its date, contents, and Magdalena at ff. 190r–197r.",
+      "accessed_on": "2026-07-16",
+      "sha256": "2814905d145bf6fa0a3664f0f46ed3dce485fff73b3bbab5a3f043608511d74b"
+    },
+    {
+      "id": "evidence:laud-iiif",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF Presentation manifest for MS Laud Misc. 108, object c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c5438c30-71dd-4cec-ac59-eb1e5a11f2a4.json",
+      "repository_path": "source-cache/ajd8171/bodleian-laud-misc-108-iiif-manifest.json",
+      "summary": "Confirms a complete 496-canvas digital carrier and maps ff. 190r–197r to canvases 395–409.",
+      "accessed_on": "2026-07-16",
+      "sha256": "ce8d05cfecb6f05778d6a0f72de48b9805e57f4844cd63b8569c1055395a3019"
+    },
+    {
+      "id": "evidence:cul-ff238",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Cambridge University Library MS Ff.2.38.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "summary": "Supports the manuscript identity and Roberd of Cisyle location at ff. 254r–257v; no CUL item-level image surrogate was used.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:cul-ii49-james",
+      "type": "official_catalog",
+      "citation": "M. R. James, unpublished description of Cambridge University Library MS Ii.4.9, transcription by Jayne Ringrose, Cambridge University Library repository.",
+      "url": "https://www.repository.cam.ac.uk/items/8991de06-1540-4afe-98bb-1ca151bacf6d",
+      "repository_path": "source-cache/ajd8171/james-cambridge-ms-ii-4-9-description.pdf",
+      "locator": "King Robert of Sicily, ff. 87v–93v; repository rights metadata.",
+      "summary": "Reconciles Horstmann's likely Cbr. Ji IV, 8 reference with current MS Ii.4.9 and supplies a catalog description only; Horstmann says the cited copy was unavailable, so no source relation is asserted.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c7a6b6f8ed4dd7fc3162cc0fc542f85d5bdb98c8db9971ce27545aeeb18621bc"
+    },
+    {
+      "id": "evidence:us-copyright-duration",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "repository_path": "source-cache/ajd8171/us-copyright-office-circular-15a-2026.pdf",
+      "locator": "Complete four-page April 2026 circular and duration tables.",
+      "summary": "Supports the conservative U.S.-jurisdiction public-domain conclusions for nineteenth-century published editions and centuries-old manuscript content; provider licenses and terms are recorded separately.",
+      "accessed_on": "2026-07-16",
+      "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef"
+    },
+    {
+      "id": "evidence:us-government-work-law",
+      "type": "law",
+      "citation": "17 U.S.C. § 105, Subject matter of copyright: United States Government works.",
+      "url": "https://www.copyright.gov/title17/92chap1.html#105",
+      "summary": "Provides that U.S. copyright protection is not available for works of the United States Government and supports the U.S.-jurisdiction status assigned to the Copyright Office circular.",
+      "accessed_on": "2026-07-16"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-image-carrier",
+      "question": "Which physical copy supplied U-M's 234 historical page images, and is a currently auditable complete image route available?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Inspect U-M digital-library administrative metadata or ask the repository whether the carrier barcode and complete current image route can be supplied."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-item", "evidence:horstmann-ia"],
+      "notes": ["Until resolved, the U-M page-image entity remains distinct from the Boston Public Library/Internet Archive facsimile."]
+    },
+    {
+      "id": "question:trinity57-catalog-retrieval",
+      "question": "Can the exact official Trinity College Oxford MS 57 catalog PDF be retrieved through a repository-supported route without bypassing the current verification challenge?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Retry the exact official PDF endpoint later or ask Trinity College/Bodleian Libraries for a supported direct copy if the verification challenge persists."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:trinity57"],
+      "notes": ["No local copy is recorded because the current response was HTML/403 rather than a verified PDF."]
+    },
+    {
+      "id": "question:working-transcript-repositories",
+      "question": "Where do the Lucy Toulmin Smith, Eugen Kölbing, and F. J. Furnivall working transcripts now survive, if at all?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Search personal-paper finding aids and correspondence catalogs for the named scholars, then contact plausible repositories if item-level records remain unavailable."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:source-mapping"],
+      "notes": ["Their intermediary role is explicit in the edition even though current repositories are unresolved."]
+    },
+    {
+      "id": "question:roberd-reading-partition",
+      "question": "What exact line-by-line partition of Horstmann's Roberd of Cisyle derives from Vernon versus Trinity College Oxford MS 57?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Collate the printed text and apparatus against complete images or diplomatic transcriptions of both principal witnesses."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:vernon-catalog", "evidence:trinity57", "evidence:source-mapping"],
+      "notes": ["Both principal transcription routes are secure; only their exact reading partition is unresolved."]
+    },
+    {
+      "id": "question:cristine-end-folio",
+      "question": "Can Cristine's inferred Arundel MS 168 endpoint at f. 4v be confirmed directly?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Inspect a complete Arundel MS 168 facsimile or a more granular item-level catalog description."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-catalogs", "evidence:horstmann-edition", "evidence:source-mapping"],
+      "notes": ["The source witness is confirmed; only the endpoint is inferred from Dorothe's cataloged start at f. 5r."]
+    },
+    {
+      "id": "question:cul-ii49-siglum",
+      "question": "Can Horstmann's unavailable Cbr. Ji IV, 8 reference be proven to be current CUL MS Ii.4.9 rather than merely identified with high probability?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Trace historical Cambridge shelfmark forms in nineteenth-century catalogs and compare Horstmann's description with the James record."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:horstmann-edition", "evidence:cul-ii49-james", "evidence:source-mapping"],
+      "notes": ["Resolution would improve identifier history but would not add the witness to the 1878 edition source chain."]
+    },
+    {
+      "id": "question:cme-license-scope",
+      "question": "Does the CME repository's Unlicense file intentionally apply to the corpus XML/data as well as software?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Seek an explicit repository or publisher statement defining the licensed material scope."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:cme-license", "evidence:repository-xml"],
+      "notes": ["The manifest records the repository statement but leaves the artifact's item-level copyright status unknown."]
+    }
+  ]
+}

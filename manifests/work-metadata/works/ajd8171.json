@@ -1,0 +1,648 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:ajd8171",
+  "work_id": "ajd8171",
+  "record_status": "reviewed",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "cataloging_subject": {
+    "id": "work:ajd8171",
+    "unit_type": "edited_selection",
+    "label": "Sammlung altenglischer Legenden",
+    "scope_note": "The complete eighteen-component scholarly anthology compiled and edited by Carl Horstmann and published in 1878: seven components in the Vernon collection and eleven Einzellegenden, including the prose Adam-and-Eve appendix. It is not one medieval work, one manuscript, the 1881 second series, or twenty-two independent works. Four components serialize two witness-version streams; witnesses, transcripts, print intermediaries, facsimiles, the U-M encoding, and the repository XML remain separate lineage layers."
+  },
+  "catalog_summary": {
+    "title": "Sammlung altenglischer Legenden",
+    "author": "Anonymous Middle English authors and translators; William Paris (Cristine)",
+    "editor": "Carl Horstmann",
+    "date": "Medieval component texts compiled and first published as this scholarly selection in 1878",
+    "region": "England (medieval textual traditions); Heilbronn (1878 publication)",
+    "genres": [
+      "Edited selection",
+      "Hagiography",
+      "Religious poetry",
+      "Biblical narrative",
+      "Debate poem",
+      "Middle English romance"
+    ],
+    "form": "mixed",
+    "language_codes": ["enm", "deu", "lat"],
+    "tags": [
+      "auchinleck-manuscript",
+      "biblical-narrative",
+      "christian-devotion",
+      "creation",
+      "debate-poetry",
+      "edited-selection",
+      "golden-legend",
+      "hagiography",
+      "manuscript-collation",
+      "manuscript-transmission",
+      "middle-english",
+      "prose-and-verse",
+      "romance",
+      "saints-lives",
+      "vernon-manuscript"
+    ]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "ajd8171",
+      "uri": "https://name.umdl.umich.edu/AJD8171.0001.001"
+    },
+    {
+      "scheme": "U-M IDNO",
+      "value": "AJD8171.0001.001",
+      "uri": "https://name.umdl.umich.edu/AJD8171.0001.001"
+    },
+    {
+      "scheme": "Library of Congress call number in source header",
+      "value": "821.2 H82s"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Sammlung altenglischer Legenden",
+      "language": "deu",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-edition"]
+      }
+    },
+    {
+      "id": "title:full-edition",
+      "type": "alternate",
+      "value": "Sammlung altenglischer Legenden: Grösstentheils zum ersten Male herausgegeben von C. Horstmann",
+      "language": "deu",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:lineage-edition"]
+      },
+      "notes": ["Retains the historical title-page spelling rather than silently modernizing it."]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:carl-horstmann",
+      "type": "person",
+      "name": "Carl Horstmann",
+      "identifiers": [
+        {
+          "scheme": "GND",
+          "value": "1153444186",
+          "uri": "https://d-nb.info/gnd/1153444186"
+        }
+      ],
+      "notes": ["Born 1851; no verified death date is asserted. The 1912 death date belongs to a namesake ophthalmologist."]
+    },
+    {
+      "id": "agent:william-paris",
+      "type": "person",
+      "name": "William Paris",
+      "notes": ["Named within Cristine; this responsibility is scoped only to that component."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-authors",
+      "display_name": "Anonymous Middle English authors and translators; William Paris (Cristine)",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {
+        "kind": "whole",
+        "description": "The heterogeneous medieval English component texts, except for the component-specific William Paris attribution"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-witnesses"]
+      },
+      "notes": ["This catalog-facing rollup includes the sole named component author but does not make the anthology an authorial medieval collection or assign Horstmann authorship."]
+    },
+    {
+      "id": "responsibility:anonymous-translators",
+      "display_name": "Anonymous Middle English translators",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": [
+          "part:paula", "part:ambrosius", "part:virgin-antioch", "part:theodora", "part:bernard", "part:augustine", "part:savinian-savina", "part:dorothe"
+        ],
+        "description": "Components explicitly presented as vernacular translations or adaptations of Latin legendary material"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-edition"]
+      }
+    },
+    {
+      "id": "responsibility:william-paris-cristine",
+      "agent_id": "agent:william-paris",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:cristine"]},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-witnesses"]
+      }
+    },
+    {
+      "id": "responsibility:horstmann-editor",
+      "agent_id": "agent:carl-horstmann",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1878 anthology, its transcriptions, comparisons, supplied readings, and apparatus"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:lineage-edition"]
+      }
+    },
+    {
+      "id": "responsibility:horstmann-compiler",
+      "agent_id": "agent:carl-horstmann",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Selection and organization of the eighteen editorial components"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-structure", "evidence:lineage-edition"]
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:compilation-1878",
+      "type": "compilation",
+      "display": "Compiled and published in 1878",
+      "normalized": {"not_before": 1878, "not_after": 1878},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:horstmann:altenglische-legenden-1878",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-edition"]
+      },
+      "notes": ["This dates the modern selection and edition, not the composition of all medieval components."]
+    }
+  ],
+  "places": [],
+  "place_statements": [],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "The eighteen vernacular component texts"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-witnesses"]
+      }
+    },
+    {
+      "id": "language:german",
+      "code": "deu",
+      "label": "German",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Horstmann's headings, introductions, arguments, and apparatus retained by the edition and encoding"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-edition"]
+      }
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "quoted",
+      "script": "Latn",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": ["part:part-i", "part:dorothe", "part:erasmus"],
+        "description": "Latin comparison text, rubrics, verses, prayers, and list material printed within the anthology"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-edition"]
+      }
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:mixed",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "Fifteen verse-only items, two mixed verse-and-prose items, and one prose-only appendix.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:ajd8171-structure"]
+      }
+    },
+    {
+      "id": "form:verse-components",
+      "value": "verse",
+      "scope": {
+        "kind": "part",
+        "part_ids": [
+          "part:paula", "part:ambrosius", "part:virgin-antioch", "part:theodora", "part:bernard", "part:augustine", "part:savinian-savina", "part:kindheit-jesu", "part:canticum-creatione", "part:magdalena", "part:marina", "part:eufrosyne", "part:cristine", "part:christian-jew-disputisoun", "part:roberd-cisyle"
+        ]
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ajd8171-structure"]}
+    },
+    {
+      "id": "form:mixed-components",
+      "value": "mixed",
+      "scope": {"kind": "part", "part_ids": ["part:dorothe", "part:erasmus"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ajd8171-structure"]}
+    },
+    {
+      "id": "form:prose-appendix",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:adam-eve-appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ajd8171-structure"]}
+    }
+  ],
+  "genre_statements": [
+    {"id":"genre:edited-selection","term":"edited-selection","label":"Edited selection","scheme":"general-corpus","primary":true,"scope":{"kind":"whole"},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-structure","evidence:lineage-edition"]}},
+    {"id":"genre:hagiography","term":"hagiography","label":"Hagiography","scheme":"general-corpus","primary":true,"scope":{"kind":"selected_passages","part_ids":["part:paula","part:ambrosius","part:virgin-antioch","part:theodora","part:bernard","part:augustine","part:savinian-savina","part:magdalena","part:marina","part:eufrosyne","part:cristine","part:dorothe","part:erasmus"],"description":"Saints' lives and legendary narratives"},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml","evidence:lineage-edition"]}},
+    {"id":"genre:religious-poetry","term":"religious-poetry","label":"Religious poetry","scheme":"general-corpus","scope":{"kind":"selected_passages","part_ids":["part:paula","part:ambrosius","part:virgin-antioch","part:theodora","part:bernard","part:augustine","part:savinian-savina","part:kindheit-jesu","part:canticum-creatione","part:magdalena","part:marina","part:eufrosyne","part:cristine","part:dorothe","part:erasmus","part:christian-jew-disputisoun"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"genre:biblical-narrative","term":"biblical-narrative","label":"Biblical narrative","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:kindheit-jesu","part:canticum-creatione","part:adam-eve-appendix"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"genre:debate-poem","term":"debate-poem","label":"Debate poem","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:christian-jew-disputisoun"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"genre:middle-english-romance","term":"middle-english-romance","label":"Middle English romance","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:roberd-cisyle"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml","evidence:lineage-witnesses"]}}
+  ],
+  "subject_statements": [
+    {"id":"subject:saints-miracles","term":"saints-and-miracles","label":"Saints, miracles, and exemplary narratives","scheme":"general-corpus","scope":{"kind":"selected_passages","part_ids":["part:paula","part:ambrosius","part:virgin-antioch","part:theodora","part:bernard","part:augustine","part:savinian-savina","part:magdalena","part:marina","part:eufrosyne","part:cristine","part:dorothe","part:erasmus"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"subject:life-jesus","term":"life-of-jesus-christ","label":"Life of Jesus Christ","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:kindheit-jesu"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"subject:creation","term":"creation-cosmology-and-natural-world","label":"Creation, cosmology, and the natural world","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:canticum-creatione","part:adam-eve-appendix"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"subject:anti-judaism","term":"christian-anti-judaism-and-antisemitism","label":"Christian anti-Judaism, antisemitism, and anti-Jewish violence","scheme":"general-corpus","scope":{"kind":"part","part_ids":["part:christian-jew-disputisoun"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]},"notes":["Records hostile Christian representation within the text rather than endorsing it."]},
+    {"id":"subject:martyrdom","term":"martyrdom","label":"Martyrdom and sainthood","scheme":"general-corpus","scope":{"kind":"selected_passages","part_ids":["part:virgin-antioch","part:theodora","part:marina","part:cristine","part:dorothe","part:erasmus"]},"assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:ajd8171-xml"]}},
+    {"id":"subject:religious-devotion","term":"religious-devotion","label":"Christian devotion and prayer","scheme":"general-corpus","scope":{"kind":"whole","description":"A broad anthology-level subject, with different emphases in individual components"},"assertion":{"status":"supported","confidence":"high","evidence_ids":["evidence:ajd8171-xml","evidence:lineage-edition"]}}
+  ],
+  "tags": [
+    "auchinleck-manuscript",
+    "biblical-narrative",
+    "christian-devotion",
+    "creation",
+    "debate-poetry",
+    "edited-selection",
+    "golden-legend",
+    "hagiography",
+    "manuscript-collation",
+    "manuscript-transmission",
+    "middle-english",
+    "prose-and-verse",
+    "romance",
+    "saints-lives",
+    "vernon-manuscript"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Carl Horstmann's 1878 anthology presents eighteen Middle English religious and legendary components. Part I transcribes a seven-item Vernon-Manuscript sequence related to the Legenda aurea; Part II prints individual saints' lives, biblical and apocryphal narratives, a Christian-Jewish disputation, the romance of Roberd of Cisyle, and a prose Adam-and-Eve appendix. Four components preserve two serialized witness versions, while German editorial framing and Latin comparisons, rubrics, verses, and prayers remain part of the scholarly presentation.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:ajd8171-xml", "evidence:ajd8171-structure", "evidence:lineage-edition"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "Part I: Paula; Ambrosius; the maiden of Antioch; Theodora; Bernard; Augustine; Savinian and Savina. Part II: Kindheit Jesu; Canticum de Creatione; Magdalena; Marina; Eufrosyne; Cristine; Dorothe; Erasmus; A disputisoun bytwene a cristenemon and a Jew; Roberd of Cisyle; appendix on Adam and Eve.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:ajd8171-xml", "evidence:ajd8171-structure"]
+    },
+    {
+      "id": "summary:counting-model",
+      "type": "cataloging_note",
+      "value": "The record counts eighteen editorial components once. Kindheit Jesu, Canticum de Creatione, Magdalena, and Erasmus each own one item/form count but no line metrics; their eight zero-item version children partition those components' 348 verse groups and 5,070 lines. Together with the seven single-stream Part II components, they produce the Part II total of 480 groups and 7,617 lines. The whole encoding serializes twenty-two streams but does not contain twenty-two independent works.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:ajd8171-structure"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 18,
+    "sections": 18,
+    "prose_only_items": 1,
+    "verse_only_items": 15,
+    "mixed_items": 2,
+    "verse_groups": 670,
+    "verse_lines": 13275,
+    "description": "Eighteen count-bearing editorial components: seven in Part I and eleven in Part II. Four components have two serialized version children, producing twenty-two text streams and twenty-eight modeled part records when the two zero-count containers and eight version children are included. XML metrics are 670 LG elements and 13,275 L elements; Part I contributes 190/5,658 and Part II 480/7,617.",
+    "evidence_ids": ["evidence:ajd8171-structure", "evidence:lineage-edition"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:part-i", "parent_id": null, "sequence": 1, "type": "section",
+      "label": "Part I: Vernon collection", "summary": "A seven-component sequence transcribed from the Vernon manuscript and compared with corresponding Legenda aurea chapters.",
+      "item_count": 0, "textual_form": "verse",
+      "metrics": {"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators": [
+        {"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3"},
+        {"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"1–98"}
+      ],
+      "evidence_ids": ["evidence:ajd8171-xml", "evidence:ajd8171-structure", "evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:paula","parent_id":"part:part-i","sequence":1,"type":"item","label":"S. Paula","summary":"A metrical legendary account of Saint Paula within the Vernon sequence.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":8,"verse_lines":248},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"3–8"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"89r–89v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["Three prose P elements are German editorial argument, not prose-form content of the item."]
+    },
+    {
+      "id":"part:ambrosius","parent_id":"part:part-i","sequence":2,"type":"item","label":"S. Ambrosius","summary":"A metrical life of Saint Ambrose, including the nested Theodosius episode.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":46,"verse_lines":1130},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.2, including 3.2.2"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"9–26"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"89v–91v; Theodosius at 91r–91v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:virgin-antioch","parent_id":"part:part-i","sequence":3,"type":"item","label":"De quadam virgine in Antiochia","summary":"The legend of a maiden of Antioch followed by the Sithia and Climonen continuation.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":6,"verse_lines":560},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.3"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"27–34"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"91v–93r; principal legend 91v–92r and continuation 92r–93r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:theodora","parent_id":"part:part-i","sequence":4,"type":"item","label":"De S. Theodora","summary":"A metrical legend of Saint Theodora.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":18,"verse_lines":410},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.4"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"35–41"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"93r–93v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:bernard","parent_id":"part:part-i","sequence":5,"type":"item","label":"S. Bernard","summary":"A metrical life of Saint Bernard.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":39,"verse_lines":1215},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.5"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"42–61"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"93v–96r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:augustine","parent_id":"part:part-i","sequence":6,"type":"item","label":"S. Augustin","summary":"A metrical life of Saint Augustine.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":71,"verse_lines":1802},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.6"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"62–92"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"96r–100r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:savinian-savina","parent_id":"part:part-i","sequence":7,"type":"item","label":"Savinian and Savina","summary":"A metrical legend of Savinian and Savina.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":2,"verse_lines":293},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:3.7"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"93–98"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"100r–100v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:part-ii","parent_id":null,"sequence":2,"type":"section","label":"Part II: Einzellegenden","summary":"Eleven individual legendary, biblical, debate, romance, and appendix components.","item_count":0,"textual_form":"mixed",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"99–227"}],
+      "evidence_ids":["evidence:ajd8171-xml","evidence:ajd8171-structure","evidence:lineage-edition"]
+    },
+    {
+      "id":"part:kindheit-jesu","parent_id":"part:part-ii","sequence":1,"type":"item","label":"Kindheit Jesu","summary":"Two serialized Middle English versions of narratives about Christ's childhood.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"101–123"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["One item/form count is owned here; the two zero-item children alone own the 137 groups and 1,538 lines."]
+    },
+    {
+      "id":"part:kindheit-harley-3954","parent_id":"part:kindheit-jesu","sequence":1,"type":"section","label":"Kindheit Jesu: Harley MS 3954 version","summary":"The first serialized witness version.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":67,"verse_lines":694},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.1.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"102–110"},{"lineage_entity_id":"witness:bl:Harley-3954","scheme":"folio","value":"70r–74r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:kindheit-harley-2399","parent_id":"part:kindheit-jesu","sequence":2,"type":"section","label":"Kindheit Jesu: Harley MS 2399 version","summary":"The second serialized witness version.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":70,"verse_lines":844},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.1.2"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"111–123"},{"lineage_entity_id":"witness:bl:Harley-2399","scheme":"folio","value":"47v–61r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:canticum-creatione","parent_id":"part:part-ii","sequence":2,"type":"item","label":"Canticum de Creatione","summary":"Two serialized creation narratives: the Trinity version and a composite Auchinleck stream surviving in Edinburgh and NLS fragments.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.2"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"124–147"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["One item/form count is owned here; the two zero-item children alone own the 202 groups and 1,983 lines."]
+    },
+    {
+      "id":"part:canticum-trinity-57","parent_id":"part:canticum-creatione","sequence":1,"type":"section","label":"Canticum: Trinity College Oxford MS 57 version","summary":"The Trinity version, whose manuscript colophon dates the composition to 1375.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":200,"verse_lines":1200},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.2.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"125–138"},{"lineage_entity_id":"witness:trinity-oxford:MS-57","scheme":"current folio","value":"157v–165r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["Horstmann's fol. 156 citation is retained in lineage as historical foliation; the current catalog starts the item at fol. 157v."]
+    },
+    {
+      "id":"part:canticum-auchinleck","parent_id":"part:canticum-creatione","sequence":2,"type":"section","label":"Canticum: composite Auchinleck version","summary":"One continuous version reconstructed from the detached EUL fragment for lines 1–352 and the NLS fragment for lines 353–end.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":2,"verse_lines":783},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.2.2"},{"lineage_entity_id":"edition:laing:penniworth-witte-1857","scheme":"printed page","value":"49–61, supplying edition lines 1–352"},{"lineage_entity_id":"witness:eul:MS-218","scheme":"folio","value":"1r–2v, lines 1–352"},{"lineage_entity_id":"witness:nls:Adv-MS-19-2-1","scheme":"folio","value":"14r–16v, lines 353–end"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["The Horstmann stream reaches EUL MS 218 through Laing's print and reaches the NLS fragment through Lucy Toulmin Smith's transcript; it is not evidence of direct Horstmann autopsy of both carriers."]
+    },
+    {
+      "id":"part:magdalena","parent_id":"part:part-ii","sequence":3,"type":"item","label":"Magdalena","summary":"Two serialized Middle English versions of the life of Mary Magdalene.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.3"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"148–170"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["One item/form count is owned here; the two zero-item children alone own the 3 groups and 1,325 lines. The prose P is an editorial loss note, not prose-form target content."]
+    },
+    {
+      "id":"part:magdalena-laud-108","parent_id":"part:magdalena","sequence":1,"type":"section","label":"Magdalena: Laud Misc. 108 version","summary":"The first serialized version, directly transcribed from Laud Misc. 108.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":1,"verse_lines":643},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.3.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"149–162"},{"lineage_entity_id":"witness:bodleian:Laud-Misc-108","scheme":"folio","value":"190r–197r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:magdalena-auchinleck","parent_id":"part:magdalena","sequence":2,"type":"section","label":"Magdalena: Auchinleck version","summary":"The second serialized version, mediated through Lucy Toulmin Smith's transcript with Kölbing's transcript consulted.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":2,"verse_lines":682},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.3.2"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"163–170"},{"lineage_entity_id":"witness:nls:Adv-MS-19-2-1","scheme":"folio","value":"62r–65v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:marina","parent_id":"part:part-ii","sequence":4,"type":"item","label":"Marina","summary":"A metrical legend of Saint Marina.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":1,"verse_lines":232},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.4"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"171–173"},{"lineage_entity_id":"witness:bl:Harley-2253","scheme":"folio","value":"64v–65v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:eufrosyne","parent_id":"part:part-ii","sequence":5,"type":"item","label":"Eufrosyne","summary":"A metrical legend of Saint Euphrosyne.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":1,"verse_lines":673},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.5"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"174–182"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"103r–104v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:cristine","parent_id":"part:part-ii","sequence":6,"type":"item","label":"Cristine","summary":"William Paris's metrical life of Saint Christine.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":65,"verse_lines":529},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.6"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"183–190"},{"lineage_entity_id":"witness:bl:Arundel-168","scheme":"folio","value":"2r–4v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["The current catalog gives the f. 2 start; the f. 4v endpoint is inferred from Dorothe beginning at f. 5r."]
+    },
+    {
+      "id":"part:dorothe","parent_id":"part:part-ii","sequence":7,"type":"item","label":"Dorothe","summary":"A metrical legend of Saint Dorothy with Latin verses and two prose prayers; the final English lines are supplied from Arundel 168 after a Harley leaf loss.","item_count":1,"textual_form":"mixed",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":1,"verse_groups":45,"verse_lines":350},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.7"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"191–197"},{"lineage_entity_id":"witness:bl:Harley-5272","scheme":"folio","value":"99r–104v"},{"lineage_entity_id":"witness:bl:Arundel-168","scheme":"folio","value":"5r–7r; verse 5r–6v, Latin verses 6v, prayer 7r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:erasmus","parent_id":"part:part-ii","sequence":8,"type":"item","label":"Erasmus","summary":"Two serialized versions of the Saint Erasmus legend; the Bedford stream continues from verse into a prose/list and prayer context.","item_count":1,"textual_form":"mixed",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":1,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.8"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"198–203"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["One item/form count is owned here; the two zero-item children alone own the 6 groups and 224 lines."]
+    },
+    {
+      "id":"part:erasmus-harley-2382","parent_id":"part:erasmus","sequence":1,"type":"section","label":"Erasmus: Harley MS 2382 version","summary":"The first serialized Erasmus version.","item_count":0,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":4,"verse_lines":174},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.8.1"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"199–200"},{"lineage_entity_id":"witness:bl:Harley-2382","scheme":"folio","value":"109r–111r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:erasmus-bedford","parent_id":"part:erasmus","sequence":2,"type":"section","label":"Erasmus: Bedford manuscript version","summary":"The second serialized Erasmus version: fifty verse lines followed by list and prayer material.","item_count":0,"textual_form":"mixed",
+      "metrics":{"prose_only_items":0,"verse_only_items":0,"mixed_items":0,"verse_groups":2,"verse_lines":50},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.8.2"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"201–203"},{"lineage_entity_id":"witness:bl:Add-36983","scheme":"folio","value":"279v–280v; verse 279v–280r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:christian-jew-disputisoun","parent_id":"part:part-ii","sequence":9,"type":"item","label":"A disputisoun bytwene a cristenemon and a Jew","summary":"A hostile Christian-Jewish disputation structured around Sir Walter's victory over a Jewish opponent.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":19,"verse_lines":319},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.9"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"204–208"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"301v–302r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"]
+    },
+    {
+      "id":"part:roberd-cisyle","parent_id":"part:part-ii","sequence":10,"type":"item","label":"Roberd of Cisyle","summary":"An eclectic edition of the Middle English romance in which a proud king is displaced, humbled, and restored.","item_count":1,"textual_form":"verse",
+      "metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":1,"verse_lines":444},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.10"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"209–219"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"300r–301r"},{"lineage_entity_id":"witness:trinity-oxford:MS-57","scheme":"folio","value":"165r–167r"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["Harley 1701, Harley 525, and CUL Ff.2.38 are collated witnesses. The unavailable CUL Ii.4.9 copy is not a source relation for this 1878 edition."]
+    },
+    {
+      "id":"part:adam-eve-appendix","parent_id":"part:part-ii","sequence":11,"type":"appendix","label":"Beilage zur Creatio mundi: þe lyff of Adam and Eue","summary":"A prose appendix recounting the creation and the life and sufferings of Adam and Eve.","item_count":1,"textual_form":"prose",
+      "metrics":{"prose_only_items":1,"verse_only_items":0,"mixed_items":0,"verse_groups":0,"verse_lines":0},
+      "locators":[{"lineage_entity_id":"encoding:umich:AJD8171.0001.001","scheme":"XML node","value":"AJD8171.0001.001:4.11"},{"lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","scheme":"printed page","value":"220–227"},{"lineage_entity_id":"witness:bodleian:Vernon","scheme":"folio","value":"393r–393v"}],
+      "evidence_ids":["evidence:ajd8171-structure","evidence:lineage-witnesses"],"notes":["The XML contains fifteen content P elements. Horstmann received the text through a Furnivall working transcript rather than claiming direct autopsy of Vernon at this locus."]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:ajd8171",
+    "manifest_path": "manifests/lineage/works/ajd8171.json",
+    "bindings": [
+      {"metadata_target":"work:ajd8171","lineage_entity_id":"artifact:general-corpus:ajd8171","role":"repository_representation"},
+      {"metadata_target":"work:ajd8171","lineage_entity_id":"encoding:umich:AJD8171.0001.001","role":"digital_encoding"},
+      {"metadata_target":"work:ajd8171","lineage_entity_id":"edition:horstmann:altenglische-legenden-1878","role":"source_edition"},
+      {"metadata_target":"part:part-i","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:paula","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:ambrosius","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:virgin-antioch","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:theodora","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:bernard","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:augustine","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:savinian-savina","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:kindheit-harley-3954","lineage_entity_id":"witness:bl:Harley-3954","role":"source_witness"},
+      {"metadata_target":"part:kindheit-harley-2399","lineage_entity_id":"witness:bl:Harley-2399","role":"source_witness"},
+      {"metadata_target":"part:canticum-trinity-57","lineage_entity_id":"witness:trinity-oxford:MS-57","role":"source_witness"},
+      {"metadata_target":"part:canticum-auchinleck","lineage_entity_id":"edition:laing:penniworth-witte-1857","role":"source_edition"},
+      {"metadata_target":"part:canticum-auchinleck","lineage_entity_id":"transcript:lucy-toulmin-smith:auchinleck","role":"source_witness"},
+      {"metadata_target":"part:magdalena-laud-108","lineage_entity_id":"witness:bodleian:Laud-Misc-108","role":"source_witness"},
+      {"metadata_target":"part:magdalena-auchinleck","lineage_entity_id":"transcript:lucy-toulmin-smith:auchinleck","role":"source_witness"},
+      {"metadata_target":"part:magdalena-auchinleck","lineage_entity_id":"transcript:kolbing:magdalena","role":"related_source"},
+      {"metadata_target":"part:marina","lineage_entity_id":"witness:bl:Harley-2253","role":"source_witness"},
+      {"metadata_target":"part:eufrosyne","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:cristine","lineage_entity_id":"witness:bl:Arundel-168","role":"source_witness"},
+      {"metadata_target":"part:dorothe","lineage_entity_id":"witness:bl:Harley-5272","role":"source_witness"},
+      {"metadata_target":"part:dorothe","lineage_entity_id":"witness:bl:Arundel-168","role":"source_witness"},
+      {"metadata_target":"part:erasmus-harley-2382","lineage_entity_id":"witness:bl:Harley-2382","role":"source_witness"},
+      {"metadata_target":"part:erasmus-bedford","lineage_entity_id":"witness:bl:Add-36983","role":"source_witness"},
+      {"metadata_target":"part:christian-jew-disputisoun","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:roberd-cisyle","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"},
+      {"metadata_target":"part:roberd-cisyle","lineage_entity_id":"witness:trinity-oxford:MS-57","role":"source_witness"},
+      {"metadata_target":"part:roberd-cisyle","lineage_entity_id":"witness:bl:Harley-1701","role":"related_source"},
+      {"metadata_target":"part:roberd-cisyle","lineage_entity_id":"witness:bl:Harley-525","role":"related_source"},
+      {"metadata_target":"part:roberd-cisyle","lineage_entity_id":"witness:cul:Ff-2-38","role":"related_source"},
+      {"metadata_target":"part:adam-eve-appendix","lineage_entity_id":"transcript:furnivall:adam-eve","role":"source_witness"},
+      {"metadata_target":"part:adam-eve-appendix","lineage_entity_id":"witness:bodleian:Vernon","role":"source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:ajd8171-xml",
+      "type": "repository_file",
+      "citation": "Pinned General Corpus source XML ajd8171.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/ajd8171.xml",
+      "locator": "HEADER, FRONT, BODY nodes AJD8171.0001.001:3–4, BACK, and page milestones",
+      "summary": "Supplies the electronic title, U-M identifier, source-edition statement, languages in the retained text, editorial production note, component headings, content, and XML structure.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685"
+    },
+    {
+      "id": "evidence:ajd8171-structure",
+      "type": "computational_inspection",
+      "citation": "XPath and semantic form audit of the pinned ajd8171 XML against Horstmann's printed pages.",
+      "repository_path": "CME/source/CME_phase_1-2/ajd8171.xml",
+      "locator": "BODY DIV1/DIV2/DIV3, LG, L, P, and PB; Horstmann printed pp. 1–227",
+      "summary": "Confirms eighteen count-bearing editorial components, four dual-version components and twenty-two streams, 670 LG elements, 13,275 L elements, and the 15 verse/2 mixed/1 prose form allocation. It distinguishes editorial prose from content prose and verifies every part metric.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c50d6e17c85b31886a72b8391ad38ca8352d2e3eedfb4b8e236184e352f38685"
+    },
+    {
+      "id": "evidence:lineage-edition",
+      "type": "linked_manifest_evidence",
+      "citation": "Linked ajd8171 lineage evidence for Horstmann's 1878 edition.",
+      "repository_path": "manifests/lineage/works/ajd8171.json",
+      "source_evidence_id": "evidence:horstmann-edition",
+      "summary": "Supplies the title-page, imprint, selection boundary, editorial responsibility, printed pagination, and source-description evidence.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:lineage-witnesses",
+      "type": "linked_manifest_evidence",
+      "citation": "Linked ajd8171 lineage evidence for Horstmann's witness and intermediary mappings.",
+      "repository_path": "manifests/lineage/works/ajd8171.json",
+      "source_evidence_id": "evidence:source-mapping",
+      "summary": "Supplies current shelfmarks, direct and mediated editorial routes, exact folio endpoints, version boundaries, and facsimile mappings.",
+      "accessed_on": "2026-07-16"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:component-composition",
+      "question": "What are the secure individual composition dates, dialect regions, and authorships of all eighteen medieval components?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Add only component-scoped claims from current specialist scholarship; do not project witness or edition dates onto the whole selection."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:ajd8171-xml", "evidence:lineage-witnesses"]
+    },
+    {
+      "id": "question:cristine-endpoint",
+      "question": "Can direct Arundel MS 168 images or a component catalog explicitly confirm Cristine's inferred endpoint at fol. 4v?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Request or inspect ff. 2r–5r and retain f. 4v as an inference until the physical boundary is visible."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:lineage-witnesses"]
+    },
+    {
+      "id": "question:roberd-partition",
+      "question": "What exact reading-level partition did Horstmann take from Vernon and Trinity MS 57 in the eclectic Roberd of Cisyle text?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Collate every edition line against both witnesses before replacing the current explicitly unresolved dual-base scope with line-level source ranges."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:lineage-witnesses"]
+    }
+  ],
+  "notes": [
+    "The two part containers, eight version children, and eighteen component parents are explicit accounting layers; only the component parents contribute item/form counts.",
+    "The XML's dedication and table-of-contents DIV1 milestones are representation-only and do not become content parts.",
+    "The 1881 second series is outside this cataloging boundary.",
+    "The raw header language code ger is retained as source history but does not describe the Middle English component texts adequately."
+  ]
+}
