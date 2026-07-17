@@ -33,6 +33,7 @@ def check_manifest(path: Path) -> list[str]:
     entities = document.get("entities", [])
     access = document.get("access", [])
     rights = document.get("rights", [])
+    evidence = document.get("evidence", [])
 
     for label, records in (
         ("entity", entities),
@@ -46,12 +47,46 @@ def check_manifest(path: Path) -> list[str]:
     entity_ids = {
         record.get("id") for record in entities if isinstance(record.get("id"), str)
     }
+    entity_by_id = {
+        record.get("id"): record
+        for record in entities
+        if isinstance(record.get("id"), str)
+    }
     access_by_id = {
         record.get("id"): record
         for record in access
         if isinstance(record.get("id"), str)
     }
     covered_entities: set[str] = set()
+
+    for index, evidence_record in enumerate(evidence):
+        evidence_id = evidence_record.get("id", f"evidence[{index}]")
+        repository_path = evidence_record.get("repository_path")
+        if isinstance(repository_path, str) and Path(repository_path).parts[:1] == (
+            "build",
+        ):
+            errors.append(
+                f"{evidence_id}: repository_path points into transient build/"
+            )
+
+    primary_subject_id = document.get("primary_subject")
+    primary_subject = entity_by_id.get(primary_subject_id)
+    if primary_subject is None:
+        errors.append(f"unresolved primary_subject {primary_subject_id!r}")
+    else:
+        if primary_subject.get("type") != "repository_artifact":
+            errors.append(
+                f"primary_subject {primary_subject_id!r} is not a "
+                "repository_artifact"
+            )
+        repository_file = primary_subject.get("repository_file")
+        if not isinstance(repository_file, dict) or not isinstance(
+            repository_file.get("path"), str
+        ):
+            errors.append(
+                f"primary_subject {primary_subject_id!r} lacks "
+                "repository_file.path"
+            )
 
     for access_record in access:
         access_id = access_record.get("id", "access without ID")

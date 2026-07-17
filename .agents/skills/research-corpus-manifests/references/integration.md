@@ -16,6 +16,12 @@ worktree.
    lineage file as a separate semantic gate; schema-valid rights can still
    point at an access record owned by another entity, and schema-valid cached
    sources can still omit their explicit target-presence boundary.
+   Treat every manifest `repository_path` as an integration-time portability
+   claim: it must resolve after the two manifests are moved into the main
+   checkout. Never cite a transient `build/` research-packet file. If a local
+   audit is evidence for a retained claim, copy the frozen audit into the
+   ignored `source-cache/WORK_ID/`, record its checksum, and validate the pair
+   from the main checkout before committing.
    After any long-running cache transfer, replace stale future-tense notes with
    the final byte count, checksum, integrity result, and internal inventory;
    remove or resolve download-pending questions before committing the record.
