@@ -1,0 +1,3101 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:any9948",
+  "work_id": "any9948",
+  "title": "Reson and Sensuallyte",
+  "primary_subject": "artifact:general-corpus:any9948",
+  "record_status": "reviewed",
+  "created": "2026-07-17",
+  "last_reviewed": "2026-07-17",
+  "summary": "The pinned General Corpus XML is a bounded navigational enrichment of the raw 2006 U-M encoding, which derives from a complete 380-TIFF capture of Ernst Sieper's 1901-1903 EETS edition. Sieper transcribes Oxford, Bodleian Library, MS Fairfax 16, ff. 202r-300r, as principal text and collates John Stow's 1558 Add. MS 29729 copy. The one unfinished 7,042-line Middle English work freely translates and expands French lines 1-4,873 of the anonymous Echecs amoureux en vers; the physical French exemplar is unknown, so the three surviving French witnesses remain supporting rather than primary sources.",
+  "languages": [
+    "enm"
+  ],
+  "review_notes": [
+    "The final graph has 21 entities, 27 relations, 17 access records, 22 separately scoped rights records, 3 editorial-practice records, 21 evidence records, and 6 open questions.",
+    "The direct digital/documentary path is repository XML -> raw U-M encoding -> U-M TIFFs -> Sieper edition -> Fairfax 16; the separate intellectual relation is whole English work version_of French lines 1-4873.",
+    "Complete manuscript objects were cached where possible. Fairfax 16 is present at ff. 202r-300r; the complete SLUB and Harvard French-source objects explicitly record the Middle English target as absent.",
+    "The Marciana full-facsimile endpoint returned HTTP 503 on 2026-07-17. This dated access limitation is not modeled as loss or permanent withdrawal.",
+    "Rights, licenses, and provider terms remain attached to the exact historical text, edition, encoding, catalog, physical carrier, or reproduction layer supported by evidence."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:any9948",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for any9948",
+      "description": "Pinned 371,462-byte XML used by the repository pipeline; SHA-256 609d56c573ca889b1390f1782e0bc771d3dc0e97372092d961e8944fafeb5b82.",
+      "identifiers": [
+        {
+          "scheme": "CME",
+          "value": "any9948"
+        },
+        {
+          "scheme": "U-M Digital Library",
+          "value": "ANY9948.0001.001",
+          "uri": "https://name.umdl.umich.edu/ANY9948.0001.001"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "f27f42497b413d2ab0e943b001703977d26b2639"
+        }
+      ],
+      "creator_ids": [
+        "agent:general-corpus"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/any9948.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f27f42497b413d2ab0e943b001703977d26b2639",
+        "sha256": "609d56c573ca889b1390f1782e0bc771d3dc0e97372092d961e8944fafeb5b82"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:xml-normalization-audit",
+        "evidence:cme-license"
+      ],
+      "notes": [
+        "The repository artifact adds only bounded navigational identifiers to the raw U-M XML; normalized text and structure are identical."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:ANY9948.0001.001",
+      "type": "digital_encoding",
+      "label": "Raw University of Michigan CME encoding ANY9948.0001.001",
+      "description": "The 362,373-byte XML in the 2006 U-M source package; SHA-256 aae13c6f9f9a2f5e19a557ad34fca0e58e70d18574ebb9678e7eaf03fdbe2426.",
+      "identifiers": [
+        {
+          "scheme": "U-M Digital Library",
+          "value": "ANY9948.0001.001",
+          "uri": "https://quod.lib.umich.edu/c/cme/ANY9948.0001.001"
+        },
+        {
+          "scheme": "Library of Congress call number",
+          "value": "820.6 E13e no.84,89"
+        }
+      ],
+      "creator_ids": [
+        "agent:university-of-michigan-library"
+      ],
+      "date_statements": [
+        {
+          "label": "Raw package date",
+          "value": "2006",
+          "normalized": "2006",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:umich-package",
+            "evidence:umich-raw-header-rights"
+          ]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:xml-normalization-audit",
+        "evidence:umich-package",
+        "evidence:umich-current-rights",
+        "evidence:umich-raw-header-rights"
+      ]
+    },
+    {
+      "id": "facsimile:umich:eets-es84-es89",
+      "type": "facsimile",
+      "label": "U-M 380-TIFF capture of the bound Sieper EETS set",
+      "description": "Complete sequence 00000001.tif through 00000380.tif; the printed work is Part I pp. 1-184 at TIFFs 00000025.tif-00000208.tif.",
+      "creator_ids": [
+        "agent:university-of-michigan-library"
+      ],
+      "reproduction_format": "380 TIFF page images in a complete source package",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:umich-package",
+        "evidence:umich-current-rights"
+      ]
+    },
+    {
+      "id": "artifact:internet-archive:any9948-source-package",
+      "type": "repository_artifact",
+      "label": "Internet Archive U-M source package for ANY9948.0001.001",
+      "description": "Complete 385-entry package containing the raw XML, TXT, HDR, pageview data, load log, and all 380 TIFFs.",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:umich-package"
+      ]
+    },
+    {
+      "id": "edition:sieper:eets-es84-es89:1901-1903",
+      "type": "scholarly_edition",
+      "label": "Ernst Sieper, Lydgate's Reson and Sensuallyte, EETS Extra Series 84 and 89 (1901-1903)",
+      "description": "Part I supplies the manuscript descriptions, edited text, Furnivall side-notes, and glossary; Part II supplies studies and notes. The Part II preface is dated Munich, May 1904, but its title page is 1903.",
+      "identifiers": [
+        {
+          "scheme": "EETS Extra Series",
+          "value": "84"
+        },
+        {
+          "scheme": "EETS Extra Series",
+          "value": "89"
+        },
+        {
+          "scheme": "Open Library work",
+          "value": "OL15431619W",
+          "uri": "https://openlibrary.org/works/OL15431619W"
+        }
+      ],
+      "creator_ids": [
+        "agent:ernst-sieper",
+        "agent:frederick-j-furnivall"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "1901-1903",
+          "normalized": "1901/1903",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:sieper-edition"
+          ],
+          "notes": "Part II bears 1903 on its title page; its preface is signed Munich, May 1904."
+        }
+      ],
+      "bibliographic": {
+        "citation": "Ernst Sieper, ed., Lydgate's Reson and Sensuallyte, EETS Extra Series 84 and 89 (London: Kegan Paul, Trench, Trubner & Co., 1901-1903).",
+        "title": "Lydgate's Reson and Sensuallyte",
+        "series": "Early English Text Society, Extra Series",
+        "volume": "84 and 89",
+        "publication_place": "London",
+        "publisher": "Kegan Paul, Trench, Trubner & Co.",
+        "date": "1901-1903",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:sieper-part-ii-source-statement"
+      ]
+    },
+    {
+      "id": "work:reson-and-sensuallyte",
+      "type": "catalog_description",
+      "label": "Reson and Sensuallyte (abstract Middle English work)",
+      "alternate_labels": [
+        "Reason and Sensuality"
+      ],
+      "description": "One unfinished 7,042-line Middle English verse translation/adaptation, cautiously attributed to John Lydgate.",
+      "identifiers": [
+        {
+          "scheme": "DIMEV",
+          "value": "5964"
+        },
+        {
+          "scheme": "IMEV",
+          "value": "3746"
+        },
+        {
+          "scheme": "NIMEV",
+          "value": "3746"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Translation and composition",
+          "value": "circa 1406-1408",
+          "normalized": "1406/1408",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:sieper-edition"
+          ]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:sieper-edition",
+        "evidence:dimev-5964"
+      ],
+      "notes": [
+        "The catalog_description type is the schema representation of the abstract work, not a modern catalog record.",
+        "John Lydgate remains an attributed translator-adapter, not an unqualified author."
+      ]
+    },
+    {
+      "id": "witness:bodleian:Fairfax16",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS Fairfax 16, ff. 202r-300r",
+      "alternate_labels": [
+        "Bodleian Library MS. Fairfax 16",
+        "MS. Fairfax 16"
+      ],
+      "description": "Principal witness used by Sieper; a mid-fifteenth-century English parchment codex. The exact work starts on f. 202r and ends on f. 300r.",
+      "identifiers": [
+        {
+          "scheme": "shelfmark",
+          "value": "MS Fairfax 16"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Production",
+          "value": "likely written in the 1440s, possibly completed in 1450",
+          "normalized": "1440/1450",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:fairfax-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian-libraries",
+        "shelfmark": "MS Fairfax 16",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4850"
+      },
+      "physical_description": {
+        "support": "parchment",
+        "extent": "ff. i + 340 + i",
+        "format": "codex",
+        "dimensions": "230 x 165 mm",
+        "notes": [
+          "Reson and Sensuallyte occupies ff. 202r-300r."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:fairfax-catalog",
+        "evidence:fairfax-visual",
+        "evidence:dimev-5964"
+      ],
+      "notes": [
+        "The first XML folio milestone is 202v after 39 poem lines, but direct image inspection proves that the work begins on f. 202r."
+      ]
+    },
+    {
+      "id": "facsimile:bodleian:Fairfax16",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete IIIF facsimile of MS Fairfax 16",
+      "description": "Complete 721-canvas object; target canvas inventory positions 417-613 inclusive.",
+      "reproduction_format": "Digital facsimile",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:fairfax-catalog",
+        "evidence:fairfax-visual"
+      ]
+    },
+    {
+      "id": "facsimile:google-harvard:sieper-eets",
+      "type": "facsimile",
+      "label": "Google/Harvard page-image scan of the complete Sieper EETS set",
+      "description": "Complete 400-page PDF derivative distributed by Internet Archive.",
+      "reproduction_format": "PDF page-image reproduction",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:google-file-use-terms"
+      ]
+    },
+    {
+      "id": "witness:british-library:Add-29729",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Add. MS 29729, ff. 184r-286v",
+      "alternate_labels": [
+        "British Library Additional MS 29729",
+        "Add. MS 29,729"
+      ],
+      "description": "John Stow's 1558 imperfect copy, collated by Sieper. DIMEV's shared ff. 184-186v locator is retained only as an identified catalog-data error.",
+      "identifiers": [
+        {
+          "scheme": "shelfmark",
+          "value": "Add MS 29729"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Copying",
+          "value": "1558",
+          "normalized": "1558",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:sieper-edition",
+            "evidence:bl-add-29729"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 29729",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002021279"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:dimev-5964",
+        "evidence:bl-add-29729"
+      ],
+      "notes": [
+        "DIMEV gives ff. 184-186v; the official catalog and Sieper establish ff. 184r-286v, so the DIMEV endpoint is retained only as a documented data error.",
+        "The work-specific copied_from relation to Fairfax comes from Sieper and is not generalized from the British Library collection-level Shirley statement."
+      ]
+    },
+    {
+      "id": "work:anonymous:echecs-amoureux-en-vers",
+      "type": "catalog_description",
+      "label": "Echecs amoureux en vers (anonymous French verse work)",
+      "description": "Anonymous, unfinished Middle French dream-vision allegory of about 30,000 octosyllabic couplet lines, dated 1370-1380 by JONAS. It is distinct from the prose moralized commentary associated with Evrart de Conty.",
+      "identifiers": [
+        {
+          "scheme": "JONAS work",
+          "value": "7116",
+          "uri": "https://jonas.irht.cnrs.fr/oeuvre/7116"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Composition",
+          "value": "1370-1380",
+          "normalized": "1370/1380",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:jonas-7116"
+          ]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:sieper-part-ii-source-statement",
+        "evidence:dimev-5964",
+        "evidence:jonas-7116"
+      ],
+      "notes": [
+        "The catalog_description type represents the abstract French work; it is distinct from the prose moralized commentary associated with Evrart de Conty."
+      ]
+    },
+    {
+      "id": "witness:slub:Mscr-Dresd-Oc-66",
+      "type": "manuscript_witness",
+      "label": "Dresden, SLUB, Mscr.Dresd.Oc.66",
+      "description": "Complete surviving French witness. The analogous first 4,873 source lines run from f. 1r through f. 25r, IIIF canvases PHYS_0006-PHYS_0054.",
+      "identifiers": [
+        {
+          "scheme": "shelfmark",
+          "value": "Mscr.Dresd.Oc.66"
+        },
+        {
+          "scheme": "SLUB digital object",
+          "value": "355847221",
+          "uri": "https://digital.slub-dresden.de/werkansicht/dlf/563326/1"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Text copying",
+          "value": "last third of the fourteenth century",
+          "normalized": "1367/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:jonas-7116"
+          ],
+          "notes": "JONAS separately dates completion of the illumination to 1482-1502; generic provider metadata giving 1450 is not substituted for this layered chronology."
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:slub-dresden",
+        "shelfmark": "Mscr.Dresd.Oc.66",
+        "catalog_url": "https://digital.slub-dresden.de/werkansicht/dlf/563326/1"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:slub-facsimile",
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "facsimile:slub:Mscr-Dresd-Oc-66",
+      "type": "facsimile",
+      "label": "SLUB complete digital facsimile of Mscr.Dresd.Oc.66",
+      "description": "Complete provider PDF and 301-canvas IIIF object.",
+      "reproduction_format": "PDF page-image reproduction",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:slub-facsimile"
+      ]
+    },
+    {
+      "id": "witness:harvard:MS-Fr-278",
+      "type": "manuscript_witness",
+      "label": "Cambridge, Houghton Library, MS Fr 278",
+      "description": "Two-leaf French fragment identified with Echecs amoureux by JONAS/Biblissima but cataloged by Harvard as an unidentified advice poem; exact verse range unresolved.",
+      "identifiers": [
+        {
+          "scheme": "shelfmark",
+          "value": "MS Fr 278"
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:houghton-library",
+        "shelfmark": "MS Fr 278",
+        "catalog_url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798"
+      },
+      "physical_description": {
+        "extent": "two surviving leaves",
+        "format": "fragment",
+        "notes": [
+          "The current complete digital object has six canvases."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:harvard-iiif"
+      ],
+      "notes": [
+        "JONAS and Biblissima identify the fragment with Echecs amoureux; Harvard describes it as an unidentified advice poem. The exact verse range remains unresolved."
+      ]
+    },
+    {
+      "id": "facsimile:harvard:MS-Fr-278",
+      "type": "facsimile",
+      "label": "Harvard complete IIIF facsimile of MS Fr 278",
+      "description": "All six canvases representing both surviving leaves and associated surfaces.",
+      "reproduction_format": "Digital facsimile",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:harvard-iiif",
+        "evidence:harvard-policy"
+      ]
+    },
+    {
+      "id": "witness:marciana:Str-App-23-267",
+      "type": "manuscript_witness",
+      "label": "Venice, Biblioteca Nazionale Marciana, Str. App. 23 (=267), ff. 37-202",
+      "description": "Late-fourteenth-century French witness, acephalous for lines 1-3,028. Its overlap with the English source segment is French lines 3,029-4,873, approximately ff. 37r-58r.",
+      "identifiers": [
+        {
+          "scheme": "shelfmark",
+          "value": "Str. App. 23 (=267)"
+        },
+        {
+          "scheme": "JONAS manuscript",
+          "value": "68344",
+          "uri": "https://jonas.irht.cnrs.fr/manuscrit/68344"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Production",
+          "value": "late fourteenth century",
+          "normalized": "1375/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:marciana-records"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:biblioteca-marciana",
+        "shelfmark": "Str. App. 23 (=267)",
+        "catalog_url": "https://jonas.irht.cnrs.fr/manuscrit/68344"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:marciana-records",
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "facsimile:internet-culturale:Str-App-23-267",
+      "type": "facsimile",
+      "label": "Internet Culturale full facsimile route for Marciana Str. App. 23 (=267)",
+      "description": "JONAS records a full facsimile route. The endpoint returned HTTP 503 on 2026-07-17; no local complete copy was obtained.",
+      "reproduction_format": "Digital facsimile",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:marciana-records",
+        "evidence:internet-culturale-terms"
+      ],
+      "notes": [
+        "The checked HTTP 503 response is a dated access limitation, not evidence of loss or permanent withdrawal."
+      ]
+    },
+    {
+      "id": "edition:costa:marciana-echecs-2023",
+      "type": "scholarly_edition",
+      "label": "Giacomo Costa, Les eschés amoureux, Marciana Str. App. 23, lines 3029-6074 (2023)",
+      "description": "Current 131-page scholarly transcription used only as supporting evidence and not inferred to have an open redistribution license.",
+      "creator_ids": [
+        "agent:giacomo-costa"
+      ],
+      "date_statements": [
+        {
+          "label": "Publication",
+          "value": "2023",
+          "normalized": "2023",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:costa-2023"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Giacomo Costa, ed., Les esches amoureux, Marciana Str. App. 23 (=267), lines 3029-6074 (2023).",
+        "title": "Les esches amoureux",
+        "date": "2023",
+        "languages": [
+          "frm",
+          "ita"
+        ]
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "catalog:dimev:record-5964",
+      "type": "catalog_description",
+      "label": "DIMEV record 5964",
+      "description": "Versioned bibliographic and witness data for Reson and Sensuallyte, including the qualified attribution, 7,042-line count, French lines 1-4,873 source scope, and both English witnesses.",
+      "identifiers": [
+        {
+          "scheme": "DIMEV",
+          "value": "5964"
+        }
+      ],
+      "creator_ids": [
+        "agent:dimev"
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:dimev-5964"
+      ]
+    },
+    {
+      "id": "catalog:jonas:oeuvre-7116",
+      "type": "catalog_description",
+      "label": "JONAS work 7116 and linked French witness records",
+      "description": "Authority description for the anonymous French verse work and its Dresden, Marciana, and Harvard witnesses.",
+      "identifiers": [
+        {
+          "scheme": "JONAS work",
+          "value": "7116",
+          "uri": "https://jonas.irht.cnrs.fr/oeuvre/7116"
+        }
+      ],
+      "creator_ids": [
+        "agent:irht-jonas"
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:jonas-7116"
+      ]
+    },
+    {
+      "id": "catalog:british-library:Add-29729",
+      "type": "catalog_description",
+      "label": "British Library catalog record for Add. MS 29729",
+      "description": "Current official catalog and access description; target ff. 184r-286v and current digital-image unavailability.",
+      "identifiers": [
+        {
+          "scheme": "British Library Archives and Manuscripts",
+          "value": "032-002021279",
+          "uri": "https://searcharchives.bl.uk/catalog/032-002021279"
+        }
+      ],
+      "creator_ids": [
+        "agent:british-library"
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:bl-add-29729"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:general-corpus",
+      "type": "organization",
+      "name": "General Corpus",
+      "urls": [
+        "https://github.com/Kyvero-Press/General-Corpus"
+      ],
+      "evidence_ids": [
+        "evidence:pinned-xml"
+      ]
+    },
+    {
+      "id": "agent:university-of-michigan-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-current-rights",
+        "evidence:umich-package"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-package",
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "agent:ernst-sieper",
+      "type": "person",
+      "name": "Ernst Sieper",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "agent:frederick-j-furnivall",
+      "type": "person",
+      "name": "Frederick J. Furnivall",
+      "alternate_names": [
+        "Frederick James Furnivall"
+      ],
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "agent:john-lydgate",
+      "type": "person",
+      "name": "John Lydgate",
+      "evidence_ids": [
+        "evidence:dimev-5964",
+        "evidence:fairfax-catalog"
+      ],
+      "notes": [
+        "Attributed translator-adapter only; the attribution remains qualified."
+      ]
+    },
+    {
+      "id": "agent:bodleian-libraries",
+      "type": "organization",
+      "name": "Bodleian Libraries",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:fairfax-catalog"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-add-29729",
+        "evidence:bl-imaging"
+      ]
+    },
+    {
+      "id": "agent:john-stow",
+      "type": "person",
+      "name": "John Stow",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:bl-add-29729"
+      ]
+    },
+    {
+      "id": "agent:slub-dresden",
+      "type": "organization",
+      "name": "Saxon State and University Library Dresden (SLUB)",
+      "urls": [
+        "https://www.slub-dresden.de/"
+      ],
+      "evidence_ids": [
+        "evidence:slub-facsimile"
+      ]
+    },
+    {
+      "id": "agent:harvard-library",
+      "type": "organization",
+      "name": "Harvard Library",
+      "urls": [
+        "https://library.harvard.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:harvard-policy"
+      ]
+    },
+    {
+      "id": "agent:houghton-library",
+      "type": "organization",
+      "name": "Houghton Library, Harvard University",
+      "urls": [
+        "https://library.harvard.edu/libraries/houghton-library"
+      ],
+      "evidence_ids": [
+        "evidence:harvard-iiif",
+        "evidence:harvard-policy"
+      ]
+    },
+    {
+      "id": "agent:biblioteca-marciana",
+      "type": "organization",
+      "name": "Biblioteca Nazionale Marciana",
+      "urls": [
+        "https://marciana.venezia.sbn.it/"
+      ],
+      "evidence_ids": [
+        "evidence:marciana-records"
+      ]
+    },
+    {
+      "id": "agent:internet-culturale",
+      "type": "organization",
+      "name": "Internet Culturale",
+      "urls": [
+        "https://www.internetculturale.it/"
+      ],
+      "evidence_ids": [
+        "evidence:marciana-records",
+        "evidence:internet-culturale-terms"
+      ]
+    },
+    {
+      "id": "agent:giacomo-costa",
+      "type": "person",
+      "name": "Giacomo Costa",
+      "evidence_ids": [
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "agent:rialfri",
+      "type": "organization",
+      "name": "RIALFrI",
+      "urls": [
+        "https://www.rialfri.eu/"
+      ],
+      "evidence_ids": [
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "agent:dimev",
+      "type": "organization",
+      "name": "Digital Index of Middle English Verse (DIMEV)",
+      "evidence_ids": [
+        "evidence:dimev-5964"
+      ]
+    },
+    {
+      "id": "agent:irht-jonas",
+      "type": "organization",
+      "name": "JONAS, Institut de recherche et d'histoire des textes",
+      "urls": [
+        "https://jonas.irht.cnrs.fr/"
+      ],
+      "evidence_ids": [
+        "evidence:jonas-7116"
+      ]
+    },
+    {
+      "id": "agent:google-books",
+      "type": "organization",
+      "name": "Google Books",
+      "evidence_ids": [
+        "evidence:google-file-use-terms"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-raw-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:any9948",
+      "object": "encoding:umich-cme:ANY9948.0001.001",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole encoding after removing 107 added NODE attributes, 484 added note IDs, and normalizing EDITORIALDECL N from 4 to 1."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole encoding after removing 107 added NODE attributes, 484 added note IDs, and normalizing EDITORIALDECL N from 4 to 1."
+        },
+        "notes": "Whole encoding after removing 107 added NODE attributes, 484 added note IDs, and normalizing EDITORIALDECL N from 4 to 1."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:xml-normalization-audit"
+        ]
+      }
+    },
+    {
+      "id": "relation:raw-umich-encoded-from-tiffs",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:ANY9948.0001.001",
+      "object": "facsimile:umich:eets-es84-es89",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Encoded poem and apparatus linked to the complete page-image capture; poem at Part I pp. 1-184 / TIFFs 25-208."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Encoded poem and apparatus linked to the complete page-image capture; poem at Part I pp. 1-184 / TIFFs 25-208."
+        },
+        "notes": "Encoded poem and apparatus linked to the complete page-image capture; poem at Part I pp. 1-184 / TIFFs 25-208."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:umich-package",
+          "evidence:pinned-xml"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-tiffs-facsimile-of-sieper",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:eets-es84-es89",
+      "object": "edition:sieper:eets-es84-es89:1901-1903",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Complete bound two-part EETS set."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Complete bound two-part EETS set."
+        },
+        "notes": "Complete bound two-part EETS set."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:umich-package",
+          "evidence:sieper-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:sieper-transcribes-fairfax",
+      "type": "transcribes",
+      "subject": "edition:sieper:eets-es84-es89:1901-1903",
+      "object": "witness:bodleian:Fairfax16",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Edited Middle English text in Part I, pp. 1-184",
+          "locators": [
+            "Part I, pp. 1-184"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Principal manuscript text in Fairfax 16",
+          "locators": [
+            "ff. 202r-300r"
+          ]
+        },
+        "notes": "Part I pp. 1-184 transcribe Fairfax 16 ff. 202r-300r as principal text."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-edition",
+          "evidence:fairfax-visual"
+        ]
+      }
+    },
+    {
+      "id": "relation:reson-version-of-echecs",
+      "type": "version_of",
+      "subject": "work:reson-and-sensuallyte",
+      "object": "work:anonymous:echecs-amoureux-en-vers",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Whole 7,042-line Middle English translation-adaptation",
+          "locators": [
+            "Middle English lines 1-7042"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Opening source segment of the anonymous French verse work",
+          "locators": [
+            "French lines 1-4873"
+          ]
+        },
+        "notes": "The whole 7,042-line English work freely translates and expands French lines 1-4,873; no physical French exemplar is identified."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-part-ii-source-statement",
+          "evidence:dimev-5964",
+          "evidence:jonas-7116"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-package-contains-raw",
+      "type": "contains",
+      "subject": "artifact:internet-archive:any9948-source-package",
+      "object": "encoding:umich-cme:ANY9948.0001.001",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Complete raw XML member any9948.0001.001.xml."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Complete raw XML member any9948.0001.001.xml."
+        },
+        "notes": "Complete raw XML member any9948.0001.001.xml."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:umich-package"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-package-contains-tiffs",
+      "type": "contains",
+      "subject": "artifact:internet-archive:any9948-source-package",
+      "object": "facsimile:umich:eets-es84-es89",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Complete 380-TIFF sequence."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Complete 380-TIFF sequence."
+        },
+        "notes": "Complete 380-TIFF sequence."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:umich-package"
+        ]
+      }
+    },
+    {
+      "id": "relation:sieper-contains-reson",
+      "type": "contains",
+      "subject": "edition:sieper:eets-es84-es89:1901-1903",
+      "object": "work:reson-and-sensuallyte",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Edited poem in Part I",
+          "locators": [
+            "Part I, pp. 1-184"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Whole unfinished Middle English work",
+          "locators": [
+            "Middle English lines 1-7042"
+          ]
+        },
+        "notes": "Edited poem in Part I pp. 1-184."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:sieper-collates-add29729",
+      "type": "collated_against",
+      "subject": "edition:sieper:eets-es84-es89:1901-1903",
+      "object": "witness:british-library:Add-29729",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Edited Middle English text in Part I, pp. 1-184",
+          "locators": [
+            "Part I, pp. 1-184"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Collated text in Add. MS 29729",
+          "locators": [
+            "ff. 184r-286v"
+          ]
+        },
+        "notes": "Part I poem against Add. 29729 ff. 184r-286v."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-edition",
+          "evidence:bl-add-29729"
+        ]
+      }
+    },
+    {
+      "id": "relation:add29729-copied-from-fairfax",
+      "type": "copied_from",
+      "subject": "witness:british-library:Add-29729",
+      "object": "witness:bodleian:Fairfax16",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Reson and Sensuallyte in Add. MS 29729",
+          "locators": [
+            "ff. 184r-286v"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Reson and Sensuallyte in Fairfax 16",
+          "locators": [
+            "ff. 202r-300r"
+          ]
+        },
+        "notes": "This work only; Sieper calls Add. 29729 a direct copy of Fairfax. Do not generalize the BL collection-level Shirley statement."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:fairfax-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Fairfax16",
+      "object": "witness:bodleian:Fairfax16",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole codex; target ff. 202r-300r at canvas positions 417-613."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole codex; target ff. 202r-300r at canvas positions 417-613."
+        },
+        "notes": "Whole codex; target ff. 202r-300r at canvas positions 417-613."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:fairfax-catalog",
+          "evidence:fairfax-visual"
+        ]
+      }
+    },
+    {
+      "id": "relation:google-facsimile-of-sieper",
+      "type": "facsimile_of",
+      "subject": "facsimile:google-harvard:sieper-eets",
+      "object": "edition:sieper:eets-es84-es89:1901-1903",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Complete scanned set; a supporting surrogate, not an evidenced ancestor of the U-M encoding."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Complete scanned set; a supporting surrogate, not an evidenced ancestor of the U-M encoding."
+        },
+        "notes": "Complete scanned set; a supporting surrogate, not an evidenced ancestor of the U-M encoding."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:sieper-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:slub-witness-contains-echecs",
+      "type": "contains",
+      "subject": "witness:slub:Mscr-Dresd-Oc-66",
+      "object": "work:anonymous:echecs-amoureux-en-vers",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole French witness; relevant analogue lines 1-4,873 at ff. 1r-25r."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole French witness; relevant analogue lines 1-4,873 at ff. 1r-25r."
+        },
+        "notes": "Whole French witness; relevant analogue lines 1-4,873 at ff. 1r-25r."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:jonas-7116",
+          "evidence:slub-facsimile",
+          "evidence:costa-2023"
+        ]
+      }
+    },
+    {
+      "id": "relation:slub-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:slub:Mscr-Dresd-Oc-66",
+      "object": "witness:slub:Mscr-Dresd-Oc-66",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Complete 301-canvas digital object."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Complete 301-canvas digital object."
+        },
+        "notes": "Complete 301-canvas digital object."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:slub-facsimile"
+        ]
+      }
+    },
+    {
+      "id": "relation:harvard-witness-contains-echecs",
+      "type": "contains",
+      "subject": "witness:harvard:MS-Fr-278",
+      "object": "work:anonymous:echecs-amoureux-en-vers",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Whole two-leaf Harvard fragment; all six current canvases"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Unresolved passage of Echecs amoureux; no verse-number locator asserted"
+        },
+        "notes": "Two-leaf fragment; exact verse range and overlap with French lines 1-4,873 unresolved."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:jonas-7116",
+          "evidence:harvard-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:harvard-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:harvard:MS-Fr-278",
+      "object": "witness:harvard:MS-Fr-278",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: All six published canvases."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: All six published canvases."
+        },
+        "notes": "All six published canvases."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:harvard-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:marciana-witness-contains-echecs",
+      "type": "contains",
+      "subject": "witness:marciana:Str-App-23-267",
+      "object": "work:anonymous:echecs-amoureux-en-vers",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "French poem in the Marciana codex",
+          "locators": [
+            "ff. 37-202"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Acephalous surviving portion of the French work",
+          "locators": [
+            "French lines 3029 onward",
+            "source overlap with the English version: French lines 3029-4873, approximately ff. 37r-58r"
+          ]
+        },
+        "notes": "Acephalous witness preserving French lines 3,029 onward; target-source overlap lines 3,029-4,873 approximately ff. 37r-58r."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:marciana-records",
+          "evidence:costa-2023"
+        ]
+      }
+    },
+    {
+      "id": "relation:marciana-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-culturale:Str-App-23-267",
+      "object": "witness:marciana:Str-App-23-267",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Full facsimile route recorded by JONAS; current endpoint unavailable on the checked date."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Full facsimile route recorded by JONAS; current endpoint unavailable on the checked date."
+        },
+        "notes": "Full facsimile route recorded by JONAS; current endpoint unavailable on the checked date."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:marciana-records"
+        ]
+      }
+    },
+    {
+      "id": "relation:costa-transcribes-marciana",
+      "type": "transcribes",
+      "subject": "edition:costa:marciana-echecs-2023",
+      "object": "witness:marciana:Str-App-23-267",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Whole Costa 2023 edition",
+          "locators": [
+            "French lines 3029-6074"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Transcribed Marciana passage",
+          "locators": [
+            "French lines 3029-6074 beginning f. 37r"
+          ]
+        },
+        "notes": "French lines 3,029-6,074 beginning at f. 37r."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:costa-2023"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-reson",
+      "type": "describes",
+      "subject": "catalog:dimev:record-5964",
+      "object": "work:reson-and-sensuallyte",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole work."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole work."
+        },
+        "notes": "Whole work."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-5964"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-fairfax",
+      "type": "describes",
+      "subject": "catalog:dimev:record-5964",
+      "object": "witness:bodleian:Fairfax16",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Witness 1, ff. 202-300."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Witness 1, ff. 202-300."
+        },
+        "notes": "Witness 1, ff. 202-300."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-5964"
+        ]
+      }
+    },
+    {
+      "id": "relation:dimev-describes-add29729",
+      "type": "describes",
+      "subject": "catalog:dimev:record-5964",
+      "object": "witness:british-library:Add-29729",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "DIMEV record 5964"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Add. MS 29729 witness entry; DIMEV's ff. 184-186v endpoint is erroneous",
+          "locators": [
+            "DIMEV: ff. 184-186v (erroneous)",
+            "verified: ff. 184r-286v"
+          ]
+        },
+        "notes": "Witness 2; its ff. 184-186v endpoint conflicts with the official BL catalog and Sieper and must be recorded as erroneous."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:dimev-5964",
+          "evidence:bl-add-29729",
+          "evidence:sieper-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:jonas-describes-echecs",
+      "type": "describes",
+      "subject": "catalog:jonas:oeuvre-7116",
+      "object": "work:anonymous:echecs-amoureux-en-vers",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole French work."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole French work."
+        },
+        "notes": "Whole French work."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:jonas-7116"
+        ]
+      }
+    },
+    {
+      "id": "relation:jonas-describes-slub",
+      "type": "describes",
+      "subject": "catalog:jonas:oeuvre-7116",
+      "object": "witness:slub:Mscr-Dresd-Oc-66",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole witness record."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole witness record."
+        },
+        "notes": "Whole witness record."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:jonas-7116"
+        ]
+      }
+    },
+    {
+      "id": "relation:jonas-describes-harvard",
+      "type": "describes",
+      "subject": "catalog:jonas:oeuvre-7116",
+      "object": "witness:harvard:MS-Fr-278",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Fragment identification; exact verse range unresolved."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Fragment identification; exact verse range unresolved."
+        },
+        "notes": "Fragment identification; exact verse range unresolved."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:jonas-7116",
+          "evidence:harvard-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:jonas-describes-marciana",
+      "type": "describes",
+      "subject": "catalog:jonas:oeuvre-7116",
+      "object": "witness:marciana:Str-App-23-267",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole witness record, including ff. 37-202 and linked full-facsimile route."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole witness record, including ff. 37-202 and linked full-facsimile route."
+        },
+        "notes": "Whole witness record, including ff. 37-202 and linked full-facsimile route."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:jonas-7116",
+          "evidence:marciana-records"
+        ]
+      }
+    },
+    {
+      "id": "relation:bl-catalog-describes-add29729",
+      "type": "describes",
+      "subject": "catalog:british-library:Add-29729",
+      "object": "witness:british-library:Add-29729",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Subject coverage: Whole codex and exact target ff. 184r-286v."
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Object coverage: Whole codex and exact target ff. 184r-286v."
+        },
+        "notes": "Whole codex and exact target ff. 184r-286v."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bl-add-29729"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:any9948",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Pinned repository file.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:cme-license"
+      ],
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/any9948.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE"
+      ],
+      "repository_path": "CME/source/CME_phase_1-2/any9948.xml",
+      "local_copies": [
+        {
+          "label": "cme license at e1d77c8",
+          "path": "source-cache/any9948/cme-license-at-e1d77c8.txt",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+          "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+          "bytes": 1211,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:umich-item",
+      "entity": "encoding:umich-cme:ANY9948.0001.001",
+      "provider_id": "agent:university-of-michigan-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "University of Michigan item page.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:umich-current-rights",
+        "evidence:pinned-xml"
+      ],
+      "url": "https://quod.lib.umich.edu/c/cme/ANY9948.0001.001",
+      "local_copies": [
+        {
+          "label": "umich any9948 item rights snapshot",
+          "path": "source-cache/any9948/umich-any9948-item-rights-snapshot.txt",
+          "source_url": "https://quod.lib.umich.edu/c/cme/ANY9948.0001.001",
+          "sha256": "98d197e195662ab32f1d5fb0927b25e2f1b80e22106c897e6098b39e5851250b",
+          "bytes": 1025,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:umich-source-package",
+      "entity": "artifact:internet-archive:any9948-source-package",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:umich-package"
+      ],
+      "url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": [
+        "https://archive.org/metadata/any9948.0001.001.umich.edu"
+      ],
+      "local_copies": [
+        {
+          "label": "umich any9948 complete source package",
+          "path": "source-cache/any9948/umich-any9948-complete-source-package.zip",
+          "source_url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+          "sha256": "d9c44f9cf9726ab1f795a713d0cb36a9ba6df28863e1d39006ed1632003df598",
+          "bytes": 26594555,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "any9948 target resources in the complete U-M package",
+            "locators": [
+              "member any9948.0001.001.xml",
+              "Part I pp. 1-184 at TIFFs 00000025.tif-00000208.tif"
+            ]
+          }
+        },
+        {
+          "label": "internet archive any9948 metadata",
+          "path": "source-cache/any9948/internet-archive-any9948-metadata.json",
+          "source_url": "https://archive.org/metadata/any9948.0001.001.umich.edu",
+          "sha256": "e8830e58fabfb59f93e7e7313e3a0cf267f05a2558287dc8ac6cb98cc4d0d627",
+          "bytes": 1617,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:umich-tiffs",
+      "entity": "facsimile:umich:eets-es84-es89",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:umich-package",
+        "evidence:umich-current-rights"
+      ],
+      "url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+      "local_copies": [
+        {
+          "label": "umich any9948 complete source package",
+          "path": "source-cache/any9948/umich-any9948-complete-source-package.zip",
+          "source_url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+          "sha256": "d9c44f9cf9726ab1f795a713d0cb36a9ba6df28863e1d39006ed1632003df598",
+          "bytes": 26594555,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "any9948 target resources in the complete U-M package",
+            "locators": [
+              "member any9948.0001.001.xml",
+              "Part I pp. 1-184 at TIFFs 00000025.tif-00000208.tif"
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "notes": [
+        "The same complete archive is also the package access object; this explicit facsimile access record lets the graph mark the U-M page-image node as downloaded.",
+        "Archive members: 00000001.tif-00000380.tif"
+      ]
+    },
+    {
+      "id": "access:google-harvard-sieper",
+      "entity": "facsimile:google-harvard:sieper-eets",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:google-file-use-terms"
+      ],
+      "url": "https://archive.org/download/lydgatesresonan00furngoog/lydgatesresonan00furngoog.pdf",
+      "local_copies": [
+        {
+          "label": "sieper 1901 1903 reson and sensuallyte google harvard",
+          "path": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf",
+          "source_url": "https://archive.org/download/lydgatesresonan00furngoog/lydgatesresonan00furngoog.pdf",
+          "sha256": "e1664cfda707e896ad74307e3f5ecf370468a489d0118c6ee93519067f0decf8",
+          "bytes": 12880062,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Reson and Sensuallyte in the complete Sieper set",
+            "locators": [
+              "Part I, printed pp. 1-184"
+            ]
+          }
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:sieper-edition",
+      "entity": "edition:sieper:eets-es84-es89:1901-1903",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the historical edition through the separately modeled Google/Harvard page-image carrier.",
+      "url": "https://archive.org/details/lydgatesresonan00furngoog",
+      "alternate_urls": [
+        "https://archive.org/metadata/lydgatesresonan00furngoog",
+        "https://openlibrary.org/works/OL15431619W.json",
+        "https://openlibrary.org/books/OL6920354M.json"
+      ],
+      "local_copies": [
+        {
+          "label": "internet archive lydgatesresonan00furngoog metadata",
+          "path": "source-cache/any9948/internet-archive-lydgatesresonan00furngoog-metadata.json",
+          "source_url": "https://archive.org/metadata/lydgatesresonan00furngoog",
+          "sha256": "e089728a2fc590bacf0b672a9c4eeaa203de8c5ab205eb6f233a234fa6680b71",
+          "bytes": 6383,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "openlibrary OL15431619W",
+          "path": "source-cache/any9948/openlibrary-OL15431619W.json",
+          "source_url": "https://openlibrary.org/works/OL15431619W.json",
+          "sha256": "3a16364e865624cc2dfbfc75f83b9cc7141ce58f5bc336fba9f1ebe043b1509c",
+          "bytes": 446,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "openlibrary OL6920354M",
+          "path": "source-cache/any9948/openlibrary-OL6920354M.json",
+          "source_url": "https://openlibrary.org/books/OL6920354M.json",
+          "sha256": "103a1a6f7e83f1d83a3718eac5b4b5d035b8d985cab05277465e3801fb06a1aa",
+          "bytes": 1615,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ],
+      "notes": [
+        "The target-bearing edition access is modeled separately from the facsimile carrier. The scan PDF remains attached only to facsimile:google-harvard:sieper-eets."
+      ]
+    },
+    {
+      "id": "access:fairfax-iiif",
+      "entity": "facsimile:bodleian:Fairfax16",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:fairfax-catalog",
+        "evidence:fairfax-visual"
+      ],
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ee2d3617-5696-4ec8-9e4d-a99d0c485019.json",
+      "alternate_urls": [
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4850"
+      ],
+      "local_copies": [
+        {
+          "label": "bodleian fairfax 16 complete",
+          "path": "source-cache/any9948/bodleian-fairfax-16-complete.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ee2d3617-5696-4ec8-9e4d-a99d0c485019.json",
+          "sha256": "bc341b3941fd88d532276e411f49da6ad453020b03d0b339da7eec2a6267d91b",
+          "bytes": 709297453,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 721,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Reson and Sensuallyte in MS Fairfax 16",
+            "locators": [
+              "ff. 202r-300r",
+              "canvas positions 417-613 inclusive",
+              "images/000417.jpg-images/000613.jpg"
+            ],
+            "start_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/465f7527-0ed3-4959-b6f1-e79b5875aea3.json",
+            "end_url": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/bdcbe3ce-49d3-4471-a762-a2bdca2a4675.json",
+            "notes": [
+              "The complete codex is retained; blank ff. 300v-305v and the next work from f. 306r remain in the bundle."
+            ]
+          }
+        },
+        {
+          "label": "Bodleian Fairfax 16 catalog access note",
+          "path": "source-cache/any9948/bodleian-fairfax-16-catalog-access-note.txt",
+          "source_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4850",
+          "sha256": "a9e25fab97c8fbc9ec588350bfbf35cde27c8f2c39ada816cb4cb870072add91",
+          "bytes": 576,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "notes": [
+            "Research access note documenting the Anubis challenge and the no-bypass decision; this is not a downloaded copy of the blocked catalog page."
+          ]
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:bl-catalog",
+      "entity": "catalog:british-library:Add-29729",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-29729"
+      ],
+      "url": "https://searcharchives.bl.uk/catalog/032-002021279",
+      "local_copies": [
+        {
+          "label": "british library add ms 29729 catalog",
+          "path": "source-cache/any9948/british-library-add-ms-29729-catalog.html",
+          "source_url": "https://searcharchives.bl.uk/catalog/032-002021279",
+          "sha256": "9515c8cf90607ea16d9f3bdfc7b390966806d384860a6d057bd0564ccde4a5d0",
+          "bytes": 60873,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:bl-onsite",
+      "entity": "witness:british-library:Add-29729",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Request onsite consultation using the British Library collection request form.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-29729"
+      ],
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "cost": "not_applicable",
+      "notes": [
+        "Current catalog says digital images are unavailable; physical consultation is onsite in London."
+      ]
+    },
+    {
+      "id": "access:bl-imaging-order",
+      "entity": "witness:british-library:Add-29729",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "purchasable",
+      "access_method": "Order digital imaging from British Library Imaging Services.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-imaging"
+      ],
+      "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/terms/imaging-services-terms-and-conditions",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "british library digitisation services",
+          "path": "source-cache/any9948/british-library-digitisation-services.html",
+          "source_url": "https://www.bl.uk/services/digitisation",
+          "sha256": "2901b6ccc8254d75f053daa4765ada9b23c38397c41ec7cf31153cfbaec54bc5",
+          "bytes": 159175,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "british library imaging services terms",
+          "path": "source-cache/any9948/british-library-imaging-services-terms.html",
+          "source_url": "https://www.bl.uk/terms/imaging-services-terms-and-conditions",
+          "sha256": "59ddc6ebb1dab35ed9ca406701a1fc9ed77bf32a3e09f75b36af7a63a18a66fa",
+          "bytes": 91241,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "british library 2025 26 digitisation rate card",
+          "path": "source-cache/any9948/british-library-2025-26-digitisation-rate-card.pdf",
+          "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+          "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+          "bytes": 181286,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "fee",
+      "notes": [
+        "Separate Imaging Services order route. Current rate card and terms are cached; large orders are individually discussed."
+      ]
+    },
+    {
+      "id": "access:bl-reference-enquiry",
+      "entity": "witness:british-library:Add-29729",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Submit a reference enquiry to the British Library.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-29729"
+      ],
+      "url": "https://bl.libanswers.com/form?queue_id=2371",
+      "cost": "unknown",
+      "notes": [
+        "Reference enquiry route, distinct from the onsite collection request and the paid Imaging Services order."
+      ]
+    },
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:record-5964",
+      "provider_id": "agent:dimev",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:dimev-5964"
+      ],
+      "url": "https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content",
+      "alternate_urls": [
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"
+      ],
+      "local_copies": [
+        {
+          "label": "dimev 2.0 alpha.1",
+          "path": "source-cache/any9948/dimev-2.0-alpha.1.zip",
+          "source_url": "https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content",
+          "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a",
+          "bytes": 3884746,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "DIMEV target record",
+            "locators": [
+              "data/Records.xml record-5964"
+            ]
+          }
+        },
+        {
+          "label": "dimev v1.0",
+          "path": "source-cache/any9948/dimev-v1.0.zip",
+          "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+          "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c",
+          "bytes": 3891929,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "present",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "DIMEV target record",
+            "locators": [
+              "data/Records.xml record-5964"
+            ]
+          }
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:jonas-record",
+      "entity": "catalog:jonas:oeuvre-7116",
+      "provider_id": "agent:irht-jonas",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:marciana-records",
+        "evidence:harvard-iiif"
+      ],
+      "url": "https://jonas.irht.cnrs.fr/oeuvre/7116",
+      "alternate_urls": [
+        "https://jonas.irht.cnrs.fr/manuscrit/68344",
+        "https://portail.biblissima.fr/ark:/43093/mdataddd12c1cfa4e736c40531cfa530b98b7757fa945",
+        "https://portail.biblissima.fr/ark:/43093/mdata71a46ca361c44c4548ad2d0673f95d3e89162289"
+      ],
+      "local_copies": [
+        {
+          "label": "jonas oeuvre 7116",
+          "path": "source-cache/any9948/jonas-oeuvre-7116.html",
+          "source_url": "https://jonas.irht.cnrs.fr/oeuvre/7116",
+          "sha256": "6769031a8cc463a4decfaf42065e196f6e44635ca2413359f49c6f893730097b",
+          "bytes": 33364,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "jonas manuscript 68344",
+          "path": "source-cache/any9948/jonas-manuscript-68344.html",
+          "source_url": "https://jonas.irht.cnrs.fr/manuscrit/68344",
+          "sha256": "effd9023702e0fdeba2893de4d24febb517a975109cc2d7e19e28fdc30b0c688",
+          "bytes": 25436,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "biblissima harvard fr278",
+          "path": "source-cache/any9948/biblissima-harvard-fr278.html",
+          "source_url": "https://portail.biblissima.fr/ark:/43093/mdataddd12c1cfa4e736c40531cfa530b98b7757fa945",
+          "sha256": "ec258ac4e06c38a3141b3fbb5ae545fb05d4b808449b7eb6029d669c25383d99",
+          "bytes": 35711,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "biblissima marciana str app 23",
+          "path": "source-cache/any9948/biblissima-marciana-str-app-23.html",
+          "source_url": "https://portail.biblissima.fr/ark:/43093/mdata71a46ca361c44c4548ad2d0673f95d3e89162289",
+          "sha256": "837aea397b84eafc0feb5865da962ff049d7ae4c00a89480f64601a8b7854ff4",
+          "bytes": 38482,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free"
+    },
+    {
+      "id": "access:slub-facsimile",
+      "entity": "facsimile:slub:Mscr-Dresd-Oc-66",
+      "provider_id": "agent:slub-dresden",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:slub-facsimile"
+      ],
+      "url": "https://digital.slub-dresden.de/data/kitodo/franha-m_355847221/franha-m_355847221_tif/jpegs/franha-m_355847221.pdf",
+      "alternate_urls": [
+        "https://iiif.slub-dresden.de/iiif/2/355847221/manifest.json",
+        "https://digital.slub-dresden.de/oai/?verb=GetRecord&metadataPrefix=mets&identifier=oai:de:slub-dresden:db:id-355847221",
+        "https://digital.slub-dresden.de/werkansicht/dlf/563326/1"
+      ],
+      "local_copies": [
+        {
+          "label": "slub dresden mscr dresd oc66 complete",
+          "path": "source-cache/any9948/slub-dresden-mscr-dresd-oc66-complete.pdf",
+          "source_url": "https://digital.slub-dresden.de/data/kitodo/franha-m_355847221/franha-m_355847221_tif/jpegs/franha-m_355847221.pdf",
+          "sha256": "958d72277482c2a7b3e8f7f8003ec3881437c10e377b17c0357c5a479a0dcd79",
+          "bytes": 49159533,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Complete French supporting witness; analogous French lines 1-4873 are at ff. 1r-25r / PHYS_0006-PHYS_0054. The Middle English target work is absent."
+          ]
+        },
+        {
+          "label": "slub dresden oc66 iiif manifest",
+          "path": "source-cache/any9948/slub-dresden-oc66-iiif-manifest.json",
+          "source_url": "https://iiif.slub-dresden.de/iiif/2/355847221/manifest.json",
+          "sha256": "a8716359f9af27d1e2a527fe1f2fed7822e50e34a2339ea5d944dbe8cd14ef4c",
+          "bytes": 578793,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "slub dresden oc66 mets",
+          "path": "source-cache/any9948/slub-dresden-oc66-mets.xml",
+          "source_url": "https://digital.slub-dresden.de/oai/?verb=GetRecord&metadataPrefix=mets&identifier=oai:de:slub-dresden:db:id-355847221",
+          "sha256": "e9a02491d285f4d20ee673f440334c6ea98bc1825388302419117152dab560ab",
+          "bytes": 489163,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "slub dresden oc66 viewer",
+          "path": "source-cache/any9948/slub-dresden-oc66-viewer.html",
+          "source_url": "https://digital.slub-dresden.de/werkansicht/dlf/563326/1",
+          "sha256": "24f2cb7571acc8ec865f66e8b2cfabfa37a0629cd31a0c1da93b46e1e8f28e5f",
+          "bytes": 35588,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "notes": [
+        "French source analogue lines 1-4,873 at ff. 1r-25r / PHYS_0006-PHYS_0054; the Middle English target itself is absent."
+      ]
+    },
+    {
+      "id": "access:harvard-facsimile",
+      "entity": "facsimile:harvard:MS-Fr-278",
+      "provider_id": "agent:houghton-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:harvard-iiif",
+        "evidence:harvard-policy"
+      ],
+      "url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798:MANIFEST:3",
+      "alternate_urls": [
+        "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798",
+        "https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain",
+        "https://library.harvard.edu/libraries/houghton-library/collections/copyright-questions"
+      ],
+      "local_copies": [
+        {
+          "label": "harvard fr278 complete",
+          "path": "source-cache/any9948/harvard-fr278-complete.zip",
+          "source_url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798:MANIFEST:3",
+          "sha256": "b958dc86c374f99b75671384bcd7e37d31334f1ee26f18dc1a95ae903ea96574",
+          "bytes": 12177604,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "notes": [
+            "Custom audited six-image ZIP with manifest and internal SHA256SUMS; it is not the canonical cache-iiif-bundle.py inventory format, so retrieval_method is intentionally omitted.",
+            "The Middle English target work is absent."
+          ]
+        },
+        {
+          "label": "harvard fr278 iiif manifest",
+          "path": "source-cache/any9948/harvard-fr278-iiif-manifest.json",
+          "source_url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798:MANIFEST:3",
+          "sha256": "3f25bc4395d60ebf3db00ca2810f8ef2daff9da6f6cbb73b123cca6e4819c45e",
+          "bytes": 10983,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "harvard fr278 viewer",
+          "path": "source-cache/any9948/harvard-fr278-viewer.html",
+          "source_url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798",
+          "sha256": "4386c84a09ba830addb819673cbf60bf39c063f8b4909131317f9b4fe794fcf7",
+          "bytes": 490,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "harvard public domain digital reproductions policy",
+          "path": "source-cache/any9948/harvard-public-domain-digital-reproductions-policy.html",
+          "source_url": "https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain",
+          "sha256": "8a8be8b9301846c74ee798bf8598846455d15c81792d65673c665d88fc7e0b48",
+          "bytes": 77178,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "harvard houghton copyright questions",
+          "path": "source-cache/any9948/harvard-houghton-copyright-questions.html",
+          "source_url": "https://library.harvard.edu/libraries/houghton-library/collections/copyright-questions",
+          "sha256": "bdabf9c5dc9a54fb0efbc3cef35665a967bf0df643bfe63b4bd322377bfc935d",
+          "bytes": 59167,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "notes": [
+        "All six canvases cached; exact French verse locator unresolved and the Middle English target itself is absent."
+      ]
+    },
+    {
+      "id": "access:marciana-facsimile",
+      "entity": "facsimile:internet-culturale:Str-App-23-267",
+      "provider_id": "agent:internet-culturale",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "Recheck the provider endpoint; it returned HTTP 503 on the recorded date.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:marciana-records",
+        "evidence:internet-culturale-terms"
+      ],
+      "url": "https://www.internetculturale.it/jmms/iccuviewer/iccu.jsp?id=oai%3A193.206.197.121%3A18%3AVE0049%3AVE0049_Str_App_0023_00267&mode=all&teca=marciana",
+      "alternate_urls": [
+        "https://www.internetculturale.it/it/151/termini-e-condizioni"
+      ],
+      "local_copies": [
+        {
+          "label": "internet culturale terms",
+          "path": "source-cache/any9948/internet-culturale-terms.html",
+          "source_url": "https://www.internetculturale.it/it/151/termini-e-condizioni",
+          "sha256": "837a19ca4304d27f19435fa22b879f965dad872d2af443e9a4f062fe0b1154ab",
+          "bytes": 27794,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "unknown",
+      "notes": [
+        "HTTP 503 on the checked date; this does not establish facsimile loss or permanent withdrawal."
+      ]
+    },
+    {
+      "id": "access:costa-edition",
+      "entity": "edition:costa:marciana-echecs-2023",
+      "provider_id": "agent:rialfri",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Follow the direct public link.",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:costa-2023"
+      ],
+      "url": "https://www.rialfri.eu/wp-content/uploads/2023/03/Edizione-del-testo-a-cura-di-Giacomo-Costa-2023.pdf",
+      "alternate_urls": [
+        "https://www.rialfri.eu/en/opere/les-esches-amoureux-del-manoscritto-str-app-23-267-della-biblioteca-marciana-di-venezia",
+        "https://thesis.unipd.it/handle/20.500.12608/41899"
+      ],
+      "local_copies": [
+        {
+          "label": "costa 2023 marciana les echecs amoureux",
+          "path": "source-cache/any9948/costa-2023-marciana-les-echecs-amoureux.pdf",
+          "source_url": "https://www.rialfri.eu/wp-content/uploads/2023/03/Edizione-del-testo-a-cura-di-Giacomo-Costa-2023.pdf",
+          "sha256": "febf9a65d02766f00fe48f00a62a9779fe3667cbfcb2dbc7341b6d822b4c47e8",
+          "bytes": 1312474,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "target_work_presence": "absent",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Complete 131-page edition of Marciana French lines 3029-6074. The Middle English target work is absent."
+          ]
+        }
+      ],
+      "cost": "free",
+      "notes": [
+        "The direct RIALFrI PDF re-streamed byte-identically on 2026-07-17. The Padua thesis landing is related but is not asserted to be the identical 131-page extract."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:middle-english-text",
+      "entity": "work:reson-and-sensuallyte",
+      "contract_terms_status": "none_known",
+      "component": "historical Middle English text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Medieval historical text; no claim is extended to modern editions, markup, catalog prose, or photographs.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "rights:middle-french-text",
+      "entity": "work:anonymous:echecs-amoureux-en-vers",
+      "contract_terms_status": "none_known",
+      "component": "historical Middle French text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Fourteenth-century historical text; no claim is extended to current scholarly editions or photographs.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:jonas-7116"
+      ]
+    },
+    {
+      "id": "rights:sieper-edition",
+      "entity": "edition:sieper:eets-es84-es89:1901-1903",
+      "access_id": "access:sieper-edition",
+      "contract_terms_status": "none_known",
+      "component": "1901-1903 edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Publication dates 1901 and 1903. Provider requests attached to particular scans remain separate.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "rights:umich-current-encoding",
+      "entity": "encoding:umich-cme:ANY9948.0001.001",
+      "access_id": "access:umich-item",
+      "asserted_by_id": "agent:university-of-michigan-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "component": "current U-M delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Current item page says the materials are public domain and supplies No Copyright - United States.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-current-rights"
+      ]
+    },
+    {
+      "id": "rights:umich-current-tiffs",
+      "entity": "facsimile:umich:eets-es84-es89",
+      "access_id": "access:umich-tiffs",
+      "asserted_by_id": "agent:university-of-michigan-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "component": "U-M 380-TIFF page-image delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "The current U-M item page says the delivered materials are public domain and supplies No Copyright - United States. This record is attached directly to the page-image facsimile rather than inherited from the encoding.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-current-rights"
+      ]
+    },
+    {
+      "id": "rights:umich-raw-header",
+      "entity": "encoding:umich-cme:ANY9948.0001.001",
+      "access_id": "access:umich-item",
+      "asserted_by_id": "agent:university-of-michigan-library",
+      "contract_terms_status": "unknown",
+      "component": "raw 2006 XML header availability statement",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-17",
+      "basis": "The raw header says that where applicable copyright and other distribution restrictions may apply. This generic older warning is not merged with the current item-level statement.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-raw-header-rights"
+      ]
+    },
+    {
+      "id": "rights:cme-unlicense-scope",
+      "entity": "artifact:general-corpus:any9948",
+      "access_id": "access:repository-xml",
+      "contract_terms_status": "unknown",
+      "component": "repository XML text/data/markup",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Pinned repository LICENSE is the Unlicense but repeatedly describes software; do not use it alone for a broad XML-content rights claim.",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:cme-license"
+      ]
+    },
+    {
+      "id": "rights:google-reproduction-terms",
+      "entity": "facsimile:google-harvard:sieper-eets",
+      "access_id": "access:google-harvard-sieper",
+      "asserted_by_id": "agent:google-books",
+      "contract_terms_status": "provider_terms_apply",
+      "component": "Google/Harvard PDF reproduction file",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "The file labels the scanned book public domain but requests personal noncommercial file use, retention of the Google watermark/attribution, no automated querying, and legal compliance. These reproduction-file requests are distinct from the edition's copyright status.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:google-file-use-terms"
+      ]
+    },
+    {
+      "id": "rights:dimev-data",
+      "entity": "catalog:dimev:record-5964",
+      "access_id": "access:dimev-release",
+      "asserted_by_id": "agent:dimev",
+      "contract_terms_status": "provider_terms_apply",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "component": "DIMEV dataset/catalog data",
+      "jurisdiction": "International",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "Versioned DIMEV release license; it does not license manuscript images.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:dimev-5964"
+      ]
+    },
+    {
+      "id": "rights:fairfax-images",
+      "entity": "facsimile:bodleian:Fairfax16",
+      "access_id": "access:fairfax-iiif",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "contract_terms_status": "provider_terms_apply",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "spdx": "CC-BY-NC-4.0",
+        "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      },
+      "component": "Digital Bodleian images",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "Official IIIF attribution; commercial reuse is outside the stated license absent separate permission.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:fairfax-catalog"
+      ]
+    },
+    {
+      "id": "rights:bl-catalog",
+      "entity": "catalog:british-library:Add-29729",
+      "access_id": "access:bl-catalog",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "provider_terms_apply",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "component": "British Library catalog text",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "Official catalog terms; does not license the manuscript or ordered images.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-29729"
+      ]
+    },
+    {
+      "id": "rights:bl-future-images",
+      "entity": "witness:british-library:Add-29729",
+      "access_id": "access:bl-imaging-order",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "component": "future ordered image files",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Current Imaging Services terms require written permission before copying or reproduction of supplied material.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging"
+      ]
+    },
+    {
+      "id": "rights:slub-images",
+      "entity": "facsimile:slub:Mscr-Dresd-Oc-66",
+      "access_id": "access:slub-facsimile",
+      "asserted_by_id": "agent:slub-dresden",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "component": "SLUB digital images",
+      "jurisdiction": "Germany",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Provider IIIF/METS rights metadata.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:slub-facsimile"
+      ]
+    },
+    {
+      "id": "rights:harvard-images",
+      "entity": "facsimile:harvard:MS-Fr-278",
+      "access_id": "access:harvard-facsimile",
+      "asserted_by_id": "agent:harvard-library",
+      "contract_terms_status": "provider_terms_apply",
+      "component": "openly available public-domain digital reproductions",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Harvard allows any-purpose use with citation under its public-domain digital-reproductions policy; Houghton asks for notification, not permission, for a facsimile edition or substantial publication.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:harvard-policy"
+      ]
+    },
+    {
+      "id": "rights:internet-culturale-images",
+      "entity": "facsimile:internet-culturale:Str-App-23-267",
+      "access_id": "access:marciana-facsimile",
+      "asserted_by_id": "agent:internet-culturale",
+      "contract_terms_status": "provider_terms_apply",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/it/"
+      },
+      "component": "Internet Culturale web-resolution digital content",
+      "jurisdiction": "Italy",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "Current portal terms; commercial users are directed to the owning institution. No images are local.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:internet-culturale-terms"
+      ]
+    },
+    {
+      "id": "rights:costa-edition",
+      "entity": "edition:costa:marciana-echecs-2023",
+      "access_id": "access:costa-edition",
+      "contract_terms_status": "unknown",
+      "component": "2023 scholarly edition",
+      "jurisdiction": "Italy",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "Treat as research evidence only; no open redistribution license was established.",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:costa-2023"
+      ]
+    },
+    {
+      "id": "rights:ia-source-package",
+      "entity": "artifact:internet-archive:any9948-source-package",
+      "access_id": "access:umich-source-package",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "component": "Archive package as a composite delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "The package combines raw XML, page images, and operational metadata governed by separately evidenced statements; no single package-wide open license is inferred.",
+      "evidence_ids": [
+        "evidence:umich-package"
+      ]
+    },
+    {
+      "id": "rights:fairfax-physical-carrier",
+      "entity": "witness:bodleian:Fairfax16",
+      "contract_terms_status": "none_known",
+      "component": "Physical manuscript carrier",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "not_applicable",
+      "as_of": "2026-07-17",
+      "basis": "Copyright status is not assigned to the physical medieval carrier; historical-text and digital-image rights are recorded on their own entities.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:fairfax-catalog"
+      ]
+    },
+    {
+      "id": "rights:slub-physical-carrier",
+      "entity": "witness:slub:Mscr-Dresd-Oc-66",
+      "contract_terms_status": "none_known",
+      "component": "Physical manuscript carrier",
+      "jurisdiction": "Germany",
+      "copyright_status": "not_applicable",
+      "as_of": "2026-07-17",
+      "basis": "Copyright status is not assigned to the physical medieval carrier; historical-text and digital-image rights are recorded on their own entities.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:slub-facsimile"
+      ]
+    },
+    {
+      "id": "rights:harvard-physical-carrier",
+      "entity": "witness:harvard:MS-Fr-278",
+      "contract_terms_status": "none_known",
+      "component": "Physical manuscript fragment",
+      "jurisdiction": "United States",
+      "copyright_status": "not_applicable",
+      "as_of": "2026-07-17",
+      "basis": "Copyright status is not assigned to the physical medieval carrier; historical-text and digital-image rights are recorded on their own entities.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:harvard-iiif"
+      ]
+    },
+    {
+      "id": "rights:marciana-physical-carrier",
+      "entity": "witness:marciana:Str-App-23-267",
+      "contract_terms_status": "none_known",
+      "component": "Physical manuscript carrier",
+      "jurisdiction": "Italy",
+      "copyright_status": "not_applicable",
+      "as_of": "2026-07-17",
+      "basis": "Copyright status is not assigned to the physical medieval carrier; historical-text and digital-image rights are recorded on their own entities.",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:marciana-records"
+      ]
+    },
+    {
+      "id": "rights:jonas-catalog",
+      "entity": "catalog:jonas:oeuvre-7116",
+      "access_id": "access:jonas-record",
+      "asserted_by_id": "agent:irht-jonas",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "component": "JONAS catalog data and prose",
+      "jurisdiction": "France",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-17",
+      "basis": "No open redistribution license was established for the JONAS catalog expression; use its records as cited research evidence.",
+      "evidence_ids": [
+        "evidence:jonas-7116"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:sieper-punctuation",
+      "entity": "edition:sieper:eets-es84-es89:1901-1903",
+      "practice": "punctuation_normalization",
+      "source_feature": "Manuscript punctuation",
+      "representation": "Editor-supplied punctuation",
+      "description": "Sieper states that he supplied punctuation.",
+      "scope": "Complete Sieper two-part edition, with the medieval text bounded to Part I pp. 1-184",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "practice:sieper-collation",
+      "entity": "edition:sieper:eets-es84-es89:1901-1903",
+      "practice": "collation",
+      "source_feature": "Fairfax principal text and Add. 29729 variant readings",
+      "representation": "Fairfax base text with Add. 29729 collation",
+      "description": "Fairfax is principal/base text and Add. 29729 is collated; Stow's spelling modernization is discussed but not exhaustively footnoted.",
+      "scope": "Part I, edited poem pp. 1-184",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    },
+    {
+      "id": "practice:sieper-selection",
+      "entity": "edition:sieper:eets-es84-es89:1901-1903",
+      "practice": "selection",
+      "source_feature": "One unfinished medieval work in a two-part scholarly edition",
+      "representation": "Part I contains the edited work; Part II contains study and notes",
+      "description": "Part I prints the unfinished 7,042-line English work; Part II supplies study and notes rather than additional medieval-work content.",
+      "scope": "Complete Sieper two-part edition, with the medieval text bounded to Part I pp. 1-184",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:sieper-edition"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:pinned-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_1-2/any9948.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "summary": "Repository identity, U-M identifier, edition citation, XML structure, line and page mapping.",
+      "accessed_on": "2026-07-17",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/any9948.xml",
+      "repository_path": "CME/source/CME_phase_1-2/any9948.xml",
+      "sha256": "609d56c573ca889b1390f1782e0bc771d3dc0e97372092d961e8944fafeb5b82",
+      "locator": "HEADER; BODY/DIV1 nodes ANY9948.0001.001:3-106; terminal editorial notes"
+    },
+    {
+      "id": "evidence:xml-normalization-audit",
+      "type": "visual_inspection",
+      "citation": "source-cache/any9948/any9948-xml-audit.txt (hardlinked to the packet copy)",
+      "summary": "Exact normalized equivalence and the bounded navigational enrichment between raw and pinned XML.",
+      "accessed_on": "2026-07-17",
+      "repository_path": "source-cache/any9948/any9948-xml-audit.txt",
+      "sha256": "0b656eccdd153920afd0cad448829dd732e7615f390c14a4b9174c8a5d5ab0fd",
+      "locator": "Structural counts, normalization method, page mapping, and witness-boundary consequence"
+    },
+    {
+      "id": "evidence:umich-package",
+      "type": "digital_surrogate",
+      "citation": "source-cache/any9948/umich-any9948-complete-source-package.zip",
+      "summary": "Raw XML, complete 380-TIFF capture, and package composition.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+      "repository_path": "source-cache/any9948/umich-any9948-complete-source-package.zip",
+      "sha256": "d9c44f9cf9726ab1f795a713d0cb36a9ba6df28863e1d39006ed1632003df598"
+    },
+    {
+      "id": "evidence:umich-current-rights",
+      "type": "official_webpage",
+      "citation": "source-cache/any9948/umich-any9948-item-rights-snapshot.txt",
+      "summary": "Current official item-level public-domain statement and No Copyright - United States URI; the snapshot transparently records that direct command-line HTML retrieval was Cloudflare-blocked.",
+      "accessed_on": "2026-07-17",
+      "url": "https://quod.lib.umich.edu/c/cme/ANY9948.0001.001",
+      "repository_path": "source-cache/any9948/umich-any9948-item-rights-snapshot.txt",
+      "sha256": "98d197e195662ab32f1d5fb0927b25e2f1b80e22106c897e6098b39e5851250b"
+    },
+    {
+      "id": "evidence:umich-raw-header-rights",
+      "type": "edition_statement",
+      "citation": "source-cache/any9948/umich-any9948-complete-source-package.zip, member any9948.0001.001.xml, HEADER/FILEDESC/PUBLICATIONSTMT/AVAILABILITY",
+      "summary": "Distinct generic 2006 warning that copyright and other distribution restrictions may apply.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/download/any9948.0001.001.umich.edu/any9948.0001.001.umich.edu_umichbook.zip",
+      "repository_path": "source-cache/any9948/umich-any9948-complete-source-package.zip",
+      "sha256": "d9c44f9cf9726ab1f795a713d0cb36a9ba6df28863e1d39006ed1632003df598",
+      "locator": "member any9948.0001.001.xml; HEADER/FILEDESC/PUBLICATIONSTMT/AVAILABILITY"
+    },
+    {
+      "id": "evidence:sieper-edition",
+      "type": "edition_statement",
+      "citation": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf",
+      "summary": "Edition dates, roles, manuscript basis, punctuation, side-notes, collation, and target text.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/download/lydgatesresonan00furngoog/lydgatesresonan00furngoog.pdf",
+      "repository_path": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf",
+      "sha256": "e1664cfda707e896ad74307e3f5ecf370468a489d0118c6ee93519067f0decf8",
+      "locator": "Part I manuscript description, text pp. 1-184, editorial statements, and Part II studies"
+    },
+    {
+      "id": "evidence:google-file-use-terms",
+      "type": "edition_statement",
+      "citation": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf, provider cover pages",
+      "summary": "Google's public-domain label and reproduction-file requests for noncommercial use, attribution/watermark retention, no automated querying, and legal compliance.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/download/lydgatesresonan00furngoog/lydgatesresonan00furngoog.pdf",
+      "repository_path": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf",
+      "sha256": "e1664cfda707e896ad74307e3f5ecf370468a489d0118c6ee93519067f0decf8",
+      "locator": "Google provider cover pages"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "source-cache/any9948/cme-license-at-e1d77c8.txt",
+      "summary": "Exact pinned Unlicense wording and the unresolved question whether software-focused language alone establishes XML text/data/markup rights.",
+      "accessed_on": "2026-07-17",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "repository_path": "source-cache/any9948/cme-license-at-e1d77c8.txt",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:sieper-part-ii-source-statement",
+      "type": "edition_statement",
+      "citation": "Sieper EETS ES 89, printed p. 59 in the cached complete edition",
+      "summary": "French lines 1-4,873 expanded into 7,042 English lines.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/download/lydgatesresonan00furngoog/lydgatesresonan00furngoog.pdf",
+      "repository_path": "source-cache/any9948/sieper-1901-1903-reson-and-sensuallyte-google-harvard.pdf",
+      "sha256": "e1664cfda707e896ad74307e3f5ecf370468a489d0118c6ee93519067f0decf8",
+      "locator": "Part II, printed p. 59"
+    },
+    {
+      "id": "evidence:dimev-5964",
+      "type": "authority_record",
+      "citation": "source-cache/any9948/dimev-2.0-alpha.1.zip and source-cache/any9948/dimev-v1.0.zip, data/Records.xml record-5964",
+      "summary": "Qualified attribution, title, incipit, subject, form, extent, French scope, English witnesses, and the versioned release license; also preserves the erroneous Add. 29729 endpoint.",
+      "accessed_on": "2026-07-17",
+      "url": "https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content",
+      "repository_path": "source-cache/any9948/dimev-2.0-alpha.1.zip",
+      "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a",
+      "locator": "data/Records.xml record-5964",
+      "alternate_urls": [
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"
+      ],
+      "notes": [
+        "Both cached versions preserve record 5964 and the same erroneous Add. 29729 endpoint."
+      ]
+    },
+    {
+      "id": "evidence:fairfax-catalog",
+      "type": "official_catalog",
+      "citation": "source-cache/any9948/bodleian-fairfax-16-complete.zip, member manifest.json; source-cache/any9948/bodleian-fairfax-16-catalog-access-note.txt",
+      "summary": "Current official Digital Bodleian object metadata embeds the catalog URL, shelfmark, physical description, date, exact ff. 202r-300r locator, qualified attribution, and CC BY-NC 4.0 image attribution. The access note records that direct catalog HTML retrieval presented an Anubis challenge and was not bypassed.",
+      "accessed_on": "2026-07-17",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ee2d3617-5696-4ec8-9e4d-a99d0c485019.json",
+      "repository_path": "source-cache/any9948/bodleian-fairfax-16-complete.zip",
+      "sha256": "bc341b3941fd88d532276e411f49da6ad453020b03d0b339da7eec2a6267d91b",
+      "locator": "manifest.json metadata and target content entry",
+      "alternate_urls": [
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4850"
+      ],
+      "notes": [
+        "The official catalog HTML presented an Anubis challenge on 2026-07-17 and was not bypassed; exact official metadata and rights are retained in manifest.json inside the complete IIIF bundle."
+      ]
+    },
+    {
+      "id": "evidence:fairfax-visual",
+      "type": "visual_inspection",
+      "citation": "source-cache/any9948/bodleian-fairfax-16-complete.zip",
+      "summary": "Corrected f. 202r start, f. 300r end, blank continuation, next-work boundary, and exact canvas/image hashes.",
+      "accessed_on": "2026-07-17",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ee2d3617-5696-4ec8-9e4d-a99d0c485019.json",
+      "repository_path": "source-cache/any9948/bodleian-fairfax-16-complete.zip",
+      "sha256": "bc341b3941fd88d532276e411f49da6ad453020b03d0b339da7eec2a6267d91b",
+      "locator": "images/000417.jpg-images/000613.jpg; ff. 202r-300r"
+    },
+    {
+      "id": "evidence:bl-add-29729",
+      "type": "official_catalog",
+      "citation": "source-cache/any9948/british-library-add-ms-29729-catalog.html",
+      "summary": "Current exact ff. 184r-286v locator, Stow date, onsite access, CC BY catalog rights, and digital-image unavailability.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/032-002021279",
+      "repository_path": "source-cache/any9948/british-library-add-ms-29729-catalog.html",
+      "sha256": "9515c8cf90607ea16d9f3bdfc7b390966806d384860a6d057bd0564ccde4a5d0"
+    },
+    {
+      "id": "evidence:bl-imaging",
+      "type": "official_webpage",
+      "citation": "source-cache/any9948/british-library-digitisation-services.html; british-library-imaging-services-terms.html; british-library-2025-26-digitisation-rate-card.pdf",
+      "summary": "Separate purchase route, current rates, processing expectations, and reproduction-permission terms.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.bl.uk/terms/imaging-services-terms-and-conditions",
+      "repository_path": "source-cache/any9948/british-library-imaging-services-terms.html",
+      "sha256": "59ddc6ebb1dab35ed9ca406701a1fc9ed77bf32a3e09f75b36af7a63a18a66fa",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"
+      ],
+      "notes": [
+        "Companion cached files provide the service page and 2025-26 rate card."
+      ]
+    },
+    {
+      "id": "evidence:jonas-7116",
+      "type": "authority_record",
+      "citation": "source-cache/any9948/jonas-oeuvre-7116.html",
+      "summary": "Anonymous French work identity, date, form, length, and linked witnesses.",
+      "accessed_on": "2026-07-17",
+      "url": "https://jonas.irht.cnrs.fr/oeuvre/7116",
+      "repository_path": "source-cache/any9948/jonas-oeuvre-7116.html",
+      "sha256": "6769031a8cc463a4decfaf42065e196f6e44635ca2413359f49c6f893730097b"
+    },
+    {
+      "id": "evidence:slub-facsimile",
+      "type": "digital_surrogate",
+      "citation": "source-cache/any9948/slub-dresden-mscr-dresd-oc66-complete.pdf; slub-dresden-oc66-iiif-manifest.json; slub-dresden-oc66-mets.xml",
+      "summary": "Complete facsimile, locators, provider metadata, and Public Domain Mark.",
+      "accessed_on": "2026-07-17",
+      "url": "https://digital.slub-dresden.de/data/kitodo/franha-m_355847221/franha-m_355847221_tif/jpegs/franha-m_355847221.pdf",
+      "repository_path": "source-cache/any9948/slub-dresden-mscr-dresd-oc66-complete.pdf",
+      "sha256": "958d72277482c2a7b3e8f7f8003ec3881437c10e377b17c0357c5a479a0dcd79",
+      "alternate_urls": [
+        "https://iiif.slub-dresden.de/iiif/2/355847221/manifest.json"
+      ],
+      "notes": [
+        "Companion cached IIIF and METS metadata establish 301 canvases and the Public Domain Mark."
+      ]
+    },
+    {
+      "id": "evidence:costa-2023",
+      "type": "scholarly_source",
+      "citation": "source-cache/any9948/costa-2023-marciana-les-echecs-amoureux.pdf",
+      "summary": "Marciana acephalous boundary, lines 3,029-6,074, and comparative identification of French line 4,873.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.rialfri.eu/wp-content/uploads/2023/03/Edizione-del-testo-a-cura-di-Giacomo-Costa-2023.pdf",
+      "repository_path": "source-cache/any9948/costa-2023-marciana-les-echecs-amoureux.pdf",
+      "sha256": "febf9a65d02766f00fe48f00a62a9779fe3667cbfcb2dbc7341b6d822b4c47e8",
+      "locator": "Marciana lines 3029-6074; identification of line 4873"
+    },
+    {
+      "id": "evidence:harvard-iiif",
+      "type": "digital_surrogate",
+      "citation": "source-cache/any9948/harvard-fr278-iiif-manifest.json and harvard-fr278-complete.zip",
+      "summary": "Complete six-canvas fragment facsimile and Harvard's conflicting unidentified-poem description.",
+      "accessed_on": "2026-07-17",
+      "url": "https://nrs.harvard.edu/URN-3:FHCL.HOUGH:10379798:MANIFEST:3",
+      "repository_path": "source-cache/any9948/harvard-fr278-complete.zip",
+      "sha256": "b958dc86c374f99b75671384bcd7e37d31334f1ee26f18dc1a95ae903ea96574"
+    },
+    {
+      "id": "evidence:harvard-policy",
+      "type": "official_webpage",
+      "citation": "source-cache/any9948/harvard-public-domain-digital-reproductions-policy.html and harvard-houghton-copyright-questions.html",
+      "summary": "Use policy, citation request, and Houghton notification request.",
+      "accessed_on": "2026-07-17",
+      "url": "https://library.harvard.edu/about/policies/policy-access-digital-reproductions-works-public-domain",
+      "repository_path": "source-cache/any9948/harvard-public-domain-digital-reproductions-policy.html",
+      "sha256": "8a8be8b9301846c74ee798bf8598846455d15c81792d65673c665d88fc7e0b48",
+      "alternate_urls": [
+        "https://library.harvard.edu/libraries/houghton-library/collections/copyright-questions"
+      ],
+      "notes": [
+        "Houghton's companion page asks for notification, not permission, for facsimile or substantial publication."
+      ]
+    },
+    {
+      "id": "evidence:marciana-records",
+      "type": "authority_record",
+      "citation": "source-cache/any9948/biblissima-marciana-str-app-23.html and jonas-manuscript-68344.html",
+      "summary": "Marciana shelfmark, folios, dating, French content, and recorded full-facsimile route.",
+      "accessed_on": "2026-07-17",
+      "url": "https://jonas.irht.cnrs.fr/manuscrit/68344",
+      "repository_path": "source-cache/any9948/jonas-manuscript-68344.html",
+      "sha256": "effd9023702e0fdeba2893de4d24febb517a975109cc2d7e19e28fdc30b0c688",
+      "alternate_urls": [
+        "https://portail.biblissima.fr/ark:/43093/mdata71a46ca361c44c4548ad2d0673f95d3e89162289"
+      ]
+    },
+    {
+      "id": "evidence:internet-culturale-terms",
+      "type": "official_webpage",
+      "citation": "source-cache/any9948/internet-culturale-terms.html",
+      "summary": "Portal digital-content reuse terms.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.internetculturale.it/it/151/termini-e-condizioni",
+      "repository_path": "source-cache/any9948/internet-culturale-terms.html",
+      "sha256": "837a19ca4304d27f19435fa22b879f965dad872d2af443e9a4f062fe0b1154ab"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:lydgate-attribution",
+      "question": "Can future scholarship raise or lower the qualified attribution of the Middle English translation-adaptation to John Lydgate?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Retain attributed translator-adapter responsibilities at medium confidence.",
+        "Review new attribution scholarship before changing the responsibility."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:sieper-edition",
+        "evidence:dimev-5964",
+        "evidence:fairfax-catalog"
+      ],
+      "notes": [
+        "Keep John Lydgate as attributed translator-adapter at medium confidence."
+      ]
+    },
+    {
+      "id": "question:exact-french-exemplar",
+      "question": "Which physical French exemplar, if any extant, did the English translator use?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Keep the version_of relation at the abstract-work level.",
+        "Do not place a surviving French witness in the primary path without direct exemplar evidence."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:sieper-part-ii-source-statement",
+        "evidence:jonas-7116"
+      ],
+      "notes": [
+        "Do not add a surviving French witness to the primary path."
+      ]
+    },
+    {
+      "id": "question:harvard-fragment-range",
+      "question": "Which exact verses of Echecs amoureux survive in Harvard MS Fr 278, and do they overlap French lines 1-4,873?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Collate the six cached images against an identified Echecs amoureux text.",
+        "Keep the fragment relation supported at medium confidence until the verse range is verified."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:jonas-7116",
+        "evidence:harvard-iiif"
+      ],
+      "notes": [
+        "Keep its contains relation supported/medium and omit a verse-number locator."
+      ]
+    },
+    {
+      "id": "question:marciana-current-access",
+      "question": "Will the recorded Internet Culturale full-facsimile endpoint for Marciana Str. App. 23 (=267) become reachable again?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Recheck the exact endpoint after the temporary HTTP 503 condition.",
+        "Do not treat an outage as evidence of loss or permanent withdrawal."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:marciana-records"
+      ],
+      "notes": [
+        "Record 2026-07-17 HTTP 503 and recheck later; do not label the facsimile lost or absent."
+      ]
+    },
+    {
+      "id": "question:umich-rights-tension",
+      "question": "How should the current U-M item-level public-domain statement be reconciled with the generic restriction warning in the raw 2006 XML header?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Preserve the two provider statements as separate dated rights records.",
+        "Seek a current U-M clarification before merging or overriding either statement."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:umich-current-rights",
+        "evidence:umich-raw-header-rights"
+      ],
+      "notes": [
+        "Preserve current public-domain item labeling and the older raw-header warning as separate provider statements."
+      ]
+    },
+    {
+      "id": "question:cme-unlicense-scope",
+      "question": "Does the repository Unlicense unambiguously cover inherited XML text, data, and markup as well as software?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Treat repository license scope as unresolved for inherited XML content.",
+        "Seek an explicit content/data licensing statement before making broader reuse claims."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:pinned-xml"
+      ],
+      "notes": [
+        "Do not infer that software-focused Unlicense wording alone resolves XML content/markup rights."
+      ]
+    }
+  ]
+}
