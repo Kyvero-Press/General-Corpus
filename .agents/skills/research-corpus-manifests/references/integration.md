@@ -12,6 +12,10 @@ worktree.
    Run the skill's duplicate-key checker on both exact JSON files before
    authorizing a commit; `jq`, ordinary JSON loading, and downstream schema
    validation may all hide an earlier duplicate by retaining its last value.
+   Run `scripts/check-lineage-rights-access.py` from the skill on the exact
+   lineage file as a separate semantic gate; schema-valid rights can still
+   point at an access record owned by another entity, and schema-valid cached
+   sources can still omit their explicit target-presence boundary.
    After any long-running cache transfer, replace stale future-tense notes with
    the final byte count, checksum, integrity result, and internal inventory;
    remove or resolve download-pending questions before committing the record.

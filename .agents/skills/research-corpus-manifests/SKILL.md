@@ -123,6 +123,14 @@ When working as a one-book subagent in an isolated worktree:
     manifests/lineage/works/WORK_ID.json
   ```
 
+- reject cross-layer rights/access joins and missing entity-level rights
+  coverage before ordinary pair validation:
+
+  ```bash
+  python3 .agents/skills/research-corpus-manifests/scripts/check-lineage-rights-access.py \
+    manifests/lineage/works/WORK_ID.json
+  ```
+
 - validate JSON and the pair as far as the worktree permits;
 - run `python3 scripts/validate-manifest-pair.py WORK_ID`;
 - send a detailed PRECOMMIT report and wait for exact-file authorization before

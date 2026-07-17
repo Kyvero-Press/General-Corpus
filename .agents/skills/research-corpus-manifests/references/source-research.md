@@ -222,6 +222,45 @@ source and link share an inode and exact bytes. Record the new work's own
 target portion and access relationship; cache reuse never transfers a locator
 or proves that the target work is present in the source.
 
+## Probe Raw Michigan Book packages
+
+For every U-M DLPS item, probe the Internet Archive metadata endpoint for the
+lowercased item identifier plus `.umich.edu`, for example
+`https://archive.org/metadata/anz4364.0001.001.umich.edu`. Inspect the returned
+file list for the exact `*_umichbook.zip` member; do not infer that a package
+exists merely from the naming pattern. When it is public, cache both the
+metadata response and the complete ZIP, even when the encoded work occupies
+only part of the scanned volume.
+
+Audit the package before modeling it:
+
+- compare its byte count, MD5, and SHA-1 with the provider metadata and record
+  a local SHA-256;
+- run the ZIP CRC test, inventory every member, and verify that the TIFF names
+  form the advertised contiguous sequence;
+- identify the raw XML, text, header, page-view map, and production log rather
+  than treating the ZIP as an undifferentiated facsimile;
+- map title, body, apparatus, and back-matter TIFFs from the XML `PB` values
+  and page-view data, retaining unreferenced images as part of the complete
+  carrier; and
+- compare the embedded raw XML with the pinned CME XML element by element.
+  Classify every changed attribute and every character-data difference. Assert
+  `copied_from` only when a bounded reversal of deterministic identifiers,
+  editorial-level changes, and formatting whitespace leaves no unexplained
+  difference; record both original hashes and the normalized equality proof.
+
+Model three documentary layers even though one ZIP delivers all of them: an
+Internet Archive package artifact, the raw U-M encoding, and the U-M TIFF
+facsimile. The package `contains` the encoding and TIFF set; the encoding is
+`encoded_from` the TIFFs when the raw header and page links establish that
+process; and the TIFF set is `facsimile_of` the scanned edition. Do not make
+the package itself an encoding or facsimile. Attach the same verified package
+local-copy object to each access route that genuinely delivers a contained
+layer so the viewer can show that layer as downloaded, but count the bytes and
+unique cache path only once. Keep package-wrapper rights, the current U-M item
+statement, and any older raw-header warning in separate, time- and
+component-scoped rights records.
+
 ## Keep a claim ledger
 
 Before JSON, record each consequential claim with:
