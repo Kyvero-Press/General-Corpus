@@ -174,6 +174,15 @@ separate scoped `transcribes` relations preserve every copy-to-witness mapping.
 Connect the edition to that intermediary and remove parallel direct edition-
 to-codex edges; keeping both paths would falsely imply independent autopsy.
 
+When acknowledgements instead name several suppliers and several witnesses but
+do not map people to sigla, do not manufacture person-to-witness assignments or
+one material transcript for each person. At most, use a provisional aggregate
+description for the evidenced class of working transcripts or collations, join
+it collectively to the supported witness scopes, and state that its membership,
+survival, holdings, and individual supplier mappings remain unknown. Such an
+aggregate is an editorial intermediary model, not a newly discovered object,
+and it receives no physical holding or access route without further evidence.
+
 A passive statement that a collaborator's transcript “was compared with the
 original” supports edition-level collation, but not the identity of the
 collator. It also does not prove that the transcript's source photographs

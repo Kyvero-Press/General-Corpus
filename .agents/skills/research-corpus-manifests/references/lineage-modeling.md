@@ -202,6 +202,14 @@ current fragment access its own scope, and describe an aggregate digital
 surrogate as complete only for its audited surviving published fragment
 sequence—not for an unreconstructed original codex.
 
+For an early printed fragment known through one bibliographic record but
+reported as leaves or pieces in multiple repositories, keep one historical
+print-witness entity only while the evidence supports that shared identity.
+Omit a singular holding, give each provider its own fragment-scoped access and
+future-image rights route, and leave physical unity, shelfmarks, and split
+history open. If later evidence establishes distinct copies rather than parts
+of one witness, split the entity instead of preserving a convenient aggregate.
+
 Use exact component records for folio boundaries. A parent codex record can
 support physical description and access, but it may include adjacent material
 outside the cataloged work.
