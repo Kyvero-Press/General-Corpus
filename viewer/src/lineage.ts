@@ -1,4 +1,8 @@
-import type { LineageEntity, LineageRelation } from "./types";
+import type {
+  LineageEntity,
+  LineageRelation,
+  LineageRelationClassification,
+} from "./types";
 
 export const PRIMARY_TRANSMISSION_TYPES = new Set([
   "copied_from",
@@ -18,17 +22,39 @@ export interface PartitionedLineageRelations {
 }
 
 /**
- * Reserve "primary" for direct transmission edges that can actually be
- * followed from the corpus repository artifact. Direct edges in disconnected
- * components remain visible, but are not presented as if they produced the
- * corpus file. Older records without an artifact entity retain the legacy
- * direct/supporting split.
+ * Prefer an evidence-reviewed manifest classification when one is supplied.
+ * This allows a path to retain exact relation semantics such as facsimile_of,
+ * contains, or version_of without a display heuristic hiding part of it.
+ * Older manifests retain the artifact-rooted direct/supporting heuristic.
  */
 export function partitionLineageRelations(
   entities: LineageEntity[],
   relations: LineageRelation[],
   primarySubjectId: string | null = null,
+  classification: LineageRelationClassification | null = null,
 ): PartitionedLineageRelations {
+  if (classification) {
+    const primaryIds = new Set(
+      classification.primaryTransmissionPaths.flatMap((path) => path.relationIds),
+    );
+    const supportingIds = new Set(
+      classification.supportingRelationships.flatMap((group) => group.relationIds),
+    );
+    return {
+      primary: relations.filter(
+        (relation) => relation.id !== null && primaryIds.has(relation.id),
+      ),
+      otherTransmission: relations.filter(
+        (relation) =>
+          relation.id === null ||
+          (!primaryIds.has(relation.id) && !supportingIds.has(relation.id)),
+      ),
+      supporting: relations.filter(
+        (relation) => relation.id !== null && supportingIds.has(relation.id),
+      ),
+    };
+  }
+
   const direct = relations.filter(isPrimaryTransmissionRelation);
   const supporting = relations.filter(
     (relation) => !isPrimaryTransmissionRelation(relation),

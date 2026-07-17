@@ -54,6 +54,45 @@ class ViewerWorkProjectionTests(unittest.TestCase):
             local_copy = detail["lineage"]["sourceLinks"][0]["localCopies"][0]
             self.assertTrue(local_copy["available"])
 
+    def test_preserves_explicit_lineage_path_classification(self) -> None:
+        with tempfile.TemporaryDirectory() as directory, fake_pdfinfo():
+            fixture = CatalogFixture(Path(directory))
+            fixture.lineage["primary_subject"] = "artifact:test"
+            fixture.lineage["entities"].insert(0, {
+                "id": "artifact:test",
+                "type": "repository_artifact",
+                "label": "Repository artifact",
+            })
+            fixture.lineage["relations"] = [{
+                "id": "relation:artifact-version-of-edition",
+                "type": "version_of",
+                "subject": "artifact:test",
+                "object": "edition:test",
+            }]
+            fixture.lineage["primary_transmission_paths"] = [{
+                "id": "path:repository-to-edition",
+                "label": "Repository artifact to source edition",
+                "relation_ids": ["relation:artifact-version-of-edition"],
+                "entity_sequence": ["artifact:test", "edition:test"],
+                "description": "A qualified version relation belongs to the reviewed path.",
+            }]
+            fixture.lineage["supporting_relationships"] = []
+            fixture.write_manifests()
+            pdf = fixture.add_pdf()
+            fixture.write_publication_inventory(pdf)
+
+            detail = validate_viewer_work.validate_projection(
+                fixture.root,
+                fixture.work_id,
+            )
+
+        classification = detail["lineage"]["relationClassification"]
+        self.assertEqual(
+            ["relation:artifact-version-of-edition"],
+            classification["primaryTransmissionPaths"][0]["relationIds"],
+        )
+        self.assertEqual([], classification["supportingRelationships"])
+
     def test_rejects_case_insensitive_collision_with_another_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as directory, fake_pdfinfo():
             fixture = CatalogFixture(Path(directory))

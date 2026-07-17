@@ -298,6 +298,26 @@ export interface AssertionRecord {
   notes?: string;
 }
 
+export interface PrimaryTransmissionPath {
+  id: string;
+  label: string;
+  relationIds: string[];
+  entitySequence: string[];
+  description: string;
+}
+
+export interface SupportingRelationshipGroup {
+  id: string;
+  label: string;
+  relationIds: string[];
+  description: string;
+}
+
+export interface LineageRelationClassification {
+  primaryTransmissionPaths: PrimaryTransmissionPath[];
+  supportingRelationships: SupportingRelationshipGroup[];
+}
+
 export interface LineageDetail {
   manifestId: string | null;
   primarySubjectId: string | null;
@@ -306,6 +326,7 @@ export interface LineageDetail {
   summary: string | null;
   entities: LineageEntity[];
   relations: LineageRelation[];
+  relationClassification?: LineageRelationClassification | null;
   sourceLinks: AccessRecord[];
   openQuestions: QuestionRecord[];
   reviewNotes: string[];

@@ -598,6 +598,34 @@ def _normalized_lineage(
             }
         )
 
+    relation_classification = None
+    raw_primary_paths = lineage.get("primary_transmission_paths")
+    raw_supporting_groups = lineage.get("supporting_relationships")
+    if isinstance(raw_primary_paths, list) and isinstance(raw_supporting_groups, list):
+        relation_classification = {
+            "primaryTransmissionPaths": [
+                {
+                    "id": item.get("id"),
+                    "label": item.get("label"),
+                    "relationIds": item.get("relation_ids", []),
+                    "entitySequence": item.get("entity_sequence", []),
+                    "description": item.get("description"),
+                }
+                for item in raw_primary_paths
+                if isinstance(item, dict)
+            ],
+            "supportingRelationships": [
+                {
+                    "id": item.get("id"),
+                    "label": item.get("label"),
+                    "relationIds": item.get("relation_ids", []),
+                    "description": item.get("description"),
+                }
+                for item in raw_supporting_groups
+                if isinstance(item, dict)
+            ],
+        }
+
     return {
         "manifestId": lineage.get("id"),
         "primarySubjectId": lineage.get("primary_subject"),
@@ -606,6 +634,7 @@ def _normalized_lineage(
         "summary": lineage.get("summary"),
         "entities": normalized_entities,
         "relations": relations,
+        "relationClassification": relation_classification,
         "sourceLinks": source_links,
         "openQuestions": lineage.get("open_questions", []),
         "reviewNotes": lineage.get("review_notes", []),

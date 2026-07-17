@@ -9,6 +9,7 @@ import type {
   ContentPart,
   LineageEntity,
   LineageRelation,
+  LineageRelationClassification,
   MetadataStatement,
   RightRecord,
   WorkDetailRecord,
@@ -540,6 +541,52 @@ function RelationGroup({
   );
 }
 
+function ReviewedRelationshipClassification({
+  classification,
+}: {
+  classification: LineageRelationClassification;
+}) {
+  const records = [
+    ...classification.primaryTransmissionPaths.map((path) => ({
+      id: path.id,
+      label: path.label,
+      description: path.description,
+      count: path.relationIds.length,
+      kind: "Primary path",
+    })),
+    ...classification.supportingRelationships.map((group) => ({
+      id: group.id,
+      label: group.label,
+      description: group.description,
+      count: group.relationIds.length,
+      kind: "Supporting group",
+    })),
+  ];
+  if (!records.length) return null;
+  return (
+    <div className="research-notes">
+      <div className="section-heading-row">
+        <div>
+          <p className="eyebrow">Evidence-reviewed organization</p>
+          <h3>Manifest path definitions</h3>
+        </div>
+        <StatusBadge value="explicit classification" />
+      </div>
+      <ul className="statement-list">
+        {records.map((record) => (
+          <li key={record.id}>
+            <span>{record.label}</span>
+            <small>
+              {record.kind} · {record.count.toLocaleString()} {record.count === 1 ? "relationship" : "relationships"}
+            </small>
+            <p>{record.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function MetadataSection({ detail }: { detail: WorkDetailRecord }) {
   const metadata = detail.metadata;
   if (!metadata) {
@@ -768,7 +815,9 @@ function LineageSection({ detail }: { detail: WorkDetailRecord }) {
     lineage.entities,
     lineage.relations,
     lineage.primarySubjectId,
+    lineage.relationClassification ?? null,
   );
+  const hasReviewedClassification = Boolean(lineage.relationClassification);
   return (
     <section className="detail-section" id="source-lineage">
       <div className="section-heading-row">
@@ -779,6 +828,11 @@ function LineageSection({ detail }: { detail: WorkDetailRecord }) {
         <StatusBadge value={lineage.recordStatus} />
       </div>
       {lineage.summary && <p className="lead-copy">{lineage.summary}</p>}
+      {lineage.relationClassification && (
+        <ReviewedRelationshipClassification
+          classification={lineage.relationClassification}
+        />
+      )}
       {lineage.relations.length > 0 && (
         <div className="lineage-view-toolbar">
           <div>
@@ -811,21 +865,27 @@ function LineageSection({ detail }: { detail: WorkDetailRecord }) {
       <div id={relationshipGroupsId}>
         <RelationGroup
           title="Primary transmission paths"
-          description="Direct copying, encoding, transcription, and excerpting relationships that can be followed from the repository artifact—or an encoding directly linked to it—toward its sources. Scope matters: separate sections may derive from different witnesses."
+          description={hasReviewedClassification
+            ? "Evidence-reviewed paths declared by the lineage manifest. Structurally necessary facsimile, containment, or version relationships retain their exact relation labels within the path."
+            : "Direct copying, encoding, transcription, and excerpting relationships that can be followed from the repository artifact—or an encoding directly linked to it—toward its sources. Scope matters: separate sections may derive from different witnesses."}
           relations={partitionedRelations.primary}
           entities={lineage.entities}
           view={relationshipView}
         />
         <RelationGroup
           title="Other documented transmission paths"
-          description="Direct transcription or excerpting relationships recorded in this lineage but not connected to the repository artifact by a complete direct-edge chain. These often describe prior editions, comparison editions, or contextual textual ancestry."
+          description={hasReviewedClassification
+            ? "Relationships not included in the manifest's explicit classification. Valid reviewed manifests classify every relationship, so this defensive group should ordinarily be empty."
+            : "Direct transcription or excerpting relationships recorded in this lineage but not connected to the repository artifact by a complete direct-edge chain. These often describe prior editions, comparison editions, or contextual textual ancestry."}
           relations={partitionedRelations.otherTransmission}
           entities={lineage.entities}
           view={relationshipView}
         />
         <RelationGroup
           title="Supporting relationships"
-          description="Collation, consultation, facsimile, catalog-description, and related scholarly connections. These do not automatically form the direct transmission path."
+          description={hasReviewedClassification
+            ? "Evidence-reviewed contextual and supporting groups declared by the lineage manifest. They remain visible without being presented as steps that produced the repository artifact."
+            : "Collation, consultation, facsimile, catalog-description, and related scholarly connections. These do not automatically form the direct transmission path."}
           relations={partitionedRelations.supporting}
           entities={lineage.entities}
           view={relationshipView}

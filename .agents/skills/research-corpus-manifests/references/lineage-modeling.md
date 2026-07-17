@@ -188,6 +188,26 @@ the edition also prints the source-language passage verbatim, give that
 separate printed passage its own scoped `transcribes` relation and keep its
 inclusion or omission from the digital encoding explicit.
 
+### Evidence-reviewed path classification
+
+The viewer's legacy relation-type heuristic cannot always recover a researched
+production path. A real path may need `version_of`, `contains`, or
+`facsimile_of` steps between copying or transcription steps. When the research
+packet has explicitly classified the complete graph, add both top-level
+`primary_transmission_paths` and `supporting_relationships` to the lineage
+manifest. Do not relabel a relation merely to make it appear in a preferred
+viewer group.
+
+For each primary path, list the ordered `relation_ids` and an
+`entity_sequence` whose adjacent endpoints exactly match those relations in
+subject-to-object direction. Group every contextual relation under a clear
+supporting label. The two collections must classify every manifest relation
+exactly once; no relation may be omitted or repeated across paths or groups.
+Use descriptive labels and explanations to state what each reviewed path or
+supporting group means. Omit both fields when the graph has not received this
+complete evidence review; older manifests then retain the viewer's conservative
+heuristic instead of presenting an analyst's partial grouping as definitive.
+
 ## Parts and shared objects
 
 A codex can contain several works, and an edition can print several witnesses
@@ -255,6 +275,8 @@ open a reconciliation question. Do not manufacture one consensus description.
 - Use the cataloged unit's preferred title as top-level `title`.
 - Verify every entity, agent, relation, access, rights, evidence, and support ID.
 - Ensure every edge has correct direction and scope.
+- If explicit path classification is present, verify exact ordered endpoints
+  and classify every relation once across primary paths and supporting groups.
 - Attach witness facts to exact institutional records.
 - Keep broader traditions separate from representative witnesses.
 - Put attractive but unsupported ancestry in `open_questions`.

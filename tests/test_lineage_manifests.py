@@ -32,6 +32,67 @@ class LineageManifestTests(unittest.TestCase):
 
         self.assertTrue(any("unresolved entity reference 'witness:missing'" in item for item in errors))
 
+    def test_explicit_relation_classification_requires_exact_endpoint_paths(self) -> None:
+        path = REPO_ROOT / "manifests" / "lineage" / "works" / "CME00099.json"
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        relation_ids = [item["id"] for item in manifest["relations"]]
+        manifest["primary_transmission_paths"] = [{
+            "id": "path:repository-to-witness",
+            "label": "Repository artifact through its immediate edition",
+            "relation_ids": relation_ids[:3],
+            "entity_sequence": [
+                "artifact:general-corpus:CME00099",
+                "encoding:umich-cme:CME00099",
+                "edition:holthausen:anglia-19-1897",
+                "witness:kb:X90",
+            ],
+            "description": "The evidence-reviewed primary path for this fixture.",
+        }]
+        manifest["supporting_relationships"] = [{
+            "id": "group:context",
+            "label": "Context and comparison",
+            "relation_ids": relation_ids[3:],
+            "description": "All remaining relationships are contextual in this fixture.",
+        }]
+
+        schema_path = REPO_ROOT / "manifests" / "lineage" / "schemas" / "lineage-manifest.schema.json"
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._schema_errors(manifest, schema, schema, "CME00099"),
+        )
+
+        self.assertEqual(
+            [],
+            validate_lineage_manifests._semantic_manifest_errors(REPO_ROOT, path, manifest),
+        )
+
+        wrong_endpoint = copy.deepcopy(manifest)
+        wrong_endpoint["primary_transmission_paths"][0]["entity_sequence"][2] = "witness:kb:X90"
+        errors = validate_lineage_manifests._semantic_manifest_errors(
+            REPO_ROOT, path, wrong_endpoint
+        )
+        self.assertTrue(any("do not match adjacent entity_sequence endpoints" in item for item in errors))
+
+        duplicate = copy.deepcopy(manifest)
+        duplicate["supporting_relationships"][0]["relation_ids"].append(relation_ids[0])
+        errors = validate_lineage_manifests._semantic_manifest_errors(REPO_ROOT, path, duplicate)
+        self.assertTrue(any("is already classified" in item for item in errors))
+
+        missing = copy.deepcopy(manifest)
+        missing["supporting_relationships"][0]["relation_ids"].pop()
+        errors = validate_lineage_manifests._semantic_manifest_errors(REPO_ROOT, path, missing)
+        self.assertTrue(any("is not classified" in item for item in errors))
+
+    def test_explicit_relation_classification_fields_must_be_paired(self) -> None:
+        path = REPO_ROOT / "manifests" / "lineage" / "works" / "CME00099.json"
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        manifest["primary_transmission_paths"] = []
+
+        errors = validate_lineage_manifests._semantic_manifest_errors(REPO_ROOT, path, manifest)
+
+        self.assertTrue(any("must be supplied together" in item for item in errors))
+
     def test_schema_rejects_unknown_top_level_property(self) -> None:
         schema_path = (
             REPO_ROOT

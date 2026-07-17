@@ -194,6 +194,51 @@ describe("lineage diagram model", () => {
     expect(partition.otherTransmission.map((item) => item.id)).toEqual(["source"]);
     expect(partition.supporting.map((item) => item.id)).toEqual(["description"]);
   });
+
+  it("honors an explicit reviewed path without changing mixed relation semantics", () => {
+    const entities = [
+      entity("artifact", "Corpus XML", "repository_artifact"),
+      entity("encoding", "Source package", "digital_encoding"),
+      entity("facsimile", "Page-image set", "facsimile"),
+      entity("carrier", "Journal volume", "physical_edition"),
+      entity("article", "Scholarly article", "scholarly_edition"),
+      entity("witness", "Manuscript witness"),
+      entity("catalog", "Catalog record", "catalog_record"),
+    ];
+    const relations = [
+      relation("r1", "version_of", "artifact", "encoding", "Corpus XML", "Source package"),
+      relation("r2", "contains", "encoding", "facsimile", "Source package", "Page-image set"),
+      relation("r3", "facsimile_of", "facsimile", "carrier", "Page-image set", "Journal volume"),
+      relation("r4", "contains", "carrier", "article", "Journal volume", "Scholarly article"),
+      relation("r5", "transcribes", "article", "witness", "Scholarly article", "Manuscript witness"),
+      relation("r6", "describes", "catalog", "witness", "Catalog record", "Manuscript witness"),
+    ];
+
+    const partition = partitionLineageRelations(
+      entities,
+      relations,
+      "artifact",
+      {
+        primaryTransmissionPaths: [{
+          id: "path:reviewed",
+          label: "Reviewed production path",
+          relationIds: ["r1", "r2", "r3", "r4", "r5"],
+          entitySequence: ["artifact", "encoding", "facsimile", "carrier", "article", "witness"],
+          description: "The reviewed path preserves each relationship's exact meaning.",
+        }],
+        supportingRelationships: [{
+          id: "group:catalog",
+          label: "Catalog support",
+          relationIds: ["r6"],
+          description: "The catalog describes the witness but is not a production step.",
+        }],
+      },
+    );
+
+    expect(partition.primary.map((item) => item.id)).toEqual(["r1", "r2", "r3", "r4", "r5"]);
+    expect(partition.otherTransmission).toEqual([]);
+    expect(partition.supporting.map((item) => item.id)).toEqual(["r6"]);
+  });
 });
 
 describe("LineageDiagram", () => {

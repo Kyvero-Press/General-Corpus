@@ -542,6 +542,116 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 errors,
             )
 
+    has_primary_paths = "primary_transmission_paths" in manifest
+    has_supporting_groups = "supporting_relationships" in manifest
+    if has_primary_paths != has_supporting_groups:
+        errors.append(
+            f"{location}: primary_transmission_paths and supporting_relationships "
+            "must be supplied together"
+        )
+    elif has_primary_paths:
+        relations_by_id = {
+            item["id"]: item
+            for item in manifest.get("relations", [])
+            if isinstance(item, dict) and isinstance(item.get("id"), str)
+        }
+        classification_ids: dict[str, str] = {}
+        classified_relations: dict[str, str] = {}
+
+        def classify_relation_ids(raw_ids: Any, item_location: str) -> None:
+            if not isinstance(raw_ids, list):
+                return
+            for relation_index, relation_id in enumerate(raw_ids):
+                ref_location = f"{item_location}.relation_ids[{relation_index}]"
+                if not isinstance(relation_id, str):
+                    continue
+                if relation_id not in relations_by_id:
+                    errors.append(
+                        f"{ref_location}: unresolved relation reference {relation_id!r}"
+                    )
+                    continue
+                prior_location = classified_relations.get(relation_id)
+                if prior_location is not None:
+                    errors.append(
+                        f"{ref_location}: relation {relation_id!r} is already classified at "
+                        f"{prior_location}"
+                    )
+                    continue
+                classified_relations[relation_id] = ref_location
+
+        for index, path_record in enumerate(manifest.get("primary_transmission_paths", [])):
+            if not isinstance(path_record, dict):
+                continue
+            item_location = f"{location}.primary_transmission_paths[{index}]"
+            path_id = path_record.get("id")
+            if isinstance(path_id, str):
+                prior_location = classification_ids.get(path_id)
+                if prior_location is not None:
+                    errors.append(
+                        f"{item_location}.id: duplicate classification id {path_id!r}; "
+                        f"first used at {prior_location}"
+                    )
+                else:
+                    classification_ids[path_id] = f"{item_location}.id"
+
+            relation_ids = path_record.get("relation_ids")
+            entity_sequence = path_record.get("entity_sequence")
+            classify_relation_ids(relation_ids, item_location)
+            if not isinstance(relation_ids, list) or not isinstance(entity_sequence, list):
+                continue
+            if len(entity_sequence) != len(relation_ids) + 1:
+                errors.append(
+                    f"{item_location}.entity_sequence: expected exactly one more entity "
+                    "than relation_ids"
+                )
+            for entity_index, entity_id in enumerate(entity_sequence):
+                _check_entity_ref(
+                    entity_id,
+                    entity_ids,
+                    f"{item_location}.entity_sequence[{entity_index}]",
+                    errors,
+                )
+            for relation_index, relation_id in enumerate(relation_ids):
+                if (
+                    not isinstance(relation_id, str)
+                    or relation_id not in relations_by_id
+                    or relation_index + 1 >= len(entity_sequence)
+                ):
+                    continue
+                subject_id = entity_sequence[relation_index]
+                object_id = entity_sequence[relation_index + 1]
+                relation = relations_by_id[relation_id]
+                if relation.get("subject") != subject_id or relation.get("object") != object_id:
+                    errors.append(
+                        f"{item_location}.relation_ids[{relation_index}]: relation "
+                        f"{relation_id!r} endpoints {relation.get('subject')!r} -> "
+                        f"{relation.get('object')!r} do not match adjacent entity_sequence "
+                        f"endpoints {subject_id!r} -> {object_id!r}"
+                    )
+
+        for index, group in enumerate(manifest.get("supporting_relationships", [])):
+            if not isinstance(group, dict):
+                continue
+            item_location = f"{location}.supporting_relationships[{index}]"
+            group_id = group.get("id")
+            if isinstance(group_id, str):
+                prior_location = classification_ids.get(group_id)
+                if prior_location is not None:
+                    errors.append(
+                        f"{item_location}.id: duplicate classification id {group_id!r}; "
+                        f"first used at {prior_location}"
+                    )
+                else:
+                    classification_ids[group_id] = f"{item_location}.id"
+            classify_relation_ids(group.get("relation_ids"), item_location)
+
+        for relation_id in relations_by_id:
+            if relation_id not in classified_relations:
+                errors.append(
+                    f"{location}.relations: relation {relation_id!r} is not classified by "
+                    "primary_transmission_paths or supporting_relationships"
+                )
+
     for index, access in enumerate(manifest.get("access", [])):
         if not isinstance(access, dict):
             continue

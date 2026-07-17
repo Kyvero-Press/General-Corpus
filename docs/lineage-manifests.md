@@ -154,6 +154,9 @@ Each work manifest contains:
   witnesses, facsimiles, and catalogues;
 - `agents`: people and institutions referenced by those entities;
 - `relations`: directed, scoped provenance edges;
+- optional `primary_transmission_paths` and `supporting_relationships`:
+  evidence-reviewed display classifications that preserve exact relation types,
+  ordered endpoints, and complete one-time coverage of the relation graph;
 - `access`: dated routes to public files, catalogues, reading-room access,
   reproduction orders, documented negative searches, and checksummed local
   copies of verified file deliverables;
