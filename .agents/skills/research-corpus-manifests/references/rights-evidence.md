@@ -367,6 +367,11 @@ scholarly reproduction” merely because a quick public search failed.
 
 - Resolve every evidence and `supports` reference.
 - Ensure rights attach to the correct entity and access record.
+- Require each `rights[].access_id` to resolve to an access record on the same
+  entity. When an edition is reached through a facsimile carrier, add a
+  target-bearing access route on the edition that points through the carrier
+  without duplicating the facsimile's local copies; keep scan files and
+  scan-layer rights on the facsimile entity.
 - Diff the complete entity-ID set against `rights[].entity`: every modeled
   entity, including each separately cached scan, OCR, catalog expression, and
   other delivery layer, must have at least one conservatively scoped rights

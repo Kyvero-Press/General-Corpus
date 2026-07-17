@@ -43,6 +43,16 @@ them with `same_as`. Request or cache the whole of each present object, then
 map the relevant work portion within each delivery; describe the historical
 join and unresolved current foliation separately.
 
+Apply the same caution when an older editor describes one witness under a
+single historical shelfmark but the current repository exposes several dated
+components. Later part labels and overlapping date ranges are crosswalk
+evidence, not proof of a split, rebinding, or one-to-one identity. Keep the
+historical editorial witness separate until an institutional transformation
+record and folio concordance justify exact relations; do not transfer source
+edges or rights conclusions across that gap. If the editor expressly supplies
+one passage from a second witness, model only that passage with a scoped source
+relation rather than creating a second whole-selection stream.
+
 ## Parallel witnesses: HMaid
 
 An edition printing Bodley 34 and Cotton Titus D XVIII in parallel still

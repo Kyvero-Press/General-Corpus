@@ -139,6 +139,26 @@ conclusions may still be stated separately, but the authorial or editorial
 literary layer must remain unresolved until its own identity evidence supports
 the term calculation.
 
+## Foreign historical editions and current manuscript components
+
+Do not apply an annual cutoff stated specifically for works published in the
+United States to an edition whose title page gives London or another foreign
+place of publication. For a United States conclusion, ground the foreign-work
+analysis in the applicable restoration and duration rules. In particular,
+17 U.S.C. 104A(a)(1)(B) limits any restored copyright to the remaining United
+States term, while section 304 supplies the relevant maximum term for
+pre-1978 copyrights. Cite the official law and the edition's exact publication
+date and place; do not turn that United States conclusion into a source-country
+or worldwide claim.
+
+Likewise, do not transfer a published edition's public-domain conclusion to
+newly cataloged physical components merely because their dates overlap the
+historical witness. Until an institutional concordance identifies the exact
+current leaves or passages represented by the edition, leave the underlying
+component text conservatively `unknown`. A separately proved passage may carry
+its own narrow conclusion without clearing the rest of the component or any
+new manuscript image.
+
 ## Representative-image trap: Gawain and Pearl
 
 A sampled Calgary image carries a public-domain label alongside enumerated use
