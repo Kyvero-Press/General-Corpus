@@ -80,18 +80,20 @@ extent, even when both editions represent the same abstract work.
 
 When an encoding serializes several complete witness versions of one abstract
 work, count the abstract work once. Model one parent work part with
-`item_count: 1`, give each witness-version child `item_count: 0`, and record
+`item_count: 1`, give each witness-version child `item_count: null`, and record
 the children's stanza, line, or prose metrics separately. Do not sum parallel
 versions into a fictitious whole-work length or let validator accounting turn
-the witnesses into multiple intellectual works.
+the witnesses into multiple intellectual works. The validator treats every
+integer, including zero, as count-bearing when it reconciles retained metrics.
 
 Apply the same accounting to internal sections. When one counted poem or prose
 work contains a nested moralitas, prologue, epilogue, or other non-independent
-section, give the parent `item_count: 1` and the nested section `item_count: 0`.
-Make `prose_only_items`, `verse_only_items`, and `mixed_items` count those same
-intellectual items; never use them for stanza or line-group totals. Preserve
-structural extent in `verse_groups`, `verse_lines`, and the section count so
-parent and child metrics reconcile without double-counting the work.
+section, give the parent `item_count: 1` and the nested analytical section
+`item_count: null` when the child retains metrics already represented by the
+parent. Make `prose_only_items`, `verse_only_items`, and `mixed_items` count
+those same intellectual items; never use them for stanza or line-group totals.
+Preserve structural extent in `verse_groups` and `verse_lines` so parent and
+child descriptions remain useful without double-counting the work.
 
 Large edited composites can have several simultaneously valid counts: selected
 XML divisions, edition-level parts, structural components, serialized text
@@ -99,10 +101,13 @@ streams, count-once intellectual items, and manifest part records. Name and
 define every axis instead of presenting them as interchangeable totals. Set
 `numbered_items` from the intellectual-item axis, and make every content part
 carry an explicit `item_count` plus `prose_only_items`, `verse_only_items`,
-`mixed_items`, `verse_groups`, and `verse_lines`. Use zero for item-form metrics
-on zero-count structural or version records and `null` for unresolved or
-inapplicable structural extents. Mechanically verify that the part-level item
-and form sums reproduce the aggregate extent before integration.
+`mixed_items`, `verse_groups`, and `verse_lines`. Use integer counts only for
+mutually exclusive accounting records. A structural container with zero or
+null metrics may use `item_count: 0`; an analytical, version, or nested child
+that overlaps a counted parent and retains metrics must use `item_count: null`.
+Use `null` for unresolved or inapplicable structural extents. Mechanically
+verify that the count-bearing part and form sums reproduce the aggregate extent
+before integration.
 
 A witness-labeled stream can itself be composite when the editor supplies
 lacunae or selected passages from other manuscripts. Keep the stream's main
@@ -144,9 +149,9 @@ medieval work rather than a few incidental comparison lines. When the passage
 has its own repertory identity, exact witness locus, and reproducible extent,
 model it as a nested content part under the apparatus and bind its work,
 witness, edition, and facsimile evidence only to that part. If the containing
-note is already counted, give the nested quotation `item_count: 0` while still
-recording its line or paragraph metrics; explain whole-item totals separately
-from the cataloged target work's intrinsic extent.
+note is already counted, give the nested quotation `item_count: null` while
+still recording its line or paragraph metrics; explain whole-item totals
+separately from the cataloged target work's intrinsic extent.
 
 Do not turn the quoted work into a section, language facet, or form component
 of the cataloged medieval target merely because the XML nests it there. Scope

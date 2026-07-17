@@ -200,6 +200,28 @@ dated assertions. Prefer the final edition for that edition's settled scope
 unless later evidence corrects it, while retaining the preliminary notice for
 provenance or physical-description details it uniquely supplies.
 
+## Reuse cached sources by identity
+
+Before downloading a large facsimile or other source object, search all of
+`source-cache/`, not only the current work directory. Search by normalized and
+legacy shelfmark variants, repository or provider object identifiers, and
+likely filenames as well as by exact source URL. Different work directories or
+filenames do not imply different source bytes.
+
+For a candidate IIIF ZIP, inspect its embedded `manifest.json` and
+`inventory.json` with `unzip -p`. Compare the source and manifest identities,
+canvas count and order, effective image request profile, target canvas or
+folio, ZIP integrity, member inventory, and whole-file checksum. For other
+formats, compare the equivalent item identity, request or download profile,
+extent, checksum, and format integrity. Reuse only when those checks establish
+that the cached object is the same complete source at the needed practical
+resolution.
+
+Create a true hard link in the new work's cache directory and then verify the
+source and link share an inode and exact bytes. Record the new work's own
+target portion and access relationship; cache reuse never transfers a locator
+or proves that the target work is present in the source.
+
 ## Keep a claim ledger
 
 Before JSON, record each consequential claim with:

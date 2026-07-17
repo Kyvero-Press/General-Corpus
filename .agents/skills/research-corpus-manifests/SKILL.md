@@ -56,11 +56,12 @@ needed; do not load both complete schemas merely for orientation.
    supporting source under `source-cache/WORK_ID/` with
    `scripts/cache-source-download.py`, or use `scripts/cache-iiif-bundle.py`
    when a complete source is exposed as IIIF canvases rather than one file.
-   Before downloading a large object, search `source-cache/` for the same
-   exact source URL and request profile. If a verified complete bundle already
-   exists at a practical resolution, create a true hard link under the new
-   work's cache directory and recheck its inode, inventory, checksum, and ZIP;
-   never use a symlink or redownload identical bytes.
+   Before downloading a large object, follow the identifier-first cache search
+   in `references/source-research.md`; exact URL matching alone is not enough.
+   If a verified complete bundle already exists at a practical resolution,
+   create a true hard link under the new work's cache directory and recheck its
+   identity, inode, inventory, checksum, and ZIP; never use a symlink or
+   redownload identical bytes.
    Classify every cached object explicitly after inspection: set
    `target_work_presence=present` and supply a reproducible `work_portion`
    when it contains the cataloged text or image representation; set
