@@ -46,6 +46,15 @@ bypass CAPTCHA, login, or human-verification controls to enumerate it; retain
 the catalog claim, record the uncertainty, and use the provider's enquiry or
 reproduction route.
 
+Keep the rights for a mediated reproduction route separate from the rights in
+the underlying historical text. The witness's medieval wording can be public
+domain while any photography supplied after an order remains item-specific
+and subject to provider terms. Leave the textual-content right entity-scoped
+or attached to a genuine textual/catalog access, and create a distinct
+access-layer right for the order route with unknown image status, the exact
+provider evidence, and no inferred grant or availability. Omit an unverified
+optional contact instead of storing `null` or inventing an address.
+
 A second repository's microfilm can be the best known scholarly reproduction
 route even when the holding library has no public images. Model it as a
 facsimile with its own request/access and rights records, outside the upstream

@@ -112,6 +112,14 @@ affect them. Keep planned, composed-but-lost, extant, printed, and encoded
 extent separate. If markup is coarse or inconsistent, use `summary` or
 `partial` structure status and explain why.
 
+When a counted aggregate part and nested analytical or version streams both
+retain metrics, make only the mutually exclusive aggregate parts
+count-bearing. Set each nested stream's `item_count` to `null`, not `0`: the
+validator treats every integer, including zero, as count-bearing and will
+otherwise add the parent and child metrics together. Preserve the child
+metrics for version-specific discovery and explain which level reconciles to
+the whole-item extent.
+
 When the cataloging subject is one historical work but the encoded item also
 retains a modern editor's preface or commentary, model that paratext as a
 separate content part so the item boundary stays visible. Reconcile the whole-

@@ -194,6 +194,14 @@ A codex can contain several works, and an edition can print several witnesses
 or source works. Scope each relationship to exact parts or locators. Do not let
 one witness's date, dialect, or rights become a whole compilation's property.
 
+One historical textual witness can now be physically divided between two or
+more repositories. Keep one witness entity for the historical textual unit,
+but do not assign it a fictional singular current holding or shelfmark. Name
+each surviving fragment, repository, shelfmark, and locus explicitly, give
+current fragment access its own scope, and describe an aggregate digital
+surrogate as complete only for its audited surviving published fragment
+sequence—not for an unreconstructed original codex.
+
 Use exact component records for folio boundaries. A parent codex record can
 support physical description and access, but it may include adjacent material
 outside the cataloged work.

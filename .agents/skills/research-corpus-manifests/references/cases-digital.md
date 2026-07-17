@@ -186,6 +186,16 @@ record the advertised slot count, non-null resource count, and deduplicated
 image inventory separately; name nulls, overlaps, and repetitions, and never
 infer physical coverage from the larger number alone.
 
+For a Zoomify-selected manuscript page, resolve the page or aspect record to
+its exact image base and preserve `ImageProperties.xml`. Verify the dimensions,
+tile size, and provider `NUMTILES`, compute the complete highest-resolution
+grid, and cache and hash every tile in that grid. A complete top-level grid is
+not a complete multi-resolution pyramid: state both counts, identify the
+intentionally omitted redundant lower levels, and keep coverage `partial` for
+the manuscript. Preserve any private-study or image-use terms, and do not call
+the resulting one-page bundle a full facsimile merely because its selected
+resolution is internally complete.
+
 A provider-generated PDF can add a cover or metadata page that is absent from
 the IIIF canvas sequence. Compare total PDF pages with manifest canvases and
 inspect the first, target, and last pages before mapping them. When an offset
