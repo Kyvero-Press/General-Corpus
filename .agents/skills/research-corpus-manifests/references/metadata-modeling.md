@@ -158,13 +158,17 @@ semantics open; a maximum or unique-target count must not be used to reconcile
 conflicting catalog line counts or extra blank and fragmentary positions.
 
 The inverse encoding problem also occurs: prose containers do not prove that
-their contents are prose. When direct textual inspection and scholarship
-identify a brief intentional rhyme inside `P` elements, record the verse at
-the smallest defensible part or item scope while retaining `prose` as the
-whole-work discovery form when prose still overwhelmingly predominates. A
+all of their contents are prose. When direct textual inspection and
+scholarship identify a brief intentional rhyme inside `P` elements, or when a
+prose-scoped wrapper contains explicit nested stanza and line structure,
+partition and record the genuine verse at the smallest defensible part or item
+scope. Do not blanket-exclude `L` elements merely because an ancestor is
+prose-scoped, and do not let the nested verse erase the surrounding prose. A
 grounded verse-group count may coexist with `verse_lines: null` when the
 edition and encoding suppress lineation; do not manufacture a line count from
-punctuation or inferred rhyme breaks.
+punctuation or inferred rhyme breaks. Retain `prose` as the whole-work
+discovery form when prose still overwhelmingly predominates, or use `mixed`
+when both forms are materially represented.
 
 Inspect the content of line-like XML elements before treating their count as
 verse extent. Speaker labels, editorial headings, and dotted rows that display
