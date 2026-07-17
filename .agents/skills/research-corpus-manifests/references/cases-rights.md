@@ -95,6 +95,17 @@ the UK. Record the provider's geographic qualification, preserve UK
 uncertainty separately, and link its reuse terms. Do not restate the assertion
 as a worldwide open license.
 
+## Item-linked rights page now returns 404
+
+When an exact item manifest still points to an official rights page but that
+page now returns 404, record the item-to-policy link, the dated live failure,
+and an archived capture of the exact official page as separate evidence. Cache
+the archived statement and preserve its declaration, attribution wording, and
+requests at their original scope. Link rot alone does not prove that the
+provider revoked the recorded declaration, but an archived capture is not a
+current live policy page either; retain the capture date and leave any current
+replacement terms open until the provider supplies them.
+
 ## Medieval does not automatically mean UK public domain: afw1075
 
 Do not infer a worldwide or United Kingdom public-domain status merely from a
