@@ -33,6 +33,12 @@ Keep a reused entity's payload limited to intrinsic identity, holding,
 physical, and date facts. Move target wording, selection exclusions, and
 work-specific scope or comparison commentary to this work's scoped relations,
 evidence, or open questions.
+Apply that test to the whole entity, not only `holding` and
+`physical_description`: descriptions, notes, date labels, citations, and
+bibliographic page ranges can also leak target-specific scope. A full-volume
+edition or catalog entity keeps full-object bibliographic identity; put the
+pages used for this work on the scoped relation or evidence record, even when
+an older manifest embedded them in the shared entity.
 
 Make every `facsimile_of` edge describe surfaces that the reproduction actually
 shows. When a public selection depicts non-target leaves of a composite codex,

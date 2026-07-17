@@ -49,6 +49,13 @@ Preserve the archive-confirmed version relation, but qualify any source-edition
 relation whose only contradictory support is the inherited `sourceDesc`; expose
 the conflict as an open question instead of silently choosing one statement.
 
+Do not treat HTTP 200 or a successful download as content validation. Inspect
+the returned payload's title and body for soft-error, login, challenge, or
+placeholder pages, and confirm that the exact cited text or object inventory is
+present before using the response as evidence. Record the validated final URL,
+bytes, and fixity rather than preserving a plausible route that returned the
+wrong content.
+
 ## Hidden headers in migrated archives
 
 A repository migration can leave a TEI deposit header reachable as a direct
