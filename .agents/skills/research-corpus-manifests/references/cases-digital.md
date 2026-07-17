@@ -237,6 +237,16 @@ the live image URLs in its inventory; do not imply that the current manifest
 endpoint works merely because the images do. Re-audit current rights statements
 separately from any license wording preserved in the archived manifest.
 
+## Extant offline editions with divergent availability
+
+When a digital scholarly edition survives on an offline carrier, keep one
+edition identity while recording publisher availability, library-held carrier
+consultation, and volatile retailer access as separate dated routes. A held
+CD, DVD, or similar carrier is an access manifestation, not a second edition;
+neither a holding nor an add-to-cart control proves publisher availability,
+successful fulfillment, public download, or reuse permission. Leave reuse
+unknown until an applicable grant is verified.
+
 ## Generic production language versus item facts
 
 A collection may describe manual keying and proofreading while one item says
