@@ -210,6 +210,15 @@ future-image rights route, and leave physical unity, shelfmarks, and split
 history open. If later evidence establishes distinct copies rather than parts
 of one witness, split the entity instead of preserving a convenient aggregate.
 
+When the entity schema has no general early-print or print-carrier type, use
+`catalog_description` as the explicit workaround for an incunable, later
+printing, or mechanical reprint carrier. Do not label it
+`scholarly_edition` merely because bibliography calls it an edition or reprint;
+reserve that type for an actual scholarly editing act. Keep an unaltered
+reprint linked to the scholarly edition it reproduces, and give any provider
+scan of that reprint a separate `facsimile` entity and same-object access
+route.
+
 Use exact component records for folio boundaries. A parent codex record can
 support physical description and access, but it may include adjacent material
 outside the cataloged work.
