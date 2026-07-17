@@ -84,6 +84,12 @@ usable image request or complete bundle can be verified, retain the historical
 facsimile entity but set current access and survival conservatively, date the
 negative check, and record what a human or provider enquiry must still test.
 
+The first folio or page milestone inside a work can occur after its opening
+lines on the same physical surface. Do not infer the work's physical start from
+that first milestone alone. Inspect the preceding text and heading, the direct
+image, the source edition, and the next work boundary; then record the corrected
+folio/canvas crosswalk and explain why it differs from the milestone sequence.
+
 Do not equate serialized page-break occurrences with distinct source images.
 Parallel witness columns or alternative-version layouts can repeat one source
 page several times in the XML, and a current image bundle can likewise expose
