@@ -29,6 +29,11 @@ manifests already contain competing aliases, prefer the most precise recent ID
 for new records and preserve the other identifiers as aliases or notes instead
 of creating a third spelling.
 
+Keep a reused entity's payload limited to intrinsic identity, holding,
+physical, and date facts. Move target wording, selection exclusions, and
+work-specific scope or comparison commentary to this work's scoped relations,
+evidence, or open questions.
+
 Make every `facsimile_of` edge describe surfaces that the reproduction actually
 shows. When a public selection depicts non-target leaves of a composite codex,
 point it to an entity for that whole physical carrier (or another component
