@@ -56,6 +56,13 @@ contains it, and keep the earlier carrier state unresolved. Count distinct
 physical designs separately from title leaves, tissue guards, and repeated
 scan states.
 
+When issued print illustrations demonstrably copy or redraw manuscript images
+but the schema has no visual-adaptation relation, use a part-scoped
+`version_of` edge as an explicit proxy. Identify the exact issued surfaces and
+manuscript loci, state that the relation models visual adaptation rather than
+textual ancestry, transcription, or facsimile reproduction, and exclude
+advertised-but-absent designs from confirmed scope.
+
 When a catalog or older editor calls a witness “unique,” check current
 repertories for complete and fragmentary holdings. Record “unique complete
 copy” separately from surviving fragments; do not turn it into “only surviving
