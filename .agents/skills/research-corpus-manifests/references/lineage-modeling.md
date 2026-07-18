@@ -104,6 +104,13 @@ the workaround. Keep the study expression separate from both its delivery
 scan and the physical witness it discusses; verified zero target-text overlap
 must remain explicit in the local-copy presence record.
 
+Do not infer zero target overlap merely because the carrier is a monograph or
+supporting study. Inspect its quotations, appendices, incipits, explicits, and
+edited extracts. If the cached study reproduces any target text, mark that
+local copy `target_work_presence=present`, give the reproduced passages a
+page-scoped `work_portion`, and still keep the study outside the primary
+transmission path unless the historical edition actually used it.
+
 When the current schema needs conceptual nodes for an abstract work or its
 recensions, `catalog_description` may be used provisionally only with an
 explicit note that the node is not a material catalog record or carrier. If a
@@ -132,6 +139,11 @@ State exactly what derived from what and at what scope.
 - Represent an eclectic edition against the named tradition or witnesses; do
   not invent a single base witness.
 - Keep later comparison sources out of the upstream chain.
+
+When a digital encoding omits an edition's textual apparatus, witnesses used
+only for that apparatus remain supporting `collated_against` relations from
+the source edition. Do not duplicate repository-to-encoding edges or primary
+paths for readings that the downstream encoding did not carry.
 
 “Made available through,” “distributed by,” a shared archive identifier, or a
 directory name establishes association, not copying direction. Use
@@ -239,6 +251,10 @@ heuristic instead of presenting an analyst's partial grouping as definitive.
 A codex can contain several works, and an edition can print several witnesses
 or source works. Scope each relationship to exact parts or locators. Do not let
 one witness's date, dialect, or rights become a whole compilation's property.
+When an encoded parent contains multiple work or witness branches, give every
+relation and reviewed path the exact child `NODE`, XPath, or equivalent branch
+locator; for unnumbered sibling paragraphs, add a stable structural selector
+and incipit. Repeating only the shared parent locator is not reproducible.
 
 One historical textual witness can now be physically divided between two or
 more repositories. Keep one witness entity for the historical textual unit,

@@ -187,6 +187,12 @@ markup with visible headings, page milestones, the scan, and surrounding text.
 Record a demonstrably misleading label as an encoding practice or open
 question rather than normalizing it silently.
 
+Treat XML `PB` and equivalent milestones as boundaries in document order, not
+as automatic inclusive starts for their containing part. When a heading or
+text precedes the first internal page milestone, inherit the previously active
+printed page, confirm the resulting range against the scan or OCR, and freeze
+the source-specific range instead of dropping the unmarked opening page.
+
 Never resolve a manuscript shelfmark from OCR alone. Inspect the cited page
 image at high enough resolution to distinguish punctuation and adjacent
 digits, then test the reading against current candidate catalogs and their
@@ -221,6 +227,12 @@ Create a true hard link in the new work's cache directory and then verify the
 source and link share an inode and exact bytes. Record the new work's own
 target portion and access relationship; cache reuse never transfers a locator
 or proves that the target work is present in the source.
+
+Do not freeze `st_nlink` or infer the original donor, first download, or
+acquisition order from a live link count: it changes as mirrors and worktrees
+are created or removed. Freeze explicit donor or reuse provenance when it is
+known, plus byte count, checksum, and inventory; validate specifically named
+live peers by device and inode at runtime.
 
 ## Probe Raw Michigan Book packages
 
