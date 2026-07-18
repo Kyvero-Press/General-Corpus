@@ -3,6 +3,14 @@
 Read this before drafting derivation entities and relations in
 `manifests/lineage/works/WORK_ID.json`.
 
+- [Entities](#entities)
+- [Relations and direction](#relations-and-direction)
+- [Evidence-reviewed path classification](#evidence-reviewed-path-classification)
+- [Parts and shared objects](#parts-and-shared-objects)
+- [Editorial practices](#editorial-practices)
+- [Confidence](#confidence)
+- [Lineage checklist](#lineage-checklist)
+
 ## Entities
 
 Create one entity per evidenced material or digital layer. Normally model:
@@ -104,12 +112,19 @@ the workaround. Keep the study expression separate from both its delivery
 scan and the physical witness it discusses; verified zero target-text overlap
 must remain explicit in the local-copy presence record.
 
-Do not infer zero target overlap merely because the carrier is a monograph or
-supporting study. Inspect its quotations, appendices, incipits, explicits, and
-edited extracts. If the cached study reproduces any target text, mark that
-local copy `target_work_presence=present`, give the reproduced passages a
-page-scoped `work_portion`, and still keep the study outside the primary
-transmission path unless the historical edition actually used it.
+Do not infer zero target overlap merely because the carrier is a monograph,
+catalog description, or supporting study. Inspect its quotations, appendices,
+incipits, explicits, and edited extracts. If the cached source reproduces any
+target text, mark that local copy `target_work_presence=present`, give the
+reproduced passages a page- or field-scoped `work_portion`, and still keep the
+source outside the primary transmission path unless the historical edition
+actually used it.
+
+Attach an access URL to the entity that the URL actually delivers. Do not mark
+an abstract source work publicly available merely because the linked resource
+delivers an excerpt, translation, adaptation, or other derivative target.
+Link access to the delivered item or edition instead; use explicitly scoped
+partial access only when the resource truly exposes that source expression.
 
 When the current schema needs conceptual nodes for an abstract work or its
 recensions, `catalog_description` may be used provisionally only with an
@@ -129,6 +144,12 @@ scholarly source merely because the manifest researcher consulted it. Keep
 that dependency in evidence, access, or rights unless the relation's subject
 actually contains the citation.
 
+Negative boundary evidence does not by itself establish a positive graph
+relation. Record that a volume, witness, or study does not carry the target in
+evidence, review notes, or an open question as appropriate; do not project
+`consulted`, `cites`, or another positive edge solely to keep that exclusion in
+the graph.
+
 ## Relations and direction
 
 State exactly what derived from what and at what scope.
@@ -139,6 +160,13 @@ State exactly what derived from what and at what scope.
 - Represent an eclectic edition against the named tradition or witnesses; do
   not invent a single base witness.
 - Keep later comparison sources out of the upstream chain.
+
+Encode partiality in the machine-readable subject and object scopes, including
+locators where the evidence permits them. A limiting phrase in free-text notes
+does not correct an endpoint modeled as the whole item, work, edition, or
+codex. Check both endpoints independently: an entire excerpt may relate to only
+one chapter of its source, and only one passage in a compilation may derive
+from a source work.
 
 When a digital encoding omits an edition's textual apparatus, witnesses used
 only for that apparatus remain supporting `collated_against` relations from
@@ -241,6 +269,11 @@ For each primary path, list the ordered `relation_ids` and an
 subject-to-object direction. Group every contextual relation under a clear
 supporting label. The two collections must classify every manifest relation
 exactly once; no relation may be omitted or repeated across paths or groups.
+Split materially different supporting roles into separate viewer-facing groups
+(for example, catalog or facsimile links, collation, source-work relationships,
+and edition-family relationships); do not hide a large heterogeneous set
+behind a single catch-all label.
+
 Use descriptive labels and explanations to state what each reviewed path or
 supporting group means. Omit both fields when the graph has not received this
 complete evidence review; older manifests then retain the viewer's conservative

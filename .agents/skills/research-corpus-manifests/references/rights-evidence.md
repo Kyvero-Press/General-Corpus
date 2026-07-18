@@ -2,6 +2,13 @@
 
 Read this before writing `access`, `rights`, and final evidence records.
 
+- [Separate rights layers](#separate-rights-layers)
+- [Verify practical access](#verify-practical-access)
+- [Cache verified file deliverables](#cache-verified-file-deliverables)
+- [Make evidence auditable](#make-evidence-auditable)
+- [Handle incomplete evidence](#handle-incomplete-evidence)
+- [Final evidence audit](#final-evidence-audit)
+
 ## Separate rights layers
 
 Consider separately:
@@ -50,6 +57,15 @@ Test the exact deliverable, not only its landing page.
 - A facsimile bibliography proves existence, not online access.
 - A selected image is not a complete manuscript.
 
+Split routes that differ in resource kind or availability into separate access
+records. A public catalog record does not make manuscript images public, and a
+fee-based reproduction service is not an alternate URL for free catalog
+access. Likewise, keep a dated negative image search separate from both the
+catalog and the requestable service. Bind textual-content rights to the
+catalog or source route and supplied-image terms to the reproduction route
+they actually govern. Provider-wide order forms and terms may support several
+request records, but record each cached file path only once.
+
 When a provider exposes selected leaves but no obtainable whole codex, retain
 the selected-leaf access as `coverage=partial` and record the negative
 whole-object result explicitly in notes, a separate unavailable access route,
@@ -61,6 +77,12 @@ as one reproduction or delivery entity and record its local path only once.
 The complete scan can be `facsimile_of` the edition while a selected-page
 relation is separately `facsimile_of` the witness. It still does not become a
 complete facsimile of that witness.
+
+For a partial image set, compare every exposed canvas label and image with the
+target loci. `target_work_presence=present` means any verified overlap, not
+complete coverage: if one selected surface contains the target's incipit or
+continuation, mark the delivery present and give that surface an exact
+`work_portion`, even when the remaining target folios are unavailable.
 
 Do not mark a file publicly downloadable until retrieval succeeds. Record
 redirects, login requirements, request forms, fees, onsite access, and negative
