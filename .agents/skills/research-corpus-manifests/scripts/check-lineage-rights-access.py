@@ -102,19 +102,31 @@ def check_manifest(path: Path) -> list[str]:
             label = local_copy.get("label", f"local_copies[{index}]")
             presence = local_copy.get("target_work_presence")
             work_portion = local_copy.get("work_portion")
-            if presence not in {"present", "absent"}:
+            if presence not in {"present", "absent", "unknown"}:
                 errors.append(
                     f"{access_id} / {label}: target_work_presence must be "
-                    "explicitly 'present' or 'absent'"
+                    "explicitly 'present', 'absent', or 'unknown'"
                 )
             elif presence == "present" and not isinstance(work_portion, dict):
                 errors.append(
                     f"{access_id} / {label}: present target lacks work_portion"
                 )
-            elif presence == "absent" and work_portion is not None:
+            elif presence in {"absent", "unknown"} and work_portion is not None:
                 errors.append(
-                    f"{access_id} / {label}: absent target must omit work_portion"
+                    f"{access_id} / {label}: {presence} target must omit "
+                    "work_portion"
                 )
+
+            if presence == "unknown":
+                notes = local_copy.get("notes")
+                has_explanation = isinstance(notes, list) and any(
+                    isinstance(note, str) and note.strip() for note in notes
+                )
+                if not has_explanation:
+                    errors.append(
+                        f"{access_id} / {label}: unknown target presence "
+                        "requires an explanatory note"
+                    )
 
             source_url = local_copy.get("source_url")
             if isinstance(source_url, str) and source_url not in access_urls:

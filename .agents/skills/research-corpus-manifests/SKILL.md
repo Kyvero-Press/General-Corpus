@@ -66,6 +66,10 @@ needed; do not load both complete schemas merely for orientation.
    `target_work_presence=present` and supply a reproducible `work_portion`
    when it contains the cataloged text or image representation; set
    `target_work_presence=absent` and omit `work_portion` when it does not.
+   Use `target_work_presence=unknown` only when an inspected partial or selected
+   object may overlap the target but its exact locus remains unresolved; omit
+   `work_portion`, explain the checked uncertainty in `notes`, and never coerce
+   unknown overlap to absence or use unknown because inspection was skipped.
    Do not leave presence implicit merely because schema validation accepts a
    locator. For manuscript facsimiles, download the complete physical codex
    whenever it is publicly obtainable and practical, then record this work's

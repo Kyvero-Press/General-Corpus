@@ -179,6 +179,11 @@ overlap, retain the selection only as supporting witness evidence, and keep the
 work-image request route open. This also permits `coverage=complete` when every
 canvas of the represented supporting object is cached; coverage and target-
 work presence are independent claims.
+If an inspected selection could overlap the work but its leaf identity or
+target-bearing locus remains unresolved, use `target_work_presence=unknown`,
+omit `work_portion`, and explain what was checked in local-copy notes. Unknown
+means unresolved overlap, not verified zero overlap and not skipped inspection;
+never coerce it to `absent` merely to satisfy a validator.
 Apply the same rule to a completely cached source-analogue manuscript that
 does not contain the target text. Keep the full-object cache and downloaded
 access record, but put analogue folio/canvas ranges in scoped comparison
