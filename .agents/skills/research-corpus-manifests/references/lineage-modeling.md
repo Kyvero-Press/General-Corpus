@@ -156,6 +156,14 @@ agreement can support a comparison relation or an open identity question, but
 cannot make the surviving object the editor's, printer's, or translator's
 physical source without provenance evidence.
 
+Apply the same rule when an edition's historical siglum or shelfmark now names
+a cataloged object whose language, contents, or extent conflict with the cited
+source. Keep an unidentified historical-source entity for the editor's object,
+the current catalog record as separate conflict evidence without a derivation
+edge, and an open identity-reconciliation question. Add `same_as` or a direct
+relation to the current physical object only after independent evidence resolves
+the identity; a shared label or isolated excerpt does not establish continuity.
+
 A repertory identifier for a source work, such as a BHL number, can support a
 part-scoped `version_of` relation even when the translator's physical exemplar
 is unknown. Model the repertory as describing that source work. Treat a later
