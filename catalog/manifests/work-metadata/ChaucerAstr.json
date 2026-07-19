@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:ChaucerAstr",
+  "work_id": "ChaucerAstr",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:ChaucerAstr",
+    "unit_type": "composite",
+    "label": "A Treatise on the Astrolabe",
+    "scope_note": "The Middle English prose treatise addressed to Lowys, comprising a Chaucerian core (Prologue, Part I.1–23, and Part II.1–40) plus eleven supplementary conclusions (Part II.41–51) of uncertain authorship as assembled in Skeat's 1872 edition and U-M CME item ChaucerAstr. Skeat's modern front matter and textual notes are excluded from the cataloged medieval composite."
+  },
+  "catalog_summary": {
+    "title": "A Treatise on the Astrolabe",
+    "author": "Geoffrey Chaucer; supplementary conclusions of uncertain authorship",
+    "editor": "Walter W. Skeat",
+    "date": "Core dated 1391; additions dated 1393 or later",
+    "region": "England; exact place of composition not securely established",
+    "genres": ["Scientific treatise", "Technical manual", "Instructional prose"],
+    "form": "prose",
+    "language_codes": ["enm", "lat"],
+    "tags": ["astrolabe", "astronomy", "astrology", "chaucer", "instrumentation", "instructional", "mathematics", "middle-english", "prose", "science", "timekeeping", "translation-and-adaptation"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "ChaucerAstr", "uri": "https://name.umdl.umich.edu/ChaucerAstr"},
+    {"scheme": "EETS", "value": "Extra Series 16"}
+  ],
+  "titles": [
+    {"id": "title:preferred", "type": "preferred", "value": "A Treatise on the Astrolabe", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-umich", "evidence:skeat-edition"]}},
+    {"id": "title:alternate-address", "type": "alternate", "value": "A Treatise on the Astrolabe Addressed to His Son Lowys", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition"]}},
+    {"id": "title:incipit", "type": "incipit", "value": "Lyte Lowys my sone", "language": "enm", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:prologue"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}}
+  ],
+  "agents": [
+    {"id": "agent:geoffrey-chaucer", "type": "person", "name": "Geoffrey Chaucer", "alternate_names": ["Geffrey Chaucer"], "identifiers": [{"scheme": "VIAF", "value": "100185203", "uri": "https://viaf.org/viaf/100185203"}]},
+    {"id": "agent:anonymous-supplementer", "type": "collective", "name": "Anonymous astrolabe supplementer or supplementers", "notes": ["Placeholder for the uncertain authorship of conclusions printed as Part II.41–51; it does not imply a single person."]},
+    {"id": "agent:walter-skeat", "type": "person", "name": "Walter W. Skeat", "alternate_names": ["Walter William Skeat"], "notes": ["Editor of the 1872 EETS edition from which the CME item was produced."]}
+  ],
+  "responsibilities": [
+    {"id": "responsibility:chaucer-author", "agent_id": "agent:geoffrey-chaucer", "role": "author", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:prologue", "part:part-i", "part:part-ii-core"], "description": "Securely Chaucerian core through Part II.40"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-umich", "evidence:astrolabe-scholarship", "evidence:supplement-authorship"]}},
+    {"id": "responsibility:chaucer-translator", "agent_id": "agent:geoffrey-chaucer", "role": "translator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:prologue", "part:part-i", "part:part-ii-core"], "description": "Translation and reworking of Latin astrolabe traditions"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:astrolabe-scholarship"]}},
+    {"id": "responsibility:chaucer-adapter", "agent_id": "agent:geoffrey-chaucer", "role": "adapter", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:prologue", "part:part-i", "part:part-ii-core"], "description": "Vernacular adaptation organized for an individual learner and instrument"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:astrolabe-scholarship"]}},
+    {"id": "responsibility:supplement-attributed", "agent_id": "agent:anonymous-supplementer", "role": "attributed_author", "attribution_status": "disputed", "scope": {"kind": "part", "part_ids": ["part:part-ii-supplement"], "description": "Supplementary conclusions II.41–51"}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:astr-xml", "evidence:supplement-authorship"], "notes": "Most scholarship treats these conclusions as non-Chaucerian additions, but the precise boundary and number of contributors remain uncertain."}, "notes": ["Do not display the whole 51-conclusion Part II as unqualified Chaucerian authorship."]},
+    {"id": "responsibility:skeat-editor", "agent_id": "agent:walter-skeat", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition"]}},
+    {"id": "responsibility:skeat-transcriber", "agent_id": "agent:walter-skeat", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "whole", "description": "Printed text assembled from four specified manuscript witnesses"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition", "evidence:lineage-astr"]}},
+    {"id": "responsibility:skeat-collator", "agent_id": "agent:walter-skeat", "role": "collator", "attribution_status": "known", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition", "evidence:lineage-astr"]}}
+  ],
+  "date_statements": [
+    {"id": "date:core-composition", "type": "composition", "display": "1391", "normalized": {"not_before": 1391, "not_after": 1391}, "scope": {"kind": "part", "part_ids": ["part:prologue", "part:part-i", "part:part-ii-core"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:chaucer-chronology"]}, "notes": ["The prologue explicitly identifies the year and Lowys's age; the plan described there was not fully completed in the surviving core."]},
+    {"id": "date:supplementary-additions", "type": "revision", "display": "1393 or later additions in the textual tradition", "normalized": {"not_before": 1393}, "scope": {"kind": "part", "part_ids": ["part:part-ii-supplement"]}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:chaucer-chronology", "evidence:supplement-authorship"]}, "notes": ["This dates additions associated with the textual tradition; it does not assign their authorship to Chaucer."]}
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:oxford", "label": "Oxford", "kind": "settlement", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {"id": "place-statement:england", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-umich", "evidence:astrolabe-scholarship"]}, "notes": ["This is not an assertion of an exact place of composition or a single scribal dialect."]},
+    {"id": "place-statement:oxford-latitude", "place_id": "place:oxford", "type": "associated_place", "scope": {"kind": "part", "part_ids": ["part:part-ii-core"], "description": "Part II uses Oxford as a practical latitude and place reference"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}, "notes": ["Operational association with Oxford does not prove that the treatise was composed there."]}
+  ],
+  "language_statements": [
+    {"id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition"]}},
+    {"id": "language:latin", "code": "lat", "label": "Latin", "usage": "embedded", "script": "Latn", "scope": {"kind": "whole", "description": "Latin headings, terms, and phrases occur throughout the Middle English instructions"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:skeat-edition"]}}
+  ],
+  "form_statements": [
+    {"id": "form:whole", "value": "prose", "scope": {"kind": "whole"}, "description": "A prose instructional treatise organized as a prologue, a description of the instrument, and numbered operational conclusions.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:astrolabe-scholarship"]}}
+  ],
+  "genre_statements": [
+    {"id": "genre:scientific-treatise", "term": "scientific-treatise", "label": "Scientific treatise", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astrolabe-scholarship"]}},
+    {"id": "genre:technical-manual", "term": "technical-manual", "label": "Technical manual", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astrolabe-scholarship", "evidence:astr-xml"]}},
+    {"id": "genre:instructional-prose", "term": "instructional-prose", "label": "Instructional prose", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:astrolabe", "term": "astrolabe", "label": "Astrolabe construction and use", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:astrolabe-scholarship"]}},
+    {"id": "subject:astronomy", "term": "astronomy", "label": "Practical astronomy", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}},
+    {"id": "subject:timekeeping", "term": "timekeeping", "label": "Timekeeping and calendrical calculation", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:part-ii-core"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}},
+    {"id": "subject:instrumentation", "term": "instrumentation", "label": "Scientific instruments and measurement", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml", "evidence:astrolabe-scholarship"]}},
+    {"id": "subject:astrology", "term": "astrology", "label": "Medieval astrology and planetary calculation", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:part-ii-core", "part:part-ii-supplement"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:astr-xml"]}, "notes": ["The text includes astrological terminology and procedures while explicitly distancing itself from some judicial practices."]}
+  ],
+  "tags": ["astrolabe", "astronomy", "astrology", "chaucer", "instrumentation", "instructional", "mathematics", "middle-english", "prose", "science", "timekeeping", "translation-and-adaptation"],
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "A Middle English prose manual explaining the parts and operation of a planispheric astrolabe for the learner Lowys. The core describes the instrument and gives numbered procedures for finding solar and stellar positions, time, latitude, ascensions, planetary positions, and related astronomical quantities. Skeat's edition appends eleven conclusions from other manuscripts whose Chaucerian authorship is doubtful.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:astr-xml", "evidence:astrolabe-scholarship", "evidence:supplement-authorship"]},
+    {"id": "summary:scope", "type": "scope_note", "value": "The record models the edition as a composite so users can distinguish the securely attributed core through Part II.40 from conclusions II.41–51 supplied from three other manuscripts. This is an authorship and textual-boundary distinction, not merely a change of physical witness.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:astr-xml", "evidence:supplement-authorship", "evidence:lineage-astr"]}
+  ],
+  "extent": {"numbered_items": 75, "sections": 3, "prose_only_items": 75, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0, "description": "Seventy-five cataloged content units: one unnumbered prologue plus 74 numbered instructional sections. Part I has 23 sections and Part II has 51, of which II.1–40 form the core and II.41–51 are supplementary. The XML's node sequence numbers all 51 Part II divisions even where Skeat's displayed supplement headings repeat 41–43-style numbers.", "evidence_ids": ["evidence:astr-structure"]},
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id": "part:prologue", "parent_id": null, "sequence": 1, "type": "prologue", "label": "Prologue", "summary": "Chaucer addresses ten-year-old Lowys, dates the work to 1391, explains his vernacular purpose, and outlines a planned five-part manual.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:skeat:astrolabe-1872", "scheme": "part", "value": "Prologue"}], "evidence_ids": ["evidence:astr-xml"]},
+    {"id": "part:part-i", "parent_id": null, "sequence": 2, "type": "section", "label": "Part I: Description of the Astrolabe", "summary": "Twenty-three sections identify and explain the ring, mother, plates, rete, rule, alidade, scales, circles, stars, and other components of the instrument.", "item_count": 23, "textual_form": "prose", "metrics": {"prose_only_items": 23, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:skeat:astrolabe-1872", "scheme": "part-and-sections", "value": "Part I.1–23"}], "evidence_ids": ["evidence:astr-xml", "evidence:astr-structure"]},
+    {"id": "part:part-ii-core", "parent_id": null, "sequence": 3, "type": "section", "label": "Part II.1–40: Core Conclusions", "summary": "Forty procedures use the instrument to determine celestial positions, time, latitude, ascensions, planetary conditions, and related quantities.", "item_count": 40, "textual_form": "prose", "metrics": {"prose_only_items": 40, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:skeat:astrolabe-1872", "scheme": "part-and-sections", "value": "Part II.1–40"}], "evidence_ids": ["evidence:astr-xml", "evidence:astr-structure"]},
+    {"id": "part:part-ii-supplement", "parent_id": null, "sequence": 4, "type": "appendix", "label": "Supplementary Conclusions II.41–51", "summary": "Eleven additional procedures on shadows, heights, mean motion, and related calculations, printed from St John's E.2, Digby 72, and Bodley 619 and generally regarded as later supplements.", "item_count": 11, "textual_form": "prose", "metrics": {"prose_only_items": 11, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:skeat:astrolabe-1872", "scheme": "part-and-sections", "value": "Part II.41–51"}], "evidence_ids": ["evidence:astr-xml", "evidence:supplement-authorship", "evidence:astr-structure"], "notes": ["The XML node numbering is normalized to II.41–51, while several displayed headings reproduce alternate numbering such as 41a, 41b, 42a, and 42b."]}
+  ],
+  "related_works": [
+    {"id": "related:pseudo-messahalla", "title": "Pseudo-Messahalla astrolabe treatise", "relation": "adaptation_of", "evidence_ids": ["evidence:astrolabe-scholarship"], "notes": ["One important Latin source tradition; Chaucer's treatise is not a simple transcription of one surviving copy."]},
+    {"id": "related:sacrobosco", "title": "Astrolabe materials associated with Johannes de Sacrobosco", "relation": "related_to", "evidence_ids": ["evidence:astrolabe-scholarship"], "notes": ["Modern scholarship identifies Sacrobosco material among Chaucer's translated and reworked sources."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:ChaucerAstr",
+    "manifest_path": "manifests/lineage/works/ChaucerAstr.json",
+    "bindings": [
+      {"metadata_target": "work:ChaucerAstr", "lineage_entity_id": "edition:skeat:astrolabe-1872", "role": "source_edition"},
+      {"metadata_target": "work:ChaucerAstr", "lineage_entity_id": "encoding:umich-cme:ChaucerAstr", "role": "digital_encoding"},
+      {"metadata_target": "work:ChaucerAstr", "lineage_entity_id": "artifact:general-corpus:ChaucerAstr", "role": "repository_representation"},
+      {"metadata_target": "part:prologue", "lineage_entity_id": "witness:cul:Dd3-53", "role": "source_witness"},
+      {"metadata_target": "part:part-i", "lineage_entity_id": "witness:cul:Dd3-53", "role": "source_witness"},
+      {"metadata_target": "part:part-ii-core", "lineage_entity_id": "witness:cul:Dd3-53", "role": "source_witness"},
+      {"metadata_target": "part:part-ii-supplement", "lineage_entity_id": "witness:stjohn:E2", "role": "source_witness"},
+      {"metadata_target": "part:part-ii-supplement", "lineage_entity_id": "witness:bodleian:Digby72", "role": "source_witness"},
+      {"metadata_target": "part:part-ii-supplement", "lineage_entity_id": "witness:bodleian:Bodley619", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:astr-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_1-2/ChaucerAstr.xml.", "repository_path": "CME/source/CME_phase_1-2/ChaucerAstr.xml", "locator": "HEADER; Prologue; Parts I–II; ANA witness labels", "summary": "Supplies title, attribution, date, Skeat source edition, OCR and selection notes, complete text structure, and exact manuscript scope for each printed section.", "accessed_on": "2026-07-11", "sha256": "4626279f117d3ec2a9dc790e9fe6135fc8e6f4b84d44123ae926ada4a791f224"},
+    {"id": "evidence:astr-umich", "type": "official_webpage", "citation": "University of Michigan Library, CME item ChaucerAstr.", "url": "https://quod.lib.umich.edu/c/cme/ChaucerAstr?view=toc", "summary": "Confirms Chaucer attribution, Skeat's 1872 EETS edition, public full text, structure, and current public-domain statement.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:skeat-edition", "type": "digital_surrogate", "citation": "Walter W. Skeat, ed., A Treatise on the Astrolabe, EETS Extra Series 16 (1872), public scan.", "url": "https://books.google.com/books?id=rIINAAAAQAAJ", "alternate_urls": ["https://archive.org/details/onastrol00chautreatiserich"], "summary": "Public reproduction of the immediate source edition and its medieval text, manuscript statements, diagrams, and editorial apparatus.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:astrolabe-scholarship", "type": "scholarly_source", "citation": "Catherine Eagleton, ‘Chaucer's astrolabe treatise: a reassessment,’ Journal for the History of Astronomy 38 (2007).", "url": "https://www.sciencedirect.com/science/article/pii/S0039368107000155", "alternate_urls": ["https://www.oupress.com/9780806134130/a-treatise-on-the-astrolabe/"], "summary": "Supports the secure authorship and technical-manual classification of the core and its translation and reworking of pseudo-Messahalla, Sacrobosco, and other Latin material.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:supplement-authorship", "type": "scholarly_source", "citation": "The Medieval Review, review of A Treatise on the Astrolabe, Variorum Edition of the Works of Geoffrey Chaucer.", "url": "https://scholarworks.iu.edu/journals/index.php/tmr/article/view/15393", "summary": "Documents the textual and attribution problem after Part II.40: supplementary conclusions are probably non-Chaucerian, though the exact boundary is not fully settled.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:chaucer-chronology", "type": "scholarly_source", "citation": "Harvard University, ‘A Brief Chronology of Chaucer's Life and Times.’", "url": "https://chaucer.fas.harvard.edu/pages/brief-chronology-chaucers-life-and-times-0", "summary": "Places the Astrolabe in 1391–92 and notes additions in 1393 or later.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:astr-structure", "type": "computational_inspection", "citation": "Element, node, and ANA-attribute inspection of repository ChaucerAstr.xml.", "repository_path": "CME/source/CME_phase_1-2/ChaucerAstr.xml", "locator": "DIV1 and DIV2 elements", "summary": "Counts one prologue, 23 Part I sections, 51 Part II sections, and maps II.1–40 to Dd.3.53, II.41–43 and II.46–50 to E.2, II.44–45 to Digby 72, and II.51 to Bodley 619.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:lineage-astr", "type": "linked_manifest_evidence", "citation": "General Corpus lineage manifest for ChaucerAstr.", "repository_path": "manifests/lineage/works/ChaucerAstr.json", "source_evidence_id": "evidence:astr-xml", "summary": "Binds each content stratum to Skeat's edition, its specific manuscript source, the U-M encoding, and the repository artifact.", "accessed_on": "2026-07-11"}
+  ],
+  "open_questions": [
+    {"id": "question:supplement-authorship", "question": "Which, if any, conclusions after Part II.40 are Chaucer's?", "status": "unresolved", "impact": "high", "next_steps": ["Consult the Variorum textual introduction and current manuscript scholarship; continue to display the supplementary stratum separately."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:supplement-authorship", "evidence:astr-xml", "evidence:lineage-astr"]},
+    {"id": "question:source-strata", "question": "Which particular Latin exemplars and intermediary compilations underlie each part of Chaucer's core treatise?", "status": "unresolved", "impact": "medium", "next_steps": ["Use Eagleton's source analysis and the Variorum commentary to map source relationships section by section rather than naming one universal exemplar."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:astrolabe-scholarship"]},
+    {"id": "question:lowys-identity", "question": "Can the addressee Lowys be independently identified beyond the text's description ‘my sone’ and age ten?", "status": "unresolved", "impact": "low", "next_steps": ["Consult current Chaucer biography and documentary scholarship before adding an authority record or biographical claims."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:astr-xml"]},
+    {"id": "question:provider-terms", "question": "Do U-M's current NoC-US statement and access interface supersede the redistribution restriction embedded in the 1997 XML?", "status": "unresolved", "impact": "high", "next_steps": ["Seek written clarification from U-M before redistributing the XML or a close derivative, especially through a for-profit service."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:astr-xml", "evidence:astr-umich", "evidence:lineage-astr"]}
+  ],
+  "notes": [
+    "Oxford is recorded as an operational associated place because the treatise uses its latitude; it is not asserted as the place of composition.",
+    "The XML's sequential nodes II.41–51 and Skeat's displayed supplement numbering are both preserved conceptually; users should cite the displayed heading when precision matters.",
+    "A four-witness edition with scoped supplements must not inherit a single manuscript's dialect or physical description at work level."
+  ]
+}

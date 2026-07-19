@@ -1,0 +1,786 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:JulianRev",
+  "work_id": "JulianRev",
+  "title": "A Revelation of Love (Long Text)",
+  "primary_subject": "artifact:general-corpus:JulianRev",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository XML is a local copy/version of an OTA/U-M machine-readable text identified as JulianRev and OTA U-700-A. Its header says the electronic text was prepared from Marion Glasscoe's 1976 University of Exeter edition and omits printed front matter, back matter, and editorial notes. Glasscoe's edition is based on British Library Sloane MS 2499, a complete seventeenth-century copy of Julian of Norwich's much earlier Long Text. The visions occurred in 1373; neither the 1976 edition date nor the c. 1650 witness date is the Long Text's composition date.",
+  "languages": [
+    "enm",
+    "eng"
+  ],
+  "review_notes": [
+    "The Long Text work, the 1373 autobiographical event, the c. 1650 Sloane witness, the 1976 edition, the electronic encoding, and the repository artifact are distinct layers.",
+    "Sloane 2499 is the explicit base witness of Glasscoe 1976. Other Long Text witnesses are relevant to the broader tradition but are not modeled as direct inputs to this edition without passage-level evidence.",
+    "The current OTA record makes the text publicly accessible, while the local header preserves personal-scholarly-use terms. Public access is not treated as an open license."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:JulianRev",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for JulianRev",
+      "description": "The XML artifact consumed by this repository's conversion workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "JulianRev"
+        },
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-700-A"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "f004ea478351876ff1bd099581656a4c5c199218"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/JulianRev.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f004ea478351876ff1bd099581656a4c5c199218",
+        "sha256": "e3b0c1631c0e9c0833e84e8da4ec51330bb697fb70b5a99a02278076bc5aa829"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ],
+      "notes": [
+        "The SHA-256 begins e3b0 but is not the empty-file hash; the file is a substantial XML document.",
+        "The source submodule is a separate repository and is not modified by this manifest."
+      ]
+    },
+    {
+      "id": "encoding:ota-u700-a",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive U-700-A / U-M JulianRev electronic text",
+      "alternate_labels": [
+        "OTA item 0700",
+        "A Revelation of Love machine-readable text"
+      ],
+      "description": "A machine-readable Middle English text prepared from Glasscoe's 1976 edition, distributed historically through the Oxford Text Archive and University of Michigan.",
+      "identifiers": [
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-700-A",
+          "uri": "https://llds.phon.ox.ac.uk/llds/xmlui/handle/20.500.14106/0700"
+        },
+        {
+          "scheme": "CME/UMDL",
+          "value": "JulianRev"
+        }
+      ],
+      "creator_ids": [
+        "agent:marion-glasscoe",
+        "agent:christina-powell",
+        "agent:ota",
+        "agent:umich"
+      ],
+      "date_statements": [
+        {
+          "label": "TEI/header revision date",
+          "value": "March 1996",
+          "normalized": "1996-03",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:julian-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-ota"
+      ],
+      "notes": [
+        "The XML credits Marion Glasscoe with responsibility for the machine-readable version and Christina Powell with TEI encoding.",
+        "The OTA currently exposes a plain-text download; an item-specific current U-M web page was not verified during this review."
+      ]
+    },
+    {
+      "id": "edition:glasscoe:revelation-1976",
+      "type": "scholarly_edition",
+      "label": "Glasscoe 1976 edition of A Revelation of Love",
+      "creator_ids": [
+        "agent:marion-glasscoe"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1976",
+          "normalized": "1976",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:julian-xml",
+            "evidence:julian-glasscoe-catalog"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Julian of Norwich, A Revelation of Love, ed. Marion Glasscoe, Exeter Medieval English Texts and Studies (Exeter: University of Exeter, 1976).",
+        "title": "A Revelation of Love",
+        "series": "Exeter Medieval English Texts and Studies",
+        "publisher": "University of Exeter",
+        "publication_place": "Exeter",
+        "date": "1976",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-sloane2499",
+        "evidence:julian-glasscoe-catalog",
+        "evidence:julian-mets"
+      ],
+      "notes": [
+        "The 1976 edition was later revised, but the XML header names 1976 specifically; no silent substitution of the 1986 or 1993 revision is made here.",
+        "The British Library catalogue and METS bibliography explicitly identify Sloane 2499 as its base manuscript."
+      ]
+    },
+    {
+      "id": "witness:bl:Sloane2499",
+      "type": "manuscript_witness",
+      "label": "British Library Sloane MS 2499",
+      "alternate_labels": [
+        "Sloane 2499",
+        "S1 witness of the Long Text"
+      ],
+      "description": "A complete early-modern manuscript witness of Julian's Long Text, copied around 1650, probably at Cambrai or Paris, and used as the base manuscript of Glasscoe's 1976 edition.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Sloane MS 2499",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002114866"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "circa 1650",
+          "normalized": "1640/1660",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:julian-sloane2499"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Sloane MS 2499",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002114866",
+        "notes": "The catalogue identifies Cambrai or Paris as the likely origin and places the work at ff. 1r-57v."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "57 folios containing the Long Text at ff. 1r-57v",
+        "dimensions": "370 x 235 mm",
+        "notes": [
+          "The hand may be that of Clementina Carey, but the BL catalogue states this attribution cautiously.",
+          "This is an early-modern copy of a medieval work, not evidence that Julian composed the Long Text in the seventeenth century."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:julian-sloane2499"
+      ],
+      "notes": [
+        "One of three early-modern complete copies associated with English recusant convent communities; the broader witness tradition is not collapsed into this one object."
+      ]
+    },
+    {
+      "id": "facsimile:bl:Sloane2499-iiif",
+      "type": "facsimile",
+      "label": "British Library full digital facsimile of Sloane MS 2499",
+      "description": "The BL IIIF presentation linked from the official manuscript catalogue.",
+      "reproduction_format": "IIIF page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-sloane2499-iiif"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:julian-of-norwich",
+      "type": "person",
+      "name": "Julian of Norwich",
+      "dates": "born c. 1343; living after 1416",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-ota"
+      ]
+    },
+    {
+      "id": "agent:marion-glasscoe",
+      "type": "person",
+      "name": "Marion Glasscoe",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-glasscoe-catalog"
+      ]
+    },
+    {
+      "id": "agent:christina-powell",
+      "type": "person",
+      "name": "Christina Powell",
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://ota.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-ota"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ]
+    },
+    {
+      "id": "agent:bl",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:julian-sloane2499"
+      ]
+    },
+    {
+      "id": "agent:kyvero",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:julian-repo-from-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:JulianRev",
+      "object": "encoding:ota-u700-a",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Repository XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "OTA/U-M machine-readable text"
+        },
+        "notes": "The matching title, OTA identifier, responsibilities, source statement, and text support the relationship; the exact transfer date into the CME submodule is undocumented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-ota"
+        ]
+      }
+    },
+    {
+      "id": "relation:julian-encoding-from-glasscoe",
+      "type": "encoded_from",
+      "subject": "encoding:ota-u700-a",
+      "object": "edition:glasscoe:revelation-1976",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Machine-readable Middle English text"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Glasscoe's edited Long Text, excluding printed front/back matter and editorial notes",
+          "locators": [
+            "Chapters I-LXXXVI"
+          ]
+        },
+        "notes": "The XML header names the 1976 edition and states the omissions explicitly."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-xml",
+          "evidence:julian-glasscoe-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:glasscoe-transcribes-sloane2499",
+      "type": "transcribes",
+      "subject": "edition:glasscoe:revelation-1976",
+      "object": "witness:bl:Sloane2499",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Edited Middle English Long Text",
+          "locators": [
+            "Chapters I-LXXXVI"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Long Text in Sloane 2499",
+          "locators": [
+            "ff. 1r-57v"
+          ]
+        },
+        "notes": "Official and scholarly sources say the edition is based on or edited from Sloane 2499; exact normalization and emendation require the printed editorial statement."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-mets",
+          "evidence:julian-glasscoe-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:sloane2499-digital-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:Sloane2499-iiif",
+      "object": "witness:bl:Sloane2499",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Full IIIF digital facsimile"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:julian-sloane2499",
+          "evidence:julian-sloane2499-iiif"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:julian-repo",
+      "entity": "artifact:general-corpus:JulianRev",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path",
+      "repository_path": "CME/source/CME_from_OTA/JulianRev.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ]
+    },
+    {
+      "id": "access:julian-ota",
+      "entity": "encoding:ota-u700-a",
+      "provider_id": "agent:ota",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "OTA item page and downloadable plain-text file",
+      "url": "https://llds.phon.ox.ac.uk/llds/xmlui/handle/20.500.14106/0700",
+      "cost": "free",
+      "format": "Metadata page and plain text download",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-ota"
+      ],
+      "notes": [
+        "Public availability does not establish an open reuse license."
+      ]
+    },
+    {
+      "id": "access:glasscoe-catalog",
+      "entity": "edition:glasscoe:revelation-1976",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "WorldCat bibliographic record and library holdings discovery",
+      "url": "https://search.worldcat.org/title/A-revelation-of-love/oclc/3482699",
+      "cost": "free",
+      "format": "Catalog record for print book",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-glasscoe-catalog"
+      ],
+      "notes": [
+        "No lawful public full scan of the exact 1976 edition was verified during this review. Later revised editions must not be substituted silently."
+      ]
+    },
+    {
+      "id": "access:sloane2499-catalog",
+      "entity": "witness:bl:Sloane2499",
+      "provider_id": "agent:bl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114866",
+      "cost": "free",
+      "format": "Online catalog record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-sloane2499"
+      ]
+    },
+    {
+      "id": "access:sloane2499-images",
+      "entity": "facsimile:bl:Sloane2499-iiif",
+      "provider_id": "agent:bl",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "British Library Universal Viewer and the exact 135-canvas IIIF Presentation manifest",
+      "url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
+      "alternate_urls": [
+        "https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete British Library Sloane MS 2499 IIIF facsimile bundle",
+          "path": "source-cache/JulianRev/bl-sloane-ms-2499-complete-iiif.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
+          "sha256": "f60430b7133f096885227bc4f64089231a34e17e2d66291f2e625029b11ea938",
+          "bytes": 49316843,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 135,
+          "notes": [
+            "Complete canvas coverage of the 135-image IIIF Presentation manifest; images are service derivatives requested at a maximum width of 1200 pixels, not preservation masters.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 135 canvas images listed when retrieved.",
+            "Effective IIIF image request profiles: '1200,' for 134 canvases and 'full' for the spine canvas; format: JPEG. The inventory records both the refused requested spine URL and the successful exact URL."
+          ],
+          "work_portion": {
+            "label": "Julian of Norwich, A Revelation of Love (Long Text)",
+            "locators": [
+              "Sloane MS 2499, ff. 1r-57v",
+              "IIIF canvases 9-122 (viewer indices 8-121)"
+            ],
+            "start_url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001&c=0&m=0&s=0&cv=8",
+            "end_url": "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001&c=0&m=0&s=0&cv=121",
+            "notes": [
+              "Manifest labels map the official catalog range ff. 1r-57v to canvases 9-122; the complete bundle also preserves covers, preliminary and terminal flyleaves, and the spine image.",
+              "Direct inspection confirmed that canvas 9 is the opening text leaf f. 1r and canvas 122 is the concluding text leaf f. 57v."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 3 and Image API JPEG derivatives",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-sloane2499-iiif",
+        "evidence:julian-sloane2499-boundary-inspection"
+      ],
+      "notes": [
+        "The ignored local cache is a research copy and is not itself evidence of permission to redistribute the BL photographs."
+      ]
+    },
+    {
+      "id": "access:sloane2499-physical",
+      "entity": "witness:bl:Sloane2499",
+      "provider_id": "agent:bl",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request through the British Library catalogue subject to reader eligibility and item restrictions",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114866",
+      "cost": "unknown",
+      "format": "Original manuscript",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-sloane2499"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:julian-medieval-text-us",
+      "entity": "witness:bl:Sloane2499",
+      "component": "Julian of Norwich's underlying medieval Long Text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The underlying work was composed in the late fourteenth or early fifteenth century, centuries before modern copyright.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "This statement covers neither modern editorial choices nor modern manuscript photography."
+      ]
+    },
+    {
+      "id": "rights:glasscoe-editorial-us",
+      "entity": "edition:glasscoe:revelation-1976",
+      "component": "Glasscoe's 1976 edited text, introduction, glossary, notes, and other original editorial contribution",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1976 and no public-domain dedication or open license for its original editorial contribution was verified.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-glasscoe-catalog",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "This does not place Julian's underlying work under copyright."
+      ]
+    },
+    {
+      "id": "rights:julian-ota-encoding",
+      "entity": "encoding:ota-u700-a",
+      "component": "The OTA/U-M machine-readable text and its encoded selection from Glasscoe 1976",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The current OTA item is publicly accessible, but the local header says OTA U-700-A was made available for personal scholarly use only and no current open license was found.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-ota"
+      ],
+      "notes": [
+        "Access without authentication is not equivalent to permission for commercial redistribution."
+      ]
+    },
+    {
+      "id": "rights:julian-local-artifact",
+      "entity": "artifact:general-corpus:JulianRev",
+      "component": "The local XML encoding and inherited OTA terms",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The artifact preserves the personal-scholarly-use restriction and is derived from a 1976 edited text whose reuse basis is not documented in the repository.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-glasscoe-catalog"
+      ]
+    },
+    {
+      "id": "rights:sloane2499-images",
+      "entity": "facsimile:bl:Sloane2499-iiif",
+      "access_id": "access:sloane2499-images",
+      "component": "Modern British Library manuscript photographs, IIIF image files, and interface assets",
+      "jurisdiction": "Most countries other than the United Kingdom, as asserted by the British Library",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The item-level IIIF manifest states: Public Domain in most countries other than the UK. This is recorded as the British Library's jurisdiction-qualified assertion, not as a worldwide license.",
+      "asserted_by_id": "agent:bl",
+      "rights_statement_uri": "https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-sloane2499-iiif"
+      ],
+      "notes": [
+        "The manuscript's old text and the modern image files are separate rights layers.",
+        "Review the linked British Library reuse terms for the intended use and country; this record deliberately excludes the United Kingdom."
+      ]
+    },
+    {
+      "id": "rights:sloane2499-images-uk",
+      "entity": "facsimile:bl:Sloane2499-iiif",
+      "access_id": "access:sloane2499-images",
+      "component": "Modern British Library manuscript photographs and IIIF image files",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The item-level IIIF statement expressly qualifies its public-domain assertion as applying in most countries other than the UK; no broader UK status is inferred here.",
+      "rights_statement_uri": "https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-sloane2499-iiif"
+      ],
+      "notes": [
+        "Consult the current British Library terms or obtain clarification before UK reuse."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:julian-electronic-selection",
+      "entity": "encoding:ota-u700-a",
+      "practice": "selection",
+      "description": "The electronic text retains the 86-chapter Long Text but omits printed front matter, back matter, and editorial notes from Glasscoe's edition.",
+      "scope": "Whole electronic item",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:julian-xml"
+      ],
+      "notes": [
+        "Consequently the encoding cannot substitute for Glasscoe's introduction or apparatus when evaluating readings."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:julian-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_from_OTA/JulianRev.xml.",
+      "repository_path": "CME/source/CME_from_OTA/JulianRev.xml",
+      "locator": "HEADER; Chapters I-LXXXVI",
+      "summary": "Identifies JulianRev, OTA U-700-A, Glasscoe and Powell's digital responsibilities, the 1976 source edition, OTA personal-scholarly-use terms, omitted editorial material, and the encoded prose text.",
+      "accessed_on": "2026-07-11",
+      "sha256": "e3b0c1631c0e9c0833e84e8da4ec51330bb697fb70b5a99a02278076bc5aa829"
+    },
+    {
+      "id": "evidence:julian-ota",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, item 0700, A Revelation of Love.",
+      "url": "https://llds.phon.ox.ac.uk/llds/xmlui/handle/20.500.14106/0700",
+      "summary": "Provides the current public metadata page and plain-text download for the machine-readable Middle English work.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-sloane2499",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Sloane MS 2499: Julian of Norwich, Revelations of Divine Love (Long Text).",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114866",
+      "summary": "Describes Short and Long Text chronology, Julian's 1373 visions, the c. 1650 paper witness at ff. 1r-57v, possible Clementina Carey hand, Cambrai/Paris origin, full digitization, and Glasscoe's use of the manuscript.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-sloane2499-iiif",
+      "type": "digital_surrogate",
+      "citation": "British Library, digitized Sloane MS 2499, direct IIIF presentation manifest.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
+      "alternate_urls": [
+        "https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165172605.0x000001",
+        "https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts"
+      ],
+      "summary": "Provides the full digital manuscript facsimile linked from the official BL catalog record and states item-level usage terms: Public Domain in most countries other than the UK, with a link to the British Library's unpublished-manuscript image reuse guidance.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-sloane2499-boundary-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the cached British Library Sloane MS 2499 IIIF manifest and boundary images.",
+      "repository_path": "source-cache/JulianRev/bl-sloane-ms-2499-complete-iiif.zip",
+      "locator": "manifest canvases 9 and 122; images/000009.jpg and images/000122.jpg",
+      "summary": "The 135-canvas manifest labels canvas 9 as f. 1r and canvas 122 as f. 57v. Image inspection confirms that these are respectively the opening and concluding text leaves of Julian's Long Text; covers, flyleaves, and spine remain outside the mapped work portion but inside the complete cached manuscript bundle.",
+      "accessed_on": "2026-07-11",
+      "sha256": "f60430b7133f096885227bc4f64089231a34e17e2d66291f2e625029b11ea938"
+    },
+    {
+      "id": "evidence:julian-mets",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, Julian of Norwich, Introduction and Select Bibliography.",
+      "url": "https://metseditions.org/read/jA7XV0kUvjzBtm6YC1jgZS08K7gkGvq",
+      "summary": "Lists the surviving Long Text, Short Text, and excerpt witnesses and identifies Glasscoe 1976, revised 1986, as based on Sloane 2499.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:julian-glasscoe-catalog",
+      "type": "official_catalog",
+      "citation": "WorldCat, A Revelation of Love, OCLC 3482699.",
+      "url": "https://search.worldcat.org/title/A-revelation-of-love/oclc/3482699",
+      "summary": "Confirms Marion Glasscoe, the University of Exeter 1976 imprint, print format, ISBN 0859890619, and OCLC identity of the immediate edition.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Provides the U.S. duration framework used to distinguish the medieval work from possible copyright in a 1976 editorial contribution.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:julian-reuse-permission",
+      "question": "What permission or rights determination allowed OTA and U-M to distribute a machine-readable text based on Glasscoe 1976, and does it allow commercial redistribution or print-on-demand use of this XML-derived text?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask the Oxford Text Archive and U-M for the accession, permission, and rights-review record for U-700-A / JulianRev.",
+        "Do not infer an open license from the current public download or from the public-domain status of Julian's underlying work."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-ota",
+        "evidence:julian-glasscoe-catalog"
+      ]
+    },
+    {
+      "id": "question:glasscoe-editorial-policy",
+      "question": "What normalization, punctuation, emendation, and division practices did Glasscoe apply to Sloane 2499 in the exact 1976 edition?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult the full 1976 introduction and apparatus and compare selected readings with the BL digital facsimile.",
+        "Do not import policies from the later revised edition without identifying them as a different edition layer."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-sloane2499",
+        "evidence:julian-glasscoe-catalog",
+        "evidence:julian-sloane2499-iiif"
+      ]
+    },
+    {
+      "id": "question:julian-u-m-current-item",
+      "question": "Is a current item-specific U-M CME page or raw XML endpoint for JulianRev still publicly available, and does it carry a current rights statement distinct from OTA's record?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Ask U-M for the current persistent identifier and archived rights metadata for JulianRev.",
+        "Retain OTA as the verified current public access point until an item-specific U-M page is confirmed."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:julian-xml",
+        "evidence:julian-ota"
+      ]
+    }
+  ]
+}

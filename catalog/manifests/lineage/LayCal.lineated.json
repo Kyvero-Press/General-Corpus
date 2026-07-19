@@ -1,0 +1,1281 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:LayCal.lineated",
+  "work_id": "LayCal.lineated",
+  "title": "Laȝamon’s Brut (Caligula version)",
+  "primary_subject": "artifact:general-corpus:LayCal.lineated",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository XML represents the Caligula version of Laȝamon's Brut, not an undifferentiated text of both surviving versions. Its direct path is the General Corpus file copied from the 1993 U-M CME item LayCal, which derives from the Caligula file in Oxford Text Archive deposit 1682, which in turn encodes the Caligula stream of G. L. Brook and R. F. Leslie's two-volume 1963-1978 EETS edition, transcribed from British Library Cotton MS Caligula A IX. The deposit separately contains an Otho stream, and the source edition separately edits the later abridged and reworked Otho version from Cotton MS Otho C XIII; neither is made a coequal source of every Caligula reading. The electronic header explicitly says that parenthetical readings no longer legible in the manuscripts came from Frederic Madden's 1847 parallel edition, making Madden a passage-scoped supporting source. The current complete 543-canvas British Library IIIF surrogate is cached with the Caligula work mapped to ff. 3r-194v, canvases 15-398. Editions, encodings, witnesses, facsimiles, access conditions, and rights assertions remain distinct.",
+  "languages": ["enm", "eng", "lat"],
+  "review_notes": [
+    "Primary path: repository XML → U-M LayCal → OTA 1682 Caligula payload → Brook-Leslie Caligula stream → Cotton Caligula A IX.",
+    "Supporting path: parenthetical readings no longer legible in the manuscripts are explicitly attributed to Madden 1847; this does not make Madden the base for the whole electronic text.",
+    "Otho is a separate version and sibling edition/deposit stream. It is modeled for context without treating it as an unrestricted source of Caligula wording.",
+    "Complete-codex caching and public image access do not themselves grant redistribution or commercial-print rights."
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus", "urls": ["https://github.com/Kyvero-Press/General-Corpus"]},
+    {"id": "agent:university-of-michigan", "type": "organization", "name": "University of Michigan Library Digital Collections", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:oxford-text-archive", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"]},
+    {"id": "agent:lagamon", "type": "person", "name": "Laȝamon", "alternate_names": ["Layamon", "Lawman"]},
+    {"id": "agent:g-l-brook", "type": "person", "name": "G. L. Brook", "alternate_names": ["George Leslie Brook"], "dates": "1910-1987"},
+    {"id": "agent:r-f-leslie", "type": "person", "name": "R. F. Leslie", "alternate_names": ["Roy Francis Leslie"]},
+    {"id": "agent:eets", "type": "organization", "name": "Early English Text Society", "urls": ["https://www.earlyenglishtextsociety.org/"]},
+    {"id": "agent:oup", "type": "organization", "name": "Oxford University Press", "urls": ["https://global.oup.com/"]},
+    {"id": "agent:frederic-madden", "type": "person", "name": "Frederic Madden", "dates": "1801-1873"},
+    {"id": "agent:society-antiquaries-london", "type": "organization", "name": "Society of Antiquaries of London"},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:google", "type": "organization", "name": "Google"},
+    {"id": "agent:harvard-university", "type": "organization", "name": "Harvard University"},
+    {"id": "agent:new-york-public-library", "type": "organization", "name": "New York Public Library"}
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:LayCal.lineated",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for LayCal.lineated",
+      "identifiers": [
+        {"scheme": "General Corpus work ID", "value": "LayCal.lineated"},
+        {"scheme": "embedded UMDL IDNO", "value": "LayCal"},
+        {"scheme": "embedded OTA number", "value": "U-1682-C"}
+      ],
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/LayCal.lineated.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "16c18313315771f607fa4a5be5a2df749e3c6db3",
+        "sha256": "c4803707f1759186a0e090876e11cebff43f5fcd44e8bb6e546006355b9007a8"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-git-state"],
+      "notes": [
+        "The pinned file is 1,119,518 bytes.",
+        "It contains 16,096 numbered lines, 161 supplied navigation groups, 418 source-edition page milestones, and a final Amen in CLOSER."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:LayCal",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME digital text LayCal",
+      "identifiers": [
+        {"scheme": "UMDL", "value": "LayCal", "uri": "https://name.umdl.umich.edu/LayCal"},
+        {"scheme": "Oxford Text Archive", "value": "U-1682-C"}
+      ],
+      "creator_ids": ["agent:university-of-michigan"],
+      "date_statements": [
+        {"label": "electronic publication", "value": "1993", "normalized": "1993", "certainty": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal"]}
+      ],
+      "description": "The public CME presentation and structured XML transformation of the Caligula stream. It numbers 16,096 verse lines, supplies 100-line navigation groups and Brook-Leslie page milestones, converts most OTA custom entities to Unicode, and moves the terminal Amen outside the numbered verse sequence.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal", "evidence:ota-umich-comparison"],
+      "notes": [
+        "The header says front and back matter and editorial notes from the printed edition were omitted; a printed facsimile was also not represented.",
+        "Against the first 16,096 OTA line rows, 16,093 are identical after whitespace normalization and custom-entity conversion. The three remaining normalized differences are at lines 71, 1715, and 13643; the exact cause and stage of those changes are undocumented."
+      ]
+    },
+    {
+      "id": "encoding:ota:1682-laycal",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive deposit 1682, Caligula payload",
+      "alternate_labels": ["laycal-1682.txt", "U-1682-C"],
+      "identifiers": [
+        {"scheme": "OTA deposit", "value": "1682", "uri": "https://hdl.handle.net/20.500.14106/1682"},
+        {"scheme": "OTA item", "value": "U-1682-C"}
+      ],
+      "creator_ids": ["agent:oxford-text-archive"],
+      "date_statements": [
+        {"label": "deposit issued", "value": "3 April 1992", "normalized": "1992-04-03", "certainty": "high", "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header"]}
+      ],
+      "description": "The complete SGML-like Caligula stream in OTA deposit 1682. It contains 16,097 l rows: the 16,096 Brook-Leslie-numbered text lines plus a final Amen. Custom entities preserve Middle English characters, and inline symbols record manuscript line breaks, additions, loss, editorial supply, and Madden-derived readings.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:ota-deposit-audit"],
+      "notes": [
+        "The current allzip deliverable contains exactly laycal-1682.txt and layotho-1682.txt; the public hidden header is a separate download.",
+        "The deposit header identifies Brook and Leslie's edition and a two-file Caligula/Otho map."
+      ]
+    },
+    {
+      "id": "encoding:ota:1682-layotho",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive deposit 1682, Otho payload",
+      "alternate_labels": ["layotho-1682.txt"],
+      "identifiers": [
+        {"scheme": "OTA deposit", "value": "1682", "uri": "https://hdl.handle.net/20.500.14106/1682"}
+      ],
+      "creator_ids": ["agent:oxford-text-archive"],
+      "date_statements": [
+        {"label": "deposit issued", "value": "3 April 1992", "normalized": "1992-04-03", "certainty": "high", "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header"]}
+      ],
+      "description": "The sibling Otho-version file in deposit 1682. It encodes the Otho stream of Brook and Leslie's edition and is preserved for comparison, but it is not upstream of the whole Caligula stream represented by LayCal.lineated.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header", "evidence:ota-deposit-audit"],
+      "notes": ["The Otho version is abridged and reworked and survives in a fire-damaged manuscript. Its separate payload prevents the two versions from being conflated."]
+    },
+    {
+      "id": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "type": "scholarly_edition",
+      "label": "G. L. Brook and R. F. Leslie, eds., Laȝamon: Brut (1963-1978)",
+      "alternate_labels": ["EETS Original Series 250 and 277"],
+      "identifiers": [
+        {"scheme": "CiNii NCID", "value": "BA02706965", "uri": "https://ci.nii.ac.jp/ncid/BA02706965"},
+        {"scheme": "ISBN", "value": "0197222501"},
+        {"scheme": "ISBN", "value": "019722279X"},
+        {"scheme": "EETS Original Series", "value": "250, 277"}
+      ],
+      "creator_ids": ["agent:g-l-brook", "agent:r-f-leslie", "agent:eets", "agent:oup"],
+      "date_statements": [
+        {"label": "volume 1 publication", "value": "1963", "normalized": "1963", "certainty": "high", "evidence_ids": ["evidence:brook-leslie-bibliography", "evidence:brook-leslie-ia-metadata"]},
+        {"label": "volume 2 publication", "value": "1978", "normalized": "1978", "certainty": "high", "evidence_ids": ["evidence:brook-leslie-bibliography"]}
+      ],
+      "bibliographic": {
+        "citation": "Laȝamon: Brut, ed. G. L. Brook and R. F. Leslie, 2 vols., Early English Text Society, Original Series 250 and 277 (London: published for the Early English Text Society by Oxford University Press, 1963-1978).",
+        "title": "Laȝamon: Brut",
+        "volume": "1-2",
+        "series": "Early English Text Society, Original Series 250, 277",
+        "publisher": "Published for the Early English Text Society by Oxford University Press",
+        "publication_place": "London",
+        "date": "1963-1978",
+        "pages": "vol. 1: lines 1-8020; vol. 2: lines 8021-end",
+        "languages": ["enm", "eng"]
+      },
+      "description": "The immediate two-volume source edition. It edits separate Caligula and Otho textual streams from Cotton Caligula A IX and Cotton Otho C XIII. The electronic Caligula payload selects the Caligula stream, not the edition's complete two-version presentation or its editorial matter.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:ota-1682-header", "evidence:brook-leslie-bibliography", "evidence:brook-leslie-ia-metadata"],
+      "notes": [
+        "The XML source statement says the printed work contained a facsimile not represented electronically, but the exact plate count and target are not established from the restricted scan metadata.",
+        "A controlled-borrowing scan of volume 1 exists at Internet Archive; no complete public downloadable copy of both volumes was verified."
+      ]
+    },
+    {
+      "id": "edition:madden:layamons-brut-1847",
+      "type": "scholarly_edition",
+      "label": "Frederic Madden, ed., Laȝamons Brut, or Chronicle of Britain (1847)",
+      "creator_ids": ["agent:frederic-madden", "agent:society-antiquaries-london"],
+      "date_statements": [
+        {"label": "publication", "value": "1847", "normalized": "1847", "certainty": "high", "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]}
+      ],
+      "bibliographic": {
+        "citation": "Laȝamons Brut, or Chronicle of Britain: A Poetical Semi-Saxon Paraphrase of the Brut of Wace, ed. Frederic Madden, 3 vols. (London: Society of Antiquaries of London, 1847).",
+        "title": "Laȝamons Brut, or Chronicle of Britain",
+        "volume": "1-3",
+        "publisher": "Society of Antiquaries of London",
+        "publication_place": "London",
+        "date": "1847",
+        "languages": ["enm", "eng"]
+      },
+      "description": "Madden's three-volume parallel presentation of the Caligula and Otho manuscript texts with literal translation, notes, and glossary. The later electronic header expressly attributes readings inside single parentheses—readings no longer legible in the manuscripts—to this edition.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1682-header", "evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]
+    },
+    {
+      "id": "facsimile:internet-archive:madden-1847",
+      "type": "facsimile",
+      "label": "Internet Archive / Google scans of Madden's 1847 edition",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "layamonsbrutorc01londgoog", "uri": "https://archive.org/details/layamonsbrutorc01londgoog"},
+        {"scheme": "Internet Archive", "value": "layamonsbrutorc03londgoog", "uri": "https://archive.org/details/layamonsbrutorc03londgoog"},
+        {"scheme": "Internet Archive", "value": "layamonsbrutorc00londgoog", "uri": "https://archive.org/details/layamonsbrutorc00londgoog"}
+      ],
+      "creator_ids": ["agent:internet-archive", "agent:google", "agent:harvard-university", "agent:new-york-public-library"],
+      "description": "Three original Google Books PDF derivatives, together reproducing all three published volumes. The scans retain the parallel manuscript text, translation, notes, and glossary used to verify Madden's supporting role.",
+      "reproduction_format": "Three PDF page-image volumes, 512, 661, and 677 pages",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]
+    },
+    {
+      "id": "facsimile:internet-archive:brook-leslie-vol1",
+      "type": "facsimile",
+      "label": "Internet Archive controlled scan of Brook-Leslie volume 1",
+      "identifiers": [{"scheme": "Internet Archive", "value": "la3amonbrut0000glbr", "uri": "https://archive.org/details/la3amonbrut0000glbr"}],
+      "creator_ids": ["agent:internet-archive"],
+      "description": "A restricted controlled-digital-lending reproduction of the 1963 first volume. Only the public item metadata is cached; no private, encrypted, or loan-gated PDF was downloaded.",
+      "reproduction_format": "Controlled-borrowing scan; public metadata JSON",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:brook-leslie-ia-metadata"]
+    },
+    {
+      "id": "witness:bl:Cotton-Caligula-A-IX",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Caligula A IX",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Cotton MS Caligula A IX", "uri": "https://searcharchives.bl.uk/catalog/040-001102334"},
+        {"scheme": "British Library ARK", "value": "ark:/81055/vdc_100165157081.0x000001"}
+      ],
+      "date_statements": [
+        {"label": "manuscript production", "value": "Second half of the thirteenth century (1250-1299)", "normalized": "1250/1299", "certainty": "high", "evidence_ids": ["evidence:bl-caligula-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Caligula A IX",
+        "historical_designations": ["British Museum MS Cotton Caligula A.IX"],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-001102334"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "261 folios, with two modern endleaves and flyleaves; Laȝamon's Brut at ff. 3r-194v",
+        "dimensions": "approximately 215 × 150 mm; text space approximately 170 × 115 mm",
+        "format": "Composite codex written in two columns",
+        "notes": ["Origin assigned to England, south-west Midlands.", "The Brut is the most complete surviving copy and opens at f. 3r with the red rubric ‘Incipit historia brutonum.’", "The codex also contains unrelated Middle English and Anglo-Norman works outside this work record."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-caligula-catalog", "evidence:bl-caligula-iiif-audit"]
+    },
+    {
+      "id": "witness:bl:Cotton-Otho-C-XIII",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Otho C XIII",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Cotton MS Otho C XIII", "uri": "https://searcharchives.bl.uk/catalog/040-001102891"}],
+      "date_statements": [
+        {"label": "manuscript production", "value": "Fourth quarter of the thirteenth century (1275-1299)", "normalized": "1275/1299", "certainty": "high", "evidence_ids": ["evidence:bl-otho-catalog"]}
+      ],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Cotton MS Otho C XIII", "catalog_url": "https://searcharchives.bl.uk/catalog/040-001102891"},
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "144 folios",
+        "dimensions": "approximately 305 × 245 mm",
+        "format": "Manuscript of the Otho version of Laȝamon's Brut",
+        "notes": ["Leaves were damaged in the 1731 Cotton Library fire; the manuscript was rebound by the British Museum in 1962."]
+      },
+      "description": "The later Otho witness, transmitting an abridged and reworked version with modernized diction as well as accidental losses from fire. It is a separate version witness and comparison source, not the source of the complete Caligula stream.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-otho-catalog", "evidence:goering-2023"]
+    },
+    {
+      "id": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "type": "facsimile",
+      "label": "British Library complete IIIF surrogate of Cotton MS Caligula A IX",
+      "identifiers": [
+        {"scheme": "IIIF Presentation 3", "value": "ark:/81055/vdc_100165157081.0x000001", "uri": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001"}
+      ],
+      "creator_ids": ["agent:british-library"],
+      "description": "The complete 543-canvas digital surrogate, beginning with the front cover and ending with the spine. The Brut occupies 384 manuscript-side canvases, 15-398, corresponding to ff. 3r-194v. The local bundle retains the provider manifest, exact request inventory, and every published image.",
+      "physical_description": {
+        "extent": "543 canvases; Brut at canvases 15-398",
+        "format": "IIIF Presentation 3 manifest with JPEG image services",
+        "notes": ["542 images were obtained at the requested 1200-pixel-width profile; the spine used the provider's full-size fallback and the inventory records both requested and effective URLs."]
+      },
+      "reproduction_format": "IIIF Presentation 3 and 543 JPEG derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-caligula-iiif-audit"]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:LayCal.lineated",
+      "object": "encoding:umich-cme:LayCal",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Checked-in LayCal.lineated.xml at the pinned CME commit"},
+        "object": {"kind": "whole", "description": "U-M CME item LayCal"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal", "evidence:cme-git-state"], "notes": "Identifiers, header, structure, and text match; the exact repository transfer event is not documented."}
+    },
+    {
+      "id": "relation:umich-encoded-from-ota-caligula",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:LayCal",
+      "object": "encoding:ota:1682-laycal",
+      "scope": {
+        "subject": {"kind": "whole", "description": "16,096-line structured U-M Caligula text"},
+        "object": {"kind": "whole", "description": "OTA 1682 Caligula payload, including terminal Amen"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:ota-umich-comparison"], "notes": "The U-M header identifies OTA U-1682-C. Comparison finds 16,093 of the first 16,096 line rows identical after whitespace and custom-entity normalization; U-M restructures the payload and has three remaining normalized differences."}
+    },
+    {
+      "id": "relation:ota-caligula-encoded-from-brook-leslie",
+      "type": "encoded_from",
+      "subject": "encoding:ota:1682-laycal",
+      "object": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete OTA Caligula payload"},
+        "object": {"kind": "part", "description": "Caligula textual stream across volumes 1-2", "locators": ["vol. 1 lines 1-8020", "vol. 2 lines 8021-end"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:brook-leslie-bibliography"]}
+    },
+    {
+      "id": "relation:ota-otho-encoded-from-brook-leslie",
+      "type": "encoded_from",
+      "subject": "encoding:ota:1682-layotho",
+      "object": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete OTA Otho payload"},
+        "object": {"kind": "part", "description": "Otho textual stream across volumes 1-2"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1682-header", "evidence:ota-deposit-audit", "evidence:brook-leslie-bibliography"], "notes": "This sibling path documents the separate Otho version and does not place it in the primary path for LayCal.lineated."}
+    },
+    {
+      "id": "relation:brook-leslie-transcribes-caligula",
+      "type": "transcribes",
+      "subject": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {"kind": "part", "description": "Caligula stream, lines 1-end"},
+        "object": {"kind": "part", "description": "Laȝamon's Brut", "locators": ["ff. 3r-194v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:ota-1682-header", "evidence:brook-leslie-bibliography", "evidence:bl-caligula-catalog"]}
+    },
+    {
+      "id": "relation:brook-leslie-transcribes-otho",
+      "type": "transcribes",
+      "subject": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "object": "witness:bl:Cotton-Otho-C-XIII",
+      "scope": {
+        "subject": {"kind": "part", "description": "Separate Otho-version stream"},
+        "object": {"kind": "whole", "description": "Surviving fire-damaged Otho manuscript"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1682-header", "evidence:brook-leslie-bibliography", "evidence:bl-otho-catalog"], "notes": "The edition's Otho stream is collateral for the Caligula record; no blanket claim is made that all Caligula editorial readings derive from Otho."}
+    },
+    {
+      "id": "relation:ota-caligula-madden-readings",
+      "type": "encoded_from",
+      "subject": "encoding:ota:1682-laycal",
+      "object": "edition:madden:layamons-brut-1847",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Readings enclosed in single parentheses because they were no longer legible"},
+        "object": {"kind": "selected_passages", "description": "Madden's corresponding 1847 readings"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"], "notes": "The electronic header states this dependency explicitly. It is passage-scoped and does not make Madden the base edition for the complete payload."}
+    },
+    {
+      "id": "relation:madden-transcribes-caligula",
+      "type": "transcribes",
+      "subject": "edition:madden:layamons-brut-1847",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {"kind": "part", "description": "Caligula column of Madden's parallel text"},
+        "object": {"kind": "part", "description": "Laȝamon's Brut", "locators": ["ff. 3r-194v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3", "evidence:bl-caligula-catalog"]}
+    },
+    {
+      "id": "relation:madden-transcribes-otho",
+      "type": "transcribes",
+      "subject": "edition:madden:layamons-brut-1847",
+      "object": "witness:bl:Cotton-Otho-C-XIII",
+      "scope": {
+        "subject": {"kind": "part", "description": "Otho column of Madden's parallel text"},
+        "object": {"kind": "whole", "description": "Surviving Otho-version witness as then legible"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3", "evidence:bl-otho-catalog"]}
+    },
+    {
+      "id": "relation:bl-facsimile-of-caligula",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "object": "witness:bl:Cotton-Caligula-A-IX",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 543-canvas digital object, front cover through spine"},
+        "object": {"kind": "whole", "description": "Complete present composite codex"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-caligula-iiif-audit"]}
+    },
+    {
+      "id": "relation:ia-facsimile-of-madden",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:madden-1847",
+      "object": "edition:madden:layamons-brut-1847",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Three cached PDF volumes"},
+        "object": {"kind": "whole", "description": "Complete three-volume 1847 edition"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]}
+    },
+    {
+      "id": "relation:ia-facsimile-of-brook-leslie-vol1",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:brook-leslie-vol1",
+      "object": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Controlled scan object for volume 1"},
+        "object": {"kind": "part", "description": "Published volume 1, lines 1-8020"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:brook-leslie-ia-metadata", "evidence:brook-leslie-bibliography"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-xml",
+      "entity": "artifact:general-corpus:LayCal.lineated",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Use the pinned CME submodule path or the exact GitHub revision.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/LayCal.lineated.xml",
+      "repository_path": "CME/source/CME_from_OTA/LayCal.lineated.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-git-state"]
+    },
+    {
+      "id": "access:umich-laycal",
+      "entity": "encoding:umich-cme:LayCal",
+      "provider_id": "agent:university-of-michigan",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Use the stable UMDL handle or item table of contents; the automated research client received HTTP 403 while indexed public pages remained discoverable.",
+      "url": "https://name.umdl.umich.edu/LayCal",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/LayCal?view=toc"],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:umich-laycal", "evidence:repo-xml"]
+    },
+    {
+      "id": "access:ota-1682-caligula",
+      "entity": "encoding:ota:1682-laycal",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the Caligula payload, hidden TEI header, or complete two-file deposit from the current OTA repository.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682",
+      "alternate_urls": [
+        "https://hdl.handle.net/20.500.14106/1682",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/header1682.xml?sequence=3&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/laycal-1682.txt?sequence=4&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682/allzip",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1682"
+      ],
+      "local_copies": [
+        {
+          "label": "OTA 1682 TEI header",
+          "path": "source-cache/LayCal.lineated/ota-1682-header.xml",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/header1682.xml?sequence=3&isAllowed=y",
+          "sha256": "a18bf4501df60787705675c0e7866677ab86490fe97f75de5a544b7c9174e215",
+          "bytes": 5429,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": ["Complete public header, including source description, two-file map, deposit dates, revision history, and CC BY-NC-SA 3.0 statement."]
+        },
+        {
+          "label": "OTA 1682 complete Caligula payload",
+          "path": "source-cache/LayCal.lineated/ota-1682-laycal.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/laycal-1682.txt?sequence=4&isAllowed=y",
+          "sha256": "ee87f39a0219676653c6a86ed702d1a2e220d8734c3e3480d0c5b5c09501ac9c",
+          "bytes": 958405,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Complete Caligula-version payload", "locators": ["laycal-1682.txt", "16,097 l rows including terminal Amen"]}
+        },
+        {
+          "label": "OTA 1682 complete advertised deposit",
+          "path": "source-cache/LayCal.lineated/ota-1682-complete-deposit.zip",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682/allzip",
+          "sha256": "d92a7e95066f092b50874456915735be07f98bb91453280a75e1ec26fe7804fb",
+          "bytes": 1691767,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 2,
+          "work_portion": {"label": "Caligula payload within complete deposit", "locators": ["laycal-1682.txt"], "notes": ["The same container also retains the sibling layotho-1682.txt payload; the header is a separate public bitstream."]}
+        }
+      ],
+      "cost": "free",
+      "format": "SGML-like text, XML header, and ZIP",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:ota-deposit-audit"]
+    },
+    {
+      "id": "access:ota-1682-otho",
+      "entity": "encoding:ota:1682-layotho",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the Otho payload directly or obtain it inside the complete two-file deposit.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/layotho-1682.txt?sequence=5&isAllowed=y",
+      "alternate_urls": ["https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682", "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682/allzip"],
+      "local_copies": [
+        {
+          "label": "OTA 1682 complete advertised deposit containing the Otho payload",
+          "path": "source-cache/LayCal.lineated/ota-1682-complete-deposit.zip",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682/allzip",
+          "sha256": "d92a7e95066f092b50874456915735be07f98bb91453280a75e1ec26fe7804fb",
+          "bytes": 1691767,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 2,
+          "work_portion": {"label": "Otho payload within complete deposit", "locators": ["layotho-1682.txt"], "notes": ["The contained Otho file is 732,741 bytes with SHA-256 5a596af8b96a0f4fa899737ab09576a378adc34787ba190b0f2d2494dc1fd724."]}
+        }
+      ],
+      "cost": "free",
+      "format": "SGML-like text and ZIP",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header", "evidence:ota-deposit-audit"]
+    },
+    {
+      "id": "access:brook-leslie-library",
+      "entity": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "provider_id": "agent:eets",
+      "resource_kind": "catalog_record",
+      "status": "requestable",
+      "access_method": "Locate the two volumes through CiNii or WorldCat and request them from a holding library or via interlibrary loan.",
+      "url": "https://ci.nii.ac.jp/ncid/BA02706965",
+      "alternate_urls": ["https://search.worldcat.org/title/Layamon-%3A-Brut/oclc/5198890", "https://search.worldcat.org/title/Layamon%27s-Brut-Vol.-2-Text-%28lines-8021-end%29/oclc/54580584", "https://catalog.folger.edu/record/21022"],
+      "cost": "unknown",
+      "format": "Two printed volumes",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:brook-leslie-bibliography"]
+    },
+    {
+      "id": "access:brook-leslie-ia-vol1",
+      "entity": "facsimile:internet-archive:brook-leslie-vol1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Sign in to Internet Archive and use controlled borrowing when available; the ordinary PDF is private and was not cached.",
+      "url": "https://archive.org/details/la3amonbrut0000glbr",
+      "alternate_urls": ["https://archive.org/metadata/la3amonbrut0000glbr"],
+      "local_copies": [
+        {
+          "label": "Public Internet Archive metadata for restricted Brook-Leslie volume 1",
+          "path": "source-cache/LayCal.lineated/brook-leslie-1963-vol1-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/la3amonbrut0000glbr",
+          "sha256": "15f33b8b7762ca968898566c60648834a349e1f967b0156c11179750d3d3aa13",
+          "bytes": 11427,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": ["Metadata identifies internetarchivebooks/inlibrary/printdisabled collections and marks the ordinary PDF private; no page-image content is claimed locally."]
+        }
+      ],
+      "cost": "free",
+      "format": "Controlled digital lending; public metadata JSON",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:brook-leslie-ia-metadata"]
+    },
+    {
+      "id": "access:madden-1847-scans",
+      "entity": "facsimile:internet-archive:madden-1847",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the original Google PDF for each of the three Internet Archive items.",
+      "url": "https://archive.org/details/layamonsbrutorc01londgoog",
+      "alternate_urls": [
+        "https://archive.org/download/layamonsbrutorc01londgoog/layamonsbrutorc01londgoog.pdf",
+        "https://archive.org/details/layamonsbrutorc03londgoog",
+        "https://archive.org/download/layamonsbrutorc03londgoog/layamonsbrutorc03londgoog.pdf",
+        "https://archive.org/details/layamonsbrutorc00londgoog",
+        "https://archive.org/download/layamonsbrutorc00londgoog/layamonsbrutorc00londgoog.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Madden 1847 volume 1",
+          "path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-1.pdf",
+          "source_url": "https://archive.org/download/layamonsbrutorc01londgoog/layamonsbrutorc01londgoog.pdf",
+          "sha256": "41ac794f0d2e3587e57e066751b1bf6835949958850c2bfc62d4ef79d0806dc5",
+          "bytes": 11761029,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Caligula column/stream in Madden's published volume 1", "locators": ["complete 512-page scan", "Caligula stream opening through Madden line 10229"], "notes": ["Line numbers are Madden's edition lineation. The same complete volume also prints the parallel Otho stream, literal translation, and editorial matter."]}
+        },
+        {
+          "label": "Madden 1847 volume 2",
+          "path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-2.pdf",
+          "source_url": "https://archive.org/download/layamonsbrutorc03londgoog/layamonsbrutorc03londgoog.pdf",
+          "sha256": "448d0aab87ceee36e1d6df04fb8b4025a4b14ea4596a20e1c5407ccab66681f0",
+          "bytes": 16277216,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Caligula column/stream in Madden's published volume 2", "locators": ["complete 661-page scan", "Caligula stream begins with Madden line 10230 and ends before Madden line 25275"], "notes": ["Line numbers are Madden's edition lineation. The same complete volume also prints the parallel Otho stream, literal translation, and editorial matter."]}
+        },
+        {
+          "label": "Madden 1847 volume 3",
+          "path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-3.pdf",
+          "source_url": "https://archive.org/download/layamonsbrutorc00londgoog/layamonsbrutorc00londgoog.pdf",
+          "sha256": "fc4da5ab3b5efbbcdc678c131267eca631594e96badf7f74d921e52a3c65414e",
+          "bytes": 18323255,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Caligula column/stream in Madden's published volume 3", "locators": ["complete 677-page scan", "Caligula stream begins with Madden line 25275 and continues to the end; notes and glossary follow"], "notes": ["Line numbers are Madden's edition lineation. The same complete volume also prints the parallel Otho stream, literal translation, and editorial matter."]}
+        }
+      ],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]
+    },
+    {
+      "id": "access:caligula-iiif",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use the British Library IIIF viewer or Presentation 3 manifest. A complete local research bundle preserves the provider manifest, inventory, and all canvases.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "alternate_urls": ["https://iiif.bl.uk/uv/#?manifest=https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001"],
+      "local_copies": [
+        {
+          "label": "British Library Cotton MS Caligula A IX complete facsimile",
+          "path": "source-cache/LayCal.lineated/cotton-caligula-a-ix-complete-iiif-1200px.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+          "sha256": "af7a3466b15540d12d12caa5148cc727db94c5d605021ba7b10aa5c78d5587e8",
+          "bytes": 301950000,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 543,
+          "notes": ["ZIP contains the exact provider manifest, an exact-source inventory, and all 543 canvas images.", "542 image requests used the supported 1200-pixel-width profile; the spine's requested 1200-pixel URL was rejected and the effective full-size fallback is preserved in the inventory."],
+          "work_portion": {
+            "label": "Laȝamon's Brut, Caligula version",
+            "locators": ["ff. 3r-194v", "IIIF canvases 15-398 of 543"],
+            "start_url": "https://bl.digirati.io/images/ark:/81055/vdc_100165331982.0x000005/canvas/c/15",
+            "end_url": "https://bl.digirati.io/images/ark:/81055/vdc_100165331982.0x000184/canvas/c/398",
+            "notes": ["The complete present codex is cached; the represented work occupies 384 manuscript-side canvases. Visual inspection confirmed the f. 3r opening rubric and f. 194v endpoint."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "543-canvas IIIF object and local ZIP",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-caligula-iiif-audit"]
+    },
+    {
+      "id": "access:caligula-physical",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Register for a British Library Reader Pass and request the shelfmark through the online collection-item request form; manuscripts and archives must be consulted in London.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-001102334", "https://www.bl.uk/visit/reader-pass", "https://bl.libanswers.com/form?queue_id=2371"],
+      "cost": "free",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-caligula-catalog"]
+    },
+    {
+      "id": "access:caligula-reproduction-enquiry",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Ask British Library digitisation staff about newly supplied images of the witness and written terms covering the intended reuse.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "contact": "licensing@bl.uk",
+      "cost": "fee",
+      "format": "Reproduction or reuse permission",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-terms", "evidence:bl-caligula-iiif"]
+    },
+    {
+      "id": "access:caligula-iiif-licensing-enquiry",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Ask British Library licensing staff for written clarification covering the existing IIIF photographs, exact intended Git redistribution, research publication, and commercial/print-on-demand uses.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "contact": "licensing@bl.uk",
+      "cost": "fee",
+      "format": "Written reuse permission or licence for the existing IIIF object",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-terms", "evidence:bl-caligula-iiif"]
+    },
+    {
+      "id": "access:otho-catalog",
+      "entity": "witness:bl:Cotton-Otho-C-XIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the current Archives and Manuscripts catalog record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102891",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-otho-catalog"]
+    },
+    {
+      "id": "access:otho-physical",
+      "entity": "witness:bl:Cotton-Otho-C-XIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Restrictions apply. Register for a Reader Pass, request the shelfmark through the online form, and consult British Library staff before travel; manuscripts and archives are consulted in London.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-001102891", "https://bl.libanswers.com/form?queue_id=2371"],
+      "cost": "free",
+      "format": "Physical fire-damaged manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-otho-catalog"]
+    },
+    {
+      "id": "access:otho-facsimile-search",
+      "entity": "witness:bl:Cotton-Otho-C-XIII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No current digitised-content link or complete public facsimile was verified; ask the British Library whether legacy photography, microfilm, or a reproduction order is available.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102891",
+      "contact": "licensing@bl.uk",
+      "cost": "unknown",
+      "format": "Potential commissioned images or legacy surrogate",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-otho-catalog", "evidence:otho-facsimile-search"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:umich-laycal",
+      "entity": "encoding:umich-cme:LayCal",
+      "access_id": "access:umich-laycal",
+      "component": "Current U-M LayCal digital-text presentation and represented materials",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current item page states that the materials are in the public domain and displays the DPLA No Copyright-United States statement. The scope of that display over independently protectable markup and metadata is not separately explained.",
+      "asserted_by_id": "agent:university-of-michigan",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:umich-laycal"],
+      "notes": ["A United States no-copyright statement is not a worldwide open license and does not license manuscript photographs or the modern source edition."]
+    },
+    {
+      "id": "rights:umich-legacy-availability-notice",
+      "entity": "encoding:umich-cme:LayCal",
+      "access_id": "access:umich-laycal",
+      "component": "Legacy availability notice embedded in the 1993 U-M XML header",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "1993-01-01",
+      "basis": "The checked-in U-M header says the text was made available through OTA ‘for personal scholarly use only.’ This historical restriction conflicts in scope with the current U-M No Copyright-United States display and current OTA CC BY-NC-SA 3.0 deposit license; no item-specific reconciliation was found.",
+      "asserted_by_id": "agent:university-of-michigan",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal", "evidence:ota-1682-record"],
+      "notes": ["The notice is preserved as historically explicit evidence, not silently treated as revoked or as controlling unrelated manuscript images and editions."]
+    },
+    {
+      "id": "rights:ota-1682-caligula",
+      "entity": "encoding:ota:1682-laycal",
+      "access_id": "access:ota-1682-caligula",
+      "component": "OTA 1682 Caligula deposit files",
+      "jurisdiction": "Provider-stated worldwide license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current OTA record and public TEI header distribute deposit 1682 under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported", "spdx": "CC-BY-NC-SA-3.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header"],
+      "notes": ["The noncommercial restriction matters for commercial/POD workflows. This deposit-layer license is not transferred to Brook-Leslie page images, the manuscripts, or BL photographs."]
+    },
+    {
+      "id": "rights:ota-1682-otho",
+      "entity": "encoding:ota:1682-layotho",
+      "access_id": "access:ota-1682-otho",
+      "component": "OTA 1682 Otho deposit file",
+      "jurisdiction": "Provider-stated worldwide license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The Otho payload belongs to the same current OTA deposit distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported", "spdx": "CC-BY-NC-SA-3.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-1682-record", "evidence:ota-1682-header"]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:LayCal.lineated",
+      "access_id": "access:repo-xml",
+      "component": "Checked-in XML serialization, transcription, and modern encoded labor",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The pinned CME submodule carries an Unlicense worded for software, while the General Corpus README separately licenses code under GPL-3.0 and non-public-domain output under CC BY-SA 4.0. The imported XML also preserves an older personal-scholarly-use notice, and its identified OTA source now has CC BY-NC-SA 3.0 terms. No file-specific statement reconciles those layers, so no single repository license is asserted as controlling every textual and markup component.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:general-corpus-license", "evidence:repo-xml", "evidence:ota-1682-record", "evidence:umich-laycal"],
+      "notes": ["The medieval text's age does not automatically resolve rights in modern editorial selection, apparatus, markup, or repository-created output."]
+    },
+    {
+      "id": "rights:brook-leslie-edition",
+      "entity": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "component": "Modern editorial text, apparatus, introductions, notes, and facsimile matter in the 1963 and 1978 volumes",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1963 and 1978 and no open license or public-domain assertion for its modern editorial contributions was found. The available volume-1 scan is controlled/print-disabled rather than openly downloadable.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brook-leslie-bibliography", "evidence:brook-leslie-ia-metadata"],
+      "notes": ["No exact term expiry is inferred because relevant authorship, employer, and publication facts were not fully established."]
+    },
+    {
+      "id": "rights:brook-leslie-ia-scan",
+      "entity": "facsimile:internet-archive:brook-leslie-vol1",
+      "access_id": "access:brook-leslie-ia-vol1",
+      "component": "Controlled-digital-lending scan and page-image derivatives for Brook-Leslie volume 1",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "Internet Archive metadata marks the item inlibrary/printdisabled and its ordinary PDF private, while supplying no open license or rights field.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brook-leslie-ia-metadata"],
+      "notes": ["Only public metadata is cached. Borrowing access does not authorize repository redistribution of the scan."]
+    },
+    {
+      "id": "rights:madden-1847-edition",
+      "entity": "edition:madden:layamons-brut-1847",
+      "component": "Underlying 1847 publication text, translation, notes, and glossary",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The three-volume edition was published in 1847 and is historical public-domain material in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]
+    },
+    {
+      "id": "rights:madden-ia-scans",
+      "entity": "facsimile:internet-archive:madden-1847",
+      "access_id": "access:madden-1847-scans",
+      "component": "Google-produced PDF reproductions and Internet Archive delivery layer",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The underlying 1847 books are public-domain material. The PDFs' embedded Google usage pages request personal, noncommercial use and attribution and warn that public-domain status varies by country; the inspected Internet Archive item metadata supplies no separate scan-layer open license or rights field.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"],
+      "notes": ["The embedded provider request belongs to the delivered scan layer, not to Madden's 1847 edition or the medieval text; public download availability is not converted into an unrestricted license for the files."]
+    },
+    {
+      "id": "rights:caligula-medieval-object",
+      "entity": "witness:bl:Cotton-Caligula-A-IX",
+      "component": "Underlying medieval text and manuscript content, excluding modern photography and catalog text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The represented manuscript and text were produced in the thirteenth century. This status is separate from ownership, physical access, photography, and provider terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-caligula-catalog"]
+    },
+    {
+      "id": "rights:otho-medieval-object",
+      "entity": "witness:bl:Cotton-Otho-C-XIII",
+      "component": "Underlying medieval text and manuscript content, excluding any modern photography and catalog text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The represented manuscript and text were produced in the thirteenth century. This status is separate from ownership, access restrictions, fire-damage documentation, photography, and provider terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-otho-catalog"]
+    },
+    {
+      "id": "rights:caligula-iiif-images",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "access_id": "access:caligula-iiif",
+      "component": "British Library manuscript photographs and IIIF presentation",
+      "jurisdiction": "Most countries other than the United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The exact IIIF manifest's Usage terms say ‘Public Domain in most countries other than the UK.’ Its machine-actionable rights URL points to a now-missing BL help page, while current BL terms say that content may have item-specific public-domain, Creative Commons, or other conditions.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-terms"],
+      "notes": ["This is an item-level public-domain assertion, not an open license. UK status and any provider conditions on repository redistribution or commercial/POD use require written clarification; local caching does not supply that permission."]
+    },
+    {
+      "id": "rights:caligula-iiif-images-uk-and-intended-reuse",
+      "entity": "facsimile:bl:Cotton-Caligula-A-IX-IIIF",
+      "access_id": "access:caligula-iiif-licensing-enquiry",
+      "component": "British Library IIIF photographs in the United Kingdom and intended Git redistribution or commercial/print-on-demand reuse",
+      "jurisdiction": "United Kingdom and intended provider-governed reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The exact manifest limits its public-domain statement to most countries other than the UK and points to a dead reuse-help URL. Current BL terms require users to follow item-specific conditions, and the digitisation service says reproduction images may be used as required only with proper permissions. No current item-specific permission for Git redistribution or commercial/POD use was found.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-terms", "evidence:bl-digitisation"],
+      "notes": ["Contact licensing@bl.uk and preserve a written response before publishing the cached image bundle or image-derived facsimiles in the repository or commercial outputs."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:brook-leslie-two-version-presentation",
+      "entity": "edition:brook-leslie:lagamon-brut-1963-1978",
+      "practice": "collation",
+      "source_feature": "Two substantially different manuscript versions, Caligula and Otho",
+      "representation": "Separate Caligula and Otho textual streams edited across the same two-volume line range",
+      "description": "Brook and Leslie title both manuscripts as sources and provide distinct streams rather than silently conflating the Otho rewriting into a single undifferentiated text. The exact apparatus rules and passage-level use of each witness require the restricted edition introductions and notes.",
+      "scope": "Complete two-volume edition",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brook-leslie-bibliography", "evidence:ota-1682-header", "evidence:goering-2023"],
+      "notes": ["This record does not infer that every bracketed or supplied Caligula reading comes from Otho."]
+    },
+    {
+      "id": "practice:ota-electronic-selection",
+      "entity": "encoding:ota:1682-laycal",
+      "practice": "selection",
+      "source_feature": "Brook-Leslie's printed Caligula stream, editorial apparatus, front/back matter, and facsimile matter",
+      "representation": "The complete line stream is encoded with compact inline symbols, while footnotes and the printed facsimile are absent from the electronic payload",
+      "description": "The electronic note preserves `%` for manuscript line breaks, `=` and `*` for categories of Caligula additions, plus signs for missing letters, double parentheses for interlinear/marginal additions, brackets for editorial supplies, and single parentheses for now-illegible Madden-derived readings. It explicitly says footnotes are not included.",
+      "scope": "Entire OTA Caligula payload",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:repo-xml"]
+    },
+    {
+      "id": "practice:umich-selection-and-structuring",
+      "entity": "encoding:umich-cme:LayCal",
+      "practice": "selection",
+      "source_feature": "OTA Caligula payload and Brook-Leslie printed page sequence",
+      "representation": "16,096 numbered L elements grouped into 161 supplied 100-line DIV1 units, with 418 PB milestones and terminal Amen in CLOSER",
+      "description": "U-M made the line text browseable by adding supplied navigation groups and page milestones, normalizing most custom characters to Unicode, and moving the terminal Amen outside the numbered verse sequence. These structures are navigational/editorial rather than manuscript chapters.",
+      "scope": "Entire U-M LayCal encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-structure", "evidence:ota-umich-comparison"]
+    },
+    {
+      "id": "practice:umich-omissions",
+      "entity": "encoding:umich-cme:LayCal",
+      "practice": "selection",
+      "source_feature": "Two-volume printed edition with front matter, back matter, editorial notes, and at least one facsimile",
+      "representation": "Caligula verse text and selected pagination are retained; front/back matter, editorial notes, and the printed facsimile are omitted",
+      "description": "The explicit omission boundary prevents the electronic item from being described as a full digital reproduction of Brook and Leslie's edition.",
+      "scope": "Entire U-M LayCal encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:brook-leslie-bibliography"]
+    },
+    {
+      "id": "practice:madden-supporting-readings",
+      "entity": "encoding:ota:1682-laycal",
+      "practice": "collation",
+      "source_feature": "Passages no longer legible in the manuscripts at the time of the later encoding/edition",
+      "representation": "Recovered readings from Madden 1847 are enclosed in single parentheses",
+      "description": "The electronic note creates a visible, passage-scoped dependency on Madden's earlier transcription. It must not be generalized into a whole-text Madden base.",
+      "scope": "Only single-parenthesized readings identified by the electronic note",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-1682-header", "evidence:ota-1682-laycal", "evidence:madden-1847-vol1", "evidence:madden-1847-vol2", "evidence:madden-1847-vol3"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus / CME source XML, CME/source/CME_from_OTA/LayCal.lineated.xml.",
+      "repository_path": "CME/source/CME_from_OTA/LayCal.lineated.xml",
+      "locator": "HEADER; TEXT/BODY; CLOSER",
+      "summary": "Primary local evidence for the LayCal and U-1682-C identities, 1993 U-M date, Brook-Leslie source edition, explicit electronic omissions, inline-symbol definitions, Wace note, complete encoded Caligula text, supplied line groups, page milestones, and final closing.",
+      "accessed_on": "2026-07-15",
+      "sha256": "c4803707f1759186a0e090876e11cebff43f5fcd44e8bb6e546006355b9007a8"
+    },
+    {
+      "id": "evidence:repo-structure",
+      "type": "visual_inspection",
+      "citation": "Target-scoped structural and locator audit of LayCal.lineated.xml.",
+      "repository_path": "CME/source/CME_from_OTA/LayCal.lineated.xml",
+      "locator": "161 DIV1; L/@N 1-16096; 418 PB; final CLOSER",
+      "summary": "Confirms 16,096 consecutive unique numbered lines, 161 DIV1 units explicitly typed as supplied line groups, 418 edition-page milestones, three notes including the encoding note, and final Amen outside the numbered line sequence.",
+      "accessed_on": "2026-07-15",
+      "sha256": "c4803707f1759186a0e090876e11cebff43f5fcd44e8bb6e546006355b9007a8"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Kyvero Press CME Git repository at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/tree/e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "locator": "source/CME_from_OTA/LayCal.lineated.xml; blob 16c18313315771f607fa4a5be5a2df749e3c6db3",
+      "summary": "Pins the exact submodule revision, source path, Git blob, and clean local source used for this record.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero Press CME repository LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "complete Unlicense text",
+      "summary": "The pinned submodule dedicates ‘software’ under the Unlicense. Its software wording does not expressly resolve imported transcription, scholarly-edition, or manuscript-image rights.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:general-corpus-license",
+      "type": "repository_file",
+      "citation": "General Corpus README license section and CC BY-SA 4.0 legal text.",
+      "repository_path": "README.org",
+      "locator": "License section; by-sa_legaltext.txt",
+      "summary": "The project states code is GPL-3.0 and output other than public-domain material is CC BY-SA 4.0, while encouraging commercial use. It does not expressly reconcile imported U-M/OTA XML, modern source-edition rights, or manuscript-image terms.",
+      "accessed_on": "2026-07-15",
+      "sha256": "62c4cdc81049a30dd883681866bcfd7f7b414aa799d62bffd80ec1633460d9da"
+    },
+    {
+      "id": "evidence:umich-laycal",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, Corpus of Middle English Prose and Verse, LayCal, Layamon's Brut (British Museum Ms. Cotton Caligula A.IX).",
+      "url": "https://quod.lib.umich.edu/c/cme/LayCal?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/LayCal"],
+      "locator": "item information, contents, rights/permissions",
+      "summary": "Official provider evidence for the title, author, Brook-Leslie publication statement, OTA number U-1682-C, 100-line contents navigation, public item access, public-domain statement, and No Copyright-United States rights display. Direct automated retrieval returned HTTP 403 on review, while the indexed public item remained available.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-1682-record",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, item 1682, Layamon's Brut.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682",
+      "alternate_urls": ["https://hdl.handle.net/20.500.14106/1682", "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1682"],
+      "locator": "item metadata, files, dates, license",
+      "summary": "Current official deposit record for the 3 April 1992 issue, Caligula and Otho files, legacy/plain-text relationship metadata, 2018 and 2022 repository dates, and CC BY-NC-SA 3.0 license. A legacy relation field names 0082 while the abstract names 0085; neither is made a direct source without further evidence.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-1682-header",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive 1682 public TEI header, header1682.xml.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/header1682.xml?sequence=3&isAllowed=y",
+      "repository_path": "source-cache/LayCal.lineated/ota-1682-header.xml",
+      "locator": "fileDesc, sourceDesc, revisionDesc, profileDesc",
+      "summary": "Complete valid XML header supporting the Brook-Leslie source edition, 1190-1215 creation metadata, two-file laycal/layotho map, 1992 deposit date, 1997-2003 header revisions, and CC BY-NC-SA 3.0 deposit-layer license. Current and legacy header bitstreams were byte-identical.",
+      "accessed_on": "2026-07-15",
+      "sha256": "a18bf4501df60787705675c0e7866677ab86490fe97f75de5a544b7c9174e215"
+    },
+    {
+      "id": "evidence:ota-1682-laycal",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive 1682 complete Caligula payload, laycal-1682.txt.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1682/laycal-1682.txt?sequence=4&isAllowed=y",
+      "repository_path": "source-cache/LayCal.lineated/ota-1682-laycal.txt",
+      "locator": "header note; 16,097 l rows",
+      "summary": "Complete 958,405-byte Caligula payload. Its embedded note defines manuscript/addition/supply conventions and explicitly says single-parenthesized now-illegible readings derive from Madden 1847. The payload supplies the exact electronic predecessor used in the U-M comparison.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ee87f39a0219676653c6a86ed702d1a2e220d8734c3e3480d0c5b5c09501ac9c"
+    },
+    {
+      "id": "evidence:ota-deposit-audit",
+      "type": "visual_inspection",
+      "citation": "Fixity and container audit of the complete OTA 1682 allzip deliverable.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1682/allzip",
+      "repository_path": "source-cache/LayCal.lineated/ota-1682-complete-deposit.zip",
+      "locator": "laycal-1682.txt; layotho-1682.txt",
+      "summary": "The 1,691,767-byte ZIP passes integrity testing and contains exactly the two advertised payloads: laycal-1682.txt (958,405 bytes) and layotho-1682.txt (732,741 bytes; SHA-256 5a596af8b96a0f4fa899737ab09576a378adc34787ba190b0f2d2494dc1fd724). The public header is a separate deliverable.",
+      "accessed_on": "2026-07-15",
+      "sha256": "d92a7e95066f092b50874456915735be07f98bb91453280a75e1ec26fe7804fb"
+    },
+    {
+      "id": "evidence:ota-umich-comparison",
+      "type": "visual_inspection",
+      "citation": "Line-by-line computational comparison of the cached OTA Caligula payload and pinned U-M/General Corpus XML.",
+      "repository_path": "source-cache/LayCal.lineated/ota-1682-laycal.txt",
+      "locator": "first 16,096 OTA l rows against U-M L/@N 1-16096",
+      "summary": "Of 16,096 paired rows, 15,676 are text-exact and 16,093 are identical after whitespace normalization and conversion of OTA custom entities to Unicode. The three normalized differences occur at U-M lines 71 and 1715, where `a;eacute;` appears after `sea`/`milcea`, and line 13643, where U-M has `andswatede` against OTA `andswarede`. U-M extracts the final Amen to CLOSER and adds numbered lines, page milestones, and 161 supplied navigation groups.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ee87f39a0219676653c6a86ed702d1a2e220d8734c3e3480d0c5b5c09501ac9c",
+      "notes": ["This comparison demonstrates close derivation but does not document who made the three changes or the exact transfer date."]
+    },
+    {
+      "id": "evidence:brook-leslie-bibliography",
+      "type": "official_catalog",
+      "citation": "CiNii Books, Laȝamon, Brut: edited from British Museum MS Cotton Caligula A. IX and British Museum MS Cotton Otho C. XIII, NCID BA02706965.",
+      "url": "https://ci.nii.ac.jp/ncid/BA02706965",
+      "alternate_urls": ["https://search.worldcat.org/title/Layamon-%3A-Brut/oclc/5198890", "https://catalog.folger.edu/record/21022"],
+      "locator": "bibliographic information; author/editor authorities; volume note",
+      "summary": "Confirms G. L. Brook and R. F. Leslie, both named manuscripts, two EETS Original Series volumes 250 and 277, publication in 1963-1978, and the line-range split at 1-8020 and 8021-end.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:brook-leslie-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive public item metadata for la3amonbrut0000glbr, Brook-Leslie volume 1 (1963).",
+      "url": "https://archive.org/metadata/la3amonbrut0000glbr",
+      "alternate_urls": ["https://archive.org/details/la3amonbrut0000glbr"],
+      "repository_path": "source-cache/LayCal.lineated/brook-leslie-1963-vol1-internet-archive-metadata.json",
+      "locator": "metadata; files",
+      "summary": "Identifies the 1963 Brook-Leslie volume and controlled collections internetarchivebooks/inlibrary/printdisabled; the ordinary PDF is private and no open license or rights field is supplied. Only this public metadata was downloaded.",
+      "accessed_on": "2026-07-15",
+      "sha256": "15f33b8b7762ca968898566c60648834a349e1f967b0156c11179750d3d3aa13"
+    },
+    {
+      "id": "evidence:madden-1847-vol1",
+      "type": "digital_surrogate",
+      "citation": "Frederic Madden, ed., Laȝamons Brut, or Chronicle of Britain, vol. 1 (London: Society of Antiquaries, 1847), Internet Archive original Google PDF.",
+      "url": "https://archive.org/download/layamonsbrutorc01londgoog/layamonsbrutorc01londgoog.pdf",
+      "alternate_urls": ["https://archive.org/details/layamonsbrutorc01londgoog"],
+      "repository_path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-1.pdf",
+      "locator": "embedded Google usage guidelines; title and prefatory matter; parallel text through Madden line 10229",
+      "summary": "Complete clean 512-page scan of volume 1, supporting the edition title, editor, publication, parallel Caligula/Otho presentation, literal translation, opening line range, and provider-delivery terms. The embedded Google pages request personal, noncommercial use and attribution while distinguishing country-specific public-domain status.",
+      "accessed_on": "2026-07-15",
+      "sha256": "41ac794f0d2e3587e57e066751b1bf6835949958850c2bfc62d4ef79d0806dc5"
+    },
+    {
+      "id": "evidence:madden-1847-vol2",
+      "type": "digital_surrogate",
+      "citation": "Frederic Madden, ed., Laȝamons Brut, or Chronicle of Britain, vol. 2 (London: Society of Antiquaries, 1847), Internet Archive original Google PDF.",
+      "url": "https://archive.org/download/layamonsbrutorc03londgoog/layamonsbrutorc03londgoog.pdf",
+      "alternate_urls": ["https://archive.org/details/layamonsbrutorc03londgoog"],
+      "repository_path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-2.pdf",
+      "locator": "parallel text from Madden line 10230 to before line 25275",
+      "summary": "Complete clean 661-page scan of volume 2, preserving the continuing Caligula and Otho columns and literal translation.",
+      "accessed_on": "2026-07-15",
+      "sha256": "448d0aab87ceee36e1d6df04fb8b4025a4b14ea4596a20e1c5407ccab66681f0"
+    },
+    {
+      "id": "evidence:madden-1847-vol3",
+      "type": "digital_surrogate",
+      "citation": "Frederic Madden, ed., Laȝamons Brut, or Chronicle of Britain, vol. 3 (London: Society of Antiquaries, 1847), Internet Archive original Google PDF.",
+      "url": "https://archive.org/download/layamonsbrutorc00londgoog/layamonsbrutorc00londgoog.pdf",
+      "alternate_urls": ["https://archive.org/details/layamonsbrutorc00londgoog"],
+      "repository_path": "source-cache/LayCal.lineated/madden-1847-layamons-brut-vol-3.pdf",
+      "locator": "parallel text from Madden line 25275; notes and glossary",
+      "summary": "Complete clean 677-page scan of volume 3, preserving the end of the parallel text and the edition's supporting notes and glossary.",
+      "accessed_on": "2026-07-15",
+      "sha256": "fc4da5ab3b5efbbcdc678c131267eca631594e96badf7f74d921e52a3c65414e"
+    },
+    {
+      "id": "evidence:bl-caligula-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Cotton MS Caligula A IX, Archives and Manuscripts Catalogue.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102334",
+      "locator": "whole manuscript; ff. 3r-194v; access links",
+      "summary": "Official evidence for the current shelfmark, 1250-1299 date, south-west Midlands origin, parchment codex, 261-folio extent, dimensions, composite contents, Laȝamon and Areley Kings attribution, alliterative form, exact Brut folios, status as most complete surviving copy, and Reader Pass/request routes.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-otho-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Cotton MS Otho C XIII, Archives and Manuscripts Catalogue.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102891",
+      "locator": "whole item; physical characteristics; access links",
+      "summary": "Official evidence for the imperfect Otho Brut, 1275-1299 date, parchment support, 144-folio extent, 305 × 245 mm dimensions, 1731 fire damage, 1962 binding, restricted physical access, and absence of a current digitised-content link.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-caligula-iiif",
+      "type": "digital_surrogate",
+      "citation": "British Library IIIF Presentation 3 manifest for Cotton MS Caligula A IX.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "locator": "metadata, rights, and 543-canvas sequence",
+      "summary": "Exact 543-canvas complete-codex manifest. It identifies the manuscript, British Library digitisation, work contents, and Usage terms ‘Public Domain in most countries other than the UK’; its rights URI now returns 404. Canvases 15 and 398 are f. 3r and f. 194v.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-caligula-iiif-audit",
+      "type": "visual_inspection",
+      "citation": "Complete-object cache, fixity, inventory, and visual audit of the British Library Cotton MS Caligula A IX IIIF surrogate.",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100165157081.0x000001",
+      "repository_path": "source-cache/LayCal.lineated/cotton-caligula-a-ix-complete-iiif-1200px.zip",
+      "locator": "manifest.json; inventory.json; images/000001.jpg-images/000543.jpg; work canvases 15-398",
+      "summary": "The 301,950,000-byte ZIP passes integrity testing and contains the exact manifest, inventory, and all 543 listed JPEGs. Inventory order confirms front cover at 1, f. 3r at 15, f. 194v at 398, and spine at 543; 542 effective requests used `1200,` and the spine used a recorded `full` fallback. Visual inspection confirmed the illuminated f. 3r opening with ‘Incipit historia brutonum,’ the text-bearing f. 194v endpoint, and the spine.",
+      "accessed_on": "2026-07-15",
+      "sha256": "af7a3466b15540d12d12caa5148cc727db94c5d605021ba7b10aa5c78d5587e8"
+    },
+    {
+      "id": "evidence:goering-2023",
+      "type": "scholarly_source",
+      "citation": "Nelson Goering, ‘Metrical Resolution in Early Middle English,’ in Prosody in Medieval English and Norse (British Academy / Oxford University Press, 2023), pp. 126-145.",
+      "url": "https://academic.oup.com/british-academy-scholarship-online/book/51376/chapter/417755220",
+      "locator": "section 7.2 and note 3",
+      "summary": "Open current scholarship supporting the two-version boundary, modern Brut title, manuscript-era title forms, conservative Caligula and later abridged/reworked Otho distinction, manuscript chronology, likely later-twelfth-century composition before 1216, Areley Kings/West Midlands association, long-line form, and direct availability of the Caligula facsimile.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Terms of Use.",
+      "url": "https://www.bl.uk/terms",
+      "locator": "content rights and permitted-use provisions",
+      "summary": "Current provider terms explain that BL content may be public domain, Creative Commons licensed, or subject to other rights and conditions, and that item-specific markings govern. They do not replace the exact IIIF Usage statement or resolve the manifest's excluded UK jurisdiction.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation Services.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "locator": "reproduction and permissions information",
+      "summary": "Official route for requesting reproductions and permissions; the page states reproduction images may be used as required only with proper permissions. Licensing enquiries are directed to licensing@bl.uk.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:otho-facsimile-search",
+      "type": "search_result",
+      "citation": "Dated search for a complete current public digital facsimile of British Library Cotton MS Otho C XIII.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102891",
+      "locator": "exact catalog record and current public discovery routes",
+      "summary": "No current digitised-content link, IIIF manifest, or complete public facsimile was verified as of 2026-07-15. This negative result is not evidence that private photography, microfilm, or unindexed legacy files do not exist.",
+      "accessed_on": "2026-07-15"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:brook-leslie-editorial-method-and-facsimile",
+      "question": "What exact base-text, collation, supply, normalization, and apparatus rules did Brook and Leslie use for each Caligula passage, and what manuscript surface or plate(s) comprised the facsimile omitted from the electronic text?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult both printed volumes' introductions, apparatus, and plate lists through a holding library or controlled borrowing.", "Map every electronic symbol category to the edition's exact conventions without assuming all Caligula supplies derive from Otho.", "Identify the omitted facsimile's exact target, extent, reproduction source, and rights before modeling it as a separate facsimile entity."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:ota-1682-header", "evidence:brook-leslie-bibliography", "evidence:brook-leslie-ia-metadata"],
+      "notes": ["The current restricted scan metadata establishes access and edition identity but not the missing editorial detail."]
+    },
+    {
+      "id": "question:umich-production-and-three-differences",
+      "question": "Who transformed OTA 1682 into the 1993 U-M item, from which exact source copy, and why do U-M lines 71, 1715, and 13643 differ after normalization from the current OTA payload?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask U-M Digital Collections for item-level production metadata, source files, and correction history.", "Compare the three readings against Brook-Leslie and any preserved earlier OTA copy.", "Do not silently correct the repository XML until the responsible layer and preferred reading are established."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal", "evidence:ota-umich-comparison"]
+    },
+    {
+      "id": "question:caligula-image-rights-and-reuse",
+      "question": "What current British Library terms govern the Caligula IIIF photographs in the UK and for Git redistribution, research publication, self-publishing, or commercial print-on-demand?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Write to licensing@bl.uk with the exact IIIF manifest, cached derivative profile, intended repository reference use, and possible commercial/POD workflows.", "Ask whether the manifest's ‘Public Domain in most countries other than the UK’ statement permits redistribution outside the UK and what UK restrictions remain.", "Preserve the written response and update both access and rights records before publishing cached images."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-caligula-iiif", "evidence:bl-terms", "evidence:bl-digitisation"],
+      "notes": ["The current manifest rights URI returns 404; public access and local caching are not substituted for permission."]
+    },
+    {
+      "id": "question:otho-complete-facsimile",
+      "question": "Can a complete current-object facsimile, legacy microfilm, or licensed image set of fire-damaged Cotton MS Otho C XIII be obtained?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Ask British Library Reference Services and licensing staff about unindexed or legacy photography and complete-object reproduction options.", "If imaging is commissioned, request the entire present object, including binding, endleaves, flyleaves, blanks, fragments, and every surviving leaf—not only text-bearing Brut portions.", "After receipt, map exact Otho work folios/canvases and the OTA/Brook-Leslie passages separately."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-otho-catalog", "evidence:otho-facsimile-search"]
+    },
+    {
+      "id": "question:encoding-rights-reconciliation",
+      "question": "How should the 1993 personal-scholarly-use notice, current U-M No Copyright-United States display, current OTA CC BY-NC-SA 3.0 license, CME software-worded Unlicense, and General Corpus output license be reconciled for redistribution of this exact XML?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Request item-level clarification from U-M and OTA about the current rights status of transcription and markup.", "Ask the CME and General Corpus maintainers to define the intended scope of their repository licenses over imported XML.", "Keep medieval text, modern edition, OTA deposit, U-M encoding, repository serialization, and generated outputs as separate rights components until clarified."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-laycal", "evidence:ota-1682-record", "evidence:cme-license", "evidence:general-corpus-license"]
+    }
+  ]
+}

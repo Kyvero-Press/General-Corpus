@@ -1,0 +1,2040 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:PPlCreed",
+  "work_id": "PPlCreed",
+  "title": "Piers the Plowman's Crede",
+  "primary_subject": "artifact:pplcreed-xml",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository XML is a preserved version of the University of Michigan May 1996 electronic edition, whose header associates it with Oxford Text Archive accession A*-1047-A. The current OTA 1047 header says its text was transcribed from Greenwood Press's 1969 reprint of Walter W. Skeat's 1867 EETS edition. Skeat based his text on Trinity College Cambridge R.3.15 and collated British Library Royal 18 B XVII and Reynold Wolfe's 1553 print; he also acknowledged substantial use of Thomas Wright's 1856 edition. Trinity and Royal are complete manuscript witnesses, Harley 78 preserves only lines 172-207, and Wolfe is an early printed textual witness. Skeat hypothesized that Trinity, Royal, and Wolfe descend from one common exemplar, but that stemma is an editorial reconstruction, not a confirmed physical chain. Whole public surrogates have been cached where available, including the complete 656-canvas Trinity IIIF object; no complete public facsimile was verified for Royal, Harley, or the 1553 print.",
+  "languages": ["enm", "eng"],
+  "review_notes": [
+    "Skeat's printed poem has 855 verse lines. The XML contains 856 L elements because XML L 847 encodes the printed running head GOD AMEND ALL FALSE FRIARS ! as though it were verse; XML L 848-856 therefore correspond to printed lines 847-855.",
+    "The printed final AMEN. is not absent from the XML: it follows the 856 L elements as a CLOSER. It is excluded only from the raw L-element count and verse-line stream.",
+    "The supplied XML heading Lines 101 through 200 encloses L 101-201, while the next division begins at L 202. Source locators therefore use actual element and printed-line boundaries rather than trusting every supplied heading.",
+    "The second top-level division, headed CREDO., is the poem's intrinsic conclusion: after the narrator asks Piers to teach him the Creed in lines 791-794, Piers answers in printed lines 795-855 and the closer.",
+    "DIMEV's Royal witness entry gives complete folios, incipit, and explicit but repeats the Harley fragment note Lines 172-207 only. The official British Library catalog and the edition evidence establish Royal as complete; the repeated note is retained as a DIMEV data defect.",
+    "Access, copyright status, licenses, and provider conditions are modeled separately. A public page or public-domain historical text does not by itself establish unrestricted redistribution of a modern image file.",
+    "The Trinity catalog describes 316 folios, while the IIIF labels run through f328. This unresolved descriptive mismatch does not affect the directly inspected work boundary at labeled fols. 317r-328r, canvases 629-651."
+  ],
+  "entities": [
+    {
+      "id": "artifact:pplcreed-xml",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for PPlCreed",
+      "description": "The exact DLPSTEXTCLASS XML artifact consumed by this repository and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "PPlCreed"},
+        {"scheme": "git blob", "value": "cfd4b5bdd82798880f2d1866056681519beb7e5f"},
+        {"scheme": "CME git commit", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "date_statements": [
+        {"label": "electronic-edition date stated in file", "value": "May 1996", "normalized": "1996-05", "certainty": "high", "evidence_ids": ["evidence:repository-xml"]}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/PPlCreed.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "cfd4b5bdd82798880f2d1866056681519beb7e5f",
+        "sha256": "815c167eb08d927ade85f8a2d06a72dc15b20d1b29ac68716ef8bf557578c8c9"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:lineation-audit"],
+      "notes": [
+        "The reviewed file is 60,495 bytes.",
+        "It contains two DIV1 elements, eight DIV2 elements, ten HEAD elements, 856 L elements, and one CLOSER."
+      ]
+    },
+    {
+      "id": "encoding:umich:pplcreed",
+      "type": "digital_encoding",
+      "label": "University of Michigan PPlCreed electronic edition",
+      "alternate_labels": ["Pierce the Ploughmans Crede [electronic edition]", "U-M CME item PPlCreed"],
+      "description": "The May 1996 U-M electronic edition represented by the current Corpus of Middle English Prose and Verse item. Its header names Skeat's 1867 edition and OTA A*-1047-A, omits printed front matter and editorial notes, and records two caesura decisions.",
+      "identifiers": [
+        {"scheme": "University of Michigan item ID", "value": "PPlCreed", "uri": "https://name.umdl.umich.edu/PPlCreed"},
+        {"scheme": "Oxford Text Archive legacy accession", "value": "A*-1047-A"}
+      ],
+      "creator_ids": ["agent:umich-library"],
+      "date_statements": [
+        {"label": "electronic edition", "value": "May 1996", "normalized": "1996-05", "certainty": "high", "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"],
+      "notes": [
+        "The current U-M item exposes the full text and a two-part table of contents.",
+        "Its current rights statement is recorded separately from the restrictive historical availability notice embedded in the pinned XML."
+      ]
+    },
+    {
+      "id": "encoding:ota:1047",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 1047, Piers the Ploughman's Crede",
+      "description": "The current OTA preservation record and plain-text representation. The record names Helen Barr as depositor/compiler and gives a 1987 deposit; the generated TEI header records Michael Day's 1990-1991 header work and Greenwood Press 1969 as the transcription source.",
+      "identifiers": [
+        {"scheme": "Oxford Text Archive", "value": "1047", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1047"},
+        {"scheme": "Oxford Text Archive legacy accession", "value": "A*-1047-A"}
+      ],
+      "creator_ids": ["agent:helen-barr", "agent:oxford-text-archive"],
+      "date_statements": [
+        {"label": "deposit", "value": "1 February 1987", "normalized": "1987-02-01", "certainty": "high", "evidence_ids": ["evidence:ota-record"]},
+        {"label": "current TEI header generation", "value": "1998", "normalized": "1998", "certainty": "high", "evidence_ids": ["evidence:ota-header"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-record", "evidence:ota-header"],
+      "notes": ["The current record's file wrapper is later than the 1987 deposit and should not be mistaken for the original encoding date."]
+    },
+    {
+      "id": "encoding:medictionary:pplcreed",
+      "type": "digital_encoding",
+      "label": "MEDictionary current PPlCreed XML",
+      "description": "A current ETS-style XML representation with a generic CME00000 wrapper and current public-domain wording. Its concatenated 856 L-element text stream exactly matches the repository XML's 856 L-element stream, although the wrappers and rights notices differ.",
+      "identifiers": [{"scheme": "MEDictionary text path", "value": "PPlCreed.xml", "uri": "https://www.medictionary.info/texts/PPlCreed.xml"}],
+      "creator_ids": ["agent:medictionary"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:medictionary-xml", "evidence:text-stream-comparison"],
+      "notes": ["Joined L-element text SHA-256 for both current MEDictionary and repository XML representations: dbdf9154000ac35d77aa8dcffbfad35dd8b2ddedd6e974c207c6a6993bb2ffed."]
+    },
+    {
+      "id": "edition:greenwood:1969",
+      "type": "scholarly_edition",
+      "label": "Greenwood Press 1969 reprint of Skeat's edition",
+      "description": "The New York Greenwood Press reprint identified by the OTA header as the immediate transcription source. It reproduces the 1867 EETS edition; the precise rights status of the 1969 carrier and any new matter remains unverified.",
+      "creator_ids": ["agent:greenwood-press", "agent:walter-w-skeat"],
+      "date_statements": [
+        {"label": "publication", "value": "1969", "normalized": "1969", "certainty": "high", "evidence_ids": ["evidence:ota-header", "evidence:greenwood-record"]}
+      ],
+      "bibliographic": {
+        "citation": "Pierce the Ploughmans Crede (about 1394 A.D.), ed. Walter W. Skeat, EETS Original Series 30 (New York: Greenwood Press, 1969), reprint of the 1867 edition.",
+        "title": "Pierce the Ploughmans Crede (about 1394 A.D.)",
+        "series": "Early English Text Society, Original Series 30",
+        "publisher": "Greenwood Press",
+        "publication_place": "New York",
+        "date": "1969",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-header", "evidence:greenwood-record"]
+    },
+    {
+      "id": "edition:skeat:1867",
+      "type": "scholarly_edition",
+      "label": "Walter W. Skeat's 1867 EETS edition",
+      "alternate_labels": ["Pierce the Ploughmans Crede (about 1394 A.D.)"],
+      "description": "The source edition for the later Greenwood reprint. Skeat says he transcribed Trinity R.3.15, collated Royal 18 B XVII and the 1553 print, used Wright's 1856 edition, and represented expanded manuscript abbreviations in italics. The Crede text occupies printed pages 1-32 and has 855 verse lines.",
+      "identifiers": [
+        {"scheme": "Early English Text Society", "value": "Original Series 30"},
+        {"scheme": "Internet Archive", "value": "pierceploughmans00skeauoft", "uri": "https://archive.org/details/pierceploughmans00skeauoft"}
+      ],
+      "creator_ids": ["agent:walter-w-skeat", "agent:eets"],
+      "date_statements": [
+        {"label": "publication", "value": "1867", "normalized": "1867", "certainty": "high", "evidence_ids": ["evidence:skeat-scan"]}
+      ],
+      "bibliographic": {
+        "citation": "Pierce the Ploughmans Crede (about 1394 A.D.), transcribed and edited from MS. Trin. Coll., Cam., R.3.15, collated with MS. Bibl. Reg. 18 B. XVII and with the old printed copy of 1553, ed. Walter W. Skeat, EETS Original Series 30 (London: N. Trübner & Co., 1867).",
+        "title": "Pierce the Ploughmans Crede (about 1394 A.D.)",
+        "series": "Early English Text Society, Original Series 30",
+        "publisher": "N. Trübner & Co.",
+        "publication_place": "London",
+        "date": "1867",
+        "pages": "Crede text 1-32; notes 33-55; complete volume xx, 75 pages",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-scan", "evidence:skeat-preface"],
+      "notes": ["Skeat also appends the separate rhyming poem God Spede the Plough; it is outside the cataloging boundary of PPlCreed."]
+    },
+    {
+      "id": "edition:wright:1856",
+      "type": "scholarly_edition",
+      "label": "Thomas Wright's 1856 second revised edition",
+      "alternate_labels": ["The Vision and Creed of Piers Ploughman"],
+      "description": "The second and revised two-volume edition that Skeat says was of very great service. Complete public scans of both volumes are cached. Volume I discusses the Crede's date, subject, witnesses, and early prints; volume II contains the Crede text at printed pages 451-501 and its notes at pages 565-587.",
+      "identifiers": [
+        {"scheme": "Internet Archive volume I", "value": "PiersPloughmanWright2nd1", "uri": "https://archive.org/details/PiersPloughmanWright2nd1"},
+        {"scheme": "Internet Archive volume II", "value": "visionandcreedp04wriggoog", "uri": "https://archive.org/details/visionandcreedp04wriggoog"}
+      ],
+      "creator_ids": ["agent:thomas-wright"],
+      "date_statements": [
+        {"label": "publication", "value": "1856", "normalized": "1856", "certainty": "high", "evidence_ids": ["evidence:wright-scan"]}
+      ],
+      "bibliographic": {
+        "citation": "The Vision and Creed of Piers Ploughman, ed. Thomas Wright, 2 vols., 2nd rev. ed. (London: John Russell Smith, 1856).",
+        "title": "The Vision and Creed of Piers Ploughman",
+        "volume": "2 vols.; Crede text in vol. II",
+        "publisher": "John Russell Smith",
+        "publication_place": "London",
+        "date": "1856",
+        "pages": "Crede text 451-501; notes 565-587",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-scan", "evidence:skeat-preface"],
+      "notes": [
+        "Wright's notes compare Crede readings with an old printed edition, but the reviewed statements do not securely identify whether his immediate copy-text was Wolfe 1553, Rogers 1561, or a later reprint; no directional source edge is asserted.",
+        "Wright's 1856 claim that Royal and Trinity were both written after the first print is retained only as an edition-history claim: the current British Library catalog dates Royal to the first quarter of the sixteenth century, before Wolfe 1553."
+      ]
+    },
+    {
+      "id": "witness:trinity-r3.15",
+      "type": "manuscript_witness",
+      "label": "Trinity College Cambridge MS R.3.15",
+      "alternate_labels": ["James 595"],
+      "description": "A composite paper codex. The Crede is the final twelve-leaf item, in the hand associated with Part I, and is complete at the IIIF labels fols. 317r-328r. Skeat used this witness as his base text.",
+      "identifiers": [
+        {"scheme": "Trinity College shelfmark", "value": "R.3.15", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15"},
+        {"scheme": "M. R. James catalog number", "value": "595"}
+      ],
+      "date_statements": [
+        {"label": "codex production", "value": "fifteenth and sixteenth centuries", "certainty": "high", "evidence_ids": ["evidence:trinity-catalog"]},
+        {"label": "Crede item hand", "value": "sixteenth century, possibly after 1600", "certainty": "medium", "evidence_ids": ["evidence:trinity-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:trinity-college",
+        "shelfmark": "R.3.15",
+        "historical_designations": ["James 595"],
+        "catalog_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15",
+        "notes": "The work is labeled fols. 317r-328r in the complete IIIF sequence, canvases 629-651."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Catalog description: 316 folios; IIIF labels continue through f328",
+        "dimensions": "28.5 x 21.5 cm",
+        "notes": ["The catalog records 30 lines to a page and multiple hands."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"],
+      "notes": ["The catalog's 316-folio extent and the IIIF labels through f328 have not yet been reconciled."]
+    },
+    {
+      "id": "witness:royal-18-b-xvii",
+      "type": "manuscript_witness",
+      "label": "British Library Royal MS 18 B XVII",
+      "description": "A complete manuscript witness of the Crede at fols. 1r-13v, written without a title and followed by later sixteenth-century corrections. It was collated by Skeat and Dean.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Royal MS 18 B XVII", "uri": "https://searcharchives.bl.uk/catalog/040-002107511"}],
+      "date_statements": [
+        {"label": "manuscript production", "value": "first quarter of the sixteenth century", "certainty": "high", "evidence_ids": ["evidence:royal-catalog"]},
+        {"label": "corrections", "value": "second half of the sixteenth century", "certainty": "high", "evidence_ids": ["evidence:royal-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Royal MS 18 B XVII",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002107511",
+        "notes": "Piers Plowman's Crede occupies fols. 1r-13v."
+      },
+      "physical_description": {
+        "support": "Vellum",
+        "extent": "i + 123 folios",
+        "dimensions": "11.25 x 8.5 inches"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:royal-catalog", "evidence:skeat-preface", "evidence:dean-edition"],
+      "notes": ["No complete public digital facsimile was verified as of the review date."]
+    },
+    {
+      "id": "witness:harley-78",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 78 fragment",
+      "description": "A fragmentary manuscript witness containing Crede lines 172-207 on fol. 3r in a composite paper codex. It is not a complete witness and is not part of Skeat's stated three-source collation.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 78", "uri": "https://searcharchives.bl.uk/catalog/040-002045906"}],
+      "date_statements": [
+        {"label": "composite manuscript production", "value": "fifteenth-sixteenth centuries", "certainty": "high", "evidence_ids": ["evidence:harley-catalog"]}
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 78",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002045906",
+        "notes": "The Crede fragment is fol. 3r, lines 172-207."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "86 folios",
+        "format": "Composite manuscript",
+        "notes": ["The fragment is in Gothic cursive script."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:harley-catalog", "evidence:dimev-record"],
+      "notes": ["The legacy British Library viewer record remains discoverable, but its page images were unavailable when checked."]
+    },
+    {
+      "id": "print:wolfe:1553",
+      "type": "scholarly_edition",
+      "label": "Reynold Wolfe's 1553 print of the Crede",
+      "description": "An early printed textual witness, represented as a scholarly-edition entity because the schema has no historical-print-witness type. Skeat collated it alongside Trinity and Royal; the reviewed Folger record describes a restricted EEBO surrogate made from the Huntington Library copy.",
+      "identifiers": [
+        {"scheme": "STC (2nd ed.)", "value": "19904"},
+        {"scheme": "Folger bibliographic ID", "value": "427810", "uri": "https://catalog.folger.edu/record/427810"}
+      ],
+      "creator_ids": ["agent:reynold-wolfe"],
+      "date_statements": [
+        {"label": "publication", "value": "1553", "normalized": "1553", "certainty": "high", "evidence_ids": ["evidence:folger-wolfe"]}
+      ],
+      "bibliographic": {
+        "citation": "Pierce the Ploughmans Crede (London: Reynold Wolfe, 1553), STC 19904.",
+        "title": "Pierce the Ploughmans Crede",
+        "publisher": "Reynold Wolfe",
+        "publication_place": "London",
+        "date": "1553",
+        "pages": "[32] pages; A-D4",
+        "languages": ["enm"]
+      },
+      "holding": {
+        "institution_id": "agent:huntington-library",
+        "shelfmark": null,
+        "catalog_url": "https://catalog.folger.edu/record/427810",
+        "notes": "The Folger vendor record identifies the Huntington Library original used for the EEBO reproduction."
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-wolfe", "evidence:skeat-preface", "evidence:dimev-record"],
+      "notes": ["No unrestricted public complete facsimile was verified as of the review date."]
+    },
+    {
+      "id": "witness:skeat-common-exemplar",
+      "type": "manuscript_witness",
+      "label": "Skeat's reconstructed common exemplar",
+      "description": "A hypothetical common source inferred by Skeat for Trinity R.3.15, Royal 18 B XVII, and the 1553 Wolfe print. It is a stemmatic reconstruction rather than an identified or extant codex.",
+      "date_statements": [
+        {"label": "hypothesized copying stage", "value": "before the surviving Trinity, Royal, and 1553 witnesses", "certainty": "low", "evidence_ids": ["evidence:skeat-preface"]}
+      ],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:skeat-preface"],
+      "notes": ["No copied-from relation is asserted for Harley 78 because the reviewed evidence did not place that fragment in Skeat's reconstructed three-witness stemma."]
+    },
+    {
+      "id": "facsimile:skeat-ia",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Skeat's 1867 EETS volume",
+      "description": "A complete public scan of EETS Original Series 30, cached as PDF together with OCR text and item metadata.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "pierceploughmans00skeauoft", "uri": "https://archive.org/details/pierceploughmans00skeauoft"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "PDF, OCR text, and Internet Archive item metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-scan", "evidence:skeat-ia-metadata"]
+    },
+    {
+      "id": "facsimile:wright-ia",
+      "type": "facsimile",
+      "label": "Internet Archive / Google Books scan of Wright's 1856 volume II",
+      "description": "A complete public scan of volume II of Wright's second revised edition, cached as PDF together with OCR text and Internet Archive item metadata.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "visionandcreedp04wriggoog", "uri": "https://archive.org/details/visionandcreedp04wriggoog"}],
+      "creator_ids": ["agent:google-books", "agent:internet-archive"],
+      "reproduction_format": "PDF, OCR text, and Internet Archive item metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wright-scan", "evidence:wright-ia-metadata"]
+    },
+    {
+      "id": "facsimile:wright-ia-volume-1",
+      "type": "facsimile",
+      "label": "Internet Archive / Google Books scan of Wright's 1856 volume I",
+      "description": "A complete public 326-page scan of volume I of Wright's second revised edition, cached as PDF together with OCR text and Internet Archive item metadata. The poem itself is in volume II, but volume I supplies Wright's historical introduction and edition statement.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "PiersPloughmanWright2nd1", "uri": "https://archive.org/details/PiersPloughmanWright2nd1"}],
+      "creator_ids": ["agent:google-books", "agent:internet-archive"],
+      "reproduction_format": "PDF, OCR text, and Internet Archive item metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-volume-1-ia-metadata"]
+    },
+    {
+      "id": "facsimile:trinity-iiif",
+      "type": "facsimile",
+      "label": "Complete Trinity R.3.15 IIIF facsimile",
+      "description": "The complete 656-canvas IIIF Presentation object was cached as a manifest, URL inventory, and 656 full-canvas JPEG derivatives at 1200-pixel width. Direct inspection places the Crede at canvases 629-651, labeled fols. 317r-328r; canvas 652, f328v, is blank after the text.",
+      "identifiers": [{"scheme": "IIIF Presentation manifest", "value": "R.3.15", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15/manifest.json"}],
+      "creator_ids": ["agent:trinity-college"],
+      "reproduction_format": "IIIF manifest, inventory, and 656 JPEG derivatives at 1200-pixel width in ZIP",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"]
+    },
+    {
+      "id": "catalog:trinity-r3.15",
+      "type": "catalog_description",
+      "label": "Trinity College R.3.15 manuscript catalog record",
+      "description": "The official James Catalogue record, including codicological description, item-level contents, incipit and explicit, and access to the IIIF manifest.",
+      "creator_ids": ["agent:trinity-college"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:trinity-catalog"]
+    },
+    {
+      "id": "catalog:bl-royal-18-b-xvii",
+      "type": "catalog_description",
+      "label": "British Library catalog record for Royal MS 18 B XVII",
+      "description": "The official archive catalog record establishing the complete Crede at fols. 1r-13v and the manuscript's date, material, extent, and corrections.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:royal-catalog"]
+    },
+    {
+      "id": "catalog:bl-harley-78",
+      "type": "catalog_description",
+      "label": "British Library catalog record for Harley MS 78",
+      "description": "The official archive catalog record identifying the Crede fragment at fol. 3r, lines 172-207, within the composite codex.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:harley-catalog"]
+    },
+    {
+      "id": "catalog:folger-stc19904",
+      "type": "catalog_description",
+      "label": "Folger vendor record for STC 19904",
+      "description": "A public bibliographic record describing the 1553 Wolfe print and linking to a subscription EEBO reproduction based on the Huntington Library original.",
+      "creator_ids": ["agent:folger-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:folger-wolfe"]
+    },
+    {
+      "id": "catalog:dimev:record-1086",
+      "type": "catalog_description",
+      "label": "DIMEV 2.0-alpha.1 record 1086",
+      "description": "A versioned scholarly index record giving the title, incipit, 855-line extent, identifiers, manuscript witnesses, and 1553 print. Its Royal source note contains a documented fragment-note duplication.",
+      "identifiers": [
+        {"scheme": "DIMEV 2.0 alpha", "value": "record-1086"},
+        {"scheme": "NIMEV", "value": "663"},
+        {"scheme": "MED bibliography", "value": "BIB2823", "uri": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB2823"}
+      ],
+      "creator_ids": ["agent:dimev"],
+      "date_statements": [
+        {"label": "release", "value": "25 June 2026", "normalized": "2026-06-25", "certainty": "high", "evidence_ids": ["evidence:dimev-record"]}
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:dimev-record"]
+    },
+    {
+      "id": "edition:dean:1991",
+      "type": "scholarly_edition",
+      "label": "James M. Dean's 1991 METS edition",
+      "description": "A later scholarly edition in Six Ecclesiastical Satires. Dean uses Trinity microfilm as base, corrects it from Royal and the 1553 print, and consults Wright 1856 and Skeat 1867. It is a supporting comparison source, not upstream of the repository XML, and numbers the poem as 850 lines.",
+      "creator_ids": ["agent:james-m-dean", "agent:medieval-institute-publications"],
+      "date_statements": [
+        {"label": "publication", "value": "1991", "normalized": "1991", "certainty": "high", "evidence_ids": ["evidence:dean-edition"]}
+      ],
+      "bibliographic": {
+        "citation": "Six Ecclesiastical Satires, ed. James M. Dean (Kalamazoo: Medieval Institute Publications, 1991), Piers the Plowman's Crede.",
+        "title": "Six Ecclesiastical Satires",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo",
+        "date": "1991",
+        "pages": "downloadable PDF pages 2-50: introduction 2-8, text 9-35, notes 36-50",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dean-edition"]
+    },
+    {
+      "id": "facsimile:dean-download",
+      "type": "facsimile",
+      "label": "METS downloadable PDF of Six Ecclesiastical Satires",
+      "description": "The complete current 251-page downloadable PDF, with the Crede introduction, text, and notes at PDF pages 2-50. It is image-only and was cached as a supporting modern-edition surrogate.",
+      "creator_ids": ["agent:mets"],
+      "reproduction_format": "251-page image-only PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dean-edition", "evidence:mets-rights"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme"]},
+    {"id": "agent:oxford-text-archive", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"]},
+    {"id": "agent:helen-barr", "type": "person", "name": "Helen Barr", "notes": ["Named as compiler and depositor in the current OTA record."]},
+    {"id": "agent:greenwood-press", "type": "organization", "name": "Greenwood Press"},
+    {"id": "agent:walter-w-skeat", "type": "person", "name": "Walter W. Skeat", "alternate_names": ["Walter William Skeat"], "dates": "1835-1912"},
+    {"id": "agent:eets", "type": "organization", "name": "Early English Text Society", "urls": ["https://www.earlyenglishtextsociety.org/"]},
+    {"id": "agent:thomas-wright", "type": "person", "name": "Thomas Wright", "dates": "1810-1877"},
+    {"id": "agent:reynold-wolfe", "type": "person", "name": "Reynold Wolfe", "alternate_names": ["Reyner Wolfe"], "dates": "died 1573"},
+    {"id": "agent:trinity-college", "type": "organization", "name": "Trinity College Cambridge", "urls": ["https://mss-cat.trin.cam.ac.uk/"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"]},
+    {"id": "agent:huntington-library", "type": "organization", "name": "The Huntington Library"},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:google-books", "type": "organization", "name": "Google Books", "urls": ["https://books.google.com/"]},
+    {"id": "agent:medictionary", "type": "organization", "name": "MEDictionary", "urls": ["https://www.medictionary.info/"]},
+    {"id": "agent:dimev", "type": "organization", "name": "Digital Index of Middle English Verse", "urls": ["https://www.dimev.net/"]},
+    {"id": "agent:james-m-dean", "type": "person", "name": "James M. Dean"},
+    {"id": "agent:medieval-institute-publications", "type": "organization", "name": "Medieval Institute Publications"},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"]},
+    {"id": "agent:folger-library", "type": "organization", "name": "Folger Shakespeare Library", "urls": ["https://catalog.folger.edu/"]},
+    {"id": "agent:us-copyright-office", "type": "organization", "name": "United States Copyright Office", "urls": ["https://www.copyright.gov/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-umich",
+      "type": "version_of",
+      "subject": "artifact:pplcreed-xml",
+      "object": "encoding:umich:pplcreed",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete pinned repository XML."},
+        "object": {"kind": "whole", "description": "The complete U-M PPlCreed electronic item."}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:umich-item"], "notes": "The local header, identifier, structure, source statement, and text identify the artifact as this U-M electronic edition; repository preservation is modeled as a version, not as a new medieval work."}
+    },
+    {
+      "id": "relation:umich-version-ota",
+      "type": "version_of",
+      "subject": "encoding:umich:pplcreed",
+      "object": "encoding:ota:1047",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete U-M electronic text."},
+        "object": {"kind": "whole", "description": "The OTA Piers the Ploughman's Crede text associated with accession A*-1047-A/current item 1047."},
+        "notes": "The relation records the U-M header's explicit OTA accession and the corresponding current OTA text. The header says made available through OTA rather than documenting a directional re-encoding, so the graph does not claim that today's OTA wrapper is byte-identical to or directly upstream of the 1996 U-M file."
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repository-xml", "evidence:ota-record", "evidence:ota-header"]}
+    },
+    {
+      "id": "relation:ota-encoded-from-greenwood",
+      "type": "encoded_from",
+      "subject": "encoding:ota:1047",
+      "object": "edition:greenwood:1969",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete OTA Crede transcription."},
+        "object": {"kind": "part", "description": "The Crede text within the Greenwood reprint.", "locators": ["reprinted Skeat text, printed pages 1-32"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-header"]}
+    },
+    {
+      "id": "relation:greenwood-version-skeat",
+      "type": "version_of",
+      "subject": "edition:greenwood:1969",
+      "object": "edition:skeat:1867",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The 1969 Greenwood reprint."},
+        "object": {"kind": "whole", "description": "Skeat's 1867 EETS Original Series 30 edition."}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-header", "evidence:greenwood-record"]}
+    },
+    {
+      "id": "relation:skeat-transcribes-trinity",
+      "type": "transcribes",
+      "subject": "edition:skeat:1867",
+      "object": "witness:trinity-r3.15",
+      "scope": {
+        "subject": {"kind": "part", "description": "The edited Crede text.", "locators": ["printed pages 1-32", "printed lines 1-855"]},
+        "object": {"kind": "part", "description": "The complete Crede witness.", "locators": ["fols. 317r-328r", "IIIF canvases 629-651"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-preface", "evidence:trinity-catalog"]}
+    },
+    {
+      "id": "relation:skeat-collates-royal",
+      "type": "collated_against",
+      "subject": "edition:skeat:1867",
+      "object": "witness:royal-18-b-xvii",
+      "scope": {
+        "subject": {"kind": "part", "description": "The edited Crede text and apparatus.", "locators": ["printed pages 1-55"]},
+        "object": {"kind": "part", "description": "The complete Royal Crede witness.", "locators": ["fols. 1r-13v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-preface", "evidence:royal-catalog"]}
+    },
+    {
+      "id": "relation:skeat-collates-wolfe",
+      "type": "collated_against",
+      "subject": "edition:skeat:1867",
+      "object": "print:wolfe:1553",
+      "scope": {
+        "subject": {"kind": "part", "description": "The edited Crede text and apparatus.", "locators": ["printed pages 1-55"]},
+        "object": {"kind": "whole", "description": "The complete 1553 printed Crede."}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-preface", "evidence:folger-wolfe"]}
+    },
+    {
+      "id": "relation:skeat-consulted-wright",
+      "type": "consulted",
+      "subject": "edition:skeat:1867",
+      "object": "edition:wright:1856",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Skeat's Crede edition."},
+        "object": {"kind": "part", "description": "Wright's Crede text and notes.", "locators": ["volume II, printed pages 451-501 and 565-587"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-preface", "evidence:wright-scan"], "notes": "Skeat calls Wright's second edition very good and useful and says it was of very great service."}
+    },
+    {
+      "id": "relation:trinity-copied-common-exemplar",
+      "type": "copied_from",
+      "subject": "witness:trinity-r3.15",
+      "object": "witness:skeat-common-exemplar",
+      "scope": {
+        "subject": {"kind": "part", "description": "The complete Trinity Crede copy.", "locators": ["fols. 317r-328r"]},
+        "object": {"kind": "whole", "description": "Skeat's hypothetical common exemplar of the poem."}
+      },
+      "assertion": {"status": "tentative", "confidence": "medium", "evidence_ids": ["evidence:skeat-preface"], "notes": "This is Skeat's reconstructed stemma, not a confirmed surviving source."}
+    },
+    {
+      "id": "relation:royal-copied-common-exemplar",
+      "type": "copied_from",
+      "subject": "witness:royal-18-b-xvii",
+      "object": "witness:skeat-common-exemplar",
+      "scope": {
+        "subject": {"kind": "part", "description": "The complete Royal Crede copy.", "locators": ["fols. 1r-13v"]},
+        "object": {"kind": "whole", "description": "Skeat's hypothetical common exemplar of the poem."}
+      },
+      "assertion": {"status": "tentative", "confidence": "medium", "evidence_ids": ["evidence:skeat-preface"], "notes": "This is Skeat's reconstructed stemma, not a confirmed surviving source."}
+    },
+    {
+      "id": "relation:wolfe-copied-common-exemplar",
+      "type": "copied_from",
+      "subject": "print:wolfe:1553",
+      "object": "witness:skeat-common-exemplar",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete 1553 printed Crede."},
+        "object": {"kind": "whole", "description": "Skeat's hypothetical common exemplar of the poem."}
+      },
+      "assertion": {"status": "tentative", "confidence": "medium", "evidence_ids": ["evidence:skeat-preface"], "notes": "This is Skeat's reconstructed stemma, not a confirmed surviving source."}
+    },
+    {
+      "id": "relation:skeat-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:skeat-ia",
+      "object": "edition:skeat:1867",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete Internet Archive scan object."},
+        "object": {"kind": "whole", "description": "The complete 1867 EETS volume."}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-scan", "evidence:skeat-ia-metadata"]}
+    },
+    {
+      "id": "relation:wright-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:wright-ia",
+      "object": "edition:wright:1856",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete scanned volume II."},
+        "object": {"kind": "part", "description": "Volume II of Wright's two-volume 1856 edition."}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wright-scan", "evidence:wright-ia-metadata"]}
+    },
+    {
+      "id": "relation:wright-volume-1-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:wright-ia-volume-1",
+      "object": "edition:wright:1856",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete scanned volume I."},
+        "object": {"kind": "part", "description": "Volume I of Wright's two-volume 1856 edition, including its historical introduction."},
+        "notes": "The target poem is printed in volume II; volume I discusses it at printed pages xxiv-xxv and xxxvi-xxxvii."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-volume-1-ia-metadata"]}
+    },
+    {
+      "id": "relation:trinity-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:trinity-iiif",
+      "object": "witness:trinity-r3.15",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The complete 656-canvas IIIF object."},
+        "object": {"kind": "whole", "description": "The complete codex represented by the provider's IIIF sequence."},
+        "notes": "The work itself is canvases 629-651, labeled fols. 317r-328r."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"]}
+    },
+    {
+      "id": "relation:medictionary-version-umich",
+      "type": "version_of",
+      "subject": "encoding:medictionary:pplcreed",
+      "object": "encoding:umich:pplcreed",
+      "scope": {
+        "subject": {"kind": "whole", "description": "The current MEDictionary XML text."},
+        "object": {"kind": "whole", "description": "The U-M PPlCreed electronic text."}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:medictionary-xml", "evidence:text-stream-comparison"], "notes": "The 856 L-element text streams are exact matches, but the current wrappers and rights notices differ."}
+    },
+    {
+      "id": "relation:dimev-describes-trinity",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1086",
+      "object": "witness:trinity-r3.15",
+      "scope": {"subject": {"kind": "part", "description": "The Trinity witness entry in record 1086."}, "object": {"kind": "part", "description": "The Crede copy in Trinity R.3.15."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-record"]}
+    },
+    {
+      "id": "relation:dimev-describes-royal",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1086",
+      "object": "witness:royal-18-b-xvii",
+      "scope": {"subject": {"kind": "part", "description": "The Royal witness entry in record 1086."}, "object": {"kind": "part", "description": "The complete Crede copy in Royal 18 B XVII."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-record", "evidence:royal-catalog"], "notes": "The record identifies the correct witness but its copied Lines 172-207 only note conflicts with its own complete locators and the official catalog."}
+    },
+    {
+      "id": "relation:dimev-describes-harley",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1086",
+      "object": "witness:harley-78",
+      "scope": {"subject": {"kind": "part", "description": "The Harley witness entry in record 1086."}, "object": {"kind": "part", "description": "The lines 172-207 fragment.", "locators": ["fol. 3r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-record", "evidence:harley-catalog"]}
+    },
+    {
+      "id": "relation:dimev-describes-wolfe",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1086",
+      "object": "print:wolfe:1553",
+      "scope": {"subject": {"kind": "part", "description": "The 1553 print entry in record 1086."}, "object": {"kind": "whole", "description": "The complete 1553 Wolfe print."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-record", "evidence:folger-wolfe"]}
+    },
+    {
+      "id": "relation:dean-transcribes-trinity",
+      "type": "transcribes",
+      "subject": "edition:dean:1991",
+      "object": "witness:trinity-r3.15",
+      "scope": {"subject": {"kind": "part", "description": "Dean's edited Crede text.", "locators": ["downloadable PDF pages 9-35"]}, "object": {"kind": "part", "description": "The complete Trinity Crede copy.", "locators": ["fols. 317r-328r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:dean-collates-royal",
+      "type": "collated_against",
+      "subject": "edition:dean:1991",
+      "object": "witness:royal-18-b-xvii",
+      "scope": {"subject": {"kind": "part", "description": "Dean's edited Crede text and notes."}, "object": {"kind": "part", "description": "The complete Royal Crede copy.", "locators": ["fols. 1r-13v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:dean-collates-wolfe",
+      "type": "collated_against",
+      "subject": "edition:dean:1991",
+      "object": "print:wolfe:1553",
+      "scope": {"subject": {"kind": "part", "description": "Dean's edited Crede text and notes."}, "object": {"kind": "whole", "description": "The 1553 Wolfe print."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:dean-consults-wright",
+      "type": "consulted",
+      "subject": "edition:dean:1991",
+      "object": "edition:wright:1856",
+      "scope": {"subject": {"kind": "whole", "description": "Dean's Crede edition."}, "object": {"kind": "part", "description": "Wright's Crede edition in volume II."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:dean-consults-skeat",
+      "type": "consulted",
+      "subject": "edition:dean:1991",
+      "object": "edition:skeat:1867",
+      "scope": {"subject": {"kind": "whole", "description": "Dean's Crede edition."}, "object": {"kind": "whole", "description": "Skeat's Crede edition."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:dean-download-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:dean-download",
+      "object": "edition:dean:1991",
+      "scope": {"subject": {"kind": "whole", "description": "The complete downloadable Six Ecclesiastical Satires PDF."}, "object": {"kind": "whole", "description": "The complete 1991 edition as currently represented by METS."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dean-edition"]}
+    },
+    {
+      "id": "relation:trinity-catalog-describes",
+      "type": "describes",
+      "subject": "catalog:trinity-r3.15",
+      "object": "witness:trinity-r3.15",
+      "scope": {"subject": {"kind": "whole", "description": "The complete official catalog record."}, "object": {"kind": "whole", "description": "The complete manuscript."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:trinity-catalog"]}
+    },
+    {
+      "id": "relation:royal-catalog-describes",
+      "type": "describes",
+      "subject": "catalog:bl-royal-18-b-xvii",
+      "object": "witness:royal-18-b-xvii",
+      "scope": {"subject": {"kind": "whole", "description": "The complete official catalog record."}, "object": {"kind": "whole", "description": "The complete manuscript."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:royal-catalog"]}
+    },
+    {
+      "id": "relation:harley-catalog-describes",
+      "type": "describes",
+      "subject": "catalog:bl-harley-78",
+      "object": "witness:harley-78",
+      "scope": {"subject": {"kind": "whole", "description": "The complete official catalog record."}, "object": {"kind": "whole", "description": "The complete composite manuscript."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:harley-catalog"]}
+    },
+    {
+      "id": "relation:folger-catalog-describes",
+      "type": "describes",
+      "subject": "catalog:folger-stc19904",
+      "object": "print:wolfe:1553",
+      "scope": {"subject": {"kind": "whole", "description": "The complete public vendor catalog record."}, "object": {"kind": "whole", "description": "The 1553 Wolfe print."}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:folger-wolfe"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:pplcreed-xml",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Read the pinned XML in the CME git submodule.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/PPlCreed.xml",
+      "repository_path": "CME/source/CME_phase_1-2/PPlCreed.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repository-xml"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich:pplcreed",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the exact U-M item and select full text or a table-of-contents section.",
+      "url": "https://quod.lib.umich.edu/c/cme/pplcreed",
+      "alternate_urls": ["https://name.umdl.umich.edu/PPlCreed"],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:ota-files",
+      "entity": "encoding:ota:1047",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the current plain text and TEI header from the OTA item record.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1047",
+      "alternate_urls": [
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1047/piercrede-1047.txt?isAllowed=y&sequence=4",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1047/header1047.xml?isAllowed=y&sequence=3"
+      ],
+      "local_copies": [
+        {
+          "label": "Current OTA plain text",
+          "path": "source-cache/PPlCreed/ota-1047-piercrede-current.txt",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1047/piercrede-1047.txt?isAllowed=y&sequence=4",
+          "sha256": "ac6a24b177afebcd2d1e73f4bb1377ee2e928c5be39e4e3e31aa7bf53e8e2b52",
+          "bytes": 44951,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Current OTA TEI header",
+          "path": "source-cache/PPlCreed/ota-1047-header.xml",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1047/header1047.xml?isAllowed=y&sequence=3",
+          "sha256": "88a8e766c6282ff762baa89a82448788582f6926e4ae0fb18e03bb4af84dc18e",
+          "bytes": 5436,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Plain text and TEI XML header",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-record", "evidence:ota-header"]
+    },
+    {
+      "id": "access:medictionary-xml",
+      "entity": "encoding:medictionary:pplcreed",
+      "provider_id": "agent:medictionary",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the current XML directly.",
+      "url": "https://www.medictionary.info/texts/PPlCreed.xml",
+      "local_copies": [
+        {
+          "label": "Current MEDictionary PPlCreed XML",
+          "path": "source-cache/PPlCreed/medictionary-pplcreed-current.xml",
+          "source_url": "https://www.medictionary.info/texts/PPlCreed.xml",
+          "sha256": "2b9bf739cad9e076ddec7a2c42601e05c929f6f1636dc412d4f9874bfb8afd8a",
+          "bytes": 62918,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:medictionary-xml"]
+    },
+    {
+      "id": "access:greenwood-record",
+      "entity": "edition:greenwood:1969",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the Finna union-catalog record; request or purchase a physical copy through a holding library or bookseller.",
+      "url": "https://www.finna.fi/Record/jykdok.226287",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:greenwood-record"],
+      "notes": ["No openly downloadable scan of the 1969 reprint was verified; the older 1867 edition is publicly available in full."]
+    },
+    {
+      "id": "access:skeat-scan",
+      "entity": "facsimile:skeat-ia",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete EETS volume, OCR, or item metadata from Internet Archive.",
+      "url": "https://archive.org/details/pierceploughmans00skeauoft",
+      "alternate_urls": [
+        "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+        "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft_djvu.txt",
+        "https://archive.org/metadata/pierceploughmans00skeauoft"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Skeat 1867 EETS volume",
+          "path": "source-cache/PPlCreed/skeat-1867-pierce-ploughmans-crede-eets-os30-complete.pdf",
+          "source_url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+          "sha256": "33af049df5c5af17e884a6291c3f8d490b7c31e1655874bdac67065e257d7bb0",
+          "bytes": 8000593,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Piers the Plowman's Crede text and notes",
+            "locators": ["PDF pages 41-72: printed text pages 1-32", "PDF pages 73-95: printed notes pages 33-55"],
+            "notes": ["PDF page 72 / printed page 32 contains the running head, printed lines 847-855, and AMEN."]
+          }
+        },
+        {
+          "label": "Skeat 1867 OCR text",
+          "path": "source-cache/PPlCreed/skeat-1867-ocr.txt",
+          "source_url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft_djvu.txt",
+          "sha256": "a8dd7d264aff107b89f1d419c67c22866fab7303aa155deea5998bbcf2ac8b0f",
+          "bytes": 272522,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Skeat 1867 Internet Archive item metadata",
+          "path": "source-cache/PPlCreed/skeat-1867-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/pierceploughmans00skeauoft",
+          "sha256": "36d5892ace705311e070db00e7a13e9e53d3ee30527a459f26b02e6e3d231a81",
+          "bytes": 6101,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, and JSON metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:skeat-scan", "evidence:skeat-ia-metadata"]
+    },
+    {
+      "id": "access:wright-scan",
+      "entity": "facsimile:wright-ia",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete scanned second volume, OCR, or item metadata from Internet Archive.",
+      "url": "https://archive.org/details/visionandcreedp04wriggoog",
+      "alternate_urls": [
+        "https://archive.org/download/visionandcreedp04wriggoog/visionandcreedp04wriggoog.pdf",
+        "https://archive.org/download/visionandcreedp04wriggoog/visionandcreedp04wriggoog_djvu.txt",
+        "https://archive.org/metadata/visionandcreedp04wriggoog"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Wright 1856 volume II",
+          "path": "source-cache/PPlCreed/wright-1856-vision-and-creed-complete.pdf",
+          "source_url": "https://archive.org/download/visionandcreedp04wriggoog/visionandcreedp04wriggoog.pdf",
+          "sha256": "e82dad27e13bdc5629f05e4ad9e8d7dbba924c3b53e89182c4e001db507a5c1e",
+          "bytes": 7778331,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Piers Ploughman's Creed in volume II",
+            "locators": ["PDF page 180: separate Creed title leaf", "PDF pages 182-232: printed text pages 451-501", "PDF pages 296-318: printed Creed notes pages 565-587"]
+          },
+          "notes": ["Complete coverage refers to the scanned volume II source entity, not both volumes of Wright's two-volume edition."]
+        },
+        {
+          "label": "Wright 1856 OCR text",
+          "path": "source-cache/PPlCreed/wright-1856-ocr.txt",
+          "source_url": "https://archive.org/download/visionandcreedp04wriggoog/visionandcreedp04wriggoog_djvu.txt",
+          "sha256": "aa63d4c9f6ced5ad3155e1a329402290326d873fa09b56084e610be86357ea2f",
+          "bytes": 504541,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Wright 1856 Internet Archive item metadata",
+          "path": "source-cache/PPlCreed/wright-1856-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/visionandcreedp04wriggoog",
+          "sha256": "321281cd004ef27a0076878c0f4ecc8d752cb9f6963ab13d93046e23ec292c8f",
+          "bytes": 6119,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, and JSON metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:wright-scan", "evidence:wright-ia-metadata"]
+    },
+    {
+      "id": "access:wright-volume-1-scan",
+      "entity": "facsimile:wright-ia-volume-1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete scanned first volume, OCR, or item metadata from Internet Archive.",
+      "url": "https://archive.org/details/PiersPloughmanWright2nd1",
+      "alternate_urls": [
+        "https://archive.org/download/PiersPloughmanWright2nd1/Piers_Ploughman_Wright_2nd_1.pdf",
+        "https://archive.org/download/PiersPloughmanWright2nd1/Piers_Ploughman_Wright_2nd_1_djvu.txt",
+        "https://archive.org/metadata/PiersPloughmanWright2nd1"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Wright 1856 volume I",
+          "path": "source-cache/PPlCreed/wright-1856-volume-1-complete.pdf",
+          "source_url": "https://archive.org/download/PiersPloughmanWright2nd1/Piers_Ploughman_Wright_2nd_1.pdf",
+          "sha256": "571e35af6af87cb05b4a904e1a895966579fc920441cc2ae380f924a85dc49a3",
+          "bytes": 6456823,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["The poem itself is printed in volume II. Volume I discusses its subject and dating at printed pages xxiv-xxv (PDF pages 32-33) and witnesses and early prints at printed pages xxxvi-xxxvii (PDF pages 44-45)."]
+        },
+        {
+          "label": "Wright 1856 volume I OCR text",
+          "path": "source-cache/PPlCreed/wright-1856-volume-1-ocr.txt",
+          "source_url": "https://archive.org/download/PiersPloughmanWright2nd1/Piers_Ploughman_Wright_2nd_1_djvu.txt",
+          "sha256": "3f2069d7669b41b272870d0716e0387cba50d4daf46cdc1d4278f487fd75348b",
+          "bytes": 336347,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["OCR of volume I; the poem itself is printed in volume II."]
+        },
+        {
+          "label": "Wright 1856 volume I Internet Archive item metadata",
+          "path": "source-cache/PPlCreed/wright-1856-volume-1-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/PiersPloughmanWright2nd1",
+          "sha256": "a596bd8e0b4723df46193e4002f07240f6370764ffe05133becabad43a55ba51",
+          "bytes": 5433,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, and JSON metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-volume-1-ia-metadata"]
+    },
+    {
+      "id": "access:trinity-catalog",
+      "entity": "catalog:trinity-r3.15",
+      "provider_id": "agent:trinity-college",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the official manuscript catalog record.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15",
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:trinity-catalog"]
+    },
+    {
+      "id": "access:trinity-iiif",
+      "entity": "facsimile:trinity-iiif",
+      "provider_id": "agent:trinity-college",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Use the complete IIIF manifest or direct Image API services; the local ZIP was assembled from all 656 canvases.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15/manifest.json",
+      "alternate_urls": [
+        "https://mss-cat.trin.cam.ac.uk:8183/iiif/2/R.3.15%2F629_R.3.15_f317r.jp2/full/1200,/0/default.jpg",
+        "https://mss-cat.trin.cam.ac.uk:8183/iiif/2/R.3.15%2F651_R.3.15_f328r.jp2/full/1200,/0/default.jpg"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Trinity R.3.15 IIIF bundle at 1200-pixel width",
+          "path": "source-cache/PPlCreed/trinity-r3.15-complete-iiif-1200px.zip",
+          "source_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15/manifest.json",
+          "sha256": "cf51469684f04dd353f1f62bbcfedf0895d2ae01c9e1af3d915fd64adf8d9e1c",
+          "bytes": 883370503,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 656,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Piers the Plowman's Crede",
+            "locators": ["IIIF canvases 629-651", "image labels fols. 317r-328r"],
+            "start_url": "https://mss-cat.trin.cam.ac.uk:8183/iiif/2/R.3.15%2F629_R.3.15_f317r.jp2/full/1200,/0/default.jpg",
+            "end_url": "https://mss-cat.trin.cam.ac.uk:8183/iiif/2/R.3.15%2F651_R.3.15_f328r.jp2/full/1200,/0/default.jpg",
+            "notes": ["Canvas 629/f317r begins Cros and curteis Crist; canvas 651/f328r ends the concluding prayer and Amen; canvas 652/f328v is blank after the work."]
+          },
+          "notes": ["ZIP members: manifest.json, inventory.json, and 656 JPEG images; 658 members total."]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation manifest and JPEG derivatives",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"]
+    },
+    {
+      "id": "access:royal-catalog",
+      "entity": "catalog:bl-royal-18-b-xvii",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the exact British Library archive catalog record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107511",
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:royal-catalog"]
+    },
+    {
+      "id": "access:royal-physical",
+      "entity": "witness:royal-18-b-xvii",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Apply for British Library manuscript access in London; the catalog states that a letter of introduction is required.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107511",
+      "contact": "British Library Manuscripts reading-room services",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:royal-catalog"]
+    },
+    {
+      "id": "access:royal-reproduction",
+      "entity": "witness:royal-18-b-xvii",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the British Library digitisation order form for fols. 1r-13v or a larger manuscript unit; availability and quotation are determined after review.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "contact": "British Library Imaging Services online order form",
+      "cost": "fee",
+      "format": "Made-to-order digital images",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-imaging", "evidence:royal-catalog"],
+      "notes": ["No complete public page-image surrogate was found. Reproduction permission and provider terms must be checked separately from ordering access."]
+    },
+    {
+      "id": "access:harley-catalog",
+      "entity": "catalog:bl-harley-78",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the exact British Library archive catalog record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002045906",
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:harley-catalog"]
+    },
+    {
+      "id": "access:harley-legacy-images",
+      "entity": "witness:harley-78",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The legacy item-viewer URL was checked, but images were not currently served.",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100193040371.0x000001",
+      "cost": "unknown",
+      "format": "Legacy image viewer",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:harley-catalog"],
+      "notes": ["This unavailable viewer should not be presented as a verified public facsimile."]
+    },
+    {
+      "id": "access:harley-physical",
+      "entity": "witness:harley-78",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Apply for British Library manuscript access in London.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002045906",
+      "contact": "British Library Manuscripts reading-room services",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:harley-catalog"]
+    },
+    {
+      "id": "access:harley-reproduction",
+      "entity": "witness:harley-78",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the British Library digitisation order form for the full manuscript or fol. 3r; availability and quotation are determined after review.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "contact": "British Library Imaging Services online order form",
+      "cost": "fee",
+      "format": "Made-to-order digital images",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:bl-imaging", "evidence:harley-catalog"]
+    },
+    {
+      "id": "access:wolfe-catalog",
+      "entity": "catalog:folger-stc19904",
+      "provider_id": "agent:folger-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the public Folger vendor record for bibliographic details and the EEBO link.",
+      "url": "https://catalog.folger.edu/record/427810",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:folger-wolfe"]
+    },
+    {
+      "id": "access:wolfe-eebo",
+      "entity": "print:wolfe:1553",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Use an institution or personal account with access to ProQuest Early English Books Online.",
+      "url": "https://search.proquest.com/docview/2240914953/?accountid=10923",
+      "cost": "unknown",
+      "format": "Restricted digital reproduction",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:folger-wolfe"],
+      "notes": ["The Folger record identifies the reproduction as based on a Huntington Library original. No unrestricted complete facsimile was verified."]
+    },
+    {
+      "id": "access:common-exemplar",
+      "entity": "witness:skeat-common-exemplar",
+      "resource_kind": "physical_manuscript",
+      "status": "no_public_copy_found",
+      "access_method": "No physical object is identified; consult Skeat's stemmatic discussion.",
+      "url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+      "cost": "not_applicable",
+      "format": "Hypothetical source only",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:skeat-preface"]
+    },
+    {
+      "id": "access:dimev-download",
+      "entity": "catalog:dimev:record-1086",
+      "provider_id": "agent:dimev",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the versioned DIMEV 2.0-alpha.1 release ZIP from Zenodo and inspect data/Records.xml record-1086.",
+      "url": "https://zenodo.org/records/20850921",
+      "alternate_urls": ["https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content"],
+      "local_copies": [
+        {
+          "label": "DIMEV 2.0-alpha.1 release ZIP",
+          "path": "source-cache/PPlCreed/dimev-2.0-alpha.1.zip",
+          "source_url": "https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content",
+          "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a",
+          "bytes": 3884746,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "DIMEV record for Piers the Plowman's Crede",
+            "locators": ["data/Records.xml: record-1086"]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "ZIP containing XML/CSV data and project documentation",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dimev-record"]
+    },
+    {
+      "id": "access:dean-web",
+      "entity": "edition:dean:1991",
+      "provider_id": "agent:mets",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the edition introduction, text, and notes on the METS website.",
+      "url": "https://metseditions.org/editions/LZqD3xXu953XSAbWfjxKQHWE5R1Rw7M",
+      "alternate_urls": [
+        "https://metseditions.org/read/GeD3MQRCYdwPI87MI8W08fdM1Wv1VGL",
+        "https://metseditions.org/read/4KMNqWVIvbptxLPIv20XFQb6v6dmX9"
+      ],
+      "cost": "free",
+      "format": "HTML digital edition",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dean-edition"]
+    },
+    {
+      "id": "access:dean-pdf",
+      "entity": "facsimile:dean-download",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete edition PDF from the METS storage endpoint.",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/1f05cf5e-adeb-4098-a5ef-e60ea3c037fd/downloadable_version/44471be6c26b949ac6e94881cf10e56c.pdf",
+      "local_copies": [
+        {
+          "label": "Complete METS PDF of Six Ecclesiastical Satires",
+          "path": "source-cache/PPlCreed/dean-1991-six-ecclesiastical-satires-complete.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/1f05cf5e-adeb-4098-a5ef-e60ea3c037fd/downloadable_version/44471be6c26b949ac6e94881cf10e56c.pdf",
+          "sha256": "f33faaf749e64b5c22ae4f1ed0712d0ce18fe101351d07d3f8ca9f70fd9deb07",
+          "bytes": 10112931,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Piers the Plowman's Crede",
+            "locators": ["PDF pages 2-8: introduction", "PDF pages 9-35: poem", "PDF pages 36-50: notes"],
+            "notes": ["PDF page 51 is blank and the next work begins on page 52."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Image-only PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dean-edition", "evidence:mets-rights"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:artifact-historical-notice",
+      "entity": "artifact:pplcreed-xml",
+      "access_id": "access:repository-xml",
+      "component": "Historical encoded text and header notice embedded in the pinned XML",
+      "jurisdiction": "Provider notice; jurisdiction not specified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The embedded availability statement grants personal scholarly use and asks users to contact the Oxford Text Archive for other uses; it does not itself establish the underlying copyright status.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repository-xml"],
+      "notes": ["This historical notice is not silently replaced by the different current U-M item statement."]
+    },
+    {
+      "id": "rights:artifact-cme-license",
+      "entity": "artifact:pplcreed-xml",
+      "access_id": "access:repository-xml",
+      "component": "CME repository licensing layer",
+      "jurisdiction": "Worldwide dedication asserted by repository",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The CME repository publishes an Unlicense file, but its wording repeatedly says software and does not expressly resolve the scope conflict with notices embedded in individual source XML files.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:repository-xml"],
+      "notes": ["Treat the exact data-layer scope as ambiguous rather than assuming the repository license overrides every embedded notice."]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich:pplcreed",
+      "access_id": "access:umich-text",
+      "component": "Current U-M PPlCreed digital item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current U-M item displays Public Domain and No Copyright - United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "rights:ota-current",
+      "entity": "encoding:ota:1047",
+      "access_id": "access:ota-files",
+      "component": "Current OTA item 1047 encoding and files",
+      "jurisdiction": "License grant; jurisdictions subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current OTA record assigns Creative Commons Attribution-NonCommercial-ShareAlike 3.0.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported", "spdx": "CC-BY-NC-SA-3.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-record", "evidence:ota-header"]
+    },
+    {
+      "id": "rights:medictionary-current",
+      "entity": "encoding:medictionary:pplcreed",
+      "access_id": "access:medictionary-xml",
+      "component": "Current MEDictionary XML representation",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The current XML header states that the text is in the public domain in the United States.",
+      "asserted_by_id": "agent:medictionary",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:medictionary-xml"]
+    },
+    {
+      "id": "rights:greenwood-carrier",
+      "entity": "edition:greenwood:1969",
+      "component": "1969 reprint carrier and any newly added matter",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The underlying 1867 edition is public domain in the United States, but the reviewed sources did not establish the copyright status of the 1969 reprint's carrier, typography, or any new matter.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:greenwood-record", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:skeat-edition",
+      "entity": "edition:skeat:1867",
+      "component": "1867 scholarly edition text and apparatus",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1867, well before the current United States public-domain cutoff for published works.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-scan", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:skeat-scan",
+      "entity": "facsimile:skeat-ia",
+      "access_id": "access:skeat-scan",
+      "component": "Internet Archive scan files",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The item metadata links a public-domain license statement for the scan of the public-domain 1867 volume.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-ia-metadata", "evidence:skeat-scan"]
+    },
+    {
+      "id": "rights:wright-edition",
+      "entity": "edition:wright:1856",
+      "component": "1856 scholarly edition text and apparatus",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1856, well before the current United States public-domain cutoff for published works.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wright-scan", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:wright-scan",
+      "entity": "facsimile:wright-ia",
+      "access_id": "access:wright-scan",
+      "component": "Google Books / Internet Archive scan files",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The embedded Google notice identifies the book as public domain, while also requesting noncommercial use, attribution, and limits on automated querying. Internet Archive metadata supplies no separate license field.",
+      "asserted_by_id": "agent:google-books",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:wright-scan", "evidence:wright-ia-metadata"],
+      "notes": ["The provider usage notice is recorded separately from the underlying edition's public-domain status."]
+    },
+    {
+      "id": "rights:wright-volume-1-scan",
+      "entity": "facsimile:wright-ia-volume-1",
+      "access_id": "access:wright-volume-1-scan",
+      "component": "Google Books / Internet Archive volume I scan files",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "Internet Archive item metadata applies the Public Domain Mark to the volume I scan; the embedded Google delivery notice requests noncommercial use, attribution, and limits on automated querying.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-volume-1-ia-metadata"],
+      "notes": ["The provider usage notice is recorded separately from the underlying edition's public-domain status."]
+    },
+    {
+      "id": "rights:trinity-manuscript-text",
+      "entity": "witness:trinity-r3.15",
+      "component": "Historical manuscript text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The anonymous medieval work and sixteenth-century manuscript text are outside United States copyright term; modern photographs are a separate component.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:trinity-facsimile",
+      "entity": "facsimile:trinity-iiif",
+      "access_id": "access:trinity-iiif",
+      "component": "Trinity College IIIF images and manifest",
+      "jurisdiction": "License grant; jurisdictions subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The official IIIF manifest assigns Creative Commons Attribution-NonCommercial 4.0 and requires attribution to Trinity College Cambridge.",
+      "asserted_by_id": "agent:trinity-college",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"]
+    },
+    {
+      "id": "rights:royal-manuscript-text",
+      "entity": "witness:royal-18-b-xvii",
+      "component": "Historical manuscript text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The anonymous medieval work and early-sixteenth-century manuscript text are outside United States copyright term; any ordered modern images are separate components.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:royal-catalog", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:harley-manuscript-text",
+      "entity": "witness:harley-78",
+      "component": "Historical manuscript text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The anonymous medieval work and fifteenth/sixteenth-century manuscript fragment are outside United States copyright term; any ordered modern images are separate components.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley-catalog", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:bl-ordered-images",
+      "entity": "witness:royal-18-b-xvii",
+      "access_id": "access:royal-reproduction",
+      "component": "Made-to-order British Library manuscript images",
+      "jurisdiction": "Provider terms; jurisdiction depends on order and use",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "British Library Imaging Services terms require the customer to secure appropriate reproduction permission; a quotation or delivery does not itself establish redistribution rights.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-imaging"],
+      "notes": ["This record applies to a Royal 18 B XVII reproduction order; Harley 78 is recorded separately."]
+    },
+    {
+      "id": "rights:bl-harley-ordered-images",
+      "entity": "witness:harley-78",
+      "access_id": "access:harley-reproduction",
+      "component": "Made-to-order British Library manuscript images",
+      "jurisdiction": "Provider terms; jurisdiction depends on order and use",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "British Library Imaging Services terms require the customer to secure appropriate reproduction permission; a quotation or delivery does not itself establish redistribution rights.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-imaging"]
+    },
+    {
+      "id": "rights:bl-catalog-text",
+      "entity": "catalog:bl-harley-78",
+      "component": "British Library public catalog page text",
+      "jurisdiction": "License grant; jurisdictions subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The British Library catalog footer licenses catalog text under Creative Commons Attribution; manuscript images and ordered reproductions are separate.",
+      "asserted_by_id": "agent:british-library",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley-catalog", "evidence:royal-catalog"]
+    },
+    {
+      "id": "rights:wolfe-text",
+      "entity": "print:wolfe:1553",
+      "component": "1553 printed text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The print was published in 1553, well outside United States copyright term; the EEBO reproduction and subscription access are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:folger-wolfe", "evidence:usco-circular-15a"]
+    },
+    {
+      "id": "rights:wolfe-eebo",
+      "entity": "print:wolfe:1553",
+      "access_id": "access:wolfe-eebo",
+      "component": "EEBO digital reproduction and access service",
+      "jurisdiction": "Provider terms; jurisdiction depends on subscription",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The reviewed public record offers the image reproduction only through a ProQuest subscription link and does not grant public redistribution rights.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:folger-wolfe"]
+    },
+    {
+      "id": "rights:dimev",
+      "entity": "catalog:dimev:record-1086",
+      "access_id": "access:dimev-download",
+      "component": "DIMEV 2.0-alpha.1 dataset and documentation",
+      "jurisdiction": "License grant; jurisdictions subject to license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The release's CITATION.cff, LICENSE, and README assign Creative Commons Attribution 4.0.",
+      "asserted_by_id": "agent:dimev",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-record"]
+    },
+    {
+      "id": "rights:dean-edition",
+      "entity": "edition:dean:1991",
+      "access_id": "access:dean-web",
+      "component": "Dean's modern edition, introduction, notes, and web presentation",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "METS states that digital editions are for individual use and directs users seeking to reprint an edition to its Executive Director; it separately licenses XML under CC BY-NC-SA 4.0.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-rights", "evidence:dean-edition"],
+      "notes": ["The CC BY-NC-SA 4.0 XML license should not be generalized to the downloadable PDF or all edition components without checking the delivered format and terms."]
+    },
+    {
+      "id": "rights:dean-pdf",
+      "entity": "facsimile:dean-download",
+      "access_id": "access:dean-pdf",
+      "component": "Downloadable METS PDF",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The PDF is a modern-edition surrogate offered under METS's individual-use and reprint-permission statement; no separate open license was displayed for the PDF.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-rights", "evidence:dean-edition"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich:pplcreed",
+      "practice": "selection",
+      "source_feature": "Skeat's complete volume includes front matter, critical notes, glossary matter, and the separate poem God Spede the Plough.",
+      "representation": "The electronic edition retains the Crede text but omits printed front matter and editorial notes.",
+      "description": "The U-M header explicitly limits the encoded selection; the XML must not be described as a complete transcription of the EETS volume.",
+      "scope": "Skeat 1867 volume to the PPlCreed digital item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repository-xml", "evidence:skeat-scan"]
+    },
+    {
+      "id": "practice:umich-caesura",
+      "entity": "encoding:umich:pplcreed",
+      "practice": "punctuation_normalization",
+      "source_feature": "Skeat's lineation and caesura marking at printed lines 69 and 444.",
+      "representation": "The header says a caesura was supplied at line 69 and that the print has no caesura at line 444.",
+      "description": "Two explicit caesura decisions were made at the encoding layer.",
+      "scope": "Printed/XML lines 69 and 444",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repository-xml"]
+    },
+    {
+      "id": "practice:skeat-abbreviations",
+      "entity": "edition:skeat:1867",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Abbreviated forms in the Trinity base manuscript.",
+      "representation": "Skeat expands abbreviations and prints supplied letters in italics.",
+      "description": "Italic letters in Skeat are editorially supplied expansions, not a direct reproduction of manuscript italic script.",
+      "scope": "Crede text, printed pages 1-32",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-preface"]
+    },
+    {
+      "id": "practice:skeat-capitalization",
+      "entity": "edition:skeat:1867",
+      "practice": "capitalization_normalization",
+      "source_feature": "Manuscript capitalization.",
+      "representation": "Skeat capitalizes proper names editorially.",
+      "description": "The edition's capitalization is not wholly diplomatic.",
+      "scope": "Crede text, printed pages 1-32",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-preface"]
+    },
+    {
+      "id": "practice:skeat-collation",
+      "entity": "edition:skeat:1867",
+      "practice": "collation",
+      "source_feature": "Readings in Trinity R.3.15, Royal 18 B XVII, and the 1553 Wolfe print.",
+      "representation": "Trinity supplies the base text; Royal and Wolfe readings are used or reported through collation.",
+      "description": "The edition is not an unmediated facsimile or single-witness transcription even though Trinity is its base.",
+      "scope": "Crede text and notes, printed pages 1-55",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-preface"]
+    },
+    {
+      "id": "practice:dean-collation",
+      "entity": "edition:dean:1991",
+      "practice": "collation",
+      "source_feature": "Trinity microfilm, Royal manuscript, 1553 Wolfe print, and earlier Wright and Skeat editions.",
+      "representation": "Dean uses Trinity as base, corrects it from Royal and Wolfe, and consults Wright and Skeat.",
+      "description": "Dean's 850-line modern edition is an independently mediated supporting edition, not the repository artifact's source.",
+      "scope": "Piers the Plowman's Crede introduction, text, and notes",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dean-edition"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repository-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_1-2/PPlCreed.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/PPlCreed.xml",
+      "locator": "HEADER; BODY; DIV1.1-2; all DIV2, HEAD, L, and CLOSER elements",
+      "summary": "The exact source identifies the May 1996 U-M electronic edition, OTA A*-1047-A, Skeat 1867, selection and editorial declarations, embedded historical availability notice, and complete text structure.",
+      "accessed_on": "2026-07-15",
+      "sha256": "815c167eb08d927ade85f8a2d06a72dc15b20d1b29ac68716ef8bf557578c8c9"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME repository LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "Complete Unlicense text",
+      "summary": "The repository publishes the Unlicense, whose dedication and permission language repeatedly identifies its subject as software; the exact application to legacy text data with embedded notices is not stated.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+      "notes": ["Git blob fdddb29aa445bf3d6a5d843d6dd77e10a9f99657."]
+    },
+    {
+      "id": "evidence:lineation-audit",
+      "type": "repository_file",
+      "citation": "Direct structural audit of PPlCreed.xml against Skeat's 1867 printed text, performed 15 July 2026.",
+      "url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+      "repository_path": "CME/source/CME_phase_1-2/PPlCreed.xml",
+      "locator": "XML L/@N 1-856 and CLOSER; Skeat PDF pages 71-72 / printed pages 31-32",
+      "summary": "The audit established 855 printed verse lines; intrusive running head at XML L 847; XML L 848-856 mapping to printed lines 847-855; terminal AMEN preserved as CLOSER; DIV1 boundaries at 1-794 and 795-856; and the supplied 101-200 heading's actual L 101-201 extent.",
+      "accessed_on": "2026-07-15",
+      "sha256": "815c167eb08d927ade85f8a2d06a72dc15b20d1b29ac68716ef8bf557578c8c9"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, PPlCreed, Pierce the Ploughmans Crede [electronic edition].",
+      "url": "https://quod.lib.umich.edu/c/cme/pplcreed",
+      "alternate_urls": ["https://name.umdl.umich.edu/PPlCreed"],
+      "locator": "Bibliographic information, table of contents, full text, and rights statement",
+      "summary": "The exact current item confirms the identifier, Skeat source, OTA number, public full text, two-part structure, and current Public Domain / No Copyright - United States statement.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-record",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 1047, Piers the Ploughman's Crede.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1047",
+      "locator": "Item metadata, depositor, deposit date, license, and bitstreams",
+      "summary": "The official record identifies Helen Barr as compiler/depositor, gives a 1 February 1987 deposit, maps the current item number 1047, exposes plain-text and header bitstreams, and assigns CC BY-NC-SA 3.0.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-header",
+      "type": "edition_statement",
+      "citation": "Oxford Text Archive item 1047, current TEI header, header1047.xml.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/1047/header1047.xml?isAllowed=y&sequence=3",
+      "locator": "fileDesc/sourceDesc and revisionDesc",
+      "summary": "The header says the text was transcribed from Greenwood Press, New York, 1969, an EETS Original Series 30 reprint first published by Trübner in London in 1867; it also records later header processing.",
+      "accessed_on": "2026-07-15",
+      "sha256": "88a8e766c6282ff762baa89a82448788582f6926e4ae0fb18e03bb4af84dc18e"
+    },
+    {
+      "id": "evidence:medictionary-xml",
+      "type": "digital_surrogate",
+      "citation": "MEDictionary, current PPlCreed.xml.",
+      "url": "https://www.medictionary.info/texts/PPlCreed.xml",
+      "locator": "ETS header and complete text",
+      "summary": "The current XML has a generic CME00000 wrapper, public-domain wording, and the same 856 L-element content stream as the repository XML.",
+      "accessed_on": "2026-07-15",
+      "sha256": "2b9bf739cad9e076ddec7a2c42601e05c929f6f1636dc412d4f9874bfb8afd8a"
+    },
+    {
+      "id": "evidence:text-stream-comparison",
+      "type": "repository_file",
+      "citation": "Deterministic comparison of normalized L-element text from the repository and current MEDictionary XML representations, performed 15 July 2026.",
+      "repository_path": "CME/source/CME_phase_1-2/PPlCreed.xml",
+      "locator": "All 856 L elements in document order",
+      "summary": "Both representations yield the exact same joined L-element string with SHA-256 dbdf9154000ac35d77aa8dcffbfad35dd8b2ddedd6e974c207c6a6993bb2ffed; wrapper metadata and rights language remain different.",
+      "accessed_on": "2026-07-15",
+      "sha256": "815c167eb08d927ade85f8a2d06a72dc15b20d1b29ac68716ef8bf557578c8c9"
+    },
+    {
+      "id": "evidence:greenwood-record",
+      "type": "official_catalog",
+      "citation": "Finna union catalog, Pierce the Ploughmans Crede, Greenwood Press 1969 reprint record.",
+      "url": "https://www.finna.fi/Record/jykdok.226287",
+      "summary": "The catalog record supports the 1969 Greenwood Press bibliographic layer as a reprint of Skeat's EETS edition.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:skeat-scan",
+      "type": "digital_surrogate",
+      "citation": "Walter W. Skeat, ed., Pierce the Ploughmans Crede, EETS Original Series 30 (London: N. Trübner & Co., 1867), complete Internet Archive scan.",
+      "url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+      "alternate_urls": ["https://archive.org/details/pierceploughmans00skeauoft"],
+      "locator": "PDF pages 41-72 / printed pages 1-32; PDF pages 73-95 / printed pages 33-55",
+      "summary": "The complete source edition supplies the 855-line Crede text, running head and final AMEN, notes, bibliographic statement, and appendage outside the work boundary.",
+      "accessed_on": "2026-07-15",
+      "sha256": "33af049df5c5af17e884a6291c3f8d490b7c31e1655874bdac67065e257d7bb0"
+    },
+    {
+      "id": "evidence:skeat-preface",
+      "type": "edition_statement",
+      "citation": "Walter W. Skeat, editorial preface and manuscript discussion in Pierce the Ploughmans Crede (1867).",
+      "url": "https://archive.org/download/pierceploughmans00skeauoft/pierceploughmans00skeauoft.pdf",
+      "locator": "Title page, preface, manuscript account, and editorial-method statements before printed page 1",
+      "summary": "Skeat identifies Trinity R.3.15 as base, Royal 18 B XVII and the 1553 print as collated witnesses, Wright 1856 as a major aid, abbreviation expansions in italics, proper-name capitalization, and a reconstructed common exemplar behind his three textual witnesses.",
+      "accessed_on": "2026-07-15",
+      "sha256": "33af049df5c5af17e884a6291c3f8d490b7c31e1655874bdac67065e257d7bb0"
+    },
+    {
+      "id": "evidence:skeat-ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for pierceploughmans00skeauoft.",
+      "url": "https://archive.org/metadata/pierceploughmans00skeauoft",
+      "summary": "Item metadata identifies the scan object and its public-domain license link.",
+      "accessed_on": "2026-07-15",
+      "sha256": "36d5892ace705311e070db00e7a13e9e53d3ee30527a459f26b02e6e3d231a81"
+    },
+    {
+      "id": "evidence:wright-scan",
+      "type": "digital_surrogate",
+      "citation": "Thomas Wright, ed., The Vision and Creed of Piers Ploughman, 2nd rev. ed., vol. II (London: John Russell Smith, 1856), complete Internet Archive / Google Books scan.",
+      "url": "https://archive.org/download/visionandcreedp04wriggoog/visionandcreedp04wriggoog.pdf",
+      "alternate_urls": ["https://archive.org/details/visionandcreedp04wriggoog"],
+      "locator": "PDF page 180 title leaf; PDF pages 182-232 / printed 451-501 text; PDF pages 296-318 / printed 565-587 notes",
+      "summary": "The complete second-volume scan verifies Wright's edition, its Crede text and notes, the exact work portion, and the embedded Google public-domain usage notice.",
+      "accessed_on": "2026-07-15",
+      "sha256": "e82dad27e13bdc5629f05e4ad9e8d7dbba924c3b53e89182c4e001db507a5c1e"
+    },
+    {
+      "id": "evidence:wright-ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for visionandcreedp04wriggoog.",
+      "url": "https://archive.org/metadata/visionandcreedp04wriggoog",
+      "summary": "Item metadata identifies the 1856 scan, University of Michigan source copy, Google digitization, and the absence of a separate license field.",
+      "accessed_on": "2026-07-15",
+      "sha256": "321281cd004ef27a0076878c0f4ecc8d752cb9f6963ab13d93046e23ec292c8f"
+    },
+    {
+      "id": "evidence:wright-volume-1-scan",
+      "type": "digital_surrogate",
+      "citation": "Thomas Wright, ed., The Vision and Creed of Piers Ploughman, 2nd rev. ed., vol. I (London: John Russell Smith, 1856), complete Internet Archive / Google Books scan.",
+      "url": "https://archive.org/download/PiersPloughmanWright2nd1/Piers_Ploughman_Wright_2nd_1.pdf",
+      "alternate_urls": ["https://archive.org/details/PiersPloughmanWright2nd1"],
+      "locator": "PDF pages 32-33 / printed pages xxiv-xxv; PDF pages 44-45 / printed pages xxxvi-xxxvii",
+      "summary": "The complete volume I scan supplies Wright's discussion of the poem's date and subject, his census and chronology of Royal and Trinity, his description of Wolfe 1553 and Rogers 1561, and the edition's historical context. The poem itself is not printed in this volume.",
+      "accessed_on": "2026-07-15",
+      "sha256": "571e35af6af87cb05b4a904e1a895966579fc920441cc2ae380f924a85dc49a3"
+    },
+    {
+      "id": "evidence:wright-volume-1-ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for PiersPloughmanWright2nd1.",
+      "url": "https://archive.org/metadata/PiersPloughmanWright2nd1",
+      "summary": "Item metadata identifies volume I, its 1856 publication, Google/ARLIMA digitization provenance, and the Public Domain Mark.",
+      "accessed_on": "2026-07-15",
+      "sha256": "a596bd8e0b4723df46193e4002f07240f6370764ffe05133becabad43a55ba51"
+    },
+    {
+      "id": "evidence:trinity-catalog",
+      "type": "official_catalog",
+      "citation": "Trinity College Cambridge, James Catalogue of Western Manuscripts, R.3.15, James 595.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15",
+      "alternate_urls": ["https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15/manifest.json"],
+      "locator": "Main Details; Contents III; IIIF manifest",
+      "summary": "The official record identifies the codex, dates, hands, materials, final twelve-leaf Crede item, incipit and explicit, Skeat's use, IIIF access, and CC BY-NC 4.0 image license.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:trinity-iiif-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection and complete retrieval audit of Trinity R.3.15 IIIF manifest and all 656 canvases, 15 July 2026.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.15/manifest.json",
+      "locator": "Canvases 629-652, labels f317r-f328v; complete 656-canvas sequence",
+      "summary": "Canvas 629/f317r begins the Crede; canvas 651/f328r ends the prayer and Amen; canvas 652/f328v is blank. The cached bundle contains the manifest, inventory, and all 656 images.",
+      "accessed_on": "2026-07-15",
+      "sha256": "cf51469684f04dd353f1f62bbcfedf0895d2ae01c9e1af3d915fd64adf8d9e1c"
+    },
+    {
+      "id": "evidence:royal-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Royal MS 18 B XVII.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002107511",
+      "locator": "Scope and content, physical description, access conditions, and rights footer",
+      "summary": "The official record establishes a complete untitled Crede at fols. 1r-13v, first-quarter-sixteenth-century vellum codex, later corrections, physical access requirements, and absence of digitized content.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:harley-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 78.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002045906",
+      "alternate_urls": ["http://access.bl.uk/item/viewer/ark:/81055/vdc_100193040371.0x000001"],
+      "locator": "Scope and content, fol. 3r fragment, physical description, and digital-content status",
+      "summary": "The official record establishes the lines 172-207 fragment on fol. 3r in a paper composite manuscript; the legacy viewer did not provide usable images when checked.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-imaging",
+      "type": "official_webpage",
+      "citation": "British Library Digitisation Services and Imaging Services terms.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://www.bl.uk/terms/imaging-services"],
+      "summary": "The official service accepts digitisation requests for a fee subject to feasibility and quotation; its terms distinguish image delivery from permission to reproduce or publish.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:folger-wolfe",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library vendor record 427810, Pierce the Ploughmans Crede, STC 19904.",
+      "url": "https://catalog.folger.edu/record/427810",
+      "alternate_urls": ["https://search.proquest.com/docview/2240914953/?accountid=10923"],
+      "summary": "The record verifies Reynold Wolfe's 1553 London print, [32]-page A-D4 extent, STC 19904, Huntington original, and subscription EEBO reproduction.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dimev-record",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse, version 2.0-alpha.1, record 1086, Pierce the Ploughmans Crede.",
+      "url": "https://zenodo.org/records/20850921",
+      "alternate_urls": ["https://zenodo.org/api/records/20850921/files/dimev-2.0-alpha.1.zip/content"],
+      "locator": "data/Records.xml, record-1086; release LICENSE, README, and CITATION.cff",
+      "summary": "Versioned evidence for 855 alliterative lines, NIMEV 663, MED BIB2823, two complete witnesses, Harley fragment, 1553 print, release date, and CC BY 4.0. The Royal entry's copied fragment note conflicts with its complete data and official catalog.",
+      "accessed_on": "2026-07-15",
+      "sha256": "c3d9050b242a5ec6bc0effdbcfaac80c447364217e86412fe11f6879df1c966a"
+    },
+    {
+      "id": "evidence:dean-edition",
+      "type": "scholarly_source",
+      "citation": "James M. Dean, ed., Piers the Plowman's Crede, in Six Ecclesiastical Satires (Kalamazoo: Medieval Institute Publications, 1991), Middle English Texts Series digital edition.",
+      "url": "https://metseditions.org/editions/LZqD3xXu953XSAbWfjxKQHWE5R1Rw7M",
+      "alternate_urls": [
+        "https://metseditions.org/read/GeD3MQRCYdwPI87MI8W08fdM1Wv1VGL",
+        "https://metseditions.org/read/4KMNqWVIvbptxLPIv20XFQb6v6dmX9",
+        "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/1f05cf5e-adeb-4098-a5ef-e60ea3c037fd/downloadable_version/44471be6c26b949ac6e94881cf10e56c.pdf"
+      ],
+      "locator": "Introduction, text, notes, bibliography; downloadable PDF pages 2-50",
+      "summary": "Dean supplies work metadata, witness census, a Trinity-base editorial account using Royal, Wolfe, Wright, and Skeat, and an edition-specific 850-line numbering system.",
+      "accessed_on": "2026-07-15",
+      "sha256": "f33faaf749e64b5c22ae4f1ed0712d0ce18fe101351d07d3f8ca9f70fd9deb07"
+    },
+    {
+      "id": "evidence:mets-rights",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright & Citation.",
+      "url": "https://metseditions.org/copyright-citation",
+      "summary": "METS states that digital editions are for individual use, directs reprint requests to the Executive Director, and separately licenses its XML under CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:usco-circular-15a",
+      "type": "law",
+      "citation": "United States Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Official guidance on copyright duration supports the United States public-domain conclusions for the medieval, 1553, 1856, and 1867 textual layers; it does not determine separate rights or provider terms for modern images and encodings.",
+      "accessed_on": "2026-07-15"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:digital-rights-conflict",
+      "question": "How should the pinned XML's personal-scholarly-use notice be reconciled with the current U-M No Copyright - United States label, the current OTA CC BY-NC-SA 3.0 license, and the CME repository's software-worded Unlicense?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask the University of Michigan and Oxford Text Archive which statement governs redistribution of the exact legacy PPlCreed transcription and markup.",
+        "Ask the CME repository maintainer whether the Unlicense is intended to cover source text data and XML markup as well as software.",
+        "Until clarified, keep each dated distribution layer separate and do not infer that the most permissive statement overrides the others."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repository-xml", "evidence:cme-license", "evidence:umich-item", "evidence:ota-record"]
+    },
+    {
+      "id": "question:skeat-stemma",
+      "question": "Can Skeat's reconstructed common exemplar and the relationships among Trinity, Royal, and Wolfe be confirmed or revised from later stemmatic scholarship?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult later textual studies that collate all complete witnesses and the Harley fragment.",
+        "Preserve Skeat attribution and tentative status until an independent stemma is found."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:skeat-preface", "evidence:dean-edition"]
+    },
+    {
+      "id": "question:wright-copy-text",
+      "question": "Which early print or reprint supplied Wright's immediate copy-text for the Crede in his 1856 second revised edition?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Collate Wright's 1856 text against Wolfe 1553, Rogers 1561, and Whitaker's 1814 reprint.",
+        "Consult Wright's first-edition production records or later bibliographical scholarship for an explicit copy-text statement.",
+        "Do not add a directional source relation from Wright until the old printed edition named in his notes is identified."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:wright-volume-1-scan", "evidence:wright-scan", "evidence:folger-wolfe"]
+    },
+    {
+      "id": "question:lineation-850-855",
+      "question": "Which editorial joining or splitting decisions account for Dean's 850-line text versus Skeat and DIMEV's 855-line count?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Collate Dean's numbering against Skeat's printed lines 1-855 and record each joined or split long line.",
+        "Keep source-specific line locators explicit rather than treating either numbering system as universal."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:skeat-scan", "evidence:dimev-record", "evidence:dean-edition"]
+    },
+    {
+      "id": "question:trinity-extent",
+      "question": "Why does the Trinity catalog state 316 folios while the complete IIIF sequence labels leaves through f328?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Ask Trinity whether the catalog extent excludes blanks, inserted leaves, or later foliation strata.",
+        "Retain both the catalog extent and exact IIIF labels without normalizing one into the other."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif-inspection"]
+    },
+    {
+      "id": "question:missing-public-facsimiles",
+      "question": "Will complete public digital facsimiles become available for Royal 18 B XVII, Harley 78, or the 1553 Wolfe print?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Recheck the British Library catalog and digitised-manuscripts services after platform migrations.",
+        "Seek a quotation for whole-manuscript imaging where feasible, while requesting publication terms separately.",
+        "Check for newly open copies of STC 19904 beyond the subscription EEBO surrogate."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:royal-catalog", "evidence:harley-catalog", "evidence:bl-imaging", "evidence:folger-wolfe"]
+    },
+    {
+      "id": "question:greenwood-rights",
+      "question": "What copyright or contractual restrictions, if any, attach specifically to the 1969 Greenwood reprint carrier and its new matter?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect a physical 1969 copy's copyright page and compare it with the 1867 volume.",
+        "Do not infer the reprint carrier's rights from the public-domain status of Skeat's underlying edition."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-header", "evidence:greenwood-record", "evidence:usco-circular-15a"]
+    }
+  ]
+}

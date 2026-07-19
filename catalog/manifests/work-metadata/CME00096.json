@@ -1,0 +1,203 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00096",
+  "work_id": "CME00096",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "cataloging_subject": {
+    "id": "work:CME00096",
+    "unit_type": "edited_selection",
+    "label": "With an O and an I",
+    "scope_note": "The cataloged subject is Wilhelm Heuser's complete 1904 Anglia article and edited selection: German commentary framing nine groups of Middle English and Latin verse transcribed or re-edited from several manuscripts and earlier editions. It is not a single medieval work, any one manuscript, the complete Anglia volume, or the U-M encoding."
+  },
+  "catalog_summary": {
+    "title": "With an O and an I",
+    "author": "Anonymous medieval contributors",
+    "editor": "Wilhelm Heuser",
+    "date": "Medieval texts chiefly attested in fourteenth- and fifteenth-century witnesses; edited selection published 1904",
+    "region": "England; precise composition places vary or remain unresolved",
+    "genres": ["Edited selection", "Scholarly article", "Religious poetry", "Antifraternal satire and controversy"],
+    "form": "mixed",
+    "language_codes": ["deu", "enm", "lat"],
+    "tags": ["middle-english", "latin", "german", "multilingual", "edited-selection", "scholarly-edition", "prose-and-verse", "religious-poetry", "devotional-poetry", "four-evangelists", "northern-homily-cycle", "friars", "antifraternal-satire", "passion", "prayer", "hours-of-the-cross", "refrain", "manuscript-studies", "dimev"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00096", "uri": "https://name.umdl.umich.edu/CME00096"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "With an O and an I", "language": "eng", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:heuser", "evidence:umich"]},
+      "notes": ["Heuser's English-language article title is retained for the heterogeneous edited selection; it is not a collective title found in a medieval witness."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:wilhelm-heuser", "type": "person", "name": "Wilhelm Heuser"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-contributors", "display_name": "Anonymous medieval contributors", "role": "author", "attribution_status": "anonymous", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:against-minorites-english", "part:against-friars-latin-excerpts", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross", "part:latin-defense-friars"], "description": "The distinct medieval texts and excerpts assembled in the article"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:dimev"]},
+      "notes": ["Richard FitzRalph and Richard Kilmington are discussed in connection with antifraternal material, but the consulted sources do not establish either as author of Heuser's Latin defense poem."]
+    },
+    {
+      "id": "responsibility:heuser-editor", "agent_id": "agent:wilhelm-heuser", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:umich"]}
+    },
+    {
+      "id": "responsibility:heuser-compiler", "agent_id": "agent:wilhelm-heuser", "role": "compiler", "attribution_status": "known", "scope": {"kind": "whole", "description": "Selection and arrangement of the article's manuscript transcriptions, re-edited passages, quotations, and commentary"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:structure"]}
+    },
+    {
+      "id": "responsibility:heuser-transcriber", "agent_id": "agent:wilhelm-heuser", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:against-minorites-english", "part:hours-cross", "part:latin-defense-friars"], "description": "Passages Heuser explicitly says he gives from Rawlinson poet. 175, Cotton Cleopatra B II, Caius 175/96, and Trinity O.9.38"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:rawlinson", "evidence:cotton-cleopatra", "evidence:caius-catalog", "evidence:trinity"]}
+    },
+    {
+      "id": "responsibility:heuser-commentator", "agent_id": "agent:wilhelm-heuser", "role": "commentator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:editorial-commentary"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:heuser"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:medieval-material", "type": "composition", "display": "Chiefly later Middle Ages; dates differ by component and composition commonly predates the surviving copy", "normalized": {"not_before": 1300, "not_after": 1500}, "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:against-minorites-english", "part:against-friars-latin-excerpts", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross", "part:latin-defense-friars"]},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:heuser", "evidence:dimev", "evidence:manuscript-catalogs"], "notes": "A discovery range summarizing heterogeneous medieval material, not a claim of common composition."}
+    },
+    {
+      "id": "date:evangelists-attestation", "type": "first_known_attestation", "display": "Second half of the fourteenth century in Bodleian MS Rawlinson poet. 175", "normalized": {"not_before": 1350, "not_after": 1399}, "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle"]}, "source_lineage_entity_id": "witness:bodleian:Rawl-poet-175",
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:rawlinson", "evidence:heuser"]},
+      "notes": ["Heuser argues that the cycle adapts the Expanded Northern Homily Cycle and cannot be earlier than the mid-fourteenth century; the manuscript date is an attestation date, not an exact composition date."]
+    },
+    {
+      "id": "date:publication", "type": "first_publication", "display": "1904 in Anglia 27, new series 15", "normalized": {"not_before": 1904, "not_after": 1904}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "edition:heuser:anglia-27-1904",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:umich"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:northern-england", "label": "Northern England", "kind": "dialect_region", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place:medieval-english", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:against-minorites-english", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:dimev", "evidence:manuscript-catalogs"]},
+      "notes": ["This broad cultural origin does not assign a common place of composition to the separate works."]
+    },
+    {
+      "id": "place:evangelists-northern", "place_id": "place:northern-england", "type": "dialect_region", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle"]}, "source_lineage_entity_id": "witness:bodleian:Rawl-poet-175",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:heuser", "evidence:dimev"]},
+      "notes": ["Heuser's dialect assessment is not automatically a place-of-composition claim."]
+    }
+  ],
+  "language_statements": [
+    {"id": "language:german", "code": "deu", "label": "German", "usage": "editorial", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:editorial-commentary"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:heuser"]}},
+    {"id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:against-minorites-english", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:heuser", "evidence:dimev"]}},
+    {"id": "language:latin", "code": "lat", "label": "Latin", "usage": "secondary", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:against-friars-latin-excerpts", "part:hours-cross", "part:latin-defense-friars"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:heuser"]}, "notes": ["Five Latin hour or display headings in the Hours are encoded as L elements but are not counted as verse lines."]}
+  ],
+  "form_statements": [
+    {"id": "form:whole", "value": "mixed", "scope": {"kind": "whole"}, "description": "Modern German scholarly prose and Middle English/Latin verse.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:structure", "evidence:heuser"]}},
+    {"id": "form:editorial", "value": "mixed", "scope": {"kind": "part", "part_ids": ["part:editorial-commentary"]}, "description": "German prose with four quoted Middle English verse lines in section 3.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:structure"]}},
+    {"id": "form:medieval", "value": "verse", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:against-minorites-english", "part:against-friars-latin-excerpts", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross", "part:latin-defense-friars"]}, "description": "The selected medieval texts are verse or verse excerpts.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:structure", "evidence:heuser"]}}
+  ],
+  "genre_statements": [
+    {"id": "genre:edited-selection", "term": "edited-selection", "label": "Edited selection", "scheme": "General Corpus genre taxonomy", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:structure"]}},
+    {"id": "genre:scholarly-article", "term": "scholarly-article", "label": "Scholarly article", "scheme": "General Corpus genre taxonomy", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:umich"]}},
+    {"id": "genre:religious-poetry", "term": "religious-poetry", "label": "Religious poetry", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts", "part:passion-song", "part:prayer-to-christ", "part:when-adam-delve", "part:hours-cross"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dimev"]}},
+    {"id": "genre:antifraternal", "term": "antifraternal-satire", "label": "Antifraternal satire and controversy", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "part", "part_ids": ["part:against-minorites-english", "part:against-friars-latin-excerpts", "part:latin-defense-friars"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:cotton-cleopatra", "evidence:trinity"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:o-i-refrains", "term": "o-and-i-refrains", "label": "Verse refrains built around the vocables O and I", "scheme": "General Corpus subject taxonomy", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:xml"]}},
+    {"id": "subject:evangelists", "term": "four-evangelists", "label": "The Four Evangelists", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "part", "part_ids": ["part:evangelists-cycle", "part:northern-homily-excerpts"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:dimev"]}},
+    {"id": "subject:friars", "term": "medieval-friars", "label": "Medieval friars, criticism, and defense", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "part", "part_ids": ["part:against-minorites-english", "part:against-friars-latin-excerpts", "part:latin-defense-friars"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:cotton-cleopatra", "evidence:trinity"]}},
+    {"id": "subject:passion", "term": "passion-and-cross", "label": "Passion of Christ and the Cross", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "part", "part_ids": ["part:passion-song", "part:prayer-to-christ", "part:hours-cross"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser", "evidence:morris", "evidence:caius-catalog"]}}
+  ],
+  "tags": ["middle-english", "latin", "german", "multilingual", "edited-selection", "scholarly-edition", "prose-and-verse", "religious-poetry", "devotional-poetry", "four-evangelists", "northern-homily-cycle", "friars", "antifraternal-satire", "passion", "prayer", "hours-of-the-cross", "refrain", "manuscript-studies", "dimev"],
+  "summaries": [
+    {
+      "id": "summary:abstract", "type": "abstract", "value": "Wilhelm Heuser's 1904 study links a newly printed four-Evangelist refrain cycle to the Expanded Northern Homily Cycle, then compares further Middle English and Latin works whose refrains turn on O and I. The article prints complete works, selected homily and antifraternal excerpts, variant-supported re-editions, and an addendum containing an Hours of the Cross and a Latin defense of friars. CME00096 preserves the complete article rather than a single medieval poem.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:xml", "evidence:heuser", "evidence:structure"]
+    },
+    {
+      "id": "summary:structure", "type": "contents_note", "value": "The XML contains two DIV1 units, six DIV2 sections, thirteen DIV3 units, 27 German prose paragraphs, 99 line groups, and 1,001 L elements across printed pp. 283-319. Of the L elements, 804 are Middle English and 197 Latin; five Latin hour/display headings in the Hours are not verse, yielding 996 verse lines represented. The intellectual parts below preserve Heuser's source and work boundaries rather than treating every XML container as a separate work.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:structure", "evidence:xml", "evidence:heuser"]
+    },
+    {
+      "id": "summary:transmission", "type": "cataloging_note", "value": "Heuser directly transcribed four groups from manuscripts, printed selected Harley homily passages, reused earlier editions by Wright and Morris, and based the Adam poem chiefly on Horstmann while adding Cambridge variants. Those distinct paths are preserved in the linked lineage graph. The complete Trinity O.9.38 object is publicly imaged; no complete public facsimile was verified for the other direct witnesses.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:heuser", "evidence:linked-lineage"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 126,
+    "sections": 10,
+    "prose_only_items": 27,
+    "verse_only_items": 99,
+    "mixed_items": 0,
+    "verse_groups": 99,
+    "verse_lines": 996,
+    "description": "At the encoded-unit level, 126 counted items comprise 27 prose paragraphs and 99 verse groups, organized here as nine medieval text groups plus a noncontiguous editorial-commentary part. The XML has 1,001 L elements: 804 Middle English and 197 Latin. Five Latin headings embedded as L in the Hours are display text, leaving 996 verse-line elements; four Middle English comparison lines quoted in German commentary remain included because they are verse quotations. Printed page coverage is complete from p. 283 through p. 319.",
+    "evidence_ids": ["evidence:structure", "evidence:xml", "evidence:heuser"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id": "part:editorial-commentary", "parent_id": null, "sequence": 1, "type": "commentary", "label": "Heuser's editorial commentary", "summary": "German introductions, source discussion, comparisons, notes, and addendum framing, with four Middle English refrain quotations in section 3.", "item_count": 27, "textual_form": "mixed", "metrics": {"prose_only_items": 27, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 4}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "283-319, noncontiguous framing passages"}, {"lineage_entity_id": "encoding:umich-cme:CME00096", "scheme": "XML elements", "value": "27 P elements plus four comparison L elements in article section 3"}], "evidence_ids": ["evidence:xml", "evidence:structure", "evidence:heuser"]},
+    {"id": "part:evangelists-cycle", "parent_id": null, "sequence": 2, "type": "work", "label": "Four Evangelists refrain cycle", "summary": "A complete unified cycle of 26 six-line stanzas: eight each for Luke and Matthew and five each for Mark and John.", "item_count": 26, "textual_form": "verse", "metrics": {"verse_groups": 26, "verse_lines": 156}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "284-289"}, {"lineage_entity_id": "witness:bodleian:Rawl-poet-175", "scheme": "current foliation", "value": "f. 132r-v; Heuser's historical f. 132a-b"}], "evidence_ids": ["evidence:heuser", "evidence:rawlinson", "evidence:dimev"]},
+    {"id": "part:northern-homily-excerpts", "parent_id": null, "sequence": 3, "type": "fragment", "label": "Expanded Northern Homily Cycle excerpts", "summary": "Eleven selected verse groups used to demonstrate Heuser's proposed source relationship; these are omissions-bearing extracts rather than complete homilies.", "item_count": 11, "textual_form": "verse", "metrics": {"verse_groups": 11, "verse_lines": 330}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "290-300"}, {"lineage_entity_id": "witness:bl:Harley-4196", "scheme": "foliation", "value": "Luke f. 6r-v; Matthew ff. 28r-30r; John ff. 16v-17r"}], "evidence_ids": ["evidence:heuser", "evidence:harley4196"]},
+    {"id": "part:against-minorites-english", "parent_id": null, "sequence": 4, "type": "work", "label": "Middle English poem against the Minorites", "summary": "Seven six-line aabbcc stanzas directly transcribed by Heuser from Cotton Cleopatra B II.", "item_count": 7, "textual_form": "verse", "metrics": {"verse_groups": 7, "verse_lines": 42}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "301-302"}, {"lineage_entity_id": "witness:bl:Cotton-Cleopatra-B-II", "scheme": "current foliation", "value": "f. 64v; Heuser's historical f. 64b"}], "evidence_ids": ["evidence:heuser", "evidence:cotton-cleopatra", "evidence:dimev"]},
+    {"id": "part:against-friars-latin-excerpts", "parent_id": null, "sequence": 5, "type": "fragment", "label": "Latin poem against friars, stanzas 1 and 32", "summary": "Two six-line stanzas selected from the 49-stanza Latin poem printed by Thomas Wright from Cotton Cleopatra B II.", "item_count": 2, "textual_form": "verse", "metrics": {"verse_groups": 2, "verse_lines": 12}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "302-303"}, {"lineage_entity_id": "edition:wright:political-poems-1859-v1", "scheme": "stanzas", "value": "1 and 32 of On the Council of London"}], "evidence_ids": ["evidence:heuser", "evidence:wright"]},
+    {"id": "part:passion-song", "parent_id": null, "sequence": 6, "type": "work", "label": "Godys sone, þat was so fre", "summary": "A Passion song reorganized by Heuser from Morris's Douce 126 edition into five inferred twelve-line stanzas.", "item_count": 5, "textual_form": "verse", "metrics": {"verse_groups": 5, "verse_lines": 60}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "303-305"}, {"lineage_entity_id": "edition:morris:holy-rood-1871", "scheme": "printed pages", "value": "150-152"}, {"lineage_entity_id": "witness:bodleian:Douce-126", "scheme": "foliation", "value": "f. 90v"}], "evidence_ids": ["evidence:heuser", "evidence:morris", "evidence:dimev"]},
+    {"id": "part:prayer-to-christ", "parent_id": null, "sequence": 7, "type": "fragment", "label": "As thou for holy church dyd pray", "summary": "An acephalous prayer for which Heuser follows Morris and infers a two-stanza form; line-count reconciliation remains open.", "item_count": 2, "textual_form": "verse", "metrics": {"verse_groups": 2, "verse_lines": 20}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed page", "value": "305"}, {"lineage_entity_id": "edition:morris:holy-rood-1871", "scheme": "printed page", "value": "153"}, {"lineage_entity_id": "witness:bodleian:Douce-128", "scheme": "foliation", "value": "f. 258"}], "evidence_ids": ["evidence:heuser", "evidence:morris", "evidence:dimev"]},
+    {"id": "part:when-adam-delve", "parent_id": null, "sequence": 8, "type": "work", "label": "When Adam delved and Eve span", "summary": "Heuser's eight-stanza short-line presentation of the Thornton version, with substantive Cambridge Dd.5.64 variants, chiefly after Horstmann.", "item_count": 8, "textual_form": "verse", "metrics": {"verse_groups": 8, "verse_lines": 96}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "305-308"}, {"lineage_entity_id": "edition:horstmann:yorkshire-writers-1895-v1", "scheme": "printed pages", "value": "73 and 367 onward"}, {"lineage_entity_id": "witness:lincoln:MS-91", "scheme": "foliation", "value": "f. 213r-v, item 45"}, {"lineage_entity_id": "witness:cul:Dd-5-64", "scheme": "foliation", "value": "f. 35v"}], "evidence_ids": ["evidence:heuser", "evidence:horstmann", "evidence:lincoln91", "evidence:dimev"]},
+    {"id": "part:hours-cross", "parent_id": null, "sequence": 9, "type": "work", "label": "Hours of the Cross", "summary": "A complete refrain poem directly transcribed from Caius MS 175/96; 96 Middle English poem lines plus five Latin hour/display headings encoded as L.", "item_count": 8, "textual_form": "verse", "metrics": {"verse_groups": 8, "verse_lines": 96}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "311-314"}, {"lineage_entity_id": "witness:caius:MS-175-96", "scheme": "manuscript pages", "value": "118-120, item 4"}], "evidence_ids": ["evidence:heuser", "evidence:caius-catalog", "evidence:dimev", "evidence:structure"]},
+    {"id": "part:latin-defense-friars", "parent_id": null, "sequence": 10, "type": "work", "label": "Latin defense of the friars", "summary": "Thirty six-line Latin stanzas directly transcribed from Trinity College Cambridge MS O.9.38.", "item_count": 30, "textual_form": "verse", "metrics": {"verse_groups": 30, "verse_lines": 180}, "locators": [{"lineage_entity_id": "edition:heuser:anglia-27-1904", "scheme": "printed pages", "value": "314-319"}, {"lineage_entity_id": "witness:trinity-cambridge:O-9-38", "scheme": "foliation", "value": "ff. 54v-56r"}], "evidence_ids": ["evidence:heuser", "evidence:trinity", "evidence:trinity-iiif"]}
+  ],
+  "related_works": [
+    {"id": "related:expanded-northern-homily-cycle", "title": "Expanded Northern Homily Cycle", "relation": "related_to", "evidence_ids": ["evidence:heuser", "evidence:harley4196"], "notes": ["Heuser argues that its evangelist homilies are the immediate literary source for the Rawlinson refrain cycle."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00096",
+    "manifest_path": "manifests/lineage/works/CME00096.json",
+    "bindings": [
+      {"metadata_target": "work:CME00096", "lineage_entity_id": "artifact:general-corpus:CME00096", "role": "repository_representation"},
+      {"metadata_target": "work:CME00096", "lineage_entity_id": "encoding:umich-cme:CME00096", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00096", "lineage_entity_id": "edition:heuser:anglia-27-1904", "role": "source_edition"},
+      {"metadata_target": "part:evangelists-cycle", "lineage_entity_id": "witness:bodleian:Rawl-poet-175", "role": "source_witness"},
+      {"metadata_target": "part:northern-homily-excerpts", "lineage_entity_id": "witness:bl:Harley-4196", "role": "source_witness"},
+      {"metadata_target": "part:against-minorites-english", "lineage_entity_id": "witness:bl:Cotton-Cleopatra-B-II", "role": "source_witness"},
+      {"metadata_target": "part:against-friars-latin-excerpts", "lineage_entity_id": "edition:wright:political-poems-1859-v1", "role": "source_edition"},
+      {"metadata_target": "part:passion-song", "lineage_entity_id": "edition:morris:holy-rood-1871", "role": "source_edition"},
+      {"metadata_target": "part:prayer-to-christ", "lineage_entity_id": "edition:morris:holy-rood-1871", "role": "source_edition"},
+      {"metadata_target": "part:when-adam-delve", "lineage_entity_id": "edition:horstmann:yorkshire-writers-1895-v1", "role": "source_edition"},
+      {"metadata_target": "part:hours-cross", "lineage_entity_id": "witness:caius:MS-175-96", "role": "source_witness"},
+      {"metadata_target": "part:latin-defense-friars", "lineage_entity_id": "witness:trinity-cambridge:O-9-38", "role": "source_witness"},
+      {"metadata_target": "work:CME00096", "lineage_entity_id": "catalog:dimev:CME00096-records", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_3/CME00096.xml.", "repository_path": "CME/source/CME_phase_3/CME00096.xml", "locator": "IDG; TEXT; complete BODY", "summary": "Primary repository evidence for the complete article text, pagination, hierarchy, languages, verse groups, prose, notes, and typographic markup.", "accessed_on": "2026-07-13", "sha256": "c742efa05cf4958fc48c2263d55dd182b375e8acb4609b8f75bda521ff852d62"},
+    {"id": "evidence:structure", "type": "computational_inspection", "citation": "Namespace-aware structure and language audit of CME00096.xml.", "repository_path": "CME/source/CME_phase_3/CME00096.xml", "locator": "BODY and descendants", "summary": "Counts 2 DIV1, 6 DIV2, 13 DIV3, 124 HEAD, 27 P, 99 LG, 1,001 L, 37 PB, 36 MILESTONE, and 87 NOTE; counts 804 Middle English and 197 Latin L elements and isolates five non-verse Latin headings in the Hours.", "accessed_on": "2026-07-13", "sha256": "c742efa05cf4958fc48c2263d55dd182b375e8acb4609b8f75bda521ff852d62"},
+    {"id": "evidence:umich", "type": "official_webpage", "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, CME00096.", "url": "https://name.umdl.umich.edu/CME00096", "alternate_urls": ["https://quod.lib.umich.edu/c/cme/CME00096"], "summary": "Official public item for Heuser's 1904 article, with bibliographic data, contents, stable identifier, and No Copyright–United States statement.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:heuser", "type": "digital_surrogate", "citation": "Wilhelm Heuser, 'With an O and an I,' Anglia 27, new series 15 (1904), 283-319, in complete volume scan.", "url": "https://archive.org/details/angliazeitschrif27tbuoft", "alternate_urls": ["https://archive.org/download/angliazeitschrif27tbuoft/angliazeitschrif27tbuoft.pdf"], "repository_path": "source-cache/CME00096/anglia-27-1904-complete.pdf", "locator": "printed pp. 283-319 / PDF pp. 293-329", "summary": "Primary immediate-edition evidence for the article boundary, source statements, transcriptions, earlier-edition dependencies, work arrangement, commentary, and publication facts.", "accessed_on": "2026-07-13", "sha256": "5f0cbd36f0671cefbc63d94c25b5c9dff1f35f6456fc789a677eb7f7f9466d79"},
+    {"id": "evidence:rawlinson", "type": "official_catalog", "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS Rawl. poet. 175.", "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_8759", "locator": "target f. 132r-v", "summary": "Confirms the extant parchment manuscript, second-half-fourteenth-century date, approximate extent and dimensions, and current shelfmark; no complete public digital object was verified.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:harley4196", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 4196.", "url": "https://searcharchives.bl.uk/catalog/040-002050033", "locator": "Expanded Northern Homily Cycle ff. 1r-132r; Heuser excerpts ff. 6r-v, 16v-17r, 28r-30r", "summary": "Confirms the late-fourteenth-/early-fifteenth-century parchment witness and the Expanded Northern Homily Cycle; no Digitised Content is exposed.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:cotton-cleopatra", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Cleopatra B II and component ff. 60-71.", "url": "https://searcharchives.bl.uk/catalog/040-001103733", "alternate_urls": ["https://searcharchives.bl.uk/catalog/041-001103734"], "locator": "English poem f. 64v; Latin poem historically cited at f. 59", "summary": "Confirms the fifteenth-century paper verse miscellany, English antifraternal poems, whole-codex description, and absence of exposed Digitised Content. A locator discrepancy for the Latin poem is retained rather than extrapolated.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:wright", "type": "digital_surrogate", "citation": "Thomas Wright, ed., Political Poems and Songs Relating to English History, vol. 1 (London, 1859).", "url": "https://archive.org/details/politicalpoemss01wriggoog", "repository_path": "source-cache/CME00096/wright-1859-political-poems-songs-vol-1-complete.pdf", "locator": "On the Council of London, printed p. 253 onward; Heuser uses stanzas 1 and 32", "summary": "Complete volume; Wright states that the 49-stanza Latin song comes from Cotton Cleopatra B II f. 59.", "accessed_on": "2026-07-13", "sha256": "befcf274678bd3a41be66ac3ebeace0589a8630a8ec2dc2975b20da4c8384448"},
+    {"id": "evidence:morris", "type": "digital_surrogate", "citation": "Richard Morris, ed., Legends of the Holy Rood, EETS OS 46 (London, 1871).", "url": "https://archive.org/details/legendsofholyroo00morr", "repository_path": "source-cache/CME00096/morris-1871-legends-holy-rood-complete.pdf", "locator": "printed pp. 150-153 / PDF pp. 190-193", "summary": "Complete volume and immediate printed source for Heuser's Douce 126 Passion song and Douce 128 prayer.", "accessed_on": "2026-07-13", "sha256": "d7af167e632961dd4f7bf849b998d8cda394d8d9ddebb67d0853e0f03c460def"},
+    {"id": "evidence:horstmann", "type": "digital_surrogate", "citation": "Carl Horstmann, Yorkshire Writers: Richard Rolle of Hampole and His Followers, vol. 1 (London, 1895).", "url": "https://archive.org/details/yorkshirewriter01horsgoog", "repository_path": "source-cache/CME00096/horstmann-1895-yorkshire-writers-vol-1-complete.pdf", "locator": "Cambridge version printed p. 73 / PDF p. 91; Thornton version p. 367 onward / PDF p. 385 onward", "summary": "Complete volume and Heuser's principal stated printed basis for the Adam poem's Thornton text and Cambridge variants.", "accessed_on": "2026-07-13", "sha256": "1c99d25935f0eb870ef35735413806f315a755e14305e3e1e5d96ae367d4034b"},
+    {"id": "evidence:lincoln91", "type": "official_catalog", "citation": "Lincoln Cathedral Library, MS 91 (Thornton Manuscript), current CalmView record.", "url": "https://specialcollections.library.lincoln.ac.uk/CalmView/record.aspx?id=LINCOLN+CATHEDRAL+MS+91&src=CalmView.Catalog", "locator": "item 45, f. 213r-v", "summary": "Confirms Robert Thornton's approximately 1430-1450 paper manuscript, physical description, and exact target locator; no complete public facsimile was verified.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:caius-catalog", "type": "digital_surrogate", "citation": "M. R. James, A Descriptive Catalogue of the Manuscripts in the Library of Gonville and Caius College, vol. 1 (Cambridge, 1907), MS 175/96.", "url": "https://archive.org/details/descriptivecatal01goin", "repository_path": "source-cache/CME00096/james-gonville-caius-manuscripts-vol1-1907.pdf", "locator": "catalog printed pp. 199-200; manuscript item 4, pp. 118-120", "summary": "Complete catalog volume confirming the fifteenth-century vellum codex's dimensions, extent, donation, and exact Hours incipit, explicit, and manuscript-page range.", "accessed_on": "2026-07-13", "sha256": "53a020d4325ff1a83c5abf730e828f0dc130b1a127cb4c6950b53a0d45d21f2b"},
+    {"id": "evidence:trinity", "type": "official_catalog", "citation": "Trinity College Cambridge, Manuscript O.9.38, Commonplace Book (Glastonbury).", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/O.9.38", "locator": "item 36, ff. 54v-56r", "summary": "Confirms the fifteenth-/sixteenth-century paper commonplace book, physical description, Glastonbury provenance, exact antifraternal item and locator, and public IIIF facsimile.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:trinity-iiif", "type": "digital_surrogate", "citation": "Trinity College Cambridge, complete IIIF manifest for MS O.9.38.", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/O.9.38/manifest.json", "repository_path": "source-cache/CME00096/trinity-o-9-38-complete-iiif.zip", "locator": "99 canvases; target canvases 62-63, ff. 54v-56r", "summary": "Complete cached 99-canvas published object, including covers, boards, flyleaves, every exposed opening, and rear surfaces; target deep links are recorded in the lineage access entry.", "accessed_on": "2026-07-13", "sha256": "aeede065d97e419e52ffb6e99c9aae2bc9699784a7a5ec2d46bbf6aefcb99328"},
+    {"id": "evidence:dimev", "type": "scholarly_source", "citation": "Digital Index of Middle English Verse 1.0, records 3298, 4230, 1639, 684, 6265, and 1164.", "url": "https://zenodo.org/records/14585961", "alternate_urls": ["https://www.dimev.net/record.php?recID=3298", "https://www.dimev.net/record.php?recID=4230", "https://www.dimev.net/record.php?recID=1639", "https://www.dimev.net/record.php?recID=684", "https://www.dimev.net/record.php?recID=6265", "https://www.dimev.net/record.php?recID=1164"], "repository_path": "source-cache/CME00096/dimev-v1.0.zip", "summary": "Modern records for six Middle English components, their witness census, locators, line/stanza structures, bibliography, IMEV/NIMEV identifiers, and CC BY 4.0 release.", "accessed_on": "2026-07-13", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"},
+    {"id": "evidence:manuscript-catalogs", "type": "linked_manifest_evidence", "citation": "Linked CME00096 lineage evidence for the Bodleian, British Library, Lincoln, Caius, and Trinity manuscript records.", "repository_path": "manifests/lineage/works/CME00096.json", "source_evidence_id": "evidence:manuscript-catalogs", "summary": "Consolidated pointer to entity-specific catalog evidence and date statements in the lineage manifest.", "accessed_on": "2026-07-13"},
+    {"id": "evidence:linked-lineage", "type": "linked_manifest_evidence", "citation": "General Corpus source-lineage manifest for CME00096.", "repository_path": "manifests/lineage/works/CME00096.json", "summary": "Provides the relation graph, entity-specific access, cached-source inventory, rights, editorial practices, and negative facsimile findings.", "accessed_on": "2026-07-13"}
+  ],
+  "open_questions": [
+    {"id": "question:prayer-line-count", "question": "Why do Morris, Heuser, and the XML display twenty short lines for the Douce 128 prayer while DIMEV describes sixteen lines?", "status": "unresolved", "impact": "medium", "next_steps": ["Inspect Douce 128 f. 258 in a complete or target facsimile.", "Compare DIMEV's segmentation and any later editions before changing the encoded count."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:heuser", "evidence:morris", "evidence:dimev"]},
+    {"id": "question:cotton-latin-locator", "question": "How should Heuser and Wright's historical f. 59 locator for the Latin Cotton Cleopatra B II poem be reconciled with the current catalog component beginning at f. 60?", "status": "unresolved", "impact": "medium", "next_steps": ["Request target images or consult a current foliation concordance.", "Do not extrapolate a universal one-folio offset from the English poem's historical 64b/current 64v agreement."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:heuser", "evidence:wright", "evidence:cotton-cleopatra"]},
+    {"id": "question:non-trinity-facsimiles", "question": "Can complete digital facsimiles be obtained for the non-Trinity direct witnesses and supporting manuscripts?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Request whole-object imaging from the Bodleian, British Library, Caius, Lincoln Cathedral, and Cambridge University Library using the exact shelfmarks and work locators in the lineage manifest.", "Record provider terms before redistributing supplied images."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:rawlinson", "evidence:harley4196", "evidence:cotton-cleopatra", "evidence:lincoln91", "evidence:caius-catalog"]},
+    {"id": "question:component-stemma", "question": "What are the textual relationships among the collateral witnesses of each Middle English component?", "status": "unresolved", "impact": "medium", "next_steps": ["Acquire complete witnesses and collate component by component.", "Do not infer a single stemma for this heterogeneous article."], "last_checked": "2026-07-13", "evidence_ids": ["evidence:dimev", "evidence:heuser"]}
+  ],
+  "notes": [
+    "Dates, places, authorship, and form are scoped to the article or named parts; properties of one witness are not transferred to all components.",
+    "The XML header LANG value 'enm ger' omits substantive Latin, so the catalog records Latin from the body itself.",
+    "Entity-specific facsimile rights and availability are documented in the lineage manifest and must not be inherited across providers."
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:Metham",
+  "work_id": "Metham",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "cataloging_subject": {
+    "id": "work:Metham",
+    "unit_type": "collection",
+    "label": "The Works of John Metham (Craig/U-M encoded collection)",
+    "scope_note": "The edition-level collection represented by the pinned U-M/CME XML and delimited by Hardin Craig's 1916 EETS volume: Amoryus and Cleopes and four prose work families, with Palmistry represented from two witnesses and the Christmas-Day prognostication represented by a complete copy and a fragment. The collection contains five medieval abstract works but seven encoded textual representations. Craig's editorial front matter is retained as paratext with an item count of zero; the unencoded glossary and index are not medieval works. Manuscript witnesses, printed editions, facsimiles, and digital encodings are transmission layers described in the linked lineage manifest."
+  },
+  "catalog_summary": {
+    "title": "The Works of John Metham (Craig/U-M encoded collection)",
+    "author": "John Metham: author, translator, or compiler by work; the two Christmas-Day texts are attributed to him",
+    "editor": "Hardin Craig (1916 source edition); University of Michigan Humanities Text Initiative (1999 digital encoding)",
+    "date": "Amoryus and Cleopes composed in the twenty-seventh regnal year of Henry VI, 1 September 1448-31 August 1449; other work dates unresolved; collection first published 1916",
+    "region": "East Anglia, especially Norfolk; more specific places of composition are uncertain",
+    "genres": ["Scholarly edition", "Middle English romance", "Scientific treatise", "Prognostic"],
+    "form": "mixed",
+    "language_codes": ["enm", "eng", "lat"],
+    "tags": ["astrology", "classical-romance", "edited-collection", "john-metham", "manuscript-transmission", "middle-english", "mixed-form", "palmistry", "parallel-witnesses", "physiognomy", "prognostics", "romance", "scholarly-edition", "scientific-treatise"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "Metham", "uri": "https://name.umdl.umich.edu/Metham"},
+    {"scheme": "EETS", "value": "Original Series 132"},
+    {"scheme": "Internet Archive source item", "value": "worksofjohnmetha00methuoft", "uri": "https://archive.org/details/worksofjohnmetha00methuoft"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "The Works of John Metham (Craig/U-M encoded collection)", "language": "eng", "script": "Latn", "supplied_by": "General Corpus cataloger", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:metham-structure", "evidence:craig-1916"]},
+      "notes": ["The qualifier makes the edition-level boundary visible and avoids treating the composite volume as one medieval work or a complete authorial corpus."]
+    },
+    {
+      "id": "title:source-edition", "type": "original", "value": "The Works of John Metham", "language": "eng", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-xml"]}
+    },
+    {
+      "id": "title:amoryus", "type": "alternate", "value": "Amoryus and Cleopes", "language": "enm", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:mets-amoryus"]}
+    },
+    {
+      "id": "title:palmistry", "type": "supplied", "value": "Palmistry", "language": "eng", "script": "Latn", "supplied_by": "Hardin Craig", "scope": {"kind": "part", "part_ids": ["part:palmistry"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-structure"]},
+      "notes": ["Craig's edition title groups two full witness versions under this work label."]
+    },
+    {
+      "id": "title:physiognomy", "type": "supplied", "value": "Physiognomy", "language": "eng", "script": "Latn", "supplied_by": "Hardin Craig", "scope": {"kind": "part", "part_ids": ["part:physiognomy"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "title:christmas", "type": "supplied", "value": "Christmas-Day Prognostications", "language": "eng", "script": "Latn", "supplied_by": "General Corpus cataloger", "scope": {"kind": "part", "part_ids": ["part:christmas-prognostications"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]}
+    },
+    {
+      "id": "title:days-moon", "type": "supplied", "value": "The Days of the Moon", "language": "eng", "script": "Latn", "supplied_by": "Hardin Craig", "scope": {"kind": "part", "part_ids": ["part:days-moon"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:john-metham", "type": "person", "name": "John Metham", "notes": ["A fifteenth-century East Anglian writer; work-specific responsibility is recorded below rather than projected uniformly over the collection."]},
+    {"id": "agent:hardin-craig", "type": "person", "name": "Hardin Craig"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:metham-amoryus-author", "agent_id": "agent:john-metham", "role": "author", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"], "description": "The Middle English verse romance"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:mets-amoryus"]}
+    },
+    {
+      "id": "responsibility:metham-palmistry-translator", "agent_id": "agent:john-metham", "role": "translator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:palmistry"], "description": "The Palmistry work represented by both Garrett and All Souls copies"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:all-souls-catalog"]},
+      "notes": ["The text says Metham translated it in his twenty-fifth winter; this biographical age is not normalized into a calendar year."]
+    },
+    {
+      "id": "responsibility:metham-physiognomy-compiler", "agent_id": "agent:john-metham", "role": "compiler", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:physiognomy"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "responsibility:metham-physiognomy-translator", "agent_id": "agent:john-metham", "role": "translator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:physiognomy"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]},
+      "notes": ["Craig identifies Latin physiognomical source traditions, but no exact exemplar has been established."]
+    },
+    {
+      "id": "responsibility:metham-days-compiler", "agent_id": "agent:john-metham", "role": "compiler", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:days-moon"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "responsibility:metham-christmas-attributed", "agent_id": "agent:john-metham", "role": "compiler", "attribution_status": "attributed", "scope": {"kind": "part", "part_ids": ["part:christmas-prognostications"], "description": "The complete and fragmentary Christmas-Day versions in Garrett 141"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:craig-1916", "evidence:mets-amoryus"]},
+      "notes": ["The two texts are not explicitly signed in the way that Metham's neighboring prose works are; attribution is retained as attributed rather than known."]
+    },
+    {
+      "id": "responsibility:craig-editor", "agent_id": "agent:hardin-craig", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "The 1916 collection, its transcription, supplied organization, notes, and front matter"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "responsibility:craig-transcriber", "agent_id": "agent:hardin-craig", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes", "part:palmistry-garrett", "part:palmistry-all-souls", "part:physiognomy", "part:christmas-complete", "part:days-moon", "part:christmas-fragment"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "responsibility:craig-collator", "agent_id": "agent:hardin-craig", "role": "collator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:palmistry"], "description": "Parallel Garrett and All Souls versions"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "responsibility:craig-commentator", "agent_id": "agent:hardin-craig", "role": "commentator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:editorial-paratext"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-structure"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:amoryus-composition", "type": "composition", "display": "Twenty-seventh regnal year of Henry VI (1 September 1448-31 August 1449)", "normalized": {"not_before": 1448, "not_after": 1449}, "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:mets-amoryus"]},
+      "notes": ["The poem's regnal-year statement is more precise than a simple display date of 1449."]
+    },
+    {
+      "id": "date:prose-composition", "type": "composition", "display": "Mid-fifteenth century; exact work dates unresolved", "scope": {"kind": "part", "part_ids": ["part:palmistry", "part:physiognomy", "part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog", "evidence:all-souls-catalog"]},
+      "notes": ["The Palmistry's reference to Metham's twenty-fifth winter does not supply a secure absolute date."]
+    },
+    {
+      "id": "date:first-publication", "type": "first_publication", "display": "1916, in EETS Original Series 132", "normalized": {"not_before": 1916, "not_after": 1916}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "edition:craig:eets-os132:1916",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    }
+  ],
+  "places": [
+    {"id": "place:east-anglia", "label": "East Anglia", "kind": "historical_region", "notes": ["Broad literary and dialect region; exact composition locations differ in certainty by work."]},
+    {"id": "place:norfolk", "label": "Norfolk", "kind": "historical_region", "notes": ["The Garrett manuscript and Metham's language are associated with Norfolk; this does not prove one copying or composition site for every item."]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:east-anglia", "place_id": "place:east-anglia", "type": "cultural_origin", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:mets-amoryus"]}
+    },
+    {
+      "id": "place-statement:norfolk", "place_id": "place:norfolk", "type": "dialect_region", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes", "part:palmistry", "part:physiognomy", "part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog", "evidence:all-souls-catalog"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes", "part:palmistry", "part:physiognomy", "part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metham-xml", "evidence:craig-1916"]}
+    },
+    {
+      "id": "language:modern-english", "code": "eng", "label": "English", "usage": "editorial", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:editorial-paratext"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-structure"]}
+    },
+    {
+      "id": "language:latin", "code": "lat", "label": "Latin", "usage": "embedded", "script": "Latn", "scope": {"kind": "whole", "description": "Latin citations, source names, and formulae in medieval texts and editorial matter"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-xml"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole", "value": "mixed", "scope": {"kind": "whole"}, "description": "The encoded collection combines one verse romance, six prose witness representations, and editorial paratext containing prose and quoted verse.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metham-structure"]}
+    },
+    {
+      "id": "form:amoryus", "value": "verse", "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]}
+    },
+    {
+      "id": "form:prose-works", "value": "prose", "scope": {"kind": "part", "part_ids": ["part:palmistry", "part:physiognomy", "part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:scholarly-edition", "term": "scholarly-edition", "label": "Scholarly edition", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-structure"]}
+    },
+    {
+      "id": "genre:middle-english-romance", "term": "middle-english-romance", "label": "Middle English romance", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-amoryus", "evidence:craig-1916"]}
+    },
+    {
+      "id": "genre:scientific-treatise", "term": "scientific-treatise", "label": "Scientific treatise", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:palmistry", "part:physiognomy"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "genre:prognostic", "term": "prognostic", "label": "Prognostic", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:classical-adaptation", "term": "classical-myth-and-medieval-adaptation", "label": "Classical myth and medieval adaptation", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:amoryus-cleopes"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-amoryus", "evidence:craig-1916"]}
+    },
+    {
+      "id": "subject:palmistry", "term": "palmistry-and-chiromancy", "label": "Palmistry and chiromancy", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:palmistry"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:all-souls-catalog"]}
+    },
+    {
+      "id": "subject:physiognomy", "term": "physiognomy", "label": "Physiognomy", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:physiognomy"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916"]}
+    },
+    {
+      "id": "subject:prognostication", "term": "astrology-and-prognostication", "label": "Astrology and prognostication", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:christmas-prognostications", "part:days-moon"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]}
+    },
+    {
+      "id": "subject:textual-transmission", "term": "manuscript-variation-and-textual-transmission", "label": "Manuscript variation and textual transmission", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:palmistry", "part:christmas-prognostications"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:craig-1916", "evidence:metham-structure"]}
+    }
+  ],
+  "tags": ["astrology", "classical-romance", "edited-collection", "john-metham", "manuscript-transmission", "middle-english", "mixed-form", "palmistry", "parallel-witnesses", "physiognomy", "prognostics", "romance", "scholarly-edition", "scientific-treatise"],
+  "summaries": [
+    {
+      "id": "summary:abstract", "type": "abstract", "value": "The encoded collection joins John Metham's 2,211-line Amoryus and Cleopes with prose works on palmistry, physiognomy, Christmas-Day prognostication, and lunar-day prognostication. Palmistry appears in full parallel versions from Princeton Garrett MS 141 and All Souls College MS 81; the Christmas-Day work appears as a complete Garrett copy and a separate Garrett flyleaf fragment.", "language": "eng", "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916", "evidence:garrett-catalog", "evidence:all-souls-catalog"]
+    },
+    {
+      "id": "summary:cataloging", "type": "cataloging_note", "value": "The five abstract medieval works, seven encoded witness representations, Craig's editorial paratext, two manuscript codices, and later edition and encoding layers are intentionally not flattened into one object.", "language": "eng", "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 7,
+    "sections": 5,
+    "prose_only_items": 6,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 319,
+    "verse_lines": 2211,
+    "description": "Intellectual and representation metrics for the medieval content: five abstract works and seven encoded textual representations because Palmistry has two full witness versions and the Christmas-Day prognostication has a complete version and a fragment. Amoryus and Cleopes has 2,211 numbered intellectual lines in 319 stanza groups. The XML has 2,248 L nodes overall: 2,217 under the poem (including two editorial-note quotation lines), twenty-eight in the introduction, and three in the fragment note. Editorial paratext has item_count 0 and the unencoded glossary and index are excluded.",
+    "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:editorial-paratext", "parent_id": null, "sequence": 1, "type": "other", "label": "Craig editorial paratext", "summary": "Encoded front matter: preface, contents, eight-section introduction, and the printed title opening Amoryus and Cleopes. It is publication-layer material, not a medieval work.", "item_count": 0, "textual_form": "mixed",
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "i-xliv"}, {"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "FRONT/DIV1[1-4]"}],
+      "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"],
+      "notes": ["Craig's glossary (pp. 167-177) and index (pp. 178-184) are not encoded; their absence does not create additional medieval-work parts."]
+    },
+    {
+      "id": "part:amoryus-cleopes", "parent_id": null, "sequence": 2, "type": "work", "label": "Amoryus and Cleopes", "summary": "A four-book Middle English verse romance adapting the Pyramus and Thisbe story and surviving uniquely in Garrett MS 141.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 319, "verse_lines": 2211},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "1-81"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "17r-56v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "37-116"}, {"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "BODY/DIV1[1] (Metham:5)"}],
+      "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916", "evidence:garrett-catalog", "evidence:mets-amoryus"],
+      "notes": ["Craig reports two cancelled, illegible stanzas after the ending. A current METS web edition reports recovering erased material through modern imaging; that later intervention is not projected into the pinned XML or Craig's 1916 text."]
+    },
+    {
+      "id": "part:amoryus-book-one", "parent_id": "part:amoryus-cleopes", "sequence": 1, "type": "section", "label": "First Book", "summary": "The seventy-line prologue and first narrative book; U-M notes that the following division is conjectural and follows Craig.", "item_count": 0, "textual_form": "verse", "metrics": {"verse_groups": 105, "verse_lines": 723},
+      "locators": [{"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:5.1; canonical lines 1-723"}], "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]
+    },
+    {
+      "id": "part:amoryus-book-two", "parent_id": "part:amoryus-cleopes", "sequence": 2, "type": "section", "label": "Second Book", "summary": "The second top-level book division in Craig's edition.", "item_count": 0, "textual_form": "verse", "metrics": {"verse_groups": 43, "verse_lines": 300},
+      "locators": [{"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:5.2; canonical lines 724-1023"}], "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"]
+    },
+    {
+      "id": "part:amoryus-book-three", "parent_id": "part:amoryus-cleopes", "sequence": 3, "type": "section", "label": "Third Book", "summary": "The third top-level book division, with its seven-line prologue.", "item_count": 0, "textual_form": "verse", "metrics": {"verse_groups": 109, "verse_lines": 755},
+      "locators": [{"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:5.3; canonical lines 1024-1778"}], "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"],
+      "notes": ["The XML has 757 L nodes here because two printed lines are split into duplicate-numbered nodes."]
+    },
+    {
+      "id": "part:amoryus-book-four", "parent_id": "part:amoryus-cleopes", "sequence": 4, "type": "section", "label": "Last Book", "summary": "The fourth and final book, including its twenty-eight-line prologue.", "item_count": 0, "textual_form": "verse", "metrics": {"verse_groups": 62, "verse_lines": 433},
+      "locators": [{"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:5.4; canonical lines 1779-2211"}], "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916"],
+      "notes": ["The XML subtree has 437 L nodes: 435 numbered nodes plus two quotation lines nested inside Craig's note at line 2193. Several printed lines are represented by split duplicate-numbered nodes."]
+    },
+    {
+      "id": "part:palmistry", "parent_id": null, "sequence": 3, "type": "work", "label": "Palmistry", "summary": "Metham's Middle English translation of a Latin chiromancy text attributed in the tradition to Doctor Aurelian, printed in two full parallel witness versions.", "item_count": null, "textual_form": "prose",
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "85-117, parallel odd/even pages"}, {"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:6.1"}],
+      "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916", "evidence:all-souls-catalog"]
+    },
+    {
+      "id": "part:palmistry-garrett", "parent_id": "part:palmistry", "sequence": 1, "type": "item", "label": "Palmistry: Garrett version", "summary": "The fuller version from Garrett MS 141, used by Craig as the principal parallel text.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "86-116, even pages"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "1r-11v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "5-26"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]
+    },
+    {
+      "id": "part:palmistry-all-souls", "parent_id": "part:palmistry", "sequence": 2, "type": "item", "label": "Palmistry: All Souls version", "summary": "A closely related full version from All Souls College MS 81, generally later in spelling and omitting two short paragraphs found in Garrett.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "85-117, odd pages"}, {"lineage_entity_id": "witness:all-souls:MS-81", "scheme": "historical folios used by Craig and Coxe", "value": "202r-212v"}, {"lineage_entity_id": "witness:all-souls:MS-81", "scheme": "current Watson foliation", "value": "175v-185v"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:all-souls-catalog", "evidence:watson-catalog"]
+    },
+    {
+      "id": "part:physiognomy", "parent_id": null, "sequence": 4, "type": "work", "label": "Physiognomy", "summary": "Metham's compilation and translation from Latin physiognomical traditions associated with Loxus, Polemon, Aristotle, and the Secretum secretorum.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "118-145"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "57r-75v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "117-154"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]
+    },
+    {
+      "id": "part:christmas-prognostications", "parent_id": null, "sequence": 5, "type": "work", "label": "Christmas-Day Prognostications", "summary": "Two separate Garrett representations of the Esdras-associated Christmas-Day prognostication tradition: one complete copy and one damaged flyleaf fragment.", "item_count": null, "textual_form": "prose",
+      "locators": [{"lineage_entity_id": "encoding:umich-cme:Metham", "scheme": "XML path", "value": "Metham:6.3 and Metham:6.5"}], "evidence_ids": ["evidence:metham-structure", "evidence:craig-1916", "evidence:garrett-catalog"]
+    },
+    {
+      "id": "part:christmas-complete", "parent_id": "part:christmas-prognostications", "sequence": 1, "type": "item", "label": "Christmas-Day Prognostication: complete Garrett version", "summary": "The complete version in the main Garrett codex sequence.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "146-147"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "78r-v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "159-160"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]
+    },
+    {
+      "id": "part:christmas-fragment", "parent_id": "part:christmas-prognostications", "sequence": 2, "type": "fragment", "label": "Christmas-Day Prognostication: Garrett flyleaf fragment", "summary": "A second version on a spoiled sheet reused as a flyleaf; the text breaks off on the third line of its second page.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "157-158"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "87r-v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "177-178"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"],
+      "notes": ["Three XML L nodes belong to Craig's editorial note about the fragment, not to a verse work."]
+    },
+    {
+      "id": "part:days-moon", "parent_id": null, "sequence": 6, "type": "work", "label": "The Days of the Moon", "summary": "Metham's prose compilation of prognostications for lunar days in the lunationes tradition.", "item_count": 1, "textual_form": "prose", "metrics": {"prose_only_items": 1},
+      "locators": [{"lineage_entity_id": "edition:craig:eets-os132:1916", "scheme": "printed pages", "value": "148-156"}, {"lineage_entity_id": "witness:princeton:Garrett-141", "scheme": "folios", "value": "79r-83v"}, {"lineage_entity_id": "facsimile:princeton:Garrett-141", "scheme": "IIIF canvases", "value": "161-170"}],
+      "evidence_ids": ["evidence:craig-1916", "evidence:garrett-catalog"]
+    }
+  ],
+  "related_works": [
+    {"id": "related:pyramus-thisbe", "title": "Ovidian Pyramus and Thisbe tradition", "relation": "adaptation_of", "evidence_ids": ["evidence:mets-amoryus", "evidence:craig-1916"], "notes": ["Relation is at the narrative-work level; no physical Ovid exemplar used by Metham is identified."]},
+    {"id": "related:aurelian-chiromancy", "title": "Latin chiromancy attributed to Doctor Aurelian", "relation": "translation_of", "evidence_ids": ["evidence:craig-1916"], "notes": ["The exact Latin work and exemplar remain unidentified."]},
+    {"id": "related:latin-physiognomy", "title": "Latin physiognomical tradition of Loxus, Polemon, and Aristotle", "relation": "adaptation_of", "evidence_ids": ["evidence:craig-1916"]},
+    {"id": "related:secretum-secretorum", "title": "Secretum secretorum, physiognomical section", "relation": "adaptation_of", "evidence_ids": ["evidence:craig-1916"], "notes": ["Craig associates material with the Latin translation by Philip of Tripoli; an exact exemplar is not known."]},
+    {"id": "related:esdras-prognostics", "title": "Esdras Christmas-Day prognostication tradition", "relation": "related_to", "evidence_ids": ["evidence:craig-1916"]},
+    {"id": "related:lunationes", "title": "Lunationes or lunar-day prognostication tradition", "relation": "related_to", "evidence_ids": ["evidence:craig-1916"]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:Metham",
+    "manifest_path": "manifests/lineage/works/Metham.json",
+    "bindings": [
+      {"metadata_target": "work:Metham", "lineage_entity_id": "edition:craig:eets-os132:1916", "role": "source_edition"},
+      {"metadata_target": "work:Metham", "lineage_entity_id": "edition:kraus:eets-os132:1974", "role": "source_edition"},
+      {"metadata_target": "work:Metham", "lineage_entity_id": "encoding:umich-cme:Metham", "role": "digital_encoding"},
+      {"metadata_target": "work:Metham", "lineage_entity_id": "artifact:general-corpus:Metham", "role": "repository_representation"},
+      {"metadata_target": "part:amoryus-cleopes", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"},
+      {"metadata_target": "part:palmistry-garrett", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"},
+      {"metadata_target": "part:palmistry-all-souls", "lineage_entity_id": "witness:all-souls:MS-81", "role": "source_witness"},
+      {"metadata_target": "part:physiognomy", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"},
+      {"metadata_target": "part:christmas-complete", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"},
+      {"metadata_target": "part:christmas-fragment", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"},
+      {"metadata_target": "part:days-moon", "lineage_entity_id": "witness:princeton:Garrett-141", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metham-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_1-2/Metham.xml.", "repository_path": "CME/source/CME_phase_1-2/Metham.xml", "locator": "HEADER; FRONT and BODY divisions", "summary": "Primary repository artifact; supplies the exact encoded boundary, titles, source statement, editorial declaration, page and folio milestones, and text.", "accessed_on": "2026-07-15", "sha256": "03ddc949efd150063d8e34d359f9c43f4e865897dcb3a0ddff1540b7235c1d49"},
+    {"id": "evidence:metham-structure", "type": "computational_inspection", "citation": "Computational structural and line-number inspection of the pinned Metham XML, checked against Craig's 1916 edition.", "repository_path": "CME/source/CME_phase_1-2/Metham.xml", "summary": "Established five abstract works, seven medieval representations, front-matter and omitted-back-matter boundaries, division paths, 319 verse groups, canonical 2,211-line extent, and raw XML node anomalies."},
+    {"id": "evidence:craig-1916", "type": "digital_surrogate", "citation": "John Metham, The Works of John Metham, ed. Hardin Craig, EETS OS 132 (London: Kegan Paul, Trench, Trubner & Co., 1916).", "url": "https://archive.org/details/worksofjohnmetha00methuoft", "alternate_urls": ["https://archive.org/download/worksofjohnmetha00methuoft/worksofjohnmetha00methuoft.pdf"], "locator": "Complete volume; especially pp. ix-xlii, 1-184", "summary": "Immediate textual ancestor of the 1974 reprint and primary evidence for edition boundary, work titles, authorship, source analysis, parallel Palmistry presentation, manuscript loci, and poem extent.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:umich-metham", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, Metham.", "url": "https://quod.lib.umich.edu/c/cme/Metham?view=toc", "alternate_urls": ["https://name.umdl.umich.edu/Metham"], "summary": "Current item landing, table of contents, persistent identifier, and provider rights statement for the electronic edition.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:current-medictionary", "type": "official_webpage", "citation": "MEDictionary, current public Metham XML, last updated May 2026.", "url": "https://www.medictionary.info/texts/Metham.xml", "alternate_urls": ["https://www.medictionary.info/pages/CME_downloads.html"], "summary": "Current descendant encoding consulted for comparison with the pinned artifact; core divisions and counts persist, while markup is modernized and two substantive corrected-reading differences were identified.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:garrett-catalog", "type": "official_catalog", "citation": "Princeton University Library, Middle English Works, Garrett MS 141.", "url": "https://catalog.princeton.edu/catalog/99108872923506421", "alternate_urls": ["https://digital-collections.princeton.edu/i/middle-english-works/item/812a0b80-1010-4547-b3a1-063857a1acfc", "http://arks.princeton.edu/ark:/88435/8k71nn092"], "summary": "Current shelfmark, contents, codicological description, date and place, language, and complete 180-image digital object for the principal manuscript witness.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:all-souls-catalog", "type": "official_catalog", "citation": "All Souls College Library, Catalogue of Manuscripts, MS 81, online edition (2022).", "url": "https://library.asc.ox.ac.uk/manuscripts/catalogue_of_manuscripts_asc.html#081", "locator": "MS 81, item 11", "summary": "Official codex description and historical foliation showing Palmistry beginning at old fol. 202 and ending before the next item at old fol. 213b.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:watson-catalog", "type": "digital_surrogate", "citation": "Andrew G. Watson, A Descriptive Catalogue of the Medieval Manuscripts of All Souls College, Oxford (1997), MS 81.", "url": "https://library.asc.ox.ac.uk/manuscripts/Watson%20Scan%20Full.pdf#page=186", "locator": "PDF viewer pp. 186-193; item E(iii)", "summary": "Current foliation, codicological strata, hand and language description, and the exact crosswalk of Metham's Palmistry to fols. 175v-185v.", "accessed_on": "2026-07-15"},
+    {"id": "evidence:mets-amoryus", "type": "scholarly_source", "citation": "Middle English Texts Series, current Amoryus and Cleopes edition and introduction.", "url": "https://metseditions.org/editions/3lwg1BLefANgTya3UMDL5fwXQb9glZR", "alternate_urls": ["https://metseditions.org/read/V2292E1fGyRf5k5hlbV2CQeK95bPEk"], "summary": "Current scholarship for the poem's date, East Anglian context, unique Garrett witness, Ovidian adaptation, literary genres, and recovery of erased ending material in the current web edition.", "accessed_on": "2026-07-15"}
+  ],
+  "open_questions": [
+    {
+      "id": "question:palmistry-latin-source", "question": "What exact Latin chiromancy work and exemplar underlie Metham's Palmistry translation attributed to Doctor Aurelian?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare the text against cataloged Latin Aurelian chiromancies and recent work on Middle English palmistry before assigning a normalized source-work identity."], "last_checked": "2026-07-15", "evidence_ids": ["evidence:craig-1916"]
+    },
+    {
+      "id": "question:physiognomy-exemplars", "question": "Can Metham's exact Latin exemplars for the Physiognomy compilation be identified beyond Craig's broad Loxus-Polemon-Aristotle and Secretum secretorum source families?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult recent source studies and compare distinctive chapter sequences against Latin witnesses."], "last_checked": "2026-07-15", "evidence_ids": ["evidence:craig-1916"]
+    }
+  ],
+  "notes": [
+    "The All Souls folio systems are both retained: Craig and the older Coxe description use 202r-212v, while Watson's current foliation locates the same text at 175v-185v.",
+    "Raw XML L-node counts are encoding metrics, not authored line counts. Duplicate, split, truncated, and missing @N values prevent a naive node or number count from replacing Craig's canonical 2,211-line statement.",
+    "The U-M encoding integrates Craig's printed notes from pp. 159-166 into the text and omits those print pages as a separate section; it also omits the glossary and index.",
+    "The first/second book division after line 723 is conjectural in the electronic edition and follows Craig's organization.",
+    "Current MEDictionary XML is a descendant public encoding, not an upstream source of the pinned repository file."
+  ]
+}

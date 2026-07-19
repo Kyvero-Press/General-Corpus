@@ -1,0 +1,1248 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Gawain",
+  "work_id": "Gawain",
+  "title": "Sir Gawain and the Green Knight",
+  "primary_subject": "artifact:general-corpus:Gawain",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The checked-in Gawain XML is a local repository representation of a University of Michigan/Oxford Text Archive electronic text distributed in 1993. Its declared immediate source is the 1967 second edition of J. R. R. Tolkien and E. V. Gordon's text, revised by Norman Davis; that edition revises the 1925 first edition and ultimately represents the unique medieval witness, British Library Cotton MS Nero A X/2. The manuscript and print editions, the electronic encoding, and the repository artifact are modeled as distinct entities so that dates, foliation, access, and rights statements are not inherited across layers.",
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Gawain",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Gawain",
+      "description": "The XML artifact consumed by this repository's conversion, catalog, and publication workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "General Corpus work ID",
+          "value": "Gawain"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "8755fea19bb086f949c193ec5d0a15dbc26f7804"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero-press"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/Gawain.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "8755fea19bb086f949c193ec5d0a15dbc26f7804",
+        "sha256": "fd0eea43e0c72a54c7b2897b89991fddb7f3b7d2d3b12b8ced8be068e08f207e"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-gawain-xml-header",
+        "evidence:repo-gawain-xml-content"
+      ],
+      "notes": [
+        "The XML identifies the digital item as Gawain through HEADER/FILEDESC/PUBLICATIONSTMT/IDNO[@TYPE='dlps'].",
+        "The source submodule is a distinct git repository; this manifest does not alter the XML."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Gawain",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item Gawain",
+      "description": "A publicly accessible electronic text of the Middle English poem, structurally divided into four passus and associated in the legacy header with Oxford Text Archive U*-62-A.",
+      "identifiers": [
+        {
+          "scheme": "University of Michigan CME item",
+          "value": "Gawain",
+          "uri": "https://name.umdl.umich.edu/Gawain"
+        },
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U*-62-A"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "electronic distribution date in legacy header",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-gawain-xml-header"
+          ],
+          "notes": "The header does not distinguish initial OTA creation, U-M ingest, or later platform migration dates."
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header",
+        "evidence:umich-gawain-item",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "The current U-M item exposes the complete poem as web text.",
+        "The exact division of encoding responsibility between OTA and U-M is not documented by the item-level evidence reviewed here."
+      ]
+    },
+    {
+      "id": "edition:tolkien-gordon-davis:1967",
+      "type": "scholarly_edition",
+      "label": "Tolkien-Gordon second edition revised by Davis (1967)",
+      "creator_ids": [
+        "agent:jrr-tolkien",
+        "agent:ev-gordon",
+        "agent:norman-davis"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1967",
+          "normalized": "1967",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-gawain-xml-header",
+            "evidence:ia-gawain-1967-scan",
+            "evidence:umich-gawain-item"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Sir Gawain and the Green Knight, ed. J. R. R. Tolkien and E. V. Gordon, 2nd ed., rev. Norman Davis (Oxford: Clarendon Press, 1967).",
+        "title": "Sir Gawain and the Green Knight",
+        "publisher": "Clarendon Press",
+        "publication_place": "Oxford",
+        "date": "1967",
+        "languages": [
+          "enm",
+          "eng",
+          "xno"
+        ]
+      },
+      "physical_description": {
+        "extent": "xxviii, 232 pages; illustrations; 23 cm",
+        "format": "Printed scholarly edition",
+        "notes": [
+          "The local XML header records illustrations in the printed text and a bibliography on pages 153–156."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header",
+        "evidence:ia-gawain-1967-scan",
+        "evidence:umich-cme-browse"
+      ],
+      "notes": [
+        "The XML header names Tolkien and Gordon but omits Davis; U-M's collection browse record and the 1967 scan metadata supply the revision responsibility.",
+        "This is a Middle English scholarly edition, not Tolkien's posthumously published Modern English translation."
+      ]
+    },
+    {
+      "id": "edition:tolkien-gordon:1925",
+      "type": "scholarly_edition",
+      "label": "Tolkien-Gordon first edition (1925)",
+      "creator_ids": [
+        "agent:jrr-tolkien",
+        "agent:ev-gordon"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1925",
+          "normalized": "1925",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:gawain-1925-wikisource-scan",
+            "evidence:repo-gawain-xml-header"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Sir Gawain and the Green Knight, ed. J. R. R. Tolkien and E. V. Gordon (Oxford: Clarendon Press, 1925).",
+        "title": "Sir Gawain and the Green Knight",
+        "publisher": "Clarendon Press",
+        "publication_place": "Oxford",
+        "date": "1925",
+        "languages": [
+          "enm",
+          "eng",
+          "xno"
+        ]
+      },
+      "physical_description": {
+        "extent": "xxvii, 211 pages plus frontispiece and plate",
+        "format": "Printed scholarly edition"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:gawain-1925-wikisource-scan",
+        "evidence:repo-gawain-xml-header"
+      ],
+      "notes": [
+        "The 1967 book identifies this as its previous edition; the complete 1925 scan is openly viewable in the United States."
+      ]
+    },
+    {
+      "id": "witness:bl:Cotton-Nero-A-X-2",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Nero A X/2",
+      "alternate_labels": [
+        "Cotton MS Nero A X, article 3",
+        "Pearl Manuscript",
+        "Gawain Manuscript"
+      ],
+      "description": "The unique manuscript witness of Sir Gawain and the Green Knight and of Pearl, Cleanness, and Patience. Gawain occupies modern folios 94v–130r; the older foliation embedded in the repository XML runs 91r–124v.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Cotton MS Nero A X/2",
+          "uri": "https://searcharchives.bl.uk/catalog/040-003316720"
+        },
+        {
+          "scheme": "British Library record ID",
+          "value": "040-003316720"
+        },
+        {
+          "scheme": "British Library LARK",
+          "value": "ark:/81055/vdc_100165158643.0x000001"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "text copied",
+          "value": "between 1375 and 1400",
+          "normalized": "1375/1400",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-nero-a-x-2"
+          ]
+        },
+        {
+          "label": "miniatures added",
+          "value": "circa 1400–1410",
+          "normalized": "1400/1410",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-cotton-nero-a-x-2"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Nero A X/2",
+        "historical_designations": [
+          "Cotton MS Nero A X, article 3",
+          "Cotton MS Nero A X, ff. 41–130"
+        ],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-003316720",
+        "notes": "The original composite Cotton MS Nero A X was separated into two volumes in 1964."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "90 folios in the separately bound volume; Gawain at modern folios 94v–130r",
+        "format": "Parchment codex, written in one column of 36 lines",
+        "dimensions": "Approximately 180 × 155 mm",
+        "notes": [
+          "Gothic cursive script described as textura rotunda with anglicana features.",
+          "The manuscript has two foliation sequences; the BL catalog uses modern pencil foliation, while the XML milestones preserve the older sequence.",
+          "The text was copied by one scribe in a South-East Cheshire or North-East Staffordshire dialect; the poet's dialect is distinguished as farther south in Staffordshire.",
+          "The BL record lists three Gawain illustrations at modern folios 94v, 129r–v, and 130r, with the first and last leaves carrying multiple scenes."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2",
+        "evidence:repo-gawain-xml-content"
+      ],
+      "notes": [
+        "Do not describe the repository XML's folio milestones as modern BL foliation.",
+        "The witness date is separate from the poem's composition date and the later illustration date."
+      ]
+    },
+    {
+      "id": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "type": "facsimile",
+      "label": "University of Calgary Gawain Manuscript microfilm page images",
+      "description": "A public digital collection of page images made from a microfilm reel of Cotton MS Nero A X/2, with item-level descriptions and older/modern foliation pairs.",
+      "identifiers": [
+        {
+          "scheme": "University of Calgary collection",
+          "value": "Gawain Manuscript",
+          "uri": "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/"
+        }
+      ],
+      "physical_description": {
+        "extent": "Full digital coverage of Cotton MS Nero A X/2 reported by the British Library catalog",
+        "format": "Digital page images derived from microfilm",
+        "notes": [
+          "The sampled item is identified as folio 125/129 verso, making the older and modern foliation relationship explicit."
+        ]
+      },
+      "reproduction_format": "Digital page images from microfilm",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ucalgary-gawain-facsimile",
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The collection is a reproduction layer, not the manuscript itself and not the repository XML."
+      ]
+    },
+    {
+      "id": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "type": "facsimile",
+      "label": "Wikimedia Commons complete Cotton Nero A X/2 PDF",
+      "description": "A downloadable 180-page PDF compiled from the University of Calgary page images, covering every side from modern folios 41r–130v.",
+      "identifiers": [
+        {
+          "scheme": "Wikimedia Commons file",
+          "value": "BL Cotton MS Nero A x (art. 3).pdf",
+          "uri": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf"
+        }
+      ],
+      "creator_ids": [
+        "agent:wikimedia-foundation"
+      ],
+      "physical_description": {
+        "extent": "180 PDF pages, one for each manuscript side",
+        "format": "Complete color PDF facsimile",
+        "notes": [
+          "Commons identifies Calgary as the file source. Direct inspection confirms color manuscript photography, including the painted Gawain leaves."
+        ]
+      },
+      "reproduction_format": "Digital PDF compiled from Calgary page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-gawain-boundaries",
+        "evidence:ucalgary-gawain-facsimile"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press/CME"
+      ]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-gawain-item",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header",
+        "evidence:umich-gawain-item"
+      ]
+    },
+    {
+      "id": "agent:oxford-university-press",
+      "type": "organization",
+      "name": "Oxford University Press",
+      "alternate_names": [
+        "Clarendon Press"
+      ],
+      "urls": [
+        "https://global.oup.com/"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ]
+    },
+    {
+      "id": "agent:university-calgary",
+      "type": "organization",
+      "name": "University of Calgary Libraries and Cultural Resources",
+      "urls": [
+        "https://digitalcollections.ucalgary.ca/"
+      ],
+      "evidence_ids": [
+        "evidence:ucalgary-gawain-facsimile"
+      ]
+    },
+    {
+      "id": "agent:wikimedia-foundation",
+      "type": "organization",
+      "name": "Wikimedia Foundation",
+      "urls": [
+        "https://www.wikimedia.org/"
+      ]
+    },
+    {
+      "id": "agent:jrr-tolkien",
+      "type": "person",
+      "name": "J. R. R. Tolkien",
+      "alternate_names": [
+        "John Ronald Reuel Tolkien"
+      ],
+      "dates": "1892–1973",
+      "evidence_ids": [
+        "evidence:ia-gawain-1967-scan",
+        "evidence:gawain-1925-wikisource-scan"
+      ]
+    },
+    {
+      "id": "agent:ev-gordon",
+      "type": "person",
+      "name": "E. V. Gordon",
+      "alternate_names": [
+        "Eric Valentine Gordon"
+      ],
+      "dates": "1896–1938",
+      "evidence_ids": [
+        "evidence:ia-gawain-1967-scan",
+        "evidence:gawain-1925-wikisource-scan"
+      ]
+    },
+    {
+      "id": "agent:norman-davis",
+      "type": "person",
+      "name": "Norman Davis",
+      "dates": "1913–1989",
+      "evidence_ids": [
+        "evidence:ia-gawain-1967-scan"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-xml-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Gawain",
+      "object": "encoding:umich-cme:Gawain",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete checked-in Gawain XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The U-M CME digital text identified as Gawain"
+        },
+        "notes": "The local header, item identifier, structure, and text align with U-M's item. The exact download, release, and any intermediate normalization are not documented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-readme-source",
+          "evidence:repo-gawain-xml-header",
+          "evidence:umich-gawain-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-1967-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Gawain",
+      "object": "edition:tolkien-gordon-davis:1967",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete electronic poem, excluding omitted editorial matter"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The Middle English text and its four-passus structure in the 1967 edition"
+        },
+        "notes": "The header explicitly names the 1967 second edition and states which print components were omitted."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-gawain-xml-header",
+          "evidence:umich-gawain-item",
+          "evidence:ia-gawain-1967-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:1967-version-of-1925",
+      "type": "version_of",
+      "subject": "edition:tolkien-gordon-davis:1967",
+      "object": "edition:tolkien-gordon:1925",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The 1967 second edition revised by Norman Davis"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The Tolkien-Gordon first edition of 1925"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-gawain-xml-header",
+          "evidence:ia-gawain-1967-scan",
+          "evidence:gawain-1925-wikisource-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:1967-edition-transcribes-witness",
+      "type": "transcribes",
+      "subject": "edition:tolkien-gordon-davis:1967",
+      "object": "witness:bl:Cotton-Nero-A-X-2",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The edited Middle English poem on text pages 1–69"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Sir Gawain and the Green Knight",
+          "locators": [
+            "modern folios 94v–130r",
+            "older foliation 91r–124v in the repository XML"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-gawain-xml-header",
+          "evidence:repo-gawain-xml-content",
+          "evidence:bl-cotton-nero-a-x-2",
+          "evidence:ia-gawain-1967-scan"
+        ],
+        "notes": "The unique witness and matching folio milestones support direct manuscript representation, while detailed collation history is edition-level scholarship not fully restated in the electronic header."
+      }
+    },
+    {
+      "id": "relation:1925-edition-transcribes-witness",
+      "type": "transcribes",
+      "subject": "edition:tolkien-gordon:1925",
+      "object": "witness:bl:Cotton-Nero-A-X-2",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "The edited Middle English text"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Sir Gawain and the Green Knight in the unique manuscript",
+          "locators": [
+            "modern folios 94v–130r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:gawain-1925-wikisource-scan",
+          "evidence:bl-cotton-nero-a-x-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:ucalgary-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "object": "witness:bl:Cotton-Nero-A-X-2",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The Gawain Manuscript page-image collection"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Cotton MS Nero A X/2"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ucalgary-gawain-facsimile",
+          "evidence:bl-cotton-nero-a-x-2"
+        ]
+      }
+    },
+    {
+      "id": "relation:commons-version-of-ucalgary",
+      "type": "version_of",
+      "subject": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "object": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 180-page Commons PDF"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 180-image Calgary facsimile"
+        },
+        "notes": "The Commons record identifies the University of Calgary collection as its source."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:commons-complete-facsimile",
+          "evidence:commons-gawain-boundaries",
+          "evidence:ucalgary-gawain-facsimile"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-gawain-xml",
+      "entity": "artifact:general-corpus:Gawain",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Checked-out CME submodule or pinned GitHub blob",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/Gawain.xml",
+      "repository_path": "CME/source/CME_from_OTA/Gawain.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header"
+      ]
+    },
+    {
+      "id": "access:umich-gawain-text",
+      "entity": "encoding:umich-cme:Gawain",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item page and View entire text",
+      "url": "https://quod.lib.umich.edu/c/cme/Gawain?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Gawain"
+      ],
+      "cost": "free",
+      "format": "HTML text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:umich-gawain-item"
+      ]
+    },
+    {
+      "id": "access:gawain-1967-ia",
+      "entity": "edition:tolkien-gordon-davis:1967",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Internet Archive controlled digital lending item; sign-in and borrowing availability may be required",
+      "url": "https://archive.org/details/sirgawaingreenkn0000tolk",
+      "cost": "free",
+      "format": "Access-restricted page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ia-gawain-1967-scan"
+      ],
+      "notes": [
+        "The item is in the printdisabled collection and reports Access-restricted-item true; it is not an unrestricted public PDF download."
+      ]
+    },
+    {
+      "id": "access:gawain-1925-wikisource",
+      "entity": "edition:tolkien-gordon:1925",
+      "provider_id": "agent:wikimedia-foundation",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Wikisource page-image viewer and original DjVu",
+      "url": "https://en.wikisource.org/wiki/File:Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu",
+      "alternate_urls": [
+        "https://babel.hathitrust.org/cgi/pt?id=mdp.39015035315160",
+        "https://upload.wikimedia.org/wikisource/en/5/58/Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu"
+      ],
+      "local_copies": [
+        {
+          "label": "Tolkien-Gordon Sir Gawain 1925 complete DjVu",
+          "path": "source-cache/Gawain/tolkien-gordon-gawain-1925-complete.djvu",
+          "source_url": "https://upload.wikimedia.org/wikisource/en/5/58/Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu",
+          "sha256": "f983de5d31333ae7bde8923c0eae9afd257eb548f1ff9960ccc6665c6d7bd676",
+          "bytes": 16534808,
+          "media_type": "image/vnd.djvu",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "Complete 256-page source DjVu, retaining cover and scan matter, preface, introduction, bibliography, edited text, notes, grammar, glossary, index, and terminal matter."
+          ],
+          "work_portion": {
+            "label": "Tolkien and Gordon's edited Middle English text",
+            "locators": ["DjVu pages 41-118", "printed text pp. 1-78"],
+            "start_url": "https://en.wikisource.org/wiki/Page:Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu/41",
+            "end_url": "https://en.wikisource.org/wiki/Page:Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu/118",
+            "notes": [
+              "Direct DjVu text and page inspection confirms that the poem begins on source page 41 and ends on source page 118; editorial notes begin on page 119."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "DjVu and page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:gawain-1925-wikisource-scan"
+      ],
+      "notes": ["The ignored local cache preserves the complete printed source object; reuse remains limited by the jurisdiction-qualified rights record."]
+    },
+    {
+      "id": "access:bl-witness-catalog",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts Catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/040-003316720",
+      "cost": "free",
+      "format": "HTML catalog record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    },
+    {
+      "id": "access:bl-witness-physical",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Request the shelfmark using the BL collection-item request process; consultation is in London and restrictions apply",
+      "url": "https://forms.office.com/pages/responsepage.aspx?id=6B2cfc7MZUyMS4s31RjO_4dHAT3W5mdPvXcbR0bE2RFUOFlXM1AzQ1JaMVBRSUZYSEJURjVNUlI3Mi4u",
+      "cost": "unknown",
+      "format": "Original parchment codex",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The catalog states that access restrictions and a letter of introduction apply and directs readers to consult staff."
+      ]
+    },
+    {
+      "id": "access:bl-witness-digital",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "British Library digital item viewer",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100165158643.0x000001",
+      "cost": "not_applicable",
+      "format": "Digital page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2"
+      ],
+      "notes": [
+        "The current catalog explicitly reports the digital images as unavailable."
+      ]
+    },
+    {
+      "id": "access:ucalgary-facsimile",
+      "entity": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "provider_id": "agent:university-calgary",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "University of Calgary Digital Collections Gawain Manuscript collection",
+      "url": "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/",
+      "cost": "free",
+      "format": "Online page images from microfilm",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ucalgary-gawain-facsimile",
+        "evidence:bl-cotton-nero-a-x-2"
+      ]
+    },
+    {
+      "id": "access:commons-complete-pdf",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "provider_id": "agent:wikimedia-foundation",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Commons file record and direct complete-PDF download",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Cotton MS Nero A X/2 PDF facsimile",
+          "path": "source-cache/Gawain/cotton-nero-a-x-2-complete-facsimile.pdf",
+          "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+          "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac",
+          "bytes": 220421432,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "work_portion": {
+            "label": "Sir Gawain and the Green Knight",
+            "locators": [
+              "modern pencil folios 94v–130r",
+              "older foliation represented in the XML: 91r–124v",
+              "PDF pages 108–179 inclusive"
+            ],
+            "start_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=108",
+            "end_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf#page=179",
+            "notes": [
+              "PDF page 108 is the prefatory Gawain illustration on modern fol. 94v; page 179 is the final illustrated surface on modern fol. 130r."
+            ]
+          },
+          "notes": [
+            "The file contains all 180 manuscript sides; the work mapping points to Gawain without reducing the cache to those leaves."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "180-page PDF",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile",
+        "evidence:commons-gawain-boundaries"
+      ],
+      "notes": [
+        "Commons's public-domain assertion conflicts with restrictions presented by the Calgary source service; this access record does not resolve that conflict."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:umich-gawain-us",
+      "entity": "encoding:umich-cme:Gawain",
+      "access_id": "access:umich-gawain-text",
+      "component": "The Gawain digital text and materials presented by University of Michigan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The item and collection pages expressly state that the materials are in the public domain in the United States and apply No Copyright–United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-gawain-item",
+        "evidence:umich-cme-collection"
+      ],
+      "notes": [
+        "No Copyright–United States is a rights statement, not a worldwide license and not an itemized analysis of the 1967 edition's editorial contributions."
+      ]
+    },
+    {
+      "id": "rights:repo-gawain-upstream-us",
+      "entity": "artifact:general-corpus:Gawain",
+      "access_id": "access:repo-gawain-xml",
+      "component": "The upstream U-M/OTA transcription and medieval text represented in the checked-in XML",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The artifact is supported as a local representation of the U-M item that U-M marks No Copyright–United States.",
+      "asserted_by_id": "agent:kyvero-press",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-gawain-xml-header",
+        "evidence:umich-gawain-item"
+      ],
+      "notes": [
+        "This statement does not independently adjudicate protectable Davis revisions or cover project-authored code, metadata, typography, or outputs."
+      ]
+    },
+    {
+      "id": "rights:gawain-medieval-text-us",
+      "entity": "witness:bl:Cotton-Nero-A-X-2",
+      "component": "The anonymous medieval textual content of Sir Gawain and the Green Knight",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The text is attested in a manuscript copied between 1375 and 1400 and is centuries beyond any U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-nero-a-x-2",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "This concerns the old text, not modern photographs, scans, transcriptions, editions, catalog prose, or provider contracts."
+      ]
+    },
+    {
+      "id": "rights:gawain-1967-edition-us",
+      "entity": "edition:tolkien-gordon-davis:1967",
+      "access_id": "access:gawain-1967-ia",
+      "component": "Protectable revisions, introduction, notes, glossary, apparatus, typography, and other editorial contributions in the 1967 second edition",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "A work first protected in 1967 can carry a 95-year U.S. term through 2062 under the Copyright Office's pre-1978 term guidance. No item-specific copyright record, exception, or permission was established in this review, and Internet Archive restricts the scan.",
+      "effective_until": "2062-12-31",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-gawain-1967-scan",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "The effective-until date is the maximum ordinary term if the edition secured U.S. protection; it is not a finding that every reading or editorial choice is independently copyrightable.",
+        "U-M's NoC-US statement for its digital item is recorded separately and is not silently generalized to the complete printed apparatus."
+      ]
+    },
+    {
+      "id": "rights:gawain-1925-edition-us",
+      "entity": "edition:tolkien-gordon:1925",
+      "access_id": "access:gawain-1925-wikisource",
+      "component": "The 1925 edition and the Wikisource/HathiTrust page-image surrogate in the United States",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1925, before the current U.S. public-domain cutoff; Wikisource independently labels the file public domain in the United States.",
+      "asserted_by_id": "agent:wikimedia-foundation",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:gawain-1925-wikisource-scan",
+        "evidence:us-copyright-circular-15a"
+      ],
+      "notes": [
+        "Wikisource warns that the edition is not necessarily public domain in its country of origin; this record is jurisdiction-limited."
+      ]
+    },
+    {
+      "id": "rights:ucalgary-facsimile-provider",
+      "entity": "facsimile:ucalgary:Cotton-Nero-A-X-2-microfilm",
+      "access_id": "access:ucalgary-facsimile",
+      "component": "University of Calgary Gawain Manuscript microfilm-derived page images",
+      "jurisdiction": "Provider rights statement and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "A sampled University of Calgary item carries a Public Domain label but also enumerates limited usage categories and requires attribution; collection-wide terms and every exact image record were not verified.",
+      "asserted_by_id": "agent:university-calgary",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ucalgary-gawain-facsimile"
+      ],
+      "notes": [
+        "Do not generalize a sampled item's public-domain label to the whole collection or to unrestricted commercial redistribution without reviewing the exact image record and current terms.",
+        "Apply the item-level attribution supplied by the provider when using an image."
+      ]
+    },
+    {
+      "id": "rights:commons-complete-facsimile",
+      "entity": "facsimile:commons:Cotton-Nero-A-X-2-pdf",
+      "access_id": "access:commons-complete-pdf",
+      "component": "Commons-hosted complete PDF compiled from Calgary images",
+      "jurisdiction": "Wikimedia Commons provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "Commons applies a mechanical-scan rationale and Public Domain Mark 1.0 to the hosted PDF.",
+      "asserted_by_id": "agent:wikimedia-foundation",
+      "license": {
+        "name": "Public Domain Mark 1.0",
+        "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:commons-complete-facsimile"
+      ],
+      "notes": [
+        "Confidence is high that Commons makes this assertion, not that it resolves Calgary's conflicting British Library license and use restrictions.",
+        "Do not transfer this provider claim to Calgary, the British Library's own images, or newly ordered photography."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:encoding-omits-apparatus",
+      "entity": "encoding:umich-cme:Gawain",
+      "practice": "selection",
+      "source_feature": "Front matter, back matter, and editorial notes in the 1967 printed edition",
+      "representation": "Omitted from the electronic text",
+      "description": "The electronic encoding selects the poem and excludes the print edition's front and back matter and editorial notes.",
+      "scope": "Complete electronic item relative to the 1967 source edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header"
+      ]
+    },
+    {
+      "id": "practice:encoding-omits-illustrations",
+      "entity": "encoding:umich-cme:Gawain",
+      "practice": "selection",
+      "source_feature": "Illustrations in the printed 1967 edition",
+      "representation": "Not noted in the electronic text",
+      "description": "The local header explicitly states that illustrations in the printed text are not noted in the electronic text.",
+      "scope": "Illustrative content of the source edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-header"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-readme-source",
+      "type": "repository_file",
+      "citation": "General Corpus README, ‘Intro.’",
+      "repository_path": "README.org",
+      "locator": "Intro",
+      "summary": "The repository describes its working source snapshot as drawn from the Corpus of Middle English."
+    },
+    {
+      "id": "evidence:repo-gawain-xml-header",
+      "type": "repository_file",
+      "citation": "General Corpus local Gawain XML header.",
+      "repository_path": "CME/source/CME_from_OTA/Gawain.xml",
+      "locator": "HEADER/FILEDESC, ENCODINGDESC, and PROFILEDESC",
+      "summary": "The header identifies Sir Gawain and the Green Knight, Anonymous, U-M distributor, item Gawain, OTA U*-62-A, 1993, and the Tolkien-Gordon 1967 second edition; it states that print front/back matter, editorial notes, and illustrations are omitted or unnoted.",
+      "sha256": "fd0eea43e0c72a54c7b2897b89991fddb7f3b7d2d3b12b8ced8be068e08f207e"
+    },
+    {
+      "id": "evidence:repo-gawain-xml-content",
+      "type": "repository_file",
+      "citation": "General Corpus local Gawain XML text.",
+      "repository_path": "CME/source/CME_from_OTA/Gawain.xml",
+      "locator": "TEXT/BODY; four DIV1 passus; folio MILESTONE elements",
+      "summary": "The complete encoded poem supports its four-passus contents, source-edition page markers 1–69, older manuscript foliation 91r–124v, and closing Anglo-Norman motto."
+    },
+    {
+      "id": "evidence:repo-gawain-xml-structure",
+      "type": "repository_file",
+      "citation": "XPath structural inspection of the General Corpus local Gawain XML.",
+      "repository_path": "CME/source/CME_from_OTA/Gawain.xml",
+      "locator": "Counts of DIV1, LG, L, PB, and MILESTONE elements, including per-passus counts",
+      "summary": "The XML contains four passus; 100 LG and 2,533 L elements. Passus counts are I 20/491, II 24/636, III 34/872, and IV 22/534 for LG/L. LG numbering spans 1–101 but has no separate LG 14.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-gawain-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, ‘Sir Gawain and the Green Knight,’ item Gawain.",
+      "url": "https://quod.lib.umich.edu/c/cme/Gawain?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Gawain"
+      ],
+      "locator": "Item information, rights, actions, and contents",
+      "summary": "The page identifies Anonymous, Oxford: Clarendon Press 1967, OTA U*-62-A, four passus, a complete web text, and No Copyright–United States.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:database-middle-english-romance",
+      "type": "scholarly_source",
+      "citation": "University of York, Database of Middle English Romance, ‘London, British Library, MS Cotton Nero A.x/2.’",
+      "url": "https://www.middleenglishromance.org.uk/index.php/manuscripts/london-british-library-ms-cotton-nero-ax2",
+      "locator": "Contents",
+      "summary": "The database identifies Gawain as a unique copy at modern folios 94v–130r, NIMEV 3144, containing 2,530 lines, and links the Calgary facsimile.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection home and rights statement.",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "locator": "Collection description and Rights and Permissions",
+      "summary": "U-M describes an initial group of texts obtained from OTA, transcribed by the Library, or contributed by faculty; later batches were manually keyed from public-domain editions with in-house proofreading and basic TEI markup. It offers bulk XML and states No Copyright–United States.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:umich-cme-browse",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse browse list.",
+      "url": "https://quod.lib.umich.edu/c/cme/browse.html",
+      "locator": "Anonymous works, Sir Gawain and the Green Knight",
+      "summary": "The collection browse entry identifies the source as edited by J. R. R. Tolkien and E. V. Gordon, revised by N. Davis, Oxford 1967.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:bl-cotton-nero-a-x-2",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Cotton MS Nero A X/2, record 040-003316720.",
+      "url": "https://searcharchives.bl.uk/catalog/040-003316720",
+      "locator": "Full record",
+      "summary": "The record supplies the shelfmark, unique poem contents and modern folios, copying and decoration dates, dialect localizations, physical description, provenance, current access restrictions, unavailable BL digital images, and a pointer to full Calgary coverage.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ia-gawain-1967-scan",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive item sirgawaingreenkn0000tolk, Sir Gawain and the Green Knight (Oxford: Clarendon Press, 1967).",
+      "url": "https://archive.org/details/sirgawaingreenkn0000tolk",
+      "alternate_urls": [
+        "https://archive.org/metadata/sirgawaingreenkn0000tolk"
+      ],
+      "locator": "Item metadata and access status",
+      "summary": "The scan metadata confirms 1967, Clarendon Press, xxviii plus 232 pages, previous edition 1925, bibliography pages 153–156, Tolkien/Gordon/Davis associations, and access-restricted printdisabled status.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:gawain-1925-wikisource-scan",
+      "type": "digital_surrogate",
+      "citation": "Wikisource/HathiTrust full scan, Sir Gawain and the Green Knight, ed. J. R. R. Tolkien and E. V. Gordon (Oxford: Clarendon Press, 1925).",
+      "url": "https://en.wikisource.org/wiki/File:Sir_Gawain_and_the_Green_Knight_-_Tolkien_and_Gordon_-_1925.djvu",
+      "alternate_urls": [
+        "https://babel.hathitrust.org/cgi/pt?id=mdp.39015035315160"
+      ],
+      "locator": "Complete 256-image DjVu and bibliographic summary",
+      "summary": "The full scan confirms the first edition's title, editors, Oxford/Clarendon Press publication, and manuscript-based Middle English text. Wikisource labels the file public domain in the United States and warns that country-of-origin status differs.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ucalgary-gawain-facsimile",
+      "type": "official_webpage",
+      "citation": "University of Calgary Digital Collections, Gawain Manuscript item for Cotton Nero A X/2 folio 125/129 verso.",
+      "url": "https://digitalcollections.ucalgary.ca/CS.aspx?VP3=SearchResult&VBID=2R34WNG3AQUL&PN=4&IID=2R3BF1FQQ9DW2",
+      "alternate_urls": [
+        "https://digitalcollections.ucalgary.ca/Browse/Collections/Gawain-Manuscript/"
+      ],
+      "locator": "Details and How can you use this image?",
+      "summary": "The item identifies a Gawain illustration as folio 125/129 verso, derived from microfilm, labels Copyright Status Public Domain, lists Usage Rights Education, Instruction, Private study, Research, and supplies an attribution line.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:commons-complete-facsimile",
+      "type": "digital_surrogate",
+      "citation": "Wikimedia Commons, BL Cotton MS Nero A x (art. 3).pdf.",
+      "url": "https://commons.wikimedia.org/wiki/File:BL_Cotton_MS_Nero_A_x_(art._3).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf"
+      ],
+      "locator": "complete 180-page PDF",
+      "summary": "The file record identifies Calgary as the source, exposes a direct complete-manuscript PDF, and applies a mechanical-scan public-domain rationale and Public Domain Mark 1.0.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
+    },
+    {
+      "id": "evidence:commons-gawain-boundaries",
+      "type": "visual_inspection",
+      "citation": "Direct inspection and folio mapping of the complete Commons Cotton Nero A X/2 PDF.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BL_Cotton_MS_Nero_A_x_%28art._3%29.pdf",
+      "locator": "PDF pp. 1–180; Gawain pp. 108–179",
+      "summary": "Confirmed complete codex coverage and color manuscript photography. PDF page 108 is the Gawain prefatory illustration at modern fol. 94v, and page 179 is the final illustrated surface at modern fol. 130r.",
+      "accessed_on": "2026-07-11",
+      "sha256": "4bc1c8e5d4abbdb1a299541adf01fd873eb04a934b6f47e04cad21f98547e9ac"
+    },
+    {
+      "id": "evidence:us-copyright-circular-15a",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright, revised April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "Works already under statutory protection before 1978; mandatory and automatic renewal; restoration of foreign works",
+      "summary": "The Copyright Office explains the possible 95-year term for protected pre-1978 publications, mandatory renewal for 1950–1963 works, automatic renewal for 1964–1977 works, restoration of certain foreign works, and the current pre-1931 U.S. public-domain cutoff.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:local-xml-transfer-history",
+      "question": "What exact OTA/U-M release, download date, and transformation history produced the pinned local Gawain XML blob?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect CME repository history and surviving U-M or OTA release documentation.",
+        "Record any intermediate normalization with checksums and dates."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-readme-source",
+        "evidence:repo-gawain-xml-header",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "question:1967-editorial-rights",
+      "question": "Which 1967 Davis revisions or other edition components remain protected in the United States and intended publication jurisdictions, and how should U-M's NoC-US statement be reconciled with them?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Review the edition's copyright page and relevant registration or restoration records.",
+        "Compare the XML systematically with the public-domain 1925 edition and the manuscript before attributing reusable readings to a protected revision.",
+        "Obtain legal review before distributing protected apparatus or nontrivial Davis revisions."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:umich-gawain-item",
+        "evidence:ia-gawain-1967-scan",
+        "evidence:gawain-1925-wikisource-scan",
+        "evidence:us-copyright-circular-15a"
+      ]
+    },
+    {
+      "id": "question:ucalgary-commercial-reuse",
+      "question": "Do the University of Calgary facsimile's enumerated Usage Rights permit commercial redistribution despite the item-level Public Domain label?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Review the current Calgary license and terms linked from representative items.",
+        "Request written clarification for commercial print or bundled image redistribution.",
+        "Preserve the required item-level attribution and any response."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ucalgary-gawain-facsimile"
+      ]
+    },
+    {
+      "id": "question:xml-stanza-line-mismatch",
+      "question": "Why does the XML contain 100 LG elements and 2,533 L elements while the conventional poem is described as 101 stanzas and 2,530 lines?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Diff the XML against the 1967 text and inspect the merged material around omitted LG number 14.",
+        "Identify L elements created by typographic line wrapping rather than verse boundaries.",
+        "Keep XML element counts distinct from canonical verse numbering in generated catalog data."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:repo-gawain-xml-structure",
+        "evidence:ia-gawain-1967-scan",
+        "evidence:gawain-1925-wikisource-scan",
+        "evidence:database-middle-english-romance"
+      ]
+    }
+  ],
+  "languages": [
+    "enm",
+    "eng",
+    "xno"
+  ],
+  "review_notes": [
+    "Composition, manuscript copying, illustration, print publication, electronic distribution, and repository dates are modeled separately.",
+    "Older XML foliation 91r–124v and modern BL foliation 94v–130r are both retained with explicit labels.",
+    "Access and rights records apply only to the named entity or component; public access to a transcription does not automatically authorize reuse of a scholarly edition or manuscript image.",
+    "This record deliberately treats the exact OTA-to-U-M-to-repository transfer history and the 1967 edition's rights as unresolved."
+  ]
+}

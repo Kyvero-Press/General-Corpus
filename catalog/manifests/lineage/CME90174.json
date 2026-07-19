@@ -1,0 +1,2058 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME90174",
+  "work_id": "CME90174",
+  "title": "Lollard Sermons",
+  "primary_subject": "artifact:general-corpus:CME90174",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The approved General Corpus source is the 2023 University of Michigan CME encoding CME90174. U-M obtained Oxford Text Archive item 0174, an incomplete and partly corrupt plain-text derivative or close associate of Gloria Cigman's 1989 EETS edition, then restored the missing sermon 13 and the damaged beginnings of sermon 4 from the print edition, reordered the material, and added structure plus folio references. Cigman's eighteen-text editorial selection transcribes sermons 1–11A from British Library Add MS 41321, sermons 12–16 and the Sermon of Dead Men from Bodleian MS Rawl. C. 751, and selected Sermon of Dead Men passages from Manchester English MS 412. The complete current OTA file package is cached. Manchester exposes a complete 199-canvas manuscript viewer, with the target work at fols 50r–72r / canvases 138–182, but no local bundle was made because the site's exact terms prohibit systematic extraction. No complete public facsimile was verified for the British Library or Bodleian witnesses.",
+  "languages": [
+    "enm",
+    "lat",
+    "eng"
+  ],
+  "review_notes": [
+    "The primary subject is the checked-in repository XML, while the intellectual unit cataloged in the paired metadata manifest is an eighteen-text edited selection rather than a single manuscript work.",
+    "No single witness contains the complete CME90174 sequence. Manuscript, scholarly-edition, OTA-deposit, U-M-encoding, and repository-artifact layers are therefore kept distinct.",
+    "The current OTA ZIP is complete coverage of the provider's three-file deposit package, but that encoding is textually incomplete relative to Cigman's eighteen-part selection: it lacks actual sermon 13, preserves sermon 4 in corrupt form, and misnumbers the Sermon of Dead Men.",
+    "The General Corpus repository's software license is not treated as a license for the CME XML, EETS editorial matter, or repository-supplied manuscript images."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME90174",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME90174",
+      "description": "The approved sparse-source XML selected by the repository's explicit publication override.",
+      "identifiers": [
+        {
+          "scheme": "CME",
+          "value": "CME90174"
+        },
+        {
+          "scheme": "XML-IDG",
+          "value": "CME90174"
+        },
+        {
+          "scheme": "XML-BIBNO",
+          "value": "OTA0174"
+        },
+        {
+          "scheme": "XML-VID",
+          "value": "CME90174"
+        }
+      ],
+      "creator_ids": [
+        "agent:general-corpus"
+      ],
+      "repository_file": {
+        "path": "CME/source/recent_changes/additions_2023/CME90174.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "0bab6b23b864a067137d1367b56fa4e5a461f920",
+        "sha256": "eda222bcb69b47e92f203d06b12cc4137ec5271819b163cf7d02f495a5f2748d"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:cme90174-source-resolution",
+        "evidence:cme90174-structure"
+      ],
+      "notes": [
+        "The file is 652,024 bytes. Its exact identity is pinned by submodule commit, git blob, and SHA-256.",
+        "The publication source resolves through manifests/publication-set/source-overrides.json rather than the normal dense CME phase directories."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME90174",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME digital text CME90174",
+      "description": "The 2023 MEC/CME encoding made from OTA 0174 and checked against Cigman's print edition.",
+      "identifiers": [
+        {
+          "scheme": "UMDL",
+          "value": "CME90174",
+          "uri": "https://name.umdl.umich.edu/CME90174"
+        }
+      ],
+      "creator_ids": [
+        "agent:university-of-michigan-library"
+      ],
+      "date_statements": [
+        {
+          "label": "revision and expansion",
+          "value": "13 February 2023",
+          "normalized": "2023-02-13",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:cme90174-xml"
+          ],
+          "notes": "The header was created on 21 February 2023; the revision entry records the substantive work on 13 February."
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:umich-cme90174",
+        "evidence:cme90174-structure"
+      ],
+      "notes": [
+        "The encoding has 18 DIV1 units, 811 paragraphs, 1,712 line milestones, and 350 manuscript-folio milestones: 213 for A, 128 for R, and 9 for M.",
+        "Those 18 editorial/XML units can also be described as 17 writings when optional expansion 11A is counted as part of sermon 11 rather than as an independent work.",
+        "It follows print-edition line breaks but omits the edition's italics, apparatus, printed-page references, introduction, and notes.",
+        "Square brackets remain literal; angle-bracketed source text was mapped to SUPPLIED, with the header warning that UNCLEAR may sometimes have been more appropriate."
+      ]
+    },
+    {
+      "id": "encoding:ota:0174",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive legacy digital text ota:0174",
+      "alternate_labels": [
+        "OTA 174"
+      ],
+      "description": "The three-file legacy OTA deposit from which the 2023 U-M text began.",
+      "identifiers": [
+        {
+          "scheme": "OTA",
+          "value": "0174",
+          "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174"
+        },
+        {
+          "scheme": "Handle",
+          "value": "20.500.12024/0174",
+          "uri": "https://hdl.handle.net/20.500.12024/0174"
+        }
+      ],
+      "creator_ids": [
+        "agent:gloria-cigman",
+        "agent:oxford-text-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "documented OTA readme date",
+          "value": "29 April 1989",
+          "normalized": "1989-04-29",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota0174-package-inspection"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota0174-item",
+        "evidence:ota0174-package-inspection",
+        "evidence:cme90174-xml"
+      ],
+      "notes": [
+        "The current package contains header0174.xml, lolls1to16-0174.txt, and readme0174.txt; ZIP integrity testing succeeded.",
+        "The readme literally attributes its source to an Early English Text Society edition dated 1988, whereas header0174.xml identifies the source as Cigman's 1989 publication and the edition itself was published in 1989. This conflict is preserved rather than normalized.",
+        "The text is incomplete relative to Cigman's edition: actual sermon 13 is absent, sermon 4 lacks the first five or six letters of most lines, and the Sermon of Dead Men is numbered as sermon 13 in the plain text.",
+        "The readme's statement that dead.txt was unavailable conflicts with the current bundled plain text, which contains the Sermon of Dead Men under the wrong number."
+      ]
+    },
+    {
+      "id": "edition:cigman:lollard-sermons:1989",
+      "type": "scholarly_edition",
+      "label": "Gloria Cigman's Lollard Sermons (1989)",
+      "creator_ids": [
+        "agent:gloria-cigman"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1989",
+          "normalized": "1989",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:folger-eets294",
+            "evidence:oup-eets294"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Gloria Cigman, ed., Lollard Sermons, with a manuscript description by Jeremy Griffiths and a language analysis by Jeremy Smith, Early English Text Society, Original Series 294 (Oxford: Oxford University Press, 1989).",
+        "title": "Lollard Sermons",
+        "series": "Early English Text Society, Original Series 294",
+        "publisher": "Oxford University Press for the Early English Text Society",
+        "publication_place": "Oxford",
+        "date": "1989",
+        "pages": "lxx, 322 pages, plates",
+        "languages": [
+          "enm",
+          "lat",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:folger-eets294",
+        "evidence:oup-eets294",
+        "evidence:cme90174-xml",
+        "evidence:internet-archive-eets294"
+      ],
+      "notes": [
+        "ISBN 0-19-722296-X / 978-0-19-722296-6.",
+        "The edition establishes the selection represented as 18 top-level units in CME90174; scholarship may count 17 writings when optional expansion 11A is treated as part of sermon 11. Its introduction and apparatus were not encoded by U-M.",
+        "Direct consultation of the edition's full introductory argument and apparatus remains necessary to refine the precise witness-to-reading relationships."
+      ]
+    },
+    {
+      "id": "facsimile:internet-archive:eets294",
+      "type": "facsimile",
+      "label": "Internet Archive access-restricted scan of Lollard Sermons (1989)",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "426-page access-restricted scanned-book object",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:internet-archive-eets294"
+      ],
+      "notes": [
+        "The item metadata reports access-restricted=true; no lawful unrestricted PDF or complete image download was verified or cached."
+      ]
+    },
+    {
+      "id": "witness:bl:Add-MS-41321",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 41321",
+      "alternate_labels": [
+        "A"
+      ],
+      "description": "The primary witness for sermons 1–11A in Cigman's edition and CME90174.",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "first decades of the fifteenth century (scholarly dating); current catalog metadata conflicts",
+          "normalized": "1400/1430",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:pink2011",
+            "evidence:bl-add41321"
+          ],
+          "notes": "Pink reports Griffiths's first-decades-of-the-fifteenth-century dating. The current BL record's title, scope note, and machine-readable date fields variously indicate late fourteenth, sixteenth, or 1500–1599."
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 41321",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002084869",
+        "notes": "The official group record is labeled Add MS 41321/1-12 and supplies child descriptions for the sermon units."
+      },
+      "physical_description": {
+        "extent": "116 folios",
+        "format": "codex; multiple hands",
+        "notes": [
+          "The official description says the manuscript ends unfinished in its sermon for the Second Sunday in Lent.",
+          "Considerable passages in sermons 8–10 are alliterative verse written as prose."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-add41321",
+        "evidence:pink2011",
+        "evidence:cme90174-structure"
+      ]
+    },
+    {
+      "id": "witness:bodleian:Rawl-C-751",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Rawl. C. 751",
+      "alternate_labels": [
+        "R",
+        "MS. Rawl. C. 751"
+      ],
+      "description": "The primary witness for sermons 12–16 and the Sermon of Dead Men in Cigman's edition and CME90174.",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "early fifteenth century",
+          "normalized": "1400/1430",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bodleian-rawl-c751",
+            "evidence:pink2011"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian-libraries",
+        "shelfmark": "MS. Rawl. C. 751",
+        "catalog_url": "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/320081",
+        "notes": "The official record describes a treatise on the four last things, sermons, and part of Poor Caitiff."
+      },
+      "physical_description": {
+        "format": "codex",
+        "notes": [
+          "CME90174 maps the Sermon of Dead Men to ff. 1r–25v and sermons 12–16 to ff. 72r–110v."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bodleian-rawl-c751",
+        "evidence:cme90174-structure",
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "witness:manchester:English-MS-412",
+      "type": "manuscript_witness",
+      "label": "University of Manchester Library English MS 412",
+      "alternate_labels": [
+        "M",
+        "R61716",
+        "Pore Caitif"
+      ],
+      "description": "A fifteenth-century manuscript of Pore Caitif containing the Sermon of Dead Men at fols 50r–72r; selected passages supply the edited base text in CME90174.",
+      "identifiers": [
+        {
+          "scheme": "Manchester Digital Collections",
+          "value": "MS-ENGLISH-00412",
+          "uri": "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "fifteenth century",
+          "normalized": "1400/1499",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:manchester-eng412"
+          ]
+        },
+        {
+          "label": "more specific scholarly dating",
+          "value": "first decades of the fifteenth century",
+          "normalized": "1400/1430",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:pink2011"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:university-of-manchester-library",
+        "shelfmark": "English MS 412",
+        "catalog_url": "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412",
+        "notes": "The catalog's alternative reference is R61716."
+      },
+      "physical_description": {
+        "support": "parchment",
+        "extent": "xii + 72 + vii folios; target work at ff. 50r–72r",
+        "format": "codex; one column; one hand in Anglicana formata",
+        "dimensions": "205 × 140 mm",
+        "notes": [
+          "The official content list identifies item 7, '[M]emorare nouissima', at ff. 50r–72r and notes its occurrence also in Rawl. C. 751."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:manchester-eng412",
+        "evidence:manchester-eng412-iiif",
+        "evidence:cme90174-structure"
+      ]
+    },
+    {
+      "id": "facsimile:manchester:English-MS-412",
+      "type": "facsimile",
+      "label": "University of Manchester complete digital viewer for English MS 412",
+      "creator_ids": [
+        "agent:university-of-manchester-library"
+      ],
+      "reproduction_format": "199-canvas IIIF-backed page-image viewer",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:manchester-eng412",
+        "evidence:manchester-eng412-iiif",
+        "evidence:manchester-digital-terms"
+      ],
+      "notes": [
+        "The viewer sequence runs from the upper cover through the lower cover.",
+        "The target work occupies fols 50r–72r, corresponding to canvases 138–182.",
+        "No local IIIF bundle was created because the exact site terms prohibit systematic extraction or reutilization of substantial parts without permission."
+      ]
+    },
+    {
+      "id": "study:pink:2011-lollard-sermons",
+      "type": "catalog_description",
+      "label": "Stephen Pink's 2011 study of scripture and Eucharistic meanings",
+      "description": "A doctoral thesis used for contextual claims about the Lollard Sermons witnesses, possible composition date, and disputed Wycliffite affiliation; it is not a transmission ancestor or source edition.",
+      "creator_ids": [
+        "agent:stephen-pink"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "2011",
+          "normalized": "2011",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:pink2011"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Stephen Pink, Holy Scripture and the Meanings of the Eucharist in Late Medieval England, c. 1370–1430 (DPhil thesis, University of Oxford, 2011).",
+        "title": "Holy Scripture and the Meanings of the Eucharist in Late Medieval England, c. 1370–1430",
+        "publisher": "University of Oxford",
+        "date": "2011",
+        "pages": "224 PDF pages",
+        "languages": [
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "study:kikusawa:2011-lollard-sermons",
+      "type": "catalog_description",
+      "label": "Namiko Kikusawa's 2011 linguistic study",
+      "description": "An MPhil thesis used for contextual description of the collection's eighteen texts, liturgical organization, performance function, and language; it is not a transmission ancestor or source edition.",
+      "creator_ids": [
+        "agent:namiko-kikusawa"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "2011",
+          "normalized": "2011",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:kikusawa2011"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Namiko Kikusawa, Conditional if-clauses in Late Middle English prose texts (MPhil thesis, University of Glasgow, 2011).",
+        "title": "Conditional if-clauses in Late Middle English prose texts",
+        "publisher": "University of Glasgow",
+        "date": "2011",
+        "pages": "75 PDF pages",
+        "languages": [
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:kikusawa2011"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:general-corpus",
+      "type": "organization",
+      "name": "General Corpus",
+      "urls": [
+        "https://github.com/Kyvero-Press/General-Corpus"
+      ]
+    },
+    {
+      "id": "agent:university-of-michigan-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ]
+    },
+    {
+      "id": "agent:oxford-text-archive",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://ota.bodleian.ox.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:gloria-cigman",
+      "type": "person",
+      "name": "Gloria Cigman",
+      "notes": [
+        "Editor of the 1989 EETS edition and identified OTA compiler or depositor; not a medieval author."
+      ]
+    },
+    {
+      "id": "agent:jeremy-griffiths",
+      "type": "person",
+      "name": "Jeremy Griffiths",
+      "notes": [
+        "Contributor of the manuscript description to Cigman's edition."
+      ]
+    },
+    {
+      "id": "agent:jeremy-smith",
+      "type": "person",
+      "name": "Jeremy Smith",
+      "notes": [
+        "Contributor of the language analysis to Cigman's edition."
+      ]
+    },
+    {
+      "id": "agent:early-english-text-society",
+      "type": "organization",
+      "name": "Early English Text Society",
+      "urls": [
+        "https://www.eets.org.uk/"
+      ]
+    },
+    {
+      "id": "agent:oxford-university-press",
+      "type": "organization",
+      "name": "Oxford University Press",
+      "urls": [
+        "https://global.oup.com/academic/"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ]
+    },
+    {
+      "id": "agent:bodleian-libraries",
+      "type": "organization",
+      "name": "Bodleian Libraries",
+      "urls": [
+        "https://www.bodleian.ox.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:university-of-manchester-library",
+      "type": "organization",
+      "name": "University of Manchester Library",
+      "urls": [
+        "https://www.library.manchester.ac.uk/",
+        "https://www.digitalcollections.manchester.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ]
+    },
+    {
+      "id": "agent:stephen-pink",
+      "type": "person",
+      "name": "Stephen Pink",
+      "evidence_ids": [
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "agent:namiko-kikusawa",
+      "type": "person",
+      "name": "Namiko Kikusawa",
+      "evidence_ids": [
+        "evidence:kikusawa2011"
+      ]
+    },
+    {
+      "id": "agent:oxford-research-archive",
+      "type": "organization",
+      "name": "Oxford University Research Archive",
+      "urls": [
+        "https://ora.ox.ac.uk/"
+      ]
+    },
+    {
+      "id": "agent:glasgow-theses-service",
+      "type": "organization",
+      "name": "University of Glasgow Enlighten Theses",
+      "urls": [
+        "https://theses.gla.ac.uk/"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME90174",
+      "object": "encoding:umich-cme:CME90174",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete checked-in XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The U-M CME digital text represented by the XML"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:umich-cme90174"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-ota",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME90174",
+      "object": "encoding:ota:0174",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The expanded and reordered eighteen-unit U-M encoding"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The complete current OTA deposit as input",
+          "locators": [
+            "lolls1to16-0174.txt",
+            "header0174.xml",
+            "readme0174.txt"
+          ]
+        },
+        "notes": "The OTA source supplied most text but lacked actual sermon 13, had damaged sermon 4 line beginnings, and misnumbered the Sermon of Dead Men."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:ota0174-package-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME90174",
+      "object": "edition:cigman:lollard-sermons:1989",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Restored sermon 13, repaired sermon 4 line beginnings, reordered units, and added line and manuscript-folio references",
+          "locators": [
+            "DIV1[@N='4']",
+            "DIV1[@N='13']",
+            "all MILESTONE[@UNIT]"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Edition readings and reference structure consulted for the 2023 repairs"
+        },
+        "notes": "The U-M header says the file was compared to the print edition; it does not claim to encode the introduction, apparatus, notes, or printed-page references."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml"
+        ]
+      }
+    },
+    {
+      "id": "relation:ota-encoded-from-edition",
+      "type": "encoded_from",
+      "subject": "encoding:ota:0174",
+      "object": "edition:cigman:lollard-sermons:1989",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The legacy OTA digital text"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The edited sermon texts, excluding introduction, notes, and apparatus"
+        },
+        "notes": "OTA and U-M describe the digital text as taken from, derived from, or closely associated with the edition. The OTA readme literally calls its source an EETS edition dated 1988, while header0174.xml and the published edition give 1989. The 29 April 1989 readme date and this source-date conflict may indicate a pre-publication editorial file, so the exact physical mediation remains unresolved."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ota0174-package-inspection",
+          "evidence:cme90174-xml",
+          "evidence:ota0174-item"
+        ],
+        "notes": "The relationship is secure at the edition-text level but not yet at the level of a specific printed copy versus editorial typescript or machine-readable precursor."
+      }
+    },
+    {
+      "id": "relation:edition-transcribes-add41321",
+      "type": "transcribes",
+      "subject": "edition:cigman:lollard-sermons:1989",
+      "object": "witness:bl:Add-MS-41321",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Sermons 1–11A",
+          "locators": [
+            "sermons 1–11",
+            "optional expansion 11A"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "The corresponding manuscript texts, with shared boundary surfaces assigned to both adjacent units",
+          "locators": [
+            "sermon 1: ff. 1r–8v",
+            "sermon 2: ff. 8v–23v",
+            "sermon 3: ff. 23v–34r",
+            "sermon 4: ff. 34r–40v",
+            "sermon 5: ff. 40v–50v",
+            "sermon 6: ff. 50v–56v",
+            "sermon 7: ff. 56v–60v",
+            "sermon 8: ff. 61r–70v",
+            "sermon 9: ff. 70v–79r",
+            "sermon 10: ff. 79r–89v",
+            "sermon 11: ff. 89v–96r",
+            "optional expansion 11A: ff. 96r–107r"
+          ]
+        },
+        "notes": "The BL child records give incipit folios. In several DIV1 units, opening words occur on the previous unit's final surface before the first inline XML folio milestone; overlapping boundary folios are therefore intentional."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:bl-add41321",
+          "evidence:folger-eets294",
+          "evidence:cme90174-structure"
+        ]
+      }
+    },
+    {
+      "id": "relation:edition-transcribes-rawl-sermons",
+      "type": "transcribes",
+      "subject": "edition:cigman:lollard-sermons:1989",
+      "object": "witness:bodleian:Rawl-C-751",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Sermons 12–16",
+          "locators": [
+            "sermons 12–16"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "The corresponding manuscript texts",
+          "locators": [
+            "ff. 72r–110v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:bodleian-rawl-c751",
+          "evidence:folger-eets294",
+          "evidence:cme90174-structure"
+        ]
+      }
+    },
+    {
+      "id": "relation:edition-transcribes-rawl-dead",
+      "type": "transcribes",
+      "subject": "edition:cigman:lollard-sermons:1989",
+      "object": "witness:bodleian:Rawl-C-751",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Sermon of Dead Men"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The primary manuscript text",
+          "locators": [
+            "ff. 1r–25v"
+          ]
+        },
+        "notes": "Manchester English MS 412 supplies selected passages where CME90174 changes its folio siglum to M."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:bodleian-rawl-c751",
+          "evidence:cme90174-structure"
+        ]
+      }
+    },
+    {
+      "id": "relation:edition-transcribes-manchester-dead",
+      "type": "transcribes",
+      "subject": "edition:cigman:lollard-sermons:1989",
+      "object": "witness:manchester:English-MS-412",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Nine discontinuous selected base-text passages in the Sermon of Dead Men",
+          "locators": [
+            "M folio milestones 50v, 51r, 51v, 52r, 56r, 56v, 57r, 57v, and 58v"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Sermon of Dead Men witness text",
+          "locators": [
+            "ff. 50r–72r",
+            "viewer canvases 138–182"
+          ]
+        },
+        "notes": "The manuscript contains the whole work at ff. 50r–72r; only nine discontinuous passages marked by M folio milestones form the base of the CME reading text."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cme90174-xml",
+          "evidence:cme90174-structure",
+          "evidence:manchester-eng412",
+          "evidence:manchester-eng412-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:eets294",
+      "object": "edition:cigman:lollard-sermons:1989",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The 426-page scanned-book object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The 1989 edition"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:internet-archive-eets294"
+        ],
+        "notes": "Bibliographic identity and page count are confirmed, but the access-restricted page images were not downloaded for leaf-by-leaf completeness inspection."
+      }
+    },
+    {
+      "id": "relation:manchester-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:manchester:English-MS-412",
+      "object": "witness:manchester:English-MS-412",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "The complete 199-canvas viewer from upper cover through lower cover",
+          "locators": [
+            "target work at canvases 138–182"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "The complete physical manuscript as represented by the provider",
+          "locators": [
+            "target work at ff. 50r–72r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:manchester-eng412",
+          "evidence:manchester-eng412-iiif"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-artifact",
+      "entity": "artifact:general-corpus:CME90174",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/additions_2023/CME90174.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/additions_2023/CME90174.xml"
+      ],
+      "repository_path": "CME/source/recent_changes/additions_2023/CME90174.xml",
+      "access_method": "public commit-pinned GitHub blob or raw XML; the same checked-in submodule file is selected through the publication source override",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:cme90174-source-resolution",
+        "evidence:cme-repository-license"
+      ]
+    },
+    {
+      "id": "access:umich-cme90174",
+      "entity": "encoding:umich-cme:CME90174",
+      "provider_id": "agent:university-of-michigan-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://name.umdl.umich.edu/CME90174",
+      "access_method": "public U-M corpus item",
+      "cost": "free",
+      "format": "web text and XML-derived corpus presentation",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:umich-cme90174",
+        "evidence:cme90174-xml"
+      ]
+    },
+    {
+      "id": "access:ota0174-package",
+      "entity": "encoding:ota:0174",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174/allzip",
+      "alternate_urls": [
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0174/header0174.xml?sequence=3&isAllowed=y",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0174/lolls1to16-0174.txt?sequence=4&isAllowed=y",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0174/readme0174.txt?sequence=5&isAllowed=y"
+      ],
+      "access_method": "direct public download of the complete current three-file deposit package",
+      "cost": "free",
+      "format": "ZIP containing XML and plain text",
+      "local_copies": [
+        {
+          "label": "Oxford Text Archive 0174 complete deposited file package",
+          "path": "source-cache/CME90174/ota-0174-all-local-files.zip",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174/allzip",
+          "sha256": "39ef933b91217b4aa7e603962c8607d2d713e7afa7c328d7235bf42a9bff0896",
+          "bytes": 494008,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 3,
+          "work_portion": {
+            "label": "Legacy OTA representation of the sermon selection",
+            "locators": [
+              "lolls1to16-0174.txt: sermons 1–12, Sermon of Dead Men misnumbered 13, and sermons 14–16; optional 11A incorporated in the sequence",
+              "actual sermon 13 absent",
+              "sermon 4 line beginnings corrupt"
+            ],
+            "notes": [
+              "Coverage is complete for the current OTA source object but incomplete for the eighteen-text intellectual unit later represented by CME90174.",
+              "The readme's statement that dead.txt was unavailable conflicts with the current text payload."
+            ]
+          },
+          "notes": [
+            "ZIP integrity verified with unzip -t on 2026-07-14.",
+            "A repeated retrieval returned identical three member payloads but a different outer-ZIP checksum because the server regenerated member timestamps. This record pins the first retained bundle; member SHA-256 values are b9e2a0e3797de40195c32dd3b5e9bd5d12adf6eef4414f040690154376030cfb (header), c817274cfebe245cd5bbe4992c0c5f9db526cf04d8aa853d865bcef04b04e555 (text), and cf4991b00b9d746473737f294564fec3186b32b74d3fb36f81e3125d834f41e5 (readme)."
+          ]
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ota0174-item",
+        "evidence:ota0174-package-inspection"
+      ]
+    },
+    {
+      "id": "access:eets294-restricted-scan",
+      "entity": "facsimile:internet-archive:eets294",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "url": "https://archive.org/details/lollardsermons0000unse",
+      "access_method": "access-restricted scanned-book viewer or controlled borrowing where available",
+      "cost": "free",
+      "format": "access-restricted scanned book",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:internet-archive-eets294"
+      ],
+      "notes": [
+        "The metadata explicitly marks the item access restricted; it is not modeled as a public downloadable facsimile."
+      ]
+    },
+    {
+      "id": "access:eets294-purchase",
+      "entity": "edition:cigman:lollard-sermons:1989",
+      "provider_id": "agent:oxford-university-press",
+      "resource_kind": "catalog_record",
+      "status": "purchasable",
+      "url": "https://global.oup.com/academic/product/lollard-sermons-9780197222966",
+      "alternate_urls": [
+        "https://www.hatchards.co.uk/book/lollard-sermons/g-cigman/9780197222966"
+      ],
+      "access_method": "purchase print edition from the publisher or bookseller",
+      "cost": "fee",
+      "format": "printed book",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:oup-eets294"
+      ],
+      "notes": [
+        "The resource_kind vocabulary has no print-book value; this route is a purchase route for the physical edition, not a verified digital download."
+      ]
+    },
+    {
+      "id": "access:bl-add41321-catalog",
+      "entity": "witness:bl:Add-MS-41321",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/032-002084869",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002084869.json"
+      ],
+      "access_method": "public catalog record and JSON representation",
+      "cost": "free",
+      "local_copies": [
+        {
+          "label": "British Library Add MS 41321 group catalog JSON",
+          "path": "source-cache/CME90174/bl-add-ms-41321-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/032-002084869.json",
+          "sha256": "1691aa035fc828f1d57a8a6df07b3a9d106a13b66614d69349e07d24e9f817fb",
+          "bytes": 18535,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321"
+      ]
+    },
+    {
+      "id": "access:bl-add41321-physical",
+      "entity": "witness:bl:Add-MS-41321",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "url": "https://searcharchives.bl.uk/catalog/032-002084869",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x"
+      ],
+      "access_method": "request the physical collection item for consultation in a British Library London reading room with an appropriate Reader Pass; this form is not an imaging order",
+      "cost": "free",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321"
+      ]
+    },
+    {
+      "id": "access:bl-add41321-reference-enquiry",
+      "entity": "witness:bl:Add-MS-41321",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "url": "https://bl.libanswers.com/form?queue_id=2371",
+      "access_method": "ask British Library Reference Services about item availability, quoting Add MS 41321; this is an enquiry route, not an imaging order",
+      "cost": "free",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321"
+      ]
+    },
+    {
+      "id": "access:bl-add41321-no-public-facsimile",
+      "entity": "witness:bl:Add-MS-41321",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "url": "https://searcharchives.bl.uk/catalog/032-002084869",
+      "access_method": "exact current catalog and digitized-content check",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321",
+        "evidence:bl-add41321-digital-search"
+      ],
+      "notes": [
+        "The record's digitized-content field was blank and no item-specific public image object was found. This is a dated negative result, not a claim that the manuscript has never been photographed."
+      ]
+    },
+    {
+      "id": "access:bl-add41321-reproduction-order",
+      "entity": "witness:bl:Add-MS-41321",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation"
+      ],
+      "access_method": "submit shelfmark, title, and required folios through the British Library digitisation order service; request color explicitly",
+      "contact": "licensing@bl.uk for digitisation or reproduction-service questions; permissions@bl.uk for written reuse permission under the Imaging Services terms",
+      "cost": "fee",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-digitisation",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Manuscripts are photographed rather than scanned. Supply and permission to reproduce are separate questions."
+      ]
+    },
+    {
+      "id": "access:bodleian-rawl-c751-catalog",
+      "entity": "witness:bodleian:Rawl-C-751",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/320081",
+      "access_method": "public official catalog record",
+      "cost": "free",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bodleian-rawl-c751"
+      ]
+    },
+    {
+      "id": "access:bodleian-rawl-c751-physical",
+      "entity": "witness:bodleian:Rawl-C-751",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/ordering/requests",
+      "access_method": "request the manuscript for consultation in a Bodleian special-collections reading room",
+      "cost": "free",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bodleian-rawl-c751",
+        "evidence:bodleian-ordering"
+      ]
+    },
+    {
+      "id": "access:bodleian-rawl-c751-no-public-facsimile",
+      "entity": "witness:bodleian:Rawl-C-751",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=%22MS.%20Rawl.%20C.%20751%22",
+      "access_method": "exact shelfmark searches in Digital Bodleian and review of the official archival record",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:digital-bodleian-rawl-c751-search",
+        "evidence:bodleian-rawl-c751"
+      ],
+      "notes": [
+        "Exact shelfmark variants returned no Digital Bodleian object on the date checked. This is a dated negative result."
+      ]
+    },
+    {
+      "id": "access:bodleian-rawl-c751-reproduction-order",
+      "entity": "witness:bodleian:Rawl-C-751",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+        "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/copyright-and-reproducing-images",
+        "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-image-order-form.pdf",
+        "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/image-order-terms-conditions.pdf",
+        "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf"
+      ],
+      "access_method": "complete the current image-order form and send it by email or post; clear publication or commercial reuse separately where applicable",
+      "contact": "imaging@bodleian.ox.ac.uk; Imaging Services, Bodleian Libraries, Broad Street, Oxford OX1 3BG, United Kingdom",
+      "cost": "fee",
+      "local_copies": [
+        {
+          "label": "Bodleian Imaging Services image-order form",
+          "path": "source-cache/CME90174/bodleian-imaging-services-image-order-form.pdf",
+          "source_url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-image-order-form.pdf",
+          "sha256": "9d97f4cfdca4190dae362d1eb3a896b617efc17e401351a63cc63a71f8dbaa10",
+          "bytes": 134612,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Bodleian image-order terms and conditions",
+          "path": "source-cache/CME90174/bodleian-image-order-terms-conditions.pdf",
+          "source_url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/image-order-terms-conditions.pdf",
+          "sha256": "6c3d0f01dfb1d76c44ae7d5e3dd7e648e3592b177f03f6b5912d0172894522dc",
+          "bytes": 179322,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Bodleian Imaging Services terms of use",
+          "path": "source-cache/CME90174/bodleian-imaging-services-terms-of-use.pdf",
+          "source_url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf",
+          "sha256": "4501e14f8012e779834860e8473f0f54e2f37a920aea7f9ad5f7c0116d74c2b2",
+          "bytes": 182014,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bodleian-imaging",
+        "evidence:bodleian-reproduction-terms",
+        "evidence:bodleian-image-order-terms",
+        "evidence:bodleian-imaging-terms"
+      ],
+      "notes": [
+        "The current form states a £20 minimum, £27 for the first high-resolution color image, £7.50 each for images 2–99, and £6.15 each for images 100 and above; large orders may be negotiated.",
+        "The current form's CC BY-NC 4.0 language for out-of-copyright material and the separately linked order terms' written-permission language are both preserved in the rights record rather than silently reconciled."
+      ]
+    },
+    {
+      "id": "access:manchester-eng412-viewer",
+      "entity": "facsimile:manchester:English-MS-412",
+      "provider_id": "agent:university-of-manchester-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412",
+      "alternate_urls": [
+        "https://www.digitalcollections.manchester.ac.uk/iiif/MS-ENGLISH-00412",
+        "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412/138",
+        "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412/182",
+        "https://image.digitalcollections.manchester.ac.uk/iiif/MS-ENGLISH-00412-000-00138.jp2/full/1800,/0/default.jpg",
+        "https://image.digitalcollections.manchester.ac.uk/iiif/MS-ENGLISH-00412-000-00182.jp2/full/1800,/0/default.jpg"
+      ],
+      "access_method": "public complete 199-canvas IIIF-backed viewer; no systematic local extraction under exact provider terms",
+      "cost": "free",
+      "format": "IIIF Presentation manifest and page-image viewer",
+      "local_copies": [
+        {
+          "label": "Manchester English MS 412 IIIF Presentation manifest",
+          "path": "source-cache/CME90174/manchester-english-ms-412-iiif-manifest.json",
+          "source_url": "https://www.digitalcollections.manchester.ac.uk/iiif/MS-ENGLISH-00412",
+          "sha256": "0bc716ae1fda3e158e329e1b14f706008ec738ad867ad8c329ba23b01b24faa3",
+          "bytes": 208877,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Only the IIIF metadata manifest is cached; no manuscript page images were downloaded."
+          ]
+        }
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:manchester-eng412",
+        "evidence:manchester-eng412-iiif",
+        "evidence:manchester-digital-terms"
+      ],
+      "notes": [
+        "The target work is at fols 50r–72r / canvases 138–182.",
+        "The /view/138 and /view/182 alternates are working human-readable boundary-page links. The exact Image API alternates are also working boundary images for fols 50r and 72r; the canvas identifiers recorded by the manifest themselves return HTTP 404 and therefore remain locators rather than links.",
+        "Only provider metadata is cached locally. Public viewing does not itself authorize whole-object systematic image extraction or repository redistribution."
+      ]
+    },
+    {
+      "id": "access:manchester-eng412-reproduction-order",
+      "entity": "witness:manchester:English-MS-412",
+      "provider_id": "agent:university-of-manchester-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://www.library.manchester.ac.uk/services/imaging-services/order-an-image/",
+      "alternate_urls": [
+        "https://forms.library.manchester.ac.uk/public/form/6836f091ae5036bb18c45d6c",
+        "https://forms.library.manchester.ac.uk/public/form/5da5c6108bf1c25d48cd693e"
+      ],
+      "access_method": "use the general Imaging Services order form for supplied images and the item viewer's Request Rights form for publication or reuse permission",
+      "contact": "uml.imaging@manchester.ac.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:manchester-imaging"
+      ],
+      "notes": [
+        "The service page currently warns of limited capacity and an estimated eight-to-ten-week turnaround."
+      ]
+    },
+    {
+      "id": "access:pink-2011",
+      "entity": "study:pink:2011-lollard-sermons",
+      "provider_id": "agent:oxford-research-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://ora.ox.ac.uk/objects/uuid:60a9655b-779b-4853-9102-7a9b058f0d5e",
+      "alternate_urls": [
+        "https://ora.ox.ac.uk/objects/uuid:60a9655b-779b-4853-9102-7a9b058f0d5e/files/m5678b6bcea5f99aee2e859f6fd1fd47b"
+      ],
+      "access_method": "Open the Oxford Research Archive record or download the complete thesis PDF.",
+      "local_copies": [
+        {
+          "label": "Pink 2011 complete DPhil thesis",
+          "path": "source-cache/CME90174/pink-2011-holy-scripture-eucharist-thesis.pdf",
+          "source_url": "https://ora.ox.ac.uk/objects/uuid:60a9655b-779b-4853-9102-7a9b058f0d5e/files/m5678b6bcea5f99aee2e859f6fd1fd47b",
+          "sha256": "022deed67b2a6f646bf67a2cab59fa8622744f73e6d845bee48ef9e2664eae03",
+          "bytes": 1606554,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Discussion of the Lollard Sermons collection and witnesses",
+            "locators": [
+              "thesis pp. 128–133",
+              "note 462"
+            ]
+          },
+          "notes": [
+            "The 224-page PDF is passwordlessly readable but carries AESv2 permission restrictions. qpdf 12.3.2 returns exit 3 with recoverable linearization hint warnings; the provider bytes were retained without repair."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF thesis",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "access:kikusawa-2011",
+      "entity": "study:kikusawa:2011-lollard-sermons",
+      "provider_id": "agent:glasgow-theses-service",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://theses.gla.ac.uk/2637/",
+      "alternate_urls": [
+        "https://theses.gla.ac.uk/2637/1/2011kikusawamphilr.pdf"
+      ],
+      "access_method": "Open the Glasgow thesis record or download the complete thesis PDF.",
+      "local_copies": [
+        {
+          "label": "Kikusawa 2011 complete MPhil thesis",
+          "path": "source-cache/CME90174/kikusawa-2011-vocabulary-lollard-sermons-thesis.pdf",
+          "source_url": "https://theses.gla.ac.uk/2637/1/2011kikusawamphilr.pdf",
+          "sha256": "f695c44bb0e0444da64c5bb028a2c058918dc58829db3144fa8a7ca256bb4627",
+          "bytes": 566271,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Summary of the Lollard Sermons collection",
+            "locators": [
+              "thesis pp. 15–16"
+            ]
+          },
+          "notes": [
+            "The 75-page PDF reads and extracts completely. qpdf 12.3.2 returns exit 3 with recoverable linearization hint-table/shared-object warnings; the provider bytes were retained without repair."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF thesis",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:kikusawa2011"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-medieval-text",
+      "entity": "edition:cigman:lollard-sermons:1989",
+      "component": "Anonymous medieval sermon texts as such, excluding modern transcription, selection, apparatus, and typography",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The underlying anonymous texts were created and fixed in surviving manuscripts in the late fourteenth or early fifteenth century; any copyright in that medieval expression has long expired. This conclusion does not extend to modern editorial or photographic layers.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add41321",
+        "evidence:bodleian-rawl-c751",
+        "evidence:manchester-eng412",
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "rights:ota0174-encoding",
+      "entity": "encoding:ota:0174",
+      "access_id": "access:ota0174-package",
+      "component": "OTA digital files and encoded transcription as distributed",
+      "jurisdiction": "International",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The official item record and embedded file header explicitly distribute the resource under CC BY-NC-SA 3.0 Unported.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota0174-item",
+        "evidence:ota0174-package-inspection"
+      ],
+      "notes": [
+        "Noncommercial and ShareAlike conditions matter for repository reuse; the license does not automatically clear any independently protected EETS editorial material."
+      ]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:CME90174",
+      "access_id": "access:repository-artifact",
+      "component": "Commit-pinned CME90174 XML repository artifact",
+      "jurisdiction": "International",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The XML's embedded AVAILABILITY statement distributes this text under CC BY-NC-SA 3.0 Unported. The CME repository's root LICENSE uses expressly software-specific Unlicense wording, so it is recorded as repository context but is not independently assumed to place the XML or data layer in the public domain.",
+      "asserted_by_id": "agent:university-of-michigan-library",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:cme-repository-license"
+      ],
+      "notes": [
+        "This scoped record does not broaden the root LICENSE's software wording to the XML/data layer."
+      ]
+    },
+    {
+      "id": "rights:umich-cme90174-encoding",
+      "entity": "encoding:umich-cme:CME90174",
+      "access_id": "access:umich-cme90174",
+      "component": "U-M CME XML encoding and 2023 additions as distributed",
+      "jurisdiction": "International",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "CME90174's embedded AVAILABILITY statement says Oxford, and consequently U-M, distributes the text under CC BY-NC-SA 3.0 Unported.",
+      "asserted_by_id": "agent:university-of-michigan-library",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "rights_statement_uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme90174-xml"
+      ],
+      "notes": [
+        "The repository artifact's separate rights record applies the same embedded source statement while preserving the CME root LICENSE as software-scoped context."
+      ]
+    },
+    {
+      "id": "rights:eets294-editorial-layer",
+      "entity": "edition:cigman:lollard-sermons:1989",
+      "component": "Modern editorial selection, transcription, introduction, apparatus, notes, and typography",
+      "jurisdiction": "United Kingdom and other applicable jurisdictions",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The edition was published in 1989 and no public-domain or open-license statement for its modern scholarly content was found in the checked official catalog and publisher records.",
+      "asserted_by_id": "agent:oxford-university-press",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:folger-eets294",
+        "evidence:oup-eets294"
+      ],
+      "notes": [
+        "This cautious status does not deny that individual facts, uncopyrightable readings, quotation exceptions, or other lawful uses may be available. It records that the modern edition as a whole is not verified open."
+      ]
+    },
+    {
+      "id": "rights:internet-archive-scan",
+      "entity": "facsimile:internet-archive:eets294",
+      "access_id": "access:eets294-restricted-scan",
+      "component": "Scanned-book images and controlled digital access",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "Internet Archive marks the scanned item access restricted and does not expose an unrestricted public-domain download for the modern edition.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:internet-archive-eets294"
+      ]
+    },
+    {
+      "id": "rights:bl-ordered-images",
+      "entity": "witness:bl:Add-MS-41321",
+      "access_id": "access:bl-add41321-reproduction-order",
+      "component": "British Library-supplied manuscript photographs",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The current imaging terms require payment and written permission before reproducing supplied material; digitisation supply and reuse authorization are separate. The digitisation page directs service or reproduction questions to licensing@bl.uk, while the January 2026 imaging terms direct permission requests to permissions@bl.uk.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-digitisation",
+        "evidence:bl-imaging-terms"
+      ]
+    },
+    {
+      "id": "rights:bodleian-ordered-images",
+      "entity": "witness:bodleian:Rawl-C-751",
+      "access_id": "access:bodleian-rawl-c751-reproduction-order",
+      "component": "Bodleian-supplied manuscript images",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The February 2026 image-order form says images of out-of-copyright material are supplied under CC BY-NC 4.0 for noncommercial reuse. The Imaging Services terms permit specified personal, noncommercial, and academic uses while requiring separate treatment for commercial use, but the separately linked Image Order Terms and Conditions say Bodleian retains copyright in reproductions and supplied material may not be reproduced without written permission. The conflict is preserved and requires item-specific clarification.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bodleian-imaging",
+        "evidence:bodleian-reproduction-terms",
+        "evidence:bodleian-image-order-terms",
+        "evidence:bodleian-imaging-terms"
+      ],
+      "notes": [
+        "Do not treat the form's CC BY-NC 4.0 statement as unqualified permission for publication, commercial print-on-demand use, or redistribution until Bodleian reconciles the simultaneously linked terms for the supplied images."
+      ]
+    },
+    {
+      "id": "rights:manchester-eng412-viewer",
+      "entity": "facsimile:manchester:English-MS-412",
+      "access_id": "access:manchester-eng412-viewer",
+      "component": "Manchester viewer images, downloadable-image representations, and database presentation",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "The exact IIIF manifest combines an all-rights-reserved attribution with CC BY-NC 4.0 language for downloadable images, while the site terms reserve rights, permit limited personal noncommercial extracts, and prohibit systematic extraction or reutilization of substantial parts.",
+      "asserted_by_id": "agent:university-of-manchester-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:manchester-eng412-iiif",
+        "evidence:manchester-digital-terms",
+        "evidence:manchester-imaging"
+      ],
+      "notes": [
+        "The conflicting rights labels are preserved rather than silently choosing the more permissive one.",
+        "No complete local bundle was made. Whole-object retention, redistribution, and publication permission should be clarified with Manchester Imaging Services."
+      ]
+    },
+    {
+      "id": "rights:pink-2011",
+      "entity": "study:pink:2011-lollard-sermons",
+      "access_id": "access:pink-2011",
+      "component": "Pink's 2011 thesis text and repository PDF",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "Oxford Research Archive supplies the thesis for public reading, but no item-level open redistribution licence was established from the evidence reviewed.",
+      "asserted_by_id": "agent:oxford-research-archive",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:pink2011"
+      ],
+      "notes": [
+        "Public download is not treated as permission to redistribute the complete thesis from this repository."
+      ]
+    },
+    {
+      "id": "rights:kikusawa-2011",
+      "entity": "study:kikusawa:2011-lollard-sermons",
+      "access_id": "access:kikusawa-2011",
+      "component": "Kikusawa's 2011 thesis text and repository PDF",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "Glasgow's thesis service supplies the PDF for public reading, but no item-level open redistribution licence was established from the evidence reviewed.",
+      "asserted_by_id": "agent:glasgow-theses-service",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:kikusawa2011"
+      ],
+      "notes": [
+        "Public download is not treated as permission to redistribute the complete thesis from this repository."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:edition-selection",
+      "entity": "edition:cigman:lollard-sermons:1989",
+      "practice": "selection",
+      "source_feature": "Sermon texts dispersed across three codices",
+      "representation": "An 18-unit editorial sequence of sermons 1–16, separately encoded optional expansion 11A, and the Sermon of Dead Men; 17 writings when 11A is counted with sermon 11",
+      "description": "Cigman's edition creates the immediate selection represented by CME90174; no single physical manuscript contains that whole sequence. The two counts describe editorial structure versus independent writings and are not competing carrier extents.",
+      "scope": "whole edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:folger-eets294",
+        "evidence:cme90174-xml",
+        "evidence:cme90174-structure"
+      ]
+    },
+    {
+      "id": "practice:edition-collation",
+      "entity": "edition:cigman:lollard-sermons:1989",
+      "practice": "collation",
+      "source_feature": "Parallel copies of the Sermon of Dead Men in Rawl. C. 751 and English MS 412",
+      "representation": "Rawl. C. 751 supplies the main sequence and Manchester English MS 412 supplies selected base-text passages",
+      "description": "CME's folio milestones switch from R to M for nine points within the Sermon of Dead Men, documenting the selected use of the Manchester witness.",
+      "scope": "Sermon of Dead Men",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:cme90174-structure",
+        "evidence:manchester-eng412"
+      ]
+    },
+    {
+      "id": "practice:umich-selection-and-repair",
+      "entity": "encoding:umich-cme:CME90174",
+      "practice": "selection",
+      "source_feature": "Incomplete, corrupt, and misordered OTA source plus unencoded print-edition matter",
+      "representation": "Restored sermon 13 and sermon 4 line beginnings, corrected order and numbering, and retained only the edited texts rather than the edition's introduction and apparatus",
+      "description": "The 2023 work is an expanded encoding and repair, not a byte-for-byte conversion of OTA 0174 or a complete encoding of the EETS volume.",
+      "scope": "whole U-M encoding, especially sermons 4 and 13",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:ota0174-package-inspection"
+      ]
+    },
+    {
+      "id": "practice:umich-collation",
+      "entity": "encoding:umich-cme:CME90174",
+      "practice": "collation",
+      "source_feature": "OTA lineated plain text and print-edition reference system",
+      "representation": "Preserved arbitrary line breaks with P and LB, added line milestones and manuscript-folio milestones, and inferred paragraphing from source spacing",
+      "description": "The encoding records line and folio references while omitting italics, apparatus, printed-page references, introduction, and notes.",
+      "scope": "whole U-M encoding",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme90174-xml",
+        "evidence:cme90174-structure"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:cme90174-xml",
+      "type": "repository_file",
+      "citation": "University of Michigan Corpus of Middle English Prose and Verse, CME90174 XML",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/additions_2023/CME90174.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/additions_2023/CME90174.xml"
+      ],
+      "repository_path": "CME/source/recent_changes/additions_2023/CME90174.xml",
+      "locator": "HEADER; BODY/ARGUMENT; all DIV1 and MILESTONE elements",
+      "summary": "Primary digital-source evidence for the U-M/OTA/edition relationship, 2023 interventions, three witness sigla, license, headings, and line and folio mappings.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eda222bcb69b47e92f203d06b12cc4137ec5271819b163cf7d02f495a5f2748d"
+    },
+    {
+      "id": "evidence:cme-repository-license",
+      "type": "repository_file",
+      "citation": "Kyvero Press CME repository LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE"
+      ],
+      "locator": "complete LICENSE",
+      "summary": "The repository root carries Unlicense text that repeatedly and expressly describes the licensed subject as software. It is not used here to broaden the XML's embedded CC BY-NC-SA 3.0 statement to a public-domain declaration for data or textual content.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cme90174-source-resolution",
+      "type": "repository_file",
+      "citation": "General Corpus publication source override and source inspector output for CME90174",
+      "repository_path": "manifests/publication-set/source-overrides.json",
+      "locator": "CME90174",
+      "summary": "Resolves the approved source to CME/source/recent_changes/additions_2023/CME90174.xml and records the publication-PDF colophon as the selection basis.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cme90174-structure",
+      "type": "visual_inspection",
+      "citation": "Programmatic local inspection of CME90174 at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "repository_path": "CME/source/recent_changes/additions_2023/CME90174.xml",
+      "summary": "Verified file identity and counted 18 DIV1, 20 HEAD, 811 P, 1 NOTE, 1,712 line milestones, and 350 folio milestones (A 213, R 128, M 9); derived each division's first and last witness folio.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-cme90174",
+      "type": "official_webpage",
+      "citation": "University of Michigan Digital Collections, CME90174",
+      "url": "https://name.umdl.umich.edu/CME90174",
+      "summary": "Canonical public U-M identifier and access route for the 2023 digital text.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota0174-item",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, Lollard sermons, ota:0174",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174",
+      "alternate_urls": [
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174/allzip"
+      ],
+      "summary": "Official item page supplies the public files, identifier, title, date range, language, legacy status, and CC BY-NC-SA 3.0 license.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota0174-package-inspection",
+      "type": "digital_surrogate",
+      "citation": "Oxford Text Archive 0174 complete current file package",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0174/allzip",
+      "repository_path": "source-cache/CME90174/ota-0174-all-local-files.zip",
+      "locator": "header0174.xml; lolls1to16-0174.txt; readme0174.txt",
+      "summary": "Downloaded all three current deposit files, passed ZIP integrity testing, and inspected the header, readme, and text. The source is incomplete relative to the eighteen-unit edition. The readme attributes its EETS source to 1988 while the header and published edition give 1989, and the readme's dead.txt statement conflicts with the current text payload.",
+      "accessed_on": "2026-07-14",
+      "sha256": "39ef933b91217b4aa7e603962c8607d2d713e7afa7c328d7235bf42a9bff0896",
+      "notes": [
+        "The allzip endpoint regenerates archive timestamps: a repeated retrieval had a different outer-ZIP checksum but byte-identical members. The retained archive and each member checksum are therefore documented separately in the access record."
+      ]
+    },
+    {
+      "id": "evidence:folger-eets294",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog record 48525, Lollard Sermons",
+      "url": "https://catalog.folger.edu/record/48525",
+      "summary": "Catalogs Cigman's 1989 EETS Original Series 294 edition, eighteen texts, three witnesses, Griffiths and Smith contributions, pagination, and ISBN.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:oup-eets294",
+      "type": "official_webpage",
+      "citation": "Oxford University Press, Lollard Sermons, ISBN 9780197222966",
+      "url": "https://global.oup.com/academic/product/lollard-sermons-9780197222966",
+      "alternate_urls": [
+        "https://www.hatchards.co.uk/book/lollard-sermons/g-cigman/9780197222966"
+      ],
+      "summary": "Publisher and bookseller records confirm the bibliographic identity and current purchase route. The publisher synopsis describes the Sermon of Dead Men as a funeral sermon with a discourse on the four last things; no open license for the edition was found.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:internet-archive-eets294",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, lollardsermons0000unse",
+      "url": "https://archive.org/details/lollardsermons0000unse",
+      "summary": "Metadata identifies the 1989 EETS volume, 426 scanned pages, ISBN, and access-restricted status; no unrestricted complete download was available.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-add41321",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts, Add MS 41321/1-12",
+      "url": "https://searcharchives.bl.uk/catalog/032-002084869",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002084869.json",
+        "https://searcharchives.bl.uk/catalog/040-002084875",
+        "https://searcharchives.bl.uk/catalog/040-002084881"
+      ],
+      "repository_path": "source-cache/CME90174/bl-add-ms-41321-catalog.json",
+      "summary": "Exact catalog group record describes the gospel sermons, optional extension, 116 folios, multiple hands, alliterative-verse passages, reading-room access, and child records. The hierarchy supplies unit incipit folios, including shared boundary surfaces; child records confirm sermon 6 at f. 50v and the manuscript's unfinished sermon 12 at f. 107r. Its date statements conflict internally and its digitized-content field is blank.",
+      "accessed_on": "2026-07-14",
+      "sha256": "1691aa035fc828f1d57a8a6df07b3a9d106a13b66614d69349e07d24e9f817fb"
+    },
+    {
+      "id": "evidence:bl-add41321-digital-search",
+      "type": "search_result",
+      "citation": "Exact British Library catalog and digital-content search for Add MS 41321",
+      "url": "https://searcharchives.bl.uk/catalog/032-002084869",
+      "summary": "No item-specific public digitized-content link or complete facsimile was found in the current record or exact shelfmark search.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation services",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u"
+      ],
+      "summary": "Explains the online imaging-order process, required bibliographic and folio details, manuscript photography, color requests, charges, and the distinction between supply and licensing. The linked Microsoft form is the current digitisation order route, and the page directs reproduction or licensing questions to licensing@bl.uk.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Imaging Services terms and conditions",
+      "url": "https://www.bl.uk/terms/imaging-services",
+      "summary": "January 2026 terms state service timelines and fees and prohibit reproduction of supplied material without written permission, directing permission requests to permissions@bl.uk.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bodleian-rawl-c751",
+      "type": "official_catalog",
+      "citation": "Bodleian Archives and Manuscripts, MS. Rawl. C. 751",
+      "url": "https://archives.bodleian.ox.ac.uk/repositories/2/archival_objects/320081",
+      "summary": "Exact official catalog record identifies the shelfmark, early-fifteenth-century date, English language, content group, and requestability.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:digital-bodleian-rawl-c751-search",
+      "type": "search_result",
+      "citation": "Digital Bodleian exact shelfmark searches for MS. Rawl. C. 751",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=%22MS.%20Rawl.%20C.%20751%22",
+      "summary": "JSON-LD searches for Rawlinson C 751, MS. Rawl. C. 751, and Rawl.C.751 returned zero exact digital objects on the date checked; broader C. 751 results were unrelated shelfmarks.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bodleian-imaging",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Order images",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+        "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-image-order-form.pdf"
+      ],
+      "repository_path": "source-cache/CME90174/bodleian-imaging-services-image-order-form.pdf",
+      "locator": "complete February 2026 order form",
+      "summary": "Provides image-order and remote-copy routes for special-collections material not available through Digital Bodleian. The form gives email and postal submission routes, current tiered color-image prices, a £20 minimum, and CC BY-NC 4.0 language for out-of-copyright supplied images.",
+      "accessed_on": "2026-07-14",
+      "sha256": "9d97f4cfdca4190dae362d1eb3a896b617efc17e401351a63cc63a71f8dbaa10"
+    },
+    {
+      "id": "evidence:bodleian-reproduction-terms",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Copyright and reproducing images",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/copyright-and-reproducing-images",
+      "summary": "Explains that reproduction and publication uses are governed by current Bodleian terms and that commercial or publishing contexts may require separate handling.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bodleian-image-order-terms",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Image Order Terms and Conditions",
+      "url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/image-order-terms-conditions.pdf",
+      "repository_path": "source-cache/CME90174/bodleian-image-order-terms-conditions.pdf",
+      "locator": "complete terms",
+      "summary": "The separately linked order terms say the Bodleian retains copyright in reproductions and that supplied material may not be reproduced without prior written permission, creating a provider-document tension with the current order form's CC BY-NC 4.0 statement.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6c3d0f01dfb1d76c44ae7d5e3dd7e648e3592b177f03f6b5912d0172894522dc"
+    },
+    {
+      "id": "evidence:bodleian-imaging-terms",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Imaging Services Terms of Use",
+      "url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf",
+      "repository_path": "source-cache/CME90174/bodleian-imaging-services-terms-of-use.pdf",
+      "locator": "complete terms",
+      "summary": "The current terms enumerate permitted personal, noncommercial, educational, and academic uses and distinguish commercial use requiring permission; item-specific delivery conditions may still control.",
+      "accessed_on": "2026-07-14",
+      "sha256": "4501e14f8012e779834860e8473f0f54e2f37a920aea7f9ad5f7c0116d74c2b2"
+    },
+    {
+      "id": "evidence:bodleian-ordering",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Special collections requests",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections/ordering/requests",
+      "summary": "Official instructions for requesting special-collections items for reading-room consultation.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:manchester-eng412",
+      "type": "official_catalog",
+      "citation": "University of Manchester Digital Collections, English MS 412",
+      "url": "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412",
+      "summary": "Exact official record describes the fifteenth-century parchment codex and locates '[M]emorare nouissima', also in Rawl. C. 751, at fols 50r–72r.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:manchester-eng412-iiif",
+      "type": "digital_surrogate",
+      "citation": "University of Manchester IIIF manifest for English MS 412",
+      "url": "https://www.digitalcollections.manchester.ac.uk/iiif/MS-ENGLISH-00412",
+      "alternate_urls": [
+        "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412/138",
+        "https://www.digitalcollections.manchester.ac.uk/view/MS-ENGLISH-00412/182"
+      ],
+      "repository_path": "source-cache/CME90174/manchester-english-ms-412-iiif-manifest.json",
+      "locator": "199 canvases; target work canvases 138–182",
+      "summary": "Manifest inspection verified a complete upper-cover-to-lower-cover sequence and mapped fols 50r–72r to canvases 138–182. Exact Image API requests for boundary images 138 and 182 returned HTTP 200, while the canvas identifiers returned HTTP 404. The manifest also exposes conflicting all-rights-reserved and CC BY-NC 4.0 statements.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0bc716ae1fda3e158e329e1b14f706008ec738ad867ad8c329ba23b01b24faa3"
+    },
+    {
+      "id": "evidence:manchester-digital-terms",
+      "type": "official_webpage",
+      "citation": "University of Manchester Digital Collections, Terms of use",
+      "url": "https://www.digitalcollections.manchester.ac.uk/terms/",
+      "summary": "Exact terms reserve rights, allow limited personal noncommercial extracts, and prohibit commercial use without license, modification, transmission or display, and systematic extraction or reutilization of substantial parts.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:manchester-imaging",
+      "type": "official_webpage",
+      "citation": "University of Manchester Library, Order an image",
+      "url": "https://www.library.manchester.ac.uk/services/imaging-services/order-an-image/",
+      "alternate_urls": [
+        "https://forms.library.manchester.ac.uk/public/form/6836f091ae5036bb18c45d6c",
+        "https://forms.library.manchester.ac.uk/public/form/5da5c6108bf1c25d48cd693e"
+      ],
+      "summary": "Provides the official image-order and permission-to-publish routes, including the general Imaging Services order form, the item viewer's Request Rights form, fee basis, contact email, and current estimated turnaround.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:pink2011",
+      "type": "scholarly_source",
+      "citation": "Stephen Pink, Holy Scripture and the Meanings of the Eucharist in Late Medieval England, c. 1370–1430 (DPhil thesis, University of Oxford, 2011), pp. 128–133 and n. 462",
+      "url": "https://ora.ox.ac.uk/objects/uuid:60a9655b-779b-4853-9102-7a9b058f0d5e",
+      "alternate_urls": [
+        "https://ora.ox.ac.uk/objects/uuid:60a9655b-779b-4853-9102-7a9b058f0d5e/files/m5678b6bcea5f99aee2e859f6fd1fd47b"
+      ],
+      "repository_path": "source-cache/CME90174/pink-2011-holy-scripture-eucharist-thesis.pdf",
+      "locator": "complete 224-page thesis; especially pp. 128–133 and note 462",
+      "summary": "Reports the three witnesses as products of the first decades of the fifteenth century, discusses possible late-fourteenth-century composition, and emphasizes the disputed nature of the Wycliffite label.",
+      "accessed_on": "2026-07-14",
+      "sha256": "022deed67b2a6f646bf67a2cab59fa8622744f73e6d845bee48ef9e2664eae03",
+      "notes": [
+        "The passwordlessly readable PDF carries AESv2 permission restrictions. qpdf reports recoverable linearization hint warnings; the provider file is retained byte-for-byte without repair."
+      ]
+    },
+    {
+      "id": "evidence:kikusawa2011",
+      "type": "scholarly_source",
+      "citation": "Namiko Kikusawa, Conditional if-clauses in Late Middle English prose texts (MPhil thesis, University of Glasgow, 2011), pp. 15–16.",
+      "url": "https://theses.gla.ac.uk/2637/",
+      "alternate_urls": [
+        "https://theses.gla.ac.uk/2637/1/2011kikusawamphilr.pdf"
+      ],
+      "repository_path": "source-cache/CME90174/kikusawa-2011-vocabulary-lollard-sermons-thesis.pdf",
+      "locator": "complete 75-page thesis; especially pp. 15–16",
+      "summary": "Summarizes Cigman and Smith: eighteen texts, gospel lections for fifteen Sarum-calendar days, an oral-performance and preacher-guidance function, and South Central Midland or Central Midlands Standard language.",
+      "accessed_on": "2026-07-14",
+      "sha256": "f695c44bb0e0444da64c5bb028a2c058918dc58829db3144fa8a7ca256bb4627",
+      "notes": [
+        "The complete PDF reads and extracts successfully. qpdf reports recoverable linearization hint-table/shared-object warnings; the provider file is retained byte-for-byte without repair."
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ota-immediate-source",
+      "question": "Was OTA 0174 keyed from a published copy of the 1989 edition, from an editorial machine-readable precursor, or through another intermediate file?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Consult Cigman's edition and archival deposit documentation for OTA 174.",
+        "Ask the Oxford Text Archive whether legacy accession records identify the deposited carrier and exact deposit date."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ota0174-package-inspection",
+        "evidence:cme90174-xml",
+        "evidence:ota0174-item"
+      ]
+    },
+    {
+      "id": "question:add41321-date-conflict",
+      "question": "Which date statement should control for Add MS 41321 given the mutually inconsistent current British Library title, scope note, and machine-readable date fields?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult Griffiths's manuscript description in Cigman's edition.",
+        "Ask the British Library to clarify or correct the catalog metadata."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321",
+        "evidence:pink2011"
+      ]
+    },
+    {
+      "id": "question:add41321-public-facsimile",
+      "question": "Does a complete lawful public facsimile of British Library Add MS 41321 exist outside the current item record?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Recheck the British Library catalog and manuscript digitisation platforms periodically.",
+        "Use the British Library digitisation or reference-enquiry form to request whole-codex availability and cost."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:bl-add41321-digital-search",
+        "evidence:bl-digitisation"
+      ]
+    },
+    {
+      "id": "question:rawl-c751-public-facsimile",
+      "question": "Does a complete lawful public facsimile of Bodleian MS Rawl. C. 751 exist outside Digital Bodleian's current exact-shelfmark results?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Ask Bodleian Imaging Services whether a full existing surrogate can be supplied.",
+        "Recheck Digital Bodleian and the detailed Medieval Manuscripts in Oxford Libraries description."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:digital-bodleian-rawl-c751-search",
+        "evidence:bodleian-imaging",
+        "evidence:bodleian-rawl-c751"
+      ]
+    },
+    {
+      "id": "question:manchester-whole-object-reuse",
+      "question": "Will Manchester authorize a complete local research bundle and repository redistribution of English MS 412 images, and under which exact license?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Contact uml.imaging@manchester.ac.uk with the shelfmark, whole-object request, intended noncommercial cache, and possible public-repository reuse.",
+        "Ask Manchester to reconcile the IIIF manifest's all-rights-reserved and CC BY-NC 4.0 statements with the site's systematic-extraction prohibition."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:manchester-eng412-iiif",
+        "evidence:manchester-digital-terms",
+        "evidence:manchester-imaging"
+      ],
+      "notes": [
+        "No request has yet been sent; an external clarification is the required next step."
+      ]
+    },
+    {
+      "id": "question:eets294-rights",
+      "question": "Who controls reuse permission for Cigman's modern editorial transcription and apparatus, and may any portion be redistributed beyond the CC-licensed OTA/U-M encodings?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Inspect the edition's copyright page through lawful access.",
+        "Ask Oxford University Press or EETS for current rights-holder and licensing guidance."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:oup-eets294",
+        "evidence:folger-eets294",
+        "evidence:internet-archive-eets294"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1298 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00062",
+  "work_id": "CME00062",
+  "title": "Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon",
+  "primary_subject": "artifact:general-corpus:CME00062",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The repository XML represents University of Michigan CME item CME00062, a complete encoding of Carl Horstmann's 1877 article in Archiv fuer das Studium der neueren Sprachen und Literaturen 57, pp. 241-316. Horstmann extracts forty-five Middle English verse narratives and a short addendum from the Northern Homily Cycle and associated material in the Vernon Manuscript, while consulting John Small's 1862 edition and several other witnesses. The complete 500-canvas BSB journal object and complete 710-canvas Digital Bodleian Vernon object are cached. Every selected Vernon passage is mapped within that full manuscript bundle; the mapping is necessarily non-contiguous, and the addendum is separately located in the Cana homily. Public whole-object images were not found for the named comparison manuscripts on 2026-07-12, so request routes and bounded uncertainties are recorded instead of selected-page downloads.",
+  "languages": ["enm", "deu", "lat"],
+  "review_notes": [
+    "The Northern Homily Cycle, the Vernon codex, Horstmann's selected edition, Small's comparison edition, the U-M encoding, and digital facsimiles are modeled as distinct layers.",
+    "Complete local bundles retain every provider-published image, including material outside the corpus selection. work_portion locators associate the selected passages without redefining either bundle as a cropped facsimile.",
+    "The inherited NLS Adv. MS. 19.3.1 bundle was checked and excluded: it is the Heege Manuscript, not the Edinburgh Royal College of Physicians witness edited by Small.",
+    "Horstmann's closing dateline, Sagan i. J. 1876, is editorial place/date evidence; the volume title page establishes publication at Braunschweig in 1877."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00062",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00062",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00062"},
+        {"scheme": "git-blob", "value": "6e0986fc035167486c3dcdc50511cd5439b6aa03"}
+      ],
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00062.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "6e0986fc035167486c3dcdc50511cd5439b6aa03",
+        "sha256": "2bf73e9de74aa92b69644c73f4adb9d76a7ab84c01b84f4e51d077091553e71c"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": [
+        "IDG/@ID, BIBNO, and VID all identify CME00062; the file is 373,582 bytes.",
+        "The XML has two DIV1 divisions, forty-five DIV2 selections, eight nested DIV3 divisions, 7,393 L elements in 111 LG elements, three prose P elements, 98 notes, and seventy-seven PB elements. Printed p. 266 is represented by two PB milestones, so PB count is not physical page count."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME00062",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item CME00062",
+      "description": "A manually keyed, proofread TEI-like representation of Horstmann's complete article, including German editorial matter, Middle English verse, notes, and addendum.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00062", "uri": "https://name.umdl.umich.edu/CME00062"},
+        {"scheme": "UMDL handle", "value": "CME00062", "uri": "https://name.umdl.umich.edu/CME00062"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich", "evidence:repo-xml"],
+      "notes": ["The encoding preserves Horstmann's duplicated printed number 15 for the Placidas item and continues with 17; it does not silently supply a number 16."]
+    },
+    {
+      "id": "edition:horstmann:archiv-57-1877",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann's 1877 selection from the Vernon Homily Collection",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [
+        {"label": "authorial dateline", "value": "Sagan i. J. 1876", "normalized": "1876", "certainty": "high", "evidence_ids": ["evidence:horstmann-article"]},
+        {"label": "publication", "value": "1877", "normalized": "1877", "certainty": "high", "evidence_ids": ["evidence:horstmann-title-page"]}
+      ],
+      "bibliographic": {
+        "citation": "Carl Horstmann, 'Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon,' Archiv fuer das Studium der neueren Sprachen und Literaturen 57 (31. Jahrgang, 1877): 241-316.",
+        "title": "Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon",
+        "container_title": "Archiv fuer das Studium der neueren Sprachen und Literaturen",
+        "volume": "57",
+        "publisher": "George Westermann",
+        "publication_place": "Braunschweig",
+        "date": "1877",
+        "pages": "241-316",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:horstmann-title-page", "evidence:repo-xml"],
+      "notes": [
+        "This is the immediate printed source represented by CME00062.",
+        "The article prints forty-five selected narratives in source order except that items 39 and 40 reverse their Vernon order; the addendum on p. 316 prints thirty-four lines from a separate location in the Cana homily.",
+        "Horstmann selects narratives from their homiletic settings and sometimes abridges within a selection; item 29c explicitly omits an introductory passage of about one hundred lines."
+      ]
+    },
+    {
+      "id": "facsimile:bsb:bsb11360559",
+      "type": "facsimile",
+      "label": "BSB complete IIIF sequence for Archiv volume 57 (1877)",
+      "description": "A 500-canvas provider-published color sequence preserving the complete exposed journal object, not only Horstmann's article.",
+      "identifiers": [
+        {"scheme": "BSB-ID", "value": "bsb11360559", "uri": "https://www.digitale-sammlungen.de/view/bsb11360559"},
+        {"scheme": "URN", "value": "urn:nbn:de:bvb:12-bsb11360559-2", "uri": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11360559-2"}
+      ],
+      "creator_ids": ["agent:bsb"],
+      "reproduction_format": "500-canvas IIIF Presentation 2 object; cached as a ZIP containing all width-1600 JPEG derivatives, provider manifest, and exact source inventory",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bsb-manifest", "evidence:bsb-bundle-audit"],
+      "notes": ["Horstmann's article maps exactly to canvases 251-326, printed pp. 241-316; the volume title page is canvas 7."]
+    },
+    {
+      "id": "witness:bodleian:MS-Eng-poet-a-1",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Eng. poet. a. 1 (Vernon Manuscript)",
+      "alternate_labels": ["Vernon Manuscript", "MS. Vernon"],
+      "description": "A monumental late-fourteenth-century English parchment codex whose current fols. 167r-318r contain the Northern Homily Cycle and associated texts. Horstmann's selected passages occur discontinuously from current fol. 167r through fol. 215v, with the addendum at fol. 176r.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Eng. poet. a. 1"},
+        {"scheme": "Digital Bodleian UUID", "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff", "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"},
+        {"scheme": "MMOL manuscript ID", "value": "manuscript_4817", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817"}
+      ],
+      "date_statements": [
+        {"label": "repository date", "value": "1381-1400; commonly dated c. 1390", "normalized": "1381/1400", "certainty": "high", "evidence_ids": ["evidence:vernon-manifest"]}
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian",
+        "shelfmark": "MS. Eng. poet. a. 1",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+        "notes": "The origin and patronage remain debated; the current record tentatively gives England, West Midlands."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "viii + 342 + i leaves, incomplete; originally viii + 413, with 71 leaves thought lost",
+        "format": "Large codex, normally quires of eight; nineteenth-century crushed russet leather over bevelled oak boards",
+        "dimensions": "544 x 393 mm",
+        "notes": [
+          "The current digital sequence jumps from fol. 126v to fol. 167r because forty-one leaves are missing at that point.",
+          "The complete codex contains more than 350 religious and didactic items, so the selected passages are only a small, discontinuous portion of the whole physical object."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-catalog", "evidence:horstmann-article"]
+    },
+    {
+      "id": "facsimile:bodleian:vernon",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian Vernon Manuscript object",
+      "description": "The complete 710-canvas object exposed by Digital Bodleian, including covers, spine, flyleaves, blanks, every surviving digitized leaf, and adjacent texts. No dedicated head, tail, or fore-edge views are exposed.",
+      "identifiers": [{"scheme": "Digital Bodleian UUID", "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff", "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"}],
+      "creator_ids": ["agent:bodleian"],
+      "reproduction_format": "710 color IIIF canvases; complete provider object cached at an effective width of 1600 pixels",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit"]
+    },
+    {
+      "id": "edition:small:english-metrical-homilies-1862",
+      "type": "scholarly_edition",
+      "label": "John Small's English Metrical Homilies (1862)",
+      "creator_ids": ["agent:john-small"],
+      "date_statements": [{"label": "publication", "value": "1862", "normalized": "1862", "certainty": "high", "evidence_ids": ["evidence:small-scan"]}],
+      "bibliographic": {
+        "citation": "John Small, ed., English Metrical Homilies from Manuscripts of the Fourteenth Century (Edinburgh: William Paterson, 1862).",
+        "title": "English Metrical Homilies from Manuscripts of the Fourteenth Century",
+        "publisher": "William Paterson",
+        "publication_place": "Edinburgh",
+        "date": "1862",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:small-scan", "evidence:small-introduction"],
+      "notes": [
+        "Small prints the fragmentary Royal College of Physicians manuscript through the Purification and supplies gaps from CUL MS Gg.5.31 and Bodleian MS. Ashmole 42.",
+        "Horstmann states that Vernon follows Small's Edinburgh witness through item 12, except that item 4 is absent there, and explicitly cites variant readings from Small."
+      ]
+    },
+    {
+      "id": "facsimile:ia:small-1862",
+      "type": "facsimile",
+      "label": "Internet Archive/Google scan of Small's 1862 English Metrical Homilies",
+      "description": "A complete 229-page PDF of the printed book with cached Internet Archive metadata and scandata sidecars.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "englishmetrical00smalgoog", "uri": "https://archive.org/details/englishmetrical00smalgoog"}],
+      "creator_ids": ["agent:internet-archive", "agent:google-books"],
+      "reproduction_format": "229-page PDF with item metadata and scan-structure sidecars",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:small-scan", "evidence:small-ia-metadata"]
+    },
+    {
+      "id": "witness:rcpe:cursor-mundi-nhc-fragment",
+      "type": "manuscript_witness",
+      "label": "Edinburgh, Royal College of Physicians, Cursor Mundi manuscript with Northern Homily Cycle fragment",
+      "alternate_labels": ["Small's Edinburgh manuscript", "Royal College of Physicians MS of Cursor Mundi"],
+      "description": "An early-fourteenth-century composite parchment fragment. The Northern Homily Cycle occupies fols. 16r-36v between Cursor Mundi fragments and ends early in the second Purification exemplum; three leaves are missing after fol. 24.",
+      "date_statements": [{"label": "scholarly date", "value": "early fourteenth century", "normalized": "1301/1325", "certainty": "medium", "evidence_ids": ["evidence:small-introduction", "evidence:thompson-2008"]}],
+      "holding": {
+        "institution_id": "agent:rcpe",
+        "shelfmark": "Exact current call number not established",
+        "catalog_url": "https://www.rcpe.ac.uk/heritage/catalogues-digitised-material",
+        "notes": "Small calls it a manuscript of Cursor Mundi belonging to the Royal College of Physicians; the College's public catalog page warns that not all holdings are listed."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "50 leaves total; Northern Homily Cycle at fols. 16r-36v, with three leaves missing after fol. 24",
+        "format": "Thin quarto; two columns; generally 43 or 45 lines",
+        "notes": ["Bequeathed to the College in 1741 by Dr John Drummond; generally treated as the earliest and least expanded surviving witness of the cycle."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:small-introduction", "evidence:thompson-2008", "evidence:rcpe"]
+    },
+    {
+      "id": "witness:bl:Harley-4196",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Harley MS 4196",
+      "description": "A late-fourteenth- or early-fifteenth-century parchment manuscript whose expanded Northern Homily Cycle occupies fols. 1r-132r. Horstmann compares this recension broadly and at items 29 and 45.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 4196", "uri": "https://searcharchives.bl.uk/catalog/040-002050033"}],
+      "date_statements": [{"label": "repository date", "value": "fourth quarter of the fourteenth century-first quarter of the fifteenth century", "normalized": "1375/1425", "certainty": "high", "evidence_ids": ["evidence:bl-harley4196"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 4196", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002050033"},
+      "physical_description": {"support": "Parchment", "extent": "258 leaves, plus flyleaves, pastedown, and stub; Northern Homily Cycle at fols. 1r-132r"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-harley4196", "evidence:horstmann-article", "evidence:thompson-2008"]
+    },
+    {
+      "id": "witness:bl:Cotton-Tiberius-E-VII",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Cotton MS Tiberius E VII",
+      "description": "A fifteenth-century parchment manuscript preserving the expanded Northern Homily Cycle at fols. 101r-281r. Horstmann says its text agrees word for word with Harley 4196 for the comparison under discussion.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Cotton MS Tiberius E VII", "uri": "https://searcharchives.bl.uk/catalog/040-001102298"}],
+      "date_statements": [{"label": "repository date", "value": "first half of the fifteenth century", "normalized": "1401/1450", "certainty": "high", "evidence_ids": ["evidence:bl-cotton"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Cotton MS Tiberius E VII", "catalog_url": "https://searcharchives.bl.uk/catalog/040-001102298"},
+      "physical_description": {"support": "Parchment", "extent": "281 folios, now bound in two volumes; Northern Homily Cycle at fols. 101r-281r", "notes": ["Damaged in the 1731 Cotton Library fire; thirty-five associated burnt fragments are now cataloged separately as Cotton MS Fragments XXXII/6."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-cotton", "evidence:horstmann-article", "evidence:thompson-2008"]
+    },
+    {
+      "id": "witness:cul:Dd-1-1",
+      "type": "manuscript_witness",
+      "label": "Cambridge, University Library, MS Dd.1.1",
+      "description": "An early-fifteenth-century, mainly paper Northern Homily Cycle witness in a generally southern dialect. Horstmann lists it among other manuscripts but does not document a specific collation in this article.",
+      "identifiers": [{"scheme": "Cambridge University Library shelfmark", "value": "MS Dd.1.1"}],
+      "holding": {"institution_id": "agent:cambridge-university-library", "shelfmark": "MS Dd.1.1", "notes": "Current public whole-object images and exact selected loci were not established."},
+      "physical_description": {"support": "Mainly paper", "format": "Long, narrow codex", "notes": ["Published descriptions warn that pagination was revised after losses."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:thompson-2008", "evidence:cul-enquiry"]
+    },
+    {
+      "id": "witness:cul:Gg-5-31",
+      "type": "manuscript_witness",
+      "label": "Cambridge, University Library, MS Gg.5.31",
+      "alternate_labels": ["Horstmann's Ms. Cambr. Gg V"],
+      "description": "An early-fifteenth-century northern parchment witness of the original Northern Homily Cycle. Small used it to supply passages missing from the Edinburgh fragment.",
+      "identifiers": [{"scheme": "Cambridge University Library shelfmark", "value": "MS Gg.5.31"}],
+      "holding": {"institution_id": "agent:cambridge-university-library", "shelfmark": "MS Gg.5.31", "notes": "The expanded modern shelfmark resolves Horstmann's abbreviated Gg V reference; current public whole-object images were not found."},
+      "physical_description": {"support": "Parchment", "notes": ["The manuscript has significant losses and published descriptions distinguish old and current pagination."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:small-introduction", "evidence:horstmann-article", "evidence:thompson-2008", "evidence:cul-enquiry"]
+    },
+    {
+      "id": "witness:bodleian:MS-Ashmole-42",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Ashmole 42",
+      "description": "A mid-fourteenth-century English parchment manuscript devoted to the Northern Homily Cycle. Small used it to supplement gaps in the Edinburgh manuscript; Horstmann lists it among other witnesses.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Ashmole 42"},
+        {"scheme": "MMOL manuscript ID", "value": "manuscript_346", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_346"},
+        {"scheme": "Summary Catalogue number", "value": "6923"}
+      ],
+      "date_statements": [{"label": "repository date", "value": "middle of the fourteenth century (1340-1360)", "normalized": "1340/1360", "certainty": "high", "evidence_ids": ["evidence:ashmole42-catalog"]}],
+      "holding": {"institution_id": "agent:bodleian", "shelfmark": "MS. Ashmole 42", "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_346"},
+      "physical_description": {"support": "Parchment", "extent": "The whole manuscript contains the Northern Homily Cycle"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole42-catalog", "evidence:small-introduction", "evidence:horstmann-article"]
+    },
+    {
+      "id": "witness:bl:Harley-2253",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Harley MS 2253",
+      "description": "A famous late-thirteenth- to early-fourteenth-century multilingual miscellany. Horstmann cites fol. 64 only for a different version of the Marina narrative associated with item 14; it is not presented here as a Northern Homily Cycle witness.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 2253", "uri": "https://searcharchives.bl.uk/catalog/040-002048084"}],
+      "date_statements": [{"label": "repository date", "value": "late thirteenth century-first half of the fourteenth century", "normalized": "1275/1350", "certainty": "high", "evidence_ids": ["evidence:bl-harley2253"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 2253", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048084"},
+      "physical_description": {"extent": "142 leaves plus flyleaves; comparison passage at edition-reported fol. 64"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-harley2253", "evidence:horstmann-article"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus project"},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library"},
+    {"id": "agent:carl-horstmann", "type": "person", "name": "Carl Horstmann", "alternate_names": ["Karl Horstmann"]},
+    {"id": "agent:ludwig-herrig", "type": "person", "name": "Ludwig Herrig"},
+    {"id": "agent:bsb", "type": "organization", "name": "Bayerische Staatsbibliothek"},
+    {"id": "agent:bodleian", "type": "organization", "name": "Bodleian Libraries, University of Oxford"},
+    {"id": "agent:john-small", "type": "person", "name": "John Small"},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive"},
+    {"id": "agent:google-books", "type": "organization", "name": "Google Books"},
+    {"id": "agent:rcpe", "type": "organization", "name": "Royal College of Physicians of Edinburgh"},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library"},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library"},
+    {"id": "agent:anne-thompson", "type": "person", "name": "Anne B. Thompson"},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:CME00062",
+      "object": "encoding:umich-cme:CME00062",
+      "scope": {"subject": {"kind": "whole", "description": "repository XML artifact"}, "object": {"kind": "whole", "description": "U-M CME00062 encoding"}, "notes": "Shared identifiers and content support identity of the encoded item; exact file-copy history is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-horstmann",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00062",
+      "object": "edition:horstmann:archiv-57-1877",
+      "scope": {
+        "subject": {"kind": "whole", "description": "all encoded headings, verse, prose, notes, and page milestones", "locators": ["encoded printed pp. 241-316"]},
+        "object": {"kind": "whole", "description": "complete Horstmann article", "locators": ["Archiv 57 (1877), pp. 241-316"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-article"]}
+    },
+    {
+      "id": "relation:bsb-facsimile-of-horstmann-volume",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:bsb11360559",
+      "object": "edition:horstmann:archiv-57-1877",
+      "scope": {
+        "subject": {"kind": "part", "description": "article within the complete journal scan", "locators": ["IIIF canvases 251-326", "printed pp. 241-316"]},
+        "object": {"kind": "whole", "description": "complete article, including addendum"},
+        "notes": "The facsimile entity is the whole journal object; this relation is scoped only to the article represented by the edition entity."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bsb-manifest", "evidence:horstmann-article"]}
+    },
+    {
+      "id": "relation:horstmann-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "forty-five edited Middle English verse narratives and the separately printed addendum", "locators": ["printed pp. 241-316", "items 1-45 plus Zusatz"]},
+        "object": {"kind": "selected_passages", "description": "non-contiguous passages in the Northern Homily Cycle and associated texts", "locators": ["current fols. 167r-215v, discontinuous", "addendum at current fol. 176r", "IIIF canvases 221-318, discontinuous; addendum canvas 239"]},
+        "notes": "Horstmann labels the first passage fol. 126 under an older foliation. Exact text and the current IIIF range place it at current fol. 167r, immediately after the forty-one-leaf lacuna between current fols. 126v and 167r."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-article", "evidence:vernon-manifest", "evidence:vernon-mapping"]}
+    },
+    {
+      "id": "relation:vernon-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:vernon",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {
+        "subject": {"kind": "whole", "description": "all 710 provider-published canvases, including covers, spine, flyleaves, blanks, surviving leaves, and adjacent works"},
+        "object": {"kind": "whole", "description": "entire surviving codex as exposed by Digital Bodleian"},
+        "notes": "Completeness is relative to the provider's full object. Dedicated edge views and lost leaves cannot be present."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit"]}
+    },
+    {
+      "id": "relation:small-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:small-1862",
+      "object": "edition:small:english-metrical-homilies-1862",
+      "scope": {"subject": {"kind": "whole", "description": "complete 229-page PDF"}, "object": {"kind": "whole", "description": "complete 1862 printed book"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:small-scan", "evidence:small-ia-metadata"]}
+    },
+    {
+      "id": "relation:small-transcribes-edinburgh",
+      "type": "transcribes",
+      "subject": "edition:small:english-metrical-homilies-1862",
+      "object": "witness:rcpe:cursor-mundi-nhc-fragment",
+      "scope": {
+        "subject": {"kind": "part", "description": "Middle English homilies printed from the principal Edinburgh witness", "locators": ["homily text through the Purification"]},
+        "object": {"kind": "part", "description": "Northern Homily Cycle fragment", "locators": ["fols. 16r-36v"]},
+        "notes": "Small supplements lacunae from Gg.5.31 and Ashmole 42; this relation does not assign those supplied passages to the Edinburgh leaves."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:small-introduction", "evidence:thompson-2008"]}
+    },
+    {
+      "id": "relation:small-collates-gg531",
+      "type": "collated_against",
+      "subject": "edition:small:english-metrical-homilies-1862",
+      "object": "witness:cul:Gg-5-31",
+      "scope": {"subject": {"kind": "selected_passages", "description": "passages supplied where the Edinburgh manuscript is defective"}, "object": {"kind": "selected_passages", "description": "corresponding Northern Homily Cycle readings; exact folios unresolved"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:small-introduction"]}
+    },
+    {
+      "id": "relation:small-collates-ashmole42",
+      "type": "collated_against",
+      "subject": "edition:small:english-metrical-homilies-1862",
+      "object": "witness:bodleian:MS-Ashmole-42",
+      "scope": {"subject": {"kind": "selected_passages", "description": "passages supplied where the Edinburgh manuscript is defective"}, "object": {"kind": "selected_passages", "description": "corresponding Northern Homily Cycle readings; exact folios unresolved"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:small-introduction"]}
+    },
+    {
+      "id": "relation:horstmann-collates-small",
+      "type": "collated_against",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "edition:small:english-metrical-homilies-1862",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "items 1-12, with item 4 absent from Small's principal witness and seven explicit variant-reading notes", "locators": ["Horstmann pp. 241-258"]},
+        "object": {"kind": "selected_passages", "description": "parallel passages through the Purification", "locators": ["Small pp. 16-19, 29-33, 38-41, 53-58, 68-73, 79-93, 112-115, 130-132, 138-144, 148-151, 160-170"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-article", "evidence:small-scan"]}
+    },
+    {
+      "id": "relation:horstmann-collates-harley4196",
+      "type": "collated_against",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:bl:Harley-4196",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "recensional overview and explicit comparisons for items 29 and 45", "locators": ["item 29: indulgence passage reported absent", "item 45: reading and alternate position"]},
+        "object": {"kind": "selected_passages", "description": "expanded Northern Homily Cycle readings", "locators": ["item 45 at edition-reported fol. 54", "item 29 exact folio unresolved"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-article", "evidence:bl-harley4196"]}
+    },
+    {
+      "id": "relation:horstmann-collates-cotton",
+      "type": "collated_against",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:bl:Cotton-Tiberius-E-VII",
+      "scope": {"subject": {"kind": "selected_passages", "description": "broad recensional comparison in the opening note"}, "object": {"kind": "part", "description": "expanded Northern Homily Cycle", "locators": ["current catalog fols. 101r-281r"]}, "notes": "Horstmann says this witness agrees word for word with Harley 4196 in the comparison; he does not provide a full Cotton collation."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:horstmann-article", "evidence:bl-cotton"]}
+    },
+    {
+      "id": "relation:horstmann-consults-dd11",
+      "type": "consulted",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:cul:Dd-1-1",
+      "scope": {"subject": {"kind": "part", "description": "opening witness note"}, "object": {"kind": "unknown", "description": "listed as another manuscript; no specific reading or locus is documented"}},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:horstmann-article", "evidence:thompson-2008"]}
+    },
+    {
+      "id": "relation:horstmann-consults-gg531",
+      "type": "consulted",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:cul:Gg-5-31",
+      "scope": {"subject": {"kind": "part", "description": "opening witness note"}, "object": {"kind": "unknown", "description": "listed as another manuscript; Horstmann does not document a direct collation here"}},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:horstmann-article", "evidence:thompson-2008"]}
+    },
+    {
+      "id": "relation:horstmann-consults-ashmole42",
+      "type": "consulted",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:bodleian:MS-Ashmole-42",
+      "scope": {"subject": {"kind": "part", "description": "opening witness note"}, "object": {"kind": "unknown", "description": "listed as another manuscript; no specific reading or locus is documented"}},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:horstmann-article", "evidence:ashmole42-catalog"]}
+    },
+    {
+      "id": "relation:horstmann-cites-harley2253",
+      "type": "cites",
+      "subject": "edition:horstmann:archiv-57-1877",
+      "object": "witness:bl:Harley-2253",
+      "scope": {"subject": {"kind": "part", "description": "footnote to item 14, Marina"}, "object": {"kind": "part", "description": "a different version of the Marina narrative", "locators": ["edition-reported fol. 64"]}, "notes": "This is a different-version comparison, not evidence that Harley 2253 transmits this Northern Homily Cycle selection."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-article", "evidence:bl-harley2253"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00062",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Git repository path",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/CME/source/CME_phase_3/CME00062.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00062.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "access:umich",
+      "entity": "encoding:umich-cme:CME00062",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item handle and full-text viewer",
+      "url": "https://name.umdl.umich.edu/CME00062",
+      "cost": "free",
+      "format": "HTML full text and page navigation",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "access:bsb-volume",
+      "entity": "facsimile:bsb:bsb11360559",
+      "provider_id": "agent:bsb",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "BSB viewer or IIIF Presentation manifest",
+      "url": "https://www.digitale-sammlungen.de/view/bsb11360559",
+      "alternate_urls": [
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest",
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/251",
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/326"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete BSB Archiv volume 57 IIIF bundle",
+          "path": "source-cache/CME00062/bsb-archiv-57-1877-complete-iiif-1600px.zip",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest",
+          "sha256": "1a32cef2a1dfadeda5e25e562f9d0b0e444621f02fbd24654371bab09127b75e",
+          "bytes": 262120230,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 500,
+          "work_portion": {
+            "label": "Horstmann's complete article represented by CME00062",
+            "locators": ["printed pp. 241-316", "IIIF canvases 251-326"],
+            "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/251",
+            "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/326",
+            "notes": ["The article begins and ends within those canvases; the title page establishing 1877 is canvas 7."]
+          },
+          "notes": ["All 500 manifest canvases are present as JPEGs with manifest and exact inventory; effective IIIF image profile is 1600 pixels wide."]
+        },
+        {
+          "label": "BSB Archiv volume 57 IIIF manifest",
+          "path": "source-cache/CME00062/bsb-archiv-57-1877-iiif-manifest.json",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest",
+          "sha256": "845028e2a80025074248a5d27bf07163125c373a8774009009e09524e162bf26",
+          "bytes": 425077,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only"
+        }
+      ],
+      "cost": "free",
+      "format": "500 color IIIF canvases and complete local provider-object bundle",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bsb-manifest", "evidence:bsb-bundle-audit"]
+    },
+    {
+      "id": "access:vernon",
+      "entity": "facsimile:bodleian:vernon",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian viewer or IIIF manifest",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/b36f69cf-5bc6-43fe-ae57-7b3125ae6d66/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/070f4951-e94b-4651-bb1a-b5b4d42d9f31/"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Bodleian Vernon Manuscript IIIF bundle",
+          "path": "source-cache/CME00062/bodleian-vernon-ms-complete-iiif.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "be5c0740ec716bab26b571d751b3071416fcd285145acfbb233b2b31abd617e6",
+          "bytes": 961521599,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 710,
+          "work_portion": {
+            "label": "All Vernon passages selected in CME00062, mapped within the complete manuscript",
+            "locators": [
+              "Item 1: current fols. 167r-v, canvases 221-222 (Horstmann legacy fol. 126)",
+              "Item 2: fol. 168r, canvas 223",
+              "Item 3: fol. 168v, canvas 224",
+              "Item 4: fols. 169r-v, canvases 225-226",
+              "Item 5: fols. 170r-v, canvases 227-228",
+              "Item 6: fols. 171r-v, canvases 229-230",
+              "Item 7: fols. 172r-173r, canvases 231-233",
+              "Item 8: fols. 175v-176r, canvases 238-239",
+              "Item 9: fol. 176v, canvas 240",
+              "Item 10: fols. 176v-177r, canvases 240-241",
+              "Item 11: fols. 177r-v, canvases 241-242",
+              "Item 12: fols. 178r-v, canvases 243-244",
+              "Item 13: fols. 179r-v, canvases 245-246",
+              "Item 14: fols. 179v-180r, canvases 246-247",
+              "Item 15: fol. 180v, canvas 248",
+              "Placidas, printed as a second item 15: fols. 181r-183v, canvases 249-254",
+              "Item 17: fol. 184r, canvas 255",
+              "Item 18: fols. 184v-185r, canvases 256-257",
+              "Item 19: fols. 185r-v, canvases 257-258",
+              "Item 20: fol. 186r, canvas 259",
+              "Item 21: fol. 186v, canvas 260",
+              "Item 22: fol. 189v, canvas 266",
+              "Item 23: fols. 189v-190r, canvases 266-267",
+              "Item 24: fols. 190r-v, canvases 267-268",
+              "Item 25: fols. 191v-192r, canvases 270-271",
+              "Item 26: fol. 192v, canvas 272",
+              "Item 27: fol. 195v, canvas 278",
+              "Item 28: fol. 195v, canvas 278",
+              "Item 29a-b: fols. 196r-197r, canvases 279-281; item 29c: fols. 197r-199r, canvases 281-285",
+              "Item 30: fol. 199v, canvas 286",
+              "Item 31: fols. 200r-v, canvases 287-288",
+              "Item 32: fols. 202r-v, canvases 291-292",
+              "Item 33: fols. 203v-205r, canvases 294-297",
+              "Item 34: fols. 205v-206r, canvases 298-299",
+              "Item 35: fols. 206v-207r, canvases 300-301",
+              "Item 36: fols. 207v-208r, canvases 302-303",
+              "Item 37: fols. 208v-209v, canvases 304-306",
+              "Item 38: fols. 210r-v, canvases 307-308",
+              "Item 39: fol. 211r, canvas 309",
+              "Item 40: fols. 210v-211r, canvases 308-309 (manuscript order precedes item 39)",
+              "Item 41: fol. 212r, canvas 311",
+              "Item 42: fols. 212v-213r, canvases 312-313",
+              "Item 43: fol. 213v, canvas 314",
+              "Item 44: fols. 213v-214v, canvases 314-316",
+              "Item 45: fols. 214v-215v, canvases 316-318",
+              "Addendum: Cana homily, fol. 176r, canvas 239"
+            ],
+            "start_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/b36f69cf-5bc6-43fe-ae57-7b3125ae6d66/",
+            "end_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/",
+            "notes": [
+              "These locators are intentionally non-contiguous and include the addendum separately; they do not imply that intervening leaves belong to the selected work."
+            ]
+          },
+          "notes": [
+            "Exact hardlink reuse of the existing complete CME00052 bundle; checksum and inode identity verified.",
+            "The bundle includes all 710 published canvases, covers, flyleaves, blanks, and spine, with adjacent texts retained. It has no dedicated edge views; effective profile is 1600 pixels wide.",
+            "Supporting comparison outside work_portion: the item 14 footnote's analogous Theodora narrative maps under the current Digital Bodleian structure to fols. 93r-v, canvases 171-172; it is not part of the forty-five-item selection."
+          ]
+        },
+        {
+          "label": "Bodleian Vernon Manuscript IIIF manifest",
+          "path": "source-cache/CME00062/bodleian-vernon-ms-iiif-manifest.json",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc",
+          "bytes": 1014568,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-11",
+          "coverage": "metadata_only"
+        }
+      ],
+      "cost": "free",
+      "format": "710 color IIIF canvases and complete local provider-object bundle",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "access:small-scan",
+      "entity": "facsimile:ia:small-1862",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item page or exact PDF download",
+      "url": "https://archive.org/details/englishmetrical00smalgoog",
+      "alternate_urls": [
+        "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog.pdf",
+        "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog_meta.xml",
+        "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Small 1862 English Metrical Homilies PDF",
+          "path": "source-cache/CME00062/small-1862-english-metrical-homilies-complete.pdf",
+          "source_url": "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog.pdf",
+          "sha256": "0e68cd2676aae2a1621b8efcea9ade75718cf4515395133477cf2675fbc59ac5",
+          "bytes": 3566547,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Small parallels explicitly used by Horstmann for items 1-12",
+            "locators": ["Small pp. 16-19, 29-33, 38-41, 53-58, 68-73, 79-93, 112-115, 130-132, 138-144, 148-151, 160-170"],
+            "notes": ["Item 4 has no parallel in Small's principal Edinburgh witness; the ranges correspond to items 1-3 and 5-12."]
+          }
+        },
+        {
+          "label": "Internet Archive metadata for Small 1862",
+          "path": "source-cache/CME00062/small-1862-internet-archive-metadata.xml",
+          "source_url": "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog_meta.xml",
+          "sha256": "a59741a93465d635129a3bfb3ddcd5ffed2c5881a761ee7265880555da6ca85c",
+          "bytes": 1469,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only"
+        },
+        {
+          "label": "Internet Archive scandata for Small 1862",
+          "path": "source-cache/CME00062/small-1862-internet-archive-scandata.xml",
+          "source_url": "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog_scandata.xml",
+          "sha256": "a6e28421bcc4491bbf2bd7845fd5713a1bcf69ece1fe54f2520bc873baf0c375",
+          "bytes": 68811,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only"
+        }
+      ],
+      "cost": "free",
+      "format": "229-page PDF with metadata and scandata",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:small-scan", "evidence:small-ia-metadata"]
+    },
+    {
+      "id": "access:rcpe-reproduction",
+      "entity": "witness:rcpe:cursor-mundi-nhc-fragment",
+      "provider_id": "agent:rcpe",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Email the College library; quote Small's title, Cursor Mundi manuscript, Drummond bequest, and fols. 16r-36v",
+      "url": "https://www.rcpe.ac.uk/heritage/catalogues-digitised-material",
+      "contact": "library@rcpe.ac.uk; Royal College of Physicians of Edinburgh, 11 Queen Street, Edinburgh EH2 1JQ, United Kingdom",
+      "cost": "unknown",
+      "format": "Request a full-object color facsimile of all 50 leaves plus covers, binding, spine, flyleaves, blanks, mounts, and edges if offered; identify the NHC portion as fols. 16r-36v",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:rcpe", "evidence:small-introduction"],
+      "notes": ["No public whole-object digital surrogate or exact current call number was found. Do not request or cache only the selected NHC leaves when a whole physical-object reproduction is practical."]
+    },
+    {
+      "id": "access:harley4196",
+      "entity": "witness:bl:Harley-4196",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use the British Library catalog record to request access or reproduction; request the complete 258-leaf object and all codex furniture, then map NHC fols. 1r-132r and item 45 at edition-reported fol. 54",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050033",
+      "contact": "British Library manuscripts reference and image-ordering services",
+      "cost": "unknown",
+      "format": "No public whole-object facsimile found; full-object reproduction subject to repository feasibility and terms",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley4196"]
+    },
+    {
+      "id": "access:cotton",
+      "entity": "witness:bl:Cotton-Tiberius-E-VII",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use the British Library catalog record to request access or reproduction; request both current volumes, all 281 folios, codex furniture, and associated condition information",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102298",
+      "contact": "British Library manuscripts reference and image-ordering services",
+      "cost": "unknown",
+      "format": "No public whole-object facsimile found; full-object reproduction may be constrained by fire damage and conservation",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-cotton"]
+    },
+    {
+      "id": "access:dd11",
+      "entity": "witness:cul:Dd-1-1",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Ask Manuscripts and University Archives to confirm current foliation, complete-object imaging availability, reproduction terms, and the relevant NHC loci",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives",
+      "contact": "mss@lib.cam.ac.uk",
+      "cost": "unknown",
+      "format": "No public complete digital object found; request the whole manuscript with covers, binding, spine, flyleaves, blanks, and edges if offered",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cul-enquiry", "evidence:thompson-2008"]
+    },
+    {
+      "id": "access:gg531",
+      "entity": "witness:cul:Gg-5-31",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Ask Manuscripts and University Archives to confirm current foliation, complete-object imaging availability, reproduction terms, and Small's supplied loci",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives",
+      "contact": "mss@lib.cam.ac.uk",
+      "cost": "unknown",
+      "format": "No public complete digital object found; request the whole manuscript with covers, binding, spine, flyleaves, blanks, and edges if offered",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cul-enquiry", "evidence:small-introduction", "evidence:thompson-2008"]
+    },
+    {
+      "id": "access:ashmole42",
+      "entity": "witness:bodleian:MS-Ashmole-42",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Current Bodleian catalog; contact Special Collections for whole-object photography",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_346",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22Bodleian%20Library%20MS.%20Ashmole%2042%22",
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_42.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Pinned Bodleian catalog TEI for MS. Ashmole 42",
+          "path": "source-cache/CME00062/bodleian-ashmole-42-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_42.xml",
+          "sha256": "11cf3eb9ce779fd973532154eb796d96380b2fe735feb87c1643b20cc1c0262e",
+          "bytes": 4423,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only"
+        }
+      ],
+      "contact": "Bodleian Special Collections reader and imaging services",
+      "cost": "free",
+      "format": "Catalog metadata only; exact Digital Bodleian shelfmark search returned no object",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ashmole42-catalog", "evidence:ashmole42-negative"]
+    },
+    {
+      "id": "access:harley2253",
+      "entity": "witness:bl:Harley-2253",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "British Library catalog; legacy full digital coverage is reported, but current digital images are marked unavailable",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048084",
+      "contact": "British Library manuscripts reference service; physical access is restricted",
+      "cost": "unknown",
+      "format": "No current public whole-object image access; do not substitute a selected fol. 64 image for a complete manuscript surrogate",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-harley2253"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repository-xml",
+      "entity": "artifact:general-corpus:CME00062",
+      "access_id": "access:repository-xml",
+      "component": "Repository XML serialization and encoding contributions",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "No explicit license file was found in the pinned CME submodule; public access does not itself establish reuse terms for new encoding contributions.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "rights:umich",
+      "entity": "encoding:umich-cme:CME00062",
+      "access_id": "access:umich",
+      "component": "U-M CME digital item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The exact U-M item applies the No Copyright-United States rights statement to the digitized historical material.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "rights:horstmann-edition",
+      "entity": "edition:horstmann:archiv-57-1877",
+      "component": "1877 article, editorial matter, and printed Middle English text",
+      "jurisdiction": "United States and ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Published in 1877 and far outside modern copyright terms; this does not grant rights in later scans or encodings.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-title-page"]
+    },
+    {
+      "id": "rights:bsb-images",
+      "entity": "facsimile:bsb:bsb11360559",
+      "access_id": "access:bsb-volume",
+      "component": "BSB digital images and IIIF reproduction layer",
+      "jurisdiction": "Provider assertion and terms",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "The exact IIIF manifest applies the No Copyright-Non-Commercial Use Only rights statement. It is a rights statement, not an open commercial-use license.",
+      "asserted_by_id": "agent:bsb",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bsb-manifest"],
+      "notes": ["Do not publish or use the cached images commercially without checking current BSB terms and obtaining any required permission."]
+    },
+    {
+      "id": "rights:vernon-text",
+      "entity": "witness:bodleian:MS-Eng-poet-a-1",
+      "component": "Medieval manuscript text and underlying historical work",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The manuscript and its medieval textual contents predate copyright by centuries; this status is separate from modern photography and catalog text.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-catalog"]
+    },
+    {
+      "id": "rights:vernon-images",
+      "entity": "facsimile:bodleian:vernon",
+      "access_id": "access:vernon",
+      "component": "Digital Bodleian manuscript photographs and cached IIIF derivatives",
+      "jurisdiction": "United Kingdom and CC BY-NC 4.0 license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The exact IIIF manifest attributes the photographs to Bodleian Libraries and applies CC BY-NC 4.0.",
+      "asserted_by_id": "agent:bodleian",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:bodleian-terms"],
+      "notes": ["The private gitignored cache does not authorize repository publication or commercial print-on-demand use of the images; commercial use requires permission beyond CC BY-NC."]
+    },
+    {
+      "id": "rights:small-edition",
+      "entity": "edition:small:english-metrical-homilies-1862",
+      "component": "1862 edition and editorial matter",
+      "jurisdiction": "United States and ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Published in 1862 and outside modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:small-scan"]
+    },
+    {
+      "id": "rights:small-scan",
+      "entity": "facsimile:ia:small-1862",
+      "access_id": "access:small-scan",
+      "component": "Google/Internet Archive scan layer",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "The Internet Archive metadata provides no explicit license for the scan; Google front matter asks for personal, non-commercial use and attribution. These terms do not alter the public-domain status of the 1862 text.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:small-scan", "evidence:small-ia-metadata"]
+    },
+    {
+      "id": "rights:comparison-manuscripts",
+      "entity": "witness:rcpe:cursor-mundi-nhc-fragment",
+      "component": "Medieval contents of the Edinburgh comparison witness",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The underlying medieval text is public domain; this does not determine rights in any newly supplied photographs.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:small-introduction", "evidence:rcpe"]
+    },
+    {
+      "id": "rights:rcpe-requested-images",
+      "entity": "witness:rcpe:cursor-mundi-nhc-fragment",
+      "access_id": "access:rcpe-reproduction",
+      "component": "Any future RCPE reproduction photographs or supplied facsimile",
+      "jurisdiction": "Repository terms and applicable law",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "No exact image license or reproduction agreement is public for this unresolved item; rights must be obtained with the repository's quotation and delivery terms.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:rcpe"],
+      "notes": ["Ask separately whether research use, repository redistribution, and commercial print-on-demand use are permitted; an underlying public-domain text does not answer those image questions."]
+    },
+    {
+      "id": "rights:harley4196-text",
+      "entity": "witness:bl:Harley-4196",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; future British Library reproductions would be a separate rights and contract layer.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-harley4196"]
+    },
+    {
+      "id": "rights:cotton-text",
+      "entity": "witness:bl:Cotton-Tiberius-E-VII",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; future British Library reproductions would be a separate rights and contract layer.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-cotton"]
+    },
+    {
+      "id": "rights:dd11-text",
+      "entity": "witness:cul:Dd-1-1",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; any future CUL image delivery remains subject to separately quoted terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-enquiry", "evidence:thompson-2008"]
+    },
+    {
+      "id": "rights:gg531-text",
+      "entity": "witness:cul:Gg-5-31",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; any future CUL image delivery remains subject to separately quoted terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-enquiry", "evidence:thompson-2008"]
+    },
+    {
+      "id": "rights:ashmole42-text",
+      "entity": "witness:bodleian:MS-Ashmole-42",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; any future Bodleian image delivery remains subject to separately quoted terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ashmole42-catalog"]
+    },
+    {
+      "id": "rights:harley2253-text",
+      "entity": "witness:bl:Harley-2253",
+      "component": "Medieval manuscript text; excludes modern catalog text and photographs",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The medieval textual content predates copyright by centuries; currently unavailable British Library images remain a separate rights and access layer.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-harley2253"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:horstmann-selection",
+      "entity": "edition:horstmann:archiv-57-1877",
+      "practice": "selection",
+      "source_feature": "Narrative exempla embedded in Gospel homilies and associated material",
+      "representation": "Forty-five separately numbered extracts plus an addendum",
+      "description": "Horstmann extracts narrative passages from their larger homiletic settings, occasionally omits internal matter, and supplies editorial headings. Item 29c omits an introductory passage of about one hundred lines; items 39 and 40 reverse manuscript order.",
+      "scope": "Complete article",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "practice:horstmann-collation",
+      "entity": "edition:horstmann:archiv-57-1877",
+      "practice": "collation",
+      "source_feature": "Parallel readings in Small 1862 and expanded Northern Homily Cycle witnesses",
+      "representation": "Footnotes, variant readings, and a recensional overview",
+      "description": "Horstmann compares the earliest section with Small and explicitly discusses Harley 4196, Cotton Tiberius E VII, and a few item-specific parallels; merely listed Dd.1.1, Gg.5.31, and Ashmole 42 are not promoted to undocumented full collations.",
+      "scope": "Opening note and item-specific apparatus",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:small-scan"]
+    },
+    {
+      "id": "practice:horstmann-abbreviations",
+      "entity": "edition:horstmann:archiv-57-1877",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript contractions and omitted letters",
+      "representation": "Italic type, preserved in CME as HI/@REND='italic'",
+      "description": "Many italics transparently supply expanded letters or contractions, but no explicit statement of editorial policy was located in the article or volume front matter. The function is therefore inferred rather than universally asserted.",
+      "scope": "Middle English transcription",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:repo-xml", "evidence:vernon-mapping"],
+      "notes": ["Compare individual italic expansions directly with the mapped manuscript canvas before using them as evidence about scribal appearance."]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, CME/source/CME_phase_3/CME00062.xml at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_3/CME00062.xml",
+      "summary": "Supplies the repository artifact identity, exact encoded structure, title, page milestones, headings, notes, and line counts.",
+      "sha256": "2bf73e9de74aa92b69644c73f4adb9d76a7ab84c01b84f4e51d077091553e71c",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, item CME00062.",
+      "url": "https://name.umdl.umich.edu/CME00062",
+      "summary": "Confirms the CME item identity, public text access, collection context, and U-M rights statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:horstmann-article",
+      "type": "edition_statement",
+      "citation": "Carl Horstmann, 'Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon,' Archiv 57 (1877), 241-316.",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/251",
+      "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/326"],
+      "locator": "Printed pp. 241-316; BSB canvases 251-326",
+      "summary": "Immediate source for the complete CME text, selection headings, witness claims, variant notes, legacy folio references, and the separately signed addendum.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:horstmann-title-page",
+      "type": "visual_inspection",
+      "citation": "Archiv fuer das Studium der neueren Sprachen und Literaturen 57, volume title page.",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/7",
+      "locator": "BSB canvas 7",
+      "summary": "Visually establishes 31st year, volume 57, Braunschweig, George Westermann, and publication year 1877; prevents mistaking Horstmann's 1876 dateline for the publication year.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bsb-manifest",
+      "type": "digital_surrogate",
+      "citation": "Bayerische Staatsbibliothek IIIF manifest for bsb11360559, Archiv volume 57 (1877).",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "Local cached copy source-cache/CME00062/bsb-archiv-57-1877-iiif-manifest.json",
+      "summary": "Supplies 500-canvas sequence identity, labels, image services, attribution, bibliographic metadata, and NoC-NC rights statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bsb-bundle-audit",
+      "type": "visual_inspection",
+      "citation": "Local audit of the complete BSB IIIF bundle for bsb11360559.",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "source-cache/CME00062/bsb-archiv-57-1877-complete-iiif-1600px.zip",
+      "summary": "ZIP integrity, 500 image files, embedded manifest and inventory, exact checksum, title-page canvas 7, and article canvases 251-326 were verified.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:vernon-manifest",
+      "type": "digital_surrogate",
+      "citation": "Bodleian Libraries IIIF manifest for the Vernon Manuscript, MS. Eng. poet. a. 1.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "Local cached copy source-cache/CME00062/bodleian-vernon-ms-iiif-manifest.json",
+      "summary": "Supplies the complete 710-canvas object, folio labels and structures, physical description, content ranges, attribution, and CC BY-NC 4.0 terms.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:vernon-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, manuscript_4817, MS. Eng. poet. a. 1.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+      "summary": "Current catalog for shelfmark, date, place, extent, material, binding, losses, provenance, and the Northern Homily Cycle content range.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:vernon-bundle-audit",
+      "type": "visual_inspection",
+      "citation": "Local audit of the complete inherited Digital Bodleian Vernon bundle.",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "source-cache/CME00062/bodleian-vernon-ms-complete-iiif.zip",
+      "summary": "ZIP integrity, 710 images, complete manifest and inventory, checksum, covers, flyleaves, blanks, spine, and absence of dedicated edge views were verified; hardlink identity to the inherited bundle was checked.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:vernon-mapping",
+      "type": "visual_inspection",
+      "citation": "Item-by-item comparison of Horstmann's 1877 transcription with official Vernon IIIF structures and page images.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/b36f69cf-5bc6-43fe-ae57-7b3125ae6d66/",
+      "alternate_urls": [
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/070f4951-e94b-4651-bb1a-b5b4d42d9f31/"
+      ],
+      "locator": "Forty-five item spans and addendum recorded under access:vernon",
+      "summary": "Confirms every selected passage's current folio and canvas mapping, the non-contiguous structure, the addendum at fol. 176r, and the reversed manuscript order of article items 39-40.",
+      "accessed_on": "2026-07-12",
+      "notes": ["The legacy fol. 126/current fol. 167 crosswalk is inferred from exact-text identity plus the official forty-one-leaf lacuna and remains an explicit open question for authoritative confirmation."]
+    },
+    {
+      "id": "evidence:bodleian-terms",
+      "type": "official_webpage",
+      "citation": "Digital Bodleian, Terms of Use.",
+      "url": "https://digital.bodleian.ox.ac.uk/terms/",
+      "summary": "Provides current institutional terms referenced by the exact Vernon manifest alongside its CC BY-NC 4.0 attribution.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:small-scan",
+      "type": "digital_surrogate",
+      "citation": "John Small, English Metrical Homilies from Manuscripts of the Fourteenth Century (Edinburgh, 1862), complete Internet Archive/Google PDF.",
+      "url": "https://archive.org/download/englishmetrical00smalgoog/englishmetrical00smalgoog.pdf",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "Local cached copy source-cache/CME00062/small-1862-english-metrical-homilies-complete.pdf",
+      "summary": "Complete source for title-page data, introduction, edited text, parallel page ranges, and Google scan notice.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:small-introduction",
+      "type": "edition_statement",
+      "citation": "John Small, English Metrical Homilies (1862), introduction and manuscript description.",
+      "url": "https://archive.org/details/englishmetrical00smalgoog",
+      "summary": "Describes the Edinburgh Royal College of Physicians manuscript, its 50 leaves, Cursor Mundi framing fragments, NHC fols. 16r-36v, losses, format, Drummond provenance, and supplied readings from Gg.5.31 and Ashmole 42.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:small-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata and scandata for englishmetrical00smalgoog.",
+      "url": "https://archive.org/metadata/englishmetrical00smalgoog",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "Local cached metadata and scandata XML sidecars",
+      "summary": "Confirms item identity and scan structure; no explicit scan-layer license is supplied.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:thompson-2008",
+      "type": "scholarly_source",
+      "citation": "Anne B. Thompson, ed., The Northern Homily Cycle, Middle English Texts Series (2008), online introduction.",
+      "url": "https://metseditions.org/read/P1QaAa78HpeQwHLYEIY9xgh2NRee9dWz",
+      "summary": "Current scholarly synthesis for cycle date and northern origin, three-recension model, approximately twenty witnesses, the early Edinburgh text, Vernon/Simeon expansion, Harley/Cotton expansion, manuscript identities, and genre.",
+      "accessed_on": "2026-07-12",
+      "notes": ["The modern edition itself is copyrighted and linked for research; no local copy is cached or redistributed."]
+    },
+    {
+      "id": "evidence:rcpe",
+      "type": "official_webpage",
+      "citation": "Royal College of Physicians of Edinburgh, Catalogues and digitised material.",
+      "url": "https://www.rcpe.ac.uk/heritage/catalogues-digitised-material",
+      "summary": "Provides the current library contact route and warns that not every collection item is represented in the public catalog; no exact digital object for Small's manuscript was found.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bl-harley4196",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 4196, Archives and Manuscripts catalog record 040-002050033.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050033",
+      "summary": "Confirms shelfmark, date, material, 258-leaf extent, NHC fols. 1r-132r, and lack of current public digitized content.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bl-cotton",
+      "type": "official_catalog",
+      "citation": "British Library, Cotton MS Tiberius E VII, Archives and Manuscripts catalog record 040-001102298.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001102298",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-003726075"],
+      "summary": "Confirms shelfmark, first-half-fifteenth-century date, 281-folio two-volume physical object, NHC fols. 101r-281r, fire damage, associated fragments, and lack of current public digitized content.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:cul-enquiry",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Manuscripts and University Archives department.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives",
+      "summary": "Provides the current repository and enquiry route for Dd.1.1 and Gg.5.31; no exact public complete image object for either shelfmark was found on the check date.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:ashmole42-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS. Ashmole 42, manuscript_346; pinned TEI at medieval-mss commit cd36dce9a104617f960dab2c97ea78f95f917496.",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_346",
+      "repository_path": "manifests/lineage/works/CME00062.json",
+      "locator": "Local cached catalog source source-cache/CME00062/bodleian-ashmole-42-catalog-tei.xml",
+      "summary": "Confirms exact shelfmark, Summary Catalogue 6923, mid-fourteenth-century date, parchment support, English origin, and whole-manuscript NHC contents.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:ashmole42-negative",
+      "type": "search_result",
+      "citation": "Exact Digital Bodleian shelfmark search for Bodleian Library MS. Ashmole 42.",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22Bodleian%20Library%20MS.%20Ashmole%2042%22",
+      "summary": "The exact search returned no Digital Bodleian object on 2026-07-12; this is a dated whole-object negative, not proof that no internal or future photography exists.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bl-harley2253",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 2253, Archives and Manuscripts catalog record 040-002048084.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048084",
+      "summary": "Confirms shelfmark, date, physical extent, restricted access, and the present statement that previously digitized images are unavailable.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:rcpe-call-number-and-facsimile",
+      "question": "What is the exact current call number of Small's Edinburgh Cursor Mundi/Northern Homily Cycle manuscript, and can RCPE supply a complete physical-object color facsimile under reusable terms?",
+      "status": "pending_external_response",
+      "impact": "high",
+      "next_steps": ["Email library@rcpe.ac.uk with Small's 1862 description and request all 50 leaves plus covers, binding, spine, flyleaves, blanks, mounts, and edges if offered; ask separately for fols. 16r-36v mapping, price, resolution, and publication/commercial-use terms."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:small-introduction", "evidence:rcpe"]
+    },
+    {
+      "id": "question:vernon-legacy-foliation",
+      "question": "Can a Bodleian or scholarly concordance explicitly confirm that Horstmann's first legacy fol. 126 corresponds to current Vernon fol. 167r after the forty-one-leaf lacuna?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult the full Vernon catalog bibliography or ask Bodleian manuscripts staff for the foliation history; retain both locators and do not replace current fol. 167r with legacy fol. 126."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:vernon-manifest", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "question:comparison-witness-loci",
+      "question": "What exact current folios contain the corresponding selected passages in Dd.1.1, Gg.5.31, Ashmole 42, and the item 29 comparison in Harley 4196?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Request current foliations and contents concordances from CUL, Bodleian, and BL before adding item-level mappings; never infer loci from Horstmann's broad witness list."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:cul-enquiry", "evidence:ashmole42-catalog", "evidence:bl-harley4196"]
+    },
+    {
+      "id": "question:italic-policy",
+      "question": "Did Horstmann state anywhere outside this article that every italic letter in the transcription represents an expanded manuscript abbreviation?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Search Horstmann's methodological prefaces and compare each queried italic span with the mapped Vernon canvas; record exceptions if found."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-article", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "question:printed-numbering",
+      "question": "Is the second printed number 15 for Placidas a typographical error for 16, or an intentional numbering artifact?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Preserve the printed duplicate 15 in source-facing data and use sequence position 16 only as an explicit normalized convenience unless contemporary errata or later scholarship resolves it."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-article", "evidence:repo-xml"]
+    }
+  ]
+}

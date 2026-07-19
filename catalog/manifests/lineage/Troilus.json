@@ -1,0 +1,222 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Troilus",
+  "work_id": "Troilus",
+  "title": "Troilus and Criseyde",
+  "primary_subject": "artifact:general-corpus:Troilus",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository XML is a local copy or version of University of Michigan CME item Troilus, distributed through Oxford Text Archive identifier U-1689-A and keyed from Barry A. Windeatt's 1984 critical edition. Windeatt's edition is eclectic and reports variants from the extant manuscript tradition; it is not a transcription of one manuscript. The electronic text omits the printed edition's front and back matter, editorial notes, bibliography, and parallel Italian Il Filostrato.",
+  "languages": ["enm"],
+  "review_notes": [
+    "The aggregate manuscript-tradition entity prevents a false single-witness lineage claim.",
+    "U-M's current No Copyright–United States statement, the older OTA personal-scholarly-use notice in the XML, and possible copyright in Windeatt's 1984 editorial contribution are recorded separately.",
+    "Morgan MS M.817 is included as an accessible representative witness, not as the sole or stated base manuscript of Windeatt's edition."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Troilus",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Troilus",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [{"scheme": "CME/UMDL", "value": "Troilus"}, {"scheme": "git-blob", "value": "5bc9a9db3b6ea98271b54b2f332e3df0d5a3bbec"}],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/Troilus.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "5bc9a9db3b6ea98271b54b2f332e3df0d5a3bbec",
+        "sha256": "b04741b72ab10fee685c4c7ae12377b1f57cff34631ba8ad04433be78b08d129"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:troilus-xml"]
+    },
+    {
+      "id": "encoding:umich-cme:Troilus",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item Troilus",
+      "description": "Publicly viewable Middle English text derived from Windeatt's edition and associated with OTA U-1689-A.",
+      "identifiers": [{"scheme": "UMDL handle", "value": "Troilus", "uri": "https://name.umdl.umich.edu/Troilus"}, {"scheme": "OTA", "value": "U-1689-A"}],
+      "creator_ids": ["agent:umich", "agent:ota"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-troilus", "evidence:troilus-xml"]
+    },
+    {
+      "id": "edition:windeatt:troilus-1984",
+      "type": "scholarly_edition",
+      "label": "Windeatt 1984 edition of Troilus and Criseyde",
+      "creator_ids": ["agent:chaucer", "agent:windeatt"],
+      "date_statements": [{"label": "publication", "value": "1984", "normalized": "1984", "certainty": "high", "evidence_ids": ["evidence:windeatt-catalog", "evidence:troilus-xml"]}],
+      "bibliographic": {
+        "citation": "Geoffrey Chaucer, Troilus & Criseyde: A New Edition of ‘The Book of Troilus,’ ed. Barry A. Windeatt (London and New York: Longman, 1984).",
+        "title": "Troilus & Criseyde: A New Edition of ‘The Book of Troilus’",
+        "publisher": "Longman",
+        "publication_place": "London; New York",
+        "date": "1984",
+        "pages": "xii, 584",
+        "languages": ["enm", "ita", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:windeatt-catalog", "evidence:cambridge-editions", "evidence:troilus-xml"],
+      "notes": [
+        "The printed edition includes facing Italian Il Filostrato, glosses, notes, variants, and bibliography; these are not all present in the electronic text.",
+        "The Cambridge Faculty of English describes it as presenting textual variants of the extant Troilus manuscripts."
+      ]
+    },
+    {
+      "id": "catalog:troilus-manuscript-tradition",
+      "type": "catalog_description",
+      "label": "Extant manuscript tradition of Troilus and Criseyde",
+      "description": "An aggregate description of the multiple surviving manuscript witnesses collated in modern critical editions; it is deliberately not a manuscript object or a claim of one base witness.",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:cambridge-editions", "evidence:morgan-m817", "evidence:bl-add12044"],
+      "notes": ["Consult Windeatt's list of manuscripts and apparatus for sigla and reading-level dependencies."]
+    },
+    {
+      "id": "witness:morgan:M817",
+      "type": "manuscript_witness",
+      "label": "Morgan Library & Museum MS M.817",
+      "alternate_labels": ["Campsall manuscript"],
+      "description": "A complete early witness of Troilus and Criseyde, securely dated 1403–1413 and probably made in London.",
+      "identifiers": [{"scheme": "Morgan shelfmark", "value": "MS M.817", "uri": "https://www.themorgan.org/manuscript/147148"}],
+      "date_statements": [{"label": "production", "value": "between 1403 and 1413", "normalized": "1403/1413", "certainty": "high", "evidence_ids": ["evidence:morgan-m817"]}],
+      "holding": {"institution_id": "agent:morgan", "shelfmark": "MS M.817", "historical_designations": ["Campsall manuscript"], "catalog_url": "https://www.themorgan.org/manuscript/147148"},
+      "physical_description": {"support": "Parchment", "extent": "120 leaves", "dimensions": "300 × 200 mm", "notes": ["One column, 35 lines; illuminated."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:morgan-m817"]
+    },
+    {
+      "id": "witness:bl:Add12044",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 12044",
+      "description": "An imperfect fifteenth-century witness of the five-book poem, lacking portions near the end.",
+      "identifiers": [{"scheme": "BL shelfmark", "value": "Add MS 12044", "uri": "https://searcharchives.bl.uk/catalog/040-002041751"}],
+      "holding": {"institution_id": "agent:bl", "shelfmark": "Add MS 12044", "historical_designations": [], "catalog_url": "https://searcharchives.bl.uk/catalog/040-002041751"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-add12044"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:chaucer", "type": "person", "name": "Geoffrey Chaucer", "dates": "c. 1343–1400", "identifiers": [{"scheme": "VIAF", "value": "100185203", "uri": "https://viaf.org/viaf/100185203"}], "evidence_ids": ["evidence:umich-troilus"]},
+    {"id": "agent:windeatt", "type": "person", "name": "Barry A. Windeatt", "dates": "1950–", "evidence_ids": ["evidence:windeatt-catalog"]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-troilus"]},
+    {"id": "agent:ota", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"], "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "agent:morgan", "type": "organization", "name": "Morgan Library & Museum", "urls": ["https://www.themorgan.org/"], "evidence_ids": ["evidence:morgan-m817"]},
+    {"id": "agent:bl", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"], "evidence_ids": ["evidence:bl-add12044"]},
+    {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:troilus-xml"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:troilus-repo-from-umich", "type": "copied_from", "subject": "artifact:general-corpus:Troilus", "object": "encoding:umich-cme:Troilus",
+      "scope": {"subject": {"kind": "whole", "description": "Repository XML"}, "object": {"kind": "whole", "description": "U-M item Troilus"}, "notes": "Matching identifier, title, source statement, and text support this relationship; exact transfer date is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:umich-troilus"]}
+    },
+    {
+      "id": "relation:troilus-umich-from-windeatt", "type": "encoded_from", "subject": "encoding:umich-cme:Troilus", "object": "edition:windeatt:troilus-1984",
+      "scope": {"subject": {"kind": "whole", "description": "Electronic Middle English poem"}, "object": {"kind": "selected_passages", "description": "Windeatt's edited Middle English text only", "locators": ["Books I–V"]}, "notes": "Front/back matter, editorial notes, bibliography, and parallel Italian text are omitted."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:umich-troilus"]}
+    },
+    {
+      "id": "relation:windeatt-collates-tradition", "type": "collated_against", "subject": "edition:windeatt:troilus-1984", "object": "catalog:troilus-manuscript-tradition",
+      "scope": {"subject": {"kind": "whole", "description": "Critical Middle English text and apparatus"}, "object": {"kind": "unknown", "description": "Extant witnesses represented in Windeatt's manuscript list and variants"}, "notes": "This aggregate edge expressly avoids identifying a single base witness."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cambridge-editions", "evidence:windeatt-catalog"]}
+    },
+    {
+      "id": "relation:tradition-describes-m817", "type": "describes", "subject": "catalog:troilus-manuscript-tradition", "object": "witness:morgan:M817",
+      "scope": {"subject": {"kind": "part", "description": "One witness in the tradition"}, "object": {"kind": "whole", "description": "Morgan MS M.817"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:morgan-m817", "evidence:cambridge-editions"]}
+    },
+    {
+      "id": "relation:tradition-describes-add12044", "type": "describes", "subject": "catalog:troilus-manuscript-tradition", "object": "witness:bl:Add12044",
+      "scope": {"subject": {"kind": "part", "description": "One witness in the tradition"}, "object": {"kind": "whole", "description": "BL Add MS 12044"}},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:bl-add12044", "evidence:cambridge-editions"]}
+    }
+  ],
+  "access": [
+    {"id": "access:troilus-repo", "entity": "artifact:general-corpus:Troilus", "provider_id": "agent:kyvero", "resource_kind": "repository_file", "status": "local_only", "access_method": "Read the checked-out CME submodule path", "repository_path": "CME/source/CME_from_OTA/Troilus.xml", "cost": "not_applicable", "format": "XML", "last_checked": "2026-07-11", "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "access:troilus-umich", "entity": "encoding:umich-cme:Troilus", "provider_id": "agent:umich", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item and full-text view", "url": "https://name.umdl.umich.edu/Troilus", "cost": "free", "format": "HTML digital text", "last_checked": "2026-07-11", "evidence_ids": ["evidence:umich-troilus"]},
+    {"id": "access:windeatt-catalog", "entity": "edition:windeatt:troilus-1984", "resource_kind": "catalog_record", "status": "purchasable", "access_method": "Library catalogue and commercial second-hand channels", "url": "https://iucat.iu.edu/iue/1703887", "alternate_urls": ["https://books.google.com/books?id=V25aAAAAMAAJ"], "cost": "fee", "format": "Print book; limited Google Books record", "last_checked": "2026-07-11", "evidence_ids": ["evidence:windeatt-catalog"]},
+    {
+      "id": "access:morgan-m817-images",
+      "entity": "witness:morgan:M817",
+      "provider_id": "agent:morgan",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Morgan catalogue and image viewer for the selected opening leaf",
+      "url": "https://www.themorgan.org/manuscript/147148",
+      "alternate_urls": [
+        "https://ica.themorgan.org/manuscript/147148",
+        "https://ica.themorgan.org/manuscript/page/1/147148",
+        "https://ica.themorgan.org/icaimages/8/m817.001r.jpg"
+      ],
+      "local_copies": [
+        {
+          "label": "Morgan selected opening image, MS M.817 fol. 1r",
+          "path": "source-cache/Troilus/morgan-m817-fol-001r-selected.jpg",
+          "source_url": "https://ica.themorgan.org/icaimages/8/m817.001r.jpg",
+          "sha256": "8873c6a6c520821e5950522d178cdde0f84664a0f33b98d489005c7de01e37a3",
+          "bytes": 82416,
+          "media_type": "image/jpeg",
+          "downloaded_on": "2026-07-11",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Opening of Troilus and Criseyde",
+            "locators": ["current Morgan fol. 1r", "Furnivall historical leaf 2"],
+            "start_url": "https://ica.themorgan.org/manuscript/page/1/147148",
+            "end_url": "https://ica.themorgan.org/manuscript/page/1/147148",
+            "notes": ["This is one selected leaf from the work, not the whole work and not the complete 120-leaf manuscript."]
+          },
+          "notes": ["Cached only because it is the sole verified public manuscript image; it is explicitly not substituted for a full-codex facsimile."]
+        }
+      ],
+      "cost": "free",
+      "format": "Catalogue plus one selected JPEG manuscript image",
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:morgan-m817", "evidence:morgan-m817-selected-image-inspection"],
+      "notes": [
+        "The public thumbnail viewer exposed only fol. 1r during direct inspection; no complete public 120-leaf facsimile or bulk download was verified.",
+        "The ignored local cache is a research copy and does not independently grant redistribution rights."
+      ]
+    },
+    {"id": "access:add12044-catalog", "entity": "witness:bl:Add12044", "provider_id": "agent:bl", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "British Library Archives and Manuscripts catalogue", "url": "https://searcharchives.bl.uk/catalog/040-002041751", "cost": "free", "format": "Catalogue record", "last_checked": "2026-07-11", "evidence_ids": ["evidence:bl-add12044"]}
+  ],
+  "rights": [
+    {"id": "rights:troilus-medieval-text-us", "entity": "edition:windeatt:troilus-1984", "component": "Chaucer's fourteenth-century underlying text", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "Chaucer died in 1400 and the underlying work predates modern copyright by centuries.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:umich-troilus", "evidence:copyright-office"]},
+    {"id": "rights:windeatt-editorial-us", "entity": "edition:windeatt:troilus-1984", "component": "Windeatt's 1984 selection, edited text, apparatus, glosses, notes, and other original editorial contribution", "jurisdiction": "United States", "copyright_status": "copyright_may_apply", "as_of": "2026-07-11", "basis": "The edition was published in 1984 and its living editor was born in 1950; no public-domain dedication or open license for the edition was verified.", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:windeatt-catalog", "evidence:copyright-office"], "notes": ["This does not place Chaucer's underlying text under copyright."]},
+    {"id": "rights:umich-troilus-us", "entity": "encoding:umich-cme:Troilus", "component": "Materials presented in U-M CME item Troilus", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-11", "basis": "U-M expressly labels the item public domain and applies No Copyright–United States.", "asserted_by_id": "agent:umich", "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/", "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:umich-troilus"], "notes": ["This provider assertion conflicts in practical scope with the older OTA restriction preserved in the XML and does not itself explain the status of Windeatt's editorial contribution."]},
+    {"id": "rights:troilus-local-terms", "entity": "artifact:general-corpus:Troilus", "component": "The local XML encoding and its use as an OTA-derived file", "jurisdiction": "Provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "The XML header states that OTA U-1689-A was made available for personal scholarly use only, while U-M's current item page supplies a broader public-domain statement.", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:troilus-xml", "evidence:umich-troilus"], "notes": ["Resolve the conflicting statements before commercial redistribution of this particular encoding."]},
+    {"id": "rights:morgan-images", "entity": "witness:morgan:M817", "access_id": "access:morgan-m817-images", "component": "Modern Morgan manuscript photographs and interface assets", "jurisdiction": "Provider terms and intended place of reuse", "copyright_status": "unknown", "as_of": "2026-07-11", "basis": "Public viewing does not by itself establish permission to redistribute the image files.", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:morgan-m817"]}
+  ],
+  "editorial_practices": [
+    {"id": "practice:troilus-electronic-selection", "entity": "encoding:umich-cme:Troilus", "practice": "selection", "description": "The electronic edition retains the poem but omits printed front/back matter, editorial notes, and bibliography.", "scope": "Whole electronic item", "confidence": "high", "evidence_ids": ["evidence:troilus-xml"]},
+    {"id": "practice:windeatt-collation", "entity": "edition:windeatt:troilus-1984", "practice": "collation", "description": "The edition records textual variants from the extant manuscript tradition rather than transcribing one witness.", "scope": "Critical Middle English text and apparatus", "confidence": "high", "evidence_ids": ["evidence:cambridge-editions", "evidence:windeatt-catalog"]}
+  ],
+  "evidence": [
+    {"id": "evidence:troilus-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_from_OTA/Troilus.xml, HEADER and full text.", "repository_path": "CME/source/CME_from_OTA/Troilus.xml", "locator": "HEADER; Books I–V", "summary": "Identifies OTA U-1689-A, U-M distribution, Windeatt 1984 as source, omissions, creation date 1385, and the five-book text.", "accessed_on": "2026-07-11", "sha256": "b04741b72ab10fee685c4c7ae12377b1f57cff34631ba8ad04433be78b08d129"},
+    {"id": "evidence:umich-troilus", "type": "official_webpage", "citation": "University of Michigan Library, ‘Geoffrey Chaucer's Troilus and Criseyde,’ CME item Troilus.", "url": "https://quod.lib.umich.edu/c/cme/Troilus?view=toc", "summary": "Supplies title, authorship, 1984 imprint, OTA identifier, public access, NoC-US statement, and five-book contents.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:windeatt-catalog", "type": "official_catalog", "citation": "Indiana University Libraries, Troilus & Criseyde: a new edition of Chaucer's The Book of Troilus, PR1895 .W56 1984.", "url": "https://iucat.iu.edu/iue/1703887", "alternate_urls": ["https://books.google.com/books?id=V25aAAAAMAAJ"], "summary": "Confirms editor Barry A. Windeatt (1950–), Longman 1984 imprint, extent, and ISBN.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:cambridge-editions", "type": "scholarly_source", "citation": "University of Cambridge Faculty of English, ‘Recommended Editions,’ Troilus & Criseyde: Translation & Commentary.", "url": "https://www.english.cam.ac.uk/troilus/?page_id=155", "summary": "Describes Windeatt 1984 as including critical notes, extant-manuscript variants, and parallel Il Filostrato.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:morgan-m817", "type": "official_catalog", "citation": "Morgan Library & Museum, MS M.817, Troilus and Criseyde.", "url": "https://www.themorgan.org/manuscript/147148", "summary": "Catalogues a 120-leaf parchment witness made probably in London between 1403 and 1413 and links to a selected-image viewer.", "accessed_on": "2026-07-11"},
+    {
+      "id": "evidence:morgan-m817-selected-image-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of the Morgan MS M.817 thumbnail viewer and selected fol. 1r JPEG.",
+      "url": "https://ica.themorgan.org/manuscript/thumbs/147148",
+      "alternate_urls": ["https://ica.themorgan.org/icaimages/8/m817.001r.jpg"],
+      "repository_path": "source-cache/Troilus/morgan-m817-fol-001r-selected.jpg",
+      "locator": "MS M.817, fol. 1r",
+      "summary": "The public thumbnail route exposed one image, fol. 1r, rather than a complete manuscript sequence. The selected JPEG visibly reproduces the opening leaf and must not be represented as a whole-codex facsimile.",
+      "accessed_on": "2026-07-11",
+      "sha256": "8873c6a6c520821e5950522d178cdde0f84664a0f33b98d489005c7de01e37a3"
+    },
+    {"id": "evidence:bl-add12044", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Add MS 12044: Geoffrey Chaucer, Troilus and Criseyde.", "url": "https://searcharchives.bl.uk/catalog/040-002041751", "summary": "Describes an imperfect five-book manuscript witness and its missing portions.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:copyright-office", "type": "law", "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.", "url": "https://www.copyright.gov/circs/circ15a.pdf", "summary": "Provides the U.S. duration framework used to distinguish the medieval work from a 1984 editorial contribution.", "accessed_on": "2026-07-11"}
+  ],
+  "open_questions": [
+    {"id": "question:troilus-rights-conflict", "question": "What permission or rights determination allowed OTA and U-M to distribute a text keyed from Windeatt 1984, and does it permit commercial redistribution of this XML-derived text?", "status": "unresolved", "impact": "high", "next_steps": ["Ask U-M and the Oxford Text Archive for the accession and permission record for U-1689-A.", "Do not infer rights in Windeatt's apparatus from Chaucer's public-domain text or U-M's item label."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:troilus-xml", "evidence:umich-troilus", "evidence:windeatt-catalog"]},
+    {"id": "question:troilus-witness-dependencies", "question": "Which witnesses and editorial principles determine each reading in Windeatt's base text?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult Windeatt's full introduction, list of manuscripts, and apparatus; record individual witness edges only where explicitly supported."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:cambridge-editions", "evidence:windeatt-catalog"]}
+  ]
+}

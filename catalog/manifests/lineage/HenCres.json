@@ -1,0 +1,1329 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:HenCres",
+  "work_id": "HenCres",
+  "title": "The Testament of Cresseid",
+  "primary_subject": "artifact:general-corpus:HenCres",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The repository artifact is a copy or version of University of Michigan/OTA electronic text U-243-A, created in 1993. Its textual base is Henry Charteris's 1593 Edinburgh print, the earliest surviving complete Scottish witness and the best early witness according to current METS scholarship. Its PB milestones reproduce pages 2–24 of G. Gregory Smith's 1908 edition, but direct comparison shows that the XML does not simply adopt all of Smith's emendations. The lineage therefore separates textual witness, pagination source, scholarly edition, electronic encoding, repository artifact, modern facsimiles, and collateral manuscript and print witnesses.",
+  "languages": ["sco", "eng", "lat"],
+  "review_notes": [
+    "The 1593 heading in HenCres.xml is a reproduced imprint layer, not the work's composition date or a second title-bearing work.",
+    "Smith 1908 is modeled as the source of page milestones and as a collated edition, not as the source of every XML reading.",
+    "The lost Asloan leaves, fragmentary witnesses, complete prints, Speght-derived copies, and modern digital reproductions are not conflated.",
+    "The current OTA A03023 EEBO-TCP text is a separate 2002–2003 encoding of the same 1593 print, not a renamed or proven continuation of legacy OTA U-243-A.",
+    "Public access, underlying-text copyright, modern image rights, license claims, and legacy provider restrictions are recorded separately."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:HenCres",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for HenCres",
+      "description": "The XML artifact consumed by this repository's corpus workflow and supplied through the pinned Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "HenCres"},
+        {"scheme": "git-blob", "value": "d5d06aea9aa7a9faa2cc6ad57a3f83d8af9640bc"},
+        {"scheme": "CME git commit", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/HenCres.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "d5d06aea9aa7a9faa2cc6ad57a3f83d8af9640bc",
+        "sha256": "7254319ce0a4d36232eb5ca5b7b8cd98807a120d5183c72574ca322c76d7639c"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:cme-git-state"],
+      "notes": ["File size is 38,531 bytes at the reviewed commit."]
+    },
+    {
+      "id": "encoding:umich-ota:U-243-A",
+      "type": "digital_encoding",
+      "label": "University of Michigan / Oxford Text Archive electronic text U-243-A",
+      "alternate_labels": ["U-M CME item HenCres"],
+      "description": "A 1993 electronic edition distributed by U-M's Humanities Text Initiative and made available through the Oxford Text Archive. The legacy header identifies Charteris 1593 as source and Smith 1908 as pagination authority.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "U-243-A"},
+        {"scheme": "CME/UMDL", "value": "HenCres", "uri": "https://name.umdl.umich.edu/HenCres"}
+      ],
+      "creator_ids": ["agent:umich", "agent:ota"],
+      "date_statements": [{"label": "electronic edition", "value": "1993", "normalized": "1993", "certainty": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres"],
+      "notes": ["No current standalone OTA accession page for U-243-A was verified; the historical identifier and terms are preserved from the source header."]
+    },
+    {
+      "id": "edition:charteris:testament-1593",
+      "type": "scholarly_edition",
+      "label": "Henry Charteris's 1593 Edinburgh print of The Testament of Cresseid",
+      "alternate_labels": ["STC 13165", "ESTC S118127"],
+      "description": "The earliest surviving complete Scottish text and, in current METS scholarship, the best witness, while still showing expected late-sixteenth-century editorial and compositorial intervention. The unique known copy is British Library C.21.c.14.",
+      "identifiers": [
+        {"scheme": "USTC", "value": "512392", "uri": "https://www.ustc.ac.uk/editions/512392"},
+        {"scheme": "ESTC", "value": "S118127", "uri": "https://catalog.folger.edu/record/417704"},
+        {"scheme": "STC (2nd ed.)", "value": "13165"},
+        {"scheme": "ProQuest/EEBO", "value": "99853336"}
+      ],
+      "creator_ids": ["agent:henry-charteris"],
+      "date_statements": [{"label": "publication", "value": "1593", "normalized": "1593", "certainty": "high", "evidence_ids": ["evidence:ustc-charteris-1593", "evidence:folger-charteris-1593"]}],
+      "bibliographic": {
+        "citation": "Robert Henryson, The Testament of Cresseid, compylit be M. Robert Henrisone, Scotaishman (Edinburgh: Henry Charteris, 1593).",
+        "title": "The Testament of Cresseid",
+        "publisher": "Henry Charteris",
+        "publication_place": "Edinburgh",
+        "date": "1593",
+        "pages": "[20] pages; signatures π⁴ B⁴ C²",
+        "languages": ["sco"]
+      },
+      "holding": {"institution_id": "agent:bl", "shelfmark": "C.21.c.14", "historical_designations": [], "catalog_url": "https://www.ustc.ac.uk/editions/512392", "notes": "Unique known copy; the Folger record is a vendor bibliographic record rather than a Folger holding."},
+      "physical_description": {"extent": "10 leaves", "format": "quarto", "notes": ["The print itself has signatures and leaves but no modern printed pagination 2–24."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ustc-charteris-1593", "evidence:folger-charteris-1593", "evidence:mets-testament", "evidence:charteris-facsimile-inspection"]
+    },
+    {
+      "id": "facsimile:ia:eebo-charteris-1593",
+      "type": "facsimile",
+      "label": "EEBO microfilm facsimile of Charteris 1593 at Internet Archive",
+      "description": "A complete 21-frame scan derived from Early English Books Online microfilm canister IA40312816-36. Direct visual inspection finds the title page, complete poem through Finis and tailpiece, and a terminal blank frame; handwritten marginal labels are visible.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593", "uri": "https://archive.org/details/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593"}, {"scheme": "EEBO microfilm canister", "value": "IA40312816-36"}],
+      "creator_ids": ["agent:internet-archive"],
+      "date_statements": [{"label": "digital publication", "value": "Internet Archive record reviewed 2026", "certainty": "high", "evidence_ids": ["evidence:ia-charteris-metadata"]}],
+      "reproduction_format": "EEBO microfilm digitized as PDF and 21-image JP2 ZIP",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-charteris-metadata", "evidence:charteris-facsimile-inspection"]
+    },
+    {
+      "id": "edition:smith:henryson-vol3-1908",
+      "type": "scholarly_edition",
+      "label": "G. Gregory Smith, The Poems of Robert Henryson, volume III (1908)",
+      "description": "Scottish Text Society edition, volume III overall and text volume II. The Testament occupies printed pages 2–24 and presents Charteris's 616-line text with editorial interventions; a Thynne text and comparison appear at pages 175–198 and in the comparison table.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "ThePoemsOfRobertHenrysonVol3", "uri": "https://archive.org/details/ThePoemsOfRobertHenrysonVol3"}],
+      "creator_ids": ["agent:g-gregory-smith"],
+      "date_statements": [{"label": "publication", "value": "1908", "normalized": "1908", "certainty": "high", "evidence_ids": ["evidence:smith-1908-scan"]}],
+      "bibliographic": {
+        "citation": "The Poems of Robert Henryson, ed. G. Gregory Smith, vol. III, Text vol. II, Scottish Text Society (Edinburgh and London: William Blackwood and Sons, 1908).",
+        "title": "The Poems of Robert Henryson",
+        "volume": "III (Text vol. II)",
+        "series": "Scottish Text Society, first series 64",
+        "publisher": "William Blackwood and Sons",
+        "publication_place": "Edinburgh; London",
+        "date": "1908",
+        "pages": "The Testament of Cresseid, 2–24; Thynne text, 175–198",
+        "languages": ["sco", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-xml-comparison"],
+      "notes": ["HenCres PB milestones exactly match Smith pages 2–24. Readings such as XML line 216 ‘blak, callit philologie,’ XML line 178 without Smith's supplied ‘[gay],’ and XML line 6 ‘can’ show that Smith is not the unqualified text source."]
+    },
+    {
+      "id": "encoding:ota-eebo-tcp:A03023",
+      "type": "digital_encoding",
+      "label": "EEBO-TCP Phase 1 encoding A03023",
+      "description": "A distinct 2002–2003 electronic transcription of Charteris 1593, keyed by SPi Global from 12 one-bit TIFF page images and sampled and proofread at Michigan. It is not proven to descend from legacy OTA U-243-A.",
+      "identifiers": [
+        {"scheme": "OTA persistent identifier", "value": "20.500.12024/A03023", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A03023"},
+        {"scheme": "ESTC", "value": "S118127"},
+        {"scheme": "STC (2nd ed.)", "value": "13165"},
+        {"scheme": "ProQuest/EEBO", "value": "99853336"},
+        {"scheme": "TCP VID", "value": "18716"}
+      ],
+      "creator_ids": ["agent:eebo-tcp", "agent:umich"],
+      "date_statements": [
+        {"label": "transcription and review", "value": "2002", "normalized": "2002", "certainty": "high", "evidence_ids": ["evidence:ota-a03023-source"]},
+        {"label": "OTA issue", "value": "2003-01", "normalized": "2003-01", "certainty": "high", "evidence_ids": ["evidence:ota-a03023-record"]}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-a03023-record", "evidence:ota-a03023-source"]
+    },
+    {
+      "id": "catalog:mets:testament-witness-census",
+      "type": "catalog_description",
+      "label": "METS scholarly census of witnesses to The Testament of Cresseid",
+      "description": "The witness discussion in the current Middle English Texts Series introduction, used here as an aggregate scholarly description so that fragmentary, missing, complete, and late derivative witnesses are not forced into one false stemma.",
+      "creator_ids": ["agent:mets"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:mets-general"],
+      "notes": ["The census includes a hypothetical early Scottish print but the evidence reviewed here does not justify creating that print as a confirmed entity."]
+    },
+    {
+      "id": "witness:nls:Asloan-MS-16500",
+      "type": "manuscript_witness",
+      "label": "Lost Testament leaves once in the Asloan manuscript (NLS MS 16500)",
+      "description": "The Asloan manuscript's c. 1515–1525 contents record a copy of the Testament, but the corresponding leaves are now missing. It is an attested lost copy, not an extant textual witness available for collation.",
+      "identifiers": [{"scheme": "NLS shelfmark", "value": "MS 16500"}],
+      "date_statements": [{"label": "Asloan compilation", "value": "c. 1515–1525", "normalized": "1515/1525", "certainty": "high", "evidence_ids": ["evidence:mets-general"]}],
+      "holding": {"institution_id": "agent:nls", "shelfmark": "MS 16500", "historical_designations": ["Asloan manuscript"], "notes": "The codex survives; the leaves containing the listed Testament do not."},
+      "survival_status": "missing",
+      "evidence_ids": ["evidence:mets-general"]
+    },
+    {
+      "id": "edition:thynne:chaucer-1532",
+      "type": "scholarly_edition",
+      "label": "The Testament in William Thynne's 1532 Works of Chaucer",
+      "description": "The earliest surviving complete text, printed anonymously at folios 219r–222v after Troilus and Criseyde. It is substantially anglicized and the Complaint is textually disordered.",
+      "identifiers": [{"scheme": "STC (2nd ed.)", "value": "5068"}, {"scheme": "Folger catalog", "value": "161594", "uri": "https://catalog.folger.edu/record/161594"}],
+      "creator_ids": ["agent:william-thynne"],
+      "date_statements": [{"label": "publication", "value": "1532", "normalized": "1532", "certainty": "high", "evidence_ids": ["evidence:folger-thynne-1532"]}],
+      "bibliographic": {
+        "citation": "The workes of Geffray Chaucer newly printed, with dyuers workes whiche were neuer in print before, ed. William Thynne (London, 1532), fols. 219r–222v.",
+        "title": "The workes of Geffray Chaucer",
+        "date": "1532",
+        "pages": "The Testament, fols. 219r–222v",
+        "languages": ["enm", "sco"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-thynne-1532", "evidence:mets-general", "evidence:skeat-thynne-facsimile"]
+    },
+    {
+      "id": "facsimile:skeat:thynne-1532-1905",
+      "type": "facsimile",
+      "label": "W. W. Skeat's 1905 facsimile of Thynne's 1532 Chaucer",
+      "description": "A complete photographic facsimile volume of the British Museum copy of Thynne 1532. The Testament appears at facsimile printed pages 457–464, corresponding to original folios 219r–222v and PDF pages 507–514.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "worksofgeoffreyc00chauuoft", "uri": "https://archive.org/details/worksofgeoffreyc00chauuoft"}],
+      "creator_ids": ["agent:w-w-skeat"],
+      "date_statements": [{"label": "publication", "value": "1905", "normalized": "1905", "certainty": "high", "evidence_ids": ["evidence:skeat-thynne-facsimile"]}],
+      "bibliographic": {"citation": "The Works of Geoffrey Chaucer and Others: Being a Reproduction in Facsimile of the First Collected Edition, 1532, from the Copy in the British Museum, with an introduction by W. W. Skeat (London: De La More Press, 1905).", "date": "1905", "pages": "The Testament, facsimile pages 457–464", "languages": ["enm", "sco", "eng"]},
+      "reproduction_format": "Photographic facsimile digitized as an 848-page PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-thynne-facsimile"]
+    },
+    {
+      "id": "witness:nls:Adv-MS-72-1-37",
+      "type": "manuscript_witness",
+      "label": "Book of the Dean of Lismore, NLS Adv. MS 72.1.37, Testament excerpt",
+      "description": "A single seven-line stanza corresponding to Testament lines 561–567 appears on inserted leaf/page 92b under a heading misattributing it to ‘Bocas.’ The manuscript was assembled in the Fortingall area by the MacGregor circle between 1512 and 1542.",
+      "identifiers": [{"scheme": "NLS shelfmark", "value": "Adv. MS 72.1.37", "uri": "https://www.isos.dias.ie/NLS/NLS_Adv_MS_72_1_37.html"}],
+      "date_statements": [{"label": "manuscript assembly", "value": "1512–1542", "normalized": "1512/1542", "certainty": "high", "evidence_ids": ["evidence:isos-dean-lismore", "evidence:mets-general"]}],
+      "holding": {"institution_id": "agent:nls", "shelfmark": "Adv. MS 72.1.37", "historical_designations": ["Book of the Dean of Lismore"], "catalog_url": "https://www.isos.dias.ie/NLS/NLS_Adv_MS_72_1_37.html"},
+      "physical_description": {"support": "Paper", "extent": "159 folios plus fragments; the work survives as one seven-line stanza", "notes": ["The stanza appears on a small inserted leaf identified by ISOS as page 92b."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:isos-dean-lismore", "evidence:mets-general"]
+    },
+    {
+      "id": "facsimile:isos:Adv-MS-72-1-37",
+      "type": "facsimile",
+      "label": "ISOS complete digital facsimile of NLS Adv. MS 72.1.37",
+      "description": "A complete public IIIF and web facsimile of the Book of the Dean of Lismore. The Testament stanza is on page 92b. Images were not cached because ISOS expressly limits duplication and requires permission for electronic reproduction.",
+      "identifiers": [{"scheme": "ISOS", "value": "NLS_Adv_MS_72_1_37", "uri": "https://www.isos.dias.ie/NLS/NLS_Adv_MS_72_1_37.html"}],
+      "creator_ids": ["agent:isos", "agent:nls"],
+      "reproduction_format": "Web image viewer and IIIF Presentation manifest",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:isos-dean-lismore", "evidence:isos-rights"]
+    },
+    {
+      "id": "witness:eul:Dc-1-43",
+      "type": "manuscript_witness",
+      "label": "Edinburgh University Library MS Dc.1.43, Testament opening stanzas",
+      "alternate_labels": ["Ruthven manuscript"],
+      "description": "The first three stanzas of the Testament were added at folio 301v of an Eneados manuscript by Patrick, third Lord Drummond, before 1581. The host manuscript is dated broadly to the first half of the sixteenth century.",
+      "identifiers": [{"scheme": "EUL shelfmark", "value": "Dc.1.43"}],
+      "date_statements": [{"label": "Testament addition", "value": "before 1581", "normalized": "../1581", "certainty": "high", "evidence_ids": ["evidence:eul-ruthven", "evidence:mets-general"]}],
+      "holding": {"institution_id": "agent:eul", "shelfmark": "Dc.1.43", "historical_designations": ["Ruthven manuscript"], "catalog_url": "https://library.ed.ac.uk/heritage-collections/collections-and-search/research-resources/scottish-literature/other-scottish-writers/scottish-authors-f-i"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eul-ruthven", "evidence:mets-general"]
+    },
+    {
+      "id": "edition:anderson:testament-1663",
+      "type": "scholarly_edition",
+      "label": "1663 Anderson edition of The Testament of Cresseid",
+      "alternate_labels": ["Wing H1476A"],
+      "description": "A heavily anglicized complete print, known from a unique Trinity College Cambridge copy. It displaces lines 302–329 but also preserves readings absent from Charteris.",
+      "identifiers": [{"scheme": "Wing (2nd ed.)", "value": "H1476A"}, {"scheme": "Folger catalog", "value": "463372", "uri": "https://catalog.folger.edu/record/463372"}],
+      "date_statements": [{"label": "publication", "value": "1663", "normalized": "1663", "certainty": "high", "evidence_ids": ["evidence:folger-anderson-1663"]}],
+      "bibliographic": {"citation": "Robert Henryson, The Testament of Cresseid ([Glasgow?]: s.n., 1663).", "title": "The Testament of Cresseid", "publication_place": "[Glasgow?]", "date": "1663", "pages": "24 pages", "languages": ["sco", "eng"]},
+      "holding": {"institution_id": "agent:trinity-cambridge", "shelfmark": null, "historical_designations": [], "notes": "Unique known copy; exact shelfmark was not established from the reviewed public record."},
+      "physical_description": {"extent": "12 leaves; 24 printed pages", "format": "octavo"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-anderson-1663", "evidence:mets-general", "evidence:anderson-facsimile-inspection"]
+    },
+    {
+      "id": "facsimile:ia:eebo-anderson-1663",
+      "type": "facsimile",
+      "label": "EEBO microfilm facsimile of the Anderson 1663 Testament at Internet Archive",
+      "description": "A complete 25-frame scan derived from EEBO microfilm canister IA40313701-16. Direct visual inspection finds the title page, title verso, complete 22-page poem through FINIS, Trinity stamp, and terminal blank.",
+      "identifiers": [{"scheme": "Internet Archive", "value": "bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663", "uri": "https://archive.org/details/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663"}, {"scheme": "EEBO microfilm canister", "value": "IA40313701-16"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "EEBO microfilm digitized as PDF and 25-image JP2 ZIP",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-anderson-metadata", "evidence:anderson-facsimile-inspection"]
+    },
+    {
+      "id": "witness:st-johns:L-1",
+      "type": "manuscript_witness",
+      "label": "St John's College Cambridge MS L.1, early-seventeenth-century Testament copy",
+      "description": "A complete Testament copied in the early seventeenth century onto inserted parchment leaves at the end of an early-fifteenth-century Troilus and Criseyde manuscript. Scholarship identifies Speght's 1602 print as its source.",
+      "identifiers": [{"scheme": "St John's shelfmark", "value": "MS L.1", "uri": "https://www.joh.cam.ac.uk/research/library/old-library"}],
+      "date_statements": [{"label": "Testament addition", "value": "early seventeenth century", "certainty": "medium", "evidence_ids": ["evidence:cambridge-early-modern-readers", "evidence:mets-general"]}],
+      "holding": {"institution_id": "agent:st-johns-cambridge", "shelfmark": "L.1", "historical_designations": [], "catalog_url": "https://www.joh.cam.ac.uk/research/library/old-library"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:st-johns-l1", "evidence:cambridge-early-modern-readers", "evidence:mets-general"]
+    },
+    {
+      "id": "witness:bodleian:Add-C-287",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Add. C. 287, Kynaston Testament transcription and Latin translation",
+      "description": "A 1639 copy at pages 475–509 alternating an English transcript derived from Speght 1598 with Francis Kynaston's Latin translation stanza by stanza.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS Add. C. 287"}],
+      "creator_ids": ["agent:francis-kynaston"],
+      "date_statements": [{"label": "copy and translation", "value": "1639", "normalized": "1639", "certainty": "high", "evidence_ids": ["evidence:ora-kynaston", "evidence:mets-general"]}],
+      "holding": {"institution_id": "agent:bodleian", "shelfmark": "MS Add. C. 287", "historical_designations": []},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ora-kynaston", "evidence:mets-general"]
+    },
+    {
+      "id": "witness:cul:Gg-4-27-1",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Gg.4.27(1), four-stanza Testament excerpt",
+      "description": "Four stanzas corresponding to lines 582–609 were added on leaf (9r) by Joseph Holland, apparently from a Speght edition, in a manuscript of Chaucer's works. The work occurrence is an excerpt, not a complete Testament.",
+      "identifiers": [{"scheme": "CUL shelfmark", "value": "Gg.4.27(1)", "uri": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1"}],
+      "holding": {"institution_id": "agent:cul", "shelfmark": "Gg.4.27(1)", "historical_designations": [], "catalog_url": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cudl-gg427", "evidence:cambridge-early-modern-readers"],
+      "notes": ["The four-stanza extent is established by scholarship and direct inspection of CUDL canvas 1084; an aggregate work-level line count in a discovery index must not be misread as this witness's extent."]
+    },
+    {
+      "id": "facsimile:cudl:Gg-4-27-1",
+      "type": "facsimile",
+      "label": "Cambridge Digital Library complete facsimile of CUL MS Gg.4.27(1)",
+      "description": "A complete 1,144-canvas IIIF facsimile of the manuscript. The Testament excerpt is isolated to added leaf (9r), canvas 1084, and contains lines 582–609.",
+      "identifiers": [{"scheme": "CUDL", "value": "MS-GG-00004-00027-00001", "uri": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1"}],
+      "creator_ids": ["agent:cul"],
+      "reproduction_format": "IIIF Presentation manifest and JPEG page images",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cudl-gg427", "evidence:cudl-gg427-inspection"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:robert-henryson", "type": "person", "name": "Robert Henryson", "dates": "c. 1430?–c. 1500?", "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]},
+    {"id": "agent:henry-charteris", "type": "person", "name": "Henry Charteris", "evidence_ids": ["evidence:ustc-charteris-1593"]},
+    {"id": "agent:g-gregory-smith", "type": "person", "name": "G. Gregory Smith", "dates": "1865–1932", "evidence_ids": ["evidence:smith-1908-scan"]},
+    {"id": "agent:william-thynne", "type": "person", "name": "William Thynne", "dates": "d. 1546", "evidence_ids": ["evidence:folger-thynne-1532"]},
+    {"id": "agent:w-w-skeat", "type": "person", "name": "Walter W. Skeat", "dates": "1835–1912", "evidence_ids": ["evidence:skeat-thynne-facsimile"]},
+    {"id": "agent:francis-kynaston", "type": "person", "name": "Francis Kynaston", "dates": "1587–1642", "evidence_ids": ["evidence:ora-kynaston", "evidence:mets-testament"]},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich-hencres", "evidence:ota-a03023-source"]},
+    {"id": "agent:ota", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"], "evidence_ids": ["evidence:hencres-xml", "evidence:ota-a03023-record"]},
+    {"id": "agent:eebo-tcp", "type": "organization", "name": "Early English Books Online Text Creation Partnership", "urls": ["https://textcreationpartnership.org/"], "evidence_ids": ["evidence:ota-a03023-record", "evidence:ota-a03023-source"]},
+    {"id": "agent:kyvero", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"], "evidence_ids": ["evidence:cme-git-state"]},
+    {"id": "agent:bl", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"], "evidence_ids": ["evidence:ustc-charteris-1593", "evidence:skeat-thynne-facsimile"]},
+    {"id": "agent:folger", "type": "organization", "name": "Folger Shakespeare Library", "urls": ["https://www.folger.edu/"], "evidence_ids": ["evidence:folger-charteris-1593", "evidence:folger-thynne-1532", "evidence:folger-anderson-1663"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-charteris-metadata", "evidence:smith-1908-scan", "evidence:skeat-thynne-facsimile", "evidence:ia-anderson-metadata"]},
+    {"id": "agent:nls", "type": "organization", "name": "National Library of Scotland", "urls": ["https://www.nls.uk/"], "evidence_ids": ["evidence:isos-dean-lismore", "evidence:nls-dean-microfilm"]},
+    {"id": "agent:isos", "type": "organization", "name": "Irish Script on Screen, Dublin Institute for Advanced Studies", "urls": ["https://www.isos.dias.ie/"], "evidence_ids": ["evidence:isos-dean-lismore", "evidence:isos-rights"]},
+    {"id": "agent:eul", "type": "organization", "name": "Edinburgh University Library", "urls": ["https://library.ed.ac.uk/"], "evidence_ids": ["evidence:eul-ruthven"]},
+    {"id": "agent:trinity-cambridge", "type": "organization", "name": "Trinity College Cambridge Library", "urls": ["https://www.trin.cam.ac.uk/library/"], "evidence_ids": ["evidence:folger-anderson-1663"]},
+    {"id": "agent:st-johns-cambridge", "type": "organization", "name": "St John's College Cambridge Old Library", "urls": ["https://www.joh.cam.ac.uk/research/library/old-library"], "evidence_ids": ["evidence:st-johns-l1"]},
+    {"id": "agent:bodleian", "type": "organization", "name": "Bodleian Libraries", "urls": ["https://www.bodleian.ox.ac.uk/"], "evidence_ids": ["evidence:ora-kynaston"]},
+    {"id": "agent:cul", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/"], "evidence_ids": ["evidence:cudl-gg427"]},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"], "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-from-u243a",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:HenCres",
+      "object": "encoding:umich-ota:U-243-A",
+      "scope": {"subject": {"kind": "whole", "description": "Repository XML HenCres.xml"}, "object": {"kind": "whole", "description": "U-M/CME electronic item HenCres, OTA U-243-A"}, "notes": "Matching identifiers, header statements, title, structure, and text establish derivation; the exact repository transfer date is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres"]}
+    },
+    {
+      "id": "relation:u243a-from-charteris",
+      "type": "encoded_from",
+      "subject": "encoding:umich-ota:U-243-A",
+      "object": "edition:charteris:testament-1593",
+      "scope": {"subject": {"kind": "whole", "description": "Electronic poem text"}, "object": {"kind": "whole", "description": "Charteris 1593 Testament text"}, "notes": "The XML source description names Charteris 1593; direct comparison shows Charteris readings retained where Smith emends."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:charteris-facsimile-inspection", "evidence:smith-xml-comparison"]}
+    },
+    {
+      "id": "relation:u243a-consulted-smith",
+      "type": "consulted",
+      "subject": "encoding:umich-ota:U-243-A",
+      "object": "edition:smith:henryson-vol3-1908",
+      "scope": {"subject": {"kind": "whole", "description": "PB milestones in the electronic text"}, "object": {"kind": "selected_passages", "description": "Smith's Testament pages", "locators": ["printed pages 2–24"]}, "notes": "The 23 PB milestones reproduce Smith pages 2–24 exactly; this scoped edge does not claim that Smith supplied every textual reading."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:smith-1908-scan", "evidence:smith-xml-comparison"]}
+    },
+    {
+      "id": "relation:charteris-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:eebo-charteris-1593",
+      "object": "edition:charteris:testament-1593",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 21-frame microfilm-derived scan"}, "object": {"kind": "whole", "description": "Complete ten-leaf Charteris print"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-charteris-metadata", "evidence:charteris-facsimile-inspection", "evidence:folger-charteris-1593"]}
+    },
+    {
+      "id": "relation:a03023-from-charteris",
+      "type": "encoded_from",
+      "subject": "encoding:ota-eebo-tcp:A03023",
+      "object": "edition:charteris:testament-1593",
+      "scope": {"subject": {"kind": "whole", "description": "EEBO-TCP transcription A03023"}, "object": {"kind": "whole", "description": "Charteris 1593 Testament"}, "notes": "A03023's header identifies STC 13165 and transcription from twelve image files."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-a03023-record", "evidence:ota-a03023-source", "evidence:folger-charteris-1593"]}
+    },
+    {
+      "id": "relation:smith-transcribes-charteris",
+      "type": "transcribes",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "edition:charteris:testament-1593",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Main Testament text", "locators": ["pages 2–24", "lines 1–616"]}, "object": {"kind": "whole", "description": "Charteris Testament"}, "notes": "Smith uses Charteris as principal witness but emends and supplies readings; transcribes does not mean diplomatic reproduction."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-xml-comparison", "evidence:mets-testament"]}
+    },
+    {
+      "id": "relation:smith-collates-thynne",
+      "type": "collated_against",
+      "subject": "edition:smith:henryson-vol3-1908",
+      "object": "edition:thynne:chaucer-1532",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Thynne appendix and Charteris/Thynne comparison", "locators": ["pages 175–198", "comparison table"]}, "object": {"kind": "selected_passages", "description": "Thynne's Testament", "locators": ["folios 219r–222v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:smith-1908-scan", "evidence:skeat-thynne-facsimile"]}
+    },
+    {
+      "id": "relation:skeat-facsimile-thynne",
+      "type": "facsimile_of",
+      "subject": "facsimile:skeat:thynne-1532-1905",
+      "object": "edition:thynne:chaucer-1532",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 1905 facsimile volume"}, "object": {"kind": "whole", "description": "Thynne 1532 collected Chaucer edition"}, "notes": "The cached volume is complete; the corpus work is located at facsimile pages 457–464/PDF pages 507–514."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-thynne-facsimile", "evidence:folger-thynne-1532"]}
+    },
+    {
+      "id": "relation:isos-facsimile-dean",
+      "type": "facsimile_of",
+      "subject": "facsimile:isos:Adv-MS-72-1-37",
+      "object": "witness:nls:Adv-MS-72-1-37",
+      "scope": {"subject": {"kind": "whole", "description": "Complete ISOS manuscript facsimile"}, "object": {"kind": "whole", "description": "Book of the Dean of Lismore"}, "notes": "The Testament portion is the single stanza on page 92b."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:isos-dean-lismore"]}
+    },
+    {
+      "id": "relation:anderson-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:eebo-anderson-1663",
+      "object": "edition:anderson:testament-1663",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 25-frame microfilm-derived scan"}, "object": {"kind": "whole", "description": "Complete 1663 Testament print"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-anderson-metadata", "evidence:anderson-facsimile-inspection", "evidence:folger-anderson-1663"]}
+    },
+    {
+      "id": "relation:cudl-facsimile-gg427",
+      "type": "facsimile_of",
+      "subject": "facsimile:cudl:Gg-4-27-1",
+      "object": "witness:cul:Gg-4-27-1",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 1,144-canvas CUDL facsimile"}, "object": {"kind": "whole", "description": "CUL MS Gg.4.27(1)"}, "notes": "The Testament portion is a four-stanza excerpt on leaf (9r), canvas 1084."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cudl-gg427", "evidence:cudl-gg427-inspection"]}
+    },
+    {
+      "id": "relation:census-charteris", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "edition:charteris:testament-1593", "scope": {"subject": {"kind": "part", "description": "Charteris witness entry"}, "object": {"kind": "whole", "description": "Charteris 1593 print"}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general"]}
+    },
+    {
+      "id": "relation:census-asloan", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "witness:nls:Asloan-MS-16500", "scope": {"subject": {"kind": "part", "description": "Asloan contents and missing-copy entry"}, "object": {"kind": "unknown", "description": "Lost Testament leaves once represented in the Asloan contents"}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general"]}
+    },
+    {
+      "id": "relation:census-thynne", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "edition:thynne:chaucer-1532", "scope": {"subject": {"kind": "part", "description": "Thynne witness entry"}, "object": {"kind": "selected_passages", "description": "Testament at folios 219r–222v"}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:folger-thynne-1532"]}
+    },
+    {
+      "id": "relation:census-dean", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "witness:nls:Adv-MS-72-1-37", "scope": {"subject": {"kind": "part", "description": "Book of the Dean of Lismore excerpt entry"}, "object": {"kind": "selected_passages", "description": "One stanza", "locators": ["lines 561–567", "page 92b"]}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:isos-dean-lismore"]}
+    },
+    {
+      "id": "relation:census-ruthven", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "witness:eul:Dc-1-43", "scope": {"subject": {"kind": "part", "description": "Ruthven excerpt entry"}, "object": {"kind": "selected_passages", "description": "First three stanzas", "locators": ["folio 301v", "lines 1–21"]}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:eul-ruthven"]}
+    },
+    {
+      "id": "relation:census-anderson", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "edition:anderson:testament-1663", "scope": {"subject": {"kind": "part", "description": "Anderson print entry"}, "object": {"kind": "whole", "description": "Complete 1663 print"}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:folger-anderson-1663"]}
+    },
+    {
+      "id": "relation:census-l1", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "witness:st-johns:L-1", "scope": {"subject": {"kind": "part", "description": "St John's L.1 witness entry"}, "object": {"kind": "selected_passages", "description": "Complete Testament addition to the host manuscript"}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:cambridge-early-modern-readers"]}
+    },
+    {
+      "id": "relation:census-addc287", "type": "describes", "subject": "catalog:mets:testament-witness-census", "object": "witness:bodleian:Add-C-287", "scope": {"subject": {"kind": "part", "description": "Kynaston witness entry"}, "object": {"kind": "selected_passages", "description": "English and Latin Testament", "locators": ["pages 475–509"]}}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:ora-kynaston"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:hencres-repo",
+      "entity": "artifact:general-corpus:HenCres",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the pinned CME submodule file",
+      "repository_path": "CME/source/CME_phase_1-2/HenCres.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:cme-git-state"]
+    },
+    {
+      "id": "access:u243a-umich",
+      "entity": "encoding:umich-ota:U-243-A",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M CME item, table of contents, and full-text views",
+      "url": "https://quod.lib.umich.edu/c/cme/HenCres?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/HenCres"],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:umich-hencres"]
+    },
+    {
+      "id": "access:charteris-catalog",
+      "entity": "edition:charteris:testament-1593",
+      "provider_id": "agent:folger",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Folger bibliographic record and USTC edition record",
+      "url": "https://catalog.folger.edu/record/417704",
+      "alternate_urls": ["https://www.ustc.ac.uk/editions/512392"],
+      "cost": "free",
+      "format": "Catalog records",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:folger-charteris-1593", "evidence:ustc-charteris-1593"]
+    },
+    {
+      "id": "access:charteris-ia-facsimile",
+      "entity": "facsimile:ia:eebo-charteris-1593",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item, PDF, JP2 ZIP, and metadata API",
+      "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593",
+      "alternate_urls": [
+        "https://archive.org/download/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593_jp2.zip",
+        "https://archive.org/download/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593.pdf",
+        "https://archive.org/metadata/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Charteris 1593 EEBO microfilm JP2 bundle",
+          "path": "source-cache/HenCres/charteris-1593-eebo-microfilm-jp2.zip",
+          "source_url": "https://archive.org/download/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593_jp2.zip",
+          "sha256": "269eaf0696001b32c63dfe715958084a1a02ec225024a00724fa8a4055730933",
+          "bytes": 34094151,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The complete Charteris 1593 Testament", "locators": ["all ten printed leaves", "21 scanned frames including terminal blank"], "start_url": "https://archive.org/details/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593"}
+        },
+        {
+          "label": "Complete Charteris 1593 EEBO microfilm PDF",
+          "path": "source-cache/HenCres/charteris-1593-eebo-microfilm.pdf",
+          "source_url": "https://archive.org/download/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593.pdf",
+          "sha256": "63bdb55247391cb71798c26b0353ff0abca463c3e0eb382232fb59ac07048ea8",
+          "bytes": 12433076,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The complete Charteris 1593 Testament", "locators": ["PDF pages 1–21", "all ten printed leaves plus terminal blank"]}
+        },
+        {
+          "label": "Internet Archive metadata for Charteris 1593 facsimile",
+          "path": "source-cache/HenCres/charteris-1593-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593",
+          "sha256": "7706dcdcd451cef21630aed86eb968fe2a020b4215e1fc2bef32dd3bb9558a06",
+          "bytes": 17320,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "21-frame PDF and JP2 ZIP; JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ia-charteris-metadata", "evidence:charteris-facsimile-inspection"],
+      "notes": ["The ignored local cache is a research copy and does not itself grant redistribution rights in modern microfilm images."]
+    },
+    {
+      "id": "access:smith-1908-scan",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive complete-volume PDF and metadata API",
+      "url": "https://archive.org/details/ThePoemsOfRobertHenrysonVol3",
+      "alternate_urls": [
+        "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf",
+        "https://archive.org/metadata/ThePoemsOfRobertHenrysonVol3"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Smith 1908 Henryson volume III PDF",
+          "path": "source-cache/HenCres/smith-1908-poems-of-robert-henryson-vol3.pdf",
+          "source_url": "https://archive.org/download/ThePoemsOfRobertHenrysonVol3/The_Poems_of_Robert_Henryson_vol3.pdf",
+          "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656",
+          "bytes": 2750942,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The Testament of Cresseid and comparison text", "locators": ["Charteris-based text, printed pages 2–24", "Thynne text, printed pages 175–198", "Charteris/Thynne comparison table"]}
+        },
+        {
+          "label": "Internet Archive metadata for Smith 1908 volume III",
+          "path": "source-cache/HenCres/smith-1908-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/ThePoemsOfRobertHenrysonVol3",
+          "sha256": "b26a548c6a1815fb8b3b29eca8f91a988e00b3ef5e33f22baec4b39184fadf00",
+          "bytes": 5321,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Complete PDF and JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-xml-comparison"]
+    },
+    {
+      "id": "access:a03023-source",
+      "entity": "encoding:ota-eebo-tcp:A03023",
+      "provider_id": "agent:ota",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "OTA item page and direct XML download",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A03023",
+      "alternate_urls": ["https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/A03023/A03023.xml?sequence=7&isAllowed=y"],
+      "local_copies": [
+        {
+          "label": "Complete OTA A03023 EEBO-TCP source XML",
+          "path": "source-cache/HenCres/ota-a03023-tcp-source.xml",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/A03023/A03023.xml?sequence=7&isAllowed=y",
+          "sha256": "9dc5f2fcd4153ea47f21a71648f49e1a5a24398b3484003de2581f0d9609145a",
+          "bytes": 64343,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The complete A03023 transcription of The Testament of Cresseid", "locators": ["entire XML body"]}
+        }
+      ],
+      "cost": "free",
+      "format": "XML and HTML repository record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ota-a03023-record", "evidence:ota-a03023-source"]
+    },
+    {
+      "id": "access:mets-witness-census",
+      "entity": "catalog:mets:testament-witness-census",
+      "provider_id": "agent:mets",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open scholarly introduction",
+      "url": "https://metseditions.org/read/ezwGwmGVTWD0GT53eWS4QbGTNVGdwy8qp",
+      "cost": "free",
+      "format": "HTML scholarly edition",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-general"]
+    },
+    {
+      "id": "access:thynne-folger-catalog",
+      "entity": "edition:thynne:chaucer-1532",
+      "provider_id": "agent:folger",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Folger bibliographic record",
+      "url": "https://catalog.folger.edu/record/161594",
+      "cost": "free",
+      "format": "Catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:folger-thynne-1532"]
+    },
+    {
+      "id": "access:skeat-thynne-facsimile",
+      "entity": "facsimile:skeat:thynne-1532-1905",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive complete-volume PDF and metadata API",
+      "url": "https://archive.org/details/worksofgeoffreyc00chauuoft",
+      "alternate_urls": [
+        "https://archive.org/download/worksofgeoffreyc00chauuoft/worksofgeoffreyc00chauuoft.pdf",
+        "https://archive.org/metadata/worksofgeoffreyc00chauuoft"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Skeat 1905 facsimile PDF of Thynne 1532",
+          "path": "source-cache/HenCres/skeat-1905-thynne-1532-facsimile.pdf",
+          "source_url": "https://archive.org/download/worksofgeoffreyc00chauuoft/worksofgeoffreyc00chauuoft.pdf",
+          "sha256": "3a09b29fabd3c9eece823538960cd784da41dcfbc05b4934beaf22fa89c42ad1",
+          "bytes": 85213340,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The Testament of Cresseid in Thynne 1532", "locators": ["original folios 219r–222v", "facsimile printed pages 457–464", "PDF pages 507–514"]}
+        },
+        {
+          "label": "Internet Archive metadata for Skeat 1905 facsimile",
+          "path": "source-cache/HenCres/skeat-1905-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/worksofgeoffreyc00chauuoft",
+          "sha256": "50aa0f250c685b717ad01de01e7123ebe80fccc5bca6ddc0c86dd150af0818aa",
+          "bytes": 153963,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "848-page PDF and JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:skeat-thynne-facsimile"]
+    },
+    {
+      "id": "access:dean-lismore-isos",
+      "entity": "facsimile:isos:Adv-MS-72-1-37",
+      "provider_id": "agent:isos",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "ISOS complete manuscript viewer and IIIF manifest",
+      "url": "https://www.isos.dias.ie/NLS/NLS_Adv_MS_72_1_37.html",
+      "alternate_urls": ["https://www.isos.dias.ie/static/manifests/NLS_Adv_MS_72_1_37.json"],
+      "cost": "free",
+      "format": "Complete page-image viewer and IIIF Presentation manifest",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:isos-dean-lismore", "evidence:isos-rights"],
+      "notes": ["No images were cached because the provider's terms require express permission for electronic duplication."]
+    },
+    {
+      "id": "access:dean-lismore-microfilm",
+      "entity": "witness:nls:Adv-MS-72-1-37",
+      "provider_id": "agent:nls",
+      "resource_kind": "microfilm",
+      "status": "requestable",
+      "access_method": "NLS Special Collections microfilm Mf.Sec.MSS.474",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/20800",
+      "cost": "unknown",
+      "format": "One microfilm reel",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:nls-dean-microfilm"]
+    },
+    {
+      "id": "access:ruthven-eul",
+      "entity": "witness:eul:Dc-1-43",
+      "provider_id": "agent:eul",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Edinburgh University Library heritage collections; contact the repository for consultation or reproduction",
+      "url": "https://library.ed.ac.uk/heritage-collections/collections-and-search/research-resources/scottish-literature/other-scottish-writers/scottish-authors-f-i",
+      "cost": "unknown",
+      "format": "Physical manuscript; no complete public digital facsimile verified",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:eul-ruthven"]
+    },
+    {
+      "id": "access:anderson-folger-catalog",
+      "entity": "edition:anderson:testament-1663",
+      "provider_id": "agent:folger",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Folger bibliographic record",
+      "url": "https://catalog.folger.edu/record/463372",
+      "cost": "free",
+      "format": "Catalog record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:folger-anderson-1663"]
+    },
+    {
+      "id": "access:anderson-ia-facsimile",
+      "entity": "facsimile:ia:eebo-anderson-1663",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item, PDF, JP2 ZIP, and metadata API",
+      "url": "https://archive.org/details/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663",
+      "alternate_urls": [
+        "https://archive.org/download/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663_jp2.zip",
+        "https://archive.org/download/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663.pdf",
+        "https://archive.org/metadata/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Anderson 1663 EEBO microfilm JP2 bundle",
+          "path": "source-cache/HenCres/anderson-1663-eebo-microfilm-jp2.zip",
+          "source_url": "https://archive.org/download/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663_jp2.zip",
+          "sha256": "c2ed38d4748a34931cfc52859cd23dd860ab6c2d58c35f29e286f9959cbe0e05",
+          "bytes": 34555149,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The complete Anderson 1663 Testament", "locators": ["all 12 printed leaves", "25 scanned frames including terminal blank"]}
+        },
+        {
+          "label": "Complete Anderson 1663 EEBO microfilm PDF",
+          "path": "source-cache/HenCres/anderson-1663-eebo-microfilm.pdf",
+          "source_url": "https://archive.org/download/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663.pdf",
+          "sha256": "bc1e5323c0776675889d134c88b581bbe651c74b2e248cc5fcfa79f63e097b69",
+          "bytes": 8940396,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "The complete Anderson 1663 Testament", "locators": ["PDF pages 1–25", "all 12 printed leaves plus terminal blank"]}
+        },
+        {
+          "label": "Internet Archive metadata for Anderson 1663 facsimile",
+          "path": "source-cache/HenCres/anderson-1663-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663",
+          "sha256": "d92e8dcfd65247b46540e953528d6a0c16d57654cdb79da7925a701b2b301085",
+          "bytes": 18137,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "25-frame PDF and JP2 ZIP; JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ia-anderson-metadata", "evidence:anderson-facsimile-inspection"],
+      "notes": ["The ignored local cache is a research copy and does not itself grant redistribution rights in modern microfilm images."]
+    },
+    {
+      "id": "access:st-johns-l1",
+      "entity": "witness:st-johns:L-1",
+      "provider_id": "agent:st-johns-cambridge",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Old Library reading-room consultation by arrangement",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "cost": "unknown",
+      "format": "Physical manuscript; no complete public digital facsimile verified",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:st-johns-l1", "evidence:cambridge-early-modern-readers"]
+    },
+    {
+      "id": "access:addc287-bodleian",
+      "entity": "witness:bodleian:Add-C-287",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Bodleian Special Collections consultation or reproduction enquiry using shelfmark MS Add. C. 287",
+      "url": "https://www.bodleian.ox.ac.uk/collections-and-resources/special-collections",
+      "cost": "unknown",
+      "format": "Physical manuscript; no public digital facsimile verified",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ora-kynaston", "evidence:mets-general"]
+    },
+    {
+      "id": "access:cudl-gg427",
+      "entity": "facsimile:cudl:Gg-4-27-1",
+      "provider_id": "agent:cul",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Cambridge Digital Library viewer and complete IIIF manifest",
+      "url": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1",
+      "alternate_urls": ["https://cudl.lib.cam.ac.uk/iiif/MS-GG-00004-00027-00001"],
+      "local_copies": [
+        {
+          "label": "Complete CUL MS Gg.4.27(1) IIIF bundle",
+          "path": "source-cache/HenCres/cul-gg-4-27-1-complete-iiif.zip",
+          "source_url": "https://cudl.lib.cam.ac.uk/iiif/MS-GG-00004-00027-00001",
+          "sha256": "74c7cc5099626791fbd98a68b15ce5b8c3f1267e57375a4bd055f2f6796123ec",
+          "bytes": 324792877,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 1144,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Testament of Cresseid excerpt",
+            "locators": ["added folio (9r)", "IIIF canvas 1084", "Testament lines 582–609"],
+            "start_url": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1084",
+            "end_url": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1084",
+            "notes": ["One added leaf preserves four seven-line stanzas; the whole current manuscript object is retained."]
+          },
+          "notes": ["ZIP contains the provider manifest, an exact-source inventory, and all 1,144 canvas images listed when retrieved.", "Effective IIIF image request profile: 1600, in JPEG format."]
+        }
+      ],
+      "cost": "free",
+      "format": "1,144-canvas IIIF facsimile; Testament at canvas 1084",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:cudl-gg427", "evidence:cudl-gg427-inspection"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-work-us",
+      "entity": "edition:charteris:testament-1593",
+      "component": "Henryson's fifteenth-century underlying literary work",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The work and all known early witnesses predate modern copyright by centuries.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-testament", "evidence:ustc-charteris-1593"]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich-ota:U-243-A",
+      "component": "Materials presented in U-M CME item HenCres",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "U-M labels the item public domain and applies No Copyright–United States.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-hencres"],
+      "notes": ["This current provider statement does not explain or erase the narrower personal-scholarly-use terms preserved in the 1993 XML header."]
+    },
+    {
+      "id": "rights:legacy-u243a-terms",
+      "entity": "artifact:general-corpus:HenCres",
+      "component": "Local XML as a copy of legacy OTA U-243-A",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The XML header states that U-243-A was made available through OTA for personal scholarly use only, while U-M now marks the item NoC-US.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres"],
+      "notes": ["Resolve the conflict before relying on the local encoding for commercial redistribution; this does not affect the public-domain status of Henryson's underlying poem."]
+    },
+    {
+      "id": "rights:cme-root-license-scope",
+      "entity": "artifact:general-corpus:HenCres",
+      "component": "CME repository artifact under the root LICENSE file",
+      "jurisdiction": "Repository licensing claim",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The pinned CME repository root contains the Unlicense text, but that file speaks of software and does not clearly resolve whether its dedication applies to OTA-derived corpus XML or overrides source-specific terms.",
+      "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cme-root-license", "evidence:hencres-xml"],
+      "notes": ["The manifest records the repository claim without expanding its scope by inference."]
+    },
+    {
+      "id": "rights:a03023-cc0",
+      "entity": "encoding:ota-eebo-tcp:A03023",
+      "access_id": "access:a03023-source",
+      "component": "EEBO-TCP source XML A03023",
+      "jurisdiction": "Worldwide license dedication asserted by OTA",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-14",
+      "basis": "The current OTA item and XML header release the TCP encoding under CC0.",
+      "asserted_by_id": "agent:ota",
+      "license": {"name": "Creative Commons CC0 1.0 Universal", "spdx": "CC0-1.0", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-a03023-record", "evidence:ota-a03023-source"]
+    },
+    {
+      "id": "rights:charteris-ia-images",
+      "entity": "facsimile:ia:eebo-charteris-1593",
+      "access_id": "access:charteris-ia-facsimile",
+      "component": "Modern EEBO microfilm images and Internet Archive derivatives",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The files are publicly downloadable, but no explicit open license for the modern microfilm images was verified.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-charteris-metadata"],
+      "notes": ["The status of the modern images is distinct from the public-domain 1593 print."]
+    },
+    {
+      "id": "rights:smith-scan-us",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "access_id": "access:smith-1908-scan",
+      "component": "Smith's 1908 edition and the accessed scan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The edition was published in 1908, and the Internet Archive item provides unrestricted public download.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-1908-scan"]
+    },
+    {
+      "id": "rights:skeat-scan-us",
+      "entity": "facsimile:skeat:thynne-1532-1905",
+      "access_id": "access:skeat-thynne-facsimile",
+      "component": "Skeat's 1905 facsimile volume and the accessed scan",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The facsimile volume was published in 1905; the Internet Archive metadata marks the item NOT_IN_COPYRIGHT in the United States.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-thynne-facsimile"]
+    },
+    {
+      "id": "rights:isos-images",
+      "entity": "facsimile:isos:Adv-MS-72-1-37",
+      "access_id": "access:dean-lismore-isos",
+      "component": "Modern ISOS/NLS manuscript images",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "ISOS permits private study but states that images may not be duplicated electronically without express permission.",
+      "asserted_by_id": "agent:isos",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:isos-rights"],
+      "notes": ["This is why the otherwise complete public facsimile was not cached."]
+    },
+    {
+      "id": "rights:anderson-ia-images",
+      "entity": "facsimile:ia:eebo-anderson-1663",
+      "access_id": "access:anderson-ia-facsimile",
+      "component": "Modern EEBO microfilm images and Internet Archive derivatives",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The files are publicly downloadable, but no explicit open license for the modern microfilm images was verified.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-anderson-metadata"],
+      "notes": ["The status of the modern images is distinct from the public-domain 1663 print."]
+    },
+    {
+      "id": "rights:cudl-download-images",
+      "entity": "facsimile:cudl:Gg-4-27-1",
+      "access_id": "access:cudl-gg427",
+      "component": "CUDL images made available for download, including the cached IIIF image bundle",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-14",
+      "basis": "CUDL identifies downloadable images as Creative Commons Attribution-NonCommercial 4.0; zooming images remain © Cambridge University Library, all rights reserved, and metadata has a separate CC BY-NC-ND license.",
+      "asserted_by_id": "agent:cul",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cudl-gg427"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:u243a-selection",
+      "entity": "encoding:umich-ota:U-243-A",
+      "practice": "selection",
+      "description": "The electronic edition includes the poem but omits the 1593 print's front and back matter and omits Smith's printed editorial notes.",
+      "scope": "Whole electronic item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:charteris-facsimile-inspection", "evidence:smith-1908-scan"]
+    },
+    {
+      "id": "practice:u243a-pagination",
+      "entity": "encoding:umich-ota:U-243-A",
+      "practice": "selection",
+      "description": "Twenty-three PB milestones reproduce Smith's modern pages 2–24 even though the 1593 print lacks that pagination.",
+      "scope": "Page-reference layer throughout lines 1–616",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:smith-1908-scan", "evidence:charteris-facsimile-inspection"]
+    },
+    {
+      "id": "practice:smith-collation",
+      "entity": "edition:smith:henryson-vol3-1908",
+      "practice": "collation",
+      "description": "Smith presents Charteris as the main 616-line text, separately prints Thynne's 606-line text, and supplies a comparison table while also emending or supplying readings in the Charteris presentation.",
+      "scope": "The Testament texts and comparison materials in volume III",
+      "confidence": "high",
+      "evidence_ids": ["evidence:smith-1908-scan", "evidence:smith-xml-comparison"]
+    },
+    {
+      "id": "practice:a03023-keying",
+      "entity": "encoding:ota-eebo-tcp:A03023",
+      "practice": "selection",
+      "description": "SPi Global keyed the text from twelve one-bit TIFF images in 2002; Michigan sampled and proofread the encoding before OTA issue.",
+      "scope": "Whole A03023 electronic text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ota-a03023-source"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:hencres-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HenCres.xml, header and full text.",
+      "repository_path": "CME/source/CME_phase_1-2/HenCres.xml",
+      "locator": "HEADER; DIV1/DIV2/LG/L/PB elements",
+      "summary": "Identifies the title, Henryson attribution, U-M and OTA U-243-A, 1993 electronic-edition date, Charteris 1593 source, Smith pagination, omitted matter, and complete text. Structural audit finds 86 LG, 617 L, and PB pages 2–24, with final ungrouped ‘Finis’ as L N=617.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7254319ce0a4d36232eb5ca5b7b8cd98807a120d5183c72574ca322c76d7639c"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME git object state for HenCres.xml.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/HenCres.xml",
+      "repository_path": "CME/source/CME_phase_1-2/HenCres.xml",
+      "summary": "Pins the reviewed artifact to CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c and git blob d5d06aea9aa7a9faa2cc6ad57a3f83d8af9640bc.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7254319ce0a4d36232eb5ca5b7b8cd98807a120d5183c72574ca322c76d7639c"
+    },
+    {
+      "id": "evidence:cme-root-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, root LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "Contains the Unlicense text framed as applying to software; its applicability to OTA-derived XML data and source-specific terms is not explicit.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-hencres",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, ‘Robert Henryson's The testament of Cresseid,’ CME item HenCres.",
+      "url": "https://quod.lib.umich.edu/c/cme/HenCres?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/HenCres"],
+      "summary": "Confirms public access, title, Henryson attribution, Charteris 1593 imprint, OTA U-243-A, and U-M's current Public Domain / No Copyright–United States statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ustc-charteris-1593",
+      "type": "official_catalog",
+      "citation": "Universal Short Title Catalogue, USTC 512392, The testament of Cresseid (Edinburgh: Henry Charteris, 1593).",
+      "url": "https://www.ustc.ac.uk/editions/512392",
+      "summary": "Supplies the Edinburgh/Charteris imprint, 1593 date, quarto format, [20]-page extent, signatures, identifiers, and unique British Library holding C.21.c.14.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:folger-charteris-1593",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog, record 417704, The Testament of Cresseid, 1593.",
+      "url": "https://catalog.folger.edu/record/417704",
+      "alternate_urls": ["https://catalog.folger.edu/record/68625"],
+      "summary": "Confirms ESTC S118127, STC 13165, the Henry Charteris Edinburgh imprint, physical extent, and the existence of a 1969 facsimile record.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ia-charteris-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for EEBO microfilm of Henryson's 1593 Testament.",
+      "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593",
+      "repository_path": "source-cache/HenCres/charteris-1593-internet-archive-metadata.json",
+      "summary": "Identifies raw canister IA40312816-36, STC 13165, 21-image extent, 800 ppi derivative, and downloadable PDF/JP2 resources.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7706dcdcd451cef21630aed86eb968fe2a020b4215e1fc2bef32dd3bb9558a06"
+    },
+    {
+      "id": "evidence:charteris-facsimile-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct page-by-page and contact-sheet inspection of the cached Charteris 1593 EEBO microfilm derivatives.",
+      "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-testament-of-cressei_henryson-robert_1593",
+      "repository_path": "source-cache/HenCres/charteris-1593-eebo-microfilm-jp2.zip",
+      "locator": "21 frames, title through Finis/tailpiece and terminal blank",
+      "summary": "Confirms complete ten-leaf coverage, visible marginal manuscript labels, and absence of modern printed page numbers 2–24. ZIP integrity was also tested.",
+      "accessed_on": "2026-07-14",
+      "sha256": "269eaf0696001b32c63dfe715958084a1a02ec225024a00724fa8a4055730933"
+    },
+    {
+      "id": "evidence:smith-1908-scan",
+      "type": "digital_surrogate",
+      "citation": "G. Gregory Smith, ed., The Poems of Robert Henryson, vol. III (Scottish Text Society, 1908), Internet Archive scan.",
+      "url": "https://archive.org/details/ThePoemsOfRobertHenrysonVol3",
+      "repository_path": "source-cache/HenCres/smith-1908-poems-of-robert-henryson-vol3.pdf",
+      "locator": "The Testament pages 2–24; Thynne text pages 175–198; comparison table",
+      "summary": "Confirms bibliographic identity, Charteris-based 616-line text, Smith pagination, separately printed Thynne text, and comparison apparatus.",
+      "accessed_on": "2026-07-14",
+      "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656"
+    },
+    {
+      "id": "evidence:smith-xml-comparison",
+      "type": "visual_inspection",
+      "citation": "Direct comparison of HenCres.xml, Smith 1908 pages 2–24, and the Charteris 1593 microfilm facsimile.",
+      "repository_path": "source-cache/HenCres/smith-1908-poems-of-robert-henryson-vol3.pdf",
+      "locator": "PB milestones and sample readings at lines 6, 178, and 216",
+      "summary": "PB milestones match Smith pages 2–24 exactly, while the XML preserves Charteris readings or omissions where Smith reads differently; Smith is therefore a pagination and consultation layer, not the sole text source.",
+      "accessed_on": "2026-07-14",
+      "sha256": "4814b44fcf786b3651c1eb705bf0f3985f1119dc66169978324d733b38924656"
+    },
+    {
+      "id": "evidence:ota-a03023-record",
+      "type": "official_webpage",
+      "citation": "Oxford Text Archive, A03023, The testament of Cresseid, EEBO-TCP Phase 1.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A03023",
+      "summary": "Identifies A03023 as a public EEBO-TCP Phase 1 text issued 2003-01, derived from STC 13165/ESTC S118127, and licensed CC0.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ota-a03023-source",
+      "type": "edition_statement",
+      "citation": "EEBO-TCP source XML A03023, TEI header and complete text.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/A03023/A03023.xml?sequence=7&isAllowed=y",
+      "repository_path": "source-cache/HenCres/ota-a03023-tcp-source.xml",
+      "locator": "TEI header, revision history, and body",
+      "summary": "Documents SPi Global keying in 2002 from twelve one-bit TIFF images, Michigan sampling/proofing, STC/ESTC/ProQuest/TCP identifiers, and CC0 release.",
+      "accessed_on": "2026-07-14",
+      "sha256": "9dc5f2fcd4153ea47f21a71648f49e1a5a24398b3484003de2581f0d9609145a"
+    },
+    {
+      "id": "evidence:mets-general",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, ‘The Complete Works of Robert Henryson: General Introduction.’",
+      "url": "https://metseditions.org/read/ezwGwmGVTWD0GT53eWS4QbGTNVGdwy8qp",
+      "summary": "Reviews the limited documentary evidence for Henryson's life, his Dunfermline associations, Older Scots language, and probable death by about 1500; its source survey distinguishes the lost Asloan copy, complete prints, fragmentary witnesses, and later Speght-derived manuscript copies.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-testament",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, ‘The Testament of Cresseid: Introduction’ and text.",
+      "url": "https://metseditions.org/read/Z9W5AYvWhNdKVIRqZSg98vI4LlxeMBGy",
+      "alternate_urls": ["https://metseditions.org/read/9lVqkrlHRqrAh4MdSVaD7s0lkjkA63Z"],
+      "summary": "Supplies current scholarly interpretation, language, late-fifteenth-century dating, stanza form, textual variants, and Charteris's status as the best surviving early witness.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:folger-thynne-1532",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog, record 161594, The workes of Geffray Chaucer, 1532.",
+      "url": "https://catalog.folger.edu/record/161594",
+      "summary": "Confirms the 1532 collected edition, William Thynne's responsibility from the dedication, STC 5068, and physical collation; METS locates the Testament at folios 219r–222v.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:skeat-thynne-facsimile",
+      "type": "digital_surrogate",
+      "citation": "W. W. Skeat, introduction, The Works of Geoffrey Chaucer and Others: Facsimile of the First Collected Edition, 1532 (1905), Internet Archive item worksofgeoffreyc00chauuoft.",
+      "url": "https://archive.org/details/worksofgeoffreyc00chauuoft",
+      "repository_path": "source-cache/HenCres/skeat-1905-thynne-1532-facsimile.pdf",
+      "locator": "PDF pages 507–514; facsimile pages 457–464; original folios 219r–222v",
+      "summary": "Provides a complete public facsimile of the 1532 collected edition and confirms the complete Testament passage and its textual form. The metadata marks the 1905 item NOT_IN_COPYRIGHT in the United States.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3a09b29fabd3c9eece823538960cd784da41dcfbc05b4934beaf22fa89c42ad1"
+    },
+    {
+      "id": "evidence:isos-dean-lismore",
+      "type": "digital_surrogate",
+      "citation": "Irish Script on Screen, NLS Adv. MS 72.1.37, Book of the Dean of Lismore, complete facsimile and IIIF manifest.",
+      "url": "https://www.isos.dias.ie/NLS/NLS_Adv_MS_72_1_37.html",
+      "alternate_urls": ["https://www.isos.dias.ie/static/manifests/NLS_Adv_MS_72_1_37.json"],
+      "locator": "Page 92b",
+      "summary": "Describes the 159-folio-plus-fragments manuscript assembled at Fortingall between 1512 and 1542 and visually exposes the seven-line stanza beginning ‘Luffaris be war,’ misattributed to Bocas.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:isos-rights",
+      "type": "official_webpage",
+      "citation": "Irish Script on Screen, Copyright and acknowledgements.",
+      "url": "https://www.isos.dias.ie/copyright.html",
+      "summary": "States that images are provided for private study and may not be duplicated electronically without express permission from the relevant repository.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nls-dean-microfilm",
+      "type": "official_catalog",
+      "citation": "National Library of Scotland Archives and Manuscripts, microfilm resource for Adv. MS 72.1.37, Mf.Sec.MSS.474.",
+      "url": "https://manuscripts.nls.uk/repositories/2/resources/20800",
+      "summary": "Records a one-reel microfilm and repository conditions for access and use.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:eul-ruthven",
+      "type": "official_webpage",
+      "citation": "Edinburgh University Library, Scottish authors F–I research guide, Robert Henryson manuscripts.",
+      "url": "https://library.ed.ac.uk/heritage-collections/collections-and-search/research-resources/scottish-literature/other-scottish-writers/scottish-authors-f-i",
+      "summary": "Identifies MS Dc.1.43 and its mid- to late-sixteenth-century copy of the first three Testament stanzas at folio 301v.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:folger-anderson-1663",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog, record 463372, The Testament of Cresseid, 1663.",
+      "url": "https://catalog.folger.edu/record/463372",
+      "summary": "Confirms the 1663 imprint, 24-page extent, Wing H1476A, unique Trinity College Cambridge copy, and microfilm reproduction.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ia-anderson-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for EEBO microfilm of Henryson's 1663 Testament.",
+      "url": "https://archive.org/details/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663",
+      "repository_path": "source-cache/HenCres/anderson-1663-internet-archive-metadata.json",
+      "summary": "Identifies raw canister IA40313701-16, 25-image extent, 800 ppi derivative, and downloadable PDF/JP2 resources.",
+      "accessed_on": "2026-07-14",
+      "sha256": "d92e8dcfd65247b46540e953528d6a0c16d57654cdb79da7925a701b2b301085"
+    },
+    {
+      "id": "evidence:anderson-facsimile-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct page-by-page and contact-sheet inspection of the cached Anderson 1663 EEBO microfilm derivatives.",
+      "url": "https://archive.org/details/bim_early-english-books-1641-1700_the-testament-of-cressei_henryson-robert_1663",
+      "repository_path": "source-cache/HenCres/anderson-1663-eebo-microfilm-jp2.zip",
+      "locator": "25 frames, title through FINIS/Trinity stamp and terminal blank",
+      "summary": "Confirms complete 12-leaf coverage and terminal blank. ZIP integrity was also tested.",
+      "accessed_on": "2026-07-14",
+      "sha256": "c2ed38d4748a34931cfc52859cd23dd860ab6c2d58c35f29e286f9959cbe0e05"
+    },
+    {
+      "id": "evidence:st-johns-l1",
+      "type": "official_webpage",
+      "citation": "St John's College Cambridge, Old Library, medieval manuscripts.",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "summary": "Lists MS L.1, an early-fifteenth-century Troilus and Criseyde manuscript, and describes year-round reading-room access; scholarship identifies the later inserted Testament copy.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cambridge-early-modern-readers",
+      "type": "scholarly_source",
+      "citation": "Chaucer's Early Modern Readers, chapter ‘Supplementing’ (Cambridge University Press).",
+      "url": "https://www.cambridge.org/core/books/chaucers-early-modern-readers/supplementing/1E0CFDCC5D1EEF3640320A1CA1283E23",
+      "summary": "Documents the complete early-seventeenth-century Testament copied into St John's L.1 from Speght 1602 and the four-stanza excerpt added to CUL Gg.4.27(1) from a Speght edition.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ora-kynaston",
+      "type": "scholarly_source",
+      "citation": "Oxford University Research Archive, ‘Reading Chaucer in New College in the 1630s.’",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Ad3c2eaf4-7613-4822-8e80-ac43e20818d0",
+      "summary": "Studies Francis Kynaston's 1639 engagement with Chaucer and identifies Bodleian MS Add. C. 287; METS supplies the Testament's pages 475–509 and Speght 1598 dependency.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cudl-gg427",
+      "type": "digital_surrogate",
+      "citation": "Cambridge Digital Library, CUL MS Gg.4.27(1), complete digital facsimile and IIIF manifest.",
+      "url": "https://cudl.lib.cam.ac.uk/view/MS-GG-00004-00027-00001/1",
+      "alternate_urls": ["https://cudl.lib.cam.ac.uk/iiif/MS-GG-00004-00027-00001"],
+      "summary": "Provides a complete 1,144-canvas facsimile and states separate rights terms for zoom images, downloadable images (CC BY-NC 4.0), and metadata (CC BY-NC-ND 4.0).",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cudl-gg427-inspection",
+      "type": "visual_inspection",
+      "citation": "Direct inspection of CUDL IIIF canvas 1084 in the complete MS Gg.4.27(1) manifest.",
+      "url": "https://cudl.lib.cam.ac.uk/iiif/MS-GG-00004-00027-00001",
+      "repository_path": "source-cache/HenCres/cul-gg-4-27-1-complete-iiif.zip",
+      "locator": "Added leaf (9r), canvas 1084",
+      "summary": "Confirms that the Testament occurrence is the four-stanza excerpt corresponding to lines 582–609 and is confined to the added leaf, not a complete copy.",
+      "accessed_on": "2026-07-14",
+      "sha256": "74c7cc5099626791fbd98a68b15ce5b8c3f1267e57375a4bd055f2f6796123ec"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:u243a-provenance-rights",
+      "question": "What accession, permission, and transformation record links legacy OTA U-243-A, the U-M CME item, and the repository XML, and how should its personal-scholarly-use notice be reconciled with U-M's current NoC-US statement?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Ask the Oxford Text Archive and U-M for the accession record for U-243-A.", "Do not infer that current A03023 is the same digital encoding or that the repository-root Unlicense overrides the legacy source notice."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres", "evidence:ota-a03023-record", "evidence:cme-root-license"]
+    },
+    {
+      "id": "question:lost-early-scottish-print",
+      "question": "Did a lost early-sixteenth-century Scottish print mediate the surviving Testament tradition before Thynne 1532?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Trace the inventory and bibliographical arguments cited by current METS scholarship before creating any lost-print entity or dependency edge."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-testament"]
+    },
+    {
+      "id": "question:later-speght-dependencies",
+      "question": "Which exact Speght impressions and readings mediate each later manuscript copy, especially CUL Gg.4.27(1), beyond the secure L.1-from-1602 and Add. C. 287-from-1598 statements?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Consult the cited early-modern-reader scholarship and manuscript descriptions before adding unmodeled Speght edition entities and direct copied-from edges."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-general", "evidence:cambridge-early-modern-readers", "evidence:ora-kynaston"]
+    }
+  ]
+}

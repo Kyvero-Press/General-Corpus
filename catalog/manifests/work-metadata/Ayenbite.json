@@ -1,0 +1,788 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:Ayenbite",
+  "work_id": "Ayenbite",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:Ayenbite",
+    "unit_type": "single_work",
+    "label": "Ayenbite of Inwyt",
+    "scope_note": "Dan Michel of Northgate's 1340 Kentish Middle English translation of Laurent d'Orleans's Somme le Roi, including its authorial preface and brief verse passages. The cataloging subject is the medieval work, not Arundel MS 57, the Morris or Gradon editions, the U-M digital encoding, or this repository's XML file."
+  },
+  "catalog_summary": {
+    "title": "Ayenbite of Inwyt",
+    "author": "Dan Michel of Northgate",
+    "editor": "Richard Morris; newly collated and corrected by Pamela Gradon",
+    "date": "Completed 27 October 1340; first printed 1866",
+    "region": "Kentish Middle English; autograph produced at St Augustine's Abbey, Canterbury",
+    "genres": [
+      "Devotional treatise",
+      "Moral theology",
+      "Confessional manual",
+      "Religious translation"
+    ],
+    "form": "prose",
+    "language_codes": [
+      "enm"
+    ],
+    "tags": [
+      "canterbury",
+      "christian-devotion",
+      "confession",
+      "conscience",
+      "didactic",
+      "kentish",
+      "middle-english",
+      "moral-theology",
+      "penance",
+      "embedded-verse",
+      "prose",
+      "seven-deadly-sins",
+      "translation",
+      "virtues"
+    ]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "Ayenbite",
+      "uri": "https://name.umdl.umich.edu/Ayenbite"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Ayenbite of Inwyt",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-arundel57"
+        ]
+      },
+      "notes": [
+        "Dan Michel's authorial preface names the book in Middle English; spelling and capitalization vary in modern records."
+      ]
+    },
+    {
+      "id": "title:alternate-remorse",
+      "type": "alternate",
+      "value": "Remorse of Conscience",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-umich"
+        ]
+      },
+      "notes": [
+        "An English gloss used in the bibliographic title of the Morris/Gradon edition."
+      ]
+    },
+    {
+      "id": "title:uniform-source-link",
+      "type": "uniform",
+      "value": "Somme le Roi. Middle English",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-folger"
+        ]
+      },
+      "notes": [
+        "Folger catalogs the edition under the uniform-title relationship to Laurent d'Orleans's Somme le Roi; this is not the preferred English work title."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:dan-michel",
+      "type": "person",
+      "name": "Dan Michel of Northgate",
+      "alternate_names": [
+        "Michael of Northgate",
+        "Michel, Dan, of Northgate"
+      ],
+      "notes": [
+        "A monk of St Augustine's Abbey, Canterbury; the unique manuscript identifies the English book as written in his own hand."
+      ]
+    },
+    {
+      "id": "agent:laurent-orleans",
+      "type": "person",
+      "name": "Laurent d'Orleans",
+      "alternate_names": [
+        "Frere Lorens",
+        "Laurent d'Orleans, Dominican"
+      ],
+      "notes": [
+        "Author of the 1279 French Somme le Roi, the principal source work."
+      ]
+    },
+    {
+      "id": "agent:richard-morris",
+      "type": "person",
+      "name": "Richard Morris",
+      "alternate_names": [
+        "Richard Morris, 1833-1894"
+      ]
+    },
+    {
+      "id": "agent:pamela-gradon",
+      "type": "person",
+      "name": "Pamela Gradon"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:dan-michel-author",
+      "agent_id": "agent:dan-michel",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Authorship of the Middle English translated work and its authorial framing"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-arundel57"
+        ]
+      },
+      "notes": [
+        "The author role describes responsibility for the English work; the separate translator role preserves its dependence on the French source."
+      ]
+    },
+    {
+      "id": "responsibility:dan-michel-translator",
+      "agent_id": "agent:dan-michel",
+      "role": "translator",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Kentish Middle English rendering of the French Somme le Roi"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-folger",
+          "evidence:ayenbite-arundel57"
+        ]
+      }
+    },
+    {
+      "id": "responsibility:laurent-source-author",
+      "agent_id": "agent:laurent-orleans",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Authorship of the French source work, not direct authorship of the Middle English wording"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-folger"
+        ]
+      },
+      "notes": [
+        "This scoped source responsibility must not displace Dan Michel as creator of the Middle English translation."
+      ]
+    },
+    {
+      "id": "responsibility:morris-editor",
+      "agent_id": "agent:richard-morris",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "1866 transcription and edition retained as the textual basis of the 1965 reissue"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-gradon-scan"
+        ]
+      }
+    },
+    {
+      "id": "responsibility:gradon-editor",
+      "agent_id": "agent:pamela-gradon",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "1965 corrected reissue and new collation of Morris's transcription"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-gradon-scan"
+        ]
+      }
+    },
+    {
+      "id": "responsibility:gradon-collator",
+      "agent_id": "agent:pamela-gradon",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "New collation against the unique Arundel 57 manuscript"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-gradon-scan",
+          "evidence:ayenbite-arundel57"
+        ]
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:translation-completion",
+      "type": "translation",
+      "display": "Completed on the eve of Saints Simon and Jude, 27 October 1340",
+      "normalized": {
+        "not_before": 1340,
+        "not_after": 1340
+      },
+      "scope": {
+        "kind": "whole"
+      },
+      "source_lineage_entity_id": "witness:bl:Arundel57",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-arundel57"
+        ]
+      },
+      "notes": [
+        "The unique manuscript's colophon supplies a precise completion date for this English text."
+      ]
+    },
+    {
+      "id": "date:first-edition",
+      "type": "first_publication",
+      "display": "First printed by Richard Morris in 1866",
+      "normalized": {
+        "not_before": 1866,
+        "not_after": 1866
+      },
+      "scope": {
+        "kind": "whole"
+      },
+      "source_lineage_entity_id": "edition:morris:ayenbite-1866",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-gradon-scan"
+        ]
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "place:canterbury",
+      "label": "Canterbury",
+      "kind": "settlement"
+    },
+    {
+      "id": "place:kent",
+      "label": "Kent",
+      "kind": "dialect_region"
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:canterbury",
+      "place_id": "place:canterbury",
+      "type": "associated_place",
+      "scope": {
+        "kind": "whole"
+      },
+      "source_lineage_entity_id": "witness:bl:Arundel57",
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ayenbite-arundel57",
+          "evidence:ayenbite-xml"
+        ]
+      },
+      "notes": [
+        "The BL catalogue locates production of the autograph manuscript at St Augustine's Abbey, Canterbury; this record does not infer that every stage of composition occurred there."
+      ]
+    },
+    {
+      "id": "place-statement:kentish",
+      "place_id": "place:kent",
+      "type": "dialect_region",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-folger",
+          "evidence:ayenbite-gradon-scan"
+        ]
+      },
+      "notes": [
+        "Dialect localization is a property of the Middle English text, distinct from the manuscript's present location."
+      ]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-folger"
+        ]
+      },
+      "notes": [
+        "The work is a Kentish Middle English translation from French; the French source language is represented through the related-work relationship rather than counted as a language of this text."
+      ]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole",
+      "value": "prose",
+      "scope": {
+        "kind": "whole"
+      },
+      "description": "A prose devotional treatise with brief verse in the authorial framing and two body sections; the repository XML contains five line groups and 34 line elements, recorded at part level rather than making the whole-work discovery form mixed.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-structure",
+          "evidence:ayenbite-xml"
+        ]
+      }
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:devotional-treatise",
+      "term": "devotional-treatise",
+      "label": "Devotional treatise",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-folger"
+        ]
+      }
+    },
+    {
+      "id": "genre:moral-theology",
+      "term": "moral-theology",
+      "label": "Moral theology",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-folger"
+        ]
+      }
+    },
+    {
+      "id": "genre:confessional-manual",
+      "term": "confessional-manual",
+      "label": "Confessional manual",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml"
+        ]
+      }
+    },
+    {
+      "id": "genre:religious-translation",
+      "term": "religious-translation",
+      "label": "Religious translation",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-folger"
+        ]
+      }
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:conscience-confession",
+      "term": "conscience-and-confession",
+      "label": "Conscience, confession, and penance",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml"
+        ]
+      }
+    },
+    {
+      "id": "subject:vices-virtues",
+      "term": "vices-and-virtues",
+      "label": "Vices and virtues",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml"
+        ]
+      }
+    },
+    {
+      "id": "subject:doctrine",
+      "term": "christian-doctrine",
+      "label": "Christian doctrine and prayer",
+      "scheme": "general-corpus",
+      "scope": {
+        "kind": "whole"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml"
+        ]
+      }
+    }
+  ],
+  "tags": [
+    "canterbury",
+    "christian-devotion",
+    "confession",
+    "conscience",
+    "didactic",
+    "kentish",
+    "middle-english",
+    "moral-theology",
+    "penance",
+    "embedded-verse",
+    "prose",
+    "seven-deadly-sins",
+    "translation",
+    "virtues"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A Kentish Middle English guide to conscience and moral life, translated by Dan Michel of Northgate from Laurent d'Orleans's French Somme le Roi. It organizes instruction around the commandments and creed, the seven deadly sins and corresponding virtues, confession and penance, prayer, almsgiving, chastity, sobriety, and the gifts of the Holy Spirit.",
+      "language": "eng",
+      "scope": {
+        "kind": "whole"
+      },
+      "evidence_ids": [
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-folger"
+      ]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "The work survives uniquely in Arundel MS 57, apparently in Dan Michel's own hand. The General Corpus text represents Gradon's 1965 corrected reissue of Morris's 1866 transcription and must not be treated as a diplomatic transcription of the manuscript.",
+      "language": "eng",
+      "scope": {
+        "kind": "whole"
+      },
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57",
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-gradon-scan"
+      ]
+    }
+  ],
+  "extent": {
+    "numbered_items": null,
+    "sections": 129,
+    "prose_only_items": 125,
+    "verse_only_items": 0,
+    "mixed_items": 2,
+    "verse_groups": 5,
+    "verse_lines": 34,
+    "description": "The XML has one authorial preface, one table of contents, and 127 body DIV1 sections (129 DIV1 elements total). Among the 127 body sections, 125 are prose-only and two contain both prose and verse; the authorial preface contains three further verse groups. Counts describe the encoding, not a critical taxonomy of the medieval work.",
+    "evidence_ids": [
+      "evidence:ayenbite-structure"
+    ]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:author-preface",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "preface",
+      "label": "Author's Preface",
+      "summary": "Devotional opening, ownership statement, and prayers identifying Dan Michel, the title, and St Augustine's Abbey.",
+      "item_count": null,
+      "textual_form": "mixed",
+      "metrics": {
+        "verse_groups": 3,
+        "verse_lines": 8
+      },
+      "locators": [
+        {
+          "lineage_entity_id": "encoding:umich-cme:Ayenbite",
+          "scheme": "XML node",
+          "value": "Ayenbite:1"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "part:contents",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "section",
+      "label": "Table of Contents",
+      "summary": "A prose guide to the chapter and leaf-reference system used in the manuscript.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [
+        {
+          "lineage_entity_id": "encoding:umich-cme:Ayenbite",
+          "scheme": "XML node",
+          "value": "Ayenbite:2"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "part:treatise",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "work",
+      "label": "Moral and devotional treatise",
+      "summary": "The 127 encoded body sections covering commandments, creed, sins, virtues, confession, penance, prayer, and related doctrine.",
+      "item_count": null,
+      "textual_form": "mixed",
+      "metrics": {
+        "prose_only_items": 125,
+        "mixed_items": 2,
+        "verse_groups": 2,
+        "verse_lines": 26
+      },
+      "locators": [
+        {
+          "lineage_entity_id": "encoding:umich-cme:Ayenbite",
+          "scheme": "XML nodes",
+          "value": "Ayenbite:3-Ayenbite:129"
+        },
+        {
+          "lineage_entity_id": "witness:bl:Arundel57",
+          "scheme": "folios",
+          "value": "ff. 13r-94r"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-arundel57"
+      ]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:somme-le-roi",
+      "title": "Somme le Roi",
+      "relation": "translation_of",
+      "evidence_ids": [
+        "evidence:ayenbite-folger"
+      ],
+      "notes": [
+        "Laurent d'Orleans composed the French source in 1279; the reviewed sources describe Ayenbite as a close or literal translation, while its own authorial preface provides English framing."
+      ]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:Ayenbite",
+    "manifest_path": "manifests/lineage/works/Ayenbite.json",
+    "bindings": [
+      {
+        "metadata_target": "work:Ayenbite",
+        "lineage_entity_id": "edition:gradon:ayenbite-1965",
+        "role": "source_edition"
+      },
+      {
+        "metadata_target": "work:Ayenbite",
+        "lineage_entity_id": "witness:bl:Arundel57",
+        "role": "source_witness"
+      },
+      {
+        "metadata_target": "work:Ayenbite",
+        "lineage_entity_id": "encoding:umich-cme:Ayenbite",
+        "role": "digital_encoding"
+      },
+      {
+        "metadata_target": "work:Ayenbite",
+        "lineage_entity_id": "artifact:general-corpus:Ayenbite",
+        "role": "repository_representation"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:ayenbite-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/Ayenbite.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Ayenbite.xml",
+      "locator": "HEADER; FRONT; BODY",
+      "summary": "Supplies the work title, Dan Michel attribution, Morris and Gradon responsibilities, 1965 source edition, Arundel 57 dependency, editorial omissions, and encoded text.",
+      "accessed_on": "2026-07-11",
+      "sha256": "ac5a4fad2db54cca681adf21250c3b5241be14766acd7e56dc2727446f9bfbdb"
+    },
+    {
+      "id": "evidence:ayenbite-structure",
+      "type": "computational_inspection",
+      "citation": "General Corpus structural inspection of Ayenbite.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Ayenbite.xml",
+      "locator": "DIV1, P, LG, and L element counts",
+      "summary": "Counts 129 DIV1 elements: one authorial preface, one table of contents, and 127 body sections; also counts five LG and 34 L elements and distinguishes body sections with verse.",
+      "accessed_on": "2026-07-11",
+      "sha256": "ac5a4fad2db54cca681adf21250c3b5241be14766acd7e56dc2727446f9bfbdb"
+    },
+    {
+      "id": "evidence:ayenbite-umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, ‘Ayenbite of Inwyt,’ Corpus of Middle English Prose and Verse.",
+      "url": "https://quod.lib.umich.edu/c/cme/Ayenbite?view=toc",
+      "summary": "Confirms title, Dan Michel attribution, Morris/Gradon edition statement, 1965 publication, contents, public access, and U-M's No Copyright-United States assertion.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-arundel57",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Arundel MS 57, Ayenbite of Inwyt child record.",
+      "url": "https://searcharchives.bl.uk/catalog/041-002356408",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002039337"
+      ],
+      "summary": "The exact BL child record catalogues Ayenbite at ff. 13r-94r within Arundel MS 57, written by Michael of Northgate at St Augustine's Abbey, Canterbury, and completed in 1340; the following folios contain other works and prayers.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-folger",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, catalog record 35564, Dan Michel's Ayenbite of Inwyt.",
+      "url": "https://catalog.folger.edu/record/35564",
+      "summary": "Records Laurent d'Orleans's authorship of the French Somme le Roi, its 1279 composition, the Middle English uniform-title relationship, the Kentish translation, and the Morris/Gradon edition.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-gradon-scan",
+      "type": "digital_surrogate",
+      "citation": "Pamela Gradon, ed., Dan Michel's Ayenbite of Inwyt, EETS Original Series 23 (1965), public scan.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf",
+      "summary": "Provides the 1965 title and prefatory explanation that Morris's 1866 transcription was retained, miscopied forms were corrected by new collation, and Morris's earlier apparatus was omitted.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ayenbite-adaptation-scope",
+      "question": "Which passages in Ayenbite depart materially from, add to, or reorder the precise French exemplar used by Dan Michel?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult a modern source study and a critical edition of Somme le Roi before recording passage-level adaptation claims."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-folger",
+        "evidence:ayenbite-gradon-scan"
+      ]
+    }
+  ],
+  "notes": [
+    "The manuscript's date and location are unusually secure because its colophon, title statement, and BL catalog record converge.",
+    "Edition, encoding, access, and rights details are maintained in manifests/lineage/works/Ayenbite.json rather than inherited as properties of the medieval work."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:ChaucerBo",
+  "work_id": "ChaucerBo",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:ChaucerBo",
+    "unit_type": "single_work",
+    "label": "Boece",
+    "scope_note": "Geoffrey Chaucer's five-book Middle English prose translation and adaptation of Boethius's De consolatione philosophiae, as represented by the text in Morris's 1868 edition and U-M CME item ChaucerBo. Morris's introduction, comparison extracts, table, appendix, index, and appended poems are edition components rather than part of the cataloged medieval work."
+  },
+  "catalog_summary": {
+    "title": "Boece",
+    "author": "Anicius Manlius Severinus Boethius; translated and adapted by Geoffrey Chaucer",
+    "editor": "Richard Morris",
+    "date": "Translated around 1380",
+    "region": "England; exact place of translation not securely established",
+    "genres": ["Philosophical translation", "Consolation", "Philosophical dialogue", "Didactic prose"],
+    "form": "prose",
+    "language_codes": ["enm", "lat"],
+    "tags": ["boethius", "chaucer", "consolation", "dialogue", "didactic", "fortune", "happiness", "middle-english", "philosophy", "prose", "providence", "translation-and-adaptation"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "ChaucerBo", "uri": "https://name.umdl.umich.edu/ChaucerBo"},
+    {"scheme": "EETS", "value": "Extra Series 5"}
+  ],
+  "titles": [
+    {"id": "title:preferred", "type": "preferred", "value": "Boece", "language": "enm", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:sources-boece"]}},
+    {"id": "title:uniform", "type": "uniform", "value": "De consolatione philosophiae. Middle English", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:bo-umich", "evidence:morris-edition"]}},
+    {"id": "title:edition", "type": "alternate", "value": "Chaucer's Translation of Boethius's De Consolatione Philosophiae", "language": "eng", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}}
+  ],
+  "agents": [
+    {"id": "agent:boethius", "type": "person", "name": "Anicius Manlius Severinus Boethius", "alternate_names": ["Boethius"], "notes": ["Author of the late-antique Latin source work, not of the Middle English wording."]},
+    {"id": "agent:geoffrey-chaucer", "type": "person", "name": "Geoffrey Chaucer", "alternate_names": ["Geffrey Chaucer"], "identifiers": [{"scheme": "VIAF", "value": "100185203", "uri": "https://viaf.org/viaf/100185203"}]},
+    {"id": "agent:richard-morris", "type": "person", "name": "Richard Morris", "alternate_names": ["Richard Morris, LL.D."], "notes": ["Editor of the 1868 EETS edition from which the CME text was keyed."]}
+  ],
+  "responsibilities": [
+    {"id": "responsibility:boethius-source-author", "agent_id": "agent:boethius", "role": "author", "attribution_status": "known", "scope": {"kind": "whole", "description": "Authorship of the Latin source work translated in Boece"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-umich", "evidence:sources-boece"]}, "notes": ["Recorded as source-work authorship; Chaucer is responsible for the Middle English translation."]},
+    {"id": "responsibility:chaucer-translator", "agent_id": "agent:geoffrey-chaucer", "role": "translator", "attribution_status": "known", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:morris-edition", "evidence:sources-boece"]}},
+    {"id": "responsibility:chaucer-adapter", "agent_id": "agent:geoffrey-chaucer", "role": "adapter", "attribution_status": "known", "scope": {"kind": "whole", "description": "Prose reworking drawing on Latin, French, and commentary traditions"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:sources-boece"]}},
+    {"id": "responsibility:morris-editor", "agent_id": "agent:richard-morris", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "Immediate 1868 source edition"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}},
+    {"id": "responsibility:morris-transcriber", "agent_id": "agent:richard-morris", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "whole", "description": "Edited from British Library Add MS 10340"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition", "evidence:bl-add10340"]}},
+    {"id": "responsibility:morris-collator", "agent_id": "agent:richard-morris", "role": "collator", "attribution_status": "known", "scope": {"kind": "whole", "description": "Collated against Cambridge University Library MS Ii.3.21"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition", "evidence:cul-ii321"]}}
+  ],
+  "date_statements": [
+    {"id": "date:translation", "type": "translation", "display": "Around 1380", "normalized": {"not_before": 1375, "not_after": 1385}, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:sources-boece"]}, "notes": ["The normalized range expresses uncertainty; it is not a claim for exact beginning and ending years."]},
+    {"id": "date:first-witness", "type": "first_known_attestation", "display": "British Library Add MS 10340, first quarter of the fifteenth century", "normalized": {"not_before": 1400, "not_after": 1424}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "witness:bl:Add10340", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-add10340"]}, "notes": ["This is a date for an extant manuscript copy, not for composition."]}
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"}
+  ],
+  "place_statements": [
+    {"id": "place-statement:england", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-umich", "evidence:sources-boece"]}, "notes": ["No exact place of translation and no single scribal dialect region are asserted."]}
+  ],
+  "language_statements": [
+    {"id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}},
+    {"id": "language:latin", "code": "lat", "label": "Latin", "usage": "embedded", "script": "Latn", "scope": {"kind": "whole", "description": "Latin lemmata, headings, and source phrases occur within the Middle English work"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}}
+  ],
+  "form_statements": [
+    {"id": "form:boece", "value": "prose", "scope": {"kind": "whole"}, "description": "Chaucer renders both Boethius's prose sections and Latin metres in Middle English prose; XML unit labels ‘prose’ and ‘metre’ identify source divisions rather than alternating Middle English forms.", "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}}
+  ],
+  "genre_statements": [
+    {"id": "genre:philosophical-translation", "term": "philosophical-translation", "label": "Philosophical translation", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-umich", "evidence:sources-boece"]}},
+    {"id": "genre:consolation", "term": "consolation", "label": "Consolation", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:sources-boece"]}},
+    {"id": "genre:dialogue", "term": "dialogue", "label": "Philosophical dialogue", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml"]}},
+    {"id": "genre:didactic-prose", "term": "didactic-prose", "label": "Didactic prose", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:sources-boece"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:fortune", "term": "fortune", "label": "Fortune and mutability", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml"]}},
+    {"id": "subject:providence", "term": "providence", "label": "Providence, fate, and free will", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml", "evidence:sources-boece"]}},
+    {"id": "subject:happiness", "term": "happiness", "label": "True and false happiness", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml"]}},
+    {"id": "subject:philosophy", "term": "philosophy", "label": "Philosophy and consolation", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bo-xml"]}}
+  ],
+  "tags": ["boethius", "chaucer", "consolation", "dialogue", "didactic", "fortune", "happiness", "middle-english", "philosophy", "prose", "providence", "translation-and-adaptation"],
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "Chaucer's Middle English prose translation and adaptation of Boethius's Consolation of Philosophy presents the imprisoned Boethius's dialogue with Lady Philosophy. Across five books it moves from grief and Fortune's instability through the nature of happiness and goodness to providence, fate, foreknowledge, and human freedom.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:bo-xml", "evidence:sources-boece"]},
+    {"id": "summary:scope", "type": "scope_note", "value": "The XML package contains extensive nineteenth-century editorial matter in addition to Boece. This metadata record treats Chaucer's five-book translation as its intellectual subject and records Morris's framing materials only to prevent their accidental attribution to Chaucer.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition"]}
+  ],
+  "extent": {"numbered_items": 79, "sections": 5, "prose_only_items": 79, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0, "description": "Five books comprising 40 prose divisions and 39 divisions corresponding to Boethius's metres, all rendered by Chaucer in Middle English prose. Counts exclude Morris's introduction, index, table, appendix, and appended comparative material.", "evidence_ids": ["evidence:bo-structure"]},
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id": "part:book-i", "parent_id": null, "sequence": 1, "type": "section", "label": "Book I", "summary": "Boethius laments his fall; Lady Philosophy diagnoses his grief and begins to restore his understanding.", "item_count": 13, "textual_form": "prose", "metrics": {"prose_only_items": 13, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:morris:boece-1868", "scheme": "book", "value": "Book I"}], "evidence_ids": ["evidence:bo-xml", "evidence:bo-structure"]},
+    {"id": "part:book-ii", "parent_id": null, "sequence": 2, "type": "section", "label": "Book II", "summary": "Philosophy exposes Fortune's mutability and the inadequacy of wealth, office, fame, and bodily pleasure.", "item_count": 17, "textual_form": "prose", "metrics": {"prose_only_items": 17, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:morris:boece-1868", "scheme": "book", "value": "Book II"}], "evidence_ids": ["evidence:bo-xml", "evidence:bo-structure"]},
+    {"id": "part:book-iii", "parent_id": null, "sequence": 3, "type": "section", "label": "Book III", "summary": "The dialogue identifies the supreme good, true happiness, unity, and God as the end sought through imperfect goods.", "item_count": 24, "textual_form": "prose", "metrics": {"prose_only_items": 24, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:morris:boece-1868", "scheme": "book", "value": "Book III"}], "evidence_ids": ["evidence:bo-xml", "evidence:bo-structure"]},
+    {"id": "part:book-iv", "parent_id": null, "sequence": 4, "type": "section", "label": "Book IV", "summary": "Philosophy considers evil, punishment, providence, fate, and the apparent success of the wicked.", "item_count": 14, "textual_form": "prose", "metrics": {"prose_only_items": 14, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:morris:boece-1868", "scheme": "book", "value": "Book IV"}], "evidence_ids": ["evidence:bo-xml", "evidence:bo-structure"]},
+    {"id": "part:book-v", "parent_id": null, "sequence": 5, "type": "section", "label": "Book V", "summary": "The final book reconciles chance, free will, divine foreknowledge, and eternity.", "item_count": 11, "textual_form": "prose", "metrics": {"prose_only_items": 11, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:morris:boece-1868", "scheme": "book", "value": "Book V"}], "evidence_ids": ["evidence:bo-xml", "evidence:bo-structure"]}
+  ],
+  "related_works": [
+    {"id": "related:consolatio", "title": "De consolatione philosophiae", "relation": "translation_of", "evidence_ids": ["evidence:bo-umich", "evidence:sources-boece"], "notes": ["The Latin prosimetrum is the source work; Chaucer renders its metres as prose."]},
+    {"id": "related:jean-de-meun", "title": "Jean de Meun's French translation of De consolatione philosophiae", "relation": "related_to", "evidence_ids": ["evidence:sources-boece"], "notes": ["A documented intermediary consulted by Chaucer, not the sole source."]},
+    {"id": "related:trevet-commentary", "title": "Nicholas Trevet's commentary on De consolatione philosophiae", "relation": "related_to", "evidence_ids": ["evidence:sources-boece"], "notes": ["A documented commentary source used in Chaucer's adaptation."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:ChaucerBo",
+    "manifest_path": "manifests/lineage/works/ChaucerBo.json",
+    "bindings": [
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "edition:morris:boece-1868", "role": "source_edition"},
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "encoding:umich-cme:ChaucerBo", "role": "digital_encoding"},
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "artifact:general-corpus:ChaucerBo", "role": "repository_representation"},
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "witness:bl:Add10340", "role": "source_witness"},
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "witness:cul:Ii3-21", "role": "source_witness"},
+      {"metadata_target": "work:ChaucerBo", "lineage_entity_id": "work:boethius:consolatio", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:bo-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_1-2/ChaucerBo.xml.", "repository_path": "CME/source/CME_phase_1-2/ChaucerBo.xml", "locator": "HEADER; main text Books I–V", "summary": "Supplies bibliographic source, attribution, base and collated manuscripts, selection statement, language declarations, and the encoded text and structure.", "accessed_on": "2026-07-11", "sha256": "4e40354faa71d75605d729443603c30a8042eb244c92bf9f4c05637b5b75439b"},
+    {"id": "evidence:bo-umich", "type": "official_webpage", "citation": "University of Michigan Library, CME item ChaucerBo.", "url": "https://quod.lib.umich.edu/c/cme/ChaucerBo?view=toc", "summary": "Confirms Boethius and Morris responsibilities, the 1868 edition, current public-domain statement, and the five-book table of contents.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:morris-edition", "type": "digital_surrogate", "citation": "Richard Morris, ed., Chaucer's Translation of Boethius's De Consolatione Philosophiae, EETS Extra Series 5 (1868), Project Gutenberg 42083.", "url": "https://www.gutenberg.org/ebooks/42083", "alternate_urls": ["https://archive.org/details/chaucerstranslat00boetuoft"], "summary": "Public reproduction of the immediate edition, confirming its title, editor, witnesses, contents, and editorial framing.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:sources-boece", "type": "scholarly_source", "citation": "University of Georgia Press, Sources of the Boece, ed. Tim William Machan with Alastair J. Minnis (2005).", "url": "https://www.ugapress.org/9780820327600/sources-of-the-boece/", "summary": "Dates Chaucer's translation around 1380 and identifies the Latin Vulgate Consolatio, Jean de Meun's French translation, and Nicholas Trevet's commentary as sources.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:bl-add10340", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Add MS 10340.", "url": "https://searcharchives.bl.uk/catalog/032-002108138", "summary": "Dates and describes Morris's base witness and locates Boece at fols. 3r–40r.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:cul-ii321", "type": "official_webpage", "citation": "Cambridge University Library, ‘Literary manuscripts,’ entry for MS Ii.3.21.", "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives/subject-guides/literary-manuscripts", "summary": "Identifies MS Ii.3.21 as a witness containing Chaucer's Boece and associated texts.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:bo-structure", "type": "computational_inspection", "citation": "Element and attribute count of repository ChaucerBo.xml.", "repository_path": "CME/source/CME_phase_1-2/ChaucerBo.xml", "locator": "Main-text DIV1 book and DIV2 prose/metre elements", "summary": "Counts five main books and 79 source divisions: 40 prose and 39 metre divisions, distributed 13, 17, 24, 14, and 11 by book.", "accessed_on": "2026-07-11"},
+    {"id": "evidence:lineage-bo", "type": "linked_manifest_evidence", "citation": "General Corpus lineage manifest for ChaucerBo.", "repository_path": "manifests/lineage/works/ChaucerBo.json", "source_evidence_id": "evidence:bo-xml", "summary": "Binds the catalog record to Morris's edition, Add MS 10340, CUL Ii.3.21, the U-M encoding, and the local artifact.", "accessed_on": "2026-07-11"}
+  ],
+  "open_questions": [
+    {"id": "question:translation-date", "question": "Can the date or phases of Chaucer's translation be narrowed beyond ‘around 1380’ without overstating disputed evidence?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult current Boece chronology scholarship and the full dating argument in Sources of the Boece."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:sources-boece"]},
+    {"id": "question:source-readings", "question": "Which individual electronic readings derive from CUL Ii.3.21 rather than Morris's Add MS 10340 base?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare Morris's full apparatus and bracket conventions with both manuscripts; do not treat every bracket as the same kind of intervention."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:bo-xml", "evidence:morris-edition", "evidence:lineage-bo"]},
+    {"id": "question:provider-terms", "question": "Do U-M's current NoC-US statement and access interface supersede the redistribution restriction embedded in the 1999 XML?", "status": "unresolved", "impact": "high", "next_steps": ["Seek written clarification from U-M before redistributing the XML or a close derivative, especially through a for-profit service."], "last_checked": "2026-07-11", "evidence_ids": ["evidence:bo-xml", "evidence:bo-umich", "evidence:lineage-bo"]}
+  ],
+  "notes": [
+    "The work-level form is prose even though its source is a prosimetrum and the XML labels 39 divisions ‘metre’; Chaucer translates those metres into prose.",
+    "French and Italian in the XML language profile occur in Morris's editorial quotations and do not make the medieval work quadrilingual.",
+    "The edition's base manuscript and collated witness are recorded separately so supplied Cambridge readings are not mistaken for Add MS 10340 readings."
+  ]
+}

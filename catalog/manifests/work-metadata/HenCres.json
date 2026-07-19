@@ -1,0 +1,349 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:HenCres",
+  "work_id": "HenCres",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "cataloging_subject": {
+    "id": "work:HenCres",
+    "unit_type": "single_work",
+    "label": "The Testament of Cresseid",
+    "scope_note": "Robert Henryson's late-fifteenth-century Older Scots poem as an intellectual work. The 1593 Charteris print, later editions and excerpts, manuscript witnesses, modern facsimiles, and the U-M/OTA and EEBO-TCP encodings are transmission layers rather than separate works. ‘The Complaint of Cresseid’ is an internal passage, not a second work."
+  },
+  "catalog_summary": {
+    "title": "The Testament of Cresseid",
+    "author": "Robert Henryson",
+    "editor": "No single editor; Charteris 1593 is the source witness and Smith 1908 supplies pagination",
+    "date": "Composed in the late fifteenth century; exact date unknown",
+    "region": "Scotland; narrative set during the Trojan War",
+    "genres": ["Narrative poem", "Tragedy", "Chaucerian continuation", "Dream vision", "Trojan narrative", "Complaint"],
+    "form": "verse",
+    "language_codes": ["sco"],
+    "tags": ["chaucerian-continuation", "complaint", "cresseid", "dream-vision", "fidelity-and-betrayal", "fortune", "leprosy", "mortality", "multiple-witnesses", "narrative-poetry", "older-scots", "planetary-gods", "print-transmission", "repentance", "rhyme-royal", "robert-henryson", "social-exclusion", "tragedy", "troilus", "trojan-war", "verse"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "HenCres", "uri": "https://name.umdl.umich.edu/HenCres"},
+    {"scheme": "OTA", "value": "U-243-A"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Testament of Cresseid",
+      "language": "sco",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]},
+      "notes": ["The title is used by every complete early witness according to the METS scholarly introduction; its spelling is normalized here only for catalog display."]
+    },
+    {
+      "id": "title:umich",
+      "type": "alternate",
+      "value": "Robert Henryson's The testament of Cresseid",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:umich-hencres"]},
+      "notes": ["Discovery title of the U-M/CME electronic item, not an independently attested work title."]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:robert-henryson",
+      "type": "person",
+      "name": "Robert Henryson"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:henryson-author",
+      "agent_id": "agent:robert-henryson",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]},
+      "notes": ["The attribution is stable even though Henryson's exact life dates and much of his biography remain uncertain."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Late fifteenth century; exact date unknown, before Henryson's death around 1500",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]},
+      "notes": ["The value 1480 in the repository XML is a legacy encoding assertion, not adopted here as a secure exact date."]
+    },
+    {
+      "id": "date:first-known-attestation",
+      "type": "first_known_attestation",
+      "display": "Recorded in the Asloan manuscript contents, c. 1515–1525; the listed Testament leaves are now missing",
+      "normalized": {"not_before": 1515, "not_after": 1525},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "witness:nls:Asloan-MS-16500",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general"]},
+      "notes": ["This is evidence for an early copy or title, not an extant textual witness and not the date of composition."]
+    },
+    {
+      "id": "date:first-surviving-publication",
+      "type": "first_publication",
+      "display": "1532, in William Thynne's edition of Chaucer's works",
+      "normalized": {"not_before": 1532, "not_after": 1532},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:thynne:chaucer-1532",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:lineage-thynne"]},
+      "notes": ["Thynne preserves the earliest surviving complete text but anglicizes it and prints it anonymously after Troilus and Criseyde."]
+    }
+  ],
+  "places": [
+    {"id": "place:scotland", "label": "Scotland", "kind": "country", "identifiers": [{"scheme": "Wikidata", "value": "Q22", "uri": "https://www.wikidata.org/entity/Q22"}]},
+    {"id": "place:troy", "label": "Troy", "kind": "historical_region", "identifiers": [{"scheme": "Wikidata", "value": "Q22647", "uri": "https://www.wikidata.org/entity/Q22647"}]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:scotland",
+      "place_id": "place:scotland",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]},
+      "notes": ["This describes the work's literary and linguistic context; it does not claim a securely documented place of composition."]
+    },
+    {
+      "id": "place-statement:troy",
+      "place_id": "place:troy",
+      "type": "historical_setting",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:older-scots",
+      "code": "sco",
+      "label": "Older Scots",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]},
+      "notes": ["Often described more specifically as Middle Scots. Witnesses and editions may be substantially anglicized; that transmission-layer variation is not assigned to the work as a whole."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "A 616-line poem in 86 stanzas: 79 seven-line rhyme-royal stanzas and seven nine-line stanzas in the Complaint.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-structure", "evidence:mets-testament"], "notes": "The repository XML also encodes a final ungrouped ‘Finis’ as L N=617; it is a terminator, not a 617th verse line."}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:narrative-poem", "term": "narrative-poem", "label": "Narrative poem", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "genre:tragedy", "term": "tragedy", "label": "Tragedy", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}, "notes": ["The narrator calls the work a tragedy."]},
+    {"id": "genre:chaucerian-continuation", "term": "chaucerian-continuation", "label": "Chaucerian continuation", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-testament"]}, "notes": ["The label places the poem in the reception tradition of Chaucer's Troilus and Criseyde; Henryson supplies an independent alternative ending rather than a textual continuation or version of Chaucer's poem."]},
+    {"id": "genre:dream-vision", "term": "dream-vision", "label": "Dream vision", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:narrative-before-complaint"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "genre:trojan-narrative", "term": "trojan-narrative", "label": "Trojan narrative", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "genre:complaint", "term": "complaint", "label": "Complaint", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:complaint"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}, "notes": ["Restricted to lines 407–469, the seven nine-line stanzas spoken by Cresseid; the XML's second DIV1 heading extends beyond the complaint through the closing narrative."]}
+  ],
+  "subject_statements": [
+    {"id": "subject:love", "term": "courtly-love", "label": "Courtly love and desire", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "subject:fortune", "term": "fortune", "label": "Fortune and mutability", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "subject:betrayal", "term": "fidelity-and-betrayal", "label": "Fidelity, exchange, and betrayal", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "subject:trojan-war", "term": "trojan-war", "label": "Trojan War", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml"]}},
+    {"id": "subject:leprosy-exclusion", "term": "leprosy-and-social-exclusion", "label": "Leprosy and social exclusion", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}},
+    {"id": "subject:judgment-repentance", "term": "judgment-repentance-and-redemption", "label": "Judgment, repentance, and redemption", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]}}
+  ],
+  "tags": ["chaucerian-continuation", "complaint", "cresseid", "dream-vision", "fidelity-and-betrayal", "fortune", "leprosy", "mortality", "multiple-witnesses", "narrative-poetry", "older-scots", "planetary-gods", "print-transmission", "repentance", "rhyme-royal", "robert-henryson", "social-exclusion", "tragedy", "troilus", "trojan-war", "verse"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "After invoking Chaucer and another account of Cresseid, the narrator tells how she is abandoned by Diomede, denounces the gods, and is judged in her dream by a planetary parliament with leprosy and exclusion. At the leper hospital she laments her fall in a seven-stanza complaint; afterward, while begging, she encounters Troilus without either recognizing the other. Once told his identity, she makes a testament to the lepers and dies; Troilus receives her ring and erects her tomb. Henryson transforms the unresolved fate of Chaucer's Criseyde into a Scots tragedy about mutability, social judgment, repentance, compassion, and literary authority.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "This record describes Henryson's poem, not the 1593 Charteris imprint reproduced in the XML heading, Smith's 1908 editorial presentation and pagination, or the U-M/OTA encoding. The XML's supplied division label ‘The complaint of cresseid’ covers lines 407–617, but the complaint proper occupies only lines 407–469; lines 470–616 return to third-person narrative.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:hencres-xml", "evidence:hencres-structure", "evidence:lineage-smith"]
+    }
+  ],
+  "extent": {
+    "numbered_items": null,
+    "sections": 3,
+    "prose_only_items": 0,
+    "verse_only_items": 86,
+    "mixed_items": 0,
+    "verse_groups": 86,
+    "verse_lines": 616,
+    "description": "One poem modeled in three narrative units: 58 seven-line stanzas before the Complaint, seven nine-line Complaint stanzas, and 21 seven-line closing stanzas. The repository XML contains 86 LG elements and 617 L elements because an ungrouped final ‘Finis’ is encoded as L N=617.",
+    "evidence_ids": ["evidence:hencres-structure", "evidence:mets-testament"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:narrative-before-complaint",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "section",
+      "label": "Narrative before Cresseid's complaint",
+      "summary": "The narrator invokes Chaucer, recounts Cresseid's abandonment and return to her father, and narrates her dream of the planetary parliament, judgment, disease, exclusion, and removal to the leper hospital.",
+      "item_count": 58,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 58, "verse_groups": 58, "verse_lines": 406},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A", "scheme": "line", "value": "1–406"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "page", "value": "2–17"}
+      ],
+      "evidence_ids": ["evidence:hencres-structure", "evidence:lineage-smith"]
+    },
+    {
+      "id": "part:complaint",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "section",
+      "label": "The Complaint of Cresseid",
+      "summary": "Cresseid reviews her former status, acknowledges her fall, laments her present exclusion, and warns other lovers.",
+      "item_count": 7,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 7, "verse_groups": 7, "verse_lines": 63},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A", "scheme": "line", "value": "407–469"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "page", "value": "17–19"}
+      ],
+      "evidence_ids": ["evidence:hencres-structure", "evidence:mets-testament"]
+    },
+    {
+      "id": "part:closing-narrative",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "section",
+      "label": "Closing narrative, testament, and death",
+      "summary": "After the complaint, Cresseid goes begging, encounters Troilus without mutual recognition, learns the almsgiving knight was Troilus, makes her testament, dies, and receives a tomb whose epitaph records her fall.",
+      "item_count": 21,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 21, "verse_groups": 21, "verse_lines": 147},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A", "scheme": "line", "value": "470–616"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "page", "value": "19–24"}
+      ],
+      "evidence_ids": ["evidence:hencres-structure", "evidence:lineage-smith"]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:troilus-and-criseyde",
+      "title": "Troilus and Criseyde",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "CME/UMDL", "value": "Troilus", "uri": "https://name.umdl.umich.edu/Troilus"}],
+      "evidence_ids": ["evidence:hencres-xml", "evidence:mets-testament"],
+      "notes": ["Henryson explicitly invokes and questions Chaucer's account, reuses its characters and predicament, and imagines Cresseid's later fate. The relationship is modeled as literary response and alternative ending, not as a textual version of Chaucer's poem."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:HenCres",
+    "manifest_path": "manifests/lineage/works/HenCres.json",
+    "bindings": [
+      {"metadata_target": "work:HenCres", "lineage_entity_id": "edition:charteris:testament-1593", "role": "source_witness"},
+      {"metadata_target": "work:HenCres", "lineage_entity_id": "edition:smith:henryson-vol3-1908", "role": "source_edition"},
+      {"metadata_target": "work:HenCres", "lineage_entity_id": "encoding:umich-ota:U-243-A", "role": "digital_encoding"},
+      {"metadata_target": "work:HenCres", "lineage_entity_id": "artifact:general-corpus:HenCres", "role": "repository_representation"},
+      {"metadata_target": "work:HenCres", "lineage_entity_id": "catalog:mets:testament-witness-census", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:hencres-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HenCres.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenCres.xml",
+      "locator": "HEADER; DIV1/DIV2/LG/L/PB elements",
+      "summary": "Supplies the electronic title, Henryson attribution, OTA identifier, 1993 encoding date, 1593 Charteris source statement, Smith pagination statement, omissions, headings, and full text.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7254319ce0a4d36232eb5ca5b7b8cd98807a120d5183c72574ca322c76d7639c"
+    },
+    {
+      "id": "evidence:hencres-structure",
+      "type": "computational_inspection",
+      "citation": "Element and stanza-pattern audit of repository HenCres.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenCres.xml",
+      "locator": "DIV1/DIV2/LG/L/PB elements and line N attributes",
+      "summary": "Counts two DIV1, six DIV2, 86 LG, 617 L, and 23 PB elements (Smith pages 2–24). Seventy-nine LG contain seven lines and seven contain nine; 616 verse lines are grouped, while final ‘Finis’ is an ungrouped L misnumbered 617. Lines 407–469 form the seven-stanza Complaint, and lines 470–616 return to closing narrative.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-hencres",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, ‘Robert Henryson's The testament of Cresseid,’ CME item HenCres.",
+      "url": "https://quod.lib.umich.edu/c/cme/HenCres?view=toc",
+      "summary": "Confirms the item title, Robert Henryson attribution, 1593 Charteris imprint, OTA U-243-A identifier, public digital-text access, and U-M's current No Copyright–United States statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-general",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, ‘The Complete Works of Robert Henryson: General Introduction.’",
+      "url": "https://metseditions.org/read/ezwGwmGVTWD0GT53eWS4QbGTNVGdwy8qp",
+      "summary": "Reviews Henryson's uncertain biography, association with Dunfermline, Older Scots language, and probable death by about 1500 without treating conjectural details as certain; its source survey distinguishes the lost Asloan copy, complete prints, fragmentary witnesses, and later Speght-derived manuscript copies.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-testament",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, ‘The Testament of Cresseid: Introduction.’",
+      "url": "https://metseditions.org/read/Z9W5AYvWhNdKVIRqZSg98vI4LlxeMBGy",
+      "alternate_urls": ["https://metseditions.org/read/9lVqkrlHRqrAh4MdSVaD7s0lkjkA63Z"],
+      "summary": "Provides the work's literary interpretation, Older Scots context, stanza form, title evidence, relation to Chaucer, late-fifteenth-century dating, textual variants, and Charteris's status as the best surviving early witness.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-thynne",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage manifest evidence for William Thynne's 1532 Chaucer edition.",
+      "repository_path": "manifests/lineage/works/HenCres.json",
+      "source_evidence_id": "evidence:folger-thynne-1532",
+      "summary": "Supports the bibliographic identity of the earliest surviving complete printed text and its original folio location.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-smith",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage manifest evidence for G. Gregory Smith's 1908 edition and direct XML comparison.",
+      "repository_path": "manifests/lineage/works/HenCres.json",
+      "source_evidence_id": "evidence:smith-1908-scan",
+      "summary": "Supports the conclusion that HenCres PB milestones reproduce Smith's pages 2–24 while the XML does not simply reproduce all of Smith's editorial readings.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:composition-date-place",
+      "question": "Can the poem's composition be dated or localized more narrowly than late-fifteenth-century Scotland without treating literary inference or Henryson's uncertain biography as documentary fact?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult current Henryson chronology and textual scholarship before adding normalized composition bounds or a precise place."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-general", "evidence:mets-testament"]
+    },
+    {
+      "id": "question:early-scottish-print",
+      "question": "Did a now-lost early-sixteenth-century Scottish print transmit the Testament before or independently of Thynne 1532?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Review the inventory and bibliographical evidence cited in the METS introduction; do not create a confirmed witness entity from a hypothetical lost print."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:mets-testament"]
+    }
+  ],
+  "notes": [
+    "The stanza and line counts describe the intellectual poem and are reconciled explicitly with the repository encoding's extra L element for ‘Finis’.",
+    "Witness dialect, scribal spelling, Charteris's compositorial and editorial interventions, Smith's emendations, and digital encoding practices remain in the lineage manifest rather than being collapsed into work language or authorship.",
+    "The six supplied line-range DIV2 headings in HenCres.xml are encoding navigation, not treated as a stable authorial section hierarchy."
+  ]
+}

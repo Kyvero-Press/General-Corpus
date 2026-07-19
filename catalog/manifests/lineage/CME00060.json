@@ -1,0 +1,979 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00060",
+  "work_id": "CME00060",
+  "title": "Prosalegenden: Die Legenden des MS. Douce 114",
+  "primary_subject": "artifact:general-corpus:CME00060",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The repository XML is a local representation of University of Michigan CME item CME00060, manually keyed from Carl Horstmann's 1885 Anglia article, pp. 102-196. The article presents German editorial matter and a complete edition of four related Middle English translations from Oxford, Bodleian Library MS. Douce 114: three saints' lives, Stefano Maconi's letter about Catherine of Siena, and the anonymous compiler-translator's framing apologies. Horstmann maps the edited manuscript selection to fols. 1r-89v of a substantially larger codex, with fol. 89v shared by the opening of the adjacent Seven Points of True Love. A complete 738-canvas scan of the entire printed Anglia volume and a second, volume-partial scan are cached with exact article mappings. No public whole-codex image object for Douce 114 was found on 2026-07-12; the exact negative search and a request route specifying every leaf and all codex furniture are recorded.",
+  "languages": ["enm", "deu", "lat"],
+  "review_notes": [
+    "The cataloged edited selection, its four medieval translated source texts, the manuscript codex, the 1885 article, digital encodings, scans, catalogs, and later scholarship are kept as distinct layers.",
+    "Complete cached sources preserve every provider-published canvas or page. The target article is associated through work_portion rather than cropped from either printed volume.",
+    "MS. Douce 114 is not represented by the cached edition facsimiles. A future manuscript delivery should cover the complete physical codex, not only fols. 1r-89v."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00060",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00060",
+      "description": "The XML artifact consumed by this repository's conversion workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00060"},
+        {"scheme": "git-blob", "value": "8e595a50e80195b10ca0849d3aa3d8b83e0cf122"}
+      ],
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00060.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "8e595a50e80195b10ca0849d3aa3d8b83e0cf122",
+        "sha256": "8927a5c523f628a042be359a5dda4fe16c3ae338ddf155ed6b3b967864acbf40"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-cme00060-xml"],
+      "notes": [
+        "IDG/@ID, BIBNO, and VID all identify CME00060.",
+        "The 406,726-byte file contains the complete printed page run 102-196 as 95 PB elements and records a substantive 2016 review."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME00060",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item CME00060",
+      "description": "A manually keyed, proofread, TEI-like representation of Horstmann's complete 1885 article.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00060", "uri": "https://name.umdl.umich.edu/CME00060"},
+        {"scheme": "UMDL handle", "value": "CME00060", "uri": "https://name.umdl.umich.edu/CME00060"}
+      ],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-cme-collection", "evidence:repo-cme00060-xml"],
+      "notes": [
+        "The XML has one DIV1, six DIV2, eight DIV3, seventy DIV4, 106 P, 224 NOTE, 3,442 italic HI, and 95 PB elements.",
+        "Its first page milestone represents printed p. 102 without an N value; later PB/@N values continue consecutively from 103 through 196."
+      ]
+    },
+    {
+      "id": "edition:horstmann:anglia-8-1885",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann's 1885 Prosalegenden from MS. Douce 114",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [
+        {"label": "publication", "value": "1885", "normalized": "1885", "certainty": "high", "evidence_ids": ["evidence:horstmann-1885-scan"]}
+      ],
+      "bibliographic": {
+        "citation": "Carl Horstmann, ed., 'Prosalegenden: Die Legenden des MS. Douce 114 (Dialekt von Nottinghamshire?),' Anglia: Zeitschrift für englische Philologie 8 (1885): 102-196.",
+        "title": "Prosalegenden: Die Legenden des MS. Douce 114 (Dialekt von Nottinghamshire?)",
+        "container_title": "Anglia: Zeitschrift für englische Philologie",
+        "volume": "8",
+        "publisher": "Max Niemeyer",
+        "publication_place": "Halle a. S.",
+        "date": "1885",
+        "pages": "102-196",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-1885-scan", "evidence:repo-cme00060-xml"],
+      "notes": [
+        "This is the immediate printed source represented by CME00060.",
+        "The German introduction occupies pp. 102-106; Elizabeth pp. 107-118; Christina pp. 119-134; Marie pp. 134-184; the Catherine letter pp. 184-195; and the closing compiler apology pp. 195-196. Pages 134, 184, and 195 are shared boundaries.",
+        "Horstmann maps the four medieval items to manuscript fols. 1-89v and prints the adjacent Seven Points separately in Anglia 10 (1888)."
+      ]
+    },
+    {
+      "id": "facsimile:bsb:bsb11642510",
+      "type": "facsimile",
+      "label": "BSB complete published IIIF sequence for Anglia volume 8 (1885)",
+      "description": "A 738-canvas provider-published sequence preserving the entire exposed journal volume, including all pages outside Horstmann's article.",
+      "identifiers": [
+        {"scheme": "BSB-ID", "value": "bsb11642510", "uri": "https://www.digitale-sammlungen.de/view/bsb11642510"},
+        {"scheme": "DDB", "value": "VY3SSDHH5NLJZVRN6EVQBTDIKFOV6PXE", "uri": "https://www.deutsche-digitale-bibliothek.de/item/VY3SSDHH5NLJZVRN6EVQBTDIKFOV6PXE"}
+      ],
+      "creator_ids": ["agent:bavarian-state-library"],
+      "reproduction_format": "738-canvas IIIF Presentation 2 sequence; cached as one ZIP with all width-1600 JPEG derivatives, provider manifest, and exact inventory",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bsb-anglia8-manifest", "evidence:bsb-bundle-audit"],
+      "notes": [
+        "Horstmann's article maps to canvases 116-210. Internal components map to 116-120, 121-132, 133-148, 148-198, 198-209, and 209-210 respectively.",
+        "Completeness is relative to all 738 canvases exposed by the BSB manifest; it does not assert that unexposed binding exteriors or preservation masters exist in the bundle."
+      ]
+    },
+    {
+      "id": "facsimile:ia:anglia8-1885-partial",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Anglia volume 8 (1885), missing title and copyright pages",
+      "description": "A 734-page PDF generated from a 738-image scan. The target article is complete, but the provider explicitly reports that title and copyright pages are missing.",
+      "identifiers": [
+        {"scheme": "Internet Archive identifier", "value": "angliazeitschrif08tbuoft", "uri": "https://archive.org/details/angliazeitschrif08tbuoft"},
+        {"scheme": "Internet Archive ARK", "value": "ark:/13960/t7vm4f49q"}
+      ],
+      "creator_ids": ["agent:internet-archive", "agent:robarts-library"],
+      "reproduction_format": "734-page PDF with cached item metadata and scandata sidecars",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia-anglia8-pdf", "evidence:ia-anglia8-metadata"],
+      "notes": [
+        "The article occupies PDF physical pp. 112-206 and BookReader leaves n128-n228.",
+        "The complete-as-published BSB sequence is the preferred full-volume surrogate."
+      ]
+    },
+    {
+      "id": "witness:bodleian:MS-Douce-114",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Douce 114",
+      "alternate_labels": ["Bodleian Library MS Douce 114", "MS_Douce_114"],
+      "description": "A fifteenth-century English parchment codex preserving the unique known Middle English copies of the four texts edited in CME00060, followed by the Seven Points of True Love and Everlasting Wisdom.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Douce 114"},
+        {"scheme": "MMOL manuscript ID", "value": "manuscript_4492", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4492"},
+        {"scheme": "MMOL msID", "value": "MS_Douce_114"},
+        {"scheme": "Bodleian IE ARK", "value": "ark:29072/x00g354g247w"},
+        {"scheme": "Bodleian CR ARK", "value": "ark:29072/x0rv042s74wq"},
+        {"scheme": "Bodleian Summary Catalogue number", "value": "21688"}
+      ],
+      "date_statements": [
+        {"label": "repository date", "value": "15th century", "normalized": "1401/1500", "certainty": "high", "evidence_ids": ["evidence:bodleian-douce114-catalog"]},
+        {"label": "current scholarly date", "value": "first half of the fifteenth century", "normalized": "1401/1450", "certainty": "medium", "evidence_ids": ["evidence:brown-2009-review", "evidence:vander-veen-2007"]}
+      ],
+      "holding": {
+        "institution_id": "agent:bodleian-library",
+        "shelfmark": "MS. Douce 114",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4492",
+        "notes": "The current Bodleian TEI record identifies manuscript_4492 / MS_Douce_114 and gives two institutional ARKs and Summary Catalogue number 21688."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "ii later endleaves + 152 leaves in the current Bodleian record",
+        "format": "Codex; coloured capitals; nineteenth-century binding with marbled flyleaves reported by Vander Veen",
+        "dimensions": "Binding 9 x 6.625 inches; Vander Veen reports approximately 22 x 16 cm with a 15 x 10 cm writing space and 32 lines per page",
+        "notes": [
+          "Horstmann and Vander Veen report 150 leaves, while the Bodleian record was revised in 2024 to ii + 152 leaves; the counting difference has not been reconciled.",
+          "Horstmann assigns Elizabeth to fols. 1-12, Christina to 12-26v, Marie to 26v-76, the Catherine letter to 76-89v, and Seven Points to 89v-148.",
+          "The Beauvale Charterhouse ownership inscription establishes provenance, not certain production there."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog", "evidence:horstmann-1885-scan", "evidence:vander-veen-2007", "evidence:biblissima-douce114"]
+    },
+    {
+      "id": "catalog:bodleian:mmol-douce114",
+      "type": "catalog_description",
+      "label": "Bodleian Medieval Manuscripts in Oxford Libraries record for MS. Douce 114",
+      "creator_ids": ["agent:bodleian-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog"],
+      "notes": ["The pinned public TEI record supplies the current shelfmark, five-item contents list, extent, material, dimensions, date, provenance, acquisition, and stable identifiers, but no item-level folio loci."]
+    },
+    {
+      "id": "catalog:biblissima:Q274556",
+      "type": "catalog_description",
+      "label": "Biblissima record Q274556 for MS. Douce 114",
+      "identifiers": [{"scheme": "Biblissima", "value": "Q274556", "uri": "https://data.biblissima.fr/entity/Q274556"}],
+      "creator_ids": ["agent:biblissima"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:biblissima-douce114"],
+      "notes": ["This aggregated record reports the four lives at fols. 1r-87r and Seven Points at 89v-148r, creating a boundary conflict with Horstmann's fol. 89v endpoint. Its page states that no digitized object is in the selection; generic Mirador controls are not image access."]
+    },
+    {
+      "id": "catalog:vander-veen:2007-thesis",
+      "type": "catalog_description",
+      "label": "Brian C. Vander Veen's 2007 study of the vitae of MS. Douce 114",
+      "creator_ids": ["agent:brian-vander-veen"],
+      "date_statements": [{"label": "PhD thesis", "value": "2007", "normalized": "2007", "certainty": "high", "evidence_ids": ["evidence:vander-veen-2007"]}],
+      "bibliographic": {
+        "citation": "Brian C. Vander Veen, The Vitae of Bodleian Library MS Douce 114 (PhD thesis, University of Nottingham, 2007).",
+        "title": "The Vitae of Bodleian Library MS Douce 114",
+        "publisher": "University of Nottingham",
+        "date": "2007",
+        "pages": "226-page PDF",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vander-veen-2007"],
+      "notes": ["The cached PDF is the complete thesis from a public mirror; Nottingham's institutional record labels it All Rights Reserved."]
+    },
+    {
+      "id": "edition:brown:three-women-2009",
+      "type": "scholarly_edition",
+      "label": "Jennifer N. Brown's Three Women of Liège",
+      "creator_ids": ["agent:jennifer-brown"],
+      "date_statements": [{"label": "publication", "value": "2009", "normalized": "2009", "certainty": "high", "evidence_ids": ["evidence:brepols-three-women"]}],
+      "bibliographic": {
+        "citation": "Jennifer N. Brown, ed., Three Women of Liège: A Critical Edition of and Commentary on the Middle English Lives of Elizabeth of Spalbeek, Christina Mirabilis, and Marie d'Oignies, Medieval Women: Texts and Contexts 23 (Turnhout: Brepols, 2009), viii + 350 pp.",
+        "title": "Three Women of Liège",
+        "series": "Medieval Women: Texts and Contexts 23",
+        "publisher": "Brepols",
+        "publication_place": "Turnhout",
+        "date": "2009",
+        "pages": "viii, 350",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:brepols-three-women", "evidence:brown-2009-review"],
+      "notes": ["This later critical edition covers the Elizabeth, Christina, and Marie texts only. It excludes the Catherine letter and therefore is not a complete replacement for Horstmann's four-text selection."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus project"},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library"},
+    {"id": "agent:carl-horstmann", "type": "person", "name": "Carl Horstmann", "alternate_names": ["Karl Horstmann"]},
+    {"id": "agent:bavarian-state-library", "type": "organization", "name": "Bayerische Staatsbibliothek"},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive"},
+    {"id": "agent:robarts-library", "type": "organization", "name": "Robarts Library, University of Toronto"},
+    {"id": "agent:bodleian-library", "type": "organization", "name": "Bodleian Libraries, University of Oxford"},
+    {"id": "agent:biblissima", "type": "organization", "name": "Biblissima+"},
+    {"id": "agent:brian-vander-veen", "type": "person", "name": "Brian C. Vander Veen", "alternate_names": ["Brian van der Veen"]},
+    {"id": "agent:university-nottingham", "type": "organization", "name": "University of Nottingham"},
+    {"id": "agent:jennifer-brown", "type": "person", "name": "Jennifer N. Brown"},
+    {"id": "agent:brepols", "type": "organization", "name": "Brepols Publishers"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:CME00060",
+      "object": "encoding:umich-cme:CME00060",
+      "scope": {"subject": {"kind": "whole", "description": "repository XML artifact"}, "object": {"kind": "whole", "description": "CME00060 digital encoding"}, "notes": "The repository artifact carries the U-M identifier family and represents the same encoded article; exact file-copy history is not documented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-cme00060-xml", "evidence:umich-cme-collection"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-horstmann",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00060",
+      "object": "edition:horstmann:anglia-8-1885",
+      "scope": {"subject": {"kind": "whole", "description": "all encoded divisions and notes", "locators": ["PB references 1-95", "printed pp. 102-196"]}, "object": {"kind": "whole", "description": "complete Horstmann article", "locators": ["Anglia 8 (1885), pp. 102-196"]}, "notes": "Consecutive page milestones, title, headings, text, notes, and Horstmann's signed close identify the article as the immediate source."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-cme00060-xml", "evidence:horstmann-1885-scan"]}
+    },
+    {
+      "id": "relation:horstmann-transcribes-douce114",
+      "type": "transcribes",
+      "subject": "edition:horstmann:anglia-8-1885",
+      "object": "witness:bodleian:MS-Douce-114",
+      "scope": {
+        "subject": {"kind": "part", "description": "Middle English edited text and compiler framing, excluding Horstmann's German introduction and notes", "locators": ["printed pp. 107-196"]},
+        "object": {"kind": "part", "description": "four Middle English translations and compiler apologies", "locators": ["edition-reported fols. 1r-89v", "Elizabeth fols. 1-12", "Christina fols. 12-26v", "Marie fols. 26v-76", "Catherine fols. 76-89v"]},
+        "notes": "Folio 89v is also the opening boundary of the excluded Seven Points. Biblissima's conflicting fol. 87r endpoint is retained as an open question."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1885-scan", "evidence:bodleian-douce114-catalog"], "notes": "Horstmann explicitly identifies MS. Douce 114 and inventories each locus."}
+    },
+    {
+      "id": "relation:bsb-facsimile-of-horstmann",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:bsb11642510",
+      "object": "edition:horstmann:anglia-8-1885",
+      "scope": {"subject": {"kind": "part", "description": "article inside complete cached volume", "locators": ["IIIF canvases 116-210", "ZIP images/000116.jpg-images/000210.jpg"]}, "object": {"kind": "whole", "description": "complete article", "locators": ["printed pp. 102-196"]}, "notes": "All 738 provider canvases are cached; the relation scopes only the article's position within that full object."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bsb-anglia8-manifest", "evidence:bsb-bundle-audit"]}
+    },
+    {
+      "id": "relation:ia-facsimile-of-horstmann",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:anglia8-1885-partial",
+      "object": "edition:horstmann:anglia-8-1885",
+      "scope": {"subject": {"kind": "part", "description": "complete article within a volume-partial PDF", "locators": ["PDF physical pp. 112-206", "BookReader leaves n128-n228"]}, "object": {"kind": "whole", "description": "complete article", "locators": ["printed pp. 102-196"]}, "notes": "The article is complete even though the scan omits the volume's title and copyright pages."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-anglia8-pdf", "evidence:ia-anglia8-metadata"]}
+    },
+    {
+      "id": "relation:bodleian-catalog-describes-douce114",
+      "type": "describes",
+      "subject": "catalog:bodleian:mmol-douce114",
+      "object": "witness:bodleian:MS-Douce-114",
+      "scope": {"subject": {"kind": "whole", "description": "current TEI catalog description"}, "object": {"kind": "whole", "description": "entire codex"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-douce114-catalog"]}
+    },
+    {
+      "id": "relation:biblissima-describes-douce114",
+      "type": "describes",
+      "subject": "catalog:biblissima:Q274556",
+      "object": "witness:bodleian:MS-Douce-114",
+      "scope": {"subject": {"kind": "whole", "description": "aggregated manuscript record"}, "object": {"kind": "whole", "description": "entire codex, with item-level loci"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:biblissima-douce114"], "notes": "The record's existence and stated loci are confirmed; its 87r boundary conflicts with Horstmann."}
+    },
+    {
+      "id": "relation:vander-veen-describes-douce114",
+      "type": "describes",
+      "subject": "catalog:vander-veen:2007-thesis",
+      "object": "witness:bodleian:MS-Douce-114",
+      "scope": {"subject": {"kind": "whole", "description": "complete thesis"}, "object": {"kind": "whole", "description": "codex, with emphasis on the four vitae/letter texts"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:vander-veen-2007"]}
+    },
+    {
+      "id": "relation:brown-transcribes-douce114-first-three",
+      "type": "transcribes",
+      "subject": "edition:brown:three-women-2009",
+      "object": "witness:bodleian:MS-Douce-114",
+      "scope": {"subject": {"kind": "whole", "description": "critical editions of Elizabeth, Christina, and Marie"}, "object": {"kind": "part", "description": "first three translated lives only", "locators": ["Horstmann-reported fols. 1-76"]}, "notes": "Brown's edition excludes Stefano Maconi's Catherine letter and cannot alone reproduce the full CME00060 selection."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:brepols-three-women", "evidence:brown-2009-review"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-cme00060",
+      "entity": "artifact:general-corpus:CME00060",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "repository_path": "CME/source/CME_phase_3/CME00060.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-cme00060-xml"]
+    },
+    {
+      "id": "access:umich-cme00060",
+      "entity": "encoding:umich-cme:CME00060",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public CME item handle and collection bulk XML",
+      "url": "https://name.umdl.umich.edu/CME00060",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/"],
+      "cost": "free",
+      "format": "HTML text and XML bulk data",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich-cme-collection", "evidence:repo-cme00060-xml"],
+      "notes": ["The stable item handle and local identifier are confirmed; automated item-page access was challenged during review, while the collection and bulk-source route remained public."]
+    },
+    {
+      "id": "access:bsb-anglia8-iiif",
+      "entity": "facsimile:bsb:bsb11642510",
+      "provider_id": "agent:bavarian-state-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Public viewer and IIIF Presentation 2 manifest",
+      "url": "https://www.digitale-sammlungen.de/view/bsb11642510",
+      "alternate_urls": [
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/manifest",
+        "https://www.deutsche-digitale-bibliothek.de/item/VY3SSDHH5NLJZVRN6EVQBTDIKFOV6PXE"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete BSB Anglia volume 8 (1885) IIIF bundle",
+          "path": "source-cache/CME00060/bsb-anglia-8-1885-complete-iiif-1600px.zip",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/manifest",
+          "sha256": "b6130978e48bcad2a51324fb6bc4d66a99ae8565172d1bb2ed16340db9c7c3af",
+          "bytes": 329839535,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 738,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Horstmann, Prosalegenden: Die Legenden des MS. Douce 114",
+            "locators": ["printed pp. 102-196", "IIIF canvases 116-210", "ZIP members images/000116.jpg-images/000210.jpg"],
+            "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/canvas/116",
+            "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/canvas/210",
+            "notes": ["Internal shared-page mappings are: introduction 116-120; Elizabeth 121-132; Christina 133-148; Marie 148-198; Catherine 198-209; closing apology 209-210."]
+          },
+          "notes": [
+            "ZIP contains the provider manifest, exact-source inventory, and all 738 canvas images.",
+            "Requested effective profile was the width-only IIIF size `1600,` in JPEG format. All 738 audited images are 1600 pixels wide; heights range from 2271 to 2544 pixels."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF JPEG page images",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bsb-anglia8-manifest", "evidence:bsb-bundle-audit"]
+    },
+    {
+      "id": "access:ia-anglia8",
+      "entity": "facsimile:ia:anglia8-1885-partial",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Public item page and direct derivative files",
+      "url": "https://archive.org/details/angliazeitschrif08tbuoft",
+      "alternate_urls": [
+        "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft.pdf",
+        "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_meta.xml",
+        "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Internet Archive scan of Anglia volume 8 (missing title and copyright pages)",
+          "path": "source-cache/CME00060/ia-anglia-8-1885-partial-volume.pdf",
+          "source_url": "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft.pdf",
+          "sha256": "8ca7c79e3f16ab811271adb37a29479f05038d11522e9c8cdf6d77f268f62327",
+          "bytes": 48651288,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Horstmann, Prosalegenden: Die Legenden des MS. Douce 114",
+            "locators": ["printed pp. 102-196", "PDF physical pp. 112-206", "BookReader leaves n128-n228"],
+            "start_url": "https://archive.org/details/angliazeitschrif08tbuoft/page/n128/mode/1up",
+            "end_url": "https://archive.org/details/angliazeitschrif08tbuoft/page/n228/mode/1up",
+            "notes": ["The target article is complete; coverage is partial because the provider reports missing volume title and copyright pages."]
+          },
+          "notes": ["Use the BSB bundle for a complete provider-published volume surrogate."]
+        },
+        {
+          "label": "Internet Archive item metadata for Anglia volume 8 scan",
+          "path": "source-cache/CME00060/ia-anglia-8-1885-meta.xml",
+          "source_url": "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_meta.xml",
+          "sha256": "47e08634d4dd037d86a132e4290086878a12e87e1c3fa5806166d5486bc31a44",
+          "bytes": 3045,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive scandata for Anglia volume 8 scan",
+          "path": "source-cache/CME00060/ia-anglia-8-1885-scandata.xml",
+          "source_url": "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_scandata.xml",
+          "sha256": "b14e35dd42dbdc66fde30446e458ca9b7ed9f89d70bfbf46a313e203f1832794",
+          "bytes": 412485,
+          "media_type": "text/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF and XML sidecars",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ia-anglia8-pdf", "evidence:ia-anglia8-metadata"]
+    },
+    {
+      "id": "access:bodleian-douce114-catalog",
+      "entity": "catalog:bodleian:mmol-douce114",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public catalog page and pinned public TEI source",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4492",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Douce/MS_Douce_114.xml"],
+      "local_copies": [
+        {
+          "label": "Bodleian MMOL TEI catalog record for MS Douce 114 (pinned)",
+          "path": "source-cache/CME00060/bodleian-ms-douce-114-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Douce/MS_Douce_114.xml",
+          "sha256": "b882d12861b7f63c6ac6f641c1fa34e4181366f29cf1b5651ba115b1441172a7",
+          "bytes": 8631,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and TEI XML catalog metadata",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog"]
+    },
+    {
+      "id": "access:digital-bodleian-douce114-negative",
+      "entity": "witness:bodleian:MS-Douce-114",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Exact-shelfmark search of the Digital Bodleian JSON discovery endpoint",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22Bodleian%20Library%20MS.%20Douce%20114%22",
+      "cost": "free",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:digital-bodleian-negative", "evidence:biblissima-douce114"],
+      "notes": [
+        "The exact shelfmark query returned totalItems=0 on 2026-07-12.",
+        "Biblissima exposes metadata and generic Mirador controls but explicitly reports no digitized object in the selection.",
+        "This is a dated negative, not a claim that the manuscript has never been photographed or can never be digitized."
+      ]
+    },
+    {
+      "id": "access:bodleian-douce114-physical",
+      "entity": "witness:bodleian:MS-Douce-114",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Consult the exact catalog and arrange Special Collections access under current reader and conservation rules",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4492",
+      "contact": "specialcollections.enquiries@bodleian.ox.ac.uk",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog", "evidence:bodleian-order-images"]
+    },
+    {
+      "id": "access:bodleian-douce114-reproduction",
+      "entity": "witness:bodleian:MS-Douce-114",
+      "provider_id": "agent:bodleian-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the Imaging Services image order form by email or post, or ask mediated.copying@bodleian.ox.ac.uk for reference scans",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+        "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/copyright-and-reproducing-images"
+      ],
+      "contact": "mediated.copying@bodleian.ox.ac.uk; specialcollections.enquiries@bodleian.ox.ac.uk",
+      "cost": "fee",
+      "format": "Reference PDF scans or high-resolution colour TIFF images",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bodleian-order-images", "evidence:bodleian-mediated-copying", "evidence:bodleian-reproduction-policy"],
+      "notes": [
+        "Request the complete physical codex, not only the target leaves: upper and lower covers or boards, spine, pastedowns, all flyleaves and later endleaves, blanks, every recto and verso of all 152 currently cataloged leaves, inserts or foldouts, and edges when offered.",
+        "Identify the work portion separately as edition-reported fols. 1r-89v, with fol. 89v shared by the opening of Seven Points; ask staff to reconcile the Biblissima 87r endpoint and the 150-versus-152 leaf count.",
+        "Current listed prices are £1 per reference scan for non-Oxford users; high-resolution colour starts at £27 for the first image and £7.50 per subsequent image from the same item, with large orders negotiated. Conservation or legal limits may apply."
+      ]
+    },
+    {
+      "id": "access:biblissima-douce114",
+      "entity": "catalog:biblissima:Q274556",
+      "provider_id": "agent:biblissima",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://portail.biblissima.fr/fr/ark%3A/43093/mdata1cfd3c1c212919784c6f115d9c40685b71d187a4",
+      "cost": "free",
+      "format": "HTML metadata",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:biblissima-douce114"]
+    },
+    {
+      "id": "access:vander-veen-thesis",
+      "entity": "catalog:vander-veen:2007-thesis",
+      "provider_id": "agent:university-nottingham",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Institutional thesis record; exact PDF currently cached from a public mirror because the institutional direct-file endpoint rejected automated retrieval",
+      "url": "https://eprints.nottingham.ac.uk/11455/",
+      "alternate_urls": ["https://www.glasgownecropolis.org/wp-content/uploads/2011/03/beguins-dissertation-The_Vitae_of_Douce_114.pdf442257.pdf"],
+      "local_copies": [
+        {
+          "label": "Brian C. Vander Veen, The Vitae of Bodleian Library MS Douce 114 (PhD thesis, 2007), public mirror",
+          "path": "source-cache/CME00060/vander-veen-2007-vitae-douce-114-thesis.pdf",
+          "source_url": "https://www.glasgownecropolis.org/wp-content/uploads/2011/03/beguins-dissertation-The_Vitae_of_Douce_114.pdf442257.pdf",
+          "sha256": "b0b5a8033708fbe1f266014968bc7e0f2cb896cd8241e646538f08f0e647a177",
+          "bytes": 1008634,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "226-page PDF",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:vander-veen-2007"]
+    },
+    {
+      "id": "access:brown-three-women",
+      "entity": "edition:brown:three-women-2009",
+      "provider_id": "agent:brepols",
+      "resource_kind": "download",
+      "status": "purchasable",
+      "access_method": "Purchase print or e-book from the publisher",
+      "url": "https://www.brepols.net/products/IS-9782503524719-1",
+      "cost": "fee",
+      "format": "Hardback or e-book",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:brepols-three-women"],
+      "notes": ["The publisher listed print and e-book editions at €85 excluding VAT on 2026-07-12. Coverage is limited to the first three lives."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:medieval-texts",
+      "entity": "witness:bodleian:MS-Douce-114",
+      "component": "Underlying fifteenth-century Middle English translations and compiler framing",
+      "jurisdiction": "General age-based assessment",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The texts and surviving witness were created in the fifteenth century; this assessment does not include modern photographs, editions, transcriptions, or provider terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog", "evidence:horstmann-1885-scan"]
+    },
+    {
+      "id": "rights:horstmann-edition-us",
+      "entity": "edition:horstmann:anglia-8-1885",
+      "component": "1885 article text, editorial readings, introduction, and notes",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "University of Michigan asserts No Copyright-United States for the CME collection; Internet Archive metadata reports NOT_IN_COPYRIGHT in the US for the scanned volume.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-cme-collection", "evidence:ia-anglia8-metadata"]
+    },
+    {
+      "id": "rights:umich-encoding-us",
+      "entity": "encoding:umich-cme:CME00060",
+      "access_id": "access:umich-cme00060",
+      "component": "CME digital transcription and markup",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The collection page states that the materials are in the public domain in the United States and applies No Copyright-United States.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-cme-collection"]
+    },
+    {
+      "id": "rights:repo-artifact-us",
+      "entity": "artifact:general-corpus:CME00060",
+      "access_id": "access:repo-cme00060",
+      "component": "Local XML representation of the U-M encoding",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The file represents the U-M CME encoding to which the provider applies No Copyright-United States; no broader worldwide conclusion is made.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-cme00060-xml", "evidence:umich-cme-collection"]
+    },
+    {
+      "id": "rights:bsb-images",
+      "entity": "facsimile:bsb:bsb11642510",
+      "access_id": "access:bsb-anglia8-iiif",
+      "component": "BSB digital page images, IIIF manifest, and access derivatives",
+      "jurisdiction": "Provider statement; Germany",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "The item-level IIIF manifest declares No Copyright-Non-Commercial Use Only 1.0.",
+      "asserted_by_id": "agent:bavarian-state-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bsb-anglia8-manifest"],
+      "notes": ["NoC-NC is a rights statement, not an open license. The private gitignored cache does not establish redistribution, Git publication, print-on-demand, or commercial permission."
+      ]
+    },
+    {
+      "id": "rights:ia-scan-us",
+      "entity": "facsimile:ia:anglia8-1885-partial",
+      "access_id": "access:ia-anglia8",
+      "component": "Internet Archive scan and derivative files",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "Internet Archive item metadata records possible-copyright-status NOT_IN_COPYRIGHT and copyright-region US; it is an item-level provider assertion, not a worldwide dedication.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-anglia8-metadata"]
+    },
+    {
+      "id": "rights:bodleian-requested-images",
+      "entity": "witness:bodleian:MS-Douce-114",
+      "access_id": "access:bodleian-douce114-reproduction",
+      "component": "Any manuscript photographs or scans supplied by Bodleian Imaging Services or mediated copying",
+      "jurisdiction": "United Kingdom and provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "The underlying manuscript is historical, but Bodleian terms govern supplied images. Non-commercial and academic use is allowed under current terms; non-academic electronic or print reproduction requires separate permission.",
+      "asserted_by_id": "agent:bodleian-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-order-images", "evidence:bodleian-reproduction-policy"],
+      "notes": ["Private research use of a supplied whole-codex facsimile must be assessed separately from publishing the image files in this repository or using them in commercial print-on-demand products."
+      ]
+    },
+    {
+      "id": "rights:bodleian-catalog-data",
+      "entity": "catalog:bodleian:mmol-douce114",
+      "access_id": "access:bodleian-douce114-catalog",
+      "component": "Bodleian MMOL TEI catalog description",
+      "jurisdiction": "Unknown",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "The TEI data are publicly downloadable from Bodleian's GitHub repository, but no license statement was found in the repository root during review.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-douce114-catalog"]
+    },
+    {
+      "id": "rights:vander-veen-thesis",
+      "entity": "catalog:vander-veen:2007-thesis",
+      "access_id": "access:vander-veen-thesis",
+      "component": "2007 thesis text and PDF",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The University of Nottingham institutional record labels the downloadable thesis All Rights Reserved.",
+      "asserted_by_id": "agent:university-nottingham",
+      "license": {"name": "All Rights Reserved"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vander-veen-2007"],
+      "notes": ["Public download and private research caching do not authorize redistribution of the complete thesis PDF."
+      ]
+    },
+    {
+      "id": "rights:brown-edition",
+      "entity": "edition:brown:three-women-2009",
+      "access_id": "access:brown-three-women",
+      "component": "Modern critical text, introduction, commentary, annotations, and e-book",
+      "jurisdiction": "Publisher statement",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The current publisher page offers the modern book for sale and states All Rights Reserved.",
+      "asserted_by_id": "agent:brepols",
+      "license": {"name": "All Rights Reserved"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brepols-three-women"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:horstmann-selection",
+      "entity": "edition:horstmann:anglia-8-1885",
+      "practice": "selection",
+      "source_feature": "A codex of five cataloged Middle English items and adjacent material",
+      "representation": "Four translated lives/letter with compiler framing, fols. 1r-89v",
+      "description": "Horstmann's article edits the first four related translations and their compiler apologies, while excluding the adjacent Seven Points beginning on shared fol. 89v; he published Seven Points separately in 1888.",
+      "scope": "MS. Douce 114 fols. 1r-89v; Anglia 8 pp. 102-196",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1885-scan", "evidence:bodleian-douce114-catalog"]
+    },
+    {
+      "id": "practice:horstmann-expansions",
+      "entity": "edition:horstmann:anglia-8-1885",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations",
+      "representation": "Expanded letters or strings printed in italics",
+      "description": "The later scholarly review of Brown's edition explicitly identifies Horstmann's italics as expansions of scribal abbreviations and notes his preservation of yogh, thorn, and ampersand.",
+      "scope": "Middle English edited text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brown-2009-review", "evidence:horstmann-1885-scan"]
+    },
+    {
+      "id": "practice:umich-italic-preservation",
+      "entity": "encoding:umich-cme:CME00060",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Horstmann's italic expansions",
+      "representation": "3,442 HI elements with REND=italic",
+      "description": "The XML preserves Horstmann's typographic expansion signal as italic markup. That signal records the print editor's treatment; it is not a visual facsimile of the manuscript letterforms.",
+      "scope": "Complete CME00060 XML",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-cme00060-xml", "evidence:brown-2009-review"]
+    },
+    {
+      "id": "practice:umich-article-boundary",
+      "entity": "encoding:umich-cme:CME00060",
+      "practice": "selection",
+      "source_feature": "Anglia volume 8 contains many unrelated articles and reviews",
+      "representation": "Complete consecutive encoding of Horstmann's article only",
+      "description": "The XML's 95 page milestones cover every printed page from 102 through 196 while excluding the rest of the journal volume. Shared internal boundary pages are not duplicated as separate physical pages.",
+      "scope": "Anglia 8 (1885), pp. 102-196",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-cme00060-xml", "evidence:bsb-anglia8-manifest"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-cme00060-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_3/CME00060.xml at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "repository_path": "CME/source/CME_phase_3/CME00060.xml",
+      "locator": "IDG, publication header, TEMPHEAD, structural divisions, PB/REF, HI, NOTE, signed close",
+      "summary": "Establishes the repository artifact, identifier family, Horstmann title and responsibility, language declaration, complete page run, internal structure, markup counts, and 2016 review history.",
+      "sha256": "8927a5c523f628a042be359a5dda4fe16c3ae338ddf155ed6b3b967864acbf40",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection page and about page",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/about.html", "https://name.umdl.umich.edu/CME00060"],
+      "summary": "States that the corpus is publicly accessible, that recent batches were manually keyed from public-domain editions with in-house proofreading, that bulk XML is available, and that the provider applies No Copyright-United States.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:horstmann-1885-scan",
+      "type": "edition_statement",
+      "citation": "Carl Horstmann, 'Prosalegenden: Die Legenden des MS. Douce 114,' Anglia 8 (1885), pp. 102-196, complete article in cached BSB and Internet Archive scans",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/manifest",
+      "alternate_urls": ["https://archive.org/details/angliazeitschrif08tbuoft"],
+      "repository_path": "source-cache/CME00060/bsb-anglia-8-1885-complete-iiif-1600px.zip",
+      "locator": "printed pp. 102-196; BSB canvases 116-210",
+      "summary": "Establishes the immediate edition, complete article contents, manuscript identification and per-item loci, source-language authors, compiler statements, shared fol. 89v boundary, conjectural Nottinghamshire localization, and Horstmann's editorial selection.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bsb-anglia8-manifest",
+      "type": "digital_surrogate",
+      "citation": "Bayerische Staatsbibliothek, Anglia volume 8 (1885), BSB-ID bsb11642510, IIIF Presentation 2 manifest",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11642510/manifest",
+      "alternate_urls": ["https://www.digitale-sammlungen.de/view/bsb11642510"],
+      "locator": "738 canvases; license field; canvases 116-210",
+      "summary": "Provides a complete published volume sequence, exact canvas labels and image services, article mapping, and item-level NoC-NC rights statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bsb-bundle-audit",
+      "type": "visual_inspection",
+      "citation": "Local integrity and image-profile audit of cached BSB IIIF bundle",
+      "repository_path": "source-cache/CME00060/bsb-anglia-8-1885-complete-iiif-1600px.zip",
+      "locator": "ZIP inventory.json; first, target-start, target-end, and final images; all image dimensions",
+      "summary": "ZIP integrity passes with 740 members: manifest, inventory, and 738 images. Inventory count is 738; all images use exact width request `1600,`, are 1600 pixels wide, and range from 2271 to 2544 pixels high. Article start/end are images 000116 and 000210.",
+      "sha256": "b6130978e48bcad2a51324fb6bc4d66a99ae8565172d1bb2ed16340db9c7c3af",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:ia-anglia8-pdf",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive, angliazeitschrif08tbuoft, PDF derivative",
+      "url": "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft.pdf",
+      "repository_path": "source-cache/CME00060/ia-anglia-8-1885-partial-volume.pdf",
+      "locator": "PDF pp. 112-206",
+      "summary": "Provides a second complete reproduction of the target article and establishes its local PDF mapping; the source volume is partial as documented by item metadata.",
+      "sha256": "8ca7c79e3f16ab811271adb37a29479f05038d11522e9c8cdf6d77f268f62327",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:ia-anglia8-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive item metadata and scandata for angliazeitschrif08tbuoft",
+      "url": "https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_meta.xml",
+      "alternate_urls": ["https://archive.org/download/angliazeitschrif08tbuoft/angliazeitschrif08tbuoft_scandata.xml"],
+      "repository_path": "source-cache/CME00060/ia-anglia-8-1885-meta.xml",
+      "locator": "notes, possible-copyright-status, copyright-region, imagecount; scandata leaf 128 through 228",
+      "summary": "Reports 738 source images, missing title and copyright pages, camera-quality cautions, US NOT_IN_COPYRIGHT status, and BookReader leaf mappings for printed pp. 102-196.",
+      "sha256": "47e08634d4dd037d86a132e4290086878a12e87e1c3fa5806166d5486bc31a44",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bodleian-douce114-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS. Douce 114, manuscript_4492; pinned TEI record at commit cd36dce9a104617f960dab2c97ea78f95f917496",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4492",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Douce/MS_Douce_114.xml"],
+      "repository_path": "source-cache/CME00060/bodleian-ms-douce-114-catalog-tei.xml",
+      "locator": "msIdentifier, msContents items 1-5, physDesc, history, revisionDesc",
+      "summary": "Confirms the current shelfmark and identifiers, five Middle English contents, parchment codex, ii + 152 leaves, binding dimensions, fifteenth-century English origin, Beauvale ownership, later provenance, and 1834 Bodleian acquisition.",
+      "sha256": "b882d12861b7f63c6ac6f641c1fa34e4181366f29cf1b5651ba115b1441172a7",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:digital-bodleian-negative",
+      "type": "search_result",
+      "citation": "Digital Bodleian JSON discovery search for exact shelfmark 'Bodleian Library MS. Douce 114'",
+      "url": "https://digital.bodleian.ox.ac.uk/search/?q=shelfmark%3A%22Bodleian%20Library%20MS.%20Douce%20114%22",
+      "locator": "Accept: application/json; totalItems=0",
+      "summary": "An exact shelfmark search returned no Digital Bodleian object on 2026-07-12, while broader searches returned unrelated Douce and Abinger records.",
+      "accessed_on": "2026-07-12",
+      "notes": ["This is a reproducible dated negative and should be rechecked after future digitization releases."
+      ]
+    },
+    {
+      "id": "evidence:biblissima-douce114",
+      "type": "scholarly_source",
+      "citation": "Biblissima+, Oxford. Bodleian Library, MS. Douce 114, Q274556",
+      "url": "https://portail.biblissima.fr/fr/ark%3A/43093/mdata1cfd3c1c212919784c6f115d9c40685b71d187a4",
+      "locator": "content presentation and selection modal",
+      "summary": "Reports Seven Points at fols. 89v-148r and the Lives of Four Female Saints at fols. 1r-87r; the page's selection control states that no digitized object is present, so generic Mirador controls are not a facsimile.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:vander-veen-2007",
+      "type": "scholarly_source",
+      "citation": "Brian C. Vander Veen, The Vitae of Bodleian Library MS Douce 114 (PhD thesis, University of Nottingham, 2007)",
+      "url": "https://eprints.nottingham.ac.uk/11455/",
+      "alternate_urls": ["https://www.glasgownecropolis.org/wp-content/uploads/2011/03/beguins-dissertation-The_Vitae_of_Douce_114.pdf442257.pdf"],
+      "repository_path": "source-cache/CME00060/vander-veen-2007-vitae-douce-114-thesis.pdf",
+      "locator": "abstract; introduction; pp. 37-38; pp. 55-69; bibliography",
+      "summary": "Confirms the unique four-text Middle English group, codicological and hand observations, 150-leaf older count, Beauvale provenance cautions, translation method, compiler audience and obedience statements, Rutland dialect localization, and likely copying from an earlier English exemplar. The institutional record labels the thesis All Rights Reserved.",
+      "sha256": "b0b5a8033708fbe1f266014968bc7e0f2cb896cd8241e646538f08f0e647a177",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:brepols-three-women",
+      "type": "official_webpage",
+      "citation": "Brepols, Three Women of Liège product record",
+      "url": "https://www.brepols.net/products/IS-9782503524719-1",
+      "summary": "Identifies Jennifer N. Brown's 2009 critical edition of the three Liège lives, its scope, ISBNs, format, availability, current price, and publisher All Rights Reserved statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:brown-2009-review",
+      "type": "scholarly_source",
+      "citation": "Karen Winstead, review of Jennifer N. Brown, Three Women of Liège, The Medieval Review 10.09.02 (2010)",
+      "url": "https://scholarworks.iu.edu/journals/index.php/tmr/article/view/17089",
+      "summary": "Reports first-quarter-fifteenth-century English translations, a first-half-fifteenth-century Douce witness copied from earlier English originals, Brown's first-three-text scope and exclusion of the Catherine letter, Catherine's possibly later separate quire, and Horstmann's italic abbreviation expansions and preserved special characters.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bodleian-order-images",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Order images from Imaging Services",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images",
+      "summary": "Provides the request route, email/post submission, current minimum and per-image prices, large-order negotiation, research-purpose limitation, technical specifications, and Special Collections contact.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bodleian-mediated-copying",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Special collections mediated copying",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "summary": "States that the service is available to all, supplies reference-quality PDF scans, charges non-Oxford users £1 per scan, may refuse items for conservation or legal reasons, and accepts enquiries at mediated.copying@bodleian.ox.ac.uk.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bodleian-reproduction-policy",
+      "type": "official_webpage",
+      "citation": "Bodleian Libraries, Reproducing images from Imaging Services",
+      "url": "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/copyright-and-reproducing-images",
+      "summary": "Separates underlying copyright from image terms: current terms allow non-commercial and academic purposes, while non-academic electronic or print reproduction requires separate permission; appropriate permissions and credit remain necessary.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:douce114-whole-facsimile",
+      "question": "Does a public or institutionally supplied complete physical-object facsimile of MS. Douce 114 exist, including covers, spine, pastedowns, endleaves, blanks, every leaf, and inserts?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Re-run the exact Digital Bodleian shelfmark search and inspect the MMOL record for new digital-object links.",
+        "Ask Bodleian Special Collections whether an existing complete surrogate can be supplied before commissioning new photography.",
+        "If ordering, request the entire codex surface inventory and map the target fols. 1r-89v inside it rather than requesting only those leaves."
+      ],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:digital-bodleian-negative", "evidence:biblissima-douce114", "evidence:bodleian-order-images"],
+      "notes": ["No manuscript images are cached. The complete printed-source scans are not manuscript facsimiles."
+      ]
+    },
+    {
+      "id": "question:douce114-boundaries-and-extent",
+      "question": "How should the target's final folio and the codex's total leaf count be reconciled across Horstmann, Biblissima/JONAS, Vander Veen, and the current Bodleian record?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask Bodleian staff to confirm whether the four-text group ends on fol. 89v, as Horstmann reports, or fol. 87r, as Biblissima/JONAS reports.",
+        "Request a foliation crosswalk explaining the older 150-leaf count and current ii + 152-leaf catalog extent.",
+        "Use a future whole-codex facsimile to locate the closing compiler apology and shared opening of Seven Points precisely on fol. 89v."
+      ],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1885-scan", "evidence:biblissima-douce114", "evidence:bodleian-douce114-catalog", "evidence:vander-veen-2007"],
+      "notes": ["Until resolved, the lineage uses Horstmann's edition-reported fols. 1r-89v and labels the conflict rather than silently choosing a modern aggregation."
+      ]
+    },
+    {
+      "id": "question:translation-production-exemplars",
+      "question": "Where, when, and from which Latin and earlier Middle English exemplars were the four translations produced and gathered before MS. Douce 114 was copied?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Consult Brown's full textual introduction and subsequent scholarship on the proposed Thurgarton and Beauvale contexts.",
+        "Compare the Middle English texts with the relevant Latin manuscript tradition and Brown's first-three critical edition.",
+        "Keep Beauvale's ownership inscription, the Rutland dialect localization, and any proposed production site as separate evidence until a transmission path is demonstrated."
+      ],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1885-scan", "evidence:vander-veen-2007", "evidence:brown-2009-review", "evidence:bodleian-douce114-catalog"]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00090",
+  "work_id": "CME00090",
+  "record_status": "reviewed",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00090",
+    "unit_type": "compilation",
+    "label": "Saint Antony: Life, Finding, and Translation",
+    "scope_note": "The cataloged subject is the three-part Middle English prose compilation transmitted continuously in British Library Royal MS 17 C XVII, fols. 124v-133r, and edited by Karl Horstmann on printed pp. 116-138. Its parts are a partial life of Antony the Great from the Athanasius-Evagrius tradition (BHL 609), a legendary finding and first translation of his relics to Constantinople (BHL 612), and a second translation into the region of Vienne (BHL 613). CME00090 encodes the complete Middle English edition but excludes Horstmann's introduction and dialect study on pp. 109-115. It is not Horstmann's complete article, the entire manuscript, or one undifferentiated saint's life."
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00090", "uri": "https://name.umdl.umich.edu/CME00090"},
+    {"scheme": "BHL source texts", "value": "609; 612; 613"},
+    {"scheme": "British Library shelfmark", "value": "Royal MS 17 C XVII, ff. 124v-133r", "uri": "https://searcharchives.bl.uk/catalog/040-002107357"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "Saint Antony: Life, Finding, and Translation", "language": "eng", "script": "Latn", "supplied_by": "General Corpus", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-bl", "evidence:metadata-xml"], "notes": "A concise English title distinguishing the three component genres and Antony the Great from Anthony of Padua."}
+    },
+    {
+      "id": "title:horstmann", "type": "alternate", "value": "S. Antonius (vita, inventio, translatio)", "language": "lat", "script": "Latn", "supplied_by": "Karl Horstmann", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann"]},
+      "notes": ["Horstmann's heading within the serial article Prosalegenden V."]
+    },
+    {
+      "id": "title:rubric", "type": "original", "value": "Here begyns þe fyndyng of þe glorios confessour Antone, þe gret ermyt", "language": "enm", "script": "Latn", "scope": {"kind": "whole", "description": "Opening rubric as printed by Horstmann; he argues that it properly belongs to the second component rather than the complete compilation."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "title:part-one", "type": "supplied", "value": "Life of Saint Antony", "language": "eng", "script": "Latn", "supplied_by": "General Corpus", "scope": {"kind": "part", "part_ids": ["part:life"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl"]}
+    },
+    {
+      "id": "title:part-two", "type": "original", "value": "Here begynnys þe fyndyng of þe gloryus confessour Antony & grete hermete", "language": "enm", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:inventio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann"]}
+    },
+    {
+      "id": "title:part-three", "type": "original", "value": "Here begynnys þe translacyone of þe gloryus confessor and hermet saynt Antony of Vienensis", "language": "enm", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:translatio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann"]}
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-translator", "agent_id": "agent:anonymous-middle-english-translator", "role": "translator", "attribution_status": "anonymous", "scope": {"kind": "whole", "description": "One or more unidentified translators of the three Latin components into Middle English"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-horstmann", "evidence:metadata-bhl"], "notes": "No source establishes that one person translated all three parts or identifies the exact Latin exemplar."}
+    },
+    {
+      "id": "responsibility:compiler", "agent_id": "agent:johannes-purvare", "role": "compiler", "attribution_status": "attributed", "scope": {"kind": "whole"},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-bl"], "notes": "Horstmann infers from the same hand and colophon that the scribe named elsewhere as Johannes Presbyter/Purvare may have compiled the unit. The current BL catalog does not make that responsibility certain."}
+    },
+    {
+      "id": "responsibility:horstmann-editor", "agent_id": "agent:karl-horstmann", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "Editor of the 1881 immediate source edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-umich"]}
+    },
+    {
+      "id": "responsibility:horstmann-transcriber", "agent_id": "agent:karl-horstmann", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "whole", "description": "Transcription of Royal MS 17 C XVII, fols. 124v-133r"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:translation", "type": "translation", "display": "By the early fifteenth century", "normalized": {"not_after": 1440}, "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-bl"], "notes": "The witness is dated 1400-1440. It supplies a terminus ante quem for the surviving Middle English versions, not a precise translation date."}
+    },
+    {
+      "id": "date:first-attestation", "type": "first_known_attestation", "display": "Early fifteenth century (Royal MS 17 C XVII)", "normalized": {"not_before": 1400, "not_after": 1440}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "witness:bl:Royal-17-C-XVII",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl"]}
+    },
+    {
+      "id": "date:first-publication", "type": "first_publication", "display": "1881", "normalized": {"not_before": 1881, "not_after": 1881}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "edition:horstmann:antonius-1881",
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-horstmann"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:northern-england", "label": "Northern England", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:west-midlands", "label": "West Midlands, England", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:egypt", "label": "Egypt", "kind": "historical_region"},
+    {"id": "place:constantinople", "label": "Constantinople", "kind": "settlement"},
+    {"id": "place:vienne", "label": "Vienne region, France", "kind": "historical_region"},
+    {"id": "place:montmajour", "label": "Montmajour Abbey, France", "kind": "settlement"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:cultural-origin", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole", "description": "Cultural and linguistic origin of the surviving Middle English compilation"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-horstmann"]}
+    },
+    {
+      "id": "place:dialect-north", "place_id": "place:northern-england", "type": "dialect_region", "scope": {"kind": "whole", "description": "Witness/scribal language, not a proved place of composition"},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:metadata-bl"], "notes": "The current BL catalog labels the codex's English 'Northern (?)'."}
+    },
+    {
+      "id": "place:dialect-west-midlands", "place_id": "place:west-midlands", "type": "dialect_region", "scope": {"kind": "whole", "description": "Horstmann's tentative linguistic localization of the witness"},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:metadata-horstmann"], "notes": "Horstmann describes mixed Midland inflections and mostly Northern vocalism but tentatively places the dialect in the western group, probably western Middle England."}
+    },
+    {
+      "id": "place:egypt-setting", "place_id": "place:egypt", "type": "historical_setting", "scope": {"kind": "part", "part_ids": ["part:life", "part:inventio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bl"]}
+    },
+    {
+      "id": "place:constantinople-setting", "place_id": "place:constantinople", "type": "historical_setting", "scope": {"kind": "part", "part_ids": ["part:inventio", "part:translatio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-analecta", "evidence:metadata-acta"]}
+    },
+    {
+      "id": "place:vienne-setting", "place_id": "place:vienne", "type": "historical_setting", "scope": {"kind": "part", "part_ids": ["part:translatio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-acta"]}
+    },
+    {
+      "id": "place:montmajour-setting", "place_id": "place:montmajour", "type": "historical_setting", "scope": {"kind": "part", "part_ids": ["part:translatio"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bl", "evidence:metadata-horstmann"]},
+      "notes": ["Brief Latin incipits, biblical quotations, and the colophon are embedded in a substantively Middle English prose work and do not make the whole-work language facet multilingual."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose", "value": "prose", "scope": {"kind": "whole"}, "description": "All three medieval components are prose; the XML contains no L or LG verse elements.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-bl"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:hagiography", "term": "hagiography", "label": "Hagiography", "scheme": "General Corpus genre", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl", "evidence:metadata-xml"]}},
+    {"id": "genre:saints-life", "term": "saints-life", "label": "Saints' lives", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:life"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl"]}},
+    {"id": "genre:inventio", "term": "inventio", "label": "Inventio (relic-finding narrative)", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:inventio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-analecta"]}},
+    {"id": "genre:translatio", "term": "translatio", "label": "Translatio (relic-translation narrative)", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:inventio", "part:translatio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-analecta", "evidence:metadata-acta"]}},
+    {"id": "genre:miracle-narrative", "term": "miracle-narrative", "label": "Miracle narrative", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:inventio", "part:translatio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-analecta", "evidence:metadata-acta"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:antony", "term": "antony-the-great", "label": "Antony the Great", "scheme": "General Corpus local subject", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl"]}},
+    {"id": "subject:asceticism", "term": "asceticism-and-monasticism", "label": "Asceticism and monasticism", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:life"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bhl"]}},
+    {"id": "subject:temptation", "term": "temptation-and-demons", "label": "Temptation and demons", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:life", "part:inventio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-analecta"]}},
+    {"id": "subject:relics", "term": "relics-and-relic-translation", "label": "Relics, finding, and translation", "scheme": "General Corpus local subject", "primary": true, "scope": {"kind": "part", "part_ids": ["part:inventio", "part:translatio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-analecta", "evidence:metadata-acta"]}},
+    {"id": "subject:healing", "term": "miraculous-healing", "label": "Miraculous healing", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:inventio", "part:translatio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-analecta", "evidence:metadata-acta"]}},
+    {"id": "subject:anthony-fire", "term": "saint-anthonys-fire", "label": "Saint Anthony's fire and its relief", "scheme": "General Corpus local subject", "scope": {"kind": "part", "part_ids": ["part:translatio"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-acta"]}}
+  ],
+  "tags": ["middle-english", "prose", "compilation", "translation", "hagiography", "saints-life", "antony-the-great", "asceticism", "monasticism", "temptation", "demons", "inventio", "translatio", "relics", "miracles", "healing", "saint-anthonys-fire", "bhl-609", "bhl-612", "bhl-613", "royal-ms-17-c-xvii"],
+  "content_parts": [
+    {
+      "id": "part:life", "parent_id": null, "sequence": 1, "type": "work", "label": "I. Life of Saint Antony", "summary": "A Middle English translation of the opening portion of the Athanasian life in Evagrius's Latin tradition: Antony renounces wealth, pursues ascetic and solitary discipline, withstands sexual and demonic temptations, and emerges physically and spiritually unbroken after twenty years in seclusion.", "item_count": 1, "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-cme:CME00090", "scheme": "XML division", "value": "DIV2 N=1"},
+        {"lineage_entity_id": "edition:horstmann:antonius-1881", "scheme": "printed pages", "value": "116-122"},
+        {"lineage_entity_id": "facsimile:internet-archive:anglia-4", "scheme": "PDF pages", "value": "128-134"},
+        {"lineage_entity_id": "witness:bl:Royal-17-C-XVII", "scheme": "folios", "value": "124v-126r"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann", "evidence:metadata-bl", "evidence:metadata-bhl"],
+      "notes": ["BHL 609; the BL catalog identifies the translated span as Evagrius's Latin version of Athanasius, chapters 1-13.", "The Middle English manuscript rubric's claim that Jerome translated the source from Greek to Latin conflicts with the current catalog and BHL attribution."]
+    },
+    {
+      "id": "part:inventio", "parent_id": null, "sequence": 2, "type": "work", "label": "II. Finding and first translation of Saint Antony's relics", "summary": "A legendary account in which the emperor's demon-possessed daughter Sophia can be cured only through Antony's body. Bishop Theophilus and twelve clerics find the hidden relics in Egypt and bring them through a sequence of miracles to Constantinople, where Sophia is delivered and the body enshrined.", "item_count": 1, "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-cme:CME00090", "scheme": "XML division", "value": "DIV2 N=2"},
+        {"lineage_entity_id": "edition:horstmann:antonius-1881", "scheme": "printed pages", "value": "122-135"},
+        {"lineage_entity_id": "facsimile:internet-archive:anglia-4", "scheme": "PDF pages", "value": "134-147"},
+        {"lineage_entity_id": "witness:bl:Royal-17-C-XVII", "scheme": "folios", "value": "126v-131v"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann", "evidence:metadata-bl", "evidence:metadata-analecta", "evidence:metadata-bhl"],
+      "notes": ["BHL 612. The BL catalog describes the component as the first translation to Constantinople and identifies the Latin account printed in Analecta Bollandiana 2 (1883), pp. 341-354.", "Printed p. 122 is shared with the end of part I."]
+    },
+    {
+      "id": "part:translatio", "parent_id": null, "sequence": 3, "type": "work", "label": "III. Translation of Saint Antony's relics into the Vienne region", "summary": "A Middle English version of the relic-translation narrative connecting Antony's body with Vienne: Jocelin receives the relics at Constantinople, a descendant entrusts them to monks of Montmajour, a monastery and hospital are founded, and Antony's aid is invoked against the burning illness called Saint Anthony's fire.", "item_count": 1, "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-cme:CME00090", "scheme": "XML division", "value": "DIV2 N=3"},
+        {"lineage_entity_id": "edition:horstmann:antonius-1881", "scheme": "printed pages", "value": "135-138"},
+        {"lineage_entity_id": "facsimile:internet-archive:anglia-4", "scheme": "PDF pages", "value": "147-150"},
+        {"lineage_entity_id": "witness:bl:Royal-17-C-XVII", "scheme": "folios", "value": "132r-133r"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-horstmann", "evidence:metadata-bl", "evidence:metadata-acta", "evidence:metadata-bhl"],
+      "notes": ["BHL 613. The next codex component, medical recipes, begins on fol. 133v.", "Printed p. 135 is shared with the end of part II."]
+    }
+  ],
+  "content_structure_status": "complete",
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "A three-part Middle English prose compilation about Antony the Great. It moves from an abridged account of his ascetic life and demonic trials to legendary narratives of the discovery of his body, its miraculous journey to Constantinople, and its later translation into France, where his relics heal sufferers from the burning disease associated with his name. The anonymous English versions draw on three distinct Latin hagiographic texts cataloged as BHL 609, 612, and 613.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bl", "evidence:metadata-bhl", "evidence:metadata-analecta", "evidence:metadata-acta"]},
+    {"id": "summary:contents", "type": "contents_note", "value": "Part I: life and ascetic formation. Part II: finding and first translation of the relics to Constantinople. Part III: second translation into the Vienne region and cult of Saint Anthony's fire.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bl"]}
+  ],
+  "related_works": [
+    {"id": "related:bhl609", "title": "Vita Antonii, Latin translation by Evagrius (BHL 609)", "relation": "translation_of", "identifiers": [{"scheme": "BHL", "value": "609"}], "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl"], "notes": ["Part I translates only the opening portion; the exact physical Latin exemplar is unidentified."]},
+    {"id": "related:bhl612", "title": "Inventio and first translation of Saint Antony (BHL 612)", "relation": "translation_of", "identifiers": [{"scheme": "BHL", "value": "612"}], "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl", "evidence:metadata-analecta"], "notes": ["Part II's Latin source work; the attribution to Theophilus belongs to the legendary textual frame and is not treated as confirmed historical authorship."]},
+    {"id": "related:bhl613", "title": "Second translation of Saint Antony into Gaul (BHL 613)", "relation": "translation_of", "identifiers": [{"scheme": "BHL", "value": "613"}], "evidence_ids": ["evidence:metadata-bl", "evidence:metadata-bhl", "evidence:metadata-acta"], "notes": ["Part III's Latin source work; the exact physical exemplar is unidentified."]}
+  ],
+  "extent": {
+    "numbered_items": 3, "sections": 3, "prose_only_items": 3, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0,
+    "description": "One DIV1 compilation containing three DIV2 parts, 23 PB elements, 140 NOTE elements, 189 MILESTONE elements, 2,161 HI elements, and 13 P elements. The encoded medieval text covers Horstmann's printed pp. 116-138; no verse L or LG elements occur.",
+    "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml", "evidence:metadata-horstmann"]
+  },
+  "notes": [
+    "Antony is Antony the Great, the Egyptian abbot and hermit, not Anthony of Padua.",
+    "The BL catalog's 166-leaf extent supersedes Horstmann's statement that the manuscript then contained 162 leaves; both belong to their dated physical-description layers.",
+    "Horstmann's dialect localization and the current catalog's Northern (?) label are preserved as competing witness-language assessments and are not converted into a place of composition.",
+    "The many italic HI spans in CME00090 reproduce Horstmann's editorial typography, including supplied or expanded letters and German notes; they are not direct evidence of manuscript emphasis.",
+    "The complete Anglia volume, BHL reference volume, Analecta Bollandiana volume, and Acta Sanctorum volume are cached locally. No complete public facsimile of Royal MS 17 C XVII was verified."
+  ],
+  "open_questions": [
+    {
+      "id": "question:translator-compiler", "question": "Did one Middle English translator or compiler assemble all three components, and was that person the Johannes Presbyter/Purvare named elsewhere in Royal MS 17 C XVII?", "status": "unresolved", "impact": "medium",
+      "next_steps": ["Consult a modern codicological and paleographical study of Royal MS 17 C XVII.", "Compare translation technique and vocabulary across all three parts.", "Retain Johannes only as Horstmann's tentative compiler inference until stronger evidence appears."],
+      "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-bl"]
+    },
+    {
+      "id": "question:dialect", "question": "How should the manuscript's dialect be localized in current Middle English dialectology?", "status": "unresolved", "impact": "medium",
+      "next_steps": ["Check LALME/eLALME and later linguistic studies for the manuscript's linguistic profile.", "Reconcile the current catalog's Northern (?) label with Horstmann's mixed Midland/western proposal.", "Keep scribal language separate from composition and translation place."],
+      "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-horstmann", "evidence:metadata-bl"]
+    },
+    {
+      "id": "question:royal-facsimile", "question": "Can the British Library supply a complete color digital facsimile of Royal MS 17 C XVII, including covers, spine, pastedowns, flyleaves, blanks, and every manuscript leaf?", "status": "unresolved", "impact": "high",
+      "next_steps": ["Ask BL Reference Services about complete whole-object imaging and costs, quoting Royal MS 17 C XVII.", "Map the target work separately to fols. 124v-133r in any supplied complete object.", "Do not infer publication or repository redistribution permission for supplied images without written terms."],
+      "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-bl"]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00090", "manifest_path": "manifests/lineage/works/CME00090.json",
+    "bindings": [
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "artifact:general-corpus:CME00090", "role": "repository_representation"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "encoding:umich-cme:CME00090", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "edition:horstmann:antonius-1881", "role": "source_edition"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "witness:bl:Royal-17-C-XVII", "role": "source_witness"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "work:latin:BHL-609", "role": "related_source"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "work:latin:BHL-612", "role": "related_source"},
+      {"metadata_target": "work:CME00090", "lineage_entity_id": "work:latin:BHL-613", "role": "related_source"}
+    ]
+  },
+  "agents": [
+    {"id": "agent:anonymous-middle-english-translator", "type": "collective", "name": "Anonymous Middle English translator or translators", "notes": ["The collective label does not assert one person or collaboration across all three parts."]},
+    {"id": "agent:johannes-purvare", "type": "person", "name": "Johannes Purvare (?)", "alternate_names": ["Johannes Presbyter (?)"], "notes": ["Named in colophons elsewhere in Royal MS 17 C XVII; Horstmann tentatively identifies him as the compilation's scribe-compiler."]},
+    {"id": "agent:karl-horstmann", "type": "person", "name": "Karl Horstmann", "alternate_names": ["C. Horstmann"]}
+  ],
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "General Corpus CME00090 source XML.", "repository_path": "CME/source/CME_phase_3/CME00090.xml", "sha256": "4707e256715a82ec4e610fe2b121ee08a32ee058fc47133e8c486f551ef31985", "summary": "Direct evidence for identifiers, three-part structure, headings, language, prose form, content, page and folio milestones, notes, and XML representation."},
+    {"id": "evidence:metadata-computation", "type": "computational_inspection", "citation": "Reproducible XML structural audit of CME00090.xml.", "repository_path": "CME/source/CME_phase_3/CME00090.xml", "sha256": "4707e256715a82ec4e610fe2b121ee08a32ee058fc47133e8c486f551ef31985", "summary": "Counts one DIV1, three DIV2, 23 PB, 140 NOTE, 189 MILESTONE, 2,161 HI and 13 P elements; no L or LG verse elements."},
+    {"id": "evidence:metadata-horstmann", "type": "scholarly_source", "citation": "Karl Horstmann, 'Prosalegenden. V. S. Antonius (vita, inventio, translatio),' Anglia 4 (1881), 109-138.", "url": "https://archive.org/details/angliazeitschrif04tbuoft/page/n127/mode/2up", "locator": "printed pp. 109-138; complete volume PDF pp. 121-150", "summary": "Immediate edition evidence for title, editor, manuscript, complete article and encoded boundary, codex description, three parts, tentative compiler, dialect analysis, transcription, folio milestones, apparatus and content.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-bl", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Royal MS 17 C XVII, record 040-002107357.", "url": "https://searcharchives.bl.uk/catalog/040-002107357", "locator": "component 20; physical description; access; digitised content", "summary": "Current official evidence for shelfmark, early-fifteenth-century date, English/Latin and Northern (?) language, paper codex with vellum flyleaves, 166 leaves, single-hand context, exact three component starts, BHL identities and source editions, adjacent recipe boundary, no listed digitised content, and physical-request route.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-bhl", "type": "scholarly_source", "citation": "Socii Bollandiani, Bibliotheca Hagiographica Latina Antiquae et Mediae Aetatis, vol. 1 (Brussels, 1898), entries 609, 612, 613.", "url": "https://archive.org/details/BibliothecaHagiographicaV1/page/n139/mode/2up", "locator": "Saint Antony entries, printed pp. 99-100 / PDF pp. 140-141", "summary": "Standard hagiographic reference identifying the Athanasius-Evagrius life, first translation, and translation into Gaul as distinct Latin works.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-analecta", "type": "scholarly_source", "citation": "'De S. Antonio Abbate: Incipit translatio sancti Anthonii confessoris,' Analecta Bollandiana 2 (1883), 341-354.", "url": "https://archive.org/details/AnalectaBollandiana1883/page/n336/mode/2up", "locator": "printed pp. 341-354 / PDF pp. 337-350", "summary": "Latin text corresponding to BHL 612 and Middle English part II, from the opening under Constantius and Theophilus through the discovery, journey, exorcism and Constantinople enshrinement.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-acta", "type": "scholarly_source", "citation": "Acta Sanctorum, Januarii II, 3rd edition (Paris and Rome, 1863), 515-516, 'Eadem historia ex veteri MS. Ultrajectino.'", "url": "https://archive.org/details/actasanctorumquo0002unse/page/515/mode/2up", "locator": "printed pp. 515-516 / PDF pp. 549-550", "summary": "Latin text and commentary corresponding to BHL 613 and Middle English part III, including the Vienne translation, Montmajour connection and cult against sacer ignis.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-umich", "type": "official_webpage", "citation": "University of Michigan Library, Corpus of Middle English item CME00090 and collection.", "url": "https://name.umdl.umich.edu/CME00090", "alternate_urls": ["https://quod.lib.umich.edu/c/cme"], "summary": "Official stable identifier and digital-item context for CME00090; the current environment encountered a Cloudflare challenge on direct item retrieval, so structural claims are grounded in the checked-in XML and inspected edition.", "accessed_on": "2026-07-12"}
+  ],
+  "catalog_summary": {
+    "title": "Saint Antony: Life, Finding, and Translation", "author": "Anonymous Middle English translator(s)", "editor": "Karl Horstmann", "date": "By the early 15th century; first published 1881", "region": "England; witness dialect disputed between Northern (?) and a mixed western Midland analysis", "language_codes": ["enm"], "form": "prose", "genres": ["Hagiography", "Saints' lives", "Inventio (relic-finding narrative)", "Translatio (relic-translation narrative)", "Miracle narrative"], "tags": ["middle-english", "prose", "compilation", "translation", "hagiography", "saints-life", "antony-the-great", "asceticism", "monasticism", "temptation", "demons", "inventio", "translatio", "relics", "miracles", "healing", "saint-anthonys-fire", "bhl-609", "bhl-612", "bhl-613", "royal-ms-17-c-xvii"]
+  }
+}

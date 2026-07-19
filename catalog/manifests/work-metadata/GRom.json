@@ -1,0 +1,862 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:GRom",
+  "work_id": "GRom",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "cataloging_subject": {
+    "id": "work:GRom",
+    "unit_type": "compilation",
+    "label": "Early English Versions of the Gesta Romanorum",
+    "scope_note": "Sidney J. H. Herrtage's 1879 edited compilation of multiple Middle English Gesta Romanorum versions: 70 Text I story groups based on Harley MS 7333 with selected Additional MS 9066 parallels, 66 Text II groups based on Additional MS 9066 with eleven full Kk.1.6 parallels, and eight Text III stories checked against Wynkyn de Worde's early print. The cataloged unit is not the abstract Latin Gesta tradition, a single medieval translation, any one physical witness, Madden's distinct 1838 edition, the complete 1879 scholarly volume beyond the edited-text compilation, the U-M encoding, the repository XML, or a facsimile."
+  },
+  "catalog_summary": {
+    "title": "Early English Versions of the Gesta Romanorum",
+    "author": "Anonymous Middle English translators and adapters",
+    "editor": "Sidney John Hervon Herrtage",
+    "date": "1879",
+    "region": "England (Middle English source traditions)",
+    "genres": [
+      "Exemplum collection",
+      "Tale collection",
+      "Religious didactic prose"
+    ],
+    "form": "prose",
+    "language_codes": ["enm", "lat", "eng"],
+    "tags": [
+      "middle-english",
+      "prose",
+      "exempla",
+      "tale-collection",
+      "moral-instruction",
+      "virtues-and-vices",
+      "christian-ethics",
+      "didactic-literature",
+      "story-cycle",
+      "manuscript-variants",
+      "early-print"
+    ]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "GRom",
+      "uri": "https://name.umdl.umich.edu/GRom"
+    },
+    {
+      "scheme": "Early English Text Society Extra Series",
+      "value": "33"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Early English Versions of the Gesta Romanorum",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage", "evidence:metadata-ia"]
+      },
+      "notes": [
+        "The preferred discovery title follows the 1879 edition and U-M 245-style title while omitting only the initial article found on the printed title page."
+      ]
+    },
+    {
+      "id": "title:printed",
+      "type": "alternate",
+      "value": "The Early English Versions of the Gesta Romanorum",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage"]
+      },
+      "notes": ["Title-page form in the 1879 volume."]
+    },
+    {
+      "id": "title:xml-uniform",
+      "type": "uniform",
+      "value": "Gesta Romanorum",
+      "language": "lat",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml"]
+      },
+      "notes": [
+        "This is the broad U-M header uniform title. It is retained for discovery but is too general to define the cataloging boundary by itself."
+      ]
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Gesta Romanorum: Early English Versions",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage"]
+      },
+      "notes": ["Modern compact discovery form; not a historical title statement."]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:sidney-herrtage",
+      "type": "person",
+      "name": "Sidney John Hervon Herrtage",
+      "alternate_names": ["Sidney J. H. Herrtage", "S. J. H. Herrtage"],
+      "notes": ["Editor and organizer of the 1879 EETS compilation."]
+    },
+    {
+      "id": "agent:lucy-toulmin-smith",
+      "type": "person",
+      "name": "Lucy Toulmin Smith",
+      "alternate_names": ["Miss Toulmin Smith"],
+      "notes": ["Herrtage credits her with collating most proof sheets against Harley MS 7333 and Additional MS 9066 and comparing the de Worde selections with the St John's original."]
+    },
+    {
+      "id": "agent:frederic-madden",
+      "type": "person",
+      "name": "Frederic Madden",
+      "alternate_names": ["Sir Frederic Madden"],
+      "notes": ["Editor of the 1838 Roxburghe Club edition whose readings and notes Herrtage retained selectively, rechecked, revised, and expanded."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-translators",
+      "display_name": "Anonymous Middle English translators and adapters",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "The distinct Middle English manuscript and early-print versions assembled in Herrtage's compilation"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-harley", "evidence:metadata-kk16", "evidence:metadata-estc"]
+      },
+      "notes": [
+        "The reviewed sources do not identify one translator for all versions. Translator and adapter are collective descriptive roles, not an assertion of common authorship or a single translation event.",
+        "The relation between the English versions and particular Latin exemplars is not reduced here to one direct source manuscript."
+      ]
+    },
+    {
+      "id": "responsibility:herrtage-editor",
+      "agent_id": "agent:sidney-herrtage",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "Fresh manuscript collation, revised reading text, parallel-version arrangement, notes, glossary, index, and other editorial work in the 1879 volume"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-herrtage-editorial", "evidence:metadata-xml"]
+      }
+    },
+    {
+      "id": "responsibility:anonymous-adapters",
+      "display_name": "Anonymous Middle English adapters",
+      "role": "adapter",
+      "attribution_status": "anonymous",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Selection, reshaping, vernacular retelling, and moralization within the fluid English Gesta traditions represented by the compilation"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-xml"]
+      },
+      "notes": [
+        "Adapter is a collective functional description of the transmitted English versions, not an assertion that every passage departs from a recoverable Latin source in the same way or that one agent shaped all three sections."
+      ]
+    },
+    {
+      "id": "responsibility:herrtage-compiler",
+      "agent_id": "agent:sidney-herrtage",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "whole",
+        "description": "The 1879 edition-defined combination and ordering of Harley, Additional, Kk.1.6, and de Worde streams into Texts I-III"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-herrtage-editorial", "evidence:metadata-structure"]
+      },
+      "notes": [
+        "Compiler here describes the modern edited aggregate and its arrangement; it does not make Herrtage compiler of the medieval Gesta tradition."
+      ]
+    },
+    {
+      "id": "responsibility:toulmin-smith-collator",
+      "agent_id": "agent:lucy-toulmin-smith",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Most Harley/Additional proof sheets and comparison of the eight de Worde selections with the St John's original"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage-editorial"]
+      },
+      "notes": ["Herrtage's acknowledgment does not say that she independently edited every passage or all Kk.1.6 material."]
+    },
+    {
+      "id": "responsibility:madden-predecessor-editor",
+      "agent_id": "agent:frederic-madden",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Earlier editorial readings, arrangement, and notes retained or revised within Herrtage's 1879 successor compilation"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-madden", "evidence:metadata-herrtage-editorial", "evidence:metadata-herrtage"]
+      },
+      "notes": [
+        "Madden is the editor of the predecessor layer, not a named co-editor of the 1879 publication. Herrtage explicitly distinguishes his fresh recollation and revision from a simple reprint."
+      ]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:compilation",
+      "type": "compilation",
+      "display": "1879",
+      "normalized": {"not_before": 1879, "not_after": 1879},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:herrtage:1879",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-ia", "evidence:metadata-xml"]
+      },
+      "notes": ["This dates Herrtage's cataloged editorial compilation, not the medieval translations, manuscript copies, or de Worde print."]
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "1879",
+      "normalized": {"not_before": 1879, "not_after": 1879},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:herrtage:1879",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-ia"]
+      },
+      "notes": ["First publication of Herrtage's revised compilation as EETS Extra Series 33."]
+    }
+  ],
+  "places": [
+    {
+      "id": "place:england",
+      "label": "England",
+      "kind": "cultural_region",
+      "notes": ["Broad cultural origin of the Middle English source versions and English early print; not a precise place of translation for every stream."]
+    },
+    {
+      "id": "place:london",
+      "label": "London",
+      "kind": "settlement",
+      "broader_place_ids": ["place:england"],
+      "notes": ["Publication place of Herrtage's 1879 edition and printing place of the de Worde source; no inference is made that all editorial labor or medieval translation occurred there."]
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:english-cultural-origin",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Middle English textual traditions and the English early print brought together in the compilation"
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-harley", "evidence:metadata-kk16", "evidence:metadata-estc"]
+      },
+      "notes": ["The statement is intentionally broader than a place-of-composition or dialect localization claim."]
+    },
+    {
+      "id": "place-statement:london-publication",
+      "place_id": "place:london",
+      "type": "associated_place",
+      "scope": {
+        "kind": "whole",
+        "description": "Publication place of the cataloged 1879 compilation"
+      },
+      "source_lineage_entity_id": "edition:herrtage:1879",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-ia", "evidence:metadata-xml"]
+      },
+      "notes": ["Associated place is used because a London imprint is not evidence that every stage of compilation occurred in London."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Narrative and moralization texts in all three edited sections"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage", "evidence:metadata-structure"]
+      },
+      "notes": ["The XML LANGUSAGE omits Middle English, but direct inspection and the edition title and contents establish it as primary."]
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {
+        "kind": "part",
+        "part_ids": ["part:text-i", "part:text-ii", "part:text-iii"],
+        "description": "Rubrics, narrative headings, biblical and learned quotations, formulas, and moralization phrases embedded in the Middle English texts"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage"]
+      },
+      "notes": ["Latin is genuinely embedded but is not the sole or primary language, despite the incomplete XML header declaration."]
+    },
+    {
+      "id": "language:modern-english",
+      "code": "eng",
+      "label": "English",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {
+        "kind": "whole",
+        "description": "Modern editorial title-page wording, supplied story descriptions and headings, apparatus, and encoding notes represented in the cataloged edition layer"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage", "evidence:metadata-herrtage-editorial"]
+      },
+      "notes": ["Modern English editorial matter is not treated as a medieval co-primary language."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A prose exemplum and moralized-tale compilation. Four of 144 story groups contain forty-two ungrouped verse-line elements in the body, but those brief embedded passages do not change the dominant whole-work form.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-herrtage"]
+      }
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:exemplum-collection",
+      "term": "exemplum-collection",
+      "label": "Exemplum collection",
+      "scheme": "General Corpus genre vocabulary",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-xml", "evidence:metadata-ia"]
+      },
+      "notes": ["U-M's official browse page places the item under Exempla, and the stories characteristically pair narratives with moralizations."]
+    },
+    {
+      "id": "genre:tale-collection",
+      "term": "tale-collection",
+      "label": "Tale collection",
+      "scheme": "General Corpus local genre vocabulary",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-structure", "evidence:metadata-ia"]
+      },
+      "notes": ["The edition groups 144 narrative presentations in three source-defined sections rather than one authorial continuous narrative."]
+    },
+    {
+      "id": "genre:religious-didactic-prose",
+      "term": "religious-didactic-prose",
+      "label": "Religious didactic prose",
+      "scheme": "General Corpus genre vocabulary",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-xml"]
+      },
+      "notes": ["Moralizations repeatedly interpret secular, classical, legendary, and marvelous narratives as Christian instruction."]
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:christian-moral-instruction",
+      "term": "christian-moral-instruction",
+      "label": "Christian moral instruction",
+      "scheme": "General Corpus subject vocabulary",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage"]
+      }
+    },
+    {
+      "id": "subject:virtues-and-vices",
+      "term": "virtues-and-vices",
+      "label": "Virtues and vices",
+      "scheme": "General Corpus subject vocabulary",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage"]
+      },
+      "notes": ["The moralizations interpret behavior through recurring discussions of sin, penance, charity, obedience, justice, pride, avarice, lust, and other virtues and vices."]
+    },
+    {
+      "id": "subject:classical-biblical-medieval-narrative",
+      "term": "classical-and-biblical-narrative",
+      "label": "Classical, biblical, and medieval narrative traditions",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-xml"]
+      },
+      "notes": ["The collection reuses Roman and classical names, biblical and saints' material, folklore, romance motifs, wonders, and social exempla; this is a broad repertory description, not a claim that every story is historically Roman."]
+    },
+    {
+      "id": "subject:justice-providence-conduct",
+      "term": "justice-providence-and-conduct",
+      "label": "Justice, providence, and moral conduct",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage"]
+      },
+      "notes": ["Recurring tales concern rulers, judges, families, vows, rewards, punishments, conversion, confession, death, salvation, and providential reversal."]
+    }
+  ],
+  "tags": [
+    "middle-english",
+    "prose",
+    "exempla",
+    "tale-collection",
+    "moral-instruction",
+    "virtues-and-vices",
+    "christian-ethics",
+    "didactic-literature",
+    "story-cycle",
+    "manuscript-variants",
+    "early-print"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Herrtage's 1879 compilation presents several late-medieval English versions of the Gesta Romanorum in a deliberately comparative arrangement. Its short prose narratives draw on classical and biblical names, legends, miracles, wonders, romance and folktale motifs, domestic and political dilemmas, and exemplary reversals. Most stories proceed to a Christian moralization that interprets emperors, knights, animals, objects, journeys, crimes, and rewards as figures for God, Christ, the Church, confession, penance, temptation, virtue, vice, judgment, death, and salvation. The edition's importance lies as much in its juxtaposition of divergent Harley, Additional, and Kk.1.6 streams and de Worde selections as in any single normalized tale sequence.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-xml", "evidence:metadata-structure"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "Text I contains 70 Harley MS 7333 story groups on printed pp. 1-326, with selected Additional MS 9066 versions printed in parallel. Text II contains 66 Additional-based groups on pp. 327-428, with eleven full Kk.1.6 parallel versions in its opening portion and other comparative readings. Text III contains eight stories on pp. 429-444 associated with Wynkyn de Worde's early print. Parallel streams make 180 XML DIV2 elements but do not increase the edition-level story-group inventory beyond 144.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-herrtage", "evidence:metadata-ia", "evidence:metadata-structure"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "The U-M/General Corpus representation retains a constructed title page and Herrtage's edited texts on printed pp. 1-444. It omits the contents, introduction, comparative table, later notes and illustrations, appendix, glossary, and index, even though those omitted portions remain essential evidence for editorial method and source identification. The cached 613-page PDF is the complete volume and is not cropped to the encoded work portion.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-herrtage", "evidence:metadata-ia", "evidence:metadata-structure"]
+    },
+    {
+      "id": "summary:cataloging-boundary",
+      "type": "cataloging_note",
+      "value": "The record is intentionally edition-level. The three sections combine versions from distinct witnesses and an early print, and Herrtage reshapes Madden's predecessor edition through fresh collation, revised readings, parallel presentation, and added reference apparatus. Treating GRom as one anonymous medieval composition would collapse textual work, physical witness, editorial compilation, digital encoding, repository artifact, and facsimile into a false single layer.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-lineage", "evidence:metadata-structure"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 144,
+    "sections": 3,
+    "prose_only_items": 140,
+    "verse_only_items": 0,
+    "mixed_items": 4,
+    "verse_groups": 0,
+    "verse_lines": 42,
+    "description": "The edition-level inventory counts 70 Text I story groups, 66 Text II groups, and eight Text III stories. Four groups contain forty-two ungrouped BODY L elements and are classified as mixed; the other 140 are prose-only. The XML has 137 BODY DIV1 elements because Texts I and II each use one DIV1 per story group while Text III uses one section-level DIV1 containing eight DIV2 stories. It also has 180 DIV2, 162 DIV3, 692 PB, 562 MILESTONE, 325 P, 42 BODY L, 1,386 NOTE1, and two NOTE elements. These XML counts are representation metrics, not additional intrinsic stories.",
+    "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-herrtage"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:text-i",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "section",
+      "label": "Text I: Harley MS 7333 with Additional MS 9066 parallel versions",
+      "summary": "Seventy story groups whose principal streams follow Harley MS 7333, with selected second versions from Additional MS 9066 set alongside the corresponding Harley stories. Narratives are generally followed by Christian moralizations, and the edition preserves manuscript leaf and column milestones.",
+      "item_count": 70,
+      "textual_form": "mixed",
+      "metrics": {
+        "prose_only_items": 68,
+        "verse_only_items": 0,
+        "mixed_items": 2,
+        "verse_groups": 0,
+        "verse_lines": 22
+      },
+      "locators": [
+        {"lineage_entity_id": "edition:herrtage:1879", "scheme": "printed-pages", "value": "1-326"},
+        {"lineage_entity_id": "facsimile:ia:herrtage-1879", "scheme": "PDF-pages", "value": "40-365"},
+        {"lineage_entity_id": "encoding:umich-cme:GRom", "scheme": "XML-divisions", "value": "BODY/DIV1 positions 1-70 (DIV1.1 through DIV1.330)"},
+        {"lineage_entity_id": "witness:bl:Harley-MS-7333", "scheme": "manuscript-folios", "value": "ff. 150r-203r"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-herrtage", "evidence:metadata-harley", "evidence:metadata-add9066"],
+      "notes": [
+        "A group with a parallel Additional stream remains one edition-level story group, not two numbered tales.",
+        "The Additional streams are non-contiguous selections and are therefore not assigned one misleading continuous manuscript-folio range here.",
+        "The two mixed groups contain twenty-two ungrouped verse-line elements; brief embedded verse does not change the section's dominant prose character."
+      ]
+    },
+    {
+      "id": "part:text-ii",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "section",
+      "label": "Text II: Additional MS 9066 with Kk.1.6 parallels",
+      "summary": "Sixty-six story groups principally based on Additional MS 9066. Eleven opening-region groups print full parallel versions from Cambridge MS Kk.1.6, whose complete Gesta section contains thirty-two tales without moralizations; the remaining edition apparatus records further comparison without making every generic variant note witness-specific.",
+      "item_count": 66,
+      "textual_form": "mixed",
+      "metrics": {
+        "prose_only_items": 64,
+        "verse_only_items": 0,
+        "mixed_items": 2,
+        "verse_groups": 0,
+        "verse_lines": 20
+      },
+      "locators": [
+        {"lineage_entity_id": "edition:herrtage:1879", "scheme": "printed-pages", "value": "327-428"},
+        {"lineage_entity_id": "facsimile:ia:herrtage-1879", "scheme": "PDF-pages", "value": "366-467"},
+        {"lineage_entity_id": "encoding:umich-cme:GRom", "scheme": "XML-divisions", "value": "BODY/DIV1 positions 71-136 (DIV1.333 through DIV1.454)"},
+        {"lineage_entity_id": "witness:bl:Add-MS-9066", "scheme": "edition-manuscript-milestones", "value": "selected leaves through Herrtage f. 87v"},
+        {"lineage_entity_id": "witness:cul:Kk-1-6", "scheme": "manuscript-folios", "value": "eleven selected tales within ff. 216r-242v"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-herrtage", "evidence:metadata-add9066", "evidence:metadata-kk16"],
+      "notes": [
+        "The eleven full Kk.1.6 streams occur in XML DIV1.333, DIV1.338, DIV1.343, DIV1.348, DIV1.353, DIV1.358, DIV1.366, DIV1.371, DIV1.376, DIV1.381, and DIV1.386, within printed pp. 327-359.",
+        "The section's two mixed groups contain sixteen and four verse lines respectively, for twenty Text II BODY L elements.",
+        "Parallel Kk.1.6 streams do not increase the 66-group edition inventory."
+      ]
+    },
+    {
+      "id": "part:text-iii",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "section",
+      "label": "Text III: Eight stories from Wynkyn de Worde's edition",
+      "summary": "Eight additional prose stories presented from Madden's earlier printed text after comparison with the St John's copy of Wynkyn de Worde's Gesta Romanorum. The XML structurally separates narrative and moralization divisions and sometimes supplies Moral headings where the source typography is unclear.",
+      "item_count": 8,
+      "textual_form": "prose",
+      "metrics": {
+        "prose_only_items": 8,
+        "verse_only_items": 0,
+        "mixed_items": 0,
+        "verse_groups": 0,
+        "verse_lines": 0
+      },
+      "locators": [
+        {"lineage_entity_id": "edition:herrtage:1879", "scheme": "printed-pages", "value": "429-444"},
+        {"lineage_entity_id": "facsimile:ia:herrtage-1879", "scheme": "PDF-pages", "value": "468-483"},
+        {"lineage_entity_id": "encoding:umich-cme:GRom", "scheme": "XML-divisions", "value": "BODY/DIV1[@ID='DIV1.455']/DIV2 (eight stories)"},
+        {"lineage_entity_id": "print:de-worde:Gesta-S4864", "scheme": "signatures", "value": "selected passages represented from Aii through Liv"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-herrtage", "evidence:metadata-herrtage-editorial", "evidence:metadata-ustc", "evidence:metadata-estc"],
+      "notes": [
+        "Text III is a selected eight-story section, not a complete facsimile or diplomatic transcription of the 82-leaf de Worde book.",
+        "Herrtage's acknowledgment supports collation against the original print; it does not establish direct transcription of the complete print or prove that Harley MS 5369 was de Worde's physical exemplar."
+      ]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:latin-gesta-tradition",
+      "title": "Gesta Romanorum (Latin narrative tradition)",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-xml"],
+      "notes": [
+        "The English versions translate, adapt, rearrange, and moralize material associated with the fluid Latin Gesta tradition. No single extant Latin manuscript is identified here as the physical exemplar for all English streams."
+      ]
+    },
+    {
+      "id": "related:madden-1838",
+      "title": "The Old English Versions of the Gesta Romanorum",
+      "relation": "version_of",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "b22007118", "uri": "https://archive.org/details/b22007118"}
+      ],
+      "evidence_ids": ["evidence:metadata-madden", "evidence:metadata-herrtage-editorial"],
+      "notes": [
+        "Herrtage's compilation descends editorially from Madden's 1838 Roxburghe Club edition but is explicitly a fresh recollation, rearrangement, revision, and expansion rather than a mechanical reprint."
+      ]
+    },
+    {
+      "id": "related:deworde-print",
+      "title": "Gesta Romanorum (Wynkyn de Worde print)",
+      "relation": "related_to",
+      "identifiers": [
+        {"scheme": "ESTC", "value": "S4864", "uri": "https://datb.cerl.org/estc/S4864"},
+        {"scheme": "USTC", "value": "501090", "uri": "https://www.ustc.ac.uk/editions/501090"}
+      ],
+      "evidence_ids": ["evidence:metadata-ustc", "evidence:metadata-estc", "evidence:metadata-herrtage-editorial"],
+      "notes": ["Eight selected stories are represented in Text III after comparison with the St John's copy; the complete early print remains a distinct textual and physical object."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:GRom",
+    "manifest_path": "manifests/lineage/works/GRom.json",
+    "bindings": [
+      {"metadata_target": "work:GRom", "lineage_entity_id": "edition:herrtage:1879", "role": "source_edition"},
+      {"metadata_target": "work:GRom", "lineage_entity_id": "edition:madden:1838", "role": "related_source"},
+      {"metadata_target": "work:GRom", "lineage_entity_id": "encoding:umich-cme:GRom", "role": "digital_encoding"},
+      {"metadata_target": "work:GRom", "lineage_entity_id": "artifact:general-corpus:GRom", "role": "repository_representation"},
+      {"metadata_target": "part:text-i", "lineage_entity_id": "witness:bl:Harley-MS-7333", "role": "source_witness"},
+      {"metadata_target": "part:text-i", "lineage_entity_id": "witness:bl:Add-MS-9066", "role": "source_witness"},
+      {"metadata_target": "part:text-ii", "lineage_entity_id": "witness:bl:Add-MS-9066", "role": "source_witness"},
+      {"metadata_target": "part:text-ii", "lineage_entity_id": "witness:cul:Kk-1-6", "role": "source_witness"},
+      {"metadata_target": "part:text-iii", "lineage_entity_id": "print:de-worde:Gesta-S4864", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:metadata-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/GRom.xml, pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/GRom.xml",
+      "locator": "HEADER; ENCODINGDESC; FRONT/TITLEPAGE; BODY/DIV1",
+      "summary": "Primary local evidence for work ID, title forms, Herrtage editorship and source, U-M production and rights statement, title-page representation, three-section text structure, Middle English and Latin content, witness labels, printed-page and manuscript milestones, moralization structure, and edition apparatus.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+    },
+    {
+      "id": "evidence:metadata-structure",
+      "type": "computational_inspection",
+      "citation": "Deterministic structural inspection of GRom.xml aligned with Herrtage's 1879 scan.",
+      "repository_path": "CME/source/CME_phase_1-2/GRom.xml",
+      "locator": "FRONT/TITLEPAGE and BODY element counts, DIV1 ranges, BIBL labels, PB sequence, manuscript MILESTONE sequence, and NOTE1 attributes",
+      "summary": "Establishes 70 + 66 + 8 edition-level story groups, the exceptional Text III nesting, 137 BODY DIV1, 180 DIV2, 162 DIV3, 692 PB, 562 MILESTONE, 325 P, forty-two BODY L elements in four groups, 1,386 NOTE1 including 1,347 TYPE=variant, and exact XML IDs for the eleven full Kk.1.6 streams. The generic variant notes do not encode their source note by note.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+    },
+    {
+      "id": "evidence:metadata-herrtage",
+      "type": "digital_surrogate",
+      "citation": "Sidney J. H. Herrtage, ed., The Early English Versions of the Gesta Romanorum, EETS Extra Series 33 (London: N. Trübner & Co., 1879), complete Google/Internet Archive scan.",
+      "url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog.pdf",
+      "alternate_urls": ["https://archive.org/details/earlyenglishver00herrgoog"],
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "PDF p. 10 title page; PDF pp. 40-483 / printed pp. 1-444; complete 613-page volume",
+      "summary": "Confirms title, editor, 1879 London publication, EETS series, relation to Madden, source witnesses, three text sections, 144-group contents, selected work pages, and the complete volume's later scholarly apparatus.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:metadata-herrtage-editorial",
+      "type": "scholarly_source",
+      "citation": "Sidney J. H. Herrtage, introduction, manuscript descriptions, editorial statement, and acknowledgments in The Early English Versions of the Gesta Romanorum (1879).",
+      "url": "https://archive.org/details/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "introduction and manuscript list, especially pp. viii-xxxi; acknowledgments; text headings and apparatus",
+      "summary": "Defines the edition's historical and editorial boundary: Herrtage calls it far from a simple Madden reprint, reports at least two manuscript collations, explains rearranged parallel versions and marked expansions, describes the witnesses and text sections, and credits Lucy Toulmin Smith's Harley/Additional proof collation and de Worde comparison.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:metadata-ia",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for earlyenglishver00herrgoog.",
+      "url": "https://archive.org/metadata/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/internet-archive-metadata.json",
+      "locator": "metadata.title, creator, date, publisher, language, description, collection, and files",
+      "summary": "Confirms the 1879 edition identity, full physical extent, language metadata, Google digitization, and detailed contents: 70 Harley stories with Additional versions, 66 Additional stories with Kk.1.6 versions, eight de Worde stories, notes, appendix, glossary, and index.",
+      "accessed_on": "2026-07-14",
+      "sha256": "a4a1804e1a1e5701767a37b8df3ee35ffb06ab516ce9d08e6b7c262b49a65473"
+    },
+    {
+      "id": "evidence:metadata-harley",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 7333, record 040-002053187.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002053187",
+      "summary": "Current item record confirming Harley MS 7333, Gesta Romanorum on ff. 150r-203r, parchment support, Leicester origin, second-half-fifteenth-century date, codex extent and dimensions, and unavailable digital images.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:metadata-add9066",
+      "type": "scholarly_source",
+      "citation": "Herrtage's description and edited use of British Museum Additional MS 9066 in The Early English Versions of the Gesta Romanorum (1879).",
+      "url": "https://archive.org/details/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "introduction manuscript descriptions; Text I parallel headings and milestones; Text II",
+      "summary": "Describes the 87-leaf parchment witness, two hands, 96 stories, and 1832 Conybeare donation; establishes its role in Text I parallel versions and as the Text II base. A current exact British Library public record was not recovered, so historical and current catalog layers remain distinguished.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:metadata-kk16",
+      "type": "scholarly_source",
+      "citation": "M. R. James, unpublished description of Cambridge, University Library, MS Kk.1.6, transcription hosted by the official Cambridge Apollo repository.",
+      "url": "https://www.repository.cam.ac.uk/bitstreams/afe05d31-ffde-46b3-982d-28cfcc43be77/download",
+      "alternate_urls": ["https://doi.org/10.17863/CAM.68083", "https://www.repository.cam.ac.uk/handle/1810/320964", "https://imep.lib.cam.ac.uk/titles/?page=181&sort=-prose"],
+      "repository_path": "source-cache/GRom/cambridge-kk-1-6-mr-james-description.pdf",
+      "locator": "section V, ff. 216r-242v",
+      "summary": "Confirms a fifteenth-century, 247-leaf vellum-and-paper codex; thirty-two Gesta tales without morals on ff. 216r-242v; textual kinship with Additional 9066; Madden's use; and Richard Fox's closing rubric.",
+      "accessed_on": "2026-07-14",
+      "sha256": "61b770e333b0b225402cb3a01aa3da6b2ae01f056029221536624cacffd68ee3"
+    },
+    {
+      "id": "evidence:metadata-ustc",
+      "type": "official_catalog",
+      "citation": "Universal Short Title Catalogue, Gesta Romanorum, USTC 501090.",
+      "url": "https://www.ustc.ac.uk/editions/501090",
+      "summary": "Records Wynkyn de Worde's London Gesta as [1510], [164] pages with full signatures, ESTC S4864/STC 21286.3, St John's A.2.18(4), an unshelfmarked Cambridge University Library holding, and restricted ProQuest digitalization.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:metadata-estc",
+      "type": "official_catalog",
+      "citation": "English Short Title Catalogue through CERL, Gesta Romanorum, ESTC S4864.",
+      "url": "https://datb.cerl.org/estc/S4864",
+      "summary": "Supplies the revised [1507 to 1508?] date, London/Fleet Street Wynkyn de Worde imprint, physical collation, St John's A.2.18(4) holding, illustrated title page, STC number, and EEBO reproduction note.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:metadata-madden",
+      "type": "digital_surrogate",
+      "citation": "Frederic Madden, ed., The Old English Versions of the Gesta Romanorum (London: W. Nicol, Shakespeare Press, for the Roxburghe Club, 1838), Internet Archive b22007118.",
+      "url": "https://archive.org/download/b22007118/b22007118.pdf",
+      "alternate_urls": ["https://archive.org/details/b22007118", "https://openlibrary.org/books/OL25938260M/The_old_English_versions_of_the_Gesta_Romanorum_edited_for_the_first_time_from_manuscripts_in_the_Br"],
+      "repository_path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum.pdf",
+      "locator": "PDF p. 7 title page; complete 544-page scan containing the [1], 530, [2]-page edition",
+      "summary": "Confirms the title and bibliographic identity of Herrtage's editorial predecessor. Herrtage's own introduction supplies the evidence for revision rather than simple reprinting.",
+      "accessed_on": "2026-07-14",
+      "sha256": "52024f9820d3b45b95669506cb3a127d9774201c0617d58d535bb231a6ce889a"
+    },
+    {
+      "id": "evidence:metadata-lineage",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus GRom lineage manifest.",
+      "repository_path": "manifests/lineage/works/GRom.json",
+      "source_evidence_id": "evidence:grom-xml",
+      "summary": "The linked lineage record supplies the audited entity identifiers and distinctions among Herrtage's compilation, Madden's predecessor edition, three manuscript witnesses, the de Worde print, the U-M encoding, repository artifact, and facsimile layers used by metadata locators and bindings."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:translation-agents-dates-sources",
+      "question": "Who translated or adapted the distinct Middle English streams, when and where were they produced, and which Latin exemplars or textual branches underlie each one?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Review current scholarship on the Harley 7333, Additional 9066, Kk.1.6, and de Worde English Gesta traditions rather than projecting witness dates onto translation events.",
+        "Collate the complete English witnesses with modern work on the Latin Gesta circulation in England and distinguish common textual affiliation from direct physical-exemplar claims.",
+        "Retain anonymous plural responsibility and broad English cultural origin until agent-, date-, dialect-, and source-specific evidence supports narrower statements."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-harley", "evidence:metadata-add9066", "evidence:metadata-kk16", "evidence:metadata-estc"]
+    },
+    {
+      "id": "question:variant-note-attribution",
+      "question": "Which source or editorial layer underlies each of the 1,347 XML NOTE1 elements marked TYPE=variant?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Map the XML NOTE1 sequence to Herrtage's printed footnotes and typographic sigla.",
+        "Compare the corresponding passages with Madden's 1838 reading and complete witness images when obtainable.",
+        "Do not assign generic variant notes wholesale to Kk.1.6, Additional 9066, or Madden without note-level evidence."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:metadata-structure", "evidence:metadata-herrtage-editorial", "evidence:metadata-madden"]
+    },
+    {
+      "id": "question:deworde-source-relation",
+      "question": "Exactly how did Herrtage and Lucy Toulmin Smith alter Madden's eight Text III readings after comparison with the St John's de Worde print, and what date and surviving-copy statement should current cataloging prefer?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Compare Herrtage Text III, Madden's 1838 text, and complete images of St John's A.2.18(4) line by line.",
+        "Review the 1507-1508? redating evidence cited by ESTC and preserve USTC's [1510] as a distinct older convention rather than averaging the two.",
+        "Confirm whether USTC's unshelfmarked Cambridge University Library holding is a distinct original copy, reproduction, or legacy record before revising survival claims."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:metadata-herrtage-editorial", "evidence:metadata-ustc", "evidence:metadata-estc", "evidence:metadata-madden"]
+    }
+  ],
+  "notes": [
+    "Work metadata catalogs Herrtage's 1879 edition-level compilation; physical holdings, access routes, facsimile completeness, rights, and digital-production layers remain in the linked lineage manifest.",
+    "The title-page representation is part of the encoded selection but is editorial apparatus rather than a fourth intrinsic content section; the content inventory therefore has three sections and 144 story groups.",
+    "The XML's Latin-only language declaration is incomplete. Direct inspection supports Middle English as primary, Latin as embedded, and modern English as editorial.",
+    "The 137 BODY DIV1 count is not a 137-story total: Text III uses one section DIV1 containing eight DIV2 stories, yielding 70 + 66 + 8 = 144 edition-level groups.",
+    "Parallel witness streams are structurally visible but are not double-counted as additional numbered stories.",
+    "The exact current catalog record and complete-facsimile status of Additional MS 9066 remain unresolved; historical Herrtage evidence is explicitly labeled rather than presented as confirmed-current catalog data.",
+    "The 1974 Exeter facsimile and EEBO reproduction are downstream consultation surrogates, not sources used by Herrtage in 1879."
+  ]
+}

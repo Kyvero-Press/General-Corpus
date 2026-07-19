@@ -1,0 +1,713 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00146",
+  "work_id": "CME00146",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "cataloging_subject": {
+    "id": "work:CME00146",
+    "unit_type": "compilation",
+    "label": "Liber Cure Cocorum",
+    "scope_note": "The cataloged subject is the anonymous Middle English verse culinary compilation Liber Cure Cocorum, not British Library Sloane MS 1986 or Magdalene College Pepys MS 1047 as physical objects, Richard Morris's 1862 printed edition and its modern paratext, the unidentified working transcript used by Morris, the University of Michigan encoding, or the checked-in XML artifact. The full work survives in Sloane MS 1986; Pepys MS 1047 preserves only four excerpts."
+  },
+  "catalog_summary": {
+    "title": "Liber Cure Cocorum",
+    "author": "Anonymous",
+    "editor": "Richard Morris",
+    "date": "Not securely established; attested in fifteenth-century Sloane MS 1986; first printed in 1862",
+    "region": "England; the Sloane witness language is localized to Cheshire, but the work's exact composition place is unresolved",
+    "genres": ["Culinary recipe collection", "Didactic poem"],
+    "form": "verse",
+    "language_codes": ["enm", "lat"],
+    "tags": [
+      "anonymous",
+      "cookery",
+      "culinary-recipes",
+      "didactic-poetry",
+      "elite-households",
+      "fifteenth-century",
+      "fish",
+      "food-history",
+      "household-management",
+      "imev-2361",
+      "latin",
+      "meat",
+      "middle-english",
+      "pastry",
+      "poultry",
+      "rhyming-couplets",
+      "verse"
+    ]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00146", "uri": "https://name.umdl.umich.edu/CME00146"},
+    {"scheme": "DIMEV", "value": "3799", "uri": "https://www.dimev.net/record.php?recID=3799"},
+    {"scheme": "IMEV", "value": "2361"},
+    {"scheme": "NIMEV", "value": "2361"},
+    {"scheme": "British Library witness and locus", "value": "Sloane MS 1986, ff. 27r-56v", "uri": "https://searcharchives.bl.uk/catalog/040-002114345"},
+    {"scheme": "Pepys Library excerpt witness and locus", "value": "Pepys MS 1047, ff. 15r-16v", "uri": "https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Liber Cure Cocorum",
+      "language": "lat",
+      "script": "Latn",
+      "supplied_by": "Stable explicit, editorial, and DIMEV usage",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"],
+        "notes": "The Sloane-derived explicit reads Explicit Liber cure Cocorum; DIMEV v1.0 uses the same title."
+      }
+    },
+    {
+      "id": "title:supplied-slyghtes",
+      "type": "supplied",
+      "value": "The Slyghtes of Cure",
+      "language": "enm",
+      "script": "Latn",
+      "supplied_by": "Richard Morris, from the main-text opening",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"],
+        "notes": "Morris calls this an appropriate English title derived from the phrase in the opening; it is not represented as a separate medieval title page."
+      }
+    },
+    {
+      "id": "title:incipit-prologue",
+      "type": "incipit",
+      "value": "Now speke I wele a lytul more",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:verse-prologue"], "description": "Opening of the fourteen-line prologue"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    },
+    {
+      "id": "title:incipit-main",
+      "type": "incipit",
+      "value": "Now slyȝtes of cure wylle I preche",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:verse-recipes"], "description": "Opening of the principal recipe text after the table"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    },
+    {
+      "id": "title:explicit",
+      "type": "explicit",
+      "value": "Explicit Liber cure Cocorum",
+      "language": "lat",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:verse-recipes"], "description": "Explicit after the complete Sloane-derived verse recipe text"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-lcc-author",
+      "type": "collective",
+      "name": "Anonymous Liber Cure Cocorum author",
+      "notes": ["No consulted witness, edition statement, or scholarly catalog source names the author."]
+    },
+    {
+      "id": "agent:richard-morris",
+      "type": "person",
+      "name": "Richard Morris"
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-author",
+      "agent_id": "agent:anonymous-lcc-author",
+      "display_name": "Anonymous",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev", "evidence:metadata-bl-catalog"]
+      }
+    },
+    {
+      "id": "responsibility:morris-editor",
+      "agent_id": "agent:richard-morris",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {
+        "kind": "part",
+        "part_ids": [
+          "part:source-title-page",
+          "part:verse-prologue",
+          "part:table-of-contents",
+          "part:verse-recipes",
+          "part:morris-index",
+          "part:morris-final-note",
+          "part:printing-colophon"
+        ],
+        "description": "The represented layers of Morris's 1862 source edition"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"],
+        "notes": "No transcriber responsibility is assigned because Morris does not identify who made the working transcript from which he printed the text."
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Not securely established; generally associated with the fifteenth century",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "tentative",
+        "confidence": "low",
+        "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-bl-catalog", "evidence:metadata-dimev"],
+        "notes": "Morris's linguistic estimate and the date of the Sloane witness do not independently date the work's composition; no exact normalized range is assigned."
+      }
+    },
+    {
+      "id": "date:first-attestation",
+      "type": "first_known_attestation",
+      "display": "Fifteenth century: the complete Sloane MS 1986 witness and the partial Pepys MS 1047 witness have overlapping production ranges",
+      "normalized": {"not_before": 1400, "not_after": 1499},
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-bl-catalog", "evidence:metadata-dimev", "evidence:metadata-pepys-cudl"],
+        "notes": "This is a joint qualified attestation window, not a composition date. Sloane MS 1986 preserves the complete work and is dated only to the fifteenth century; Pepys MS 1047 preserves four excerpts and is dated after 1470/1471. Their ranges overlap, so the consulted evidence does not establish which surviving witness is earlier, and no singular lineage entity is asserted."
+      }
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "1862",
+      "normalized": {"not_before": 1862, "not_after": 1862},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:morris:liber-cure-cocorum-1862",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "place:england",
+      "label": "England",
+      "kind": "country",
+      "notes": [
+        "Both manuscript witnesses are cataloged as English, and the work is Middle English; the exact place of composition remains unresolved.",
+        "DIMEV's Cheshire localization belongs to the Sloane witness language rather than the composition event."
+      ]
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:english-origin",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-bl-catalog", "evidence:metadata-pepys-cudl", "evidence:metadata-dimev"]
+      },
+      "notes": [
+        "Do not infer a specific composition place from Morris's North-West Lancashire proposal, DIMEV's Cheshire localization of the Sloane witness, current London or Cambridge custody, or the Berlin imprint."
+      ]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev", "evidence:metadata-pepys-cudl"]
+      }
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {
+        "kind": "selected_passages",
+        "part_ids": ["part:table-of-contents", "part:verse-recipes"],
+        "description": "Brief rubrics, headings, and the explicit embedded in a predominantly Middle English work"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"],
+        "notes": "Latin is not treated as a second full-text language."
+      }
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "A fourteen-line prologue and 127-recipe culinary text in rhyming couplets, rhyme pattern aa; the table and modern editorial paratext do not change the primary form of the work.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:culinary-recipe-collection",
+      "term": "culinary-recipe-collection",
+      "label": "Culinary recipe collection",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    },
+    {
+      "id": "genre:didactic-poem",
+      "term": "didactic-poem",
+      "label": "Didactic poem",
+      "scheme": "general-corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"],
+        "notes": "The speaker explicitly undertakes to teach the practices of cookery, and the directions are organized in verse."
+      }
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:cooking",
+      "term": "cooking-and-food-preparation",
+      "label": "Cooking and food preparation",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+      }
+    },
+    {
+      "id": "subject:household-service",
+      "term": "household-food-service",
+      "label": "Household food service and course organization",
+      "scheme": "general-corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"],
+        "notes": "The prologue organizes cookery among the hasteler, pasteler, and potagere, while the recipe collection includes service guidance for fish and flesh days."
+      }
+    },
+    {
+      "id": "subject:fasting",
+      "term": "fasting-and-feast-day-cookery",
+      "label": "Fasting and feast-day cookery",
+      "scheme": "general-corpus",
+      "primary": false,
+      "scope": {"kind": "part", "part_ids": ["part:verse-recipes"]},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]
+      }
+    }
+  ],
+  "tags": [
+    "anonymous",
+    "cookery",
+    "culinary-recipes",
+    "didactic-poetry",
+    "elite-households",
+    "fifteenth-century",
+    "fish",
+    "food-history",
+    "household-management",
+    "imev-2361",
+    "latin",
+    "meat",
+    "middle-english",
+    "pastry",
+    "poultry",
+    "rhyming-couplets",
+    "verse"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "An anonymous Middle English culinary compilation that teaches cookery in rhyming couplets. A fourteen-line prologue introduces the courtly crafts of the hasteler, pasteler, and potagere; a table precedes 127 recipes for pottages, broths, meat, poultry, fish, baked dishes, sauces, preserves, herbs, and fish- and flesh-day service.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "CME00146 retains Morris's source title page, the fourteen-line prologue, table of contents, complete main verse text, index of words and dishes, final editorial note, and printing colophon. It omits Morris's two-page preface, even though that preface supplies the crucial statement that the edition was printed from an unidentified transcript of Sloane MS 1986.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris", "evidence:metadata-umich"]
+    },
+    {
+      "id": "summary:cataloging",
+      "type": "cataloging_note",
+      "value": "DIMEV v1.0 describes 127 recipes in 1,429 main-text lines plus a fourteen-line prologue. The XML has 1,437 L elements in the main poem division, fourteen in the prologue, and two more inside the final modern editorial note. The unexplained eight-line difference between DIMEV and the main XML division is retained rather than silently normalized.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-dimev", "evidence:metadata-morris"]
+    },
+    {
+      "id": "summary:witnesses",
+      "type": "contents_note",
+      "value": "Sloane MS 1986 transmits the complete work at ff. 27r-56v. Pepys MS 1047 preserves only four excerpts at ff. 15r-16v: mallard sauce, preparation of woodcock and related birds, fritters, and pot herbs. No direct copying relationship between the two codices is asserted.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-bl-catalog", "evidence:metadata-dimev", "evidence:metadata-pepys-cudl", "evidence:metadata-pepys-visual"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 544,
+    "sections": 7,
+    "prose_only_items": null,
+    "verse_only_items": null,
+    "mixed_items": null,
+    "verse_groups": 141,
+    "verse_lines": 1453,
+    "description": "At work level DIMEV v1.0 reports 127 recipes, 1,429 main-text lines, and a fourteen-line prologue. At representation level the XML has seven DIV1 units and 1,453 L elements: 14 prologue lines, 1,437 main-poem lines in 140 LG wrappers, and 2 quotation lines in the final editorial note. The extent's 544 numbered items total the six content parts with integer item counts (the table remains unnumbered here), while verse_lines records all 1,453 XML L elements; only 1,451 of those lines belong to the prologue and main work. The XML also contains 128 table rows, 413 index ITEM elements, one TEMPHEAD workflow ITEM, 62 PB milestones, 75 notes, and later edition paratext. Recipe count, encoded-part item count, XML line count, page milestones, table rows, and index items are distinct measurements.",
+    "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-dimev", "evidence:metadata-morris"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:source-title-page",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "other",
+      "label": "Morris source title page",
+      "summary": "The 1862 title, copied-and-edited statement, editor credentials, Philological Society imprint, Berlin publisher, and date.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "PDF page", "value": "PDF p. 7, title page"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[1], PB REF='1'"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-umich"]
+    },
+    {
+      "id": "part:verse-prologue",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "prologue",
+      "label": "Fourteen-line verse prologue",
+      "summary": "A verse introduction naming the courtly crafts of cookery and promising a numbered table of pottages, roasting, baked meat, and petecure.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 1, "verse_lines": 14},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF page", "value": "printed p. 1, PDF p. 11"},
+        {"lineage_entity_id": "witness:bl:Sloane-MS-1986", "scheme": "manuscript folios", "value": "begins f. 27r and continues to f. 27v"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[2], PB REF='2', one LG with 14 L elements"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:table-of-contents",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "section",
+      "label": "Table of contents",
+      "summary": "A page-numbered table listing the culinary preparations that follow.",
+      "item_count": null,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF pages", "value": "printed pp. 1-3, PDF pp. 11-13"},
+        {"lineage_entity_id": "witness:bl:Sloane-MS-1986", "scheme": "manuscript folios", "value": "after the prologue and before the principal text beginning f. 29r"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[3], 128 ROW and 256 CELL elements, PB REF='3'-'4'"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris", "evidence:metadata-dimev"],
+      "notes": [
+        "The XML's 128 ROW elements are a table-layout count and are not equated mechanically with DIMEV's 127 recipe count."
+      ]
+    },
+    {
+      "id": "part:verse-recipes",
+      "parent_id": null,
+      "sequence": 4,
+      "type": "work",
+      "label": "Verse culinary recipe collection",
+      "summary": "The complete Sloane-derived main text, comprising 127 culinary recipes in couplets according to DIMEV, followed by the explicit Liber cure Cocorum.",
+      "item_count": 127,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 127, "verse_groups": 140, "verse_lines": 1437},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF pages", "value": "blank printed p. 4 milestone through printed p. 55; PDF pp. 14-65; text begins printed p. 5"},
+        {"lineage_entity_id": "witness:bl:Sloane-MS-1986", "scheme": "manuscript folios", "value": "principal text begins f. 29r and explicit follows on f. 56v"},
+        {"lineage_entity_id": "witness:magdalene:Pepys-MS-1047", "scheme": "excerpt witness", "value": "four excerpts at ff. 15r-16v; CUDL canvases 33-36; DIMEV 5104, 1420, 6721, 5106"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[4], PB REF='5'-'56', 140 LG and 1,437 L elements"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris", "evidence:metadata-dimev", "evidence:metadata-pepys-visual"],
+      "notes": [
+        "DIMEV's 1,429 main-text lines differ by eight from the XML division's 1,437 L elements; both measurements are retained.",
+        "The 140 XML LG wrappers do not imply 140 recipes and are not substituted for DIMEV's 127-recipe intellectual count.",
+        "Pepys MS 1047 is a partial excerpt witness and is not the source from which Morris printed the complete text."
+      ]
+    },
+    {
+      "id": "part:morris-index",
+      "parent_id": null,
+      "sequence": 5,
+      "type": "appendix",
+      "label": "Morris's index of words, dishes, etc.",
+      "summary": "A modern editorial index and glossary to the printed verse text.",
+      "item_count": 413,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 413},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF pages", "value": "printed pp. 56-61, PDF pp. 66-71"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[5], 413 ITEM, 53 ROW, 78 CELL, and 25 TABLE elements; PB REF='57'-'62'"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris"],
+      "notes": ["This is Morris's nineteenth-century editorial apparatus, not part of the medieval work's 127-recipe extent."]
+    },
+    {
+      "id": "part:morris-final-note",
+      "parent_id": null,
+      "sequence": 6,
+      "type": "commentary",
+      "label": "Morris's final editorial note",
+      "summary": "A note proposing a corrected reading for page 5, line 23 and quoting the printed and proposed lines.",
+      "item_count": 1,
+      "textual_form": "mixed",
+      "metrics": {"mixed_items": 1, "verse_lines": 2},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF page", "value": "printed p. 61, PDF p. 71"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[6], one P and two L elements"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris"],
+      "notes": ["The two quoted L elements are excluded from the medieval work's verse-line extent."]
+    },
+    {
+      "id": "part:printing-colophon",
+      "parent_id": null,
+      "sequence": 7,
+      "type": "other",
+      "label": "Printing colophon",
+      "summary": "Berlin printing statement for Unger Brothers, Printers to the King.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1},
+      "locators": [
+        {"lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "scheme": "printed and PDF page", "value": "printed p. 61, PDF p. 71"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00146", "scheme": "XML structure", "value": "DIV1[7], one P element"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"],
+      "notes": ["This is a printing-production statement, not a medieval explicit or work title."]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:CME00146",
+    "manifest_path": "manifests/lineage/works/CME00146.json",
+    "bindings": [
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "work:middle-english:liber-cure-cocorum", "role": "related_source"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "witness:bl:Sloane-MS-1986", "role": "source_witness"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "witness:magdalene:Pepys-MS-1047", "role": "source_witness"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "catalog:dimev:record-3799", "role": "related_source"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "encoding:umich-cme:CME00146", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00146", "lineage_entity_id": "artifact:general-corpus:CME00146", "role": "repository_representation"},
+      {"metadata_target": "part:source-title-page", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:verse-prologue", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:table-of-contents", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:verse-recipes", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:verse-recipes", "lineage_entity_id": "witness:bl:Sloane-MS-1986", "role": "source_witness"},
+      {"metadata_target": "part:verse-recipes", "lineage_entity_id": "witness:magdalene:Pepys-MS-1047", "role": "source_witness"},
+      {"metadata_target": "part:morris-index", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:morris-final-note", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"},
+      {"metadata_target": "part:printing-colophon", "lineage_entity_id": "edition:morris:liber-cure-cocorum-1862", "role": "source_edition"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:metadata-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_3/CME00146.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_3/CME00146.xml",
+      "locator": "Complete seven-DIV1 electronic text",
+      "summary": "Direct evidence for identifiers, title page, fourteen-line prologue, table, complete verse text, Latin rubrics and explicit, recipe and service subjects, index, final editorial note, colophon, page milestones, and representation boundaries.",
+      "accessed_on": "2026-07-13",
+      "sha256": "166256a5a42c7b2e8a166568550689c1876189a3c4a291d77afca096b5ee5b2a"
+    },
+    {
+      "id": "evidence:metadata-computation",
+      "type": "computational_inspection",
+      "citation": "Parent-aware structural and count audit of CME00146.xml against Morris's complete source scan.",
+      "repository_path": "CME/source/CME_phase_3/CME00146.xml",
+      "summary": "Confirmed 107,737 bytes; 7 DIV1, 135 HEAD, 1,453 L, 141 LG, 75 NOTE, 8 P, 62 PB, 414 ITEM, 181 ROW, 334 CELL, 26 TABLE, and 3 TRAILER. Isolated 14 prologue lines, 1,437 main-poem lines, and 2 final-note quotation lines; assigned 413 ITEM nodes to the index and one to TEMPHEAD; and mapped REF 1-62 to PDF pp. 7 and 11-71.",
+      "accessed_on": "2026-07-13",
+      "sha256": "166256a5a42c7b2e8a166568550689c1876189a3c4a291d77afca096b5ee5b2a"
+    },
+    {
+      "id": "evidence:metadata-morris",
+      "type": "digital_surrogate",
+      "citation": "Richard Morris, ed., Liber Cure Cocorum (Berlin: A. Asher & Co. for the Philological Society, 1862), complete Internet Archive scan.",
+      "url": "https://archive.org/download/b21505044/b21505044.pdf",
+      "alternate_urls": ["https://archive.org/details/b21505044"],
+      "locator": "PDF p. 7 title; pp. 9-10 preface; pp. 11-71 printed pp. 1-61 and colophon",
+      "summary": "Primary evidence for title, anonymous author framing, first publication, verse cookery scope, prologue and table, exact main text and explicit, editorial index, source-method statement, Northern-dialect proposal, bracketed editorial responsibility, and page boundaries.",
+      "accessed_on": "2026-07-13",
+      "sha256": "46d5bc76433d606b2f5a3b9d91bf85828a1bb473933fe65db03831be38b9f59e",
+      "notes": ["SHA-256 is for the complete cached 96-page PDF."]
+    },
+    {
+      "id": "evidence:metadata-umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00146 item page.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00146",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00146"],
+      "summary": "Official route for the stable CME identifier, Morris 1862 source citation, encoded content, and item-level catalog framing.",
+      "accessed_on": "2026-07-13",
+      "notes": ["Automated requests returned HTTP 403 during review; the stable public route and exact checked-in XML were used without interpreting that response as item removal."]
+    },
+    {
+      "id": "evidence:metadata-dimev",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse v1.0, record 3799, excerpt records 5104, 1420, 6721, and 5106, and manuscript entries BLSl1986 and CamMagPep1047.",
+      "url": "https://doi.org/10.5281/zenodo.14585961",
+      "alternate_urls": [
+        "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0",
+        "https://www.dimev.net/record.php?recID=3799"
+      ],
+      "locator": "data/Records.xml records 3799, 5104, 1420, 6721, 5106; data/Manuscripts.xml BLSl1986 and CamMagPep1047; data/Bibliography.xml Morris1862 and Hodgett1972",
+      "summary": "Versioned evidence for preferred title, IMEV/NIMEV 2361, culinary subject, 127 recipes, 1,429 couplet lines plus a fourteen-line prologue, aa rhyme, Sloane and Pepys loci, exact excerpt incipits and extents, Sloane-witness Cheshire localization, and edition and facsimile bibliography.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"
+    },
+    {
+      "id": "evidence:metadata-bl-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Sloane MS 1986, record 040-002114345.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002114345",
+      "locator": "Date, Physical Description, and Scope and Content",
+      "summary": "Official evidence for the fifteenth-century parchment quarto, 110-folio extent, English and Latin contents, Boke of Curtasye at ff. 12-27, and complete Liber Cure Cocorum at ff. 27-56b.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-pepys-cudl",
+      "type": "digital_surrogate",
+      "citation": "Cambridge Digital Library, official IIIF manifest for Medical and culinary recipes, Magdalene College Pepys MS 1047, preserved by the Internet Archive on 2025-06-14.",
+      "url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+      "alternate_urls": ["https://cudl.lib.cam.ac.uk/view/MS-MAGDALENE-PEPYS-01047/1"],
+      "locator": "Complete 55-canvas manifest; range ITEM-10 and canvases 33-36, ff. 15r-16v",
+      "summary": "Provider evidence for the late-fifteenth-century English paper codex, post-1470/1471 terminus, single Anglicana-formata scribe, Middle English and Latin language, physical dimensions and extent, and the four-canvas collection of culinary recipes in verse.",
+      "accessed_on": "2026-07-13",
+      "sha256": "c3ab7df51d4d2d05400f35f2a6a4d6fb4774bd130663b82deef2b7a7df18e5cd",
+      "notes": ["SHA-256 is for the complete locally cached 55-image IIIF bundle with archived canonical manifest and inventory."]
+    },
+    {
+      "id": "evidence:metadata-pepys-visual",
+      "type": "digital_surrogate",
+      "citation": "Direct inspection of the complete cached CUDL Pepys MS 1047 image object.",
+      "url": "https://web.archive.org/web/20250614163541id_/https://cudl.lib.cam.ac.uk/iiif/MS-MAGDALENE-PEPYS-01047?manifest=https://cudl.lib.cam.ac.uk//iiif/MS-MAGDALENE-PEPYS-01047",
+      "locator": "canvases 33-36 and adjacent canvases 32 and 37; ff. 15r-16v",
+      "summary": "Confirmed that DIMEV 5104 crosses 15r-15v, 1420 crosses 15v-16r, 6721 is on 16r, and 5106 crosses 16r-16v; also confirmed overlapping preceding and following prose recipes on the boundary canvases.",
+      "accessed_on": "2026-07-13",
+      "sha256": "c3ab7df51d4d2d05400f35f2a6a4d6fb4774bd130663b82deef2b7a7df18e5cd"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:composition-date-place",
+      "question": "When and where was Liber Cure Cocorum composed, as distinct from the date and Cheshire linguistic localization of its Sloane witness?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult modern linguistic and culinary-text scholarship based directly on the Sloane text and independent recipe parallels.",
+        "Distinguish composition evidence from Morris's 1862 North-West Lancashire inference and from LALME/eLALME localization of the Sloane copy.",
+        "Do not normalize the work to c. 1430, Lancashire, or Cheshire without source-specific support."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-bl-catalog", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "question:line-count",
+      "question": "Why does DIMEV v1.0 report 1,429 main-text lines while the XML main poem division contains 1,437 L elements?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Collate DIMEV's counting rule line by line against Morris printed pp. 5-55 and XML DIV1[4].",
+        "Keep the fourteen-line prologue and the two quotation lines in Morris's final note outside the main-text comparison.",
+        "Preserve both counts until the eight-line difference is explained."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-dimev", "evidence:metadata-morris"]
+    },
+    {
+      "id": "question:witness-relationship",
+      "question": "What textual relationship connects the four Pepys MS 1047 excerpts to the complete Sloane MS 1986 witness?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Prepare diplomatic transcriptions of the four Pepys passages and collate them with Sloane once direct or complete-image access is available.",
+        "Consult modern scholarship on circulation and recombination of Middle English culinary recipes.",
+        "Avoid asserting direct witness-to-witness copying without textual and codicological evidence."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-pepys-visual", "evidence:metadata-bl-catalog"]
+    }
+  ],
+  "notes": [
+    "The catalog summary's date deliberately avoids the frequently repeated c. 1420-1440 estimate because the consulted secure sources date the surviving witnesses more confidently than the abstract composition event.",
+    "DIMEV's LALME/eLALME LP 43, grid 406 400, Cheshire localization is retained as evidence about the Sloane witness language and is not promoted into a work-level place of composition.",
+    "Latin occurs only in brief rubrics, headings, and the explicit; modern English in Morris's index and note is an editorial layer rather than a second language of the medieval work.",
+    "The XML proofing TEMPHEAD is a repository workflow marker, not a culinary item, witness date, or source-edition date.",
+    "Morris's title-page wording does not establish that he personally made the unidentified transcript used to prepare the edition."
+  ]
+}

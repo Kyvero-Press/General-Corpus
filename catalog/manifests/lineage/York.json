@@ -1,0 +1,839 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:York",
+  "work_id": "York",
+  "title": "York Corpus Christi Play",
+  "primary_subject": "artifact:general-corpus:York",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The pinned repository XML is a copy of a 1993 University of Michigan/Oxford Text Archive electronic edition made from Richard Beadle's 1982 edition, with corrections recorded by Gerald Byron Kinneavy in 1986. Beadle's edition principally transcribes British Library Add MS 35290. The separate Sykes copy of the Scriveners' play, documentary Ordo, and collateral York-related material in Huntington HM 1 are modeled from independently inspected sources without asserting unverified source use by Beadle. The XML encodes fifty divisions and deliberately omits front and back matter, illustrations, and editorial notes. Physical, textual, editorial, electronic, and repository layers are not collapsed into one object.",
+  "languages": ["enm", "eng", "lat"],
+  "review_notes": [
+    "The cataloging boundary is exactly the fifty DIV1 units in York.xml: 1, 2, 3A, 3B, 4-22, 22A, 23-46, 46A, and 47.",
+    "The Ironmongers' empty register entry and the Funeral of the Virgin, never entered in the Register, are excluded rather than invented as encoded plays.",
+    "Play XVI serializes Yk.16, Yk.16G, and Yk.16M shared and alternative blocks; its 539 L elements are not asserted as 539 additive intellectual lines.",
+    "Huntington HM 1 is a distinct Towneley compilation preserving York-derived adaptation or borrowing. Its selected digital object contains no exact York target text and is modeled target-work absent.",
+    "The exact CME_from_OTA path notice, not the repository root software license, governs the distributed York artifact and assigns CC BY-NC-SA 3.0.",
+    "Complete local-copy coverage always refers to the accessed source entity. It never silently implies a complete physical manuscript or unrestricted redistribution."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:York",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for York",
+      "description": "The pinned XML artifact consumed by this repository's conversion and publication workflow, supplied through the Kyvero-Press/CME git submodule from the path-specific CME_from_OTA collection.",
+      "identifiers": [
+        {"scheme": "General Corpus work ID", "value": "York"},
+        {"scheme": "git blob", "value": "582bdf552ea2d5a6c93feafb25de7b9d0c36f95f"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/York.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "582bdf552ea2d5a6c93feafb25de7b9d0c36f95f",
+        "sha256": "21de160d526dff4c0899c290fb0308f52f52dcde216ae9a49336dda8339c1a52"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-inspection", "evidence:cme-from-ota-license"]
+    },
+    {
+      "id": "encoding:umich-ota:U-1392-B-York",
+      "type": "digital_encoding",
+      "label": "University of Michigan/Oxford Text Archive electronic edition U-1392-B",
+      "description": "A 1993 electronic edition based on Beadle 1982 and corrected from Kinneavy 1986. The four text files cover the full fifty-division electronic sequence; a fifth file documents input conventions.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "U-1392-B"},
+        {"scheme": "OTA repository", "value": "ota:1392", "uri": "https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392"},
+        {"scheme": "CME/UMDL", "value": "York", "uri": "https://name.umdl.umich.edu/York"}
+      ],
+      "creator_ids": ["agent:umich", "agent:ota"],
+      "date_statements": [{"label":"electronic edition creation","value":"1993","normalized":"1993","certainty":"high","evidence_ids":["evidence:repo-xml","evidence:ota-item"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-york", "evidence:ota-item", "evidence:ota-files"]
+    },
+    {
+      "id": "edition:beadle:york-plays-1982",
+      "type": "scholarly_edition",
+      "label": "Richard Beadle, The York Plays (1982)",
+      "description": "The immediate printed source named in the electronic header. Its contents include the fifty encoded pageant divisions and also modern front matter, notes, appendices, glossary, the unregistered Funeral text, and other editorial matter omitted from the encoding.",
+      "identifiers": [
+        {"scheme": "ISBN", "value": "0-7131-6326-7"},
+        {"scheme": "LCCN", "value": "82185833", "uri": "https://lccn.loc.gov/82185833"},
+        {"scheme": "OCLC", "value": "9557018"}
+      ],
+      "creator_ids": ["agent:richard-beadle"],
+      "date_statements": [{"label":"publication","value":"1982","normalized":"1982","certainty":"high","evidence_ids":["evidence:beadle-preview"]}],
+      "bibliographic": {
+        "citation": "The York Plays, ed. Richard Beadle (London: Edward Arnold, 1982), 537 pp.",
+        "title": "The York Plays",
+        "publisher": "Edward Arnold",
+        "publication_place": "London",
+        "date": "1982",
+        "pages": "537",
+        "languages": ["enm", "eng", "lat"]
+      },
+      "physical_description": {"extent":"537 pages","format":"Printed scholarly edition"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:beadle-preview", "evidence:beadle-copyright", "evidence:beadle-contents"]
+    },
+    {
+      "id": "catalog:kinneavy:york-concordance-1986",
+      "type": "catalog_description",
+      "label": "Gerald Byron Kinneavy, A Concordance to the York Plays (1986)",
+      "description": "A concordance whose pp. xxxi-xxxii record corrections to Beadle's edition incorporated in the electronic text.",
+      "identifiers": [
+        {"scheme":"ISBN","value":"0-8240-8656-2"},
+        {"scheme":"LCCN","value":"85045133","uri":"https://lccn.loc.gov/85045133"}
+      ],
+      "creator_ids": ["agent:gerald-b-kinneavy"],
+      "date_statements": [{"label":"publication","value":"1986","normalized":"1986","certainty":"high","evidence_ids":["evidence:kinneavy"]}],
+      "bibliographic": {"citation":"Gerald Byron Kinneavy, A Concordance to the York Plays, Garland Reference Library of the Humanities 626 (New York: Garland, 1986), xxxviii + 936 pp.","title":"A Concordance to the York Plays","series":"Garland Reference Library of the Humanities 626","publisher":"Garland","publication_place":"New York","date":"1986","pages":"xxxviii + 936","languages":["enm","eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:kinneavy"]
+    },
+    {
+      "id": "witness:bl:Add-MS-35290",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 35290 (York Register)",
+      "alternate_labels": ["York Register", "Ashburnham manuscript, Appendix 137"],
+      "description": "The principal surviving civic register of the York pageants, copied chiefly c. 1463-1477 and repeatedly revised into the sixteenth century. It contains the pageant texts represented by the encoding, lacunae and blank entries, and later additions; it is not itself the 1993 electronic text.",
+      "identifiers": [
+        {"scheme":"British Library shelfmark","value":"Add MS 35290","uri":"https://searcharchives.bl.uk/catalog/040-002088765"},
+        {"scheme":"British Library ARK","value":"ark:/81055/vdc_100000001490.0x00012e"}
+      ],
+      "date_statements": [
+        {"label":"principal copying","value":"c. 1463-1477","normalized":"1463/1477","certainty":"medium","evidence_ids":["evidence:bl-catalog","evidence:mets-york"]},
+        {"label":"continuing additions and revision","value":"late fifteenth through sixteenth century","normalized":"1463/1599","certainty":"high","evidence_ids":["evidence:bl-catalog"]}
+      ],
+      "holding": {"institution_id":"agent:british-library","shelfmark":"Add MS 35290","historical_designations":["Ashburnham Appendix 137"],"catalog_url":"https://searcharchives.bl.uk/catalog/040-002088765","notes":"Current physical consultation is restricted and requires a letter of introduction and advance request."},
+      "physical_description": {"support":"parchment","extent":"254 folios plus starred inserts and flyleaves; the facsimile/critical-edition foliation counts 268 parchment leaves including blanks","format":"Civic register codex","dimensions":"280 × 205 mm","notes":["Current catalog languages are Middle English and Latin.","Pageant text is physically nonsequential at the Purification, later Coronation fragment, and several blank or inserted leaves."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:mets-york", "evidence:bl-catalog-inspection"]
+    },
+    {
+      "id": "catalog:bl:Add-MS-35290-current",
+      "type": "catalog_description",
+      "label": "British Library current catalog description for Add MS 35290",
+      "description": "Current official manuscript record with a detailed folio map, physical description, provenance, access status, and catalog-data licensing statement.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-catalog-inspection"]
+    },
+    {
+      "id": "witness:york-city-archives:Acc-104-G-1",
+      "type": "manuscript_witness",
+      "label": "York City Archives, Acc 104/G.1 (Sykes manuscript)",
+      "alternate_labels": ["Sykes manuscript", "Acc 104: G/1"],
+      "description": "A separate c. 1525-1550 guild copy of the Scriveners' Incredulity of Thomas on four vellum leaves. Cawley's collation finds that neither this copy nor the Register was copied directly from the other; their precise common exemplar remains uncertain.",
+      "identifiers": [{"scheme":"York City Archives shelfmark","value":"Acc 104/G.1"}],
+      "date_statements": [{"label":"copying","value":"c. 1525-1550","normalized":"1525/1550","certainty":"high","evidence_ids":["evidence:cawley-sykes"]}],
+      "holding": {"institution_id":"agent:york-city-archives","shelfmark":"Acc 104/G.1","historical_designations":["Sykes manuscript"],"catalog_url":"https://exploreyork.org.uk/archives/visiting-us/","notes":"The exact current item page was unavailable during review; the current shelfmark is established by scholarly and repository references, with access arranged through York City Archives."},
+      "physical_description": {"support":"vellum","extent":"four leaves in one quire, with vellum cover and flap","format":"Separate guild pageant copy","notes":["Cawley published a photograph of f. 1a, not a complete photographic facsimile."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cawley-sykes", "evidence:york-city-access"]
+    },
+    {
+      "id": "edition:cawley:sykes-1952",
+      "type": "scholarly_edition",
+      "label": "A. C. Cawley, The Sykes MS of the York Scriveners' Play (1952)",
+      "description": "Article containing a complete transcription and collation of the Sykes Scriveners copy against the Register, with one manuscript photograph.",
+      "creator_ids": ["agent:a-c-cawley"],
+      "date_statements": [{"label":"publication","value":"1952","normalized":"1952","certainty":"high","evidence_ids":["evidence:cawley-sykes"]}],
+      "bibliographic": {"citation":"A. C. Cawley, ‘The Sykes MS of the York Scriveners' Play,’ Leeds Studies in English 7-8 (1952): 45-80.","title":"The Sykes MS of the York Scriveners' Play","container_title":"Leeds Studies in English","volume":"7-8","date":"1952","pages":"45-80","languages":["enm","eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cawley-sykes"]
+    },
+    {
+      "id": "facsimile:leeds:cawley-sykes-1952",
+      "type": "facsimile",
+      "label": "Leeds digital facsimile of Cawley's 1952 article",
+      "description": "A complete 38-page PDF of the article and cover sheet. It contains the complete diplomatic transcription but only one photograph of the Sykes manuscript.",
+      "creator_ids": ["agent:university-of-leeds"],
+      "physical_description": {"extent":"38 PDF pages","format":"Complete article scan"},
+      "reproduction_format": "PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cawley-sykes"]
+    },
+    {
+      "id": "witness:borthwick:E-20-1327-1547",
+      "type": "manuscript_witness",
+      "label": "A/Y Memorandum Book containing the Ordo Paginarum",
+      "alternate_labels": ["Ordo Paginarum", "York Memorandum Book A/Y"],
+      "description": "A civic documentary manuscript containing the layered Ordo pageant list. It documents pageant organization but is not a script witness of the exact cycle text. The Ordo originated in 1415 and was erased, supplemented, and rewritten; flood damage in 1892 makes early transcripts important.",
+      "identifiers": [{"scheme":"REED/Borthwick reference","value":"E 20:1327-1547"}],
+      "date_statements": [{"label":"Ordo origin and revision","value":"begun 1415 and subsequently revised","normalized":"1415/1500","certainty":"high","evidence_ids":["evidence:reed-york","evidence:meredith-ordo"]}],
+      "holding": {"institution_id":"agent:borthwick-institute","shelfmark":"E 20:1327-1547","historical_designations":["A/Y Memorandum Book, York City Library"],"catalog_url":"https://www.york.ac.uk/borthwick/visiting-us/","notes":"Current REED attribution places the source at the Borthwick Institute, while older scholarship calls it York City Library/York City Archives. The exact present catalog record and shelfmark mapping remain unresolved."},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:reed-york", "evidence:meredith-ordo", "evidence:borthwick-access"]
+    },
+    {
+      "id": "catalog:reed:york-collection",
+      "type": "catalog_description",
+      "label": "Records of Early English Drama York collection",
+      "description": "A current TEI documentary edition of York civic records, pinned to commit 1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66. It is evidence for performance and pageant organization, not a transcription of the exact York play script.",
+      "creator_ids": ["agent:reed-project"],
+      "date_statements": [{"label":"pinned repository commit","value":"2025-06-26","normalized":"2025-06-26","certainty":"high","evidence_ids":["evidence:reed-commit"]}],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:reed-york", "evidence:reed-license", "evidence:reed-commit"]
+    },
+    {
+      "id": "catalog:meredith:ordo-1980",
+      "type": "catalog_description",
+      "label": "Peter Meredith, The Ordo Paginarum and the Development of the York Tilemakers' Pageant (1980)",
+      "description": "Scholarly article demonstrating that the Ordo is a layered and revised document and that the Tilemakers entry cannot be treated as a homogeneous 1415 state.",
+      "creator_ids": ["agent:peter-meredith"],
+      "date_statements": [{"label":"publication","value":"1980","normalized":"1980","certainty":"high","evidence_ids":["evidence:meredith-ordo"]}],
+      "bibliographic": {"citation":"Peter Meredith, ‘The Ordo Paginarum and the Development of the York Tilemakers' Pageant,’ Leeds Studies in English, n.s. 11 (1980): 59-73.","title":"The Ordo Paginarum and the Development of the York Tilemakers' Pageant","container_title":"Leeds Studies in English","volume":"new series 11","date":"1980","pages":"59-73","languages":["eng","lat"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:meredith-ordo"]
+    },
+    {
+      "id": "facsimile:leeds:meredith-ordo-1980",
+      "type": "facsimile",
+      "label": "Digital facsimile of Meredith's 1980 Ordo article",
+      "description": "A complete 15-page article PDF. It contains one Ordo image, not a full manuscript facsimile.",
+      "creator_ids": ["agent:university-of-leeds"],
+      "physical_description": {"extent":"15 PDF pages","format":"Complete article scan"},
+      "reproduction_format": "PDF",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:meredith-ordo"]
+    },
+    {
+      "id": "witness:huntington:HM-1",
+      "type": "manuscript_witness",
+      "label": "Huntington Library, HM 1 (Towneley manuscript)",
+      "description": "The distinct Towneley manuscript compilation. Selected pageants contain York-tradition borrowing or adaptation, but HM 1 does not contain the exact York target work and is not modeled as its physical source witness.",
+      "identifiers": [{"scheme":"Huntington shelfmark","value":"mssHM 1","uri":"https://catalog.huntington.org/record=b1862079"}],
+      "date_statements": [{"label":"current catalog date","value":"1490-1510","normalized":"1490/1510","certainty":"high","evidence_ids":["evidence:huntington-hm1"]}],
+      "holding": {"institution_id":"agent:huntington","shelfmark":"mssHM 1","catalog_url":"https://catalog.huntington.org/record=b1862079","notes":"Research access is restricted and arranged through Huntington curatorial procedures."},
+      "physical_description": {"support":"parchment","extent":"132 folios","format":"Manuscript compilation"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm1", "evidence:mets-york", "evidence:cawley-sykes"]
+    },
+    {
+      "id": "facsimile:huntington:HM-1-selected",
+      "type": "facsimile",
+      "label": "Huntington public 60-canvas selected-image object for HM 1",
+      "description": "The complete provider-selected 60-canvas object, partial relative to the 132-folio manuscript. Its York-related Towneley passages are collateral adaptations or borrowings, not the exact York target text.",
+      "identifiers": [{"scheme":"Huntington digital object","value":"p15150coll7:52988","uri":"https://hdl.huntington.org/digital/collection/p15150coll7/id/52988"}],
+      "creator_ids": ["agent:huntington"],
+      "reproduction_format": "IIIF Presentation manifest and 60 JPEG derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-hm1", "evidence:huntington-iiif", "evidence:huntington-visual"]
+    },
+    {
+      "id": "edition:smith:york-plays-1885",
+      "type": "scholarly_edition",
+      "label": "Lucy Toulmin Smith, York Plays (1885)",
+      "description": "The first complete printed edition, made directly from the then Ashburnham manuscript. Smith expanded contractions, regularized selected characters, supplied titles, dramatis personae, analysis, stage directions, scenes, and stanza numbering, and collated the Sykes and Towneley materials.",
+      "creator_ids": ["agent:lucy-toulmin-smith"],
+      "date_statements": [{"label":"publication","value":"1885","normalized":"1885","certainty":"high","evidence_ids":["evidence:smith-1885"]}],
+      "bibliographic": {"citation":"York Plays: The Plays Performed by the Crafts or Mysteries of York on the Day of Corpus Christi in the 14th, 15th, and 16th Centuries, ed. Lucy Toulmin Smith (Oxford: Clarendon Press, 1885).","title":"York Plays","publisher":"Clarendon Press","publication_place":"Oxford","date":"1885","languages":["enm","eng","lat"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1885"]
+    },
+    {
+      "id": "facsimile:ia:smith-york-1885",
+      "type": "facsimile",
+      "label": "Internet Archive/Google scan of Smith's 1885 York Plays",
+      "description": "A complete 667-page PDF scan with complete OCR, scan-data XML, and item metadata cached for verification.",
+      "identifiers": [{"scheme":"Internet Archive","value":"yorkplaysnowfir00smitgoog","uri":"https://archive.org/details/yorkplaysnowfir00smitgoog"}],
+      "creator_ids": ["agent:internet-archive"],
+      "physical_description": {"extent":"667 PDF pages","format":"Complete printed-volume scan"},
+      "reproduction_format": "PDF, OCR text, scan-data XML, and item metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:smith-1885", "evidence:smith-ia-metadata"]
+    },
+    {
+      "id": "facsimile:ia:beadle-1982-preview",
+      "type": "facsimile",
+      "label": "Internet Archive restricted preview of Beadle's 1982 York Plays",
+      "description": "A controlled-lending item from which the title, copyright, and two contents pages were publicly previewed and cached as OCR. It is not a complete public facsimile.",
+      "identifiers": [{"scheme":"Internet Archive","value":"yorkplays0000unse","uri":"https://archive.org/details/yorkplays0000unse"}],
+      "creator_ids": ["agent:internet-archive"],
+      "physical_description": {"extent":"Item metadata plus four preview-page OCR objects","format":"Restricted printed-volume scan with public preview"},
+      "reproduction_format": "Controlled digital lending / preview OCR",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:beadle-preview", "evidence:beadle-copyright", "evidence:beadle-contents"]
+    },
+    {
+      "id": "facsimile:leeds:york-register-ordo-1983",
+      "type": "facsimile",
+      "label": "The York Play facsimile of the York Register and Ordo (1983)",
+      "description": "A print facsimile reproducing the surviving York Register and an Ordo section, with modern introductory matter. No complete public digital copy was found.",
+      "identifiers": [
+        {"scheme":"LCCN","value":"84221144","uri":"https://lccn.loc.gov/84221144"},
+        {"scheme":"OCLC","value":"26054360"},
+        {"scheme":"Open Library","value":"OL14069239M","uri":"https://openlibrary.org/works/OL14069239M"}
+      ],
+      "creator_ids": ["agent:richard-beadle", "agent:peter-meredith", "agent:richard-rastall"],
+      "date_statements": [{"label":"publication","value":"1983","normalized":"1983","certainty":"high","evidence_ids":["evidence:facsimile-1983"]}],
+      "bibliographic": {"citation":"Richard Beadle, Peter Meredith, and Richard Rastall, The York Play: A Facsimile of British Library MS Additional 35290, Together with a Facsimile of the Ordo Paginarum, Leeds Texts and Monographs, Medieval Drama Facsimiles 7 (Leeds, 1983), lxi + [510] plates.","title":"The York Play","series":"Leeds Texts and Monographs, Medieval Drama Facsimiles 7","publication_place":"Leeds","date":"1983","pages":"lxi + [510] plates","languages":["enm","eng","lat"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:facsimile-1983"]
+    },
+    {
+      "id": "edition:beadle:york-plays-2009-2013",
+      "type": "scholarly_edition",
+      "label": "Richard Beadle, The York Plays, revised EETS edition (2009-2013)",
+      "description": "A substantially revised and expanded two-volume edition of the 1982 work. It is later scholarship, not the source of the 1993 electronic encoding.",
+      "identifiers": [
+        {"scheme":"ISBN","value":"978-0-19-957847-4"},
+        {"scheme":"ISBN","value":"978-0-19-959036-0"}
+      ],
+      "creator_ids": ["agent:richard-beadle"],
+      "date_statements": [{"label":"publication","value":"2009-2013","normalized":"2009/2013","certainty":"high","evidence_ids":["evidence:beadle-revised"]}],
+      "bibliographic": {"citation":"The York Plays, ed. Richard Beadle, 2 vols., Early English Text Society, Supplementary Series 23-24 (Oxford: Oxford University Press, 2009-2013).","title":"The York Plays","volume":"1-2","series":"Early English Text Society, Supplementary Series 23-24","publisher":"Oxford University Press","publication_place":"Oxford","date":"2009-2013","languages":["enm","eng","lat"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:beadle-revised"]
+    },
+    {
+      "id": "catalog:usco:circular-15a-2026",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A: Duration of Copyright (April 2026)",
+      "description": "Official legal guidance consulted only for the United States term status of Smith's 1885 edition and its mechanical scan. It does not decide provider terms, foreign jurisdictions, manuscript-image rights, or modern editorial layers.",
+      "creator_ids": ["agent:us-copyright-office"],
+      "date_statements": [{"label":"current circular issue","value":"April 2026","normalized":"2026-04","certainty":"high","evidence_ids":["evidence:usco-circular15a"]}],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:usco-circular15a"]
+    }
+  ],
+  "agents": [
+    {"id":"agent:kyvero-press","type":"organization","name":"Kyvero Press","urls":["https://github.com/Kyvero-Press/CME"]},
+    {"id":"agent:umich","type":"organization","name":"University of Michigan Library Digital Collections","urls":["https://quod.lib.umich.edu/c/cme/"]},
+    {"id":"agent:ota","type":"organization","name":"Oxford Text Archive","urls":["https://ota.ox.ac.uk/"]},
+    {"id":"agent:richard-beadle","type":"person","name":"Richard Beadle"},
+    {"id":"agent:gerald-b-kinneavy","type":"person","name":"Gerald Byron Kinneavy"},
+    {"id":"agent:british-library","type":"organization","name":"British Library","urls":["https://www.bl.uk/"]},
+    {"id":"agent:york-city-archives","type":"organization","name":"York City Archives","urls":["https://exploreyork.org.uk/archives/"]},
+    {"id":"agent:a-c-cawley","type":"person","name":"A. C. Cawley","alternate_names":["Arthur C. Cawley"]},
+    {"id":"agent:university-of-leeds","type":"organization","name":"University of Leeds","urls":["https://www.leeds.ac.uk/"]},
+    {"id":"agent:borthwick-institute","type":"organization","name":"Borthwick Institute for Archives, University of York","urls":["https://www.york.ac.uk/borthwick/"]},
+    {"id":"agent:peter-meredith","type":"person","name":"Peter Meredith"},
+    {"id":"agent:reed-project","type":"organization","name":"Records of Early English Drama","urls":["https://reed.utoronto.ca/"]},
+    {"id":"agent:huntington","type":"organization","name":"The Huntington Library","urls":["https://www.huntington.org/library"]},
+    {"id":"agent:lucy-toulmin-smith","type":"person","name":"Lucy Toulmin Smith"},
+    {"id":"agent:internet-archive","type":"organization","name":"Internet Archive","urls":["https://archive.org/"]},
+    {"id":"agent:richard-rastall","type":"person","name":"Richard Rastall"},
+    {"id":"agent:us-copyright-office","type":"organization","name":"United States Copyright Office","urls":["https://www.copyright.gov/"]}
+  ],
+  "relations": [
+    {
+      "id":"relation:artifact-copied-from-encoding","type":"copied_from","subject":"artifact:general-corpus:York","object":"encoding:umich-ota:U-1392-B-York",
+      "scope":{"subject":{"kind":"whole","description":"Entire pinned repository XML"},"object":{"kind":"whole","description":"The fifty-division U-M/OTA electronic edition"},"notes":"The repository artifact preserves the electronic text, identifiers, and structure with no evidenced intervening substantive edition."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:repo-xml","evidence:repo-inspection","evidence:ota-files"]}
+    },
+    {
+      "id":"relation:encoding-from-beadle","type":"encoded_from","subject":"encoding:umich-ota:U-1392-B-York","object":"edition:beadle:york-plays-1982",
+      "scope":{"subject":{"kind":"whole","description":"All fifty encoded divisions"},"object":{"kind":"part","description":"Beadle's edited pageant texts and their printed pagination, excluding omitted front/back matter and notes"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:repo-xml","evidence:beadle-preview","evidence:beadle-contents"]}
+    },
+    {
+      "id":"relation:encoding-consulted-kinneavy","type":"consulted","subject":"encoding:umich-ota:U-1392-B-York","object":"catalog:kinneavy:york-concordance-1986",
+      "scope":{"subject":{"kind":"selected_passages","description":"Corrections incorporated into the electronic text"},"object":{"kind":"part","description":"Correction list on pp. xxxi-xxxii"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:repo-xml","evidence:kinneavy"]}
+    },
+    {
+      "id":"relation:beadle-transcribes-register","type":"transcribes","subject":"edition:beadle:york-plays-1982","object":"witness:bl:Add-MS-35290",
+      "scope":{"subject":{"kind":"part","description":"The fifty pageant divisions represented in the electronic item"},"object":{"kind":"selected_passages","description":"All Register passages corresponding to those divisions, including lacunae, additions, and the displaced Purification"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:repo-xml","evidence:beadle-contents","evidence:bl-catalog"]}
+    },
+    {
+      "id":"relation:smith-transcribes-register","type":"transcribes","subject":"edition:smith:york-plays-1885","object":"witness:bl:Add-MS-35290",
+      "scope":{"subject":{"kind":"whole","description":"Smith's complete edition and manuscript-derived apparatus"},"object":{"kind":"whole","description":"Then Ashburnham manuscript, including its registered pageants, gaps, and additions"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:smith-1885","evidence:bl-catalog"]}
+    },
+    {
+      "id":"relation:smith-collates-sykes","type":"collated_against","subject":"edition:smith:york-plays-1885","object":"witness:york-city-archives:Acc-104-G-1",
+      "scope":{"subject":{"kind":"selected_passages","description":"Scriveners' Incredulity of Thomas and notes"},"object":{"kind":"whole","description":"Separate Scriveners copy"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:smith-1885","evidence:cawley-sykes"]}
+    },
+    {
+      "id":"relation:smith-collates-hm1","type":"collated_against","subject":"edition:smith:york-plays-1885","object":"witness:huntington:HM-1",
+      "scope":{"subject":{"kind":"selected_passages","description":"Selected York/Towneley parallels discussed in Smith's introduction and notes"},"object":{"kind":"selected_passages","description":"Collateral Towneley versions only"}},
+      "assertion":{"status":"confirmed","confidence":"medium","evidence_ids":["evidence:smith-1885","evidence:huntington-hm1"]}
+    },
+    {
+      "id":"relation:ia-smith-facsimile","type":"facsimile_of","subject":"facsimile:ia:smith-york-1885","object":"edition:smith:york-plays-1885",
+      "scope":{"subject":{"kind":"whole","description":"Complete 667-page digital scan and OCR"},"object":{"kind":"whole","description":"Complete printed 1885 volume"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:smith-1885","evidence:smith-ia-metadata"]}
+    },
+    {
+      "id":"relation:ia-beadle-preview","type":"facsimile_of","subject":"facsimile:ia:beadle-1982-preview","object":"edition:beadle:york-plays-1982",
+      "scope":{"subject":{"kind":"part","description":"Cached title, copyright, and two contents-page OCR objects plus item metadata"},"object":{"kind":"selected_passages","description":"Printed preliminary pages 6-9 only"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:beadle-preview","evidence:beadle-copyright","evidence:beadle-contents"]}
+    },
+    {
+      "id":"relation:cawley-transcribes-sykes","type":"transcribes","subject":"edition:cawley:sykes-1952","object":"witness:york-city-archives:Acc-104-G-1",
+      "scope":{"subject":{"kind":"part","description":"Complete diplomatic transcription within the article"},"object":{"kind":"whole","description":"All four leaves of the Sykes Scriveners copy"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:cawley-sykes"]}
+    },
+    {
+      "id":"relation:cawley-collates-register","type":"collated_against","subject":"edition:cawley:sykes-1952","object":"witness:bl:Add-MS-35290",
+      "scope":{"subject":{"kind":"selected_passages","description":"Variant apparatus and textual relationship argument"},"object":{"kind":"selected_passages","description":"Register Scriveners pageant, ff. 218r-220r"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:cawley-sykes","evidence:bl-catalog"]}
+    },
+    {
+      "id":"relation:leeds-cawley-facsimile","type":"facsimile_of","subject":"facsimile:leeds:cawley-sykes-1952","object":"edition:cawley:sykes-1952",
+      "scope":{"subject":{"kind":"whole","description":"Complete 38-page article PDF"},"object":{"kind":"whole","description":"Complete published article"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:cawley-sykes"]}
+    },
+    {
+      "id":"relation:meredith-describes-ordo","type":"describes","subject":"catalog:meredith:ordo-1980","object":"witness:borthwick:E-20-1327-1547",
+      "scope":{"subject":{"kind":"whole","description":"Article's analysis of the Ordo and Tilemakers entry"},"object":{"kind":"selected_passages","description":"Ordo pageant lists and revised Tilemakers entry"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:meredith-ordo"]}
+    },
+    {
+      "id":"relation:leeds-meredith-facsimile","type":"facsimile_of","subject":"facsimile:leeds:meredith-ordo-1980","object":"catalog:meredith:ordo-1980",
+      "scope":{"subject":{"kind":"whole","description":"Complete 15-page article PDF"},"object":{"kind":"whole","description":"Complete published article"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:meredith-ordo"]}
+    },
+    {
+      "id":"relation:bl-catalog-describes-register","type":"describes","subject":"catalog:bl:Add-MS-35290-current","object":"witness:bl:Add-MS-35290",
+      "scope":{"subject":{"kind":"whole","description":"Current catalog record and detailed scope note"},"object":{"kind":"whole","description":"Current physical manuscript"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:bl-catalog","evidence:bl-catalog-inspection"]}
+    },
+    {
+      "id":"relation:reed-describes-ordo","type":"describes","subject":"catalog:reed:york-collection","object":"witness:borthwick:E-20-1327-1547",
+      "scope":{"subject":{"kind":"selected_passages","description":"York civic records and Ordo documentary entries"},"object":{"kind":"selected_passages","description":"Ordo and related Memorandum Book records"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:reed-york","evidence:reed-commit"]}
+    },
+    {
+      "id":"relation:huntington-selection-facsimile","type":"facsimile_of","subject":"facsimile:huntington:HM-1-selected","object":"witness:huntington:HM-1",
+      "scope":{"subject":{"kind":"whole","description":"All 60 canvases in the provider-selected public object"},"object":{"kind":"selected_passages","description":"Non-contiguous views of HM 1, partial relative to the 132-folio manuscript"},"notes":"The cached selected object is complete as an accessed digital entity but contains no exact York target work."},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:huntington-hm1","evidence:huntington-iiif","evidence:huntington-visual"]}
+    },
+    {
+      "id":"relation:1983-facsimile-register","type":"facsimile_of","subject":"facsimile:leeds:york-register-ordo-1983","object":"witness:bl:Add-MS-35290",
+      "scope":{"subject":{"kind":"part","description":"Register facsimile plates"},"object":{"kind":"whole","description":"Surviving manuscript register including blanks and additions"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:facsimile-1983"]}
+    },
+    {
+      "id":"relation:1983-facsimile-ordo","type":"facsimile_of","subject":"facsimile:leeds:york-register-ordo-1983","object":"witness:borthwick:E-20-1327-1547",
+      "scope":{"subject":{"kind":"part","description":"Ordo facsimile section"},"object":{"kind":"selected_passages","description":"Ordo Paginarum leaves, not the entire Memorandum Book"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:facsimile-1983","evidence:meredith-ordo"]}
+    },
+    {
+      "id":"relation:revised-beadle-version","type":"version_of","subject":"edition:beadle:york-plays-2009-2013","object":"edition:beadle:york-plays-1982",
+      "scope":{"subject":{"kind":"whole","description":"Substantially revised and expanded two-volume edition"},"object":{"kind":"whole","description":"Earlier single-volume edition"}},
+      "assertion":{"status":"confirmed","confidence":"high","evidence_ids":["evidence:beadle-revised"]}
+    }
+  ],
+  "access": [
+    {
+      "id":"access:repository-xml","entity":"artifact:general-corpus:York","provider_id":"agent:kyvero-press","resource_kind":"repository_file","status":"local_only",
+      "access_method":"Pinned git-submodule path in the working repository","url":"https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/York.xml","repository_path":"CME/source/CME_from_OTA/York.xml","cost":"not_applicable","format":"XML","last_checked":"2026-07-15","evidence_ids":["evidence:repo-xml","evidence:repo-inspection"]
+    },
+    {
+      "id":"access:cme-from-ota-license","entity":"artifact:general-corpus:York","provider_id":"agent:kyvero-press","resource_kind":"download","status":"publicly_available",
+      "access_method":"Exact path-specific distribution notice at the pinned CME commit; a byte-for-byte copy is cached because the sparse submodule checkout does not expose the sibling notice file.",
+      "url":"https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt",
+      "alternate_urls":["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt"],
+      "local_copies":[{
+        "label":"Exact CME_from_OTA CC BY-NC-SA 3.0 notice","path":"source-cache/York/cme-from-ota-license-e1d77c8.txt","source_url":"https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt","sha256":"9129f6b4fc4dd9385c4acde807f5177391a0da36992831c3bbdfb9cecca65386","bytes":505,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["The notice contains no York dramatic text; it is rights evidence for the folder containing York.xml.","Pinned git blob 613b1c0bdca14107145749e19840d258485ce1df."]
+      }],
+      "cost":"free","format":"Plain text","last_checked":"2026-07-15","evidence_ids":["evidence:cme-from-ota-license"]
+    },
+    {
+      "id":"access:umich-encoding","entity":"encoding:umich-ota:U-1392-B-York","provider_id":"agent:umich","resource_kind":"digital_text","status":"publicly_available",
+      "access_method":"University of Michigan CME reading interface and table of contents","url":"https://quod.lib.umich.edu/c/cme/York?view=toc","alternate_urls":["https://name.umdl.umich.edu/York"],"cost":"free","format":"HTML digital text","last_checked":"2026-07-15","evidence_ids":["evidence:umich-york"]
+    },
+    {
+      "id":"access:ota-files","entity":"encoding:umich-ota:U-1392-B-York","provider_id":"agent:ota","resource_kind":"download","status":"publicly_available",
+      "access_method":"Current OTA item page and direct DSpace bitstream links. The item describes Academic Use terms even though all five files downloaded without authentication on the review date.",
+      "url":"https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392",
+      "alternate_urls":[
+        "https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york1-1392.txt?sequence=4&isAllowed=y",
+        "https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york2-1392.txt?sequence=5&isAllowed=y",
+        "https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york3-1392.txt?sequence=6&isAllowed=y",
+        "https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york4-1392.txt?sequence=7&isAllowed=y",
+        "https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/yorkdoc-1392.txt?sequence=8&isAllowed=y",
+        "https://hdl.handle.net/20.500.14106/licence-ota"
+      ],
+      "local_copies":[
+        {"label":"OTA York text file 1, plays 1-18","path":"source-cache/York/ota-1392-york1.txt","source_url":"https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york1-1392.txt?sequence=4&isAllowed=y","sha256":"618164c2bcadf49f6cb4c3382b246c7c9131f4fbe8a06bc2deb2544dadfce65d","bytes":178923,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Electronic plays 1-18, including 3A/3B, 16G/16M alternatives, and 22A where sequenced by the source conventions","locators":["Source record labels Yk.1 through Yk.18; Yk.16, Yk.16G, and Yk.16M"]},"target_work_presence":"present"},
+        {"label":"OTA York text file 2, plays 19-30","path":"source-cache/York/ota-1392-york2.txt","source_url":"https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york2-1392.txt?sequence=5&isAllowed=y","sha256":"d60b6de09c50af135a647201180df7cfce3ba84f13f8ce09b38c90bca182ee6f","bytes":177541,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Electronic plays 19-30","locators":["Source record labels Yk.19 through Yk.30"]},"target_work_presence":"present"},
+        {"label":"OTA York text file 3, plays 31-40","path":"source-cache/York/ota-1392-york3.txt","source_url":"https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york3-1392.txt?sequence=6&isAllowed=y","sha256":"e8a10da4fa68b7b2e56881e40f5730e2be3070295a3b17eba9664a9f6b297508","bytes":174157,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Electronic plays 31-40","locators":["Source record labels Yk.31 through Yk.40"]},"target_work_presence":"present"},
+        {"label":"OTA York text file 4, plays 41-47","path":"source-cache/York/ota-1392-york4.txt","source_url":"https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/york4-1392.txt?sequence=7&isAllowed=y","sha256":"190c5e81cef62d9f25d6726af33317bc5051fdbb3a5bad2d23ce39884c7d2a86","bytes":79698,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","work_portion":{"label":"Electronic plays 41-47, including 46A","locators":["Source record labels Yk.41 through Yk.47 and Yk.46A"]},"target_work_presence":"present"},
+        {"label":"OTA York input conventions","path":"source-cache/York/ota-1392-input-conventions.txt","source_url":"https://ota.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/1392/yorkdoc-1392.txt?sequence=8&isAllowed=y","sha256":"88fda87ac6d1bdf61b2a349d53db674047ffea0c04c94902c711cde624e423ed","bytes":11104,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Encoding documentation only; no York dramatic text."]}
+      ],
+      "cost":"free","format":"Plain text","last_checked":"2026-07-15","evidence_ids":["evidence:ota-item","evidence:ota-files","evidence:ota-license"]
+    },
+    {
+      "id":"access:beadle-preview","entity":"facsimile:ia:beadle-1982-preview","provider_id":"agent:internet-archive","resource_kind":"page_images","status":"publicly_available",
+      "access_method":"Public item metadata and four preview OCR page endpoints; the complete carrier remains controlled-lending/restricted.",
+      "url":"https://archive.org/details/yorkplays0000unse",
+      "alternate_urls":[
+        "https://archive.org/metadata/yorkplays0000unse",
+        "https://archive.org/download/yorkplays0000unse/page/n6.xml",
+        "https://archive.org/download/yorkplays0000unse/page/n7.xml",
+        "https://archive.org/download/yorkplays0000unse/page/n8.xml",
+        "https://archive.org/download/yorkplays0000unse/page/n9.xml"
+      ],
+      "local_copies":[
+        {"label":"Internet Archive item metadata for Beadle 1982","path":"source-cache/York/ia-yorkplays0000unse-metadata.json","source_url":"https://archive.org/metadata/yorkplays0000unse","sha256":"b66c3fa44f633beb8bb572464942378bf7f2306f6a863922129e74514292e384","bytes":13470,"media_type":"application/json","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"},
+        {"label":"Beadle preview title page OCR","path":"source-cache/York/beadle-1982-preview-page-6-ocr.xml","source_url":"https://archive.org/download/yorkplays0000unse/page/n6.xml","sha256":"66837fdd4bdf738b1f3da995a006e8451b743390696efc14e1d946713af3f742","bytes":1577,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Title-page metadata only; no medieval dramatic text."]},
+        {"label":"Beadle preview copyright page OCR","path":"source-cache/York/beadle-1982-preview-page-7-ocr.xml","source_url":"https://archive.org/download/yorkplays0000unse/page/n7.xml","sha256":"8a5aef8ffaec33e38ea83ffe45d108ce8a7daa306ff1828fe12178db6ad5dbac","bytes":10967,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Copyright and publication data only."]},
+        {"label":"Beadle preview first contents page OCR","path":"source-cache/York/beadle-1982-preview-page-8-ocr.xml","source_url":"https://archive.org/download/yorkplays0000unse/page/n8.xml","sha256":"21da95b257d87a518abfa8519f826001942fd5f2e1b0472ea0d72bf3f7f478da","bytes":25237,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Contents metadata describing plays I-XXIV; no dramatic text."]},
+        {"label":"Beadle preview second contents page OCR","path":"source-cache/York/beadle-1982-preview-page-9-ocr.xml","source_url":"https://archive.org/download/yorkplays0000unse/page/n9.xml","sha256":"0c6d25570118581de0bff1b806e75f961a0dca41ee507476b64d5e2dec5cbbc3","bytes":19491,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"partial","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Contents metadata describing plays XXV-XLVII and back matter; no dramatic text."]}
+      ],
+      "cost":"free","format":"Item metadata and preview OCR XML","last_checked":"2026-07-15","evidence_ids":["evidence:beadle-preview","evidence:beadle-copyright","evidence:beadle-contents"],
+      "notes":["Complete reading access may require controlled borrowing; this access record is limited to the cached public preview surfaces."]
+    },
+    {
+      "id":"access:bl-catalog","entity":"catalog:bl:Add-MS-35290-current","provider_id":"agent:british-library","resource_kind":"catalog_record","status":"publicly_available",
+      "access_method":"Current Archives and Manuscripts HTML record and JSON representation","url":"https://searcharchives.bl.uk/catalog/040-002088765.json","alternate_urls":["https://searcharchives.bl.uk/catalog/040-002088765"],
+      "local_copies":[{"label":"Current British Library Add MS 35290 catalog JSON","path":"source-cache/York/british-library-add-ms-35290-catalog.json","source_url":"https://searcharchives.bl.uk/catalog/040-002088765.json","sha256":"6a9bce0b346bd77c50c3d04478155598a5d697616956f36e51fdb25ee7fe0502","bytes":40365,"media_type":"application/json","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Catalog text and folio map only; no manuscript images or dramatic transcription."]}],
+      "cost":"free","format":"HTML and JSON","last_checked":"2026-07-15","evidence_ids":["evidence:bl-catalog","evidence:bl-catalog-inspection"]
+    },
+    {
+      "id":"access:bl-physical","entity":"witness:bl:Add-MS-35290","provider_id":"agent:british-library","resource_kind":"physical_manuscript","status":"requestable",
+      "access_method":"Advance request to the British Library with a letter of introduction; consultation in London subject to current restrictions.","url":"https://searcharchives.bl.uk/catalog/040-002088765","contact":"British Library manuscripts reading-room services","cost":"not_applicable","last_checked":"2026-07-15","evidence_ids":["evidence:bl-catalog","evidence:bl-access"]
+    },
+    {
+      "id":"access:bl-images","entity":"witness:bl:Add-MS-35290","provider_id":"agent:british-library","resource_kind":"reproduction_order","status":"requestable",
+      "access_method":"Order reference or reproduction images through British Library Imaging Services; the current record supplies no public manuscript image sequence.","url":"https://www.bl.uk/services/digitisation","alternate_urls":["https://www.bl.uk/terms/imaging-services"],"contact":"British Library Imaging Services / permissions and licensing","cost":"fee","last_checked":"2026-07-15","evidence_ids":["evidence:bl-imaging","evidence:bl-catalog"],"notes":["Current digital-image availability is recorded as unavailable despite historical catalog statements about full coverage."]
+    },
+    {
+      "id":"access:sykes-physical","entity":"witness:york-city-archives:Acc-104-G-1","provider_id":"agent:york-city-archives","resource_kind":"physical_manuscript","status":"requestable",
+      "access_method":"Arrange an archive appointment and preorder material through York City Archives.","url":"https://exploreyork.org.uk/archives/visiting-us/","contact":"archives@exploreyork.org.uk","cost":"not_applicable","last_checked":"2026-07-15","evidence_ids":["evidence:york-city-access","evidence:cawley-sykes"]
+    },
+    {
+      "id":"access:cawley-pdf","entity":"facsimile:leeds:cawley-sykes-1952","provider_id":"agent:university-of-leeds","resource_kind":"download","status":"publicly_available",
+      "access_method":"Current University of Leeds Digital Library item and direct PDF","url":"https://digital.library.leeds.ac.uk/71/1/LSE1952_pp45-80_Cawley_article.pdf","alternate_urls":["https://digital.library.leeds.ac.uk/71/"],
+      "local_copies":[{"label":"Complete Cawley 1952 Sykes-manuscript article PDF","path":"source-cache/York/cawley-1952-sykes-manuscript-complete.pdf","source_url":"https://digital.library.leeds.ac.uk/71/1/LSE1952_pp45-80_Cawley_article.pdf","sha256":"e6c8fe9e6743fc23a13921b23733db5d71375b7fbf7c885826dbc8930b25d203","bytes":1696475,"media_type":"application/pdf","downloaded_on":"2026-07-15","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"Complete transcription and collation of the Scriveners' Incredulity of Thomas","locators":["Article pp. 45-80; complete Sykes transcription and Register collation"]},"target_work_presence":"present","notes":["The complete article contains only one Sykes-manuscript photograph, so it is not a full photographic manuscript facsimile.","qpdf reports recoverable linearization hint warnings; the exact bytes are preserved without repair."]}],
+      "cost":"free","format":"PDF","last_checked":"2026-07-15","evidence_ids":["evidence:cawley-sykes"]
+    },
+    {
+      "id":"access:ordo-physical","entity":"witness:borthwick:E-20-1327-1547","provider_id":"agent:borthwick-institute","resource_kind":"physical_manuscript","status":"requestable",
+      "access_method":"Contact the Borthwick Institute to resolve the current catalog reference, arrange a visit, or order document copies.","url":"https://www.york.ac.uk/borthwick/visiting-us/","alternate_urls":["https://store.york.ac.uk/product-catalogue/borthwick-institute-shop/document-copies"],"contact":"Borthwick Institute for Archives","cost":"fee","last_checked":"2026-07-15","evidence_ids":["evidence:borthwick-access","evidence:reed-york"],"notes":["Copy services are for personal, private, noncommercial research unless further permission is obtained."]
+    },
+    {
+      "id":"access:reed-york","entity":"catalog:reed:york-collection","provider_id":"agent:reed-project","resource_kind":"download","status":"publicly_available",
+      "access_method":"Pinned REED Collections GitHub sources; exact XML, license, and commit metadata are cached.",
+      "url":"https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/tei/records/yorkc.xml",
+      "alternate_urls":[
+        "https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/LICENSE.txt",
+        "https://api.github.com/repos/REEDProject/Collections/commits/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66",
+        "https://github.com/REEDProject/Collections/commit/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66"
+      ],
+      "local_copies":[
+        {"label":"Pinned REED York collection TEI XML","path":"source-cache/York/reed-york-collection-1bec27e.xml","source_url":"https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/tei/records/yorkc.xml","sha256":"3171d24de740773473c59ff32192005d0afd55219b1415c7133f5c45938967e1","bytes":236878,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"complete","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Complete documentary TEI source relative to this catalog entity; it contains civic records, not the exact York dramatic text."]},
+        {"label":"Pinned REED repository CC BY-NC-SA 4.0 license","path":"source-cache/York/reed-collections-license-1bec27e.txt","source_url":"https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/LICENSE.txt","sha256":"cd9832c492786274823efa8d026ba57f45b51fabf37fc67b85069e1ed0c062b7","bytes":20845,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"},
+        {"label":"Pinned REED GitHub commit metadata","path":"source-cache/York/reed-collections-commit-1bec27e.json","source_url":"https://api.github.com/repos/REEDProject/Collections/commits/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66","sha256":"f14acf1952ee9ae25f1b1941d2a4487c0f1a54c664ce1c826b889772210ff3af","bytes":126482,"media_type":"application/json","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ],
+      "cost":"free","format":"TEI XML, plain-text license, and JSON commit metadata","last_checked":"2026-07-15","evidence_ids":["evidence:reed-york","evidence:reed-license","evidence:reed-commit"]
+    },
+    {
+      "id":"access:meredith-pdf","entity":"facsimile:leeds:meredith-ordo-1980","provider_id":"agent:university-of-leeds","resource_kind":"download","status":"publicly_available",
+      "access_method":"Public Leeds Studies in English issue source; a complete 15-page article PDF is cached.","url":"https://archive.org/details/lse-1979-whole-issue/page/n65/mode/2up",
+      "local_copies":[{"label":"Complete Meredith 1980 Ordo article PDF","path":"source-cache/York/meredith-1980-ordo-paginarum-complete.pdf","source_url":"https://archive.org/details/lse-1979-whole-issue/page/n65/mode/2up","sha256":"25f77d76e69eb6c37d741cc5dc8c8f03f8811b97028786380ef3db5f973f3077","bytes":753410,"media_type":"application/pdf","downloaded_on":"2026-07-15","coverage":"complete","target_work_presence":"absent","notes":["Complete article relative to the source entity; it analyzes the documentary Ordo and contains only one Ordo image, not York dramatic text or a full manuscript facsimile.","qpdf reports recoverable linearization hint warnings; the exact bytes are preserved without repair."]}],
+      "cost":"free","format":"PDF","last_checked":"2026-07-15","evidence_ids":["evidence:meredith-ordo"]
+    },
+    {
+      "id":"access:huntington-physical","entity":"witness:huntington:HM-1","provider_id":"agent:huntington","resource_kind":"physical_manuscript","status":"requestable",
+      "access_method":"Restricted curatorial access through Huntington reader registration and Aeon request procedures.","url":"https://catalog.huntington.org/record=b1862079","alternate_urls":["https://www.huntington.org/library/using-library","https://aeon.huntington.org/"],"cost":"not_applicable","last_checked":"2026-07-15","evidence_ids":["evidence:huntington-hm1","evidence:huntington-rights"]
+    },
+    {
+      "id":"access:huntington-selection","entity":"facsimile:huntington:HM-1-selected","provider_id":"agent:huntington","resource_kind":"page_images","status":"publicly_available",
+      "access_method":"Huntington Digital Library public compound object and IIIF Presentation manifest","url":"https://hdl.huntington.org/iiif/info/p15150coll7/52988/manifest.json","alternate_urls":["https://hdl.huntington.org/digital/collection/p15150coll7/id/52988","https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json"],
+      "local_copies":[{"label":"Complete Huntington 60-canvas selected-image bundle at requested 1600-pixel width","path":"source-cache/York/huntington-hm1-published-selection.zip","source_url":"https://hdl.huntington.org/iiif/info/p15150coll7/52988/manifest.json","sha256":"7a0c0ce137dd2a0db40645d49cc3c370493f6c1628cf26c3efb5a4890a287616","bytes":28960501,"media_type":"application/zip","downloaded_on":"2026-07-15","coverage":"complete","retrieval_method":"iiif_bundle","source_file_count":60,"bundle_source_kind":"iiif_presentation_manifest","target_work_presence":"absent","notes":["All 60 manifest canvases, the exact provider manifest, and a per-image inventory are present and ZIP integrity is clean.","Visual inspection confirmed Towneley Pharaoh, Harrowing, Resurrection, and Judgment passages, which are collateral adaptations or borrowings rather than exact York text. No work_portion is supplied because the York target is absent.","Coverage is complete for the provider-selected digital object and partial for physical HM 1."]}],
+      "cost":"free","format":"IIIF JPEG images; cached ZIP bundle","last_checked":"2026-07-15","evidence_ids":["evidence:huntington-hm1","evidence:huntington-iiif","evidence:huntington-visual"],"notes":["The provider states that HM 1 was only partially scanned."]
+    },
+    {
+      "id":"access:smith-scan","entity":"facsimile:ia:smith-york-1885","provider_id":"agent:internet-archive","resource_kind":"download","status":"publicly_available",
+      "access_method":"Internet Archive direct public derivative files and metadata","url":"https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog.pdf",
+      "alternate_urls":[
+        "https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog_djvu.txt",
+        "https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog_scandata.xml",
+        "https://archive.org/metadata/yorkplaysnowfir00smitgoog",
+        "https://archive.org/details/yorkplaysnowfir00smitgoog"
+      ],
+      "local_copies":[
+        {"label":"Complete Smith 1885 York Plays PDF","path":"source-cache/York/smith-1885-york-plays-complete.pdf","source_url":"https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog.pdf","sha256":"cd9147c5cf8484c95851ded99b208c805475cca29e612592901801f78724c7cc","bytes":24254048,"media_type":"application/pdf","downloaded_on":"2026-07-15","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"Complete Smith edition of the York Plays","locators":["667-page scan including introduction, complete edition, notes, glossary, and index"]},"target_work_presence":"present"},
+        {"label":"Complete OCR text for Smith 1885","path":"source-cache/York/smith-1885-york-plays-complete-ocr.txt","source_url":"https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog_djvu.txt","sha256":"70851ac4f6b9521257d83240ce1466d46b098f57e6e53edc079945849612cc5e","bytes":1229316,"media_type":"text/plain","downloaded_on":"2026-07-15","coverage":"complete","retrieval_method":"direct_download","work_portion":{"label":"OCR of complete Smith edition, including full York text","locators":["Complete OCR derivative corresponding to the 667-page scan"]},"target_work_presence":"present"},
+        {"label":"Smith scan-data XML","path":"source-cache/York/smith-1885-york-plays-scandata.xml","source_url":"https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog_scandata.xml","sha256":"3d2125877033a128bce863d328071c63cb3535d029f99abc3d6ee6e4a57a51f7","bytes":214190,"media_type":"application/xml","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["Page-structure metadata only; no York text."]},
+        {"label":"Smith Internet Archive item metadata","path":"source-cache/York/smith-1885-york-plays-ia-metadata.json","source_url":"https://archive.org/metadata/yorkplaysnowfir00smitgoog","sha256":"33a76e571d7247f4bf299fe7d68df21bfa851bdd1e3d7cfeabf6cce498392154","bytes":122686,"media_type":"application/json","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent"}
+      ],
+      "cost":"free","format":"PDF, OCR text, scan-data XML, and JSON metadata","last_checked":"2026-07-15","evidence_ids":["evidence:smith-1885","evidence:smith-ia-metadata","evidence:usco-circular15a"]
+    },
+    {
+      "id":"access:kinneavy-no-public-copy","entity":"catalog:kinneavy:york-concordance-1986","resource_kind":"download","status":"no_public_copy_found",
+      "access_method":"Bibliographic and library searches located print holdings but no complete public digital copy.","url":"https://lccn.loc.gov/85045133","cost":"unknown","last_checked":"2026-07-15","evidence_ids":["evidence:kinneavy"]
+    },
+    {
+      "id":"access:1983-facsimile-no-public-copy","entity":"facsimile:leeds:york-register-ordo-1983","resource_kind":"page_images","status":"no_public_copy_found",
+      "access_method":"Consult a research-library or purchased print copy; no complete public digital facsimile was identified.","url":"https://lccn.loc.gov/84221144","cost":"unknown","last_checked":"2026-07-15","evidence_ids":["evidence:facsimile-1983"]
+    },
+    {
+      "id":"access:beadle-revised-no-public-copy","entity":"edition:beadle:york-plays-2009-2013","resource_kind":"download","status":"no_public_copy_found",
+      "access_method":"Bibliographic and review sources identify the two volumes, but no complete public digital copy was found.","url":"https://scholarworks.iu.edu/journals/index.php/tmr/article/view/18635","cost":"unknown","last_checked":"2026-07-15","evidence_ids":["evidence:beadle-revised"]
+    },
+    {
+      "id":"access:usco-circular15a","entity":"catalog:usco:circular-15a-2026","provider_id":"agent:us-copyright-office","resource_kind":"download","status":"publicly_available",
+      "access_method":"Official U.S. Copyright Office PDF; a complete byte-for-byte copy is cached.","url":"https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies":[{"label":"Complete U.S. Copyright Office Circular 15A, April 2026","path":"source-cache/York/us-copyright-office-circular-15a-2026.pdf","source_url":"https://www.copyright.gov/circs/circ15a.pdf","sha256":"6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef","bytes":273867,"media_type":"application/pdf","downloaded_on":"2026-07-15","coverage":"metadata_only","retrieval_method":"direct_download","target_work_presence":"absent","notes":["General legal guidance only; no York text.","qpdf completed with recoverable linearization hint-table warnings; the exact official bytes are preserved."]}],
+      "cost":"free","format":"PDF","last_checked":"2026-07-15","evidence_ids":["evidence:usco-circular15a"]
+    }
+  ],
+  "rights": [
+    {
+      "id":"rights:underlying-york-text","entity":"witness:bl:Add-MS-35290","component":"Underlying anonymous medieval and early-modern York dramatic texts","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-15",
+      "basis":"The anonymous dramatic texts and the surviving Register long predate modern copyright terms; this statement does not cover modern editions, markup, catalog prose, or manuscript photography.","contract_terms_status":"none_known","confidence":"high","evidence_ids":["evidence:bl-catalog","evidence:usco-circular15a"]
+    },
+    {
+      "id":"rights:repository-artifact","entity":"artifact:general-corpus:York","access_id":"access:repository-xml","component":"Pinned York XML text, data, and markup distributed in CME_from_OTA","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-15",
+      "basis":"The exact CME_from_OTA folder notice says the texts derive from OTA files and redistributes them under Creative Commons Attribution-NonCommercial-ShareAlike 3.0. The repository root software license is not substituted for this path-specific notice.","asserted_by_id":"agent:kyvero-press","license":{"name":"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported","spdx":"CC-BY-NC-SA-3.0","uri":"https://creativecommons.org/licenses/by-nc-sa/3.0/"},"contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:cme-from-ota-license","evidence:repo-xml"],
+      "notes":["The license record concerns the distributed repository artifact; the underlying historical text and upstream electronic/provider layers are assessed separately."]
+    },
+    {
+      "id":"rights:umich-encoding","entity":"encoding:umich-ota:U-1392-B-York","access_id":"access:umich-encoding","component":"Current University of Michigan digital item and electronic text","jurisdiction":"United States","copyright_status":"no_known_copyright","as_of":"2026-07-15",
+      "basis":"The current University of Michigan item states that the materials are in the public domain and supplies the No Copyright - United States rights statement.","asserted_by_id":"agent:umich","rights_statement_uri":"http://rightsstatements.org/vocab/NoC-US/1.0/","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:umich-york"],
+      "notes":["The current U-M assertion differs from the OTA Academic Use terms and from the path-specific downstream CME license; those layers are retained separately."]
+    },
+    {
+      "id":"rights:ota-files","entity":"encoding:umich-ota:U-1392-B-York","access_id":"access:ota-files","component":"Oxford Text Archive U-1392-B text files and delivery","jurisdiction":"United States","copyright_status":"unknown","as_of":"2026-07-15",
+      "basis":"The current OTA record labels the item Academic Use and its terms require attribution, noncommercial use, and permission for uses outside the stated license. Public download availability does not remove those provider terms.","asserted_by_id":"agent:ota","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:ota-item","evidence:ota-license","evidence:ota-files"]
+    },
+    {
+      "id":"rights:beadle-1982","entity":"edition:beadle:york-plays-1982","access_id":"access:beadle-preview","component":"Beadle's 1982 edition, editorial matter, and restricted digital preview","jurisdiction":"United States","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The inspected copyright page states copyright 1982 Richard Beadle, reserves all rights, and requires prior publisher permission for reproduction; no open license was identified.","asserted_by_id":"agent:richard-beadle","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:beadle-copyright","evidence:beadle-preview"]
+    },
+    {
+      "id":"rights:beadle-preview-facsimile","entity":"facsimile:ia:beadle-1982-preview","access_id":"access:beadle-preview","component":"Internet Archive controlled-lending scan and public preview OCR of Beadle 1982","jurisdiction":"United States","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The digital surrogate reproduces a copyrighted 1982 edition and is exposed only through controlled lending and limited public preview; no open license was identified.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:beadle-preview","evidence:beadle-copyright"]
+    },
+    {
+      "id":"rights:bl-catalog-text","entity":"catalog:bl:Add-MS-35290-current","access_id":"access:bl-catalog","component":"British Library catalog descriptive text and data","jurisdiction":"United Kingdom","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The current catalog record expressly licenses catalog content under Creative Commons Attribution 4.0; that grant does not cover manuscript images or third-party content.","asserted_by_id":"agent:british-library","license":{"name":"Creative Commons Attribution 4.0 International","spdx":"CC-BY-4.0","uri":"https://creativecommons.org/licenses/by/4.0/"},"contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:bl-catalog","evidence:bl-catalog-inspection"]
+    },
+    {
+      "id":"rights:bl-images","entity":"witness:bl:Add-MS-35290","access_id":"access:bl-images","component":"Modern British Library manuscript images and reproductions","jurisdiction":"United Kingdom","copyright_status":"unknown","as_of":"2026-07-15",
+      "basis":"No public image sequence or image-specific open license was available. The British Library directs reproduction requests through Imaging Services and separate permissions procedures.","asserted_by_id":"agent:british-library","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:bl-catalog","evidence:bl-imaging"]
+    },
+    {
+      "id":"rights:sykes-underlying-text","entity":"witness:york-city-archives:Acc-104-G-1","access_id":"access:sykes-physical","component":"Underlying medieval Scriveners' pageant text","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-15",
+      "basis":"The separate guild copy and underlying anonymous pageant text date to the sixteenth century; physical access and reproduction conditions remain distinct.","contract_terms_status":"none_known","confidence":"high","evidence_ids":["evidence:cawley-sykes","evidence:york-city-access"]
+    },
+    {
+      "id":"rights:cawley-article","entity":"edition:cawley:sykes-1952","access_id":"access:cawley-pdf","component":"Cawley's 1952 article, transcription, apparatus, and manuscript photograph","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-15",
+      "basis":"The complete article is publicly downloadable, but no item-specific open license or definitive United States term determination was identified; the medieval underlying text is assessed separately.","contract_terms_status":"provider_terms_apply","confidence":"medium","evidence_ids":["evidence:cawley-sykes"]
+    },
+    {
+      "id":"rights:cawley-digital-facsimile","entity":"facsimile:leeds:cawley-sykes-1952","access_id":"access:cawley-pdf","component":"Leeds digital article scan and delivery file","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-15",
+      "basis":"The scan reproduces the potentially protected 1952 article and its manuscript photograph; no independent open license for the delivery file was identified.","contract_terms_status":"provider_terms_apply","confidence":"medium","evidence_ids":["evidence:cawley-sykes"]
+    },
+    {
+      "id":"rights:ordo-underlying-text","entity":"witness:borthwick:E-20-1327-1547","access_id":"access:ordo-physical","component":"Underlying medieval and early-modern Ordo documentary text","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-15",
+      "basis":"The historical documentary text long predates modern copyright terms; archive copy-service and image conditions remain separate.","contract_terms_status":"none_known","confidence":"high","evidence_ids":["evidence:reed-york","evidence:meredith-ordo"]
+    },
+    {
+      "id":"rights:reed-xml","entity":"catalog:reed:york-collection","access_id":"access:reed-york","component":"REED York TEI XML, editorial transcription, and repository data","jurisdiction":"Canada","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The pinned REED Collections repository license applies Creative Commons Attribution-NonCommercial-ShareAlike 4.0 to the collection.","asserted_by_id":"agent:reed-project","license":{"name":"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International","spdx":"CC-BY-NC-SA-4.0","uri":"https://creativecommons.org/licenses/by-nc-sa/4.0/"},"contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:reed-license","evidence:reed-york","evidence:reed-commit"]
+    },
+    {
+      "id":"rights:meredith-article","entity":"catalog:meredith:ordo-1980","access_id":"access:meredith-pdf","component":"Meredith's 1980 article and its Ordo image","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-15",
+      "basis":"A complete article scan is publicly available, but no item-specific open license or definitive term determination was identified.","contract_terms_status":"provider_terms_apply","confidence":"medium","evidence_ids":["evidence:meredith-ordo"]
+    },
+    {
+      "id":"rights:meredith-digital-facsimile","entity":"facsimile:leeds:meredith-ordo-1980","access_id":"access:meredith-pdf","component":"Digital article scan and delivery file","jurisdiction":"United States","copyright_status":"copyright_may_apply","as_of":"2026-07-15",
+      "basis":"The scan reproduces the potentially protected 1980 article and its Ordo image; no independent open license for the delivery file was identified.","contract_terms_status":"provider_terms_apply","confidence":"medium","evidence_ids":["evidence:meredith-ordo"]
+    },
+    {
+      "id":"rights:hm1-underlying-text","entity":"witness:huntington:HM-1","access_id":"access:huntington-physical","component":"Underlying medieval and early-modern Towneley compilation texts","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-15",
+      "basis":"The manuscript texts long predate modern copyright terms. This statement does not cover Huntington's modern photography or provider terms, which are recorded on the selected facsimile entity.","contract_terms_status":"none_known","confidence":"high","evidence_ids":["evidence:huntington-hm1","evidence:usco-circular15a"]
+    },
+    {
+      "id":"rights:huntington-selected-images","entity":"facsimile:huntington:HM-1-selected","access_id":"access:huntington-selection","component":"Huntington selected manuscript images, IIIF manifest, and delivery","jurisdiction":"United States","copyright_status":"unknown","as_of":"2026-07-15",
+      "basis":"The exact object supplies no explicit open license and refers users to Huntington's rights policy, which places rights determinations on the researcher and distinguishes physical ownership from copyright.","asserted_by_id":"agent:huntington","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:huntington-hm1","evidence:huntington-rights","evidence:huntington-iiif"],
+      "notes":["The cached object is collateral Towneley material and contains no exact York target text."]
+    },
+    {
+      "id":"rights:smith-1885","entity":"edition:smith:york-plays-1885","access_id":"access:smith-scan","component":"Smith's 1885 edition text and editorial matter","jurisdiction":"United States","copyright_status":"public_domain","as_of":"2026-07-15",
+      "basis":"The edition was published in 1885, before the current United States public-domain cutoff described in U.S. Copyright Office Circular 15A.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:smith-1885","evidence:usco-circular15a"]
+    },
+    {
+      "id":"rights:smith-ia-facsimile","entity":"facsimile:ia:smith-york-1885","access_id":"access:smith-scan","component":"Internet Archive/Google mechanical scan, OCR, and delivery files for Smith 1885","jurisdiction":"United States","copyright_status":"no_known_copyright","as_of":"2026-07-15",
+      "basis":"No separately licensed creative scan layer is identified for the public-domain volume; provider service terms remain applicable.","contract_terms_status":"provider_terms_apply","confidence":"high","evidence_ids":["evidence:smith-1885","evidence:smith-ia-metadata","evidence:usco-circular15a"]
+    },
+    {
+      "id":"rights:kinneavy-1986","entity":"catalog:kinneavy:york-concordance-1986","access_id":"access:kinneavy-no-public-copy","component":"Kinneavy's 1986 concordance and correction list","jurisdiction":"United States","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The modern publication remains within ordinary copyright terms and no open license was identified.","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:kinneavy"]
+    },
+    {
+      "id":"rights:facsimile-1983","entity":"facsimile:leeds:york-register-ordo-1983","access_id":"access:1983-facsimile-no-public-copy","component":"1983 facsimile volume, introduction, and photographic plates","jurisdiction":"United States","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The modern facsimile and editorial matter were published in 1983; no open license or complete public digital copy was identified.","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:facsimile-1983"]
+    },
+    {
+      "id":"rights:beadle-revised","entity":"edition:beadle:york-plays-2009-2013","access_id":"access:beadle-revised-no-public-copy","component":"Revised 2009-2013 EETS edition and editorial matter","jurisdiction":"United States","copyright_status":"copyrighted","as_of":"2026-07-15",
+      "basis":"The modern two-volume edition remains within ordinary copyright terms and no open license was identified.","contract_terms_status":"permission_required","confidence":"high","evidence_ids":["evidence:beadle-revised"]
+    },
+    {
+      "id":"rights:usco-circular15a","entity":"catalog:usco:circular-15a-2026","access_id":"access:usco-circular15a","component":"Official Circular 15A text and PDF delivery file","jurisdiction":"United States","copyright_status":"unknown","as_of":"2026-07-15",
+      "basis":"The circular is an official U.S. Copyright Office publication and publicly downloadable, but this manifest does not make a separate statutory determination for its delivery file.","asserted_by_id":"agent:us-copyright-office","contract_terms_status":"unknown","confidence":"medium","evidence_ids":["evidence:usco-circular15a"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id":"practice:encoding-selection","entity":"encoding:umich-ota:U-1392-B-York","practice":"selection",
+      "source_feature":"Beadle's complete 537-page printed edition, including illustrations, front and back matter, editorial notes, and pageant texts",
+      "representation":"Fifty electronic pageant divisions; illustrations, front and back matter, and editorial notes omitted",
+      "description":"The electronic header expressly defines a selective representation of the printed edition rather than a complete page facsimile or transcription of every editorial layer.","scope":"Entire U-M/OTA encoding","confidence":"high","evidence_ids":["evidence:repo-xml","evidence:beadle-contents"]
+    },
+    {
+      "id":"practice:beadle-play16-container","entity":"edition:beadle:york-plays-1982","practice":"selection",
+      "source_feature":"Separate Masons' Herod and Goldsmiths' Magi pageant units in the Register, with a shared middle scene preserved in alternative versions",
+      "representation":"One editorial Play XVI contents container, Masons / Goldsmiths — Herod / Magi, spanning printed pp. 135-149",
+      "description":"Beadle's contents combine two intellectual pageant units in one numbered editorial container. The work manifest therefore counts two nested components while retaining the fifty-container electronic structure.","scope":"Play XVI only","confidence":"high","evidence_ids":["evidence:beadle-contents","evidence:smith-1885","evidence:bl-catalog"]
+    },
+    {
+      "id":"practice:encoding-play16-serialization","entity":"encoding:umich-ota:U-1392-B-York","practice":"selection",
+      "source_feature":"Yk.16 shared outer material plus alternative Yk.16M and Yk.16G middle blocks in the OTA source files",
+      "representation":"A single XML DIV1 N=16 containing 539 L elements serialized from shared and alternative blocks",
+      "description":"The electronic serialization preserves both alternative branches within one container; its raw L-element count is a representation metric, not a claim that all branches form one additive intellectual line sequence.","scope":"XML division 16","confidence":"high","evidence_ids":["evidence:repo-inspection","evidence:ota-files","evidence:smith-1885"]
+    },
+    {
+      "id":"practice:smith-abbreviation-expansion","entity":"edition:smith:york-plays-1885","practice":"abbreviation_expansion",
+      "source_feature":"Register contractions and manuscript letterforms",
+      "representation":"Expanded contractions and selected regularized characters in the printed edition",
+      "description":"Smith explicitly describes expansion and character treatment in the edition's introductory statement; this modern editorial layer is not attributed to the manuscript.","scope":"Complete 1885 edition","confidence":"high","evidence_ids":["evidence:smith-1885"]
+    },
+    {
+      "id":"practice:smith-supplied-apparatus","entity":"edition:smith:york-plays-1885","practice":"selection",
+      "source_feature":"Register text, divisions, speaker cues, and stage material without Smith's complete modern navigational apparatus",
+      "representation":"Supplied play titles, dramatis personae, analyses, scenes, stage directions, and stanza numbering",
+      "description":"Smith distinguishes her supplied editorial apparatus from the manuscript-derived text; later users must not treat those additions as physical-witness features.","scope":"Complete 1885 edition","confidence":"high","evidence_ids":["evidence:smith-1885"]
+    },
+    {
+      "id":"practice:cawley-collation","entity":"edition:cawley:sykes-1952","practice":"collation",
+      "source_feature":"The separate four-leaf Sykes Scriveners copy and the corresponding Register text",
+      "representation":"Complete Sykes transcription with Register variants and a textual-relationship analysis",
+      "description":"Cawley's collation demonstrates that neither surviving copy is a direct transcript of the other; it does not authorize collapsing them into one witness.","scope":"Scriveners' Incredulity of Thomas","confidence":"high","evidence_ids":["evidence:cawley-sykes","evidence:bl-catalog"]
+    }
+  ],
+  "evidence": [
+    {
+      "id":"evidence:repo-xml","type":"repository_file","citation":"General Corpus, CME/source/CME_from_OTA/York.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.","repository_path":"CME/source/CME_from_OTA/York.xml","locator":"HEADER; TEXT/BODY/DIV1; commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob 582bdf552ea2d5a6c93feafb25de7b9d0c36f95f; 705,809 bytes","summary":"Fixes the exact repository artifact and supplies the 1993 U-M/OTA statement, Beadle 1982 source, Kinneavy correction note, selection declarations, fifty divisions, page boundaries, speakers, and text.","accessed_on":"2026-07-15","sha256":"21de160d526dff4c0899c290fb0308f52f52dcde216ae9a49336dda8339c1a52"
+    },
+    {
+      "id":"evidence:repo-inspection","type":"repository_file","citation":"Targeted structural inspection of the pinned York.xml and its exact OTA source files.","repository_path":"CME/source/CME_from_OTA/York.xml","locator":"50 DIV1; N order 1, 2, 3A, 3B, 4-22, 22A, 23-46, 46A, 47; 13,638 L; 2,754 SP/SPEAKER; 367 PB; 368 EPB","summary":"Establishes the exact electronic boundary and raw representation counts. It also confirms that Play XVI serializes shared and alternative Yk.16, Yk.16M, and Yk.16G blocks, so raw L counts cannot be treated as additive intellectual lineation.","accessed_on":"2026-07-15","sha256":"21de160d526dff4c0899c290fb0308f52f52dcde216ae9a49336dda8339c1a52"
+    },
+    {
+      "id":"evidence:cme-from-ota-license","type":"official_webpage","citation":"Kyvero-Press/CME, exact CME_from_OTA distribution notice at the pinned commit.","url":"https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt","alternate_urls":["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt"],"repository_path":"source-cache/York/cme-from-ota-license-e1d77c8.txt","locator":"commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob 613b1c0bdca14107145749e19840d258485ce1df; complete 505-byte notice","summary":"The path-specific notice says the CME_from_OTA texts derive from OTA files and are redistributed under CC BY-NC-SA 3.0. It is the relevant repository-artifact grant and is not replaced by the root software license.","accessed_on":"2026-07-15","sha256":"9129f6b4fc4dd9385c4acde807f5177391a0da36992831c3bbdfb9cecca65386"
+    },
+    {
+      "id":"evidence:umich-york","type":"official_webpage","citation":"University of Michigan Library Digital Collections, The York plays.","url":"https://quod.lib.umich.edu/c/cme/York?view=toc","alternate_urls":["https://name.umdl.umich.edu/York"],"summary":"Confirms current public access, the fifty-entry electronic table of contents, 1982 source citation, OTA U-1392-B identity, and current public-domain/No Copyright - United States assertion.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:ota-item","type":"official_catalog","citation":"Oxford Text Archive, York miracle play cycle, ota:1392 / U-1392-B.","url":"https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392","summary":"Confirms the electronic item identity, 1993 issue date, five-file inventory, source edition, and current Academic Use designation.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:ota-files","type":"digital_surrogate","citation":"Oxford Text Archive U-1392-B plain-text files york1-york4 and input conventions.","url":"https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392","repository_path":"source-cache/York/ota-1392-york1.txt","locator":"york1-york4 record labels; Yk.16, Yk.16G, and Yk.16M; yorkdoc input conventions","summary":"The four text files yield 13,638 source text rows and cover the full electronic sequence; the conventions file documents record structure. Direct comparison supports XML derivation and the Play XVI shared/alternative-block analysis.","accessed_on":"2026-07-15","sha256":"618164c2bcadf49f6cb4c3382b246c7c9131f4fbe8a06bc2deb2544dadfce65d","notes":["Other cached exact SHA-256 values: york2 d60b6de09c50af135a647201180df7cfce3ba84f13f8ce09b38c90bca182ee6f; york3 e8a10da4fa68b7b2e56881e40f5730e2be3070295a3b17eba9664a9f6b297508; york4 190c5e81cef62d9f25d6726af33317bc5051fdbb3a5bad2d23ce39884c7d2a86; conventions 88fda87ac6d1bdf61b2a349d53db674047ffea0c04c94902c711cde624e423ed."]
+    },
+    {
+      "id":"evidence:ota-license","type":"official_webpage","citation":"Oxford Text Archive, current Academic Use licence terms.","url":"https://hdl.handle.net/20.500.14106/licence-ota","summary":"States the current attribution and noncommercial Academic Use conditions and directs users to seek permission for uses outside the license.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:beadle-preview","type":"official_catalog","citation":"Internet Archive metadata for yorkplays0000unse, Richard Beadle's The York Plays (1982).","url":"https://archive.org/metadata/yorkplays0000unse","alternate_urls":["https://archive.org/details/yorkplays0000unse"],"repository_path":"source-cache/York/ia-yorkplays0000unse-metadata.json","summary":"Confirms item identity, restricted-access status, publication data, identifier metadata, and the limited preview surfaces inspected for the 1982 edition.","accessed_on":"2026-07-15","sha256":"b66c3fa44f633beb8bb572464942378bf7f2306f6a863922129e74514292e384"
+    },
+    {
+      "id":"evidence:beadle-copyright","type":"digital_surrogate","citation":"Beadle 1982 public preview, copyright page OCR.","url":"https://archive.org/download/yorkplays0000unse/page/n7.xml","repository_path":"source-cache/York/beadle-1982-preview-page-7-ocr.xml","locator":"copyright and publication notice","summary":"Records copyright 1982 Richard Beadle, all rights reserved, and prior-permission language from Edward Arnold.","accessed_on":"2026-07-15","sha256":"8a5aef8ffaec33e38ea83ffe45d108ce8a7daa306ff1828fe12178db6ad5dbac"
+    },
+    {
+      "id":"evidence:beadle-contents","type":"digital_surrogate","citation":"Beadle 1982 public preview, two contents-page OCR objects.","url":"https://archive.org/download/yorkplays0000unse/page/n8.xml","alternate_urls":["https://archive.org/download/yorkplays0000unse/page/n9.xml"],"repository_path":"source-cache/York/beadle-1982-preview-page-8-ocr.xml","locator":"contents pp. vii-viii; plays I-XLVII and back matter","summary":"Confirms all fifty encoded headings and printed-page ranges, including one combined Play XVI Masons / Goldsmiths container at pp. 135-149, the later 22A and 46A fragments, and editorial matter omitted from the encoding.","accessed_on":"2026-07-15","sha256":"21da95b257d87a518abfa8519f826001942fd5f2e1b0472ea0d72bf3f7f478da","notes":["The second cached contents page has SHA-256 0c6d25570118581de0bff1b806e75f961a0dca41ee507476b64d5e2dec5cbbc3."]
+    },
+    {
+      "id":"evidence:kinneavy","type":"authority_record","citation":"Library of Congress LCCN 85045133, Gerald Byron Kinneavy, A Concordance to the York Plays (1986).","url":"https://lccn.loc.gov/85045133","summary":"Confirms the concordance's bibliographic identity. The electronic header specifically says corrections recorded in this work were incorporated, but the complete correction list on pp. xxxi-xxxii was not publicly accessible during review.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:bl-catalog","type":"official_catalog","citation":"British Library, Add MS 35290, York Mystery Plays, Archives and Manuscripts record 040-002088765.","url":"https://searcharchives.bl.uk/catalog/040-002088765","alternate_urls":["https://searcharchives.bl.uk/catalog/040-002088765.json"],"repository_path":"source-cache/York/british-library-add-ms-35290-catalog.json","locator":"Scope and Content; folio-level pageant entries; Physical Description; Custodial History; Conditions of Access; copyright notice","summary":"Confirms the York Register's shelfmark, dates, support, extent, provenance, detailed folio map, restricted physical access, current image status, and CC BY 4.0 catalog-data grant.","accessed_on":"2026-07-15","sha256":"6a9bce0b346bd77c50c3d04478155598a5d697616956f36e51fdb25ee7fe0502"
+    },
+    {
+      "id":"evidence:bl-catalog-inspection","type":"official_catalog","citation":"Targeted inspection of the cached British Library Add MS 35290 JSON record.","url":"https://searcharchives.bl.uk/catalog/040-002088765.json","repository_path":"source-cache/York/british-library-add-ms-35290-catalog.json","locator":"fifty-one represented pageant/fragment units and exact folio map; access and digital-image fields","summary":"Separates the fifty electronic containers from the physical/intellectual pageant units, confirms separate Masons and Goldsmiths folio blocks, the displaced Purification, blank Ironmongers entry, and later Coronation fragment, and records the current lack of a public image sequence.","accessed_on":"2026-07-15","sha256":"6a9bce0b346bd77c50c3d04478155598a5d697616956f36e51fdb25ee7fe0502"
+    },
+    {
+      "id":"evidence:mets-york","type":"scholarly_source","citation":"Clifford Davidson, ed., The York Corpus Christi Play, Middle English Texts Series reading edition (2011; current web edition).","url":"https://metseditions.org/read/VEVbdg4i9xbBCRY8Ulyq4S2vNg7NGYW","summary":"Supports the established work title; civic-cycle model; pageant wagons and stations; Register copying and revision; Ordo layers; omitted entries; separate guild copies; Towneley relationships; and performance history through 1569.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:bl-access","type":"official_webpage","citation":"British Library Add MS 35290 access conditions.","url":"https://searcharchives.bl.uk/catalog/040-002088765","summary":"Records restricted consultation, advance request requirements, and the letter-of-introduction condition for the physical manuscript.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:bl-imaging","type":"official_webpage","citation":"British Library, Digitisation Services and Imaging Services terms.","url":"https://www.bl.uk/services/digitisation","alternate_urls":["https://www.bl.uk/terms/imaging-services"],"summary":"Documents the current route for requesting reference or publication-quality images and the separation of image supply from permissions and licensing.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:cawley-sykes","type":"scholarly_source","citation":"A. C. Cawley, ‘The Sykes MS of the York Scriveners' Play,’ Leeds Studies in English 7-8 (1952): 45-80, complete article scan.","url":"https://digital.library.leeds.ac.uk/71/","alternate_urls":["https://digital.library.leeds.ac.uk/71/1/LSE1952_pp45-80_Cawley_article.pdf"],"repository_path":"source-cache/York/cawley-1952-sykes-manuscript-complete.pdf","locator":"complete article; manuscript description; photograph of f. 1a; diplomatic transcription; Register collation; textual-relationship conclusion","summary":"Establishes the separate four-leaf Scriveners witness, its c. 1525-1550 date, complete transcription and collation, and the conclusion that neither Sykes nor Register copy derives directly from the other.","accessed_on":"2026-07-15","sha256":"e6c8fe9e6743fc23a13921b23733db5d71375b7fbf7c885826dbc8930b25d203"
+    },
+    {
+      "id":"evidence:york-city-access","type":"official_webpage","citation":"York City Archives, Visiting Us.","url":"https://exploreyork.org.uk/archives/visiting-us/","summary":"Provides current appointment, preordering, and contact procedures for consulting York City Archives holdings; no exact public Acc 104/G.1 item page was located.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:reed-york","type":"official_catalog","citation":"Records of Early English Drama, York collection TEI at pinned commit 1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66.","url":"https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/tei/records/yorkc.xml","repository_path":"source-cache/York/reed-york-collection-1bec27e.xml","locator":"complete York civic-record TEI; Ordo and performance records","summary":"Supplies documentary evidence for York's civic performance tradition and Ordo organization. It is a complete source for the accessed REED catalog entity, not a transcription of the exact dramatic target work.","accessed_on":"2026-07-15","sha256":"3171d24de740773473c59ff32192005d0afd55219b1415c7133f5c45938967e1"
+    },
+    {
+      "id":"evidence:reed-license","type":"official_webpage","citation":"REEDProject/Collections repository license at commit 1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66.","url":"https://raw.githubusercontent.com/REEDProject/Collections/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/LICENSE.txt","repository_path":"source-cache/York/reed-collections-license-1bec27e.txt","summary":"Applies Creative Commons Attribution-NonCommercial-ShareAlike 4.0 to the pinned REED collection.","accessed_on":"2026-07-15","sha256":"cd9832c492786274823efa8d026ba57f45b51fabf37fc67b85069e1ed0c062b7"
+    },
+    {
+      "id":"evidence:reed-commit","type":"digital_surrogate","citation":"GitHub commit metadata for REEDProject/Collections commit 1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66.","url":"https://api.github.com/repos/REEDProject/Collections/commits/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66","alternate_urls":["https://github.com/REEDProject/Collections/commit/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66"],"repository_path":"source-cache/York/reed-collections-commit-1bec27e.json","summary":"Pins the REED XML and license evidence to an exact repository state and commit date.","accessed_on":"2026-07-15","sha256":"f14acf1952ee9ae25f1b1941d2a4487c0f1a54c664ce1c826b889772210ff3af"
+    },
+    {
+      "id":"evidence:meredith-ordo","type":"scholarly_source","citation":"Peter Meredith, ‘The Ordo Paginarum and the Development of the York Tilemakers' Pageant,’ Leeds Studies in English, n.s. 11 (1980): 59-73, complete article scan.","url":"https://archive.org/details/lse-1979-whole-issue/page/n65/mode/2up","repository_path":"source-cache/York/meredith-1980-ordo-paginarum-complete.pdf","locator":"complete article pp. 59-73; Ordo image and layered-entry analysis","summary":"Shows that the Ordo is an erased, supplemented, and rewritten documentary witness rather than a homogeneous 1415 script, and documents flood damage and the value of early transcripts.","accessed_on":"2026-07-15","sha256":"25f77d76e69eb6c37d741cc5dc8c8f03f8811b97028786380ef3db5f973f3077"
+    },
+    {
+      "id":"evidence:borthwick-access","type":"official_webpage","citation":"Borthwick Institute for Archives, Visiting Us and document-copy services.","url":"https://www.york.ac.uk/borthwick/visiting-us/","alternate_urls":["https://store.york.ac.uk/product-catalogue/borthwick-institute-shop/document-copies"],"summary":"Provides current physical consultation and copy-request procedures; the exact mapping between the current REED reference and older York City Library/York City Archives designations remains unresolved.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:huntington-hm1","type":"official_catalog","citation":"The Huntington, Towneley cycle: manuscript, mssHM 1.","url":"https://www.huntington.org/collections/lib-p15150coll7-52988","alternate_urls":["https://catalog.huntington.org/record=b1862079","https://hdl.huntington.org/digital/collection/p15150coll7/id/52988"],"summary":"Confirms HM 1 as a distinct 132-folio parchment compilation dated 1490-1510 by the current catalog, restricted physical access, the 60-view partially scanned public object, and York-related collateral material without making it the exact York witness.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:huntington-iiif","type":"digital_surrogate","citation":"Huntington Digital Library IIIF Presentation manifest for p15150coll7:52988 and complete cached 60-canvas selected bundle.","url":"https://hdl.huntington.org/iiif/info/p15150coll7/52988/manifest.json","alternate_urls":["https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json"],"repository_path":"source-cache/York/huntington-hm1-published-selection.zip","locator":"manifest.json; inventory; all 60 JPEG derivatives at requested 1600-pixel width","summary":"The bundle is complete for the provider-selected digital object and partial for physical HM 1. Inventory and ZIP validation confirm all 60 canvases; the exact York target work is absent.","accessed_on":"2026-07-15","sha256":"7a0c0ce137dd2a0db40645d49cc3c370493f6c1628cf26c3efb5a4890a287616"
+    },
+    {
+      "id":"evidence:huntington-visual","type":"visual_inspection","citation":"Visual inspection of selected HM 1 canvases in the cached Huntington bundle.","repository_path":"source-cache/York/huntington-hm1-published-selection.zip","locator":"Pharaoh f. 21r; Harrowing f. 97v; Resurrection boundary f. 101r; Judgment ff. 127r-v","summary":"Confirms that the selected object displays Towneley versions of York-related material. These are collateral adaptations or borrowings, not the exact York target text, so target_work_presence is absent and no work_portion is asserted.","accessed_on":"2026-07-15","sha256":"7a0c0ce137dd2a0db40645d49cc3c370493f6c1628cf26c3efb5a4890a287616"
+    },
+    {
+      "id":"evidence:huntington-rights","type":"official_webpage","citation":"The Huntington, Library Rights and Permissions.","url":"https://www.huntington.org/library-rights-and-permissions","summary":"Distinguishes ownership of physical objects from intellectual-property rights, places rights determination on the researcher, does not require Huntington permission for public-domain material, and requests appropriate citation.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:smith-1885","type":"edition_statement","citation":"York Plays, ed. Lucy Toulmin Smith (Oxford: Clarendon Press, 1885), complete Internet Archive scan and OCR.","url":"https://archive.org/download/yorkplaysnowfir00smitgoog/yorkplaysnowfir00smitgoog.pdf","alternate_urls":["https://archive.org/details/yorkplaysnowfir00smitgoog"],"repository_path":"source-cache/York/smith-1885-york-plays-complete.pdf","locator":"preface and editorial statement; contents; printed pp. 115-129 notes on Masons/Goldsmiths; pp. 448 and 455 Sykes collation; Towneley parallel notes including the Doctors pageant","summary":"Confirms the first complete edition's direct use of the Ashburnham Register, Smith's editorial transformations, separate Masons XVI and Goldsmiths XVII units with shared middle scene and distinct outer material, explicit Sykes collation, and explicit printed Towneley comparisons.","accessed_on":"2026-07-15","sha256":"cd9147c5cf8484c95851ded99b208c805475cca29e612592901801f78724c7cc"
+    },
+    {
+      "id":"evidence:smith-ia-metadata","type":"digital_surrogate","citation":"Internet Archive metadata for yorkplaysnowfir00smitgoog.","url":"https://archive.org/metadata/yorkplaysnowfir00smitgoog","repository_path":"source-cache/York/smith-1885-york-plays-ia-metadata.json","summary":"Confirms the Internet Archive item identity, public delivery, complete derivative inventory, and 667-page scan record.","accessed_on":"2026-07-15","sha256":"33a76e571d7247f4bf299fe7d68df21bfa851bdd1e3d7cfeabf6cce498392154","notes":["The complete cached OCR has SHA-256 70851ac4f6b9521257d83240ce1466d46b098f57e6e53edc079945849612cc5e; scan-data XML has SHA-256 3d2125877033a128bce863d328071c63cb3535d029f99abc3d6ee6e4a57a51f7."]
+    },
+    {
+      "id":"evidence:facsimile-1983","type":"authority_record","citation":"Library of Congress LCCN 84221144, The York Play: a Facsimile of British Library MS Additional 35290, together with a Facsimile of the Ordo Paginarum (1983).","url":"https://lccn.loc.gov/84221144","alternate_urls":["https://openlibrary.org/works/OL14069239M"],"summary":"Confirms the print facsimile's title, responsibilities, publication date, series, extent, and dual Register/Ordo scope; no complete public digital copy was found.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:beadle-revised","type":"scholarly_source","citation":"Review and bibliographic record for Richard Beadle's revised two-volume EETS York Plays (2009-2013).","url":"https://scholarworks.iu.edu/journals/index.php/tmr/article/view/18635","summary":"Confirms the later two-volume revised edition's identity and dates. It is later scholarship and not the source of the 1993 electronic encoding.","accessed_on":"2026-07-15"
+    },
+    {
+      "id":"evidence:usco-circular15a","type":"law","citation":"U.S. Copyright Office, Circular 15A: Duration of Copyright (April 2026).","url":"https://www.copyright.gov/circs/circ15a.pdf","repository_path":"source-cache/York/us-copyright-office-circular-15a-2026.pdf","locator":"complete official circular; works first published before 1930","summary":"Supplies current official United States term guidance used narrowly for the 1885 Smith edition and underlying historical texts; it does not decide foreign jurisdictions, provider terms, or modern image/editorial layers.","accessed_on":"2026-07-15","sha256":"6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef"
+    }
+  ],
+  "open_questions": [
+    {
+      "id":"question:play-16-branches","question":"What exact textual genealogy and editorial rationale underlie the Yk.16, Yk.16M, and Yk.16G shared and alternative blocks serialized inside Play XVI?","status":"unresolved","impact":"medium","next_steps":["Consult the complete 1982 edition and Kinneavy's full correction list, then collate the Register folios, OTA records, and XML serialization without treating alternative branches as additive intellectual lines."],"last_checked":"2026-07-15","evidence_ids":["evidence:repo-inspection","evidence:ota-files","evidence:beadle-contents","evidence:smith-1885"],"notes":["The fifty-container electronic structure and the two nested Masons/Goldsmiths pageant units are secure; the unresolved issue is internal branch genealogy."]
+    },
+    {
+      "id":"question:beadle-collateral-sources","question":"Did Beadle's 1982 edition directly consult or collate the Sykes manuscript or Huntington HM 1?","status":"no_public_source_found","impact":"medium","next_steps":["Inspect the complete 1982 introduction, textual notes, and apparatus before adding any Beadle-to-Sykes or Beadle-to-HM 1 source-use relation."],"last_checked":"2026-07-15","evidence_ids":["evidence:beadle-preview","evidence:beadle-contents","evidence:cawley-sykes","evidence:huntington-hm1"],"notes":["The currently accessible Beadle title, copyright, and contents previews do not prove either relation. Smith's explicit Sykes and Towneley comparisons are modeled separately."]
+    },
+    {
+      "id":"question:kinneavy-corrections","question":"Which exact electronic passages were changed from Beadle 1982 using Kinneavy's correction list on pp. xxxi-xxxii?","status":"no_public_source_found","impact":"medium","next_steps":["Inspect a physical or licensed complete copy of Kinneavy 1986 and record each corrected locus against the OTA files and XML."],"last_checked":"2026-07-15","evidence_ids":["evidence:repo-xml","evidence:kinneavy"]
+    },
+    {
+      "id":"question:ordo-current-holding","question":"What is the exact current catalog record and shelfmark mapping for the A/Y Memorandum Book containing the Ordo Paginarum?","status":"unresolved","impact":"medium","next_steps":["Ask the Borthwick Institute and York City Archives to reconcile REED's current E 20:1327-1547 attribution with older York City Library and York City Archives designations."],"last_checked":"2026-07-15","evidence_ids":["evidence:reed-york","evidence:meredith-ordo","evidence:borthwick-access"]
+    },
+    {
+      "id":"question:full-register-public-facsimile","question":"Does a complete current public digital facsimile of British Library Add MS 35290 exist?","status":"no_public_source_found","impact":"high","next_steps":["Periodically recheck the exact British Library record and digitized-manuscript services; meanwhile use the 1983 print facsimile or request reference images from Imaging Services."],"last_checked":"2026-07-15","evidence_ids":["evidence:bl-catalog","evidence:bl-catalog-inspection","evidence:bl-imaging","evidence:facsimile-1983"],"notes":["The current catalog reports no available digital images despite historical references to full coverage."]
+    },
+    {
+      "id":"question:sykes-register-exemplar","question":"What lost exemplar or transmission path best explains the Sykes and Register versions of the Scriveners' pageant?","status":"unresolved","impact":"medium","next_steps":["Preserve Cawley's negative conclusion that neither surviving witness directly copies the other; undertake renewed stemmatic and paleographical analysis before asserting a more specific genealogy."],"last_checked":"2026-07-15","evidence_ids":["evidence:cawley-sykes","evidence:bl-catalog"]
+    },
+    {
+      "id":"question:electronic-rights-layers","question":"How should the current U-M NoC-US assertion, OTA Academic Use terms, and downstream CME_from_OTA CC BY-NC-SA 3.0 grant be reconciled?","status":"unresolved","impact":"medium","next_steps":["Seek a provider or repository statement explaining the chain of grants; until then retain each electronic and distribution layer separately and follow the exact path-specific license for the repository artifact."],"last_checked":"2026-07-15","evidence_ids":["evidence:umich-york","evidence:ota-item","evidence:ota-license","evidence:cme-from-ota-license"]
+    }
+  ]
+}

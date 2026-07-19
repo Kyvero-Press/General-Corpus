@@ -1,0 +1,457 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:3rdFranRule",
+  "work_id": "3rdFranRule",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "cataloging_subject": {
+    "id": "work:3rdFranRule",
+    "unit_type": "single_work",
+    "label": "The Thirde Order of Seynt Franceys for the Brethren and Susters of the Order of Penitentis",
+    "scope_note": "The anonymous Middle English translation and version of the rule incorporated in Pope Nicholas IV's 1289 bull Supra montem, attested in National Library of Wales MS 22873B at fols. 2r-15v. The record does not describe the Latin source rule, the whole nineteen-leaf manuscript, its adjacent Latin extract and Offices, Seton's composite 1914 EETS volume, the University of Michigan encoding, or the repository XML artifact."
+  },
+  "catalog_summary": {
+    "title": "The Thirde Order of Seynt Franceys for the Brethren and Susters of the Order of Penitentis",
+    "author": "Anonymous Middle English translator; Latin source promulgated by Nicholas IV",
+    "editor": "Walter W. Seton",
+    "date": "Translation undated; attested in a manuscript of around 1500",
+    "region": "England; exact place of translation and copying unknown",
+    "genres": ["Religious rule", "Vernacular religious translation", "Papal bull"],
+    "form": "prose",
+    "language_codes": ["enm", "lat"],
+    "tags": ["franciscans", "third-order", "penitence", "religious-rule", "middle-english", "prose", "translation", "papal-bull", "nicholas-iv", "fasting", "prayer", "lay-religion"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "3rdFranRule", "uri": "https://name.umdl.umich.edu/3rdFranRule"},
+    {"scheme": "NLW shelfmark", "value": "NLW MS 22873B"},
+    {"scheme": "EETS", "value": "Original Series 148"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Thirde Order of Seynt Franceys for the Brethren and Susters of the Order of Penitentis",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition", "evidence:nlw-catalog"]}
+    },
+    {
+      "id": "title:uniform",
+      "type": "uniform",
+      "value": "Rule of the Third Order of Saint Francis. Middle English",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:nlw-catalog", "evidence:nlw-annual-report"]},
+      "notes": ["Modern identifying title; the witness and edition preserve the Middle English title as the preferred form."]
+    },
+    {
+      "id": "title:umich",
+      "type": "alternate",
+      "value": "Thirde Order of Seynt Franceys for the brethren and susters of the Order of Penitentis",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich-franrule", "evidence:franrule-xml"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:nicholas-iv",
+      "type": "person",
+      "name": "Nicholas IV, Pope",
+      "alternate_names": ["Girolamo Masci", "Hieronymus of Ascoli"],
+      "notes": ["Issuer and textual authority for the 1289 Latin bull Supra montem; not the Middle English translator."]
+    },
+    {
+      "id": "agent:walter-seton",
+      "type": "person",
+      "name": "Walter W. Seton",
+      "alternate_names": ["Walter Warren Seton"],
+      "identifiers": [{"scheme": "VIAF", "value": "16212389", "uri": "https://viaf.org/viaf/16212389"}],
+      "notes": ["Editor and transcriber of the Franciscan components in the 1914 EETS volume."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:nicholas-source-author",
+      "agent_id": "agent:nicholas-iv",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Authorship and promulgation of the Latin source bull and incorporated rule translated by the cataloged work"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:telma-supra-montem"]},
+      "notes": ["Source-work responsibility only; this does not attribute the English wording to Nicholas IV or erase the rule's earlier textual history."]
+    },
+    {
+      "id": "responsibility:anonymous-translator",
+      "display_name": "Anonymous Middle English translator",
+      "role": "translator",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:nlw-catalog"]},
+      "notes": ["No translator, place, institutional community, or date of translation is named in the reviewed sources."]
+    },
+    {
+      "id": "responsibility:anonymous-scribe",
+      "display_name": "Anonymous scribe of NLW MS 22873B",
+      "role": "transcriber",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole", "description": "Copying of the English rule in the surviving manuscript witness"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nlw-catalog", "evidence:seton-edition"]},
+      "notes": ["Witness-level scribal responsibility, not authorship or proof of translation responsibility."]
+    },
+    {
+      "id": "responsibility:seton-editor",
+      "agent_id": "agent:walter-seton",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Immediate 1914 EETS edition of the English rule"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]}
+    },
+    {
+      "id": "responsibility:seton-transcriber",
+      "agent_id": "agent:walter-seton",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Transcription of the Pennant manuscript, now NLW MS 22873B"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:nlw-catalog"]}
+    },
+    {
+      "id": "responsibility:seton-commentator",
+      "agent_id": "agent:walter-seton",
+      "role": "commentator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Introduction, textual notes, bibliography, and glossary in the 1914 edition; omitted from the U-M encoding"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:franrule-xml"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:translation",
+      "type": "translation",
+      "display": "No later than about 1500; otherwise undated",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:nlw-annual-report", "evidence:seton-edition"]},
+      "notes": ["The witness date supplies only a terminus ante quem for the translation represented by that copy; it is not treated as an exact translation date."]
+    },
+    {
+      "id": "date:first-known-attestation",
+      "type": "first_known_attestation",
+      "display": "NLW MS 22873B, around 1500",
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "witness:nlw:22873B",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nlw-annual-report", "evidence:nlw-catalog"]},
+      "notes": ["This dates the extant manuscript witness, not composition of the 1289 Latin source and not a securely identified translation event."]
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:seton-edition", "evidence:nlw-catalog"]},
+      "notes": ["Seton treats the version as made for English Tertiaries but reports no clue to its precise place of production. Rieti is the issue place of the Latin source bull, London the edition's publication place, and Aberystwyth the current holding place; none fixes the translation place."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition", "evidence:nlw-catalog"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Prayer names, psalm incipits, liturgical phrases, and the closing Deo gracias embedded in the English rule"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]},
+      "notes": ["The separate Latin Beatus Franciscus extract on witness fols. 15v-17 is outside the cataloged work and omitted by the encoding."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A prose rule organized as a table of chapters, papal preamble, and twenty-four prose chapters; short embedded Latin formulas do not change the whole-work form.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:religious-rule",
+      "term": "religious-rule",
+      "label": "Religious rule",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:nlw-catalog", "evidence:seton-edition"]}
+    },
+    {
+      "id": "genre:vernacular-religious-translation",
+      "term": "vernacular-religious-translation",
+      "label": "Vernacular religious translation",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:nlw-annual-report"]}
+    },
+    {
+      "id": "genre:papal-bull",
+      "term": "papal-bull",
+      "label": "Papal bull",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:seton-edition", "evidence:telma-supra-montem"]},
+      "notes": ["The cataloged English version preserves the address and closing of Nicholas IV's bull and translates the rule incorporated in it."]
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:third-order-discipline",
+      "term": "franciscan-third-order-discipline",
+      "label": "Franciscan Third Order discipline",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]}
+    },
+    {
+      "id": "subject:lay-penitential-life",
+      "term": "lay-penitential-life",
+      "label": "Religious life of brothers and sisters of penance",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]}
+    },
+    {
+      "id": "subject:devotional-observance",
+      "term": "devotional-observance",
+      "label": "Fasting, prayer, confession, communion, and almsgiving",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml"]}
+    },
+    {
+      "id": "subject:community-governance",
+      "term": "religious-community-governance",
+      "label": "Admission, profession, visitation, discipline, and community governance",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:franrule-xml"]}
+    }
+  ],
+  "tags": ["franciscans", "third-order", "penitence", "religious-rule", "middle-english", "prose", "translation", "papal-bull", "nicholas-iv", "fasting", "prayer", "lay-religion"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "An anonymous Middle English version of the rule promulgated by Pope Nicholas IV in Supra montem (1289) for brothers and sisters of the Order of Penance. Its twenty-four chapters regulate Catholic profession, admission, clothing, diet and fasting, worship and prayer, property and peace, oaths and weapons, almsgiving, care of sick and dead members, offices, visitation, discipline, and the rule's moral force.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition", "evidence:telma-supra-montem"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "NLW MS 22873B is a composite devotional manuscript: the English rule at fols. 2r-15v is followed by a Latin extract from Bernardine de Bustis at fols. 15v-17 and by prayer Offices and miniatures at fols. 17v-19, with leaves for five Offices now missing. Seton's 1914 component prints the English rule and Latin extract, but the U-M encoding selects the English rule and omits Seton's introduction, endnotes, the Latin extract, and glossary.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:nlw-catalog", "evidence:seton-edition", "evidence:franrule-xml"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 24,
+    "sections": 24,
+    "prose_only_items": 24,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": 0,
+    "verse_lines": 0,
+    "description": "The encoded work has a twenty-four-entry table followed by twenty-four chapter divisions containing 28 body paragraphs. It preserves 28 manuscript leaf-side milestones (2r-15v) and 11 print-page milestones (45-55). These are representation metrics for the selected U-M XML, not a count of the whole manuscript or whole 1914 volume.",
+    "evidence_ids": ["evidence:franrule-structure", "evidence:franrule-xml", "evidence:seton-edition"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id": "part:chapter-table", "parent_id": null, "sequence": 1, "type": "preface", "label": "Table of the twenty-four chapters", "summary": "A rubric and twenty-four entries preview the rule's chapter sequence.", "item_count": 0, "textual_form": "prose", "metrics": {"prose_only_items": 0, "verse_only_items": 0}, "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "pages", "value": "45-46"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition", "evidence:franrule-structure"], "notes": ["The table repeats the twenty-four chapters and therefore contributes no additional unique numbered item to the work-level extent."]},
+    {"id": "part:chapter-01", "parent_id": null, "sequence": 2, "type": "section", "label": "Chapter I: Catholic faith", "summary": "The papal preamble affirms Roman Catholic faith and invokes Francis as founder of the order.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "I"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]},
+    {"id": "part:chapter-02", "parent_id": null, "sequence": 3, "type": "section", "label": "Chapter II: Entry into the rule", "summary": "Candidates are examined for faith, obedience, status, restitution, and reconciliation before admission.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "II"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-03", "parent_id": null, "sequence": 4, "type": "section", "label": "Chapter III: Profession", "summary": "After a year, a suitable candidate makes a formally recorded promise and profession.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "III"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-04", "parent_id": null, "sequence": 5, "type": "section", "label": "Chapter IV: Permanence in the rule", "summary": "Professed members may not return to the world, while married women require their husbands' consent.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "IV"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-05", "parent_id": null, "sequence": 6, "type": "section", "label": "Chapter V: Clothing", "summary": "The rule prescribes modest clothing and limits costly fabrics, fur, silk, and worldly display.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "V"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]},
+    {"id": "part:chapter-06", "parent_id": null, "sequence": 7, "type": "section", "label": "Chapter VI: Entertainments", "summary": "Members avoid dishonest feasts, spectacles, courts, dances, and support for minstrels' vanities.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "VI"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-07", "parent_id": null, "sequence": 8, "type": "section", "label": "Chapter VII: Abstinence from meat", "summary": "The rule defines weekly meat abstinence, exceptions, ordinary meals, temperance, and meal prayers.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "VII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-08", "parent_id": null, "sequence": 9, "type": "section", "label": "Chapter VIII: Fasting", "summary": "Members observe weekly and seasonal fasts with exceptions for illness, pregnancy, travel, and labor.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "VIII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-09", "parent_id": null, "sequence": 10, "type": "section", "label": "Chapter IX: Confession and communion", "summary": "Members confess, receive communion, reconcile with neighbors, and restore others' goods at three annual feasts.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "IX"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-10", "parent_id": null, "sequence": 11, "type": "section", "label": "Chapter X: Weapons", "summary": "Brothers may not bear weapons except for specified defensive purposes or by ministerial license.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "X"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-11", "parent_id": null, "sequence": 12, "type": "section", "label": "Chapter XI: Prayer", "summary": "Clerical and unlettered members receive daily offices, psalms, creeds, and Pater Noster obligations with allowances for sickness.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XI"}], "evidence_ids": ["evidence:franrule-xml", "evidence:nlw-catalog"]},
+    {"id": "part:chapter-12", "parent_id": null, "sequence": 13, "type": "section", "label": "Chapter XII: Testaments", "summary": "Legally capable members must make a testament within three months of entry.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-13", "parent_id": null, "sequence": 14, "type": "section", "label": "Chapter XIII: Keeping peace", "summary": "Ministers pursue peace within and beyond the fraternity and seek episcopal counsel in legal conflicts.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XIII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-14", "parent_id": null, "sequence": 15, "type": "section", "label": "Chapter XIV: Oaths", "summary": "Members avoid solemn and casual oaths except in defined lawful circumstances and perform penance for careless swearing.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XIV"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-15", "parent_id": null, "sequence": 16, "type": "section", "label": "Chapter XV: Hearing Mass", "summary": "Healthy members hear Mass daily when possible and attend a designated monthly solemn Mass.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XV"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-16", "parent_id": null, "sequence": 17, "type": "section", "label": "Chapter XVI: Almsgiving", "summary": "Regular contributions support poor, sick, and unburied members, other poor people, the church, and religious instruction.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XVI"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-17", "parent_id": null, "sequence": 18, "type": "section", "label": "Chapter XVII: Silence in church", "summary": "Members keep silence and attend to prayer and preaching during Mass, subject to fraternity needs.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XVII"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]},
+    {"id": "part:chapter-18", "parent_id": null, "sequence": 19, "type": "section", "label": "Chapter XVIII: Sick and dead members", "summary": "Ministers visit and support the sick; members attend funerals and perform specified prayers and Masses for the dead.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XVIII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-19", "parent_id": null, "sequence": 20, "type": "section", "label": "Chapter XIX: Holding office", "summary": "Members faithfully undertake assigned offices, which are limited in duration rather than held for life.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XIX"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition"]},
+    {"id": "part:chapter-20", "parent_id": null, "sequence": 21, "type": "section", "label": "Chapter XX: Visitation", "summary": "The fraternity gathers for priestly visitation, preferably by Friars Minor, with annual correction and expulsion after repeated warning.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XX"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-21", "parent_id": null, "sequence": 22, "type": "section", "label": "Chapter XXI: Strife and disputes", "summary": "Brothers and sisters avoid disputes, make amends, or answer before lawful jurisdiction.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XXI"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-22", "parent_id": null, "sequence": 23, "type": "section", "label": "Chapter XXII: Dispensation from fasting", "summary": "Ordinaries and visitors may dispense members from fasting and observances for reasonable need.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XXII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-23", "parent_id": null, "sequence": 24, "type": "section", "label": "Chapter XXIII: Incorrigible members", "summary": "Ministers report open faults; the visitor punishes and may expel an incorrigible member after three warnings.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XXIII"}], "evidence_ids": ["evidence:franrule-xml"]},
+    {"id": "part:chapter-24", "parent_id": null, "sequence": 25, "type": "section", "label": "Chapter XXIV: Moral force and conclusion", "summary": "The rule distinguishes its observances from mortal-sin obligations, prescribes penance for offenses, and closes with the bull's prohibition, sanction, place, and date.", "item_count": 1, "textual_form": "prose", "locators": [{"lineage_entity_id": "edition:seton:franciscan-rules-1914", "scheme": "chapter", "value": "XXIV"}], "evidence_ids": ["evidence:franrule-xml", "evidence:seton-edition", "evidence:telma-supra-montem"]}
+  ],
+  "related_works": [
+    {
+      "id": "related:supra-montem",
+      "title": "Supra montem",
+      "relation": "translation_of",
+      "evidence_ids": ["evidence:seton-edition", "evidence:telma-supra-montem"],
+      "notes": ["Nicholas IV's bull, issued at Rieti on 18 August 1289, incorporates the Latin rule translated by the cataloged English version; the relation is work-to-source, not a claim of direct use of a surviving Vatican manuscript by the English copyist."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:3rdFranRule",
+    "manifest_path": "manifests/lineage/works/3rdFranRule.json",
+    "bindings": [
+      {"metadata_target": "work:3rdFranRule", "lineage_entity_id": "edition:seton:franciscan-rules-1914", "role": "source_edition"},
+      {"metadata_target": "work:3rdFranRule", "lineage_entity_id": "encoding:umich-cme:3rdFranRule", "role": "digital_encoding"},
+      {"metadata_target": "work:3rdFranRule", "lineage_entity_id": "artifact:general-corpus:3rdFranRule", "role": "repository_representation"},
+      {"metadata_target": "work:3rdFranRule", "lineage_entity_id": "witness:nlw:22873B", "role": "source_witness"},
+      {"metadata_target": "work:3rdFranRule", "lineage_entity_id": "work:nicholas-iv:supra-montem", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:franrule-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/3rdFranRule.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/3rdFranRule.xml",
+      "locator": "HEADER; FRONT title page and chapter table; BODY chapters I-XXIV",
+      "summary": "Identifies U-M item 3rdFranRule, the 1914 Seton source, the former Pennant manuscript, 1999 OCR production, electronic omissions and tag practices, provider terms, and the complete encoded English rule.",
+      "accessed_on": "2026-07-11",
+      "sha256": "048f0c247f97bea5be6ce05db290cd634245af3be690072c745c039218933e1e"
+    },
+    {
+      "id": "evidence:umich-franrule",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, CME item 3rdFranRule.",
+      "url": "https://quod.lib.umich.edu/c/cme/3rdFranRule",
+      "locator": "Item information, rights statement, and contents",
+      "summary": "Confirms the item title, Seton editorship, London 1914 publication, public HTML text, twenty-four-chapter contents, and current Public Domain / No Copyright-United States statement.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:seton-edition",
+      "type": "digital_surrogate",
+      "citation": "R. W. Chambers and Walter W. Seton, eds., A Fifteenth-Century Courtesy Book and Two Fifteenth-Century Franciscan Rules, EETS Original Series 148 (London, 1914), Internet Archive courtesybook00unknuoft.",
+      "url": "https://archive.org/download/courtesybook00unknuoft/courtesybook00unknuoft.pdf",
+      "alternate_urls": ["https://archive.org/details/courtesybook00unknuoft", "https://catalog.hathitrust.org/Record/001644649"],
+      "locator": "Title page; contents; Seton's introduction pp. 25-41; editorial note and English text pp. 45-55; Latin addition pp. 55-57; notes pp. 58-59; glossary pp. 126-127",
+      "summary": "The inspected scan establishes the composite volume, Seton's sole responsibility for the Franciscan components, the English version's relation to Supra montem, the Pennant manuscript's then-known history and physical description, edition conventions, English text, Latin codex addition, two printed witness facsimiles, notes, and glossary.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:nlw-catalog",
+      "type": "official_catalog",
+      "citation": "National Library of Wales Archives and Manuscripts, Rule of the Third Order of St Francis, NLW MS 22873B.",
+      "url": "https://archivestest.library.wales/index.php/informationobject/browse?genres=2707512&languages=en&levels=226&media=print&sf_culture=en&sort=alphabetic&sortDir=asc&topLod=0&view=table",
+      "locator": "NLW MS 22873B component description",
+      "summary": "Identifies the extant former Pennant/Seton manuscript under its current shelfmark; locates the English rule at fols. 2-15v; describes its script, adjacent Latin text, Offices, missing leaves, three miniatures, decoration, and Seton's two reproduced folios; and reports an identical Wynkyn de Worde print of 1510.",
+      "accessed_on": "2026-07-11",
+      "notes": ["The catalog's current test-host browse route returned the item description in indexed results but intermittently returned a gateway error on direct reload; the exact description was therefore cross-checked against the NLW annual report and Seton scan."]
+    },
+    {
+      "id": "evidence:nlw-annual-report",
+      "type": "official_webpage",
+      "citation": "National Library of Wales, Annual Report 1991-92, acquisition 1992036.",
+      "url": "https://www.library.wales/fileadmin/docs_gwefan/adroddiadau_blynyddol/Ab1992.pdf",
+      "locator": "PDF p. 8, acquisition 1992036",
+      "summary": "Records NLW MS 22873B as a unique English translation of the rules of the Third Order of St Francis, dates the manuscript around 1500, and notes its former place in Thomas Pennant's Downing library.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:telma-supra-montem",
+      "type": "scholarly_source",
+      "citation": "Institut de recherche et d'histoire des textes, Telma - Chartes, Nicholas IV, Supra montem, record 154463.",
+      "url": "https://telma-chartes.irht.cnrs.fr/en/154463",
+      "locator": "Document analysis, date, and Latin transcription",
+      "summary": "Provides a research-institute charter record and Latin transcription for Nicholas IV's Supra montem, dated 18 August 1289, whose address, preamble, and rule text correspond to the source identified by Seton.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:franrule-structure",
+      "type": "computational_inspection",
+      "citation": "XPath and element-count inspection of repository 3rdFranRule.xml performed 2026-07-11.",
+      "repository_path": "CME/source/CME_phase_1-2/3rdFranRule.xml",
+      "locator": "TEXT/FRONT and TEXT/BODY",
+      "summary": "Counts one twenty-four-entry table, twenty-four chapter DIV1 elements, 28 body P elements, 28 leaf milestones, 11 print-page milestones, one NOTE1, seven ADD, four DEL, two CORR, three SUPPLIED, and 21 FOREIGN elements.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:lineage-franrule",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage manifest for 3rdFranRule.",
+      "repository_path": "manifests/lineage/works/3rdFranRule.json",
+      "source_evidence_id": "evidence:franrule-xml",
+      "summary": "Binds the work record to NLW MS 22873B, Seton's 1914 edition, U-M's 1999 encoding, the local XML artifact, the 1914 book scan and printed manuscript plates, and Nicholas IV's Latin source.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:translation-origin",
+      "question": "When, where, by whom, and for what individual or community was this Middle English translation made?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult current linguistic and paleographical scholarship on NLW MS 22873B.", "Do not convert the c. 1500 witness date, Middle English language, or Rieti source date into a precise translation date or place."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:seton-edition", "evidence:nlw-catalog", "evidence:nlw-annual-report"]
+    },
+    {
+      "id": "question:de-worde-relationship",
+      "question": "What is the copying or print relationship between NLW MS 22873B and Wynkyn de Worde's 1510 edition (STC 19596)?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Inspect an item-level record and surviving copy or full facsimile of STC 19596.", "Collate it against fols. 2r-15v before asserting priority, common exemplar, or direct derivation."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:nlw-catalog", "evidence:seton-edition"]
+    },
+    {
+      "id": "question:chapter-division",
+      "question": "At which transmission layer were the twenty-four chapter divisions and English chapter table introduced?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare the manuscript directly with the 1510 print and Latin rule traditions.", "Retain the twenty-four chapters as stable structure of the attested English version without assigning the innovation to translator or scribe."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:seton-edition", "evidence:franrule-xml"]
+    },
+    {
+      "id": "question:codex-hands",
+      "question": "How should the relationship and date of the English-rule hand and the Latin-addition hand in NLW MS 22873B be described?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Seek current NLW curatorial clarification or inspect the manuscript.", "Reconcile Seton's description of a later, different, apparently Italian hand with the current catalog's description of a contemporary addition in similar script."],
+      "last_checked": "2026-07-11",
+      "evidence_ids": ["evidence:seton-edition", "evidence:nlw-catalog"]
+    }
+  ],
+  "notes": [
+    "The XML TITLE TYPE=130 value 'Fifteenth-century courtesy book. Selections' belongs to cataloging of the composite 1914 volume and is not treated as the medieval work's title.",
+    "The XML language profile declares Latin but omits the overwhelmingly primary Middle English; the manifest corrects scope from direct text inspection rather than copying that incomplete header field.",
+    "R. W. Chambers edited the courtesy-book component of EETS OS 148, not the cataloged Franciscan rule; Walter W. Seton edited the two Franciscan components.",
+    "Copyright, provider terms, reproduction access, and the conflict between U-M's current No Copyright-United States label and the embedded 1999 availability notice are recorded in the linked lineage manifest."
+  ]
+}

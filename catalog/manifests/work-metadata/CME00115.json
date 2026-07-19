@@ -1,0 +1,352 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00115",
+  "work_id": "CME00115",
+  "record_status": "reviewed",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00115",
+    "unit_type": "single_work",
+    "label": "Sir Gowther",
+    "scope_note": "The cataloged subject is the anonymous Middle English verse romance Sir Gowther, not either surviving manuscript as a physical object, Karl Breul's 1886 German monograph as a whole, the University of Michigan encoding, or the checked-in XML artifact. The represented text is Breul's eclectic 756-position critical text, based chiefly on witness A (NLS Adv.MS.19.3.1) but supplied and corrected from witness B (BL Royal MS 17 B XLIII); its apparatus and source title page are retained as separate content layers."
+  },
+  "catalog_summary": {
+    "title": "Sir Gowther",
+    "author": "Anonymous",
+    "editor": "Karl Hermann Breul",
+    "date": "Probably around 1400; surviving witnesses are later fifteenth-century copies; source edition 1886",
+    "region": "Probably the Northeast Midlands of England; witness A was copied in a North-Midland context",
+    "genres": ["Romance", "Breton lay", "Penitential romance", "Hagiographical romance"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": ["middle-english", "verse", "tail-rhyme", "romance", "breton-lay", "penitential-romance", "hagiographical-romance", "penance", "redemption", "demonic-paternity", "chivalry", "miracles", "anonymous", "northeast-midlands", "imev-973"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00115", "uri": "https://name.umdl.umich.edu/CME00115"},
+    {"scheme": "DIMEV", "value": "1595", "uri": "https://www.dimev.net/record.php?recID=1595"},
+    {"scheme": "IMEV", "value": "973"},
+    {"scheme": "NIMEV", "value": "973"},
+    {"scheme": "NLS witness and current locus", "value": "Adv.MS.19.3.1, ff. 11r-27v", "uri": "https://manuscripts.nls.uk/repositories/2/resources/15302"},
+    {"scheme": "BL witness and locus", "value": "Royal MS 17 B XLIII, ff. 116r-131v", "uri": "https://searcharchives.bl.uk/catalog/040-002107332"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Sir Gowther",
+      "language": "enm",
+      "script": "Latn",
+      "supplied_by": "Stable manuscript, editorial, and scholarly usage",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-nls-visual", "evidence:metadata-dimev", "evidence:metadata-dmbr"], "notes": "Witness A has the running title 'sir gwother' and an explicit naming the work; witness B has no opening title and ends 'Explicit vita sancti'."}
+    },
+    {
+      "id": "title:alternate-syr",
+      "type": "alternate",
+      "value": "Syr Gowther",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul"], "notes": "Orthography used in Breul's transcription and the encoded trailer 'Explicit Syr Goþer'."}
+    },
+    {
+      "id": "title:alternate-gowghter",
+      "type": "alternate",
+      "value": "Sir Gowghter",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bl-catalog"]}
+    },
+    {
+      "id": "title:incipit-critical",
+      "type": "incipit",
+      "value": "God, that art of myghtis most",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:critical-text"], "description": "First line of Breul's represented critical text, supplied from witness B because witness A begins imperfectly"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "title:explicit-a",
+      "type": "explicit",
+      "value": "Explicit Syr Goþer",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:critical-text"], "description": "A-version explicit retained after Breul's 756-position critical text"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-nls-visual", "evidence:metadata-dimev"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:anonymous-sir-gowther-poet", "type": "collective", "name": "Anonymous Sir Gowther poet", "notes": ["No surviving witness or consulted work-level source names an author."]},
+    {"id": "agent:karl-hermann-breul", "type": "person", "name": "Karl Hermann Breul", "alternate_names": ["Karl Breul"], "identifiers": [{"scheme": "GND", "value": "116493534", "uri": "https://d-nb.info/gnd/116493534"}]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-author",
+      "agent_id": "agent:anonymous-sir-gowther-poet",
+      "display_name": "Anonymous",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dmbr", "evidence:metadata-mets", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "responsibility:breul-editor",
+      "agent_id": "agent:karl-hermann-breul",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:source-title-page", "part:critical-text", "part:critical-apparatus"], "description": "Modern source-edition layers represented by the encoding"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Probably around 1400",
+      "normalized": {"not_before": 1390, "not_after": 1410},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-dmbr", "evidence:metadata-mets"], "notes": "This dates the work, not either later manuscript witness."}
+    },
+    {
+      "id": "date:first-attestation",
+      "type": "first_known_attestation",
+      "display": "Second half of the fifteenth century",
+      "normalized": {"not_before": 1450, "not_after": 1499},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-nls-catalog", "evidence:metadata-bl-catalog", "evidence:metadata-breul"], "notes": "Both known witnesses are later-fifteenth-century copies; neither is treated as the composition event."}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:northeast-midlands", "label": "Northeast Midlands of England", "kind": "dialect_region", "broader_place_ids": ["place:england"], "notes": ["A scholarly localization for the work's language; not the current holding place of either witness."]}
+  ],
+  "place_statements": [
+    {
+      "id": "place:composition-northeast-midlands",
+      "place_id": "place:northeast-midlands",
+      "type": "place_of_composition",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-dmbr", "evidence:metadata-mets"], "notes": "Localization is inferential and must remain distinct from the c.1480 North-Midland copying context of witness A."}
+    },
+    {
+      "id": "place:dialect-northeast-midlands",
+      "place_id": "place:northeast-midlands",
+      "type": "dialect_region",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dmbr", "evidence:metadata-mets"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-dimev"]},
+      "notes": ["German prose occurs in Breul's modern apparatus but is not treated as an intellectual language of the medieval work."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "A tail-rhyme narrative represented by Breul in sixty-three twelve-line stanzas, rhyme pattern aabccbddbeeb.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-breul", "evidence:metadata-dimev"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:romance",
+      "term": "romance",
+      "label": "Romance",
+      "scheme": "DIMEV",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-dmbr", "evidence:metadata-mets"]}
+    },
+    {
+      "id": "genre:breton-lay",
+      "term": "breton-lay",
+      "label": "Breton lay",
+      "scheme": "DIMEV",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev", "evidence:metadata-mets"], "notes": "The text calls its story a lai of Britain and DIMEV indexes it as a Breton lai; METS notes that the work also crosses hagiographical and romance categories."}
+    },
+    {
+      "id": "genre:penitential-romance",
+      "term": "penitential-romance",
+      "label": "Penitential romance",
+      "scheme": "METS Middle English Texts Series",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-mets", "evidence:metadata-dmbr"]}
+    },
+    {
+      "id": "genre:hagiographical-romance",
+      "term": "hagiographical-romance",
+      "label": "Hagiographical romance",
+      "scheme": "METS Middle English Texts Series",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-mets", "evidence:metadata-dmbr"], "notes": "Witness B's explicit 'vita sancti' also records a medieval hagiographical framing without proving a single exclusive genre."}
+    }
+  ],
+  "subject_statements": [
+    {"id": "subject:penance-redemption", "term": "penance-and-redemption", "label": "Penance and redemption", "scheme": "General Corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-mets", "evidence:metadata-dmbr"]}},
+    {"id": "subject:demonic-paternity", "term": "demonic-paternity", "label": "Demonic paternity", "scheme": "General Corpus", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-mets", "evidence:metadata-dmbr"]}},
+    {"id": "subject:chivalric-violence", "term": "chivalry-and-violence", "label": "Chivalry and violence", "scheme": "General Corpus", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dmbr"]}},
+    {"id": "subject:miracles-sanctity", "term": "miracles-and-sanctity", "label": "Miracles and sanctity", "scheme": "General Corpus", "primary": false, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-mets", "evidence:metadata-dmbr", "evidence:metadata-dimev"]}}
+  ],
+  "tags": ["middle-english", "verse", "tail-rhyme", "romance", "breton-lay", "penitential-romance", "hagiographical-romance", "penance", "redemption", "demonic-paternity", "chivalry", "miracles", "anonymous", "northeast-midlands", "imev-973"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "An anonymous Middle English tail-rhyme romance in which the demon-begotten Gowther grows into a violent outlaw, learns the truth of his birth, undertakes a divinely prescribed silent penance, defends an emperor's realm in disguise, restores a princess, and becomes associated with sanctity and miracles.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-mets", "evidence:metadata-dmbr"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "CME00115 preserves Breul's source title page and his section VI, Text, including the critical text and footnote apparatus; it does not encode the monograph's preface, introduction, grammar, metrical study, literary-historical investigation, separate annotations, glossary, bibliography, or appendices.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-umich"]
+    },
+    {
+      "id": "summary:cataloging",
+      "type": "cataloging_note",
+      "value": "Breul's critical text has 756 editorial line positions in 63 twelve-line stanzas. His introduction says A contains 738 written lines and B 691; DIMEV v1.0 reports 757 for A. The raw XML has 766 L elements because ten lines of B's wholly divergent ending are embedded inside the apparatus note at critical line 754.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-breul", "evidence:metadata-dimev"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 644,
+    "sections": 2,
+    "prose_only_items": 1,
+    "verse_only_items": 1,
+    "mixed_items": 1,
+    "verse_groups": 64,
+    "verse_lines": 766,
+    "description": "The XML has two DIV1 sections: a four-paragraph source title page and VI. Text. The latter contains 63 main LG elements, 756 main-stream L elements, 63 stanza HEAD elements, 642 NOTE elements, and one further LG with ten B-ending L elements nested in the note at critical line 754. Across the file are 32 PB, 286 MILESTONE, two TRAILER, one CLOSER, and 2,262 italic HI elements. Thus 766 is the raw encoded L total, while 756 is the critical poem extent and ten belong to an apparatus quotation.",
+    "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml", "evidence:metadata-breul"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:source-title-page",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "other",
+      "label": "Breul source title page",
+      "summary": "The four-paragraph transcription of the 1886 edition's long German title, editor statement, place, publisher, and date.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1},
+      "locators": [
+        {"lineage_entity_id": "edition:breul:sir-gowther-1886", "scheme": "printed leaf and IIIF", "value": "title page, BSB canvas 7"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00115", "scheme": "XML structure", "value": "first DIV1, four P elements; PB REF='2'"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-breul", "evidence:metadata-umich"]
+    },
+    {
+      "id": "part:critical-text",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "VI. Text: Sir Gowther",
+      "summary": "Breul's eclectic Middle English critical text, chiefly based on witness A and supplied or corrected from B, with an A-version explicit after line 756.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 63, "verse_lines": 756},
+      "locators": [
+        {"lineage_entity_id": "edition:breul:sir-gowther-1886", "scheme": "printed pages", "value": "pp. 135-165; BSB canvases 159-189"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-19-3-1", "scheme": "current manuscript folios", "value": "ff. 11r-27v; NLS canvases 37-70"},
+        {"lineage_entity_id": "witness:bl:Royal-MS-17-B-XLIII", "scheme": "manuscript folios", "value": "ff. 116r-131v"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00115", "scheme": "XML structure", "value": "second DIV1, 63 main LG and 756 L elements outside NOTE descendants"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-breul", "evidence:metadata-nls-visual", "evidence:metadata-bl-catalog", "evidence:metadata-dimev"],
+      "notes": [
+        "Breul supplies critical lines 1-12, 42-44, and 463-465 from B where A lacks text; other B readings and editorial interventions are recorded in the apparatus.",
+        "The XML's stanza 43 has LG/@N='63' and HEAD 'LXIII'; direct inspection of printed p.155, BSB canvas 179, confirms the source reads 'XLIII'.",
+        "Breul prints his line numbers in the left margin, Utterson's independent numbering in the right, and manuscript folio milestones; the 221 numeric MILESTONE elements therefore do not form one canonical line sequence."
+      ]
+    },
+    {
+      "id": "part:critical-apparatus",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "commentary",
+      "label": "Breul's inline critical apparatus",
+      "summary": "Six hundred forty-two encoded footnotes, chiefly in German, recording A and B readings, lacunae, emendations, foliation, and editorial explanation; the note at critical line 754 quotes B's wholly divergent ten-line ending and its explicit.",
+      "item_count": 642,
+      "textual_form": "mixed",
+      "metrics": {"mixed_items": 1, "verse_groups": 1, "verse_lines": 10},
+      "locators": [
+        {"lineage_entity_id": "edition:breul:sir-gowther-1886", "scheme": "printed pages", "value": "foot-of-page apparatus on pp. 135-165"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00115", "scheme": "XML structure", "value": "642 NOTE elements; one nested LG with ten L elements in the note attached to critical line 754"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-breul"],
+      "notes": ["The 1,163 italic HI elements inside notes and 1,099 elsewhere preserve Breul's editorial typography; they are not manuscript emphasis."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:robert-le-diable",
+      "title": "Robert le Diable",
+      "relation": "related_to",
+      "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-mets"],
+      "notes": ["Breul organizes his historical investigation around the Robert the Devil tradition; later scholarship treats that relationship and wider analogues as a source problem, not a demonstrated direct physical exemplar. The relation is therefore deliberately non-directional."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00115",
+    "manifest_path": "manifests/lineage/works/CME00115.json",
+    "bindings": [
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "work:middle-english:sir-gowther", "role": "related_source"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "edition:breul:sir-gowther-1886", "role": "source_edition"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "witness:nls:Adv-MS-19-3-1", "role": "source_witness"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "witness:bl:Royal-MS-17-B-XLIII", "role": "source_witness"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "catalog:dimev:record-1595", "role": "related_source"},
+      {"metadata_target": "part:source-title-page", "lineage_entity_id": "edition:breul:sir-gowther-1886", "role": "source_edition"},
+      {"metadata_target": "part:critical-text", "lineage_entity_id": "edition:breul:sir-gowther-1886", "role": "source_edition"},
+      {"metadata_target": "part:critical-apparatus", "lineage_entity_id": "edition:breul:sir-gowther-1886", "role": "source_edition"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "encoding:umich-cme:CME00115", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00115", "lineage_entity_id": "artifact:general-corpus:CME00115", "role": "repository_representation"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_3/CME00115.xml.", "repository_path": "CME/source/CME_phase_3/CME00115.xml", "locator": "TEMPHEAD, title DIV1, and complete VI. Text DIV1", "summary": "Direct evidence for CME identifiers, source title, language labels, 756-position critical text, 642 notes, pagination and foliation milestones, B ending, and retained italic typography.", "accessed_on": "2026-07-12", "sha256": "57acdf2fc3567194de0d1f85cdd44a512c51df386718a67fecf8832824520996"},
+    {"id": "evidence:metadata-computation", "type": "computational_inspection", "citation": "ElementTree audit of CME00115.xml against note ancestry and direct source structure.", "repository_path": "CME/source/CME_phase_3/CME00115.xml", "summary": "Confirmed 137,224 bytes; 2 DIV1, 64 LG total (63 outside notes), 766 L total (756 outside notes), 64 HEAD, 642 NOTE, 32 PB, 286 MILESTONE, 2 TRAILER, 1 CLOSER, and 2,262 italic HI. Also identified the stanza-43 LXIII encoding error and separated Breul's two line-number systems.", "accessed_on": "2026-07-12", "sha256": "57acdf2fc3567194de0d1f85cdd44a512c51df386718a67fecf8832824520996"},
+    {"id": "evidence:metadata-breul", "type": "digital_surrogate", "citation": "Karl Breul, Sir Gowther: Eine englische Romanze aus dem XV. Jahrhundert (Oppeln: Eugen Franck's Buchhandlung [Georg Maske], 1886), complete BSB digital copy.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest", "alternate_urls": ["https://www.digitale-sammlungen.de/view/bsb11664278", "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11664278-2"], "locator": "title canvas 7; preface canvases 11-12; witness and editorial account canvases 23-29 (pp. 1-7); text canvases 159-189 (pp. 135-165)", "summary": "Primary evidence for the 1886 source edition, A/B sigla, witness descriptions, eclectic editorial method, italic conventions, dual lineation, folio milestones, 738 A lines, 691 B lines, and exact printed typography and stanza headings.", "accessed_on": "2026-07-12", "sha256": "52ac28706ad087601f36b0042a11755071bc30e6b9b5bfe4e98044e143c50cef", "notes": ["The SHA-256 is for the complete locally cached 274-canvas IIIF bundle, including canonical manifest and inventory."]},
+    {"id": "evidence:metadata-nls-catalog", "type": "official_catalog", "citation": "National Library of Scotland, Adv.MS.19.3.1 catalog record.", "url": "https://manuscripts.nls.uk/repositories/2/resources/15302", "locator": "Contents, Physical Description, Arrangement, and Conditions of Access", "summary": "Official evidence for the c.1480 paper codex, North-Midland and scribal context, current shelfmark and former designation, physical extent, Sir Gowther beginning at f.11 and Stans puer ad mensam beginning at f.28, acquisition, and access routes.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-nls-visual", "type": "digital_surrogate", "citation": "National Library of Scotland, complete provider-published IIIF facsimile of Adv.MS.19.3.1.", "url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json", "locator": "canvases 37-70 = current ff. 11r-27v; adjacent canvases 36 and 71 inspected", "summary": "Direct visual evidence that Sir Gowther begins acephalously on damaged f.11r at canvas 37, ends with its explicit on f.27v at canvas 70, and is bounded by different works on canvases 36 and 71.", "accessed_on": "2026-07-12", "sha256": "8f28ae541b049198ee7581c1de9ce8da6ce910399a4c9e076d44022cf16fed4b", "notes": ["The SHA-256 is for the complete locally cached 482-canvas IIIF bundle."]},
+    {"id": "evidence:metadata-bl-catalog", "type": "official_catalog", "citation": "British Library, Royal MS 17 B XLIII, record 040-002107332.", "url": "https://searcharchives.bl.uk/catalog/040-002107332", "locator": "Sir Gowghter component and whole-manuscript description", "summary": "Official evidence for the parchment witness, f.116 opening, 691-line extent, incipit and explicit, later-fifteenth-century date, whole-codex extent and dimensions, holding, and current request conditions.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-dimev", "type": "scholarly_source", "citation": "Digital Index of Middle English Verse, v1.0, record 1595 / IMEV and NIMEV 973, with Bibliography.xml entry Breul1886a.", "url": "https://doi.org/10.5281/zenodo.14585961", "alternate_urls": ["https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0", "https://www.dimev.net/record.php?recID=1595"], "locator": "data/Records.xml record-1595; data/Bibliography.xml Breul1886a", "summary": "Versioned evidence for title, romance and Breton-lai classifications, twelve-line stanza form and rhyme pattern, both witnesses and loci, incipits and explicits, 691-line B extent, reported 757-line A extent, and Breul bibliography.", "accessed_on": "2026-07-12", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"},
+    {"id": "evidence:metadata-dmbr", "type": "scholarly_source", "citation": "Database of Middle English Romance, Sir Gowther.", "url": "https://www.middleenglishromance.org.uk/romances/sir-gowther", "summary": "Work-level evidence for approximate date c.1400, Northeast-Midlands localization, twelve-line tail-rhyme form, IMEV 973, two manuscript witnesses and current loci, editions, motifs, and romance classification.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-mets", "type": "scholarly_source", "citation": "Anne Laskaya and Eve Salisbury, eds., Sir Gowther, Middle English Texts Series.", "url": "https://metseditions.org/read/PW64KRztNjvILYAIYWeLu8GvXqAYVA", "summary": "Scholarly evidence for anonymous authorship, two late-fifteenth-century versions, Northeast-Midland language, A/B variation, penitential and hagiographical romance contexts, Breton-lay categorization, and cautious treatment of Robert le Diable and broader analogues.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-umich", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00115 item page.", "url": "https://quod.lib.umich.edu/c/cme/CME00115", "alternate_urls": ["https://name.umdl.umich.edu/CME00115"], "summary": "Official item evidence for the Breul 1886 source citation, stable identifier, public-domain access statement, and encoded contents limited to the title page and VI. Text.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:composition-and-source", "question": "What exact date, place, and source relations best explain Sir Gowther, Robert le Diable, and the wider demonic-paternity and penitential traditions?", "status": "unresolved", "impact": "medium", "next_steps": ["Consult later work-specific source studies and dialect research beyond the directly inspected reference editions.", "Keep analogues, textual sources, and physical exemplars distinct; do not convert Breul's organizing comparison into a proven direct exemplar."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-mets", "evidence:metadata-dmbr"]},
+    {"id": "question:witness-stemma", "question": "What exact stemma or sequence of redaction connects the substantially different A and B versions?", "status": "unresolved", "impact": "medium", "next_steps": ["Collate complete high-resolution images of both witnesses against a modern diplomatic edition.", "Treat Breul's view that neither surviving copy directly derives from the other, and that B is a refined revision, as editorial analysis rather than a confirmed physical genealogy."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-mets", "evidence:metadata-dimev"]},
+    {"id": "question:line-and-folio-discrepancies", "question": "How should DIMEV's 757-line description of A and Breul's historical endpoint f.28a be reconciled with Breul's statement that A contains 738 written lines and with the direct current boundary f.27v?", "status": "unresolved", "impact": "medium", "next_steps": ["Compare DIMEV's count with a diplomatic transcription of current ff.11r-27v.", "Consult NLS foliation history to determine whether Breul's f.28a reflects an older numbering rather than another physical leaf.", "Preserve the 756 critical positions, 738 A-line statement, 691 B-line statement, and 766 raw XML L count as distinct measurements."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-breul", "evidence:metadata-nls-catalog", "evidence:metadata-nls-visual", "evidence:metadata-dimev", "evidence:metadata-computation"]}
+  ],
+  "notes": [
+    "TEXT/@LANG='enm ger' describes the encoded source layers; only Middle English is cataloged as the language of the medieval work.",
+    "The XML proofing note dated 9-6-16 is a repository encoding history marker, not a work, witness, or edition date.",
+    "Current NLS foliation and visual boundaries take precedence for the digital work portion; Breul's historical A. fol. milestones and occasional XML milestone anomalies are retained as source features, not silently normalized."
+  ]
+}

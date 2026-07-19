@@ -1,0 +1,624 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00025",
+  "work_id": "CME00025",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00025",
+    "unit_type": "compilation",
+    "label": "Ipomedon in drei englischen Bearbeitungen",
+    "scope_note": "The edition-level compilation represented by University of Michigan CME item CME00025: Eugen Kölbing's 1889 presentation of three independently derived anonymous Middle English adaptations of Hue de Rotelande's Anglo-Norman Ipomedon, conventionally called A, B, and C, together with encoded German title matter and local editorial apparatus. This record does not collapse the three adaptations, Hue's source romance, the three physical manuscripts, Kölbing's complete printed volume, the U-M encoding, or the repository XML into one abstract medieval work."
+  },
+  "catalog_summary": {
+    "title": "Ipomedon in drei englischen Bearbeitungen",
+    "author": "Three anonymous Middle English adapters",
+    "editor": "Eugen Kölbing; Joseph Hall collated Ipomadon A against its manuscript",
+    "date": "A: late 14th–mid-15th century; B: second half of the 15th century; C: 15th century; edition published 1889",
+    "region": "England; A is localized broadly to the North Midlands and B to the Northeast Midlands, while C's compositional locality remains unresolved",
+    "genres": ["Scholarly edition", "Middle English romance", "Chivalric romance"],
+    "form": "mixed",
+    "language_codes": ["enm", "deu"],
+    "tags": [
+      "middle-english",
+      "scholarly-edition",
+      "romance",
+      "chivalry",
+      "courtly-love",
+      "identity-and-disguise",
+      "hunting",
+      "tournaments",
+      "translation-and-adaptation",
+      "tail-rhyme",
+      "rhyming-couplets",
+      "prose",
+      "textual-criticism"
+    ]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00025", "uri": "https://name.umdl.umich.edu/CME00025"},
+    {"scheme": "Repository XML IDG/@ID", "value": "CME00025"},
+    {"scheme": "BSB object", "value": "bsb11664485", "uri": "https://www.digitale-sammlungen.de/view/bsb11664485"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Ipomedon in drei englischen Bearbeitungen",
+      "language": "deu",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:umich"]}
+    },
+    {
+      "id": "title:original-full",
+      "type": "original",
+      "value": "Ipomedon in drei englischen Bearbeitungen. Herausgegeben von Eugen Kölbing",
+      "language": "deu",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing"]}
+    },
+    {
+      "id": "title:part-a",
+      "type": "uniform",
+      "value": "Ipomadon (A)",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:dmr-a"]}
+    },
+    {
+      "id": "title:part-b",
+      "type": "original",
+      "value": "The Lyfe of Ipomydon (B)",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:ipomydon-b"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:dmr-b"]}
+    },
+    {
+      "id": "title:part-c",
+      "type": "uniform",
+      "value": "Ipomedon (C)",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:mayer"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:anonymous-adapter-a", "type": "person", "name": "Anonymous adapter of Ipomadon A"},
+    {"id": "agent:anonymous-adapter-b", "type": "person", "name": "Anonymous adapter of Ipomydon B"},
+    {"id": "agent:anonymous-adapter-c", "type": "person", "name": "Anonymous adapter of Ipomedon C"},
+    {"id": "agent:eugen-kolbing", "type": "person", "name": "Eugen Kölbing"},
+    {"id": "agent:joseph-hall", "type": "person", "name": "Joseph Hall"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:adapter-a",
+      "agent_id": "agent:anonymous-adapter-a",
+      "role": "adapter",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:dmr-a", "evidence:mayer"]},
+      "notes": ["The three Middle English texts are independently derived adaptations; anonymous responsibility is therefore modeled separately for each part."]
+    },
+    {
+      "id": "responsibility:adapter-b",
+      "agent_id": "agent:anonymous-adapter-b",
+      "role": "adapter",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:ipomydon-b"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:dmr-b", "evidence:mayer"]}
+    },
+    {
+      "id": "responsibility:adapter-c",
+      "agent_id": "agent:anonymous-adapter-c",
+      "role": "adapter",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:ipomedon-c"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mayer", "evidence:sanchez"]}
+    },
+    {
+      "id": "responsibility:kolbing-editor",
+      "agent_id": "agent:eugen-kolbing",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:umich"]}
+    },
+    {
+      "id": "responsibility:kolbing-collator",
+      "agent_id": "agent:eugen-kolbing",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"], "description": "Manuscript-based texts and apparatus in the 1889 edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing"]}
+    },
+    {
+      "id": "responsibility:hall-collator-a",
+      "agent_id": "agent:joseph-hall",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a"], "description": "Proofreading and manuscript collation of Ipomadon A"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing"]},
+      "notes": ["Kölbing's preface says Hall read the proofs with the Chetham manuscript beside him and supplied corrections; this role does not extend to B or C."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:edition-publication",
+      "type": "first_publication",
+      "display": "Kölbing's edition-level compilation was published in 1889",
+      "normalized": {"not_before": 1889, "not_after": 1889},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:kolbing:ipomedon-1889",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:umich"]},
+      "notes": ["This is the publication date of the cataloging subject, not the composition date of any medieval adaptation."]
+    },
+    {
+      "id": "date:a-composition",
+      "type": "composition",
+      "display": "Ipomadon A was composed between the late 14th and mid-15th century",
+      "normalized": {"not_before": 1375, "not_after": 1450},
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:dmr-a"]}
+    },
+    {
+      "id": "date:b-composition",
+      "type": "composition",
+      "display": "Ipomydon B was composed in the second half of the 15th century",
+      "normalized": {"not_before": 1450, "not_after": 1500},
+      "scope": {"kind": "part", "part_ids": ["part:ipomydon-b"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mayer", "evidence:dmr-b"]}
+    },
+    {
+      "id": "date:c-composition",
+      "type": "composition",
+      "display": "Ipomedon C is a 15th-century prose adaptation",
+      "normalized": {"not_before": 1401, "not_after": 1500},
+      "scope": {"kind": "part", "part_ids": ["part:ipomedon-c"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mayer"]},
+      "notes": ["The Longleat manuscript's proposed 1457–1469 production window is witness evidence, not a narrower composition date for the adaptation."]
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:north-midlands", "label": "North Midlands", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:northeast-midlands", "label": "Northeast Midlands", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:breslau", "label": "Breslau (Wrocław)", "kind": "settlement"}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dmr-a", "evidence:dmr-b", "evidence:mayer"]},
+      "notes": ["This broad cultural origin does not transfer any surviving witness's production place to the lost authorial text."]
+    },
+    {
+      "id": "place-statement:a-dialect",
+      "place_id": "place:north-midlands",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:dmr-a"]}
+    },
+    {
+      "id": "place-statement:b-dialect",
+      "place_id": "place:northeast-midlands",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:ipomydon-b"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mayer"]}
+    },
+    {
+      "id": "place-statement:publication",
+      "place_id": "place:breslau",
+      "type": "associated_place",
+      "scope": {"kind": "whole", "description": "Publication place of Kölbing's 1889 edition"},
+      "source_lineage_entity_id": "edition:kolbing:ipomedon-1889",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing"]},
+      "notes": ["Breslau is not asserted as a medieval place of composition."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:mayer"]}
+    },
+    {
+      "id": "language:german-editorial",
+      "code": "deu",
+      "label": "German",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:editorial-frame"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole-mixed",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "Two verse adaptations and one prose adaptation, with prose German title matter and editorial apparatus",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:kolbing"]}
+    },
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dmr-a", "evidence:dmr-b"]}
+    },
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:ipomedon-c", "part:editorial-frame"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mayer"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:scholarly-edition",
+      "term": "scholarly-edition",
+      "label": "Scholarly edition",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:umich"]}
+    },
+    {
+      "id": "genre:middle-english-romance",
+      "term": "middle-english-romance",
+      "label": "Middle English romance",
+      "scheme": "General Corpus local genre",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dmr-a", "evidence:dmr-b", "evidence:mayer"]}
+    },
+    {
+      "id": "genre:chivalric-romance",
+      "term": "chivalric-romance",
+      "label": "Chivalric romance",
+      "scheme": "General Corpus local genre",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dmr-a", "evidence:dmr-b", "evidence:mayer"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:chivalry",
+      "term": "chivalry-and-tournaments",
+      "label": "Chivalry and tournaments",
+      "scheme": "General Corpus local subject",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:dmr-a", "evidence:dmr-b"]}
+    },
+    {
+      "id": "subject:courtship",
+      "term": "courtship-and-marriage",
+      "label": "Courtship, love, and marriage",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:mayer"]}
+    },
+    {
+      "id": "subject:identity",
+      "term": "identity-and-disguise",
+      "label": "Disguise, concealed identity, and recognition",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing", "evidence:mayer"]}
+    },
+    {
+      "id": "subject:hunting",
+      "term": "hunting",
+      "label": "Hunting",
+      "scheme": "General Corpus local subject",
+      "scope": {"kind": "part", "part_ids": ["part:ipomadon-a", "part:ipomydon-b", "part:ipomedon-c"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kolbing"]}
+    }
+  ],
+  "tags": [
+    "middle-english",
+    "scholarly-edition",
+    "romance",
+    "chivalry",
+    "courtly-love",
+    "identity-and-disguise",
+    "hunting",
+    "tournaments",
+    "translation-and-adaptation",
+    "tail-rhyme",
+    "rhyming-couplets",
+    "prose",
+    "textual-criticism"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Three independent Middle English adaptations of Hue de Rotelande's Anglo-Norman Ipomedon. A is an 8,890-line tail-rhyme romance; B is a shorter 2,346-line couplet romance; C is an incomplete prose rendition in eleven encoded divisions. Across differing forms, the versions narrate Ipomedon's concealed identity, courtship of the heiress of Calabria, hunting, tournaments, military tests, separation, and recognition. Kölbing presents the texts separately with manuscript-based readings and extensive German apparatus.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:kolbing", "evidence:xml", "evidence:dmr-a", "evidence:dmr-b", "evidence:mayer"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "CME00025 encodes the edition title page and printed pp. 3–358: the three edited Middle English texts and their local apparatus. It omits the dedication, preface, CLXXXI-page introduction, pp. 359–464 endnotes, corrections, indexes, abbreviations, blanks, and binding matter of the complete 1889 object.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:kolbing"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 13,
+    "sections": 3,
+    "prose_only_items": 1,
+    "verse_only_items": 2,
+    "mixed_items": 0,
+    "verse_groups": 760,
+    "verse_lines": 11236,
+    "description": "Three edited adaptations in six XML DIV1 units: A has 8,890 L elements in 751 LG groups, B has 2,346 L elements in 9 LG groups, and C has 11 DIV2 units containing 192 P elements. The whole XML also contains 2,059 NOTE, 357 PB, and 717 MILESTONE elements. These are encoding metrics, not normalized canonical counts.",
+    "evidence_ids": ["evidence:xml"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:editorial-frame",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "commentary",
+      "label": "Encoded edition title matter and local apparatus",
+      "summary": "The German edition title page, part titles and half-titles, headings, page and manuscript milestones, and interleaved textual notes retained from Kölbing; the long introduction and back matter are omitted.",
+      "item_count": null,
+      "textual_form": "prose",
+      "locators": [
+        {"lineage_entity_id": "edition:kolbing:ipomedon-1889", "scheme": "printed edition", "value": "main title page; half-titles pp. 255 and 321; local apparatus pp. 3–358"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00025", "scheme": "XML", "value": "title matter, headings, 2,059 NOTE, 357 PB, and 717 MILESTONE elements"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:kolbing"]
+    },
+    {
+      "id": "part:ipomadon-a",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "Ipomadon A",
+      "summary": "The long stanzaic tail-rhyme adaptation, edited from Chetham's Library MS 8009 (Mun.A.6.31).",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 751, "verse_lines": 8890},
+      "locators": [
+        {"lineage_entity_id": "witness:chetham:MunA631", "scheme": "current manuscript folios", "value": "191r–335r; f. 335v is blank in the digital sequence"},
+        {"lineage_entity_id": "witness:chetham:MunA631", "scheme": "Kölbing legacy foliation", "value": "188a–332a; leaf after old f. 234 lost"},
+        {"lineage_entity_id": "edition:kolbing:ipomedon-1889", "scheme": "printed pages", "value": "3–253"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00025", "scheme": "XML", "value": "A-1–A-8890; 8,890 L; 751 LG; 1,830 NOTE"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:dmr-a", "evidence:chetham"],
+      "notes": ["The encoded 8,890 line elements preserve Kölbing's edition lineation. They are not a newly normalized critical count."]
+    },
+    {
+      "id": "part:ipomydon-b",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "work",
+      "label": "The Lyfe of Ipomydon B",
+      "summary": "The shorter rhyming-couplet adaptation, edited from British Library Harley MS 2252 with variants from the surviving de Worde fragment Kölbing called W.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 2346},
+      "locators": [
+        {"lineage_entity_id": "witness:bl:Harley2252", "scheme": "manuscript folios", "value": "54r–84r"},
+        {"lineage_entity_id": "edition:kolbing:ipomedon-1889", "scheme": "printed pages", "value": "half-title p. 255; text pp. 257–319"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00025", "scheme": "XML", "value": "B-1–B-2346; 2,346 L; 9 LG; 153 NOTE"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:dmr-b", "evidence:mayer", "evidence:harley"]
+    },
+    {
+      "id": "part:ipomedon-c",
+      "parent_id": null,
+      "sequence": 4,
+      "type": "fragment",
+      "label": "Ipomedon C",
+      "summary": "The incomplete prose adaptation from Longleat House MS 257 (formerly Bath MS 25); physical losses include ff. 101 and 106, the latter containing the ending.",
+      "item_count": 11,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 11},
+      "locators": [
+        {"lineage_entity_id": "witness:longleat:MS257", "scheme": "manuscript folios", "value": "90r–105v; ff. 101 and 106 missing"},
+        {"lineage_entity_id": "edition:kolbing:ipomedon-1889", "scheme": "printed pages", "value": "half-title p. 321; text pp. 323–358"},
+        {"lineage_entity_id": "artifact:general-corpus:CME00025", "scheme": "XML", "value": "11 DIV2 units; 192 P; 76 NOTE; ending marked by an ellipsis"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:kolbing", "evidence:mayer", "evidence:sanchez", "evidence:longleat"],
+      "notes": ["The ending is textually incomplete because a manuscript leaf is missing; it is not merely omitted by the U-M encoding."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:hue-ipomedon",
+      "title": "Ipomedon (Anglo-Norman romance by Hue de Rotelande)",
+      "relation": "adaptation_of",
+      "identifiers": [{"scheme": "Author and conventional title", "value": "Hue de Rotelande, Ipomedon"}],
+      "evidence_ids": ["evidence:dmr-a", "evidence:dmr-b", "evidence:mayer", "evidence:kolbing"],
+      "notes": ["The relation applies independently to all three medieval content parts. It records textual ancestry and does not identify any surviving French manuscript as the direct physical exemplar used by an English adapter or by Kölbing."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00025",
+    "manifest_path": "manifests/lineage/works/CME00025.json",
+    "bindings": [
+      {"metadata_target": "work:CME00025", "lineage_entity_id": "edition:kolbing:ipomedon-1889", "role": "source_edition"},
+      {"metadata_target": "work:CME00025", "lineage_entity_id": "encoding:umich-cme:CME00025", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00025", "lineage_entity_id": "artifact:general-corpus:CME00025", "role": "repository_representation"},
+      {"metadata_target": "part:ipomadon-a", "lineage_entity_id": "witness:chetham:MunA631", "role": "source_witness"},
+      {"metadata_target": "part:ipomydon-b", "lineage_entity_id": "witness:bl:Harley2252", "role": "source_witness"},
+      {"metadata_target": "part:ipomydon-b", "lineage_entity_id": "print:de-worde:stc5732-5-fragment", "role": "related_source"},
+      {"metadata_target": "part:ipomedon-c", "lineage_entity_id": "witness:longleat:MS257", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:xml",
+      "type": "computational_inspection",
+      "citation": "General Corpus CME00025 source XML and structural inspection",
+      "repository_path": "CME/source/CME_phase_3/CME00025.xml",
+      "summary": "Verifies identifiers, edition title, three adaptation boundaries, line and stanza counts, prose divisions, notes, page and manuscript milestones, incomplete ending, and the noncontiguous source selection.",
+      "accessed_on": "2026-07-12",
+      "sha256": "a91a01e01f21c31e2981bea8e910a624eb726393911bfbb13690019d532646d7"
+    },
+    {
+      "id": "evidence:umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, CME00025 item and About the Corpus of Middle English Prose and Verse",
+      "url": "https://name.umdl.umich.edu/CME00025",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/about.html"],
+      "source_evidence_id": "evidence:umich-item",
+      "summary": "Confirms item identity, title, 1889 edition, public access, and rights; the About page describes the 2016–2018 manually keyed and proofread production batch.",
+      "accessed_on": "2026-07-12",
+      "notes": ["The discovery record's Author field names Hue de Rotelande, but that name belongs to the Anglo-Norman source work rather than to the three anonymous Middle English adaptations."]
+    },
+    {
+      "id": "evidence:kolbing",
+      "type": "digital_surrogate",
+      "citation": "Eugen Kölbing, ed., Ipomedon in drei englischen Bearbeitungen (Breslau: Wilhelm Koebner, 1889), complete BSB scan",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664485/manifest",
+      "alternate_urls": ["https://www.digitale-sammlungen.de/view/bsb11664485"],
+      "source_evidence_id": "evidence:kolbing-scan",
+      "locator": "title; preface pp. v–vi; introduction pp. XI–XV and CLXXX–CLXXXI; edited texts pp. 3–358; notes pp. 359–464",
+      "summary": "Verifies bibliographic identity, the three independent texts and their witnesses, Kölbing and Hall's editorial roles, editorial method, folio and page loci, print-fragment collation, and the XML selection boundary.",
+      "accessed_on": "2026-07-12",
+      "sha256": "dcb475e6a71dd34c3a6dd337c92e493139ab0722ba7962626cf7da22c7c8655a"
+    },
+    {
+      "id": "evidence:dmr-a",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Ipomadon",
+      "url": "https://www.middleenglishromance.org.uk/romances/ipomadon",
+      "source_evidence_id": "evidence:dmr-a",
+      "summary": "Supports A's anonymous independent adaptation, date range, North-Midlands localization, tail-rhyme form, 8,890-line extent, unique Chetham witness, and relation to Hue's source.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:dmr-b",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, The Lyfe of Ipomydon",
+      "url": "https://www.middleenglishromance.org.uk/romances/lyfe-ipomydon",
+      "source_evidence_id": "evidence:dmr-b",
+      "summary": "Supports B's anonymous adaptation, couplet form, Harley MS 2252 locus, early-print tradition, and relation to Hue's source.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:mayer",
+      "type": "scholarly_source",
+      "citation": "Nora Mayer, An Edition of the Ipomedon B and C Texts (PhD thesis, University of York, 2011)",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/2161/",
+      "source_evidence_id": "evidence:mayer-2011",
+      "locator": "especially pp. 21–27; editions and commentary thereafter",
+      "summary": "Supports independent adaptation from Hue, B's date and Northeast-Midlands language, C's 15th-century prose form and uncertain dialect, witness loci, missing Longleat leaves, and narrative description.",
+      "accessed_on": "2026-07-12",
+      "sha256": "4ef02150502d1d456eaa47f8dbd0aead3818428769e70333aa3cd99925a563e9"
+    },
+    {
+      "id": "evidence:sanchez",
+      "type": "scholarly_source",
+      "citation": "Jordi Sánchez-Martí, 'Longleat House MS 257: A Description' (2005)",
+      "url": "https://rua.ua.es/handle/10045/19207",
+      "source_evidence_id": "evidence:sanchez-2005",
+      "summary": "Supports Longleat MS 257's physical structure, former designation Bath MS 25, Ipomedon C locus, missing ff. 101 and 106, and proposed 1457–1469 production window without transferring that witness date to composition.",
+      "accessed_on": "2026-07-12",
+      "sha256": "b612d58268a6aaa130eea19efea0d010cb69afe2389d2511ecf2b0596817db87"
+    },
+    {
+      "id": "evidence:chetham",
+      "type": "official_catalog",
+      "citation": "Chetham's Library, medieval-manuscript list and University of Manchester LUNA object for MS 8009 (Mun.A.6.31)",
+      "url": "https://library.chethams.com/collections/archives-manuscripts/medieval-manuscripts/",
+      "alternate_urls": ["https://luna.manchester.ac.uk/luna/servlet/detail/Man4MedievalVC~4~4~487912~116549"],
+      "source_evidence_id": "evidence:chetham-luna",
+      "summary": "Confirms current and historical shelfmarks, 15th-century miscellany context, complete public 768-image sequence, and the text-bearing boundary ff. 191r–335r followed by blank f. 335v.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:harley",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 2252",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048083",
+      "source_evidence_id": "evidence:bl-harley2252",
+      "summary": "Confirms the composite codex, second-half-15th-century Ipomydon booklet and target ff. 54r–84r; current full digital coverage is unavailable.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:longleat",
+      "type": "official_webpage",
+      "citation": "Longleat House, Access the Collections",
+      "url": "https://www.longleat.co.uk/things-to-do/house/the-collections/access-the-collections",
+      "source_evidence_id": "evidence:longleat-access",
+      "summary": "Documents the current enquiry route and research-only microfilm-PDF service for certain manuscripts; no exact public MS 257 catalog or complete surrogate was found.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:lineage",
+      "type": "linked_manifest_evidence",
+      "citation": "CME00025 source-lineage manifest",
+      "repository_path": "manifests/lineage/works/CME00025.json",
+      "summary": "Provides the entity, relation, whole-object access, cache, rights, editorial-practice, and unresolved-question record underlying this work-level description.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:chetham-terminal-folio",
+      "question": "Should Ipomadon A's current terminal locus be cited as f. 335r, where the text visibly ends, or as f. 335v, as stated by the Database of Middle English Romance?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask Chetham's Library or the Database of Middle English Romance to reconcile the explicit blank-folio image label with the published terminal locator; retain f. 335r as the observed text-bearing end meanwhile."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:chetham", "evidence:dmr-a"]
+    },
+    {
+      "id": "question:witness-digital-objects",
+      "question": "Can complete, reusable digital objects be obtained for Harley MS 2252 and Longleat House MS 257?",
+      "status": "pending_external_response",
+      "impact": "high",
+      "next_steps": ["Monitor the exact British Library record for restored images and enquire with Longleat about MS 257's microfilm-PDF eligibility, physical coverage, cost, and reuse terms."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:harley", "evidence:longleat", "evidence:lineage"]
+    },
+    {
+      "id": "question:de-worde-fragment",
+      "question": "What exact current catalog record, shelfmark, surviving extent, and digital availability correspond to Kölbing's de Worde fragment W?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Confirm the modern STC identity and shelfmark in a current British Library or ESTC record before treating later three-leaf descriptions as equivalent to Kölbing's explicitly one-leaf Ipomydon fragment."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:kolbing", "evidence:dmr-b", "evidence:lineage"]
+    },
+    {
+      "id": "question:encoding-selection",
+      "question": "What U-M production record explains the selection of the edition title and pp. 3–358 while omitting Kölbing's introduction and back matter?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Ask U-M Digital Content and Collections for item-level production notes while preserving the directly observed noncontiguous mapping."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:xml", "evidence:umich", "evidence:kolbing"]
+    }
+  ],
+  "notes": [
+    "Hue de Rotelande is modeled as author of the related Anglo-Norman source, not as author of the three anonymous Middle English adaptations, despite the inherited U-M discovery field.",
+    "The record distinguishes medieval composition, witness production, 1889 editorial compilation, U-M encoding, and repository artifact dates.",
+    "The A and B line totals, stanza-group totals, C paragraph counts, notes, page breaks, and milestones are representation metrics from the XML and Kölbing's lineation, not newly normalized critical extents.",
+    "Longleat's proposed York production context and Harley's London booklet context belong to physical-witness lineage; neither is transferred automatically into work-level composition geography.",
+    "The complete Chetham LUNA inventory was verified but not bulk-cached because current Manchester terms prohibit systematic extraction or reutilization of substantial parts."
+  ]
+}

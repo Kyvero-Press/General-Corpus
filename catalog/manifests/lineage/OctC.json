@@ -1,0 +1,1296 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:OctC",
+  "work_id": "OctC",
+  "title": "Octovian (Cambridge, University Library, MS Ff.2.38)",
+  "primary_subject": "artifact:general-corpus:OctC",
+  "record_status": "partial",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository artifact is a pinned copy of University of Michigan CME item OctC, which encodes Frances McSparran’s direct working transcription of the Northern Octavian in Cambridge University Library MS Ff.2.38, ff. 90rb-102vb. The source statement explicitly calls the text a transcription rather than the 1986 EETS edition: manuscript spelling, capitalization, and punctuation are retained, abbreviations are silently expanded, and even EETS page milestones are added only for comparison. The 1,731-line witness-specific text is distinct from the Lincoln Northern text and from the Southern Octavian. OTA item 1683 is a closely related three-file release, but its protected bitstreams were not accepted or compared, so exact package identity remains supported rather than confirmed. Complete public source objects for DIMEV v1, the 1857 CUL catalog volume, and Harriet Hudson’s 2006 edition are cached outside Git. No verified public whole-manuscript digital facsimile of Ff.2.38 was found; onsite, mediated viewing, and paid imaging routes are recorded separately from the 1979 Scolar printed facsimile.",
+  "languages": ["enm", "eng"],
+  "review_notes": [
+    "The cataloging boundary is the complete 1,731-line Cambridge witness text at ff. 90rb-102vb, not an abstract Northern version, the Lincoln witness, the Southern version, the 1986 EETS volume, the OTA package, or the physical codex as a whole.",
+    "The manuscript’s mid-fifteenth-century date and Leicestershire linguistic profile describe the witness and scribal language. They are not substituted for the work-level composition range or qualified Northeast Midlands/Yorkshire localization.",
+    "The 1857 catalog’s statement of a uniform hand conflicts with the current Database of Middle English Romance description of two scribes, the second taking over during Octavian; both claims are preserved and the exact hand boundary remains unresolved.",
+    "Rights and access statements are component-specific. The medieval text, McSparran transcription, U-M encoding, OTA package, repository copy, modern editions, printed facsimile, and any CUL-supplied photography are separate layers.",
+    "Negative public-facsimile findings are date-bounded to 2026-07-15 and do not establish that no institutional, private, legacy, or unindexed surrogate exists."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:OctC",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for OctC",
+      "description": "The XML artifact consumed by this repository’s conversion workflow and supplied through the pinned Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "OctC"},
+        {"scheme": "git-blob", "value": "23ab964fbecf7a0ea9b92feae1d3a319dbb8c816"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/OctC.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "23ab964fbecf7a0ea9b92feae1d3a319dbb8c816",
+        "sha256": "fc61df1e92e3579b65915a7abbf49e4001ca677e0316aba4c6ff4dd040adfeba"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-structural-audit", "evidence:cme-git"],
+      "notes": ["The 160,248-byte repository file was byte-identical to the same path on the current CME main branch at review time."]
+    },
+    {
+      "id": "encoding:umich-cme:OctC",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item OctC",
+      "description": "The U-M structural encoding of McSparran’s Cambridge transcription, distributed in 1993 and now represented by the current CME collection and the pinned repository XML.",
+      "identifiers": [
+        {"scheme": "CME", "value": "OctC", "uri": "https://name.umdl.umich.edu/OctC"}
+      ],
+      "creator_ids": ["agent:university-of-michigan"],
+      "date_statements": [{
+        "label": "distribution",
+        "value": "1993",
+        "normalized": "1993",
+        "certainty": "high",
+        "evidence_ids": ["evidence:repo-xml"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-collection"],
+      "notes": ["The exact current item resolver was intermittently protected by an automated challenge; the collection-level current page and pinned item XML provide the evidence used here."]
+    },
+    {
+      "id": "encoding:ota:1683",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive item 1683, Octovian",
+      "description": "A current OTA item listing for a three-file electronic release containing a header plus separate Cambridge (OctC) and Lincoln (OctL) texts.",
+      "identifiers": [
+        {"scheme": "OTA", "value": "1683", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683"},
+        {"scheme": "legacy OTA", "value": "U-1683-A"}
+      ],
+      "creator_ids": ["agent:john-price-wilkin", "agent:oxford-text-archive"],
+      "date_statements": [{
+        "label": "issued",
+        "value": "1992-04-03",
+        "normalized": "1992-04-03",
+        "certainty": "high",
+        "evidence_ids": ["evidence:ota-1683-item", "evidence:ota-1992-announcement"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ota-1683-item", "evidence:ota-1992-announcement", "evidence:repo-xml"],
+      "notes": [
+        "The current listing names header1683.xml, octc-1683.txt, and octl-1683.txt. The content bitstreams require an interactive terms step and were not accepted or cached during this audit.",
+        "The current OTA preview describes the Cambridge text through the EETS edition, whereas the repository XML gives the more precise provenance statement that OctC derives from a direct McSparran transcription and merely imports EETS pagination."
+      ]
+    },
+    {
+      "id": "transcription:mcsparran:cambridge-octavian",
+      "type": "scholarly_edition",
+      "label": "Frances McSparran’s direct transcription of the Cambridge Northern Octavian",
+      "description": "The direct working transcription of Ff.2.38 used to create the electronic text. This entity is typed as a scholarly edition only because the schema has no distinct transcription type; the source explicitly says it is not an edition.",
+      "creator_ids": ["agent:frances-mcsparran"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": [
+        "No separately cataloged physical or digital carrier for the working transcription was identified.",
+        "Its exact relationship to McSparran’s editorial files for the 1986 EETS volume remains unresolved."
+      ]
+    },
+    {
+      "id": "witness:cul:Ff-2-38",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ff.2.38",
+      "alternate_labels": ["CUL Ff.2.38", "DIMEV CULFf238"],
+      "description": "A mid-fifteenth-century paper romance and didactic miscellany preserving the 1,731-line Cambridge Northern Octavian at ff. 90rb-102vb.",
+      "identifiers": [
+        {"scheme": "CUL shelfmark", "value": "Ff.2.38"},
+        {"scheme": "DIMEV manuscript key", "value": "CULFf238"},
+        {"scheme": "LALME/eLALME linguistic profile", "value": "LP 531"}
+      ],
+      "date_statements": [{
+        "label": "manuscript date",
+        "value": "middle of the fifteenth century",
+        "normalized": "1425/1475",
+        "certainty": "high",
+        "evidence_ids": ["evidence:cul-catalogue-scan", "evidence:dmer-ff238"]
+      }],
+      "holding": {
+        "institution_id": "agent:cambridge-university-library",
+        "shelfmark": "Ff.2.38",
+        "catalog_url": "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search",
+        "notes": "The principal public item-level description remains the 1857 printed catalog; most CUL medieval manuscripts do not yet have modern ArchiveSearch records."
+      },
+      "physical_description": {
+        "support": "paper",
+        "extent": "247 leaves in the 1857 catalog",
+        "dimensions": "approximately 297 × 206 mm",
+        "format": "folio codex, chiefly double columns of about forty lines",
+        "notes": [
+          "The 1857 catalog reports missing leaves and calls the hand uniform.",
+          "The current Database of Middle English Romance reports two scribes, with the second taking over in the middle of Octavian.",
+          "DIMEV assigns the Octavian hand LALME/eLALME LP 531, grid 445 305, Leicestershire; this is a scribal-language localization, not a secure place of manuscript production or work composition."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dimev-v1", "evidence:dmer-ff238", "evidence:cul-catalogue-scan"],
+      "notes": [
+        "Octavian begins after Sir Tryamour on f. 90r and Bevis of Hampton begins on f. 102v; those shared page boundaries do not make the adjacent works part of OctC.",
+        "DIMEV’s exact target locus ff. 90rb-102vb is preferred to the less precise ff. 90r-102v summaries."
+      ]
+    },
+    {
+      "id": "witness:lincoln:MS-91",
+      "type": "manuscript_witness",
+      "label": "Lincoln Cathedral Library MS 91",
+      "alternate_labels": ["Lincoln Thornton Manuscript", "DIMEV LincCath91"],
+      "description": "The other complete manuscript witness of the Northern Octavian, at DIMEV’s ff. 98va-109rb. DIMEV v1 counts 1,628 lines and records lacunae, while the current Database of Middle English Romance manuscript page gives 1,629 lines; the disagreement is not reconciled. It is related to but not the textual source of OctC.",
+      "identifiers": [{"scheme": "Lincoln Cathedral Library shelfmark", "value": "MS 91"}],
+      "holding": {
+        "institution_id": "agent:lincoln-cathedral-library",
+        "shelfmark": "MS 91"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dimev-v1", "evidence:hudson-2006-pdf", "evidence:dmer-octavian", "evidence:dmer-lincoln", "evidence:octl-structure"],
+      "notes": [
+        "McSparran prints its transcription on the odd EETS pages 77-179; Hudson uses it as the base manuscript for the 2006 METS text.",
+        "DIMEV v1 reports 1,628 manuscript-text lines; the current DMR manuscript page reports 1,629. Separately, the OctL electronic component contains 1,634 unique consecutive L/@N positions. That encoding metric is not used to harmonize the one-line catalog disagreement."
+      ]
+    },
+    {
+      "id": "edition:mcsparran:octovian:1986",
+      "type": "scholarly_edition",
+      "label": "McSparran’s 1986 EETS edition of Octovian",
+      "creator_ids": ["agent:frances-mcsparran"],
+      "date_statements": [{
+        "label": "publication",
+        "value": "1986",
+        "normalized": "1986",
+        "certainty": "high",
+        "evidence_ids": ["evidence:folger-eets-1986", "evidence:dimev-v1"]
+      }],
+      "bibliographic": {
+        "citation": "Frances McSparran, ed., Octovian, Early English Text Society, Original Series 289 (London and New York: Oxford University Press for EETS, 1986).",
+        "title": "Octovian",
+        "publisher": "Oxford University Press for the Early English Text Society",
+        "publication_place": "London and New York",
+        "date": "1986",
+        "series": "Early English Text Society, Original Series 289",
+        "pages": "244 pages",
+        "languages": ["eng", "enm"]
+      },
+      "identifiers": [{"scheme": "ISBN", "value": "0197222919"}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-eets-1986", "evidence:dimev-v1", "evidence:repo-xml"],
+      "notes": ["The Cambridge and Lincoln transcriptions are printed in parallel, with Cambridge on even pp. 76-178 and Lincoln on odd pp. 77-179."]
+    },
+    {
+      "id": "facsimile:scolar:Ff-2-38:1979",
+      "type": "facsimile",
+      "label": "McSparran and Robinson 1979 printed facsimile of CUL MS Ff.2.38",
+      "creator_ids": ["agent:frances-mcsparran", "agent:p-r-robinson", "agent:scolar-press"],
+      "date_statements": [{
+        "label": "publication",
+        "value": "1979",
+        "normalized": "1979",
+        "certainty": "high",
+        "evidence_ids": ["evidence:scolar-facsimile", "evidence:dmer-ff238"]
+      }],
+      "bibliographic": {
+        "citation": "Frances McSparran and P. R. Robinson, introduction, Cambridge University Library MS Ff.2.38 (London: Scolar Press, 1979).",
+        "title": "Cambridge University Library MS Ff.2.38",
+        "publisher": "Scolar Press",
+        "publication_place": "London",
+        "date": "1979",
+        "pages": "xxv pages and 261 facsimile leaves",
+        "languages": ["eng", "enm"]
+      },
+      "identifiers": [
+        {"scheme": "ISBN", "value": "0859674711"},
+        {"scheme": "Google Books", "value": "vnaBQgAACAAJ", "uri": "https://books.google.com/books?id=vnaBQgAACAAJ"}
+      ],
+      "reproduction_format": "34 cm printed whole-manuscript facsimile with scholarly introduction",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:scolar-facsimile", "evidence:dmer-ff238", "evidence:dimev-v1"],
+      "notes": ["No verified public complete digital copy of this facsimile was found."]
+    },
+    {
+      "id": "edition:hudson:four-romances:2006",
+      "type": "scholarly_edition",
+      "label": "Harriet Hudson’s Four Middle English Romances, second edition",
+      "creator_ids": ["agent:harriet-hudson", "agent:middle-english-texts-series"],
+      "date_statements": [{
+        "label": "second edition",
+        "value": "2006",
+        "normalized": "2006",
+        "certainty": "high",
+        "evidence_ids": ["evidence:hudson-2006-pdf"]
+      }],
+      "bibliographic": {
+        "citation": "Harriet Hudson, ed., Four Middle English Romances, 2nd ed. (Kalamazoo: Medieval Institute Publications, 2006).",
+        "title": "Four Middle English Romances",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo, Michigan",
+        "date": "2006",
+        "pages": "206 PDF pages; Octavian introduction pp. 39-43, text pp. 45-88, notes pp. 89-95",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hudson-2006-pdf", "evidence:mets-rights"],
+      "notes": [
+        "Hudson edits the Lincoln text, collating and occasionally supplying from Cambridge; the edition is not the source text encoded as OctC.",
+        "The prose introduction correctly identifies Cambridge as Northern, but the manuscript list mistakenly labels it Southern and gives ff. 90r-101v; those isolated errors are preserved as an inconsistency rather than adopted."
+      ]
+    },
+    {
+      "id": "catalog:cul:1857:Ff-2-38",
+      "type": "catalog_description",
+      "label": "CUL manuscript catalog volume 2 (1857), Ff.2.38 entry",
+      "creator_ids": ["agent:cambridge-university-library"],
+      "date_statements": [{
+        "label": "publication",
+        "value": "1857",
+        "normalized": "1857",
+        "certainty": "high",
+        "evidence_ids": ["evidence:cul-catalogue-scan"]
+      }],
+      "bibliographic": {
+        "citation": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge, vol. 2 (Cambridge: Cambridge University Press, 1857), 404-408.",
+        "title": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge: Ee.I.1-Ff.vi.57",
+        "publisher": "Cambridge University Press",
+        "publication_place": "Cambridge",
+        "date": "1857",
+        "pages": "404-408",
+        "languages": ["eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-catalogue-scan"],
+      "notes": ["Item 37 on printed p. 407 identifies the target only as a tale of the Emperor Octavian, without a manuscript title."]
+    },
+    {
+      "id": "catalog:dimev:v1:record-3132",
+      "type": "catalog_description",
+      "label": "DIMEV v1 record 3132, Octavian (Northern version)",
+      "creator_ids": ["agent:dimev"],
+      "date_statements": [{
+        "label": "release",
+        "value": "2024-12-30",
+        "normalized": "2024-12-30",
+        "certainty": "high",
+        "evidence_ids": ["evidence:dimev-v1"]
+      }],
+      "identifiers": [
+        {"scheme": "DIMEV", "value": "3132"},
+        {"scheme": "IMEV/NIMEV", "value": "1918"}
+      ],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dimev-v1"],
+      "notes": ["Record 3132 distinguishes the Northern work from Southern record 2930 and enumerates Cambridge, Lincoln, and early-print witnesses."]
+    },
+    {
+      "id": "catalog:dmer:octavian-and-ff238",
+      "type": "catalog_description",
+      "label": "Database of Middle English Romance descriptions of Octavian and CUL MS Ff.2.38",
+      "creator_ids": ["agent:database-of-middle-english-romance"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dmer-octavian", "evidence:dmer-ff238"],
+      "notes": ["The work and manuscript pages are modeled together as one catalog entity because both are needed to separate composition, version, witness, and scribal claims."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus"},
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"]},
+    {"id": "agent:university-of-michigan", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:oxford-text-archive", "type": "organization", "name": "Oxford Text Archive", "urls": ["https://ota.bodleian.ox.ac.uk/"]},
+    {"id": "agent:john-price-wilkin", "type": "person", "name": "John Price-Wilkin"},
+    {"id": "agent:frances-mcsparran", "type": "person", "name": "Frances McSparran"},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/"]},
+    {"id": "agent:lincoln-cathedral-library", "type": "organization", "name": "Lincoln Cathedral Library"},
+    {"id": "agent:early-english-text-society", "type": "organization", "name": "Early English Text Society", "urls": ["https://earlyenglishtextsociety.org/"]},
+    {"id": "agent:oxford-university-press", "type": "organization", "name": "Oxford University Press"},
+    {"id": "agent:p-r-robinson", "type": "person", "name": "P. R. Robinson"},
+    {"id": "agent:scolar-press", "type": "organization", "name": "Scolar Press"},
+    {"id": "agent:harriet-hudson", "type": "person", "name": "Harriet Hudson"},
+    {"id": "agent:middle-english-texts-series", "type": "organization", "name": "Middle English Texts Series", "urls": ["https://metseditions.org/"]},
+    {"id": "agent:medieval-institute-publications", "type": "organization", "name": "Medieval Institute Publications"},
+    {"id": "agent:dimev", "type": "organization", "name": "Digital Index of Middle English Verse", "urls": ["https://www.dimev.net/"]},
+    {"id": "agent:database-of-middle-english-romance", "type": "organization", "name": "Database of Middle English Romance", "urls": ["https://www.middleenglishromance.org.uk/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:folger-shakespeare-library", "type": "organization", "name": "Folger Shakespeare Library", "urls": ["https://www.folger.edu/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:OctC",
+      "object": "encoding:umich-cme:OctC",
+      "scope": {
+        "subject": {"kind": "whole", "description": "complete pinned OctC XML"},
+        "object": {"kind": "whole", "description": "complete U-M CME OctC encoding"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-collection", "evidence:cme-git"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-working-transcription",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:OctC",
+      "object": "transcription:mcsparran:cambridge-octavian",
+      "scope": {
+        "subject": {"kind": "whole", "description": "1,731-line U-M encoded Cambridge text"},
+        "object": {"kind": "whole", "description": "McSparran’s direct Cambridge transcription"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:working-transcription-transcribes-cul",
+      "type": "transcribes",
+      "subject": "transcription:mcsparran:cambridge-octavian",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "whole", "description": "complete 1,731-line transcription"},
+        "object": {"kind": "part", "description": "Cambridge Northern Octavian", "locators": ["ff. 90rb-102vb", "DIMEV record 3132 Cambridge witness"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:dimev-v1"]}
+    },
+    {
+      "id": "relation:ota-version-of-umich-production",
+      "type": "version_of",
+      "subject": "encoding:ota:1683",
+      "object": "encoding:umich-cme:OctC",
+      "scope": {
+        "subject": {"kind": "part", "description": "OctC component octc-1683.txt in a three-file Cambridge-and-Lincoln package"},
+        "object": {"kind": "whole", "description": "U-M OctC Cambridge encoding"},
+        "notes": "The current metadata and shared legacy identifier support a close production relationship, but the protected OTA bitstream was not accepted or byte-compared."
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:ota-1683-item", "evidence:ota-1992-announcement", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:umich-consulted-eets-pagination",
+      "type": "consulted",
+      "subject": "encoding:umich-cme:OctC",
+      "object": "edition:mcsparran:octovian:1986",
+      "scope": {
+        "subject": {"kind": "part", "description": "52 PB milestones labeled with even page numbers 76-178"},
+        "object": {"kind": "part", "description": "Cambridge transcription on even EETS pages 76-178"},
+        "notes": "The header explicitly limits this dependency to comparison pagination; the continuous encoded readings derive from the working transcription, not from the EETS print text."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:repo-structural-audit", "evidence:dimev-v1"]}
+    },
+    {
+      "id": "relation:eets-transcribes-cambridge",
+      "type": "transcribes",
+      "subject": "edition:mcsparran:octovian:1986",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "part", "description": "Cambridge parallel transcription on even pp. 76-178"},
+        "object": {"kind": "part", "description": "Northern Octavian", "locators": ["ff. 90rb-102vb"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:folger-eets-1986", "evidence:dimev-v1"]}
+    },
+    {
+      "id": "relation:eets-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "edition:mcsparran:octovian:1986",
+      "object": "witness:lincoln:MS-91",
+      "scope": {
+        "subject": {"kind": "part", "description": "Lincoln parallel transcription on odd pp. 77-179"},
+        "object": {"kind": "part", "description": "Northern Octavian", "locators": ["ff. 98va-109rb"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:folger-eets-1986", "evidence:dimev-v1"]}
+    },
+    {
+      "id": "relation:scolar-facsimile-of-cul",
+      "type": "facsimile_of",
+      "subject": "facsimile:scolar:Ff-2-38:1979",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "whole", "description": "complete printed whole-manuscript facsimile"},
+        "object": {"kind": "whole", "description": "complete codex as reproduced in 1979, with Octavian on ff. 90r-102v"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:scolar-facsimile", "evidence:dmer-ff238"]}
+    },
+    {
+      "id": "relation:hudson-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "edition:hudson:four-romances:2006",
+      "object": "witness:lincoln:MS-91",
+      "scope": {
+        "subject": {"kind": "part", "description": "Octavian edited text on pp. 45-88"},
+        "object": {"kind": "part", "description": "Lincoln Northern Octavian", "locators": ["ff. 98va-109rb"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hudson-2006-pdf"]}
+    },
+    {
+      "id": "relation:hudson-collated-cambridge",
+      "type": "collated_against",
+      "subject": "edition:hudson:four-romances:2006",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "part", "description": "Octavian text and notes, including Cambridge supplies and comparisons", "locators": ["pp. 45-95"]},
+        "object": {"kind": "part", "description": "Cambridge Northern Octavian", "locators": ["ff. 90rb-102vb"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hudson-2006-pdf"]}
+    },
+    {
+      "id": "relation:cul-catalog-describes-witness",
+      "type": "describes",
+      "subject": "catalog:cul:1857:Ff-2-38",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Ff.2.38 entry on printed pp. 404-408"},
+        "object": {"kind": "whole", "description": "physical manuscript and contents, with Octavian as item 37"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cul-catalogue-scan"]}
+    },
+    {
+      "id": "relation:dimev-describes-cambridge",
+      "type": "describes",
+      "subject": "catalog:dimev:v1:record-3132",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "part", "description": "record 3132, CULFf238 witness row, manuscript record, and bibliography"},
+        "object": {"kind": "part", "description": "Cambridge Northern Octavian", "locators": ["ff. 90rb-102vb", "1,731 lines"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-v1"]}
+    },
+    {
+      "id": "relation:dmer-describes-cambridge",
+      "type": "describes",
+      "subject": "catalog:dmer:octavian-and-ff238",
+      "object": "witness:cul:Ff-2-38",
+      "scope": {
+        "subject": {"kind": "whole", "description": "combined work and manuscript descriptions"},
+        "object": {"kind": "part", "description": "Octavian at ff. 90r-102v and its codicological context"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dmer-octavian", "evidence:dmer-ff238"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:OctC",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Read the pinned CME submodule path or current raw file.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OctC.xml",
+      "repository_path": "CME/source/CME_phase_1-2/OctC.xml",
+      "cost": "free",
+      "format": "DLPSTEXTCLASS XML, 160,248 bytes",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:cme-git"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:OctC",
+      "provider_id": "agent:university-of-michigan",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Use the CME collection interface or stable U-M resolver; if the item resolver challenges automated access, use the pinned repository XML for exact text inspection.",
+      "url": "https://name.umdl.umich.edu/OctC",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/"],
+      "cost": "free",
+      "format": "public digital text and collection-level bulk XML route",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:umich-collection", "evidence:repo-xml"]
+    },
+    {
+      "id": "access:ota-item",
+      "entity": "encoding:ota:1683",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Read the public item page and file inventory. Content download requires an interactive click-through step that was not accepted during this audit.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683",
+      "cost": "free",
+      "format": "public metadata and three-file inventory; protected content bitstreams",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:ota-1683-item"],
+      "notes": ["No redirected generic HTML response is treated as a cached OTA source object."]
+    },
+    {
+      "id": "access:working-transcription",
+      "entity": "transcription:mcsparran:cambridge-octavian",
+      "resource_kind": "digital_text",
+      "status": "unknown",
+      "access_method": "The transcription is textually represented through OctC, but no independently cataloged carrier or access route was identified.",
+      "cost": "unknown",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "access:cul-reading-room",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Registered users may consult Special Collections onsite; contact the department and request Ff.2.38 in advance.",
+      "url": "https://www.lib.cam.ac.uk/using-library/person-services/use-special-collections",
+      "contact": "specialcollections@lib.cam.ac.uk",
+      "cost": "not_applicable",
+      "format": "original manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-special-collections"]
+    },
+    {
+      "id": "access:cul-virtual-reading-room",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Request a curator call using the overhead visualizer and ask whether existing digital images can be supplied.",
+      "url": "https://www.lib.cam.ac.uk/using-library/remote-services/virtual-reading-room",
+      "contact": "mss@lib.cam.ac.uk",
+      "cost": "unknown",
+      "format": "live remote consultation and possible mediated images",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-virtual-reading-room"]
+    },
+    {
+      "id": "access:cul-reproduction-order",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit an imaging request quoting Ff.2.38. Request the complete physical object separately from target ff. 90rb-102vb, and request written publication and redistribution terms.",
+      "url": "https://imagingservices.lib.cam.ac.uk/",
+      "alternate_urls": [
+        "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+        "https://www.lib.cam.ac.uk/collections/departments/chil/pricing",
+        "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction"
+      ],
+      "contact": "photo@lib.cam.ac.uk",
+      "cost": "fee",
+      "format": "normally uncompressed JPG at 600 ppi or best possible, RGB 8-bit per channel; TIFF on request",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-imaging", "evidence:cul-imaging-terms"],
+      "notes": ["The service states a £25 minimum order; exact feasibility, cost, image count, and delivery require a shelfmark-specific quote."]
+    },
+    {
+      "id": "access:cul-public-facsimile-negative",
+      "entity": "witness:cul:Ff-2-38",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Check Cambridge Digital Library, ArchiveSearch and CUL manuscript routes, the current specialist catalog, Internet Archive, and Google Books for an exact complete public object.",
+      "url": "https://cudl.lib.cam.ac.uk/",
+      "alternate_urls": [
+        "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search",
+        "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238"
+      ],
+      "cost": "not_applicable",
+      "format": "no verified public whole-manuscript image sequence",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-public-facsimile-search", "evidence:scolar-facsimile"]
+    },
+    {
+      "id": "access:scolar-record",
+      "entity": "facsimile:scolar:Ff-2-38:1979",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use public bibliographic records to locate a holding of the printed facsimile.",
+      "url": "https://books.google.com/books?id=vnaBQgAACAAJ",
+      "cost": "free",
+      "format": "bibliographic record for a 34 cm printed facsimile",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:scolar-facsimile"]
+    },
+    {
+      "id": "access:scolar-digital-negative",
+      "entity": "facsimile:scolar:Ff-2-38:1979",
+      "resource_kind": "download",
+      "status": "no_public_copy_found",
+      "access_method": "Exact title, ISBN, shelfmark, and Google Books identifier searches did not establish a complete public digital copy.",
+      "url": "https://books.google.com/books?id=vnaBQgAACAAJ",
+      "cost": "not_applicable",
+      "format": "no verified public complete digital copy",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:scolar-facsimile", "evidence:cul-public-facsimile-search"]
+    },
+    {
+      "id": "access:eets-catalog",
+      "entity": "edition:mcsparran:octovian:1986",
+      "provider_id": "agent:folger-shakespeare-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Use the Folger catalog record and onsite open-stacks holding.",
+      "url": "https://catalog.folger.edu/record/39975",
+      "cost": "free",
+      "format": "public catalog record for 244-page printed edition",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:folger-eets-1986"]
+    },
+    {
+      "id": "access:hudson-pdf",
+      "entity": "edition:hudson:four-romances:2006",
+      "provider_id": "agent:middle-english-texts-series",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read the public METS edition or download the complete edition PDF.",
+      "url": "https://metseditions.org/editions/YbyP0NRFYXQi9WZ3hZeMbc6A0gaEV87",
+      "alternate_urls": ["https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf"],
+      "local_copies": [{
+        "label": "Complete Hudson Four Middle English Romances second-edition PDF",
+        "path": "source-cache/OctC/hudson-four-middle-english-romances-2006-complete.pdf",
+        "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf",
+        "sha256": "754939b49979a0a2e77ec129269a6c793464416101e36a14ef46a8529d6e0a17",
+        "bytes": 1355962,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-15",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "source_file_count": 1,
+        "work_portion": {
+          "label": "Octavian introduction, Lincoln-based text, and notes",
+          "locators": ["general introduction pp. 1-3", "Octavian introduction pp. 39-43", "text pp. 45-88", "notes pp. 89-95"]
+        },
+        "notes": ["The 206-page PDF is readable and text-extractable. qpdf reports numerous inherited object-offset-zero warnings but successfully reconstructs and reads the file; the provider object was retained unchanged."]
+      }],
+      "cost": "free",
+      "format": "206-page complete PDF and web reading interface",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:hudson-2006-pdf", "evidence:mets-rights"]
+    },
+    {
+      "id": "access:cul-catalog-volume",
+      "entity": "catalog:cul:1857:Ff-2-38",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Read or download the complete Internet Archive scan of CUL manuscript catalog volume 2.",
+      "url": "https://archive.org/details/catalogueofmanus02cambuoft",
+      "alternate_urls": ["https://archive.org/download/catalogueofmanus02cambuoft/catalogueofmanus02cambuoft.pdf"],
+      "local_copies": [{
+        "label": "Complete CUL manuscript catalog volume 2 PDF",
+        "path": "source-cache/OctC/cul-manuscripts-catalogue-volume-2-1857-complete.pdf",
+        "source_url": "https://archive.org/download/catalogueofmanus02cambuoft/catalogueofmanus02cambuoft.pdf",
+        "sha256": "f785ba38c28e05a3144f8e38ca5d37752a2533540cb0aba5aa358ee4ce4d6c84",
+        "bytes": 31207350,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-15",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "source_file_count": 1,
+        "work_portion": {
+          "label": "Ff.2.38 catalog entry and Octavian item",
+          "locators": ["printed pp. 404-408", "PDF pp. 416-420", "item 37 on printed p. 407"]
+        }
+      }],
+      "cost": "free",
+      "format": "596-page PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-catalogue-scan"]
+    },
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:v1:record-3132",
+      "provider_id": "agent:dimev",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Use the public DIMEV site or download the complete v1 Zenodo release archive.",
+      "url": "https://zenodo.org/records/14585961",
+      "alternate_urls": [
+        "https://www.dimev.net/record.php?recID=3132",
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"
+      ],
+      "local_copies": [{
+        "label": "Complete DIMEV version 1.0 release ZIP",
+        "path": "source-cache/OctC/dimev-v1.0.zip",
+        "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+        "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c",
+        "bytes": 3891929,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-15",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "source_file_count": 32,
+        "work_portion": {
+          "label": "Northern and Southern Octavian records, manuscripts, and bibliography",
+          "locators": ["data/Records.xml records 3132 and 2930", "data/Manuscripts.xml CULFf238 and LincCath91", "data/Bibliography.xml McSparran, Hudson, and Scolar entries"]
+        }
+      }],
+      "cost": "free",
+      "format": "32-member versioned ZIP release",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dimev-v1"]
+    },
+    {
+      "id": "access:dmer",
+      "entity": "catalog:dmer:octavian-and-ff238",
+      "provider_id": "agent:database-of-middle-english-romance",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Read the public romance and manuscript descriptions.",
+      "url": "https://www.middleenglishromance.org.uk/romances/octavian",
+      "alternate_urls": ["https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238"],
+      "cost": "free",
+      "format": "public scholarly database pages",
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:dmer-octavian", "evidence:dmer-ff238"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-medieval-text",
+      "entity": "witness:cul:Ff-2-38",
+      "component": "anonymous medieval Northern Octavian text and witness readings",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The work and manuscript witness are medieval and predate modern copyright by centuries.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-v1", "evidence:cul-catalogue-scan"],
+      "notes": ["This does not determine rights in modern transcriptions, editions, photography, encodings, interfaces, or supplied files."]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:OctC",
+      "access_id": "access:umich-text",
+      "component": "U-M CME encoded text and collection presentation",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The current collection page describes manually keyed full texts from public-domain materials and applies No Copyright - United States at collection level.",
+      "asserted_by_id": "agent:university-of-michigan",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:umich-collection"],
+      "notes": ["The current exact item resolver could not be independently inspected through the automated challenge, so the assertion is not promoted beyond collection-level evidence."]
+    },
+    {
+      "id": "rights:repository-xml-embedded",
+      "entity": "artifact:general-corpus:OctC",
+      "access_id": "access:repository-xml",
+      "component": "U-M-derived encoded text embedded in the pinned XML",
+      "jurisdiction": "Provider statements and United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The XML embeds a legacy OTA statement limiting the text to personal scholarly use, while current U-M collection metadata applies NoC-US and current OTA item metadata applies CC BY 3.0. The conflict cannot be resolved by silently choosing the most permissive statement.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-collection", "evidence:ota-1683-item"],
+      "notes": ["Confirm the provenance and supersession of the legacy restriction before redistribution in a commercial or print-on-demand product."]
+    },
+    {
+      "id": "rights:cme-repository-license",
+      "entity": "artifact:general-corpus:OctC",
+      "component": "contributor-controlled CME repository software and material covered by the root LICENSE",
+      "jurisdiction": "Repository license assertion",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The CME repository root LICENSE uses the Unlicense, but its scope over inherited U-M and OTA textual layers is not explicit and is not treated as superseding their separate statements.",
+      "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:repo-xml"]
+    },
+    {
+      "id": "rights:ota-1683",
+      "entity": "encoding:ota:1683",
+      "access_id": "access:ota-item",
+      "component": "current OTA item 1683 package as labeled by the item page",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current OTA item metadata applies Creative Commons Attribution 3.0 to the item. The content files were not accepted or inspected for additional embedded terms.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {"name": "Creative Commons Attribution 3.0 Unported", "spdx": "CC-BY-3.0", "uri": "https://creativecommons.org/licenses/by/3.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:ota-1683-item"],
+      "notes": ["Do not generalize this current package-level label to the repository XML without resolving version and supersession questions."]
+    },
+    {
+      "id": "rights:working-transcription",
+      "entity": "transcription:mcsparran:cambridge-octavian",
+      "component": "McSparran’s direct working transcription and editorial choices",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "Authorship is documented, but no independently verified license or publication status for the working transcription carrier was found.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "rights:eets-1986",
+      "entity": "edition:mcsparran:octovian:1986",
+      "access_id": "access:eets-catalog",
+      "component": "1986 introduction, parallel transcriptions, apparatus, pagination, layout, and editorial matter",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The modern scholarly edition was published in 1986 by Oxford University Press for EETS; no open license was identified.",
+      "asserted_by_id": "agent:oxford-university-press",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:folger-eets-1986"]
+    },
+    {
+      "id": "rights:cul-supplied-images",
+      "entity": "witness:cul:Ff-2-38",
+      "access_id": "access:cul-reproduction-order",
+      "component": "any CUL-supplied photography, scan, or other reproduction",
+      "jurisdiction": "United Kingdom and item-specific agreement",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "CUL limits supplied copies to research, private study, or evaluation absent a separate license and requires prior written permission for reproduction and publication.",
+      "asserted_by_id": "agent:cambridge-university-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-imaging", "evidence:cul-imaging-terms"],
+      "notes": ["Payment for image supply alone does not authorize public Git hosting, redistribution, publication, or print-on-demand reuse."]
+    },
+    {
+      "id": "rights:scolar-facsimile",
+      "entity": "facsimile:scolar:Ff-2-38:1979",
+      "access_id": "access:scolar-record",
+      "component": "1979 facsimile photography, introduction, selection, layout, and print edition",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The modern Scolar Press facsimile was published in 1979 and no open license was identified.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:scolar-facsimile"]
+    },
+    {
+      "id": "rights:hudson-digital-edition",
+      "entity": "edition:hudson:four-romances:2006",
+      "access_id": "access:hudson-pdf",
+      "component": "Hudson’s editorial text, introductions, notes, formatted digital edition, and complete downloadable PDF",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "METS states that its digital editions are for individual use and directs reprint requests to the Executive Director. Its separate CC BY-NC-SA 4.0 grant is specific to XML and is not generalized to the PDF.",
+      "asserted_by_id": "agent:middle-english-texts-series",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hudson-2006-pdf", "evidence:mets-rights"]
+    },
+    {
+      "id": "rights:hudson-xml",
+      "entity": "edition:hudson:four-romances:2006",
+      "component": "METS XML supplied separately from the formatted edition and PDF",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "METS licenses its XML under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.",
+      "asserted_by_id": "agent:middle-english-texts-series",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International", "spdx": "CC-BY-NC-SA-4.0", "uri": "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-rights"]
+    },
+    {
+      "id": "rights:dimev-v1",
+      "entity": "catalog:dimev:v1:record-3132",
+      "access_id": "access:dimev-release",
+      "component": "DIMEV version 1.0 data, documentation, and release archive",
+      "jurisdiction": "Provider license",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The DIMEV version 1.0 release includes a CC BY 4.0 license.",
+      "asserted_by_id": "agent:dimev",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-v1"]
+    },
+    {
+      "id": "rights:cul-catalog-text",
+      "entity": "catalog:cul:1857:Ff-2-38",
+      "access_id": "access:cul-catalog-volume",
+      "component": "1857 catalog text and historical typography",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The catalog was published in 1857, far before the current U.S. public-domain cutoff for published works.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-catalogue-scan"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:transcription-abbreviation-expansion",
+      "entity": "transcription:mcsparran:cambridge-octavian",
+      "practice": "abbreviation_expansion",
+      "source_feature": "manuscript abbreviations",
+      "representation": "expanded without notice",
+      "description": "McSparran silently expands manuscript abbreviations, so the encoded letter sequence is not an allographic diplomatic transcript.",
+      "scope": "complete 1,731-line Cambridge transcription",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "practice:transcription-capitalization-retention",
+      "entity": "transcription:mcsparran:cambridge-octavian",
+      "practice": "capitalization_normalization",
+      "source_feature": "manuscript spelling, capitalization, and punctuation",
+      "representation": "retained rather than normalized, apart from silent abbreviation expansion",
+      "description": "The source statement says the text otherwise preserves manuscript spelling, capitalization, and punctuation.",
+      "scope": "complete Cambridge transcription",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": ["The controlled practice name is used to record an explicit non-normalization policy."]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:OctC",
+      "practice": "selection",
+      "source_feature": "working transcription and EETS editorial package",
+      "representation": "continuous Cambridge verse text with front matter, back matter, and editorial notes omitted",
+      "description": "The electronic text includes the witness transcription but omits printed-edition front and back matter and editorial notes.",
+      "scope": "complete encoded OctC item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "practice:umich-supplied-divisions",
+      "entity": "encoding:umich-cme:OctC",
+      "practice": "selection",
+      "source_feature": "continuous 1,731-line transcription without encoded stanza groups",
+      "representation": "18 artificial DIV1 blocks, normally 100 lines each, with supplied headings",
+      "description": "The encoding adds navigational hundred-line groups. They are representation units, not manuscript, narrative, or stanza divisions.",
+      "scope": "DIV1 NODE OctC:1 through OctC:18",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-structural-audit"]
+    },
+    {
+      "id": "practice:umich-eets-pagination",
+      "entity": "encoding:umich-cme:OctC",
+      "practice": "collation",
+      "source_feature": "EETS 1986 Cambridge pagination",
+      "representation": "52 PB milestones labeled with every even page from 76 through 178",
+      "description": "U-M supplies EETS page markers solely to facilitate comparison with the final edition; the page sequence is not manuscript foliation.",
+      "scope": "complete encoded text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-structural-audit", "evidence:dimev-v1"]
+    },
+    {
+      "id": "practice:umich-cross-version-xptr",
+      "entity": "encoding:umich-cme:OctC",
+      "practice": "collation",
+      "source_feature": "correspondence between Cambridge and Lincoln textual lines",
+      "representation": "one XPTR per OctC line; 331 TO values are 0000, while 1,400 nonzero occurrences resolve to 1,397 unique values in an undocumented target namespace",
+      "description": "The XPTR/@TO values exhibit partial cross-version alignment or concordance behavior rather than OctC line numbering: OctC and the paired OctL component each have 1,400 nonzero occurrences and 1,397 unique TO values, but their unique-value intersection is only 1,180, with 217 values unique to each file. Because no explicit field documentation or target-namespace definition was located, the exact semantics remain unresolved and the values are not used to calculate textual extent.",
+      "scope": "1,731 L/XPTR pairs in OctC and comparative OctL pointer audit",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-structural-audit", "evidence:octl-structure"],
+      "notes": ["The independent L/@N sequence 0001-1731 and specialist catalogs establish the 1,731-line extent."]
+    },
+    {
+      "id": "practice:hudson-punctuation-and-stanzas",
+      "entity": "edition:hudson:four-romances:2006",
+      "practice": "punctuation_normalization",
+      "source_feature": "Lincoln manuscript text without indicated stanza divisions, tag lines, or modern punctuation",
+      "representation": "editorially supplied punctuation and stanza spacing",
+      "description": "Hudson supplies punctuation and formats stanzas for readers; those display units must not be projected backward onto the Cambridge manuscript or OctC encoding.",
+      "scope": "Hudson’s Octavian text, pp. 45-88",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hudson-2006-pdf"]
+    },
+    {
+      "id": "practice:hudson-cambridge-collation",
+      "entity": "edition:hudson:four-romances:2006",
+      "practice": "collation",
+      "source_feature": "Lincoln base text with lacunae and variant Cambridge redaction",
+      "representation": "Lincoln-based edited text with Cambridge comparison and selected supplies",
+      "description": "Hudson treats Lincoln as base while consulting the shorter, independently transmitted Cambridge text; this does not make Hudson a transcription of Cambridge.",
+      "scope": "Octavian text and notes, pp. 45-95",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hudson-2006-pdf"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus / CME source XML, CME/source/CME_phase_1-2/OctC.xml, at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OctC.xml",
+      "repository_path": "CME/source/CME_phase_1-2/OctC.xml",
+      "locator": "HEADER; SOURCEDESC; ENCODINGDESC; TEXT/BODY",
+      "summary": "Primary evidence for identity, McSparran responsibility, direct-transcription provenance, 1993 U-M distribution, legacy OTA restriction and identifier, 1350-1375 profile date, transcription policy, omissions, EETS comparison pagination, and complete encoded readings.",
+      "accessed_on": "2026-07-15",
+      "sha256": "fc61df1e92e3579b65915a7abbf49e4001ca677e0316aba4c6ff4dd040adfeba"
+    },
+    {
+      "id": "evidence:repo-structural-audit",
+      "type": "repository_file",
+      "citation": "XPath, hash, Git-object, and OctC/OctL pointer inspection of the electronic Octavian texts.",
+      "alternate_urls": ["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OctL.xml"],
+      "repository_path": "CME/source/CME_phase_1-2/OctC.xml",
+      "locator": "DIV1, HEAD, L/@N, PB/@N, EPB, LG, NOTE, P, and XPTR/@TO counts and distributions",
+      "summary": "OctC has 18 supplied DIV1 groups, 19 HEAD, 1,731 unique consecutive L/@N values 0001-1731, 52 PB values covering even EETS pp. 76-178, 53 EPB, no LG or NOTE, five header P elements, and 1,731 XPTR. OctC has 331 TO=0000 values and 1,400 nonzero occurrences resolving to 1,397 unique values. The paired OctL component also has 1,400 nonzero occurrences and 1,397 unique values; the unique-value intersection is 1,180, with 217 values unique to each. This shows partial cross-version alignment or concordance behavior, but the target namespace is undocumented and TO values are not used as textual extent. The file is 160,248 bytes and Git blob 23ab964fbecf7a0ea9b92feae1d3a319dbb8c816.",
+      "accessed_on": "2026-07-15",
+      "sha256": "fc61df1e92e3579b65915a7abbf49e4001ca677e0316aba4c6ff4dd040adfeba"
+    },
+    {
+      "id": "evidence:octl-structure",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME paired Lincoln XML, source/CME_phase_1-2/OctL.xml, at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; structural inspection on 2026-07-15.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/OctL.xml",
+      "locator": "L/@N and XPTR/@TO counts and distributions",
+      "summary": "The 153,520-byte paired OctL file, Git blob 37c33ddd84ab03845bd0b334fcb3e256a5316ffe, contains 1,634 unique consecutive L/@N positions 0001-1634. Its 1,634 XPTR elements comprise 234 TO=0000 values and 1,400 nonzero occurrences resolving to 1,397 unique values. The 1,634 encoded positions are a separate digital representation metric and do not resolve DIMEV’s 1,628-line versus DMR’s 1,629-line manuscript-text counts.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ad86cd7f32363c8102e2968be0f58cbe9efcfbcdd8b63d131ddf00f157a46c30"
+    },
+    {
+      "id": "evidence:cme-git",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME git repository, pinned and current-main OctC objects.",
+      "url": "https://github.com/Kyvero-Press/CME",
+      "repository_path": "CME/source/CME_phase_1-2/OctC.xml",
+      "locator": "commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; source/CME_phase_1-2/OctC.xml",
+      "summary": "The submodule commit and current remote main resolved to the same commit during review, and the raw OctC file was byte-identical.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME root LICENSE (The Unlicense).",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "The repository root applies the Unlicense to contributor-controlled material, but does not explicitly resolve scope over inherited U-M and OTA source-text layers.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse collection page.",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "alternate_urls": ["https://rightsstatements.org/vocab/NoC-US/1.0/"],
+      "locator": "collection description, access, keying, bulk XML, and rights statement",
+      "summary": "Describes public manually keyed full texts, bulk XML access, source materials characterized as public domain in the United States, and the collection-level No Copyright - United States statement.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-1683-item",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive, item 1683, Octovian.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/1683",
+      "locator": "title, issue date, contributor, license, description, and three-file inventory",
+      "summary": "Identifies John Price-Wilkin, issue date 1992-04-03, current CC BY 3.0 label, and files header1683.xml, octc-1683.txt, and octl-1683.txt. Content files require an interactive terms step and were not accepted or cached.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-1992-announcement",
+      "type": "scholarly_source",
+      "citation": "Humanist Discussion Group, Oxford Text Archive deposit announcement, 12 August 1992.",
+      "url": "https://dhhumanist.org/Archives/Virginia/v06/0238.html",
+      "locator": "new accessions since April 1992, OTA 1683",
+      "summary": "Contemporary announcement listing ‘Octovian (John Price-Wilkin, Michigan)’ as OTA accession 1683 among newly deposited texts.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:folger-eets-1986",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog, record 39975, Frances McSparran, Octovian.",
+      "url": "https://catalog.folger.edu/record/39975",
+      "locator": "title, editor, imprint, series, physical description, ISBN, holdings, and parallel-transcription note",
+      "summary": "Confirms the 1986 OUP/EETS edition, Original Series 289, ISBN 0197222919, 244-page extent, open-stacks holding, and parallel Cambridge and Lincoln manuscript transcriptions.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dimev-v1",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse, version 1.0, records 3132 and 2930, manuscripts CULFf238 and LincCath91, and linked bibliography.",
+      "url": "https://zenodo.org/records/14585961",
+      "alternate_urls": [
+        "https://www.dimev.net/record.php?recID=3132",
+        "https://www.dimev.net/record.php?recID=2930"
+      ],
+      "repository_path": "source-cache/OctC/dimev-v1.0.zip",
+      "locator": "data/Records.xml; data/Manuscripts.xml; data/Bibliography.xml; README.md; LICENSE",
+      "summary": "Supplies the Northern/Southern work boundary, DIMEV and IMEV/NIMEV identifiers, forms and rhyme schemes, exact Cambridge and Lincoln loci and extents, incipits and explicits, edition and facsimile references, manuscript linguistic profile, and CC BY 4.0 release license.",
+      "accessed_on": "2026-07-15",
+      "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"
+    },
+    {
+      "id": "evidence:dmer-octavian",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Octavian.",
+      "url": "https://www.middleenglishromance.org.uk/romances/octavian",
+      "summary": "Current specialist synthesis for c. 1350 composition, Northeast Midlands and possible Yorkshire localization, Northern and Southern forms, plot, subjects, Cambridge and Lincoln witnesses, print fragment, and modern editions.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dmer-ff238",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Cambridge, University Library, MS Ff.2.38.",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+      "locator": "manuscript description and contents, especially Octavian at ff. 90r-102v",
+      "summary": "Supports the mid-fifteenth-century paper witness, dimensions, two scribes with the second taking over during Octavian, complete manuscript context, shared work boundaries, Northern identity, 1,731 lines, and 1979 Scolar facsimile.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:dmer-lincoln",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Lincoln, Cathedral Library, MS 91 (Lincoln Thornton Manuscript).",
+      "url": "https://www.middleenglishromance.org.uk/manuscripts/lincoln-cathedral-library-ms-91-lincoln-thornton-manuscript",
+      "locator": "contents row for Octavian at ff. 98v-109r",
+      "summary": "The current manuscript page identifies the Northern Octavian at ff. 98v-109r and reports 1,629 lines. This differs by one line from DIMEV v1’s 1,628-line count and is preserved as an unresolved catalog disagreement.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:hudson-2006-pdf",
+      "type": "scholarly_source",
+      "citation": "Harriet Hudson, ed., Four Middle English Romances, 2nd ed. (Kalamazoo: Medieval Institute Publications, 2006).",
+      "url": "https://metseditions.org/editions/YbyP0NRFYXQi9WZ3hZeMbc6A0gaEV87",
+      "alternate_urls": ["https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/45168e5a-3920-4ef0-960c-16010fc115a4/downloadable_version/279cdcd5fcea37cff67cbe0b261d9e62.pdf"],
+      "repository_path": "source-cache/OctC/hudson-four-middle-english-romances-2006-complete.pdf",
+      "locator": "general introduction pp. 1-3; Octavian introduction pp. 39-43; text pp. 45-88; notes pp. 89-95",
+      "summary": "Supports anonymous authorship, composition and localization, family-romance and tail-rhyme classification, Old French adaptation, Northern/Southern distinction, written Cambridge-Lincoln relation, Lincoln-base editorial method, Cambridge supplies, and supplied stanza/punctuation practice. Its isolated Cambridge manuscript-list errors are not adopted.",
+      "accessed_on": "2026-07-15",
+      "sha256": "754939b49979a0a2e77ec129269a6c793464416101e36a14ef46a8529d6e0a17"
+    },
+    {
+      "id": "evidence:mets-rights",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright & Citation.",
+      "url": "https://metseditions.org/copyright-citation",
+      "summary": "States that digital editions are for individual use and directs reprint requests to the Executive Director; separately licenses METS XML under CC BY-NC-SA 4.0, which is not generalized to the downloadable PDF.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-catalogue-scan",
+      "type": "official_catalog",
+      "citation": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge, vol. 2 (Cambridge, 1857), pp. 404-408, no. 1205, Ff.II.38.",
+      "url": "https://archive.org/details/catalogueofmanus02cambuoft",
+      "alternate_urls": ["https://archive.org/download/catalogueofmanus02cambuoft/catalogueofmanus02cambuoft.pdf"],
+      "repository_path": "source-cache/OctC/cul-manuscripts-catalogue-volume-2-1857-complete.pdf",
+      "locator": "printed pp. 404-408; PDF pp. 416-420; item 37 on printed p. 407",
+      "summary": "Official historical evidence for the 247-leaf paper folio, double columns of about forty lines, mid-fifteenth-century date, losses, claimed uniform hand, contents, and item 37, an untitled tale of Emperor Octavian.",
+      "accessed_on": "2026-07-15",
+      "sha256": "f785ba38c28e05a3144f8e38ca5d37752a2533540cb0aba5aa358ee4ce4d6c84"
+    },
+    {
+      "id": "evidence:cul-special-collections",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Use Special Collections.",
+      "url": "https://www.lib.cam.ac.uk/using-library/person-services/use-special-collections",
+      "locator": "registration, onsite consultation, and advance contact",
+      "summary": "Official route for registered-user consultation in the Special Collections Reading Room and advance contact with the department.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-virtual-reading-room",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Virtual Reading Room and Manuscripts services.",
+      "url": "https://www.lib.cam.ac.uk/using-library/remote-services/virtual-reading-room",
+      "locator": "remote curator appointment, overhead visualizer, and possible image supply",
+      "summary": "Official mediated route for remote consultation of Special Collections material through a curator and visualizer, with possible provision of digital images.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-imaging",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library Cultural Heritage Imaging Laboratory, Image Supply and Reproduction and Pricing.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+      "alternate_urls": [
+        "https://imagingservices.lib.cam.ac.uk/",
+        "https://www.lib.cam.ac.uk/collections/departments/chil/pricing"
+      ],
+      "locator": "request route, file specifications, quotation, payment, minimum order, and delivery",
+      "summary": "Official evidence for professional imaging requests, normally uncompressed 600 ppi RGB JPEG or TIFF on request, the £25 minimum, quoted fees, and separate permission workflow.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-imaging-terms",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Terms and Conditions: Image Supply and Reproduction.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/terms-and-conditions-image-supply-and-reproduction",
+      "summary": "Limits supplied copies to research, private study, or evaluation absent a separate license and requires prior written permission for reproduction, redistribution, publication, and other reuse.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:cul-public-facsimile-search",
+      "type": "search_result",
+      "citation": "Dated public-facsimile check for Cambridge University Library MS Ff.2.38 across CUDL, ArchiveSearch and official CUL routes, DMR, Internet Archive, and Google Books.",
+      "url": "https://cudl.lib.cam.ac.uk/",
+      "alternate_urls": [
+        "https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/search",
+        "https://www.middleenglishromance.org.uk/manuscripts/cambridge-university-library-ms-ff238",
+        "https://books.google.com/books?id=vnaBQgAACAAJ"
+      ],
+      "summary": "On 2026-07-15 no verified complete public page-image sequence for the manuscript or complete digital copy of the 1979 printed facsimile was found. This is a dated negative access finding, not proof that no institutional or private surrogate exists.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:scolar-facsimile",
+      "type": "authority_record",
+      "citation": "Frances McSparran and P. R. Robinson, Cambridge University Library MS Ff.2.38 (London: Scolar Press, 1979).",
+      "url": "https://books.google.com/books?id=vnaBQgAACAAJ",
+      "locator": "bibliographic metadata, ISBNs, extent, and format",
+      "summary": "Confirms the 1979 whole-manuscript printed facsimile, editors, publisher, xxv plus 261-leaf extent, 34 cm format, and ISBNs; the record supplies no complete public digital copy.",
+      "accessed_on": "2026-07-15"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:digital-production-and-rights",
+      "question": "How exactly do the McSparran working transcription, OTA 1683 files, 1993 U-M OctC encoding, current OTA CC BY 3.0 label, current U-M NoC-US statement, embedded personal-scholarly-use restriction, and CME Unlicense relate and supersede one another?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask OTA and U-M for accession, migration, license, and file-history documentation for 1683 / U-1683-A and OctC.",
+        "With authorization, accept the OTA click-through in a normal browser, download the complete three-file package, and compare octc-1683.txt and header1683.xml with the repository XML.",
+        "Obtain explicit permission or a provider clarification before commercial or print-on-demand redistribution."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:ota-1683-item", "evidence:umich-collection", "evidence:cme-license"]
+    },
+    {
+      "id": "question:complete-facsimile",
+      "question": "Can CUL supply or publish a complete high-resolution color surrogate of Ff.2.38, and what exact reuse terms and cost would govern it?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask Manuscripts staff through the Virtual Reading Room whether complete existing photography is held.",
+        "Request a quote for the complete bound object and a separate target-only quote for ff. 90rb-102vb.",
+        "Request written redistribution, publication, and commercial-use terms before acquisition."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-public-facsimile-search", "evidence:cul-virtual-reading-room", "evidence:cul-imaging", "evidence:cul-imaging-terms"]
+    },
+    {
+      "id": "question:scribal-boundary",
+      "question": "At which exact line or folio does the second scribe take over during Octavian, and how should that hand boundary qualify LP 531 and any line-level language claims?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect the 1979 facsimile introduction and target leaves or request a CUL visual review.",
+        "Consult current codicological scholarship and eLALME’s hand-level description before assigning the profile to all 1,731 lines."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:cul-catalogue-scan", "evidence:dmer-ff238", "evidence:dimev-v1"]
+    },
+    {
+      "id": "question:working-transcription-carrier",
+      "question": "Does a separately preserved McSparran transcription carrier survive, and what is its precise textual relationship to the 1986 EETS Cambridge transcription?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask U-M, OTA, EETS/OUP, and relevant McSparran archival custodians for production files and accession notes.",
+        "Compare the repository text line by line with the EETS even-page transcription when lawful access is available."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-xml", "evidence:folger-eets-1986"]
+    },
+    {
+      "id": "question:eets-line-crosswalk",
+      "question": "What exact line-by-line crosswalk links OctC, the EETS Cambridge and Lincoln transcriptions, and the XPTR concordance target universe?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Locate explicit HTI/DLPS or project documentation for XPTR TARGORDER, FROM, and TO in this paired edition.",
+        "Compare both complete electronic components against the EETS parallel pages, preserving unmatched and many-to-one mappings."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:repo-structural-audit", "evidence:octl-structure", "evidence:repo-xml", "evidence:folger-eets-1986"]
+    }
+  ]
+}

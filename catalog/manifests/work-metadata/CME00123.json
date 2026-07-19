@@ -1,0 +1,523 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00123",
+  "work_id": "CME00123",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "cataloging_subject": {
+    "id": "work:CME00123",
+    "unit_type": "single_work",
+    "label": "Household Inventory of the Fifteenth Century",
+    "scope_note": "The cataloged subject is the anonymous first-person household inventory dated 15 May 1463 and written at a place called 'litill Barw', identified by catalog and contextual scholarship as Little Baddow, Essex. It is not the whole Huntington HM 744 codex, the different 1444 inventory material on f. iv, the 1852 journal article as a bibliographic carrier, the University of Michigan encoding, or the checked-in XML artifact. CME00123 retains the 1852 editor's supplied title, headnote, tailnote, and signature as distinct paratext."
+  },
+  "catalog_summary": {
+    "title": "Household Inventory of the Fifteenth Century",
+    "author": "Anonymous",
+    "editor": "W. (unidentified)",
+    "date": "15 May 1463; first published November 1852",
+    "region": "Probably Little Baddow, Essex, England",
+    "genres": ["Household inventory", "Documentary writing"],
+    "form": "prose",
+    "language_codes": ["enm"],
+    "tags": ["middle-english", "prose", "household-inventory", "documentary-writing", "material-culture", "domestic-life", "household-goods", "furniture-and-furnishings", "kitchen-equipment", "textiles", "little-baddow", "essex", "fyler-family", "anonymous"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00123", "uri": "https://name.umdl.umich.edu/CME00123"},
+    {"scheme": "Huntington shelfmark and locus", "value": "HM 744, f. ir", "uri": "https://www.huntington.org/collections/lib-p15150coll7-18518"},
+    {"scheme": "Huntington ContentDM parent ID", "value": "p15150coll7/18518", "uri": "https://huntington.contentdm.oclc.org/digital/api/singleitem/collection/p15150coll7/id/18518"},
+    {"scheme": "Historical shelfmark", "value": "Ashburnham Appendix 133"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Household Inventory of the Fifteenth Century",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "The unidentified editor signing as W. in The Retrospective Review",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-umich"],
+        "notes": "This established access title is editorial and does not appear as a medieval title on HM 744 f. ir."
+      }
+    },
+    {
+      "id": "title:supplied-date-place",
+      "type": "supplied",
+      "value": "Household Inventory of 1463 at Little Baddow",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dutschke", "evidence:metadata-sutton"],
+        "notes": "A descriptive supplied title clarifying date and place; 'litill Barw' is damaged in the witness and expanded as Little Baddow by catalog and contextual evidence."
+      }
+    },
+    {
+      "id": "title:incipit",
+      "type": "incipit",
+      "value": "Thes parcelles her after wretyn ben in my place in litill Barw",
+      "language": "enm",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-householder",
+      "type": "collective",
+      "name": "Anonymous householder",
+      "notes": ["The inventory says it was written with the writer's own hand, but neither the medieval leaf nor the 1852 editor securely identifies that writer."]
+    },
+    {
+      "id": "agent:thomas-fyler",
+      "type": "person",
+      "name": "Thomas Fyler",
+      "alternate_names": ["Thomas Filer"],
+      "notes": ["A London mercer associated by Anne F. Sutton with HM 744, a merchant mark in the codex, and property at Little Baddow; retained only as a tentative attributed writer, not as established author."]
+    },
+    {
+      "id": "agent:w-editor",
+      "type": "person",
+      "name": "W.",
+      "notes": ["Unidentified signer of the 1852 article. No reliable evidence found supports expanding the initial to Thomas Wright."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-author",
+      "agent_id": "agent:anonymous-householder",
+      "display_name": "Anonymous",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-huntington", "evidence:metadata-dutschke"],
+        "notes": "The first-person statement establishes self-inscription but not a personal name."
+      }
+    },
+    {
+      "id": "responsibility:thomas-fyler-attribution",
+      "agent_id": "agent:thomas-fyler",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "assertion": {
+        "status": "tentative",
+        "confidence": "low",
+        "evidence_ids": ["evidence:metadata-sutton", "evidence:metadata-lmes", "evidence:metadata-dutschke"],
+        "notes": "Sutton's contextual case connects Thomas Fyler with HM 744 and Little Baddow, but the Huntington catalog does not name the inventory writer; LMES instead says the inventories were probably by or for John Fyler."
+      }
+    },
+    {
+      "id": "responsibility:w-transcriber-editor",
+      "agent_id": "agent:w-editor",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:editorial-framing", "part:inventory", "part:editorial-tailnote"], "description": "The 1852 printed transcription and its editorial framing"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:metadata-retrospective-review", "evidence:metadata-xml", "evidence:metadata-dutschke"],
+        "notes": "The article is signed W.; that signature supports responsibility for the printed contribution but does not disclose a full identity or distinguish transcription from editorial preparation."
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "15 May 1463",
+      "normalized": {"not_before": 1463, "not_after": 1463},
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "source_lineage_entity_id": "witness:huntington:HM-744",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke"], "notes": "The inventory itself says it was written with the writer's own hand on this date."}
+    },
+    {
+      "id": "date:first-attestation",
+      "type": "first_known_attestation",
+      "display": "15 May 1463",
+      "normalized": {"not_before": 1463, "not_after": 1463},
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "source_lineage_entity_id": "witness:huntington:HM-744",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-huntington", "evidence:metadata-dutschke", "evidence:metadata-huntington-visual"], "notes": "The dated inventory survives as an addition on HM 744 f. ir; the codex's broader catalog date of 1425-1450 belongs to its principal medieval contents, not this later flyleaf addition."}
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "November 1852",
+      "normalized": {"not_before": 1852, "not_after": 1852},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:retrospective-review:household-inventory-1852",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-retrospective-review", "evidence:metadata-routledge", "evidence:metadata-dutschke"], "notes": "The article appeared in the November 1852 installment. The collected volume title page is dated 1853, explaining catalog citations to new series volume 1 (1853)."}
+    }
+  ],
+  "places": [
+    {"id": "place:little-baddow", "label": "Little Baddow", "kind": "settlement", "broader_place_ids": ["place:essex"], "notes": ["The manuscript reading is damaged and printed as 'litill Barw(?)'; Dutschke and Sutton identify the place as Little Baddow."]},
+    {"id": "place:essex", "label": "Essex", "kind": "region", "broader_place_ids": ["place:england"]},
+    {"id": "place:england", "label": "England", "kind": "country"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:associated-little-baddow",
+      "place_id": "place:little-baddow",
+      "type": "associated_place",
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "source_lineage_entity_id": "witness:huntington:HM-744",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dutschke", "evidence:metadata-sutton"], "notes": "The text locates the listed possessions in the writer's place at a damaged toponym; Little Baddow is a strong contextual identification, but this is not promoted to a certain place of composition."}
+    },
+    {
+      "id": "place:cultural-origin-england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-huntington", "evidence:metadata-dutschke", "evidence:metadata-xml"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke"]},
+      "notes": ["Modern English title, headnote, and tailnote are editorial paratext and are not promoted to a second intellectual-work language facet."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A first-person prose preamble followed by nested room-by-room lists of household goods.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:household-inventory",
+      "term": "household-inventory",
+      "label": "Household inventory",
+      "scheme": "General Corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-huntington"]}
+    },
+    {
+      "id": "genre:documentary-writing",
+      "term": "documentary-writing",
+      "label": "Documentary writing",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dutschke"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:household-goods",
+      "term": "household-goods",
+      "label": "Household goods",
+      "scheme": "General Corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review"]}
+    },
+    {
+      "id": "subject:domestic-interiors",
+      "term": "domestic-interiors",
+      "label": "Domestic interiors",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}
+    },
+    {
+      "id": "subject:material-culture",
+      "term": "material-culture",
+      "label": "Material culture",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-sutton"]}
+    },
+    {
+      "id": "subject:furniture-furnishings",
+      "term": "furniture-and-furnishings",
+      "label": "Furniture and furnishings",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}
+    },
+    {
+      "id": "subject:kitchen-equipment",
+      "term": "kitchen-equipment",
+      "label": "Kitchen equipment",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "part", "part_ids": ["part:inventory"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}
+    },
+    {
+      "id": "subject:textiles",
+      "term": "textiles",
+      "label": "Textiles",
+      "scheme": "General Corpus",
+      "primary": false,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}
+    }
+  ],
+  "tags": ["middle-english", "prose", "household-inventory", "documentary-writing", "material-culture", "domestic-life", "household-goods", "furniture-and-furnishings", "kitchen-equipment", "textiles", "little-baddow", "essex", "fyler-family", "anonymous"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A household inventory dated 15 May 1463, introduced as a list of goods at the writer's place in 'litill Barw', probably Little Baddow, Essex. It moves through hall, parlour, buttery, chamber, kitchen, outbuildings, stable, cheese house, and barn, recording furniture, wall hangings, tableware, linens, bedding, tools, vessels, tack, and farm equipment.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "CME00123 represents the complete two-page 1852 article: its supplied title and private-manuscript headnote, the 1463 inventory, the editorial statement that the writer cannot be identified, and the signature 'W.' It does not encode the different 1444 heading and inventory material on HM 744 f. iv or surrounding journal contributions.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke", "evidence:metadata-huntington-visual"]
+    },
+    {
+      "id": "summary:cataloging",
+      "type": "cataloging_note",
+      "value": "The XML contains sixty-nine ITEM elements, but one is administrative prose inside TEMPHEAD. The represented article therefore has sixty-eight body ITEM elements: nine top-level room or space entries and fifty-nine nested inventory entries. These XML list items are not sixty-eight discrete physical objects because several entries aggregate multiple goods and quantities.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation"]
+    }
+  ],
+  "extent": {
+    "numbered_items": null,
+    "sections": 1,
+    "prose_only_items": 3,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": 0,
+    "verse_lines": 0,
+    "description": "One prose inventory in one DIV1, with one preamble paragraph and sixty-eight body ITEM elements arranged as nine top-level space entries and fifty-nine nested entries; plus editorial title, headnote, tailnote, and signature.",
+    "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:editorial-framing",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "introduction",
+      "label": "Editorial title and headnote",
+      "summary": "The supplied title and note that the source was then a manuscript in private hands.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:retrospective-review:household-inventory-1852", "scheme": "printed pages", "value": "p. 101"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00123", "scheme": "XML elements", "value": "HEAD and HEADNOTE"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review"],
+      "notes": ["Paratext supplied by the nineteenth-century contribution, not medieval title matter."]
+    },
+    {
+      "id": "part:inventory",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "Household inventory dated 15 May 1463",
+      "summary": "First-person preamble and room-by-room list of household goods.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "witness:huntington:HM-744", "scheme": "folio", "value": "f. ir"},
+        {"lineage_entity_id": "facsimile:huntington:HM-744-digital", "scheme": "IIIF canvas", "value": "canvas 145 (ContentDM child 18509)"},
+        {"lineage_entity_id": "edition:retrospective-review:household-inventory-1852", "scheme": "printed pages", "value": "pp. 101-102"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review", "evidence:metadata-dutschke", "evidence:metadata-huntington-visual"],
+      "notes": ["The separate 1444 material on f. iv is outside this work boundary."]
+    },
+    {
+      "id": "part:editorial-tailnote",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "commentary",
+      "label": "Editorial tailnote and signature",
+      "summary": "An editor's statement that the original did not identify its writer, followed by the signature 'W.'",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:retrospective-review:household-inventory-1852", "scheme": "printed page", "value": "p. 102"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00123", "scheme": "XML elements", "value": "TAILNOTE and CLOSER/SIGNED"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-retrospective-review"]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:CME00123",
+    "manifest_path": "manifests/lineage/works/CME00123.json",
+    "bindings": [
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "artifact:general-corpus:CME00123", "role": "repository_representation"},
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "encoding:umich-cme:CME00123", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "edition:retrospective-review:household-inventory-1852", "role": "source_edition"},
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "witness:huntington:HM-744", "role": "source_witness"},
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "facsimile:huntington:HM-744-digital", "role": "related_source"},
+      {"metadata_target": "work:CME00123", "lineage_entity_id": "facsimile:internet-archive:retrospective-review-v1", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:metadata-xml",
+      "type": "repository_file",
+      "citation": "CME00123.xml, University of Michigan Corpus of Middle English Prose and Verse repository copy, pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00123.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00123.xml",
+      "summary": "Primary local evidence for the encoded title, language, date statement, inventory contents, structure, uncertain italic readings, tailnote, and signature.",
+      "accessed_on": "2026-07-13",
+      "sha256": "4ad3584ba5fe2771821d3b4a6c9eac16de43018e34e7f2abaf5335d342c1f24d"
+    },
+    {
+      "id": "evidence:metadata-computation",
+      "type": "computational_inspection",
+      "citation": "Local structural audit of CME/source/CME_phase_3/CME00123.xml.",
+      "repository_path": "CME/source/CME_phase_3/CME00123.xml",
+      "summary": "Counted one DIV1, one HEAD, one HEADNOTE, one TAILNOTE, three body P elements, eight body LIST elements, sixty-eight body ITEM elements, nine top-level inventory-space entries, fifty-nine nested entries, three PB elements, three italic HI elements, and four SUP elements; excluded the one TEMPHEAD administrative ITEM.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, 'Household inventory of the fifteenth century. [Retrospective Review 1 (1852-3)],' Corpus of Middle English Prose and Verse, CME00123.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00123",
+      "summary": "Official U-M item record and public electronic text, confirming title, corpus identifier, source container, and access statement.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-retrospective-review",
+      "type": "digital_surrogate",
+      "citation": "W., 'Household Inventory of the Fifteenth Century,' The Retrospective Review, new series 1 (November 1852): 101-102; collected volume title page dated 1853.",
+      "url": "https://archive.org/details/retrospectivere01unkngoog/page/n115/mode/1up",
+      "alternate_urls": ["https://archive.org/details/retrospectivere01unkngoog/page/n116/mode/1up", "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog.pdf"],
+      "locator": "Printed pp. 101-102; PDF pages 116-117; BookReader leaves n115-n116",
+      "summary": "Exact two-page source article, visually checked against the XML; establishes the contribution's title, text, typography, editorial tailnote, signature, and November 1852 issue headers.",
+      "accessed_on": "2026-07-13",
+      "sha256": "618aa4959b9ecbad6c423db69f7a489f074d3a1c4c3b3e446f0de3290f9b796b",
+      "notes": ["The SHA-256 is for the complete locally cached collected-volume PDF, not only the two article pages."]
+    },
+    {
+      "id": "evidence:metadata-routledge",
+      "type": "official_webpage",
+      "citation": "Routledge, product description for The Retrospective Review, Vol. 17, reprinting new-series volume I.",
+      "url": "https://www.routledge.com/The-Retrospective-Review-Vol-17/Deguchi/p/book/9781138762541",
+      "summary": "Confirms that new-series volume I was issued in installments dated November 1852 and February, May, and August 1853, explaining the issue/volume date distinction.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-huntington",
+      "type": "official_catalog",
+      "citation": "The Huntington Library, catalog record for Didactic pieces: manuscript, [between 1425 and 1450], mssHM 744.",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-18518",
+      "alternate_urls": ["https://huntington.contentdm.oclc.org/digital/api/singleitem/collection/p15150coll7/id/18518"],
+      "locator": "Back flyleaf f. i recto-verso; target inventory f. ir",
+      "summary": "Current institutional description of HM 744, including shelfmark, material extent, holding, flyleaf inventories, access restriction, and provenance.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-huntington-visual",
+      "type": "digital_surrogate",
+      "citation": "The Huntington Library, IIIF digital facsimile of HM 744, canvas 145, f. ir.",
+      "url": "https://cdm16003.contentdm.oclc.org/iiif/2/p15150coll7:18509/full/1800,/0/default.jpg",
+      "alternate_urls": ["https://cdm16003.contentdm.oclc.org/iiif/info/p15150coll7/18518/manifest.json"],
+      "locator": "IIIF canvas 145 of 153; ContentDM child 18509; rear flyleaf f. ir",
+      "summary": "Visual evidence that the complete target inventory occupies f. ir and that the flyleaf is damaged, stained, and difficult to read; f. iv/canvas 146 contains separate earlier inventory material.",
+      "accessed_on": "2026-07-13",
+      "sha256": "57f16cb42209fe77175babdf7192773b0b4ad2defee2398bb2cc6fa3416c2caf",
+      "notes": ["The SHA-256 is for the complete 153-image locally cached HM 744 IIIF bundle."]
+    },
+    {
+      "id": "evidence:metadata-dutschke",
+      "type": "scholarly_source",
+      "citation": "C. W. Dutschke with R. H. Rouse et al., Guide to Medieval and Renaissance Manuscripts in the Huntington Library (San Marino, 1989), vol. 1, 247-251, electronic description of HM 744, item 21.",
+      "url": "https://web.archive.org/web/20180604091931id_/http://bancroft.berkeley.edu/digitalscriptorium/huntington/HM744.html",
+      "locator": "Item 21, f. i recto-verso",
+      "summary": "Identifies the Retrospective Review text as transcribed from this manuscript when privately held, separates the 1463 recto from the 1444 verso heading, records the severe deterioration and reagent damage, and discusses probable Fyler-family ownership.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-sutton",
+      "type": "scholarly_source",
+      "citation": "Anne F. Sutton, 'Alice Claver, Silkwoman (d. 1489),' in Caroline M. Barron and Anne F. Sutton, eds., Medieval London Widows, 1300-1500 (London: Hambledon Press, 1994), 135-136 and n. 20.",
+      "url": "https://books.google.com/books?id=3-veBAAAQBAJ",
+      "locator": "pp. 135-136, especially n. 20",
+      "summary": "Connects HM 744, a merchant mark, Thomas and possibly Beatrice Fyler, the 1463 'litill Barw' inventory, and Thomas Fyler's documented property at Little Baddow; it supports contextual association but not secure authorship.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:metadata-lmes",
+      "type": "scholarly_source",
+      "citation": "Late Medieval English Scribes, manuscript record 237, San Marino, Huntington Library, HM 744.",
+      "url": "https://www.medievalscribes.com/index.php?browse=manuscripts&id=237&navappellation=John+Brode&navtype=scribes",
+      "summary": "A scholarly project record that describes the inventories on the two back flyleaves as dated 1444 and 1463 in the same hand and probably written by or for John Fyler; this conflicts with a simple Thomas-Fyler authorship inference and is preserved as an unresolved attribution question.",
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:writer-identity",
+      "question": "Was the 1463 inventory written by Thomas Fyler, John Fyler, another Fyler-family member, or an unidentified householder?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare the inventory hand and merchant marks against identified Fyler-family entries throughout HM 744.", "Consult specialist paleographic work or request a Huntington curatorial opinion before strengthening any attribution."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-retrospective-review", "evidence:metadata-dutschke", "evidence:metadata-sutton", "evidence:metadata-lmes"],
+      "notes": ["The present manifest keeps the author anonymous and treats Thomas Fyler only as a low-confidence attribution."]
+    },
+    {
+      "id": "question:w-identity",
+      "question": "Who was the contributor or transcriber signing the 1852 article as 'W.'?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Search publisher correspondence, contributor indexes, and contemporary journal notices for the new-series Retrospective Review."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-retrospective-review", "evidence:metadata-xml"],
+      "notes": ["No reliable evidence was found for expanding W. to Thomas Wright."]
+    },
+    {
+      "id": "question:diplomatic-readings",
+      "question": "Which readings and layout details on damaged HM 744 f. ir can now be recovered independently of the 1852 transcription?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare the high-resolution provider image line by line with the 1852 print and XML.", "Ask Huntington whether higher-resolution or multispectral imaging exists for the reagent-darkened flyleaf."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:metadata-retrospective-review", "evidence:metadata-huntington-visual", "evidence:metadata-dutschke"],
+      "notes": ["Dutschke marks several supplied words as no longer present and reports damage and reagent treatment; the print may preserve readings no longer legible, but the exact state at transcription is not established."]
+    }
+  ],
+  "notes": [
+    "The 1852 article is the immediate source of the U-M encoding; the current manuscript shelfmark is Huntington HM 744, not HM 114.",
+    "The collected Retrospective Review volume is dated 1853, but the article's running headers and installment chronology date its issue to November 1852.",
+    "The Huntington catalog's broad 1425-1450 date describes the codex's principal contents and must not replace the inventory's explicit date of 15 May 1463.",
+    "The complete HM 744 digital sequence is cached locally; the work-specific locus is f. ir/canvas 145, while f. iv/canvas 146 contains separate 1444 material."
+  ]
+}

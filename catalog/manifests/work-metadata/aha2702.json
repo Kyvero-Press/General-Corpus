@@ -1,0 +1,538 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:aha2702",
+  "work_id": "aha2702",
+  "record_status": "reviewed",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "cataloging_subject": {
+    "id": "work:aha2702",
+    "unit_type": "edited_selection",
+    "label": "Legends of the Holy Rood: Symbols of the Passion and Cross-Poems",
+    "scope_note": "The cataloging subject is the edition-defined selection represented by University of Michigan item AHA2702.0001.001: thirteen medieval items or witness-versions from Richard Morris's numbered texts II–IV and VI–XIII, plus three appendix works, as encoded from printed pp. 17–97 and 107–224 of Morris's 1871 EETS volume. It is not one homogeneous medieval work, all versions of any constituent work, Morris's complete volume, the omitted Old English items I and V, the omitted front or back matter, the whole manuscripts or 1493 book from which the texts were edited, the U-M encoding, or the repository XML."
+  },
+  "catalog_summary": {
+    "title": "Legends of the Holy Rood: Symbols of the Passion and Cross-Poems",
+    "author": "Multiple anonymous Middle English authors and translators",
+    "editor": "Richard Morris",
+    "date": "Texts attested c. 1300–1493; edition-defined selection first published 1871",
+    "region": "England (multiple textual and dialect regions); edited and published in London",
+    "genres": [
+      "True Cross legends",
+      "Devotional poetry",
+      "Religious debate",
+      "Arma Christi literature",
+      "Hagiography",
+      "Religious prose",
+      "Prayer and hours"
+    ],
+    "form": "mixed",
+    "language_codes": ["enm", "lat"],
+    "tags": [
+      "middle-english", "true-cross", "holy-rood", "passion", "arma-christi",
+      "virgin-mary", "helena", "invention-of-the-cross", "exaltation-of-the-cross",
+      "religious-debate", "devotional-poetry", "religious-prose", "book-of-hours",
+      "liturgical-year", "golden-legend", "manuscript-transmission", "eets", "edited-selection"
+    ]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "AHA2702.0001.001", "uri": "https://name.umdl.umich.edu/AHA2702.0001.001"},
+    {"scheme": "CME source filename", "value": "aha2702"},
+    {"scheme": "EETS Original Series", "value": "46"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Legends of the Holy Rood: Symbols of the Passion and Cross-Poems",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "Normalized from Richard Morris's 1871 title page",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "title:original-edition",
+      "type": "original",
+      "value": "Legends of the Holy Rood; Symbols of the Passion and Cross-Poems. In Old English of the Eleventh, Fourteenth, and Fifteenth Centuries. Edited from MSS. in the British Museum and Bodleian Libraries; with Introduction, Translations, and Glossarial Index",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "Richard Morris",
+      "scope": {"kind": "whole", "description": "Title of the complete 1871 edition; the encoded selection excludes its Old English texts and paratext"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris"]},
+      "notes": ["The title's century labels belong to the complete volume and should not be read as a complete date statement for the narrower encoded selection."]
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Legends of the Holy Rood",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "Cataloging abbreviation",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-umich"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:richard-morris", "type": "person", "name": "Richard Morris"},
+    {"id": "agent:william-caxton", "type": "person", "name": "William Caxton", "notes": ["Translator and adapter of the English Golden Legend prose represented in parts XI and XII."]},
+    {"id": "agent:jacobus-de-voragine", "type": "person", "name": "Jacobus de Voragine", "alternate_names": ["James of Voragine"], "notes": ["Author traditionally associated with the Latin Legenda aurea behind the English Golden Legend; not author of this whole selection."]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-authors",
+      "display_name": "Multiple anonymous Middle English authors and translators",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole", "description": "The sixteen represented medieval items or witness-versions; this collective display does not posit a single author"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "responsibility:morris-editor",
+      "agent_id": "agent:richard-morris",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1871 edition-defined selection and its apparatus"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "responsibility:morris-collator",
+      "agent_id": "agent:richard-morris",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:ii-ashmole", "part:xiii-royal"], "description": "The Ashmole version collated with Harley 2277 and Royal Symbols readings collated with Additional 11748"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris"]}
+    },
+    {
+      "id": "responsibility:caxton-translator",
+      "agent_id": "agent:william-caxton",
+      "role": "translator",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"], "description": "English Golden Legend prose as printed in 1493"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-istc", "evidence:metadata-morris"]}
+    },
+    {
+      "id": "responsibility:caxton-adapter",
+      "agent_id": "agent:william-caxton",
+      "role": "adapter",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"], "description": "English Golden Legend prose as printed in 1493"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-istc"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:attestation-range",
+      "type": "first_known_attestation",
+      "display": "Represented textual states are attested from about 1300 or the early fourteenth century through the 1493 Golden Legend printing",
+      "normalized": {"not_before": 1300, "not_after": 1493},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-ashmole", "evidence:metadata-vernon", "evidence:metadata-istc"]},
+      "notes": ["This range dates witnesses and the source print, not composition of all constituent works. Morris dated Ashmole 43 to the late thirteenth century, while the current Bodleian catalog dates it to the first quarter of the fourteenth."]
+    },
+    {
+      "id": "date:selection-publication",
+      "type": "first_publication",
+      "display": "1871",
+      "normalized": {"not_before": 1871, "not_after": 1871},
+      "scope": {"kind": "whole", "description": "First publication of Morris's edition-defined selection"},
+      "source_lineage_entity_id": "edition:morris:holy-rood-1871",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "date:golden-legend-source",
+      "type": "first_known_attestation",
+      "display": "20 May 1493",
+      "normalized": {"not_before": 1493, "not_after": 1493},
+      "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"], "description": "Date of the exact printed edition used by Morris"},
+      "source_lineage_entity_id": "edition:de-worde:golden-legend-1493",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-istc", "evidence:metadata-morris"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:london", "label": "London", "kind": "settlement", "broader_place_ids": ["place:england"]},
+    {"id": "place:westminster", "label": "Westminster", "kind": "settlement", "broader_place_ids": ["place:england"]},
+    {"id": "place:west-midlands", "label": "West Midlands", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:gloucestershire", "label": "Gloucestershire", "kind": "dialect_region", "broader_place_ids": ["place:england"]},
+    {"id": "place:lancashire", "label": "Lancashire", "kind": "region", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "place-statement:london-publication",
+      "place_id": "place:london",
+      "type": "associated_place",
+      "scope": {"kind": "whole", "description": "Publication place of the 1871 edition"},
+      "source_lineage_entity_id": "edition:morris:holy-rood-1871",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris"]}
+    },
+    {
+      "id": "place-statement:westminster-printing",
+      "place_id": "place:westminster",
+      "type": "associated_place",
+      "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"], "description": "Printing place of the 1493 Golden Legend source"},
+      "source_lineage_entity_id": "edition:de-worde:golden-legend-1493",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-istc"]}
+    },
+    {
+      "id": "place-statement:vernon-west-midlands",
+      "place_id": "place:west-midlands",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:ii-vernon", "part:viii-mary-cross"], "description": "Association of the Vernon Manuscript"},
+      "source_lineage_entity_id": "witness:bodleian:MS-Eng-poet-a-1",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-vernon"]}
+    },
+    {
+      "id": "place-statement:ashmole-gloucestershire",
+      "place_id": "place:gloucestershire",
+      "type": "dialect_region",
+      "scope": {"kind": "part", "part_ids": ["part:ii-ashmole"], "description": "Current Bodleian catalog dialect localization"},
+      "source_lineage_entity_id": "witness:bodleian:MS-Ashmole-43",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-ashmole"]}
+    },
+    {
+      "id": "place-statement:fairfax-lancashire",
+      "place_id": "place:lancashire",
+      "type": "associated_place",
+      "scope": {"kind": "part", "part_ids": ["part:vi-fairfax"], "description": "Current Bodleian catalog association of Fairfax 14"},
+      "source_lineage_entity_id": "witness:bodleian:MS-Fairfax-14",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-fairfax"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "The represented medieval texts, excluding embedded Latin and modern editorial matter"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:xiii-royal", "part:xiii-additional", "part:horae"], "description": "Arma Christi captions and incipits of prayers or offices"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:mixed-whole",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "The selection combines thirteen verse-only items, two prose-only Golden Legend items, and one mixed verse/prose Horae item.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "form:verse-items",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:ii-ashmole", "part:ii-vernon", "part:iii-rood-story", "part:iv-finding", "part:vi-fairfax", "part:vii-exposition", "part:viii-mary-cross", "part:ix-o-and-i", "part:x-o-for-i", "part:xiii-royal", "part:xiii-additional", "part:appendix-dispute", "part:festivals"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "form:prose-items",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}
+    },
+    {
+      "id": "form:horae-mixed",
+      "value": "mixed",
+      "scope": {"kind": "part", "part_ids": ["part:horae"]},
+      "description": "Verse prayers with prose or rubric-like material and Latin incipits.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:true-cross-legends", "term": "true-cross-legends", "label": "True Cross legends", "scheme": "General Corpus local genre vocabulary", "primary": true, "scope": {"kind": "part", "part_ids": ["part:ii-ashmole", "part:ii-vernon", "part:iii-rood-story", "part:iv-finding", "part:vi-fairfax", "part:vii-exposition", "part:xi-invention-prose", "part:xii-exaltation-prose"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}},
+    {"id": "genre:devotional-poetry", "term": "devotional-poetry", "label": "Devotional poetry", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "part", "part_ids": ["part:ix-o-and-i", "part:x-o-for-i", "part:xiii-royal", "part:xiii-additional", "part:festivals", "part:horae"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev"]}},
+    {"id": "genre:religious-debate", "term": "religious-debate", "label": "Religious debate", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "part", "part_ids": ["part:viii-mary-cross", "part:appendix-dispute"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}},
+    {"id": "genre:arma-christi", "term": "arma-christi", "label": "Arma Christi literature", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "part", "part_ids": ["part:xiii-royal", "part:xiii-additional"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-royal17", "evidence:metadata-add22029", "evidence:metadata-dimev"]}},
+    {"id": "genre:hagiography", "term": "hagiography", "label": "Hagiography", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "selected_passages", "part_ids": ["part:ii-ashmole", "part:ii-vernon", "part:xi-invention-prose", "part:xii-exaltation-prose"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-dimev"]}},
+    {"id": "genre:religious-prose", "term": "religious-prose", "label": "Religious prose", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "part", "part_ids": ["part:xi-invention-prose", "part:xii-exaltation-prose"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml", "evidence:metadata-istc"]}},
+    {"id": "genre:prayer-hours", "term": "prayer-hours", "label": "Prayer and hours", "scheme": "General Corpus local genre vocabulary", "scope": {"kind": "part", "part_ids": ["part:horae"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-liturg", "evidence:metadata-morris"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:holy-cross", "term": "holy-cross", "label": "Exaltation of the Holy Cross", "scheme": "General Corpus local subject vocabulary", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}},
+    {"id": "subject:passion", "term": "passion-of-christ", "label": "Passion of Christ", "scheme": "General Corpus local subject vocabulary", "scope": {"kind": "part", "part_ids": ["part:ix-o-and-i", "part:x-o-for-i", "part:xiii-royal", "part:xiii-additional", "part:horae"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}},
+    {"id": "subject:helena", "term": "saint-helena", "label": "Saint Helena", "scheme": "General Corpus local subject vocabulary", "scope": {"kind": "selected_passages", "part_ids": ["part:ii-ashmole", "part:ii-vernon", "part:iv-finding", "part:vi-fairfax", "part:xi-invention-prose"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris"]}},
+    {"id": "subject:mary", "term": "virgin-mary", "label": "Virgin Mary", "scheme": "General Corpus local subject vocabulary", "scope": {"kind": "part", "part_ids": ["part:viii-mary-cross", "part:appendix-dispute"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}},
+    {"id": "subject:liturgical-year", "term": "liturgical-year", "label": "Christian liturgical year", "scheme": "General Corpus local subject vocabulary", "scope": {"kind": "part", "part_ids": ["part:iv-finding", "part:vii-exposition", "part:festivals", "part:horae"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml"]}}
+  ],
+  "tags": [
+    "middle-english", "true-cross", "holy-rood", "passion", "arma-christi", "virgin-mary",
+    "helena", "invention-of-the-cross", "exaltation-of-the-cross", "religious-debate",
+    "devotional-poetry", "religious-prose", "book-of-hours", "liturgical-year",
+    "golden-legend", "manuscript-transmission", "eets", "edited-selection"
+  ],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "An edition-defined anthology of Middle English traditions concerning the Holy Cross and Christ's Passion. It juxtaposes alternate manuscript versions of True Cross legends, poems on finding and exalting the Cross, two versions of a debate between Mary and the Cross, short Passion refrains, prose excerpts from the 1493 English Golden Legend, two text-image versions of the Symbols of the Passion, and three appendix works on Mary and the Cross, church festivals, and the Hours of the Cross.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml", "evidence:metadata-computation"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "The encoded selection preserves thirteen main-text items or witness-versions—Morris II twice, III, IV, VI, VII, VIII, IX, X, XI, XII, and XIII twice—and three appendix works. Front matter, Old English item I, Old English item V, and back matter are represented only by omitted-content scaffolding and are outside the cataloged subject.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "Version labels are witness- and edition-specific. The two item-II texts, the two item-XIII texts, and the two Mary-and-the-Cross texts are not collapsed into single abstract works; Morris's direct sources, collation sources, digital surrogates, and the encoded selection remain separate in the lineage manifest.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-xml", "evidence:metadata-dimev"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 16,
+    "sections": 2,
+    "prose_only_items": 2,
+    "verse_only_items": 13,
+    "mixed_items": 1,
+    "verse_groups": 195,
+    "verse_lines": 4807,
+    "description": "The cataloged hierarchy has two editorial containers and sixteen represented intellectual items or witness-versions: thirteen in the main text and three in the appendix. The main text contributes 4,067 L elements in 129 LG containers and the appendix 740 L elements in 66 LG containers, for 4,807 L and 195 LG overall. Form classification counts thirteen verse-only items, two prose-only Golden Legend items, and one mixed Horae item. Sixty-eight represented P elements comprise ten Golden Legend prose paragraphs, fifty Symbols illustration/text placeholders, and eight Horae paragraphs or rubric-like blocks; P is not an item count. Five further empty P placeholders belong to omitted item V, and three P elements outside the represented divisions belong to carrier/header/title structures, accounting for the XML-wide total of 76 P. The XML also has 272 PB and 151 MILESTONE elements, but these are carrier and source-locus scaffolding rather than additional intellectual items. Printed-page coverage is discontinuous: pp. 17–97 and 107–224.",
+    "evidence_ids": ["evidence:metadata-computation", "evidence:metadata-xml", "evidence:metadata-morris"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:main-text", "parent_id": null, "sequence": 1, "type": "section", "label": "Main-text selection: Morris II–IV and VI–XIII", "summary": "Container for thirteen represented items or witness-versions, excluding Old English items I and V; child work parts carry the additive item and line metrics.", "item_count": 0, "textual_form": "mixed",
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML structure", "value": "BODY/DIV1[4], excluding DIV2[@TYPE='omitted Old English legend']; printed pp. 17–97 and 107–193"},
+        {"lineage_entity_id": "edition:morris:holy-rood-1871", "scheme": "printed pages", "value": "pp. 17–97 and 107–193"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris"]
+    },
+    {
+      "id": "part:ii-ashmole", "parent_id": "part:main-text", "sequence": 1, "type": "work", "label": "II. Þe Holy Rode — Ashmole version", "summary": "A South English Legendary Holy Rood version edited from Ashmole 43 and collated with the imperfect Harley 2277 text.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 520},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[1]/DIV3; printed pp. 18–60"},
+        {"lineage_entity_id": "witness:bodleian:MS-Ashmole-43", "scheme": "manuscript locus", "value": "ff. 63v–71v"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-ashmole", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:ii-vernon", "parent_id": "part:main-text", "sequence": 2, "type": "work", "label": "II. Hou þe Holy Cros Was Y-founde — Vernon version", "summary": "The Vernon Manuscript version of the same broad Holy Rood tradition, printed in parallel with the Ashmole version.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 520},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[2]/DIV3; printed pp. 19–61"},
+        {"lineage_entity_id": "witness:bodleian:MS-Eng-poet-a-1", "scheme": "manuscript locus", "value": "ff. 28vb–30ra"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-vernon", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:iii-rood-story", "parent_id": "part:main-text", "sequence": 3, "type": "work", "label": "III. The Story of the Holy Rood", "summary": "A Cross-tree narrative embedded in the Expanded Northern Passion in Harley 4196.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 8, "verse_lines": 860},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[3]/DIV3; printed pp. 62–86"},
+        {"lineage_entity_id": "witness:bl:Harley-4196", "scheme": "manuscript locus", "value": "ff. 76va–81r, within the Expanded Northern Passion at ff. 67r–86r"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-harley4196", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:iv-finding", "parent_id": "part:main-text", "sequence": 4, "type": "work", "label": "IV. Finding of the Cross", "summary": "A verse account for the feast of the Invention of the Cross from Harley 4196.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 2, "verse_lines": 359},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[4]/DIV3; printed pp. 87–97"},
+        {"lineage_entity_id": "witness:bl:Harley-4196", "scheme": "manuscript locus", "value": "ff. 149vb–151va"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-harley4196", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:vi-fairfax", "parent_id": "part:main-text", "sequence": 5, "type": "work", "label": "VI. How þe Hali Cros Was Fundin be Seint Elaine", "summary": "A northern verse Finding of the Cross text copied in Fairfax 14.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 5, "verse_lines": 494},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[6]/DIV3; printed pp. 107–121"},
+        {"lineage_entity_id": "witness:bodleian:MS-Fairfax-14", "scheme": "manuscript locus", "value": "ff. 88v–91v"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-fairfax"]
+    },
+    {
+      "id": "part:vii-exposition", "parent_id": "part:main-text", "sequence": 6, "type": "work", "label": "VII. Exposition of the Holy Rood", "summary": "A verse narrative for the feast of the Exaltation of the Cross from Harley 4196.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 1, "verse_lines": 306},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[7]/DIV3; printed pp. 122–130"},
+        {"lineage_entity_id": "witness:bl:Harley-4196", "scheme": "manuscript locus", "value": "ff. 177rb–179ra"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-harley4196", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:viii-mary-cross", "parent_id": "part:main-text", "sequence": 7, "type": "work", "label": "VIII. Dispute Between Mary and the Cross — Vernon version", "summary": "A stanzaic debate in which Mary and the Cross contest responsibility for Christ's suffering.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 40, "verse_lines": 528},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[8]/DIV3; printed pp. 131–149"},
+        {"lineage_entity_id": "witness:bodleian:MS-Eng-poet-a-1", "scheme": "manuscript locus", "value": "ff. 315vc–316vc"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-vernon", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:ix-o-and-i", "parent_id": "part:main-text", "sequence": 8, "type": "work", "label": "IX. With an O and an I", "summary": "A six-stanza Passion lyric with a recurring O-and-I refrain.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 6, "verse_lines": 60},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[9]/DIV3; printed pp. 150–152"},
+        {"lineage_entity_id": "witness:bodleian:Douce-126", "scheme": "manuscript locus", "value": "ff. 90v–91r according to Morris's milestone mapping; DIMEV gives f. 90va"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-douce126", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:x-o-for-i", "parent_id": "part:main-text", "sequence": 9, "type": "work", "label": "X. With an O for an I", "summary": "A short Passion lyric whose refrain pairs O and I.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 1, "verse_lines": 16},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[10]/DIV3; printed p. 153"},
+        {"lineage_entity_id": "witness:bodleian:Douce-128", "scheme": "manuscript locus", "value": "f. 258r"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-douce128", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:xi-invention-prose", "parent_id": "part:main-text", "sequence": 10, "type": "work", "label": "XI. The Invention of the Holy Cross", "summary": "Middle English prose from the 20 May 1493 Golden Legend printing, edited by Morris as his item XI.", "item_count": 1, "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[11]/DIV3; 4 P; printed pp. 154–160"},
+        {"lineage_entity_id": "edition:de-worde:golden-legend-1493", "scheme": "printed leaves", "value": "Cxxxi column 1–Cxxxiii column 2"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-istc"]
+    },
+    {
+      "id": "part:xii-exaltation-prose", "parent_id": "part:main-text", "sequence": 11, "type": "work", "label": "XII. The Exaltation of the Cross", "summary": "Middle English prose from the 20 May 1493 Golden Legend printing, edited by Morris as his item XII.", "item_count": 1, "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[12]/DIV3; 6 P; printed pp. 161–169"},
+        {"lineage_entity_id": "edition:de-worde:golden-legend-1493", "scheme": "printed leaves", "value": "CClxviib column 1–CClxx column 1"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-istc"]
+    },
+    {
+      "id": "part:xiii-royal", "parent_id": "part:main-text", "sequence": 12, "type": "work", "label": "XIII. The Symbols of the Passion — Royal version", "summary": "A text-image Arma Christi sequence from Royal 17 A XXVII; the encoding preserves verse and captions but reduces the twenty-four miniature sequence to structural placeholders.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 29, "verse_lines": 252},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[13]/DIV3; 252 L, 29 LG, 26 P; printed pp. 170–196"},
+        {"lineage_entity_id": "witness:bl:Royal-MS-17-A-XXVII-ff71-97", "scheme": "manuscript locus", "value": "ff. 72v–81r; O Vernicle ff. 72v–78v and thanksgiving prayer ff. 79r–80r, followed by further captions/text through f. 81r"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-royal17", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:xiii-additional", "parent_id": "part:main-text", "sequence": 13, "type": "work", "label": "XIII. The Symbols of the Passion — Additional 22029 version", "summary": "The Arma Christi roll version, whose twenty-four illustrations were supplied to Morris by Professor de la Motte; the encoding retains empty illustration placeholders rather than the pictures.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 24, "verse_lines": 152},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[4]/DIV2[14]/DIV3; 152 L, 24 LG, 24 empty P illustration placeholders; printed pp. 171–193"},
+        {"lineage_entity_id": "witness:bl:Add-MS-22029", "scheme": "manuscript locus", "value": "ff. 1r–4v, the complete roll"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-add22029", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:appendix", "parent_id": null, "sequence": 2, "type": "appendix", "label": "Appendix", "summary": "Container for three additional Middle English works from Royal 18 A X and Bodleian MS Liturg. 104; child work parts carry the additive item and line metrics.", "item_count": 0, "textual_form": "mixed",
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML structure", "value": "BODY/DIV1[5]; printed pp. 197–224"},
+        {"lineage_entity_id": "edition:morris:holy-rood-1871", "scheme": "printed pages", "value": "pp. 197–224"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-computation", "evidence:metadata-morris"]
+    },
+    {
+      "id": "part:appendix-dispute", "parent_id": "part:appendix", "sequence": 1, "type": "work", "label": "Dispute Between Mary and the Cross — Royal version", "summary": "A longer Royal 18 A X version of the Mary-and-the-Cross debate, arranged against the corresponding stanzas of Morris's item VIII.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 28, "verse_lines": 372},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[5]/DIV2[1]/DIV3[1]; printed pp. 197–209"},
+        {"lineage_entity_id": "witness:bl:Royal-MS-18-A-X", "scheme": "manuscript locus", "value": "ff. 126v–130v"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-royal18", "evidence:metadata-dimev"]
+    },
+    {
+      "id": "part:festivals", "parent_id": "part:appendix", "sequence": 2, "type": "work", "label": "Festivals of the Church", "summary": "A verse sequence on church feasts, incomplete at the end in Royal 18 A X.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 31, "verse_lines": 335},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[5]/DIV2[1]/DIV3[2]; printed pp. 210–221"},
+        {"lineage_entity_id": "witness:bl:Royal-MS-18-A-X", "scheme": "manuscript locus", "value": "ff. 130v–134v; incomplete ending"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-royal18", "evidence:metadata-dimev"],
+      "notes": ["The XML has 335 L elements. The British Library catalog describes the witness as incomplete at line 333; the difference likely reflects counting conventions and remains open."]
+    },
+    {
+      "id": "part:horae", "parent_id": "part:appendix", "sequence": 3, "type": "work", "label": "Horae de Cruce", "summary": "English verse portions of the Hours of the Cross with the beginnings of preceding Latin prayers and rubrics, selected discontinuously from Bodleian MS Liturg. 104.", "item_count": 1, "textual_form": "mixed",
+      "metrics": {"mixed_items": 1, "verse_groups": 7, "verse_lines": 33},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:aha2702", "scheme": "XML division", "value": "BODY/DIV1[5]/DIV2[2]/DIV3; printed pp. 222–224"},
+        {"lineage_entity_id": "witness:bodleian:MS-Liturg-104", "scheme": "manuscript loci from XML milestones", "value": "ff. 50r–52v, 61r–61v, 66r–67r, 70v–71v, 76v–77v, 82r–82v, and 89v–91r"}
+      ], "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-liturg", "evidence:metadata-dimev"],
+      "notes": ["DIMEV gives a broader locus of ff. 49–88, while the encoding's seven milestone sequences extend through f. 91r; manuscript autopsy is needed to reconcile the conventions.", "Morris describes seventeen couplets, while the XML has 33 L elements rather than 34; the discrepancy is not silently corrected."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:golden-legend",
+      "title": "Legenda aurea sanctorum, sive Lombardica historia [English]: The Golden Legend",
+      "relation": "contained_in",
+      "identifiers": [
+        {"scheme": "ISTC", "value": "ij00150000", "uri": "https://data.cerl.org/istc/ij00150000"},
+        {"scheme": "STC", "value": "24875"},
+        {"scheme": "GW", "value": "M11436"}
+      ],
+      "evidence_ids": ["evidence:metadata-istc", "evidence:metadata-morris"],
+      "notes": ["Only the Invention and Exaltation prose passages from the 1493 printing are represented; the whole Golden Legend is not part of this cataloging subject."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:aha2702",
+    "manifest_path": "manifests/lineage/works/aha2702.json",
+    "bindings": [
+      {"metadata_target": "work:aha2702", "lineage_entity_id": "artifact:general-corpus:aha2702", "role": "repository_representation"},
+      {"metadata_target": "work:aha2702", "lineage_entity_id": "encoding:umich-cme:AHA2702.0001.001", "role": "digital_encoding"},
+      {"metadata_target": "work:aha2702", "lineage_entity_id": "edition:morris:holy-rood-1871", "role": "source_edition"},
+      {"metadata_target": "part:ii-ashmole", "lineage_entity_id": "witness:bodleian:MS-Ashmole-43", "role": "source_witness"},
+      {"metadata_target": "part:ii-ashmole", "lineage_entity_id": "witness:bl:Harley-MS-2277", "role": "related_source"},
+      {"metadata_target": "part:ii-vernon", "lineage_entity_id": "witness:bodleian:MS-Eng-poet-a-1", "role": "source_witness"},
+      {"metadata_target": "part:iii-rood-story", "lineage_entity_id": "witness:bl:Harley-4196", "role": "source_witness"},
+      {"metadata_target": "part:iv-finding", "lineage_entity_id": "witness:bl:Harley-4196", "role": "source_witness"},
+      {"metadata_target": "part:vi-fairfax", "lineage_entity_id": "witness:bodleian:MS-Fairfax-14", "role": "source_witness"},
+      {"metadata_target": "part:vii-exposition", "lineage_entity_id": "witness:bl:Harley-4196", "role": "source_witness"},
+      {"metadata_target": "part:viii-mary-cross", "lineage_entity_id": "witness:bodleian:MS-Eng-poet-a-1", "role": "source_witness"},
+      {"metadata_target": "part:ix-o-and-i", "lineage_entity_id": "witness:bodleian:Douce-126", "role": "source_witness"},
+      {"metadata_target": "part:x-o-for-i", "lineage_entity_id": "witness:bodleian:Douce-128", "role": "source_witness"},
+      {"metadata_target": "part:xi-invention-prose", "lineage_entity_id": "edition:de-worde:golden-legend-1493", "role": "source_edition"},
+      {"metadata_target": "part:xii-exaltation-prose", "lineage_entity_id": "edition:de-worde:golden-legend-1493", "role": "source_edition"},
+      {"metadata_target": "part:xiii-royal", "lineage_entity_id": "witness:bl:Royal-MS-17-A-XXVII-ff71-97", "role": "source_witness"},
+      {"metadata_target": "part:xiii-royal", "lineage_entity_id": "witness:bl:Add-MS-11748", "role": "related_source"},
+      {"metadata_target": "part:xiii-additional", "lineage_entity_id": "witness:bl:Add-MS-22029", "role": "source_witness"},
+      {"metadata_target": "part:appendix-dispute", "lineage_entity_id": "witness:bl:Royal-MS-18-A-X", "role": "source_witness"},
+      {"metadata_target": "part:festivals", "lineage_entity_id": "witness:bl:Royal-MS-18-A-X", "role": "source_witness"},
+      {"metadata_target": "part:horae", "lineage_entity_id": "witness:bodleian:MS-Liturg-104", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "Pinned CME source XML for aha2702", "repository_path": "CME/source/CME_phase_1-2/aha2702.xml", "summary": "Supplies the exact encoded selection, U-M header, titles, printed-page and manuscript milestones, line/group/paragraph structures, and omitted-content boundaries.", "sha256": "22ed7bc5b1b84458dde56394152809573a0dc70653975fdbf0697b657fbffa83"},
+    {"id": "evidence:metadata-computation", "type": "computational_inspection", "citation": "XPath audit of pinned aha2702 XML, 2026-07-16", "repository_path": "CME/source/CME_phase_1-2/aha2702.xml", "summary": "Audited the hierarchy and counts: sixteen represented items, 4,807 L, 195 LG, and 68 represented P elements, with omitted and carrier scaffolding counted separately.", "sha256": "22ed7bc5b1b84458dde56394152809573a0dc70653975fdbf0697b657fbffa83"},
+    {"id": "evidence:metadata-morris", "type": "linked_manifest_evidence", "citation": "Richard Morris, ed., Legends of the Holy Rood (EETS OS 46, 1871)", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:morris-scan", "summary": "Supports the edition boundary, titles, sources, loci, collation statements, and appendix structure."},
+    {"id": "evidence:metadata-umich", "type": "linked_manifest_evidence", "citation": "University of Michigan CME item AHA2702.0001.001", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:umich", "summary": "Supports the digital item identity and public record."},
+    {"id": "evidence:metadata-ashmole", "type": "linked_manifest_evidence", "citation": "Bodleian catalog and Digital Bodleian object for MS Ashmole 43", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-ashmole", "summary": "Supports the current shelfmark, date, origin, dialect, physical description, and exact target locus."},
+    {"id": "evidence:metadata-vernon", "type": "linked_manifest_evidence", "citation": "Bodleian catalog and Digital Bodleian object for MS Eng. poet. a. 1", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-vernon", "summary": "Supports the Vernon witness description and two target loci."},
+    {"id": "evidence:metadata-fairfax", "type": "linked_manifest_evidence", "citation": "Bodleian catalog for MS Fairfax 14", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-fairfax", "summary": "Supports the witness date, Lancashire association, language, and target locus."},
+    {"id": "evidence:metadata-douce126", "type": "linked_manifest_evidence", "citation": "Bodleian catalog for MS Douce 126", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-douce126", "summary": "Supports the witness identity, date, and access boundary."},
+    {"id": "evidence:metadata-douce128", "type": "linked_manifest_evidence", "citation": "Bodleian catalog for MS Douce 128", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-douce128", "summary": "Supports the witness identity, composite date, and access boundary."},
+    {"id": "evidence:metadata-liturg", "type": "linked_manifest_evidence", "citation": "Bodleian catalog and Digital Bodleian object for MS Liturg. 104", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bodleian-liturg104", "summary": "Supports the current shelfmark, Book of Hours identity, languages, and selected-image access."},
+    {"id": "evidence:metadata-harley4196", "type": "linked_manifest_evidence", "citation": "British Library Archives and Manuscripts record for Harley MS 4196", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bl-harley4196", "summary": "Supports the witness identity, date, material, languages, and direct loci."},
+    {"id": "evidence:metadata-royal17", "type": "linked_manifest_evidence", "citation": "British Library record for Royal MS 17 A XXVII, ff. 71–97", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bl-royal17", "summary": "Supports the exact manuscript component, date, target locus, and miniature/text sequence."},
+    {"id": "evidence:metadata-add22029", "type": "linked_manifest_evidence", "citation": "British Library record for Add MS 22029", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bl-add22029", "summary": "Supports the roll's full locus, date, dimensions, languages, and twenty-four miniatures."},
+    {"id": "evidence:metadata-royal18", "type": "linked_manifest_evidence", "citation": "British Library record for Royal MS 18 A X", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:bl-royal18", "summary": "Supports the two appendix loci and incomplete Festivals ending."},
+    {"id": "evidence:metadata-istc", "type": "linked_manifest_evidence", "citation": "CERL ISTC ij00150000", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:istc", "summary": "Supports the 1493 English Golden Legend's title, translator, printer, date, place, and identifiers."},
+    {"id": "evidence:metadata-dimev", "type": "linked_manifest_evidence", "citation": "DIMEV 2.0-alpha.1 records relevant to aha2702", "repository_path": "manifests/lineage/works/aha2702.json", "source_evidence_id": "evidence:dimev", "summary": "Supports modern witness loci, incipit-based identifications, and distinctions among constituent works and versions."}
+  ],
+  "open_questions": [
+    {"id": "question:golden-legend-copy", "question": "Which physical copy of the 20 May 1493 Golden Legend did Morris transcribe?", "status": "unresolved", "impact": "medium", "next_steps": ["Inspect Morris's papers or EETS production records and compare distinctive readings against extant copies."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-istc"]},
+    {"id": "question:golden-legend-edition-number", "question": "How should Morris's description of the 1493 printing as the third edition be reconciled with current catalogs that treat it as the second English edition or a reprint of 1483?", "status": "unresolved", "impact": "low", "next_steps": ["Consult current Caxton and Wynkyn de Worde bibliographies; preserve both attributed descriptions meanwhile."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-istc"]},
+    {"id": "question:horae-locus", "question": "Why do the XML milestones run through f. 91r while DIMEV gives ff. 49–88 for Horae de Cruce?", "status": "unresolved", "impact": "medium", "next_steps": ["Inspect all target leaves in MS Liturg. 104 or order images and reconcile modern and historical foliation."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-liturg", "evidence:metadata-dimev"]},
+    {"id": "question:horae-line-count", "question": "Does Morris's statement of seventeen couplets reflect a missing or merged line where the XML has 33 L elements?", "status": "unresolved", "impact": "low", "next_steps": ["Collate printed pp. 222–224 against the manuscript surfaces and inspect line-container boundaries."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]},
+    {"id": "question:festivals-count", "question": "Why does the British Library description refer to an incomplete ending at line 333 while the XML has 335 L elements?", "status": "unresolved", "impact": "low", "next_steps": ["Inspect Royal 18 A X ff. 130v–134v and compare catchwords, headings, and Morris's lineation."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-royal18", "evidence:metadata-morris"]},
+    {"id": "question:ashmole-date", "question": "Should the history-of-scholarship note retain Morris's late-thirteenth-century date alongside the current Bodleian first-quarter-fourteenth-century date?", "status": "resolved", "impact": "low", "next_steps": ["Retain both with attribution and use the current catalog date for present-day witness metadata."], "last_checked": "2026-07-16", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-ashmole"]}
+  ],
+  "notes": [
+    "Roman numerals follow Morris. Numbers I and V are absent because those Old English texts are outside the encoded selection, not because the cataloging omitted two represented works.",
+    "The two item-II versions, two item-XIII versions, and two Mary-and-the-Cross versions are counted separately because the edition and encoding transmit distinct textual states.",
+    "Illustration placeholders in the Symbols items are structural representation facts; they are not prose paragraphs and do not make those items mixed-form.",
+    "Manuscript dates are first-known-attestation evidence and are not silently converted into composition dates."
+  ]
+}

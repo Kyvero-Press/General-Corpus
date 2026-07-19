@@ -1,0 +1,1691 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CT",
+  "work_id": "CT",
+  "title": "The Canterbury Tales",
+  "primary_subject": "artifact:general-corpus:CT",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The approved General Corpus publication source is the repaired repository XML at CME/source/recent_changes/repairs_2023/CT.xml. It is a corrected version of the repository's CME_from_OTA copy, which derives ultimately from the 1993 Oxford Text Archive/University of Michigan electronic text. That encoding represents The Canterbury Tales on pp. 17–265 of F. N. Robinson's 1957 second edition of The Works of Geoffrey Chaucer while omitting the edition's front and back matter and notes. Robinson's eclectic text uses the Chaucer Society's printed Ellesmere transcript as its principal base representation and collates other printed Chaucer Society transcripts, among additional sources. Ellesmere and Hengwrt are distinct manuscript witnesses; their complete provider-published IIIF inventories are cached locally with exact work portions recorded, while physical-object completeness is stated separately.",
+  "languages": [
+    "enm",
+    "eng"
+  ],
+  "review_notes": [
+    "The abstract medieval work and its fifty-four represented component units are cataloged in the linked work-metadata manifest; lineage entities here are physical, editorial, or digital transmission objects.",
+    "The repaired publication XML and the CME_from_OTA copy entered the current CME Git history together. Their two running-text differences and December 2020 in-file correction comments are documented, but the shared import does not establish the complete repair workflow or authority for either reading.",
+    "Robinson's relationship to Ellesmere is routed through the Chaucer Society printed transcript because the checked evidence documents the printed source but does not prove direct autopsy of the Huntington codex. His edition remains eclectic rather than a diplomatic transcription.",
+    "Hengwrt is a major early comparator and a source in the Chaucer Society parallel-text layer; it is not claimed to be the immediate source of Robinson's whole text.",
+    "The CME_from_OTA path-specific CC BY-NC-SA 3.0 notice, current U-M No Copyright–United States language, the embedded 1993 Oxford Text Archive personal-scholarly-use notice, and the repository's software-worded Unlicense are recorded separately because their scopes and legal or contractual interaction are unresolved."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CT",
+      "type": "repository_artifact",
+      "label": "General Corpus repaired source XML for CT",
+      "description": "The exact XML selected by the publication-source override and currently bound to CT.pdf.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "CT"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "3b10412c4fbc3db0e0bb60310be85422dfd14e24"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/recent_changes/repairs_2023/CT.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "3b10412c4fbc3db0e0bb60310be85422dfd14e24",
+        "sha256": "00a3335e0a4b228500acaadfe862ed66f1226a150f7c21b7f617c79d823445c5"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:ct-version-diff"
+      ]
+    },
+    {
+      "id": "artifact:cme:CT-ota-copy",
+      "type": "repository_artifact",
+      "label": "CME_from_OTA repository copy of CT",
+      "description": "A second repository XML at CME/source/CME_from_OTA/CT.xml. It has the same structure as the repaired publication source but differs at two running-text readings. A path-specific repository notice says files in CME_from_OTA derive ultimately from Oxford Text Archive files and are redistributed under CC BY-NC-SA 3.0.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "CT"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "05b39b14328f5a30b830987b8a8ba164edee9873"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/CT.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "05b39b14328f5a30b830987b8a8ba164edee9873",
+        "sha256": "7902d4ac9daebcc305570388b4ceae2a4d15b80a828545dbf600ed115ae87830"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:ct-ota-repository-copy",
+        "evidence:ct-version-diff",
+        "evidence:cme-ota-path-license"
+      ],
+      "notes": [
+        "This file is not the approved CT publication source."
+      ]
+    },
+    {
+      "id": "artifact:cme:ota-path-license",
+      "type": "repository_artifact",
+      "label": "CME_from_OTA path-specific license notice",
+      "description": "The pinned repository notice for source/CME_from_OTA. It attributes the folder's files ultimately to Oxford Text Archive distributions and expressly says the repository redistributes them under CC BY-NC-SA 3.0.",
+      "identifiers": [
+        {
+          "scheme": "git-blob",
+          "value": "613b1c0bdca14107145749e19840d258485ce1df"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/read_me_license.txt",
+        "media_type": "text/plain",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "613b1c0bdca14107145749e19840d258485ce1df",
+        "sha256": "9129f6b4fc4dd9385c4acde807f5177391a0da36992831c3bbdfb9cecca65386"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:cme-ota-path-license"
+      ],
+      "notes": [
+        "This is a repository license assertion for the folder contents, not a conclusion about the underlying medieval text, Robinson's 1957 editorial contributions, or U-M's current distribution terms."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CT",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive / University of Michigan CME item CT",
+      "description": "A 1993 machine-readable Middle English text of Robinson's Canterbury Tales, now served in the University of Michigan Corpus of Middle English Prose and Verse.",
+      "identifiers": [
+        {
+          "scheme": "UMDL handle",
+          "value": "CT",
+          "uri": "https://name.umdl.umich.edu/CT"
+        },
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1678-C"
+        }
+      ],
+      "creator_ids": [
+        "agent:oxford-text-archive",
+        "agent:umich"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic publication",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ct-repaired-xml",
+            "evidence:umich-ct"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:umich-ct",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "edition:robinson:works-1957",
+      "type": "scholarly_edition",
+      "label": "Robinson's 1957 second edition of The Works of Geoffrey Chaucer",
+      "description": "The immediate printed source for the electronic text. The Canterbury Tales occupies pp. 17–265 in the source statement; Robinson uses the Chaucer Society's printed Ellesmere transcript as the base representation for an eclectic text and records selected variants.",
+      "creator_ids": [
+        "agent:chaucer",
+        "agent:robinson"
+      ],
+      "date_statements": [
+        {
+          "label": "second edition publication",
+          "value": "1957",
+          "normalized": "1957",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ct-repaired-xml",
+            "evidence:robinson-1957"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Geoffrey Chaucer, The Works of Geoffrey Chaucer, ed. F. N. Robinson, 2nd ed. (Boston: Houghton Mifflin, 1957), xliv + 1002 pp.; The Canterbury Tales at pp. 17–265.",
+        "title": "The Works of Geoffrey Chaucer",
+        "publisher": "Houghton Mifflin",
+        "publication_place": "Boston",
+        "date": "1957",
+        "pages": "17–265",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:robinson-1957",
+        "evidence:robinson-method",
+        "evidence:harvard-fragments"
+      ]
+    },
+    {
+      "id": "edition:chaucer-society:parallel-texts",
+      "type": "scholarly_edition",
+      "label": "Chaucer Society parallel-text publications of The Canterbury Tales",
+      "alternate_labels": [
+        "A Six-Text Print of Chaucer's Canterbury Tales"
+      ],
+      "description": "Printed diplomatic witness texts begun in 1868 with Ellesmere, Hengwrt, Cambridge Gg.4.27, Corpus Christi College Oxford 198, Petworth, and Lansdowne 851, followed by the separately printed Harley 7334 text in 1885 and Cambridge Dd.4.24 text in 1902. Robinson's documented base and collation set uses these printed witness representations among its sources.",
+      "creator_ids": [
+        "agent:furnivall",
+        "agent:chaucer-society"
+      ],
+      "date_statements": [
+        {
+          "label": "publication span represented here",
+          "value": "1868–1902",
+          "normalized": "1868/1902",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:chaucer-society-six-text",
+            "evidence:robinson-method"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Frederick J. Furnivall, ed., A Six-Text Print of Chaucer's Canterbury Tales and separately issued Chaucer Society texts of Harley 7334 and Cambridge Dd.4.24, Chaucer Society, First Series (London, 1868–1902).",
+        "title": "A Six-Text Print of Chaucer's Canterbury Tales",
+        "series": "Chaucer Society, First Series",
+        "publication_place": "London",
+        "date": "1868–1902",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:chaucer-society-six-text",
+        "evidence:robinson-method"
+      ],
+      "notes": [
+        "This entity represents the printed parallel-text source layer rather than a claim that Robinson consulted every named physical manuscript directly."
+      ]
+    },
+    {
+      "id": "witness:huntington:EL-26-C-9",
+      "type": "manuscript_witness",
+      "label": "Huntington Library MS EL 26 C 9 (Ellesmere Chaucer)",
+      "alternate_labels": [
+        "Ellesmere Manuscript",
+        "Ellesmere Chaucer"
+      ],
+      "description": "A deluxe illuminated manuscript of The Canterbury Tales produced in England, cataloged c. 1400–1410. It underlies the Chaucer Society Ellesmere transcript used as Robinson's principal base representation and supplies the Ellesmere-related order, subject to Robinson's collation and emendation.",
+      "identifiers": [
+        {
+          "scheme": "Huntington shelfmark",
+          "value": "mssEL 26 C 9"
+        },
+        {
+          "scheme": "IIIF manifest",
+          "value": "2838",
+          "uri": "https://hdl.huntington.org/iiif/info/p15150coll7/2838/manifest.json"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript production",
+          "value": "c. 1400–1410",
+          "normalized": "1400/1410",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:huntington-ellesmere-catalog",
+            "evidence:huntington-ellesmere-iiif"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:huntington",
+        "shelfmark": "mssEL 26 C 9",
+        "historical_designations": [
+          "EL 26 C 9"
+        ],
+        "catalog_url": "https://www.huntington.org/collections/lib-mssel-26-c-9",
+        "notes": "The physical manuscript is restricted; Huntington directs researchers to digital reproductions or the print facsimile."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "232 main text folios plus twelve cataloged non-text leaves (ii modern + iv contemporary before the text; iv modern + ii contemporary after it); 480 canvases in the current published IIIF sequence",
+        "format": "Illuminated manuscript codex",
+        "dimensions": "284 × 394 mm",
+        "notes": [
+          "The official item record dates the manuscript c. 1400–1410; a separate institutional feature page uses the narrower c. 1400–1405 range."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-catalog",
+        "evidence:huntington-ellesmere-iiif",
+        "evidence:robinson-method"
+      ]
+    },
+    {
+      "id": "facsimile:huntington:ellesmere-iiif",
+      "type": "facsimile",
+      "label": "Huntington 480-canvas published IIIF presentation of the Ellesmere Chaucer",
+      "description": "The complete official 480-canvas published sequence, including all 232 main folios and eight published preliminary/final leaves. Its own physical description lists twelve non-text leaves, so the sequence is complete as a provider-published inventory but does not reproduce four cataloged non-text leaves. The manifest describes 800-DPI scans made from color transparencies photographed after the manuscript's 1995 conservation.",
+      "creator_ids": [
+        "agent:huntington"
+      ],
+      "date_statements": [
+        {
+          "label": "current public IIIF sequence checked",
+          "value": "2026-07-14",
+          "normalized": "2026-07-14",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:huntington-ellesmere-iiif"
+          ]
+        }
+      ],
+      "reproduction_format": "IIIF Presentation 2 manifest with JPEG images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-iiif"
+      ]
+    },
+    {
+      "id": "witness:nlw:Peniarth-392D",
+      "type": "manuscript_witness",
+      "label": "National Library of Wales Peniarth MS 392D (Hengwrt Chaucer)",
+      "alternate_labels": [
+        "Hengwrt Chaucer",
+        "Hengwrt MS 154"
+      ],
+      "description": "An early, incomplete and differently ordered manuscript of The Canterbury Tales, cataloged [1395]–[1405] and written mainly by the same scribe as Ellesmere. Scholarship cited here describes it as generally accepted as the earliest attempt to assemble the Tales, a qualified relative-priority claim despite overlapping catalog date ranges. It is an important comparator represented in the Chaucer Society parallel texts, not Robinson's base manuscript.",
+      "identifiers": [
+        {
+          "scheme": "NLW shelfmark",
+          "value": "Peniarth MS 392D"
+        },
+        {
+          "scheme": "IIIF manifest",
+          "value": "4628556",
+          "uri": "https://iiif.llyfrgell.cymru/manifests/2.0/4628556/manifest.json"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript production",
+          "value": "[1395]–[1405]",
+          "normalized": "1395/1405",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:nlw-hengwrt-catalog",
+            "evidence:nlw-hengwrt-page"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:nlw",
+        "shelfmark": "Peniarth MS 392D",
+        "historical_designations": [
+          "Hengwrt MS 154"
+        ],
+        "catalog_url": "https://archives.library.wales/index.php/hengwrt-chaucer",
+        "notes": "Original physical access is authorized only and surrogates should normally be used."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "258 folios total: four modern binding leaves, original parchment ff. 2–250, and four modern binding leaves",
+        "format": "Manuscript codex",
+        "dimensions": "approximately 290 × 205 mm",
+        "notes": [
+          "The current red morocco binding dates from 1956; earlier covers are retained and included in the digital sequence.",
+          "The catalog records losses including Canon's Yeoman G.554–1481 and Parson/Retraction from X.1180 to the end."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-catalog",
+        "evidence:nlw-hengwrt-page",
+        "evidence:nlw-hengwrt-iiif",
+        "evidence:stubbs-hengwrt-earliest"
+      ]
+    },
+    {
+      "id": "facsimile:nlw:hengwrt-iiif",
+      "type": "facsimile",
+      "label": "National Library of Wales complete IIIF presentation of the Hengwrt Chaucer",
+      "description": "The official 518-canvas published sequence, including covers, disbound boards, an old-binding leaf, manuscript leaves, edges, and a 3D general view.",
+      "creator_ids": [
+        "agent:nlw"
+      ],
+      "date_statements": [
+        {
+          "label": "current public IIIF sequence checked",
+          "value": "2026-07-14",
+          "normalized": "2026-07-14",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:nlw-hengwrt-iiif"
+          ]
+        }
+      ],
+      "reproduction_format": "IIIF Presentation 2 manifest with JPEG images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-iiif",
+        "evidence:nlw-rights"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:chaucer",
+      "type": "person",
+      "name": "Geoffrey Chaucer",
+      "dates": "c. 1343–1400",
+      "identifiers": [
+        {
+          "scheme": "VIAF",
+          "value": "100185203",
+          "uri": "https://viaf.org/viaf/100185203"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:umich-ct",
+        "evidence:cooper-introduction"
+      ]
+    },
+    {
+      "id": "agent:robinson",
+      "type": "person",
+      "name": "Fred Norris Robinson",
+      "dates": "1871–1966",
+      "alternate_names": [
+        "F. N. Robinson",
+        "Fred N. Robinson"
+      ],
+      "evidence_ids": [
+        "evidence:robinson-1957"
+      ]
+    },
+    {
+      "id": "agent:furnivall",
+      "type": "person",
+      "name": "Frederick James Furnivall",
+      "dates": "1825–1910",
+      "alternate_names": [
+        "Frederick J. Furnivall",
+        "F. J. Furnivall"
+      ],
+      "identifiers": [
+        {
+          "scheme": "VIAF",
+          "value": "24616924",
+          "uri": "https://viaf.org/viaf/24616924"
+        }
+      ],
+      "evidence_ids": [
+        "evidence:chaucer-society-six-text"
+      ]
+    },
+    {
+      "id": "agent:chaucer-society",
+      "type": "organization",
+      "name": "Chaucer Society",
+      "evidence_ids": [
+        "evidence:chaucer-society-six-text"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:chaucer-society-ia-parts-1-2"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-ct",
+        "evidence:umich-cme-collection"
+      ]
+    },
+    {
+      "id": "agent:oxford-text-archive",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://ota.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:umich-ct"
+      ]
+    },
+    {
+      "id": "agent:kyvero",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:cme-ota-path-license",
+        "evidence:cme-license"
+      ]
+    },
+    {
+      "id": "agent:huntington",
+      "type": "organization",
+      "name": "The Huntington Library, Art Museum, and Botanical Gardens",
+      "urls": [
+        "https://www.huntington.org/"
+      ],
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-catalog",
+        "evidence:huntington-ellesmere-iiif"
+      ]
+    },
+    {
+      "id": "agent:nlw",
+      "type": "organization",
+      "name": "National Library of Wales",
+      "urls": [
+        "https://www.library.wales/"
+      ],
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-catalog",
+        "evidence:nlw-hengwrt-iiif"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:ct-ota-copy-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:cme:CT-ota-copy",
+      "object": "encoding:umich-cme:CT",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "CME_from_OTA repository XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M/OTA item CT"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ct-ota-repository-copy",
+          "evidence:umich-ct",
+          "evidence:cme-ota-path-license"
+        ],
+        "notes": "The path notice says this folder's files derive ultimately from Oxford Text Archive distributions. That supports the route but does not document the exact transfer event, intervening transformations, or byte identity with the mutable U-M presentation."
+      }
+    },
+    {
+      "id": "relation:ct-repaired-version-of-ota-copy",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:CT",
+      "object": "artifact:cme:CT-ota-copy",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Approved repaired XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Alternate repository XML"
+        },
+        "notes": "Structure and counts agree. Running text differs only at A.2232 (“that I feele” versus “that feele”) and A.3931 (“baar he in his pouche” versus “baar he is in his pouche”)."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ct-version-diff",
+          "evidence:umich-repaired-readings"
+        ],
+        "notes": "The relation records a closely related corrected version and exact differences, not a proven direct copy operation or Git chronology. Both paths first appear in the same imported commit. The repaired XML comments attribute the A.2232 insertion to “pfs” in December 2020 and date the A.3931 deletion to December 2020 without naming an editor."
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-robinson",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CT",
+      "object": "edition:robinson:works-1957",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Electronic Canterbury Tales text"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Robinson's edited Canterbury Tales",
+          "locators": [
+            "printed pp. 17–265"
+          ]
+        },
+        "notes": "The header says front matter, back matter, and editorial notes were omitted."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ct-repaired-xml",
+          "evidence:umich-ct",
+          "evidence:robinson-1957"
+        ]
+      }
+    },
+    {
+      "id": "relation:robinson-base-chaucer-society-ellesmere",
+      "type": "transcribes",
+      "subject": "edition:robinson:works-1957",
+      "object": "edition:chaucer-society:parallel-texts",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Robinson's Canterbury Tales text, selectively emended after collation",
+          "locators": [
+            "pp. 17–265"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "The printed Ellesmere transcript used as Robinson's principal base representation",
+          "locators": [
+            "Chaucer Society First Series nos. 2, 8, 16, 26, 32, 38, 50, and 70 (1868–1879)"
+          ]
+        },
+        "notes": "“Transcribes” here denotes the base-text route through a printed transcript. Robinson's edition is eclectic rather than a diplomatic reprint, and the checked evidence does not establish direct autopsy of the Huntington codex."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:robinson-method",
+          "evidence:harvard-fragments",
+          "evidence:chaucer-society-six-text"
+        ]
+      }
+    },
+    {
+      "id": "relation:robinson-collates-parallel-texts",
+      "type": "collated_against",
+      "subject": "edition:robinson:works-1957",
+      "object": "edition:chaucer-society:parallel-texts",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "The Canterbury Tales text and selected textual notes",
+          "locators": [
+            "pp. 17–265"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The seven other printed witness texts named in Robinson's documented collation set: Hengwrt, Cambridge Dd.4.24, Cambridge Gg.4.27, Corpus Christi College Oxford 198, Petworth, Lansdowne 851, and Harley 7334"
+        },
+        "notes": "Robinson also consulted Thynne's edition and Cardigan and Morgan manuscripts; those auxiliary layers are named in evidence but not expanded into entities in this focused graph."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:robinson-method",
+          "evidence:chaucer-society-six-text"
+        ]
+      }
+    },
+    {
+      "id": "relation:parallel-texts-transcribe-ellesmere",
+      "type": "transcribes",
+      "subject": "edition:chaucer-society:parallel-texts",
+      "object": "witness:huntington:EL-26-C-9",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Ellesmere parallel column"
+        },
+        "object": {
+          "kind": "part",
+          "description": "The Canterbury Tales",
+          "locators": [
+            "ff. 1r–232v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:chaucer-society-six-text",
+          "evidence:huntington-ellesmere-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:parallel-texts-transcribe-hengwrt",
+      "type": "transcribes",
+      "subject": "edition:chaucer-society:parallel-texts",
+      "object": "witness:nlw:Peniarth-392D",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Hengwrt parallel column"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Extant incomplete Canterbury Tales",
+          "locators": [
+            "original parchment ff. 2r–250v"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:chaucer-society-six-text",
+          "evidence:nlw-hengwrt-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:ellesmere-iiif-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:huntington:ellesmere-iiif",
+      "object": "witness:huntington:EL-26-C-9",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 480-canvas published digital object"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "All 232 main text folios and the eight preliminary/final leaves included in the published sequence",
+          "locators": [
+            "ff. 1r–232v",
+            "IIIF canvases 1–480"
+          ]
+        },
+        "notes": "The facsimile is complete relative to Huntington's published 480-canvas inventory, but the cataloged physical extent contains twelve non-text leaves and the published sequence shows eight; four physical non-text leaves therefore are not reproduced."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:huntington-ellesmere-iiif"
+        ]
+      }
+    },
+    {
+      "id": "relation:hengwrt-iiif-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:nlw:hengwrt-iiif",
+      "object": "witness:nlw:Peniarth-392D",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 518-canvas published digital object"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Bound manuscript object, retained old-binding material, and edges"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:nlw-hengwrt-iiif"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:ct-repaired",
+      "entity": "artifact:general-corpus:CT",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Exact raw file at the pinned CME Git commit",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/repairs_2023/CT.xml",
+      "repository_path": "CME/source/recent_changes/repairs_2023/CT.xml",
+      "local_copies": [
+        {
+          "label": "Approved repaired CT XML",
+          "path": "source-cache/CT/general-corpus-cme-ct-repaired.xml",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/repairs_2023/CT.xml",
+          "sha256": "00a3335e0a4b228500acaadfe862ed66f1226a150f7c21b7f617c79d823445c5",
+          "bytes": 1365609,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Byte-identical ignored cache of the approved publication source."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml"
+      ]
+    },
+    {
+      "id": "access:ct-ota-copy",
+      "entity": "artifact:cme:CT-ota-copy",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Exact raw file at the pinned CME Git commit",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/CT.xml",
+      "repository_path": "CME/source/CME_from_OTA/CT.xml",
+      "local_copies": [
+        {
+          "label": "CME_from_OTA alternate CT XML",
+          "path": "source-cache/CT/cme-from-ota-ct.xml",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/CT.xml",
+          "sha256": "7902d4ac9daebcc305570388b4ceae2a4d15b80a828545dbf600ed115ae87830",
+          "bytes": 1365512,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Byte-identical ignored cache of the alternate repository XML; this is not the approved CT publication source."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ct-ota-repository-copy",
+        "evidence:cme-ota-path-license"
+      ]
+    },
+    {
+      "id": "access:cme-ota-path-license",
+      "entity": "artifact:cme:ota-path-license",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Exact raw path-specific notice at the pinned CME Git commit",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt",
+      "repository_path": "CME/source/CME_from_OTA/read_me_license.txt",
+      "local_copies": [
+        {
+          "label": "CME_from_OTA path-specific license notice",
+          "path": "source-cache/CT/cme-from-ota-read-me-license.txt",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt",
+          "sha256": "9129f6b4fc4dd9385c4acde807f5177391a0da36992831c3bbdfb9cecca65386",
+          "bytes": 505,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "Plain text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:cme-ota-path-license"
+      ]
+    },
+    {
+      "id": "access:umich-ct",
+      "entity": "encoding:umich-cme:CT",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item table of contents, full text, search, and component views",
+      "url": "https://quod.lib.umich.edu/c/cme/CT",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/CT"
+      ],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:umich-ct"
+      ]
+    },
+    {
+      "id": "access:robinson-1957",
+      "entity": "edition:robinson:works-1957",
+      "resource_kind": "page_images",
+      "status": "registration_required",
+      "access_method": "Borrow a controlled digital copy through Internet Archive/Open Library when lending is available",
+      "url": "https://openlibrary.org/books/OL7381947M/Works_of_Geoffrey_Chaucer",
+      "alternate_urls": [
+        "https://archive.org/details/worksofgeoffreyc0000chau_o7w0",
+        "https://books.google.com/books/about/The_Works_of_Geoffrey_Chaucer.html?id=l7YrAAAAYAAJ"
+      ],
+      "cost": "free",
+      "format": "Restricted digital book / searchable bibliographic preview",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:robinson-1957"
+      ],
+      "notes": [
+        "No unrestricted complete public scan of the 1957 edition was verified; restricted copies were not cached. Print copies are widely held and purchasable second-hand, but prices vary."
+      ]
+    },
+    {
+      "id": "access:chaucer-society-umich",
+      "entity": "edition:chaucer-society:parallel-texts",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M Corpus of Middle English browse records and searchable full-text transcriptions",
+      "url": "https://quod.lib.umich.edu/c/cme/browse.html",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/AGZ8232.0001.001",
+        "https://name.umdl.umich.edu/AGZ8233.0001.001",
+        "https://name.umdl.umich.edu/AGZ8234.0001.001",
+        "https://name.umdl.umich.edu/AGZ8235.0001.001",
+        "https://name.umdl.umich.edu/AGZ8236.0001.001",
+        "https://name.umdl.umich.edu/ASH2689.0001.001",
+        "https://name.umdl.umich.edu/AGZ8246.0001.001",
+        "https://name.umdl.umich.edu/ASH3725.0001.001"
+      ],
+      "cost": "free",
+      "format": "HTML diplomatic digital texts",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:chaucer-society-six-text"
+      ],
+      "notes": [
+        "These are searchable transcriptions of the eight printed Chaucer Society witness texts relevant to Robinson's described source set, not page-image facsimiles of the printed volumes or manuscripts."
+      ]
+    },
+    {
+      "id": "access:chaucer-society-ia-parts-1-2",
+      "entity": "edition:chaucer-society:parallel-texts",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item with a directly downloadable scan of Parts I–II",
+      "url": "https://archive.org/details/ASix-textPrintOfChaucersCanterburyTalesInParallelColumnsFromThe",
+      "alternate_urls": [
+        "https://archive.org/download/ASix-textPrintOfChaucersCanterburyTalesInParallelColumnsFromThe/Six_Text_Print_Canterbury_Tales_pt1__pt2.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "A Six-Text Print, Parts I–II",
+          "path": "source-cache/CT/chaucer-society-six-text-parts-1-2.pdf",
+          "source_url": "https://archive.org/download/ASix-textPrintOfChaucersCanterburyTalesInParallelColumnsFromThe/Six_Text_Print_Canterbury_Tales_pt1__pt2.pdf",
+          "sha256": "2417b323e87c34b27ca09a825db3e4f877da81195c5dc5b3f29c38c4b766332d",
+          "bytes": 51069317,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The cached scan contains Parts I–II only; it is not a complete copy of the six-text series or the later Harley 7334 and Dd.4.24 transcript publications represented by this entity.",
+            "The provider PDF is readable as 346 pages, but qpdf reports malformed indirect references and linearization hint-table warnings; the cache preserves the provider bytes unchanged."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF page images",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:chaucer-society-ia-parts-1-2"
+      ]
+    },
+    {
+      "id": "access:ellesmere-facsimile",
+      "entity": "facsimile:huntington:ellesmere-iiif",
+      "provider_id": "agent:huntington",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Official Huntington digital object and IIIF Presentation manifest",
+      "url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/2838/",
+      "alternate_urls": [
+        "https://hdl.huntington.org/iiif/info/p15150coll7/2838/manifest.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Huntington Ellesmere Chaucer complete 480-canvas published object",
+          "path": "source-cache/CT/huntington-ellesmere-ms-el-26-c-9-complete.zip",
+          "source_url": "https://hdl.huntington.org/iiif/info/p15150coll7/2838/manifest.json",
+          "sha256": "3e552dd63919d8fe2daa60f40b64e54228e7ea79f27751d8838be48879ce6230",
+          "bytes": 217097769,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 480,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The Canterbury Tales in the Ellesmere manuscript",
+            "locators": [
+              "ff. 1r–232v",
+              "IIIF canvases 9–472 of 480"
+            ],
+            "start_url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/2367/",
+            "end_url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/2829/",
+            "notes": [
+              "The work occupies all 232 main text folios. The complete published-object cache also retains eight preliminary and final leaves, while four additional non-text leaves listed in the physical extent are absent from the provider's published sequence."
+            ]
+          },
+          "notes": [
+            "Complete official published IIIF sequence retrieved at the effective 1600-pixel width profile; complete coverage refers to the 480-canvas provider inventory, not every leaf in the physical extent statement.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 480 canvas images."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 / JPEG bundle",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-iiif"
+      ],
+      "notes": [
+        "A public viewer is not itself an affirmative image-reuse license; consult the separate rights record."
+      ]
+    },
+    {
+      "id": "access:ellesmere-physical",
+      "entity": "witness:huntington:EL-26-C-9",
+      "provider_id": "agent:huntington",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "Huntington restricts circulation of the manuscript and directs users to digital reproductions or the print facsimile",
+      "url": "https://www.huntington.org/collections/lib-mssel-26-c-9",
+      "contact": "reference@huntington.org",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-catalog"
+      ]
+    },
+    {
+      "id": "access:hengwrt-facsimile",
+      "entity": "facsimile:nlw:hengwrt-iiif",
+      "provider_id": "agent:nlw",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Official National Library of Wales digital object and IIIF Presentation manifest",
+      "url": "https://iiif.llyfrgell.cymru/manifests/2.0/4628556/manifest.json",
+      "alternate_urls": [
+        "https://damsssl.llgc.org.uk/iiif/2.0/4628556/manifest.json",
+        "https://www.library.wales/discover-learn/digital-exhibitions/manuscripts/the-middle-ages/the-hengwrt-chaucer/"
+      ],
+      "local_copies": [
+        {
+          "label": "National Library of Wales Peniarth MS 392D complete 518-canvas published object",
+          "path": "source-cache/CT/nlw-peniarth-ms-392d-hengwrt-complete.zip",
+          "source_url": "https://damsssl.llgc.org.uk/iiif/2.0/4628556/manifest.json",
+          "sha256": "551bdeab4426f4bd56ccc714222a9c5886201fa8603816c509b090361e5b4a9f",
+          "bytes": 95614573,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 518,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "The Canterbury Tales as transmitted by the Hengwrt manuscript",
+            "locators": [
+              "original parchment ff. 2r–250v",
+              "IIIF canvases 15–512 of 518"
+            ],
+            "start_url": "https://iiif.llyfrgell.cymru/iiif/4628571/full/!1200,1200/0/default.jpg",
+            "end_url": "https://iiif.llyfrgell.cymru/iiif/4629068/full/!1200,1200/0/default.jpg",
+            "notes": [
+              "The manuscript preserves an incomplete and differently ordered Canterbury Tales; this maps the extant text-bearing sequence, not a complete authorial text."
+            ]
+          },
+          "notes": [
+            "Complete official IIIF inventory including covers, disbound boards, old-binding leaf, manuscript leaves, edges, and 3D general view.",
+            "ZIP contains the provider manifest, an exact-source inventory, and all 518 canvas images at the provider's 1200-by-1200 maximum."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 / JPEG bundle",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-iiif",
+        "evidence:nlw-rights"
+      ]
+    },
+    {
+      "id": "access:hengwrt-physical",
+      "entity": "witness:nlw:Peniarth-392D",
+      "provider_id": "agent:nlw",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Apply to consult the original; the catalog says authorization is required and surrogates should normally be used",
+      "url": "https://archives.library.wales/index.php/hengwrt-chaucer",
+      "alternate_urls": [
+        "https://www.library.wales/catalogues-searching/catalogues/archives-manuscripts/help-to-search"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-catalog"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:ct-medieval-text-us",
+      "entity": "artifact:general-corpus:CT",
+      "component": "Geoffrey Chaucer's medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The underlying work was composed and transmitted centuries before modern copyright.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-cme-collection",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "This assessment does not automatically govern Robinson's editorial matter, the XML encoding, or modern manuscript photographs."
+      ]
+    },
+    {
+      "id": "rights:robinson-editorial-us",
+      "entity": "edition:robinson:works-1957",
+      "access_id": "access:robinson-1957",
+      "component": "Robinson's 1957 editorial selection, emendations, notes, and apparatus",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The second edition was first published in 1957; no public-domain determination, rights-holder permission, or open license was verified.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:robinson-1957",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "The copyright status of Robinson's editorial contributions is distinct from Chaucer's public-domain text."
+      ]
+    },
+    {
+      "id": "rights:umich-ct-current",
+      "entity": "encoding:umich-cme:CT",
+      "access_id": "access:umich-ct",
+      "component": "Materials presented in the current U-M CME item CT",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "U-M currently describes CME corpus materials as public domain in the United States and supplies a No Copyright–United States statement.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-cme-collection",
+        "evidence:umich-ct"
+      ],
+      "notes": [
+        "The embedded 1993 OTA notice limits use to personal scholarly purposes. This record does not assume the current collection statement legally supersedes that notice."
+      ]
+    },
+    {
+      "id": "rights:ct-repository-xml",
+      "entity": "artifact:general-corpus:CT",
+      "access_id": "access:ct-repaired",
+      "component": "Repository XML serialization, markup, and repaired readings",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The repaired file sits outside CME_from_OTA, whose path-specific notice asserts CC BY-NC-SA 3.0 for that folder's files, but it is a close corrected version of the licensed-folder copy. The repository also has an Unlicense file phrased for software, and CT embeds a legacy personal-scholarly-use notice. No checked statement expressly resolves which terms govern the repaired serialization and readings.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:ct-version-diff",
+        "evidence:cme-ota-path-license",
+        "evidence:cme-license"
+      ],
+      "notes": [
+        "Do not broaden either the repository's software-worded Unlicense or the neighboring folder's CC notice into a definitive license for this repaired path without clarification."
+      ]
+    },
+    {
+      "id": "rights:ct-ota-copy",
+      "entity": "artifact:cme:CT-ota-copy",
+      "access_id": "access:ct-ota-copy",
+      "component": "Repository XML serialization and markup",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The exact CME_from_OTA path notice says the folder's files derive ultimately from Oxford Text Archive distributions and are redistributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0. That express repository assertion is recorded without treating it as proof that every upstream right or the embedded personal-scholarly-use notice has been reconciled.",
+      "asserted_by_id": "agent:kyvero",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ct-ota-repository-copy",
+        "evidence:cme-ota-path-license",
+        "evidence:umich-ct",
+        "evidence:cme-license"
+      ],
+      "notes": [
+        "The license applies as a provider assertion to the repository copy; underlying medieval text, Robinson's editorial layer, OTA/U-M provider terms, and the legal effectiveness of the asserted license remain distinct."
+      ]
+    },
+    {
+      "id": "rights:chaucer-society-edition-us",
+      "entity": "edition:chaucer-society:parallel-texts",
+      "access_id": "access:chaucer-society-umich",
+      "component": "Nineteenth-century printed parallel-text edition and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The represented printed transcript publications date from 1868 through 1902, and U-M presents the digitized texts with a No Copyright–United States statement.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:chaucer-society-six-text",
+        "evidence:umich-cme-collection",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "The locally cached Internet Archive PDF covers only Parts I–II; this public-domain assessment concerns the represented nineteenth- and early-twentieth-century printed layer, not modern provider metadata or terms."
+      ]
+    },
+    {
+      "id": "rights:ellesmere-manuscript-text",
+      "entity": "witness:huntington:EL-26-C-9",
+      "component": "Medieval manuscript content as a historical object",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The manuscript was produced c. 1400–1410.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-catalog",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:huntington-ellesmere-images",
+      "entity": "facsimile:huntington:ellesmere-iiif",
+      "access_id": "access:ellesmere-facsimile",
+      "component": "Modern digital images, IIIF presentation, and downloaded JPEG bundle",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The IIIF manifest supplies no explicit license. Huntington says it does not require permission or fees to publish public-domain material or material whose copyright it does not own, but researchers remain responsible for determining rights and restrictions.",
+      "asserted_by_id": "agent:huntington",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-iiif",
+        "evidence:huntington-rights"
+      ],
+      "notes": [
+        "Public access and local caching do not by themselves establish an open image license; cite Huntington and contact reference@huntington.org for uncertain reuse."
+      ]
+    },
+    {
+      "id": "rights:hengwrt-manuscript-text",
+      "entity": "witness:nlw:Peniarth-392D",
+      "component": "Medieval manuscript content as a historical object",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The manuscript was produced c. 1395–1405.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-catalog",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:nlw-hengwrt-images",
+      "entity": "facsimile:nlw:hengwrt-iiif",
+      "access_id": "access:hengwrt-facsimile",
+      "component": "NLW digital images and complete IIIF/JPEG bundle",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-14",
+      "basis": "The item-specific IIIF manifest marks the object with the Creative Commons Public Domain Mark 1.0 and attributes the images to the National Library of Wales.",
+      "asserted_by_id": "agent:nlw",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:nlw-hengwrt-iiif",
+        "evidence:nlw-rights"
+      ],
+      "notes": [
+        "Follow the item-level mark and requested attribution; NLW's general rights page says item-specific labels control and separately addresses high-resolution services."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:CT",
+      "practice": "selection",
+      "description": "The electronic text encodes Robinson's Canterbury Tales on printed pp. 17–265 and omits the source volume's front matter, back matter, and editorial notes.",
+      "scope": "Whole U-M/OTA CT encoding",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ct-repaired-xml",
+        "evidence:robinson-1957"
+      ]
+    },
+    {
+      "id": "practice:robinson-collation",
+      "entity": "edition:robinson:works-1957",
+      "practice": "collation",
+      "description": "Robinson bases The Canterbury Tales on the Chaucer Society's printed Ellesmere transcript while admitting readings from the seven other printed Chaucer Society witness texts and additional witnesses and editions; the checked evidence does not establish direct physical-manuscript autopsy.",
+      "scope": "The Canterbury Tales, pp. 17–265",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:robinson-method",
+        "evidence:harvard-fragments"
+      ],
+      "notes": [
+        "This is an eclectic editorial text, not a diplomatic facsimile or transcript of one witness."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:ct-repaired-xml",
+      "type": "repository_file",
+      "citation": "General Corpus / CME, repaired CT source XML.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/recent_changes/repairs_2023/CT.xml",
+      "repository_path": "CME/source/recent_changes/repairs_2023/CT.xml",
+      "locator": "HEADER; TEXT/BODY",
+      "summary": "Exact approved publication source. Its header identifies Chaucer, the 1993 electronic publication, Robinson's 1957 second edition, source pp. 17–265, and omissions; repository fixity and full structure were inspected locally.",
+      "accessed_on": "2026-07-14",
+      "sha256": "00a3335e0a4b228500acaadfe862ed66f1226a150f7c21b7f617c79d823445c5"
+    },
+    {
+      "id": "evidence:ct-ota-repository-copy",
+      "type": "repository_file",
+      "citation": "CME repository, CME_from_OTA copy of CT at pinned commit e1d77c8.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/CT.xml",
+      "repository_path": "CME/source/CME_from_OTA/CT.xml",
+      "locator": "HEADER; TEXT/BODY",
+      "summary": "Alternate repository artifact with identical high-level structure and two running-text differences from the approved repaired source; it is not selected by the publication override.",
+      "accessed_on": "2026-07-14",
+      "sha256": "7902d4ac9daebcc305570388b4ceae2a4d15b80a828545dbf600ed115ae87830"
+    },
+    {
+      "id": "evidence:ct-version-diff",
+      "type": "repository_file",
+      "citation": "Byte and XML running-text comparison of the two CT files at CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/recent_changes/repairs_2023/CT.xml",
+      "locator": "A.2232 and A.3931",
+      "summary": "The repaired file is 1,365,609 bytes with SHA-256 00a333… and Git blob 3b1041…; the OTA copy is 1,365,512 bytes with SHA-256 7902d4… and blob 05b39b…. Structural counts agree. Running text differs only at A.2232 (“that I feele” / “that feele”) and A.3931 (“baar he in his pouche” / “baar he is in his pouche”). In-file comments date both corrections to December 2020, attribute the A.2232 insertion to “pfs,” and do not identify an editor for A.3931. Both paths first appear in the same repository import commit.",
+      "accessed_on": "2026-07-14",
+      "sha256": "00a3335e0a4b228500acaadfe862ed66f1226a150f7c21b7f617c79d823445c5"
+    },
+    {
+      "id": "evidence:cme-ota-path-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME, source/CME_from_OTA/read_me_license.txt at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_from_OTA/read_me_license.txt",
+      "repository_path": "CME/source/CME_from_OTA/read_me_license.txt",
+      "summary": "The path-specific notice says files in CME_from_OTA derive ultimately from Oxford Text Archive distributions and that the repository redistributes the folder under CC BY-NC-SA 3.0. This is direct evidence of the repository's license assertion, not proof that upstream rights and embedded terms have been reconciled.",
+      "accessed_on": "2026-07-14",
+      "sha256": "9129f6b4fc4dd9385c4acde807f5177391a0da36992831c3bbdfb9cecca65386"
+    },
+    {
+      "id": "evidence:umich-repaired-readings",
+      "type": "official_webpage",
+      "citation": "University of Michigan CME full text for CT, Group I, current readings at A.2232 and A.3931.",
+      "url": "https://quod.lib.umich.edu/c/cme/CT/1%3A1.6?rgn=div2&view=fulltext",
+      "alternate_urls": [
+        "https://quod.lib.umich.edu/c/cme/CT/1%3A1.2?rgn=div2&view=fulltext"
+      ],
+      "locator": "A.2232 and A.3931",
+      "summary": "The current U-M presentation supports the repaired readings, including A.3931 “baar he in his pouche”; U-M/MED evidence also records A.2232 “that I feele.” Agreement with the current presentation does not identify who made the repository repairs, their authority, or the intervening workflow.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-ct",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, Corpus of Middle English Prose and Verse, CT, The Canterbury tales.",
+      "url": "https://quod.lib.umich.edu/c/cme/CT",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/CT"
+      ],
+      "summary": "Official item record, table of contents, and full text confirming Chaucer attribution, Robinson 1957 as source, the ten-group sequence, current public access, and the embedded Oxford Text Archive availability notice.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-cme-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, About the Corpus of Middle English Prose and Verse.",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "summary": "Describes corpus history, Oxford Text Archive intake, TEI encoding, bulk XML context, present educational and research purposes, and current public-domain/No Copyright–United States rights statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:robinson-1957",
+      "type": "edition_statement",
+      "citation": "Geoffrey Chaucer, The Works of Geoffrey Chaucer, ed. F. N. Robinson, 2nd ed. (Boston: Houghton Mifflin, 1957).",
+      "url": "https://books.google.com/books/about/The_Works_of_Geoffrey_Chaucer.html?id=l7YrAAAAYAAJ",
+      "alternate_urls": [
+        "https://openlibrary.org/books/OL7381947M/Works_of_Geoffrey_Chaucer",
+        "https://archive.org/details/worksofgeoffreyc0000chau_o7w0"
+      ],
+      "locator": "The Canterbury Tales, pp. 17–265; source volume xliv + 1002 pp.",
+      "summary": "Bibliographic evidence for edition, editor, publisher, date, extent, and contents. Checked digital copies were preview-only or controlled-loan rather than unrestricted complete scans.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:robinson-method",
+      "type": "scholarly_source",
+      "citation": "Beverly Boyd, Chaucer's Knight's Tale: An Annotated Bibliography, 1900 to 1985 (University of Toronto Press, 1994), entry for Robinson's 1957 edition.",
+      "url": "https://doi.org/10.3138/9781442672888",
+      "summary": "The published annotated bibliography describes Ellesmere as Robinson's base for The Canterbury Tales, collated with the other seven manuscripts printed by the Chaucer Society, Thynne's edition, and the Cardigan and Morgan manuscripts, and notes the ten-fragment Ellesmere order.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:harvard-fragments",
+      "type": "scholarly_source",
+      "citation": "Harvard's Geoffrey Chaucer Website, “Fragments or Groups of Tales.”",
+      "url": "https://chaucer.fas.harvard.edu/fragments-or-groups-tales",
+      "summary": "Explains that Chaucer left the work unfinished and unrevised, that the ten fragments are internally linked but mostly lack explicit inter-fragment connections, and that Robinson follows the Ellesmere-related order despite recognizing ordering uncertainty.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cooper-introduction",
+      "type": "scholarly_source",
+      "citation": "Helen Cooper, The Canterbury Tales, 3rd ed., Oxford Guides to Chaucer, chapter 1, “The Canterbury Tales” (Oxford University Press, 2023).",
+      "url": "https://academic.oup.com/book/46796/chapter-abstract/413422090",
+      "summary": "Current scholarship on probable late-1380s beginnings, continuing 1390s composition, uncertain component dates, the possibly later frame, and the unfinished state at or before Chaucer's death.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:chaucer-society-six-text",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, browse records for the eight Chaucer Society printed witness texts used in Robinson's described source set.",
+      "url": "https://quod.lib.umich.edu/c/cme/browse.html",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/AGZ8232.0001.001",
+        "https://name.umdl.umich.edu/AGZ8233.0001.001",
+        "https://name.umdl.umich.edu/AGZ8234.0001.001",
+        "https://name.umdl.umich.edu/AGZ8235.0001.001",
+        "https://name.umdl.umich.edu/AGZ8236.0001.001",
+        "https://name.umdl.umich.edu/ASH2689.0001.001",
+        "https://name.umdl.umich.edu/AGZ8246.0001.001",
+        "https://name.umdl.umich.edu/ASH3725.0001.001"
+      ],
+      "summary": "Official U-M records provide searchable diplomatic text for the Ellesmere, Hengwrt, Cambridge Gg.4.27, Corpus Christi College Oxford 198, Lansdowne 851, Petworth, Harley 7334, and Cambridge Dd.4.24 printed transcripts, published across 1868–1902. They are digital texts, not page-image facsimiles.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:chaucer-society-ia-parts-1-2",
+      "type": "digital_surrogate",
+      "citation": "Frederick J. Furnivall, ed., A Six-Text Print of Chaucer's Canterbury Tales, Parts I–II (Chaucer Society), Internet Archive scan.",
+      "url": "https://archive.org/details/ASix-textPrintOfChaucersCanterburyTalesInParallelColumnsFromThe",
+      "alternate_urls": [
+        "https://archive.org/download/ASix-textPrintOfChaucersCanterburyTalesInParallelColumnsFromThe/Six_Text_Print_Canterbury_Tales_pt1__pt2.pdf"
+      ],
+      "locator": "Parts I–II only",
+      "summary": "Public 346-page page-image scan of Parts I–II. The item description and file content establish partial access only; this source does not supply the complete six-text publication sequence or the later Harley 7334 and Dd.4.24 texts. The provider PDF opens successfully, although qpdf reports malformed indirect references and linearization hint-table warnings.",
+      "accessed_on": "2026-07-14",
+      "sha256": "2417b323e87c34b27ca09a825db3e4f877da81195c5dc5b3f29c38c4b766332d"
+    },
+    {
+      "id": "evidence:stubbs-hengwrt-earliest",
+      "type": "scholarly_source",
+      "citation": "Estelle Stubbs, “‘Here’s One I Prepared Earlier’: The Work of Scribe D and the Hengwrt Chaucer Revisited,” The Review of English Studies 58 (2007).",
+      "url": "https://doi.org/10.1093/res/hgl147",
+      "summary": "The article's abstract states that Hengwrt is generally accepted as the earliest attempt to assemble The Canterbury Tales. This supports a qualified first-known-attestation claim despite overlapping catalog date ranges, not an exact production date or a claim of authorial supervision.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:huntington-ellesmere-catalog",
+      "type": "official_catalog",
+      "citation": "The Huntington, mssEL 26 C 9, Ellesmere manuscript of Chaucer's Canterbury Tales.",
+      "url": "https://www.huntington.org/collections/lib-mssel-26-c-9",
+      "alternate_urls": [
+        "https://www.huntington.org/library/library-collections/ellesmere-chaucer"
+      ],
+      "summary": "Official item evidence for shelfmark, c. 1400–1410 date, parchment support, dimensions, manuscript identity, and physical-access restriction; the feature page supplies additional institutional context but a narrower date range.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:huntington-ellesmere-iiif",
+      "type": "digital_surrogate",
+      "citation": "The Huntington, Ellesmere Chaucer, official IIIF Presentation manifest.",
+      "url": "https://hdl.huntington.org/iiif/info/p15150coll7/2838/manifest.json",
+      "alternate_urls": [
+        "https://hdl.huntington.org/digital/collection/p15150coll7/id/2838/"
+      ],
+      "locator": "480 canvases; ff. 1r–232v at canvases 9–472",
+      "summary": "Complete official 480-canvas published inventory. It reproduces all 232 main text folios and eight preliminary/final leaves and describes 800-DPI scans made from post-1995-conservation transparencies. The physical extent statement lists twelve non-text leaves, so four cataloged non-text leaves are absent from the published sequence. No explicit image license appears in the manifest.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3e552dd63919d8fe2daa60f40b64e54228e7ea79f27751d8838be48879ce6230",
+      "notes": [
+        "The SHA-256 describes the ignored local bundle that completely captures the provider's published 480-canvas inventory, not the mutable remote JSON alone or a physically complete reproduction of every cataloged leaf."
+      ]
+    },
+    {
+      "id": "evidence:huntington-rights",
+      "type": "official_webpage",
+      "citation": "The Huntington Library, Rights and Permissions.",
+      "url": "https://www.huntington.org/library/library-rights-and-permissions",
+      "summary": "States that Huntington does not require permission or charge fees to quote or publish public-domain material or material whose copyright it does not own, requests citation, and places rights determination responsibility on the researcher; provides reference@huntington.org.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nlw-hengwrt-catalog",
+      "type": "official_catalog",
+      "citation": "National Library of Wales Archives and Manuscripts, Peniarth MS 392D, Hengwrt Chaucer.",
+      "url": "https://archives.library.wales/index.php/hengwrt-chaucer",
+      "summary": "Official repository description of shelfmark, former designation Hengwrt MS 154, [1395]–[1405] production in London, 258-folio structure, incomplete text and losses, binding history, physical access controls, and current digital version.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nlw-hengwrt-page",
+      "type": "official_webpage",
+      "citation": "National Library of Wales, “The Hengwrt Chaucer.”",
+      "url": "https://www.library.wales/discover-learn/digital-exhibitions/manuscripts/the-middle-ages/the-hengwrt-chaucer/",
+      "summary": "Institutional contextual account identifying Hengwrt as an especially important early and incomplete Canterbury Tales witness, and explaining the shared-scribe relationship with Ellesmere while presenting the Adam Pinkhurst attribution as scholarly identification.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:nlw-hengwrt-iiif",
+      "type": "digital_surrogate",
+      "citation": "National Library of Wales, Peniarth MS 392D, official IIIF Presentation manifest.",
+      "url": "https://iiif.llyfrgell.cymru/manifests/2.0/4628556/manifest.json",
+      "alternate_urls": [
+        "https://damsssl.llgc.org.uk/iiif/2.0/4628556/manifest.json"
+      ],
+      "locator": "518 canvases; original parchment ff. 2r–250v at canvases 15–512",
+      "summary": "Complete 518-canvas published inventory covering the physical object's covers, boards, old-binding leaf, manuscript leaves, edges, and 3D view. The manifest carries a Public Domain Mark 1.0 and NLW attribution.",
+      "accessed_on": "2026-07-14",
+      "sha256": "551bdeab4426f4bd56ccc714222a9c5886201fa8603816c509b090361e5b4a9f",
+      "notes": [
+        "The SHA-256 describes the ignored complete local IIIF bundle, not the mutable remote JSON alone."
+      ]
+    },
+    {
+      "id": "evidence:nlw-rights",
+      "type": "official_webpage",
+      "citation": "National Library of Wales, Copyright and use of digital material.",
+      "url": "https://www.library.wales/copyright",
+      "summary": "Explains that item-specific rights marks govern digital material, requests acknowledgment, treats NLW-created metadata as CC0, and supplies enquiry routes for higher-resolution or otherwise restricted uses.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME repository LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "The repository-level Unlicense text refers to “software.” It does not expressly resolve the status of third-party textual data, U-M/OTA terms, editorial content, or manuscript images.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Authoritative general term guidance supporting the separation of medieval and nineteenth-century public-domain layers from potentially protected 1957 editorial contributions.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ct-version-history",
+      "question": "Who is “pfs,” who made the unattributed A.3931 repair, and what textual authority supports the two December 2020 readings?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect upstream history outside the current one-commit CME import, if available, to identify “pfs” and the A.3931 editor.",
+        "Ask the CME maintainers for the December 2020 repair log and the source or collation authority for both readings.",
+        "Keep the exact diff, comment dates, and current U-M agreement documented without treating agreement as proof of the repair workflow."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:ct-version-diff",
+        "evidence:umich-repaired-readings"
+      ]
+    },
+    {
+      "id": "question:cme-repaired-license-scope",
+      "question": "Does the CME_from_OTA path-specific CC BY-NC-SA 3.0 assertion extend to the closely related repaired CT XML outside that folder, and how does it interact with the repository Unlicense and embedded OTA notice?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask the CME maintainers to identify the intended license for source/recent_changes/repairs_2023/CT.xml and the repaired readings.",
+        "Do not infer that either the software-worded Unlicense or the CME_from_OTA folder notice controls the repaired path until scope is clarified.",
+        "Retain the exact path notice, repository license, XML headers, and version diff as separate evidence."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:cme-ota-path-license",
+        "evidence:cme-license",
+        "evidence:ct-repaired-xml",
+        "evidence:ct-version-diff"
+      ]
+    },
+    {
+      "id": "question:umich-ota-terms",
+      "question": "How do U-M's current No Copyright–United States statement, the embedded 1993 OTA personal-scholarly-use notice, and CME_from_OTA's CC BY-NC-SA 3.0 assertion interact for reuse of this encoding?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Request a written interpretation from U-M before redistributing the XML or a close derivative, especially in a commercial workflow.",
+        "Keep underlying-text copyright, editorial copyright, encoding rights, and provider terms distinct."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:umich-ct",
+        "evidence:umich-cme-collection",
+        "evidence:ct-repaired-xml",
+        "evidence:cme-ota-path-license"
+      ]
+    },
+    {
+      "id": "question:robinson-source-routing",
+      "question": "For each reading in Robinson's Canterbury Tales, which evidence came from a directly consulted manuscript, a Chaucer Society printed transcript, Thynne, or another intermediary?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Consult Robinson's full preface and textual notes in a lawful copy of the 1957 edition.",
+        "Model additional witnesses only when reading-level or section-level source roles can be demonstrated.",
+        "Do not replace the current focused path with a flat list that implies direct physical consultation."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:robinson-method",
+        "evidence:robinson-1957",
+        "evidence:chaucer-society-six-text"
+      ]
+    },
+    {
+      "id": "question:huntington-image-license",
+      "question": "What item-specific reuse terms, if any, govern the Huntington Ellesmere IIIF images?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask reference@huntington.org whether the IIIF JPEGs may be redistributed in this repository or commercial print products and request a citable written answer.",
+        "Until clarified, link and cache for research but do not treat the missing manifest license as an open license."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:huntington-ellesmere-iiif",
+        "evidence:huntington-rights"
+      ]
+    },
+    {
+      "id": "question:authorial-order",
+      "question": "What final order, if any, did Chaucer intend for the ten fragments?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Display Robinson's Ellesmere-related sequence as editorial.",
+        "Preserve fragment identifiers and ordering uncertainty in downstream interfaces."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": [
+        "evidence:harvard-fragments",
+        "evidence:robinson-1957"
+      ]
+    }
+  ]
+}

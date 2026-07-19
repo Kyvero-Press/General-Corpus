@@ -1,0 +1,1655 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:GRom",
+  "work_id": "GRom",
+  "title": "Early English Versions of the Gesta Romanorum",
+  "primary_subject": "artifact:general-corpus:GRom",
+  "record_status": "partial",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "summary": "The repository artifact is the pinned CME copy of University of Michigan item GRom, an edition-level electronic encoding of Sidney J. H. Herrtage's 1879 Early English Text Society compilation. Herrtage re-edited Frederic Madden's 1838 work against British Library Harley MS 7333 and Additional MS 9066, Cambridge University Library MS Kk.1.6, and the St John's College copy of Wynkyn de Worde's early-sixteenth-century Gesta Romanorum. The encoded selection retains a constructed title-page representation and printed pp. 1-444: Text I has 70 Harley-based story groups, including parallel Additional versions; Text II has 66 Additional-based groups, including eleven full parallel Kk.1.6 versions; Text III adds eight stories checked against de Worde. Most front matter and all later notes, appendix, glossary, and index are omitted. A complete 613-page Google/Internet Archive scan of the 1879 volume and its OCR, scandata, and metadata derivatives are cached; no complete public manuscript facsimile was verified for any of the three manuscript witnesses or for the St John's early print.",
+  "languages": ["enm", "lat", "eng"],
+  "review_notes": [
+    "The intellectual boundary is Herrtage's 1879 edited multi-version compilation, not the abstract Latin Gesta Romanorum, a homogeneous medieval English work, or one physical witness.",
+    "The 144 edition-level story groups comprise 70 Text I groups, 66 Text II groups, and eight Text III stories; parallel witness streams are not counted again as independent story groups.",
+    "Herrtage says the 1879 volume is far from a simple reprint of Madden: he twice collated the text with manuscripts, rearranged parallel versions, distinguished expansions, and revised readings and apparatus.",
+    "The XML has 1,347 NOTE1 elements marked TYPE=variant, but their immediate source is not encoded note by note. They are therefore documented as edition apparatus rather than assigned wholesale to Kk.1.6 or another witness.",
+    "Current ESTC dates de Worde's print to 1507-1508?, superseding the older c. 1510 convention retained by USTC, Herrtage, and the XML; both statements are preserved with their different evidential bases.",
+    "The current British Library catalog supplies an exact public record for Harley MS 7333 but targeted exact-shelfmark searches did not recover a current item record for Additional MS 9066. Herrtage remains the direct descriptive evidence for the latter pending curatorial confirmation.",
+    "The checked-in U-M-derived XML embeds an express redistribution restriction. Public-domain status of the 1879 edition does not silently settle rights or provider terms in the electronic encoding or scan files."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:GRom",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for GRom",
+      "description": "The checked-out XML file in the CME submodule, treated as the repository representation rather than as the 1879 edition, medieval witnesses, or abstract narrative tradition.",
+      "identifiers": [
+        {"scheme": "General Corpus work ID", "value": "GRom"},
+        {"scheme": "CME/UMDL", "value": "GRom", "uri": "https://name.umdl.umich.edu/GRom"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/GRom.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "ceb33c9f690c8430517e6b64fb7d1eaf483c35b7",
+        "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:grom-xml", "evidence:raw-cme"],
+      "notes": [
+        "The submodule commit and blob identify the exact repository source independently of later metadata and lineage files."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:GRom",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item GRom",
+      "description": "A keyboarded and structurally marked electronic text derived from the selected portion of Herrtage's 1879 edition. The encoding serializes printed parallel upper and lower page zones together at story-group level.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "GRom", "uri": "https://name.umdl.umich.edu/GRom"}
+      ],
+      "creator_ids": ["agent:umich-library", "agent:seconr", "agent:kenneth-church", "agent:catherine-paul"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:grom-xml", "evidence:umich-handle", "evidence:raw-cme"],
+      "notes": [
+        "The XML says Seconr keyboarded the text, five percent was proofed to a stated one-error-per-20,000-character specification, Kenneth Church encoded it, and Catherine Paul reviewed the markup.",
+        "The language declaration says only Latin, but direct text inspection establishes Middle English as primary, with embedded Latin and modern English editorial matter."
+      ]
+    },
+    {
+      "id": "edition:herrtage:1879",
+      "type": "scholarly_edition",
+      "label": "Herrtage, Early English Versions of the Gesta Romanorum (1879)",
+      "alternate_labels": [
+        "Early English Versions of the Gesta Romanorum, EETS Extra Series 33",
+        "The Early English Versions of the Gesta Romanorum"
+      ],
+      "description": "Herrtage's edited compilation of multiple Middle English manuscript streams, revised from Madden's 1838 edition, with eleven full Kk.1.6 parallel versions and eight additional stories associated with de Worde's print.",
+      "identifiers": [
+        {"scheme": "EETS Extra Series", "value": "33"}
+      ],
+      "creator_ids": ["agent:sidney-herrtage"],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1879",
+          "normalized": "1879",
+          "certainty": "high",
+          "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata"]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Sidney J. H. Herrtage, ed., The Early English Versions of the Gesta Romanorum, Early English Text Society, Extra Series 33 (London: N. Trübner & Co., 1879).",
+        "title": "The Early English Versions of the Gesta Romanorum",
+        "series": "Early English Text Society, Extra Series 33",
+        "publisher": "N. Trübner & Co.",
+        "publication_place": "London",
+        "date": "1879",
+        "pages": "xxxi pages, 1 leaf, 563, [1] pages, 1 leaf",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata", "evidence:herrtage-editorial"],
+      "notes": [
+        "The encoded work portion is the title-page representation and printed pp. 1-444. The complete volume also contains contents, introduction, comparative table, notes and illustrations, appendix, glossary, and index.",
+        "Miss Lucy Toulmin Smith collated most proof sheets against Harley MS 7333 and Additional MS 9066, as Herrtage acknowledges."
+      ]
+    },
+    {
+      "id": "facsimile:ia:herrtage-1879",
+      "type": "facsimile",
+      "label": "Google/Internet Archive scan of Herrtage's 1879 edition",
+      "description": "A complete 613-page PDF scan of the 1879 volume, with Internet Archive OCR, scandata, and item metadata derivatives.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "earlyenglishver00herrgoog", "uri": "https://archive.org/details/earlyenglishver00herrgoog"}
+      ],
+      "creator_ids": ["agent:google", "agent:internet-archive"],
+      "reproduction_format": "Complete Google-derived PDF scan with OCR and scan metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata", "evidence:ia-ocr", "evidence:ia-scandata"],
+      "notes": [
+        "The scan is a facsimile of the complete printed edition, not a facsimile of any manuscript or early-print witness."
+      ]
+    },
+    {
+      "id": "edition:madden:1838",
+      "type": "scholarly_edition",
+      "label": "Madden, The Old English Versions of the Gesta Romanorum (1838)",
+      "description": "Frederic Madden's Roxburghe Club edition, the immediate editorial predecessor that Herrtage substantially rechecked, revised, rearranged, and expanded.",
+      "creator_ids": ["agent:frederic-madden"],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1838",
+          "normalized": "1838",
+          "certainty": "high",
+          "evidence_ids": ["evidence:madden-1838"]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Frederic Madden, ed., The Old English Versions of the Gesta Romanorum, Edited for the First Time from Manuscripts in the British Museum and University Library, Cambridge, with an Introduction and Notes (London: W. Nicol, Shakespeare Press, for the Roxburghe Club, 1838).",
+        "title": "The Old English Versions of the Gesta Romanorum",
+        "publisher": "W. Nicol, Shakespeare Press, for the Roxburghe Club",
+        "publication_place": "London",
+        "date": "1838",
+        "pages": "[1], 530, [2] pages",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:madden-1838", "evidence:herrtage-editorial"],
+      "notes": [
+        "Herrtage explicitly denies that his 1879 edition is merely a reprint. The version relation records editorial descent without erasing the later recollation and restructuring."
+      ]
+    },
+    {
+      "id": "facsimile:ia:madden-1838",
+      "type": "facsimile",
+      "label": "Internet Archive scan of Madden's 1838 edition",
+      "description": "A complete public scan of the Roxburghe Club edition used to confirm its bibliographic identity, cached with its OCR, scandata, and Internet Archive item metadata.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "b22007118", "uri": "https://archive.org/details/b22007118"}
+      ],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Complete scanned volume",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:madden-1838"]
+    },
+    {
+      "id": "witness:bl:Harley-MS-7333",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 7333",
+      "alternate_labels": ["Harley 7333", "Harl. MS. 7333"],
+      "description": "The principal manuscript source for Herrtage's Text I. The current British Library record places the Gesta Romanorum on ff. 150r-203r within a Leicester manuscript of the second half of the fifteenth century.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Harley MS 7333"},
+        {"scheme": "British Library catalog record", "value": "040-002053187", "uri": "https://searcharchives.bl.uk/catalog/040-002053187"}
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript production",
+          "value": "Second half of the fifteenth century",
+          "normalized": "1450-1499",
+          "certainty": "high",
+          "evidence_ids": ["evidence:bl-harley7333"]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 7333",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002053187",
+        "notes": "The Gesta Romanorum occupies ff. 150r-203r."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "211 folios plus flyleaves",
+        "format": "Large folio codex, usually in two columns",
+        "dimensions": "455 x 330 mm",
+        "notes": ["Current catalog origin: Leicester."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-harley7333", "evidence:herrtage-editorial"],
+      "notes": [
+        "Herrtage dated the manuscript about 1440; the current British Library catalog's broader 1450-1499 date is used for the physical witness.",
+        "The legacy viewer link remains in the catalog, but the current record says digital images are unavailable."
+      ]
+    },
+    {
+      "id": "witness:bl:Add-MS-9066",
+      "type": "manuscript_witness",
+      "label": "British Library, Additional MS 9066",
+      "alternate_labels": ["Additional 9066", "Addit. MS. 9066", "Add MS 9066"],
+      "description": "The manuscript source for parallel versions in Text I and the principal source for Text II. Herrtage describes an 87-leaf parchment manuscript written by two hands and presented to the British Museum by the Rev. William Conybeare in 1832.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Add MS 9066"}
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript production",
+          "value": "Fifteenth century, approximately contemporary with Harley MS 7333 according to Herrtage",
+          "normalized": "1400-1499",
+          "certainty": "medium",
+          "evidence_ids": ["evidence:add9066-historical"]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 9066",
+        "notes": "Current holding is accepted from the established shelfmark and historical edition, but an exact current public catalog record was not recovered in the dated search."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "87 leaves in Herrtage's description",
+        "notes": [
+          "Herrtage reports two scribal hands, 96 stories in the volume, and a Gesta proper followed by related narrative material.",
+          "Physical description awaits confirmation from a current British Library item record or direct inspection."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:add9066-historical", "evidence:add9066-search", "evidence:grom-xml"],
+      "notes": [
+        "The XML's story-local milestones range through Herrtage's foliation to leaf 87 verso, but the relation scopes do not turn these printed milestones into a current catalog description of the whole codex.",
+        "One XML BIBL label says 'Harl. MS. 9066'; its surrounding Additional stream establishes that as an encoding or source-label error, not a separate Harley witness."
+      ]
+    },
+    {
+      "id": "witness:cul:Kk-1-6",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library, MS Kk.1.6",
+      "alternate_labels": ["CUL Kk.1.6", "Cambridge MS Kk.1.6", "Camb. Kk 1.6"],
+      "description": "A fifteenth-century multi-text manuscript whose Gesta Romanorum section occupies ff. 216r-242v and contains thirty-two tales without moralizations. Herrtage prints eleven full Kk.1.6 parallels in Text II and consults the manuscript comparatively.",
+      "identifiers": [
+        {"scheme": "Cambridge University Library shelfmark", "value": "Kk.1.6"},
+        {"scheme": "Cambridge Apollo DOI", "value": "10.17863/CAM.68083", "uri": "https://doi.org/10.17863/CAM.68083"}
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript production",
+          "value": "Fifteenth century",
+          "normalized": "1400-1499",
+          "certainty": "high",
+          "evidence_ids": ["evidence:cul-kk16"]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:cambridge-university-library",
+        "shelfmark": "Kk.1.6",
+        "notes": "The Cambridge-hosted M. R. James handlist description is exact scholarly evidence for Kk.1.6, but it is not represented here as a current item-level holding catalog record."
+      },
+      "physical_description": {
+        "support": "Vellum and paper",
+        "extent": "247 leaves",
+        "format": "Single-column codex in several hands",
+        "dimensions": "11 x 8.25 inches",
+        "notes": [
+          "James reports 28-33 lines per page and brown calf binding.",
+          "Richard Fox writes or rubricates part of the manuscript and supplies the Gesta closing rubric."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-kk16", "evidence:imep-kk16", "evidence:herrtage-editorial"],
+      "notes": [
+        "James describes the Gesta text as akin to Additional MS 9066 and notes Madden's use of it.",
+        "No public complete CUDL, IIIF, PDF, or other manuscript image delivery was verified during the dated search."
+      ]
+    },
+    {
+      "id": "print:de-worde:Gesta-S4864",
+      "type": "scholarly_edition",
+      "label": "Wynkyn de Worde, Gesta Romanorum (ESTC S4864; USTC 501090)",
+      "alternate_labels": ["Wynkyn de Worde's Gesta Romanorum", "STC 21286.3"],
+      "description": "The early English print against which Herrtage says Madden's printed Text III readings were checked. The schema type scholarly_edition is used for this historical printed textual witness, not to imply modern critical editing.",
+      "identifiers": [
+        {"scheme": "ESTC", "value": "S4864", "uri": "https://datb.cerl.org/estc/S4864"},
+        {"scheme": "USTC", "value": "501090", "uri": "https://www.ustc.ac.uk/editions/501090"},
+        {"scheme": "STC (2nd ed.)", "value": "21286.3"}
+      ],
+      "creator_ids": ["agent:wynkyn-de-worde"],
+      "date_statements": [
+        {
+          "label": "printing date, current ESTC",
+          "value": "1507-1508?",
+          "normalized": "1507-1508",
+          "certainty": "medium",
+          "evidence_ids": ["evidence:estc-deworde"],
+          "notes": "ESTC reports the revised conjecture associated with J. J. Gwara's 2013 dating."
+        },
+        {
+          "label": "printing date, USTC and older convention",
+          "value": "[1510]",
+          "normalized": "1510",
+          "certainty": "medium",
+          "evidence_ids": ["evidence:ustc-deworde", "evidence:herrtage-editorial"],
+          "notes": "Herrtage and the XML use circa 1510; USTC retains [1510]."
+        }
+      ],
+      "bibliographic": {
+        "citation": "Gesta Romanorum ([London]: Wynkyn de Worde, [1507-1508?]); ESTC S4864, USTC 501090, STC 21286.3.",
+        "title": "Gesta Romanorum",
+        "publisher": "Wynkyn de Worde",
+        "publication_place": "London",
+        "date": "[1507-1508?]",
+        "pages": "[164] pages; signatures A8 B4 C8 D4 E8 F4 G8 H4 I8 K4 L8 M4 N6 O4",
+        "languages": ["enm", "lat"]
+      },
+      "holding": {
+        "institution_id": "agent:st-johns-college-cambridge",
+        "shelfmark": "A.2.18(4)",
+        "historical_designations": ["Og.6.38"],
+        "notes": "ESTC explicitly records the St John's copy and shelfmark, but its external bibliographic record is not presented as a St John's item-level catalog URL. USTC also lists a Cambridge University Library holding without a shelfmark; that additional holding requires confirmation."
+      },
+      "physical_description": {
+        "support": "Printed paper book",
+        "extent": "82 leaves ([164] pages)",
+        "format": "Early printed book with illustrations and an illustrated title page",
+        "notes": [
+          "Herrtage describes the St John's copy as perfect but closely cropped.",
+          "The current ESTC and USTC copy lists differ from Herrtage's historical claim that the St John's copy was unique."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ustc-deworde", "evidence:estc-deworde", "evidence:herrtage-editorial"],
+      "notes": [
+        "Herrtage says the print resembles Harley MS 5369 in story selection, order, and peculiarities; this does not prove that the extant Harley manuscript was its direct exemplar.",
+        "The eight Text III stories are not a complete reproduction of the de Worde print."
+      ]
+    },
+    {
+      "id": "facsimile:eebo:de-worde-S4864",
+      "type": "facsimile",
+      "label": "EEBO reproduction of the St John's de Worde Gesta Romanorum",
+      "description": "A subscription-mediated Early English Books Online reproduction made from the St John's College copy; no public complete downloadable payload or local copy was obtained.",
+      "identifiers": [
+        {"scheme": "ProQuest document ID", "value": "2240939730", "uri": "https://search.proquest.com/docview/2240939730"},
+        {"scheme": "ESTC", "value": "S4864", "uri": "https://datb.cerl.org/estc/S4864"}
+      ],
+      "creator_ids": ["agent:proquest"],
+      "reproduction_format": "EEBO page images derived from a microfilm reproduction",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:eebo-deworde", "evidence:estc-deworde"]
+    },
+    {
+      "id": "facsimile:exeter:de-worde-1974",
+      "type": "facsimile",
+      "label": "Wynkyn de Worde's Gesta Romanorum, Exeter facsimile (1974)",
+      "description": "A 1974 printed facsimile reprint of the St John's copy, issued in the Exeter Medieval English Texts series; it postdates Herrtage and is a consultation surrogate, not an upstream source for the 1879 edition.",
+      "identifiers": [
+        {"scheme": "ISBN", "value": "0900771976"},
+        {"scheme": "ISBN-13", "value": "9780900771972"}
+      ],
+      "creator_ids": ["agent:university-of-exeter"],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1974",
+          "normalized": "1974",
+          "certainty": "high",
+          "evidence_ids": ["evidence:exeter-facsimile"]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Wynkyn de Worde's Gesta Romanorum (Exeter: University of Exeter, 1974), Exeter Medieval English Texts.",
+        "title": "Wynkyn de Worde's Gesta Romanorum",
+        "series": "Exeter Medieval English Texts",
+        "publisher": "University of Exeter",
+        "publication_place": "Exeter",
+        "date": "1974",
+        "pages": "[8], 162 pages",
+        "languages": ["enm", "lat", "eng"]
+      },
+      "reproduction_format": "Printed facsimile of St John's College Cambridge A.2.18(4)",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:exeter-facsimile"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"]},
+    {"id": "agent:seconr", "type": "organization", "name": "Seconr", "evidence_ids": ["evidence:grom-xml"], "notes": ["Name transcribed exactly from the XML production statement; no fuller authority identity was established."]},
+    {"id": "agent:kenneth-church", "type": "person", "name": "Kenneth Church", "evidence_ids": ["evidence:grom-xml"], "notes": ["Named as encoder in the XML production statement."]},
+    {"id": "agent:catherine-paul", "type": "person", "name": "Catherine Paul", "evidence_ids": ["evidence:grom-xml"], "notes": ["Named as markup reviewer in the XML production statement."]},
+    {"id": "agent:sidney-herrtage", "type": "person", "name": "Sidney John Hervon Herrtage", "alternate_names": ["Sidney J. H. Herrtage", "S. J. H. Herrtage"], "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata"]},
+    {"id": "agent:lucy-toulmin-smith", "type": "person", "name": "Lucy Toulmin Smith", "alternate_names": ["Miss Toulmin Smith"], "evidence_ids": ["evidence:herrtage-editorial"]},
+    {"id": "agent:early-english-text-society", "type": "organization", "name": "Early English Text Society", "urls": ["https://www.earlyenglishtextsociety.org/"]},
+    {"id": "agent:n-trubner", "type": "organization", "name": "N. Trübner & Co.", "evidence_ids": ["evidence:herrtage-scan"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:google", "type": "organization", "name": "Google", "urls": ["https://books.google.com/"]},
+    {"id": "agent:frederic-madden", "type": "person", "name": "Frederic Madden", "dates": "1801-1873", "evidence_ids": ["evidence:madden-1838", "evidence:herrtage-editorial"]},
+    {"id": "agent:roxburghe-club", "type": "organization", "name": "Roxburghe Club", "evidence_ids": ["evidence:madden-1838"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"]},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/"]},
+    {"id": "agent:st-johns-college-cambridge", "type": "organization", "name": "St John's College, Cambridge", "urls": ["https://www.joh.cam.ac.uk/research/library"]},
+    {"id": "agent:wynkyn-de-worde", "type": "person", "name": "Wynkyn de Worde", "evidence_ids": ["evidence:ustc-deworde", "evidence:estc-deworde"]},
+    {"id": "agent:proquest", "type": "organization", "name": "ProQuest", "urls": ["https://www.proquest.com/"]},
+    {"id": "agent:university-of-exeter", "type": "organization", "name": "University of Exeter", "urls": ["https://www.exeter.ac.uk/"]},
+    {"id": "agent:heidelberg-university-library", "type": "organization", "name": "Heidelberg University Library", "urls": ["https://www.ub.uni-heidelberg.de/"]},
+    {"id": "agent:universal-short-title-catalogue", "type": "organization", "name": "Universal Short Title Catalogue", "urls": ["https://www.ustc.ac.uk/"]},
+    {"id": "agent:cerl", "type": "organization", "name": "Consortium of European Research Libraries", "urls": ["https://www.cerl.org/"]},
+    {"id": "agent:us-copyright-office", "type": "organization", "name": "United States Copyright Office", "urls": ["https://www.copyright.gov/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:GRom",
+      "object": "encoding:umich-cme:GRom",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete checked-in GRom XML artifact"},
+        "object": {"kind": "whole", "description": "Complete U-M GRom electronic encoding"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:grom-xml", "evidence:raw-cme"]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-herrtage",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:GRom",
+      "object": "edition:herrtage:1879",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete U-M GRom encoding"},
+        "object": {
+          "kind": "part",
+          "description": "Constructed title-page representation and the three edited text sections",
+          "locators": ["title page", "printed pp. 1-444"]
+        },
+        "notes": "The XML omits most front matter after its title-page representation and omits the complete notes and illustrations, appendix, glossary, and index after p. 444."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:grom-xml", "evidence:grom-structure", "evidence:herrtage-scan"]
+      }
+    },
+    {
+      "id": "relation:ia-herrtage-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:herrtage-1879",
+      "object": "edition:herrtage:1879",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 613-page PDF scan"},
+        "object": {"kind": "whole", "description": "Complete 1879 printed volume"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata"]
+      }
+    },
+    {
+      "id": "relation:herrtage-version-of-madden",
+      "type": "version_of",
+      "subject": "edition:herrtage:1879",
+      "object": "edition:madden:1838",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Herrtage's 1879 revised and expanded compilation"},
+        "object": {"kind": "whole", "description": "Madden's 1838 Roxburghe Club edition"},
+        "notes": "Herrtage retained and revised Madden's editorial inheritance but explicitly describes a fresh manuscript recollation, rearrangement of parallel versions, and substantial new apparatus and reference work."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:madden-1838"]
+      }
+    },
+    {
+      "id": "relation:ia-madden-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:madden-1838",
+      "object": "edition:madden:1838",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete Internet Archive scanned volume"},
+        "object": {"kind": "whole", "description": "Complete 1838 printed edition"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:madden-1838"]
+      }
+    },
+    {
+      "id": "relation:herrtage-transcribes-harley7333",
+      "type": "transcribes",
+      "subject": "edition:herrtage:1879",
+      "object": "witness:bl:Harley-MS-7333",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Text I principal streams: 70 story groups",
+          "locators": ["printed pp. 1-326"]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Middle English Gesta Romanorum text",
+          "locators": ["ff. 150r-203r"]
+        },
+        "notes": "Some Text I groups also print an Additional MS 9066 version in parallel; the relation identifies only the Harley stream."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:bl-harley7333", "evidence:grom-structure"]
+      }
+    },
+    {
+      "id": "relation:herrtage-transcribes-add9066",
+      "type": "transcribes",
+      "subject": "edition:herrtage:1879",
+      "object": "witness:bl:Add-MS-9066",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Parallel Additional versions in Text I and the 66 principal Additional-based groups in Text II",
+          "locators": ["selected parallel streams within printed pp. 1-326", "printed pp. 327-428"]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Gesta and related story material represented by Herrtage's story-local leaf milestones",
+          "locators": ["selected leaves within Herrtage's foliation through f. 87v"]
+        },
+        "notes": "The XML preserves non-contiguous Additional streams at story level; this relation does not claim that every codex leaf or all 96 stories are transcribed."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:add9066-historical", "evidence:grom-structure"]
+      }
+    },
+    {
+      "id": "relation:herrtage-transcribes-kk16",
+      "type": "transcribes",
+      "subject": "edition:herrtage:1879",
+      "object": "witness:cul:Kk-1-6",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Eleven full Kk.1.6 parallel versions in the opening portion of Text II",
+          "locators": ["printed pp. 327-359", "XML DIV1.333, DIV1.338, DIV1.343, DIV1.348, DIV1.353, DIV1.358, DIV1.366, DIV1.371, DIV1.376, DIV1.381, and DIV1.386"]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Eleven tales selected from the manuscript's thirty-two-tale Gesta section",
+          "locators": ["selected passages within ff. 216r-242v"]
+        },
+        "notes": "Kk.1.6's morals are omitted in the manuscript description; Herrtage's eleven printed parallels are discontiguous selections rather than a complete transcription of all thirty-two tales."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:cul-kk16", "evidence:grom-structure"]
+      }
+    },
+    {
+      "id": "relation:herrtage-collated-kk16",
+      "type": "collated_against",
+      "subject": "edition:herrtage:1879",
+      "object": "witness:cul:Kk-1-6",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Textual comparison associated with the Kk.1.6 readings and parallel versions",
+          "locators": ["Text II, especially printed pp. 327-359"]
+        },
+        "object": {
+          "kind": "part",
+          "description": "The manuscript's Gesta Romanorum section",
+          "locators": ["ff. 216r-242v"]
+        },
+        "notes": "The relation follows Herrtage's stated manuscript collation and the explicit full Kk.1.6 streams. The XML's generic TYPE=variant NOTE1 elements are not assigned to this witness note by note."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:cul-kk16", "evidence:grom-structure"]
+      }
+    },
+    {
+      "id": "relation:herrtage-collated-deworde",
+      "type": "collated_against",
+      "subject": "edition:herrtage:1879",
+      "object": "print:de-worde:Gesta-S4864",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Text III: eight additional stories",
+          "locators": ["printed pp. 429-444", "XML DIV1.455 and its eight DIV2 story divisions"]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Eight story passages checked in the St John's early print",
+          "locators": ["signatures represented from Aii through Liv"]
+        },
+        "notes": "Herrtage thanks St John's College for allowing Miss Toulmin Smith to compare Madden's printed text with the original de Worde volume. The relation is therefore collation, not an unsupported claim that Herrtage independently transcribed the complete print."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:herrtage-editorial", "evidence:ustc-deworde", "evidence:estc-deworde", "evidence:grom-structure"]
+      }
+    },
+    {
+      "id": "relation:eebo-facsimile-of-deworde",
+      "type": "facsimile_of",
+      "subject": "facsimile:eebo:de-worde-S4864",
+      "object": "print:de-worde:Gesta-S4864",
+      "scope": {
+        "subject": {"kind": "whole", "description": "EEBO reproduction of the St John's copy"},
+        "object": {"kind": "whole", "description": "The surviving St John's early printed volume"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:eebo-deworde", "evidence:estc-deworde"]
+      }
+    },
+    {
+      "id": "relation:exeter-facsimile-of-deworde",
+      "type": "facsimile_of",
+      "subject": "facsimile:exeter:de-worde-1974",
+      "object": "print:de-worde:Gesta-S4864",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 1974 printed facsimile reprint"},
+        "object": {"kind": "whole", "description": "St John's copy A.2.18(4)"}
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:exeter-facsimile", "evidence:estc-deworde"]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:GRom",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path",
+      "repository_path": "CME/source/CME_phase_1-2/GRom.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:grom-xml"]
+    },
+    {
+      "id": "access:encoding-raw",
+      "entity": "encoding:umich-cme:GRom",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Exact raw XML from the pinned CME commit",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/GRom.xml",
+      "cost": "free",
+      "format": "XML served as text/plain",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:raw-cme", "evidence:grom-xml"]
+    },
+    {
+      "id": "access:umich-handle",
+      "entity": "encoding:umich-cme:GRom",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "unknown",
+      "access_method": "Stable U-M handle redirects to the current item resolver",
+      "url": "https://name.umdl.umich.edu/GRom",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/GRom"],
+      "cost": "free",
+      "format": "HTML digital text when available",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:umich-handle", "evidence:grom-xml"],
+      "notes": [
+        "The stable handle and direct item route both reached a Cloudflare challenge during automated review; the collection browse page still indexes the Herrtage item. This does not establish ordinary interactive-browser unavailability."
+      ]
+    },
+    {
+      "id": "access:ia-herrtage-scan",
+      "entity": "facsimile:ia:herrtage-1879",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item and direct derivative downloads",
+      "url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/earlyenglishver00herrgoog",
+        "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_djvu.txt",
+        "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_scandata.xml",
+        "https://archive.org/metadata/earlyenglishver00herrgoog"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Herrtage 1879 Google/Internet Archive PDF",
+          "path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+          "source_url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog.pdf",
+          "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64",
+          "bytes": 25807455,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "U-M/General Corpus GRom selection within the complete volume",
+            "locators": ["PDF p. 10: title page", "PDF pp. 40-483: printed pp. 1-444"],
+            "notes": [
+              "The cached object is the whole 613-page volume; the work locators do not crop or redefine the downloaded source."
+            ]
+          }
+        },
+        {
+          "label": "Internet Archive full-volume OCR text",
+          "path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum-ocr.txt",
+          "source_url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_djvu.txt",
+          "sha256": "d48789cd4ff6d172b9949611c529424180565ba5931ab3e4bff60b19ed59ccf3",
+          "bytes": 1681135,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "notes": ["OCR spans the full page sequence but is partial coverage of the visual facsimile because it omits page images and layout; it is used for navigation, not as a substitute for visual page inspection."]
+        },
+        {
+          "label": "Internet Archive scandata",
+          "path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum-scandata.xml",
+          "source_url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_scandata.xml",
+          "sha256": "a4683f1f7a23d443cf2a85853e4c84a0544b35fde0fe822664cf2cb9b0a9a200",
+          "bytes": 203655,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/GRom/internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/earlyenglishver00herrgoog",
+          "sha256": "a4a1804e1a1e5701767a37b8df3ee35ffb06ab516ce9d08e6b7c262b49a65473",
+          "bytes": 114580,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, scandata XML, and JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:herrtage-scan", "evidence:ia-metadata", "evidence:ia-ocr", "evidence:ia-scandata"]
+    },
+    {
+      "id": "access:ia-madden-scan",
+      "entity": "facsimile:ia:madden-1838",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item viewer and downloads",
+      "url": "https://archive.org/download/b22007118/b22007118.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/b22007118",
+        "https://archive.org/download/b22007118/b22007118_djvu.txt",
+        "https://archive.org/download/b22007118/b22007118_scandata.xml",
+        "https://archive.org/metadata/b22007118"
+      ],
+      "local_copies": [
+        {
+          "label": "Madden 1838 complete Internet Archive scan",
+          "path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum.pdf",
+          "source_url": "https://archive.org/download/b22007118/b22007118.pdf",
+          "sha256": "52024f9820d3b45b95669506cb3a127d9774201c0617d58d535bb231a6ce889a",
+          "bytes": 24239320,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Madden 1838 Internet Archive OCR text",
+          "path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum-ocr.txt",
+          "source_url": "https://archive.org/download/b22007118/b22007118_djvu.txt",
+          "sha256": "6a4452aae2c2ba580fed42c2b434c6be6ca09b9d685d6a32f186546f4b7b14b0",
+          "bytes": 1302777,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-14",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "notes": ["OCR spans the complete scan sequence but is a noisy navigation derivative rather than a substitute for the page images."]
+        },
+        {
+          "label": "Madden 1838 Internet Archive scan metadata",
+          "path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum-scandata.xml",
+          "source_url": "https://archive.org/download/b22007118/b22007118_scandata.xml",
+          "sha256": "1eff197b7342be4e5097073282e98d105f16ac16af0058674c91f60e936a7a04",
+          "bytes": 718779,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Madden 1838 Internet Archive item metadata",
+          "path": "source-cache/GRom/madden-1838-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/b22007118",
+          "sha256": "095c425b874fec65d064db71efca6f5546950326f25273361c47b37e29b470cc",
+          "bytes": 100460,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-14",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, scandata XML, and JSON metadata",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:madden-1838", "evidence:madden-ia-metadata", "evidence:madden-ia-ocr", "evidence:madden-ia-scandata"]
+    },
+    {
+      "id": "access:harley7333-catalog",
+      "entity": "witness:bl:Harley-MS-7333",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog record",
+      "url": "https://searcharchives.bl.uk/catalog/040-002053187",
+      "cost": "free",
+      "format": "HTML catalog description",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-harley7333"]
+    },
+    {
+      "id": "access:harley7333-images",
+      "entity": "witness:bl:Harley-MS-7333",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "Legacy digital-item viewer exposed by the current catalog",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100161517548.0x000001",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002053187"],
+      "cost": "not_applicable",
+      "format": "Legacy digital manuscript object",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-harley7333"],
+      "notes": ["The current catalog explicitly reports that digital images are unavailable; no local image substitute is claimed."]
+    },
+    {
+      "id": "access:harley7333-physical",
+      "entity": "witness:bl:Harley-MS-7333",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request Harley MS 7333 for consultation under current British Library reader and collection-access procedures",
+      "url": "https://searcharchives.bl.uk/catalog/040-002053187",
+      "cost": "not_applicable",
+      "format": "Physical manuscript consultation in London",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-harley7333"]
+    },
+    {
+      "id": "access:harley7333-reproduction",
+      "entity": "witness:bl:Harley-MS-7333",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Ask British Library Digitisation Services for color photography of the complete physical codex, subject to condition, feasibility, quotation, payment, and reuse terms",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://www.bl.uk/terms/imaging-services", "https://searcharchives.bl.uk/catalog/040-002053187"],
+      "contact": "Use the British Library digitisation order form and seek separate written reuse permission where required",
+      "cost": "fee",
+      "format": "Reference or reproduction photography as approved",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-imaging-terms", "evidence:bl-harley7333"],
+      "notes": ["For physical-object completeness, request covers, boards, spine, pastedowns, flyleaves, blanks, and every leaf; associate GRom specifically with ff. 150r-203r."]
+    },
+    {
+      "id": "access:add9066-catalog",
+      "entity": "witness:bl:Add-MS-9066",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "no_public_copy_found",
+      "access_method": "Exact-shelfmark searches of the current British Library catalog and legacy FullDisplay route",
+      "alternate_urls": ["https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_9066"],
+      "cost": "not_applicable",
+      "format": "No exact current public item record recovered",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:add9066-search", "evidence:add9066-historical"],
+      "notes": ["The legacy URL now resolves to generic digitised-manuscript guidance. This date-bounded negative result is not evidence that the physical manuscript is lost or uncataloged internally."]
+    },
+    {
+      "id": "access:add9066-images",
+      "entity": "witness:bl:Add-MS-9066",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Targeted exact-shelfmark, catalog, image-index, and likely legacy viewer searches",
+      "cost": "not_applicable",
+      "format": "No complete public digital object located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:add9066-search"],
+      "notes": ["The dated search does not rule out an internal, private, microfilm, or unindexed surrogate."]
+    },
+    {
+      "id": "access:add9066-physical",
+      "entity": "witness:bl:Add-MS-9066",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Ask British Library Reference Services to confirm the current request record for Add MS 9066 and arrange onsite consultation subject to reader and collection conditions",
+      "url": "https://bl.libanswers.com/form?queue_id=2371",
+      "cost": "unknown",
+      "format": "Physical manuscript consultation if available",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:add9066-historical", "evidence:add9066-search"]
+    },
+    {
+      "id": "access:add9066-reproduction",
+      "entity": "witness:bl:Add-MS-9066",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request confirmation and a quotation for color photography of the complete Add MS 9066 physical object",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://www.bl.uk/terms/imaging-services", "https://bl.libanswers.com/form?queue_id=2371"],
+      "cost": "fee",
+      "format": "Reference or reproduction photography subject to curatorial confirmation and preservation review",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-imaging-terms", "evidence:add9066-search"],
+      "notes": ["Ask first for a current foliation and item-level catalog link; request all physical surfaces rather than only the story passages represented by Herrtage."]
+    },
+    {
+      "id": "access:kk16-description",
+      "entity": "witness:cul:Kk-1-6",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Cambridge-hosted historical scholarly handlist description, with an Apollo record and downloadable M. R. James PDF",
+      "url": "https://doi.org/10.17863/CAM.68083",
+      "alternate_urls": ["https://www.repository.cam.ac.uk/handle/1810/320964", "https://www.repository.cam.ac.uk/bitstreams/afe05d31-ffde-46b3-982d-28cfcc43be77/download", "https://imep.lib.cam.ac.uk/titles/?page=181&sort=-prose"],
+      "cost": "free",
+      "format": "HTML repository record, PDF catalog description, and IMEP title index",
+      "last_checked": "2026-07-14",
+      "local_copies": [
+        {
+          "label": "M. R. James description of Cambridge University Library MS Kk.1.6",
+          "path": "source-cache/GRom/cambridge-kk-1-6-mr-james-description.pdf",
+          "source_url": "https://www.repository.cam.ac.uk/bitstreams/afe05d31-ffde-46b3-982d-28cfcc43be77/download",
+          "sha256": "61b770e333b0b225402cb3a01aa3da6b2ae01f056029221536624cacffd68ee3",
+          "bytes": 120641,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-14",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Coverage is complete for the three-page scholarly catalog description; this PDF is not a facsimile of the 247-leaf manuscript.",
+            "The exact provider PDF has six zero-offset xref entries that qpdf identifies as a common recoverable error; pdfinfo and text extraction read all three pages."
+          ]
+        }
+      ],
+      "evidence_ids": ["evidence:cul-kk16", "evidence:imep-kk16"]
+    },
+    {
+      "id": "access:kk16-images",
+      "entity": "witness:cul:Kk-1-6",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Targeted CUDL, IIIF, Apollo, IMEP, catalog, and general web search for a complete Kk.1.6 image object",
+      "cost": "not_applicable",
+      "format": "No complete public image delivery located",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:cul-kk16", "evidence:cul-access"],
+      "notes": ["The public three-page catalog-description PDF is not a manuscript facsimile."]
+    },
+    {
+      "id": "access:kk16-physical",
+      "entity": "witness:cul:Kk-1-6",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Apply to consult Kk.1.6 in Cambridge University Library Special Collections under current admission and appointment procedures",
+      "url": "https://www.lib.cam.ac.uk/using-library/person-services/use-special-collections",
+      "alternate_urls": ["https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/services"],
+      "cost": "unknown",
+      "format": "Onsite manuscript consultation",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:cul-access", "evidence:cul-kk16"]
+    },
+    {
+      "id": "access:kk16-reproduction",
+      "entity": "witness:cul:Kk-1-6",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Order images through Cambridge University Library or ask for a Virtual Reading Room appointment, subject to condition, service limits, fees, and terms",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+      "alternate_urls": ["https://www.lib.cam.ac.uk/using-library/remote-services/virtual-reading-room"],
+      "cost": "fee",
+      "format": "Item-specific photography or mediated remote consultation",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:cul-image-services", "evidence:cul-access"],
+      "notes": ["For a complete surrogate, request every physical surface of the 247-leaf codex; identify the Gesta work portion separately as ff. 216r-242v."]
+    },
+    {
+      "id": "access:deworde-ustc",
+      "entity": "print:de-worde:Gesta-S4864",
+      "provider_id": "agent:universal-short-title-catalogue",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "USTC edition record 501090",
+      "url": "https://www.ustc.ac.uk/editions/501090",
+      "cost": "free",
+      "format": "HTML bibliographic and copy record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ustc-deworde"]
+    },
+    {
+      "id": "access:deworde-estc",
+      "entity": "print:de-worde:Gesta-S4864",
+      "provider_id": "agent:cerl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Current ESTC record S4864 through CERL",
+      "url": "https://datb.cerl.org/estc/S4864",
+      "cost": "free",
+      "format": "HTML bibliographic and holdings record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:estc-deworde"]
+    },
+    {
+      "id": "access:deworde-physical",
+      "entity": "print:de-worde:Gesta-S4864",
+      "provider_id": "agent:st-johns-college-cambridge",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Arrange an Old Library/Special Collections appointment to consult A.2.18(4), subject to current access conditions",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "alternate_urls": ["https://www.joh.cam.ac.uk/research/library"],
+      "contact": "special.collections@joh.cam.ac.uk",
+      "cost": "unknown",
+      "format": "Onsite consultation of the original early print",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:stjohns-access", "evidence:estc-deworde"]
+    },
+    {
+      "id": "access:deworde-reproduction",
+      "entity": "print:de-worde:Gesta-S4864",
+      "provider_id": "agent:st-johns-college-cambridge",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Ask Special Collections about existing photography or order reference or high-resolution images and obtain item-specific reuse terms",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "contact": "special.collections@joh.cam.ac.uk",
+      "cost": "fee",
+      "format": "Read copies or high-resolution images as approved",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:stjohns-access"],
+      "notes": ["Request the complete 82-leaf physical object and preserve its sequence; map Herrtage's eight Text III selections separately to the represented signatures."]
+    },
+    {
+      "id": "access:eebo-deworde",
+      "entity": "facsimile:eebo:de-worde-S4864",
+      "provider_id": "agent:proquest",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Early English Books Online institutional or personal subscription access",
+      "url": "https://search.proquest.com/docview/2240939730",
+      "alternate_urls": ["https://quod.lib.umich.edu/e/eebo2/A68674.0001.001?rgn=main;view=fulltext"],
+      "cost": "fee",
+      "format": "Microfilm-derived page images and EEBO text",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:eebo-deworde", "evidence:estc-deworde"],
+      "notes": ["No subscription controls were bypassed and no complete payload was cached."]
+    },
+    {
+      "id": "access:exeter-facsimile-catalog",
+      "entity": "facsimile:exeter:de-worde-1974",
+      "provider_id": "agent:heidelberg-university-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Heidelberg University Library catalog record",
+      "url": "https://katalog.ub.uni-heidelberg.de/titel/67420067",
+      "cost": "free",
+      "format": "HTML bibliographic record",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:exeter-facsimile"]
+    },
+    {
+      "id": "access:exeter-facsimile-physical",
+      "entity": "facsimile:exeter:de-worde-1974",
+      "provider_id": "agent:heidelberg-university-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Consult the cataloged printed facsimile under Heidelberg University Library's current use conditions",
+      "url": "https://katalog.ub.uni-heidelberg.de/titel/67420067",
+      "cost": "unknown",
+      "format": "Printed facsimile, call number I GES 5",
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:exeter-facsimile"],
+      "notes": ["No public full digital copy of the 1974 facsimile was located in the dated search."]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:herrtage-edition-us",
+      "entity": "edition:herrtage:1879",
+      "component": "Herrtage's 1879 transcription, arrangement, introduction, notes, glossary, index, and other editorial content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The edition was first published in 1879, well before the current United States public-domain cutoff for published works described by the U.S. Copyright Office.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:herrtage-scan", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:madden-edition-us",
+      "entity": "edition:madden:1838",
+      "component": "Madden's 1838 transcription, introduction, notes, and editorial arrangement",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The edition was first published in 1838, well before the current United States public-domain cutoff for published works.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:madden-1838", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:umich-encoding-terms",
+      "entity": "encoding:umich-cme:GRom",
+      "access_id": "access:umich-handle",
+      "component": "U-M electronic transcription and structural markup",
+      "jurisdiction": "Provider terms and undetermined copyright jurisdiction",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The embedded availability statement permits individual personal, research, and teaching copies with the notice retained and permits linking, but expressly forbids redistribution by commercial or not-for-profit content providers. No current item-specific rights label was retrieved during automated review.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:grom-xml", "evidence:umich-handle"],
+      "notes": ["The public-domain status of the medieval texts and 1879 edition does not itself resolve rights or provider terms in the later encoding."]
+    },
+    {
+      "id": "rights:repository-xml-terms",
+      "entity": "artifact:general-corpus:GRom",
+      "access_id": "access:repository-xml",
+      "component": "Checked-in U-M-derived XML transcription and markup",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The repository artifact embeds the same U-M availability statement and express redistribution restriction as the source encoding.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:grom-xml"]
+    },
+    {
+      "id": "rights:ia-herrtage-scan",
+      "entity": "facsimile:ia:herrtage-1879",
+      "access_id": "access:ia-herrtage-scan",
+      "component": "Google/Internet Archive page images, OCR, scandata, and digital packaging",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The underlying 1879 edition is public domain in the United States, but the reviewed Internet Archive metadata supplies no item-level rights or license field for the scan derivatives.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-metadata", "evidence:herrtage-scan"],
+      "notes": ["Public download and local research caching are not treated as an unrestricted redistribution license for every digital derivative."]
+    },
+    {
+      "id": "rights:ia-madden-scan",
+      "entity": "facsimile:ia:madden-1838",
+      "access_id": "access:ia-madden-scan",
+      "component": "Internet Archive scan files and packaging",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The underlying 1838 edition is public domain in the United States, and the Internet Archive metadata applies the Creative Commons Public Domain Mark to the work; the metadata does not state an item-specific license for every scan derivative and packaging component.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:madden-1838", "evidence:madden-ia-metadata"],
+      "notes": ["The Public Domain Mark statement is retained as provider evidence without treating it as a license grant for independently protectable scan derivatives."]
+    },
+    {
+      "id": "rights:deworde-print-us",
+      "entity": "print:de-worde:Gesta-S4864",
+      "component": "Early-sixteenth-century printed text, typography, and illustrations",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-14",
+      "basis": "The print was produced about 1507-1510, centuries before modern United States copyright terms; catalog access and physical custody are distinct from copyright in the historical content.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:estc-deworde", "evidence:ustc-deworde", "evidence:copyright-office"]
+    },
+    {
+      "id": "rights:eebo-deworde",
+      "entity": "facsimile:eebo:de-worde-S4864",
+      "access_id": "access:eebo-deworde",
+      "component": "EEBO microfilm-derived images, transcription, metadata, and platform delivery",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-14",
+      "basis": "The underlying early print is public domain, but the EEBO reproduction is subscription-mediated and no open item-level license for the platform files was found.",
+      "asserted_by_id": "agent:proquest",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:eebo-deworde", "evidence:estc-deworde"]
+    },
+    {
+      "id": "rights:exeter-facsimile",
+      "entity": "facsimile:exeter:de-worde-1974",
+      "access_id": "access:exeter-facsimile-physical",
+      "component": "1974 facsimile edition, modern preliminary matter, and edition packaging",
+      "jurisdiction": "United Kingdom and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-14",
+      "basis": "The facsimile was published in 1974 and no open license or public-domain dedication for its modern production layer was found in the reviewed catalog records.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:exeter-facsimile"],
+      "notes": ["This assessment does not transfer copyright to the underlying early-sixteenth-century print content."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:herrtage-selection",
+      "entity": "edition:herrtage:1879",
+      "practice": "selection",
+      "source_feature": "Overlapping and non-identical story repertoires in three manuscript witnesses and the de Worde print",
+      "representation": "Three editorial text sections containing 70, 66, and eight story groups, with selected parallel versions",
+      "description": "Herrtage organizes an edition-defined compilation rather than reproducing one complete witness: Harley supplies Text I, Additional supplies its parallels and Text II, Kk.1.6 supplies selected comparisons, and de Worde supplies eight additional stories.",
+      "scope": "Complete 1879 edited compilation, especially printed pp. 1-444",
+      "confidence": "high",
+      "evidence_ids": ["evidence:herrtage-scan", "evidence:herrtage-editorial", "evidence:grom-structure"]
+    },
+    {
+      "id": "practice:herrtage-collation",
+      "entity": "edition:herrtage:1879",
+      "practice": "collation",
+      "source_feature": "Madden's prior reading and the manuscript and early-print sources",
+      "representation": "Freshly checked readings, parallel versions, variants, corrections, and revised notes",
+      "description": "Herrtage says he collated the text with the manuscripts at least twice and that the volume is far from a simple Madden reprint. Lucy Toulmin Smith checked most proofs against Harley MS 7333 and Additional MS 9066 and compared the Text III material with de Worde's original print.",
+      "scope": "Whole edited text and apparatus",
+      "confidence": "high",
+      "evidence_ids": ["evidence:herrtage-editorial", "evidence:herrtage-scan"]
+    },
+    {
+      "id": "practice:herrtage-expansions",
+      "entity": "edition:herrtage:1879",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Scribal abbreviations and expanded forms in the manuscripts",
+      "representation": "Herrtage says expansions are distinguished typographically while manuscript forms are followed more closely than in Madden",
+      "description": "The edition expands manuscript abbreviations but marks the expansions, rather than silently treating expanded letters as literal diplomatic transcription.",
+      "scope": "Manuscript-based textual streams",
+      "confidence": "high",
+      "evidence_ids": ["evidence:herrtage-editorial"]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:GRom",
+      "practice": "selection",
+      "source_feature": "Complete 1879 volume with extensive editorial front and back matter",
+      "representation": "Title-page representation plus printed pp. 1-444; most front matter and all later notes, appendix, glossary, and index omitted",
+      "description": "The U-M encoding selects the edited primary texts and a title-page representation rather than the whole scholarly volume.",
+      "scope": "Complete GRom digital encoding",
+      "confidence": "high",
+      "evidence_ids": ["evidence:grom-xml", "evidence:grom-structure", "evidence:herrtage-scan"]
+    },
+    {
+      "id": "practice:umich-parallel-serialization",
+      "entity": "encoding:umich-cme:GRom",
+      "practice": "collation",
+      "source_feature": "Printed pages split into upper and lower zones for consecutive primary and parallel versions",
+      "representation": "Each story group is serialized at DIV1 level, with witness-specific versions nested in DIV2 and identified by BIBL and manuscript milestones",
+      "description": "The digital hierarchy brings parallel versions together even though the print lets each stream continue across separate top and bottom page zones.",
+      "scope": "Story groups with parallel witness versions in Texts I and II",
+      "confidence": "high",
+      "evidence_ids": ["evidence:grom-xml", "evidence:grom-structure"]
+    },
+    {
+      "id": "practice:umich-deworde-morals",
+      "entity": "encoding:umich-cme:GRom",
+      "practice": "rubrication_representation",
+      "source_feature": "Unclear or typographically undifferentiated moralization boundaries and headings in the de Worde stories",
+      "representation": "Supplied or structurally separated Moral headings and moralization divisions where the encoding statement says typography and context required interpretation",
+      "description": "The encoding makes some de Worde moralization boundaries explicit; these structural supplies are digital editorial intervention, not silently attributed to the early print.",
+      "scope": "Text III, printed pp. 429-444",
+      "confidence": "high",
+      "evidence_ids": ["evidence:grom-xml", "evidence:grom-structure"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:grom-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/GRom.xml, pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_1-2/GRom.xml",
+      "locator": "HEADER; ENCODINGDESC; FRONT/TITLEPAGE; BODY/DIV1",
+      "summary": "Primary local evidence for GRom identity, U-M production and availability statements, Herrtage source citation, digital editorial declaration, title-page representation, three text sections, witness labels and milestones, printed-page milestones, variant and editorial notes, and the selected text boundary.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+    },
+    {
+      "id": "evidence:grom-structure",
+      "type": "visual_inspection",
+      "citation": "Deterministic structural and source-label inspection of CME/source/CME_phase_1-2/GRom.xml, aligned against the cached Herrtage scan.",
+      "repository_path": "CME/source/CME_phase_1-2/GRom.xml",
+      "locator": "FRONT/TITLEPAGE; BODY DIV1/DIV2/DIV3, BIBL, PB, MILESTONE, L, NOTE, and NOTE1 elements",
+      "summary": "Counts one title-page representation, 137 BODY DIV1 elements, 180 DIV2, 162 DIV3, 692 PB, 562 MILESTONE, 325 P, 42 BODY L, 1,386 NOTE1, and two NOTE elements. The first 70 story groups cover Text I, the next 66 Text II, and DIV1.455 contains eight Text III stories. Four story groups contain the 42 body verse-line elements. Of NOTE1, 1,347 are marked TYPE=variant and 39 are untyped; immediate variant sources are not encoded note by note.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+    },
+    {
+      "id": "evidence:raw-cme",
+      "type": "digital_surrogate",
+      "citation": "Kyvero-Press/CME, GRom.xml at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/GRom.xml",
+      "summary": "Provides an exact public raw copy corresponding to the checked-out repository file and pinned Git blob.",
+      "accessed_on": "2026-07-14",
+      "sha256": "3d70eb8d25dd80098dc4a238f554b340782c90960190c08d235603b488ce5918"
+    },
+    {
+      "id": "evidence:umich-handle",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, GRom stable handle and Corpus of Middle English browse page.",
+      "url": "https://name.umdl.umich.edu/GRom",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/browse.html", "https://quod.lib.umich.edu/c/cme/GRom"],
+      "summary": "The official browse page indexes Early English versions of the Gesta Romanorum, edited by S. J. H. Herrtage, among Exempla. The stable handle and direct item URL reached an automated Cloudflare challenge during this review, so current interactive text delivery and any current item-specific rights label were not verified.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:herrtage-scan",
+      "type": "digital_surrogate",
+      "citation": "Sidney J. H. Herrtage, ed., The Early English Versions of the Gesta Romanorum, EETS Extra Series 33 (London: N. Trübner & Co., 1879), Google/Internet Archive scan earlyenglishver00herrgoog.",
+      "url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog.pdf",
+      "alternate_urls": ["https://archive.org/details/earlyenglishver00herrgoog"],
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "PDF p. 10 title page; PDF pp. 40-483 / printed pp. 1-444; complete 613-page volume",
+      "summary": "The complete scan confirms title, editorship, relation to Madden, source witnesses, London EETS publication, three-part edited-text structure, 144 story groups, printed page range, later notes, appendix, glossary, and index. Visual mapping places the encoded title page at PDF p. 10 and encoded printed pp. 1-444 at PDF pp. 40-483.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata API for earlyenglishver00herrgoog.",
+      "url": "https://archive.org/metadata/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/internet-archive-metadata.json",
+      "locator": "metadata and files arrays",
+      "summary": "Confirms item identity, title, creator, 1879 London EETS publication, physical extent, Google digitization, Middle English and English language labels, detailed contents, file inventory, byte sizes, and absence of item-level rights and license fields.",
+      "accessed_on": "2026-07-14",
+      "sha256": "a4a1804e1a1e5701767a37b8df3ee35ffb06ab516ce9d08e6b7c262b49a65473"
+    },
+    {
+      "id": "evidence:ia-ocr",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive full-volume DjVu OCR for earlyenglishver00herrgoog.",
+      "url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_djvu.txt",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum-ocr.txt",
+      "locator": "title page, contents, introduction, manuscript descriptions, editorial method, acknowledgments, and edited text",
+      "summary": "A noisy but complete navigation derivative used to locate statements in the scan; claims were checked against page images or the XML rather than accepted solely from OCR.",
+      "accessed_on": "2026-07-14",
+      "sha256": "d48789cd4ff6d172b9949611c529424180565ba5931ab3e4bff60b19ed59ccf3"
+    },
+    {
+      "id": "evidence:ia-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for earlyenglishver00herrgoog.",
+      "url": "https://archive.org/download/earlyenglishver00herrgoog/earlyenglishver00herrgoog_scandata.xml",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum-scandata.xml",
+      "locator": "pageData and pageNumber mappings",
+      "summary": "Supplies the scan's page-order and printed-page metadata used with visual inspection to audit the cached whole-volume sequence and GRom work-portion mapping.",
+      "accessed_on": "2026-07-14",
+      "sha256": "a4683f1f7a23d443cf2a85853e4c84a0544b35fde0fe822664cf2cb9b0a9a200"
+    },
+    {
+      "id": "evidence:herrtage-editorial",
+      "type": "edition_statement",
+      "citation": "Sidney J. H. Herrtage, introduction, manuscript descriptions, editorial statement, and acknowledgments in The Early English Versions of the Gesta Romanorum (1879).",
+      "url": "https://archive.org/details/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "introduction and manuscript list, especially pp. viii-xxxi; acknowledgments; title page; edited texts pp. 1-444",
+      "summary": "Herrtage describes Harley 7333, Additional 9066, Kk.1.6, and de Worde; says the edition is far from a simple Madden reprint; records at least two manuscript collations, rearranged parallel versions, marked expansions, revised notes, glossary, and index; and thanks Lucy Toulmin Smith for proof collation and comparison with the original de Worde volume.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:madden-1838",
+      "type": "digital_surrogate",
+      "citation": "Frederic Madden, ed., The Old English Versions of the Gesta Romanorum (London: W. Nicol, Shakespeare Press, for the Roxburghe Club, 1838), Internet Archive b22007118.",
+      "url": "https://archive.org/download/b22007118/b22007118.pdf",
+      "alternate_urls": ["https://archive.org/details/b22007118", "https://openlibrary.org/books/OL25938260M/The_old_English_versions_of_the_Gesta_Romanorum_edited_for_the_first_time_from_manuscripts_in_the_Br"],
+      "repository_path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum.pdf",
+      "locator": "PDF p. 7 title page; complete 544-page scan containing the [1], 530, [2]-page edition",
+      "summary": "Confirms the title, Madden's editorship, 1838 London Roxburghe Club publication, manuscript-based scope, and complete public scan of Herrtage's immediate editorial predecessor.",
+      "accessed_on": "2026-07-14",
+      "sha256": "52024f9820d3b45b95669506cb3a127d9774201c0617d58d535bb231a6ce889a"
+    },
+    {
+      "id": "evidence:madden-ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata API for b22007118.",
+      "url": "https://archive.org/metadata/b22007118",
+      "repository_path": "source-cache/GRom/madden-1838-internet-archive-metadata.json",
+      "locator": "metadata and files arrays",
+      "summary": "Confirms item identity, title, contributors, 1838 date, physical extent, full file inventory and byte sizes, and the provider's Creative Commons Public Domain Mark statement for the work.",
+      "accessed_on": "2026-07-14",
+      "sha256": "095c425b874fec65d064db71efca6f5546950326f25273361c47b37e29b470cc"
+    },
+    {
+      "id": "evidence:madden-ia-ocr",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive full-volume DjVu OCR for b22007118.",
+      "url": "https://archive.org/download/b22007118/b22007118_djvu.txt",
+      "repository_path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum-ocr.txt",
+      "locator": "title page, introduction, edited text, notes, glossary, and index",
+      "summary": "A noisy navigation derivative spanning the complete scan sequence; bibliographic and textual claims were checked against page images rather than accepted solely from OCR.",
+      "accessed_on": "2026-07-14",
+      "sha256": "6a4452aae2c2ba580fed42c2b434c6be6ca09b9d685d6a32f186546f4b7b14b0"
+    },
+    {
+      "id": "evidence:madden-ia-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for b22007118.",
+      "url": "https://archive.org/download/b22007118/b22007118_scandata.xml",
+      "repository_path": "source-cache/GRom/madden-1838-old-english-versions-gesta-romanorum-scandata.xml",
+      "locator": "pageData and pageNumber mappings",
+      "summary": "Supplies page-order, page-type, and printed-page metadata for auditing the complete cached scan sequence.",
+      "accessed_on": "2026-07-14",
+      "sha256": "1eff197b7342be4e5097073282e98d105f16ac16af0058674c91f60e936a7a04"
+    },
+    {
+      "id": "evidence:bl-harley7333",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 7333, record 040-002053187.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002053187",
+      "alternate_urls": ["http://access.bl.uk/item/viewer/ark:/81055/vdc_100161517548.0x000001"],
+      "locator": "scope and content, date, origin, extent, dimensions, Gesta folios, digitised content, and access",
+      "summary": "Identifies Harley MS 7333, the Gesta Romanorum on ff. 150r-203r, Leicester origin, second-half-fifteenth-century date, parchment support, 211 folios plus flyleaves, dimensions, and currently unavailable linked digital images.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:add9066-historical",
+      "type": "edition_statement",
+      "citation": "Herrtage's description of British Museum Additional MS 9066 in The Early English Versions of the Gesta Romanorum (1879).",
+      "url": "https://archive.org/details/earlyenglishver00herrgoog",
+      "repository_path": "source-cache/GRom/herrtage-1879-early-english-gesta-romanorum.pdf",
+      "locator": "introduction, manuscript descriptions; Text I and Text II witness headings and leaf milestones",
+      "summary": "Herrtage describes an 87-leaf parchment manuscript in two hands, approximately contemporary with Harley 7333, containing 96 stories; records its donation by William Conybeare in 1832 and a Gervase Lee ownership note; and uses it for Text I parallels and the Text II base.",
+      "accessed_on": "2026-07-14",
+      "sha256": "0add0331ac9785e443f8fb6abcf61e08b7e0b85e55e413acf73ba5cdff28bd64"
+    },
+    {
+      "id": "evidence:add9066-search",
+      "type": "search_result",
+      "citation": "Date-bounded exact-shelfmark catalog and facsimile search for British Library Additional MS 9066.",
+      "url": "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_9066",
+      "repository_path": "manifests/lineage/works/GRom.json",
+      "summary": "On 2026-07-14, exact reference searches for Add MS 9066, Additional MS 9066, and 9066 in the current British Library catalog returned no matching item record; the legacy FullDisplay URL redirected to generic manuscript guidance, and targeted image and likely legacy viewer searches found no complete public facsimile. This records search scope and date, not manuscript loss or absence from internal systems.",
+      "accessed_on": "2026-07-14",
+      "notes": ["Current holding and access should be confirmed directly with British Library Reference Services before ordering or citation as a current catalog record."]
+    },
+    {
+      "id": "evidence:cul-kk16",
+      "type": "scholarly_source",
+      "citation": "M. R. James, unpublished description of Cambridge, University Library, MS Kk.1.6, transcription hosted by the official Cambridge Apollo repository.",
+      "url": "https://www.repository.cam.ac.uk/bitstreams/afe05d31-ffde-46b3-982d-28cfcc43be77/download",
+      "alternate_urls": ["https://doi.org/10.17863/CAM.68083", "https://www.repository.cam.ac.uk/handle/1810/320964"],
+      "repository_path": "source-cache/GRom/cambridge-kk-1-6-mr-james-description.pdf",
+      "locator": "MS Kk.1.6 description, section V, ff. 216-242b",
+      "summary": "Describes a fifteenth-century, 247-leaf vellum-and-paper codex in many hands; gives dimensions and layout; places thirty-two Gesta tales without morals on ff. 216r-242v; calls the text akin to Additional 9066; records Madden's use; and transcribes Richard Fox's closing rubric.",
+      "accessed_on": "2026-07-14",
+      "sha256": "61b770e333b0b225402cb3a01aa3da6b2ae01f056029221536624cacffd68ee3"
+    },
+    {
+      "id": "evidence:imep-kk16",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, Index of Middle English Prose, Kk.1.6 title entry and Summary Lists volume 19.",
+      "url": "https://imep.lib.cam.ac.uk/titles/?page=181&sort=-prose",
+      "alternate_urls": ["https://imep.lib.cam.ac.uk/static/Summary_lists_of_Middle_English_prose_contents_vol_19.pdf"],
+      "locator": "entry 'A fewe of the tales of gestes romonore' | CUL Kk.1.6 [7]",
+      "summary": "Confirms the Middle English prose item identity and a thirty-two-tale Kk.1.6 Gesta section in the official Cambridge-hosted IMEP resource.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cul-access",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, using Special Collections and Archives and Modern Manuscripts services.",
+      "url": "https://www.lib.cam.ac.uk/using-library/person-services/use-special-collections",
+      "alternate_urls": ["https://www.lib.cam.ac.uk/collections/departments/archives-modern-and-medieval-manuscripts-and-university-archives/services", "https://www.lib.cam.ac.uk/using-library/remote-services/virtual-reading-room"],
+      "summary": "Provides current onsite consultation, departmental contact, and mediated remote-reading routes relevant to requesting Kk.1.6 when no public facsimile is available.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:cul-image-services",
+      "type": "official_webpage",
+      "citation": "Cambridge University Library, ordering images from Cultural Heritage Imaging Laboratory.",
+      "url": "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images",
+      "summary": "Describes the Library's image-ordering route, which is request- and fee-mediated and does not itself provide a complete public Kk.1.6 image payload.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:ustc-deworde",
+      "type": "official_catalog",
+      "citation": "Universal Short Title Catalogue, Gesta Romanorum, USTC 501090.",
+      "url": "https://www.ustc.ac.uk/editions/501090",
+      "locator": "edition data, format and collation, references, holdings, and digitalization",
+      "summary": "Records Gesta Romanorum, London, Wynkyn de Worde, [1510], [164] pages with full signature collation, identifiers ESTC S4864 and STC 21286.3, St John's A.2.18(4), an unshelfmarked Cambridge University Library holding, and restricted ProQuest/EEBO digitalization.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:estc-deworde",
+      "type": "official_catalog",
+      "citation": "English Short Title Catalogue through CERL, Gesta Romanorum, ESTC S4864.",
+      "url": "https://datb.cerl.org/estc/S4864",
+      "locator": "imprint, date note, physical description, references, reproduction note, and holdings",
+      "summary": "Gives the revised [1507 to 1508?] date, Wynkyn de Worde Fleet Street imprint, [164]-page extent and signatures, STC 21286.3, St John's A.2.18(4), illustrated title page, and EEBO microfilm reproduction statement. Its date differs from USTC's older [1510] convention.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:stjohns-access",
+      "type": "official_webpage",
+      "citation": "St John's College, Cambridge, Library and Old Library access pages.",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "alternate_urls": ["https://www.joh.cam.ac.uk/research/library"],
+      "summary": "Provides the Special Collections contact and current route for appointments, read copies, and high-resolution image requests. It does not expose a complete public image payload for A.2.18(4).",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:eebo-deworde",
+      "type": "official_webpage",
+      "citation": "ProQuest Early English Books Online, Gesta Romanorum, document 2240939730; U-M EEBO text A68674.0001.001.",
+      "url": "https://search.proquest.com/docview/2240939730",
+      "alternate_urls": ["https://quod.lib.umich.edu/e/eebo2/A68674.0001.001?rgn=main;view=fulltext"],
+      "summary": "Identifies a subscription-mediated digital reproduction and a publicly indexed EEBO text associated with the early de Worde Gesta. No complete image payload was downloaded or cached, and platform access is not treated as open reuse permission.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:exeter-facsimile",
+      "type": "official_catalog",
+      "citation": "Heidelberg University Library catalog, Wynkyn de Worde's Gesta Romanorum, record 67420067.",
+      "url": "https://katalog.ub.uni-heidelberg.de/titel/67420067",
+      "locator": "publication, series, extent, source-note, ISBN, language, and holding",
+      "summary": "Confirms the 1974 Exeter Medieval English Texts printed facsimile, [8] + 162-page extent, reproduction of St John's A.2.18 / STC 21286.3, ISBNs 0900771976 and 9780900771972, Middle English and Latin languages, and Heidelberg call number I GES 5.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation services.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "locator": "ordering, manuscript photography, formats, color, costs, and permissions",
+      "summary": "Provides the current request route for manuscript photography, distinguishes reference and reproduction services, and makes complete-object feasibility and price subject to item condition and quotation.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Imaging Services terms and conditions, updated January 2026.",
+      "url": "https://www.bl.uk/terms/imaging-services",
+      "summary": "States preservation, ordering, supply, third-party-rights, and reproduction conditions; supplied images do not automatically carry repository redistribution permission.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright, revised April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "locator": "works already under statutory protection before 1978 and current public-domain cutoff",
+      "summary": "Supplies current official duration guidance for United States published works, supporting jurisdiction-specific public-domain conclusions for the 1838, 1879, and early-sixteenth-century printed content while leaving provider terms and digital-derivative layers separate.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:add9066-current-record-and-facsimile",
+      "question": "What is the current British Library item record, physical description, foliation, consultation status, and complete-surrogate availability for Additional MS 9066?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Send the exact shelfmark and Herrtage provenance to British Library Reference Services and request the current item URI and full description.",
+        "Ask whether a complete internal digital, microfilm, or photographic surrogate exists and whether it can be supplied.",
+        "If imaging is possible, request the complete physical object, not only Herrtage's selected story loci, and obtain written item-specific reuse terms.",
+        "Replace Herrtage-only physical details with current curatorial evidence where they differ; retain both descriptions when historically meaningful."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:add9066-historical", "evidence:add9066-search", "evidence:bl-digitisation", "evidence:bl-imaging-terms"]
+    },
+    {
+      "id": "question:manuscript-facsimiles",
+      "question": "Can complete, reusable, item-specific facsimiles be obtained for Harley MS 7333 and Cambridge MS Kk.1.6, including full physical-object context rather than only the Gesta loci?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask the British Library whether the unavailable Harley digital object can be restored or supplied and request all physical surfaces if new photography is required.",
+        "Ask Cambridge University Library whether complete Kk.1.6 photography already exists and request the entire 247-leaf codex if supply is feasible.",
+        "For each deliverable, record exact source URL or order provenance, checksum, byte size, coverage, work portion, and written reuse terms before repository redistribution."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:bl-harley7333", "evidence:cul-kk16", "evidence:cul-access", "evidence:cul-image-services", "evidence:bl-digitisation"]
+    },
+    {
+      "id": "question:deworde-date-holdings-and-images",
+      "question": "How should the de Worde print's revised 1507-1508? dating, USTC's [1510] convention, and the differing current copy lists be reconciled, and can a complete reusable image set of St John's A.2.18(4) be obtained?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult J. J. Gwara's 2013 dating argument and any subsequent bibliographical work before normalizing to one exact year.",
+        "Ask USTC and Cambridge University Library to identify the unshelfmarked CUL holding and determine whether it is a distinct surviving copy, a reproduction, or legacy catalog data.",
+        "Ask St John's whether complete photography exists and obtain explicit reuse terms; do not treat EEBO subscription access or the 1974 facsimile as open image licensing.",
+        "Compare the eight Text III passages directly with the original or complete facsimile to document Herrtage's corrections to Madden."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:ustc-deworde", "evidence:estc-deworde", "evidence:stjohns-access", "evidence:eebo-deworde", "evidence:exeter-facsimile", "evidence:herrtage-editorial"]
+    },
+    {
+      "id": "question:umich-current-rights",
+      "question": "What current item-specific rights statement does U-M apply to GRom, and does it supersede or clarify the redistribution restriction embedded in the XML?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Retry the item in an ordinary interactive browser or ask U-M Digital Collections for the current GRom rights record.",
+        "Preserve the embedded restriction unless the provider supplies a clear item-specific interpretation or replacement statement.",
+        "Keep rights in Herrtage's public-domain edition, U-M's later transcription and markup, the checked-in XML, and third-party scan derivatives as separate layers."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:grom-xml", "evidence:umich-handle"]
+    },
+    {
+      "id": "question:variant-apparatus-sources",
+      "question": "Can each of the 1,347 XML NOTE1 elements marked TYPE=variant be attributed to a specific manuscript, Madden reading, printed correction, or other editorial source?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Audit the 1879 footnotes and typographic cues against the XML NOTE1 sequence and record the source signa used by Herrtage.",
+        "Compare the apparatus with Madden's 1838 edition and with complete images of Harley 7333, Additional 9066, Kk.1.6, and de Worde when accessible.",
+        "Do not assign the generic variant notes wholesale to Kk.1.6 or any other witness without note-level evidence."
+      ],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:grom-structure", "evidence:herrtage-editorial", "evidence:madden-1838"]
+    }
+  ]
+}

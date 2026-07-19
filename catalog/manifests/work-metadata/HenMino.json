@@ -1,0 +1,754 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:HenMino",
+  "work_id": "HenMino",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-14",
+  "cataloging_subject": {
+    "id": "work:HenMino",
+    "unit_type": "edited_selection",
+    "label": "The Minor Poems of Robert Henryson (twelve-poem selection)",
+    "scope_note": "The intellectual/content unit delimited by the pinned U-M/OTA XML: twelve separately headed Older Scots verse works selected through G. Gregory Smith's 1908 edition. It is not one poem, an authorial collection, every shorter poem printed by Smith, or the complete set of works in the current METS Shorter Poems section. Each top-level poem is modeled as a work part, with the Moralitas of The Bludy Serk as a nested section. Witnesses, print versions, Smith's edition, and the electronic encoding are transmission layers described in the linked lineage manifest."
+  },
+  "catalog_summary": {
+    "title": "The Minor Poems of Robert Henryson (twelve-poem selection)",
+    "author": "Robert Henryson (traditional and poem-specific; some assignments uncertain or disputed), with Patrick Johnstoun named in the selected witness of The Thre Deid Pollis",
+    "editor": "G. Gregory Smith (1908 source edition); U-M/OTA electronic selection (1993)",
+    "date": "Poems traditionally dated to the late fifteenth century; individual composition dates uncertain; edited electronic selection created in 1993",
+    "region": "Scotland",
+    "genres": ["Edited selection", "Lyric poetry", "Moral and didactic verse", "Pastoral", "Debate poetry", "Religious poetry", "Allegory", "Satire and burlesque", "Memento mori"],
+    "form": "verse",
+    "language_codes": ["sco"],
+    "tags": ["age-and-youth", "allegory", "authorship-dispute", "debate-poetry", "devotional-poetry", "edited-selection", "ethical-conduct", "love-and-courtship", "medicine-parody", "memento-mori", "mortality", "older-scots", "pastoral", "plague", "robert-henryson", "satire", "verse"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "HenMino", "uri": "https://name.umdl.umich.edu/HenMino"},
+    {"scheme": "OTA", "value": "U-243-A"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Minor Poems of Robert Henryson (twelve-poem selection)",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:henmino-structure", "evidence:lineage-smith"]},
+      "notes": ["The qualifier makes the electronic item's exact boundary visible and avoids implying that this is a complete or authorial collection."]
+    },
+    {
+      "id": "title:umich",
+      "type": "alternate",
+      "value": "Robert Henryson's The minor poems of Robert Henryson",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino"]},
+      "notes": ["Exact electronic-item title; its blanket possessive authorship is a discovery label, not a resolution of poem-level attribution conflicts."]
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Henryson: Minor Poems (HenMino selection)",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:henmino-xml"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:robert-henryson",
+      "type": "person",
+      "name": "Robert Henryson",
+      "notes": ["Exact life dates are uncertain. The older header formula 1430?-1506? is retained as historical data only, not a confirmed authority date."]
+    },
+    {
+      "id": "agent:patrick-johnstoun",
+      "type": "person",
+      "name": "Patrick Johnstoun",
+      "alternate_names": ["Patrick Johnston"],
+      "notes": ["Named in the selected Bannatyne subscription to The Thre Deid Pollis; the Maitland Folio instead names Robert Henryson."]
+    },
+    {
+      "id": "agent:g-gregory-smith",
+      "type": "person",
+      "name": "G. Gregory Smith",
+      "alternate_names": ["George Gregory Smith"]
+    },
+    {
+      "id": "agent:george-stevenson",
+      "type": "person",
+      "name": "George Stevenson",
+      "notes": ["Smith credits Stevenson with transcribing and collating the edition's texts."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:henryson-supported-parts",
+      "agent_id": "agent:robert-henryson",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:robene-makyne", "part:bludy-serk", "part:garmont", "part:aige-zowth", "part:deth-man", "part:aganis", "part:annunciation", "part:medecyne"], "description": "Eight poems whose selected source copy or immediate witness tradition explicitly names Henryson and whose attribution is accepted in current scholarship"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:mets-shorter-introduction"]},
+      "notes": ["This grouped responsibility is scoped to named parts; it does not authorize a blanket whole-selection attribution."]
+    },
+    {
+      "id": "responsibility:henryson-prais",
+      "agent_id": "agent:robert-henryson",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:prais-aige"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-chepman", "evidence:mets-shorter-introduction"], "notes": "Smith's selected Chepman and Myllar print version is anonymous; a collateral Bannatyne version attributes the poem to Henryson."},
+      "notes": ["Authorship and selected-copy attribution are deliberately not conflated."]
+    },
+    {
+      "id": "responsibility:henryson-abbey",
+      "agent_id": "agent:robert-henryson",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:abbay-walk"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-bannatyne", "evidence:mets-shorter-introduction"], "notes": "The selected Bannatyne draft is anonymous; the Bannatyne main version names Henryson, while the Maitland version says authore incerto."},
+      "notes": ["The selected draft copy's silence is retained as transmission evidence."]
+    },
+    {
+      "id": "responsibility:henryson-prayer",
+      "agent_id": "agent:robert-henryson",
+      "role": "attributed_author",
+      "attribution_status": "attributed",
+      "scope": {"kind": "part", "part_ids": ["part:prayer-pest"]},
+      "assertion": {"status": "tentative", "confidence": "medium", "evidence_ids": ["evidence:lineage-smith-critical", "evidence:mets-shorter-introduction"], "notes": "The selected Bannatyne main version's Henryson ascription is in a later hand."},
+      "notes": ["The later-hand subscription supports an attribution history, not certainty of authorship."]
+    },
+    {
+      "id": "responsibility:henryson-pollis",
+      "agent_id": "agent:robert-henryson",
+      "role": "attributed_author",
+      "attribution_status": "disputed",
+      "scope": {"kind": "part", "part_ids": ["part:thre-deid-pollis"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:mets-shorter-introduction"], "notes": "The collateral Maitland text names Henryson, but the selected Bannatyne text names Patrick Johnstoun."},
+      "notes": ["This records a competing witness attribution, not a resolved author assignment."]
+    },
+    {
+      "id": "responsibility:johnstoun-pollis",
+      "agent_id": "agent:patrick-johnstoun",
+      "role": "attributed_author",
+      "attribution_status": "disputed",
+      "scope": {"kind": "part", "part_ids": ["part:thre-deid-pollis"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-bannatyne"], "notes": "Confirmed as the explicit subscription in the selected Bannatyne witness, not confirmed as the true intellectual authorship."},
+      "notes": ["Smith prints Finis: quod patrik Iohnistoun at the end of selected version A."]
+    },
+    {
+      "id": "responsibility:smith-editor",
+      "agent_id": "agent:g-gregory-smith",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1908 source-edition presentation and source-version selection, not authorship of the poems"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lineage-smith"]},
+      "notes": ["Editorial responsibility belongs to a transmission layer but is included because this cataloging unit is an edited selection whose text and boundaries depend on Smith."]
+    },
+    {
+      "id": "responsibility:stevenson-transcriber",
+      "agent_id": "agent:george-stevenson",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Transcription work for Smith's source edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lineage-smith"]},
+      "notes": ["Smith's preface thanks Stevenson for transcribing and collating texts."]
+    },
+    {
+      "id": "responsibility:stevenson-collator",
+      "agent_id": "agent:george-stevenson",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:prais-aige", "part:aige-zowth", "part:abbay-walk", "part:deth-man", "part:aganis", "part:thre-deid-pollis", "part:prayer-pest"], "description": "Poems for which Smith prints or compares multiple source versions"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-smith-critical"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Traditionally late fifteenth century; individual poem dates are uncertain",
+      "scope": {"kind": "whole", "description": "Broad literary period for the twelve poem texts, not a claim of simultaneous composition or an authorial collection"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-general", "evidence:mets-shorter-introduction"]},
+      "notes": ["The XML's c. 1480 value is a legacy collection-level assertion and is not precise enough to normalize the twelve works individually.", "The disputed authorship of The Thre Deid Pollis further cautions against forcing one authorial chronology onto the selection."]
+    },
+    {
+      "id": "date:annunciation-attestation",
+      "type": "first_known_attestation",
+      "display": "Late fifteenth century, probably c. 1500, in the Gray manuscript",
+      "scope": {"kind": "part", "part_ids": ["part:annunciation"]},
+      "source_lineage_entity_id": "witness:nls:Adv-MS-34-7-3",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:lineage-gray", "evidence:lineage-celm"]},
+      "notes": ["The witness date is not necessarily the date of composition."]
+    },
+    {
+      "id": "date:prais-first-publication",
+      "type": "first_publication",
+      "display": "1508, in the Chepman and Myllar prints",
+      "normalized": {"not_before": 1508, "not_after": 1508},
+      "scope": {"kind": "part", "part_ids": ["part:prais-aige"]},
+      "source_lineage_entity_id": "edition:chepman-myllar:prais-aige-1508",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lineage-chepman"]},
+      "notes": ["The printed version is anonymous and is a transmission date, not a composition date."]
+    },
+    {
+      "id": "date:electronic-selection",
+      "type": "compilation",
+      "display": "1993 electronic edited selection",
+      "normalized": {"not_before": 1993, "not_after": 1993},
+      "scope": {"kind": "whole", "description": "The exact twelve-poem HenMino selection as a cataloging unit"},
+      "source_lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:umich-henmino"]},
+      "notes": ["This dates the electronic selection, not any medieval poem."]
+    }
+  ],
+  "places": [
+    {
+      "id": "place:scotland",
+      "label": "Scotland",
+      "kind": "country",
+      "identifiers": [{"scheme": "Wikidata", "value": "Q22", "uri": "https://www.wikidata.org/entity/Q22"}],
+      "notes": ["Used as a broad cultural and linguistic origin; exact places of composition are not securely documented."]
+    }
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:scotland",
+      "place_id": "place:scotland",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:lineage-celm"]},
+      "notes": ["Edinburgh is the publication place of the selected 1508 print and an association of the Bannatyne codex, not thereby a proven place of composition for all twelve works."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:older-scots",
+      "code": "sco",
+      "label": "Older Scots",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-general", "evidence:mets-shorter-text"]},
+      "notes": ["Often described more specifically as Middle Scots. Brief Latin subscriptions and formulae do not constitute a sustained secondary-language passage for collection-level faceting."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "Twelve verse works totaling 867 intellectual verse lines in 106 stanza or verse-group elements; labels, subheadings, subscriptions, and an empty display line are excluded from the verse-line total.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-structure"], "notes": "The XML has 893 L elements and 868 numbered L elements, but one numbered L is The Bludy Serk's subscription and 25 unnumbered L elements are non-verse display matter."}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:edited-selection", "term": "edited-selection", "label": "Edited selection", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:henmino-structure", "evidence:lineage-smith"]}, "notes": ["This whole-scope primary term describes the heterogeneous cataloging unit rather than forcing one literary genre across all twelve works."]},
+    {"id": "genre:lyric-poetry", "term": "lyric-poetry", "label": "Lyric poetry", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:robene-makyne", "part:garmont", "part:prais-aige", "part:abbay-walk", "part:aganis", "part:annunciation", "part:prayer-pest"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-shorter-introduction", "evidence:mets-shorter-text"]}},
+    {"id": "genre:moral-didactic", "term": "moral-didactic-verse", "label": "Moral and didactic verse", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:bludy-serk", "part:garmont", "part:prais-aige", "part:abbay-walk", "part:deth-man", "part:aganis", "part:thre-deid-pollis", "part:prayer-pest"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "genre:pastoral", "term": "pastoral", "label": "Pastoral", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:robene-makyne"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-introduction"]}},
+    {"id": "genre:debate-poetry", "term": "debate-poetry", "label": "Debate poetry", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:aige-zowth", "part:deth-man"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "genre:religious-poetry", "term": "religious-poetry", "label": "Religious poetry", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:bludy-serk", "part:bludy-moralitas", "part:abbay-walk", "part:annunciation", "part:prayer-pest"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "genre:allegory", "term": "allegory", "label": "Allegory", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:bludy-serk", "part:garmont"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "genre:satire-burlesque", "term": "satire-and-burlesque", "label": "Satire and burlesque", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:medecyne"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "genre:memento-mori", "term": "memento-mori", "label": "Memento mori", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:deth-man", "part:thre-deid-pollis"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:love-courtship", "term": "love-and-courtship", "label": "Love, courtship, and reversal of desire", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:robene-makyne"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:salvation-devotion", "term": "christian-salvation-and-devotion", "label": "Christian salvation, prayer, and devotion", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:bludy-serk", "part:bludy-moralitas", "part:abbay-walk", "part:annunciation", "part:prayer-pest"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:virtue-conduct", "term": "virtue-and-ethical-conduct", "label": "Virtue and ethical conduct", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:garmont", "part:prais-aige", "part:abbay-walk", "part:aganis"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:age-mortality", "term": "age-youth-and-mortality", "label": "Age, youth, death, and mortality", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:prais-aige", "part:aige-zowth", "part:deth-man", "part:thre-deid-pollis"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:slander", "term": "slander-and-counsel", "label": "Slander, tale-bearing, and responsible counsel", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:aganis"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml"]}},
+    {"id": "subject:annunciation", "term": "annunciation-and-incarnation", "label": "The Annunciation, Incarnation, and Marian devotion", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:annunciation"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:medicine-parody", "term": "medicine-and-recipe-parody", "label": "Medicine, recipes, and learned-language parody", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:medecyne"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}},
+    {"id": "subject:plague", "term": "plague-and-communal-repentance", "label": "Plague and communal repentance", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:prayer-pest"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-text"]}}
+  ],
+  "tags": ["age-and-youth", "allegory", "authorship-dispute", "debate-poetry", "devotional-poetry", "edited-selection", "ethical-conduct", "love-and-courtship", "medicine-parody", "memento-mori", "mortality", "older-scots", "pastoral", "plague", "robert-henryson", "satire", "verse"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "This edited selection gathers twelve varied Older Scots poems transmitted under or near Robert Henryson's name: a pastoral courtship dialogue, a Christian rescue allegory with moralitas, an allegorical garment of virtues, praises and debates concerning age, moral counsels on fortune and slander, a dialogue between Death and Man, an Annunciation lyric, a burlesque medical recipe, a three-skull memento mori, and a plague prayer. Their shared concerns include mutability, mortality, ethical self-government, salvation, and the instability of worldly desire, but the selection is editorial rather than an authorial book and its attributions are not uniform.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:henmino-xml", "evidence:mets-shorter-introduction", "evidence:mets-shorter-text"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "The record stops at the twelve DIV1 units in HenMino.xml. It includes the nested Moralitas of The Bludy Serk, but excludes Smith's parallel source versions and shorter works absent from the XML, including The Want of Wise Men. Source subscriptions and collateral ascriptions are retained at poem and witness level rather than flattened into the electronic header's blanket Henryson attribution.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-celm"]
+    },
+    {
+      "id": "summary:cataloging",
+      "type": "cataloging_note",
+      "value": "The pinned XML contains 893 L elements: 867 intellectual verse lines, one wrongly numbered subscription in The Bludy Serk, and 25 unnumbered labels, subscriptions, medicine subheads, or an empty display line. Page milestones reflect Smith's printed pages but are incomplete and anomalous. Content-part metrics therefore use inspected verse lines and groups, not raw element counts.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 12,
+    "sections": 13,
+    "prose_only_items": 0,
+    "verse_only_items": 12,
+    "mixed_items": 0,
+    "verse_groups": 106,
+    "verse_lines": 867,
+    "description": "Twelve top-level verse works plus the nested Moralitas in The Bludy Serk. The 106 LG elements contain 867 intellectual verse lines. Raw XML counts are 893 L and 868 numbered L because the encoding also uses L for speaker labels, subheadings, subscriptions, and one empty display line, and numbers the Bludy Serk subscription 121.",
+    "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:robene-makyne",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "work",
+      "label": "Robene and Makyne",
+      "summary": "Makyne declares her love to the indifferent shepherd Robene; after she withdraws, he falls in love and pursues her, but she refuses him, reversing their emotional positions.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 16, "verse_lines": 128},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:1, lines 1-128"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "90-94"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. II fols. 365r-366v, pp. 779-782"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol2", "scheme": "IIIF canvas", "value": "413-416"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["The XML has one additional unnumbered L for the subscription after the 128 verse lines."]
+    },
+    {
+      "id": "part:bludy-serk",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "work",
+      "label": "The Bludy Serk",
+      "summary": "A king's daughter is imprisoned by a giant and rescued by a knight who dies of his wounds, leaving his bloody shirt as a token; the nested Moralitas interprets king, lady, giant, knight, pit, and shirt through the Christian story of creation, sin, Christ's sacrifice, hell, and salvation.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 12, "verse_lines": 96},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:2, narrative lines 1-96; Moralitas at HenMino:2.1"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "96-100"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. II fols. 325r-326v, pp. 699-702"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol2", "scheme": "IIIF canvas", "value": "333-336"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["The parent metrics count the twelve narrative stanzas only; the child Moralitas contributes three additional stanzas and 24 lines."]
+    },
+    {
+      "id": "part:bludy-moralitas",
+      "parent_id": "part:bludy-serk",
+      "sequence": 1,
+      "type": "section",
+      "label": "Moralitas",
+      "summary": "The narrative figures are decoded as the Trinity, the human soul, Lucifer, Christ, hell, sin, and the saving memory of Christ's blood, ending with an exhortation to reject sin and remember the bloody shirt.",
+      "item_count": 0,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 0, "verse_groups": 3, "verse_lines": 24},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:2.1, lines 97-120"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "99-100"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol2", "scheme": "IIIF canvas", "value": "335-336 within the broader Bludy Serk passage"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["XML L N=121 is the subscription ‘ffinis quod mr r. henrici,’ not a twenty-fifth verse line."]
+    },
+    {
+      "id": "part:garmont",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "work",
+      "label": "The Garmont of Gud Ladeis",
+      "summary": "A virtuous woman's ideal garment is allegorically assembled from moral qualities, including chastity, humility, good conscience, patience, and truth.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 10, "verse_lines": 40},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:3, lines 1-40"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "102-103"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. II fol. 215r-v, pp. 489-490"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol2", "scheme": "IIIF canvas", "value": "123-124"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"]
+    },
+    {
+      "id": "part:prais-aige",
+      "parent_id": null,
+      "sequence": 4,
+      "type": "work",
+      "label": "The Prais of Aige",
+      "summary": "The speaker praises age for cooling youthful passion, loosening worldly attachment, revealing mutability, and directing thought toward spiritual ends.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 4, "verse_lines": 32},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:4, lines 1-32"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "107-108, version B"},
+        {"lineage_entity_id": "edition:chepman-myllar:prais-aige-1508", "scheme": "tract and facsimile image", "value": "tract 7; images 144 lower portion-145 upper portion"},
+        {"lineage_entity_id": "facsimile:commons:chepman-myllar", "scheme": "DjVu image", "value": "144-145"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-chepman"],
+      "notes": ["Smith's selected print is anonymous; Makculloch and Bannatyne alternatives are collateral, not encoded versions."]
+    },
+    {
+      "id": "part:aige-zowth",
+      "parent_id": null,
+      "sequence": 5,
+      "type": "work",
+      "label": "The Ressoning betuix Aige and Zowth",
+      "summary": "Youth boasts of pleasure, vitality, and love while Age answers with the brevity of delight, bodily decline, moral danger, and the need to prepare for death.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 9, "verse_lines": 72},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:5, lines 1-72"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "118-120, Bannatyne version C"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. I fols. 55r-56r, pp. 169-171"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "187-189"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["Eight unnumbered L elements are alternating speaker labels, not verse lines. Smith also prints unselected Makculloch, Bannatyne B, and Maitland versions."]
+    },
+    {
+      "id": "part:abbay-walk",
+      "parent_id": null,
+      "sequence": 6,
+      "type": "work",
+      "label": "The Abbay Walk",
+      "summary": "A moral lyric urges trust in God and gratitude in both prosperity and adversity, repeating the counsel to accept divine governance rather than worldly instability.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 7, "verse_lines": 56},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:6, lines 1-56"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "126-127, Bannatyne draft version A"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "draft page", "value": "vol. I manuscript pp. 30-32"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "48-50"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne", "evidence:lineage-celm"],
+      "notes": ["The selected draft is anonymous. The Bannatyne main version names Henryson, the Maitland version says authore incerto, and a 1636-reported copy is untraced. One unnumbered XML L is a subscription/display line."]
+    },
+    {
+      "id": "part:deth-man",
+      "parent_id": null,
+      "sequence": 7,
+      "type": "work",
+      "label": "The Ressoning betuix Deth and Man",
+      "summary": "Death and Man dispute the certainty, timing, and spiritual meaning of mortality, pressing the living speaker toward repentance and preparation.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 6, "verse_lines": 48},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:7, lines 1-48"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "136-138, Bannatyne main version B"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. I fols. 56r-57r, pp. 171-173"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "189-191"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["Six unnumbered L elements are speaker labels and one is a subscription/display line; none counts toward the 48 verse lines. Canvas 189 is shared with the end of Aige and Zowth."]
+    },
+    {
+      "id": "part:aganis",
+      "parent_id": null,
+      "sequence": 8,
+      "type": "work",
+      "label": "Aganis Haisty Credence of Titlaris",
+      "summary": "A counsel poem warns rulers and great lords not to believe tale-bearers, slanderers, or hurried accusation, urging deliberation, truth, and direct hearing instead.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 7, "verse_lines": 56},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:8, lines 1-56"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "140-142, Bannatyne version A"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. I fols. 67v-68r, pp. 196-197"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "214-215"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["One unnumbered XML L is a subscription/display line. Smith also prints a collateral Maitland version."]
+    },
+    {
+      "id": "part:annunciation",
+      "parent_id": null,
+      "sequence": 9,
+      "type": "work",
+      "label": "The Annunciation",
+      "summary": "A devotional lyric celebrates Gabriel's greeting, Mary's humility and consent, Christ's Incarnation, and the Virgin's intercessory role.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 6, "verse_lines": 72},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:9, lines 1-72"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "146-148"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-34-7-3", "scheme": "current and historical folio", "value": "current fols. 71r-72v; historical fols. 70r-71v"},
+        {"lineage_entity_id": "facsimile:nls:gray", "scheme": "IIIF canvas", "value": "175-178"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-gray", "evidence:lineage-celm"],
+      "notes": ["The Gray manuscript is the sole known witness. One unnumbered XML L is a subscription/display line; canvas 178 also begins the following legal entry."]
+    },
+    {
+      "id": "part:medecyne",
+      "parent_id": null,
+      "sequence": 10,
+      "type": "work",
+      "label": "Sum Practysis of Medecyne",
+      "summary": "A mock medical letter answers bad medicine with grotesque pseudo-recipes, comic Latinized headings, impossible ingredients, bodily humor, and deliberately nonsensical cures.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 7, "verse_lines": 91},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:10, lines 1-91"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page", "value": "150-153"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. I fols. 141v-142v, pp. 342-344"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "360-362"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"],
+      "notes": ["Four unnumbered L elements are recipe subheadings. Smith's source table says 90 lines, but the inspected printed text and XML have an actual final line 91; the discrepancy remains open."]
+    },
+    {
+      "id": "part:thre-deid-pollis",
+      "parent_id": null,
+      "sequence": 11,
+      "type": "work",
+      "label": "The Thre Deid Pollis",
+      "summary": "Three skulls address the living, especially the young, ornamented women, the proud, and the old, exposing bodily decay and social equality in death and urging penitence and prayer.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 8, "verse_lines": 64},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:11, lines 1-64"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "156-158, Bannatyne version A"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "visually corrected folio and historical page", "value": "vol. I fols. 57v-59r, pp. 174-177"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "192-195"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:lineage-bannatyne", "evidence:lineage-celm"],
+      "notes": ["The selected witness ends ‘quod patrik Iohnistoun’; the Maitland version names Robert Henryson. One unnumbered L is the subscription and one is empty. Direct image inspection corrects CELM's internally inconsistent endpoint: page 178/canvas 196 is the next work."]
+    },
+    {
+      "id": "part:prayer-pest",
+      "parent_id": null,
+      "sequence": 12,
+      "type": "work",
+      "label": "Ane Prayer for the Pest",
+      "summary": "A communal supplication asks God to turn away plague, forgive sin, reform public and private conduct, protect the people, and restore civic and spiritual health.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"verse_only_items": 1, "verse_groups": 11, "verse_lines": 88},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "scheme": "XML node and line", "value": "HenMino:12, lines 1-88"},
+        {"lineage_entity_id": "edition:smith:henryson-vol3-1908", "scheme": "printed page and version", "value": "165-168, Bannatyne main version B"},
+        {"lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "scheme": "folio and historical page", "value": "vol. I fols. 24r-25v, pp. 107-110"},
+        {"lineage_entity_id": "facsimile:nls:bannatyne-vol1", "scheme": "IIIF canvas", "value": "125-128"}
+      ],
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:lineage-bannatyne"],
+      "notes": ["The XML HEAD is ‘Ane prayer for the pest\"’ with a stray trailing quotation mark; the catalog label silently removes that encoding typo. The selected version's Henryson ascription is in a later hand."]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:HenMino",
+    "manifest_path": "manifests/lineage/works/HenMino.json",
+    "bindings": [
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "edition:smith:henryson-vol3-1908", "role": "source_edition"},
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "encoding:umich-ota:U-243-A-HenMino", "role": "digital_encoding"},
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "artifact:general-corpus:HenMino", "role": "repository_representation"},
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "edition:smith:henryson-vol1-1914", "role": "related_source"},
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "catalog:celm:henryson-witnesses", "role": "related_source"},
+      {"metadata_target": "work:HenMino", "lineage_entity_id": "edition:mets:complete-works-current", "role": "related_source"},
+      {"metadata_target": "part:robene-makyne", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:bludy-serk", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:bludy-moralitas", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:garmont", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:prais-aige", "lineage_entity_id": "edition:chepman-myllar:prais-aige-1508", "role": "source_witness"},
+      {"metadata_target": "part:aige-zowth", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:abbay-walk", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:deth-man", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:aganis", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:annunciation", "lineage_entity_id": "witness:nls:Adv-MS-34-7-3", "role": "source_witness"},
+      {"metadata_target": "part:medecyne", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:thre-deid-pollis", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:prayer-pest", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:henmino-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HenMino.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "HEADER; DIV1/DIV2/HEAD/LG/L/PB elements",
+      "summary": "Supplies the exact twelve-work boundary, electronic title and header assertions, headings, textual content, source statement, and encoded structure.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+    },
+    {
+      "id": "evidence:henmino-structure",
+      "type": "computational_inspection",
+      "citation": "Element, numbering, stanza, and page-milestone audit of the pinned HenMino XML.",
+      "repository_path": "CME/source/CME_phase_1-2/HenMino.xml",
+      "locator": "All DIV1/DIV2/HEAD/LG/L/PB elements and N/NODE attributes",
+      "summary": "Counts 12 DIV1, one nested DIV2, 13 HEAD, 106 LG, 893 L, 868 numbered L, and 33 PB. Excluding one numbered subscription and 25 unnumbered display elements yields 867 intellectual verse lines. Per-part stanza and line counts and structural anomalies were checked directly.",
+      "accessed_on": "2026-07-14",
+      "sha256": "eed4def12dccb7c633093c61a08cd2ea6db75767fca9627a47cdc03599d53485"
+    },
+    {
+      "id": "evidence:umich-henmino",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, HenMino.",
+      "url": "https://quod.lib.umich.edu/c/cme/HenMino?view=toc",
+      "alternate_urls": ["https://name.umdl.umich.edu/HenMino"],
+      "summary": "Confirms the current electronic item title, public table of contents, and U-M access context.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-smith",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for Smith volume III, source table, and XML comparison.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:smith-source-table",
+      "summary": "Supports the exact 1908 source edition, selected versions, pages, line counts, source subscriptions, collateral variants, and Smith-to-XML relationship.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-smith-critical",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for Smith volume I critical notes.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:smith-critical-notes",
+      "summary": "Supports source uniqueness and attribution cautions for Annunciation, Pollis, Prayer, Medecyne, Deth and Man, Prais, and Abbey Walk.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-bannatyne",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for the Bannatyne manuscript catalog, IIIF objects, and direct passage inspection.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:bannatyne-direct-inspection",
+      "summary": "Supports the single-codex model, selected passage folios/pages/canvases, exact boundaries, source subscriptions, and corrected Pollis locator.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-gray",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for the Gray manuscript catalog, IIIF object, and direct inspection.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:gray-direct-inspection",
+      "summary": "Supports the Annunciation's sole-witness status, current and historical foliation, canvases 175-178, and source attribution.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-chepman",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for the 1508 Chepman and Myllar print and complete facsimile.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:chepman-direct-inspection",
+      "summary": "Supports the anonymous selected Prais of Aige print, its 1508 Edinburgh publication, and exact image 144-145 boundary.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-celm",
+      "type": "linked_manifest_evidence",
+      "citation": "HenMino lineage manifest evidence for the CELM Henryson witness census.",
+      "repository_path": "manifests/lineage/works/HenMino.json",
+      "source_evidence_id": "evidence:celm-henryson",
+      "summary": "Supports witness loci and relationships for Bannatyne, Gray, Maitland, Makculloch, Chepman and Myllar, and the untraced Riddell copy.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-general",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current General Introduction to the Complete Works of Robert Henryson.",
+      "url": "https://metseditions.org/read/3z5VNPXU44PVtyvXSMwAzuM1Ry1X4Rq",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supports Older Scots language and cultural context, biographical/date uncertainty, and caution that not every shorter poem is certainly Henryson's.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    },
+    {
+      "id": "evidence:mets-shorter-introduction",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current Introduction to the Shorter Poems.",
+      "url": "https://metseditions.org/read/7P9Wxlmtav4CNA3cRv1BUzgvD0lb5B",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supports poem-level genre, source, and attribution statements, including the later-hand Prayer attribution and the Pollis conflict.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    },
+    {
+      "id": "evidence:mets-shorter-text",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current Shorter Poems texts and notes.",
+      "url": "https://metseditions.org/read/89747zXC82YNSj8Vt1R4GiYPwVN41DP",
+      "repository_path": "source-cache/HenMino/mets-complete-works-robert-henryson-current-edition.pdf",
+      "summary": "Supports the poem summaries, genre and subject analysis, and current distinctions among source versions.",
+      "accessed_on": "2026-07-14",
+      "sha256": "62c0240635200d5e094a9214dc943da518b8c52bfa6ce6b52e439d622228eda2"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:authorship-pollis",
+      "question": "Who wrote The Thre Deid Pollis?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Preserve both witness ascriptions and review future attribution scholarship; do not select one author without new evidence."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:mets-shorter-introduction"],
+      "notes": ["Bannatyne selected version A names Patrick Johnstoun; Maitland version B names Robert Henryson."]
+    },
+    {
+      "id": "question:attribution-prais-abbey-prayer",
+      "question": "How confidently can The Prais of Aige, The Abbay Walk, and Ane Prayer for the Pest be assigned to Henryson?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Keep responsibilities part-scoped and distinguish the selected copy from collateral and later-hand ascriptions; consult new attribution studies before revising confidence."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:lineage-smith", "evidence:lineage-smith-critical", "evidence:mets-shorter-introduction"]
+    },
+    {
+      "id": "question:composition-dates",
+      "question": "What are the individual composition dates and places of the twelve poems?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Use broad late-fifteenth-century Scottish context only; seek poem-specific linguistic, historical, or manuscript evidence before normalizing dates or places."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:mets-general"],
+      "notes": ["The XML's c. 1480 value is retained as a legacy assertion, not a secure date for all parts."]
+    },
+    {
+      "id": "question:medecyne-count",
+      "question": "Why does Smith's source table call Sum Practysis of Medecyne a 90-line poem while the printed text and XML contain 91 verse lines?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Compare the final stanza directly with a diplomatic Bannatyne transcription and any edition errata; retain the inspected 91-line count meanwhile."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-structure", "evidence:lineage-smith", "evidence:lineage-bannatyne"]
+    },
+    {
+      "id": "question:selection-rationale",
+      "question": "Why did the 1993 electronic item select exactly these twelve shorter poems and omit other Smith texts such as The Want of Wise Men?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Seek legacy U-M/OTA project documentation if the selection rationale becomes catalogically important; retain the XML boundary without speculating."],
+      "last_checked": "2026-07-14",
+      "evidence_ids": ["evidence:henmino-xml", "evidence:lineage-smith"]
+    }
+  ],
+  "notes": [
+    "Content parts preserve the XML's historical spellings where useful, with catalog capitalization normalized; the stray final quotation mark in the Prayer heading is treated as an encoding typo.",
+    "Witness dates, foliation, printing places, and digital-publication dates belong to lineage layers unless explicitly scoped here as first attestation or first publication.",
+    "No English or Latin language facet is added: the intellectual verse is Older Scots, and brief Latinized headings or subscriptions are embedded formulae rather than sustained passages.",
+    "The content-part totals are non-overlapping: The Bludy Serk parent counts twelve narrative stanzas/96 lines and its child Moralitas counts three stanzas/24 lines."
+  ]
+}

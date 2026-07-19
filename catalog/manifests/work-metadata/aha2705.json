@@ -1,0 +1,330 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:aha2705",
+  "work_id": "aha2705",
+  "record_status": "reviewed",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "cataloging_subject": {
+    "id": "work:aha2705",
+    "unit_type": "edited_selection",
+    "label": "Old English Homilies of the Twelfth Century, Second Series (source-language selection)",
+    "scope_note": "The cataloged unit is Richard Morris's ordered selection as represented in aha2705: thirty-four anonymous Early Middle English prose homilies followed by the Trinity B.14.52 version of Poema Morale as item XXXV, A Moral Ode. It is neither one medieval work nor the complete 1873 book. The XML omits the facing Modern English translations to homilies I–XXXIV, front matter, notes and back matter, and the separately appended three hymns and musical material. The manuscript, edition, U-M OCR encoding, and repository XML remain distinct lineage layers."
+  },
+  "catalog_summary": {
+    "title": "Old English Homilies of the Twelfth Century, Second Series (source-language selection)",
+    "author": "Anonymous Middle English authors",
+    "editor": "Richard Morris",
+    "date": "Edition-defined selection compiled and first published in 1873; the component works and manuscript copies have distinct earlier histories",
+    "region": "England; Trinity MS B.14.52 is associated with southeastern England, but that witness localization is not assigned wholesale to the component works",
+    "genres": ["Prose homily", "Verse homily", "Religious and didactic literature"],
+    "form": "mixed",
+    "language_codes": ["enm", "lat"],
+    "tags": ["middle-english", "early-middle-english", "homily", "sermon", "religious-prose", "religious-poetry", "verse-homily", "poema-morale", "liturgical-year", "saints", "moral-instruction", "trinity-b-14-52", "scholarly-edition", "morris"]
+  },
+  "identifiers": [
+    {"scheme": "General Corpus", "value": "aha2705"},
+    {"scheme": "U-M DLPS", "value": "AHA2705.0001.001", "uri": "https://name.umdl.umich.edu/AHA2705.0001.001"},
+    {"scheme": "Library of Congress call number", "value": "820.6 E13 no.53"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Old English Homilies of the Twelfth Century, Second Series (source-language selection)",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"], "notes": "The qualifier identifies the actual selected source-language unit and is not part of Morris's historical title."}
+    },
+    {
+      "id": "title:edition",
+      "type": "alternate",
+      "value": "Old English Homilies of the Twelfth Century",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Historical title inherited from Morris's Second Series"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-umich"]},
+      "notes": ["The historical bibliographic wording Old English is retained; the selected vernacular is cataloged linguistically as Early Middle English."]
+    },
+    {
+      "id": "title:moral-ode",
+      "type": "original",
+      "value": "A Moral Ode",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:item-35"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}
+    },
+    {
+      "id": "title:poema-morale",
+      "type": "uniform",
+      "value": "Poema Morale",
+      "language": "lat",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:item-35"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-trinity"]},
+      "notes": ["Conventional scholarly title for the work represented by the Trinity copy; it is not an authorial manuscript title."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:anonymous-authors", "type": "collective", "name": "Anonymous Middle English authors", "notes": ["This collective label does not imply common authorship of the thirty-five components."]},
+    {"id": "agent:richard-morris", "type": "person", "name": "Richard Morris", "identifiers": [{"scheme": "VIAF", "value": "61612203", "uri": "https://viaf.org/viaf/61612203"}]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-authorship",
+      "agent_id": "agent:anonymous-authors",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-trinity"]},
+      "notes": ["Anonymous authorship applies component by component and is not an attribution of the compilation to a single author."]
+    },
+    {
+      "id": "responsibility:morris-editor",
+      "agent_id": "agent:richard-morris",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-umich"]}
+    },
+    {
+      "id": "responsibility:morris-compiler",
+      "agent_id": "agent:richard-morris",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-structure"], "notes": "Morris reordered the manuscript's opening Poema Morale after the homilies as item XXXV and defined the published selection."}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:compilation",
+      "type": "compilation",
+      "display": "Compiled for Morris's Second Series, published in 1873",
+      "normalized": {"not_before": 1873, "not_after": 1873},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:morris:old-english-homilies-1873",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-umich"], "notes": "This dates the edition-defined selection, not composition of its medieval components."}
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "First published in this ordered Second Series selection in 1873",
+      "normalized": {"not_before": 1873, "not_after": 1873},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:morris:old-english-homilies-1873",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-morris"]}
+    }
+  ],
+  "places": [],
+  "place_statements": [],
+  "language_statements": [
+    {
+      "id": "language:early-middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-em1060"]},
+      "notes": ["The U-M header's broad eng code and Morris's historical Old English title are not used as the normalized language classification."]
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "embedded",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Rubrics, biblical lemmata, citations, and other embedded passages"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-em1060"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:mixed",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "Thirty-four prose homilies followed by one 400-line verse item.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-structure"]}
+    },
+    {
+      "id": "form:prose",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:item-01", "part:item-02", "part:item-03", "part:item-04", "part:item-05", "part:item-06", "part:item-07", "part:item-08", "part:item-09", "part:item-10", "part:item-11", "part:item-12", "part:item-13", "part:item-14", "part:item-15", "part:item-16", "part:item-17", "part:item-18", "part:item-19", "part:item-20", "part:item-21", "part:item-22", "part:item-23", "part:item-24", "part:item-25", "part:item-26", "part:item-27", "part:item-28", "part:item-29", "part:item-30", "part:item-31", "part:item-32", "part:item-33", "part:item-34"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-structure"]}
+    },
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:item-35"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-structure", "evidence:metadata-morris"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:prose-homily", "term": "prose-homily", "label": "Prose homily", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "part", "part_ids": ["part:item-01", "part:item-02", "part:item-03", "part:item-04", "part:item-05", "part:item-06", "part:item-07", "part:item-08", "part:item-09", "part:item-10", "part:item-11", "part:item-12", "part:item-13", "part:item-14", "part:item-15", "part:item-16", "part:item-17", "part:item-18", "part:item-19", "part:item-20", "part:item-21", "part:item-22", "part:item-23", "part:item-24", "part:item-25", "part:item-26", "part:item-27", "part:item-28", "part:item-29", "part:item-30", "part:item-31", "part:item-32", "part:item-33", "part:item-34"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}},
+    {"id": "genre:verse-homily", "term": "verse-homily", "label": "Verse homily", "scheme": "General Corpus controlled vocabulary", "primary": true, "scope": {"kind": "part", "part_ids": ["part:item-35"]}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-trinity"]}},
+    {"id": "genre:religious-didactic", "term": "religious-didactic-literature", "label": "Religious and didactic literature", "scheme": "General Corpus controlled vocabulary", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:christian-instruction", "term": "christian-instruction", "label": "Christian doctrine and moral instruction", "scheme": "General Corpus subjects", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}},
+    {"id": "subject:liturgical-year", "term": "liturgical-year", "label": "Christian liturgical year", "scheme": "General Corpus subjects", "primary": true, "scope": {"kind": "selected_passages", "part_ids": ["part:item-01", "part:item-02", "part:item-03", "part:item-06", "part:item-07", "part:item-08", "part:item-09", "part:item-11", "part:item-12", "part:item-13", "part:item-14", "part:item-15", "part:item-16", "part:item-17", "part:item-18", "part:item-19", "part:item-20", "part:item-22", "part:item-23", "part:item-24", "part:item-25", "part:item-26", "part:item-27", "part:item-29"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}},
+    {"id": "subject:repentance-judgment", "term": "repentance-and-last-judgment", "label": "Sin, repentance, death, judgment, and salvation", "scheme": "General Corpus subjects", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris"]}}
+  ],
+  "tags": ["middle-english", "early-middle-english", "homily", "sermon", "religious-prose", "religious-poetry", "verse-homily", "poema-morale", "liturgical-year", "saints", "moral-instruction", "trinity-b-14-52", "scholarly-edition", "morris"],
+  "summaries": [
+    {"id": "summary:abstract", "type": "abstract", "value": "A mixed-form edited selection of thirty-four Early Middle English prose homilies and the 400-line Trinity version of Poema Morale, arranged by Richard Morris as items I–XXXV in his 1873 Second Series.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-trinity"]},
+    {"id": "summary:scope", "type": "scope_note", "value": "aha2705 preserves the source-language texts only. It excludes the facing Modern English translations, front matter, editorial notes/back matter, and the unrelated three-hymn appendix and musical reproductions, while retaining title-page and omission-marker structure at the encoding layer.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-structure", "evidence:metadata-morris"]}
+  ],
+  "extent": {
+    "numbered_items": 35,
+    "sections": 35,
+    "prose_only_items": 34,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 1,
+    "verse_lines": 400,
+    "description": "The target BODY contains 35 DIV2 containers: 34 prose homilies in 36 P elements and one LG containing exactly 400 L elements. The XML has 407 L elements globally because seven Latin Lectori lines on the title page fall outside the cataloged subject.",
+    "evidence_ids": ["evidence:metadata-structure", "evidence:metadata-xml"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id":"part:item-01","parent_id":null,"sequence":1,"type":"item","label":"I. DE ADUENTU.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='1']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"3–7"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-02","parent_id":null,"sequence":2,"type":"item","label":"II. DOMINICA SECUNDA IN ADUENTU.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='2']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"9"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-03","parent_id":null,"sequence":3,"type":"item","label":"III. DOMINICA TERTIA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='3']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"11–15"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-04","parent_id":null,"sequence":4,"type":"item","label":"IV. CREDO.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='4']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"17–23"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-05","parent_id":null,"sequence":5,"type":"item","label":"V. PATER NOSTER.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='5']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"25–31"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-06","parent_id":null,"sequence":6,"type":"item","label":"VI. IN DIE NATALIS DOMINI.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='6']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"33–41"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-07","parent_id":null,"sequence":7,"type":"item","label":"VII. [IN EPIPHANIA DOMINI.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='7']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"43–45"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-08","parent_id":null,"sequence":8,"type":"item","label":"VIII. [IN PURIFICATIONE S. MARIE.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='8']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"47–51"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-09","parent_id":null,"sequence":9,"type":"item","label":"IX. [IN SEPTUAGESIMA.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='9']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"53–55"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-10","parent_id":null,"sequence":10,"type":"item","label":"X. [DE CONFESSIONE.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='10']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"57–59"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"],"notes":["Morris notes that the homily appears imperfect."]},
+    {"id":"part:item-11","parent_id":null,"sequence":11,"type":"item","label":"XI. IN CAPITE IEIUNIJ.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='11']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"61–67"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-12","parent_id":null,"sequence":12,"type":"item","label":"XII. [DOMINICA I] IN XLA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='12']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"69–75"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-13","parent_id":null,"sequence":13,"type":"item","label":"XIII. [DOMINICA II] IN QUADRAGESIMA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='13']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"77–81"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-14","parent_id":null,"sequence":14,"type":"item","label":"XIV. IN MEDIA XLA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='14']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"83–89"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-15","parent_id":null,"sequence":15,"type":"item","label":"XV. DOMINICA PALMARUM.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='15']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"91–93"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-16","parent_id":null,"sequence":16,"type":"item","label":"XVI. IN DIE PASCHE.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='16']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"95–101"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-17","parent_id":null,"sequence":17,"type":"item","label":"XVII. [DOMINICA I POST PASCHA.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='17']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"103–105"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-18","parent_id":null,"sequence":18,"type":"item","label":"XVIII. [DOMINICA IV POST PASCHA.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='18']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"107–109"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-19","parent_id":null,"sequence":19,"type":"item","label":"XIX. IN ASCENSIONE DOMINI.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='19']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"111–115"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-20","parent_id":null,"sequence":20,"type":"item","label":"XX. IN DIE PENTECOSTE.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='20']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"117–121"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-21","parent_id":null,"sequence":21,"type":"item","label":"XXI. [SERMO IN PS. LIII. 1.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='21']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"123–125"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-22","parent_id":null,"sequence":22,"type":"item","label":"XXII. DE SANCTO IOHANNE BAPTISTA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='22']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"127–131"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-23","parent_id":null,"sequence":23,"type":"item","label":"XXIII. DE SANCTO IOHANNE BAPTISTA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='23']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"133–141"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-24","parent_id":null,"sequence":24,"type":"item","label":"XXIV. DE SANCTA MARIA MAGDALENA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='24']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"143–145"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-25","parent_id":null,"sequence":25,"type":"item","label":"XXV. DE SANCTO IACOBO.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='25']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"147–153"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-26","parent_id":null,"sequence":26,"type":"item","label":"XXVI. DE SANCTO LAURENTIO.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='26']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"155–159"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-27","parent_id":null,"sequence":27,"type":"item","label":"XXVII. (ASSUMPTIO S. MARIE VIRGINIS.)","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='27']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"161–167"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-28","parent_id":null,"sequence":28,"type":"item","label":"XXVIII. DE DEFUNCTIS.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='28']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"169–173"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-29","parent_id":null,"sequence":29,"type":"item","label":"XXIX. DE SANCTO ANDREA.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='29']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"175–185"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-30","parent_id":null,"sequence":30,"type":"item","label":"XXX. [ESTOTE FORTES IN BELLO.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='30']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"187–193"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-31","parent_id":null,"sequence":31,"type":"item","label":"XXXI. [ESTOTE PRUDENTES ET VIGILATE IN ORATIONIBUS.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='31']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"195–201"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-32","parent_id":null,"sequence":32,"type":"item","label":"XXXII. SERMO IN MARCUM VIII. 34.","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='32']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"203–209"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-33","parent_id":null,"sequence":33,"type":"item","label":"XXXIII. [SERMO IN PS. CXIX. 110.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='33']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"211–217"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-34","parent_id":null,"sequence":34,"type":"item","label":"XXXIV. [SERMO IN ISA. XI. I.]","summary":"One of the thirty-four selected Early Middle English prose homilies transcribed from Trinity MS B.14.52.","item_count":1,"textual_form":"prose","locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='34']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"219"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"]},
+    {"id":"part:item-35","parent_id":null,"sequence":35,"type":"item","label":"XXXV. A MORAL ODE.","summary":"The selected Early Middle English verse text of the Trinity copy of Poema Morale.","item_count":1,"textual_form":"verse","metrics":{"prose_only_items":0,"verse_only_items":1,"mixed_items":0,"verse_groups":1,"verse_lines":400},"locators":[{"lineage_entity_id":"encoding:umich-cme:AHA2705.0001.001","scheme":"XML XPath","value":"BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[@N='35']"},{"lineage_entity_id":"edition:morris:old-english-homilies-1873","scheme":"printed pages","value":"220–232"}],"evidence_ids":["evidence:metadata-xml","evidence:metadata-structure","evidence:metadata-morris"],"notes":["Morris points readers to a translation in the First Series; that translation is outside aha2705."]}
+  ],
+  "related_works": [
+    {"id": "work:poema-morale", "title": "Poema Morale", "relation": "contains", "evidence_ids": ["evidence:metadata-morris", "evidence:metadata-trinity"], "notes": ["Only item XXXV is this work; the record does not flatten the whole selection into Poema Morale."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:aha2705",
+    "manifest_path": "manifests/lineage/works/aha2705.json",
+    "bindings": [
+      {"metadata_target": "work:aha2705", "lineage_entity_id": "edition:morris:old-english-homilies-1873", "role": "source_edition"},
+      {"metadata_target": "work:aha2705", "lineage_entity_id": "witness:trinity:B-14-52", "role": "source_witness"},
+      {"metadata_target": "work:aha2705", "lineage_entity_id": "encoding:umich-cme:AHA2705.0001.001", "role": "digital_encoding"},
+      {"metadata_target": "work:aha2705", "lineage_entity_id": "artifact:general-corpus:aha2705", "role": "repository_representation"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:metadata-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned CME source XML, aha2705.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/aha2705.xml",
+      "locator": "HEADER; BODY/DIV1[@TYPE='Middle English homilies 1-35']/DIV2[1–35]; FRONT and BACK omission wrappers",
+      "summary": "Primary evidence for the exact encoded boundary, U-M identifier, edition title, OCR declaration, item labels, language content, page milestones, notes, and excluded sections.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c05e722efa8d29a6b6670c16ae1a4fedd0bf571110a99e8a8dd0a55b3b5c2a76"
+    },
+    {
+      "id": "evidence:metadata-structure",
+      "type": "computational_inspection",
+      "citation": "Element, attribute, and page-locator audit of repository aha2705.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/aha2705.xml",
+      "locator": "Direct ordered counts and PB/@N mapping under BODY/DIV1",
+      "summary": "Counts 35 DIV2 units, 34 prose items, one LG and 400 target L elements. It distinguishes the seven title-page Latin lines from the target verse and maps each item to its printed pages.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c05e722efa8d29a6b6670c16ae1a4fedd0bf571110a99e8a8dd0a55b3b5c2a76"
+    },
+    {
+      "id": "evidence:metadata-morris",
+      "type": "digital_surrogate",
+      "citation": "Richard Morris, ed., Old English Homilies of the Twelfth Century, Second Series, EETS Original Series 53 (London, 1873).",
+      "url": "https://archive.org/download/oldenglishhomili00morruoft/oldenglishhomili00morruoft.pdf",
+      "repository_path": "source-cache/aha2705/morris-1873-old-english-homilies-second-series-complete-bound-carrier.pdf",
+      "locator": "Second Series PDF pp. 399–710; title p. 405; preface pp. 407–408; selected source text printed pp. 3–232 / PDF pp. 433–662",
+      "summary": "Primary edition evidence for Morris's title, responsibility, 1873 publication, direct use of Trinity B.14.52, the thirty-five-item order, facing translations, source-text page ranges, and the separately appended hymns and music.",
+      "accessed_on": "2026-07-16",
+      "sha256": "a87558b9dd36cdb607a52e092e2cfabf8ff311df0bc3feaf39eeea0a19e7bae0"
+    },
+    {
+      "id": "evidence:metadata-umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, Corpus of Middle English item AHA2705.0001.001.",
+      "url": "https://quod.lib.umich.edu/c/cme/AHA2705.0001.001",
+      "alternate_urls": ["https://name.umdl.umich.edu/AHA2705.0001.001"],
+      "locator": "bibliographic header, contents, access and rights statements",
+      "summary": "Official item evidence for bibliographic identity, thirty-five numbered text units, omission of facing translations and book matter, public access, and U-M rights labeling.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:metadata-trinity",
+      "type": "official_catalog",
+      "citation": "Trinity College Cambridge, The James Catalogue of Western Manuscripts, B.14.52 (James no. 335).",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/B.14.52",
+      "locator": "main details; contents from Poema Morale f. 2r through the final homily f. 88r; IIIF link",
+      "summary": "Current institutional evidence for the unique principal manuscript, shelfmark, thirteenth-century date, physical description, broad contents, work loci, and complete public IIIF route.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:metadata-em1060",
+      "type": "scholarly_source",
+      "citation": "Elaine Treharne et al., The Production and Use of English Manuscripts 1060 to 1220, Cambridge, Trinity College B.14.52 description.",
+      "url": "https://em1060.stanford.edu/manuscript/cambridge-trinity-college-b-14-52",
+      "locator": "summary, hands, codicology, foliation, item loci, origin and bibliography",
+      "summary": "Academic manuscript description supporting the component-sensitive date and origin evidence, the 400-line Poema Morale locus, homily boundaries, Latin citations, hands, foliation systems, and quire distinctions.",
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:metadata-lineage",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus source-lineage manifest for aha2705.",
+      "repository_path": "manifests/lineage/works/aha2705.json",
+      "source_evidence_id": "evidence:morris-edition",
+      "summary": "Provides the separated artifact, encoding, edition, witness and facsimile layers, direct lineage relations, exact local-copy mappings, rights evidence, and unresolved source questions."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:component-identification",
+      "question": "Which modern work authorities, individual composition dates, and source traditions can be assigned to each of the thirty-four prose homilies without projecting the Trinity copy's date or Morris's edition label onto them?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult item-level homily scholarship and repertories against each incipit and explicit.", "Retain the edition-defined selection boundary until component identities are evidenced individually."],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-morris", "evidence:metadata-em1060"]
+    }
+  ],
+  "notes": [
+    "The BODY DIV1 label Middle English homilies 1-35 is structurally convenient but generically inaccurate: item XXXV is the verse work A Moral Ode, not a prose homily.",
+    "Morris's manuscript order differs from his edition order: Poema Morale precedes the homilies in Trinity B.14.52 but appears after them as XXXV in the edition.",
+    "The XML's omitted back matter wrapper begins with the facing translation on printed p. 218; actual editorial notes/back matter begin on printed p. 233.",
+    "No composition-place statement is made for the whole selection because southeastern manuscript production is witness evidence, not proof of a shared origin for all component works."
+  ]
+}

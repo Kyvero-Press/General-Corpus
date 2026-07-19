@@ -1,0 +1,570 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00024",
+  "work_id": "CME00024",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00024",
+    "unit_type": "edited_selection",
+    "label": "Letters and Papers of John Shillingford, Mayor of Exeter, 1447–50",
+    "scope_note": "Stuart A. Moore's 1871 editorial selection and arrangement of documents associated with John Shillingford and Exeter's civic-cathedral dispute, represented in the repository by 43 top-level documentary containers in three parts. The cataloging subject is not the whole surviving Shillingford archive, not one manuscript or codex, and not necessarily 43 independent physical works: Moore collated drafts, copies, fragments, rolls, and separately cataloged appendix records. The historical documents, Moore's edition, the archival witnesses, U-M's electronic encoding, the repository XML, and the modern scan remain distinct lineage layers."
+  },
+  "catalog_summary": {
+    "title": "Letters and Papers of John Shillingford, Mayor of Exeter, 1447–50",
+    "author": "John Shillingford and other named and anonymous civic, ecclesiastical, and administrative documentary creators",
+    "editor": "Stuart A. Moore",
+    "date": "Historical documents c. 1443–1449, chiefly late 1447–spring 1448; edited selection first published 1871",
+    "region": "Exeter and Devon, England, with civic business in London",
+    "genres": ["Edited documentary collection", "Correspondence", "Legal and administrative records", "Accounts"],
+    "form": "prose",
+    "language_codes": ["enm", "lat", "eng"],
+    "tags": ["middle-english", "latin", "edited-selection", "documentary-collection", "correspondence", "civic-letters", "late-medieval-england", "exeter", "devon", "municipal-government", "civic-liberties", "ecclesiastical-jurisdiction", "legal-documents", "petitions", "accounts", "urban-history", "manuscript-studies"]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "CME00024",
+      "uri": "https://name.umdl.umich.edu/CME00024"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Letters and Papers of John Shillingford, Mayor of Exeter, 1447–50",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "title:short",
+      "type": "short",
+      "value": "Letters and Papers of John Shillingford",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "title:part-i",
+      "type": "alternate",
+      "value": "Letters of John Shillingford",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:letters"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:john-shillingford",
+      "type": "person",
+      "name": "John Shillingford",
+      "notes": ["Mayor of Exeter in 1447–1448 and principal documentary voice in the collection; he is not the creator of every selected document."]
+    },
+    {
+      "id": "agent:other-documentary-creators",
+      "type": "collective",
+      "name": "Other civic, ecclesiastical, royal, legal, and administrative documentary creators",
+      "notes": ["A cataloging collective for the collection's many named and anonymous correspondents, officials, petitioners, clerks, and accountants; it is not a claim of shared authorship or institutional identity."]
+    },
+    {
+      "id": "agent:stuart-a-moore",
+      "type": "person",
+      "name": "Stuart A. Moore",
+      "notes": ["Editor and compiler of the 1871 Camden Society volume."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:shillingford-author",
+      "agent_id": "agent:john-shillingford",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"], "description": "Letters, petitions, answers, memoranda, and other documents composed, issued, or presented by or for Shillingford"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction"]},
+      "notes": ["The schema role author is used broadly for documentary creation; item-level responsibility may instead be sender, petitioner, issuer, declarant, or office-holder."]
+    },
+    {
+      "id": "responsibility:other-creators",
+      "agent_id": "agent:other-documentary-creators",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"], "description": "Documents created by Shillingford's correspondents, Exeter and cathedral officials, royal or legal authorities, and municipal accountants"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "responsibility:moore-editor",
+      "agent_id": "agent:stuart-a-moore",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1871 Camden Society edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-rhs-series"]}
+    },
+    {
+      "id": "responsibility:moore-compiler",
+      "agent_id": "agent:stuart-a-moore",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Selection, ordering, grouping, and numbering of dispersed documents and appendix records"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-introduction", "evidence:cme00024-cruse"]}
+    },
+    {
+      "id": "responsibility:moore-transcriber",
+      "agent_id": "agent:stuart-a-moore",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"], "description": "Historical documents printed or excerpted in the edition"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-introduction", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "responsibility:moore-collator",
+      "agent_id": "agent:stuart-a-moore",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings"], "description": "Documents constructed or supplied from multiple drafts, copies, fragments, or rolls"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:cme00024-moore-introduction", "evidence:cme00024-cruse"]},
+      "notes": ["Cruse shows that Moore's treatment of drafts, copies, variants, and manuscript changes is not consistent enough to assume a uniform critical method."]
+    },
+    {
+      "id": "responsibility:moore-commentator",
+      "agent_id": "agent:stuart-a-moore",
+      "role": "commentator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Introduction, document headings, editorial notes, and index in the print volume"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-moore-introduction"]},
+      "notes": ["The repository XML includes the title page, document text, headings, and notes, but omits Moore's contents, introduction, and index."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:documents",
+      "type": "composition",
+      "display": "c. 1443–1449, chiefly late 1447–spring 1448",
+      "normalized": {"not_before": 1443, "not_after": 1449},
+      "scope": {"kind": "whole", "description": "Creation, issue, or accounting dates of the selected historical documents"},
+      "source_lineage_entity_id": "edition:moore:shillingford:1871",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition", "evidence:cme00024-devon-receivers"]},
+      "notes": ["The title's 1447–50 is retained as title information, not imposed as an exact content range. The six appendix accounts represented in the XML run from 22 to 28 Henry VI, approximately 1443–1449; the principal dispute correspondence is concentrated in late 1447 and early 1448."]
+    },
+    {
+      "id": "date:compilation",
+      "type": "compilation",
+      "display": "1871",
+      "normalized": {"not_before": 1871, "not_after": 1871},
+      "scope": {"kind": "whole", "description": "Moore's editorial selection, arrangement, collation, and annotation"},
+      "source_lineage_entity_id": "edition:moore:shillingford:1871",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-rhs-series"]}
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "1871",
+      "normalized": {"not_before": 1871, "not_after": 1871},
+      "scope": {"kind": "whole", "description": "First publication of Moore's Camden Society edited selection"},
+      "source_lineage_entity_id": "edition:moore:shillingford:1871",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-rhs-series"]}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:devon", "label": "Devon", "kind": "region", "broader_place_ids": ["place:england"]},
+    {"id": "place:exeter", "label": "Exeter", "kind": "settlement", "broader_place_ids": ["place:devon"]},
+    {"id": "place:london", "label": "London", "kind": "settlement", "broader_place_ids": ["place:england"]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:exeter",
+      "place_id": "place:exeter",
+      "type": "historical_setting",
+      "scope": {"kind": "whole", "description": "Principal setting and subject of the civic, cathedral, legal, and financial records"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction"]}
+    },
+    {
+      "id": "place-statement:devon",
+      "place_id": "place:devon",
+      "type": "associated_place",
+      "scope": {"kind": "whole", "description": "County context and present archival home of the principal witnesses"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-devon-main", "evidence:cme00024-devon-receivers"]}
+    },
+    {
+      "id": "place-statement:england",
+      "place_id": "place:england",
+      "type": "historical_setting",
+      "scope": {"kind": "whole", "description": "Political and legal jurisdiction of the selected records"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "place-statement:london",
+      "place_id": "place:london",
+      "type": "associated_place",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters"], "description": "Shillingford's lobbying, legal business, and correspondence at Westminster and London"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"], "description": "Most correspondence, petitions, pleadings, and narrative documentary text"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "language:latin",
+      "code": "lat",
+      "label": "Latin",
+      "usage": "secondary",
+      "script": "Latn",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:pleadings", "part:appendix"], "description": "Formal bonds, legal formulae, and the receiver-account extracts"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "language:modern-english-editorial",
+      "code": "eng",
+      "label": "English",
+      "usage": "editorial",
+      "script": "Latn",
+      "scope": {"kind": "whole", "description": "Moore's title, introduction, headings, notes, expansions, and index"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]},
+      "notes": ["This modern editorial English is distinct from the Middle English documentary text."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:whole",
+      "value": "prose",
+      "scope": {"kind": "whole"},
+      "description": "A prose documentary collection comprising letters, petitions, articles, answers, memoranda, legal instruments, court records, and municipal accounts.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-structure"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:edited-documentary-collection",
+      "term": "edited-documentary-collection",
+      "label": "Edited documentary collection",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-moore-introduction"]}
+    },
+    {
+      "id": "genre:correspondence",
+      "term": "correspondence",
+      "label": "Correspondence",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters"], "description": "Shillingford's outgoing and incoming civic correspondence and associated drafts"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction"]}
+    },
+    {
+      "id": "genre:legal-administrative-records",
+      "term": "legal-and-administrative-records",
+      "label": "Legal and administrative records",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"], "description": "Petitions, articles and answers, bonds, memoranda, court-roll extracts, and municipal instruments"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "genre:accounts",
+      "term": "accounts",
+      "label": "Accounts",
+      "scheme": "general-corpus",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:appendix"], "description": "Extracts from six Exeter receiver-account rolls for 1443–1449"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-devon-receivers"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:exeter-jurisdiction",
+      "term": "exeter-civic-cathedral-jurisdiction-dispute",
+      "label": "Exeter civic-cathedral jurisdiction dispute",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction", "evidence:cme00024-cruse"]}
+    },
+    {
+      "id": "subject:municipal-government",
+      "term": "municipal-government-and-civic-liberties",
+      "label": "Municipal government and civic liberties",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction"]}
+    },
+    {
+      "id": "subject:arbitration",
+      "term": "legal-arbitration-and-jurisdiction",
+      "label": "Legal arbitration and jurisdiction",
+      "scheme": "general-corpus",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:letters", "part:pleadings", "part:appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition"]}
+    },
+    {
+      "id": "subject:civic-writing",
+      "term": "late-medieval-civic-correspondence-and-documentary-practice",
+      "label": "Late medieval civic correspondence and documentary practice",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-cruse"]}
+    },
+    {
+      "id": "subject:municipal-finance",
+      "term": "exeter-municipal-finance",
+      "label": "Exeter municipal finance",
+      "scheme": "general-corpus",
+      "scope": {"kind": "selected_passages", "part_ids": ["part:appendix"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-devon-receivers"]}
+    }
+  ],
+  "tags": ["middle-english", "latin", "edited-selection", "documentary-collection", "correspondence", "civic-letters", "late-medieval-england", "exeter", "devon", "municipal-government", "civic-liberties", "ecclesiastical-jurisdiction", "legal-documents", "petitions", "accounts", "urban-history", "manuscript-studies"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Moore's edited collection assembles letters, petitions, pleadings, memoranda, legal instruments, and municipal accounts centered on John Shillingford's mayoralty and Exeter's dispute with the cathedral authorities over civic liberties and jurisdiction. The main correspondence follows Shillingford's efforts in Exeter and London in late 1447 and early 1448; the second part gathers formal articles, answers, bonds, and related records; the appendix adds supplementary civic documents and account extracts extending the represented chronology to approximately 1443–1449. The collection is especially important for late medieval urban government, civic advocacy, legal process, vernacular administrative writing, and the material practices of drafting and copying.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-introduction", "evidence:cme00024-cruse"]
+    },
+    {
+      "id": "summary:contents",
+      "type": "contents_note",
+      "value": "The encoded selection has three main parts. Part I, Letters of John Shillingford, contains 28 top-level documentary containers on printed pages 1–72. Part II contains eight top-level containers on pages 75–132, subdivided into 44 articles or parts for petitions, pleadings, bonds, and related records. The Appendix contains seven top-level containers on pages 133–154, including an Exbridge petition, an extract from a 1444–45 Mayor's Court roll, and six receiver-account extracts. The print volume also contains a contents list, Moore's introduction on pages i–xxvi, and an index on pages 155–161, which the repository XML omits.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:cme00024-structure", "evidence:cme00024-moore-edition"]
+    },
+    {
+      "id": "summary:cataloging-scope",
+      "type": "scope_note",
+      "value": "This record describes Moore's 1871 editorially created selection as the corpus work. The 43 top-level XML containers describe edition structure, not 43 uniform or independent archival objects. Moore sometimes combined drafts, copies, fragments, or roll extracts, and the appendix draws from separately cataloged municipal series. Current Devon catalog ranges, Moore's Roman numerals, and earlier archive-box designations do not support a complete one-to-one item crosswalk, so document-level authorship, shelfmarks, dates, and languages are not inferred beyond inspected evidence.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:cme00024-cruse", "evidence:cme00024-devon-main", "evidence:cme00024-structure"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 43,
+    "sections": 3,
+    "prose_only_items": 43,
+    "verse_only_items": 0,
+    "mixed_items": 0,
+    "verse_groups": 0,
+    "verse_lines": 0,
+    "description": "The repository XML contains 43 body DIV2 top-level documentary containers in three DIV1 parts, with 50 nested DIV3 units. Part I has 28 DIV2 units; Part II has eight DIV2 and 44 DIV3 units; the Appendix has seven DIV2 and six DIV3 units. These edition/encoding containers are not a physical-document count: Moore's Roman numbering is irregular, some units collate multiple drafts or fragments, and some appendix units excerpt larger rolls.",
+    "evidence_ids": ["evidence:cme00024-structure", "evidence:cme00024-moore-edition", "evidence:cme00024-cruse"]
+  },
+  "content_structure_status": "summary",
+  "content_parts": [
+    {
+      "id": "part:letters",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "section",
+      "label": "Part I: Letters of John Shillingford",
+      "summary": "Twenty-eight top-level containers, chiefly Shillingford's late 1447–early 1448 letters and drafts concerning the Exeter dispute and his business in London.",
+      "item_count": 28,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 28, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:moore:shillingford:1871", "scheme": "printed pages", "value": "1–72"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00024", "scheme": "XML path", "value": "BODY/DIV1[@N='1']/DIV2"}
+      ],
+      "evidence_ids": ["evidence:cme00024-structure", "evidence:cme00024-moore-edition"]
+    },
+    {
+      "id": "part:pleadings",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "section",
+      "label": "Part II: Petitions, articles, answers, and related documents",
+      "summary": "Eight top-level containers, subdivided into 44 articles or parts, presenting formal statements, petitions, responses, bonds, memoranda, and evidence in the civic-cathedral dispute.",
+      "item_count": 8,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 8, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:moore:shillingford:1871", "scheme": "printed pages", "value": "75–132"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00024", "scheme": "XML path", "value": "BODY/DIV1[@N='2']/DIV2"}
+      ],
+      "evidence_ids": ["evidence:cme00024-structure", "evidence:cme00024-moore-edition"]
+    },
+    {
+      "id": "part:appendix",
+      "parent_id": null,
+      "sequence": 3,
+      "type": "section",
+      "label": "Appendix",
+      "summary": "Seven top-level containers of supplementary civic records, including an Exbridge petition, a Mayor's Court-roll extract, and six annual receiver-account extracts.",
+      "item_count": 7,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 7, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:moore:shillingford:1871", "scheme": "printed pages", "value": "133–154"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00024", "scheme": "XML path", "value": "BODY/DIV1[HEAD='APPENDIX']/DIV2"}
+      ],
+      "evidence_ids": ["evidence:cme00024-structure", "evidence:cme00024-moore-edition", "evidence:cme00024-devon-exbridge", "evidence:cme00024-devon-mayor-roll", "evidence:cme00024-devon-receivers"]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:CME00024",
+    "manifest_path": "manifests/lineage/works/CME00024.json",
+    "bindings": [
+      {"metadata_target": "work:CME00024", "lineage_entity_id": "edition:moore:shillingford:1871", "role": "source_edition"},
+      {"metadata_target": "work:CME00024", "lineage_entity_id": "encoding:umich-cme:CME00024", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00024", "lineage_entity_id": "artifact:general-corpus:CME00024", "role": "repository_representation"},
+      {"metadata_target": "work:CME00024", "lineage_entity_id": "witness:devon:ECA-1-1-6", "role": "source_witness"},
+      {"metadata_target": "part:appendix", "lineage_entity_id": "witness:devon:ECA-11-MR-3", "role": "source_witness"},
+      {"metadata_target": "part:appendix", "lineage_entity_id": "witness:devon:ECA-2-1-1-156", "role": "source_witness"},
+      {"metadata_target": "part:appendix", "lineage_entity_id": "witness:devon:ECA-3-1-1-1-99-104", "role": "source_witness"},
+      {"metadata_target": "work:CME00024", "lineage_entity_id": "facsimile:internet-archive:letterspapersofj00shilrich", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:cme00024-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_3/CME00024.xml.",
+      "repository_path": "CME/source/CME_phase_3/CME00024.xml",
+      "locator": "HEADER; FRONT; BODY; REVIEW/TEMPHEAD",
+      "summary": "Supplies the encoded title and identifier, edition statement, documentary text, part and item headings, languages visible in the text, page milestones, notes, and 2016 review history.",
+      "accessed_on": "2026-07-12",
+      "sha256": "393e34357c55535485c624b69e2a167553ad8b6bda8ad36599fee38c48864f07"
+    },
+    {
+      "id": "evidence:cme00024-structure",
+      "type": "computational_inspection",
+      "citation": "Element and source-structure inspection of repository CME00024.xml.",
+      "repository_path": "CME/source/CME_phase_3/CME00024.xml",
+      "locator": "BODY/DIV1, DIV2, DIV3, HEAD, P, NOTE, and PB elements",
+      "summary": "Counts five BODY DIV1 containers including title and half-title divisions, 43 documentary DIV2 containers, 50 nested DIV3 units, 79 headings, 222 paragraphs, 268 notes, and 155 page milestones; confirms the three substantive parts and their 28/8/7 top-level split, printed page ranges, and absence of verse structures.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:cme00024-umich",
+      "type": "linked_manifest_evidence",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00024 item record and full text.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:umich-cme00024",
+      "summary": "Confirms the public electronic item, stable identifier, title, author heading, 1871 source-edition statement, subject headings, and public-domain rights assertion."
+    },
+    {
+      "id": "evidence:cme00024-moore-edition",
+      "type": "linked_manifest_evidence",
+      "citation": "Stuart A. Moore, ed., Letters and Papers of John Shillingford, Mayor of Exeter 1447–50, Camden Society, New Series II (1871).",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:moore-1871-edition",
+      "summary": "The complete volume scan confirms title, editor, publisher and printer, publication year, part and document arrangement, pagination, document contents and languages, introduction, appendix, and index."
+    },
+    {
+      "id": "evidence:cme00024-moore-introduction",
+      "type": "linked_manifest_evidence",
+      "citation": "Moore, introduction to Letters and Papers of John Shillingford, pp. xiii–xxvi.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:moore-1871-introduction",
+      "summary": "Explains the papers' dispersed discovery in Exeter's corporate archives, the archive's incompleteness, Moore's access to originals through the city, and examples of documents formed from drafts, copies, fragments, and rolls."
+    },
+    {
+      "id": "evidence:cme00024-rhs-series",
+      "type": "linked_manifest_evidence",
+      "citation": "Royal Historical Society, Camden New Series list.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:rhs-camden-series",
+      "summary": "Confirms Moore's Shillingford volume as Camden New Series volume II, published in 1871."
+    },
+    {
+      "id": "evidence:cme00024-devon-main",
+      "type": "linked_manifest_evidence",
+      "citation": "Devon Archives and Local Studies, ECA/1/1/6, Shillingford letters and papers.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:devon-shillingford-catalog",
+      "summary": "Identifies the current principal archival series, four child groupings, extent, access status, former references, and publication note; the child number ranges do not establish a complete unambiguous crosswalk to Moore."
+    },
+    {
+      "id": "evidence:cme00024-devon-exbridge",
+      "type": "linked_manifest_evidence",
+      "citation": "Devon Archives and Local Studies, ECA/11/MR/3, records concerning the River Exe and Earls of Devon.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:devon-exbridge-catalog",
+      "summary": "Identifies the 17-membrane roll whose membrane 6 contains Shillingford's Exbridge petition printed in the appendix."
+    },
+    {
+      "id": "evidence:cme00024-devon-mayor-roll",
+      "type": "linked_manifest_evidence",
+      "citation": "Devon Archives and Local Studies, ECA/2/1/1/156, Mayor's Court Roll, 23–24 Henry VI.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:devon-mayor-roll-catalog",
+      "summary": "Identifies the 51-membrane 1444–45 court roll whose membrane 21 is excerpted in the appendix."
+    },
+    {
+      "id": "evidence:cme00024-devon-receivers",
+      "type": "linked_manifest_evidence",
+      "citation": "Devon Archives and Local Studies, ECA/3/1/1/1 and child rolls 99–104, Receiver's account rolls.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:devon-receivers-catalog",
+      "summary": "Identifies the six annual rolls for 1443–1449 excerpted on printed pages 143–154; the parent catalog's less precise 1444–50 and pp. 143–152 note is retained as an attributed discrepancy."
+    },
+    {
+      "id": "evidence:cme00024-cruse",
+      "type": "linked_manifest_evidence",
+      "citation": "Julia Cruse, Gentry Identity and the Politics of Vernacular Letter Writing in the Fifteenth Century (PhD thesis, University of Kent, 2014), pp. 79–84.",
+      "repository_path": "manifests/lineage/works/CME00024.json",
+      "source_evidence_id": "evidence:cruse-2014",
+      "summary": "Describes the historically dispersed Shillingford papers, their varied material forms and earlier box designations, Moore's irregular numbering, and his inconsistent conflation or reporting of drafts, copies, and manuscript changes."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:document-crosswalk",
+      "question": "How do Moore's 43 top-level editorial units, internal Roman numerals, and cited fragments map to the current ECA/1/1/6 child records and their document numbers?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Obtain or inspect complete images and folder-level inventories for all four ECA/1/1/6 child records, including unnumbered fragments, endorsements, and labels.", "Build a many-to-many crosswalk that preserves Moore's conflations and current overlapping or missing catalog number ranges rather than forcing one-to-one matches."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cme00024-devon-main", "evidence:cme00024-cruse", "evidence:cme00024-moore-edition"]
+    },
+    {
+      "id": "question:roman-numbering",
+      "question": "What corrected editorial sequence should be used for item-level cataloging when Moore omits XXIV, prints the following unit as XXV, and later duplicates or restarts XXXV and XXXVI?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Record printed labels verbatim and assign separate stable corpus component identifiers.", "Reconcile each label against headings, pagination, manuscript references, and Cruse's numbering analysis before exposing a corrected sequence."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cme00024-moore-edition", "evidence:cme00024-cruse", "evidence:cme00024-structure"]
+    },
+    {
+      "id": "question:title-date",
+      "question": "Which documentary or editorial rationale supports the title endpoint 1450 when the XML's six receiver-account extracts end in 1448–49 and the principal correspondence is chiefly 1447–48?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Inspect every dated heading and Moore's source citations against complete manuscript images.", "Continue to preserve 1447–50 as part of the edition title while displaying the inspected content range separately."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-moore-edition", "evidence:cme00024-devon-receivers"]
+    },
+    {
+      "id": "question:item-attribution-language",
+      "question": "What are the exact document-level creators, scribal roles, languages, and relationships among drafts, copies, and final versions?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Create item-level diplomatic descriptions from complete archival images, separately recording author, sender, issuer, scribe, recipient, language, material form, and documentary state.", "Do not propagate Shillingford authorship or Middle English to every component from the collection title or U-M header."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cme00024-xml", "evidence:cme00024-devon-main", "evidence:cme00024-cruse"]
+    }
+  ],
+  "notes": [
+    "The 43 top-level documentary containers are Moore/U-M structural units, not a count of distinct manuscripts or authored works.",
+    "The current Devon catalog exposes no public digitized attachments for the identified source records as of 2026-07-12; the Internet Archive PDF is a scan of Moore's printed edition, not a manuscript facsimile.",
+    "Complete reproduction requests for roll sources must include every membrane, side, endorsement, attachment, seal, label, fold, fragment, and adjacent record, then identify the printed work portion rather than requesting only the excerpted membrane.",
+    "The XML review note dated 2016-08-25 documents a later proofing and restructuring pass, not the original U-M keying or encoding date."
+  ]
+}

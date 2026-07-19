@@ -1,0 +1,234 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00093",
+  "work_id": "CME00093",
+  "record_status": "reviewed",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00093",
+    "unit_type": "single_work",
+    "label": "De Arte Lacrimandi",
+    "scope_note": "The cataloged subject is the anonymous Middle English Marian poem conventionally called De Arte Lacrimandi, not Robert Max Garrett's four-paragraph English preface, the complete 1909 Anglia article, the U-M digital encoding, or any one physical manuscript. CME00093 retains both Garrett's editorial preface and his 72-stanza text, so those layers are modeled separately."
+  },
+  "catalog_summary": {
+    "title": "De Arte Lacrimandi",
+    "author": "Anonymous",
+    "editor": "Robert Max Garrett",
+    "date": "Fifteenth century; copied in Bodleian MS Bodley 423 by approximately 1430-1440",
+    "region": "England; precise place of composition and dialect region unresolved",
+    "genres": ["Marian lament", "Devotional poetry", "Religious poetry", "Dream vision"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": ["middle-english", "verse", "anonymous", "marian-devotion", "virgin-mary", "lament", "weeping", "tears", "life-of-the-virgin", "passion-of-christ", "assumption-of-mary", "dream-vision", "devotional-poetry", "religious-poetry", "refrain", "harley-ms-2274", "dimev-3777", "nimev-2347"]
+  },
+  "identifiers": [
+    {"scheme": "CME", "value": "CME00093", "uri": "https://name.umdl.umich.edu/CME00093"},
+    {"scheme": "DIMEV", "value": "3777", "uri": "https://www.dimev.net/record.php?recID=3777"},
+    {"scheme": "NIMEV/IMEV", "value": "2347"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "De Arte Lacrimandi", "language": "lat", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:garrett-1909", "evidence:bl-harley2274", "evidence:dimev"]},
+      "notes": ["Garrett used this as the article title, and DIMEV reports that the Harley scribe wrote the same Latin title in the upper margin of fol. 35r. It is retained as the established discovery title rather than treated as proof of an authorial title."]
+    },
+    {
+      "id": "title:garrett-poem-heading", "type": "alternate", "value": "De arte lacrimandi. Prosopopaeia B. Virginie", "language": "lat", "script": "Latn", "supplied_by": "Robert Max Garrett's 1909 edition", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:garrett-1909", "evidence:xml"]},
+      "notes": ["Garrett's fuller printed heading means approximately 'On the art of weeping: a personification of the Blessed Virgin.' It is not identified as the complete manuscript rubric."]
+    },
+    {
+      "id": "title:incipit", "type": "incipit", "value": "Now late me thought I wolde begynne / My synfull lyuyng to abate", "language": "enm", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:garrett-1909", "evidence:bl-harley2274"]},
+      "notes": ["DIMEV 1.0 prints 'My sinful language to abate'; Garrett, the XML, and the BL incipit identify 'living/lyuyng,' so the DIMEV wording is retained as an open data-quality question rather than adopted here."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:anonymous-author", "type": "person", "name": "Anonymous", "notes": ["No author is named by Garrett, DIMEV, the current BL record, or the other witness records consulted."]},
+    {"id": "agent:robert-max-garrett", "type": "person", "name": "Robert Max Garrett", "alternate_names": ["Robert M. Garrett"]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-author", "agent_id": "agent:anonymous-author", "role": "author", "attribution_status": "anonymous", "scope": {"kind": "whole", "description": "The medieval Marian poem"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:garrett-1909", "evidence:dimev", "evidence:bl-harley2274"]}
+    },
+    {
+      "id": "responsibility:garrett-editor", "agent_id": "agent:robert-max-garrett", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "The text and apparatus printed in Anglia 32 and encoded by U-M"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:garrett-1909", "evidence:umich"]}
+    },
+    {
+      "id": "responsibility:garrett-transcriber", "agent_id": "agent:robert-max-garrett", "role": "transcriber", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:poem"], "description": "Transcription of Harley MS 2274, historical fols. 35a-46b, now ff. 35r-46v"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:garrett-1909", "evidence:linked-lineage"]}
+    },
+    {
+      "id": "responsibility:garrett-commentator", "agent_id": "agent:robert-max-garrett", "role": "commentator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:editorial-preface"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:garrett-1909"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition", "type": "composition", "display": "Fifteenth century; necessarily no later than the approximately 1430-1440 Bodley 423 copy", "normalized": {"not_before": 1400, "not_after": 1440}, "scope": {"kind": "whole"},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:dimev", "evidence:bodley423-project"], "notes": "The normalized range is a cautious inference from the earliest currently identified copy, not an independently dated act of composition."}
+    },
+    {
+      "id": "date:first-attestation", "type": "first_known_attestation", "display": "Approximately 1430-1440 in Bodleian Library MS Bodley 423, part B", "normalized": {"not_before": 1430, "not_after": 1440}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "witness:bodleian:Bodley-423",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:dimev", "evidence:bodley423-project"], "notes": "This dates the manuscript part containing the poem, not the poem's composition. The consulted Digital Bodleian selection describes the composite codex only broadly as mid-fifteenth century and does not image the poem."}
+    },
+    {
+      "id": "date:first-publication", "type": "first_publication", "display": "1909 in Robert Max Garrett's Anglia edition", "normalized": {"not_before": 1909, "not_after": 1909}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "edition:garrett:anglia-32-1909",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:garrett-1909", "evidence:dimev"], "notes": "Garrett is the earliest complete publication identified in the consulted edition and DIMEV bibliography; a comprehensive pre-1909 publication search was not performed."}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:english-origin", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:dimev", "evidence:bl-harley2274", "evidence:bodley423-project"], "notes": "The Middle English work survives in English collections and Bodley 423 part B is assigned to England. This broad cultural origin does not establish a precise place of composition or transfer any one scribe's dialect to the work."}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:garrett-1909", "evidence:dimev", "evidence:bl-harley2274"]},
+      "notes": ["The brief Latin title and Garrett's modern English editorial preface do not make the medieval poem itself multilingual."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse", "value": "verse", "scope": {"kind": "whole"}, "description": "Seventy-two twelve-line stanzas, each ending in a variable form of the refrain 'Who can not wepe come lerne att me.'",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:structure", "evidence:garrett-1909", "evidence:dimev"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:marian-lament", "term": "marian-lament", "label": "Marian lament", "scheme": "General Corpus genre taxonomy", "primary": true, "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dimev", "evidence:mets"]}
+    },
+    {
+      "id": "genre:devotional-poetry", "term": "devotional-poetry", "label": "Devotional poetry", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dimev", "evidence:mets"]}
+    },
+    {
+      "id": "genre:religious-poetry", "term": "religious-poetry", "label": "Religious poetry", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dimev"]}
+    },
+    {
+      "id": "genre:dream-vision", "term": "dream-vision", "label": "Dream vision", "scheme": "General Corpus genre taxonomy", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:xml"], "notes": "The penitential speaker kneels before an image of pity, is ravished out of the body, and hears the Virgin's first-person narrative. The visionary frame occupies the opening stanzas rather than the entire poem."}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:virgin-life", "term": "life-of-the-virgin-mary", "label": "Life of the Virgin Mary from her birth through the Assumption", "scheme": "General Corpus subject taxonomy", "primary": true, "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "subject:weeping", "term": "sacred-weeping-and-tears", "label": "Sacred weeping, tears, and instruction in compassion", "scheme": "General Corpus subject taxonomy", "primary": true, "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:dimev"]}
+    },
+    {
+      "id": "subject:passion", "term": "passion-of-christ", "label": "Passion of Christ", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    },
+    {
+      "id": "subject:marian-devotion", "term": "marian-devotion", "label": "Devotion to the Virgin Mary", "scheme": "General Corpus subject taxonomy", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:mets"]}
+    }
+  ],
+  "tags": ["middle-english", "verse", "anonymous", "marian-devotion", "virgin-mary", "lament", "weeping", "tears", "life-of-the-virgin", "passion-of-christ", "assumption-of-mary", "dream-vision", "devotional-poetry", "religious-poetry", "refrain", "harley-ms-2274", "dimev-3777", "nimev-2347"],
+  "summaries": [
+    {
+      "id": "summary:abstract", "type": "abstract", "value": "An anonymous Middle English devotional poem in which a penitential speaker, kneeling before an image of the Virgin with the dead Christ, enters a visionary state and hears Mary narrate her life from childhood through Christ's Passion and her own Assumption. Each twelve-line stanza turns Mary's joy, fear, or grief into instruction in sacred tears through the refrain 'Who can not wepe come lerne att me.' CME00093 also retains Robert Max Garrett's modern English preface and manuscript notes as editorial paratext.", "language": "eng", "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:xml", "evidence:garrett-1909", "evidence:dimev", "evidence:mets"]
+    },
+    {
+      "id": "summary:structure", "type": "contents_note", "value": "The encoded poem has 72 numbered stanzas and 864 verse-line elements. Garrett prints manuscript-folio milestones from historical 35a through 46b, now expressed as ff. 35r-46v, 36 apparatus notes, and a variable refrain. Four modern-English prose paragraphs preceding the poem describe the Harley witness, stanza and rhyme form, language, and literary qualities.", "language": "eng", "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:structure", "evidence:garrett-1909", "evidence:bl-harley2274"]
+    },
+    {
+      "id": "summary:witnesses", "type": "cataloging_note", "value": "Garrett transcribed only Harley MS 2274. DIMEV 3777 identifies three additional witnesses: a 76-stanza Bodley 423 text, a three-stanza Corpus Christi College Oxford 261 fragment, and a 52-stanza Trinity College Dublin 160 text. Their readings, dates, and image terms are not transferred into Garrett's direct source chain.", "language": "eng", "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:garrett-1909", "evidence:dimev", "evidence:linked-lineage"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 76,
+    "sections": 72,
+    "prose_only_items": 4,
+    "verse_only_items": 72,
+    "mixed_items": 0,
+    "verse_groups": 72,
+    "verse_lines": 864,
+    "description": "At the encoded-item boundary, 76 modeled items comprise four editorial-preface paragraphs and 72 medieval verse stanzas; the cataloged medieval work itself is the 72 LG stanzas and 864 L elements, twelve lines per stanza. CME00093 also has 74 HEAD elements across both layers, 26 PB elements covering Garrett's article pp. 269-294, 23 manuscript-folio milestones, 36 NOTE elements, 72 italic HI spans, and 12 SUP elements. These are encoding and edition metrics, not evidence that every witness has the same stanza count or typographic conventions.",
+    "evidence_ids": ["evidence:structure", "evidence:garrett-1909", "evidence:dimev"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:editorial-preface", "parent_id": null, "sequence": 1, "type": "preface", "label": "Garrett's editorial preface", "summary": "Four modern-English prose paragraphs on Harley MS 2274, metre and rhyme, linguistic features, and literary construction; printed on pp. 269-270 and outside the medieval poem's intellectual boundary.", "item_count": 4, "textual_form": "prose",
+      "metrics": {"prose_only_items": 4, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "edition:garrett:anglia-32-1909", "scheme": "printed pages", "value": "269-270"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00093", "scheme": "XML hierarchy", "value": "BODY/DIV1/DIV2[@TYPE='preface']"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:garrett-1909", "evidence:structure"],
+      "notes": ["This part is represented to disclose the CME item boundary; it is not part of the medieval work cataloged as De Arte Lacrimandi."]
+    },
+    {
+      "id": "part:poem", "parent_id": null, "sequence": 2, "type": "work", "label": "De Arte Lacrimandi", "summary": "Garrett's complete 72-stanza text of the anonymous Middle English poem, with manuscript-folio milestones and notes on Harley readings and corrections.", "item_count": 72, "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 72, "mixed_items": 0, "verse_groups": 72, "verse_lines": 864},
+      "locators": [
+        {"lineage_entity_id": "edition:garrett:anglia-32-1909", "scheme": "printed pages", "value": "270-294"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00093", "scheme": "XML hierarchy", "value": "BODY/DIV1/DIV2[@TYPE='poem']"},
+        {"lineage_entity_id": "witness:bl:Harley-2274", "scheme": "current foliation", "value": "ff. 35r-46v; Garrett's historical notation 35a-46b"}
+      ],
+      "evidence_ids": ["evidence:xml", "evidence:garrett-1909", "evidence:bl-harley2274", "evidence:structure"]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:sodenly-afraide", "title": "Sodenly afraide, half waking, half slepyng", "relation": "related_to", "evidence_ids": ["evidence:mets", "evidence:dimev"],
+      "notes": ["A distinct shorter Marian lyric with the same 'Who cannot wepe come lerne at me' refrain. Saupe's commentary uses it to point readers to Garrett's much longer poem; shared refrain does not make the works identical."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00093",
+    "manifest_path": "manifests/lineage/works/CME00093.json",
+    "bindings": [
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "artifact:general-corpus:CME00093", "role": "repository_representation"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "encoding:umich-cme:CME00093", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "edition:garrett:anglia-32-1909", "role": "source_edition"},
+      {"metadata_target": "part:poem", "lineage_entity_id": "witness:bl:Harley-2274", "role": "source_witness"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "witness:bodleian:Bodley-423", "role": "related_source"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "witness:ccc-oxford:MS-261", "role": "related_source"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "witness:tcd:MS-160", "role": "related_source"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "catalog:dimev:3777", "role": "related_source"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "edition:baker:1983", "role": "related_source"},
+      {"metadata_target": "work:CME00093", "lineage_entity_id": "edition:saupe:1997", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:xml", "type": "repository_file", "citation": "General Corpus source XML for CME00093.", "repository_path": "CME/source/CME_phase_3/CME00093.xml", "locator": "IDG; TEXT; BODY/DIV1; preface and poem DIV2 elements", "summary": "Primary repository evidence for identifiers, article boundary, preface, poem, headings, stanza text, notes, pagination, manuscript-folio milestones, and encoded typography.", "accessed_on": "2026-07-12", "sha256": "b01a0bbd1ae04eb0705b24f73ad65292fa978bc88b21a591b281f30bcd38b4d7"},
+    {"id": "evidence:structure", "type": "computational_inspection", "citation": "Namespace-aware structural and element audit of CME00093.xml, checked against Garrett's complete article scan.", "repository_path": "CME/source/CME_phase_3/CME00093.xml", "locator": "BODY/DIV1 and descendants", "summary": "Counts 1 DIV1, 2 DIV2, 74 HEAD, 72 LG, 864 L, 4 P, 26 PB, 23 folio MILESTONE, 36 NOTE, 72 italic HI, 12 SUP, and no ABBR; confirms a four-paragraph preface followed by 72 twelve-line stanzas.", "accessed_on": "2026-07-12", "sha256": "b01a0bbd1ae04eb0705b24f73ad65292fa978bc88b21a591b281f30bcd38b4d7"},
+    {"id": "evidence:umich", "type": "official_webpage", "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, CME00093.", "url": "https://name.umdl.umich.edu/CME00093", "alternate_urls": ["https://quod.lib.umich.edu/c/cme/CME00093"], "summary": "Official public item and stable identifier for U-M's electronic text derived from Garrett's Anglia article.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:garrett-1909", "type": "digital_surrogate", "citation": "Robert Max Garrett, 'De Arte Lacrimandi,' Anglia 32, new series 20 (1909), 269-294.", "url": "https://archive.org/details/angliazeitschrif32tbuoft", "alternate_urls": ["https://archive.org/download/angliazeitschrif32tbuoft/angliazeitschrif32tbuoft.pdf"], "repository_path": "source-cache/CME00093/anglia-32-1909-complete.pdf", "locator": "printed pp. 269-294 / PDF pp. 279-304", "summary": "Complete volume scan inspected for title-page facts, article boundaries, Garrett's preface, Harley source statement, 72-stanza text, manuscript milestones, notes, and closing signature.", "accessed_on": "2026-07-12", "sha256": "e6ff7a8ca224b5a7de68896d8093468fdbf3d88193d3c9fdc9e02b87be015435"},
+    {"id": "evidence:bl-harley2274", "type": "official_catalog", "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 2274 and component ff. 35r-46v.", "url": "https://searcharchives.bl.uk/catalog/040-002048105", "alternate_urls": ["https://searcharchives.bl.uk/catalog/041-002772893"], "locator": "ff. 35r-46v", "summary": "Confirms the current shelfmark and component boundary, 72 twelve-line stanzas, rhyme scheme and refrain, second-half-fifteenth-century date for the manuscript, mixed paper/parchment composite context, and absence of exposed Digitised Content.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:dimev", "type": "scholarly_source", "citation": "Digital Index of Middle English Verse 1.0, record 3777 / NIMEV 2347.", "url": "https://www.dimev.net/record.php?recID=3777", "alternate_urls": ["https://zenodo.org/records/14585961", "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content"], "repository_path": "source-cache/CME00093/dimev-v1.0.zip", "summary": "Modern witness census identifying four copies, their locators and extents, the poem's stanza and refrain form, Marian-lament subject, Garrett and Baker bibliography, and five Bodley-only stanzas printed by Baker in 1983.", "accessed_on": "2026-07-12", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"},
+    {"id": "evidence:bodley423-project", "type": "scholarly_source", "citation": "Birgitta in England, Digital Birgitta, Bodleian Library MS Bodley 423, part B.", "url": "https://birgitta.uib.no/s/birgitta/item/639", "summary": "Scholarly project record assigning composite part B to England, approximately 1430-1440, and listing the target incipit among its contents. This is used as part-level scholarly evidence, not as the Bodleian's exact catalog record.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:mets", "type": "digital_surrogate", "citation": "Karen Saupe, ed., Middle English Marian Lyrics (Kalamazoo, MI: Medieval Institute Publications, 1997), commentary to section 39, p. 221.", "url": "https://metseditions.org/read/lj9lg3xH6ZmxcymwClQg7ckNrEyYNDG", "alternate_urls": ["https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/cf7f3582-5861-4831-bef8-ee10b847d544/downloadable_version/2e10862f127733bb75f63c5cdc0f9e3f.pdf"], "repository_path": "source-cache/CME00093/mets-middle-english-marian-lyrics-complete.pdf", "locator": "printed p. 221 / PDF p. 224", "summary": "Supporting scholarly commentary distinguishing a shorter same-refrain lyric from Garrett's much longer Harley poem and summarizing the latter as Mary's life from birth to Assumption.", "accessed_on": "2026-07-12", "sha256": "374a469ce8ae1da556ee1efcb1230f60f7e3f26ea59dfed4f0df17e298a51b54"},
+    {"id": "evidence:linked-lineage", "type": "linked_manifest_evidence", "citation": "General Corpus source-lineage manifest for CME00093.", "repository_path": "manifests/lineage/works/CME00093.json", "source_evidence_id": "evidence:garrett-article", "summary": "Provides the repository-to-U-M-to-Garrett-to-Harley chain, collateral-witness distinctions, local source caches, access routes, and rights qualifications used by this metadata record.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:composition-place", "question": "Can the poem's composition date, place, and dialect be established without transferring a surviving copy's production facts to the abstract work?", "status": "unresolved", "impact": "medium", "next_steps": ["Review current linguistic scholarship across all four witnesses.", "Collate the complete Bodley, Harley, Corpus, and Trinity texts before narrowing the work-level date or region."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:dimev", "evidence:garrett-1909", "evidence:bodley423-project"]},
+    {"id": "question:dimev-incipit", "question": "Is DIMEV 1.0's second incipit line 'My sinful language to abate' a data-entry error for Garrett and Harley's 'My sinful living to abate'?", "status": "unresolved", "impact": "low", "next_steps": ["Check the Harley, Bodley, Corpus, and Trinity readings directly.", "Report a correction to DIMEV if all witnesses and historical editions support 'living.'"], "last_checked": "2026-07-12", "evidence_ids": ["evidence:dimev", "evidence:xml", "evidence:garrett-1909", "evidence:bl-harley2274"]},
+    {"id": "question:related-refrain", "question": "What textual or devotional relationship, if any, links De Arte Lacrimandi to the shorter same-refrain Marian lyric edited by Saupe?", "status": "unresolved", "impact": "low", "next_steps": ["Compare refrain wording, visionary frame, and manuscript contexts without treating a shared refrain as proof of common authorship."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:mets", "evidence:dimev"]}
+  ],
+  "notes": [
+    "Garrett's printed rhyme scheme ababababbcbC uses capital C to mark the refrain line; DIMEV normalizes the sound pattern as ababababbcbc. These statements are compatible and do not imply a substantive disagreement.",
+    "Garrett's historical recto/verso notation 35a-46b is cross-walked to the current BL form ff. 35r-46v; no constant offset is involved.",
+    "The 1909 edition's estimate of very late fifteenth- or early sixteenth-century handwriting and language is retained in lineage as Garrett's historical judgment, while the current BL whole-manuscript record dates Harley MS 2274 to the second half of the fifteenth century."
+  ]
+}

@@ -1,0 +1,2028 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00144",
+  "work_id": "CME00144",
+  "title": "Source lineage for Libeaus Desconus",
+  "primary_subject": "artifact:general-corpus:CME00144",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "The checked-in XML is a University of Michigan encoding of Max Kaluza's 1890 eclectic critical edition of Libeaus Desconus. Kaluza constructed a 2,232-line text from six manuscripts through unequal routes: August Rhode's working copies plus Kaluza's complete recollation for Lincoln's Inn, Ashmole, Lambeth, and Cotton; Eugen Kölbing's published Naples collation and an unlocated complete private Naples transcript; and Hales and Furnivall's Percy Folio edition, checked directly by Kaluza against the first 200 Percy lines. The XML embeds alternate-witness passages in notes, so its 2,533 descendant L elements must not be mistaken for the edition's or work's line extent. Complete public-image bundles are cached for Ashmole 61, Lambeth 306, and Lincoln's Inn Hale 150; no complete public work facsimile was found for the two British Library witnesses or Naples XIII.B.29.",
+  "languages": [
+    "enm",
+    "deu",
+    "lat"
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00144",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00144",
+      "identifiers": [
+        { "scheme": "CME", "value": "CME00144" },
+        { "scheme": "XML-IDG", "value": "CME00144" },
+        { "scheme": "XML-BIBNO", "value": "CME00144" },
+        { "scheme": "XML-VID", "value": "CME00144" }
+      ],
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00144.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "8fb53ee846e91d9745a79dfaba453871db920b88",
+        "sha256": "2b0283c95a3dd3073ad3bd73fa5494dd0f2b8e77f800a90235e01332593045cc"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cme00144-xml", "evidence:cme00144-structure"],
+      "notes": [
+        "The pinned file is 508,311 bytes.",
+        "Its direct poem division contains 186 direct LG elements and 2,232 direct L elements; 42 further LG and 301 further L elements occur inside editorial NOTE apparatus."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME00144",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse digital text CME00144",
+      "identifiers": [
+        { "scheme": "U-M Digital Collections", "value": "CME00144", "uri": "https://quod.lib.umich.edu/c/cme/CME00144" }
+      ],
+      "creator_ids": ["agent:university-of-michigan"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-cme00144", "evidence:umich-collection"],
+      "notes": [
+        "U-M describes the CME texts as manually keyed from public-domain editions and proofread in house, with TEI structural markup.",
+        "The public item identifies Kaluza 1890 as the source edition."
+      ]
+    },
+    {
+      "id": "edition:kaluza:libeaus-desconus:1890",
+      "type": "scholarly_edition",
+      "label": "Max Kaluza's Libeaus Desconus (1890)",
+      "creator_ids": ["agent:max-kaluza"],
+      "bibliographic": {
+        "citation": "Max Kaluza, Libeaus Desconus: Die mittelenglische Romanze vom Schönen unbekannten, nach sechs Handschriften kritisch herausgegeben (Leipzig: O. R. Reisland, 1890).",
+        "title": "Libeaus Desconus: Die mittelenglische Romanze vom Schönen unbekannten",
+        "publisher": "O. R. Reisland",
+        "publication_place": "Leipzig",
+        "date": "1890",
+        "languages": ["enm", "deu", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:kaluza-edition", "evidence:kaluza-method"],
+      "notes": [
+        "A reconstructive critical edition based on six witnesses, not a diplomatic transcript of any one manuscript.",
+        "The printed reading text has 2,232 numbered lines in 186 twelve-line stanzas, with extensive variant passages and commentary in notes."
+      ]
+    },
+    {
+      "id": "intermediary:rhode-four-witness-copies",
+      "type": "manuscript_witness",
+      "label": "August Rhode's working copies of the Lincoln's Inn, Ashmole, Lambeth, and Cotton texts",
+      "creator_ids": ["agent:august-rhode"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:kaluza-method"],
+      "notes": [
+        "Kaluza says Rhode had prepared copies of I, A, L, and C before Kaluza checked them throughout against the manuscripts.",
+        "The current schema has no working-transcript entity type; manuscript_witness is used provisionally for this material intermediary, not to claim medieval date or independent textual authority.",
+        "Present location and survival have not been established."
+      ]
+    },
+    {
+      "id": "intermediary:koelbing-naples-transcript",
+      "type": "manuscript_witness",
+      "label": "Eugen Kölbing's complete private transcript of Naples MS XIII.B.29",
+      "creator_ids": ["agent:eugen-koelbing"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:kaluza-method"],
+      "notes": [
+        "Kaluza reports using Kölbing's complete private copy in addition to Kölbing's published 1877 variant collation.",
+        "The current schema has no working-transcript entity type; manuscript_witness is used provisionally for this nineteenth-century intermediary.",
+        "No current holding or digitization was located."
+      ]
+    },
+    {
+      "id": "edition:koelbing:englische-studien:1877",
+      "type": "scholarly_edition",
+      "label": "Eugen Kölbing's published Naples collation and source study (1877)",
+      "creator_ids": ["agent:eugen-koelbing"],
+      "bibliographic": {
+        "citation": "Eugen Kölbing, 'Zur Überlieferung und Quelle des mittelenglischen Gedichtes: Lybeaus Disconus,' Englische Studien 1 (1877): 121-169.",
+        "container_title": "Englische Studien",
+        "volume": "1",
+        "pages": "121-169",
+        "date": "1877",
+        "languages": ["deu", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:koelbing-article"],
+      "notes": [
+        "The article prints a detailed Naples variant collation against Ritson's Cotton text and discusses analogues; it is not itself a complete continuous Naples transcript."
+      ]
+    },
+    {
+      "id": "edition:hales-furnivall:percy-folio-v2:1868",
+      "type": "scholarly_edition",
+      "label": "Hales and Furnivall's Bishop Percy's Folio Manuscript, volume 2 (1867-1868)",
+      "creator_ids": ["agent:john-w-hales", "agent:frederick-j-furnivall"],
+      "bibliographic": {
+        "citation": "John W. Hales and Frederick J. Furnivall, eds., Bishop Percy's Folio Manuscript: Ballads and Romances, vol. 2 (London: N. Trubner, 1867-1868), 404-499.",
+        "title": "Bishop Percy's Folio Manuscript: Ballads and Romances",
+        "volume": "2",
+        "publisher": "N. Trubner",
+        "publication_place": "London",
+        "pages": "404-499",
+        "date": "1867-1868",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hales-furnivall-edition"],
+      "notes": [
+        "The main Percy transcript occupies printed pp. 415-497 and ends at numbered line 2241; pp. 497-499 add terminal passages from Lincoln's Inn, Ashmole, Cotton, and Lambeth.",
+        "Kaluza used this publication for P after checking its first 200 lines directly against the manuscript."
+      ]
+    },
+    {
+      "id": "edition:mets:salisbury-weldon:2013",
+      "type": "scholarly_edition",
+      "label": "Salisbury and Weldon's Libeaus Desconus (2013)",
+      "creator_ids": ["agent:eve-salisbury", "agent:james-weldon", "agent:medieval-institute-publications"],
+      "bibliographic": {
+        "citation": "Eve Salisbury and James Weldon, eds., Libeaus Desconus (Kalamazoo: Medieval Institute Publications, 2013).",
+        "title": "Libeaus Desconus",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo",
+        "date": "2013",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:mets-edition", "evidence:mets-edition-pdf", "evidence:mets-copyright"],
+      "notes": [
+        "A modern downstream edition presenting Lambeth and Naples as separate texts; it is evidence for the work and witnesses, not an ancestor of CME00144."
+      ]
+    },
+    {
+      "id": "witness:lincolns-inn:Hale-150",
+      "type": "manuscript_witness",
+      "label": "Lincoln's Inn, Hale MS 150 (I)",
+      "identifiers": [{ "scheme": "shelfmark", "value": "Hale MS 150" }],
+      "holding": {
+        "institution_id": "agent:lincolns-inn-library",
+        "shelfmark": "Hale MS 150",
+        "catalog_url": "https://archives.lincolnsinn.org.uk/documents/49"
+      },
+      "physical_description": {
+        "support": "paper",
+        "notes": ["Composite romance manuscript; the institutional viewer broadly describes a fourteenth-century hand, while modern item-level scholarship gives more differentiated dating."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lincolns-inn-hale150", "evidence:dimev-record-2824"],
+      "notes": [
+        "Very imperfect witness, 1,107 lines in DIMEV.",
+        "Current physical sequence is ff. 1r-10v (provider images 9-28). Kaluza and DIMEV's legacy sequence ff. 4-9, f. 1, ff. 10-12v maps to current ff. 1-6, f. 7, ff. 8-10v."
+      ]
+    },
+    {
+      "id": "witness:bodleian:Ashmole-61",
+      "type": "manuscript_witness",
+      "label": "Bodleian Libraries, MS Ashmole 61 (A)",
+      "identifiers": [{ "scheme": "shelfmark", "value": "MS Ashmole 61" }],
+      "holding": {
+        "institution_id": "agent:bodleian-libraries",
+        "shelfmark": "MS Ashmole 61",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359"
+      },
+      "physical_description": {
+        "support": "paper",
+        "extent": "162 principal leaves plus endpapers",
+        "dimensions": "approximately 417-418 x 138-141 mm",
+        "notes": ["Copied in England, perhaps Leicester, in the late fifteenth or early sixteenth century by the Rate or Rathe scribe."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole61-catalog", "evidence:ashmole61-facsimile", "evidence:dimev-record-2824"],
+      "notes": ["Libeaus Desconus occupies ff. 38v-59v and has 2,250 lines in DIMEV."]
+    },
+    {
+      "id": "witness:lambeth:MS-306",
+      "type": "manuscript_witness",
+      "label": "Lambeth Palace Library, MS 306 (L)",
+      "identifiers": [{ "scheme": "shelfmark", "value": "MS 306" }],
+      "holding": {
+        "institution_id": "agent:lambeth-palace-library",
+        "shelfmark": "MS 306",
+        "catalog_url": "https://archives.lambethpalacelibrary.org.uk/CalmView/Record.aspx?src=CalmView.Catalog&id=MSS%2F306"
+      },
+      "physical_description": {
+        "support": "paper",
+        "extent": "i + 204 folios",
+        "notes": ["Composite manuscript of fifteenth- and sixteenth-century fascicles; this item is dated about 1465 in the current catalog."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth306-catalog", "evidence:lambeth306-facsimile", "evidence:dimev-record-2824"],
+      "notes": ["Libeaus Desconus occupies ff. 73r-107r and has 2,204 lines in DIMEV."]
+    },
+    {
+      "id": "witness:british-library:Cotton-Caligula-A-II",
+      "type": "manuscript_witness",
+      "label": "British Library, Cotton MS Caligula A II, ff. 3-139 (C)",
+      "identifiers": [
+        { "scheme": "shelfmark", "value": "Cotton MS Caligula A II" },
+        { "scheme": "BL Archives and Manuscripts ARK", "value": "ark:/81055/vdc_100000001630.0x00014c", "uri": "https://searcharchives.bl.uk/catalog/041-001102312" }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Caligula A II",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/041-001102312"
+      },
+      "physical_description": {
+        "support": "paper",
+        "notes": ["The relevant component is English and dated to the second half of the fifteenth century by the current BL record."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii", "evidence:dimev-record-2824"],
+      "notes": ["Libeaus Desconus occupies ff. 42vb-57rb and has 2,130 lines in DIMEV; the BL catalog exposes no Digitised Content for this component."]
+    },
+    {
+      "id": "witness:british-library:Add-27879",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 27879, the Percy Folio (P)",
+      "identifiers": [
+        { "scheme": "shelfmark", "value": "Add MS 27879" },
+        { "scheme": "BL Archives and Manuscripts ARK", "value": "ark:/81055/vdc_100000000045.0x000387", "uri": "https://searcharchives.bl.uk/catalog/032-002031324" }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 27879",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002031324"
+      },
+      "physical_description": {
+        "support": "paper",
+        "format": "oblong folio",
+        "notes": ["The current BL record dates the manuscript about 1630-1670."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-add-27879", "evidence:hales-furnivall-edition", "evidence:dimev-record-2824"],
+      "notes": ["Libeaus Desconus occupies old pages 317-346, corresponding to modern ff. 156v-171r, and has 2,241 lines."]
+    },
+    {
+      "id": "witness:naples:XIII-B-29",
+      "type": "manuscript_witness",
+      "label": "Biblioteca Nazionale di Napoli, MS XIII.B.29 (N)",
+      "identifiers": [{ "scheme": "shelfmark", "value": "XIII.B.29" }],
+      "holding": {
+        "institution_id": "agent:biblioteca-nazionale-di-napoli",
+        "shelfmark": "XIII.B.29"
+      },
+      "physical_description": {
+        "support": "paper",
+        "extent": "73 paginated folios plus two flyleaves",
+        "dimensions": "approximately 285 x 195 mm after trimming",
+        "notes": ["Completed in 1457 according to its colophon; copied by a scribe identifying himself as More."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fraaije-naples", "evidence:dimev-record-2824"],
+      "notes": ["Libeaus Desconus occupies pp. 87a-113b; DIMEV records 2,230 lines, while historical and modern numbering practices differ."]
+    },
+    {
+      "id": "facsimile:internet-archive:kaluza-1890",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Kaluza's Libeaus Desconus",
+      "creator_ids": ["agent:internet-archive", "agent:robarts-library"],
+      "reproduction_format": "Complete 402-page PDF with OCR derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:kaluza-ia-metadata", "evidence:kaluza-edition"]
+    },
+    {
+      "id": "facsimile:internet-archive:englische-studien-1",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Englische Studien, volume 1",
+      "creator_ids": ["agent:internet-archive", "agent:robarts-library"],
+      "reproduction_format": "Complete volume PDF with OCR derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:koelbing-ia-metadata", "evidence:koelbing-article"]
+    },
+    {
+      "id": "facsimile:internet-archive:percy-folio-v2",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Bishop Percy's Folio Manuscript, volume 2",
+      "creator_ids": ["agent:internet-archive", "agent:robarts-library"],
+      "reproduction_format": "Complete volume PDF with OCR derivatives",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:hales-furnivall-ia-metadata", "evidence:hales-furnivall-edition"]
+    },
+    {
+      "id": "facsimile:bodleian:Ashmole-61",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete facsimile of MS Ashmole 61",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "358-canvas IIIF object cached as 1,800-pixel JPEG bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ashmole61-facsimile", "evidence:ashmole61-visual"]
+    },
+    {
+      "id": "facsimile:lambeth:MS-306",
+      "type": "facsimile",
+      "label": "Lambeth Palace Library complete public facsimile of MS 306",
+      "creator_ids": ["agent:lambeth-palace-library"],
+      "reproduction_format": "415-canvas IIIF object cached as provider-sequence image bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth306-facsimile", "evidence:lambeth306-visual"]
+    },
+    {
+      "id": "facsimile:lincolns-inn:Hale-150",
+      "type": "facsimile",
+      "label": "Lincoln's Inn complete public facsimile of Hale MS 150",
+      "creator_ids": ["agent:lincolns-inn-library"],
+      "reproduction_format": "264 provider JPEGs cached in published inventory order",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lincolns-inn-hale150", "evidence:lincolns-inn-visual"]
+    },
+    {
+      "id": "edition:fraaije:anglo-italian-communities:2024",
+      "type": "scholarly_edition",
+      "label": "Karel Fraaije's study of Naples MS XIII.B.29 (2024)",
+      "description": "Open-access scholarly article used for current codicological, contents, provenance, scribal, and digitization-status evidence about Naples MS XIII.B.29; it is collateral research, not an edition ancestor of CME00144.",
+      "identifiers": [
+        { "scheme": "DOI", "value": "10.1007/s11061-024-09814-y", "uri": "https://doi.org/10.1007/s11061-024-09814-y" }
+      ],
+      "creator_ids": ["agent:karel-fraaije", "agent:springer-nature"],
+      "bibliographic": {
+        "citation": "Karel Fraaije, 'Locating Anglo-Italian Communities in Bevis and the Naples Manuscript,' Neophilologus 108 (2024): 633-653.",
+        "title": "Locating Anglo-Italian Communities in Bevis and the Naples Manuscript",
+        "container_title": "Neophilologus",
+        "volume": "108",
+        "pages": "633-653",
+        "date": "2024",
+        "languages": ["eng", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:fraaije-naples"]
+    },
+    {
+      "id": "catalog:dimev:record-2824",
+      "type": "catalog_description",
+      "label": "DIMEV record 2824 for Libeaus Desconus",
+      "identifiers": [
+        { "scheme": "DIMEV", "value": "2824", "uri": "https://www.dimev.net/record.php?recID=2824" },
+        { "scheme": "IMEV", "value": "1690" },
+        { "scheme": "NIMEV", "value": "1690" }
+      ],
+      "creator_ids": ["agent:dimev"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dimev-record-2824"]
+    },
+    {
+      "id": "catalog:bl-digitisation-service",
+      "type": "catalog_description",
+      "label": "British Library digitisation, imaging terms, and 2025-2026 price schedule",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    }
+  ],
+  "agents": [
+    { "id": "agent:general-corpus", "type": "organization", "name": "General Corpus project" },
+    { "id": "agent:university-of-michigan", "type": "organization", "name": "University of Michigan Library" },
+    { "id": "agent:max-kaluza", "type": "person", "name": "Max Kaluza" },
+    { "id": "agent:august-rhode", "type": "person", "name": "August Rhode" },
+    { "id": "agent:eugen-koelbing", "type": "person", "name": "Eugen Kölbing", "alternate_names": ["Eugen Koelbing"] },
+    { "id": "agent:john-w-hales", "type": "person", "name": "John Wesley Hales" },
+    { "id": "agent:frederick-j-furnivall", "type": "person", "name": "Frederick James Furnivall" },
+    { "id": "agent:eve-salisbury", "type": "person", "name": "Eve Salisbury" },
+    { "id": "agent:james-weldon", "type": "person", "name": "James Weldon" },
+    { "id": "agent:medieval-institute-publications", "type": "organization", "name": "Medieval Institute Publications" },
+    { "id": "agent:karel-fraaije", "type": "person", "name": "Karel Fraaije" },
+    { "id": "agent:springer-nature", "type": "organization", "name": "Springer Nature" },
+    { "id": "agent:internet-archive", "type": "organization", "name": "Internet Archive" },
+    { "id": "agent:robarts-library", "type": "organization", "name": "Robarts Library, University of Toronto" },
+    { "id": "agent:bodleian-libraries", "type": "organization", "name": "Bodleian Libraries, University of Oxford" },
+    { "id": "agent:lambeth-palace-library", "type": "organization", "name": "Lambeth Palace Library" },
+    { "id": "agent:lincolns-inn-library", "type": "organization", "name": "Lincoln's Inn Library and Archive" },
+    { "id": "agent:british-library", "type": "organization", "name": "British Library" },
+    { "id": "agent:biblioteca-nazionale-di-napoli", "type": "organization", "name": "Biblioteca Nazionale di Napoli" },
+    { "id": "agent:dimev", "type": "organization", "name": "Digital Index of Middle English Verse" }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00144",
+      "object": "encoding:umich-cme:CME00144",
+      "scope": {
+        "subject": { "kind": "whole", "description": "checked-in CME00144 XML" },
+        "object": { "kind": "whole", "description": "U-M CME00144 digital text" },
+        "notes": "Identifiers, title-page transcription, text, and apparatus align; byte identity with an upstream export has not been tested."
+      },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:cme00144-xml", "evidence:umich-cme00144"] }
+    },
+    {
+      "id": "relation:umich-encoded-from-kaluza",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00144",
+      "object": "edition:kaluza:libeaus-desconus:1890",
+      "scope": {
+        "subject": { "kind": "whole", "description": "U-M encoded edition text and apparatus" },
+        "object": { "kind": "whole", "description": "Kaluza's complete 1890 edition" },
+        "notes": "The XML's page milestones run through Kaluza's edition and its embedded notes reproduce the edition's witness apparatus."
+      },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00144-xml", "evidence:kaluza-edition", "evidence:umich-cme00144"] }
+    },
+    {
+      "id": "relation:kaluza-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:kaluza-1890",
+      "object": "edition:kaluza:libeaus-desconus:1890",
+      "scope": {
+        "subject": { "kind": "whole", "description": "complete 402-page digital scan" },
+        "object": { "kind": "whole", "description": "complete printed volume" }
+      },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-ia-metadata", "evidence:kaluza-edition"] }
+    },
+    {
+      "id": "relation:rhode-transcribes-lincoln",
+      "type": "transcribes",
+      "subject": "intermediary:rhode-four-witness-copies",
+      "object": "witness:lincolns-inn:Hale-150",
+      "scope": { "subject": { "kind": "part", "description": "Rhode's I copy" }, "object": { "kind": "selected_passages", "description": "surviving Libeaus Desconus text in the disordered and fragmentary witness", "locators": ["current ff. 1r-10v", "legacy ff. 4-9, f. 1, ff. 10-12v"] } },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:lincolns-inn-hale150"] }
+    },
+    {
+      "id": "relation:rhode-transcribes-ashmole",
+      "type": "transcribes",
+      "subject": "intermediary:rhode-four-witness-copies",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": { "subject": { "kind": "part", "description": "Rhode's A copy" }, "object": { "kind": "part", "description": "Libeaus Desconus", "locators": ["ff. 38v-59v"] } },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:ashmole61-catalog"] }
+    },
+    {
+      "id": "relation:rhode-transcribes-lambeth",
+      "type": "transcribes",
+      "subject": "intermediary:rhode-four-witness-copies",
+      "object": "witness:lambeth:MS-306",
+      "scope": { "subject": { "kind": "part", "description": "Rhode's L copy" }, "object": { "kind": "part", "description": "Libeaus Desconus", "locators": ["ff. 73r-107r"] } },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:lambeth306-catalog"] }
+    },
+    {
+      "id": "relation:rhode-transcribes-cotton",
+      "type": "transcribes",
+      "subject": "intermediary:rhode-four-witness-copies",
+      "object": "witness:british-library:Cotton-Caligula-A-II",
+      "scope": { "subject": { "kind": "part", "description": "Rhode's C copy" }, "object": { "kind": "part", "description": "Libeaus Desconus", "locators": ["ff. 42vb-57rb"] } },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:bl-cotton-caligula-a-ii"] }
+    },
+    {
+      "id": "relation:kaluza-transcribes-rhode",
+      "type": "transcribes",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "intermediary:rhode-four-witness-copies",
+      "scope": {
+        "subject": { "kind": "whole", "description": "readings and apparatus assigned to I, A, L, and C" },
+        "object": { "kind": "whole", "description": "Rhode's four working copies" },
+        "notes": "The working copies mediated initial transcription, but Kaluza reports checking them throughout against the four physical manuscripts."
+      },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:kaluza-collates-lincoln",
+      "type": "collated_against",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "witness:lincolns-inn:Hale-150",
+      "scope": { "subject": { "kind": "whole", "description": "I readings and apparatus" }, "object": { "kind": "selected_passages", "description": "all surviving Libeaus Desconus passages in I" }, "notes": "Kaluza reports rechecking Rhode's copy completely against I." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:kaluza-collates-ashmole",
+      "type": "collated_against",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": { "subject": { "kind": "whole", "description": "A readings and apparatus" }, "object": { "kind": "part", "description": "complete A text at ff. 38v-59v" }, "notes": "Kaluza reports rechecking Rhode's copy completely against A." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:kaluza-collates-lambeth",
+      "type": "collated_against",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "witness:lambeth:MS-306",
+      "scope": { "subject": { "kind": "whole", "description": "L readings and apparatus" }, "object": { "kind": "part", "description": "complete L text at ff. 73r-107r" }, "notes": "Kaluza reports rechecking Rhode's copy completely against L." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:kaluza-collates-cotton",
+      "type": "collated_against",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "witness:british-library:Cotton-Caligula-A-II",
+      "scope": { "subject": { "kind": "whole", "description": "C readings and apparatus" }, "object": { "kind": "part", "description": "complete C text at ff. 42vb-57rb" }, "notes": "Kaluza reports rechecking Rhode's copy completely against C." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:koelbing-transcript-transcribes-naples",
+      "type": "transcribes",
+      "subject": "intermediary:koelbing-naples-transcript",
+      "object": "witness:naples:XIII-B-29",
+      "scope": { "subject": { "kind": "whole", "description": "reported complete working transcript" }, "object": { "kind": "part", "description": "Libeaus Desconus at pp. 87a-113b" } },
+      "assertion": { "status": "supported", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:koelbing-article"] }
+    },
+    {
+      "id": "relation:koelbing-article-collates-naples",
+      "type": "collated_against",
+      "subject": "edition:koelbing:englische-studien:1877",
+      "object": "witness:naples:XIII-B-29",
+      "scope": { "subject": { "kind": "part", "description": "published Naples variant collation" }, "object": { "kind": "part", "description": "Libeaus Desconus at pp. 87a-113b" }, "notes": "The article reports variants against the Cotton-based Ritson text rather than printing a complete continuous transcript." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:koelbing-article"] }
+    },
+    {
+      "id": "relation:kaluza-transcribes-koelbing-transcript",
+      "type": "transcribes",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "intermediary:koelbing-naples-transcript",
+      "scope": { "subject": { "kind": "whole", "description": "N readings and apparatus" }, "object": { "kind": "whole", "description": "Kölbing's reported complete Naples copy" }, "notes": "Kaluza did not claim direct physical consultation of the Naples manuscript." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:kaluza-consulted-koelbing-article",
+      "type": "consulted",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "edition:koelbing:englische-studien:1877",
+      "scope": { "subject": { "kind": "whole", "description": "N collation and source discussion" }, "object": { "kind": "whole", "description": "published 1877 article" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:koelbing-article"] }
+    },
+    {
+      "id": "relation:koelbing-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:englische-studien-1",
+      "object": "edition:koelbing:englische-studien:1877",
+      "scope": { "subject": { "kind": "part", "description": "article at PDF pp. 133-181 within complete volume scan" }, "object": { "kind": "whole", "description": "article at printed pp. 121-169" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:koelbing-ia-metadata", "evidence:koelbing-article"] }
+    },
+    {
+      "id": "relation:hales-furnivall-transcribes-percy",
+      "type": "transcribes",
+      "subject": "edition:hales-furnivall:percy-folio-v2:1868",
+      "object": "witness:british-library:Add-27879",
+      "scope": { "subject": { "kind": "part", "description": "main Percy transcript", "locators": ["printed pp. 415-497", "numbered lines 1-2241"] }, "object": { "kind": "part", "description": "Libeaus Desconus", "locators": ["old pp. 317-346", "modern ff. 156v-171r"] } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hales-furnivall-edition", "evidence:bl-add-27879"] }
+    },
+    {
+      "id": "relation:kaluza-transcribes-hales-furnivall",
+      "type": "transcribes",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "edition:hales-furnivall:percy-folio-v2:1868",
+      "scope": { "subject": { "kind": "whole", "description": "P readings and apparatus" }, "object": { "kind": "part", "description": "Percy transcript at pp. 415-497" }, "notes": "This edition is the principal material intermediary for P; Kaluza directly checked only its first 200 lines." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method", "evidence:hales-furnivall-edition"] }
+    },
+    {
+      "id": "relation:kaluza-checks-percy-first-200",
+      "type": "collated_against",
+      "subject": "edition:kaluza:libeaus-desconus:1890",
+      "object": "witness:british-library:Add-27879",
+      "scope": { "subject": { "kind": "selected_passages", "description": "P readings in the opening 200 lines" }, "object": { "kind": "selected_passages", "description": "first 200 lines of the Percy text" }, "notes": "Kaluza says his sample check found no correction necessary and that he trusted Furnivall thereafter." },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:kaluza-method"] }
+    },
+    {
+      "id": "relation:hales-furnivall-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:percy-folio-v2",
+      "object": "edition:hales-furnivall:percy-folio-v2:1868",
+      "scope": { "subject": { "kind": "whole", "description": "complete volume scan" }, "object": { "kind": "whole", "description": "complete printed volume 2" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:hales-furnivall-ia-metadata", "evidence:hales-furnivall-edition"] }
+    },
+    {
+      "id": "relation:ashmole-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:Ashmole-61",
+      "object": "witness:bodleian:Ashmole-61",
+      "scope": { "subject": { "kind": "whole", "description": "358-canvas digital object from upper board through former lower board" }, "object": { "kind": "whole", "description": "complete physical manuscript object" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ashmole61-facsimile", "evidence:ashmole61-visual"] }
+    },
+    {
+      "id": "relation:lambeth-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:lambeth:MS-306",
+      "object": "witness:lambeth:MS-306",
+      "scope": { "subject": { "kind": "whole", "description": "415-canvas public IIIF object" }, "object": { "kind": "whole", "description": "complete physical manuscript object" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lambeth306-facsimile", "evidence:lambeth306-visual"] }
+    },
+    {
+      "id": "relation:lincoln-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:lincolns-inn:Hale-150",
+      "object": "witness:lincolns-inn:Hale-150",
+      "scope": { "subject": { "kind": "whole", "description": "264-image public object" }, "object": { "kind": "whole", "description": "complete physical manuscript object" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lincolns-inn-hale150", "evidence:lincolns-inn-visual"] }
+    },
+    {
+      "id": "relation:mets-transcribes-lambeth",
+      "type": "transcribes",
+      "subject": "edition:mets:salisbury-weldon:2013",
+      "object": "witness:lambeth:MS-306",
+      "scope": { "subject": { "kind": "part", "description": "separately presented Lambeth text" }, "object": { "kind": "part", "description": "Libeaus Desconus at ff. 73r-107r" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-edition", "evidence:lambeth306-catalog"] }
+    },
+    {
+      "id": "relation:mets-transcribes-naples",
+      "type": "transcribes",
+      "subject": "edition:mets:salisbury-weldon:2013",
+      "object": "witness:naples:XIII-B-29",
+      "scope": { "subject": { "kind": "part", "description": "separately presented Naples text" }, "object": { "kind": "part", "description": "Libeaus Desconus at pp. 87a-113b" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-edition", "evidence:fraaije-naples"] }
+    },
+    {
+      "id": "relation:fraaije-describes-naples",
+      "type": "describes",
+      "subject": "edition:fraaije:anglo-italian-communities:2024",
+      "object": "witness:naples:XIII-B-29",
+      "scope": {
+        "subject": { "kind": "whole", "description": "article's codicological and provenance discussion" },
+        "object": { "kind": "whole", "description": "Naples MS XIII.B.29, including Libeaus Desconus at pp. 87-113" },
+        "notes": "The article describes the complete composite codex and its contexts; it is not a complete manuscript facsimile."
+      },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:fraaije-naples"] }
+    },
+    {
+      "id": "relation:dimev-describes-edition",
+      "type": "describes",
+      "subject": "catalog:dimev:record-2824",
+      "object": "edition:kaluza:libeaus-desconus:1890",
+      "scope": { "subject": { "kind": "whole", "description": "record 2824" }, "object": { "kind": "whole", "description": "Kaluza critical text and its six witness entries" } },
+      "assertion": { "status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-record-2824"] }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00144",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "repository_path": "CME/source/CME_phase_3/CME00144.xml",
+      "format": "XML",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:cme00144-xml"]
+    },
+    {
+      "id": "access:umich-cme00144",
+      "entity": "encoding:umich-cme:CME00144",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00144",
+      "format": "HTML text",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:umich-cme00144"]
+    },
+    {
+      "id": "access:kaluza-ia",
+      "entity": "facsimile:internet-archive:kaluza-1890",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/libeausdesconusd00kaluuoft",
+      "alternate_urls": [
+        "https://archive.org/download/libeausdesconusd00kaluuoft/libeausdesconusd00kaluuoft.pdf",
+        "https://archive.org/metadata/libeausdesconusd00kaluuoft",
+        "https://archive.org/download/libeausdesconusd00kaluuoft/libeausdesconusd00kaluuoft_djvu.txt"
+      ],
+      "format": "PDF, OCR text, item metadata",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete provider PDF",
+          "path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-complete.pdf",
+          "source_url": "https://archive.org/download/libeausdesconusd00kaluuoft/libeausdesconusd00kaluuoft.pdf",
+          "sha256": "b87e6c706bd48fb9e27fdf450cffe8f01decc432ab4f21b660703f70af75d787",
+          "bytes": 23557830,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Critical text of Libeaus Desconus",
+            "locators": ["printed pp. 3-128", "PDF pages 31-156", "numbered lines 1-2232"],
+            "notes": ["The complete PDF also preserves title matter, introduction, notes, glossary, and bibliography."]
+          }
+        },
+        {
+          "label": "Complete Internet Archive item metadata",
+          "path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/libeausdesconusd00kaluuoft",
+          "sha256": "f14d2ca57c614489c36f99c4126693aa968a3c0e0b9686780c543b01ac569fd2",
+          "bytes": 78163,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Complete OCR derivative",
+          "path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-ocr.txt",
+          "source_url": "https://archive.org/download/libeausdesconusd00kaluuoft/libeausdesconusd00kaluuoft_djvu.txt",
+          "sha256": "3f6eb19f66d81d2fe81175cd6e7ad58feb2789d9af9021abfaa79b574671738b",
+          "bytes": 975841,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": ["Complete OCR coverage of the volume, not a verified transcription."]
+        }
+      ],
+      "evidence_ids": ["evidence:kaluza-ia-metadata", "evidence:kaluza-edition"]
+    },
+    {
+      "id": "access:koelbing-ia",
+      "entity": "facsimile:internet-archive:englische-studien-1",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/englischestudien01leipuoft",
+      "alternate_urls": [
+        "https://archive.org/download/englischestudien01leipuoft/englischestudien01leipuoft.pdf",
+        "https://archive.org/metadata/englischestudien01leipuoft",
+        "https://archive.org/download/englischestudien01leipuoft/englischestudien01leipuoft_djvu.txt"
+      ],
+      "format": "PDF, OCR text, item metadata",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete provider PDF",
+          "path": "source-cache/CME00144/koelbing-englische-studien-1-1877-complete.pdf",
+          "source_url": "https://archive.org/download/englischestudien01leipuoft/englischestudien01leipuoft.pdf",
+          "sha256": "cfdeef636c9eff71b0204bbbbb06fa83d0dd9f25359c55fca9694762261634fa",
+          "bytes": 30285317,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": { "label": "Kölbing's Lybeaus Disconus article", "locators": ["printed pp. 121-169", "PDF pages 133-181"] }
+        },
+        {
+          "label": "Complete Internet Archive item metadata",
+          "path": "source-cache/CME00144/koelbing-englische-studien-1-1877-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/englischestudien01leipuoft",
+          "sha256": "8730bd5ee0610e349859ba7a44c728eceaf456accf8d68dd28803a162cd21e57",
+          "bytes": 105238,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Complete OCR derivative",
+          "path": "source-cache/CME00144/koelbing-englische-studien-1-1877-ocr.txt",
+          "source_url": "https://archive.org/download/englischestudien01leipuoft/englischestudien01leipuoft_djvu.txt",
+          "sha256": "b899ffe4a306eddc28dccd6edba940f416f94b5ef645b972c58e309a2406b4af",
+          "bytes": 1733773,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": ["Complete OCR coverage of the volume, not a verified transcription."]
+        }
+      ],
+      "evidence_ids": ["evidence:koelbing-ia-metadata", "evidence:koelbing-article"]
+    },
+    {
+      "id": "access:hales-furnivall-ia",
+      "entity": "facsimile:internet-archive:percy-folio-v2",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/bishoppercysfoli02percuoft",
+      "alternate_urls": [
+        "https://archive.org/download/bishoppercysfoli02percuoft/bishoppercysfoli02percuoft.pdf",
+        "https://archive.org/metadata/bishoppercysfoli02percuoft",
+        "https://archive.org/download/bishoppercysfoli02percuoft/bishoppercysfoli02percuoft_djvu.txt"
+      ],
+      "format": "PDF, OCR text, item metadata",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete provider PDF",
+          "path": "source-cache/CME00144/hales-furnivall-bishop-percy-folio-v2-1868-complete.pdf",
+          "source_url": "https://archive.org/download/bishoppercysfoli02percuoft/bishoppercysfoli02percuoft.pdf",
+          "sha256": "f5c5b174f334a1bf92e07642878369ce070d984d1b9d11cbe6465287139addb3",
+          "bytes": 42560480,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": { "label": "Libeaus Desconus introduction, Percy transcript, and supplementary endings", "locators": ["printed pp. 404-499", "PDF pages 488-583"] }
+        },
+        {
+          "label": "Complete Internet Archive item metadata",
+          "path": "source-cache/CME00144/hales-furnivall-bishop-percy-folio-v2-1868-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/bishoppercysfoli02percuoft",
+          "sha256": "1535e20d5472f36979d9b801f2f8db49702a0b2ab8e3ee4a581cb055b9e6eb66",
+          "bytes": 128596,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Complete OCR derivative",
+          "path": "source-cache/CME00144/hales-furnivall-bishop-percy-folio-v2-1868-ocr.txt",
+          "source_url": "https://archive.org/download/bishoppercysfoli02percuoft/bishoppercysfoli02percuoft_djvu.txt",
+          "sha256": "99c0df0e2ffa1d5c475efaeef66bf9afa8d006378f4dd197ea34d9b8f4173917",
+          "bytes": 1386490,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": ["Complete OCR coverage of the volume, not a verified transcription."]
+        }
+      ],
+      "evidence_ids": ["evidence:hales-furnivall-ia-metadata", "evidence:hales-furnivall-edition"]
+    },
+    {
+      "id": "access:ashmole61-facsimile",
+      "entity": "facsimile:bodleian:Ashmole-61",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json",
+        "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml"
+      ],
+      "format": "IIIF Presentation and JPEG bundle",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete 358-canvas 1,800-pixel IIIF bundle",
+          "path": "source-cache/CME00144/bodleian-ms-ashmole-61-complete-1800.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json",
+          "sha256": "a6945b6af77bca611a9c9d8fadce71565c1c2c5755321490327c9f12efed39dc",
+          "bytes": 551390486,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 358,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Libeaus Desconus",
+            "locators": ["ff. 38v-59v", "canvases 94-136", "bundle images 000094.jpg-000136.jpg"],
+            "start_url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/surfaces/1d122566-da04-4675-a345-8133ca01e49d/",
+            "end_url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/surfaces/03db055c-652b-4e2c-8a47-9e5642bdb7c8/",
+            "notes": ["The first and last work surfaces also contain boundaries with adjacent works."]
+          }
+        },
+        {
+          "label": "Pinned official Bodleian TEI catalog description",
+          "path": "source-cache/CME00144/bodleian-ms-ashmole-61-catalog-tei.xml",
+          "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml",
+          "sha256": "bbfe7d35f7d061abb19d29bbe41e820f454dfb4721c4fb4a95503fe8f5d6f748",
+          "bytes": 42520,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "evidence_ids": ["evidence:ashmole61-facsimile", "evidence:ashmole61-catalog"]
+    },
+    {
+      "id": "access:lambeth306-facsimile",
+      "entity": "facsimile:lambeth:MS-306",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~178964~124985/manifest",
+      "alternate_urls": [
+        "https://archives.lambethpalacelibrary.org.uk/CalmView/rdf/catalog/MSS/306",
+        "https://lambethpalacelibrary.info/wp-content/uploads/2021/09/Digital-photography.pdf",
+        "https://lambethpalacelibrary.info/wp-content/uploads/2021/09/Permission-to-reproduce.pdf"
+      ],
+      "format": "IIIF Presentation and JPEG bundle",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete 415-canvas public IIIF bundle",
+          "path": "source-cache/CME00144/lambeth-ms306-complete-1800.zip",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~178964~124985/manifest",
+          "sha256": "d6276a95d07f1391beb2297535fb42f6a84374069c1bbf2421a9b2f19b9331fd",
+          "bytes": 294862327,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 415,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Libeaus Desconus",
+            "locators": ["ff. 73r-107r", "canvases 149-217", "provider page indices 148-216"],
+            "start_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/LPLIBLPL~17~17~178964~124985page148/full/!1024,1024/0/default.jpg",
+            "end_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/LPLIBLPL~17~17~178964~124985page216/full/!1024,1024/0/default.jpg",
+            "notes": ["The first and last work surfaces also contain boundaries with adjacent material."]
+          }
+        },
+        {
+          "label": "Complete official CalmView RDF description",
+          "path": "source-cache/CME00144/lambeth-ms306-catalog-rdf.xml",
+          "source_url": "https://archives.lambethpalacelibrary.org.uk/CalmView/rdf/catalog/MSS/306",
+          "sha256": "2d4a0d1a21662bdcb9a92d5e9b920cdb4b808f6d4ac883e4d189144a1bc9d464",
+          "bytes": 14299,
+          "media_type": "application/rdf+xml",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Lambeth digital photography order form",
+          "path": "source-cache/CME00144/lambeth-digital-photography-order-form.pdf",
+          "source_url": "https://lambethpalacelibrary.info/wp-content/uploads/2021/09/Digital-photography.pdf",
+          "sha256": "b6346d6760e07e6797c0eccbc6f8ccb1e59cec658cb28ce6cde5801771d713e0",
+          "bytes": 119152,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        },
+        {
+          "label": "Lambeth permission to reproduce form",
+          "path": "source-cache/CME00144/lambeth-permission-to-reproduce-form.pdf",
+          "source_url": "https://lambethpalacelibrary.info/wp-content/uploads/2021/09/Permission-to-reproduce.pdf",
+          "sha256": "9d659518492dcbc53f76304e4953242357f39b43102a3a02face8b061cfc85e4",
+          "bytes": 220230,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "evidence_ids": ["evidence:lambeth306-facsimile", "evidence:lambeth306-catalog", "evidence:lambeth-imaging-service"]
+    },
+    {
+      "id": "access:lincolns-inn-facsimile",
+      "entity": "facsimile:lincolns-inn:Hale-150",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://archives.lincolnsinn.org.uk/documents/49",
+      "alternate_urls": ["https://archives.lincolnsinn.org.uk/wp-content/uploads/2022/03/Lincolns-Inn-Digital-Collections-terms-of-use.pdf"],
+      "format": "264-image browser object and cached JPEG bundle",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete 264-image public object in provider inventory order",
+          "path": "source-cache/CME00144/lincolns-inn-hale-150-complete-published-inventory.zip",
+          "source_url": "https://archives.lincolnsinn.org.uk/documents/49",
+          "sha256": "edca4de2c686a898cf29aada9f5536e51670dcd7aae5cd348f006686ba997397",
+          "bytes": 68740299,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 264,
+          "bundle_source_kind": "image_url_inventory",
+          "work_portion": {
+            "label": "Libeaus Desconus",
+            "locators": ["current ff. 1r-10v", "provider images 9-28", "legacy ff. 4-9, f. 1, ff. 10-12v"],
+            "start_url": "https://archives.lincolnsinn.org.uk/documents/49#page/n8/mode/1up",
+            "end_url": "https://archives.lincolnsinn.org.uk/documents/49#page/n27/mode/1up",
+            "notes": ["The legacy foliation reflects an older disordered sequence; the image-to-current-folio mapping was checked visually."]
+          }
+        },
+        {
+          "label": "Lincoln's Inn Digital Collections terms of use",
+          "path": "source-cache/CME00144/lincolns-inn-digital-collections-terms-of-use.pdf",
+          "source_url": "https://archives.lincolnsinn.org.uk/wp-content/uploads/2022/03/Lincolns-Inn-Digital-Collections-terms-of-use.pdf",
+          "sha256": "6e444a6dbc9d7d3d216e109be9c5c838add502a8e4b622eb9229632f1838c035",
+          "bytes": 203819,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "evidence_ids": ["evidence:lincolns-inn-hale150", "evidence:lincolns-inn-terms"]
+    },
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:record-2824",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://zenodo.org/records/14585961",
+      "alternate_urls": [
+        "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+        "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0",
+        "https://github.com/digital-index-of-middle-english-verse/dimev"
+      ],
+      "format": "ZIP data release",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete DIMEV v1.0 release archive",
+          "path": "source-cache/CME00144/dimev-v1.0.zip",
+          "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+          "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c",
+          "bytes": 3891929,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": { "label": "DIMEV record 2824", "locators": ["record-2824", "IMEV/NIMEV 1690"] }
+        }
+      ],
+      "evidence_ids": ["evidence:dimev-record-2824"]
+    },
+    {
+      "id": "access:fraaije-article",
+      "entity": "edition:fraaije:anglo-italian-communities:2024",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://link.springer.com/content/pdf/10.1007/s11061-024-09814-y.pdf",
+      "alternate_urls": [
+        "https://doi.org/10.1007/s11061-024-09814-y",
+        "https://link.springer.com/article/10.1007/s11061-024-09814-y"
+      ],
+      "format": "Complete publisher PDF",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete Springer version-of-record PDF",
+          "path": "source-cache/CME00144/fraaije-2024-anglo-italian-communities-naples-ms-complete.pdf",
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s11061-024-09814-y.pdf",
+          "sha256": "bbef414e5d35bf3969fa68eb5faef1a39d357a80000f030bd8324c9e29920c7f",
+          "bytes": 742762,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Naples MS XIII.B.29 description relevant to Libeaus Desconus",
+            "locators": ["article pp. 633-653", "manuscript properties and provenance", "Libeaus Desconus pp. 87-113 discussion"],
+            "notes": ["Complete coverage of the scholarly article, not manuscript-image coverage."
+            ]
+          }
+        }
+      ],
+      "evidence_ids": ["evidence:fraaije-naples"]
+    },
+    {
+      "id": "access:cotton-catalog",
+      "entity": "witness:british-library:Cotton-Caligula-A-II",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/041-001102312",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-001102311"],
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "access:cotton-physical",
+      "entity": "witness:british-library:Cotton-Caligula-A-II",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "British Library restricted-materials process; the catalog states that a letter of introduction is required.",
+      "cost": "unknown",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "access:cotton-reproduction",
+      "entity": "witness:british-library:Cotton-Caligula-A-II",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu"],
+      "contact": "licensing@bl.uk for publication licensing",
+      "cost": "fee",
+      "last_checked": "2026-07-13",
+      "notes": ["Request exact color images of ff. 42vb-57rb and provider confirmation of retention, redistribution, and publication terms."],
+      "evidence_ids": ["evidence:bl-digitisation-service", "evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "access:percy-catalog",
+      "entity": "witness:british-library:Add-27879",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/032-002031324",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-add-27879"]
+    },
+    {
+      "id": "access:percy-physical",
+      "entity": "witness:british-library:Add-27879",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "British Library restricted-materials process; the catalog states that a letter of introduction is required.",
+      "cost": "unknown",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-add-27879"]
+    },
+    {
+      "id": "access:percy-reproduction",
+      "entity": "witness:british-library:Add-27879",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu"],
+      "contact": "licensing@bl.uk for publication licensing",
+      "cost": "fee",
+      "last_checked": "2026-07-13",
+      "notes": ["Request exact color images of modern ff. 156v-171r (old pp. 317-346) and provider confirmation of retention, redistribution, and publication terms."],
+      "evidence_ids": ["evidence:bl-digitisation-service", "evidence:bl-add-27879"]
+    },
+    {
+      "id": "access:bl-service-pricing",
+      "entity": "catalog:bl-digitisation-service",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"],
+      "format": "Current service page and PDF price schedule",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "British Library Digitisation Services pricing 2025-2026",
+          "path": "source-cache/CME00144/british-library-digitisation-prices-2026.pdf",
+          "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+          "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+          "bytes": 181286,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "access:naples-physical",
+      "entity": "witness:naples:XIII-B-29",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "url": "https://www.bnnonline.it/it/193/manoscritti-e-rari",
+      "access_method": "Apply to the Biblioteca Nazionale di Napoli manuscripts and rare-books service with identification and the required introduction or authorization.",
+      "cost": "unknown",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bnn-access", "evidence:fraaije-naples"]
+    },
+    {
+      "id": "access:naples-reproduction",
+      "entity": "witness:naples:XIII-B-29",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "url": "https://www.bnnonline.it/it/432/riproduzioni",
+      "access_method": "Submit a reproduction request for the whole object or exact work pages; ask whether unpublished existing digital files can be released and obtain written reuse terms.",
+      "cost": "unknown",
+      "last_checked": "2026-07-13",
+      "notes": ["The service states that noncommercial study and research use has no use fee, although reproduction costs may apply; no complete public facsimile or exact current public catalog record was found."],
+      "evidence_ids": ["evidence:bnn-access", "evidence:fraaije-naples"]
+    },
+    {
+      "id": "access:mets-edition",
+      "entity": "edition:mets:salisbury-weldon:2013",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://metseditions.org/editions/b2NZA50TB0Xcdb0u0QzVC85x15V57G",
+      "alternate_urls": [
+        "https://metseditions.org/read/3lw8aYyES44PxhybLUM919cX6lMRZ73M",
+        "https://metseditions.org/read/3lk3QKM0s4K0LTvlVhM9m5u6GEgjl0zD",
+        "https://metseditions.org/read/ereYpPBhWk6Etajrc4k9VFNVR4z5eV6"
+      ],
+      "format": "HTML scholarly edition",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:mets-edition"]
+    },
+    {
+      "id": "access:mets-edition-pdf",
+      "entity": "edition:mets:salisbury-weldon:2013",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/0c3c7d76-28ae-44b2-bc05-b36caaffb784/downloadable_version/4ee6c0a6491825df8da987ac29f07cd2.pdf",
+      "alternate_urls": [
+        "https://metseditions.org/editions/b2NZA50TB0Xcdb0u0QzVC85x15V57G",
+        "https://metseditions.org/copyright-citation"
+      ],
+      "format": "Complete official 212-page downloadable edition PDF",
+      "cost": "free",
+      "last_checked": "2026-07-13",
+      "local_copies": [
+        {
+          "label": "Complete official METS downloadable edition PDF",
+          "path": "source-cache/CME00144/salisbury-weldon-libeaus-desconus-2013-mets-complete.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/0c3c7d76-28ae-44b2-bc05-b36caaffb784/downloadable_version/4ee6c0a6491825df8da987ac29f07cd2.pdf",
+          "sha256": "bc62ec744091df1caab49a74fe2753d5d2d7dc760c7df72639f5acbc724e897a",
+          "bytes": 4722697,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "The provider PDF is retained byte-for-byte. pdfinfo and pdfseparate expose and separate all 212 pages successfully; qpdf --check completes with recoverable warnings that multiple objects have offset 0, while file(1) misreports eight pages. No repair, normalization, or rewrite was performed."
+          ],
+          "work_portion": {
+            "label": "Complete Salisbury-Weldon edition of Libeaus Desconus",
+            "locators": ["212 PDF pages", "introduction", "Lambeth text", "Naples text", "explanatory and textual notes", "bibliography and glossary"],
+            "notes": ["Complete coverage of the official downloadable edition, not complete manuscript-image coverage; included manuscript figures are separately credited as reproduced by permission."]
+          }
+        }
+      ],
+      "notes": [
+        "Public download and individual reading access do not grant open republication rights; METS requires permission for more extensive reuse.",
+        "The official provider PDF has recoverable internal offset warnings but yields all 212 pages; the cached bytes remain unmodified for fixity and provenance."
+      ],
+      "evidence_ids": ["evidence:mets-edition", "evidence:mets-edition-pdf", "evidence:mets-copyright"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repo-xml",
+      "entity": "artifact:general-corpus:CME00144",
+      "component": "Checked-in XML file as a combined transcription, markup, and repository artifact",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The CME repository contains an Unlicense file, but its scope over imported U-M transcription and encoding content is not explicit enough to infer unrestricted downstream rights for every layer.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:umich-cme00144"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:CME00144",
+      "component": "U-M digital text and presentation",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The item displays the RightsStatements.org No Copyright - United States statement; this does not override site terms for unrelated components.",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-cme00144", "evidence:umich-collection"]
+    },
+    {
+      "id": "rights:kaluza-edition",
+      "entity": "edition:kaluza:libeaus-desconus:1890",
+      "component": "1890 edition text, notes, and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "First published in 1890 and in the public domain in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kaluza-edition"]
+    },
+    {
+      "id": "rights:koelbing-article",
+      "entity": "edition:koelbing:englische-studien:1877",
+      "component": "1877 article and collation",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "First published in 1877 and in the public domain in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:koelbing-article"]
+    },
+    {
+      "id": "rights:hales-furnivall-edition",
+      "entity": "edition:hales-furnivall:percy-folio-v2:1868",
+      "component": "1867-1868 edition and transcription",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "First published in 1867-1868 and in the public domain in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:hales-furnivall-edition"]
+    },
+    {
+      "id": "rights:ia-kaluza-scan",
+      "entity": "facsimile:internet-archive:kaluza-1890",
+      "component": "Internet Archive scan and OCR derivatives",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The underlying edition is public domain, but the complete item metadata supplies no machine-readable license or rights field for the scan and OCR layer.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:kaluza-ia-metadata"]
+    },
+    {
+      "id": "rights:ia-koelbing-scan",
+      "entity": "facsimile:internet-archive:englische-studien-1",
+      "component": "Internet Archive scan and OCR derivatives",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The underlying volume is public domain, but the complete item metadata supplies no machine-readable license or rights field for the scan and OCR layer.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:koelbing-ia-metadata"]
+    },
+    {
+      "id": "rights:ia-hales-furnivall-scan",
+      "entity": "facsimile:internet-archive:percy-folio-v2",
+      "component": "Internet Archive scan and OCR derivatives",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The underlying volume is public domain, but the complete item metadata supplies no machine-readable license or rights field for the scan and OCR layer.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:hales-furnivall-ia-metadata"]
+    },
+    {
+      "id": "rights:medieval-text-lincoln",
+      "entity": "witness:lincolns-inn:Hale-150",
+      "component": "Underlying medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The medieval wording predates modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lincolns-inn-hale150"]
+    },
+    {
+      "id": "rights:medieval-text-ashmole",
+      "entity": "witness:bodleian:Ashmole-61",
+      "component": "Underlying medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The medieval wording predates modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ashmole61-catalog"]
+    },
+    {
+      "id": "rights:medieval-text-lambeth",
+      "entity": "witness:lambeth:MS-306",
+      "component": "Underlying medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The medieval wording predates modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth306-catalog"]
+    },
+    {
+      "id": "rights:medieval-text-cotton",
+      "entity": "witness:british-library:Cotton-Caligula-A-II",
+      "component": "Underlying medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The medieval wording predates modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii"]
+    },
+    {
+      "id": "rights:medieval-text-percy",
+      "entity": "witness:british-library:Add-27879",
+      "component": "Underlying seventeenth-century copy of the medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The wording and its seventeenth-century copy predate modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-add-27879"]
+    },
+    {
+      "id": "rights:medieval-text-naples",
+      "entity": "witness:naples:XIII-B-29",
+      "component": "Underlying medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The medieval wording predates modern copyright; this does not extend to manuscript photography or provider metadata.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:fraaije-naples"]
+    },
+    {
+      "id": "rights:ashmole-facsimile",
+      "entity": "facsimile:bodleian:Ashmole-61",
+      "component": "Digital Bodleian manuscript photography",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "Digital Bodleian identifies the photographs as copyright Bodleian Libraries and licenses them under CC BY-NC 4.0.",
+      "license": { "name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/" },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ashmole61-facsimile"]
+    },
+    {
+      "id": "rights:lambeth-facsimile",
+      "entity": "facsimile:lambeth:MS-306",
+      "component": "Public-viewer manuscript photography and any separately supplied files",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The public IIIF object does not expose a clear open license; Lambeth separately supplies photography and requires permission for reproduction.",
+      "contract_terms_status": "permission_required",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:lambeth306-facsimile", "evidence:lambeth-imaging-service"]
+    },
+    {
+      "id": "rights:lincoln-facsimile",
+      "entity": "facsimile:lincolns-inn:Hale-150",
+      "component": "Lincoln's Inn digital manuscript images",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "Lincoln's Inn's Digital Collections terms assert rights in the images and text and license noncommercial use under CC BY-NC-ND 4.0, with contact required for commercial use.",
+      "license": { "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International", "spdx": "CC-BY-NC-ND-4.0", "uri": "https://creativecommons.org/licenses/by-nc-nd/4.0/" },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lincolns-inn-terms"]
+    },
+    {
+      "id": "rights:bl-ordered-images",
+      "entity": "catalog:bl-digitisation-service",
+      "component": "New British Library manuscript photography ordered for Cotton Caligula A II or Add MS 27879",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "The current imaging terms require separate publication licensing and do not grant blanket redistribution rights with an order.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "rights:naples-ordered-images",
+      "entity": "witness:naples:XIII-B-29",
+      "component": "Existing unpublished or newly supplied BNN manuscript photography",
+      "jurisdiction": "Italy",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "The BNN reproduction service distinguishes study use and reproduction costs; written authorization and exact downstream reuse terms are required before redistribution or publication.",
+      "contract_terms_status": "permission_required",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:bnn-access"]
+    },
+    {
+      "id": "rights:dimev-data",
+      "entity": "catalog:dimev:record-2824",
+      "component": "DIMEV v1.0 data release",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The release repository states Creative Commons Attribution 4.0 licensing.",
+      "license": { "name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/" },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dimev-record-2824"]
+    },
+    {
+      "id": "rights:fraaije-article",
+      "entity": "edition:fraaije:anglo-italian-communities:2024",
+      "access_id": "access:fraaije-article",
+      "component": "2024 version-of-record article and included third-party material unless separately credited",
+      "jurisdiction": "International",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "Springer's article page states that the open-access article is licensed under Creative Commons Attribution 4.0 International; separately credited third-party material may require additional permission.",
+      "license": { "name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/" },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:fraaije-naples"]
+    },
+    {
+      "id": "rights:mets-edition",
+      "entity": "edition:mets:salisbury-weldon:2013",
+      "access_id": "access:mets-edition",
+      "component": "Modern digital edition, introduction, notes, and site presentation",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "METS states that all METS texts are copyrighted, digital editions are provided for individual use, and permission is required to reprint or make more extensive use; only the separately distributed XML is identified as CC BY-NC-SA 4.0.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-edition", "evidence:mets-copyright"]
+    },
+    {
+      "id": "rights:mets-edition-pdf",
+      "entity": "edition:mets:salisbury-weldon:2013",
+      "access_id": "access:mets-edition-pdf",
+      "component": "Official downloadable 212-page PDF, including modern editorial text and separately credited manuscript figures",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The official PDF is publicly downloadable, but METS states that its texts remain copyrighted and are for individual use; more extensive reuse requires permission. The XML-only CC BY-NC-SA statement is not extended to this PDF, and included figures carry separate permission credits.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-edition-pdf", "evidence:mets-copyright"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:kaluza-eclectic-collation",
+      "entity": "edition:kaluza:libeaus-desconus:1890",
+      "practice": "collation",
+      "source_feature": "Six witnesses preserve differing lengths and readings; Kaluza grouped C, z, and P2 as independent branches and treated L as generally representative of z.",
+      "representation": "A single reconstructed critical text, normally supported by agreement between groups, with I, N, or A substituted when L appeared corrupt and C often preferred in unresolved cases.",
+      "description": "The edition is eclectic and genealogically argued rather than a transcription of a base witness.",
+      "scope": "Entire 2,232-line reading text and apparatus",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kaluza-method"]
+    },
+    {
+      "id": "practice:kaluza-metrical-emendation",
+      "entity": "edition:kaluza:libeaus-desconus:1890",
+      "practice": "collation",
+      "source_feature": "Witness readings can be metrically or rhymically defective and do not always preserve a complete twelve-line stanza.",
+      "representation": "Kaluza restores meter and a complete twelve-line rhyme scheme, sometimes against every witness and occasionally with explicitly conjectural wording.",
+      "description": "Conjectural metrical reconstruction is part of the edition's reading text and must not be attributed mechanically to any one manuscript.",
+      "scope": "Critical reading text",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kaluza-method"]
+    },
+    {
+      "id": "practice:kaluza-abbreviations",
+      "entity": "edition:kaluza:libeaus-desconus:1890",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations",
+      "representation": "Abbreviations are expanded in the printed text and apparatus.",
+      "description": "The edition does not preserve manuscript abbreviation signs diplomatically.",
+      "scope": "Reading text and cited variants",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kaluza-method"]
+    },
+    {
+      "id": "practice:kaluza-capitalization",
+      "entity": "edition:kaluza:libeaus-desconus:1890",
+      "practice": "capitalization_normalization",
+      "source_feature": "Variable manuscript capitalization and decorative initial flourishes",
+      "representation": "Capitalization is normalized and ornamental flourishes are not represented; variant spelling follows the first manuscript cited for a reading.",
+      "description": "Editorial typography does not reproduce the visual hierarchy of the witnesses.",
+      "scope": "Reading text and apparatus",
+      "confidence": "high",
+      "evidence_ids": ["evidence:kaluza-method"]
+    },
+    {
+      "id": "practice:xml-apparatus-embedding",
+      "entity": "artifact:general-corpus:CME00144",
+      "practice": "selection",
+      "source_feature": "Kaluza's notes contain alternate-witness passages set as verse groups and lines in addition to the critical reading text.",
+      "representation": "The XML nests 42 LG and 301 L elements inside NOTE elements while the direct poem division contains 186 LG and 2,232 L elements.",
+      "description": "Only direct poem children count toward the represented critical text; descendant-wide counts conflate reading text and apparatus.",
+      "scope": "BODY/DIV1 and nested NOTE apparatus",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cme00144-structure", "evidence:kaluza-edition"]
+    },
+    {
+      "id": "practice:umich-manual-keying",
+      "entity": "encoding:umich-cme:CME00144",
+      "practice": "selection",
+      "source_feature": "A public-domain critical edition with front matter, poem, and extensive apparatus.",
+      "representation": "U-M manually keyed and proofread the edition and encoded structural and semantic features in TEI-derived XML.",
+      "description": "The digital text represents an edition layer, not a fresh manuscript transcription.",
+      "scope": "Complete encoded U-M item",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-collection", "evidence:umich-cme00144"]
+    },
+    {
+      "id": "practice:mets-separate-versions",
+      "entity": "edition:mets:salisbury-weldon:2013",
+      "practice": "selection",
+      "source_feature": "The six witnesses have substantial textual variation and have been grouped into proposed recensional threads.",
+      "representation": "Salisbury and Weldon present the Lambeth and Naples versions separately rather than reconstructing one eclectic text.",
+      "description": "This modern editorial model is useful comparative evidence but should not be projected backward as an uncontested stemma.",
+      "scope": "2013 edition",
+      "confidence": "high",
+      "evidence_ids": ["evidence:mets-edition"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:cme00144-xml",
+      "type": "repository_file",
+      "citation": "General Corpus / CME source XML, CME/source/CME_phase_3/CME00144.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00144.xml",
+      "locator": "TEMPHEAD; IDG; BIBNO; VID; title page; BODY; direct LG and L children; PB, MILESTONE, and NOTE elements",
+      "summary": "Primary local evidence for identifiers, Kaluza title-page data, encoded text and apparatus, page sequence, and repository fixity.",
+      "accessed_on": "2026-07-13",
+      "sha256": "2b0283c95a3dd3073ad3bd73fa5494dd0f2b8e77f800a90235e01332593045cc"
+    },
+    {
+      "id": "evidence:cme00144-structure",
+      "type": "repository_file",
+      "citation": "XPath counts over the pinned CME00144 XML",
+      "repository_path": "CME/source/CME_phase_3/CME00144.xml",
+      "locator": "/ETS/EEBO/TEXT/BODY/DIV1/LG and direct L children; descendant LG and L; NOTE descendants",
+      "summary": "Confirms 186 direct main-text LG and 2,232 direct main-text L elements versus 228 descendant LG and 2,533 descendant L elements; the difference is 42 apparatus LG and 301 apparatus L elements inside notes.",
+      "accessed_on": "2026-07-13",
+      "sha256": "2b0283c95a3dd3073ad3bd73fa5494dd0f2b8e77f800a90235e01332593045cc"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME LICENSE (Unlicense text)",
+      "repository_path": "CME/LICENSE",
+      "summary": "Repository-level license evidence; scope over imported historical transcription and encoding layers remains ambiguous.",
+      "accessed_on": "2026-07-13",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-cme00144",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00144 item page",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00144",
+      "summary": "Identifies Libeaus Desconus, Kaluza's 1890 edition, public item access, and the NoC-US rights statement.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:umich-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse collection description",
+      "url": "https://quod.lib.umich.edu/c/cme/",
+      "summary": "Describes the corpus as manually keyed and in-house proofread from public-domain editions with structural and semantic markup.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:kaluza-edition",
+      "type": "digital_surrogate",
+      "citation": "Max Kaluza, Libeaus Desconus (Leipzig, 1890), complete Internet Archive scan",
+      "url": "https://archive.org/details/libeausdesconusd00kaluuoft",
+      "repository_path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-complete.pdf",
+      "locator": "title page; introduction; printed pp. 3-128; numbered lines 1-2232; apparatus",
+      "summary": "Complete visual evidence for the immediate source edition, its 2,232-line critical text, and its extensive six-witness apparatus.",
+      "accessed_on": "2026-07-13",
+      "sha256": "b87e6c706bd48fb9e27fdf450cffe8f01decc432ab4f21b660703f70af75d787"
+    },
+    {
+      "id": "evidence:kaluza-method",
+      "type": "edition_statement",
+      "citation": "Kaluza, Libeaus Desconus (1890), introduction and editorial method",
+      "url": "https://archive.org/details/libeausdesconusd00kaluuoft",
+      "repository_path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-complete.pdf",
+      "locator": "introduction sections on manuscripts, source copies, grouping, constitution of the text, spelling, abbreviations, and meter",
+      "summary": "Primary evidence for the six sigla; Rhode, Kölbing, and Hales-Furnivall intermediaries; Kaluza's full recollation of I/A/L/C and first-200-line Percy check; witness grouping; eclectic selection; conjectural metrical restoration; and normalization practices.",
+      "accessed_on": "2026-07-13",
+      "sha256": "b87e6c706bd48fb9e27fdf450cffe8f01decc432ab4f21b660703f70af75d787"
+    },
+    {
+      "id": "evidence:kaluza-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for libeausdesconusd00kaluuoft",
+      "url": "https://archive.org/metadata/libeausdesconusd00kaluuoft",
+      "repository_path": "source-cache/CME00144/kaluza-libeaus-desconus-1890-internet-archive-metadata.json",
+      "summary": "Fixes provider identifier and derivative inventory; contains no explicit scan-layer license or rights statement.",
+      "accessed_on": "2026-07-13",
+      "sha256": "f14d2ca57c614489c36f99c4126693aa968a3c0e0b9686780c543b01ac569fd2"
+    },
+    {
+      "id": "evidence:koelbing-article",
+      "type": "scholarly_source",
+      "citation": "Eugen Kölbing, 'Zur Überlieferung und Quelle des mittelenglischen Gedichtes: Lybeaus Disconus,' Englische Studien 1 (1877): 121-169",
+      "url": "https://archive.org/details/englischestudien01leipuoft",
+      "repository_path": "source-cache/CME00144/koelbing-englische-studien-1-1877-complete.pdf",
+      "locator": "printed pp. 121-169; PDF pp. 133-181",
+      "summary": "Primary published evidence for Kölbing's Naples variant collation against the Cotton-based text and his comparison of narrative analogues; not a complete continuous Naples transcript.",
+      "accessed_on": "2026-07-13",
+      "sha256": "cfdeef636c9eff71b0204bbbbb06fa83d0dd9f25359c55fca9694762261634fa"
+    },
+    {
+      "id": "evidence:koelbing-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for englischestudien01leipuoft",
+      "url": "https://archive.org/metadata/englischestudien01leipuoft",
+      "repository_path": "source-cache/CME00144/koelbing-englische-studien-1-1877-internet-archive-metadata.json",
+      "summary": "Fixes provider identifier and derivative inventory; contains no explicit scan-layer license or rights statement.",
+      "accessed_on": "2026-07-13",
+      "sha256": "8730bd5ee0610e349859ba7a44c728eceaf456accf8d68dd28803a162cd21e57"
+    },
+    {
+      "id": "evidence:hales-furnivall-edition",
+      "type": "digital_surrogate",
+      "citation": "John W. Hales and Frederick J. Furnivall, Bishop Percy's Folio Manuscript, vol. 2 (1867-1868), complete Internet Archive scan",
+      "url": "https://archive.org/details/bishoppercysfoli02percuoft",
+      "repository_path": "source-cache/CME00144/hales-furnivall-bishop-percy-folio-v2-1868-complete.pdf",
+      "locator": "printed pp. 404-499; PDF pp. 488-583",
+      "summary": "Primary evidence for the introduction, 2,241-line Percy transcript at pp. 415-497, and supplementary endings from I/A/C/L at pp. 497-499.",
+      "accessed_on": "2026-07-13",
+      "sha256": "f5c5b174f334a1bf92e07642878369ce070d984d1b9d11cbe6465287139addb3"
+    },
+    {
+      "id": "evidence:hales-furnivall-ia-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for bishoppercysfoli02percuoft",
+      "url": "https://archive.org/metadata/bishoppercysfoli02percuoft",
+      "repository_path": "source-cache/CME00144/hales-furnivall-bishop-percy-folio-v2-1868-internet-archive-metadata.json",
+      "summary": "Fixes provider identifier and derivative inventory; contains no explicit scan-layer license or rights statement.",
+      "accessed_on": "2026-07-13",
+      "sha256": "1535e20d5472f36979d9b801f2f8db49702a0b2ab8e3ee4a581cb055b9e6eb66"
+    },
+    {
+      "id": "evidence:ashmole61-catalog",
+      "type": "official_catalog",
+      "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS Ashmole 61",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_359",
+      "alternate_urls": ["https://raw.githubusercontent.com/bodleian/medieval-mss/cd36dce9a104617f960dab2c97ea78f95f917496/collections/Ashmole/MS_Ashmole_61.xml"],
+      "repository_path": "source-cache/CME00144/bodleian-ms-ashmole-61-catalog-tei.xml",
+      "locator": "item 5, ff. 38v-59v; object description; origin and hand",
+      "summary": "Official descriptive evidence for work locus, 2,250-line extent, date, probable origin, material, dimensions, and scribe.",
+      "accessed_on": "2026-07-13",
+      "sha256": "bbfe7d35f7d061abb19d29bbe41e820f454dfb4721c4fb4a95503fe8f5d6f748"
+    },
+    {
+      "id": "evidence:ashmole61-facsimile",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian, MS Ashmole 61 complete IIIF object",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/69462c25-b481-4643-9942-34f7243ea921/",
+      "alternate_urls": ["https://iiif.bodleian.ox.ac.uk/iiif/manifest/69462c25-b481-4643-9942-34f7243ea921.json"],
+      "repository_path": "source-cache/CME00144/bodleian-ms-ashmole-61-complete-1800.zip",
+      "summary": "Complete 358-canvas digital object; identifies Bodleian image copyright and CC BY-NC 4.0 license.",
+      "accessed_on": "2026-07-13",
+      "sha256": "a6945b6af77bca611a9c9d8fadce71565c1c2c5755321490327c9f12efed39dc"
+    },
+    {
+      "id": "evidence:ashmole61-visual",
+      "type": "visual_inspection",
+      "citation": "Visual inspection of Digital Bodleian MS Ashmole 61 work-boundary canvases",
+      "repository_path": "source-cache/CME00144/bodleian-ms-ashmole-61-complete-1800.zip",
+      "locator": "canvases 94 and 136; ff. 38v and 59v",
+      "summary": "Confirms that Libeaus Desconus begins on the lower portion of f. 38v after the preceding work and ends on the upper portion of f. 59v before the following work.",
+      "accessed_on": "2026-07-13",
+      "sha256": "a6945b6af77bca611a9c9d8fadce71565c1c2c5755321490327c9f12efed39dc"
+    },
+    {
+      "id": "evidence:lambeth306-catalog",
+      "type": "official_catalog",
+      "citation": "Lambeth Palace Library, CalmView record MSS/306",
+      "url": "https://archives.lambethpalacelibrary.org.uk/CalmView/Record.aspx?src=CalmView.Catalog&id=MSS%2F306",
+      "alternate_urls": ["https://archives.lambethpalacelibrary.org.uk/CalmView/rdf/catalog/MSS/306"],
+      "repository_path": "source-cache/CME00144/lambeth-ms306-catalog-rdf.xml",
+      "locator": "item 7, ff. 73r-107r; object description",
+      "summary": "Official descriptive evidence for the composite manuscript, item date, work locus, and 2,204-line extent.",
+      "accessed_on": "2026-07-13",
+      "sha256": "2d4a0d1a21662bdcb9a92d5e9b920cdb4b808f6d4ac883e4d189144a1bc9d464"
+    },
+    {
+      "id": "evidence:lambeth306-facsimile",
+      "type": "digital_surrogate",
+      "citation": "Lambeth Palace Library, MS 306 public IIIF manifest",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~178964~124985/manifest",
+      "repository_path": "source-cache/CME00144/lambeth-ms306-complete-1800.zip",
+      "summary": "Complete 415-canvas public digital object; the work maps to canvases 149-217/provider page indices 148-216.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d6276a95d07f1391beb2297535fb42f6a84374069c1bbf2421a9b2f19b9331fd"
+    },
+    {
+      "id": "evidence:lambeth306-visual",
+      "type": "visual_inspection",
+      "citation": "Visual inspection of Lambeth MS 306 work-boundary canvases",
+      "repository_path": "source-cache/CME00144/lambeth-ms306-complete-1800.zip",
+      "locator": "provider page indices 148 and 216; ff. 73r and 107r",
+      "summary": "Confirms that the work begins at the top of f. 73r and ends in the upper portion of f. 107r before the next text.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d6276a95d07f1391beb2297535fb42f6a84374069c1bbf2421a9b2f19b9331fd"
+    },
+    {
+      "id": "evidence:lambeth-imaging-service",
+      "type": "official_webpage",
+      "citation": "Lambeth Palace Library, Imaging Services, with order and permission forms",
+      "url": "https://www.lambethpalacelibrary.info/services/imaging-services/",
+      "summary": "Documents requestable photography and separate reproduction permission; the two current forms are retained locally as metadata-only evidence.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:lincolns-inn-hale150",
+      "type": "official_catalog",
+      "citation": "Lincoln's Inn Library and Archive, Hale MS 150 digital object",
+      "url": "https://archives.lincolnsinn.org.uk/documents/49",
+      "repository_path": "source-cache/CME00144/lincolns-inn-hale-150-complete-published-inventory.zip",
+      "summary": "Official 264-image public object and broad manuscript description; complete image inventory retained locally.",
+      "accessed_on": "2026-07-13",
+      "sha256": "edca4de2c686a898cf29aada9f5536e51670dcd7aae5cd348f006686ba997397"
+    },
+    {
+      "id": "evidence:lincolns-inn-visual",
+      "type": "visual_inspection",
+      "citation": "Visual inspection of Lincoln's Inn Hale MS 150 image sequence",
+      "repository_path": "source-cache/CME00144/lincolns-inn-hale-150-complete-published-inventory.zip",
+      "locator": "provider images 9-29; current ff. 1r-11r",
+      "summary": "Confirms Libeaus Desconus at provider images 9-28/current ff. 1r-10v, its explicit on image 28, and the next work beginning on image 29; resolves the legacy disordered foliation crosswalk.",
+      "accessed_on": "2026-07-13",
+      "sha256": "edca4de2c686a898cf29aada9f5536e51670dcd7aae5cd348f006686ba997397"
+    },
+    {
+      "id": "evidence:lincolns-inn-terms",
+      "type": "official_webpage",
+      "citation": "Lincoln's Inn, Digital Collections terms of use",
+      "url": "https://archives.lincolnsinn.org.uk/wp-content/uploads/2022/03/Lincolns-Inn-Digital-Collections-terms-of-use.pdf",
+      "repository_path": "source-cache/CME00144/lincolns-inn-digital-collections-terms-of-use.pdf",
+      "summary": "Provider terms identify CC BY-NC-ND 4.0 for noncommercial use and require contact for commercial use.",
+      "accessed_on": "2026-07-13",
+      "sha256": "6e444a6dbc9d7d3d216e109be9c5c838add502a8e4b622eb9229632f1838c035"
+    },
+    {
+      "id": "evidence:bl-cotton-caligula-a-ii",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts, Cotton MS Caligula A II, ff. 3-139",
+      "url": "https://searcharchives.bl.uk/catalog/041-001102312",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-001102311"],
+      "locator": "component description; Libeaus Desconus ff. 42vb-57rb; access conditions; Digitised Content",
+      "summary": "Official evidence for shelfmark, component date and origin, work locus, onsite access conditions, and absence of linked digitized content for the component.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-add-27879",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts, Add MS 27879, the Percy Folio",
+      "url": "https://searcharchives.bl.uk/catalog/032-002031324",
+      "locator": "object description; access conditions; Digitised Content",
+      "summary": "Official evidence for shelfmark, paper support, oblong format, current circa 1630-1670 date, onsite restrictions, and absence of linked digitized content.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-digitisation-service",
+      "type": "official_webpage",
+      "citation": "British Library Digitisation Services, imaging terms, order form, and 2025-2026 pricing",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://www.bl.uk/terms/imaging-services", "https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu"],
+      "repository_path": "source-cache/CME00144/british-library-digitisation-prices-2026.pdf",
+      "summary": "Current evidence for requestable color manuscript photography, fee schedule, expected fulfilment, exact-folio requirements, and separate publication licensing.",
+      "accessed_on": "2026-07-13",
+      "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597"
+    },
+    {
+      "id": "evidence:bnn-access",
+      "type": "official_webpage",
+      "citation": "Biblioteca Nazionale di Napoli, manuscripts and rare books access and reproduction services",
+      "url": "https://www.bnnonline.it/it/193/manoscritti-e-rari",
+      "alternate_urls": ["https://www.bnnonline.it/it/432/riproduzioni"],
+      "summary": "Official evidence for onsite manuscript consultation and mediated reproduction requests, including the stated study/research fee distinction.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:fraaije-naples",
+      "type": "scholarly_source",
+      "citation": "Karel Fraaije, 'Locating Anglo-Italian Communities in Bevis and the Naples Manuscript,' Neophilologus 108 (2024): 633-653",
+      "url": "https://doi.org/10.1007/s11061-024-09814-y",
+      "alternate_urls": ["https://link.springer.com/article/10.1007/s11061-024-09814-y", "https://link.springer.com/content/pdf/10.1007/s11061-024-09814-y.pdf"],
+      "repository_path": "source-cache/CME00144/fraaije-2024-anglo-italian-communities-naples-ms-complete.pdf",
+      "locator": "article pp. 633-653; Manuscript Properties and Provenance; Rights and permissions",
+      "summary": "Complete current open-access scholarly evidence for codex contents, colophon date, material and dimensions, scribal self-identification as More, Libeaus locus, provenance, the not-yet-realized status of a planned online digital resource, and article-level CC BY 4.0 rights.",
+      "accessed_on": "2026-07-13",
+      "sha256": "bbef414e5d35bf3969fa68eb5faef1a39d357a80000f030bd8324c9e29920c7f"
+    },
+    {
+      "id": "evidence:dimev-record-2824",
+      "type": "scholarly_source",
+      "citation": "Digital Index of Middle English Verse, record 2824, release v1.0",
+      "url": "https://www.dimev.net/record.php?recID=2824",
+      "alternate_urls": [
+        "https://zenodo.org/records/14585961",
+        "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0"
+      ],
+      "repository_path": "source-cache/CME00144/dimev-v1.0.zip",
+      "locator": "record-2824; manuscript witnesses; editions; IMEV/NIMEV 1690",
+      "summary": "Evidence for incipit, form, six witness loci and line counts, Kaluza's 2,232-line critical text, identifiers, and release-level CC BY 4.0 license.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"
+    },
+    {
+      "id": "evidence:middle-english-romance-database",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, 'Libeaus Desconus'",
+      "url": "https://www.middleenglishromance.org.uk/romances/libeaus-desconus",
+      "summary": "Current work-level evidence for circa 1325-1350 composition, South-East Midlands localization, twelve-line tail-rhyme form, IMEV 1690, subjects, witnesses, and editions.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:mets-edition",
+      "type": "scholarly_source",
+      "citation": "Eve Salisbury and James Weldon, eds., Libeaus Desconus (Medieval Institute Publications, 2013), METS digital edition",
+      "url": "https://metseditions.org/editions/b2NZA50TB0Xcdb0u0QzVC85x15V57G",
+      "alternate_urls": ["https://metseditions.org/read/3lw8aYyES44PxhybLUM919cX6lMRZ73M", "https://metseditions.org/read/3lk3QKM0s4K0LTvlVhM9m5u6GEgjl0zD", "https://metseditions.org/read/ereYpPBhWk6Etajrc4k9VFNVR4z5eV6"],
+      "summary": "Modern scholarly evidence for anonymous authorship, Fair Unknown analogues, witness description, proposed recensional threads, and separately edited Lambeth and Naples texts.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:mets-edition-pdf",
+      "type": "digital_surrogate",
+      "citation": "Eve Salisbury and James Weldon, eds., Libeaus Desconus (Medieval Institute Publications, 2013), complete official METS downloadable PDF",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/0c3c7d76-28ae-44b2-bc05-b36caaffb784/downloadable_version/4ee6c0a6491825df8da987ac29f07cd2.pdf",
+      "alternate_urls": ["https://metseditions.org/editions/b2NZA50TB0Xcdb0u0QzVC85x15V57G"],
+      "repository_path": "source-cache/CME00144/salisbury-weldon-libeaus-desconus-2013-mets-complete.pdf",
+      "locator": "212 pages; introduction; witness list and dates; Lambeth text; Naples text; notes; bibliography; glossary",
+      "summary": "Complete official edition evidence for the c. 1400 dates assigned to Cotton C and Lincoln LI, separate Lambeth and Naples texts, editorial policy, analogues, recensional discussion, and complete-edition extent.",
+      "accessed_on": "2026-07-13",
+      "sha256": "bc62ec744091df1caab49a74fe2753d5d2d7dc760c7df72639f5acbc724e897a"
+    },
+    {
+      "id": "evidence:mets-copyright",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright and Citation",
+      "url": "https://metseditions.org/copyright-citation",
+      "alternate_urls": ["https://metseditions.org/editions"],
+      "summary": "Official rights evidence that METS editions remain copyrighted, digital texts are for individual use, permission is required for reprinting or more extensive use, and only XML is openly licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:working-transcripts",
+      "question": "Do August Rhode's four witness copies or Eugen Kölbing's complete Naples transcript survive in an identifiable archive?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Search Kaluza, Rhode, and Kölbing archival papers, library correspondence, and edition-production records.",
+        "If found, record exact holdings and determine whether the documents are separable copies or a combined collation.",
+        "Preserve the current indirect lineage until physical or catalog evidence supports a more exact model."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:kaluza-method", "evidence:koelbing-article"]
+    },
+    {
+      "id": "question:bl-complete-facsimiles",
+      "question": "Can complete, retainable work images be obtained for Cotton Caligula A II and Add MS 27879 when neither current BL record exposes a complete public facsimile?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Submit separate BL digitisation requests for Cotton ff. 42vb-57rb and Add MS 27879 modern ff. 156v-171r, including shared boundary surfaces.",
+        "Request color photography and written terms for private retention, automated analysis, Git redistribution, scholarly publication, and commercial print-on-demand use.",
+        "Keep any historical selected images classified as partial unless the full requested work sequence is delivered."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-cotton-caligula-a-ii", "evidence:bl-add-27879", "evidence:bl-digitisation-service"]
+    },
+    {
+      "id": "question:naples-access",
+      "question": "What is the exact current BNN catalog identifier, digitization status, and reusable image route for Naples MS XIII.B.29?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Ask the BNN manuscripts service to confirm the current shelfmark, catalog description, and whether complete unpublished digital files exist.",
+        "Request the complete physical object, preserving covers, spine, flyleaves, blanks, and all leaves, and map pp. 87a-113b only after receipt.",
+        "Obtain written terms for retention, analysis, quotation, redistribution, electronic publication, and commercial use."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bnn-access", "evidence:fraaije-naples", "evidence:dimev-record-2824"]
+    },
+    {
+      "id": "question:lincoln-date-crosswalk",
+      "question": "How should the institutional viewer's broad fourteenth-century description of Hale MS 150 be reconciled with modern item-level dating, and can the current-to-legacy foliation crosswalk be confirmed from a full codicological catalog?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult the most recent full Lincoln's Inn manuscript catalog and codicological scholarship.",
+        "Ask the library to confirm the refoliation or rebinding history underlying the legacy I sequence.",
+        "Do not replace current image mapping with the legacy order; preserve both as explicitly labeled locator systems."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:lincolns-inn-hale150", "evidence:lincolns-inn-visual", "evidence:dimev-record-2824"]
+    },
+    {
+      "id": "question:recensions-source-authorship",
+      "question": "What confidence should attach to proposed CL and ANP recensions, a lost French source, and the historical attribution to Thomas Chestre?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Review current textual scholarship across all six witnesses rather than treating shorter or longer readings as automatically authorial.",
+        "Distinguish analogy with Renaut de Bage's Li Biaus Descouneus from proof of direct derivation.",
+        "Keep Thomas Chestre's name disputed unless new external authorship evidence appears."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:mets-edition", "evidence:kaluza-method"]
+    },
+    {
+      "id": "question:counts-and-rhyme-schemes",
+      "question": "How should differing Naples line counts and the alternative normalized tail-rhyme patterns in DIMEV and the Middle English Romance database be reconciled?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Compare DIMEV's 2,230-line Naples count with Kaluza's historical 2,275 and METS numbering, separating post-explicit moral lines and the Latin colophon.",
+        "Align stanza lines rather than comparing rhyme-letter labels in isolation.",
+        "Retain the computationally secure 2,232-line extent only for Kaluza's critical text and CME00144's direct poem children."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:dimev-record-2824", "evidence:middle-english-romance-database", "evidence:mets-edition", "evidence:cme00144-structure"]
+    },
+    {
+      "id": "question:repo-license-scope",
+      "question": "Does the CME repository's Unlicense unambiguously cover the imported U-M transcription and markup as well as repository-authored code?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Seek a repository-owner statement identifying the license scope for imported corpus XML.",
+        "Preserve U-M's NoC-US statement and the public-domain status of Kaluza's edition as separate layer-specific evidence.",
+        "Do not infer rights in manuscript photography from rights in medieval words or nineteenth-century editions."
+      ],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:cme-license", "evidence:umich-cme00144", "evidence:kaluza-edition"]
+    }
+  ],
+  "review_notes": [
+    "All nineteen local cache paths are recorded with byte size, SHA-256, source URL, coverage, retrieval date, and work-portion mapping where applicable.",
+    "Direct and mediated consultation are modeled separately: Kaluza's I/A/L/C recollation is not collapsed into Rhode's copies, the complete Kölbing transcript is not conflated with the 1877 article, and the first-200-line Percy check is not generalized to the full witness.",
+    "A source URL and locator audit was completed on 2026-07-13; remaining provider-access gaps are explicit open questions rather than inferred absences."
+  ]
+}

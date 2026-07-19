@@ -1,0 +1,157 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00089",
+  "work_id": "CME00089",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00089",
+    "unit_type": "single_work",
+    "label": "The Complaint of God",
+    "scope_note": "The sixty-eight-stanza Middle English dialogue conventionally called The Complaint of God and attributed to William Lichfield. The abstract work is kept distinct from its thirteen witnesses in DIMEV v1.0, Wynkyn de Worde's early print, Borgstrom's reordered 1911 transcription of Gonville and Caius MS 174/95, the U-M encoding, the repository XML, and modern facsimiles. CME00089 encodes only Borgstrom's poem on printed pp. 508-525, not his title, manuscript description, attribution discussion, or linguistic study on pp. 498-507."
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00089", "uri": "https://name.umdl.umich.edu/CME00089"},
+    {"scheme": "DIMEV", "value": "4312", "uri": "https://www.dimev.net/record.php?recID=4312"},
+    {"scheme": "IMEV", "value": "2711.5"},
+    {"scheme": "NIMEV", "value": "2714"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "The Complaint of God", "language": "eng", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-appleford-watson"], "notes": "DIMEV's established short title; the definite article is supplied for display."}
+    },
+    {
+      "id": "title:borgstrom", "type": "alternate", "value": "The Complaint of God to Sinful Man and the Answer of Man", "language": "eng", "script": "Latn", "supplied_by": "Edvard Borgstrom's 1911 article", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-xml"]}
+    },
+    {
+      "id": "title:incipit", "type": "incipit", "value": "Owre gracious god, prynce of pite", "language": "enm", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-borgstrom", "evidence:metadata-dimev"]}
+    },
+    {
+      "id": "title:explicit", "type": "explicit", "value": "That leve there synne and them amende", "language": "enm", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-borgstrom", "evidence:metadata-dimev"]}
+    }
+  ],
+  "agents": [
+    {"id": "agent:william-lichfield", "type": "person", "name": "William Lichfield", "alternate_names": ["William Lychefeld", "William Litchfield"], "notes": ["London rector and preacher who died in 1447 or 1448 according to competing historical accounts; exact life dates are not used to force a precise poem date."]},
+    {"id": "agent:edvard-borgstrom", "type": "person", "name": "Nils Edvard Borgstrom", "alternate_names": ["Edv. Borgstrom"]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:lichfield-author", "agent_id": "agent:william-lichfield", "role": "attributed_author", "attribution_status": "attributed", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-dimev", "evidence:metadata-appleford-watson"], "notes": "Caius 174/95 expressly names Magister William Lychefeld, doctor of theology, in its colophon; Trinity R.3.21 and Huntington HM 144 preserve later attribution history. Appleford and Watson note that unanimity has been lacking but defend Lichfield's authorship. Attribution is therefore strong but not silently converted into an unqualified autograph claim."}
+    },
+    {
+      "id": "responsibility:borgstrom-editor", "agent_id": "agent:edvard-borgstrom", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "Immediate 1911 printed edition"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-xml"]},
+      "notes": ["Borgstrom transcribed Caius 174/95, supplied punctuation and capitalization policy, made limited corrections, and restored the manuscript's displaced lines 321-364 to their intended continuous position."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition", "type": "composition", "display": "First half of the fifteenth century, before William Lichfield's death in 1447/1448 if the attribution is accepted", "normalized": {"not_before": 1400, "not_after": 1448}, "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-appleford-watson"], "notes": "This is a broad authorship-based composition window, not the late-fifteenth-century date of Caius 174/95 or Huntington HM 144. No exact year is established."}
+    },
+    {
+      "id": "date:first-publication", "type": "first_publication", "display": "First known in print in Wynkyn de Worde's The remors of conscyence, circa 1510", "normalized": {"not_before": 1505, "not_after": 1515}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "print:cul:Sel-5-6",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-folger-eebo"], "notes": "DIMEV records the Cambridge copy as a witness and modern scholarship reports two de Worde editions. The circa-1510 copy is imperfect, and a full early-print census remains desirable."}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:london", "label": "London", "kind": "settlement"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:cultural-origin", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-appleford-watson"], "notes": "The broad English cultural context is distinct from the production place of any one witness."}
+    },
+    {
+      "id": "place:london-association", "place_id": "place:london", "type": "associated_place", "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-appleford-watson"], "notes": "Lichfield was rector of All Hallows the Great and Appleford and Watson interpret the writings in relation to London merchants and lay religion. This association is not promoted to a proven composition place; Borgstrom's linguistic comparison with London charters concerns the transmitted language."}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-borgstrom", "evidence:metadata-dimev"]},
+      "notes": ["Borgstrom's modern English and German linguistic discussion is edition-layer matter outside CME00089's cataloged poem."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse", "value": "verse", "scope": {"kind": "whole"}, "description": "Sixty-eight eight-line stanzas, normally rhyming abababab, for 544 lines in the represented Caius version.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml-structure", "evidence:metadata-dimev", "evidence:metadata-borgstrom"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:religious-poetry", "term": "religious-poetry", "label": "Religious poetry", "scheme": "General Corpus genre", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "genre:devotional-poem", "term": "devotional-poem", "label": "Devotional poem", "scheme": "General Corpus genre", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-appleford-watson"]}},
+    {"id": "genre:didactic-poetry", "term": "didactic-poetry", "label": "Didactic poetry", "scheme": "General Corpus genre", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-appleford-watson"]}},
+    {"id": "genre:dialogue-poem", "term": "dialogue-poem", "label": "Dialogue poem", "scheme": "General Corpus genre", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "genre:penitential-poetry", "term": "penitential-poetry", "label": "Penitential poetry", "scheme": "General Corpus genre", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-appleford-watson"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:god-and-sinful-humanity", "term": "dialogue-between-god-and-sinful-humanity", "label": "Dialogue between God and sinful humanity", "scheme": "General Corpus subject", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-dimev"]}},
+    {"id": "subject:sin-repentance", "term": "sin-repentance-and-amendment", "label": "Sin, repentance, and amendment of life", "scheme": "General Corpus subject", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}},
+    {"id": "subject:mercy-judgment", "term": "divine-mercy-justice-and-last-judgment", "label": "Divine mercy, justice, and the Last Judgment", "scheme": "General Corpus subject", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}},
+    {"id": "subject:charity-trade", "term": "charity-wealth-trade-and-social-obligation", "label": "Charity, wealth, trade, and social obligation", "scheme": "General Corpus subject", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-appleford-watson"]}},
+    {"id": "subject:passion-salvation", "term": "christs-passion-and-salvation", "label": "Christ's Passion and human salvation", "scheme": "General Corpus subject", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml"]}}
+  ],
+  "tags": ["middle-english", "verse", "william-lichfield", "complaint-of-god", "religious-poetry", "devotional-poem", "didactic-poetry", "dialogue-poem", "penitential-poetry", "god-and-man", "conscience", "sin", "repentance", "mercy", "last-judgment", "charity", "trade", "salvation", "eight-line-stanzas", "abababab", "imev-2711-5", "nimev-2714"],
+  "summaries": [
+    {
+      "id": "summary:abstract", "type": "abstract", "value": "God repeatedly confronts sinful humanity with creation, bodily gifts, wealth, reason, Christ's Passion, mercy, and the certainty of judgment. The human speaker confesses failures of lust, avarice, false dealing, oaths, anger, and neglect of the poor, then promises restitution, charity, penance, and amendment. The alternating admonitions and replies join pastoral instruction to penitential devotion, with particular attention to the moral obligations of ordinary social and commercial life.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-appleford-watson"]
+    },
+    {
+      "id": "summary:cataloging", "type": "cataloging_note", "value": "CME00089 represents Borgstrom's reconstructed continuous reading order. In Caius 174/95 the scribe accidentally omitted present lines 321-364, copied them later on manuscript pp. 481-482, and marked the intended insertion point; the abstract work and the witness's physical order therefore must not be conflated.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-xml"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 1, "sections": 1, "prose_only_items": 0, "verse_only_items": 1, "mixed_items": 0, "verse_groups": 68, "verse_lines": 544,
+    "description": "One complete represented poem in 68 LG elements and 544 direct L elements. Eighteen PB elements map Borgstrom's printed pp. 508-525; manuscript-page and poem-line MILESTONE elements total 127. The 206 HI elements chiefly preserve Borgstrom's italic expansion typography and are representation features, not a count of manuscript abbreviations independently verified from the codex.",
+    "evidence_ids": ["evidence:metadata-xml-structure", "evidence:metadata-borgstrom"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [],
+  "related_works": [
+    {"id": "related:remors-of-conscyence", "title": "The remors of conscyence", "relation": "version_of", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-folger-eebo"], "notes": ["Wynkyn de Worde's circa-1510 print transmits a substantially reworked version under a different title; the precise textual relationship among its editions and the manuscript families needs critical collation."]}
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00089", "manifest_path": "manifests/lineage/works/CME00089.json",
+    "bindings": [
+      {"metadata_target": "work:CME00089", "lineage_entity_id": "artifact:general-corpus:CME00089", "role": "repository_representation"},
+      {"metadata_target": "work:CME00089", "lineage_entity_id": "encoding:umich-cme:CME00089", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00089", "lineage_entity_id": "edition:borgstrom:anglia-34-1911", "role": "source_edition"},
+      {"metadata_target": "work:CME00089", "lineage_entity_id": "witness:caius:MS-174-95", "role": "source_witness"},
+      {"metadata_target": "work:CME00089", "lineage_entity_id": "catalog:dimev:record-4312", "role": "related_source"}
+    ]
+  },
+  "catalog_summary": {
+    "title": "The Complaint of God", "author": "William Lichfield (attributed; strongly supported)", "editor": "Nils Edvard Borgstrom", "date": "First half of the fifteenth century; first known in print circa 1510", "region": "England, with a strong London association; exact composition place unknown",
+    "genres": ["Religious poetry", "Devotional poem", "Didactic poetry", "Dialogue poem", "Penitential poetry"], "form": "verse", "language_codes": ["enm"],
+    "tags": ["middle-english", "verse", "william-lichfield", "complaint-of-god", "religious-poetry", "devotional-poem", "didactic-poetry", "dialogue-poem", "penitential-poetry", "god-and-man", "conscience", "sin", "repentance", "mercy", "last-judgment", "charity", "trade", "salvation", "eight-line-stanzas", "abababab", "imev-2711-5", "nimev-2714"]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "General Corpus / CME source XML, CME/source/CME_phase_3/CME00089.xml.", "repository_path": "CME/source/CME_phase_3/CME00089.xml", "locator": "TEMPHEAD; IDG; TEXT/@LANG; BODY/DIV1 poem; opening and closing LG; PB, MILESTONE, NOTE, and HI elements", "summary": "Confirms the repository identifier family, Middle English poem, Borgstrom pp. 508-525 boundary, 68 stanzas, reconstructed manuscript-page sequence, source notes, italic typography, incipit, explicit, and 2016 repository review.", "accessed_on": "2026-07-12", "sha256": "810f31afd7a1ab425c9b7d49d8420b6a56aeea3e78469c25e28e75495faf83e3"},
+    {"id": "evidence:metadata-xml-structure", "type": "computational_inspection", "citation": "Structural inspection of CME00089.xml.", "repository_path": "CME/source/CME_phase_3/CME00089.xml", "locator": "Count of DIV1, LG, L, PB, NOTE, MILESTONE, and HI elements", "summary": "Finds one poem DIV1, 68 LG, 544 L, 18 PB, 31 NOTE, 127 MILESTONE, and 206 HI elements.", "accessed_on": "2026-07-12", "sha256": "810f31afd7a1ab425c9b7d49d8420b6a56aeea3e78469c25e28e75495faf83e3"},
+    {"id": "evidence:metadata-borgstrom", "type": "linked_manifest_evidence", "citation": "Nils Edvard Borgstrom, 'The Complaint of God to Sinful Man and the Answer of Man. By William Lichfield,' Anglia 34 (1911): 498-525.", "url": "https://archive.org/details/angliazeitschrif34tbuoft/page/n507/mode/1up", "repository_path": "manifests/lineage/works/CME00089.json", "locator": "Printed pp. 498-525; poem pp. 508-525", "source_evidence_id": "evidence:borgstrom-edition", "summary": "Companion-lineage evidence for the title, editor, direct Caius source, manuscript description, displaced-line reconstruction, author colophon and biography, linguistic discussion, editorial policy, complete poem, and exact encoded selection.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-dimev", "type": "linked_manifest_evidence", "citation": "Digital Index of Middle English Verse, version 1.0, record 4312 (IMEV 2711.5; NIMEV 2714).", "url": "https://www.dimev.net/record.php?recID=4312", "repository_path": "manifests/lineage/works/CME00089.json", "source_evidence_id": "evidence:dimev-release", "summary": "Companion-lineage evidence for work identity, preferred incipit and title, William Lichfield attribution, dialogue subject, 68 eight-line abababab stanzas, thirteen-witness census, loci, witness titles, incompleteness, early print, and editions.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-appleford-watson", "type": "scholarly_source", "citation": "Amy Appleford and Nicholas Watson, 'Merchant Religion in Fifteenth-Century London: The Writings of William Litchfield,' The Chaucer Review 46.1-2 (2011): 203-222.", "url": "https://doi.org/10.5325/chaucerrev.46.1_2.0203", "locator": "Abstract and bibliographic record", "summary": "States that authorship has not been unanimous but upholds Litchfield's authorship of the Complaint; describes its fourteen-manuscript and two-edition reading history, pastoral theology, and London mercantile and lay-religious context.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-folger-eebo", "type": "official_catalog", "citation": "Folger Shakespeare Library catalog record for the EEBO reproduction of Wynkyn de Worde's circa-1510 The remors of conscyence, STC 20881.3.", "url": "https://catalog.folger.edu/record/419887", "summary": "Supports the circa-1510 imprint, Lichfield attribution, Cambridge original, imperfect extent, EEBO microfilm reproduction, and subscription-mediated access.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:authorship-date", "question": "Can William Lichfield's authorship and the poem's composition date be narrowed beyond the strong but not unanimous attribution and broad pre-1448 window?", "status": "unresolved", "impact": "high", "next_steps": ["Consult the complete Appleford-Watson argument and subsequent attribution scholarship.", "Compare the Caius colophon and attribution annotations in Trinity R.3.21 and Huntington HM 144 palaeographically and historically.", "Keep witness dates and London linguistic features separate from composition."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-borgstrom", "evidence:metadata-dimev", "evidence:metadata-appleford-watson"]},
+    {"id": "question:witness-count", "question": "Why does DIMEV v1.0 list thirteen witnesses, including the circa-1510 print, while Appleford and Watson report fourteen manuscripts and two de Worde editions?", "status": "unresolved", "impact": "medium", "next_steps": ["Obtain the complete 2011 article's witness list and compare it item by item with DIMEV record 4312.", "Separate physical manuscript witnesses, early printed editions, fragments, and lost or reidentified copies.", "Update the collateral lineage without retroactively making later census witnesses sources of Borgstrom's edition."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-appleford-watson"]},
+    {"id": "question:critical-edition", "question": "How do the thirteen DIMEV witnesses and early prints relate textually, and does a current critical edition supersede the Caius-only Borgstrom text?", "status": "unresolved", "impact": "high", "next_steps": ["Collate the five publicly available complete witness facsimiles against Borgstrom and Furnivall.", "Search recent scholarship by DIMEV, IMEV, NIMEV, incipit, and de Worde title.", "Model families and supplied readings only after reading-level evidence is established."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-dimev", "evidence:metadata-borgstrom", "evidence:metadata-appleford-watson"]}
+  ],
+  "notes": [
+    "Borgstrom calls manuscript pp. 469-482 'folios'; DIMEV and the XML treat the numerals as manuscript pages. The manifest preserves the current scholarly page terminology and records Borgstrom's historical wording in evidence.",
+    "The Caius witness's physical displacement of lines 321-364 is not a second work. Borgstrom explains the cross-references and restores the lines to the continuous poem; CME follows that editorial order.",
+    "The direct Caius source alone is upstream of Borgstrom. All other witnesses and Furnivall's Lambeth texts are collateral supporting sources, even when complete facsimiles are available."
+  ]
+}

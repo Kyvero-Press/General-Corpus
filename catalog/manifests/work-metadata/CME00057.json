@@ -1,0 +1,323 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00057",
+  "work_id": "CME00057",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00057",
+    "unit_type": "collection",
+    "label": "George Ashby's Poems",
+    "scope_note": "An encoding-specific collection record for the two extant works by George Ashby represented in CME00057: A Prisoner's Reflections and the incomplete Active Policy of a Prince with its Dicta et Opiniones Diversorum Philosophorum section. Mary Bateson's 1899 edition and the CME XML number Active Policy and Dicta as two printed poems, but current scholarship and the holograph's layout support treating them as two sections of one work. The collection title is editorial; this record does not collapse the medieval works, two physical manuscripts, Bateson's edition, the U-M encoding, or the repository XML into one object."
+  },
+  "catalog_summary": {
+    "title": "George Ashby's Poems",
+    "author": "George Ashby",
+    "editor": "Mary Bateson",
+    "date": "1461-1464: Active Policy and Dicta probably 1461-62; A Prisoner's Reflections Michaelmas 1463-24 March 1464",
+    "region": "England; Fleet Prison, London, for A Prisoner's Reflections",
+    "genres": ["Prison writing", "Autobiographical complaint", "Didactic poetry", "Mirror for princes", "Political advice poetry", "Wisdom literature"],
+    "form": "mixed",
+    "language_codes": ["enm", "lat"],
+    "tags": ["middle-english", "latin", "george-ashby", "rhyme-royal", "prison-writing", "mirror-for-princes", "political-advice", "didactic-poetry", "wisdom-literature", "moral-philosophy", "proverbs", "kingship", "governance", "lancastrian", "wars-of-the-roses", "fleet-prison", "signet-clerk", "holograph", "translation", "compilation"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "CME00057", "uri": "https://name.umdl.umich.edu/CME00057"},
+    {"scheme": "EETS", "value": "Extra Series 76"},
+    {"scheme": "ISBN", "value": "9780859917346"},
+    {"scheme": "Trinity shelfmark", "value": "R.3.19", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19"},
+    {"scheme": "CUL shelfmark", "value": "Mm.IV.42"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred", "type": "preferred", "value": "George Ashby's Poems", "language": "eng", "script": "Latn", "supplied_by": "Mary Bateson's 1899 source edition",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bateson"]},
+      "notes": ["An editorial collection title rather than a known fifteenth-century title for a single work or medieval compilation."]
+    },
+    {
+      "id": "title:prison-reflections", "type": "preferred", "value": "A Prisoner's Reflections", "language": "eng", "script": "Latn", "supplied_by": "Mary Bateson's edition",
+      "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-sobecki"]},
+      "notes": ["Modern conventional title; Trinity's catalog labels the item Complaint of a Prisoner."]
+    },
+    {
+      "id": "title:prison-complaint", "type": "alternate", "value": "Complaint of a Prisoner", "language": "eng", "script": "Latn", "supplied_by": "Trinity College manuscript catalog",
+      "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-trinity"]}
+    },
+    {
+      "id": "title:prison-incipit", "type": "incipit", "value": "At the ende of Somer, when wynter began", "language": "enm", "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity"]}
+    },
+    {
+      "id": "title:active-policy", "type": "preferred", "value": "Active Policy of a Prince", "language": "eng", "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-douma", "evidence:metadata-scattergood"]},
+      "notes": ["Used here for the whole incomplete work, including the Dicta section, following current scholarship."]
+    },
+    {
+      "id": "title:active-policy-latin", "type": "original", "value": "De activa pollecia principis", "language": "lat", "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:active-policy-section"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "title:dicta", "type": "original", "value": "Dicta et Opiniones Diversorum Philosophorum", "language": "lat", "script": "Latn",
+      "scope": {"kind": "part", "part_ids": ["part:dicta-section"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]},
+      "notes": ["A manuscript section heading, not evidence that the section is an independent work."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:george-ashby", "type": "person", "name": "George Ashby", "alternate_names": ["George Asshby"], "notes": ["Lancastrian administrator and Signet clerk, probably born circa 1385 and died in 1475; Mm.IV.42 is now identified as his holograph."]},
+    {"id": "agent:mary-bateson", "type": "person", "name": "Mary Bateson", "notes": ["Editor of the 1899 EETS source representation encoded by U-M."]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:ashby-author", "agent_id": "agent:george-ashby", "role": "author", "attribution_status": "known", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-trinity", "evidence:metadata-sobecki", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "responsibility:ashby-compiler", "agent_id": "agent:george-ashby", "role": "compiler", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"], "description": "Compilation and extraction of political and moral advice, including the Latin philosophers' sayings"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-douma", "evidence:metadata-scattergood", "evidence:metadata-buhler"]}
+    },
+    {
+      "id": "responsibility:ashby-translator", "agent_id": "agent:george-ashby", "role": "translator", "attribution_status": "known", "scope": {"kind": "part", "part_ids": ["part:dicta-section"], "description": "Middle English rhyme-royal translations or verse renderings following Latin sayings"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-cul-catalog", "evidence:metadata-douma", "evidence:metadata-buhler"]}
+    },
+    {
+      "id": "responsibility:bateson-editor", "agent_id": "agent:mary-bateson", "role": "editor", "attribution_status": "known", "scope": {"kind": "whole", "description": "Immediate 1899 printed representation, not medieval authorship or compilation"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bateson"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:prison-reflections", "type": "composition", "display": "Between Michaelmas 1463 and 24 March 1464 in modern reckoning; self-dated 1463", "normalized": {"not_before": 1463, "not_after": 1464}, "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]}, "source_lineage_entity_id": "witness:trinity:R.3.19",
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity", "evidence:metadata-sobecki"], "notes": "The poem says it was written in prison in 1463; Sobecki narrows the interval using the Michaelmas commitment and the medieval calendar."}
+    },
+    {
+      "id": "date:active-policy-dicta", "type": "composition", "display": "Most likely between April 1461 and the second half of 1462", "normalized": {"not_before": 1461, "not_after": 1462}, "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]}, "source_lineage_entity_id": "witness:cul:Mm.IV.42",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-sobecki", "evidence:metadata-douma"], "notes": "Current preferred scholarly window based on Ashby's reference to himself as lately Margaret's Signet clerk, the holograph's unfinished state, and newly assembled life records; earlier scholarship proposed 1460-61, circa 1463, 1468, or 1470."}
+    },
+    {
+      "id": "date:first-publication-collection", "type": "first_publication", "display": "Published as George Ashby's Poems by Mary Bateson in 1899", "normalized": {"not_before": 1899, "not_after": 1899}, "scope": {"kind": "whole"}, "source_lineage_entity_id": "edition:bateson:1899",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-xml"], "notes": "This dates the editorial collection represented by CME00057, not necessarily the first separate printing of every component poem."}
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:london", "label": "London", "kind": "settlement", "broader_place_ids": ["place:england"]},
+    {"id": "place:fleet-prison", "label": "Fleet Prison", "kind": "settlement", "broader_place_ids": ["place:london"], "notes": ["Historical prison in London; used here as the poem's explicitly named place of composition."]}
+  ],
+  "place_statements": [
+    {
+      "id": "place:cultural-origin-england", "place_id": "place:england", "type": "cultural_origin", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-trinity", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "place:prison-composition", "place_id": "place:fleet-prison", "type": "place_of_composition", "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]}, "source_lineage_entity_id": "witness:trinity:R.3.19",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity", "evidence:metadata-sobecki"]}
+    },
+    {
+      "id": "place:active-composition-england", "place_id": "place:england", "type": "place_of_composition", "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]}, "source_lineage_entity_id": "witness:cul:Mm.IV.42",
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:metadata-douma", "evidence:metadata-sobecki"], "notes": "The current evidence supports composition in England after the Lancastrian royal family's 1461 exile, but does not securely locate Ashby in a particular town."}
+    },
+    {
+      "id": "place:historical-setting-england", "place_id": "place:england", "type": "historical_setting", "scope": {"kind": "whole", "description": "Lancastrian and Yorkist political conflict, imprisonment, and advice for the English crown prince"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-douma"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english", "code": "enm", "label": "Middle English", "usage": "primary", "script": "Latn", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity", "evidence:metadata-cul-catalog"]}
+    },
+    {
+      "id": "language:latin", "code": "lat", "label": "Latin", "usage": "embedded", "script": "Latn", "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"], "description": "Authorial prose preface, section headings, and extensive philosophers' sayings preceding English verse renderings"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]}
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:mixed", "value": "mixed", "scope": {"kind": "whole"}, "description": "The collection is predominantly Middle English rhyme-royal verse, but Active Policy and Dicta include an integral Latin prose preface and repeated prose Latin maxims; the work-level collection is therefore mixed rather than pure verse.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]}
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:prison-writing", "term": "prison-writing", "label": "Prison writing", "scheme": "General Corpus genre", "primary": true, "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity", "evidence:metadata-sobecki"]}
+    },
+    {
+      "id": "genre:autobiographical-complaint", "term": "autobiographical-complaint", "label": "Autobiographical complaint", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-sobecki"]}
+    },
+    {
+      "id": "genre:didactic-poetry", "term": "didactic-poetry", "label": "Didactic poetry", "scheme": "General Corpus genre", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-douma", "evidence:metadata-scattergood"]}
+    },
+    {
+      "id": "genre:mirror-for-princes", "term": "mirror-for-princes", "label": "Mirror for princes", "scheme": "General Corpus genre", "primary": true, "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-douma", "evidence:metadata-sobecki"]}
+    },
+    {
+      "id": "genre:political-advice", "term": "political-advice-poetry", "label": "Political advice poetry", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "genre:wisdom-literature", "term": "wisdom-literature", "label": "Wisdom literature", "scheme": "General Corpus genre", "scope": {"kind": "part", "part_ids": ["part:dicta-section"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-buhler", "evidence:metadata-douma"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:imprisonment-patience", "term": "imprisonment-patience-and-adversity", "label": "Imprisonment, patience, and adversity", "scheme": "General Corpus subject", "primary": true, "scope": {"kind": "part", "part_ids": ["part:prison-reflections"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-trinity"]}
+    },
+    {
+      "id": "subject:royal-service", "term": "royal-service-and-signet-office", "label": "Royal service and the Signet Office", "scheme": "General Corpus subject", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-sobecki", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "subject:kingship-governance", "term": "kingship-and-governance", "label": "Kingship and governance", "scheme": "General Corpus subject", "primary": true, "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-bateson", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "subject:lancastrian-politics", "term": "lancastrian-politics-and-wars-of-the-roses", "label": "Lancastrian politics and the Wars of the Roses", "scheme": "General Corpus subject", "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-sobecki", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "subject:moral-philosophy", "term": "moral-philosophy-and-proverbs", "label": "Moral philosophy and proverbs", "scheme": "General Corpus subject", "scope": {"kind": "part", "part_ids": ["part:active-policy-dicta"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-buhler", "evidence:metadata-douma"]}
+    },
+    {
+      "id": "subject:translation-compilation", "term": "translation-and-compilation", "label": "Translation and compilation", "scheme": "General Corpus subject", "scope": {"kind": "part", "part_ids": ["part:dicta-section"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:metadata-cul-catalog", "evidence:metadata-scattergood", "evidence:metadata-douma"]}
+    }
+  ],
+  "tags": ["middle-english", "latin", "george-ashby", "rhyme-royal", "prison-writing", "mirror-for-princes", "political-advice", "didactic-poetry", "wisdom-literature", "moral-philosophy", "proverbs", "kingship", "governance", "lancastrian", "wars-of-the-roses", "fleet-prison", "signet-clerk", "holograph", "translation", "compilation"],
+  "summaries": [
+    {
+      "id": "summary:abstract", "type": "abstract", "value": "Two surviving works by the Lancastrian Signet clerk George Ashby. A Prisoner's Reflections combines autobiographical complaint about wrongful imprisonment in the Fleet with moral and devotional counsel on patience in adversity. Active Policy of a Prince, written for Edward of Westminster, advises a future king about memory, present government, future policy, royal authority, ministers, finance, rebellion, war, commerce, and public order; its Dicta section extends that teaching through Latin sayings attributed to ancient philosophers followed by Middle English rhyme-royal renderings.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bateson", "evidence:metadata-douma"]
+    },
+    {
+      "id": "summary:cataloging", "type": "cataloging_note", "value": "CME00057 follows Bateson's three printed divisions, but the manuscript structure and current scholarship support a two-work model: the Trinity prison poem and one incomplete Mm.IV.42 work comprising Active Policy and Dicta. The encoding contains 2,531 Middle English verse lines in 362 LG groups, along with substantial embedded Latin prose. Mm.IV.42 breaks off during Dicta and has lost at least one final quire.", "language": "eng", "scope": {"kind": "whole"}, "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-scattergood", "evidence:metadata-douma"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 3,
+    "sections": 3,
+    "prose_only_items": 0,
+    "verse_only_items": 1,
+    "mixed_items": 2,
+    "verse_groups": 362,
+    "verse_lines": 2531,
+    "description": "Two abstract works represented as three numbered divisions in Bateson's edition and CME XML. A Prisoner's Reflections has 50 verse groups and 350 lines. The incomplete Active Policy and Dicta work has 312 verse groups and 2,181 Middle English verse lines: 131 groups/918 lines in the Active Policy division and 181 groups/1,263 lines in Dicta, plus integral Latin prose. Counts describe the encoding, not the amount lost after Mm.IV.42 f. 48v.",
+    "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-scattergood", "evidence:metadata-douma"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:prison-reflections", "parent_id": null, "sequence": 1, "type": "work", "label": "A Prisoner's Reflections", "summary": "Ashby's autobiographical prison complaint and counsel on sustaining patience in adversity, followed by an envoy and explicit conclusion.", "item_count": 1, "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 1, "mixed_items": 0, "verse_groups": 50, "verse_lines": 350},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00057", "scheme": "XPath-like", "value": "ETS/EEBO/TEXT/BODY/DIV1/DIV2[@N='1']"},
+        {"lineage_entity_id": "edition:bateson:1899", "scheme": "printed pages", "value": "1-12"},
+        {"lineage_entity_id": "witness:trinity:R.3.19", "scheme": "folios", "value": "41r-45v"},
+        {"lineage_entity_id": "facsimile:trinity:R.3.19-iiif", "scheme": "IIIF canvases", "value": "87-96"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-bateson", "evidence:metadata-trinity"],
+      "notes": ["Bateson's a/b manuscript references correspond to recto/verso in the current Trinity catalog and IIIF labels."]
+    },
+    {
+      "id": "part:active-policy-dicta", "parent_id": null, "sequence": 2, "type": "work", "label": "Active Policy of a Prince, including Dicta et Opiniones Diversorum Philosophorum", "summary": "An incomplete mirror for Prince Edward of Westminster: a Latin authorial preface, English prologue, political advice organized around past, present, and future, and an extensive Dicta section of Latin authorities with Middle English verse renderings.", "item_count": null, "textual_form": "mixed",
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00057", "scheme": "XPath-like", "value": "ETS/EEBO/TEXT/BODY/DIV1/DIV2[@N='2' or @N='3']"},
+        {"lineage_entity_id": "edition:bateson:1899", "scheme": "printed pages", "value": "12-100"},
+        {"lineage_entity_id": "witness:cul:Mm.IV.42", "scheme": "folios", "value": "2r-48v"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-scattergood", "evidence:metadata-douma"],
+      "notes": ["The work is textually incomplete: the extant holograph ends midway through the 312th stanza and has lost at least one final quire."]
+    },
+    {
+      "id": "part:active-policy-section", "parent_id": "part:active-policy-dicta", "sequence": 1, "type": "section", "label": "De activa pollecia principis", "summary": "Latin prose framing, twelve-stanza poetic prologue, introductory advice, and sections In tempore preterito, Iam de tempore presenti, and Iam de tempore futuro.", "item_count": 1, "textual_form": "mixed",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 1, "verse_groups": 131, "verse_lines": 918},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00057", "scheme": "XPath-like", "value": "ETS/EEBO/TEXT/BODY/DIV1/DIV2[@N='2']"},
+        {"lineage_entity_id": "edition:bateson:1899", "scheme": "printed pages", "value": "12-41"},
+        {"lineage_entity_id": "witness:cul:Mm.IV.42", "scheme": "folios", "value": "2r-19r before the Dicta heading"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-douma"]
+    },
+    {
+      "id": "part:dicta-section", "parent_id": "part:active-policy-dicta", "sequence": 2, "type": "section", "label": "Dicta et Opiniones Diversorum Philosophorum", "summary": "A disjointed, incomplete sequence of Latin moral sayings attributed to philosophers, each normally followed by one or occasionally two English rhyme-royal stanzas, continuing the advice to Prince Edward.", "item_count": 1, "textual_form": "mixed",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 1, "verse_groups": 181, "verse_lines": 1263},
+      "locators": [
+        {"lineage_entity_id": "artifact:general-corpus:CME00057", "scheme": "XPath-like", "value": "ETS/EEBO/TEXT/BODY/DIV1/DIV2[@N='3']"},
+        {"lineage_entity_id": "edition:bateson:1899", "scheme": "printed pages", "value": "42-100"},
+        {"lineage_entity_id": "witness:cul:Mm.IV.42", "scheme": "folios", "value": "19r-48v"}
+      ],
+      "evidence_ids": ["evidence:metadata-xml", "evidence:metadata-cul-catalog", "evidence:metadata-buhler", "evidence:metadata-douma"],
+      "notes": ["Item count follows the 181 numbered rhyme-royal groups in the encoding, not discrete underlying philosophical works."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "work:liber-philosophorum-moralium-antiquorum", "title": "Liber Philosophorum Moralium Antiquorum", "relation": "adaptation_of", "evidence_ids": ["evidence:metadata-buhler", "evidence:metadata-douma"],
+      "notes": ["Source of practically all Dicta and eight passages of Active Policy. The exact physical Latin exemplar used by Ashby is not identified; do not equate the abstract source work with Paris BnF lat. 6652 or another surviving copy without stemmatic evidence."]
+    },
+    {
+      "id": "work:seven-wise-counsels", "title": "Seven Wise Counsels", "relation": "related_to", "evidence_ids": ["evidence:metadata-douma"],
+      "notes": ["A short anonymous poem identified by Margaret Kekewich as the source of the past-present-future counsel adapted near the end of the Active Policy section."]
+    },
+    {
+      "id": "work:court-of-sapience", "title": "The Court of Sapience", "relation": "related_to", "evidence_ids": ["evidence:metadata-buhler", "evidence:metadata-douma"],
+      "notes": ["Shares a stanza with Active Policy; current scholarship considers borrowing by Ashby more likely than Ashby's authorship of The Court of Sapience."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:CME00057",
+    "manifest_path": "manifests/lineage/works/CME00057.json",
+    "bindings": [
+      {"metadata_target": "work:CME00057", "lineage_entity_id": "artifact:general-corpus:CME00057", "role": "repository_representation"},
+      {"metadata_target": "work:CME00057", "lineage_entity_id": "encoding:umich-cme:CME00057", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00057", "lineage_entity_id": "edition:bateson:1899", "role": "source_edition"},
+      {"metadata_target": "part:prison-reflections", "lineage_entity_id": "witness:trinity:R.3.19", "role": "source_witness"},
+      {"metadata_target": "part:prison-reflections", "lineage_entity_id": "facsimile:trinity:R.3.19-iiif", "role": "repository_representation"},
+      {"metadata_target": "part:active-policy-dicta", "lineage_entity_id": "witness:cul:Mm.IV.42", "role": "source_witness"},
+      {"metadata_target": "part:active-policy-dicta", "lineage_entity_id": "facsimile:bmp:Mm.IV.42", "role": "repository_representation"},
+      {"metadata_target": "part:active-policy-dicta", "lineage_entity_id": "edition:douma:2023", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {"id": "evidence:metadata-xml", "type": "repository_file", "citation": "Kyvero-Press/CME, CME00057.xml.", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:xml", "summary": "Grounds the encoded title, authorship/editor statement, languages, structural hierarchy, three printed divisions, 362 verse groups, 2,531 lines, page scope, source headnotes, and exact content-part counts.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-bateson", "type": "digital_surrogate", "citation": "George Ashby, George Ashby's Poems, ed. Mary Bateson (EETS ES 76, 1899), complete Stanford/ARLIMA scan.", "url": "https://archive.org/details/GeorgeAshbySPoems", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:bateson", "locator": "introduction pp. v-vii; contents; texts pp. 1-100", "summary": "Grounds the editorial collection title, manuscript sources, printed titles, structure, contributors, content descriptions, editor, first collection publication, and Bateson's historical interpretation.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-trinity", "type": "official_catalog", "citation": "Trinity College Cambridge, James Catalogue, R.3.19.", "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.19", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:trinity-catalog", "summary": "Supports the Complaint of a Prisoner title, Ashby attribution, self-date, incipit and explicit, unique folio range ff. 41r-45v, and witness context.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-cul-catalog", "type": "official_catalog", "citation": "A Catalogue of the Manuscripts Preserved in the Library of the University of Cambridge, vol. 4 (1861), 299-300.", "url": "https://archive.org/details/catalogueofmanus04cambuoft", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:cul-catalog", "summary": "Supports Mm.IV.42's material, extent, incomplete state, work titles, author, Active Policy and Dicta boundaries, Latin-before-English organization, and translation responsibility.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-scattergood", "type": "scholarly_source", "citation": "John Scattergood, 'The Date and Composition of George Ashby's Poems,' Leeds Studies in English 21 (1990): 167-176.", "url": "https://digital.library.leeds.ac.uk/294/", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:scattergood", "summary": "Direct manuscript study supporting one-work treatment of Active Policy and Dicta, the advice-compilation genre, rhyme-royal organization, incomplete status, and older circa-1463 dating argument.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-sobecki", "type": "scholarly_source", "citation": "Sebastian Sobecki, 'The Signet Self: George Ashby's Autograph Writing,' in Last Words (2019), 159-191.", "url": "https://academic.oup.com/book/32335/chapter-abstract/268581085", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:sobecki", "summary": "Supports Ashby's biography, holograph identification, intended recipient, 1461-62 Active Policy date, refined Michaelmas 1463-24 March 1464 prison-poem date, and Signet-service themes.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-douma", "type": "scholarly_source", "citation": "Aline Douma, George Ashby's Active Policy of a Prince (PhD diss., University of Groningen, 2023).", "url": "https://research.rug.nl/en/publications/george-ashbys-active-policy-of-a-prince-lancastrian-kingship-and-/", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:douma", "locator": "volume 1, pp. 31-45 and critical edition", "summary": "Primary current metadata source for the 1461-62 date, one-work/two-section structure, holograph, codicology, language and form, sources, mirror-for-princes genre, political content, intended audience, and incomplete ending.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:metadata-buhler", "type": "scholarly_source", "citation": "Curt F. Bühler, 'The Liber de Dictis Philosophorum Antiquorum and Common Proverbs in George Ashby's Poems,' PMLA 65.2 (1950): 282-289.", "url": "https://www.cambridge.org/core/journals/pmla/article/abs/liber-de-dictis-philosophorum-antiquorum-and-common-proverbs-in-george-ashbys-poems/B87F722B4D5F792E30CB57A3099F09D2", "repository_path": "manifests/lineage/works/CME00057.json", "source_evidence_id": "evidence:buhler", "summary": "Supports the Liber Philosophorum source relationship, wisdom/proverb subjects, eight Liber extracts in Active Policy, and the distinction between the abstract source tradition and a physical exemplar.", "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {
+      "id": "question:active-policy-exact-date", "question": "Can the likely April 1461-second-half-1462 composition window for Active Policy and Dicta be narrowed further?", "status": "unresolved", "impact": "medium", "next_steps": ["Follow Aline Douma's forthcoming TEAMS edition and monograph for any revised dating based on newly identified records or manuscript evidence.", "Keep earlier 1460-61, circa-1463, 1468, and 1470 proposals in the research history rather than presenting them as coequal current dates."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-scattergood", "evidence:metadata-sobecki", "evidence:metadata-douma"]
+    },
+    {
+      "id": "question:dicta-lost-extent", "question": "How much of the Dicta section and any intended conclusion was lost after Mm.IV.42 f. 48v?", "status": "unresolved", "impact": "high", "next_steps": ["Do not infer a missing-line count from the one known lost quire because the extant source sequence is not systematic and the work may never have been completed.", "Compare the philosophical source sequence and any future material analysis of the codex only as qualified evidence."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-cul-catalog", "evidence:metadata-douma"]
+    },
+    {
+      "id": "question:physical-latin-exemplar", "question": "Which physical copy or textual branch of the Liber Philosophorum Moralium Antiquorum did Ashby use?", "status": "unresolved", "impact": "medium", "next_steps": ["Treat Bühler's relationship to Paris BnF lat. 6652 as a textual-affinity hypothesis, not identification of Ashby's physical exemplar.", "Review current stemmatic work before adding a manuscript-level source witness."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:metadata-buhler", "evidence:metadata-douma"]
+    }
+  ],
+  "notes": [
+    "The collection title and three numbered printed divisions are edition-level facts; the two-work catalog model reflects the physical manuscripts and current scholarship.",
+    "The self-date 1463 for A Prisoner's Reflections and the modern 1463-64 interval are compatible under medieval English year reckoning and the poem's Michaelmas chronology.",
+    "Mixed form records integral Latin prose, not merely editorial notes: Mm.IV.42 begins with an authorial Latin preface and Dicta alternates Latin prose sayings with Middle English verse.",
+    "The 2,531-line extent is the encoded surviving text and does not estimate the missing end of Dicta.",
+    "Mary Bateson is displayed as editor because CME00057 represents her 1899 edition; medieval authorship and compilation remain George Ashby's."
+  ]
+}

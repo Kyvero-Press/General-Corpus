@@ -1,0 +1,441 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00115",
+  "work_id": "CME00115",
+  "title": "Sir Gowther",
+  "primary_subject": "artifact:general-corpus:CME00115",
+  "record_status": "reviewed",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The checked-in XML is a repository copy of University of Michigan CME00115, an encoding of the title page and section VI, Text, from Karl Breul's 1886 Sir Gowther monograph. Breul's 756-position eclectic critical text is based chiefly on manuscript A, National Library of Scotland Adv.MS.19.3.1, current ff.11r-27v; he fills A's lacunae and records variant readings from manuscript B, British Library Royal MS 17 B XLIII, ff.116r-131v. A complete BSB digital copy of the 1886 volume and the complete 482-canvas NLS digital object are cached with fixity and exact work boundaries. No complete public BL facsimile was found in the official routes checked on 2026-07-12; the official catalog, physical-manuscript request, reference enquiry, and digitisation-order routes are recorded separately.",
+  "languages": ["enm", "deu"],
+  "review_notes": [
+    "The primary subject is the repository artifact carrying CME/source/CME_phase_3/CME00115.xml; the abstract medieval work, source edition, encoding, witnesses, and facsimiles are separate entities.",
+    "Breul's own witness key identifies A as Advocates' Library MS 19.3.1 (current NLS Adv.MS.19.3.1) and B as Royal MS 17 B XLIII. No direct witness-to-witness derivation is asserted.",
+    "The U-M encoding selects only the 1886 title page and section VI, Text (printed pp.135-165), not the rest of Breul's XVI + 241-page study.",
+    "Breul says A contains 738 written lines and B 691; his critical text has 756 positions. DIMEV v1.0 reports A as 757 lines. The XML has 766 L elements only because a ten-line B ending is quoted inside the apparatus note at critical line 754.",
+    "All 2,262 HI elements are italic. Breul explains that italics mark expanded abbreviations, B-supplied passages, and occasional editorial interventions; they are not manuscript emphasis.",
+    "The 221 numeric MILESTONE elements serialize Breul's left-margin critical numbering and Utterson's independent right-margin numbering, so duplicates and non-monotonic values must not be treated as one line sequence. Additional folio milestones retain historical and occasional encoding anomalies.",
+    "The XML encodes stanza 43 as N='63' with heading LXIII. Direct inspection of printed p.155, BSB canvas 179, confirms the source heading is XLIII.",
+    "The NLS manifest's canvas identifiers for 37 and 70 return HTTP 404. Work-portion boundaries therefore use tested 200-response IIIF Image API URLs while retaining canvas numbers, current folios, and ZIP members as locators.",
+    "The NLS cache is complete relative to all 482 provider-published canvases, not to every physical leaf: the provider explicitly states that numerous modern blank flyleaves at the beginning were not all captured."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00115",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00115",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00115"},
+        {"scheme": "git-blob", "value": "d760e3d7b59988c07e3da8d7cebe313c147d0087"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00115.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "d760e3d7b59988c07e3da8d7cebe313c147d0087",
+        "sha256": "57acdf2fc3567194de0d1f85cdd44a512c51df386718a67fecf8832824520996"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit"],
+      "notes": ["IDG/@ID, BIBNO, and VID all identify CME00115; the file is 137,224 bytes."]
+    },
+    {
+      "id": "encoding:umich-cme:CME00115",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item CME00115",
+      "description": "A public electronic text keyed from Breul 1886. Its content list and the checked-in XML contain the source title page and VI. Text, including Middle English critical text, German apparatus, pagination, foliation milestones, and typography.",
+      "identifiers": [{"scheme": "U-M name", "value": "CME00115", "uri": "https://name.umdl.umich.edu/CME00115"}],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:umich-collection"]
+    },
+    {
+      "id": "work:middle-english:sir-gowther",
+      "type": "catalog_description",
+      "label": "Sir Gowther",
+      "alternate_labels": ["Syr Gowther", "Sir Gowghter"],
+      "description": "An anonymous Middle English twelve-line tail-rhyme romance, probably composed around 1400 in the Northeast Midlands. It survives in two substantially different later-fifteenth-century witnesses and combines chivalric, penitential, hagiographical, and Breton-lay features.",
+      "identifiers": [{"scheme": "IMEV/NIMEV", "value": "973"}],
+      "date_statements": [{"label": "Composition", "value": "Probably around 1400", "normalized": "1390/1410", "certainty": "medium", "evidence_ids": ["evidence:dmbr", "evidence:mets"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:breul-editorial", "evidence:dimev-release", "evidence:dmbr", "evidence:mets"],
+      "notes": ["Neither consulted witness nor work-level source names an author.", "Northeast-Midland localization is a work-level scholarly inference and is not conflated with the c.1480 copying context of witness A."]
+    },
+    {
+      "id": "edition:breul:sir-gowther-1886",
+      "type": "scholarly_edition",
+      "label": "Karl Breul, Sir Gowther (1886)",
+      "description": "Breul's expanded monograph and eclectic critical edition. Its critical text is based on A, fills A's lacunae from B, occasionally adopts corrections, collates B throughout, and prints manuscript foliation, Breul's own lineation, Utterson's independent lineation, and a foot-of-page apparatus.",
+      "identifiers": [
+        {"scheme": "BSB-ID", "value": "991066309939707356"},
+        {"scheme": "BV", "value": "BV005022592"},
+        {"scheme": "WorldCat", "value": "162898968", "uri": "https://search.worldcat.org/title/162898968"},
+        {"scheme": "URN", "value": "urn:nbn:de:bvb:12-bsb11664278-2", "uri": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11664278-2"}
+      ],
+      "creator_ids": ["agent:karl-hermann-breul"],
+      "date_statements": [{"label": "Publication", "value": "1886", "normalized": "1886", "certainty": "high", "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:dimev-release"]}],
+      "bibliographic": {
+        "citation": "Karl Breul, ed., Sir Gowther: Eine englische Romanze aus dem XV. Jahrhundert kritisch herausgegeben nebst einer litterarhistorischen Untersuchung über ihre Quelle sowie den gesamten ihr verwandten Sagen- und Legenden-Kreis mit Zugrundelegung der Sage von Robert dem Teufel (Oppeln: Eugen Franck's Buchhandlung [Georg Maske], 1886).",
+        "title": "Sir Gowther: Eine englische Romanze aus dem XV. Jahrhundert",
+        "publisher": "Eugen Franck's Buchhandlung (Georg Maske)",
+        "publication_place": "Oppeln",
+        "date": "1886",
+        "pages": "XVI, 241",
+        "languages": ["deu", "enm"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:breul-text-visual", "evidence:dimev-release", "evidence:repo-xml"],
+      "notes": ["The encoded portion comprises the title page and section VI, Text, printed pp.135-165.", "Breul's preface says the critical text first appeared in his 1883 Berlin dissertation and that the 1886 text incorporates reviewed suggestions and selected changes."]
+    },
+    {
+      "id": "edition:breul:sir-gowther-1883",
+      "type": "scholarly_edition",
+      "label": "Karl Breul's 1883 Sir Gowther dissertation text",
+      "description": "The earlier dissertation issue of Breul's critical text, identified in his 1886 preface as the work's first appearance; the later monograph adds the extended study and incorporates selected revisions.",
+      "creator_ids": ["agent:karl-hermann-breul"],
+      "identifiers": [{"scheme": "NCID", "value": "BB24907662", "uri": "https://ci.nii.ac.jp/ncid/BB24907662"}],
+      "date_statements": [{"label": "Publication", "value": "1883", "normalized": "1883", "certainty": "high", "evidence_ids": ["evidence:breul-editorial"]}],
+      "bibliographic": {"citation": "Karl Breul, Sir Gowther: Eine englische Romanze aus dem XV. Jahrhundert, inaugural dissertation, Friedrich-Wilhelms-Universität zu Berlin (Weimar: Hof-Buchdruckerei, 1883), 38 pp.", "title": "Sir Gowther: Eine englische Romanze aus dem XV. Jahrhundert", "publisher": "Hof-Buchdruckerei", "publication_place": "Weimar", "date": "1883", "pages": "38", "languages": ["deu", "enm"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:breul-editorial", "evidence:breul-1883-catalog", "evidence:breul-1883-access-audit"],
+      "notes": ["This entity records the earlier edition layer attested by Breul's own preface; it is not the immediate source of CME00115.", "A dated search found a physical catalog record and modern reprints but no complete public digital copy of the distinct 38-page dissertation issue."]
+    },
+    {
+      "id": "witness:nls:Adv-MS-19-3-1",
+      "type": "manuscript_witness",
+      "label": "National Library of Scotland, Adv.MS.19.3.1 (Breul A)",
+      "alternate_labels": ["Advocates' Library MS 19.3.1", "Jac.V.7.27", "Breul manuscript A"],
+      "description": "A paper miscellany copied about 1480 in a North-Midland context. Sir Gowther begins acephalously on current f.11r, where the upper outer corner and opening text are damaged, and ends with its explicit on f.27v. The following work begins on f.28r.",
+      "identifiers": [{"scheme": "NLS shelfmark", "value": "Adv.MS.19.3.1", "uri": "https://manuscripts.nls.uk/repositories/2/resources/15302"}],
+      "creator_ids": ["agent:richard-heeg"],
+      "date_statements": [{"label": "Manuscript production", "value": "Circa 1480", "normalized": "1470/1490", "certainty": "high", "evidence_ids": ["evidence:nls-catalog", "evidence:nls-iiif"], "notes": "This dates the physical witness, not the composition of Sir Gowther."}],
+      "holding": {
+        "institution_id": "agent:national-library-scotland",
+        "shelfmark": "Adv.MS.19.3.1",
+        "historical_designations": ["Advocates' Library MS 19.3.1", "Jac.V.7.27"],
+        "catalog_url": "https://manuscripts.nls.uk/repositories/2/resources/15302",
+        "notes": "Acquired for the national collections in 1925."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "xii + 216 + xviii folios; Sir Gowther at current ff.11r-27v",
+        "format": "Bound miscellany in nine fascicles",
+        "dimensions": "210 x 140 mm",
+        "notes": ["Full red morocco binding dated 1964.", "Breul's historical discussion gives A fol.11a-28a, while the current NLS catalog, DIMEV v1.0, and direct digital images place the work at ff.11r-27v.", "The Sir Gowther text is associated with Richard Heeg's hand; the codex also contains material by James Hawghton and additions in other hands."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:breul-editorial", "evidence:nls-catalog", "evidence:nls-iiif", "evidence:nls-visual", "evidence:dimev-release", "evidence:mets"]
+    },
+    {
+      "id": "facsimile:nls:Adv-MS-19-3-1-digital",
+      "type": "facsimile",
+      "label": "NLS digital facsimile of Adv.MS.19.3.1",
+      "description": "The complete 482-canvas object published in the NLS IIIF manifest, including covers and provider-published endmatter. The provider notes that numerous modern blank flyleaves at the beginning were not all captured. Sir Gowther occupies canvases 37-70, current ff.11r-27v.",
+      "creator_ids": ["agent:national-library-scotland"],
+      "reproduction_format": "IIIF Presentation 2 manifest with 482 color canvases",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:nls-iiif", "evidence:nls-visual"]
+    },
+    {
+      "id": "witness:bl:Royal-MS-17-B-XLIII",
+      "type": "manuscript_witness",
+      "label": "British Library, Royal MS 17 B XLIII (Breul B)",
+      "alternate_labels": ["Royal 17 B XLIII", "Breul manuscript B"],
+      "description": "A parchment miscellany of the later fifteenth century. Its 691-line Sir Gowghter text occupies ff.116r-131v, opens 'God that art of myghtis most', and ends with 'Explicit vita sancti'. Breul treats it as a substantially different and in places revised or abridged version, not as a direct copy of A.",
+      "identifiers": [{"scheme": "BL shelfmark", "value": "Royal MS 17 B XLIII", "uri": "https://searcharchives.bl.uk/catalog/040-002107332"}],
+      "date_statements": [{"label": "Manuscript production", "value": "Later fifteenth century", "normalized": "1450/1499", "certainty": "high", "evidence_ids": ["evidence:bl-catalog", "evidence:breul-editorial"]}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Royal MS 17 B XLIII", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002107332"},
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "187 folios; Sir Gowther at ff.116r-131v",
+        "format": "Bound miscellany",
+        "dimensions": "8.25 x 5.75 inches",
+        "notes": ["The exact current catalog record has no populated Digitised Content field."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-access-audit", "evidence:breul-editorial", "evidence:dimev-release", "evidence:mets"]
+    },
+    {
+      "id": "facsimile:bsb:breul-sir-gowther-1886",
+      "type": "facsimile",
+      "label": "BSB complete digital facsimile of Breul's 1886 Sir Gowther",
+      "description": "The complete provider-published 274-canvas scan of the XVI + 241-page monograph, including binding, cover, preliminaries, the full study, text, notes, glossary, bibliography, appendices, and endmatter. The encoded title page is canvas 7 and the encoded text is canvases 159-189.",
+      "creator_ids": ["agent:bayerische-staatsbibliothek"],
+      "reproduction_format": "IIIF Presentation 2 manifest with 274 page-image canvases",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:breul-text-visual"]
+    },
+    {
+      "id": "catalog:dimev:record-1595",
+      "type": "catalog_description",
+      "label": "DIMEV v1.0 record 1595 / IMEV 973",
+      "description": "A versioned catalog record describing Sir Gowther as a Breton lai in twelve-line stanzas with rhyme pattern aabccbddbeeb and separately describing both manuscript witnesses, their loci, incipits, explicits, extents, and editions.",
+      "identifiers": [
+        {"scheme": "DIMEV", "value": "1595", "uri": "https://www.dimev.net/record.php?recID=1595"},
+        {"scheme": "IMEV", "value": "973"},
+        {"scheme": "NIMEV", "value": "973"}
+      ],
+      "creator_ids": ["agent:dimev"],
+      "date_statements": [{"label": "Version 1.0 publication", "value": "2025-01-01", "normalized": "2025-01-01", "certainty": "high", "evidence_ids": ["evidence:dimev-release"]}],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:dimev-release"],
+      "notes": ["The release reports A as 757 lines and B as 691; the A count conflicts with Breul's 738-written-line statement and is preserved as an unresolved measurement difference."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"], "evidence_ids": ["evidence:repo-xml"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme"], "evidence_ids": ["evidence:umich-item", "evidence:umich-collection"]},
+    {"id": "agent:karl-hermann-breul", "type": "person", "name": "Karl Hermann Breul", "alternate_names": ["Karl Breul"], "identifiers": [{"scheme": "GND", "value": "116493534", "uri": "https://d-nb.info/gnd/116493534"}], "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:dimev-release"]},
+    {"id": "agent:richard-heeg", "type": "person", "name": "Richard Heeg", "alternate_names": ["Richard Hyheg"], "dates": "fl. 1480", "evidence_ids": ["evidence:nls-catalog", "evidence:nls-iiif", "evidence:breul-editorial"]},
+    {"id": "agent:national-library-scotland", "type": "organization", "name": "National Library of Scotland", "urls": ["https://www.nls.uk/"], "evidence_ids": ["evidence:nls-catalog", "evidence:nls-iiif", "evidence:nls-copyright"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/"], "evidence_ids": ["evidence:bl-catalog", "evidence:bl-access-audit", "evidence:bl-digitisation"]},
+    {"id": "agent:bayerische-staatsbibliothek", "type": "organization", "name": "Bayerische Staatsbibliothek", "urls": ["https://www.bsb-muenchen.de/"], "evidence_ids": ["evidence:breul-manifest"]},
+    {"id": "agent:dimev", "type": "organization", "name": "Digital Index of Middle English Verse", "urls": ["https://www.dimev.net/", "https://github.com/digital-index-of-middle-english-verse/dimev"], "evidence_ids": ["evidence:dimev-release"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00115",
+      "object": "encoding:umich-cme:CME00115",
+      "scope": {"subject": {"kind": "whole", "description": "Complete checked-in XML repository copy"}, "object": {"kind": "whole", "description": "Complete U-M item content represented by the keyed text"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:encoding-breul",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00115",
+      "object": "edition:breul:sir-gowther-1886",
+      "scope": {"subject": {"kind": "whole", "description": "Entire CME00115 electronic text"}, "object": {"kind": "selected_passages", "description": "Noncontiguous source selection: title page and section VI, Text, pp.135-165", "locators": ["BSB canvas 7", "BSB canvases 159-189", "printed pp.135-165"]}, "notes": "The intervening preface and study and the material after p.165 are not encoded."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:breul-editorial", "evidence:breul-text-visual"]}
+    },
+    {
+      "id": "relation:bsb-facsimile-breul",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:breul-sir-gowther-1886",
+      "object": "edition:breul:sir-gowther-1886",
+      "scope": {"subject": {"kind": "whole", "description": "All 274 canvases in the provider manifest"}, "object": {"kind": "whole", "description": "Complete printed monograph, including covers and endmatter exposed by the provider"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:breul-text-visual"]}
+    },
+    {
+      "id": "relation:nls-facsimile-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:nls:Adv-MS-19-3-1-digital",
+      "object": "witness:nls:Adv-MS-19-3-1",
+      "scope": {"subject": {"kind": "whole", "description": "All 482 provider-published canvases"}, "object": {"kind": "part", "description": "The manuscript content selected by NLS; the provider says numerous modern blank opening flyleaves were not all captured"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:nls-iiif", "evidence:nls-visual"]}
+    },
+    {
+      "id": "relation:breul-transcribes-a",
+      "type": "transcribes",
+      "subject": "edition:breul:sir-gowther-1886",
+      "object": "witness:nls:Adv-MS-19-3-1",
+      "scope": {"subject": {"kind": "part", "description": "Critical text and apparatus based chiefly on A", "locators": ["pp.135-165", "critical positions 13-41, 45-462, and 466-756, subject to documented corrections"]}, "object": {"kind": "part", "description": "Sir Gowther witness A", "locators": ["current ff.11r-27v", "NLS canvases 37-70"]}, "notes": "Breul says A has 738 written lines; his text retains A spelling in principle while normalizing specified editorial features."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:breul-editorial", "evidence:breul-text-visual", "evidence:nls-visual", "evidence:repo-xml"]}
+    },
+    {
+      "id": "relation:breul-transcribes-b-supplies",
+      "type": "transcribes",
+      "subject": "edition:breul:sir-gowther-1886",
+      "object": "witness:bl:Royal-MS-17-B-XLIII",
+      "scope": {"subject": {"kind": "selected_passages", "description": "B-supplied whole lines in the eclectic text and B's quoted divergent ending", "locators": ["critical lines 1-12", "critical lines 42-44", "critical lines 463-465", "ten-line B ending quoted in the note at critical line 754"]}, "object": {"kind": "selected_passages", "description": "Corresponding readings in B", "locators": ["ff.116r-131v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:breul-editorial", "evidence:breul-text-visual", "evidence:repo-xml", "evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:breul-collates-b",
+      "type": "collated_against",
+      "subject": "edition:breul:sir-gowther-1886",
+      "object": "witness:bl:Royal-MS-17-B-XLIII",
+      "scope": {"subject": {"kind": "part", "description": "Entire printed critical text and inline apparatus, pp.135-165"}, "object": {"kind": "part", "description": "Entire B version of Sir Gowther", "locators": ["ff.116r-131v", "691 lines"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:breul-editorial", "evidence:breul-text-visual", "evidence:bl-catalog", "evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:breul-1886-version-1883",
+      "type": "version_of",
+      "subject": "edition:breul:sir-gowther-1886",
+      "object": "edition:breul:sir-gowther-1883",
+      "scope": {"subject": {"kind": "part", "description": "Revised critical text plus expanded monograph"}, "object": {"kind": "whole", "description": "Earlier dissertation issue of the critical text"}, "notes": "Breul's 1886 preface identifies the dissertation text and notes incorporated revisions."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:breul-editorial"]}
+    },
+    {
+      "id": "relation:dimev-work",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1595",
+      "object": "work:middle-english:sir-gowther",
+      "scope": {"subject": {"kind": "whole", "description": "Complete record 1595"}, "object": {"kind": "whole", "description": "Sir Gowther work description"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:dimev-a",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1595",
+      "object": "witness:nls:Adv-MS-19-3-1",
+      "scope": {"subject": {"kind": "part", "description": "Witness entry wit-1595-2"}, "object": {"kind": "part", "description": "Sir Gowther at ff.11r-27v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:dimev-b",
+      "type": "describes",
+      "subject": "catalog:dimev:record-1595",
+      "object": "witness:bl:Royal-MS-17-B-XLIII",
+      "scope": {"subject": {"kind": "part", "description": "Witness entry wit-1595-1"}, "object": {"kind": "part", "description": "Sir Gowther at ff.116r-131v"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-release"]}
+    },
+    {
+      "id": "relation:dimev-cites-breul",
+      "type": "cites",
+      "subject": "catalog:dimev:record-1595",
+      "object": "edition:breul:sir-gowther-1886",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Both witness edition references and Bibliography.xml Breul1886a"}, "object": {"kind": "whole", "description": "Breul's 1886 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dimev-release"]}
+    }
+  ],
+  "access": [
+    {"id": "access:repository-xml", "entity": "artifact:general-corpus:CME00115", "provider_id": "agent:kyvero-press", "resource_kind": "repository_file", "status": "publicly_available", "access_method": "Repository checkout or pinned GitHub blob", "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00115.xml", "repository_path": "CME/source/CME_phase_3/CME00115.xml", "cost": "free", "format": "application/xml", "last_checked": "2026-07-12", "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]},
+    {"id": "access:umich-item", "entity": "encoding:umich-cme:CME00115", "provider_id": "agent:umich-library", "resource_kind": "digital_text", "status": "publicly_available", "access_method": "U-M item page and stable name URL", "url": "https://quod.lib.umich.edu/c/cme/CME00115", "alternate_urls": ["https://name.umdl.umich.edu/CME00115"], "cost": "free", "format": "Web text", "last_checked": "2026-07-12", "evidence_ids": ["evidence:umich-item", "evidence:umich-collection"], "notes": ["The item was inspected through the public web interface; automated requests may encounter provider anti-bot responses without implying ordinary browser unavailability."]},
+    {
+      "id": "access:breul-bsb",
+      "entity": "facsimile:bsb:breul-sir-gowther-1886",
+      "provider_id": "agent:bayerische-staatsbibliothek",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "BSB viewer and IIIF Presentation manifest",
+      "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest",
+      "alternate_urls": ["https://www.digitale-sammlungen.de/view/bsb11664278", "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11664278-2"],
+      "local_copies": [{
+        "label": "Complete provider-published Breul 1886 IIIF bundle",
+        "path": "source-cache/CME00115/bsb-breul-sir-gowther-1886-complete-iiif-1600px.zip",
+        "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest",
+        "sha256": "52ac28706ad087601f36b0042a11755071bc30e6b9b5bfe4e98044e143c50cef",
+        "bytes": 149553431,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-13",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 274,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "Noncontiguous CME00115 source portions in the complete Breul volume",
+          "locators": ["title page = IIIF canvas 7 = ZIP images/000007.jpg", "section VI, Text = printed pp.135-165 = IIIF canvases 159-189 = ZIP images/000159.jpg-images/000189.jpg"],
+          "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/canvas/7",
+          "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/canvas/189",
+          "notes": ["The start/end URLs delimit an envelope containing two noncontiguous encoded portions; the intervening monograph is retained in the complete cache but is not encoded in CME00115.", "All 274 provider canvases, including binding, cover, preliminaries, full study, annotations, glossary, bibliography, appendices, and endmatter, were captured. The inventory records 1600-pixel requests with per-canvas fallback where needed."]
+        }
+      }],
+      "cost": "free",
+      "format": "IIIF images and manifest",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:breul-manifest", "evidence:breul-editorial", "evidence:breul-text-visual"]
+    },
+    {"id": "access:breul-1883", "entity": "edition:breul:sir-gowther-1883", "resource_kind": "download", "status": "no_public_copy_found", "access_method": "Bibliographic and public-copy search for the distinct 38-page dissertation issue", "url": "https://ci.nii.ac.jp/ncid/BB24907662", "cost": "unknown", "format": "Printed 38-page doctoral dissertation; complete public scan not located", "last_checked": "2026-07-12", "evidence_ids": ["evidence:breul-1883-catalog", "evidence:breul-1883-access-audit"], "notes": ["The BSB digital object is the expanded 1886 monograph and is not substituted for the separately issued 1883 dissertation. This is a dated negative public-copy finding, not a claim that no private, library, or commercial reproduction exists."]},
+    {
+      "id": "access:nls-iiif",
+      "entity": "facsimile:nls:Adv-MS-19-3-1-digital",
+      "provider_id": "agent:national-library-scotland",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "NLS IIIF Presentation manifest and IIIF Image API",
+      "url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json",
+      "alternate_urls": ["https://digital.nls.uk/133680060"],
+      "local_copies": [{
+        "label": "Complete provider-published Adv.MS.19.3.1 IIIF bundle",
+        "path": "source-cache/CME00115/nls-adv-ms-19-3-1-complete-iiif-1600px.zip",
+        "source_url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json",
+        "sha256": "8f28ae541b049198ee7581c1de9ce8da6ce910399a4c9e076d44022cf16fed4b",
+        "bytes": 256392827,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-13",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 482,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "work_portion": {
+          "label": "Sir Gowther in Adv.MS.19.3.1",
+          "locators": ["current ff.11r-27v", "IIIF canvases 37-70", "ZIP members images/000037.jpg-images/000070.jpg"],
+          "start_url": "https://dg-view.nls.uk/iiif/2/1341%2F6201%2F134162019.5/full/1600,/0/default.jpg",
+          "end_url": "https://dg-view.nls.uk/iiif/2/1341%2F6241%2F134162415.5/full/1600,/0/default.jpg",
+          "notes": ["Both exact Image API boundary URLs returned HTTP 200 during review; the corresponding Presentation canvas identifiers returned HTTP 404 and are therefore retained only as locators.", "Canvas 36 is the end of the preceding Hunting of the Hare material; canvas 37 is damaged f.11r and the first surviving Sir Gowther page; canvas 70 is f.27v with the Sir Gowther explicit; canvas 71 is f.28r and begins Stans puer ad mensam.", "All 482 canvases exposed by the provider manifest were captured at a non-upscaling 1600-pixel-wide request. The provider states that numerous modern blank flyleaves at the beginning were not all captured in the published object."]
+        }
+      }],
+      "cost": "free",
+      "format": "IIIF images and manifest",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:nls-iiif", "evidence:nls-visual"]
+    },
+    {"id": "access:nls-physical", "entity": "witness:nls:Adv-MS-19-3-1", "provider_id": "agent:national-library-scotland", "resource_kind": "physical_manuscript", "status": "requestable", "access_method": "NLS manuscript catalog and reading-room request subject to collection conditions", "url": "https://manuscripts.nls.uk/repositories/2/resources/15302", "cost": "unknown", "format": "Physical codex", "last_checked": "2026-07-12", "evidence_ids": ["evidence:nls-catalog"]},
+    {"id": "access:nls-reproduction", "entity": "witness:nls:Adv-MS-19-3-1", "provider_id": "agent:national-library-scotland", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Contact NLS for preservation-quality files, omitted modern blanks if required, and a shelfmark-specific reuse statement", "url": "https://www.nls.uk/tools-for-research/copyright/", "cost": "unknown", "format": "Digital reproduction; terms and completeness to be quoted", "last_checked": "2026-07-12", "evidence_ids": ["evidence:nls-catalog", "evidence:nls-copyright"]},
+    {"id": "access:bl-catalog", "entity": "witness:bl:Royal-MS-17-B-XLIII", "provider_id": "agent:british-library", "resource_kind": "catalog_record", "status": "publicly_available", "access_method": "British Library Archives and Manuscripts catalog", "url": "https://searcharchives.bl.uk/catalog/040-002107332", "cost": "free", "format": "HTML catalog record", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-catalog"]},
+    {"id": "access:bl-physical", "entity": "witness:bl:Royal-MS-17-B-XLIII", "provider_id": "agent:british-library", "resource_kind": "physical_manuscript", "status": "requestable", "access_method": "Request through the BL Archives and Manuscripts appointment form; consult in London subject to current conditions", "url": "https://forms.office.com/e/SbCAGb201x", "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002107332"], "contact": "British Library Reference Services: https://bl.libanswers.com/form?queue_id=2371", "cost": "unknown", "format": "Physical codex", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-catalog", "evidence:bl-access-audit"], "notes": ["The exact catalog record states that all manuscripts are consulted in London and that a letter of introduction may be required."]},
+    {"id": "access:bl-reproduction", "entity": "witness:bl:Royal-MS-17-B-XLIII", "provider_id": "agent:british-library", "resource_kind": "reproduction_order", "status": "requestable", "access_method": "Order digitisation by supplying shelfmark, title, and exact folios ff.116r-131v", "url": "https://www.bl.uk/services/digitisation", "contact": "British Library digitisation services and Reference Services: https://bl.libanswers.com/form?queue_id=2371", "cost": "fee", "format": "Digital images; specification and terms to be quoted", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-catalog"]},
+    {"id": "access:bl-public-facsimile", "entity": "witness:bl:Royal-MS-17-B-XLIII", "provider_id": "agent:british-library", "resource_kind": "page_images", "status": "no_public_copy_found", "access_method": "Dated audit of the exact current record, its Digitised Content field, the BL digitised-manuscripts routes, and the legacy shelfmark display", "url": "https://searcharchives.bl.uk/catalog/040-002107332", "cost": "unknown", "format": "Complete public digital facsimile not located", "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-catalog", "evidence:bl-access-audit"], "notes": ["This is a negative finding for the official routes checked on 2026-07-12, not a claim that no image or restricted surrogate exists. The record's Digitised Content field is blank; use the physical-request, reference-enquiry, or paid digitisation routes for access."]},
+    {
+      "id": "access:dimev-release",
+      "entity": "catalog:dimev:record-1595",
+      "provider_id": "agent:dimev",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Zenodo versioned release and GitHub tag",
+      "url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content",
+      "alternate_urls": ["https://doi.org/10.5281/zenodo.14585961", "https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0"],
+      "local_copies": [{"label": "Complete DIMEV v1.0 release", "path": "source-cache/CME00115/dimev-v1.0.zip", "source_url": "https://zenodo.org/api/records/14585961/files/digital-index-of-middle-english-verse/dimev-v1.0.zip/content", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c", "bytes": 3891929, "media_type": "application/zip", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "work_portion": {"label": "Sir Gowther record and Breul bibliography", "locators": ["data/Records.xml record-1595", "data/Bibliography.xml Breul1886a"], "notes": ["The complete release is cached, not exported record fragments."]}}],
+      "cost": "free",
+      "format": "ZIP archive of XML data and project files",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:dimev-release"]
+    }
+  ],
+  "rights": [
+    {"id": "rights:repository-xml", "entity": "artifact:general-corpus:CME00115", "access_id": "access:repository-xml", "component": "Modern repository XML structure and markup", "jurisdiction": "Repository license declaration", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The pinned CME repository's root LICENSE dedicates the repository's software/source material to the public domain under the Unlicense. This claim concerns the modern XML markup layer; underlying medieval text and source-edition rights are recorded separately.", "asserted_by_id": "agent:kyvero-press", "license": {"name": "The Unlicense", "spdx": "Unlicense", "uri": "https://unlicense.org/"}, "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]},
+    {"id": "rights:umich-cme-nocus", "entity": "encoding:umich-cme:CME00115", "access_id": "access:umich-item", "component": "U-M electronic text and represented public-domain source material", "jurisdiction": "United States provider statement", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The U-M item and collection apply No Copyright - United States to the public content; that rights statement records no known U.S. copyright rather than granting a license. Institutional service terms still apply.", "asserted_by_id": "agent:umich-library", "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-item", "evidence:umich-collection"]},
+    {"id": "rights:breul-underlying", "entity": "edition:breul:sir-gowther-1886", "component": "1886 printed edition and medieval text as the underlying work of the BSB digital object", "jurisdiction": "United States and provider rights-statement premise", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The edition was published in 1886, well before the current U.S. public-domain cutoff. The exact BSB item also applies No Copyright - Non-Commercial Use Only 1.0, whose premise is that the underlying work is public domain while contract terms may govern the digital representation.", "asserted_by_id": "agent:bayerische-staatsbibliothek", "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:breul-manifest", "evidence:noc-nc-1", "evidence:us-copyright-duration"]},
+    {"id": "rights:breul-1883", "entity": "edition:breul:sir-gowther-1883", "access_id": "access:breul-1883", "component": "Underlying 1883 dissertation text and typography; any later reproduction layer excluded", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The dissertation was published in 1883, well before the current U.S. public-domain cutoff. This does not assign reuse terms to any modern reprint or scan.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:breul-1883-catalog", "evidence:us-copyright-duration"]},
+    {"id": "rights:bsb-breul-digital", "entity": "facsimile:bsb:breul-sir-gowther-1886", "access_id": "access:breul-bsb", "component": "BSB digital page images and metadata", "jurisdiction": "Provider access statement", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The exact IIIF manifest supplies RightsStatements.org No Copyright - Non-Commercial Use Only 1.0. This is not an open license and includes provider noncommercial terms for the digital representation.", "asserted_by_id": "agent:bayerische-staatsbibliothek", "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:breul-manifest", "evidence:noc-nc-1"]},
+    {"id": "rights:nls-medieval-text", "entity": "witness:nls:Adv-MS-19-3-1", "component": "Underlying medieval Sir Gowther text embodied in Adv.MS.19.3.1; physical ownership and digital images excluded", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The anonymous text is embodied in a manuscript copied about 1480 and predates modern copyright by centuries. Physical-access and image-reuse terms are separate.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:nls-catalog", "evidence:dimev-release", "evidence:us-copyright-duration"]},
+    {"id": "rights:nls-digital-pdm", "entity": "facsimile:nls:Adv-MS-19-3-1-digital", "access_id": "access:nls-iiif", "component": "NLS digital page images and item-level facsimile", "jurisdiction": "Provider item statement; worldwide mark", "copyright_status": "no_known_copyright", "as_of": "2026-07-12", "basis": "The exact IIIF item metadata links the Public Domain Mark 1.0 and states that the material is free of known copyright restrictions. NLS's copyright guidance says faithful digitizations retain the original's status and waives related digitization rights with CC0 where they subsist; the exact item remains marked PDM rather than licensed.", "asserted_by_id": "agent:national-library-scotland", "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:nls-iiif", "evidence:nls-copyright", "evidence:pdm-1"]},
+    {"id": "rights:bl-medieval-text", "entity": "witness:bl:Royal-MS-17-B-XLIII", "component": "Underlying medieval Sir Gowther text embodied in Royal MS 17 B XLIII; physical ownership and future reproductions excluded", "jurisdiction": "United States", "copyright_status": "public_domain", "as_of": "2026-07-12", "basis": "The anonymous text is embodied in a later-fifteenth-century manuscript and predates modern copyright by centuries. British Library access, photography, and supplied-image terms remain separate and must be confirmed for any reproduction.", "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:bl-catalog", "evidence:dimev-release", "evidence:us-copyright-duration"]},
+    {"id": "rights:dimev-ccby", "entity": "catalog:dimev:record-1595", "access_id": "access:dimev-release", "component": "DIMEV v1.0 data and project files", "jurisdiction": "License grant", "copyright_status": "copyrighted", "as_of": "2026-07-12", "basis": "The versioned release README and LICENSE identify Creative Commons Attribution 4.0 International; no additional item-specific contractual restriction was found in the release.", "asserted_by_id": "agent:dimev", "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"}, "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:dimev-release", "evidence:cc-by-4"]}
+  ],
+  "editorial_practices": [
+    {"id": "practice:encoding-selection", "entity": "encoding:umich-cme:CME00115", "practice": "selection", "source_feature": "Breul's complete XVI + 241-page monograph", "representation": "Source title page followed by section VI, Text, only", "description": "The electronic text omits the preface, introduction, grammar, metrical and literary-historical studies, separate annotations, glossary, bibliography, and appendices.", "scope": "Complete CME00115 encoding", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:breul-editorial"]},
+    {"id": "practice:breul-collation", "entity": "edition:breul:sir-gowther-1886", "practice": "collation", "source_feature": "Substantially different A and B manuscript versions", "representation": "A-based critical text with B supplies and foot-of-page variants", "description": "Breul bases the critical text on A, fills A's lacunae from B, occasionally adopts evident corrections, and documents deviations and B readings in the apparatus. He does not claim that either surviving witness directly descends from the other.", "scope": "Printed pp.135-165", "confidence": "high", "evidence_ids": ["evidence:breul-editorial", "evidence:breul-text-visual", "evidence:repo-xml"]},
+    {"id": "practice:breul-abbreviations", "entity": "edition:breul:sir-gowther-1886", "practice": "abbreviation_expansion", "source_feature": "Abbreviations in manuscript A", "representation": "Expanded letters printed in italics and retained as HI/@REND='italic' in XML", "description": "Breul explicitly states that he expands A's abbreviations and marks supplied letters in italics. The same italic device also marks B-supplied verses and occasional emendation, so each italic string must be interpreted with its apparatus context.", "scope": "Critical text pp.135-165", "confidence": "high", "evidence_ids": ["evidence:breul-editorial", "evidence:breul-text-visual", "evidence:repo-xml", "evidence:xml-audit"]},
+    {"id": "practice:breul-capitalization", "entity": "edition:breul:sir-gowther-1886", "practice": "capitalization_normalization", "source_feature": "A's spelling, word division, w/v usage, and capitalization", "representation": "A spelling retained in principle, with normalized word division, w/v, f/F, and capitalization", "description": "The printed text is a critical editorial representation rather than a diplomatic transcript of A.", "scope": "Critical text pp.135-165", "confidence": "high", "evidence_ids": ["evidence:breul-editorial"]},
+    {"id": "practice:breul-punctuation", "entity": "edition:breul:sir-gowther-1886", "practice": "punctuation_normalization", "source_feature": "Manuscript punctuation", "representation": "Modernized editorial punctuation", "description": "Breul lists punctuation among the features he normalizes while retaining A's spelling in principle.", "scope": "Critical text pp.135-165", "confidence": "high", "evidence_ids": ["evidence:breul-editorial"]}
+  ],
+  "evidence": [
+    {"id": "evidence:repo-xml", "type": "repository_file", "citation": "General Corpus, CME/source/CME_phase_3/CME00115.xml.", "repository_path": "CME/source/CME_phase_3/CME00115.xml", "locator": "TEMPHEAD, IDG, title DIV1, and complete VI. Text DIV1", "summary": "Direct evidence for identifiers, repository artifact, Breul-derived content, title page, 756-position critical text, 642 notes, B ending, pagination, foliation milestones, numbering, and italic typography.", "supports": ["artifact:general-corpus:CME00115", "relation:repo-encoding", "relation:encoding-breul"], "accessed_on": "2026-07-12", "sha256": "57acdf2fc3567194de0d1f85cdd44a512c51df386718a67fecf8832824520996"},
+    {"id": "evidence:repo-license", "type": "repository_file", "citation": "Kyvero-Press/CME, root LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.", "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE", "summary": "The pinned repository license dedicates its software/source material to the public domain under the Unlicense; the modern XML markup layer is distinguished from underlying medieval and editorial text.", "supports": ["access:repository-xml", "rights:repository-xml"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:xml-audit", "type": "visual_inspection", "citation": "Structural and typographic audit of the exact CME00115 XML.", "repository_path": "CME/source/CME_phase_3/CME00115.xml", "summary": "Confirmed 137,224 bytes; git blob d760e3d7b59988c07e3da8d7cebe313c147d0087; 2 DIV1, 64 LG total, 766 L total, 64 HEAD, 642 NOTE, 32 PB, 286 MILESTONE, 2 TRAILER, 1 CLOSER, and 2,262 italic HI. Parent-aware counting isolates 63 main stanzas and 756 main lines from one ten-line B ending nested in a note. It also identifies the stanza-43 LXIII encoding error and the two numbering streams.", "supports": ["artifact:general-corpus:CME00115", "practice:breul-abbreviations"], "accessed_on": "2026-07-12", "sha256": "57acdf2fc3567194de0d1f85cdd44a512c51df386718a67fecf8832824520996"},
+    {"id": "evidence:umich-item", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse, CME00115 item page.", "url": "https://quod.lib.umich.edu/c/cme/CME00115", "alternate_urls": ["https://name.umdl.umich.edu/CME00115"], "summary": "Official item evidence for the Breul 1886 citation, stable identifier, public-domain / NoC-US statement, and contents limited to the title page and VI. Text.", "supports": ["encoding:umich-cme:CME00115", "relation:repo-encoding", "relation:encoding-breul", "rights:umich-cme-nocus"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:umich-collection", "type": "official_webpage", "citation": "University of Michigan, Corpus of Middle English Prose and Verse collection information and copyright statement.", "url": "https://quod.lib.umich.edu/c/cme", "summary": "Collection-level evidence for manually keyed public-domain editions, in-house proofing and tagging, basic TEI, bulk XML context, and current access and rights framing.", "supports": ["encoding:umich-cme:CME00115", "rights:umich-cme-nocus"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:breul-manifest", "type": "digital_surrogate", "citation": "Bayerische Staatsbibliothek, IIIF manifest for Karl Breul, Sir Gowther (1886), BSB shelfmark P.o.angl. 143 k.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest", "alternate_urls": ["https://www.digitale-sammlungen.de/view/bsb11664278", "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11664278-2"], "summary": "Exact provider evidence for bibliographic metadata, XVI + 241-page extent, BSB identifiers and shelfmark, 274-canvas complete object, attribution, and NoC-NC 1.0 rights statement.", "supports": ["edition:breul:sir-gowther-1886", "facsimile:bsb:breul-sir-gowther-1886", "relation:bsb-facsimile-breul", "rights:breul-underlying", "rights:bsb-breul-digital"], "accessed_on": "2026-07-12", "sha256": "52ac28706ad087601f36b0042a11755071bc30e6b9b5bfe4e98044e143c50cef", "notes": ["SHA-256 is for the complete cached 274-image bundle with canonical manifest and inventory; inventory retrieval metadata records 2026-07-13."]},
+    {"id": "evidence:breul-editorial", "type": "edition_statement", "citation": "Karl Breul, Sir Gowther (1886), preface and Einleitung.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest", "locator": "BSB canvases 11-12 and 23-29; printed preface and pp.1-7", "summary": "Primary evidence for the 1883 dissertation antecedent, 1886 revision, A/B sigla, manuscript descriptions, 738 A lines and 691 B lines, substantial version differences, A-based eclectic method, B supplies, italic conventions, spelling and punctuation normalization, dual lineation, and folio markers.", "supports": ["edition:breul:sir-gowther-1886", "edition:breul:sir-gowther-1883", "witness:nls:Adv-MS-19-3-1", "witness:bl:Royal-MS-17-B-XLIII", "relation:breul-transcribes-a", "relation:breul-transcribes-b-supplies", "relation:breul-collates-b", "relation:breul-1886-version-1883"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:breul-1883-catalog", "type": "official_catalog", "citation": "CiNii Books, Sir Gowther: Eine englische Romanze aus dem XV Jahrhundert, NCID BB24907662.", "url": "https://ci.nii.ac.jp/ncid/BB24907662", "summary": "National Institute of Informatics catalog evidence for Breul's distinct 38-page Weimar Hof-Buchdruckerei dissertation of 1883, its Berlin doctoral-thesis status, languages, and one reported physical holding.", "supports": ["edition:breul:sir-gowther-1883", "access:breul-1883", "rights:breul-1883"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:breul-1883-access-audit", "type": "search_result", "citation": "Dated public-copy search for Karl Breul's distinct 1883 Sir Gowther dissertation issue.", "url": "https://ci.nii.ac.jp/ncid/BB24907662", "summary": "Bibliographic searches located the distinct physical dissertation and modern commercial reprints, while BSB and Deutsche Digitale Bibliothek identify their digital object as the expanded 1886 volume partly based on the 1883 dissertation. No complete public scan of the distinct 38-page 1883 issue was found on 2026-07-12.", "supports": ["edition:breul:sir-gowther-1883", "access:breul-1883"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:breul-text-visual", "type": "visual_inspection", "citation": "Direct inspection of Breul 1886 title and complete critical-text page images.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11664278/manifest", "locator": "title canvas 7; text canvases 159-189 = printed pp.135-165; p.155 = canvas 179", "summary": "Confirmed exact encoded boundaries, page and stanza layout, foot-of-page apparatus, italic typography, left Breul and right Utterson numbers, folio markers, supplied passages, A-version ending, quoted B ending, and source heading XLIII at stanza 43.", "supports": ["relation:encoding-breul", "relation:breul-transcribes-a", "relation:breul-transcribes-b-supplies", "relation:breul-collates-b", "practice:breul-collation", "practice:breul-abbreviations"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:nls-catalog", "type": "official_catalog", "citation": "National Library of Scotland, Adv.MS.19.3.1 catalog record.", "url": "https://manuscripts.nls.uk/repositories/2/resources/15302", "locator": "Contents, Physical Description, Arrangement, and access information", "summary": "Official evidence for the c.1480 paper codex, North-Midland and scribal context, current and former shelfmarks, physical extent and dimensions, Sir Gowther at f.11 followed by Stans puer at f.28, acquisition, microfilms, digital copy, and access conditions.", "supports": ["witness:nls:Adv-MS-19-3-1"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:nls-iiif", "type": "digital_surrogate", "citation": "National Library of Scotland, IIIF manifest for Adv.MS.19.3.1.", "url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json", "alternate_urls": ["https://digital.nls.uk/133680060"], "summary": "Exact provider evidence for shelfmark, c.1480 date, North-Midland and scribal description, 482-canvas published object, omission of some modern blank flyleaves, and item-level Public Domain Mark statement.", "supports": ["facsimile:nls:Adv-MS-19-3-1-digital", "relation:nls-facsimile-witness", "rights:nls-digital-pdm"], "accessed_on": "2026-07-12", "sha256": "8f28ae541b049198ee7581c1de9ce8da6ce910399a4c9e076d44022cf16fed4b", "notes": ["SHA-256 is for the complete cached 482-image bundle with canonical manifest and inventory; inventory retrieval metadata records 2026-07-13."]},
+    {"id": "evidence:nls-visual", "type": "visual_inspection", "citation": "Direct inspection of NLS Adv.MS.19.3.1 canvases 36-71 and exact IIIF Image API boundaries.", "url": "https://view.nls.uk/manifest/1336/8006/133680060/manifest.json", "locator": "canvas 36 preceding text; canvases 37-70 current ff.11r-27v; canvas 71 following text", "summary": "Confirmed that canvas 37 is damaged f.11r and the first surviving Sir Gowther page, canvas 70 is f.27v with the explicit, canvas 36 belongs to the preceding work, and canvas 71 begins Stans puer. Exact start and end Image API URLs returned HTTP 200; Presentation canvas URLs returned 404.", "supports": ["witness:nls:Adv-MS-19-3-1", "facsimile:nls:Adv-MS-19-3-1-digital", "relation:nls-facsimile-witness", "relation:breul-transcribes-a"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:nls-copyright", "type": "official_webpage", "citation": "National Library of Scotland, Copyright and the collections.", "url": "https://www.nls.uk/tools-for-research/copyright/", "summary": "Official policy evidence that faithful digitizations retain the original's copyright status and that NLS waives related digitization rights with CC0 where they subsist; the exact object itself carries the Public Domain Mark.", "supports": ["rights:nls-digital-pdm"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-catalog", "type": "official_catalog", "citation": "British Library, Royal MS 17 B XLIII, record 040-002107332.", "url": "https://searcharchives.bl.uk/catalog/040-002107332", "locator": "Sir Gowghter component, whole-manuscript description, Digitised Content, and Access", "summary": "Official evidence for shelfmark, parchment support, later-fifteenth-century date, 187-folio codex and dimensions, 691-line Sir Gowghter beginning at f.116, incipit, explicit, blank Digitised Content field, London consultation, manuscript request, and reference contact.", "supports": ["witness:bl:Royal-MS-17-B-XLIII", "relation:breul-collates-b"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-access-audit", "type": "official_webpage", "citation": "British Library official digital and access-route audit for Royal MS 17 B XLIII.", "url": "https://searcharchives.bl.uk/catalog/040-002107332", "alternate_urls": ["https://forms.office.com/e/SbCAGb201x", "https://bl.libanswers.com/form?queue_id=2371"], "summary": "The exact current record and request/reference routes resolve, but no complete public facsimile was found after checking the record's blank Digitised Content field, official digitised-manuscript routes, and legacy shelfmark display. This is a dated negative finding, not evidence of nonexistence.", "supports": ["access:bl-physical", "access:bl-public-facsimile"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-digitisation", "type": "official_webpage", "citation": "British Library, Digitisation services.", "url": "https://www.bl.uk/services/digitisation", "summary": "Official route for individuals to order digitised copies by supplying shelfmark, title, and folio requirements; charges and reuse terms require a quote.", "supports": ["access:bl-reproduction"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:dimev-release", "type": "scholarly_source", "citation": "Digital Index of Middle English Verse v1.0, record 1595 and bibliography entry Breul1886a.", "url": "https://doi.org/10.5281/zenodo.14585961", "alternate_urls": ["https://github.com/digital-index-of-middle-english-verse/dimev/tree/v1.0", "https://www.dimev.net/record.php?recID=1595"], "locator": "data/Records.xml record-1595; data/Bibliography.xml Breul1886a; README and LICENSE", "summary": "Versioned evidence for DIMEV/IMEV/NIMEV identifiers, title, classifications, rhyme form, both witnesses and loci, incipits and explicits, reported line extents, Breul bibliography, release metadata, and CC BY 4.0 license.", "supports": ["catalog:dimev:record-1595", "witness:nls:Adv-MS-19-3-1", "witness:bl:Royal-MS-17-B-XLIII", "relation:dimev-work", "relation:dimev-a", "relation:dimev-b", "relation:dimev-cites-breul", "rights:dimev-ccby"], "accessed_on": "2026-07-12", "sha256": "d63e36d13da5830327428fedfcc2ec09763f7eb21f1751d924f65ca06fec634c"},
+    {"id": "evidence:dmbr", "type": "scholarly_source", "citation": "Database of Middle English Romance, Sir Gowther.", "url": "https://www.middleenglishromance.org.uk/romances/sir-gowther", "summary": "Work-level evidence for c.1400 composition, Northeast-Midlands localization, twelve-line tail-rhyme form, IMEV 973, current witness loci, editions, plot, motifs, and romance classification.", "supports": ["work:middle-english:sir-gowther"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:mets", "type": "scholarly_source", "citation": "Anne Laskaya and Eve Salisbury, eds., Sir Gowther, Middle English Texts Series.", "url": "https://metseditions.org/read/PW64KRztNjvILYAIYWeLu8GvXqAYVA", "summary": "Scholarly evidence for anonymous authorship, two late-fifteenth-century and substantially different versions, Northeast-Midland language, A/B character, genre plurality, and cautious source analogues.", "supports": ["work:middle-english:sir-gowther", "witness:nls:Adv-MS-19-3-1", "witness:bl:Royal-MS-17-B-XLIII"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:noc-nc-1", "type": "official_webpage", "citation": "RightsStatements.org, No Copyright - Non-Commercial Use Only 1.0.", "url": "https://rightsstatements.org/vocab/NoC-NC/1.0/", "summary": "Defines the statement applied by BSB: the underlying work is public domain, but the provider may restrict commercial use of the digital representation by contract; the statement is not a license.", "supports": ["rights:breul-underlying", "rights:bsb-breul-digital"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:pdm-1", "type": "official_webpage", "citation": "Creative Commons, Public Domain Mark 1.0.", "url": "https://creativecommons.org/publicdomain/mark/1.0/", "summary": "Defines the no-known-copyright mark linked by the exact NLS item; it is not a license.", "supports": ["rights:nls-digital-pdm"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:cc-by-4", "type": "official_webpage", "citation": "Creative Commons Attribution 4.0 International.", "url": "https://creativecommons.org/licenses/by/4.0/", "summary": "Authoritative text of the license declared by DIMEV v1.0.", "supports": ["rights:dimev-ccby"], "accessed_on": "2026-07-12"},
+    {"id": "evidence:us-copyright-duration", "type": "law", "citation": "U.S. Copyright Office, Copyright Term and the Public Domain, Circular 15A.", "url": "https://www.copyright.gov/circs/circ15a.pdf", "summary": "Authoritative duration guidance supporting United States public-domain conclusions for works published before 1931 and for the centuries-old anonymous medieval texts modeled here.", "supports": ["rights:breul-underlying", "rights:breul-1883", "rights:nls-medieval-text", "rights:bl-medieval-text"], "accessed_on": "2026-07-12"}
+  ],
+  "open_questions": [
+    {"id": "question:bl-facsimile", "question": "Does a complete public or restricted digital facsimile of Royal MS 17 B XLIII exist outside the official BL routes checked on 2026-07-12?", "status": "no_public_source_found", "impact": "high", "next_steps": ["Submit the recorded BL Reference Services enquiry with shelfmark Royal MS 17 B XLIII and exact target ff.116r-131v.", "Request a digitisation quote and ask whether an existing surrogate can be supplied before commissioning new photography.", "If files are obtained, record object-level image rights, completeness, and exact work boundaries before caching."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:bl-catalog", "evidence:bl-access-audit", "evidence:bl-digitisation"]},
+    {"id": "question:line-folio-discrepancies", "question": "How should DIMEV's 757-line A extent and Breul's historical endpoint A fol.28a be reconciled with Breul's 738-written-line statement and the direct current boundary f.27v?", "status": "unresolved", "impact": "medium", "next_steps": ["Collate a diplomatic transcription of NLS canvases 37-70 and document the counting rule.", "Ask NLS about historical and current foliation of the opening fascicle.", "Keep critical positions, witness-written lines, apparatus-quoted lines, and raw XML L counts separate."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:breul-editorial", "evidence:nls-catalog", "evidence:nls-visual", "evidence:dimev-release", "evidence:xml-audit"]},
+    {"id": "question:a-b-stemma", "question": "What exact textual genealogy or sequence of redaction connects the A and B versions?", "status": "unresolved", "impact": "medium", "next_steps": ["Obtain complete B images and collate both versions against a modern diplomatic edition.", "Consult later stemmatic and source scholarship.", "Continue to represent A and B as independent witnesses rather than asserting a direct edge between them."], "last_checked": "2026-07-12", "evidence_ids": ["evidence:breul-editorial", "evidence:mets", "evidence:dimev-release"]}
+  ]
+}

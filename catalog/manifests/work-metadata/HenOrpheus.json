@@ -1,0 +1,401 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:HenOrpheus",
+  "work_id": "HenOrpheus",
+  "record_status": "reviewed",
+  "created": "2026-07-14",
+  "last_reviewed": "2026-07-15",
+  "cataloging_subject": {
+    "id": "work:HenOrpheus",
+    "unit_type": "single_work",
+    "label": "Orpheus and Eurydice",
+    "scope_note": "Robert Henryson's late-fifteenth-century Older Scots poem, including its narrative tale (lines 1-414) and its integral Moralitas (lines 415-633), as one intellectual work. The imperfect unique Chepman-Myllar print copy, the 578-line Asloan and 633-line Bannatyne witnesses, Smith's parallel edition, the 1984 OSTA/OTA machine-readable text, the 1993 U-M transformation, later critical editions, and facsimiles are transmission layers rather than separate works. The separate lyric The Want of Wise Men, printed after Orpheus in the 1508 tract and advertised as ‘ane othir ballad,’ is outside this record."
+  },
+  "catalog_summary": {
+    "title": "Orpheus and Eurydice",
+    "author": "Robert Henryson",
+    "editor": "No editor at work level; G. Gregory Smith's 1908 parallel edition underlies the 1984 OSTA/OTA machine-readable text later transformed at U-M",
+    "date": "Late fifteenth century; c. 1480 is a conventional approximation, not a secure exact date",
+    "region": "Scotland; mythic action ranges from Thrace through the planetary spheres to the classical underworld",
+    "genres": ["Romance", "Narrative poem", "Classical-myth adaptation", "Mythographic poetry", "Moral-didactic allegory"],
+    "form": "verse",
+    "language_codes": ["sco"],
+    "tags": ["afterlife", "allegory", "boethius", "classical-mythology", "descent-to-the-underworld", "eurydice", "love-and-loss", "middle-scots", "moral-poetry", "music", "nicholas-trivet", "older-scots", "orpheus", "reason-and-appetite", "rhyme-royal", "robert-henryson", "romance", "verse"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "HenOrpheus", "uri": "https://name.umdl.umich.edu/HenOrpheus"},
+    {"scheme": "OTA", "value": "U*-243-A"},
+    {"scheme": "OTA legacy item", "value": "2231", "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/2231"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "Orpheus and Eurydice",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]},
+      "notes": ["A normalized conventional title used for human-readable discovery; surviving witnesses vary the spelling of Eurydice's name."]
+    },
+    {
+      "id": "title:umich",
+      "type": "alternate",
+      "value": "Robert Henryson's Orpheus and Eurydice",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:umich-henorpheus"]},
+      "notes": ["Discovery title of the U-M/CME item, not an independently transmitted medieval title."]
+    },
+    {
+      "id": "title:chepman-rubric",
+      "type": "alternate",
+      "value": "Heir begynnis the traitie of Orpheus kyng and how he yeid to hewyn and to hel to seik his quene",
+      "language": "sco",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:lineage-chepman"]},
+      "notes": ["The 1508 print continues ‘and ane othir ballad in the lattir end’; that phrase advertises a separate following lyric and is excluded from the work title here."]
+    },
+    {
+      "id": "title:new-orpheus",
+      "type": "alternate",
+      "value": "New Orpheus",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:lineage-smith-introduction"]},
+      "notes": ["Smith reports this early descriptive title in a Cambridge note associated with Gavin Douglas; it is retained as historical reception evidence, not preferred over the established title."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:robert-henryson", "type": "person", "name": "Robert Henryson", "notes": ["Active in late-fifteenth-century Scotland; exact birth and death dates remain uncertain."]}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:henryson-author",
+      "agent_id": "agent:robert-henryson",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-orpheus", "evidence:lineage-celm", "evidence:lineage-smith-introduction"]},
+      "notes": ["The Bannatyne copy ends ‘Finis: quod mr. R. H.’; current scholarship and catalogs accept the attribution to Henryson. The anonymous 1508 print does not by itself name him."]
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Late fifteenth century; c. 1480 is a conventional or legacy approximation",
+      "normalized": {"not_before": 1450, "not_after": 1500},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-general", "evidence:mets-orpheus", "evidence:henorpheus-xml"]},
+      "notes": ["The repository XML supplies c. 1480 without an evidentiary explanation. The broad range records the late-fifteenth-century scholarly context without converting that legacy value into a secure date."]
+    },
+    {
+      "id": "date:first-publication",
+      "type": "first_publication",
+      "display": "April 1508, in Walter Chepman and Androw Myllar's Edinburgh print collection",
+      "normalized": {"not_before": 1508, "not_after": 1508},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "edition:chepman-myllar:orpheus-1508",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:lineage-chepman", "evidence:lineage-celm"]},
+      "notes": ["The unique surviving 1508 copy is imperfect: the third and fourth leaves of its first gathering, carrying unified lines 59-175, are lost. Its 461 surviving lines do not establish that the original print was intentionally a shorter version. Bannatyne is the first surviving witness with all 633 lines."]
+    }
+  ],
+  "places": [
+    {"id": "place:scotland", "label": "Scotland", "kind": "country", "identifiers": [{"scheme": "Wikidata", "value": "Q22", "uri": "https://www.wikidata.org/entity/Q22"}]},
+    {"id": "place:dunfermline", "label": "Dunfermline", "kind": "settlement", "identifiers": [{"scheme": "Wikidata", "value": "Q201149", "uri": "https://www.wikidata.org/entity/Q201149"}]},
+    {"id": "place:thrace", "label": "Thrace", "kind": "historical_region", "identifiers": [{"scheme": "Wikidata", "value": "Q41741", "uri": "https://www.wikidata.org/entity/Q41741"}]},
+    {"id": "place:classical-underworld", "label": "Classical underworld", "kind": "cultural_region"}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:scotland",
+      "place_id": "place:scotland",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-general", "evidence:mets-orpheus"]},
+      "notes": ["This describes the poem's literary and linguistic context, not a documented exact place of composition."]
+    },
+    {
+      "id": "place-statement:dunfermline",
+      "place_id": "place:dunfermline",
+      "type": "associated_place",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-general"]},
+      "notes": ["Henryson is documented in Dunfermline in 1477-1478. That biographical association does not prove the poem was composed there."]
+    },
+    {
+      "id": "place-statement:thrace",
+      "place_id": "place:thrace",
+      "type": "historical_setting",
+      "scope": {"kind": "part", "part_ids": ["part:tale"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml"]}
+    },
+    {
+      "id": "place-statement:underworld",
+      "place_id": "place:classical-underworld",
+      "type": "historical_setting",
+      "scope": {"kind": "part", "part_ids": ["part:tale", "part:moralitas"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]},
+      "notes": ["A mythological setting rather than a claim about historical geography."]
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:older-scots",
+      "code": "sco",
+      "label": "Older Scots",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-general", "evidence:mets-orpheus"]},
+      "notes": ["Often described more specifically as Middle Scots. The brief Latin Moralitas rubric and learned names do not make the poem as a whole multilingual."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "A 633-line verse work. The tale has 57 stanzas: fifty-two seven-line rhyme-royal stanzas and five ten-line lyric stanzas; the 219-line Moralitas is encoded as continuous verse rather than LG stanza groups.",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-structure", "evidence:mets-orpheus"]}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:romance", "term": "romance", "label": "Romance", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:tale"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-orpheus"]}},
+    {"id": "genre:narrative-poem", "term": "narrative-poem", "label": "Narrative poem", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}},
+    {"id": "genre:classical-myth-adaptation", "term": "classical-myth-adaptation", "label": "Classical-myth adaptation", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}},
+    {"id": "genre:mythographic-poetry", "term": "mythographic-poetry", "label": "Mythographic poetry", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-orpheus"]}},
+    {"id": "genre:moral-allegory", "term": "moral-didactic-allegory", "label": "Moral-didactic allegory", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:moralitas"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:orpheus-eurydice", "term": "orpheus-and-eurydice", "label": "Orpheus and Eurydice", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}},
+    {"id": "subject:love-loss", "term": "love-and-loss", "label": "Love, grief, and loss", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:tale"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml"]}},
+    {"id": "subject:music", "term": "music-and-eloquence", "label": "Music, harmony, and eloquence", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}},
+    {"id": "subject:katabasis", "term": "descent-to-the-underworld", "label": "Descent to the underworld", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:tale"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml"]}},
+    {"id": "subject:reason-appetite", "term": "reason-and-appetite", "label": "Reason, affection, and appetite", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:moralitas"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}},
+    {"id": "subject:sin-moral-instruction", "term": "sin-and-moral-instruction", "label": "Sin, moral instruction, and contemplation", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:moralitas"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]}}
+  ],
+  "tags": ["afterlife", "allegory", "boethius", "classical-mythology", "descent-to-the-underworld", "eurydice", "love-and-loss", "middle-scots", "moral-poetry", "music", "nicholas-trivet", "older-scots", "orpheus", "reason-and-appetite", "rhyme-royal", "robert-henryson", "romance", "verse"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Henryson recounts Orpheus's lineage, marriage to Eurydice, and grief after she is taken to the underworld. Orpheus searches the planetary spheres, learns celestial harmony, descends through hell, charms its guardians and tormented figures, and wins Eurydice's release on condition that he not look back; his backward glance loses her again. A long Moralitas then interprets Orpheus as the intellectual or reasoning power of the soul and Eurydice as affection or appetite, turning the classical romance into instruction about sin, eloquence, worldly desire, contemplation, and the discipline of reason.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus"]
+    },
+    {
+      "id": "summary:scope",
+      "type": "scope_note",
+      "value": "This record describes one 633-line intellectual work, including its tale and Moralitas. It does not describe the separate Want of Wise Men printed immediately afterward in 1508, nor does it conflate the imperfect surviving Chepman print, the Asloan and Bannatyne witnesses, Smith's 1908 parallel presentation, the 1984 OSTA/OTA COCOA text, the 1993 U-M transformation, or modern facsimiles with the work itself.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:henorpheus-xml", "evidence:lineage-smith", "evidence:lineage-chepman"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 1,
+    "sections": 2,
+    "prose_only_items": 0,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 57,
+    "verse_lines": 633,
+    "description": "One counted verse work in two stable conceptual parts. Lines 1-414 form 57 stanza groups; lines 415-633 form a continuous 219-line Moralitas. Verse groups and lines are structural metrics, not separately counted works or items. The repository XML's six supplied line-range DIV2 units are navigation subdivisions, not treated as authorial sections.",
+    "evidence_ids": ["evidence:henorpheus-structure", "evidence:lineage-smith"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {
+      "id": "part:work",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "work",
+      "label": "Orpheus and Eurydice",
+      "summary": "The single counted poem, comprising the tale and its integral Moralitas.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 1, "mixed_items": 0, "verse_groups": 0, "verse_lines": 0},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenOrpheus", "scheme": "line", "value": "1-633"}
+      ],
+      "evidence_ids": ["evidence:henorpheus-structure", "evidence:lineage-ota"]
+    },
+    {
+      "id": "part:tale",
+      "parent_id": "part:work",
+      "sequence": 1,
+      "type": "section",
+      "label": "The tale of Orpheus and Eurydice",
+      "summary": "The romance narrative from Orpheus's genealogy and marriage through Eurydice's death, the cosmic and infernal quest, her conditional release, and her loss when Orpheus looks back.",
+      "item_count": 0,
+      "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 57, "verse_lines": 414},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenOrpheus", "scheme": "line", "value": "1-414"}
+      ],
+      "evidence_ids": ["evidence:henorpheus-structure", "evidence:lineage-smith"]
+    },
+    {
+      "id": "part:moralitas",
+      "parent_id": "part:work",
+      "sequence": 2,
+      "type": "commentary",
+      "label": "Moralitas Fabule Sequitur",
+      "summary": "An allegorical exposition mapping the myth's characters, journey, monsters, punishments, and backward glance onto intellect, appetite, sin, worldly instability, eloquence, and contemplation.",
+      "item_count": 0,
+      "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 0, "verse_lines": 219},
+      "locators": [
+        {"lineage_entity_id": "encoding:umich-ota:U-243-A-HenOrpheus", "scheme": "line", "value": "415-633"}
+      ],
+      "evidence_ids": ["evidence:henorpheus-structure", "evidence:mets-orpheus", "evidence:lineage-smith"],
+      "notes": ["The 219 verse lines are a structural metric, not 219 separately counted items. The source XML does not group the Moralitas into LG stanza containers."]
+    }
+  ],
+  "related_works": [
+    {
+      "id": "related:boethius-consolation",
+      "title": "The Consolation of Philosophy, Book III, metre 12",
+      "relation": "adaptation_of",
+      "identifiers": [{"scheme": "Conventional authority", "value": "Boethius, Consolatio Philosophiae III.m.12"}],
+      "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus", "evidence:lineage-smith-introduction"],
+      "notes": ["The narrative explicitly names Boethius and current scholarship identifies III.m.12 as the principal literary basis. This is an intellectual-source relation, not a claim that a particular surviving Boethius manuscript or edition was Henryson's physical exemplar."]
+    },
+    {
+      "id": "related:trivet-commentary",
+      "title": "Nicholas Trivet's commentary on Boethius's Consolation of Philosophy",
+      "relation": "adaptation_of",
+      "identifiers": [{"scheme": "Conventional authority", "value": "Nicholas Trivet (Trevet), commentary on Consolatio Philosophiae"}],
+      "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-orpheus", "evidence:lineage-smith-introduction"],
+      "notes": ["The Moralitas names ‘maister trowit doctour nicholas,’ and scholarship identifies Trivet's commentary as its source. No exact surviving exemplar is asserted."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:HenOrpheus",
+    "manifest_path": "manifests/lineage/works/HenOrpheus.json",
+    "bindings": [
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "edition:chepman-myllar:orpheus-1508", "role": "source_witness"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "witness:nls:MS-16500", "role": "source_witness"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "witness:nls:Adv-MS-1-1-6", "role": "source_witness"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "edition:smith:henryson-vol3-1908", "role": "source_edition"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "encoding:ota:2231-orpheus", "role": "digital_encoding"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "encoding:umich-ota:U-243-A-HenOrpheus", "role": "digital_encoding"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "artifact:general-corpus:HenOrpheus", "role": "repository_representation"},
+      {"metadata_target": "work:HenOrpheus", "lineage_entity_id": "edition:mets:kindrick-1997", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:henorpheus-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/HenOrpheus.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenOrpheus.xml",
+      "locator": "HEADER; DIV1/DIV2/LG/L/PB elements",
+      "summary": "Supplies the electronic title and Henryson attribution, OTA identifier, 1993 date, Smith source statement and page milestones, legacy c. 1480 date, omissions, headings, and full 633-line text.",
+      "accessed_on": "2026-07-14",
+      "sha256": "c9a88c55dec019b965e0207d23821edfdb3d25d1fb4a4145898a8c49bc6a2487"
+    },
+    {
+      "id": "evidence:henorpheus-structure",
+      "type": "computational_inspection",
+      "citation": "Element, numbering, and stanza-pattern audit of repository HenOrpheus.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/HenOrpheus.xml",
+      "locator": "DIV1/DIV2/LG/L/PB elements and line N attributes",
+      "summary": "Counts two DIV1, six supplied DIV2, 57 LG, 633 L, and 22 PB elements. Lines 1-414 contain fifty-two seven-line and five ten-line stanzas; lines 415-633 form the ungrouped 219-line Moralitas. All L elements are consecutively numbered 1-633.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:umich-henorpheus",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, ‘Robert Henryson's Orpheus and Eurydice,’ CME item HenOrpheus.",
+      "url": "https://quod.lib.umich.edu/c/cme/HenOrpheus?view=toc",
+      "summary": "Confirms the item title, author, public text access, two-part contents, 1993 electronic edition, exact OTA U*-243-A identifier, Smith source statement, and current No Copyright-United States statement.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-general",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, current General Introduction to The Complete Works of Robert Henryson.",
+      "url": "https://metseditions.org/read/ezwGwmGVTWD0GT53eWS4QbGTNVGdwy8qp",
+      "summary": "Provides the cautious Henryson biography, Older Scots context, 1508 Chepman-Myllar tract boundary, Asloan and Bannatyne witness descriptions, dates, completeness differences, and the warning that The Want of Wise Men is a separate work.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:mets-orpheus",
+      "type": "scholarly_source",
+      "citation": "Middle English Texts Series, Robert L. Kindrick edition, ‘Orpheus and Eurydice: Introduction.’",
+      "url": "https://metseditions.org/read/XjyX39phNjkXUDYdhR72bCG6gVrRppK",
+      "alternate_urls": ["https://metseditions.org/read/EdVrxGbhr8b0UNXZuqNQ8t1qkxN24ab"],
+      "summary": "Supports the romance and mythographic classification, Boethius and Trivet source relations, literary interpretation, two-part work structure, textual-witness comparison, and current critical reading.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-smith",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage evidence for Smith volume III and direct XML comparison.",
+      "repository_path": "manifests/lineage/works/HenOrpheus.json",
+      "source_evidence_id": "evidence:smith-xml-comparison",
+      "summary": "Supports Smith's separate Chepman, Asloan-transcript, and Bannatyne streams and the exact supplementation spans used to assess the later OSTA/OTA text.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lineage-ota",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage evidence for OTA legacy item 2231 and its comparison with the U-M XML.",
+      "repository_path": "manifests/lineage/works/HenOrpheus.json",
+      "source_evidence_id": "evidence:ota-umich-comparison",
+      "summary": "Supports the 1984 OSTA/OTA machine-readable intermediate, its former folder-0243 context, and the near-exact transformation into the 1993 U-M item: 632 of 633 normalized verse lines match, with only line 98 differing as BUS/buss.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lineage-smith-introduction",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage evidence for Smith volume I's Orpheus source and attribution discussion.",
+      "repository_path": "manifests/lineage/works/HenOrpheus.json",
+      "source_evidence_id": "evidence:smith-1914-scan",
+      "summary": "Supports the three-witness census, Biilbring transcript intermediary, historical New Orpheus title, authorship evidence, and Boethius-Trivet source discussion.",
+      "accessed_on": "2026-07-14"
+    },
+    {
+      "id": "evidence:lineage-chepman",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage evidence for the 1508 Chepman-Myllar Orpheus tract and complete public facsimile.",
+      "repository_path": "manifests/lineage/works/HenOrpheus.json",
+      "source_evidence_id": "evidence:chepman-direct-inspection",
+      "summary": "Supports the exact tract boundary, title rubric, 461 surviving lines, the two-leaf lacuna carrying unified lines 59-175, April 1508 first publication, and separation of the following Want of Wise Men.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:lineage-celm",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus lineage evidence from the Catalogue of English Literary Manuscripts Henryson entries.",
+      "repository_path": "manifests/lineage/works/HenOrpheus.json",
+      "source_evidence_id": "evidence:celm-henryson",
+      "summary": "Supports accepted Henryson authorship, the Asloan and Bannatyne loci and extents, and the 1508 publication history.",
+      "accessed_on": "2026-07-14"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:composition-date-place",
+      "question": "Can Orpheus and Eurydice be dated or localized more narrowly than late-fifteenth-century Scotland without converting literary inference or Henryson's Dunfermline association into documentary fact?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Consult current work-specific chronology and textual scholarship before narrowing the normalized range or naming a place of composition."],
+      "last_checked": "2026-07-15",
+      "evidence_ids": ["evidence:henorpheus-xml", "evidence:mets-general", "evidence:mets-orpheus"]
+    }
+  ],
+  "notes": [
+    "The six supplied line-range DIV2 headings in HenOrpheus.xml are electronic navigation units, not treated as a stable authorial hierarchy.",
+    "Witness spelling, the unique Chepman copy's physical lacuna, scribal and print features, Smith's collation, and the OSTA/OTA-to-U-M transformation remain in the lineage manifest rather than being collapsed into work-level metadata.",
+    "Boethius and Nicholas Trivet are modeled as intellectual source works without asserting a particular surviving manuscript or edition as Henryson's physical exemplar."
+  ]
+}

@@ -1,0 +1,797 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:apa1967",
+  "work_id": "apa1967",
+  "title": "Source lineage for The Wars of Alexander: Skeat's 1886 edited selection",
+  "primary_subject": "artifact:general-corpus:apa1967",
+  "record_status": "partial",
+  "created": "2026-07-17",
+  "last_reviewed": "2026-07-17",
+  "summary": "The General Corpus artifact is a pinned copy of U-M encoding APA1967.0001.001, which encodes selected matter from Walter W. Skeat's 1886 edition. That edition contains two distinct historical works: Wars of Alexander (Fragment C), printed through overlapping Ashmole 44 and TCD MS 213 witness streams, and a separate prose Story of Alexander from TCD MS 213. The U-M raw package, its encoding payload, its 506-TIFF printed-volume facsimile, the Kraus unaltered reprint, and the Warburg PDF facsimile are modeled as distinct layers.",
+  "languages": ["enm", "eng"],
+  "review_notes": [
+    "Primary transmission path — Wars via Ashmole: artifact:general-corpus:apa1967 -> encoding:umich:APA1967.0001.001 -> edition:skeat:wars-of-alexander:1886 -> witness:bodleian:ashmole-44. Ashmole is the larger base stream; its lacuna is supplied from Dublin.",
+    "Primary transmission path — Wars via Dublin: artifact:general-corpus:apa1967 -> encoding:umich:APA1967.0001.001 -> edition:skeat:wars-of-alexander:1886 -> witness:tcd:ms-213. This overlaps Ashmole and is not an additive second half.",
+    "Primary transmission path — Story via Dublin: artifact:general-corpus:apa1967 -> encoding:umich:APA1967.0001.001 -> edition:skeat:wars-of-alexander:1886 -> witness:tcd:ms-213. The prose is a separate work at current ff. 70v-72r after intervening account leaves.",
+    "Supporting relationship — The U-M raw package supplies both the raw encoding payload and the 506-TIFF printed-edition facsimile payload.",
+    "Supporting relationship — The Digital Bodleian object supplies one image of Ashmole 44 fol. 1r only.",
+    "Supporting relationship — The Historia de Preliis J3a relation identifies a source tradition, not a direct codex-to-codex transmission claim.",
+    "Supporting relationship — The proposed Caxton relation is supported/medium and remains distinct from confirmed primary paths.",
+    "Supporting relationship — The Warburg PDF is a facsimile of a Kraus unaltered reprint copied from Skeat 1886; it is not the physical 1886 U-M scan object.",
+    "Supporting relationship — Stevenson 1849 and Duggan-Turville-Petre 1989 are supporting editions, not ancestors of apa1967."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:apa1967",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for apa1967",
+      "description": "The exact pinned XML artifact consumed by the repository. After removal of generated node and note identifiers plus the processing-profile value, its canonicalized structure and text are byte-identical to the raw U-M XML.",
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/apa1967.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "6fce3965183576059244626faac07a119db19dee",
+        "xml_identifier_aliases": ["APA1967.0001.001", "apa1967"],
+        "sha256": "ae13b21fd684858ed21d022dcdc29f16fbe6704d18aa8f6480a9569c2c5c566f"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:xml-computation"]
+    },
+    {
+      "id": "package:umich:APA1967.0001.001-raw",
+      "type": "repository_artifact",
+      "label": "U-M raw distribution package for APA1967.0001.001",
+      "description": "The complete provider ZIP distributed through Internet Archive: 511 members comprising 506 TIFF page images and five raw encoding, OCR, header, page-order, and processing-support files. The package contains but is not identical to either the encoding or TIFF facsimile layer.",
+      "identifiers": [
+        {"scheme": "Internet Archive identifier", "value": "apa1967.0001.001.umich.edu", "uri": "https://archive.org/details/apa1967.0001.001.umich.edu"},
+        {"scheme": "ARK", "value": "ark:/13960/t9s191h9n"}
+      ],
+      "creator_ids": ["agent:university-of-michigan-library"],
+      "date_statements": [{"label": "Digital production", "value": "2006", "normalized": "2006", "certainty": "high", "evidence_ids": ["evidence:raw-package"]}],
+      "repository_file": {"path": "source-cache/apa1967/umich-apa1967-complete-raw-package.zip", "media_type": "application/zip", "sha256": "6f581b1c146dfd8e62db177e5ebd80f9ae6aa9d1fe059190d236c36f370aa901"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]
+    },
+    {
+      "id": "encoding:umich:APA1967.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME encoding APA1967.0001.001",
+      "description": "A 2006 TEI Libraries Level 1 encoding of selected matter from Skeat's 1886 edition. The raw provider XML reports no corrections or editing. It retains title matter, the verse edition, Skeat's ending paraphrase, The Story of Alexander, notes, and page-image links while omitting most front and back text.",
+      "identifiers": [{"scheme": "U-M DLPS", "value": "APA1967.0001.001", "uri": "https://name.umdl.umich.edu/apa1967.0001.001"}],
+      "creator_ids": ["agent:university-of-michigan-library"],
+      "date_statements": [{"label": "Digital production", "value": "2006", "normalized": "2006", "certainty": "high", "evidence_ids": ["evidence:raw-package"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:raw-package", "evidence:umich-current-item"]
+    },
+    {
+      "id": "facsimile:umich:APA1967.0001.001-tiffs",
+      "type": "facsimile",
+      "label": "U-M 506-TIFF scan layer for Skeat's 1886 volume",
+      "description": "The complete 506-image sequence in the U-M raw package. It includes the full provider-published scan object for the printed volume, including matter omitted from the text encoding. Completeness is relative to the provider object, not proof that every binding surface was photographed.",
+      "creator_ids": ["agent:university-of-michigan-library"],
+      "date_statements": [{"label": "Digital production", "value": "2006", "normalized": "2006", "certainty": "high", "evidence_ids": ["evidence:raw-package"]}],
+      "reproduction_format": "506 monochrome 600 dpi TIFF G4 images",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]
+    },
+    {
+      "id": "edition:skeat:wars-of-alexander:1886",
+      "type": "scholarly_edition",
+      "label": "Walter W. Skeat, The Wars of Alexander (EETS Extra Series 47, 1886)",
+      "description": "The immediate printed source of the U-M encoding. Skeat prints MS Ashmole 44 and TCD MS 213 on facing pages where they overlap, supplies the Ashmole lacuna from Dublin, paraphrases the lost ending editorially, and appends a separate incomplete prose Story of Alexander from the Dublin codex.",
+      "creator_ids": ["agent:walter-william-skeat"],
+      "date_statements": [{"label": "Publication", "value": "1886", "normalized": "1886", "certainty": "high", "evidence_ids": ["evidence:skeat-title-and-introduction"]}],
+      "bibliographic": {
+        "citation": "Walter W. Skeat, ed., The Wars of Alexander: An Alliterative Romance Translated Chiefly from the Historia Alexandri Magni de Preliis, EETS Extra Series 47 (London: N. Trübner, 1886).",
+        "title": "The Wars of Alexander",
+        "series": "Early English Text Society, Extra Series 47",
+        "publisher": "N. Trübner & Co.",
+        "publication_place": "London",
+        "date": "1886",
+        "pages": "xxiv, 478 pages, one unnumbered leaf",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:repository-xml", "evidence:raw-package"]
+    },
+    {
+      "id": "edition:kraus:unaltered-reprint-skeat",
+      "type": "catalog_description",
+      "label": "Kraus unaltered reprint of Skeat's 1886 Wars of Alexander",
+      "description": "An undated Kraus Reprint Co. physical reprint whose preliminary statement calls it an unaltered reprint produced with EETS permission. It reproduces the 1886 title page and text but is a distinct print carrier. Because the schema has no general print-carrier type and this is not a new scholarly editing act, catalog_description is the deliberate workaround.",
+      "creator_ids": ["agent:kraus-reprint-company"],
+      "bibliographic": {"citation": "Kraus Reprint Co., unaltered reprint of Walter W. Skeat, The Wars of Alexander, EETS Extra Series 47 (1886), undated.", "publisher": "Kraus Reprint Co.", "date": "undated"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-warburg"]
+    },
+    {
+      "id": "facsimile:warburg:kraus-skeat-pdf",
+      "type": "facsimile",
+      "label": "Warburg PDF scan of the complete Kraus reprint of Skeat 1886",
+      "description": "A complete 512-page provider PDF. The original 1886 title page is PDF page 9, the edition text begins at PDF page 31, and the target selection ends at PDF page 313. It is a scan of the Kraus reprint, not the same physical 1886 copy represented by U-M's TIFF package.",
+      "creator_ids": ["agent:warburg-institute-library"],
+      "reproduction_format": "512-page PDF page-image scan with OCR text layer",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-warburg"]
+    },
+    {
+      "id": "work:anonymous:wars-of-alexander-fragment-c",
+      "type": "catalog_description",
+      "label": "Wars of Alexander (Alexander Fragment C), abstract work",
+      "description": "The anonymous Middle English unrhymed alliterative Alexander romance, distinct from Alexander Fragments A and B and from the prose Story appended by Skeat. The schema has no abstract-work entity type, so catalog_description is used with this explicit note.",
+      "identifiers": [{"scheme": "NIMEV", "value": "*3947.3"}, {"scheme": "DIMEV", "value": "6306"}],
+      "creator_ids": ["agent:anonymous-verse-adapter"],
+      "date_statements": [{"label": "Composition", "value": "circa 1450", "normalized": "1425/1475", "certainty": "medium", "evidence_ids": ["evidence:dmer"], "notes": "Do not conflate this work-level estimate with witness copying dates."}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dmer", "evidence:middle-english-compendium", "evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "work:anonymous:story-of-alexander",
+      "type": "catalog_description",
+      "label": "The Story of Alexander, abstract prose work",
+      "description": "A separate incomplete Middle English prose epitome preserved at TCD MS 213 ff. 70v-72r and editorially titled by Skeat. The proposed relation to Caxton's second Dicts and Sayings edition remains supported rather than confirmed. The schema has no abstract-work entity type, so catalog_description is used.",
+      "creator_ids": ["agent:anonymous-prose-adapter"],
+      "date_statements": [{"label": "First known attestation", "value": "late fifteenth century", "normalized": "1450/1500", "certainty": "medium", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:dublin-witness-crosswalk", "evidence:khalaf-2021"], "notes": "This is witness attestation, not a secure composition range."}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:skeat-title-and-introduction", "evidence:khalaf-2021"]
+    },
+    {
+      "id": "witness:bodleian:ashmole-44",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library, MS Ashmole 44, ff. 1r-97v",
+      "description": "A mid-fifteenth-century northern English paper codex containing the longest and most complete witness of Wars of Alexander as its single text. The work is imperfect at the end and has a lacuna between current fols. 12 and 13.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Ashmole 44"},
+        {"scheme": "Bodleian IE Ark", "value": "ark:/29072/x0xw42n7232b"},
+        {"scheme": "Bodleian CR Ark", "value": "ark:/29072/x0xs55mb39r8"},
+        {"scheme": "Summary Catalogue", "value": "6925"}
+      ],
+      "date_statements": [{"label": "Manuscript production", "value": "1440-1460", "normalized": "1440/1460", "certainty": "high", "evidence_ids": ["evidence:bodleian-ashmole-tei"]}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Ashmole 44", "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_101"},
+      "physical_description": {"support": "paper", "extent": "ix + 97 + ix leaves; target ff. 1r-97v", "dimensions": "222-225 x 144-147 mm", "notes": ["One column, 25-34 lines; one scribe in Anglicana.", "Catalog date 1440-1460; substantially Durham or possibly south Northumberland dialect with north-west Midland features."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-ashmole-tei"]
+    },
+    {
+      "id": "witness:tcd:ms-213",
+      "type": "manuscript_witness",
+      "label": "Trinity College Dublin, IE TCD MS 213 (formerly D.4.12)",
+      "description": "A composite fifteenth-century paper codex. Wars of Alexander occupies current ff. 27r-66v; accounts and miscellanea occupy ff. 67r-70r; the separate prose Story occupies ff. 70v-72r. Skeat's restarted foliation calls the prose leaves 45v-47r.",
+      "identifiers": [{"scheme": "TCD current shelfmark", "value": "IE TCD MS 213"}, {"scheme": "TCD former shelfmark", "value": "D.4.12"}, {"scheme": "Abbott catalogue", "value": "213"}],
+      "date_statements": [{"label": "Manuscript production", "value": "late fifteenth century", "normalized": "1450/1500", "certainty": "medium", "evidence_ids": ["evidence:dmer", "evidence:abbott-1900"], "notes": "Retain the broad range pending a current item-level TCD catalog record."}],
+      "holding": {"institution_id": "agent:trinity-college-dublin-library", "shelfmark": "IE TCD MS 213", "historical_designations": ["D.4.12"], "notes": "No stable current item-level catalog URL was verified as of 2026-07-17."},
+      "physical_description": {"support": "paper", "extent": "Composite codex; target verse ff. 27r-66v and target prose ff. 70v-72r", "format": "quarto"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:abbott-1900", "evidence:skeat-title-and-introduction", "evidence:dmer", "evidence:dublin-witness-crosswalk"]
+    },
+    {
+      "id": "facsimile:bodleian:ashmole-44-one-image",
+      "type": "facsimile",
+      "label": "Digital Bodleian one-image surrogate of MS Ashmole 44",
+      "description": "A one-canvas public object showing only fol. 1r, the opening page of Wars of Alexander. It is partial to the codex and must never be described as a complete manuscript facsimile.",
+      "identifiers": [{"scheme": "Digital Bodleian object", "value": "72f3f3f4-bc78-476a-bbcb-0578d4686135", "uri": "https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/"}],
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "IIIF Presentation object with one color JPEG from a 35mm slide",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bodleian-ashmole-iiif"]
+    },
+    {
+      "id": "source:historia-de-preliis-j3a",
+      "type": "catalog_description",
+      "label": "Historia de Preliis, recension J3a, source tradition",
+      "description": "The Latin Alexander source tradition identified for the Middle English verse. This is a textual-source relation, not a claim that either surviving English codex was copied directly from a particular identified Latin manuscript.",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:dmer", "evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "print:caxton:dicts-second-edition-c1480",
+      "type": "catalog_description",
+      "label": "William Caxton's second edition of The Dicts and Sayings of the Philosophers, circa 1480",
+      "description": "Proposed printed source for the prose Story. The schema has no early-print class, so catalog_description is the deliberate print-carrier workaround; it must not be mislabeled as a scholarly editing act. The relation remains supported/medium pending direct collation and exact edition identification.",
+      "creator_ids": ["agent:william-caxton"],
+      "date_statements": [{"label": "Printing", "value": "circa 1480", "normalized": "1479/1481", "certainty": "medium", "evidence_ids": ["evidence:khalaf-2021"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:khalaf-2021"]
+    },
+    {
+      "id": "edition:stevenson:wars-of-alexander:1849",
+      "type": "scholarly_edition",
+      "label": "Joseph Stevenson, The Alliterative Romance of Alexander (1849)",
+      "description": "An earlier edition of the Ashmole witness, useful as supporting edition history but not the immediate source of the U-M encoding.",
+      "creator_ids": ["agent:joseph-stevenson"],
+      "date_statements": [{"label": "Publication", "value": "1849", "normalized": "1849", "certainty": "high", "evidence_ids": ["evidence:stevenson-1849"]}],
+      "bibliographic": {"citation": "Joseph Stevenson, ed., The Alliterative Romance of Alexander (Roxburghe Club, 1849).", "title": "The Alliterative Romance of Alexander", "publisher": "Roxburghe Club", "date": "1849", "languages": ["enm", "eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:stevenson-1849"]
+    },
+    {
+      "id": "edition:duggan-turville-petre:wars-of-alexander:1989",
+      "type": "scholarly_edition",
+      "label": "Hoyt N. Duggan and Thorlac Turville-Petre, The Wars of Alexander (EETS Supplementary Series 10, 1989)",
+      "description": "A modern scholarly edition and supporting access lead, not an ancestor of the U-M encoding. Its exact witness treatment was not directly verified, so no transcribes relation is projected from the catalog record alone.",
+      "identifiers": [{"scheme": "ISBN", "value": "9780197224106"}],
+      "creator_ids": ["agent:hoyt-n-duggan", "agent:thorlac-turville-petre"],
+      "date_statements": [{"label": "Publication", "value": "1989", "normalized": "1989", "certainty": "high", "evidence_ids": ["evidence:folger-1989"]}],
+      "bibliographic": {"citation": "Hoyt N. Duggan and Thorlac Turville-Petre, eds., The Wars of Alexander, EETS Supplementary Series 10 (Oxford University Press, 1989).", "title": "The Wars of Alexander", "series": "Early English Text Society, Supplementary Series 10", "publisher": "Oxford University Press", "date": "1989", "languages": ["enm", "eng"]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:folger-1989"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus", "urls": ["https://github.com/Kyvero-Press/General-Corpus"]},
+    {"id": "agent:university-of-michigan-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:walter-william-skeat", "type": "person", "name": "Walter William Skeat", "alternate_names": ["Walter W. Skeat"], "dates": "1835-1912"},
+    {"id": "agent:anonymous-verse-adapter", "type": "person", "name": "Anonymous Middle English poet-translator or adapter"},
+    {"id": "agent:anonymous-prose-adapter", "type": "person", "name": "Anonymous English epitomator or compiler"},
+    {"id": "agent:mr-hessels", "type": "person", "name": "Mr. Hessels", "notes": ["Skeat's source-limited display is retained; no initials or fuller identity are inferred."]},
+    {"id": "agent:george-parker", "type": "person", "name": "George Parker", "notes": ["Recorded exactly as named by Skeat; authority normalization remains open."]},
+    {"id": "agent:kraus-reprint-company", "type": "organization", "name": "Kraus Reprint Co."},
+    {"id": "agent:warburg-institute-library", "type": "organization", "name": "Warburg Institute Library", "urls": ["https://warburg.sas.ac.uk/library"]},
+    {"id": "agent:bodleian-libraries", "type": "organization", "name": "Bodleian Libraries, University of Oxford", "urls": ["https://www.bodleian.ox.ac.uk/"]},
+    {"id": "agent:trinity-college-dublin-library", "type": "organization", "name": "The Library of Trinity College Dublin", "urls": ["https://www.tcd.ie/library/"]},
+    {"id": "agent:william-caxton", "type": "person", "name": "William Caxton"},
+    {"id": "agent:joseph-stevenson", "type": "person", "name": "Joseph Stevenson"},
+    {"id": "agent:hoyt-n-duggan", "type": "person", "name": "Hoyt N. Duggan"},
+    {"id": "agent:thorlac-turville-petre", "type": "person", "name": "Thorlac Turville-Petre"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich", "type": "copied_from", "subject": "artifact:general-corpus:apa1967", "object": "encoding:umich:APA1967.0001.001",
+      "scope": {"subject": {"kind": "whole", "description": "Whole pinned XML artifact"}, "object": {"kind": "whole", "description": "Whole raw U-M XML after documented generated-attribute normalization"}, "notes": "Canonicalized structure and text compare equal after removing generated identifiers and the processing-profile value."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:raw-package", "evidence:xml-computation"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-skeat", "type": "encoded_from", "subject": "encoding:umich:APA1967.0001.001", "object": "edition:skeat:wars-of-alexander:1886",
+      "scope": {"subject": {"kind": "whole", "description": "Encoded selection including title matter, verse, editorial ending, argument, prose Story, notes, and page links"}, "object": {"kind": "selected_passages", "description": "Selected title matter and printed pp. 1-283, with omitted text represented by page breaks", "locators": ["title TIFF 1-2", "printed pp. 1-283", "TIFF 23-305"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:raw-package", "evidence:xml-computation"]}
+    },
+    {
+      "id": "relation:umich-tiffs-facsimile-of-skeat", "type": "facsimile_of", "subject": "facsimile:umich:APA1967.0001.001-tiffs", "object": "edition:skeat:wars-of-alexander:1886",
+      "scope": {"subject": {"kind": "whole", "description": "Complete provider-published 506-image scan object"}, "object": {"kind": "whole", "description": "Printed-volume carrier represented by the U-M scan"}, "notes": "This is not a claim that every binding surface was photographed."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]}
+    },
+    {
+      "id": "relation:kraus-reprint-copied-from-skeat", "type": "copied_from", "subject": "edition:kraus:unaltered-reprint-skeat", "object": "edition:skeat:wars-of-alexander:1886",
+      "scope": {"subject": {"kind": "whole", "description": "Whole Kraus print carrier"}, "object": {"kind": "whole", "description": "Whole 1886 edition"}, "notes": "The Kraus preliminary statement describes the reprint as unaltered."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-warburg"]}
+    },
+    {
+      "id": "relation:warburg-pdf-facsimile-of-kraus-reprint", "type": "facsimile_of", "subject": "facsimile:warburg:kraus-skeat-pdf", "object": "edition:kraus:unaltered-reprint-skeat",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 512-page provider PDF"}, "object": {"kind": "whole", "description": "Whole Kraus reprint carrier"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-warburg"]}
+    },
+    {
+      "id": "relation:raw-package-contains-encoding", "type": "contains", "subject": "package:umich:APA1967.0001.001-raw", "object": "encoding:umich:APA1967.0001.001",
+      "scope": {"subject": {"kind": "part", "description": "Five non-image support members", "locators": ["apa1967.0001.001.xml", "apa1967.0001.001.txt", "apa1967.0001.001.hdr", "pageview.dat", "loadcd.log"]}, "object": {"kind": "whole", "description": "Raw XML, OCR text, header, and processing support for the encoding"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]}
+    },
+    {
+      "id": "relation:raw-package-contains-tiff-facsimile", "type": "contains", "subject": "package:umich:APA1967.0001.001-raw", "object": "facsimile:umich:APA1967.0001.001-tiffs",
+      "scope": {"subject": {"kind": "part", "description": "All 506 TIFF members"}, "object": {"kind": "whole", "description": "Complete 506-image TIFF facsimile payload"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]}
+    },
+    {
+      "id": "relation:skeat-version-of-wars", "type": "version_of", "subject": "edition:skeat:wars-of-alexander:1886", "object": "work:anonymous:wars-of-alexander-fragment-c",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Medieval verse only; exclude Skeat's ending paraphrase", "locators": ["printed pp. 1-276"]}, "object": {"kind": "whole", "description": "Wars of Alexander (Alexander Fragment C)"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:dmer", "evidence:repository-xml"]}
+    },
+    {
+      "id": "relation:skeat-version-of-story", "type": "version_of", "subject": "edition:skeat:wars-of-alexander:1886", "object": "work:anonymous:story-of-alexander",
+      "scope": {"subject": {"kind": "selected_passages", "description": "The Story of Alexander; exclude Skeat's argument", "locators": ["printed pp. 279-283"]}, "object": {"kind": "whole", "description": "Separate incomplete prose work"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:repository-xml"]}
+    },
+    {
+      "id": "relation:skeat-transcribes-ashmole", "type": "transcribes", "subject": "edition:skeat:wars-of-alexander:1886", "object": "witness:bodleian:ashmole-44",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Ashmole verse stream in Skeat's edition"}, "object": {"kind": "selected_passages", "description": "Wars of Alexander", "locators": ["ff. 1r-97v"]}, "notes": "George Parker collated Ashmole readings for Skeat."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:bodleian-ashmole-tei"]}
+    },
+    {
+      "id": "relation:skeat-transcribes-dublin-verse", "type": "transcribes", "subject": "edition:skeat:wars-of-alexander:1886", "object": "witness:tcd:ms-213",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Overlapping Dublin verse stream and Dublin supply for the Ashmole lacuna"}, "object": {"kind": "selected_passages", "description": "Wars of Alexander", "locators": ["current ff. 27r-66v"]}, "notes": "The Dublin stream overlaps Ashmole and is not an additive second half."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:dmer", "evidence:dublin-witness-crosswalk"]}
+    },
+    {
+      "id": "relation:skeat-transcribes-dublin-story", "type": "transcribes", "subject": "edition:skeat:wars-of-alexander:1886", "object": "witness:tcd:ms-213",
+      "scope": {"subject": {"kind": "selected_passages", "description": "The Story of Alexander", "locators": ["printed pp. 279-283"]}, "object": {"kind": "selected_passages", "description": "Separate prose Story", "locators": ["current ff. 70v-72r", "Skeat restarted ff. 45v-47r"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:repository-xml", "evidence:dublin-witness-crosswalk"]}
+    },
+    {
+      "id": "relation:ashmole-contains-wars", "type": "contains", "subject": "witness:bodleian:ashmole-44", "object": "work:anonymous:wars-of-alexander-fragment-c",
+      "scope": {"subject": {"kind": "whole", "description": "The codex's single text", "locators": ["ff. 1r-97v"]}, "object": {"kind": "whole", "description": "Wars of Alexander (Fragment C)"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-ashmole-tei", "evidence:dmer"]}
+    },
+    {
+      "id": "relation:dublin-contains-wars", "type": "contains", "subject": "witness:tcd:ms-213", "object": "work:anonymous:wars-of-alexander-fragment-c",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Verse witness", "locators": ["current ff. 27r-66v"]}, "object": {"kind": "whole", "description": "Wars of Alexander (Fragment C)"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dmer", "evidence:skeat-title-and-introduction", "evidence:abbott-1900"]}
+    },
+    {
+      "id": "relation:dublin-contains-story", "type": "contains", "subject": "witness:tcd:ms-213", "object": "work:anonymous:story-of-alexander",
+      "scope": {"subject": {"kind": "selected_passages", "description": "Prose witness separated from the verse by accounts and miscellanea", "locators": ["current ff. 70v-72r"]}, "object": {"kind": "whole", "description": "Separate prose Story of Alexander"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:khalaf-2021", "evidence:dublin-witness-crosswalk"]}
+    },
+    {
+      "id": "relation:bodleian-one-image-facsimile-of-ashmole", "type": "facsimile_of", "subject": "facsimile:bodleian:ashmole-44-one-image", "object": "witness:bodleian:ashmole-44",
+      "scope": {"subject": {"kind": "whole", "description": "The complete one-canvas public digital object"}, "object": {"kind": "selected_passages", "description": "One leaf of the 97-leaf codex", "locators": ["fol. 1r"]}, "notes": "The digital object is complete as one canvas but partial to the physical codex."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bodleian-ashmole-iiif", "evidence:bodleian-ashmole-tei"]}
+    },
+    {
+      "id": "relation:wars-version-of-historia-j3a", "type": "version_of", "subject": "work:anonymous:wars-of-alexander-fragment-c", "object": "source:historia-de-preliis-j3a",
+      "scope": {"subject": {"kind": "whole", "description": "Middle English Wars of Alexander (Fragment C)"}, "object": {"kind": "whole", "description": "Historia de Preliis J3a textual source tradition"}, "notes": "This is not a known direct physical-exemplar relation."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:dmer", "evidence:skeat-title-and-introduction"]}
+    },
+    {
+      "id": "relation:story-excerpted-from-caxton-second", "type": "excerpted_from", "subject": "work:anonymous:story-of-alexander", "object": "print:caxton:dicts-second-edition-c1480",
+      "scope": {"subject": {"kind": "whole", "description": "Incomplete prose Story preserved at TCD MS 213 ff. 70v-72r"}, "object": {"kind": "selected_passages", "description": "Proposed source passage in Caxton's second Dicts and Sayings edition"}},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:khalaf-2021"], "notes": "Khalaf reports the scholarly view and cites Blake 1991; direct collation and exact-edition verification remain open."}
+    },
+    {
+      "id": "relation:stevenson-transcribes-ashmole", "type": "transcribes", "subject": "edition:stevenson:wars-of-alexander:1849", "object": "witness:bodleian:ashmole-44",
+      "scope": {"subject": {"kind": "whole", "description": "Earlier Ashmole-only edition"}, "object": {"kind": "selected_passages", "description": "Wars of Alexander", "locators": ["ff. 1r-97v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:stevenson-1849"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-artifact-pinned", "entity": "artifact:general-corpus:apa1967", "provider_id": "agent:general-corpus", "resource_kind": "repository_file", "status": "publicly_available",
+      "access_method": "Pinned raw GitHub file and repository view",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml",
+      "alternate_urls": ["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml"],
+      "repository_path": "CME/source/CME_phase_1-2/apa1967.xml", "cost": "free", "format": "XML", "last_checked": "2026-07-17", "evidence_ids": ["evidence:repository-xml"]
+    },
+    {
+      "id": "access:repository-raw-audit", "entity": "artifact:general-corpus:apa1967", "provider_id": "agent:general-corpus", "resource_kind": "repository_file", "status": "local_only",
+      "access_method": "Generated comparison audit stored in the ignored source cache",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml",
+      "alternate_urls": ["https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip"],
+      "local_copies": [{
+        "label": "APA1967 raw encoding comparison audit", "path": "source-cache/apa1967/apa1967-raw-encoding-audit.json",
+        "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml",
+        "sha256": "efad063814fd78a72603cd0b403c3a307810bb9f1b7a45dec12feb900e2658a0", "bytes": 8350, "media_type": "application/json", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "target_work_presence": "absent",
+        "notes": ["Generated audit; source_url identifies the primary input, not a download location. The audit contains structural results rather than the target text."]
+      }],
+      "cost": "not_applicable", "format": "JSON audit", "last_checked": "2026-07-17", "evidence_ids": ["evidence:repository-xml", "evidence:raw-package", "evidence:xml-computation"]
+    },
+    {
+      "id": "access:umich-raw-package", "entity": "package:umich:APA1967.0001.001-raw", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available",
+      "access_method": "Direct ZIP download",
+      "url": "https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": ["https://archive.org/details/apa1967.0001.001.umich.edu"],
+      "local_copies": [{
+        "label": "Complete U-M raw package", "path": "source-cache/apa1967/umich-apa1967-complete-raw-package.zip",
+        "source_url": "https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip",
+        "sha256": "6f581b1c146dfd8e62db177e5ebd80f9ae6aa9d1fe059190d236c36f370aa901", "bytes": 39670711, "media_type": "application/zip", "downloaded_on": "2026-07-17", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 511, "target_work_presence": "present",
+        "work_portion": {"label": "The complete encoded selection and its printed-volume page images", "locators": ["title matter TIFF 1-2", "Wars of Alexander printed pp. 1-279 / TIFF 23-301; medieval verse ends p. 276 / TIFF 298 and editorial paraphrase continues", "The Story of Alexander printed pp. 279-283 / TIFF 301-305"], "notes": ["The package also contains omitted front and back page images through TIFF 506."]},
+        "notes": ["ZIP integrity and the 511-member inventory were verified."]
+      }],
+      "cost": "free", "format": "ZIP: 506 TIFFs plus five support files", "last_checked": "2026-07-17", "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"]
+    },
+    {
+      "id": "access:umich-raw-package-metadata", "entity": "package:umich:APA1967.0001.001-raw", "provider_id": "agent:internet-archive", "resource_kind": "catalog_record", "status": "publicly_available",
+      "access_method": "Internet Archive metadata API",
+      "url": "https://archive.org/metadata/apa1967.0001.001.umich.edu",
+      "alternate_urls": ["https://archive.org/details/apa1967.0001.001.umich.edu"],
+      "local_copies": [{"label": "Internet Archive item metadata", "path": "source-cache/apa1967/umich-apa1967-ia-metadata.json", "source_url": "https://archive.org/metadata/apa1967.0001.001.umich.edu", "sha256": "04617e98c3c39a18b82e189c8fb7edd4bf660f36ce7942dbab1fadf92f754626", "bytes": 1966, "media_type": "application/json", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["Provider metadata does not contain the target text or images."]}],
+      "cost": "free", "format": "JSON", "last_checked": "2026-07-17", "evidence_ids": ["evidence:ia-package-metadata"]
+    },
+    {
+      "id": "access:umich-current-item", "entity": "encoding:umich:APA1967.0001.001", "provider_id": "agent:university-of-michigan-library", "resource_kind": "digital_text", "status": "publicly_available",
+      "access_method": "U-M Digital Collections browser",
+      "url": "https://quod.lib.umich.edu/c/cme/apa1967.0001.001/1%3AAPA1967.0001.001?view=toc", "alternate_urls": ["https://name.umdl.umich.edu/apa1967.0001.001"],
+      "cost": "free", "format": "HTML text view", "last_checked": "2026-07-17", "evidence_ids": ["evidence:umich-current-item"]
+    },
+    {
+      "id": "access:umich-raw-encoding-in-package", "entity": "encoding:umich:APA1967.0001.001", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available",
+      "access_method": "Extract the XML payload from the complete raw ZIP",
+      "url": "https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip",
+      "cost": "free", "format": "XML inside ZIP", "last_checked": "2026-07-17", "evidence_ids": ["evidence:raw-package", "evidence:xml-computation"],
+      "notes": ["The cached ZIP is recorded once on the package entity; this access row projects the contained raw-encoding route without duplicating the local-copy record."]
+    },
+    {
+      "id": "access:umich-tiff-page-images", "entity": "facsimile:umich:APA1967.0001.001-tiffs", "provider_id": "agent:university-of-michigan-library", "resource_kind": "page_images", "status": "publicly_available",
+      "access_method": "U-M page-image browser; complete TIFF payload also contained in the raw ZIP",
+      "url": "https://quod.lib.umich.edu/c/cme/apa1967.0001.001/1%3AAPA1967.0001.001?view=toc", "alternate_urls": ["https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip"],
+      "cost": "free", "format": "Browser page images and TIFFs in ZIP", "last_checked": "2026-07-17", "evidence_ids": ["evidence:umich-current-item", "evidence:raw-package"]
+    },
+    {
+      "id": "access:skeat-ia", "entity": "edition:skeat:wars-of-alexander:1886", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available",
+      "access_method": "Internet Archive item and derivatives",
+      "url": "https://archive.org/details/warsofalexandera00leoarich", "cost": "free", "format": "Multiple scan derivatives", "last_checked": "2026-07-17", "evidence_ids": ["evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "access:skeat-warburg", "entity": "facsimile:warburg:kraus-skeat-pdf", "provider_id": "agent:warburg-institute-library", "resource_kind": "download", "status": "publicly_available",
+      "access_method": "Direct PDF download",
+      "url": "https://resources.warburg.sas.ac.uk/pdf/neh2420b2329987.pdf",
+      "local_copies": [{
+        "label": "Complete Warburg PDF of the Kraus reprint", "path": "source-cache/apa1967/skeat-1886-wars-of-alexander-warburg.pdf", "source_url": "https://resources.warburg.sas.ac.uk/pdf/neh2420b2329987.pdf",
+        "sha256": "878e9247514c4c4149e00ed684a66f53b42b191c01267df14eeeee5417a0e5a8", "bytes": 27665372, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 1, "target_work_presence": "present",
+        "work_portion": {"label": "Skeat's edited selection inside the complete 512-page reprint scan", "locators": ["Kraus title page PDF 5", "unaltered-reprint statement PDF 6", "original 1886 title page PDF 9", "printed pp. 1-283 at PDF 31-313"]},
+        "notes": ["qpdf reported no syntax or stream-encoding errors."]
+      }],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-17", "evidence_ids": ["evidence:skeat-warburg"]
+    },
+    {
+      "id": "access:ashmole-catalog", "entity": "witness:bodleian:ashmole-44", "provider_id": "agent:bodleian-libraries", "resource_kind": "catalog_record", "status": "publicly_available",
+      "access_method": "Pinned Bodleian manuscript-catalog TEI",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/30eeba18af5a67e9585a2477b48a0847607228a3/collections/Ashmole/MS_Ashmole_44.xml", "alternate_urls": ["https://medieval.bodleian.ox.ac.uk/catalog/manuscript_101"],
+      "local_copies": [{"label": "Pinned Bodleian catalog TEI for MS Ashmole 44", "path": "source-cache/apa1967/bodleian-ms-ashmole-44-catalog-tei.xml", "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/30eeba18af5a67e9585a2477b48a0847607228a3/collections/Ashmole/MS_Ashmole_44.xml", "sha256": "fc2e375e401b8d211dd61e9a5c73df1675a42ab5f867753587706ae9d1bdf436", "bytes": 18091, "media_type": "application/xml", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["Catalog metadata describes the target but does not reproduce its text or manuscript images."]}],
+      "cost": "free", "format": "TEI XML", "last_checked": "2026-07-17", "evidence_ids": ["evidence:bodleian-ashmole-tei"]
+    },
+    {
+      "id": "access:ashmole-public-partial", "entity": "facsimile:bodleian:ashmole-44-one-image", "provider_id": "agent:bodleian-libraries", "resource_kind": "page_images", "status": "publicly_available",
+      "access_method": "IIIF Presentation manifest and Digital Bodleian object",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/72f3f3f4-bc78-476a-bbcb-0578d4686135.json", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/"],
+      "local_copies": [{
+        "label": "Digital Bodleian one-image IIIF bundle", "path": "source-cache/apa1967/bodleian-ms-ashmole-44-one-image-iiif.zip", "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/72f3f3f4-bc78-476a-bbcb-0578d4686135.json",
+        "sha256": "446598dc17e0da9613814688022e2ed188682056f9a695efa7c824c0162196a0", "bytes": 2682159, "media_type": "application/zip", "downloaded_on": "2026-07-17", "coverage": "partial", "retrieval_method": "iiif_bundle", "source_file_count": 1, "bundle_source_kind": "iiif_presentation_manifest", "target_work_presence": "present",
+        "work_portion": {"label": "Opening page of Wars of Alexander", "locators": ["MS Ashmole 44 fol. 1r", "IIIF canvas 1"], "start_url": "https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/", "end_url": "https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/", "notes": ["The target incipit is present, but the object supplies only one leaf of the codex."]},
+        "notes": ["Complete as a one-canvas provider object but partial to the 97-leaf codex."]
+      }],
+      "cost": "free", "format": "One-image IIIF bundle", "last_checked": "2026-07-17", "evidence_ids": ["evidence:bodleian-ashmole-iiif"]
+    },
+    {
+      "id": "access:ashmole-complete-public-search", "entity": "witness:bodleian:ashmole-44", "provider_id": "agent:bodleian-libraries", "resource_kind": "page_images", "status": "no_public_copy_found",
+      "access_method": "Bodleian catalog and Digital Bodleian item-level search",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_101", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/"],
+      "cost": "unknown", "format": "No complete public object verified", "last_checked": "2026-07-17", "evidence_ids": ["evidence:bodleian-ashmole-tei", "evidence:bodleian-ashmole-iiif"],
+      "notes": ["The only verified public image object supplies fol. 1r. This dated negative finding is not a permanent claim of non-digitisation."]
+    },
+    {
+      "id": "access:ashmole-complete-request", "entity": "witness:bodleian:ashmole-44", "provider_id": "agent:bodleian-libraries", "resource_kind": "reproduction_order", "status": "requestable",
+      "access_method": "Mediated copying or Imaging Services whole-object request",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+      "alternate_urls": ["https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images", "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf"],
+      "local_copies": [{"label": "Bodleian Imaging Services Terms of Use", "path": "source-cache/apa1967/bodleian-imaging-services-terms-of-use.pdf", "source_url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf", "sha256": "4501e14f8012e779834860e8473f0f54e2f37a920aea7f9ad5f7c0116d74c2b2", "bytes": 182014, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["Service terms do not reproduce the target work."]}],
+      "contact": "mediated.copying@bodleian.ox.ac.uk", "cost": "fee", "format": "Reference PDF or high-resolution color images by quotation", "last_checked": "2026-07-17", "evidence_ids": ["evidence:bodleian-mediated-copying", "evidence:bodleian-imaging-terms"],
+      "notes": ["Request the whole codex, including covers or boards, spine, pastedowns, flyleaves, blanks, and all folios; identify target ff. 1r-97v.", "Published mediated copying says GBP 1 per scan; high-resolution work has separate minimum and per-image charges. Obtain a whole-object quote."]
+    },
+    {
+      "id": "access:tcd-historical-catalog", "entity": "witness:tcd:ms-213", "provider_id": "agent:trinity-college-dublin-library", "resource_kind": "catalog_record", "status": "publicly_available",
+      "access_method": "Internet Archive PDF of Abbott's 1900 institutional catalog",
+      "url": "https://archive.org/download/cataloguemanusc00abbogoog/cataloguemanusc00abbogoog.pdf",
+      "local_copies": [{"label": "Abbott 1900 Trinity manuscript catalog", "path": "source-cache/apa1967/abbott-1900-trinity-manuscripts-catalogue.pdf", "source_url": "https://archive.org/download/cataloguemanusc00abbogoog/cataloguemanusc00abbogoog.pdf", "sha256": "e371b8e4de6d9bfdb46287bcae50c849dd5bf96e23e050f3b231b516e1650e5d", "bytes": 31938494, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["The catalog describes MS 213 but does not reproduce the target text or manuscript images."]}],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-17", "evidence_ids": ["evidence:abbott-1900"]
+    },
+    {
+      "id": "access:story-khalaf-source-study", "entity": "work:anonymous:story-of-alexander", "resource_kind": "digital_text", "status": "publicly_available",
+      "access_method": "Direct scholarly chapter PDF",
+      "url": "https://www.research.unipd.it/retrieve/e14fb26f-4fa3-3de1-e053-1705fe0ac030/Khalaf_Vezzosi_Eng_P02-3.pdf",
+      "local_copies": [{"label": "Khalaf chapter supporting the proposed Caxton relation", "path": "source-cache/apa1967/khalaf-vezzosi-patronage-print-education-gentry.pdf", "source_url": "https://www.research.unipd.it/retrieve/e14fb26f-4fa3-3de1-e053-1705fe0ac030/Khalaf_Vezzosi_Eng_P02-3.pdf", "sha256": "f85cb402ff6c0393d3322d4891c89592f68a68398440bcc65de2e260b8285d07", "bytes": 152064, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["The chapter discusses the proposed source relationship but does not reproduce the Story of Alexander."]}],
+      "cost": "free", "format": "PDF", "last_checked": "2026-07-17", "evidence_ids": ["evidence:khalaf-2021"]
+    },
+    {
+      "id": "access:tcd-complete-public-search", "entity": "witness:tcd:ms-213", "provider_id": "agent:trinity-college-dublin-library", "resource_kind": "page_images", "status": "no_public_copy_found",
+      "access_method": "Official digitised-manuscripts list and direct identifier search",
+      "url": "https://www.tcd.ie/library/research-collections/projects/medieval/manuscripts.php", "alternate_urls": ["https://www.tcd.ie/library/research-collections/manuscripts.php"],
+      "cost": "unknown", "format": "No public image object verified", "last_checked": "2026-07-17", "evidence_ids": ["evidence:tcd-digitised-manuscripts-list", "evidence:tcd-research-collections"],
+      "notes": ["MS 213 was absent from the official public list, and no stable Digital Collections object or IIIF manifest was verified. This is a dated negative finding."]
+    },
+    {
+      "id": "access:tcd-complete-request", "entity": "witness:tcd:ms-213", "provider_id": "agent:trinity-college-dublin-library", "resource_kind": "reproduction_order", "status": "requestable",
+      "access_method": "Digital Collections image request",
+      "url": "https://www.tcd.ie/library/dris/services.php",
+      "alternate_urls": ["https://www.tcd.ie/library/assets/pdf/TCD%20Digital%20Collections%20Image%20Request%20Form.pdf", "https://www.tcd.ie/library/assets/pdf/Digital%20Collections%20Services%20Price%20list%202023.pdf", "https://www.tcd.ie/library/research-collections/manuscripts.php"],
+      "local_copies": [
+        {"label": "TCD Digital Collections Image Request Form", "path": "source-cache/apa1967/tcd-digital-collections-image-request-form.pdf", "source_url": "https://www.tcd.ie/library/assets/pdf/TCD%20Digital%20Collections%20Image%20Request%20Form.pdf", "sha256": "e47c86bf556484787547f084ad75e9b5339ac9ee88388b9e5e8ba30935fac9db", "bytes": 264717, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["The request form does not reproduce the target work."]},
+        {"label": "TCD Digital Collections Services Price List 2023", "path": "source-cache/apa1967/tcd-digital-collections-price-list-2023.pdf", "source_url": "https://www.tcd.ie/library/assets/pdf/Digital%20Collections%20Services%20Price%20list%202023.pdf", "sha256": "9451581e5d303a3d22b258c1f7291bc6e8d2922057f02ecc3d06c87cf2604ac3", "bytes": 219062, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["The price list does not reproduce the target work and is dated rather than guaranteed current pricing."]}
+      ],
+      "contact": "Digital.Collections@tcd.ie; manuscript enquiries: rescoll@tcd.ie", "cost": "fee", "format": "Digital images by request", "last_checked": "2026-07-17", "evidence_ids": ["evidence:tcd-imaging-services", "evidence:tcd-request-form", "evidence:tcd-price-list", "evidence:tcd-research-collections"],
+      "notes": ["Request the complete codex under current shelfmark IE TCD MS 213, including binding surfaces, endleaves, blanks, and every folio; identify verse ff. 27r-66v and prose ff. 70v-72r.", "The cached 2023 schedule lists EUR 25 setup/first image plus EUR 2 per additional image, VAT excluded; obtain a current whole-object quote and allow at least three weeks."]
+    },
+    {
+      "id": "access:tcd-rights-policy", "entity": "witness:tcd:ms-213", "provider_id": "agent:trinity-college-dublin-library", "resource_kind": "repository_enquiry", "status": "publicly_available",
+      "access_method": "Official open-licensing policy and rights page",
+      "url": "https://www.tcd.ie/media/tcd/about/policies/pdfs/open-licensing-library-digitised-content-policy.pdf", "alternate_urls": ["https://www.tcd.ie/library/dris/copyright.php"],
+      "local_copies": [{"label": "TCD open-licensing policy, version 1.0 (2025)", "path": "source-cache/apa1967/tcd-open-licensing-library-digitised-content-policy-2025.pdf", "source_url": "https://www.tcd.ie/media/tcd/about/policies/pdfs/open-licensing-library-digitised-content-policy.pdf", "sha256": "8570d9c09fba7c078514d6225fc7f9544857c953b0339c58e0a0e4958468fc9c", "bytes": 477155, "media_type": "application/pdf", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "retrieval_method": "direct_download", "target_work_presence": "absent", "notes": ["The policy describes general licensing rules and does not reproduce the target work or supply an item-level MS 213 license."]}],
+      "contact": "Digital.Collections@tcd.ie", "cost": "free", "format": "PDF policy and HTML rights page", "last_checked": "2026-07-17", "evidence_ids": ["evidence:tcd-open-licensing-policy", "evidence:tcd-rights-page", "evidence:tcd-request-form"]
+    },
+    {
+      "id": "access:tcd-crosswalk-audit", "entity": "witness:tcd:ms-213", "provider_id": "agent:general-corpus", "resource_kind": "repository_file", "status": "local_only",
+      "access_method": "Generated foliation and content crosswalk stored in the ignored source cache",
+      "url": "https://archive.org/details/warsofalexandera00leoarich",
+      "alternate_urls": ["https://www.middleenglishromance.org.uk/romances/wars-alexander-alexander-fragment-c", "https://archive.org/download/cataloguemanusc00abbogoog/cataloguemanusc00abbogoog.pdf", "https://www.research.unipd.it/retrieve/e14fb26f-4fa3-3de1-e053-1705fe0ac030/Khalaf_Vezzosi_Eng_P02-3.pdf"],
+      "local_copies": [{"label": "APA1967 Dublin witness foliation and content crosswalk", "path": "source-cache/apa1967/apa1967-dublin-witness-crosswalk.json", "source_url": "https://archive.org/details/warsofalexandera00leoarich", "sha256": "6cc32858efadff2e9cd247785e653eb362855d70cd94255538dec82cb799df33", "bytes": 3846, "media_type": "application/json", "downloaded_on": "2026-07-17", "coverage": "metadata_only", "target_work_presence": "absent", "notes": ["Generated audit; source_url identifies the primary input, not a download location. The audit contains locators and conclusions rather than the target text."]}],
+      "cost": "not_applicable", "format": "JSON audit", "last_checked": "2026-07-17", "evidence_ids": ["evidence:dublin-witness-crosswalk", "evidence:skeat-title-and-introduction", "evidence:dmer", "evidence:abbott-1900", "evidence:khalaf-2021"]
+    },
+    {
+      "id": "access:stevenson-1849", "entity": "edition:stevenson:wars-of-alexander:1849", "provider_id": "agent:internet-archive", "resource_kind": "download", "status": "publicly_available",
+      "access_method": "Internet Archive item and derivatives", "url": "https://archive.org/details/TheAlliterativeRomanceOfAlexander/", "cost": "free", "format": "Scan derivatives", "last_checked": "2026-07-17", "evidence_ids": ["evidence:stevenson-1849"]
+    },
+    {
+      "id": "access:folger-modern-edition", "entity": "edition:duggan-turville-petre:wars-of-alexander:1989", "resource_kind": "catalog_record", "status": "publicly_available",
+      "access_method": "Folger catalog record", "url": "https://catalog.folger.edu/record/77480", "cost": "free", "format": "Catalog record; library or purchase access to the edition", "last_checked": "2026-07-17", "evidence_ids": ["evidence:folger-1989"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:artifact-general-corpus", "entity": "artifact:general-corpus:apa1967", "access_id": "access:repository-artifact-pinned", "component": "Exact pinned General Corpus/CME XML artifact", "jurisdiction": "United States; provider and repository terms",
+      "copyright_status": "unknown", "as_of": "2026-07-17",
+      "basis": "U-M currently labels the hosted materials public domain/No Copyright - United States, while the inherited raw header retains a conditional copyright notice and the CME Unlicense expressly speaks of software. No broader artifact license is inferred across text, data, and markup layers.",
+      "contract_terms_status": "unknown", "confidence": "medium", "evidence_ids": ["evidence:repository-xml", "evidence:umich-current-item", "evidence:cme-license"],
+      "notes": ["The separate provider and repository statements are preserved rather than collapsed into one license conclusion."]
+    },
+    {
+      "id": "rights:umich-raw-package", "entity": "package:umich:APA1967.0001.001-raw", "access_id": "access:umich-raw-package", "component": "Raw distribution package as delivered, including images, XML, OCR, header, and support files", "jurisdiction": "United States; provider terms",
+      "copyright_status": "copyright_may_apply", "as_of": "2026-07-17",
+      "basis": "The embedded legacy header says use is subject to copyright where applicable and limits copying to scholarship and research unless permission is obtained; the Internet Archive item supplies no verified item-level license overriding that package statement.",
+      "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:raw-package", "evidence:ia-package-metadata"],
+      "notes": ["This historical provider layer is distinct from the current U-M public-domain display."]
+    },
+    {
+      "id": "rights:umich-encoding-current", "entity": "encoding:umich:APA1967.0001.001", "access_id": "access:umich-current-item", "component": "Current U-M hosted digital text and encoding", "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright", "as_of": "2026-07-17",
+      "basis": "The current U-M browser states that the materials are in the public domain and displays the RightsStatements.org No Copyright - United States designation.",
+      "asserted_by_id": "agent:university-of-michigan-library", "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:umich-current-item"],
+      "notes": ["Retain alongside the older raw-header statement; this record does not erase the historical distribution layer."]
+    },
+    {
+      "id": "rights:umich-tiffs-current", "entity": "facsimile:umich:APA1967.0001.001-tiffs", "access_id": "access:umich-tiff-page-images", "component": "Current U-M page-image presentation and the provider TIFF scan layer", "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright", "as_of": "2026-07-17",
+      "basis": "The current U-M item applies its public-domain/No Copyright - United States statement to the hosted materials. No separate item-level license for the historical raw ZIP was verified.",
+      "asserted_by_id": "agent:university-of-michigan-library", "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/", "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:umich-current-item", "evidence:raw-package"]
+    },
+    {
+      "id": "rights:skeat-1886-edition", "entity": "edition:skeat:wars-of-alexander:1886", "access_id": "access:skeat-ia", "component": "Skeat's 1886 editorial text and arrangement", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "Published in 1886 and therefore in the public domain in the United States.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "rights:kraus-reprint-carrier", "entity": "edition:kraus:unaltered-reprint-skeat", "component": "Undated Kraus reprint carrier and any carrier-specific presentation", "jurisdiction": "United States and provider jurisdiction",
+      "copyright_status": "copyright_may_apply", "as_of": "2026-07-17", "basis": "The reprint is undated and no item-level license or evidence establishing the legal status of carrier-specific presentation was verified, even though its underlying 1886 editorial text is public domain in the United States.",
+      "contract_terms_status": "unknown", "confidence": "low", "evidence_ids": ["evidence:skeat-warburg"]
+    },
+    {
+      "id": "rights:warburg-pdf", "entity": "facsimile:warburg:kraus-skeat-pdf", "access_id": "access:skeat-warburg", "component": "Warburg provider PDF scan and OCR layer", "jurisdiction": "United Kingdom; provider terms",
+      "copyright_status": "unknown", "as_of": "2026-07-17", "basis": "The PDF is publicly downloadable, but no item-level open license for the scan or OCR layer was verified. Public access alone is not reuse permission.",
+      "contract_terms_status": "provider_terms_apply", "confidence": "medium", "evidence_ids": ["evidence:skeat-warburg"]
+    },
+    {
+      "id": "rights:wars-abstract-work", "entity": "work:anonymous:wars-of-alexander-fragment-c", "component": "Underlying medieval Middle English work", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The anonymous medieval work predates modern copyright protection.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:dmer", "evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "rights:story-abstract-work", "entity": "work:anonymous:story-of-alexander", "component": "Underlying medieval Middle English prose work", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The anonymous medieval work is attested in a late-fifteenth-century witness and predates modern copyright protection.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:khalaf-2021"]
+    },
+    {
+      "id": "rights:ashmole-medieval-text", "entity": "witness:bodleian:ashmole-44", "component": "Underlying medieval manuscript text and historical codex contents", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The fifteenth-century manuscript text predates modern copyright protection; this does not determine rights or contract terms in modern reproductions.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:bodleian-ashmole-tei"]
+    },
+    {
+      "id": "rights:ashmole-future-ordered-images", "entity": "witness:bodleian:ashmole-44", "access_id": "access:ashmole-complete-request", "component": "Any future Bodleian ordered images of MS Ashmole 44", "jurisdiction": "United Kingdom; Bodleian service terms",
+      "copyright_status": "copyright_may_apply", "as_of": "2026-07-17", "basis": "Imaging-service terms and publication categories apply; commercial use requires permission and may incur fees. No terms for a future whole-codex delivery have been granted.",
+      "asserted_by_id": "agent:bodleian-libraries", "contract_terms_status": "permission_required", "confidence": "high", "evidence_ids": ["evidence:bodleian-imaging-terms", "evidence:bodleian-mediated-copying"],
+      "notes": ["Ask specifically about public Git redistribution, preservation/reference use, and a repository supporting commercial as well as noncommercial print-on-demand."]
+    },
+    {
+      "id": "rights:tcd-medieval-text", "entity": "witness:tcd:ms-213", "component": "Underlying medieval manuscript texts and historical codex contents", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The fifteenth-century manuscript texts predate modern copyright protection; this does not determine rights in future digital surrogates.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:abbott-1900", "evidence:khalaf-2021"]
+    },
+    {
+      "id": "rights:tcd-future-ordered-images", "entity": "witness:tcd:ms-213", "access_id": "access:tcd-rights-policy", "component": "Any future TCD ordered images of IE TCD MS 213", "jurisdiction": "Ireland; TCD service and licensing terms",
+      "copyright_status": "unknown", "as_of": "2026-07-17", "basis": "TCD's 2025 policy makes CC BY 4.0 the default for qualifying out-of-copyright Library-created surrogates absent conflicts, but no item-level license for MS 213 or future order files was verified.",
+      "asserted_by_id": "agent:trinity-college-dublin-library", "contract_terms_status": "permission_required", "confidence": "medium", "evidence_ids": ["evidence:tcd-open-licensing-policy", "evidence:tcd-rights-page", "evidence:tcd-request-form"],
+      "notes": ["Obtain written item-specific permission before redistribution, especially in a Git repository supporting commercial print-on-demand."]
+    },
+    {
+      "id": "rights:bodleian-one-image", "entity": "facsimile:bodleian:ashmole-44-one-image", "access_id": "access:ashmole-public-partial", "component": "Digital Bodleian image of MS Ashmole 44 fol. 1r", "jurisdiction": "United Kingdom; item-level license",
+      "copyright_status": "copyrighted", "as_of": "2026-07-17", "basis": "The IIIF manifest attributes the image Photo © Bodleian Libraries, University of Oxford and applies Creative Commons Attribution-NonCommercial 4.0 International.",
+      "asserted_by_id": "agent:bodleian-libraries", "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply", "confidence": "high", "evidence_ids": ["evidence:bodleian-ashmole-iiif"],
+      "notes": ["The noncommercial condition does not authorize commercial or for-profit print-on-demand reuse."]
+    },
+    {
+      "id": "rights:historia-j3a", "entity": "source:historia-de-preliis-j3a", "component": "Underlying medieval Latin source tradition", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The medieval source tradition predates modern copyright protection; modern editions and facsimiles remain separate layers.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:dmer", "evidence:skeat-title-and-introduction"]
+    },
+    {
+      "id": "rights:caxton-second-print", "entity": "print:caxton:dicts-second-edition-c1480", "component": "Underlying circa-1480 printed text and historical print carrier", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "The fifteenth-century printed text and carrier predate modern copyright protection; this record does not apply to any modern scan.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:khalaf-2021"]
+    },
+    {
+      "id": "rights:stevenson-1849", "entity": "edition:stevenson:wars-of-alexander:1849", "access_id": "access:stevenson-1849", "component": "Stevenson's 1849 editorial text and arrangement", "jurisdiction": "United States",
+      "copyright_status": "public_domain", "as_of": "2026-07-17", "basis": "Published in 1849 and therefore in the public domain in the United States.",
+      "contract_terms_status": "none_known", "confidence": "high", "evidence_ids": ["evidence:stevenson-1849"]
+    },
+    {
+      "id": "rights:duggan-turville-petre-1989", "entity": "edition:duggan-turville-petre:wars-of-alexander:1989", "access_id": "access:folger-modern-edition", "component": "1989 scholarly edition and editorial matter", "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "copyrighted", "as_of": "2026-07-17", "basis": "Published in 1989; no item-level open license was verified. The Folger catalog record provides discovery, not permission to reproduce the edition.",
+      "contract_terms_status": "unknown", "confidence": "high", "evidence_ids": ["evidence:folger-1989"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection", "entity": "encoding:umich:APA1967.0001.001", "practice": "selection",
+      "source_feature": "Skeat's complete printed volume", "representation": "Selected title matter and printed pp. 1-283 are transcribed; omitted front and back text remains represented chiefly by PB links.",
+      "description": "The U-M encoding is an edited selection from the printed volume, not a full-text transcription of all 506 scanned pages.",
+      "scope": "Whole encoding and its front/back omission boundary", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:raw-package", "evidence:xml-computation"]
+    },
+    {
+      "id": "practice:skeat-parallel-collation", "entity": "edition:skeat:wars-of-alexander:1886", "practice": "collation",
+      "source_feature": "Overlapping Ashmole 44 and TCD MS 213 verse witnesses", "representation": "Facing or parallel witness streams where they overlap, with Dublin also supplying the Ashmole lacuna.",
+      "description": "The two verse streams are alternative witnesses of one work and are non-additive; serialized line-element counts cannot be summed as poem length.",
+      "scope": "Wars of Alexander, printed pp. 1-276", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:repository-xml", "evidence:xml-computation"]
+    },
+    {
+      "id": "practice:skeat-ending-and-story-boundary", "entity": "edition:skeat:wars-of-alexander:1886", "practice": "selection",
+      "source_feature": "Incomplete verse ending and separate Dublin prose work", "representation": "Skeat supplies an editorial prose paraphrase through p. 279, then an argument and separately headed prose Story on pp. 279-283.",
+      "description": "The ending paraphrase is editorial rather than medieval verse, and The Story of Alexander is a distinct historical work rather than the final prose section of the verse romance.",
+      "scope": "Printed pp. 276-283", "confidence": "high", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:repository-xml", "evidence:xml-computation"]
+    },
+    {
+      "id": "practice:umich-parallel-serialization", "entity": "encoding:umich:APA1967.0001.001", "practice": "collation",
+      "source_feature": "Skeat's page-level parallel witness presentation", "representation": "The XML serializes 5,688 Ashmole-stream L elements and 2,821 Dublin-stream L elements across 40 verse-group containers, with page milestones preserving the printed order.",
+      "description": "Encoding order and line-element counts describe the digital representation, not an intellectual 8,509-line poem.",
+      "scope": "27 passus containers and 24 parallel-version containers", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:xml-computation"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repository-xml", "type": "repository_file", "citation": "Kyvero-Press/CME, source/CME_phase_1-2/apa1967.xml, pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml", "alternate_urls": ["https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/apa1967.xml"],
+      "repository_path": "CME/source/CME_phase_1-2/apa1967.xml", "sha256": "ae13b21fd684858ed21d022dcdc29f16fbe6704d18aa8f6480a9569c2c5c566f",
+      "summary": "Primary evidence for the exact repository artifact, U-M identifier and source description, encoded title matter, division boundaries, witness labels, notes, folio milestones, prose-story boundary, and legacy availability statement.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:raw-package", "type": "digital_surrogate", "citation": "University of Michigan Library, complete raw package for APA1967.0001.001, distributed by Internet Archive.",
+      "url": "https://archive.org/download/apa1967.0001.001.umich.edu/apa1967.0001.001.umich.edu_umichbook.zip", "repository_path": "source-cache/apa1967/umich-apa1967-complete-raw-package.zip", "sha256": "6f581b1c146dfd8e62db177e5ebd80f9ae6aa9d1fe059190d236c36f370aa901",
+      "locator": "511 members: 506 TIFFs plus apa1967.0001.001.xml, .txt, .hdr, pageview.dat, and loadcd.log.",
+      "summary": "Primary evidence for distinct raw-package, encoding, and 506-TIFF layers; 2006 production; page sequence; raw XML; and legacy availability text.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:ia-package-metadata", "type": "official_webpage", "citation": "Internet Archive metadata record for apa1967.0001.001.umich.edu.",
+      "url": "https://archive.org/metadata/apa1967.0001.001.umich.edu", "repository_path": "source-cache/apa1967/umich-apa1967-ia-metadata.json", "sha256": "04617e98c3c39a18b82e189c8fb7edd4bf660f36ce7942dbab1fadf92f754626",
+      "summary": "Confirms the IA identifier, ARK, raw-package filename, size and checksums, 511-file inventory, U-M provenance, and public timestamp.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:umich-current-item", "type": "official_webpage", "citation": "University of Michigan Library Digital Collections, APA1967.0001.001.",
+      "url": "https://quod.lib.umich.edu/c/cme/apa1967.0001.001/1%3AAPA1967.0001.001?view=toc", "alternate_urls": ["https://name.umdl.umich.edu/apa1967.0001.001"],
+      "summary": "Current access and rights evidence: 1886 publication, encoded contents, public-domain statement, and No Copyright - United States designation.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:skeat-title-and-introduction", "type": "edition_statement", "citation": "Walter W. Skeat, ed., The Wars of Alexander, EETS Extra Series 47 (London: N. Trübner, 1886).",
+      "url": "https://archive.org/details/warsofalexandera00leoarich", "locator": "Original title page; introduction pp. ix-xxiv; verse pp. 1-276; ending paraphrase pp. 276-279; The Story of Alexander pp. 279-283.",
+      "summary": "Primary evidence for title, publication, fragment independence, witness arrangement, Hessels and Parker's roles, manuscript boundaries, editorial paraphrase, and separate prose text.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:skeat-warburg", "type": "digital_surrogate", "citation": "Warburg Institute Library digital PDF of the Kraus unaltered reprint of Skeat's Wars of Alexander.",
+      "url": "https://resources.warburg.sas.ac.uk/pdf/neh2420b2329987.pdf", "repository_path": "source-cache/apa1967/skeat-1886-wars-of-alexander-warburg.pdf", "sha256": "878e9247514c4c4149e00ed684a66f53b42b191c01267df14eeeee5417a0e5a8",
+      "locator": "512 PDF pages; Kraus title 5; unaltered-reprint statement 6; original 1886 title 9; printed pp. 1-283 at PDF 31-313.",
+      "summary": "Complete provider PDF used for direct inspection; a scan of a later Kraus reprint, not the physical 1886 U-M scan object.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:stevenson-1849", "type": "edition_statement", "citation": "Joseph Stevenson, ed., The Alliterative Romance of Alexander (Roxburghe Club, 1849).",
+      "url": "https://archive.org/details/TheAlliterativeRomanceOfAlexander/", "summary": "Supporting evidence for the earlier Ashmole-only edition identified and criticized by Skeat; it is not an ancestor of apa1967.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:dmer", "type": "scholarly_source", "citation": "Database of Middle English Romance, Wars of Alexander (Alexander Fragment C).",
+      "url": "https://www.middleenglishromance.org.uk/romances/wars-alexander-alexander-fragment-c", "summary": "Supports preferred work title, c.1450, tentative Northumbria, unrhymed alliterative form, NIMEV *3947.3, Historia J3a, and both witness loci.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:middle-english-compendium", "type": "scholarly_source", "citation": "Middle English Compendium, bibliography BIB3575, Wars of Alexander.",
+      "url": "https://quod.lib.umich.edu/m/middle-english-dictionary/bibliography/BIB3575?rid=hyp.832.19990304t151115", "summary": "Confirms NIMEV *3947.3, DIMEV 6306, both witnesses, Skeat EETS ES 47, and the preferred-manuscript/Dublin-lacuna arrangement.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:bodleian-ashmole-tei", "type": "official_catalog", "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, MS. Ashmole 44, catalog description by Charlotte Ross (2024).",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/30eeba18af5a67e9585a2477b48a0847607228a3/collections/Ashmole/MS_Ashmole_44.xml", "repository_path": "source-cache/apa1967/bodleian-ms-ashmole-44-catalog-tei.xml", "sha256": "fc2e375e401b8d211dd61e9a5c73df1675a42ab5f867753587706ae9d1bdf436",
+      "summary": "Current catalog evidence for identifiers, ff. 1r-97v contents, date, northern context, physical description, lacuna, numbering cautions, and the partial image object.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:bodleian-ashmole-iiif", "type": "digital_surrogate", "citation": "Digital Bodleian IIIF object 72f3f3f4-bc78-476a-bbcb-0578d4686135, MS Ashmole 44 fol. 1r.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/72f3f3f4-bc78-476a-bbcb-0578d4686135.json", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/72f3f3f4-bc78-476a-bbcb-0578d4686135/"], "repository_path": "source-cache/apa1967/bodleian-ms-ashmole-44-one-image-iiif.zip", "sha256": "446598dc17e0da9613814688022e2ed188682056f9a695efa7c824c0162196a0",
+      "summary": "One-canvas surrogate showing the target incipit on fol. 1r; complete only as a one-canvas object and partial to the codex. Manifest states Photo © Bodleian and CC BY-NC 4.0.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:abbott-1900", "type": "official_catalog", "citation": "T. K. Abbott, Catalogue of the Manuscripts in the Library of Trinity College, Dublin (1900), no. 213.",
+      "url": "https://archive.org/download/cataloguemanusc00abbogoog/cataloguemanusc00abbogoog.pdf", "repository_path": "source-cache/apa1967/abbott-1900-trinity-manuscripts-catalogue.pdf", "sha256": "e371b8e4de6d9bfdb46287bcae50c849dd5bf96e23e050f3b231b516e1650e5d", "locator": "Catalog no. 213.",
+      "summary": "Historical catalog description of the fifteenth-century quarto paper codex; not a current item-level record or target-text reproduction.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:khalaf-2021", "type": "scholarly_source", "citation": "Omar Khalaf, Patronage, Print and the Education of the Gentry, in English Literature and the Gentry in Late Medieval England (2021).",
+      "url": "https://www.research.unipd.it/retrieve/e14fb26f-4fa3-3de1-e053-1705fe0ac030/Khalaf_Vezzosi_Eng_P02-3.pdf", "repository_path": "source-cache/apa1967/khalaf-vezzosi-patronage-print-education-gentry.pdf", "sha256": "f85cb402ff6c0393d3322d4891c89592f68a68398440bcc65de2e260b8285d07", "locator": "Footnote 12.",
+      "summary": "Reports that TCD MS 213 ff. 70v-72r are considered copied from Caxton's second Dicts and Sayings edition; secondary support, not direct collation.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:folger-1989", "type": "official_catalog", "citation": "Folger Shakespeare Library, catalog record 77480, The Wars of Alexander, edited by Hoyt N. Duggan and Thorlac Turville-Petre (1989).",
+      "url": "https://catalog.folger.edu/record/77480", "summary": "Confirms the modern EETS Supplementary Series 10 edition and ISBN; the record alone does not establish exact witness treatment.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:bodleian-mediated-copying", "type": "official_webpage", "citation": "Bodleian Libraries, Special collections mediated copying and Order images from Imaging Services.",
+      "url": "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying", "alternate_urls": ["https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/order-images", "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/bodleian-libraries-mediated-copying-form.pdf"],
+      "summary": "Current whole-object request routes and published reference/high-resolution price structure, subject to condition, capacity, and quotation for large orders.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:bodleian-imaging-terms", "type": "official_webpage", "citation": "Bodleian Libraries Imaging Services Terms of Use.",
+      "url": "https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/imaging-services-terms-of-use.pdf", "alternate_urls": ["https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services/copyright-and-reproducing-images"], "repository_path": "source-cache/apa1967/bodleian-imaging-services-terms-of-use.pdf", "sha256": "4501e14f8012e779834860e8473f0f54e2f37a920aea7f9ad5f7c0116d74c2b2",
+      "summary": "Use evidence distinguishing academic/noncommercial use from publication and commercial use; ordered-file redistribution requires written item-specific clarification.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-imaging-services", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Imaging Services.",
+      "url": "https://www.tcd.ie/library/dris/services.php", "summary": "Current request route, Digital.Collections@tcd.ie contact, conservation/service discretion, and at-least-three-week lead-time request.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-request-form", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Digital Collections Image Request Form.",
+      "url": "https://www.tcd.ie/library/assets/pdf/TCD%20Digital%20Collections%20Image%20Request%20Form.pdf", "alternate_urls": ["https://www.tcd.ie/library/assets/pdf/TCD%20Digital%20Collections%20Image%20Request%20Form%202024%20%28beta%29.pdf"], "repository_path": "source-cache/apa1967/tcd-digital-collections-image-request-form.pdf", "sha256": "e47c86bf556484787547f084ad75e9b5339ac9ee88388b9e5e8ba30935fac9db",
+      "summary": "Official order-form evidence; publication wording must be read with current policy and an item-specific reply.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-price-list", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Digital Collections Services Price List 2023.",
+      "url": "https://www.tcd.ie/library/assets/pdf/Digital%20Collections%20Services%20Price%20list%202023.pdf", "repository_path": "source-cache/apa1967/tcd-digital-collections-price-list-2023.pdf", "sha256": "9451581e5d303a3d22b258c1f7291bc6e8d2922057f02ecc3d06c87cf2604ac3",
+      "summary": "Dated pricing: EUR 25 setup/first image plus EUR 2 per additional image, VAT excluded; obtain a current whole-codex quote.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-open-licensing-policy", "type": "official_webpage", "citation": "Trinity College Dublin, Policy on the Open Licensing of the Library's Digitised Content, version 1.0, 4 June 2025.",
+      "url": "https://www.tcd.ie/media/tcd/about/policies/pdfs/open-licensing-library-digitised-content-policy.pdf", "repository_path": "source-cache/apa1967/tcd-open-licensing-library-digitised-content-policy-2025.pdf", "sha256": "8570d9c09fba7c078514d6225fc7f9544857c953b0339c58e0a0e4958468fc9c",
+      "summary": "CC BY 4.0 default for qualifying Library-created surrogates of out-of-copyright items, subject to exceptions; not an item-level license for MS 213 or future files.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-rights-page", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Rights Information.",
+      "url": "https://www.tcd.ie/library/dris/copyright.php", "summary": "Conditional CC BY 4.0 rule, exceptions, and contact for license or permission clarification.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:cme-license", "type": "repository_file", "citation": "Kyvero-Press/CME, LICENSE, pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE", "repository_path": "CME/LICENSE", "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+      "summary": "The Unlicense text expressly refers to software and is not broadened without evidence to inherited texts, images, or provider metadata.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:xml-computation", "type": "repository_file", "citation": "APA1967 durable raw-to-pinned XML and page-sequence computation audit.",
+      "repository_path": "source-cache/apa1967/apa1967-raw-encoding-audit.json", "sha256": "efad063814fd78a72603cd0b403c3a307810bb9f1b7a45dec12feb900e2658a0",
+      "summary": "Supports fixity and equality conclusions, two-work cardinality, non-additive witness streams, prose/editorial boundaries, page mapping, and null intellectual verse extent.", "accessed_on": "2026-07-17",
+      "notes": ["Method: element/attribute census, normalized canonical XML comparison, ZIP inventory/checksum verification, PB/TIFF census, and XPath counts."]
+    },
+    {
+      "id": "evidence:dublin-witness-crosswalk", "type": "repository_file", "citation": "APA1967 durable Dublin witness foliation and content crosswalk audit.",
+      "repository_path": "source-cache/apa1967/apa1967-dublin-witness-crosswalk.json", "sha256": "6cc32858efadff2e9cd247785e653eb362855d70cd94255538dec82cb799df33",
+      "summary": "Supports current verse ff. 27r-66v, intervening accounts/miscellanea at ff. 67r-70r, prose ff. 70v-72r, and Skeat's restarted prose foliation; not a substitute for a current TCD catalog record.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-digitised-manuscripts-list", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Digitised Manuscripts, Manuscripts for Medieval Studies Project.",
+      "url": "https://www.tcd.ie/library/research-collections/projects/medieval/manuscripts.php", "summary": "The list checked on 2026-07-17 does not include MS 213; this supports a dated negative finding, not a permanent claim of non-digitisation.", "accessed_on": "2026-07-17"
+    },
+    {
+      "id": "evidence:tcd-research-collections", "type": "official_webpage", "citation": "The Library of Trinity College Dublin, Manuscripts & Archives and Reading Room Appointment Request.",
+      "url": "https://www.tcd.ie/library/research-collections/manuscripts.php", "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=jb6V1Qaz9EWAZJ5bgvvlK_Q7v65FEOdIttxp9ENGYtlUQlYwVjZTQUdNWVM3QUpSSjdOTVE3OVcyUC4u"],
+      "summary": "Current research-collections contact and visit route; rescoll@tcd.ie for manuscript enquiries and Digital.Collections@tcd.ie for imaging and license questions.", "accessed_on": "2026-07-17"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:verse-line-numbering", "question": "Can Skeat's conventional 5,677 endpoint, the XML's 5,688 Ashmole L nodes, and the Bodleian catalog's 5,803/approximately-6,300 account be crosswalked without conflating editorial systems?",
+      "status": "unresolved", "impact": "high", "next_steps": ["Collate the systems against passus, witness, and lacuna boundaries before supplying an intellectual line extent."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:xml-computation", "evidence:skeat-title-and-introduction", "evidence:bodleian-ashmole-tei"]
+    },
+    {
+      "id": "question:dublin-line-ranges", "question": "Can Skeat's Dublin line ranges be reconciled with the 2024 Bodleian catalog's modern ranges?",
+      "status": "unresolved", "impact": "medium", "next_steps": ["Create a page-and-line concordance using a complete Dublin reproduction and the modern edition."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:skeat-title-and-introduction", "evidence:bodleian-ashmole-tei", "evidence:dublin-witness-crosswalk"]
+    },
+    {
+      "id": "question:tcd-current-catalog", "question": "What is the current stable item-level Trinity catalog URL and complete physical description for IE TCD MS 213?",
+      "status": "no_public_source_found", "impact": "high", "next_steps": ["Ask Trinity Research Collections for the current catalog record and shelfmark history."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:abbott-1900", "evidence:tcd-research-collections", "evidence:dublin-witness-crosswalk"]
+    },
+    {
+      "id": "question:caxton-source", "question": "Does direct collation confirm that The Story of Alexander derives from Caxton's second Dicts and Sayings edition, and which exact printing is intended?",
+      "status": "unresolved", "impact": "medium", "next_steps": ["Collate TCD ff. 70v-72r against the second-edition print witness and Blake 1991."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:khalaf-2021", "evidence:dublin-witness-crosswalk"]
+    },
+    {
+      "id": "question:ashmole-complete-facsimile", "question": "Will Bodleian provide a complete-color or complete-reference facsimile of MS Ashmole 44, and under what repository/publication license and quote?",
+      "status": "no_public_source_found", "impact": "high", "next_steps": ["Request a whole-codex quote and written redistribution terms; identify target ff. 1r-97v."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:bodleian-mediated-copying", "evidence:bodleian-imaging-terms", "evidence:bodleian-ashmole-iiif"]
+    },
+    {
+      "id": "question:tcd-complete-facsimile", "question": "Will TCD provide a complete-color facsimile of IE TCD MS 213, and does an item-specific CC BY 4.0 statement apply to delivered files?",
+      "status": "no_public_source_found", "impact": "high", "next_steps": ["Request the complete codex, identify verse ff. 27r-66v and prose ff. 70v-72r, and obtain item-specific reuse terms."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:tcd-digitised-manuscripts-list", "evidence:tcd-imaging-services", "evidence:tcd-open-licensing-policy", "evidence:tcd-rights-page"]
+    },
+    {
+      "id": "question:contributor-authorities", "question": "What exact preferred authority identity should replace Skeat's source-limited Mr. Hessels, and can George Parker be normalized beyond Skeat's printed name?",
+      "status": "unresolved", "impact": "low", "next_steps": ["Search authority files and EETS correspondence without expanding either display name from inference alone."], "last_checked": "2026-07-17", "evidence_ids": ["evidence:skeat-title-and-introduction"]
+    }
+  ]
+}

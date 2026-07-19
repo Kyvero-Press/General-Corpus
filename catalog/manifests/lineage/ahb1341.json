@@ -1,0 +1,5012 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:ahb1341",
+  "work_id": "ahb1341",
+  "title": "Middle English translations and continuations of Ranulf Higden's Polychronicon (Rolls Series edited selection)",
+  "primary_subject": "artifact:general-corpus:ahb1341",
+  "record_status": "partial",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "summary": "The repository artifact pins a U-M/CME encoding of selected Middle English material in the nine-volume Rolls Series edition: Trevisa's translation and short continuation, an independent anonymous translation, a Harley MS 1900 alternative, and selected Caxton adaptation/continuation text. The graph separates intellectual-version nodes, manuscript witnesses, one aggregate edition and nine printed volume expressions, nine IA/Google scan carriers, derivative OCR/scandata and metadata objects, the historical U-M page-image layer, the current Medictionary reformat, and supporting catalog or scholarly records.",
+  "languages": [
+    "enm",
+    "lat"
+  ],
+  "review_notes": [
+    "The schema has no abstract-work or abstract-version entity types. The Latin Polychronicon and the four English version-level nodes are represented as catalog_description entities solely as a schema-native compromise; their notes identify the abstraction explicitly.",
+    "Access and rights apply only to the named entity and component. Printed volume-expression rights, scan-carrier/provider terms, derivative-file rights, catalog-data licenses, manuscript text, and manuscript-image supply terms are not inherited across the graph.",
+    "The current U-M item exposes a viewer link, but an automated request to a sample image route returned HTTP 403. That does not prove direct public download or unavailability; the 5,176-image layer remains access status unknown and is not cached as a current image set.",
+    "Volume IX contains no target work text but remains in the complete nine-volume edition and is retained as target-absent boundary evidence."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:ahb1341",
+      "type": "repository_artifact",
+      "label": "Pinned CME source XML for ahb1341",
+      "description": "The exact Kyvero-Press/CME XML artifact used to identify and model the repository work at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "identifiers": [
+        {
+          "scheme": "CME item identifier",
+          "value": "AHB1341.0001.001",
+          "uri": "https://name.umdl.umich.edu/AHB1341.0001.001"
+        },
+        {
+          "scheme": "git blob",
+          "value": "f2fc00a20b062315e69f51507476067a867adfb5"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero-press"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/ahb1341.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f2fc00a20b062315e69f51507476067a867adfb5",
+        "sha256": "847ed602aa7d1c469e7a11fae8e309cc86c35177975044d11c4c8b66f29931aa"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:pinned-xml"
+      ],
+      "notes": [
+        "The header reports 5,176 600dpi TIFF G4 page images and item ID AHB1341.0001.001.",
+        "The cached copy is content-identical to the raw GitHub object at the pinned commit."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:ahb1341-2006",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item AHB1341.0001.001",
+      "description": "The 2006 U-M digital text from which the pinned CME XML descends. Its item header describes OCR creation without correction or content editing.",
+      "identifiers": [
+        {
+          "scheme": "UMDL handle",
+          "value": "AHB1341.0001.001",
+          "uri": "https://name.umdl.umich.edu/AHB1341.0001.001"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich-library"
+      ],
+      "date_statements": [
+        {
+          "label": "online publication",
+          "value": "2006",
+          "normalized": "2006",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:pinned-xml",
+            "evidence:umich-item"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:umich-item",
+        "evidence:pinned-xml",
+        "evidence:umich-about"
+      ]
+    },
+    {
+      "id": "facsimile:umich:ahb1341-page-images",
+      "type": "facsimile",
+      "label": "U-M linked page-image layer for AHB1341.0001.001",
+      "description": "The historical header reports 5,176 600dpi TIFF G4 page images and the XML contains 7,454 PB occurrences. The physical copies scanned are unidentified and a complete current public image set has not been verified.",
+      "creator_ids": [
+        "agent:umich-library"
+      ],
+      "reproduction_format": "5,176 600dpi TIFF G4 images reported in the historical header",
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:umich-item",
+        "evidence:umich-image-check"
+      ],
+      "notes": [
+        "The 7,454 PB occurrences reuse image references; they are not 7,454 unique images.",
+        "A landing-page viewer link plus HTTP 403 from one automated image-route check does not establish a direct-download status."
+      ]
+    },
+    {
+      "id": "encoding:medictionary:ahb1341-may-2026",
+      "type": "digital_encoding",
+      "label": "Medictionary reformatted CME XML for ahb1341 (May 2026)",
+      "description": "A current reformatted XML distribution. Structural and text comparison found substantive target-stream identity apart from tiny editorial-note additions; it is a version of the historical U-M-derived encoding, not a separate edition.",
+      "creator_ids": [
+        "agent:medictionary"
+      ],
+      "date_statements": [
+        {
+          "label": "reformat release",
+          "value": "May 2026",
+          "normalized": "2026-05",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:medictionary-downloads",
+            "evidence:medictionary-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:medictionary-downloads",
+        "evidence:medictionary-xml",
+        "evidence:xml-comparison"
+      ]
+    },
+    {
+      "id": "work:latin-polychronicon",
+      "type": "catalog_description",
+      "label": "Ranulf Higden's Latin Polychronicon (abstract work)",
+      "description": "The Latin universal chronicle underlying the English translations and adaptations.",
+      "creator_ids": [
+        "agent:ranulf-higden"
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "Schema compromise: catalog_description represents an abstract work because the lineage schema has no abstract-work entity type."
+      ]
+    },
+    {
+      "id": "version:trevisa-polychronicon-1387",
+      "type": "catalog_description",
+      "label": "John Trevisa's Middle English Polychronicon translation and short continuation (abstract version)",
+      "creator_ids": [
+        "agent:john-trevisa"
+      ],
+      "date_statements": [
+        {
+          "label": "translation completed",
+          "value": "18 April 1387",
+          "normalized": "1387-04-18",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:rolls-series",
+            "evidence:liira-2020"
+          ]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "Schema compromise: catalog_description represents an abstract textual version because the schema has no abstract-version entity type.",
+        "The version includes the short continuation counted with the Trevisa family, not as another work."
+      ]
+    },
+    {
+      "id": "version:anonymous-second-polychronicon",
+      "type": "catalog_description",
+      "label": "Anonymous second Middle English Polychronicon translation (abstract version)",
+      "description": "An independent complete seven-book translation, inferred by the Rolls editors to date probably c. 1432-1460 and surviving only in Harley MS 2261.",
+      "date_statements": [
+        {
+          "label": "probable translation date",
+          "value": "c. 1432-1460",
+          "normalized": "1432/1460",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:rolls-series",
+            "evidence:liira-2020"
+          ],
+          "notes": "This intellectual-version inference is distinct from the sole manuscript witness's catalog date of 1450-1474."
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020",
+        "evidence:bl-harley-2261-catalog"
+      ],
+      "notes": [
+        "Schema compromise: catalog_description represents an abstract textual version because the schema has no abstract-version entity type."
+      ]
+    },
+    {
+      "id": "version:harley-1900-book6-alternative",
+      "type": "catalog_description",
+      "label": "Harley MS 1900 Book VI chapters 15-26 alternative (abstract version passage)",
+      "description": "A zero-count Trevisa-version child printed in volume VII as an alternative passage on pages [501]-538.",
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "Schema compromise: catalog_description represents an abstract version passage because the schema has no abstract-version entity type.",
+        "The source begins at Harley MS 1900 fol. 248v (Rolls 248b); the exact manuscript endpoint remains unresolved."
+      ]
+    },
+    {
+      "id": "version:caxton-polycronicon-1482",
+      "type": "catalog_description",
+      "label": "William Caxton's 1482 Polycronicon adaptation and continuation (abstract version)",
+      "description": "Caxton's printed modernization and adaptation of Trevisa with continuation from 1357 through 1460.",
+      "creator_ids": [
+        "agent:william-caxton"
+      ],
+      "identifiers": [
+        {
+          "scheme": "ISTC",
+          "value": "ih00267000",
+          "uri": "https://data.cerl.org/istc/ih00267000"
+        },
+        {
+          "scheme": "STC",
+          "value": "13438"
+        },
+        {
+          "scheme": "GW",
+          "value": "12468"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "printing",
+          "value": "between 2 July and 8 October 1482",
+          "normalized": "1482-07-02/1482-10-08",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:cerl-istc"
+          ]
+        }
+      ],
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:cerl-istc",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Schema compromise: catalog_description represents an abstract print version because the schema has no abstract-version entity type.",
+        "The exact Caxton copy or copies used by the Rolls editors remain unidentified."
+      ]
+    },
+    {
+      "id": "witness:st-johns:H1",
+      "type": "manuscript_witness",
+      "label": "Cambridge, St John's College, MS H.1 (204)",
+      "description": "The principal Rolls Series base manuscript for Trevisa's translation.",
+      "identifiers": [
+        {
+          "scheme": "St John's College shelfmark",
+          "value": "H.1 (204)"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript date",
+          "value": "1400-1425",
+          "normalized": "1400/1425",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:liira-2020"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:st-johns-college",
+        "shelfmark": "H.1 (204)",
+        "catalog_url": "https://www.joh.cam.ac.uk/research/library/old-library"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "280 folios",
+        "notes": [
+          "The selected Trevisa text begins approximately at fol. 34r and runs through approximately fol. 280r."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:liira-2020",
+        "evidence:st-johns-library"
+      ]
+    },
+    {
+      "id": "witness:bl:Add-MS-24194",
+      "type": "manuscript_witness",
+      "label": "British Library, Add MS 24194",
+      "description": "An incomplete Trevisa witness collated by the Rolls editors.",
+      "identifiers": [
+        {
+          "scheme": "BL Archives and Manuscripts record",
+          "value": "040-002031479",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002031479"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog date",
+          "value": "1400-1440",
+          "normalized": "1400/1440",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-add-24194-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 24194",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002031479"
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "263 folios",
+        "notes": [
+          "Main text fols. 36r-262rb; missing Book III chapter 41 through Book IV chapter 4, Book I chapters 1-4, and part of Book VI chapters 14-25."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog",
+        "evidence:liira-2020",
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-1900",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 1900",
+      "description": "A Trevisa witness and source of the alternative Book VI chapters 15-26 printed in the volume VII appendix.",
+      "identifiers": [
+        {
+          "scheme": "BL shelfmark",
+          "value": "Harley MS 1900"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "manuscript date",
+          "value": "1400-1425",
+          "normalized": "1400/1425",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:liira-2020"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 1900",
+        "notes": "No exact current BL public catalog record was verified on 2026-07-16; do not substitute an adjacent record."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "310 folios",
+        "notes": [
+          "Main Trevisa text approximately fols. 44r-310v; the printed alternative begins at fol. 248v, but its endpoint is unresolved."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:liira-2020",
+        "evidence:rolls-series",
+        "evidence:bl-services"
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-2261",
+      "type": "manuscript_witness",
+      "label": "British Library, Harley MS 2261",
+      "description": "The sole known manuscript witness of the anonymous second translation.",
+      "identifiers": [
+        {
+          "scheme": "BL Archives and Manuscripts record",
+          "value": "040-002048092",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002048092"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "catalog date",
+          "value": "1450-1474",
+          "normalized": "1450/1474",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-harley-2261-catalog"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 2261",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048092"
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "449 folios",
+        "notes": [
+          "Table fols. 1r-16r; main narrative fols. 17r-445r."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog",
+        "evidence:liira-2020",
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:aggregate",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41 Polychronicon edition, nine-volume aggregate",
+      "description": "The complete nine-volume scholarly edition published in London from 1865 to 1886. The target selection is present in volumes I-VIII and absent from volume IX.",
+      "creator_ids": [
+        "agent:churchill-babington",
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "Churchill Babington and J. Rawson Lumby, eds., Polychronicon Ranulphi Higden monachi Cestrensis; together with the English translations of John Trevisa and of an unknown writer of the fifteenth century, Rerum Britannicarum Medii Aevi Scriptores 41, 9 vols. (London, 1865-1886).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis; together with the English translations of John Trevisa and of an unknown writer of the fifteenth century",
+        "series": "Rerum Britannicarum Medii Aevi Scriptores 41",
+        "publisher": "Longman & Co. and Her Majesty's Stationery Office",
+        "publication_place": "London",
+        "date": "1865-1886",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:pinned-xml"
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol1",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume I (1865)",
+      "creator_ids": [
+        "agent:churchill-babington"
+      ],
+      "bibliographic": {
+        "citation": "Churchill Babington, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. I (London, 1865).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "I",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1865",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-431."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol2",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume II (1869)",
+      "creator_ids": [
+        "agent:churchill-babington"
+      ],
+      "bibliographic": {
+        "citation": "Churchill Babington, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. II (London, 1869).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "II",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1869",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-451."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol3",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume III (1871)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. III (London, 1871).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "III",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1871",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-479."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol4",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume IV (1872)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. IV (London, 1872).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "IV",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1872",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-475."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol5",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume V (1874)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. V (London, 1874).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "V",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1874",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-461."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol6",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume VI (1876)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. VI (London, 1876).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "VI",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1876",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portion: odd-numbered printed pages [3]-477."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol7",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume VII (1879)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. VII (London, 1879).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "VII",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1879",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target portions: odd-numbered printed pages [3]-497 and Harley MS 1900 appendix pages [501]-538."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol8",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume VIII (1882)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. VIII (London, 1882).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "VIII",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1882",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "Target union: odd-numbered pages [3]-339; pages 341, 343, 345, 347; all pages 348-353; and all pages 429-587. Pages 354-428 contain no target stream."
+      ]
+    },
+    {
+      "id": "edition:rolls-series-41:vol9",
+      "type": "scholarly_edition",
+      "label": "Rolls Series 41, volume IX (1886)",
+      "creator_ids": [
+        "agent:joseph-rawson-lumby"
+      ],
+      "bibliographic": {
+        "citation": "J. Rawson Lumby, ed., Polychronicon Ranulphi Higden monachi Cestrensis, vol. IX (London, 1886).",
+        "title": "Polychronicon Ranulphi Higden monachi Cestrensis",
+        "volume": "IX",
+        "series": "Rolls Series 41",
+        "publication_place": "London",
+        "date": "1886",
+        "languages": [
+          "enm",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata",
+        "evidence:rolls-series"
+      ],
+      "notes": [
+        "The target selection is absent; this volume contains supporting edition matter and remains part of the aggregate."
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol1",
+      "type": "facsimile",
+      "label": "Internet Archive/Google facsimile of Rolls Series volume I",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconra00lumbgoog",
+          "uri": "https://archive.org/details/polychroniconra00lumbgoog"
+        }
+      ],
+      "creator_ids": [
+        "agent:google",
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "552-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol2",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume II",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran02higd",
+          "uri": "https://archive.org/details/polychroniconran02higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "528-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol3",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume III",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran03higd",
+          "uri": "https://archive.org/details/polychroniconran03higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "536-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol4",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume IV",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran04higd",
+          "uri": "https://archive.org/details/polychroniconran04higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "542-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol5",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume V",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran05higd",
+          "uri": "https://archive.org/details/polychroniconran05higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "572-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol6",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume VI",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran06higd",
+          "uri": "https://archive.org/details/polychroniconran06higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "568-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol7",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume VII",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran07higd",
+          "uri": "https://archive.org/details/polychroniconran07higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "618-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol8",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume VIII",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran08higd",
+          "uri": "https://archive.org/details/polychroniconran08higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "658-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "facsimile:ia:vol9",
+      "type": "facsimile",
+      "label": "Internet Archive facsimile of Rolls Series volume IX",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive identifier",
+          "value": "polychroniconran09higd",
+          "uri": "https://archive.org/details/polychroniconran09higd"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "reproduction_format": "648-page PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata",
+        "evidence:scan-integrity"
+      ],
+      "notes": [
+        "Complete carrier retained as target-absent boundary/support evidence."
+      ]
+    },
+    {
+      "id": "encoding:ia:vol1-ocr",
+      "type": "digital_encoding",
+      "label": "Internet Archive OCR text for volume I",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "encoding:ia:vol7-ocr",
+      "type": "digital_encoding",
+      "label": "Internet Archive OCR text for volume VII",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "encoding:ia:vol8-ocr",
+      "type": "digital_encoding",
+      "label": "Internet Archive OCR text for volume VIII",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata"
+      ]
+    },
+    {
+      "id": "encoding:ia:vol9-ocr",
+      "type": "digital_encoding",
+      "label": "Internet Archive OCR text for volume IX",
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata"
+      ],
+      "notes": [
+        "Target work absent."
+      ]
+    },
+    {
+      "id": "catalog:cerl:istc-ih00267000",
+      "type": "catalog_description",
+      "label": "CERL ISTC record ih00267000",
+      "description": "The ISTC catalog record for Caxton's 1482 Polycronicon, including imprint range, identifiers, and 65 current holding entries.",
+      "creator_ids": [
+        "agent:cerl"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "catalog:bl:Add-MS-24194",
+      "type": "catalog_description",
+      "label": "British Library catalog JSON for Add MS 24194",
+      "creator_ids": [
+        "agent:british-library"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog"
+      ]
+    },
+    {
+      "id": "catalog:bl:Harley-MS-2261",
+      "type": "catalog_description",
+      "label": "British Library catalog JSON for Harley MS 2261",
+      "creator_ids": [
+        "agent:british-library"
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog"
+      ]
+    },
+    {
+      "id": "study:liira:2020",
+      "type": "catalog_description",
+      "label": "Liira 2020 study of Middle English Polychronicon paratextuality",
+      "description": "Aino Liira's doctoral dissertation, used as a scoped supporting scholarly description of the Trevisa, anonymous, and Caxton traditions and the principal manuscript witnesses.",
+      "creator_ids": [
+        "agent:aino-liira"
+      ],
+      "bibliographic": {
+        "citation": "Aino Liira, Paratextuality in Manuscript and Print: Verbal and Visual Presentation of the Middle English Polychronicon, Annales Universitatis Turkuensis B 512 (University of Turku, 2020).",
+        "title": "Paratextuality in Manuscript and Print: Verbal and Visual Presentation of the Middle English Polychronicon",
+        "series": "Annales Universitatis Turkuensis B 512",
+        "publisher": "University of Turku",
+        "publication_place": "Turku",
+        "date": "2020",
+        "languages": [
+          "eng"
+        ]
+      },
+      "identifiers": [
+        {
+          "scheme": "ISBN PDF",
+          "value": "978-951-29-8058-1"
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:ranulf-higden",
+      "type": "person",
+      "name": "Ranulf Higden",
+      "dates": "died 1364",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "agent:john-trevisa",
+      "type": "person",
+      "name": "John Trevisa",
+      "dates": "died 1402",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "agent:william-caxton",
+      "type": "person",
+      "name": "William Caxton",
+      "dates": "approximately 1422-1491",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "agent:churchill-babington",
+      "type": "person",
+      "name": "Churchill Babington",
+      "dates": "1821-1889",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "agent:joseph-rawson-lumby",
+      "type": "person",
+      "name": "Joseph Rawson Lumby",
+      "alternate_names": [
+        "J. Rawson Lumby"
+      ],
+      "dates": "1831-1895",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://quod.lib.umich.edu/c/cme/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-about"
+      ]
+    },
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press/CME"
+      ],
+      "evidence_ids": [
+        "evidence:pinned-xml"
+      ]
+    },
+    {
+      "id": "agent:medictionary",
+      "type": "organization",
+      "name": "Medictionary",
+      "urls": [
+        "https://www.medictionary.info/pages/CME_downloads.html"
+      ],
+      "evidence_ids": [
+        "evidence:medictionary-downloads"
+      ]
+    },
+    {
+      "id": "agent:st-johns-college",
+      "type": "organization",
+      "name": "St John's College, Cambridge",
+      "urls": [
+        "https://www.joh.cam.ac.uk/research/library/old-library"
+      ],
+      "evidence_ids": [
+        "evidence:st-johns-library"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://searcharchives.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-services"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "agent:google",
+      "type": "organization",
+      "name": "Google",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "agent:cerl",
+      "type": "organization",
+      "name": "Consortium of European Research Libraries",
+      "urls": [
+        "https://data.cerl.org/istc/"
+      ],
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "agent:aino-liira",
+      "type": "person",
+      "name": "Aino Liira",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "agent:university-of-turku",
+      "type": "organization",
+      "name": "University of Turku",
+      "urls": [
+        "https://www.utupub.fi/"
+      ],
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:trevisa-version-of-latin",
+      "type": "version_of",
+      "subject": "version:trevisa-polychronicon-1387",
+      "object": "work:latin-polychronicon",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Trevisa's seven-book English translation and short continuation"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Higden's Latin Polychronicon"
+        },
+        "notes": "Translation relationship; the continuation extends beyond the Latin endpoint."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:anonymous-version-of-latin",
+      "type": "version_of",
+      "subject": "version:anonymous-second-polychronicon",
+      "object": "work:latin-polychronicon",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Independent anonymous seven-book Middle English translation"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Higden's Latin Polychronicon"
+        },
+        "notes": "Independent translation relationship, not a version of Trevisa."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:harley-alternative-version-of-trevisa",
+      "type": "version_of",
+      "subject": "version:harley-1900-book6-alternative",
+      "object": "version:trevisa-polychronicon-1387",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Alternative Book VI chapters 15-26 passage"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Trevisa Book VI chapters 15-26"
+        },
+        "notes": "Zero-count textual version child."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:caxton-version-of-trevisa",
+      "type": "version_of",
+      "subject": "version:caxton-polycronicon-1482",
+      "object": "version:trevisa-polychronicon-1387",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Caxton's 1482 printed modernization, adaptation, and continuation through 1460"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Trevisa translation used as Caxton's English base"
+        },
+        "notes": "Schema-native version_of records the adaptation/continuation relationship; the prose modernization and new continuation are stated here rather than using an unsupported relation type."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cerl-istc",
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol1",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol1",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume I"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume I expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol2",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol2",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume II"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume II expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol3",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol3",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume III"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume III expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol4",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol4",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume IV"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume IV expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol5",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol5",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume V"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume V expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol6",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol6",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume VI"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VI expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol7",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol7",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume VII"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VII expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol8",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol8",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume VIII"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VIII expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-contains-vol9",
+      "type": "contains",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "edition:rolls-series-41:vol9",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume IX"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume IX expression; target absent"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-version-of-trevisa",
+      "type": "version_of",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "version:trevisa-polychronicon-1387",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Trevisa parallel-text portions in volumes I-VIII"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Trevisa translation and short continuation"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-version-of-anonymous",
+      "type": "version_of",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "version:anonymous-second-polychronicon",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "anonymous translation parallel-text portions in volumes I-VIII"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "anonymous second translation"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-version-of-caxton",
+      "type": "version_of",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "version:caxton-polycronicon-1482",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Caxton late Book VII and Book VIII material in volume VIII"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "corresponding 1482 Caxton adaptation and continuation passages"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:cerl-istc"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-transcribes-h1",
+      "type": "transcribes",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "witness:st-johns:H1",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Trevisa base text in volumes I-VIII"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Trevisa text approximately fols. 34r-280r"
+        },
+        "notes": "H.1 is the principal base witness; the edition also collates other witnesses and Caxton."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-collated-add24194",
+      "type": "collated_against",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "witness:bl:Add-MS-24194",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Trevisa editorial text and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "extant Trevisa passages, principally fols. 36r-262rb"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:bl-add-24194-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-transcribes-harley1900",
+      "type": "transcribes",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "witness:bl:Harley-MS-1900",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "volume VII appendix pages [501]-538"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Book VI chapters 15-26 alternative beginning fol. 248v; endpoint unresolved"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:aggregate-transcribes-harley2261",
+      "type": "transcribes",
+      "subject": "edition:rolls-series-41:aggregate",
+      "object": "witness:bl:Harley-MS-2261",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "anonymous translation parallel-text portions in volumes I-VIII"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "main narrative fols. 17r-445r"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:rolls-series",
+          "evidence:bl-harley-2261-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-rolls",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:ahb1341-2006",
+      "object": "edition:rolls-series-41:aggregate",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "17 target DIV1 streams plus non-target front/back scaffolding"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "target printed portions in volumes I-VIII; volume IX target absent"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:pinned-xml",
+          "evidence:rolls-series"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-images",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:ahb1341-2006",
+      "object": "facsimile:umich:ahb1341-page-images",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "OCR-derived text with 7,454 PB links"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "linked images corresponding to encoded pages"
+        },
+        "notes": "The header says OCR and links images, but the exact physical scan-copy provenance is unknown."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:pinned-xml",
+          "evidence:umich-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-images-facsimile-of-rolls",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:ahb1341-page-images",
+      "object": "edition:rolls-series-41:aggregate",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "5,176-image layer reported by the historical header"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "nine-volume Rolls Series edition"
+        },
+        "notes": "Edition identity is clear from page labels and header; the particular physical copies scanned are not."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:pinned-xml"
+        ]
+      }
+    },
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:ahb1341",
+      "object": "encoding:umich-cme:ahb1341-2006",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "pinned repository XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "historical U-M CME encoding"
+        }
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:pinned-xml",
+          "evidence:umich-item"
+        ]
+      }
+    },
+    {
+      "id": "relation:medictionary-version-of-umich",
+      "type": "version_of",
+      "subject": "encoding:medictionary:ahb1341-may-2026",
+      "object": "encoding:umich-cme:ahb1341-2006",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "May 2026 reformatted XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M-derived encoding"
+        },
+        "notes": "Schema-native version_of records reformatting; stream comparison found only two tiny editorial-note additions outside substantive target wording."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:medictionary-xml",
+          "evidence:xml-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol1-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol1",
+      "object": "edition:rolls-series-41:vol1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 552-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume I expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol1-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol2-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol2",
+      "object": "edition:rolls-series-41:vol2",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 528-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume II expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol2-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol3-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol3",
+      "object": "edition:rolls-series-41:vol3",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 536-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume III expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol3-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol4-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol4",
+      "object": "edition:rolls-series-41:vol4",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 542-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume IV expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol4-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol5-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol5",
+      "object": "edition:rolls-series-41:vol5",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 572-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume V expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol5-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol6-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol6",
+      "object": "edition:rolls-series-41:vol6",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 568-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VI expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol6-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol7-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol7",
+      "object": "edition:rolls-series-41:vol7",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 618-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VII expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol7-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol8-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol8",
+      "object": "edition:rolls-series-41:vol8",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 658-page scan carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume VIII expression"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol8-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-vol9-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:vol9",
+      "object": "edition:rolls-series-41:vol9",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 648-page scan carrier; target absent"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete volume IX expression; target absent"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol9-metadata",
+          "evidence:scan-integrity"
+        ]
+      }
+    },
+    {
+      "id": "relation:ocr-vol1-encoded-from-facsimile",
+      "type": "encoded_from",
+      "subject": "encoding:ia:vol1-ocr",
+      "object": "facsimile:ia:vol1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete OCR derivative"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "volume I scan"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol1-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:ocr-vol7-encoded-from-facsimile",
+      "type": "encoded_from",
+      "subject": "encoding:ia:vol7-ocr",
+      "object": "facsimile:ia:vol7",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete OCR derivative"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "volume VII scan"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol7-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:ocr-vol8-encoded-from-facsimile",
+      "type": "encoded_from",
+      "subject": "encoding:ia:vol8-ocr",
+      "object": "facsimile:ia:vol8",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete OCR derivative"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "volume VIII scan"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol8-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:ocr-vol9-encoded-from-facsimile",
+      "type": "encoded_from",
+      "subject": "encoding:ia:vol9-ocr",
+      "object": "facsimile:ia:vol9",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete OCR derivative; target absent"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "volume IX scan; target absent"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ia-vol9-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:cerl-describes-caxton",
+      "type": "describes",
+      "subject": "catalog:cerl:istc-ih00267000",
+      "object": "version:caxton-polycronicon-1482",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "ISTC bibliographic and holdings record"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Caxton 1482 edition/version"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:cerl-istc"
+        ]
+      }
+    },
+    {
+      "id": "relation:bl-catalog-describes-add24194",
+      "type": "describes",
+      "subject": "catalog:bl:Add-MS-24194",
+      "object": "witness:bl:Add-MS-24194",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "BL catalog JSON/text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bl-add-24194-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:bl-catalog-describes-harley2261",
+      "type": "describes",
+      "subject": "catalog:bl:Harley-MS-2261",
+      "object": "witness:bl:Harley-MS-2261",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "BL catalog JSON/text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:bl-harley-2261-catalog"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-trevisa",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "version:trevisa-polychronicon-1387",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "discussion of Trevisa's version and paratextual tradition"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Trevisa textual version"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-anonymous",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "version:anonymous-second-polychronicon",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "discussion distinguishing the anonymous second translation"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "anonymous textual version"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-caxton",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "version:caxton-polycronicon-1482",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "discussion of Caxton's print adaptation and paratext"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Caxton version"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-h1",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "witness:st-johns:H1",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "description and analysis of MS H.1"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-add24194",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "witness:bl:Add-MS-24194",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "description and analysis of Add MS 24194"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    },
+    {
+      "id": "relation:liira-describes-harley1900",
+      "type": "describes",
+      "subject": "study:liira:2020",
+      "object": "witness:bl:Harley-MS-1900",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "description and analysis of Harley MS 1900"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "physical manuscript"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:liira-2020"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:pinned-artifact",
+      "entity": "artifact:general-corpus:ahb1341",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Pinned raw GitHub files",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ahb1341.xml",
+      "alternate_urls": [
+        "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+        "https://github.com/Kyvero-Press/CME/tree/e1d77c88ca561be924b2fedc54dd474be2e7e49c"
+      ],
+      "repository_path": "CME/source/CME_phase_1-2/ahb1341.xml",
+      "local_copies": [
+        {
+          "label": "Pinned ahb1341 XML",
+          "path": "source-cache/ahb1341/cme-pinned-ahb1341-e1d77c88.xml",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ahb1341.xml",
+          "sha256": "847ed602aa7d1c469e7a11fae8e309cc86c35177975044d11c4c8b66f29931aa",
+          "bytes": 7416321,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete encoded target selection",
+            "locators": [
+              "XML DIV1 nodes AHB1341.0001.001:3 through :19 (17 target streams)",
+              "613 target DIV2 chapter divisions",
+              "vol. I odd printed pages [3]-431",
+              "vol. II odd printed pages [3]-451",
+              "vol. III odd printed pages [3]-479",
+              "vol. IV odd printed pages [3]-475",
+              "vol. V odd printed pages [3]-461",
+              "vol. VI odd printed pages [3]-477",
+              "vol. VII odd printed pages [3]-497 and appendix pages [501]-538",
+              "vol. VIII odd pages [3]-339; 341, 343, 345, 347; pages 348-353; pages 429-587"
+            ],
+            "notes": [
+              "Non-target front/back scaffolding and Latin-text placeholders are also present in the complete XML file."
+            ]
+          }
+        },
+        {
+          "label": "Pinned repository LICENSE",
+          "path": "source-cache/ahb1341/cme-pinned-license-e1d77c88.txt",
+          "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+          "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+          "bytes": 1211,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Supporting rights evidence only; the Unlicense wording is software-oriented and its scope over the XML/data is ambiguous."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "XML and supporting plain-text license",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:pinned-license"
+      ]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:ahb1341-2006",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public item page and persistent handle",
+      "url": "https://quod.lib.umich.edu/c/cme/AHB1341.0001.001",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/AHB1341.0001.001"
+      ],
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:umich-item"
+      ]
+    },
+    {
+      "id": "access:umich-images",
+      "entity": "facsimile:umich:ahb1341-page-images",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "page_images",
+      "status": "unknown",
+      "access_method": "Item landing page exposes viewer navigation; direct image delivery was not verified",
+      "url": "https://quod.lib.umich.edu/c/cme/AHB1341.0001.001",
+      "cost": "unknown",
+      "format": "Historical header reports 5,176 600dpi TIFF G4 images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:umich-image-check"
+      ],
+      "notes": [
+        "An automated request to a sample image route returned HTTP 403. This does not establish that the viewer is unavailable to people, nor that a complete direct download exists.",
+        "No current complete image set is cached."
+      ]
+    },
+    {
+      "id": "access:medictionary-xml",
+      "entity": "encoding:medictionary:ahb1341-may-2026",
+      "provider_id": "agent:medictionary",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct XML download linked from the CME downloads page",
+      "url": "http://www.medictionary.info/texts/ahb1341.xml",
+      "alternate_urls": [
+        "https://www.medictionary.info/pages/CME_downloads.html"
+      ],
+      "local_copies": [
+        {
+          "label": "Medictionary current reformatted XML",
+          "path": "source-cache/ahb1341/cme-current-reformatted-ahb1341-2026.xml",
+          "source_url": "http://www.medictionary.info/texts/ahb1341.xml",
+          "sha256": "87c81757d50175a91b24e88cc2ffc6a184e955f85a2f6fcb0830377497d30dc7",
+          "bytes": 7155657,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Complete reformatted target selection",
+            "locators": [
+              "17 target DIV1 streams corresponding to the pinned source target",
+              "vol. I odd printed pages [3]-431",
+              "vol. II odd printed pages [3]-451",
+              "vol. III odd printed pages [3]-479",
+              "vol. IV odd printed pages [3]-475",
+              "vol. V odd printed pages [3]-461",
+              "vol. VI odd printed pages [3]-477",
+              "vol. VII odd printed pages [3]-497 and appendix pages [501]-538",
+              "vol. VIII odd pages [3]-339; 341, 343, 345, 347; pages 348-353; pages 429-587"
+            ],
+            "notes": [
+              "Current document root is ETS; structure is reformatted and should not be identified by the pinned XML's exact NODE syntax."
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:medictionary-downloads",
+        "evidence:medictionary-xml"
+      ]
+    },
+    {
+      "id": "access:latin-work-description",
+      "entity": "work:latin-polychronicon",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp78159",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "access:trevisa-version-description",
+      "entity": "version:trevisa-polychronicon-1387",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp78159",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "access:anonymous-version-description",
+      "entity": "version:anonymous-second-polychronicon",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048092",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "access:harley-alternative-description",
+      "entity": "version:harley-1900-book6-alternative",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran07higd",
+      "cost": "free",
+      "format": "Rolls Series volume VII appendix pages [501]-538",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "access:caxton-version-description",
+      "entity": "version:caxton-polycronicon-1482",
+      "provider_id": "agent:cerl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://data.cerl.org/istc/ih00267000",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ],
+      "notes": [
+        "ISTC links several holding records and digital resources, but the exact copy used by the Rolls editors is unknown."
+      ]
+    },
+    {
+      "id": "access:st-johns-h1",
+      "entity": "witness:st-johns:H1",
+      "provider_id": "agent:st-johns-college",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Old Library reading room; reproductions may be requested separately",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "alternate_urls": [
+        "https://www.joh.cam.ac.uk/research/library"
+      ],
+      "contact": "special.collections@joh.cam.ac.uk",
+      "cost": "unknown",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:st-johns-library"
+      ],
+      "notes": [
+        "Published hours were Monday-Friday 09:00-13:00 and 14:00-17:00 when checked; confirm before travel.",
+        "Reproduction supply and reuse are separate from access to the medieval text."
+      ]
+    },
+    {
+      "id": "access:bl-add24194",
+      "entity": "witness:bl:Add-MS-24194",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Catalog record, reading-room request, or paid digitisation enquiry",
+      "url": "https://searcharchives.bl.uk/catalog/040-002031479",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog",
+        "evidence:bl-services"
+      ],
+      "notes": [
+        "The catalog indicates that a letter of introduction is required. No request or enquiry has been sent.",
+        "Supply and reuse terms for reproductions are distinct from copyright in the medieval text and from the CC BY catalog record."
+      ]
+    },
+    {
+      "id": "access:bl-harley1900",
+      "entity": "witness:bl:Harley-MS-1900",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Reading-room request or paid digitisation enquiry; no exact current public catalog record verified",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-services",
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "No request or enquiry has been sent.",
+        "Supply and reuse terms for reproductions are separate from access and from rights in the underlying medieval text."
+      ]
+    },
+    {
+      "id": "access:bl-harley2261",
+      "entity": "witness:bl:Harley-MS-2261",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Catalog record, reading-room request, or paid digitisation enquiry",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048092",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog",
+        "evidence:bl-services"
+      ],
+      "notes": [
+        "No public digitized manuscript content was verified and no request or enquiry has been sent.",
+        "Supply and reuse terms for reproductions are distinct from the CC BY catalog record and from rights in the underlying medieval text."
+      ]
+    },
+    {
+      "id": "access:rolls-aggregate",
+      "entity": "edition:rolls-series-41:aggregate",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp78159",
+      "alternate_urls": [
+        "https://catalog.hathitrust.org/Record/001652214"
+      ],
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "access:rolls-vol1-expression",
+      "entity": "edition:rolls-series-41:vol1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconra00lumbgoog",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol2-expression",
+      "entity": "edition:rolls-series-41:vol2",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran02higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol3-expression",
+      "entity": "edition:rolls-series-41:vol3",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran03higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol4-expression",
+      "entity": "edition:rolls-series-41:vol4",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran04higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol5-expression",
+      "entity": "edition:rolls-series-41:vol5",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran05higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol6-expression",
+      "entity": "edition:rolls-series-41:vol6",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran06higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol7-expression",
+      "entity": "edition:rolls-series-41:vol7",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran07higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol8-expression",
+      "entity": "edition:rolls-series-41:vol8",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran08higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata"
+      ]
+    },
+    {
+      "id": "access:rolls-vol9-expression",
+      "entity": "edition:rolls-series-41:vol9",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://archive.org/details/polychroniconran09higd",
+      "cost": "free",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata"
+      ],
+      "notes": [
+        "Expression is part of the aggregate; the target work is absent."
+      ]
+    },
+    {
+      "id": "access:facsimile-vol1",
+      "entity": "facsimile:ia:vol1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconra00lumbgoog",
+        "https://archive.org/metadata/polychroniconra00lumbgoog",
+        "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume I PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol1-1865-ia-google.pdf",
+          "source_url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog.pdf",
+          "sha256": "6c92f8ea50c4f0800f746304760bc9c24af5e2d74988861517f367119cea56a7",
+          "bytes": 18560749,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume I target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-431"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume I",
+          "path": "source-cache/ahb1341/ia-polychroniconra00lumbgoog-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconra00lumbgoog",
+          "sha256": "a10b6d8bcddd9264e2a480e2ecdfab3a26f666fc44cadc748ee2749c249367b3",
+          "bytes": 102638,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "IA scandata XML for volume I",
+          "path": "source-cache/ahb1341/rolls-series-41-vol1-1865-ia-google-scandata.xml",
+          "source_url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog_scandata.xml",
+          "sha256": "2ecc2a6c8f0cc5931f9bea8fb24eff9828e0ae5de2fe65067ee7e0e4caeda76b",
+          "bytes": 181524,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata",
+        "evidence:ia-vol1-scandata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol2",
+      "entity": "facsimile:ia:vol2",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran02higd/polychroniconran02higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran02higd",
+        "https://archive.org/metadata/polychroniconran02higd"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume II PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol2-1869-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran02higd/polychroniconran02higd.pdf",
+          "sha256": "67e465e2b81d4f0a2bd03361a1e91ce20d8ca7003d4b2b2d64b00e41f9aa82ef",
+          "bytes": 43235470,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume II target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-451"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume II",
+          "path": "source-cache/ahb1341/ia-polychroniconran02higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran02higd",
+          "sha256": "7d9f0d86775082ad6a52b24d73ba072b49c563036643bf07cbe5d5ceadecfe4c",
+          "bytes": 99464,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol3",
+      "entity": "facsimile:ia:vol3",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran03higd/polychroniconran03higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran03higd",
+        "https://archive.org/metadata/polychroniconran03higd"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume III PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol3-1871-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran03higd/polychroniconran03higd.pdf",
+          "sha256": "9df419e8fcc0232d8226253de82806043bf25cef25e551fb3c9e35b1baed6202",
+          "bytes": 37811101,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume III target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-479"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume III",
+          "path": "source-cache/ahb1341/ia-polychroniconran03higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran03higd",
+          "sha256": "190802cfc4b4ca872e067d86033c6ba38de80b0533618df7de4737f39c5b092c",
+          "bytes": 100950,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol4",
+      "entity": "facsimile:ia:vol4",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran04higd/polychroniconran04higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran04higd",
+        "https://archive.org/metadata/polychroniconran04higd"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume IV PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol4-1872-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran04higd/polychroniconran04higd.pdf",
+          "sha256": "bca05b72280cceab5e2474291db5530015ae018423d71bbc8fc272f8ba370f19",
+          "bytes": 37061730,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume IV target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-475"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume IV",
+          "path": "source-cache/ahb1341/ia-polychroniconran04higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran04higd",
+          "sha256": "1d21635e93d81bb9aaf03d192e0088b5f4815a14d1e2dd0c9627474208c15220",
+          "bytes": 101641,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol5",
+      "entity": "facsimile:ia:vol5",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran05higd/polychroniconran05higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran05higd",
+        "https://archive.org/metadata/polychroniconran05higd"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume V PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol5-1874-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran05higd/polychroniconran05higd.pdf",
+          "sha256": "f4b200ef93cc9f0e2ff75b090a66a6d28636d9fbc90d1c7cd471a214dc5d4ce8",
+          "bytes": 30578227,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume V target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-461"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume V",
+          "path": "source-cache/ahb1341/ia-polychroniconran05higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran05higd",
+          "sha256": "74d5a7d1bf446b353f6e7398fdbab81165c7b3f15f15ef54b77fac02ec9769a6",
+          "bytes": 106483,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol6",
+      "entity": "facsimile:ia:vol6",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran06higd/polychroniconran06higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran06higd",
+        "https://archive.org/metadata/polychroniconran06higd"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume VI PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol6-1876-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran06higd/polychroniconran06higd.pdf",
+          "sha256": "219926a796c2fc8d32e1b21e1191517a5ee05de77824761a7c7f68ee740a1592",
+          "bytes": 40962903,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume VI target columns",
+            "locators": [
+              "odd-numbered printed pages [3]-477"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume VI",
+          "path": "source-cache/ahb1341/ia-polychroniconran06higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran06higd",
+          "sha256": "f2fab9789c716ba7360bebcde05999281b8917bc4184e5ad9e16499dcc0922a9",
+          "bytes": 105670,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol7",
+      "entity": "facsimile:ia:vol7",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran07higd",
+        "https://archive.org/metadata/polychroniconran07higd",
+        "https://archive.org/download/polychroniconran07higd/polychroniconran07higd_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume VII PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol7-1879-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd.pdf",
+          "sha256": "d9b8f04a566ae843f8178ea027be254b893564a848dd06480eb05ed24b53bed4",
+          "bytes": 49834811,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume VII target columns and appendix",
+            "locators": [
+              "odd-numbered printed pages [3]-497",
+              "Harley MS 1900 appendix pages [501]-538"
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume VII",
+          "path": "source-cache/ahb1341/ia-polychroniconran07higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran07higd",
+          "sha256": "207fc455d5187535f888145403e1980efee7bb35c2c04e904aa2d87d729f8165",
+          "bytes": 114296,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "IA scandata XML for volume VII",
+          "path": "source-cache/ahb1341/rolls-series-41-vol7-1879-ia-scandata.xml",
+          "source_url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd_scandata.xml",
+          "sha256": "11dafd88fefbe764eb466036c2dc8c5e24922db2c7341c9dc4e7f89ffde6d31b",
+          "bytes": 618559,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata",
+        "evidence:ia-vol7-scandata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol8",
+      "entity": "facsimile:ia:vol8",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran08higd",
+        "https://archive.org/metadata/polychroniconran08higd",
+        "https://archive.org/download/polychroniconran08higd/polychroniconran08higd_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume VIII PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol8-1882-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd.pdf",
+          "sha256": "69fc05e95cf758168f137b409c1a08608d5b1c3ae51522845798461f81afdec2",
+          "bytes": 34773611,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume VIII target union",
+            "locators": [
+              "odd-numbered printed pages [3]-339",
+              "printed pages 341, 343, 345, and 347",
+              "all printed pages 348-353",
+              "all printed pages 429-587"
+            ],
+            "notes": [
+              "Printed pages 354-428 contain no target stream."
+            ]
+          }
+        },
+        {
+          "label": "IA item metadata JSON for volume VIII",
+          "path": "source-cache/ahb1341/ia-polychroniconran08higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran08higd",
+          "sha256": "35d1fe8a4a3c38c43c383454181110413be7ed80f6abe234a8bfd7a46b049323",
+          "bytes": 121830,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "IA scandata XML for volume VIII",
+          "path": "source-cache/ahb1341/rolls-series-41-vol8-1882-ia-scandata.xml",
+          "source_url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd_scandata.xml",
+          "sha256": "fdef216e1f601940c07ce3d05be3542cee31628312b038176702e5607d9d8a54",
+          "bytes": 664079,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata",
+        "evidence:ia-vol8-scandata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:facsimile-vol9",
+      "entity": "facsimile:ia:vol9",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran09higd",
+        "https://archive.org/metadata/polychroniconran09higd",
+        "https://archive.org/download/polychroniconran09higd/polychroniconran09higd_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete volume IX PDF",
+          "path": "source-cache/ahb1341/rolls-series-41-vol9-1886-ia.pdf",
+          "source_url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd.pdf",
+          "sha256": "6ef7c52a137bf829e1601720ad21c478b01121dccf9fada2b629d3b262753527",
+          "bytes": 49721323,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Complete volume retained as zero-overlap boundary/support evidence; no work_portion is supplied."
+          ]
+        },
+        {
+          "label": "IA item metadata JSON for volume IX",
+          "path": "source-cache/ahb1341/ia-polychroniconran09higd-metadata.json",
+          "source_url": "https://archive.org/metadata/polychroniconran09higd",
+          "sha256": "bc35c4d44d67674e9993f43d75fc078dc28b33f9a6eef2b0812dfefc3950fe1a",
+          "bytes": 119697,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "IA scandata XML for volume IX",
+          "path": "source-cache/ahb1341/rolls-series-41-vol9-1886-ia-scandata.xml",
+          "source_url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd_scandata.xml",
+          "sha256": "499b10b18a51b156d22504ad654461161439d0e63ec9808b08456e7c35a283ff",
+          "bytes": 661894,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF plus supporting metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata",
+        "evidence:ia-vol9-scandata",
+        "evidence:scan-integrity"
+      ]
+    },
+    {
+      "id": "access:ocr-vol1",
+      "entity": "encoding:ia:vol1-ocr",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog_djvu.txt",
+      "local_copies": [
+        {
+          "label": "Complete volume I OCR text",
+          "path": "source-cache/ahb1341/rolls-series-41-vol1-1865-ia-google-ocr.txt",
+          "source_url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog_djvu.txt",
+          "sha256": "839453490a32702dcb49777eceeec418fbc69b8dea0f70717c5d0cba74dbb60f",
+          "bytes": 1249789,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume I target OCR",
+            "locators": [
+              "odd-numbered printed pages [3]-431"
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "plain-text OCR",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "access:ocr-vol7",
+      "entity": "encoding:ia:vol7-ocr",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd_djvu.txt",
+      "local_copies": [
+        {
+          "label": "Complete volume VII OCR text",
+          "path": "source-cache/ahb1341/rolls-series-41-vol7-1879-ia-ocr.txt",
+          "source_url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd_djvu.txt",
+          "sha256": "a7acfbec203c0f885203b29d3eb1ca4c9c3be4fa2a75e6918f600b294cd81ca8",
+          "bytes": 1436150,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume VII target OCR",
+            "locators": [
+              "odd-numbered printed pages [3]-497",
+              "Harley MS 1900 appendix pages [501]-538"
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "plain-text OCR",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "access:ocr-vol8",
+      "entity": "encoding:ia:vol8-ocr",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd_djvu.txt",
+      "local_copies": [
+        {
+          "label": "Complete volume VIII OCR text",
+          "path": "source-cache/ahb1341/rolls-series-41-vol8-1882-ia-ocr.txt",
+          "source_url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd_djvu.txt",
+          "sha256": "ba9bd4cab6564926d3b7232db4bfa0629b1474752ec8b0bed1b3d2038d35cc4f",
+          "bytes": 1634482,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Volume VIII target OCR",
+            "locators": [
+              "odd-numbered printed pages [3]-339",
+              "printed pages 341, 343, 345, and 347",
+              "all printed pages 348-353",
+              "all printed pages 429-587"
+            ]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "plain-text OCR",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata"
+      ]
+    },
+    {
+      "id": "access:ocr-vol9",
+      "entity": "encoding:ia:vol9-ocr",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd_djvu.txt",
+      "local_copies": [
+        {
+          "label": "Complete volume IX OCR text",
+          "path": "source-cache/ahb1341/rolls-series-41-vol9-1886-ia-ocr.txt",
+          "source_url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd_djvu.txt",
+          "sha256": "c5e1929e75f9330663d23e4eea59b4f15e9ee2b4adcc1a57bec7b0c239d26cd9",
+          "bytes": 1753233,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Target work absent; no work_portion is supplied."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "plain-text OCR",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata"
+      ]
+    },
+    {
+      "id": "access:cerl-istc",
+      "entity": "catalog:cerl:istc-ih00267000",
+      "provider_id": "agent:cerl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://data.cerl.org/istc/ih00267000?format=json",
+      "alternate_urls": [
+        "https://data.cerl.org/istc/ih00267000"
+      ],
+      "local_copies": [
+        {
+          "label": "CERL ISTC JSON ih00267000",
+          "path": "source-cache/ahb1341/cerl-istc-ih00267000.json",
+          "source_url": "https://data.cerl.org/istc/ih00267000?format=json",
+          "sha256": "98cf4e309580a056039b4e7ca2074e19f33e8f172c864186f38d289762440f35",
+          "bytes": 15015,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON catalog data",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "access:bl-add24194-catalog",
+      "entity": "catalog:bl:Add-MS-24194",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002031479.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002031479"
+      ],
+      "local_copies": [
+        {
+          "label": "BL catalog JSON for Add MS 24194",
+          "path": "source-cache/ahb1341/bl-add-ms-24194-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002031479.json",
+          "sha256": "8b4b36e3f5990c5e7689dc4ffe0d14446f7842e3fcdcba8f5858b8683a19d6a7",
+          "bytes": 12573,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON catalog data",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog"
+      ]
+    },
+    {
+      "id": "access:bl-harley2261-catalog",
+      "entity": "catalog:bl:Harley-MS-2261",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048092.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048092"
+      ],
+      "local_copies": [
+        {
+          "label": "BL catalog JSON for Harley MS 2261",
+          "path": "source-cache/ahb1341/bl-harley-ms-2261-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002048092.json",
+          "sha256": "a89939e3ecd1da538f3bfd569b9d1d3e9f9b157fa78aa640888b6149246fbec2",
+          "bytes": 12124,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON catalog data",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog"
+      ]
+    },
+    {
+      "id": "access:liira-2020",
+      "entity": "study:liira:2020",
+      "provider_id": "agent:university-of-turku",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://www.utupub.fi/server/api/core/bitstreams/6a4c7848-b63a-4dc5-a49d-3d25e37cc03d/content",
+      "local_copies": [
+        {
+          "label": "Liira 2020 dissertation PDF",
+          "path": "source-cache/ahb1341/liira-2020-paratextuality-middle-english-polychronicon.pdf",
+          "source_url": "https://www.utupub.fi/server/api/core/bitstreams/6a4c7848-b63a-4dc5-a49d-3d25e37cc03d/content",
+          "sha256": "2cd6baf2772d6da70b9b244b83b8f5ba747872433c14465cbbbdba44faceeb70",
+          "bytes": 5716029,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Supporting scholarly study; it describes and quotes the tradition but is not a carrier of the cataloged edited selection."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:artifact-current-content",
+      "entity": "artifact:general-corpus:ahb1341",
+      "access_id": "access:pinned-artifact",
+      "component": "encoded text content as represented by the current U-M item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The current U-M item labels the digital text Public Domain and DPLA supplies the No Copyright - United States statement.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-item",
+        "evidence:umich-rights"
+      ],
+      "notes": [
+        "This applies to the encoded text component, not automatically to repository packaging, linked images, provider metadata, or requested reproductions."
+      ]
+    },
+    {
+      "id": "rights:artifact-legacy-warning",
+      "entity": "artifact:general-corpus:ahb1341",
+      "access_id": "access:pinned-artifact",
+      "component": "historical availability warning embedded in the pinned XML header",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2006-02-22",
+      "basis": "The historical header says that where applicable the item is subject to copyright and that other distribution restrictions may apply.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:pinned-xml"
+      ],
+      "notes": [
+        "This records the legacy warning separately; it is not generalized into the current rights assessment and does not erase the current U-M public-domain statement."
+      ]
+    },
+    {
+      "id": "rights:artifact-unlicense-scope",
+      "entity": "artifact:general-corpus:ahb1341",
+      "access_id": "access:pinned-artifact",
+      "component": "repository-specific code, packaging, XML, or data potentially covered by the repository LICENSE",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The pinned repository LICENSE contains the Unlicense text, but it does not state whether its software wording applies to the XML transcription/data.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "unknown",
+      "confidence": "low",
+      "evidence_ids": [
+        "evidence:pinned-license"
+      ],
+      "notes": [
+        "Do not treat this ambiguous repository-level license as proof that U-M images, printed scans, manuscript images, or third-party metadata are Unlicensed."
+      ]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:ahb1341-2006",
+      "access_id": "access:umich-text",
+      "component": "current U-M digital text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Current U-M item status and No Copyright - United States statement.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-item",
+        "evidence:umich-rights"
+      ]
+    },
+    {
+      "id": "rights:umich-images",
+      "entity": "facsimile:umich:ahb1341-page-images",
+      "access_id": "access:umich-images",
+      "component": "historical page-image files and any current viewer delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current item labels the text public domain, but no image-specific license or complete current image-set terms were verified.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:umich-item",
+        "evidence:umich-image-check"
+      ],
+      "notes": [
+        "Do not infer image-file reuse permission from the digital-text rights statement."
+      ]
+    },
+    {
+      "id": "rights:medictionary-encoding",
+      "entity": "encoding:medictionary:ahb1341-may-2026",
+      "access_id": "access:medictionary-xml",
+      "component": "underlying historical/U-M-derived textual content carried by the reformat",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The underlying U-M encoding is currently marked public domain/NoC-US.",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:umich-rights",
+        "evidence:medictionary-downloads"
+      ],
+      "notes": [
+        "This does not extend to Medictionary-specific formatting/markup, third-party images, or provider metadata."
+      ]
+    },
+    {
+      "id": "rights:medictionary-markup",
+      "entity": "encoding:medictionary:ahb1341-may-2026",
+      "access_id": "access:medictionary-xml",
+      "component": "Medictionary-specific reformatting and markup",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Medictionary states that raw CME files are freely downloadable without restrictions but supplies no distinct license governing its May 2026 reformatting/markup.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:medictionary-downloads",
+        "evidence:medictionary-xml"
+      ]
+    },
+    {
+      "id": "rights:latin-work",
+      "entity": "work:latin-polychronicon",
+      "component": "medieval Latin literary work",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Ranulf Higden died in 1364; the medieval literary work is out of copyright.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:trevisa-version",
+      "entity": "version:trevisa-polychronicon-1387",
+      "component": "medieval Middle English translation and continuation text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The translation was completed in 1387 and Trevisa died in 1402.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "rights:anonymous-version",
+      "entity": "version:anonymous-second-polychronicon",
+      "component": "medieval anonymous Middle English translation text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The anonymous translation is a fifteenth-century work.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "rights:harley-alternative",
+      "entity": "version:harley-1900-book6-alternative",
+      "component": "medieval alternative passage text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The alternative is a passage in an early-fifteenth-century Trevisa witness.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:liira-2020",
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:caxton-version",
+      "entity": "version:caxton-polycronicon-1482",
+      "component": "1482 adaptation and continuation text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The work was printed in 1482 and Caxton died in 1491.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "rights:h1-text",
+      "entity": "witness:st-johns:H1",
+      "access_id": "access:st-johns-h1",
+      "component": "underlying medieval manuscript text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The manuscript and text date to the early fifteenth century.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "This does not grant rights in new photography or override reproduction supply/reuse terms."
+      ]
+    },
+    {
+      "id": "rights:h1-reproductions",
+      "entity": "witness:st-johns:H1",
+      "access_id": "access:st-johns-h1",
+      "component": "newly supplied manuscript reproductions",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The library offers reproductions but image-specific reuse terms were not established.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:st-johns-library"
+      ]
+    },
+    {
+      "id": "rights:add24194-text",
+      "entity": "witness:bl:Add-MS-24194",
+      "access_id": "access:bl-add24194",
+      "component": "underlying medieval manuscript text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The manuscript and text are medieval.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog"
+      ],
+      "notes": [
+        "This does not apply to BL catalog data, manuscript images, or reproduction service terms."
+      ]
+    },
+    {
+      "id": "rights:add24194-reproductions",
+      "entity": "witness:bl:Add-MS-24194",
+      "access_id": "access:bl-add24194",
+      "component": "newly supplied manuscript reproductions",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "BL imaging-service supply and reuse terms apply separately; no reproduction was ordered.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-services"
+      ]
+    },
+    {
+      "id": "rights:harley1900-text",
+      "entity": "witness:bl:Harley-MS-1900",
+      "access_id": "access:bl-harley1900",
+      "component": "underlying medieval manuscript text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The manuscript and text are medieval.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ],
+      "notes": [
+        "This does not apply to manuscript images or reproduction service terms."
+      ]
+    },
+    {
+      "id": "rights:harley1900-reproductions",
+      "entity": "witness:bl:Harley-MS-1900",
+      "access_id": "access:bl-harley1900",
+      "component": "newly supplied manuscript reproductions",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "BL imaging-service supply and reuse terms apply separately; no reproduction was ordered.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-services"
+      ]
+    },
+    {
+      "id": "rights:harley2261-text",
+      "entity": "witness:bl:Harley-MS-2261",
+      "access_id": "access:bl-harley2261",
+      "component": "underlying medieval manuscript text",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The manuscript and text are fifteenth-century.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog"
+      ],
+      "notes": [
+        "This does not apply to BL catalog data, manuscript images, or reproduction service terms."
+      ]
+    },
+    {
+      "id": "rights:harley2261-reproductions",
+      "entity": "witness:bl:Harley-MS-2261",
+      "access_id": "access:bl-harley2261",
+      "component": "newly supplied manuscript reproductions",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "BL imaging-service supply and reuse terms apply separately; no reproduction was ordered.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-services"
+      ]
+    },
+    {
+      "id": "rights:rolls-aggregate",
+      "entity": "edition:rolls-series-41:aggregate",
+      "access_id": "access:rolls-aggregate",
+      "component": "nine-volume printed edition expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Volumes were published in 1865-1886 and are public domain in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol1-expression",
+      "entity": "edition:rolls-series-41:vol1",
+      "access_id": "access:rolls-vol1-expression",
+      "component": "printed volume I expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1865.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata",
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol2-expression",
+      "entity": "edition:rolls-series-41:vol2",
+      "access_id": "access:rolls-vol2-expression",
+      "component": "printed volume II expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1869.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol3-expression",
+      "entity": "edition:rolls-series-41:vol3",
+      "access_id": "access:rolls-vol3-expression",
+      "component": "printed volume III expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1871.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol4-expression",
+      "entity": "edition:rolls-series-41:vol4",
+      "access_id": "access:rolls-vol4-expression",
+      "component": "printed volume IV expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1872.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol5-expression",
+      "entity": "edition:rolls-series-41:vol5",
+      "access_id": "access:rolls-vol5-expression",
+      "component": "printed volume V expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1874.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol6-expression",
+      "entity": "edition:rolls-series-41:vol6",
+      "access_id": "access:rolls-vol6-expression",
+      "component": "printed volume VI expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1876.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol7-expression",
+      "entity": "edition:rolls-series-41:vol7",
+      "access_id": "access:rolls-vol7-expression",
+      "component": "printed volume VII expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1879.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol8-expression",
+      "entity": "edition:rolls-series-41:vol8",
+      "access_id": "access:rolls-vol8-expression",
+      "component": "printed volume VIII expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1882.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:rolls-vol9-expression",
+      "entity": "edition:rolls-series-41:vol9",
+      "access_id": "access:rolls-vol9-expression",
+      "component": "printed volume IX expression",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1886.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol1-carrier",
+      "entity": "facsimile:ia:vol1",
+      "access_id": "access:facsimile-vol1",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-16",
+      "basis": "Only volume I's current IA metadata explicitly records NOT_IN_COPYRIGHT/Possible copyright, and the embedded Google notice identifies a public-domain book.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ],
+      "notes": [
+        "The embedded Google notice requests personal, non-commercial use and attribution; those provider conditions apply at the carrier/service layer, not to the public-domain printed volume expression."
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol1-metadata",
+      "entity": "facsimile:ia:vol1",
+      "access_id": "access:facsimile-vol1",
+      "component": "IA metadata JSON and scandata XML",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached IA metadata objects.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata",
+        "evidence:ia-vol1-scandata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol2-carrier",
+      "entity": "facsimile:ia:vol2",
+      "access_id": "access:facsimile-vol2",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume II IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol2-metadata",
+      "entity": "facsimile:ia:vol2",
+      "access_id": "access:facsimile-vol2",
+      "component": "IA metadata JSON",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol2-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol3-carrier",
+      "entity": "facsimile:ia:vol3",
+      "access_id": "access:facsimile-vol3",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume III IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol3-metadata",
+      "entity": "facsimile:ia:vol3",
+      "access_id": "access:facsimile-vol3",
+      "component": "IA metadata JSON",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol3-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol4-carrier",
+      "entity": "facsimile:ia:vol4",
+      "access_id": "access:facsimile-vol4",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume IV IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol4-metadata",
+      "entity": "facsimile:ia:vol4",
+      "access_id": "access:facsimile-vol4",
+      "component": "IA metadata JSON",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol4-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol5-carrier",
+      "entity": "facsimile:ia:vol5",
+      "access_id": "access:facsimile-vol5",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume V IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol5-metadata",
+      "entity": "facsimile:ia:vol5",
+      "access_id": "access:facsimile-vol5",
+      "component": "IA metadata JSON",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol5-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol6-carrier",
+      "entity": "facsimile:ia:vol6",
+      "access_id": "access:facsimile-vol6",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume VI IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol6-metadata",
+      "entity": "facsimile:ia:vol6",
+      "access_id": "access:facsimile-vol6",
+      "component": "IA metadata JSON",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol6-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol7-carrier",
+      "entity": "facsimile:ia:vol7",
+      "access_id": "access:facsimile-vol7",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume VII IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol7-metadata",
+      "entity": "facsimile:ia:vol7",
+      "access_id": "access:facsimile-vol7",
+      "component": "IA metadata JSON and scandata XML",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata objects.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata",
+        "evidence:ia-vol7-scandata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol8-carrier",
+      "entity": "facsimile:ia:vol8",
+      "access_id": "access:facsimile-vol8",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume VIII IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol8-metadata",
+      "entity": "facsimile:ia:vol8",
+      "access_id": "access:facsimile-vol8",
+      "component": "IA metadata JSON and scandata XML",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata objects.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata",
+        "evidence:ia-vol8-scandata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol9-carrier",
+      "entity": "facsimile:ia:vol9",
+      "access_id": "access:facsimile-vol9",
+      "component": "PDF scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "The current volume IX IA metadata has no explicit rights field; volume I's status is not generalized.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata"
+      ]
+    },
+    {
+      "id": "rights:facsimile-vol9-metadata",
+      "entity": "facsimile:ia:vol9",
+      "access_id": "access:facsimile-vol9",
+      "component": "IA metadata JSON and scandata XML",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit reusable-data license was found in the cached metadata objects.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata",
+        "evidence:ia-vol9-scandata"
+      ]
+    },
+    {
+      "id": "rights:ocr-vol1",
+      "entity": "encoding:ia:vol1-ocr",
+      "access_id": "access:ocr-vol1",
+      "component": "OCR derivative file",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Underlying edition text is public domain, but no distinct reusable-file license was verified for the OCR derivative.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol1-metadata"
+      ]
+    },
+    {
+      "id": "rights:ocr-vol7",
+      "entity": "encoding:ia:vol7-ocr",
+      "access_id": "access:ocr-vol7",
+      "component": "OCR derivative file",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Underlying edition text is public domain, but no distinct reusable-file license was verified for the OCR derivative.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol7-metadata"
+      ]
+    },
+    {
+      "id": "rights:ocr-vol8",
+      "entity": "encoding:ia:vol8-ocr",
+      "access_id": "access:ocr-vol8",
+      "component": "OCR derivative file",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Underlying edition text is public domain, but no distinct reusable-file license was verified for the OCR derivative.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol8-metadata"
+      ]
+    },
+    {
+      "id": "rights:ocr-vol9",
+      "entity": "encoding:ia:vol9-ocr",
+      "access_id": "access:ocr-vol9",
+      "component": "OCR derivative file",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Underlying edition text is public domain, but no distinct reusable-file license was verified for the OCR derivative.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-vol9-metadata"
+      ]
+    },
+    {
+      "id": "rights:cerl-istc-data",
+      "entity": "catalog:cerl:istc-ih00267000",
+      "access_id": "access:cerl-istc",
+      "component": "CERL ISTC JSON and catalog data",
+      "jurisdiction": "European Union",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No explicit open-data license was established for the downloaded record in this review.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "rights:bl-add24194-catalog",
+      "entity": "catalog:bl:Add-MS-24194",
+      "access_id": "access:bl-add24194-catalog",
+      "component": "BL catalog JSON/text only",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The BL catalog record footer licenses catalog content under CC BY 4.0.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-24194-catalog"
+      ],
+      "notes": [
+        "CC BY applies only to the catalog JSON/text, not to the manuscript, its medieval text, or any manuscript images."
+      ]
+    },
+    {
+      "id": "rights:bl-harley2261-catalog",
+      "entity": "catalog:bl:Harley-MS-2261",
+      "access_id": "access:bl-harley2261-catalog",
+      "component": "BL catalog JSON/text only",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The BL catalog record footer licenses catalog content under CC BY 4.0.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2261-catalog"
+      ],
+      "notes": [
+        "CC BY applies only to the catalog JSON/text, not to the manuscript, its medieval text, or any manuscript images."
+      ]
+    },
+    {
+      "id": "rights:liira-2020",
+      "entity": "study:liira:2020",
+      "access_id": "access:liira-2020",
+      "component": "2020 dissertation text and PDF",
+      "jurisdiction": "Finland and worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "A 2020 authored dissertation; no open license was verified on the cached PDF or download route.",
+      "asserted_by_id": "agent:aino-liira",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:liira-2020"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:rolls-collation",
+      "entity": "edition:rolls-series-41:aggregate",
+      "practice": "collation",
+      "source_feature": "Multiple Trevisa witnesses, Harley MS 2261, and Caxton's printed version",
+      "representation": "Parallel Latin/English text with variant apparatus and a separate Harley MS 1900 appendix",
+      "description": "The Rolls editors establish the English texts from multiple manuscript and print sources rather than reproducing one carrier mechanically.",
+      "scope": "Target portions in volumes I-VIII",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:pinned-xml",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:ahb1341-2006",
+      "practice": "selection",
+      "source_feature": "Nine-volume parallel-text scholarly edition",
+      "representation": "17 English target DIV1 streams and 613 target DIV2 chapters; Latin parallel text and extensive front/back matter are represented chiefly as omitted placeholders",
+      "description": "The electronic item is an edited digital selection from the larger printed edition, not an encoding of all substantive Latin and English matter in all nine volumes.",
+      "scope": "Complete U-M item AHB1341.0001.001",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:rolls-series"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:pinned-xml",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME ahb1341 XML at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_1-2/ahb1341.xml",
+      "repository_path": "source-cache/ahb1341/cme-pinned-ahb1341-e1d77c88.xml",
+      "locator": "HEADER; DIV1 nodes AHB1341.0001.001:3 through :19; PB, LG, L, and MILESTONE structures",
+      "summary": "Exact pinned source for item identity, historical production and rights wording, 5,176-image statement, page-image links, edition page locators, structural counts, and target text.",
+      "supports": [
+        "artifact:general-corpus:ahb1341",
+        "encoding:umich-cme:ahb1341-2006",
+        "facsimile:umich:ahb1341-page-images"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "847ed602aa7d1c469e7a11fae8e309cc86c35177975044d11c4c8b66f29931aa"
+    },
+    {
+      "id": "evidence:pinned-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "repository_path": "source-cache/ahb1341/cme-pinned-license-e1d77c88.txt",
+      "summary": "Exact Unlicense wording used only as scoped repository-rights evidence; its applicability to XML/data is ambiguous.",
+      "supports": [
+        "artifact:general-corpus:ahb1341"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan, Corpus of Middle English Prose and Verse, item AHB1341.0001.001",
+      "url": "https://quod.lib.umich.edu/c/cme/AHB1341.0001.001",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/AHB1341.0001.001"
+      ],
+      "summary": "Current item identity, public HTML access, title, viewer navigation, bibliographic description, and Public Domain label.",
+      "supports": [
+        "encoding:umich-cme:ahb1341-2006",
+        "facsimile:umich:ahb1341-page-images"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:umich-about",
+      "type": "official_webpage",
+      "citation": "University of Michigan, About the Corpus of Middle English Prose and Verse",
+      "url": "https://quod.lib.umich.edu/c/cme/about.html",
+      "summary": "Collection history states batch creation in 2000, online release in 2006, and generally manual keying and proofreading, creating an unresolved tension with this item's OCR/no-corrections header.",
+      "supports": [
+        "encoding:umich-cme:ahb1341-2006"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:umich-rights",
+      "type": "official_webpage",
+      "citation": "Current U-M item rights display and No Copyright - United States statement for AHB1341.0001.001",
+      "url": "https://quod.lib.umich.edu/c/cme/AHB1341.0001.001",
+      "alternate_urls": [
+        "https://rightsstatements.org/page/NoC-US/1.0/"
+      ],
+      "locator": "Rights/status display",
+      "summary": "Supports public-domain status for the current digital text in the United States. It is not an image-specific license.",
+      "supports": [
+        "encoding:umich-cme:ahb1341-2006",
+        "artifact:general-corpus:ahb1341"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:umich-image-check",
+      "type": "search_result",
+      "citation": "Automated access check of U-M page-image delivery linked from AHB1341.0001.001",
+      "url": "https://quod.lib.umich.edu/c/cme/AHB1341.0001.001",
+      "summary": "The landing page exposes image-viewer navigation, while one automated direct image-route request returned HTTP 403. This supports only an unknown direct-delivery status, not an assertion that public human viewing is unavailable.",
+      "supports": [
+        "facsimile:umich:ahb1341-page-images"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:medictionary-downloads",
+      "type": "official_webpage",
+      "citation": "Medictionary, Corpus of Middle English downloads page",
+      "url": "https://www.medictionary.info/pages/CME_downloads.html",
+      "summary": "Identifies the May 2026 reformat and states that raw CME files may be downloaded without restrictions, while supplying no distinct license text for the reformat.",
+      "supports": [
+        "encoding:medictionary:ahb1341-may-2026"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:medictionary-xml",
+      "type": "digital_surrogate",
+      "citation": "Medictionary reformatted ahb1341 XML",
+      "url": "http://www.medictionary.info/texts/ahb1341.xml",
+      "repository_path": "source-cache/ahb1341/cme-current-reformatted-ahb1341-2026.xml",
+      "summary": "Complete current reformatted XML carrier used for structural/text comparison and target locator verification.",
+      "supports": [
+        "encoding:medictionary:ahb1341-may-2026"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "87c81757d50175a91b24e88cc2ffc6a184e955f85a2f6fcb0830377497d30dc7"
+    },
+    {
+      "id": "evidence:xml-comparison",
+      "type": "visual_inspection",
+      "citation": "Structural and normalized target-text comparison of pinned and Medictionary ahb1341 XML files",
+      "repository_path": "source-cache/ahb1341/cme-current-reformatted-ahb1341-2026.xml",
+      "locator": "all target streams; compared with source-cache/ahb1341/cme-pinned-ahb1341-e1d77c88.xml",
+      "summary": "Streams corresponding to pinned nodes :3-:5 were text-identical after normalization; stream :3 has one added editorial-note 'd' and stream :4 one added Greek word in the current version. No substantive target-text divergence was found.",
+      "supports": [
+        "encoding:medictionary:ahb1341-may-2026",
+        "encoding:umich-cme:ahb1341-2006"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:rolls-series",
+      "type": "official_webpage",
+      "citation": "The Online Books Page, Polychronicon Ranulphi Higden monachi Cestrensis, nine-volume Rolls Series listing",
+      "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp78159",
+      "alternate_urls": [
+        "https://catalog.hathitrust.org/Record/001652214"
+      ],
+      "summary": "Stable aggregate bibliography and volume links, checked against inspected title pages and cached PDFs for exact editor, date, volume, and target-page boundaries.",
+      "supports": [
+        "edition:rolls-series-41:aggregate",
+        "work:latin-polychronicon",
+        "version:trevisa-polychronicon-1387",
+        "version:anonymous-second-polychronicon",
+        "version:harley-1900-book6-alternative",
+        "version:caxton-polycronicon-1482"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:liira-2020",
+      "type": "scholarly_source",
+      "citation": "Aino Liira, Paratextuality in Manuscript and Print: Verbal and Visual Presentation of the Middle English Polychronicon (University of Turku, 2020)",
+      "url": "https://www.utupub.fi/server/api/core/bitstreams/6a4c7848-b63a-4dc5-a49d-3d25e37cc03d/content",
+      "repository_path": "source-cache/ahb1341/liira-2020-paratextuality-middle-english-polychronicon.pdf",
+      "summary": "Supporting study for textual-family boundaries, translation relationships, paratext, and scoped descriptions of H.1, Add MS 24194, Harley MS 1900, Harley MS 2261, and Caxton.",
+      "supports": [
+        "study:liira:2020",
+        "version:trevisa-polychronicon-1387",
+        "version:anonymous-second-polychronicon",
+        "version:caxton-polycronicon-1482",
+        "witness:st-johns:H1",
+        "witness:bl:Add-MS-24194",
+        "witness:bl:Harley-MS-1900",
+        "witness:bl:Harley-MS-2261"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "2cd6baf2772d6da70b9b244b83b8f5ba747872433c14465cbbbdba44faceeb70"
+    },
+    {
+      "id": "evidence:st-johns-library",
+      "type": "official_webpage",
+      "citation": "St John's College Cambridge, Old Library and research-library access pages",
+      "url": "https://www.joh.cam.ac.uk/research/library/old-library",
+      "alternate_urls": [
+        "https://www.joh.cam.ac.uk/research/library"
+      ],
+      "summary": "Supports institutional holding context, reading-room access, contact, hours, and reproduction availability; it is not a folio-level catalog record for H.1.",
+      "supports": [
+        "witness:st-johns:H1"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:bl-add-24194-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts catalog record 040-002031479, Add MS 24194",
+      "url": "https://searcharchives.bl.uk/catalog/040-002031479.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002031479"
+      ],
+      "repository_path": "source-cache/ahb1341/bl-add-ms-24194-catalog.json",
+      "summary": "Exact catalog JSON supporting shelfmark, date, extent, material, folio range, access caveat, and catalog-text CC BY 4.0 scope.",
+      "supports": [
+        "catalog:bl:Add-MS-24194",
+        "witness:bl:Add-MS-24194"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "8b4b36e3f5990c5e7689dc4ffe0d14446f7842e3fcdcba8f5858b8683a19d6a7"
+    },
+    {
+      "id": "evidence:bl-harley-2261-catalog",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts catalog record 040-002048092, Harley MS 2261",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048092.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048092"
+      ],
+      "repository_path": "source-cache/ahb1341/bl-harley-ms-2261-catalog.json",
+      "summary": "Exact catalog JSON supporting the sole anonymous witness's shelfmark, date, paper support, extent, folio range, access, and catalog-text CC BY 4.0 scope.",
+      "supports": [
+        "catalog:bl:Harley-MS-2261",
+        "witness:bl:Harley-MS-2261",
+        "version:anonymous-second-polychronicon"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "a89939e3ecd1da538f3bfd569b9d1d3e9f9b157fa78aa640888b6149246fbec2"
+    },
+    {
+      "id": "evidence:bl-services",
+      "type": "official_webpage",
+      "citation": "British Library physical-item request, digitisation service, and imaging-service terms",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "summary": "Supports requestable access and separate supply/reuse terms for new reproductions. Imaging terms were current January 2026. No request was submitted.",
+      "supports": [
+        "witness:bl:Add-MS-24194",
+        "witness:bl:Harley-MS-1900",
+        "witness:bl:Harley-MS-2261"
+      ],
+      "accessed_on": "2026-07-16"
+    },
+    {
+      "id": "evidence:cerl-istc",
+      "type": "official_catalog",
+      "citation": "CERL Incunabula Short Title Catalogue ih00267000",
+      "url": "https://data.cerl.org/istc/ih00267000?format=json",
+      "alternate_urls": [
+        "https://data.cerl.org/istc/ih00267000"
+      ],
+      "repository_path": "source-cache/ahb1341/cerl-istc-ih00267000.json",
+      "summary": "Exact ISTC JSON supporting title, Caxton continuation, Westminster imprint, 1482 date range, identifiers, and 65 listed holdings. Some BL digital links were not network-resolvable in this review.",
+      "supports": [
+        "catalog:cerl:istc-ih00267000",
+        "version:caxton-polycronicon-1482"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "98cf4e309580a056039b4e7ca2074e19f33e8f172c864186f38d289762440f35"
+    },
+    {
+      "id": "evidence:ia-vol1-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconra00lumbgoog",
+      "url": "https://archive.org/metadata/polychroniconra00lumbgoog",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconra00lumbgoog"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconra00lumbgoog-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume I; uniquely among the nine cached records, it contains explicit NOT_IN_COPYRIGHT/Possible copyright fields.",
+      "supports": [
+        "facsimile:ia:vol1",
+        "edition:rolls-series-41:vol1",
+        "encoding:ia:vol1-ocr"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "a10b6d8bcddd9264e2a480e2ecdfab3a26f666fc44cadc748ee2749c249367b3"
+    },
+    {
+      "id": "evidence:ia-vol2-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran02higd",
+      "url": "https://archive.org/metadata/polychroniconran02higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran02higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran02higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume II; no explicit rights field is present, and the metadata's 1865 date is not used in place of the inspected 1869 title page.",
+      "supports": [
+        "facsimile:ia:vol2",
+        "edition:rolls-series-41:vol2"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "7d9f0d86775082ad6a52b24d73ba072b49c563036643bf07cbe5d5ceadecfe4c"
+    },
+    {
+      "id": "evidence:ia-vol3-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran03higd",
+      "url": "https://archive.org/metadata/polychroniconran03higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran03higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran03higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume III; no explicit rights field is present and the inspected title page establishes 1871.",
+      "supports": [
+        "facsimile:ia:vol3",
+        "edition:rolls-series-41:vol3"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "190802cfc4b4ca872e067d86033c6ba38de80b0533618df7de4737f39c5b092c"
+    },
+    {
+      "id": "evidence:ia-vol4-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran04higd",
+      "url": "https://archive.org/metadata/polychroniconran04higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran04higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran04higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume IV; no explicit rights field is present and the inspected title page establishes 1872.",
+      "supports": [
+        "facsimile:ia:vol4",
+        "edition:rolls-series-41:vol4"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "1d21635e93d81bb9aaf03d192e0088b5f4815a14d1e2dd0c9627474208c15220"
+    },
+    {
+      "id": "evidence:ia-vol5-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran05higd",
+      "url": "https://archive.org/metadata/polychroniconran05higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran05higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran05higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume V; no explicit rights field is present and the inspected title page establishes 1874.",
+      "supports": [
+        "facsimile:ia:vol5",
+        "edition:rolls-series-41:vol5"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "74d5a7d1bf446b353f6e7398fdbab81165c7b3f15f15ef54b77fac02ec9769a6"
+    },
+    {
+      "id": "evidence:ia-vol6-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran06higd",
+      "url": "https://archive.org/metadata/polychroniconran06higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran06higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran06higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume VI; no explicit rights field is present and the inspected title page establishes 1876.",
+      "supports": [
+        "facsimile:ia:vol6",
+        "edition:rolls-series-41:vol6"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "f2fab9789c716ba7360bebcde05999281b8917bc4184e5ad9e16499dcc0922a9"
+    },
+    {
+      "id": "evidence:ia-vol7-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran07higd",
+      "url": "https://archive.org/metadata/polychroniconran07higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran07higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran07higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume VII; no explicit rights field is present and the inspected title page establishes 1879.",
+      "supports": [
+        "facsimile:ia:vol7",
+        "edition:rolls-series-41:vol7",
+        "encoding:ia:vol7-ocr"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "207fc455d5187535f888145403e1980efee7bb35c2c04e904aa2d87d729f8165"
+    },
+    {
+      "id": "evidence:ia-vol8-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran08higd",
+      "url": "https://archive.org/metadata/polychroniconran08higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran08higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran08higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume VIII; no explicit rights field is present and the inspected title page establishes 1882.",
+      "supports": [
+        "facsimile:ia:vol8",
+        "edition:rolls-series-41:vol8",
+        "encoding:ia:vol8-ocr"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "35d1fe8a4a3c38c43c383454181110413be7ed80f6abe234a8bfd7a46b049323"
+    },
+    {
+      "id": "evidence:ia-vol9-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for polychroniconran09higd",
+      "url": "https://archive.org/metadata/polychroniconran09higd",
+      "alternate_urls": [
+        "https://archive.org/details/polychroniconran09higd"
+      ],
+      "repository_path": "source-cache/ahb1341/ia-polychroniconran09higd-metadata.json",
+      "summary": "Exact current metadata and file inventory for volume IX; no explicit rights field is present, the inspected title page establishes 1886, and the target work is absent.",
+      "supports": [
+        "facsimile:ia:vol9",
+        "edition:rolls-series-41:vol9",
+        "encoding:ia:vol9-ocr"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "bc35c4d44d67674e9993f43d75fc078dc28b33f9a6eef2b0812dfefc3950fe1a"
+    },
+    {
+      "id": "evidence:ia-vol1-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for polychroniconra00lumbgoog",
+      "url": "https://archive.org/download/polychroniconra00lumbgoog/polychroniconra00lumbgoog_scandata.xml",
+      "repository_path": "source-cache/ahb1341/rolls-series-41-vol1-1865-ia-google-scandata.xml",
+      "summary": "Complete page/leaf structural metadata used to map printed page 395 during verse-form inspection; target text itself is absent.",
+      "supports": [
+        "facsimile:ia:vol1"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "2ecc2a6c8f0cc5931f9bea8fb24eff9828e0ae5de2fe65067ee7e0e4caeda76b"
+    },
+    {
+      "id": "evidence:ia-vol7-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for polychroniconran07higd",
+      "url": "https://archive.org/download/polychroniconran07higd/polychroniconran07higd_scandata.xml",
+      "repository_path": "source-cache/ahb1341/rolls-series-41-vol7-1879-ia-scandata.xml",
+      "summary": "Complete page/leaf structural metadata for the volume VII carrier; target text itself is absent.",
+      "supports": [
+        "facsimile:ia:vol7"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "11dafd88fefbe764eb466036c2dc8c5e24922db2c7341c9dc4e7f89ffde6d31b"
+    },
+    {
+      "id": "evidence:ia-vol8-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for polychroniconran08higd",
+      "url": "https://archive.org/download/polychroniconran08higd/polychroniconran08higd_scandata.xml",
+      "repository_path": "source-cache/ahb1341/rolls-series-41-vol8-1882-ia-scandata.xml",
+      "summary": "Complete page/leaf structural metadata used to map printed pages 518 and 557 during verse-form inspection; target text itself is absent.",
+      "supports": [
+        "facsimile:ia:vol8"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "fdef216e1f601940c07ce3d05be3542cee31628312b038176702e5607d9d8a54"
+    },
+    {
+      "id": "evidence:ia-vol9-scandata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive scandata XML for polychroniconran09higd",
+      "url": "https://archive.org/download/polychroniconran09higd/polychroniconran09higd_scandata.xml",
+      "repository_path": "source-cache/ahb1341/rolls-series-41-vol9-1886-ia-scandata.xml",
+      "summary": "Complete page/leaf structural metadata for the target-absent volume IX carrier.",
+      "supports": [
+        "facsimile:ia:vol9"
+      ],
+      "accessed_on": "2026-07-16",
+      "sha256": "499b10b18a51b156d22504ad654461161439d0e63ec9808b08456e7c35a283ff"
+    },
+    {
+      "id": "evidence:scan-integrity",
+      "type": "visual_inspection",
+      "citation": "Local integrity and spot-render inspection of all nine cached Rolls Series PDFs",
+      "repository_path": "source-cache/ahb1341/rolls-series-41-vol1-1865-ia-google.pdf",
+      "summary": "qpdf --check passed on all nine PDFs; PDF page counts are 552, 528, 536, 542, 572, 568, 618, 658, and 648; first, middle, and last pages rendered successfully for every volume. Target pages in volumes I, VII, and VIII were additionally inspected.",
+      "supports": [
+        "facsimile:ia:vol1",
+        "facsimile:ia:vol2",
+        "facsimile:ia:vol3",
+        "facsimile:ia:vol4",
+        "facsimile:ia:vol5",
+        "facsimile:ia:vol6",
+        "facsimile:ia:vol7",
+        "facsimile:ia:vol8",
+        "facsimile:ia:vol9"
+      ],
+      "accessed_on": "2026-07-16",
+      "notes": [
+        "The remaining PDF paths are source-cache/ahb1341/rolls-series-41-vol2-1869-ia.pdf through rolls-series-41-vol9-1886-ia.pdf."
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:harley-1900-endpoint",
+      "question": "What exact folio in Harley MS 1900 ends the Book VI chapters 15-26 alternative printed on volume VII pages [501]-538?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect the manuscript or obtain an authoritative folio-level description; no enquiry has been sent."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:liira-2020"
+      ]
+    },
+    {
+      "id": "question:umich-image-provenance",
+      "question": "Which physical copies supplied U-M's 5,176 page images, and what current direct image-delivery route, if any, is publicly usable?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask U-M Digital Collections staff to identify scan-copy provenance and current image delivery; no enquiry has been sent."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:umich-item",
+        "evidence:umich-image-check"
+      ]
+    },
+    {
+      "id": "question:caxton-copy",
+      "question": "Which exact Caxton 1482 copy or copies did the Rolls Series editors use for the selected readings and continuation?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Review all Rolls Series introductions and collation sigla against surviving ISTC holdings; no holding institution has been contacted."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:rolls-series",
+        "evidence:cerl-istc"
+      ]
+    },
+    {
+      "id": "question:production-method",
+      "question": "How should the collection-level manual-keying/proofreading account be reconciled with this item's header statement that it was OCR-created without corrections or content editing?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Seek item-level production documentation from U-M; no enquiry has been sent."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": [
+        "evidence:pinned-xml",
+        "evidence:umich-about"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,833 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00129",
+  "work_id": "CME00129",
+  "title": "Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI",
+  "primary_subject": "artifact:general-corpus:CME00129",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "The checked-in XML is a repository representation of University of Michigan CME00129. The U-M item encodes John Bruce's 1838 Camden Society edition title page and the complete chronicle on numbered pp. 1-40, while omitting Bruce's introduction, notes, index, and other volume matter. Bruce explicitly says his published text copies John Stow's late-sixteenth-century transcript, now British Library Harley MS 543, ff. 31r-49r. Stow's transcript in turn identifies its source as a book formerly belonging to William Fleetwood; that exemplar is now reported lost, and it is not established as an authorial autograph. The anonymous chronicle internally describes its compiler as a servant of Edward IV who witnessed much of the 1471 campaign and learned the remainder from participants. A complete 88-page Internet Archive PDF, complete OCR, IA metadata JSON, exact BL catalog JSON, and Andrew Whittle's complete 2017 thesis are cached with fixity. No public complete digital facsimile of Harley MS 543 was found; the exact target locus is ff. 31r-49r, and current BL routes permit physical consultation and paid imaging requests subject to availability and condition.",
+  "languages": ["enm", "eng"],
+  "review_notes": [
+    "The primary subject is the repository artifact at CME/source/CME_phase_3/CME00129.xml. The anonymous medieval work, lost Fleetwood exemplar, Stow transcript, Bruce edition, U-M encoding, IA facsimile, provider metadata, and BL catalog are distinct layers.",
+    "The primary transmission path is repository artifact -> U-M encoding -> Bruce 1838 edition -> Stow transcript in Harley MS 543 ff. 31r-49r -> lost Fleetwood exemplar. Bruce must not be connected directly to the Fleetwood exemplar.",
+    "The chronicle's author is anonymous. 'Servant of Edward IV' and eyewitness/participant-report access are internal claims supported by the work and discussed by modern scholarship, not independently confirmed identity facts.",
+    "Bruce's title page and complete chronicle are discontiguous in the scanned volume: physical PDF p. 5/BookReader n5 and physical PDF pp. 21-60/BookReader n21-n60. Introduction pp. iii-xiv, a blank page, notes pp. 41-47, and the index are not encoded.",
+    "Bruce states that the copy in Stow's hand entered the Harleian Library through Sir Simonds D'Ewes, but the current aggregate BL catalog says D'Ewes's A.450.ix covered ff. 1-30 and 50-181, conspicuously excluding the target ff. 31-49. The locus-level custodial history remains unresolved.",
+    "The current BL record describes the whole codex as paper, 210 x 150 mm, with ff. 181 plus twelve unfoliated leaves. A whole-manuscript imaging request should include all folios, rectos, versos, blanks, flyleaves, interposed unfoliated leaves, binding surfaces, and the target ff. 31r-49r mapping.",
+    "Whittle's 2017 thesis is supporting scholarship only and is not placed on the primary transmission path. Its cached 359-page PDF renders and yields text, but qpdf reports nonfatal linearization hint-table mismatches.",
+    "Bruce's claim that a Ghent French text is an abridgment is not promoted into the direct chain because modern scholarship described by Whittle disputes the direction and sequence of the long and short versions.",
+    "The XML contains 26 literal square-bracketed supplies and three blank GAP elements matching Bruce's printed blanks. These are observed edition and encoding features, not a complete reconstruction of Stow's manuscript conventions.",
+    "The XML title page reads PUBLISHED FOR where the inspected 1838 title page reads PRINTED FOR. The discrepancy is preserved as an open question rather than silently normalized."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00129",
+      "type": "repository_artifact",
+      "label": "General Corpus checked-in CME00129 XML artifact",
+      "description": "The repository file used by General Corpus, preserving U-M/CME identifiers, title page, complete chronicle text and apparatus, structure, page milestones, and revision metadata.",
+      "identifiers": [{"scheme": "CME", "value": "CME00129", "uri": "https://name.umdl.umich.edu/CME00129"}],
+      "creator_ids": ["agent:kyvero-press"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00129.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "4e1f8e87dda24c65e8e2ac078886a82f34aff4d3",
+        "sha256": "ba7beb2e343de9d2cc3dc2cebf510035c41c7cd1b6c5d327cf7332713099cf66"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit"]
+    },
+    {
+      "id": "encoding:umich-cme:CME00129",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME00129 electronic text",
+      "alternate_labels": ["Historie of the arrivall of Edward IV. in England"],
+      "description": "Public U-M electronic item derived from Bruce's 1838 title page and chronicle pp. 1-40. It contains three narrative parts and modern provider metadata.",
+      "identifiers": [{"scheme": "U-M stable name", "value": "CME00129", "uri": "https://name.umdl.umich.edu/CME00129"}],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:umich-item", "evidence:repo-xml", "evidence:bruce-volume"],
+      "notes": ["The exact technical import path from U-M into the checked-in CME repository is not documented by an inspected source."]
+    },
+    {
+      "id": "edition:bruce:historie-arrivall-1838",
+      "type": "scholarly_edition",
+      "label": "John Bruce's 1838 Camden Society edition of the Historie of the Arrivall",
+      "description": "First complete publication of the long English chronicle, with title page, introduction, transcription on numbered pp. 1-40, notes on pp. 41-47, and index. CME00129 selects the edition title page and chronicle only.",
+      "creator_ids": ["agent:john-bruce", "agent:camden-society"],
+      "date_statements": [{"label": "Publication", "value": "1838", "normalized": "1838", "certainty": "high", "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"]}],
+      "bibliographic": {
+        "citation": "John Bruce, ed., Historie of the Arrivall of Edward IV. in England and the Finall Recouerye of His Kingdomes from Henry VI. A.D. M.CCCC.LXXI. (London: Printed for the Camden Society by John Bowyer Nichols and Son, 1838).",
+        "title": "Historie of the Arrivall of Edward IV. in England and the Finall Recouerye of His Kingdomes from Henry VI. A.D. M.CCCC.LXXI.",
+        "publisher": "Camden Society; printed by John Bowyer Nichols and Son",
+        "publication_place": "London",
+        "date": "1838",
+        "pages": "Chronicle pp. 1-40; notes pp. 41-47",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata", "evidence:whittle-thesis"],
+      "notes": ["Bruce explicitly states that the published work is a copy of Stow's manuscript.", "The edition retains 26 visible square-bracketed supplies in the CME-selected chronicle and prints three one-word blanks; notes following p. 40 discuss manuscript readings and emendations."]
+    },
+    {
+      "id": "witness:bl:Harley-MS-543",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Harley MS 543, ff. 31r-49r",
+      "alternate_labels": ["John Stow's transcript of the Historie of the Arrivall"],
+      "description": "The immediate manuscript source of Bruce's edition: a late-sixteenth-century transcript in John Stow's hand at ff. 31r-49r within a larger collection of English historical texts. The target ends by identifying its source as Master Fleetwood's book.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark and locus", "value": "Harley MS 543, ff. 31r-49r", "uri": "https://searcharchives.bl.uk/catalog/040-002046372"},
+        {"scheme": "British Library record ID", "value": "040-002046372", "uri": "https://searcharchives.bl.uk/catalog/040-002046372"},
+        {"scheme": "MDARK", "value": "ark:/81055/vdc_100000000652.0x000031", "uri": "https://searcharchives.bl.uk/catalog/040-002046372"}
+      ],
+      "creator_ids": ["agent:john-stow"],
+      "date_statements": [{"label": "Copying/codex date", "value": "4th quarter of the 16th century (1575-1599)", "normalized": "1575/1599", "certainty": "high", "evidence_ids": ["evidence:bl-catalog"]}],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 543",
+        "historical_designations": ["D'Ewes catalog A.450.ix for ff. 1-30 and 50-181; target ff. 31-49 excluded by the current wording"],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002046372",
+        "notes": "Western Manuscripts, Harley Collection. The current catalog traces D'Ewes material into the Harley Library and the national purchase of 1753, but its D'Ewes folio range excludes the target unit."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "Whole codex: ff. 181 plus 12 unfoliated paper leaves (3 at beginning, 5 at end, 1 between ff. 30/31, 2 between ff. 49/50, 1 between ff. 92/93); target ff. 31r-49r",
+        "format": "Bound manuscript volume; the target is an apparently separate transcript unit, but physical insertion has not been verified",
+        "dimensions": "210 x 150 mm",
+        "notes": ["Gothic script; post-1600 British Museum in-house binding.", "The whole-codex leaf count is 193 when the catalog's 181 foliated and 12 unfoliated leaves are combined; binding surfaces are additional."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bruce-volume"]
+    },
+    {
+      "id": "witness:fleetwood:lost-arrivall-exemplar",
+      "type": "manuscript_witness",
+      "label": "Lost Arrivall exemplar formerly in William Fleetwood's book collection",
+      "alternate_labels": ["Mastar Flyghtwods boke"],
+      "description": "The physical exemplar from which Stow copied the long English Arrivall. The surviving transcript's trailer names Master Fleetwood's book; Bruce reports that the whereabouts of Fleetwood's manuscripts were unknown, and modern scholarship treats the original as lost.",
+      "date_statements": [{"label": "Date", "value": "Unknown; necessarily predates Stow's late-sixteenth-century transcript", "certainty": "low", "evidence_ids": ["evidence:bruce-volume", "evidence:whittle-thesis"]}],
+      "physical_description": {"extent": "Unknown", "format": "Manuscript exemplar or book; physical constitution unknown", "notes": ["No inspected evidence establishes that this was the anonymous author's autograph or fixes its date, place, hand, support, or prior provenance."]},
+      "survival_status": "reported_lost",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog", "evidence:whittle-thesis"],
+      "notes": ["William Fleetwood is modeled as former possessor/source owner, not as author of this chronicle.", "A modernized and altered narrative associated with Fleetwood and used in Holinshed is downstream context, not the immediate source of Bruce's edition."]
+    },
+    {
+      "id": "facsimile:internet-archive:historieofarriva01brucuoft",
+      "type": "facsimile",
+      "label": "Internet Archive digital facsimile of Bruce's 1838 Arrivall edition",
+      "description": "A complete 88-page PDF facsimile with OCR, derived from a PIMS-University of Toronto physical copy. The CME selection maps to the title page at physical PDF p. 5/BookReader n5 and the chronicle at physical PDF pp. 21-60/BookReader n21-n60.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "historieofarriva01brucuoft", "uri": "https://archive.org/details/historieofarriva01brucuoft"}],
+      "creator_ids": ["agent:internet-archive", "agent:pims-university-toronto"],
+      "date_statements": [{"label": "Internet Archive public date", "value": "19 March 2007", "normalized": "2007-03-19", "certainty": "high", "evidence_ids": ["evidence:ia-metadata"]}],
+      "reproduction_format": "88-page PDF with complete OCR derivatives; provider metadata reports 92 source images at 400 ppi",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"],
+      "notes": ["The Toronto source copy, abstract 1838 edition, scan bytes, OCR, and IA metadata record are distinct layers."]
+    },
+    {
+      "id": "catalog:internet-archive:historieofarriva01brucuoft",
+      "type": "catalog_description",
+      "label": "Internet Archive metadata record for historieofarriva01brucuoft",
+      "description": "Provider metadata for the 1838 volume and its derivatives, including PIMS-University of Toronto contribution, MSN sponsorship, 400 ppi, 92 source images, public date, and a scanner-supplied NOT_IN_COPYRIGHT determination for the United States.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "historieofarriva01brucuoft", "uri": "https://archive.org/details/historieofarriva01brucuoft"}],
+      "creator_ids": ["agent:internet-archive"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:ia-metadata"],
+      "notes": ["The exact metadata JSON and provider-listed PDF/OCR MD5 and SHA-1 values were checked against the cached downloads."]
+    },
+    {
+      "id": "catalog:uea:whittle-2017",
+      "type": "catalog_description",
+      "label": "Andrew R. Whittle, The Historical Reputation of Edward IV 1461-1725 (2017)",
+      "description": "A modern scholarly source used to assess the Arrivall's partisan purpose, authorship claims, survival in Stow's Harley transcript, lost Fleetwood source, first complete publication, and disputed version relationships. The schema's catalog_description type is used provisionally for a supporting scholarly study rather than a transmission source or source edition.",
+      "identifiers": [{"scheme": "UEA Digital Repository eprint", "value": "64257", "uri": "https://ueaeprints.uea.ac.uk/id/eprint/64257/"}],
+      "creator_ids": ["agent:andrew-r-whittle", "agent:university-east-anglia"],
+      "date_statements": [{"label": "Publication", "value": "2017", "normalized": "2017", "certainty": "high", "evidence_ids": ["evidence:whittle-thesis"]}],
+      "bibliographic": {
+        "citation": "Andrew R. Whittle, The Historical Reputation of Edward IV 1461-1725 (doctoral thesis, University of East Anglia, 2017).",
+        "title": "The Historical Reputation of Edward IV 1461-1725",
+        "publisher": "University of East Anglia",
+        "date": "2017",
+        "languages": ["eng"]
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:whittle-thesis"],
+      "notes": ["This supporting-study entity is not part of the primary transmission path."]
+    },
+    {
+      "id": "catalog:bl:040-002046372",
+      "type": "catalog_description",
+      "label": "British Library catalog record 040-002046372 for Harley MS 543",
+      "description": "Current ISAD(G) description of the complete codex, explicitly locating the Arrivall at ff. 31r-49r and transcribing its title and Fleetwood trailer. It supplies date, origin, support, dimensions, foliation, script, binding, provenance, physical-request links, and a blank Digitised Content value.",
+      "identifiers": [
+        {"scheme": "British Library record ID", "value": "040-002046372", "uri": "https://searcharchives.bl.uk/catalog/040-002046372"},
+        {"scheme": "MDARK", "value": "ark:/81055/vdc_100000000652.0x000031", "uri": "https://searcharchives.bl.uk/catalog/040-002046372"}
+      ],
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:bl-catalog"],
+      "notes": ["The exact JSON representation is cached locally with SHA-256 fixity.", "Its blank Digitised Content field is evidence that this record supplies no image link, not proof that no private, commissioned, or unlinked images exist."]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"], "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme"], "evidence_ids": ["evidence:umich-item"]},
+    {"id": "agent:anonymous-author-arrivall", "type": "person", "name": "Anonymous author of the Arrivall", "evidence_ids": ["evidence:bruce-volume", "evidence:whittle-thesis"], "notes": ["The work internally describes its compiler as a servant of Edward IV with partial eyewitness and participant-report access; the name and more specific institutional role are unknown."]},
+    {"id": "agent:john-stow", "type": "person", "name": "John Stow", "alternate_names": ["John Stowe"], "dates": "1524/1525-1605", "urls": ["https://searcharchives.bl.uk/catalog/040-002046372"], "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog"]},
+    {"id": "agent:john-bruce", "type": "person", "name": "John Bruce", "dates": "1802-1869", "urls": ["https://archive.org/details/historieofarriva01brucuoft"], "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"]},
+    {"id": "agent:william-fleetwood", "type": "person", "name": "William Fleetwood", "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog", "evidence:whittle-thesis"], "notes": ["Recorder of London and former possessor of the lost source book; not identified as the author of the Arrivall."]},
+    {"id": "agent:camden-society", "type": "organization", "name": "Camden Society", "urls": ["https://archive.org/details/historieofarriva01brucuoft"], "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://www.bl.uk/", "https://searcharchives.bl.uk/"], "evidence_ids": ["evidence:bl-catalog", "evidence:bl-digitisation", "evidence:bl-imaging-terms"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-metadata", "evidence:bruce-volume"]},
+    {"id": "agent:pims-university-toronto", "type": "organization", "name": "PIMS - University of Toronto", "urls": ["https://pims.ca/", "https://www.utoronto.ca/"], "evidence_ids": ["evidence:ia-metadata"]},
+    {"id": "agent:andrew-r-whittle", "type": "person", "name": "Andrew R. Whittle", "urls": ["https://ueaeprints.uea.ac.uk/id/eprint/64257/"], "evidence_ids": ["evidence:whittle-thesis"]},
+    {"id": "agent:university-east-anglia", "type": "organization", "name": "University of East Anglia", "urls": ["https://www.uea.ac.uk/", "https://ueaeprints.uea.ac.uk/"], "evidence_ids": ["evidence:whittle-thesis"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-encoding",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:CME00129",
+      "object": "encoding:umich-cme:CME00129",
+      "scope": {"subject": {"kind": "whole", "description": "Complete checked-in XML artifact"}, "object": {"kind": "whole", "description": "Complete U-M CME00129 item"}, "notes": "Matching identifier, title, structure, text, page milestones, and title-page PUBLISHED reading establish representation identity; no inspected process document proves a specific copy/import event."},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:xml-audit"], "notes": "version_of is intentionally weaker than copied_from because technical direction is undocumented."}
+    },
+    {
+      "id": "relation:encoding-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00129",
+      "object": "edition:bruce:historie-arrivall-1838",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete U-M electronic item: edition title page and three-part chronicle"},
+        "object": {"kind": "selected_passages", "description": "1838 edition title page plus complete chronicle pp. 1-40; introduction, intervening blank, notes pp. 41-47, index, and other volume matter excluded", "locators": ["title page physical PDF p. 5 / BookReader n5 / OCR lines 13-28", "chronicle printed pp. 1-40 / physical PDF pp. 21-60 / BookReader n21-n60 / OCR lines 424-2028"]},
+        "notes": "The encoded selection is complete for the chronicle but discontiguous within the full source volume."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:bruce-volume", "evidence:xml-audit"]}
+    },
+    {
+      "id": "relation:edition-stow-transcript",
+      "type": "transcribes",
+      "subject": "edition:bruce:historie-arrivall-1838",
+      "object": "witness:bl:Harley-MS-543",
+      "scope": {
+        "subject": {"kind": "part", "description": "Chronicle transcription on numbered pp. 1-40; Bruce title page, introduction, notes, and index excluded from the manuscript target", "locators": ["printed pp. 1-40"]},
+        "object": {"kind": "part", "description": "Complete Arrivall transcript in Harley MS 543", "locators": ["ff. 31r-49r"]},
+        "notes": "Bruce explicitly states, 'The work now published is a copy of Stowe's MS.'"
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog"]}
+    },
+    {
+      "id": "relation:stow-fleetwood-exemplar",
+      "type": "transcribes",
+      "subject": "witness:bl:Harley-MS-543",
+      "object": "witness:fleetwood:lost-arrivall-exemplar",
+      "scope": {
+        "subject": {"kind": "part", "description": "Stow's complete transcript of the Arrivall", "locators": ["Harley MS 543, ff. 31r-49r"]},
+        "object": {"kind": "whole", "description": "Lost exemplar formerly in Fleetwood's book collection; physical extent unknown"},
+        "notes": "The surviving trailer says the text ends from Master Fleetwood's book, and Bruce states that Stow copied the original from Fleetwood's manuscripts."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog", "evidence:whittle-thesis"], "notes": "The copy relationship is strong; authorial-autograph status and the lost exemplar's date remain unknown."}
+    },
+    {
+      "id": "relation:bl-catalog-harley",
+      "type": "describes",
+      "subject": "catalog:bl:040-002046372",
+      "object": "witness:bl:Harley-MS-543",
+      "scope": {"subject": {"kind": "whole", "description": "Complete current BL record 040-002046372"}, "object": {"kind": "whole", "description": "Harley MS 543 as a codex, with the Arrivall at ff. 31r-49r"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bl-catalog"]}
+    },
+    {
+      "id": "relation:ia-facsimile-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:historieofarriva01brucuoft",
+      "object": "edition:bruce:historie-arrivall-1838",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 88-page cached PDF and associated OCR derivatives"}, "object": {"kind": "whole", "description": "Complete 1838 volume, including matter outside CME00129"}, "notes": "The work-specific mapping selects title page physical p. 5 and chronicle physical pp. 21-60 without cropping the complete cached volume."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"]}
+    },
+    {
+      "id": "relation:ia-metadata-facsimile",
+      "type": "describes",
+      "subject": "catalog:internet-archive:historieofarriva01brucuoft",
+      "object": "facsimile:internet-archive:historieofarriva01brucuoft",
+      "scope": {"subject": {"kind": "whole", "description": "Complete IA metadata response"}, "object": {"kind": "whole", "description": "Internet Archive item and downloadable derivatives"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia-metadata"]}
+    },
+    {
+      "id": "relation:whittle-describes-harley",
+      "type": "describes",
+      "subject": "catalog:uea:whittle-2017",
+      "object": "witness:bl:Harley-MS-543",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Modern discussion of the long Arrivall's survival and transmission", "locators": ["thesis printed pp. 51-61", "thesis printed p. 159"]},
+        "object": {"kind": "part", "description": "Stow's Arrivall transcript and its Fleetwood-source identification", "locators": ["Harley MS 543, ff. 31r-49r"]},
+        "notes": "This is a supporting scholarly relationship, not a textual ancestor or reproduction relationship."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:whittle-thesis", "evidence:bl-catalog", "evidence:bruce-volume"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00129",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Repository checkout, pinned GitHub blob, or raw GitHub file",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00129.xml",
+      "alternate_urls": ["https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00129.xml"],
+      "repository_path": "CME/source/CME_phase_3/CME00129.xml",
+      "cost": "free",
+      "format": "application/xml",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:CME00129",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public U-M item information and full-text views",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00129",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00129", "https://quod.lib.umich.edu/c/cme/CME00129/1:1?rgn=div1;view=fulltext"],
+      "cost": "free",
+      "format": "text/html and XML-derived views",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:ia-facsimile",
+      "entity": "facsimile:internet-archive:historieofarriva01brucuoft",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive BookReader or direct complete-volume PDF and OCR downloads",
+      "url": "https://archive.org/details/historieofarriva01brucuoft/page/n21/mode/1up",
+      "alternate_urls": [
+        "https://archive.org/details/historieofarriva01brucuoft/page/n5/mode/1up",
+        "https://archive.org/details/historieofarriva01brucuoft/page/n60/mode/1up",
+        "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft.pdf",
+        "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft_djvu.txt"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Bruce 1838 Arrivall edition PDF",
+          "path": "source-cache/CME00129/bruce-historie-arrivall-edward-iv-1838-complete.pdf",
+          "source_url": "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft.pdf",
+          "sha256": "8114e9f6ad315d28e14c072ac6182e7c43fdb44cb00ebb11f68bc766565bd1a8",
+          "bytes": 4908870,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "CME00129 edition title page and complete chronicle",
+            "locators": ["edition title page: physical PDF p. 5 / BookReader n5", "chronicle: printed pp. 1-40 / physical PDF pp. 21-60 / BookReader n21-n60", "introduction physical pp. 7-19 omitted", "physical p. 20 blank and omitted", "notes physical pp. 61-67 and index omitted"],
+            "start_url": "https://archive.org/details/historieofarriva01brucuoft/page/n5/mode/1up",
+            "end_url": "https://archive.org/details/historieofarriva01brucuoft/page/n60/mode/1up",
+            "notes": ["The complete volume is retained; CME's encoded source range is discontiguous and is not represented as a cropped continuous run.", "qpdf reports 88 pages, no encryption, and no syntax or stream errors. Provider MD5 and SHA-1 values match the cached PDF."]
+          }
+        },
+        {
+          "label": "Complete Bruce 1838 Arrivall edition OCR",
+          "path": "source-cache/CME00129/bruce-historie-arrivall-edward-iv-1838-ocr.txt",
+          "source_url": "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft_djvu.txt",
+          "sha256": "9e817e92cc96565b9fe8fe424ccd5c878fc29644b2c89c3a4bc5cabc31245e24",
+          "bytes": 222932,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "OCR spans for the edition title page and complete chronicle",
+            "locators": ["title page OCR lines 13-28", "chronicle OCR lines 424-2028", "final Fleetwood trailer OCR lines 2027-2028"],
+            "start_url": "https://archive.org/details/historieofarriva01brucuoft/page/n5/mode/1up",
+            "end_url": "https://archive.org/details/historieofarriva01brucuoft/page/n60/mode/1up",
+            "notes": ["Line numbers refer to the exact cached OCR file.", "Provider MD5 and SHA-1 values match the cached OCR derivative."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "application/pdf and text/plain",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata"]
+    },
+    {
+      "id": "access:ia-metadata",
+      "entity": "catalog:internet-archive:historieofarriva01brucuoft",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Internet Archive metadata API",
+      "url": "https://archive.org/metadata/historieofarriva01brucuoft",
+      "local_copies": [{
+        "label": "Exact Internet Archive metadata JSON",
+        "path": "source-cache/CME00129/bruce-historie-arrivall-edward-iv-1838-internet-archive-metadata.json",
+        "source_url": "https://archive.org/metadata/historieofarriva01brucuoft",
+        "sha256": "d3c5bf719b3cf68abd144bf99d9504c775592ba83c4d22835123a5300e8a47a3",
+        "bytes": 25808,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-13",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "work_portion": {"label": "Item-level metadata for the complete scanned source volume", "locators": ["identifier historieofarriva01brucuoft", "date 1838", "PIMS - University of Toronto contributor", "possible-copyright-status NOT_IN_COPYRIGHT / region US"], "notes": ["This JSON describes the IA item; it does not contain manuscript images or the edition text itself."]}
+      }],
+      "cost": "free",
+      "format": "application/json",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:ia-metadata"]
+    },
+    {
+      "id": "access:bl-catalog",
+      "entity": "catalog:bl:040-002046372",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public HTML catalog page or JSON representation",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046372",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002046372.json"],
+      "local_copies": [{
+        "label": "Exact British Library catalog JSON",
+        "path": "source-cache/CME00129/british-library-catalog-040-002046372.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/040-002046372.json",
+        "sha256": "9507eff2cda0516302e784978b9fcaffeaaf516a5dc4dd0925a1b9b938991040",
+        "bytes": 15974,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-13",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "work_portion": {"label": "Catalog component for the target Stow transcript", "locators": ["Harley MS 543", "ff. 31r-49r", "Arrivall title and Fleetwood trailer", "target bounded by unfoliated leaves between ff. 30/31 and ff. 49/50"], "notes": ["The same JSON describes the complete codex, contents, physical characteristics, and provenance."]}
+      }],
+      "cost": "free",
+      "format": "text/html and application/json",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog"]
+    },
+    {
+      "id": "access:whittle-thesis",
+      "entity": "catalog:uea:whittle-2017",
+      "provider_id": "agent:university-east-anglia",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "UEA Digital Repository record and direct complete PDF",
+      "url": "https://ueaeprints.uea.ac.uk/id/eprint/64257/",
+      "alternate_urls": ["https://ueaeprints.uea.ac.uk/id/eprint/64257/1/Andrew_Whittle%2C_Edward_IV_PhD%2C_Final_Print_Version%2C_22.06.2017.pdf"],
+      "local_copies": [{
+        "label": "Complete Whittle doctoral thesis PDF",
+        "path": "source-cache/CME00129/whittle-historical-reputation-edward-iv-2017-complete.pdf",
+        "source_url": "https://ueaeprints.uea.ac.uk/id/eprint/64257/1/Andrew_Whittle%2C_Edward_IV_PhD%2C_Final_Print_Version%2C_22.06.2017.pdf",
+        "sha256": "de1c061b964a10a246856272fe24f84e85e79bf681c7a17d796f818fbf697491",
+        "bytes": 1967247,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-13",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "work_portion": {
+          "label": "Modern scholarly discussion supporting Arrivall metadata and transmission review",
+          "locators": ["thesis printed pp. 51-61 / physical PDF pp. 61-71", "thesis printed p. 159 / physical PDF pp. 169-170"],
+          "notes": ["The complete 359-page provider PDF is cached, not an extracted page range.", "The PDF renders and yields text. qpdf reports nonfatal linearization hint-table mismatches, including shared-object and page object-count mismatches; it is not qpdf-clean."]
+        }
+      }],
+      "cost": "free",
+      "format": "Complete PDF",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:whittle-thesis"]
+    },
+    {
+      "id": "access:bl-manuscript",
+      "entity": "witness:bl:Harley-MS-543",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request Harley MS 543 through the BL online collection-item request form; manuscripts and archives are consulted in London with a current Reader Pass, subject to availability and restrictions",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046372",
+      "alternate_urls": ["https://forms.office.com/e/SbCAGb201x", "https://bl.libanswers.com/form?queue_id=2371"],
+      "contact": "British Library Reference Services; quote Harley MS 543 and target ff. 31r-49r",
+      "cost": "not_applicable",
+      "format": "Physical paper manuscript volume",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog"],
+      "notes": ["Readers whose pass predates 21 March 2024 must renew before pre-requesting. Restrictions and temporary unavailability may apply."]
+    },
+    {
+      "id": "access:bl-public-images",
+      "entity": "witness:bl:Harley-MS-543",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "No public complete-codex or ff. 31r-49r image sequence was found; the current catalog's Digitised Content value is blank and legacy display/viewer URLs do not expose this manuscript",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046372",
+      "alternate_urls": ["https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Harley_MS_543", "https://www.bl.uk/manuscripts/Viewer.aspx?ref=Harley_MS_543"],
+      "cost": "not_applicable",
+      "format": "No public digital facsimile located",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-public-image-check"],
+      "notes": ["This is a dated negative finding and does not exclude private, commissioned, unlinked, or future images."]
+    },
+    {
+      "id": "access:bl-reproduction-order",
+      "entity": "witness:bl:Harley-MS-543",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "purchasable",
+      "access_method": "British Library Imaging Services online order; request expert full-color photography and provide the shelfmark, target folios, desired whole-volume coverage, format, delivery, and payment details",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://www.bl.uk/terms/imaging-services"],
+      "contact": "British Library Imaging Services; quote Harley MS 543 and separately identify ff. 31r-49r",
+      "cost": "fee",
+      "format": "Expert manuscript photography; exact deliverable and color specification by quote",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-digitisation", "evidence:bl-imaging-terms"],
+      "notes": ["For a complete facsimile request, specify covers/boards, spine, pastedowns, all three beginning and five ending flyleaves, every foliated leaf ff. 1r-181v, the one unfoliated leaf between ff. 30/31, both between ff. 49/50, the one between ff. 92/93, all blanks, and edges if offered.", "Ask the quote to map the target work separately as ff. 31r-49r. Fulfillment, price, retrieval, handling feasibility, and any large-order conditions require individual BL confirmation.", "Manuscript originals receive expert photography rather than ordinary scanning; request color explicitly."]
+    },
+    {
+      "id": "access:fleetwood-exemplar",
+      "entity": "witness:fleetwood:lost-arrivall-exemplar",
+      "resource_kind": "physical_manuscript",
+      "status": "unavailable",
+      "access_method": "No extant holding or reproduction source identified; Bruce reported Fleetwood's manuscript whereabouts unknown and modern scholarship calls the original lost",
+      "cost": "not_applicable",
+      "format": "Lost manuscript exemplar",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:whittle-thesis"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:historical-text",
+      "entity": "witness:fleetwood:lost-arrivall-exemplar",
+      "component": "Underlying anonymous fifteenth-century Arrivall text; physical ownership, modern transcriptions, markup, catalog prose, and photographs excluded",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The work was composed in 1471 and completely published in 1838. Any authorial literary term has long expired, and the U-M item also asserts public-domain/No Copyright - United States status for its materials. This does not grant rights in physical manuscripts, catalog descriptions, or later images.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:umich-item", "evidence:whittle-thesis", "evidence:uk-copyright-duration"]
+    },
+    {
+      "id": "rights:bruce-edition",
+      "entity": "edition:bruce:historie-arrivall-1838",
+      "component": "John Bruce's 1838 edition text, introduction, notes, and typographical arrangement; modern scans excluded",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The edition was first published in 1838 and Bruce died in 1869. The UK life-plus-70 literary term and 25-year published-edition typographical term have expired; a work first published in 1838 is also outside current United States federal copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:ia-metadata", "evidence:uk-copyright-duration"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:CME00129",
+      "access_id": "access:umich-text",
+      "component": "University of Michigan CME00129 digital item",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The exact U-M item page states that the materials are in the public domain and supplies the DPLA No Copyright - United States rights statement; provider access and service terms remain distinct.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:CME00129",
+      "access_id": "access:repository-xml",
+      "component": "Repository-specific XML, markup, and revision metadata",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The pinned CME repository contains Unlicense language framed as applying to software. Its application to corpus XML, data, and markup is not explicit enough to broaden into a high-confidence license determination for the complete artifact.",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-license", "evidence:repo-xml"],
+      "notes": ["The underlying fifteenth-century text and Bruce's 1838 edition are separately modeled as public domain."]
+    },
+    {
+      "id": "rights:ia-facsimile",
+      "entity": "facsimile:internet-archive:historieofarriva01brucuoft",
+      "access_id": "access:ia-facsimile",
+      "component": "Internet Archive PDF and OCR derivatives of the PIMS-University of Toronto source copy",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The exact IA metadata records possible-copyright-status NOT_IN_COPYRIGHT for region US, based on no visible notice and the stated 1838 date. It does not provide an explicit Creative Commons or equivalent affirmative license for the scan derivatives.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-metadata", "evidence:bruce-volume"]
+    },
+    {
+      "id": "rights:bl-catalog",
+      "entity": "catalog:bl:040-002046372",
+      "access_id": "access:bl-catalog",
+      "component": "British Library catalog text and structured record data, excluding manuscript images and third-party material",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The current BL catalog page footer states that British Library text is available under CC BY except where otherwise stated.",
+      "asserted_by_id": "agent:british-library",
+      "license": {"name": "Creative Commons Attribution 4.0 International", "spdx": "CC-BY-4.0", "uri": "https://creativecommons.org/licenses/by/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-catalog"]
+    },
+    {
+      "id": "rights:whittle-thesis",
+      "entity": "catalog:uea:whittle-2017",
+      "access_id": "access:whittle-thesis",
+      "component": "Andrew R. Whittle's 2017 doctoral thesis and repository PDF",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-13",
+      "basis": "The thesis is a recent scholarly work. Its public UEA download record was found, but no thesis-specific open license was observed; public access is not treated as permission to redistribute the PDF.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:whittle-thesis"]
+    },
+    {
+      "id": "rights:commissioned-bl-images",
+      "entity": "witness:bl:Harley-MS-543",
+      "access_id": "access:bl-reproduction-order",
+      "component": "Any manuscript photographs supplied through British Library Imaging Services",
+      "jurisdiction": "United Kingdom",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "No item-specific images or open license were found. Current BL Imaging Services terms place rights clearance responsibility on the requester and require written BL permission to copy or reproduce supplied material, potentially subject to additional fees.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-imaging-terms"],
+      "notes": ["This concerns commissioned image files and contractual reuse, not copyright in the underlying fifteenth-century text."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:bruce-transcription",
+      "entity": "edition:bruce:historie-arrivall-1838",
+      "practice": "selection",
+      "source_feature": "Stow's transcript in Harley MS 543, ff. 31r-49r",
+      "representation": "A complete forty-page printed chronicle with three arguments, visible square-bracketed supplied words or phrases, three one-word blank rules, and emendatory/manuscript-reading notes after the text.",
+      "description": "Bruce says the published work copies Stow's manuscript. Direct page inspection establishes the printed brackets, blanks, and following notes, but no inspected general method statement licenses assumptions about every expansion, spelling, punctuation, or italic feature.",
+      "scope": "Chronicle pp. 1-40 and notes pp. 41-47",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog", "evidence:xml-audit"]
+    },
+    {
+      "id": "practice:encoding-selection",
+      "entity": "encoding:umich-cme:CME00129",
+      "practice": "selection",
+      "source_feature": "A complete 1838 volume containing title page, introduction, blank leaf, chronicle, notes, and index",
+      "representation": "The encoding selects the edition title page and complete chronicle pp. 1-40, including three arguments, page milestones, 26 literal bracketed supplies, three GAP elements for printed blanks, and the trailer; it excludes introduction, blank leaf, notes, and index.",
+      "description": "CME00129 is complete relative to Bruce's chronicle but selective and discontiguous relative to the full edition.",
+      "scope": "Complete CME00129 item; source title page plus numbered pp. 1-40",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:bruce-volume", "evidence:xml-audit"]
+    },
+    {
+      "id": "practice:title-page-wording",
+      "entity": "encoding:umich-cme:CME00129",
+      "practice": "selection",
+      "source_feature": "Bruce title-page imprint reads PRINTED FOR THE CAMDEN SOCIETY",
+      "representation": "CME00129 and the U-M display read PUBLISHED FOR THE CAMDEN SOCIETY",
+      "description": "A material title-page transcription discrepancy is documented without deciding whether it reflects a different source copy or an encoding error.",
+      "scope": "Edition title-page imprint",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:bruce-volume", "evidence:xml-audit"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_3/CME00129.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00129.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00129.xml",
+      "summary": "Primary evidence for artifact identity, encoded title page and complete chronicle, structure, language declaration, page milestones, arguments, supplies, gaps, trailer, and 2016 revision note.",
+      "accessed_on": "2026-07-13",
+      "sha256": "ba7beb2e343de9d2cc3dc2cebf510035c41c7cd1b6c5d327cf7332713099cf66"
+    },
+    {
+      "id": "evidence:xml-audit",
+      "type": "repository_file",
+      "citation": "Local structural and textual audit of CME00129.xml against Bruce's 1838 page images.",
+      "repository_path": "CME/source/CME_phase_3/CME00129.xml",
+      "summary": "Verified IDs and source boundaries; counted two DIV1, three DIV2, two HEAD, three ARGUMENT, 51 P, 41 PB, three GAP, three HI, 21 body SUP, one TRAILER, and 26 literal bracketed supplies; confirmed the three printed blanks and PUBLISHED/PRINTED discrepancy.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:repo-license",
+      "type": "repository_file",
+      "citation": "CME/LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "Unlicense text framed as applying to software; it does not explicitly resolve scope over XML, corpus data, markup, underlying editions, or manuscript images.",
+      "accessed_on": "2026-07-13",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, 'Historie of the arrivall of Edward IV. in England,' CME00129.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00129",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00129", "https://quod.lib.umich.edu/c/cme/CME00129/1:1?rgn=div1;view=fulltext"],
+      "summary": "Official item page confirming Bruce's 1838 source, title and contents, public electronic text, provider creator field, title-page PUBLISHED wording, and public-domain/No Copyright - United States rights statement.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bruce-volume",
+      "type": "digital_surrogate",
+      "citation": "John Bruce, ed., Historie of the Arrivall of Edward IV. in England and the Finall Recouerye of His Kingdomes from Henry VI. A.D. M.CCCC.LXXI. (London, 1838), title page; introduction pp. xiii-xiv; chronicle pp. 1-40; notes pp. 41-47.",
+      "url": "https://archive.org/details/historieofarriva01brucuoft/page/n21/mode/1up",
+      "alternate_urls": ["https://archive.org/details/historieofarriva01brucuoft/page/n5/mode/1up", "https://archive.org/details/historieofarriva01brucuoft/page/n60/mode/1up", "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft.pdf", "https://archive.org/download/historieofarriva01brucuoft/historieofarriva01brucuoft_djvu.txt"],
+      "repository_path": "source-cache/CME00129/bruce-historie-arrivall-edward-iv-1838-complete.pdf",
+      "locator": "Title page physical PDF p. 5/BookReader n5/OCR lines 13-28; introduction physical pp. 17-18; chronicle printed pp. 1-40 = physical PDF pp. 21-60 = BookReader n21-n60 = OCR lines 424-2028; notes physical pp. 61-67",
+      "summary": "Exact complete source volume, visually inspected for title and imprint, selection boundary, internal authorship claim, events and dates, transcription features, excluded matter, and Bruce's explicit Stow/Fleetwood source account.",
+      "accessed_on": "2026-07-13",
+      "sha256": "8114e9f6ad315d28e14c072ac6182e7c43fdb44cb00ebb11f68bc766565bd1a8",
+      "notes": ["The hash is for the complete cached PDF. qpdf reports 88 pages, no encryption, and no syntax or stream errors; provider MD5 and SHA-1 values match."]
+    },
+    {
+      "id": "evidence:ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for historieofarriva01brucuoft.",
+      "url": "https://archive.org/metadata/historieofarriva01brucuoft",
+      "repository_path": "source-cache/CME00129/bruce-historie-arrivall-edward-iv-1838-internet-archive-metadata.json",
+      "summary": "Records title, Bruce creator heading, London 1838 publication, PIMS-University of Toronto contribution, MSN sponsorship, 400 ppi, 92 source images, public date, derivatives, and scanner-supplied NOT_IN_COPYRIGHT/US evidence; provider hashes match the cached PDF and OCR.",
+      "accessed_on": "2026-07-13",
+      "sha256": "d3c5bf719b3cf68abd144bf99d9504c775592ba83c4d22835123a5300e8a47a3"
+    },
+    {
+      "id": "evidence:bl-catalog",
+      "type": "official_catalog",
+      "citation": "British Library, Harley MS 543, 'Collection of English historical texts,' record 040-002046372.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046372",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002046372.json"],
+      "repository_path": "source-cache/CME00129/british-library-catalog-040-002046372.json",
+      "locator": "Scope and Content ff. 31r-49r; Date Range; Physical Characteristics; Custodial History; Access; Digitised Content",
+      "summary": "Current official record confirming target title, ff. 31r-49r and Fleetwood trailer; Stow's hand; 1575-1599 date; England origin; paper support; whole-codex extent, dimensions, unfoliated leaves, script, binding and provenance; physical request links; blank digitised-content field; and CC BY footer for BL text.",
+      "accessed_on": "2026-07-13",
+      "sha256": "9507eff2cda0516302e784978b9fcaffeaaf516a5dc4dd0925a1b9b938991040",
+      "notes": ["The hash is for the exact cached JSON. The CC BY statement was verified on the corresponding HTML page footer."]
+    },
+    {
+      "id": "evidence:whittle-thesis",
+      "type": "scholarly_source",
+      "citation": "Andrew R. Whittle, The Historical Reputation of Edward IV 1461-1725 (PhD thesis, University of East Anglia, 2017), pp. 51-61 and 159.",
+      "url": "https://ueaeprints.uea.ac.uk/id/eprint/64257/",
+      "alternate_urls": ["https://ueaeprints.uea.ac.uk/id/eprint/64257/1/Andrew_Whittle%2C_Edward_IV_PhD%2C_Final_Print_Version%2C_22.06.2017.pdf"],
+      "repository_path": "source-cache/CME00129/whittle-historical-reputation-edward-iv-2017-complete.pdf",
+      "locator": "Printed pp. 51-61 = physical PDF pp. 61-71; printed p. 159 = physical PDF pp. 169-170",
+      "summary": "Modern supporting scholarship for the text's Yorkist purpose, anonymous servant/eyewitness claim, Stow transcript from Fleetwood's lost book, Bruce's first complete publication, later print dependence, and contested long/short English/French relationships.",
+      "accessed_on": "2026-07-13",
+      "sha256": "de1c061b964a10a246856272fe24f84e85e79bf681c7a17d796f818fbf697491",
+      "notes": ["The complete 359-page cached PDF renders and pdftotext extracts readable text. qpdf completes with nonfatal linearization hint-table warnings, including shared-object and page object-count mismatches; it is not qpdf-clean."]
+    },
+    {
+      "id": "evidence:bl-public-image-check",
+      "type": "search_result",
+      "citation": "Dated public-image check for British Library Harley MS 543 across the current catalog and legacy Digitised Manuscripts display/viewer routes.",
+      "url": "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Harley_MS_543",
+      "alternate_urls": ["https://www.bl.uk/manuscripts/Viewer.aspx?ref=Harley_MS_543", "https://searcharchives.bl.uk/catalog/040-002046372"],
+      "summary": "The current catalog exposes no Digitised Content link, and legacy exact-shelfmark routes do not expose an image sequence. This supports a time-bounded no-public-copy-found status, not a claim that the manuscript has never been photographed.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, 'Digitisation services - advice, scanning, printing.'",
+      "url": "https://www.bl.uk/services/digitisation",
+      "summary": "Explains the paid online order route, required shelfmark/title/folio-side/format/payment data, expert photography for rare items, inability to scan original manuscripts, possible restrictions, color-by-request, and permission enquiries.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "British Library, 'Imaging Services terms and conditions,' updated January 2026.",
+      "url": "https://www.bl.uk/terms/imaging-services",
+      "summary": "Makes fulfillment subject to retrieval, condition, complete order data, payment, and individual agreement for difficult or large orders; places rights clearance on the user and requires written BL permission to reproduce supplied material, potentially for additional fees.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:uk-copyright-duration",
+      "type": "law",
+      "citation": "UK Intellectual Property Office, 'How copyright protects your work: How long copyright lasts' and 'Copyright Notice: Duration of copyright (term).', current guidance.",
+      "url": "https://www.gov.uk/copyright/how-long-copyright-lasts",
+      "alternate_urls": ["https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term"],
+      "summary": "Official guidance for life-plus-70 literary-work terms and the 25-year term for published-edition typographical arrangements; applied to the 1838 publication and Bruce's 1869 death without conflating text, physical ownership, catalog prose, or images.",
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:fleetwood-exemplar",
+      "question": "What were the date, physical character, earlier provenance, and textual status of the lost Fleetwood exemplar copied by Stow?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Search Fleetwood and Stow inventories, correspondence, and manuscript descriptions for the identified source book.", "Do not call the exemplar an authorial autograph or fifteenth-century manuscript without direct evidence."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog", "evidence:whittle-thesis"]
+    },
+    {
+      "id": "question:harley-title-provenance",
+      "question": "Who supplied the title page associated with Harley MS 543 ff. 31r-49r, and was the apparently separate target unit physically inserted into the codex; if so, how and when did that occur given that the current D'Ewes catalog range excludes ff. 31-49?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Inspect full-color images of ff. 31r-49r and the unfoliated boundary leaves, especially title, hands, quiring, and physical evidence bearing on whether the target is a separate or inserted unit.", "Ask BL staff to reconcile Bruce's another-hand/D'Ewes account with the current folio-specific custodial statement."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:bl-catalog"],
+      "notes": ["The aggregate statement that Stow wrote the manuscript is not silently expanded to the title page Bruce assigns to another hand."]
+    },
+    {
+      "id": "question:version-relationships",
+      "question": "What is the direction and sequence among the long English Arrivall, shorter English text, and French newsletter versions?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult modern textual studies and current editions of all surviving versions.", "Model no short French or English version as a direct ancestor of CME00129 until the disputed transmission direction is resolved."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bruce-volume", "evidence:whittle-thesis"]
+    },
+    {
+      "id": "question:public-manuscript-facsimile",
+      "question": "Does any public or institutionally restricted complete digital facsimile of Harley MS 543 exist outside the current BL catalog links?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Ask BL Reference Services whether preservation photography, institutional viewers, or unlinked IIIF assets exist.", "If no complete surrogate exists, request a whole-manuscript color quote with the exact surface inventory recorded in access metadata."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:bl-catalog", "evidence:bl-public-image-check", "evidence:bl-digitisation"]
+    },
+    {
+      "id": "question:printed-published",
+      "question": "Why do CME00129 and the U-M display say PUBLISHED FOR where the inspected 1838 title page says PRINTED FOR?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask U-M whether a different physical copy or transcription source was used.", "If the source is the inspected printing, correct the XML in a separate encoding change while retaining the prior reading in lineage history."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:bruce-volume", "evidence:xml-audit"]
+    },
+    {
+      "id": "question:repository-provenance",
+      "question": "What documented technical process produced the checked-in CME XML from the University of Michigan encoding?",
+      "status": "no_public_source_found",
+      "impact": "low",
+      "next_steps": ["Seek repository history, import scripts, or maintainer confirmation before strengthening version_of to copied_from."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:xml-audit"]
+    },
+    {
+      "id": "question:ia-scan-reuse",
+      "question": "What affirmative item-specific reuse permission, if any, applies to the IA PDF and OCR derivatives for historieofarriva01brucuoft?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": ["Ask Internet Archive and, if necessary, PIMS-University of Toronto before redistributing the scan files themselves.", "Continue to distinguish the metadata's NOT_IN_COPYRIGHT finding from an explicit open license for scan derivatives."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:ia-metadata", "evidence:bruce-volume"]
+    }
+  ]
+}

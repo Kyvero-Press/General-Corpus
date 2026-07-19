@@ -1,0 +1,580 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:CME00027",
+  "work_id": "CME00027",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "cataloging_subject": {
+    "id": "work:CME00027",
+    "unit_type": "single_work",
+    "label": "The Serpent of Division",
+    "scope_note": "John Lydgate's Middle English prose tract on Julius Caesar and the political dangers of division, completed in December 1422, together with its intentional 24-line verse envoy. The intellectual work is distinct from its four known medieval manuscript witnesses, early printed versions, Henry Noble MacCracken's 1911 critical edition, the University of Michigan encoding, and the checked-in repository XML. MacCracken's introduction and notes are evidence and editorial apparatus, not parts of the medieval work."
+  },
+  "catalog_summary": {
+    "title": "The Serpent of Division",
+    "author": "John Lydgate",
+    "editor": "Henry Noble MacCracken",
+    "date": "Completed 1 December 1422",
+    "region": "England; ancient Rome as historical setting",
+    "genres": ["Prose chronicle", "Mirror for princes", "Didactic prose", "Translation and adaptation"],
+    "form": "mixed",
+    "language_codes": ["enm"],
+    "tags": ["middle-english", "john-lydgate", "prose", "verse-envoy", "julius-caesar", "roman-history", "civil-war", "political-division", "mirror-for-princes", "didactic-literature", "fortune", "kingship", "fifteenth-century", "manuscript-witnesses", "early-print", "textual-variants"]
+  },
+  "identifiers": [
+    {
+      "scheme": "CME/UMDL",
+      "value": "CME00027",
+      "uri": "https://name.umdl.umich.edu/CME00027"
+    }
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "The Serpent of Division",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:maccracken-1911", "evidence:rogers-1559"]
+      },
+      "notes": ["The title is established by the early print tradition and MacCracken's edition; the Harvard manuscript instead preserves Damage and Destruction in Realms."]
+    },
+    {
+      "id": "title:damage-destruction",
+      "type": "alternate",
+      "value": "Damage and Destruction in Realms",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:harvard-eng530", "evidence:maccracken-1911"]
+      },
+      "notes": ["Modernized from the Harvard manuscript title and the Treverys colophon wording; spelling varies by witness and print."]
+    },
+    {
+      "id": "title:chronicle-caesar",
+      "type": "alternate",
+      "value": "The Chronicle of Julius Caesar, Emperor of Rome",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:bl-add48031a", "evidence:maccracken-1911"]
+      },
+      "notes": ["A normalized form of the Calthorpe/Yelverton manuscript's final colophon rather than an independently witnessed opening title."]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:john-lydgate",
+      "type": "person",
+      "name": "John Lydgate",
+      "alternate_names": ["Dan John Lydgate", "John of Bury"],
+      "identifiers": [
+        {
+          "scheme": "VIAF",
+          "value": "100190004",
+          "uri": "https://viaf.org/viaf/100190004"
+        }
+      ],
+      "notes": ["Benedictine monk of Bury St Edmunds; the Calthorpe/Yelverton colophon names him and the Pepys witness uses the abbreviated attribution J. de B."]
+    },
+    {
+      "id": "agent:henry-noble-maccracken",
+      "type": "person",
+      "name": "Henry Noble MacCracken",
+      "notes": ["Editor, transcriber, collator, and commentator of the 1911 edition immediately encoded by U-M."]
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:lydgate-author",
+      "agent_id": "agent:john-lydgate",
+      "role": "author",
+      "attribution_status": "known",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:bl-add48031a", "evidence:maccracken-1911", "evidence:nolan-2005"]
+      }
+    },
+    {
+      "id": "responsibility:lydgate-compiler",
+      "agent_id": "agent:john-lydgate",
+      "role": "compiler",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"], "description": "Assembly of a Caesar narrative and political exemplum from several historical and literary authorities"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:maccracken-introduction", "evidence:nolan-2005"]
+      }
+    },
+    {
+      "id": "responsibility:lydgate-translator-adapter",
+      "agent_id": "agent:john-lydgate",
+      "role": "adapter",
+      "attribution_status": "known",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"], "description": "Middle English adaptation of Latin and English historical and literary materials"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:maccracken-introduction", "evidence:maccracken-1911"]
+      },
+      "notes": ["Lydgate calls the work a little translation, but the evidence supports compilation and adaptation from multiple sources rather than translation from one established exemplar."]
+    },
+    {
+      "id": "responsibility:maccracken-editor",
+      "agent_id": "agent:henry-noble-maccracken",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1911 scholarly edition, including introduction, notes, glossary, and presentation of the medieval text"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:maccracken-1911"]
+      }
+    },
+    {
+      "id": "responsibility:maccracken-transcriber",
+      "agent_id": "agent:henry-noble-maccracken",
+      "role": "transcriber",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Faithful transcription of Fitzwilliam McClean 182, supplied at its lost opening from Calthorpe/Yelverton 35"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:maccracken-manuscripts-prints", "evidence:maccracken-1911"]
+      }
+    },
+    {
+      "id": "responsibility:maccracken-collator",
+      "agent_id": "agent:henry-noble-maccracken",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "Important variants from all four manuscripts and the Treverys fragment, with occasional reference to Owen Rogers's 1559 print"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:maccracken-manuscripts-prints"]
+      }
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:composition",
+      "type": "composition",
+      "display": "Completed 1 December 1422, in the first regnal year of Henry VI",
+      "normalized": {"not_before": 1422, "not_after": 1422},
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "witness:british-library:Add-MS-48031A",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:bl-add48031a", "evidence:maccracken-1911", "evidence:nolan-2005"]
+      },
+      "notes": ["The Calthorpe/Yelverton colophon also gives 1400, but the work's ending specifies December in the first year of Henry VI. The current British Library catalog identifies the colophon date as a copyist's error."]
+    }
+  ],
+  "places": [
+    {"id": "place:england", "label": "England", "kind": "country"},
+    {"id": "place:rome", "label": "Rome", "kind": "settlement"}
+  ],
+  "place_statements": [
+    {
+      "id": "place:cultural-origin-england",
+      "place_id": "place:england",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:nolan-2005", "evidence:maccracken-1911"]
+      },
+      "notes": ["This broad cultural origin does not claim a specific place of composition or transfer any witness dialect to the work as a whole."]
+    },
+    {
+      "id": "place:historical-setting-rome",
+      "place_id": "place:rome",
+      "type": "historical_setting",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"], "description": "Caesar's career, the Roman civil war, and the consequences of political division"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005"]
+      }
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:maccracken-1911", "evidence:harvard-eng530"]
+      }
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:mixed-whole",
+      "value": "mixed",
+      "scope": {"kind": "whole"},
+      "description": "A prose historical-political tract followed by an intentional 24-line verse envoy.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure", "evidence:maccracken-1911"]
+      }
+    },
+    {
+      "id": "form:prose-tract",
+      "value": "prose",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"]},
+      "description": "The main tract is prose, although it embeds a four-line quotation attributed by Lydgate to Chaucer.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure"]
+      }
+    },
+    {
+      "id": "form:verse-envoy",
+      "value": "verse",
+      "scope": {"kind": "part", "part_ids": ["part:envoy"]},
+      "description": "Three eight-line stanzas, 24 lines in total.",
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure", "evidence:maccracken-1911"]
+      }
+    }
+  ],
+  "genre_statements": [
+    {
+      "id": "genre:prose-chronicle",
+      "term": "prose-chronicle",
+      "label": "Prose chronicle",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:bl-add48031a", "evidence:nolan-2005"]}
+    },
+    {
+      "id": "genre:mirror-for-princes",
+      "term": "mirror-for-princes",
+      "label": "Mirror for princes",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:nolan-2005", "evidence:maccracken-introduction"]},
+      "notes": ["The tract converts Caesar's history into counsel about concord, governance, and the ruin caused by division."]
+    },
+    {
+      "id": "genre:didactic-prose",
+      "term": "didactic-prose",
+      "label": "Didactic prose",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005"]}
+    },
+    {
+      "id": "genre:translation-adaptation",
+      "term": "translation-adaptation",
+      "label": "Translation and adaptation",
+      "scheme": "general-corpus",
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"]},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:maccracken-introduction", "evidence:maccracken-1911"]}
+    }
+  ],
+  "subject_statements": [
+    {
+      "id": "subject:julius-caesar",
+      "term": "julius-caesar",
+      "label": "Julius Caesar",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005"]}
+    },
+    {
+      "id": "subject:roman-civil-war",
+      "term": "roman-civil-war",
+      "label": "Roman Civil War",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "part", "part_ids": ["part:prose-tract"]},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005"]}
+    },
+    {
+      "id": "subject:political-division",
+      "term": "political-division-and-civil-strife",
+      "label": "Political division and civil strife",
+      "scheme": "general-corpus",
+      "primary": true,
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005"]}
+    },
+    {
+      "id": "subject:kingship-counsel",
+      "term": "kingship-and-political-counsel",
+      "label": "Kingship and political counsel",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:nolan-2005", "evidence:maccracken-introduction"]}
+    },
+    {
+      "id": "subject:vice",
+      "term": "pride-ambition-envy-and-avarice",
+      "label": "Pride, ambition, envy, and avarice",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:rogers-1559"]}
+    },
+    {
+      "id": "subject:fortune",
+      "term": "fortune",
+      "label": "Fortune and mutability",
+      "scheme": "general-corpus",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:cme00027-xml", "evidence:maccracken-1911"]}
+    }
+  ],
+  "tags": ["middle-english", "john-lydgate", "prose", "verse-envoy", "julius-caesar", "roman-history", "civil-war", "political-division", "mirror-for-princes", "didactic-literature", "fortune", "kingship", "fifteenth-century", "manuscript-witnesses", "early-print", "textual-variants"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "Lydgate recounts Julius Caesar's rise, civil war with Pompey, triumph, and assassination as a warning that pride, avarice, envy, and internal division destroy rulers and commonwealths. Written after Henry V's death, the tract addresses lords and princes through Roman history and closes with a verse envoy on concord, governance, and Fortune.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:cme00027-xml", "evidence:nolan-2005", "evidence:maccracken-introduction"]
+    },
+    {
+      "id": "summary:cataloging-note",
+      "type": "cataloging_note",
+      "value": "The catalog record treats the medieval intellectual work as one mixed-form unit. Its prose tract, 24-line envoy, manuscript witnesses, early prints, MacCracken edition, U-M encoding, and repository artifact are represented as separate but linked layers. The 28 encoded verse lines comprise the 24-line envoy plus a four-line quotation embedded in the prose, not a 28-line envoy.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:cme00027-structure", "evidence:lineage-manifest"]
+    }
+  ],
+  "extent": {
+    "numbered_items": null,
+    "sections": 2,
+    "prose_only_items": 1,
+    "verse_only_items": 1,
+    "mixed_items": 0,
+    "verse_groups": 4,
+    "verse_lines": 28,
+    "description": "The work is summarized as a main prose tract and a 24-line verse envoy. In the XML, the main tract has 29 direct prose paragraphs and one four-line embedded quotation; the envoy has three eight-line verse groups. The complete file has 4 LG and 28 L elements, 124 MILESTONE elements, 24 PB elements, 56 P elements, and 290 NOTE elements. These are encoding metrics, not a claim that the work has a canonical two-chapter structure.",
+    "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure", "evidence:maccracken-1911"]
+  },
+  "content_structure_status": "summary",
+  "content_parts": [
+    {
+      "id": "part:prose-tract",
+      "parent_id": null,
+      "sequence": 1,
+      "type": "section",
+      "label": "Main prose tract",
+      "summary": "A historical and political account of Rome and Julius Caesar, shaped as an exemplum against internal division and addressed to rulers and governors.",
+      "item_count": 1,
+      "textual_form": "prose",
+      "metrics": {"prose_only_items": 1, "verse_only_items": 0, "mixed_items": 0, "verse_groups": 1, "verse_lines": 4},
+      "locators": [
+        {"lineage_entity_id": "edition:maccracken:serpent:1911", "scheme": "printed pages", "value": "pp. 49-66 before the [Lenvoy] heading on p. 66"},
+        {"lineage_entity_id": "witness:harvard-houghton:MS-Eng-530", "scheme": "manuscript folios", "value": "ff. 49r-57v; this witness lacks the envoy"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00027", "scheme": "XML path", "value": "ETS/EEBO/TEXT/BODY before the final three LG elements"}
+      ],
+      "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure", "evidence:maccracken-1911", "evidence:harvard-eng530"]
+    },
+    {
+      "id": "part:envoy",
+      "parent_id": null,
+      "sequence": 2,
+      "type": "epilogue",
+      "label": "Envoy",
+      "summary": "Three eight-line stanzas applying the tract's warning about division, Fortune, and governance to lords and princes.",
+      "item_count": 1,
+      "textual_form": "verse",
+      "metrics": {"prose_only_items": 0, "verse_only_items": 1, "mixed_items": 0, "verse_groups": 3, "verse_lines": 24},
+      "locators": [
+        {"lineage_entity_id": "edition:maccracken:serpent:1911", "scheme": "printed pages", "value": "pp. 66-67"},
+        {"lineage_entity_id": "encoding:umich-cme:CME00027", "scheme": "XML path", "value": "ETS/EEBO/TEXT/BODY/DIV1[@TYPE='account']/LG[position() > 1]"}
+      ],
+      "evidence_ids": ["evidence:cme00027-xml", "evidence:cme00027-structure", "evidence:maccracken-1911"],
+      "notes": ["Harvard Houghton MS Eng 530 and British Library Add MS 48031 A lack the envoy; the Treverys print places it after the printer's colophon, but MacCracken shows that it belongs to Lydgate's work."]
+    }
+  ],
+  "related_works": [],
+  "lineage": {
+    "manifest_id": "lineage:CME00027",
+    "manifest_path": "manifests/lineage/works/CME00027.json",
+    "bindings": [
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "artifact:general-corpus:CME00027", "role": "repository_representation"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "encoding:umich-cme:CME00027", "role": "digital_encoding"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "edition:maccracken:serpent:1911", "role": "source_edition"},
+      {"metadata_target": "part:prose-tract", "lineage_entity_id": "witness:fitzwilliam:MS-McClean-182", "role": "source_witness"},
+      {"metadata_target": "part:prose-tract", "lineage_entity_id": "witness:british-library:Add-MS-48031A", "role": "source_witness"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "witness:magdalene-pepys:MS-2006", "role": "related_source"},
+      {"metadata_target": "part:prose-tract", "lineage_entity_id": "witness:harvard-houghton:MS-Eng-530", "role": "related_source"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "edition:treverys:damage-destruction", "role": "related_source"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "edition:rogers:serpent:1559", "role": "related_source"},
+      {"metadata_target": "work:CME00027", "lineage_entity_id": "facsimile:internet-archive:serpentofdivisio00lydguoft", "role": "related_source"},
+      {"metadata_target": "part:prose-tract", "lineage_entity_id": "facsimile:harvard-houghton:MS-Eng-530", "role": "related_source"}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence:cme00027-xml",
+      "type": "repository_file",
+      "citation": "General Corpus / CME source XML, CME/source/CME_phase_3/CME00027.xml, at CME submodule commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_phase_3/CME00027.xml",
+      "locator": "TEMPHEAD/REVDESCR; EEBO/IDG; EEBO/TEXT/FRONT and BODY",
+      "summary": "Primary local evidence for the CME identifier, encoded title page, Middle English work text, verse envoy, printed-page milestones, notes, and documented review date.",
+      "accessed_on": "2026-07-12",
+      "sha256": "5e5d2488333aee9163f717a6ac8749150eb39ae4e080f29261517da592ce2a11"
+    },
+    {
+      "id": "evidence:cme00027-structure",
+      "type": "computational_inspection",
+      "citation": "Structural inspection of CME00027.xml with XPath element counts, scoped BODY counts, and repository hashing.",
+      "repository_path": "CME/source/CME_phase_3/CME00027.xml",
+      "locator": "counts of DIV1, DIV2, DIV3, P, LG, L, NOTE, PB, MILESTONE, and scoped BODY children",
+      "summary": "Finds 4 verse groups and 28 verse lines: one embedded four-line quotation and a three-stanza, 24-line envoy. It also distinguishes the editor's front matter and notes from the medieval work.",
+      "accessed_on": "2026-07-12",
+      "sha256": "5e5d2488333aee9163f717a6ac8749150eb39ae4e080f29261517da592ce2a11"
+    },
+    {
+      "id": "evidence:maccracken-1911",
+      "type": "digital_surrogate",
+      "citation": "John Lydgate, The Serpent of Division, ed. Henry Noble MacCracken (London: Henry Frowde, Oxford University Press; New Haven: Yale University Press, 1911).",
+      "url": "https://archive.org/download/serpentofdivisio00lydguoft/serpentofdivisio00lydguoft.pdf",
+      "alternate_urls": ["https://archive.org/details/serpentofdivisio00lydguoft/page/n7/mode/1up", "https://archive.org/details/serpentofdivisio00lydguoft/page/n77/mode/1up"],
+      "locator": "title page; work text pp. 49-67",
+      "source_evidence_id": "evidence:maccracken-1911-scan",
+      "summary": "Immediate-edition evidence for title, author and editor statements, complete edited work, page boundaries, prose and verse form, and editorial presentation.",
+      "accessed_on": "2026-07-12",
+      "sha256": "8b1f7b94ccb419aa0dc65fb0450f8e4a373011edf234b820b1a6270391654cb3"
+    },
+    {
+      "id": "evidence:maccracken-introduction",
+      "type": "digital_surrogate",
+      "citation": "Henry Noble MacCracken, 'Introductory Note,' in The Serpent of Division (1911), pp. 1-44.",
+      "url": "https://archive.org/details/serpentofdivisio00lydguoft/page/n13/mode/1up",
+      "locator": "pp. 1-44, especially date and authorship pp. 3-7 and sources pp. 7-44",
+      "source_evidence_id": "evidence:maccracken-introduction",
+      "summary": "Evidence for Lydgate's authorship, the December 1422 date, the political setting after Henry V's death, the work's compilation and adaptation of multiple authorities, and its didactic purpose.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:maccracken-manuscripts-prints",
+      "type": "digital_surrogate",
+      "citation": "Henry Noble MacCracken, 'Manuscripts and Prints,' in The Serpent of Division (1911), pp. 45-47.",
+      "url": "https://archive.org/details/serpentofdivisio00lydguoft/page/n59/mode/1up",
+      "locator": "pp. 45-47 and the edition's opening collation note on p. 49",
+      "source_evidence_id": "evidence:maccracken-manuscripts-prints",
+      "summary": "Editor-authored evidence for the four manuscript witnesses, three early prints, base-text switch, collated sources, transcription method, and conjectured textual relationships.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:bl-add48031a",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Add MS 48031 A, record 040-001951042.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001951042",
+      "source_evidence_id": "evidence:bl-add48031a",
+      "summary": "Current official evidence for the Calthorpe/Yelverton witness, Lydgate work at ff. 165v-175v, late-fifteenth-century date, 1422 composition, and the erroneous 1400 colophon date.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:harvard-eng530",
+      "type": "official_catalog",
+      "citation": "Harvard Library, Houghton Library MS Eng 530, Compleynt of Cryst, Guy of Warwick; etc.: manuscript, [ca. 1450], Alma 990097568050203941, with complete IIIF manifest.",
+      "url": "https://id.lib.harvard.edu/alma/990097568050203941/catalog",
+      "alternate_urls": ["https://nrs.lib.harvard.edu/URN-3:FHCL.HOUGH:1199986:MANIFEST:2"],
+      "locator": "Damage and destruction in realmes, ff. 49r-57v, IIIF canvases 105-122",
+      "source_evidence_id": "evidence:harvard-eng530-catalog",
+      "summary": "Current catalog and direct-image evidence for the Harvard witness's title, locus, approximate date, codex context, and absence of the envoy.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:rogers-1559",
+      "type": "digital_surrogate",
+      "citation": "John Lydgate, The Serpent of Division, set forth after the author's old copy, printed by Owen Rogers (London, 4 May 1559), Internet Archive microfilm facsimile.",
+      "url": "https://archive.org/download/bim_early-english-books-1475-1640_the-serpent-of-division_lydgate-john_1559/bim_early-english-books-1475-1640_the-serpent-of-division_lydgate-john_1559.pdf",
+      "source_evidence_id": "evidence:rogers-1559-scan",
+      "summary": "Direct visual evidence for the 1559 title, attribution, date, printer, and the early-modern printed form of the tract.",
+      "accessed_on": "2026-07-12",
+      "sha256": "8e7e5954df1b10b50e75bfe0d58f0c119d48eaacc32b30194b1555f9ecb9cce7"
+    },
+    {
+      "id": "evidence:nolan-2005",
+      "type": "scholarly_source",
+      "citation": "Maura Nolan, 'Tragic history: Lydgate's Serpent of Division,' in John Lydgate and the Making of Public Culture (Cambridge University Press, 2005), doi:10.1017/CBO9780511483387.002.",
+      "url": "https://www.cambridge.org/core/product/identifier/CBO9780511483387A007/type/BOOK_PART",
+      "source_evidence_id": "evidence:nolan-2005",
+      "summary": "Current scholarly framing of the work as a short prose tract written in 1422, recounting Caesar while warning lords and princes about political and social division after Henry V's death.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:lineage-manifest",
+      "type": "linked_manifest_evidence",
+      "citation": "General Corpus source-lineage manifest for CME00027.",
+      "repository_path": "manifests/lineage/works/CME00027.json",
+      "summary": "Linked evidence for the separation and qualified relationships among the medieval work, four manuscript witnesses, early prints, MacCracken edition, U-M encoding, repository XML, facsimiles, access routes, and rights statements.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:patron-commission",
+      "question": "Who was the 'most worshipful master and sovereign' at whose request the Fitzwilliam reading says Lydgate made the work?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Review current scholarship on the tract's patronage and Duke Humphrey of Gloucester.", "Treat MacCracken's identification of Humphrey as a reasoned hypothesis, not a confirmed commission."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:maccracken-introduction", "evidence:nolan-2005"]
+    },
+    {
+      "id": "question:source-route",
+      "question": "What exact exemplar or source sequence underlies Lydgate's self-described translation and compilation?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult current source studies after MacCracken.", "Compare the tract against the specific states of Vincent of Beauvais, Trevisa's Polychronicon, and other authorities available to Lydgate.", "Do not infer a lost French intermediary or a single translated exemplar without textual evidence."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:maccracken-introduction", "evidence:nolan-2005"]
+    },
+    {
+      "id": "question:calthorpe-ending",
+      "question": "Does the divergent ending in the Calthorpe/Yelverton witness preserve an authorial early draft, scribal revision, or another textual state?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Obtain complete color images of Add MS 48031 A ff. 165v-175v and the other witnesses.", "Collate the divergent ending and envoy across all witnesses and early prints.", "Keep MacCracken's authorial-draft explanation explicitly conjectural."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:maccracken-manuscripts-prints", "evidence:bl-add48031a"]
+    }
+  ],
+  "notes": [
+    "The work date is 1422, not the erroneous 1400 written in the Calthorpe/Yelverton colophon and not the 1911 edition year.",
+    "The Harvard witness's production date and language do not establish a more precise place or dialect for the intellectual work.",
+    "MacCracken's base text is composite at the edition layer: Calthorpe/Yelverton supplies the opening lost from Fitzwilliam McClean 182, and Fitzwilliam then supplies the remainder.",
+    "The record remains partial because patronage, exact source routes, the Calthorpe ending's textual status, and complete direct verification of three witnesses remain unresolved."
+  ]
+}

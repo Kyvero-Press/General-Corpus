@@ -1,0 +1,960 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Ayenbite",
+  "work_id": "Ayenbite",
+  "title": "Ayenbite of Inwyt",
+  "primary_subject": "artifact:general-corpus:Ayenbite",
+  "record_status": "partial",
+  "created": "2026-07-11",
+  "last_reviewed": "2026-07-11",
+  "summary": "The repository artifact is a local copy/version of University of Michigan CME item Ayenbite, an electronic encoding of the text in Pamela Gradon's 1965 EETS reissue. That reissue retained Richard Morris's 1866 transcription while correcting miscopied forms through a new collation with the unique witness, British Library Arundel MS 57. Morris's 1866 edition directly transcribed that manuscript. The work, witness, two editorial layers, digital encoding, repository copy, and public scans are separate entities with separate access and rights statements.",
+  "languages": [
+    "enm",
+    "eng"
+  ],
+  "review_notes": [
+    "The Gradon volume is modeled as a version of Morris's edition and as collated against Arundel 57; it is not represented as an independently reconstructed text without Morris.",
+    "The BL record calls Arundel 57 the only copy and identifies Michael of Northgate as its 1340 scribe; claims about an autograph therefore apply to this witness, not automatically to every spelling or supplied reading in the editions.",
+    "Access and rights statements are entity- and component-specific. U-M's current NoC-US assertion does not by itself settle copyright in Gradon's 1965 original collation and corrections."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Ayenbite",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Ayenbite",
+      "description": "The XML artifact consumed by this repository's conversion workflow, supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "Ayenbite"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "3113655be1fd8af7eb9863a297a94c48a342f38f"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/Ayenbite.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "3113655be1fd8af7eb9863a297a94c48a342f38f",
+        "sha256": "ac5a4fad2db54cca681adf21250c3b5241be14766acd7e56dc2727446f9bfbdb"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ],
+      "notes": [
+        "The source submodule is a separate repository and is not modified by this manifest."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Ayenbite",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English Prose and Verse item Ayenbite",
+      "description": "A keyed and structurally marked-up electronic text of the 1965 Gradon/Morris source volume.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "Ayenbite",
+          "uri": "https://name.umdl.umich.edu/Ayenbite"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic publication",
+          "value": "1999",
+          "normalized": "1999",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ayenbite-xml"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-umich",
+        "evidence:ayenbite-xml"
+      ],
+      "notes": [
+        "The XML header says printed front matter was omitted, editor's notes from volume 1 were retained, and folio-number placement is approximate."
+      ]
+    },
+    {
+      "id": "edition:gradon:ayenbite-1965",
+      "type": "scholarly_edition",
+      "label": "Gradon 1965 corrected reissue of Morris's Ayenbite",
+      "creator_ids": [
+        "agent:pamela-gradon",
+        "agent:richard-morris"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1965",
+          "normalized": "1965",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ayenbite-gradon-scan",
+            "evidence:ayenbite-xml"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Dan Michel, Dan Michel's Ayenbite of Inwyt or Remorse of Conscience, vol. 1, text, Richard Morris's transcription newly collated with the unique manuscript British Museum MS Arundel 57 by Pamela Gradon, Early English Text Society, Original Series 23 (London, New York, and Toronto: Oxford University Press, 1965).",
+        "title": "Dan Michel's Ayenbite of Inwyt or Remorse of Conscience: Volume 1, Text",
+        "series": "Early English Text Society, Original Series 23",
+        "publisher": "Oxford University Press",
+        "publication_place": "London, New York, and Toronto",
+        "date": "1965",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan",
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-folger"
+      ],
+      "notes": [
+        "The new preface says Morris's transcription was retained except where new collation corrected miscopied forms.",
+        "The 1965 reissue omitted Morris's introduction, notes, and glossary; its title nevertheless remains in EETS Original Series 23 because the first edition had appeared under that number."
+      ]
+    },
+    {
+      "id": "edition:morris:ayenbite-1866",
+      "type": "scholarly_edition",
+      "label": "Morris 1866 edition of Ayenbite",
+      "creator_ids": [
+        "agent:richard-morris"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1866",
+          "normalized": "1866",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ayenbite-morris-scan",
+            "evidence:ayenbite-gradon-scan"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Dan Michel, Dan Michel's Ayenbite of Inwyt, or Remorse of Conscience, in the Kentish Dialect, 1340 A.D., ed. Richard Morris, Early English Text Society, Original Series 23 (London: N. Trubner & Co., 1866).",
+        "title": "Dan Michel's Ayenbite of Inwyt, or Remorse of Conscience, in the Kentish Dialect, 1340 A.D.",
+        "series": "Early English Text Society, Original Series 23",
+        "publisher": "N. Trubner & Co.",
+        "publication_place": "London",
+        "date": "1866",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-morris-scan",
+        "evidence:ayenbite-gradon-scan",
+        "evidence:ayenbite-xml"
+      ],
+      "notes": [
+        "This is the transcription layer retained and corrected by Gradon, not merely a prior edition cited for comparison."
+      ]
+    },
+    {
+      "id": "witness:bl:Arundel57",
+      "type": "manuscript_witness",
+      "label": "British Library Arundel MS 57",
+      "alternate_labels": [
+        "British Museum MS Arundel 57"
+      ],
+      "description": "The unique manuscript witness of Ayenbite of Inwyt, containing the work at ff. 13r-94r and identifying Michael of Northgate as its scribe; later folios contain other works and prayers.",
+      "identifiers": [
+        {
+          "scheme": "British Library shelfmark",
+          "value": "Arundel MS 57",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002039337"
+        }
+      ],
+      "creator_ids": [
+        "agent:dan-michel"
+      ],
+      "date_statements": [
+        {
+          "label": "production and Ayenbite colophon",
+          "value": "1340; Ayenbite completed on the eve of Saints Simon and Jude",
+          "normalized": "1340",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ayenbite-arundel57"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:bl",
+        "shelfmark": "Arundel MS 57",
+        "historical_designations": [
+          "British Museum MS Arundel 57"
+        ],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002039337",
+        "notes": "The holding institution's current catalogue uses British Library, while the source edition retains the former British Museum designation."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "108 folios; Ayenbite at ff. 13r-94r",
+        "dimensions": "310 x 200 mm",
+        "notes": [
+          "The codex also contains prayers and shorter treatises.",
+          "The BL catalogue records Middle English, Old French, and Latin across the codex; this does not mean the Ayenbite work itself is trilingual."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ],
+      "notes": [
+        "Produced at St Augustine's Abbey, Canterbury.",
+        "The catalogue describes it as the only copy of Ayenbite and says the work was written by Michael of Northgate in his own hand."
+      ]
+    },
+    {
+      "id": "facsimile:wikimedia:gradon-1965",
+      "type": "facsimile",
+      "label": "Public PDF scan of the 1965 Gradon volume",
+      "description": "A page-image PDF of the printed 1965 edition; it is a facsimile of the modern edition, not of Arundel MS 57.",
+      "reproduction_format": "PDF page images",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan"
+      ]
+    },
+    {
+      "id": "facsimile:ia:morris-1866",
+      "type": "facsimile",
+      "label": "Internet Archive scan of the 1866 Morris edition",
+      "description": "A public scan of the printed first edition, not a manuscript facsimile.",
+      "reproduction_format": "Page images and downloadable PDF",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ayenbite-morris-scan"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:dan-michel",
+      "type": "person",
+      "name": "Dan Michel of Northgate",
+      "alternate_names": [
+        "Michael of Northgate"
+      ],
+      "dates": "fl. 1340",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57",
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "agent:richard-morris",
+      "type": "person",
+      "name": "Richard Morris",
+      "dates": "1833-1894",
+      "evidence_ids": [
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-morris-scan"
+      ]
+    },
+    {
+      "id": "agent:pamela-gradon",
+      "type": "person",
+      "name": "Pamela Gradon",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan",
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-umich"
+      ]
+    },
+    {
+      "id": "agent:bl",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ]
+    },
+    {
+      "id": "agent:kyvero",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "agent:wikimedia-commons",
+      "type": "organization",
+      "name": "Wikimedia Commons",
+      "urls": [
+        "https://commons.wikimedia.org/"
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ],
+      "evidence_ids": [
+        "evidence:ayenbite-morris-scan"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:ayenbite-repo-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Ayenbite",
+      "object": "encoding:umich-cme:Ayenbite",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Repository XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME item Ayenbite"
+        },
+        "notes": "Matching identifiers, header, source statement, and text support the relationship; exact transfer date is undocumented."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-umich"
+        ]
+      }
+    },
+    {
+      "id": "relation:ayenbite-encoding-from-gradon",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Ayenbite",
+      "object": "edition:gradon:ayenbite-1965",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Electronic text and retained volume-one notes"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "The text volume without printed front matter",
+          "locators": [
+            "Volume 1, text"
+          ]
+        },
+        "notes": "The XML explicitly names the 1965 volume as its source and documents omissions and transformations."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-xml",
+          "evidence:ayenbite-gradon-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:gradon-version-of-morris",
+      "type": "version_of",
+      "subject": "edition:gradon:ayenbite-1965",
+      "object": "edition:morris:ayenbite-1866",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "1965 corrected text reissue"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Morris's transcription, with earlier apparatus omitted",
+          "locators": [
+            "Text pages"
+          ]
+        },
+        "notes": "The generic version_of relation carries a specific revised-reissue relationship because the schema has no reissue_of or revised_edition_of predicate."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-gradon-scan",
+          "evidence:ayenbite-xml"
+        ]
+      }
+    },
+    {
+      "id": "relation:gradon-collated-arundel57",
+      "type": "collated_against",
+      "subject": "edition:gradon:ayenbite-1965",
+      "object": "witness:bl:Arundel57",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Corrected text pages"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Ayenbite text in the unique manuscript",
+          "locators": [
+            "ff. 13r-94r"
+          ]
+        },
+        "notes": "Gradon's new collation corrected forms Morris had miscopied; this edge does not imply that every 1965 reading was independently re-edited from scratch."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-gradon-scan",
+          "evidence:ayenbite-arundel57"
+        ]
+      }
+    },
+    {
+      "id": "relation:morris-transcribes-arundel57",
+      "type": "transcribes",
+      "subject": "edition:morris:ayenbite-1866",
+      "object": "witness:bl:Arundel57",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Morris's edited transcription of Ayenbite",
+          "locators": [
+            "EETS OS 23 text"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Ayenbite in the unique manuscript",
+          "locators": [
+            "ff. 13r-94r"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-morris-scan",
+          "evidence:ayenbite-gradon-scan",
+          "evidence:ayenbite-arundel57"
+        ]
+      }
+    },
+    {
+      "id": "relation:gradon-scan-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:wikimedia:gradon-1965",
+      "object": "edition:gradon:ayenbite-1965",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Public PDF scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Printed 1965 volume"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-gradon-scan"
+        ]
+      }
+    },
+    {
+      "id": "relation:morris-scan-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:morris-1866",
+      "object": "edition:morris:ayenbite-1866",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Internet Archive scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Printed 1866 edition"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ayenbite-morris-scan"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:ayenbite-repo",
+      "entity": "artifact:general-corpus:Ayenbite",
+      "provider_id": "agent:kyvero",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out CME submodule path",
+      "repository_path": "CME/source/CME_phase_1-2/Ayenbite.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "access:ayenbite-umich",
+      "entity": "encoding:umich-cme:Ayenbite",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item and full-text view",
+      "url": "https://name.umdl.umich.edu/Ayenbite",
+      "cost": "free",
+      "format": "HTML digital text",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-umich"
+      ]
+    },
+    {
+      "id": "access:ayenbite-gradon-scan",
+      "entity": "facsimile:wikimedia:gradon-1965",
+      "provider_id": "agent:wikimedia-commons",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct Wikimedia Commons PDF",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf",
+      "local_copies": [
+        {
+          "label": "Gradon Ayenbite 1965 complete scan",
+          "path": "source-cache/Ayenbite/gradon-ayenbite-1965-complete.pdf",
+          "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf",
+          "sha256": "4fc1f9f5a46005714d86045ce17b7afd01adb0b2cd04f841d6f17966e228f4cb",
+          "bytes": 22408217,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "Complete 287-page provider PDF, including Google/library matter, title and publication pages, Gradon's preface and collation note, the entire edited text, and terminal library matter."
+          ],
+          "work_portion": {
+            "label": "Gradon/Morris edited Middle English Ayenbite text",
+            "locators": ["printed pp. 1-271", "PDF pages 13-283"],
+            "start_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf#page=13",
+            "end_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf#page=283",
+            "notes": ["Direct inspection confirms printed p. 1 at PDF page 13 and printed p. 271 at PDF page 283."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "PDF page images",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan"
+      ],
+      "notes": ["The ignored local cache is a complete scan of the printed edition, not a manuscript facsimile and not an independent reuse grant."]
+    },
+    {
+      "id": "access:ayenbite-morris-scan",
+      "entity": "facsimile:ia:morris-1866",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item with page viewer and downloads",
+      "url": "https://archive.org/details/danmichelsayenb00laur",
+      "alternate_urls": [
+        "https://books.google.com/books?id=oH0NAAAAQAAJ",
+        "https://archive.org/download/danmichelsayenb00laur/danmichelsayenb00laur.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Morris Ayenbite 1866 complete scan",
+          "path": "source-cache/Ayenbite/morris-ayenbite-1866-complete.pdf",
+          "source_url": "https://archive.org/download/danmichelsayenb00laur/danmichelsayenb00laur.pdf",
+          "sha256": "757dcd86f9c1ed67502562be721b2156c9fbc844cc80dbb3f7d4bd95c1d299d6",
+          "bytes": 35460592,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "notes": [
+            "Complete 490-page provider PDF, retaining scan and library matter, title pages, prefaces, manuscript description, grammar, the entire edited text, notes, glossary, corrections, and terminal matter."
+          ],
+          "work_portion": {
+            "label": "Morris's edited Middle English Ayenbite text",
+            "locators": ["printed pp. 1-271", "PDF pages 117-387"],
+            "start_url": "https://archive.org/download/danmichelsayenb00laur/danmichelsayenb00laur.pdf#page=117",
+            "end_url": "https://archive.org/download/danmichelsayenb00laur/danmichelsayenb00laur.pdf#page=387",
+            "notes": ["Direct inspection confirms printed p. 1 at PDF page 117 and printed p. 271 at PDF page 387; Morris's editorial notes begin on PDF page 388."]
+          }
+        }
+      ],
+      "cost": "free",
+      "format": "Page viewer, PDF, and derived formats",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-morris-scan"
+      ],
+      "notes": ["The ignored local cache is a complete scan of the printed edition, not a manuscript facsimile and not an independent reuse grant."]
+    },
+    {
+      "id": "access:arundel57-catalog",
+      "entity": "witness:bl:Arundel57",
+      "provider_id": "agent:bl",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalogue",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039337",
+      "cost": "free",
+      "format": "Online catalog record",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ]
+    },
+    {
+      "id": "access:arundel57-images",
+      "entity": "witness:bl:Arundel57",
+      "provider_id": "agent:bl",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The current BL catalogue record reports that digital images are unavailable",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039337",
+      "cost": "unknown",
+      "format": "No current public digital facsimile",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ],
+      "notes": [
+        "This is a date-bounded availability statement, not proof that no institutional photography exists."
+      ]
+    },
+    {
+      "id": "access:arundel57-physical",
+      "entity": "witness:bl:Arundel57",
+      "provider_id": "agent:bl",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Request through the British Library catalogue subject to reader eligibility and item restrictions",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039337",
+      "cost": "unknown",
+      "format": "Original manuscript",
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ],
+      "notes": [
+        "The catalogue warns that some material requires a letter of introduction and that not all described units can necessarily be requested together."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:ayenbite-medieval-text-us",
+      "entity": "witness:bl:Arundel57",
+      "component": "Dan Michel's 1340 underlying Middle English work",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The underlying work and manuscript text were created in 1340, centuries before modern copyright.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "This statement does not cover modern photographs, transcriptions, or editorial contributions."
+      ]
+    },
+    {
+      "id": "rights:morris-edition-us",
+      "entity": "edition:morris:ayenbite-1866",
+      "component": "Morris's 1866 edition and editorial contribution",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "The edition was published in 1866 and is well outside the U.S. copyright term.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-morris-scan",
+        "evidence:copyright-office"
+      ]
+    },
+    {
+      "id": "rights:gradon-editorial-us",
+      "entity": "edition:gradon:ayenbite-1965",
+      "component": "Pamela Gradon's new collation, corrections, prefatory material, and any other original 1965 editorial contribution",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-11",
+      "basis": "The volume appeared in 1965 and no open license or public-domain dedication for Gradon's original contribution was verified.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan",
+        "evidence:copyright-office"
+      ],
+      "notes": [
+        "This does not revive copyright in the medieval work or Morris's 1866 contribution."
+      ]
+    },
+    {
+      "id": "rights:umich-ayenbite-us",
+      "entity": "encoding:umich-cme:Ayenbite",
+      "component": "Materials presented in U-M CME item Ayenbite",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-11",
+      "basis": "U-M's current item page labels the item public domain and applies No Copyright-United States.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-umich"
+      ],
+      "notes": [
+        "The provider assertion is recorded as stated; it does not explain the independent status of Gradon's original 1965 contributions."
+      ]
+    },
+    {
+      "id": "rights:ayenbite-local-legacy-terms",
+      "entity": "artifact:general-corpus:Ayenbite",
+      "component": "The local XML encoding and provider terms preserved in its header",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "The XML permits copying for personal use, research, and teaching with the availability statement and permits links from for-profit works, but expressly forbids redistribution by commercial or not-for-profit content providers.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-umich"
+      ],
+      "notes": [
+        "These legacy terms and U-M's current NoC-US statement point in different practical directions; resolve the conflict before redistributing this particular encoding commercially."
+      ]
+    },
+    {
+      "id": "rights:arundel57-images",
+      "entity": "witness:bl:Arundel57",
+      "access_id": "access:arundel57-images",
+      "component": "Any modern British Library manuscript photography or ordered reproduction",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-11",
+      "basis": "No current public image set or image-specific reuse license was available from the item record.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:gradon-collation",
+      "entity": "edition:gradon:ayenbite-1965",
+      "practice": "collation",
+      "description": "Gradon retained Morris's transcription but corrected forms that a fresh collation showed he had miscopied.",
+      "scope": "The 1965 text pages",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan",
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "practice:ayenbite-electronic-selection",
+      "entity": "encoding:umich-cme:Ayenbite",
+      "practice": "selection",
+      "description": "The electronic edition omits printed front matter, retains editor's notes from volume 1, and places manuscript folio numbers approximately.",
+      "scope": "Whole electronic item",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "practice:ayenbite-abbreviation-information-loss",
+      "entity": "encoding:umich-cme:Ayenbite",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Expanded abbreviations distinguished by italics in the printed edition",
+      "representation": "The XML header says the italic indication was not reproduced electronically",
+      "description": "The digital encoding does not preserve the print edition's typographic distinction for expanded abbreviations, so it cannot be used alone to recover which letter sequences were editorial expansions.",
+      "scope": "Expanded forms throughout the electronic text",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    },
+    {
+      "id": "practice:ayenbite-supplied-text",
+      "entity": "encoding:umich-cme:Ayenbite",
+      "practice": "selection",
+      "source_feature": "Bracketed matter and an editorial uncertainty marker in the source edition",
+      "representation": "The XML retains supplied text and notes that brackets normally indicate Morris's supply; it interprets '(?)' on printed page 120 as editorial uncertainty",
+      "description": "Supplied and uncertain readings belong to editorial layers and should not be mistaken for literal manuscript characters without checking the source edition and witness.",
+      "scope": "Bracketed and uncertainty-marked readings",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ayenbite-xml"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:ayenbite-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/Ayenbite.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Ayenbite.xml",
+      "locator": "HEADER; authorial preface; full encoded text",
+      "summary": "Identifies U-M item Ayenbite, the 1965 Gradon source, Morris's retained transcription, Arundel 57 dependency, electronic omissions, legacy availability terms, and the encoded work.",
+      "accessed_on": "2026-07-11",
+      "sha256": "ac5a4fad2db54cca681adf21250c3b5241be14766acd7e56dc2727446f9bfbdb"
+    },
+    {
+      "id": "evidence:ayenbite-umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, ‘Ayenbite of Inwyt,’ Corpus of Middle English Prose and Verse.",
+      "url": "https://quod.lib.umich.edu/c/cme/Ayenbite?view=toc",
+      "summary": "Confirms public digital-text access, bibliographic data, full contents, and U-M's Public Domain and NoC-US statements.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-arundel57",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Arundel MS 57, Ayenbite of Inwyt child record.",
+      "url": "https://searcharchives.bl.uk/catalog/041-002356408",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002039337"
+      ],
+      "summary": "The exact child record describes the only manuscript copy of Ayenbite at ff. 13r-94r, production at St Augustine's Abbey by Michael of Northgate in 1340, and the completion colophon; the parent record supplies codicological and access information, and shows that ff. 94v-96v contain other works and prayers.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-gradon-scan",
+      "type": "digital_surrogate",
+      "citation": "Pamela Gradon, ed., Dan Michel's Ayenbite of Inwyt, EETS Original Series 23 (1965), public PDF scan.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dan_Michel%27s_Ayenbite_of_inwyt%2C_or%2C_Remorse_of_conscience._-_In_the_Kentish_dialect%2C_1340_A.D_%28IA_bub_gb_ZoGYogGATAIC%29.pdf",
+      "summary": "Provides the complete scanned volume and the new preface explaining the retention and correction of Morris's transcription and omission of Morris's apparatus.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-morris-scan",
+      "type": "digital_surrogate",
+      "citation": "Richard Morris, ed., Dan Michel's Ayenbite of Inwyt, EETS Original Series 23 (1866), Internet Archive item.",
+      "url": "https://archive.org/details/danmichelsayenb00laur",
+      "alternate_urls": [
+        "https://books.google.com/books?id=oH0NAAAAQAAJ"
+      ],
+      "summary": "Provides a public scan of the 1866 transcription and editorial apparatus that formed the base of the 1965 text.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:ayenbite-folger",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library, catalog record 35564, Dan Michel's Ayenbite of Inwyt.",
+      "url": "https://catalog.folger.edu/record/35564",
+      "summary": "Confirms the two-volume 1965 bibliographic record and identifies the work as a literal Kentish Middle English translation of Laurent d'Orleans's 1279 Somme le Roi.",
+      "accessed_on": "2026-07-11"
+    },
+    {
+      "id": "evidence:copyright-office",
+      "type": "law",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "Provides the U.S. duration framework used to distinguish the 1340 work, 1866 edition, and possible 1965 editorial copyright.",
+      "accessed_on": "2026-07-11"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ayenbite-rights-conflict",
+      "question": "What permissions and rights analysis underlie U-M's current NoC-US assertion for an encoding sourced from Gradon's 1965 corrected reissue, and do they permit commercial redistribution of this XML-derived text?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask U-M for the accession, permission, and rights-review record for Ayenbite.",
+        "Separate readings inherited from Morris and the medieval witness from Gradon's demonstrably new corrections before making a reuse decision."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-xml",
+        "evidence:ayenbite-umich",
+        "evidence:ayenbite-gradon-scan"
+      ]
+    },
+    {
+      "id": "question:arundel57-facsimile",
+      "question": "Can the British Library supply or authorize a complete current digital facsimile of Arundel MS 57, and under what reproduction and publication terms?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Contact British Library manuscript services with shelfmark Arundel MS 57 and request current image availability, cost, and reuse terms.",
+        "Record any supplied reproduction as a new facsimile entity rather than changing the witness's rights statement."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-arundel57"
+      ]
+    },
+    {
+      "id": "question:gradon-reading-dependencies",
+      "question": "Which individual readings in the 1965 text are inherited unchanged from Morris and which are Gradon's new corrections from Arundel 57?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Collate the 1866 and 1965 text pages and verify each difference against Arundel 57 or Gradon's later apparatus."
+      ],
+      "last_checked": "2026-07-11",
+      "evidence_ids": [
+        "evidence:ayenbite-gradon-scan",
+        "evidence:ayenbite-morris-scan",
+        "evidence:ayenbite-arundel57"
+      ]
+    }
+  ]
+}

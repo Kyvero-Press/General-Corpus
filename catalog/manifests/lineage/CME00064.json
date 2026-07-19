@@ -1,0 +1,1154 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00064",
+  "work_id": "CME00064",
+  "title": "Proprium Sanctorum: Zusatz-Homilien des Ms. Vernon fol. CCXV ff. zur nördlichen Sammlung der Dominicalia evangelia",
+  "primary_subject": "artifact:general-corpus:CME00064",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The repository XML represents University of Michigan CME item CME00064, an encoding of Carl Horstmann's 1888 edition of a late-fourteenth-century supplementary sanctorale homily sequence in the Vernon Manuscript. Horstmann prints twenty-eight complete Middle English verse homilies in two journal runs, pp. 83-114 and 299-321. The manuscript sequence at Vernon fols. 215v-227v has thirty-five feast positions: twenty-nine full homilies and six title-only cross-references. Horstmann retains the six references but omits the full Invention of the Cross homily beginning Erat homo; the encoded selection therefore must not be mistaken for the entire manuscript sequence. The complete 710-canvas Vernon object, not a cropped work extract, is cached and the selected span is mapped within it. The complete 4,616,920,131-byte Oxford facsimile/transcription dataset is also cached and integrity-checked, with exact internal transcription and image paths recorded for fols. 215v-227v. The parallel sequence in British Library Add MS 22283 is collateral evidence, not a documented source for the 1888 transcription; current catalog structure places it at fols. 19v(a)-30v(a) and appears to omit the Exaltation of the Cross homily present in Vernon.",
+  "languages": ["enm", "deu", "lat"],
+  "review_notes": [
+    "The medieval sequence, each manuscript witness, Horstmann's editions, U-M encoding, repository artifact, and modern facsimiles are modeled as separate layers.",
+    "Complete local facsimile bundles retain the provider's entire physical or bibliographic object. work_portion locators point to the corpus selection without redefining a full manuscript or journal as a cropped extract.",
+    "The article's traditional page citation is corrected to pp. 83-114 and 299-321. Printed pp. 322-326 are unrelated reviews.",
+    "Horstmann's 1881 claim that Add MS 22283 is a mere copy of Vernon is retained as a historical, tentative claim. Current catalog data assign the target sequence to Add Scribe 1; the scribe shared with Vernon is Add Scribe 2 elsewhere in the codex.",
+    "The XML's 2016 revision note reports removal of fragments from the middle and end, but does not identify them. No claim equates those unspecified fragments with the demonstrable Horstmann omission of Erat homo."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00064",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00064",
+      "description": "The XML artifact consumed by this repository's publication workflow and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00064"},
+        {"scheme": "git-blob", "value": "f172f2af6904e3fee4e1e2f0e7ea2d0d157d0fb5"}
+      ],
+      "creator_ids": ["agent:general-corpus"],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00064.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f172f2af6904e3fee4e1e2f0e7ea2d0d157d0fb5",
+        "sha256": "9b8cc283c02e5a2663363cbe80b6df9af1eaf4a2b083b8d8cdede4efd77a5d55"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:repo-xml"],
+      "notes": [
+        "IDG/@ID, BIBNO, and VID all identify CME00064; the file is 261,795 bytes.",
+        "The XML contains one DIV1 and twenty-eight DIV2 divisions, 5,582 L elements in sixty-four LG elements, fifty-five PB milestones, and languages enm, ger, and lat."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:CME00064",
+      "type": "digital_encoding",
+      "label": "University of Michigan Corpus of Middle English item CME00064",
+      "description": "A manually keyed and proofread TEI-like representation of Horstmann's complete twenty-eight-homily selection, including Latin Gospel rubrics, German editorial framing and notes, and printed page milestones.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00064", "uri": "https://name.umdl.umich.edu/CME00064"},
+        {"scheme": "UMDL handle", "value": "CME00064", "uri": "https://name.umdl.umich.edu/CME00064"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich", "evidence:repo-xml"],
+      "notes": ["The 2016 revision history records structural normalization and two unidentified fragment removals; the currently encoded text still contains all twenty-eight homilies printed by Horstmann."]
+    },
+    {
+      "id": "facsimile:umich:CME00064-source-pages",
+      "type": "facsimile",
+      "label": "U-M CME00064 source-page TIFF selection",
+      "description": "A fifty-five-file one-bit TIFF bundle corresponding to Horstmann's two article runs. It is a selected reproduction of printed source pages, not a manuscript facsimile and not a complete journal volume.",
+      "creator_ids": ["agent:umich"],
+      "reproduction_format": "55 one-bit TIFF page images in a ZIP archive",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-source-pages"]
+    },
+    {
+      "id": "edition:horstmann:proprium-sanctorum-1888",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann's 1888 Proprium Sanctorum selection",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [{"label": "publication", "value": "1888", "normalized": "1888", "certainty": "high", "evidence_ids": ["evidence:horstmann-1888"]}],
+      "bibliographic": {
+        "citation": "Carl Horstmann, 'Proprium Sanctorum: Zusatz-Homilien des Ms. Vernon fol. CCXV ff. zur nördlichen Sammlung der Dominicalia evangelia,' Archiv für das Studium der neueren Sprachen und Literaturen 81 (42. Jahrgang, 1888): 83-114, 299-321.",
+        "title": "Proprium Sanctorum: Zusatz-Homilien des Ms. Vernon fol. CCXV ff. zur nördlichen Sammlung der Dominicalia evangelia",
+        "container_title": "Archiv für das Studium der neueren Sprachen und Literaturen",
+        "volume": "81",
+        "publisher": "George Westermann",
+        "publication_place": "Braunschweig",
+        "date": "1888",
+        "pages": "83-114, 299-321",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-1888", "evidence:repo-xml"],
+      "notes": [
+        "This is the immediate printed source represented by CME00064.",
+        "The first run ends on p. 114 with the continuation notice Schluss folgt; the article resumes on p. 299 and its target text ends on p. 321. The following cue Hou a man schal lyue parfytly introduces another manuscript work and is not part of this selection.",
+        "Horstmann prints twenty-eight full homilies, retains six incipit cross-references in their manuscript positions, and editorially omits the full repeated Erat homo homily for the Invention of the Cross."
+      ]
+    },
+    {
+      "id": "facsimile:bsb:bsb11874338",
+      "type": "facsimile",
+      "label": "BSB complete IIIF sequence for Archiv volume 81 (1888)",
+      "description": "A 502-canvas provider-published color sequence preserving the complete exposed journal volume, not only Horstmann's article.",
+      "identifiers": [{"scheme": "BSB-ID", "value": "bsb11874338", "uri": "https://www.digitale-sammlungen.de/view/bsb11874338"}],
+      "creator_ids": ["agent:bsb"],
+      "reproduction_format": "502-canvas IIIF Presentation 2 object; cached as a ZIP containing all width-1600 JPEG derivatives, provider manifest, and source inventory",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bsb81-manifest", "evidence:bsb81-bundle-audit"]
+    },
+    {
+      "id": "facsimile:ia:archiv-81-1888",
+      "type": "facsimile",
+      "label": "Internet Archive complete PDF for Archiv volume 81 (1888)",
+      "description": "A complete 499-page Google-derived scan of the journal volume, with cached metadata, scan structure, and complete OCR sidecars.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "ArchivFurDasStudiumDerNeuerenSprachen81", "uri": "https://archive.org/details/ArchivFurDasStudiumDerNeuerenSprachen81"}],
+      "creator_ids": ["agent:internet-archive", "agent:google-books"],
+      "reproduction_format": "499-page PDF plus Internet Archive metadata, scandata, and DjVu XML OCR",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ia81-scan", "evidence:ia81-metadata"]
+    },
+    {
+      "id": "edition:horstmann:altenglische-legenden-1881",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann's Altenglische Legenden, Neue Folge (1881)",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [{"label": "publication", "value": "1881", "normalized": "1881", "certainty": "high", "evidence_ids": ["evidence:horstmann-1881"]}],
+      "bibliographic": {
+        "citation": "Carl Horstmann, Altenglische Legenden, Neue Folge (Heilbronn: Gebr. Henninger, 1881), pp. LXXIV-LXXVII.",
+        "title": "Altenglische Legenden, Neue Folge",
+        "publisher": "Gebr. Henninger",
+        "publication_place": "Heilbronn",
+        "date": "1881",
+        "pages": "LXXIV-LXXVII",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-1881"],
+      "notes": ["The cited introductory pages identify the feast sequence, describe the prologue and southern-addition hypotheses, and compare the Vernon and Simeon codices. They are a scholarly guide cited by the 1888 article, not its immediate printed text."]
+    },
+    {
+      "id": "facsimile:ia:horstmann-1881",
+      "type": "facsimile",
+      "label": "Internet Archive/Google complete PDF of Horstmann's 1881 volume",
+      "description": "A complete 686-page PDF with Internet Archive metadata and scan-structure sidecars.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "altenglischeleg01barbgoog", "uri": "https://archive.org/details/altenglischeleg01barbgoog"}],
+      "creator_ids": ["agent:internet-archive", "agent:google-books"],
+      "reproduction_format": "686-page PDF plus item metadata and scandata sidecars",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-1881", "evidence:ia1881-metadata"]
+    },
+    {
+      "id": "edition:horstmann:evangelien-geschichten-1877",
+      "type": "scholarly_edition",
+      "label": "Carl Horstmann's Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon (1877)",
+      "creator_ids": ["agent:carl-horstmann"],
+      "date_statements": [{"label": "publication", "value": "1877", "normalized": "1877", "certainty": "high", "evidence_ids": ["evidence:horstmann-1877"]}],
+      "bibliographic": {
+        "citation": "Carl Horstmann, 'Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon,' Archiv für das Studium der neueren Sprachen und Literaturen 57 (31. Jahrgang, 1877): 241-316.",
+        "title": "Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon",
+        "container_title": "Archiv für das Studium der neueren Sprachen und Literaturen",
+        "volume": "57",
+        "publisher": "George Westermann",
+        "publication_place": "Braunschweig",
+        "date": "1877",
+        "pages": "241-316",
+        "languages": ["deu", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:horstmann-1877"],
+      "notes": ["The 1888 Mary Magdalene homily notes that its lines 23-100 parallel the first Gospel story printed here at p. 241. This is a cited parallel, not an upstream source for the whole 1888 edition."]
+    },
+    {
+      "id": "facsimile:bsb:bsb11360559",
+      "type": "facsimile",
+      "label": "BSB complete IIIF sequence for Archiv volume 57 (1877)",
+      "description": "A 500-canvas complete journal sequence containing Horstmann's related 1877 article.",
+      "identifiers": [{"scheme": "BSB-ID", "value": "bsb11360559", "uri": "https://www.digitale-sammlungen.de/view/bsb11360559"}],
+      "creator_ids": ["agent:bsb"],
+      "reproduction_format": "500-canvas IIIF Presentation 2 object cached as a complete width-1600 JPEG bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bsb57-manifest", "evidence:bsb57-bundle-audit"]
+    },
+    {
+      "id": "witness:bodleian:MS-Eng-poet-a-1",
+      "type": "manuscript_witness",
+      "label": "Oxford, Bodleian Library, MS. Eng. poet. a. 1 (Vernon Manuscript)",
+      "alternate_labels": ["Vernon Manuscript", "MS. Vernon"],
+      "description": "A monumental late-fourteenth-century parchment codex. The complete supplementary sanctorale sequence is at current fols. 215v-227v; the twenty-eight homilies printed by Horstmann occur there around one full omitted homily and six internal cross-references.",
+      "identifiers": [
+        {"scheme": "Bodleian shelfmark", "value": "MS. Eng. poet. a. 1"},
+        {"scheme": "Digital Bodleian UUID", "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff", "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"},
+        {"scheme": "MMOL manuscript ID", "value": "manuscript_4817", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817"}
+      ],
+      "date_statements": [{"label": "repository date", "value": "1381-1400; commonly dated c. 1390", "normalized": "1381/1400", "certainty": "high", "evidence_ids": ["evidence:vernon-catalog"]}],
+      "holding": {
+        "institution_id": "agent:bodleian",
+        "shelfmark": "MS. Eng. poet. a. 1",
+        "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+        "notes": "The current record tentatively gives England, West Midlands; origin and patronage remain debated."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "viii + 342 + i surviving leaves, incomplete; originally viii + 413, with 71 leaves thought lost",
+        "format": "Large codex, normally quires of eight; nineteenth-century crushed russet leather over bevelled oak boards",
+        "dimensions": "544 x 393 mm",
+        "notes": ["The target sequence occupies a small portion of a codex containing more than 350 texts; it begins on a leaf also ending Piers Toller and ends on a leaf also beginning How a Man Shall Live Perfectly."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-catalog", "evidence:vernon-manifest", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "facsimile:bodleian:vernon",
+      "type": "facsimile",
+      "label": "Complete Digital Bodleian Vernon Manuscript object",
+      "description": "The complete 710-canvas object exposed by Digital Bodleian, including covers, spine, flyleaves, blanks, every surviving digitized leaf, and adjacent texts. No dedicated edge views are exposed.",
+      "identifiers": [{"scheme": "Digital Bodleian UUID", "value": "52f0a31a-1478-40e4-b05b-fddb1ad076ff", "uri": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/"}],
+      "creator_ids": ["agent:bodleian"],
+      "reproduction_format": "710 color IIIF canvases; complete provider object cached at an effective width of 1600 pixels",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit"]
+    },
+    {
+      "id": "facsimile:ora:vernon-2019",
+      "type": "facsimile",
+      "label": "Scase and Kennedy complete Vernon facsimile/transcription dataset",
+      "description": "The complete Bodleian Digital Texts 3 facsimile edition deposited in ORA: a 4.3 GB ZIP containing high-resolution images of the entire manuscript, a live transcription, page descriptions, and specialist essays.",
+      "identifiers": [
+        {"scheme": "ORA UUID", "value": "797a4c33-cb7b-4fbc-b939-2412769ead1f", "uri": "https://ora.ox.ac.uk/objects/uuid%3A797a4c33-cb7b-4fbc-b939-2412769ead1f"},
+        {"scheme": "ARK", "value": "ark:/29072/ora_797a4c33cb7b4fbcb9392412769ead1f", "uri": "https://n2t.net/ark:/29072/ora_797a4c33cb7b4fbcb9392412769ead1f"}
+      ],
+      "creator_ids": ["agent:wendy-scase", "agent:nick-kennedy", "agent:bodleian"],
+      "date_statements": [{"label": "ORA publication", "value": "2019", "normalized": "2019", "certainty": "high", "evidence_ids": ["evidence:ora-vernon"]}],
+      "reproduction_format": "Complete downloadable 4.3 GB ZIP facsimile edition with high-resolution images, complete transcription, descriptions, and essays",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:ncs-vernon-announcement"]
+    },
+    {
+      "id": "encoding:scase:vernon-complete",
+      "type": "digital_encoding",
+      "label": "Wendy Scase's complete Vernon Manuscript transcription",
+      "description": "The complete scholarly transcription distributed within the ORA Vernon facsimile dataset and exposed as page annotations in Digital Bodleian.",
+      "creator_ids": ["agent:wendy-scase", "agent:nick-kennedy"],
+      "date_statements": [{"label": "digital edition publication", "value": "2011/2012; ORA deposit 2019", "certainty": "high", "evidence_ids": ["evidence:ora-vernon"]}],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:vernon-manifest"]
+    },
+    {
+      "id": "witness:bl:Add-MS-22283",
+      "type": "manuscript_witness",
+      "label": "London, British Library, Add MS 22283 (Simeon Manuscript)",
+      "alternate_labels": ["Simeon Manuscript", "Simeon MS"],
+      "description": "A very large late-fourteenth-century English parchment miscellany preserving a parallel supplementary sanctorale sequence at fols. 19v(a)-30v(a), copied by Add Scribe 1. Current catalog structure moves from the Nativity of the Virgin homily to Matthew and appears not to contain the Vernon Exaltation of the Cross homily in this sequence.",
+      "identifiers": [
+        {"scheme": "British Library shelfmark", "value": "Add MS 22283", "uri": "https://searcharchives.bl.uk/catalog/032-002034756"},
+        {"scheme": "British Library record", "value": "032-002034756", "uri": "https://searcharchives.bl.uk/catalog/032-002034756"},
+        {"scheme": "ARK", "value": "ark:/81055/vdc_100000000043.0x0003c3", "uri": "https://n2t.net/ark:/81055/vdc_100000000043.0x0003c3"}
+      ],
+      "date_statements": [{"label": "repository date", "value": "1360-1399", "normalized": "1360/1399", "certainty": "high", "evidence_ids": ["evidence:add22283-catalog"]}],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 22283",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002034756",
+        "notes": "Origin is given as England, perhaps north Worcestershire."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "172 folios plus unfoliated modern paper leaves and five inserted modern paper leaves; many leaves lost or remounted",
+        "format": "Very large miscellany copied by three scribes",
+        "dimensions": "590 x 390 mm",
+        "notes": ["Target execution is Add Scribe 1, fols. 1r-61v. Add Scribe 2, not the target scribe, is identified by the current catalog as Vernon Scribe 2."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:add22283-catalog", "evidence:horstmann-1881"]
+    },
+    {
+      "id": "facsimile:bl:Add-MS-22283-legacy",
+      "type": "facsimile",
+      "label": "Former British Library Digitised Manuscripts object for Add MS 22283",
+      "description": "A former full-display endpoint for manuscript images. The current British Library catalog states that images are unavailable, and no current public whole-object image delivery was found.",
+      "identifiers": [{"scheme": "legacy BL FullDisplay", "value": "Add_MS_22283", "uri": "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283"}],
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "unknown",
+      "evidence_ids": ["evidence:add22283-catalog", "evidence:add22283-legacy"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:general-corpus", "type": "organization", "name": "General Corpus project"},
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library"},
+    {"id": "agent:carl-horstmann", "type": "person", "name": "Carl Horstmann", "alternate_names": ["Karl Horstmann"]},
+    {"id": "agent:bsb", "type": "organization", "name": "Bayerische Staatsbibliothek"},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive"},
+    {"id": "agent:google-books", "type": "organization", "name": "Google Books"},
+    {"id": "agent:bodleian", "type": "organization", "name": "Bodleian Libraries, University of Oxford"},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library"},
+    {"id": "agent:wendy-scase", "type": "person", "name": "Wendy Scase"},
+    {"id": "agent:nick-kennedy", "type": "person", "name": "Nick Kennedy"},
+    {"id": "agent:anne-thompson", "type": "person", "name": "Anne B. Thompson"},
+    {"id": "agent:mets", "type": "organization", "name": "Middle English Texts Series"},
+    {"id": "agent:new-chaucer-society", "type": "organization", "name": "New Chaucer Society"}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-version-of-umich",
+      "type": "version_of",
+      "subject": "artifact:general-corpus:CME00064",
+      "object": "encoding:umich-cme:CME00064",
+      "scope": {"subject": {"kind": "whole", "description": "repository XML artifact"}, "object": {"kind": "whole", "description": "U-M CME00064 encoding"}, "notes": "Shared identifiers and content establish representation of the same encoded item; exact copy history is undocumented."},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-horstmann",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00064",
+      "object": "edition:horstmann:proprium-sanctorum-1888",
+      "scope": {
+        "subject": {"kind": "whole", "description": "all twenty-eight encoded homilies, rubrics, framing, notes, and page milestones", "locators": ["PB refs 1-55; encoded printed pp. 83-114 and 299-321"]},
+        "object": {"kind": "whole", "description": "complete Horstmann article selection", "locators": ["Archiv 81 (1888), pp. 83-114 and 299-321"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-1888"]}
+    },
+    {
+      "id": "relation:umich-source-pages-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:CME00064-source-pages",
+      "object": "edition:horstmann:proprium-sanctorum-1888",
+      "scope": {"subject": {"kind": "whole", "description": "all fifty-five selected TIFF pages"}, "object": {"kind": "whole", "description": "the article's two printed runs", "locators": ["pp. 83-114", "pp. 299-321"]}, "notes": "The bundle is complete for the article selection but partial for Archiv volume 81."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich-source-pages", "evidence:horstmann-1888"]}
+    },
+    {
+      "id": "relation:bsb81-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:bsb11874338",
+      "object": "edition:horstmann:proprium-sanctorum-1888",
+      "scope": {"subject": {"kind": "selected_passages", "description": "article within the complete journal scan", "locators": ["canvases 95-126 and 311-333", "printed pp. 83-114 and 299-321"]}, "object": {"kind": "whole", "description": "complete article selection"}, "notes": "The facsimile entity remains the whole 502-canvas volume; only this relation is article-scoped."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bsb81-manifest", "evidence:horstmann-1888"]}
+    },
+    {
+      "id": "relation:ia81-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:archiv-81-1888",
+      "object": "edition:horstmann:proprium-sanctorum-1888",
+      "scope": {"subject": {"kind": "selected_passages", "description": "article within the complete 499-page PDF", "locators": ["PDF pages 97-128 and 313-335", "printed pp. 83-114 and 299-321"]}, "object": {"kind": "whole", "description": "complete article selection"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ia81-scan", "evidence:horstmann-1888"]}
+    },
+    {
+      "id": "relation:horstmann-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "edition:horstmann:proprium-sanctorum-1888",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {
+        "subject": {"kind": "whole", "description": "twenty-eight printed homilies plus six retained incipit pointers", "locators": ["pp. 83-114 and 299-321"]},
+        "object": {"kind": "selected_passages", "description": "supplementary sanctorale sequence excluding the full repeated Erat homo homily", "locators": ["fols. 215v-227v", "IIIF canvases 318-342", "Erat homo excluded at fols. 221r-222r, canvases 329-331"]},
+        "notes": "The manuscript has thirty-five feast positions: twenty-nine full homilies and six title-only pointers. The edition's twenty-eight full homilies omit Erat homo but preserve the pointers."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1888", "evidence:horstmann-1881", "evidence:vernon-mapping"]}
+    },
+    {
+      "id": "relation:vernon-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:vernon",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {"subject": {"kind": "whole", "description": "all 710 provider-published canvases, including covers, spine, flyleaves, blanks, surviving leaves, and adjacent works"}, "object": {"kind": "whole", "description": "entire surviving codex as exposed by Digital Bodleian"}, "notes": "Completeness is relative to the provider's full object; lost leaves and unoffered dedicated edge views cannot be present."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit"]}
+    },
+    {
+      "id": "relation:ora-facsimile-of-vernon",
+      "type": "facsimile_of",
+      "subject": "facsimile:ora:vernon-2019",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {"subject": {"kind": "whole", "description": "complete high-resolution facsimile edition distributed as one 4.3 GB dataset"}, "object": {"kind": "whole", "description": "entire surviving Vernon Manuscript"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ora-vernon"]}
+    },
+    {
+      "id": "relation:scase-transcribes-vernon",
+      "type": "transcribes",
+      "subject": "encoding:scase:vernon-complete",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {"subject": {"kind": "whole", "description": "complete live transcription and associated XML data"}, "object": {"kind": "whole", "description": "entire surviving manuscript text"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ora-vernon", "evidence:vernon-manifest"]}
+    },
+    {
+      "id": "relation:ora-contains-scase-transcription",
+      "type": "contains",
+      "subject": "facsimile:ora:vernon-2019",
+      "object": "encoding:scase:vernon-complete",
+      "scope": {"subject": {"kind": "part", "description": "transcription and XML components within the complete facsimile dataset"}, "object": {"kind": "whole", "description": "complete scholarly transcription"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ora-vernon"]}
+    },
+    {
+      "id": "relation:1888-cites-1881",
+      "type": "cites",
+      "subject": "edition:horstmann:proprium-sanctorum-1888",
+      "object": "edition:horstmann:altenglische-legenden-1881",
+      "scope": {"subject": {"kind": "part", "description": "opening footnote identifying earlier discussion"}, "object": {"kind": "selected_passages", "description": "description and feast identification for the Proprium sequence", "locators": ["roman pp. LXXIV-LXXVII"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1888", "evidence:horstmann-1881"]}
+    },
+    {
+      "id": "relation:ia1881-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:horstmann-1881",
+      "object": "edition:horstmann:altenglische-legenden-1881",
+      "scope": {"subject": {"kind": "whole", "description": "complete 686-page PDF"}, "object": {"kind": "whole", "description": "complete printed volume"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1881", "evidence:ia1881-metadata"]}
+    },
+    {
+      "id": "relation:1881-describes-vernon",
+      "type": "describes",
+      "subject": "edition:horstmann:altenglische-legenden-1881",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {"subject": {"kind": "selected_passages", "description": "introduction to the supplementary sanctorale", "locators": ["pp. LXXIV-LXXVII"]}, "object": {"kind": "part", "description": "target sequence", "locators": ["fols. 215v-227v"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1881", "evidence:vernon-mapping"]}
+    },
+    {
+      "id": "relation:1881-describes-add22283",
+      "type": "describes",
+      "subject": "edition:horstmann:altenglische-legenden-1881",
+      "object": "witness:bl:Add-MS-22283",
+      "scope": {"subject": {"kind": "selected_passages", "description": "comparison of Vernon and the Simeon manuscript", "locators": ["pp. LXXVI-LXXVII"]}, "object": {"kind": "part", "description": "parallel supplementary sanctorale sequence", "locators": ["current catalog fols. 19v(a)-30v(a)"]}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1881", "evidence:add22283-catalog"]}
+    },
+    {
+      "id": "relation:add22283-copied-from-vernon-historical-claim",
+      "type": "copied_from",
+      "subject": "witness:bl:Add-MS-22283",
+      "object": "witness:bodleian:MS-Eng-poet-a-1",
+      "scope": {"subject": {"kind": "part", "description": "parallel supplementary sanctorale at fols. 19v(a)-30v(a)"}, "object": {"kind": "part", "description": "Vernon sequence at fols. 215v-227v"}, "notes": "Horstmann calls Add MS 22283 a mere copy of Vernon and says the Proprium is complete and verbatim. Current catalog evidence weakens that formulation: the target was copied by Add Scribe 1, not the scribe shared with Vernon, and current item structure appears to omit Vernon's Exaltation of the Cross homily."},
+      "assertion": {"status": "tentative", "confidence": "low", "evidence_ids": ["evidence:horstmann-1881", "evidence:add22283-catalog"], "notes": "Retained as a historical scholarly claim requiring renewed textual and codicological review."}
+    },
+    {
+      "id": "relation:1888-cites-1877-parallel",
+      "type": "cites",
+      "subject": "edition:horstmann:proprium-sanctorum-1888",
+      "object": "edition:horstmann:evangelien-geschichten-1877",
+      "scope": {"subject": {"kind": "part", "description": "Mary Magdalene homily, lines 23-100", "locators": ["part 17", "printed pp. 299-303"]}, "object": {"kind": "part", "description": "parallel first Gospel story", "locators": ["p. 241", "lines 1-76"]}, "notes": "Horstmann says the earlier version preserves northern traces less fully erased. This is a scoped parallel, not a source relation for the other homilies."},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:horstmann-1888", "evidence:horstmann-1877"]}
+    },
+    {
+      "id": "relation:bsb57-facsimile-of-1877",
+      "type": "facsimile_of",
+      "subject": "facsimile:bsb:bsb11360559",
+      "object": "edition:horstmann:evangelien-geschichten-1877",
+      "scope": {"subject": {"kind": "selected_passages", "description": "article in complete journal volume", "locators": ["canvases 251-326", "printed pp. 241-316"]}, "object": {"kind": "whole", "description": "complete 1877 article"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:bsb57-manifest", "evidence:horstmann-1877"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00064",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Git repository path",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/CME/source/CME_phase_3/CME00064.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00064.xml",
+      "cost": "free",
+      "format": "XML",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "access:umich",
+      "entity": "encoding:umich-cme:CME00064",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M item handle and full-text viewer",
+      "url": "https://name.umdl.umich.edu/CME00064",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/CME00064"],
+      "cost": "free",
+      "format": "HTML full text and page navigation",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "access:umich-source-pages",
+      "entity": "facsimile:umich:CME00064-source-pages",
+      "provider_id": "agent:umich",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Pinned raw GitHub download",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/old_files/Corpus/CME_2017-18/images/CME00064.zip",
+      "local_copies": [{
+        "label": "U-M CME00064 source-page TIFF selection",
+        "path": "source-cache/CME00064/umich-cme00064-source-page-images.zip",
+        "source_url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/old_files/Corpus/CME_2017-18/images/CME00064.zip",
+        "sha256": "35402423622e336eabd0384cb654ef6ba8cb34f93ba125f73f8027aa59cd50df",
+        "bytes": 16817548,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-12",
+        "coverage": "partial",
+        "retrieval_method": "direct_download",
+        "source_file_count": 55,
+        "work_portion": {"label": "Complete article selection represented by CME00064", "locators": ["printed pp. 83-114", "printed pp. 299-321", "fifty-five TIFFs corresponding to XML PB refs 1-55"], "notes": ["Complete for the selected article pages; not a complete Archiv volume and not a manuscript facsimile."]}
+      }],
+      "cost": "free",
+      "format": "ZIP containing 55 one-bit TIFFs",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich-source-pages"]
+    },
+    {
+      "id": "access:bsb81",
+      "entity": "facsimile:bsb:bsb11874338",
+      "provider_id": "agent:bsb",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "BSB viewer or IIIF Presentation manifest",
+      "url": "https://www.digitale-sammlungen.de/view/bsb11874338",
+      "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/manifest", "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/canvas/95", "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/canvas/333"],
+      "local_copies": [
+        {
+          "label": "Complete BSB Archiv volume 81 IIIF bundle",
+          "path": "source-cache/CME00064/bsb-archiv-81-1888-complete-iiif-1600px.zip",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/manifest",
+          "sha256": "931db8718e6a582f2d91062d0bf0db86ef854b40587d44981a118f0faec59520",
+          "bytes": 299253550,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 502,
+          "work_portion": {"label": "Horstmann's complete article represented by CME00064", "locators": ["printed pp. 83-114, IIIF canvases 95-126", "printed pp. 299-321, IIIF canvases 311-333"], "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/canvas/95", "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/canvas/333", "notes": ["Canvas 7 is the volume title page. Pages 322-326/canvases 334-338 are unrelated reviews and are outside the work portion."]},
+          "notes": ["All 502 manifest canvases are present with manifest and source inventory; image derivatives use an effective width of 1600 pixels."]
+        },
+        {
+          "label": "BSB Archiv volume 81 IIIF manifest",
+          "path": "source-cache/CME00064/bsb-archiv-81-1888-iiif-manifest.json",
+          "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/manifest",
+          "sha256": "fd1497840f0eff8df61e853e0a9eaff29515abcd9530e1b5cd57edb23064f450",
+          "bytes": 426795,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only"
+        }
+      ],
+      "cost": "free",
+      "format": "502 color IIIF canvases and complete local provider-object bundle",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bsb81-manifest", "evidence:bsb81-bundle-audit"]
+    },
+    {
+      "id": "access:ia81",
+      "entity": "facsimile:ia:archiv-81-1888",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item or exact derivative downloads",
+      "url": "https://archive.org/details/ArchivFurDasStudiumDerNeuerenSprachen81",
+      "alternate_urls": ["https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/Archiv_fur_das_Studium_der_neueren_Sprachen_81.pdf", "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_meta.xml", "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_scandata.xml", "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_djvu.xml"],
+      "local_copies": [
+        {"label": "Complete Internet Archive Archiv volume 81 PDF", "path": "source-cache/CME00064/ia-archiv-81-1888-complete.pdf", "source_url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/Archiv_fur_das_Studium_der_neueren_Sprachen_81.pdf", "sha256": "33bc1c5019bde364ef8c5ccdf1f837b12d588d3b7d96946e4dc4b541b98be436", "bytes": 22268064, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 1, "work_portion": {"label": "Horstmann article represented by CME00064", "locators": ["PDF pages 97-128 = printed pp. 83-114", "PDF pages 313-335 = printed pp. 299-321"], "notes": ["Printed pp. 322-326 are unrelated reviews."]}},
+        {"label": "Internet Archive Archiv volume 81 metadata", "path": "source-cache/CME00064/ia-archiv-81-1888-metadata.xml", "source_url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_meta.xml", "sha256": "1354664556018b9fe304f9589680e7b4d2f822ad3673309086ca94cc99088180", "bytes": 1584, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only"},
+        {"label": "Internet Archive Archiv volume 81 scandata", "path": "source-cache/CME00064/ia-archiv-81-1888-scandata.xml", "source_url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_scandata.xml", "sha256": "a78af5057696b9f13daaad95d8537574ea7a12308dd1227f277f3bef242e68a5", "bytes": 166709, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only"},
+        {"label": "Internet Archive Archiv volume 81 complete OCR", "path": "source-cache/CME00064/ia-archiv-81-1888-djvu-ocr.xml", "source_url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/ArchivFurDasStudiumDerNeuerenSprachen81_djvu.xml", "sha256": "cc64e1fba6b1693bb95424761e452fbe3bed28ace0a104b083e0b60e1c393f0c", "bytes": 11331234, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 1, "work_portion": {"label": "OCR corresponding to the article", "locators": ["printed pp. 83-114", "printed pp. 299-321"]}}
+      ],
+      "cost": "free",
+      "format": "Complete PDF with metadata, scandata, and OCR sidecars",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ia81-scan", "evidence:ia81-metadata"]
+    },
+    {
+      "id": "access:horstmann1881",
+      "entity": "facsimile:ia:horstmann-1881",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item and direct PDF",
+      "url": "https://archive.org/details/altenglischeleg01barbgoog",
+      "alternate_urls": ["https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog.pdf", "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog_meta.xml", "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog_scandata.xml"],
+      "local_copies": [
+        {"label": "Complete Horstmann 1881 volume PDF", "path": "source-cache/CME00064/horstmann-1881-altenglische-legenden-neue-folge-complete.pdf", "source_url": "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog.pdf", "sha256": "540c3451d724c0f9d6165c84dc88ae36e1ecf126a4c1771f305f6655226c2d9c", "bytes": 23587009, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 1, "work_portion": {"label": "Discussion of the supplementary sanctorale", "locators": ["roman pp. LXXIV-LXXVII", "PDF pages 84-87"]}},
+        {"label": "Internet Archive metadata for Horstmann 1881", "path": "source-cache/CME00064/horstmann-1881-internet-archive-metadata.xml", "source_url": "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog_meta.xml", "sha256": "e2ec762f061b56259ef2e69cef2d4d231137b4aa7bd9554b050cc9dac3393228", "bytes": 2454, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only"},
+        {"label": "Internet Archive scandata for Horstmann 1881", "path": "source-cache/CME00064/horstmann-1881-internet-archive-scandata.xml", "source_url": "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog_scandata.xml", "sha256": "254260e1a785a6aad30c635ea1903a15d4cc781d57acc365cb27d6d0d123397d", "bytes": 223318, "media_type": "application/xml", "downloaded_on": "2026-07-12", "coverage": "metadata_only"}
+      ],
+      "cost": "free",
+      "format": "Complete PDF plus metadata and scandata",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1881", "evidence:ia1881-metadata"]
+    },
+    {
+      "id": "access:bsb57",
+      "entity": "facsimile:bsb:bsb11360559",
+      "provider_id": "agent:bsb",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "BSB viewer or IIIF Presentation manifest",
+      "url": "https://www.digitale-sammlungen.de/view/bsb11360559",
+      "alternate_urls": ["https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest", "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/251"],
+      "local_copies": [
+        {"label": "Complete BSB Archiv volume 57 IIIF bundle", "path": "source-cache/CME00064/bsb-archiv-57-1877-complete-iiif-1600px.zip", "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest", "sha256": "1a32cef2a1dfadeda5e25e562f9d0b0e444621f02fbd24654371bab09127b75e", "bytes": 262120230, "media_type": "application/zip", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "iiif_bundle", "bundle_source_kind": "iiif_presentation_manifest", "source_file_count": 500, "work_portion": {"label": "Related 1877 article and the specifically cited parallel", "locators": ["full article printed pp. 241-316, canvases 251-326", "cited parallel begins printed p. 241, canvas 251"], "start_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/251", "end_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/canvas/326"}},
+        {"label": "BSB Archiv volume 57 IIIF manifest", "path": "source-cache/CME00064/bsb-archiv-57-1877-iiif-manifest.json", "source_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest", "sha256": "845028e2a80025074248a5d27bf07163125c373a8774009009e09524e162bf26", "bytes": 425077, "media_type": "application/json", "downloaded_on": "2026-07-12", "coverage": "metadata_only"}
+      ],
+      "cost": "free",
+      "format": "500 color IIIF canvases and complete local provider-object bundle",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bsb57-manifest", "evidence:bsb57-bundle-audit"]
+    },
+    {
+      "id": "access:vernon",
+      "entity": "facsimile:bodleian:vernon",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian viewer or IIIF manifest",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/",
+        "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/66d6388e-3ca9-4b03-aeb2-d01a80d7f627/"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Bodleian Vernon Manuscript IIIF bundle",
+          "path": "source-cache/CME00064/bodleian-vernon-ms-complete-iiif.zip",
+          "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+          "sha256": "be5c0740ec716bab26b571d751b3071416fcd285145acfbb233b2b31abd617e6",
+          "bytes": 961521599,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-11",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "source_file_count": 710,
+          "work_portion": {
+            "label": "Complete supplementary sanctorale sequence, with CME00064 selection identified within it",
+            "locators": [
+              "whole manuscript sequence: current fols. 215v-227v, IIIF canvases 318-342",
+              "CME00064's twenty-eight full homilies: fols. 215v-221r and 222r-227v, canvases 318-329 and 331-342",
+              "six retained title-only pointers occur at fols. 220r, 221r, 222r, and 224r-v, canvases 327, 329, 331, and 335-336",
+              "full Erat homo homily omitted by Horstmann: fols. 221r-222r, canvases 329-331"
+            ],
+            "start_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/",
+            "end_url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/66d6388e-3ca9-4b03-aeb2-d01a80d7f627/",
+            "notes": ["Both boundary canvases are shared with adjacent works. The pointer associates the work with its span but the local file remains the complete codex."]
+          },
+          "notes": ["The bundle includes all 710 provider-published canvases, covers, flyleaves, blanks, surviving leaves, and spine. It has no dedicated edge views; effective profile is 1600 pixels wide."]
+        },
+        {"label": "Bodleian Vernon Manuscript IIIF manifest", "path": "source-cache/CME00064/bodleian-vernon-ms-iiif-manifest.json", "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json", "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc", "bytes": 1014568, "media_type": "application/json", "downloaded_on": "2026-07-11", "coverage": "metadata_only"}
+      ],
+      "cost": "free",
+      "format": "710 color IIIF canvases with complete manuscript transcription annotations and complete local provider-object bundle",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:vernon-bundle-audit", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "access:ora-vernon",
+      "entity": "facsimile:ora:vernon-2019",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "ORA dataset record and exact ZIP download",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A797a4c33-cb7b-4fbc-b939-2412769ead1f",
+      "alternate_urls": ["https://ora.ox.ac.uk/objects/uuid:797a4c33-cb7b-4fbc-b939-2412769ead1f/files/rzk51vh57n", "https://ora.ox.ac.uk/objects/uuid%3A797a4c33-cb7b-4fbc-b939-2412769ead1f/files/rzk51vh57n", "https://n2t.net/ark:/29072/ora_797a4c33cb7b4fbcb9392412769ead1f", "https://n2t.net/ark:/29072/ora_797a4c33cb7b4fbcb9392412769ead1f/files/rzk51vh57n"],
+      "local_copies": [
+        {
+          "label": "Complete Oxford ORA Vernon facsimile and transcription dataset",
+          "path": "source-cache/CME00064/oxford-ora-vernon-complete-facsimile-transcription.zip",
+          "source_url": "https://ora.ox.ac.uk/objects/uuid:797a4c33-cb7b-4fbc-b939-2412769ead1f/files/rzk51vh57n",
+          "sha256": "1e0b523081886557cfebbf4751b505ba09c5c7950bb87947d4611e3acb3e6d8a",
+          "bytes": 4616920131,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 7375,
+          "work_portion": {
+            "label": "Complete supplementary sanctorale sequence, with CME00064's selection and Horstmann's omission identified within it",
+            "locators": [
+              "whole manuscript sequence: current fols. 215v-227v",
+              "CME00064's twenty-eight full homilies: fols. 215v-221r and 222r-227v",
+              "internal transcription pages: engine/volume/vernon/transcript/transcript_f_215v.html through transcript_f_227v.html",
+              "internal page descriptions: engine/volume/vernon/description/description_f_215v.html through description_f_227v.html",
+              "highest-resolution internal images: resources/vernon/images/facsimile/200/vernon_215v.jpg through vernon_227v.jpg",
+              "full Erat homo homily omitted by Horstmann: fols. 221r-222r"
+            ],
+            "notes": [
+              "The ZIP remains the complete facsimile edition; these paths locate the work without extracting or substituting a cropped object."
+            ]
+          },
+          "notes": [
+            "ZIP integrity passed with no errors. The archive contains 7,519 entries, including 7,375 non-directory files and 4,669,625,567 uncompressed bytes.",
+            "The dataset includes Vernon transcription.xml, Vernon description.xml, four specialist essay PDFs, a complete web application, multiple image resolutions for the manuscript, page-level transcriptions, and page descriptions."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "Single 4.3 GB ZIP containing the complete facsimile, complete transcription, descriptions, and essays",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:ora-terms"],
+      "notes": ["The complete dataset is cached without extraction as a substitute work-only object; work locators point into the full archive."]
+    },
+    {
+      "id": "access:scase-transcription",
+      "entity": "encoding:scase:vernon-complete",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian page transcription annotations and ORA complete dataset",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "alternate_urls": ["https://ora.ox.ac.uk/objects/uuid%3A797a4c33-cb7b-4fbc-b939-2412769ead1f"],
+      "cost": "free",
+      "format": "Complete page-linked transcription and downloadable XML/application data",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:vernon-manifest"]
+    },
+    {
+      "id": "access:vernon-physical",
+      "entity": "witness:bodleian:MS-Eng-poet-a-1",
+      "provider_id": "agent:bodleian",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Bodleian Special Collections consultation subject to reader admission and handling restrictions",
+      "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817",
+      "cost": "unknown",
+      "format": "Physical parchment manuscript",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:vernon-catalog"]
+    },
+    {
+      "id": "access:add22283-catalog",
+      "entity": "witness:bl:Add-MS-22283",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "British Library Archives and Manuscripts catalog",
+      "url": "https://searcharchives.bl.uk/catalog/032-002034756",
+      "cost": "free",
+      "format": "HTML catalog record with detailed item and scribal structure",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:add22283-catalog"]
+    },
+    {
+      "id": "access:add22283-physical",
+      "entity": "witness:bl:Add-MS-22283",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "registration_required",
+      "access_method": "Onsite consultation in London with a Reader Pass; a letter of introduction is requested for manuscripts",
+      "url": "https://www.bl.uk/research/reader-registration",
+      "cost": "free",
+      "format": "Physical parchment manuscript",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:add22283-catalog", "evidence:bl-reader-access"]
+    },
+    {
+      "id": "access:add22283-legacy-images",
+      "entity": "facsimile:bl:Add-MS-22283-legacy",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Former Digitised Manuscripts FullDisplay endpoint",
+      "url": "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283",
+      "cost": "unknown",
+      "format": "Former web page images; current delivery unavailable",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:add22283-legacy", "evidence:add22283-catalog"],
+      "notes": ["The current catalog explicitly reports images unavailable. No cache or alternate current whole-object image endpoint was found."]
+    },
+    {
+      "id": "access:add22283-reproduction",
+      "entity": "witness:bl:Add-MS-22283",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "British Library digitisation service online order form; request a quotation for expert color photography of the entire surviving object",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu", "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"],
+      "local_copies": [{"label": "British Library digitisation rate card 2025/26", "path": "source-cache/CME00064/british-library-digitisation-rate-card-2025-26.pdf", "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf", "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597", "bytes": 181286, "media_type": "application/pdf", "downloaded_on": "2026-07-12", "coverage": "complete", "retrieval_method": "direct_download", "source_file_count": 1}],
+      "contact": "Use the online order form; written-permission enquiries: permissions@bl.uk; the digitisation page also directs reproduction licensing questions to licensing@bl.uk",
+      "cost": "fee",
+      "format": "Ask for color TIFFs or highest-resolution archival image files; rare material may require expert photography rather than scanning",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:bl-digitisation", "evidence:bl-rate-card", "evidence:bl-imaging-terms"],
+      "notes": [
+        "Request the whole physical object: covers/boards, spine, pastedowns, all beginning and end leaves, every surviving manuscript leaf recto and verso, five inserted modern paper leaves, flyleaves and blanks, and edges when the service offers them. Identify the work separately at fols. 19v(a)-30v(a).",
+        "A rough standard-rate baseline for 412 leaf-side surfaces is about GBP 3,007.45 (first TIFF GBP 27.70 plus 411 subsequent images at GBP 7.25), before binding furniture, expert photography, handling, administration, or complex-request fees. Only a quote can establish the actual whole-object price.",
+        "British Library terms state that supplied images may not be copied or reproduced without written permission; request separate permission for any repository publication or commercial use."
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:medieval-text",
+      "entity": "witness:bodleian:MS-Eng-poet-a-1",
+      "component": "Medieval text and underlying homily sequence",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The manuscript text and anonymous late-medieval works predate copyright by centuries; this does not determine rights in modern photography, transcription, or editorial matter.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-catalog", "evidence:add22283-catalog"]
+    },
+    {
+      "id": "rights:horstmann-1888",
+      "entity": "edition:horstmann:proprium-sanctorum-1888",
+      "component": "1888 transcription, selection, and editorial matter",
+      "jurisdiction": "United States and jurisdictions using ordinary author-term/publication-term copyright rules",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The edition was published in 1888 and its editor died in 1912; the historical edition is public domain by age. Modern scan rights and terms remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1888"]
+    },
+    {
+      "id": "rights:horstmann-1881",
+      "entity": "edition:horstmann:altenglische-legenden-1881",
+      "component": "1881 scholarly text and editorial matter",
+      "jurisdiction": "United States and jurisdictions using ordinary author-term/publication-term copyright rules",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Published in 1881; public domain by age. Reproduction-provider terms remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1881"]
+    },
+    {
+      "id": "rights:horstmann-1877",
+      "entity": "edition:horstmann:evangelien-geschichten-1877",
+      "component": "1877 scholarly text and editorial matter",
+      "jurisdiction": "United States and jurisdictions using ordinary author-term/publication-term copyright rules",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Published in 1877; public domain by age. Reproduction-provider terms remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1877"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:CME00064",
+      "access_id": "access:umich",
+      "component": "U-M CME digital item",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The exact U-M item applies the No Copyright-United States rights statement to the digitized historical material.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:CME00064",
+      "access_id": "access:repository-xml",
+      "component": "Kyvero-Press/CME repository artifact and software-layer contributions",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "The pinned CME repository contains an Unlicense dedication for software/source-code form. This repository-level statement is not treated as relicensing third-party photographs or separately protected scholarly content.",
+      "license": {"name": "The Unlicense", "uri": "https://unlicense.org/"},
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cme-license", "evidence:repo-xml"]
+    },
+    {
+      "id": "rights:umich-source-pages",
+      "entity": "facsimile:umich:CME00064-source-pages",
+      "access_id": "access:umich-source-pages",
+      "component": "U-M selected TIFF reproductions of public-domain article pages",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "U-M applies No Copyright-United States to the CME historical materials; the TIFF bundle reproduces an 1888 public-domain edition.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:umich", "evidence:umich-source-pages"]
+    },
+    {
+      "id": "rights:bsb81-images",
+      "entity": "facsimile:bsb:bsb11874338",
+      "access_id": "access:bsb81",
+      "component": "BSB page images, IIIF derivatives, metadata, and local complete bundle",
+      "jurisdiction": "Germany and provider terms",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "BSB labels the digital object No Copyright - Non-Commercial Use Only. The statement does not grant commercial reuse; the noncommercial condition is preserved as a provider term.",
+      "asserted_by_id": "agent:bsb",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bsb81-manifest"],
+      "notes": ["Do not publish these images in a commercially reusable repository or print-on-demand product without resolving the provider restriction."]
+    },
+    {
+      "id": "rights:bsb57-images",
+      "entity": "facsimile:bsb:bsb11360559",
+      "access_id": "access:bsb57",
+      "component": "BSB page images, IIIF derivatives, metadata, and local complete bundle",
+      "jurisdiction": "Germany and provider terms",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "BSB labels the digital object No Copyright - Non-Commercial Use Only; the noncommercial condition remains a provider term.",
+      "asserted_by_id": "agent:bsb",
+      "rights_statement_uri": "https://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bsb57-manifest"]
+    },
+    {
+      "id": "rights:ia81-scan",
+      "entity": "facsimile:ia:archiv-81-1888",
+      "access_id": "access:ia81",
+      "component": "Internet Archive-hosted Google scan, OCR, and metadata",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Internet Archive item metadata applies the Public Domain Mark to the scan, while embedded Google frontmatter requests personal noncommercial use, attribution, and no automated querying. Both layers are recorded rather than treating access as unrestricted commercial permission.",
+      "asserted_by_id": "agent:internet-archive",
+      "license": {"name": "Public Domain Mark 1.0", "uri": "https://creativecommons.org/publicdomain/mark/1.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:ia81-metadata", "evidence:ia81-google-notice"],
+      "notes": ["Private research caching is distinct from repository redistribution. Prefer the public-domain text layer or obtain a scan with clear commercial terms for print-on-demand use."]
+    },
+    {
+      "id": "rights:ia1881-scan",
+      "entity": "facsimile:ia:horstmann-1881",
+      "access_id": "access:horstmann1881",
+      "component": "Internet Archive-hosted Google scan and metadata",
+      "jurisdiction": "United States and provider terms",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "Internet Archive metadata identifies the work as not in copyright in the United States, while embedded Google frontmatter requests personal noncommercial use and attribution.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:ia1881-metadata", "evidence:ia1881-google-notice"]
+    },
+    {
+      "id": "rights:vernon-images",
+      "entity": "facsimile:bodleian:vernon",
+      "access_id": "access:vernon",
+      "component": "Digital Bodleian manuscript photographs and cached IIIF derivatives",
+      "jurisdiction": "United Kingdom and CC BY-NC 4.0 license terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The exact IIIF manifest attributes the photographs to Bodleian Libraries and applies CC BY-NC 4.0.",
+      "asserted_by_id": "agent:bodleian",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:vernon-manifest", "evidence:bodleian-terms"],
+      "notes": ["The private gitignored cache does not authorize repository publication or commercial print-on-demand use of the images; commercial use requires permission beyond CC BY-NC."]
+    },
+    {
+      "id": "rights:ora-vernon-dataset",
+      "entity": "facsimile:ora:vernon-2019",
+      "access_id": "access:ora-vernon",
+      "component": "Complete facsimile/transcription dataset, application, essays, descriptions, and high-resolution images",
+      "jurisdiction": "United Kingdom and ORA terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The ORA record names Bodleian Library Publishing as copyright holder, 2019. In the absence of a more permissive item license, ORA permits one downloaded or printed copy for private study or research for noncommercial purposes and prohibits profit-making use.",
+      "asserted_by_id": "agent:bodleian",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:ora-terms"],
+      "notes": ["Keep the cache private and gitignored. Link the ORA record rather than redistributing the ZIP; obtain permission before repository publication or commercial use."]
+    },
+    {
+      "id": "rights:scase-transcription",
+      "entity": "encoding:scase:vernon-complete",
+      "access_id": "access:scase-transcription",
+      "component": "Modern complete transcription and scholarly apparatus",
+      "jurisdiction": "United Kingdom and ORA/Digital Bodleian terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The modern transcription and scholarly apparatus are part of the copyrighted Vernon digital edition; public access is not an unrestricted commercial reuse license.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ora-vernon", "evidence:ora-terms", "evidence:bodleian-terms"]
+    },
+    {
+      "id": "rights:add22283-text",
+      "entity": "witness:bl:Add-MS-22283",
+      "component": "Medieval manuscript text and underlying historical works",
+      "jurisdiction": "Ordinary copyright jurisdictions",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The manuscript text predates copyright by centuries. This does not determine rights in modern photographs, catalog text, or ordered reproductions.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:add22283-catalog"]
+    },
+    {
+      "id": "rights:add22283-legacy-images",
+      "entity": "facsimile:bl:Add-MS-22283-legacy",
+      "access_id": "access:add22283-legacy-images",
+      "component": "Former British Library web manuscript images",
+      "jurisdiction": "United Kingdom and unknown legacy provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-12",
+      "basis": "The former image endpoint is unavailable and its exact item-level reuse terms could not be recovered.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:add22283-legacy", "evidence:add22283-catalog"]
+    },
+    {
+      "id": "rights:add22283-ordered-images",
+      "entity": "witness:bl:Add-MS-22283",
+      "access_id": "access:add22283-reproduction",
+      "component": "New images supplied through the British Library digitisation service",
+      "jurisdiction": "United Kingdom and British Library supply/permission terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-12",
+      "basis": "British Library imaging terms state that requested images may not be copied or reproduced without written permission; additional permission and fees may apply.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-imaging-terms", "evidence:bl-digitisation"],
+      "notes": ["Ask permissions@bl.uk expressly about private research use, publication of images in the git repository, and commercial or noncommercial print-on-demand use."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:horstmann-selection",
+      "entity": "edition:horstmann:proprium-sanctorum-1888",
+      "practice": "selection",
+      "source_feature": "A manuscript sequence with twenty-nine complete homilies and six title-only cross-references",
+      "representation": "Twenty-eight complete homilies plus the six cross-references",
+      "description": "Horstmann omits the complete repeated Erat homo homily at the Invention of the Cross while retaining its incipit/reference position. He also supplies feast identifications because the manuscript itself does not label the feasts.",
+      "scope": "Entire edited selection; omitted source passage at Vernon fols. 221r-222r",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1881", "evidence:horstmann-1888", "evidence:vernon-mapping"]
+    },
+    {
+      "id": "practice:horstmann-abbreviation-expansion",
+      "entity": "edition:horstmann:proprium-sanctorum-1888",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Scribal abbreviations in the Vernon text",
+      "representation": "Italic letters within Middle English words appear to represent editorially supplied expansion characters",
+      "description": "Comparison of the print transcription, U-M italic HI spans, and manuscript images supports abbreviation expansion as the principal function of embedded italics, but Horstmann's explicit convention statement has not yet been located.",
+      "scope": "Italic characters embedded throughout the Middle English transcription",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-xml", "evidence:horstmann-1888", "evidence:vernon-mapping"],
+      "notes": ["Use the manuscript image or Scase transcription to verify individual expansions; do not treat italics generically as emphasis."]
+    },
+    {
+      "id": "practice:horstmann-collation",
+      "entity": "edition:horstmann:proprium-sanctorum-1888",
+      "practice": "collation",
+      "source_feature": "Parallel earlier Vernon Gospel-story passage",
+      "representation": "Footnote relating Mary Magdalene lines 23-100 to the 1877 text",
+      "description": "Horstmann identifies the scoped parallel and notes different preservation of northern linguistic traces; this does not document a full collation against Add MS 22283.",
+      "scope": "Part 17 only",
+      "confidence": "high",
+      "evidence_ids": ["evidence:horstmann-1888", "evidence:horstmann-1877"]
+    },
+    {
+      "id": "practice:umich-structural-selection",
+      "entity": "encoding:umich-cme:CME00064",
+      "practice": "selection",
+      "source_feature": "Printed article structure, headings, trailing cue, and unidentified fragments in an earlier encoding state",
+      "representation": "Twenty-eight DIV2 homily units; title references represented as EPIGRAPH Q elements; following work excluded",
+      "description": "The 2016 revision converted several former divisions to epigraphs and reports removing a middle fragment and an end fragment. The exact deleted content is not specified, so those changes are not equated with Horstmann's separately demonstrable Erat homo omission.",
+      "scope": "Complete U-M encoding revision dated 2016-08-29",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml"]
+    }
+  ],
+  "evidence": [
+    {"id": "evidence:repo-xml", "type": "repository_file", "citation": "Kyvero-Press/CME, CME/source/CME_phase_3/CME00064.xml at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.", "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/CME/source/CME_phase_3/CME00064.xml", "repository_path": "CME/source/CME_phase_3/CME00064.xml", "summary": "Establishes repository identity, checksum, languages, encoded title and byline, twenty-eight-part structure, 5,582 verse lines, page milestones, editorial notes, and the 2016 revision history.", "accessed_on": "2026-07-12", "sha256": "9b8cc283c02e5a2663363cbe80b6df9af1eaf4a2b083b8d8cdede4efd77a5d55"},
+    {"id": "evidence:cme-license", "type": "repository_file", "citation": "Kyvero-Press/CME, LICENSE at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c (The Unlicense).", "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE", "summary": "Supplies the repository-level public-domain dedication for software/source-code contributions; it does not purport to override third-party image or edition rights.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:umich", "type": "official_webpage", "citation": "University of Michigan Library, Corpus of Middle English Prose and Verse, item CME00064 and collection description.", "url": "https://name.umdl.umich.edu/CME00064", "alternate_urls": ["https://quod.lib.umich.edu/c/cme/"], "summary": "Confirms the item identity, public text access, collection production by manual keying and proofing from public-domain editions, and the No Copyright-United States statement.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:umich-source-pages", "type": "digital_surrogate", "citation": "Kyvero-Press/CME historical source-page bundle for CME00064, pinned at commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.", "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/old_files/Corpus/CME_2017-18/images/CME00064.zip", "repository_path": "source-cache/CME00064/umich-cme00064-source-page-images.zip", "locator": "Fifty-five TIFF files", "summary": "The valid ZIP contains fifty-five one-bit TIFFs matching the two article page runs and XML PB refs; it is not a manuscript facsimile or whole journal.", "accessed_on": "2026-07-12", "sha256": "35402423622e336eabd0384cb654ef6ba8cb34f93ba125f73f8027aa59cd50df"},
+    {"id": "evidence:horstmann-1888", "type": "edition_statement", "citation": "Carl Horstmann, 'Proprium Sanctorum,' Archiv 81 (1888), 83-114, 299-321.", "url": "https://www.digitale-sammlungen.de/view/bsb11874338", "alternate_urls": ["https://archive.org/details/ArchivFurDasStudiumDerNeuerenSprachen81"], "repository_path": "manifests/lineage/works/CME00064.json", "locator": "BSB canvases 95-126 and 311-333; IA PDF pages 97-128 and 313-335", "summary": "The immediate edition confirms title, responsibility, twenty-eight full homilies, notes, two non-contiguous page runs, the p. 321 endpoint, six retained cross-references, the 1877 scoped parallel, and the exclusion of the following work.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bsb81-manifest", "type": "digital_surrogate", "citation": "Bayerische Staatsbibliothek IIIF manifest for Archiv volume 81, bsb11874338.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11874338/manifest", "repository_path": "source-cache/CME00064/bsb-archiv-81-1888-iiif-manifest.json", "summary": "Supplies the complete 502-canvas object, stable canvas URLs, article mapping, volume title page, and NoC-NC rights statement.", "accessed_on": "2026-07-12", "sha256": "fd1497840f0eff8df61e853e0a9eaff29515abcd9530e1b5cd57edb23064f450"},
+    {"id": "evidence:bsb81-bundle-audit", "type": "visual_inspection", "citation": "Local audit of the complete BSB Archiv volume 81 IIIF bundle.", "repository_path": "source-cache/CME00064/bsb-archiv-81-1888-complete-iiif-1600px.zip", "summary": "ZIP integrity, 502 images, manifest/inventory completeness, checksum, article boundaries, p. 321 target endpoint, and unrelated pp. 322-326 were verified.", "accessed_on": "2026-07-12", "sha256": "931db8718e6a582f2d91062d0bf0db86ef854b40587d44981a118f0faec59520"},
+    {"id": "evidence:ia81-scan", "type": "digital_surrogate", "citation": "Internet Archive, ArchivFurDasStudiumDerNeuerenSprachen81, complete PDF.", "url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/Archiv_fur_das_Studium_der_neueren_Sprachen_81.pdf", "repository_path": "source-cache/CME00064/ia-archiv-81-1888-complete.pdf", "summary": "Independent complete scan confirming the article's PDF and printed page mapping and providing a second whole-volume surrogate.", "accessed_on": "2026-07-12", "sha256": "33bc1c5019bde364ef8c5ccdf1f837b12d588d3b7d96946e4dc4b541b98be436"},
+    {"id": "evidence:ia81-metadata", "type": "digital_surrogate", "citation": "Internet Archive metadata and scandata for ArchivFurDasStudiumDerNeuerenSprachen81.", "url": "https://archive.org/metadata/ArchivFurDasStudiumDerNeuerenSprachen81", "repository_path": "manifests/lineage/works/CME00064.json", "locator": "Local metadata, scandata, and OCR sidecars under source-cache/CME00064", "summary": "Supports item identity, derivative inventory, scan structure, and Internet Archive's Public Domain Mark assertion.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ia81-google-notice", "type": "visual_inspection", "citation": "Embedded Google Books usage notice in the Archiv volume 81 scan.", "url": "https://archive.org/download/ArchivFurDasStudiumDerNeuerenSprachen81/Archiv_fur_das_Studium_der_neueren_Sprachen_81.pdf", "locator": "Google frontmatter", "summary": "Requests personal noncommercial use, preservation of attribution/watermark, and no automated querying; recorded separately from Internet Archive's Public Domain Mark.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:horstmann-1881", "type": "scholarly_source", "citation": "Carl Horstmann, Altenglische Legenden, Neue Folge (1881), pp. LXXIV-LXXVII.", "url": "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog.pdf", "repository_path": "source-cache/CME00064/horstmann-1881-altenglische-legenden-neue-folge-complete.pdf", "locator": "PDF pages 84-87", "summary": "Identifies the inferred feast sequence; distinguishes a prologue from the collection proper; proposes regional/authorial hypotheses; describes six incipit pointers and full Erat homo; and makes the historical Vernon/Add copy claim.", "accessed_on": "2026-07-12", "sha256": "540c3451d724c0f9d6165c84dc88ae36e1ecf126a4c1771f305f6655226c2d9c"},
+    {"id": "evidence:ia1881-metadata", "type": "digital_surrogate", "citation": "Internet Archive metadata and scandata for altenglischeleg01barbgoog.", "url": "https://archive.org/metadata/altenglischeleg01barbgoog", "repository_path": "manifests/lineage/works/CME00064.json", "locator": "Local sidecars under source-cache/CME00064", "summary": "Confirms the complete scan object and Internet Archive not-in-copyright-US statement.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ia1881-google-notice", "type": "visual_inspection", "citation": "Embedded Google Books usage notice in the Horstmann 1881 scan.", "url": "https://archive.org/download/altenglischeleg01barbgoog/altenglischeleg01barbgoog.pdf", "locator": "Google frontmatter", "summary": "Requests personal noncommercial use and attribution; recorded as a provider layer distinct from the public-domain edition.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:horstmann-1877", "type": "scholarly_source", "citation": "Carl Horstmann, 'Die Evangelien-Geschichten der Homiliensammlung des Ms. Vernon,' Archiv 57 (1877), 241-316.", "url": "https://www.digitale-sammlungen.de/view/bsb11360559", "repository_path": "manifests/lineage/works/CME00064.json", "locator": "BSB canvases 251-326; cited parallel starts canvas 251", "summary": "Provides the earlier Gospel-story passage explicitly cited in the 1888 Mary Magdalene homily and contextualizes Horstmann's work on the Vernon Homily Collection.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bsb57-manifest", "type": "digital_surrogate", "citation": "Bayerische Staatsbibliothek IIIF manifest for Archiv volume 57, bsb11360559.", "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11360559/manifest", "repository_path": "source-cache/CME00064/bsb-archiv-57-1877-iiif-manifest.json", "summary": "Supplies the complete 500-canvas object, stable article canvases, and NoC-NC statement.", "accessed_on": "2026-07-12", "sha256": "845028e2a80025074248a5d27bf07163125c373a8774009009e09524e162bf26"},
+    {"id": "evidence:bsb57-bundle-audit", "type": "visual_inspection", "citation": "Local audit of the complete BSB Archiv volume 57 IIIF bundle.", "repository_path": "source-cache/CME00064/bsb-archiv-57-1877-complete-iiif-1600px.zip", "summary": "ZIP integrity, 500-image completeness, manifest and inventory, checksum, and the p. 241 cited passage were verified.", "accessed_on": "2026-07-12", "sha256": "1a32cef2a1dfadeda5e25e562f9d0b0e444621f02fbd24654371bab09127b75e"},
+    {"id": "evidence:vernon-catalog", "type": "official_catalog", "citation": "Bodleian Libraries, Medieval Manuscripts in Oxford Libraries, manuscript_4817, MS. Eng. poet. a. 1.", "url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_4817", "summary": "Current catalog for shelfmark, date, tentative place, extent, support, binding, losses, provenance, scribes, and broader contents.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:vernon-manifest", "type": "digital_surrogate", "citation": "Bodleian Libraries IIIF manifest for the Vernon Manuscript, MS. Eng. poet. a. 1.", "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json", "repository_path": "source-cache/CME00064/bodleian-vernon-ms-iiif-manifest.json", "summary": "Supplies the complete 710-canvas object, folio labels and detailed text ranges, page-linked transcription annotations, physical description, attribution, and CC BY-NC 4.0 terms.", "accessed_on": "2026-07-12", "sha256": "90d113e82acf31163ce926ee38f342b6fbd3162b7d976ec744e73905c42e57bc"},
+    {"id": "evidence:vernon-bundle-audit", "type": "visual_inspection", "citation": "Local audit of the complete Digital Bodleian Vernon bundle.", "repository_path": "source-cache/CME00064/bodleian-vernon-ms-complete-iiif.zip", "summary": "ZIP integrity, 710 images, complete manifest/inventory, checksum, covers, flyleaves, blanks, spine, and absence of dedicated edge views were verified.", "accessed_on": "2026-07-12", "sha256": "be5c0740ec716bab26b571d751b3071416fcd285145acfbb233b2b31abd617e6"},
+    {"id": "evidence:vernon-mapping", "type": "visual_inspection", "citation": "Item-by-item comparison of Horstmann's 1888 edition, official Vernon IIIF structures, images, and complete transcription annotations.", "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/54c1bbbd-1085-4964-a7dd-badc30b7fe67/", "alternate_urls": ["https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/surfaces/66d6388e-3ca9-4b03-aeb2-d01a80d7f627/"], "locator": "fols. 215v-227v, canvases 318-342", "summary": "Confirms the complete sequence boundaries, twenty-eight printed item spans, six title-only pointers, the full omitted Erat homo at fols. 221r-222r, and shared boundary canvases with adjacent works.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bodleian-terms", "type": "official_webpage", "citation": "Digital Bodleian, Terms of Use.", "url": "https://digital.bodleian.ox.ac.uk/terms/", "summary": "Provides the Digital Bodleian reuse framework referenced by the IIIF manifest; the exact Vernon attribution applies CC BY-NC 4.0.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ora-vernon", "type": "official_catalog", "citation": "Wendy Scase and Nick Kennedy, A facsimile edition of the Vernon manuscript, Oxford University Research Archive, UUID 797a4c33-cb7b-4fbc-b939-2412769ead1f (2019 deposit).", "url": "https://ora.ox.ac.uk/objects/uuid%3A797a4c33-cb7b-4fbc-b939-2412769ead1f", "alternate_urls": ["https://ora.ox.ac.uk/objects/uuid:797a4c33-cb7b-4fbc-b939-2412769ead1f/files/rzk51vh57n", "https://n2t.net/ark:/29072/ora_797a4c33cb7b4fbcb9392412769ead1f/files/rzk51vh57n"], "repository_path": "source-cache/CME00064/oxford-ora-vernon-complete-facsimile-transcription.zip", "locator": "complete ZIP; target transcription_f_215v.html through transcript_f_227v.html; matching descriptions and all image-resolution tiers", "summary": "Confirms and locally verifies a 4,616,920,131-byte complete facsimile edition with high-resolution images of every manuscript page, complete live transcription, page descriptions, and specialist essays; names creators, 2019 copyright holder, and ORA terms. ZIP integrity and the 7,375-file inventory passed.", "accessed_on": "2026-07-12", "sha256": "1e0b523081886557cfebbf4751b505ba09c5c7950bb87947d4611e3acb3e6d8a"},
+    {"id": "evidence:ora-terms", "type": "official_webpage", "citation": "Oxford University Research Archive, Terms and Conditions of Use.", "url": "https://ora.ox.ac.uk/terms_of_use", "summary": "In the absence of a more permissive item notice, permits one copy for private study or research for noncommercial purposes and prohibits profit-making activity; item record links should use the record page.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:ncs-vernon-announcement", "type": "scholarly_source", "citation": "New Chaucer Society, 'Complete Vernon Manuscript Transcription and Images Now Online and Open Access,' 13 April 2026.", "url": "https://newchaucersociety.org/news/725237/Complete-Vernon-Manuscript-Transcription-and-Images-Now-Online-and-Open-Access.htm", "summary": "Announces public availability of the complete Scase transcription alongside all Vernon images in Digital Bodleian and points to the ORA XML and project data.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:add22283-catalog", "type": "official_catalog", "citation": "British Library Archives and Manuscripts, Add MS 22283, record 032-002034756.", "url": "https://searcharchives.bl.uk/catalog/032-002034756", "summary": "Current authority for shelfmark, ARK, date 1360-1399, tentative north-Worcestershire origin, extent, inserted leaves, physical condition, three scribes, target sequence at fols. 19v(a)-30v(a), its Add Scribe 1 execution, and unavailable image status.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:add22283-legacy", "type": "official_webpage", "citation": "British Library Digitised Manuscripts legacy FullDisplay endpoint for Add MS 22283.", "url": "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283", "summary": "Documents the former public image endpoint; current access fails and the replacement catalog reports images unavailable.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-reader-access", "type": "official_webpage", "citation": "British Library, Reader registration and manuscript consultation guidance.", "url": "https://www.bl.uk/research/reader-registration", "summary": "Explains Reader Pass registration and additional introduction requirements for consulting manuscripts onsite.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-digitisation", "type": "official_webpage", "citation": "British Library, Digitisation services.", "url": "https://www.bl.uk/services/digitisation", "alternate_urls": ["https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSyQlQCN0PWcu"], "summary": "Current route for requesting and quoting reproduction of collection material; rare manuscripts may require expert photography rather than ordinary scanning.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:bl-rate-card", "type": "official_webpage", "citation": "British Library, Digitisation Services price list 2025/26.", "url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf", "repository_path": "source-cache/CME00064/british-library-digitisation-rate-card-2025-26.pdf", "summary": "Lists TIFF pricing of GBP 27.70 for the first image and GBP 7.25 for each subsequent image, plus other service and complex-order charges; actual whole-manuscript cost requires a quote.", "accessed_on": "2026-07-12", "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597"},
+    {"id": "evidence:bl-imaging-terms", "type": "official_webpage", "citation": "British Library, Imaging Services terms and conditions, updated January 2026.", "url": "https://www.bl.uk/terms/imaging-services", "alternate_urls": ["https://www.bl.uk/services/digitisation"], "summary": "States that supplied images may not be copied or reproduced without written permission and that fees may apply; permissions enquiries are directed to permissions@bl.uk. The service page separately directs reproduction licensing questions to licensing@bl.uk.", "accessed_on": "2026-07-12"},
+    {"id": "evidence:thompson-2008", "type": "scholarly_source", "citation": "Anne B. Thompson, ed., The Northern Homily Cycle, Middle English Texts Series (2008), online introduction.", "url": "https://metseditions.org/read/P1QaAa78HpeQwHLYEIY9xgh2NRee9dWz", "summary": "Current scholarly synthesis for homily form and the textual tradition: Vernon and Simeon preserve the first major late-fourteenth-century, Midland expansion of the Northern Homily Cycle, adding feast-day material.", "accessed_on": "2026-07-12", "notes": ["The modern edition is copyrighted and linked for research; it is not cached or redistributed.", "Claims about the original early-fourteenth-century northern cycle are not automatically transferred to the supplementary sanctorale additions."]}
+  ],
+  "open_questions": [
+    {
+      "id": "question:umich-removed-fragments",
+      "question": "What exact middle and end fragments did the 2016 U-M revision remove?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare pre- and post-2016 encoding snapshots or proofsheets if recoverable", "Do not equate the unnamed removals with Erat homo without documentary evidence"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:repo-xml"]
+    },
+    {
+      "id": "question:add-vernon-relationship",
+      "question": "What is the exact textual and codicological relationship between the Vernon and Add MS 22283 supplementary sanctorale sequences?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Obtain or consult complete Add MS 22283 images", "Collate fols. 19v(a)-30v(a) against Vernon fols. 215v-227v", "Reassess Horstmann's mere-copy claim using current scribal assignments"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1881", "evidence:add22283-catalog"]
+    },
+    {
+      "id": "question:add-exaltation",
+      "question": "Does Add MS 22283 truly lack the Exaltation of the Cross homily Nunc iudicium in this sequence, or is the omission only in the current catalog structure?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Inspect complete images around fols. 27v-28r", "Ask the British Library to confirm the item boundary", "Compare any Scase/Vernon project notes on the Simeon witness"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:add22283-catalog", "evidence:horstmann-1881"]
+    },
+    {
+      "id": "question:add-images",
+      "question": "Will the British Library restore public Add MS 22283 images, and what exact reuse permission would govern a new whole-manuscript reproduction?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": ["Submit a whole-object digitisation quote request", "Request written repository-publication and commercial/noncommercial print-on-demand permissions separately", "Ask whether the former digital surrogate can be restored"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:add22283-catalog", "evidence:add22283-legacy", "evidence:bl-digitisation", "evidence:bl-imaging-terms"]
+    },
+    {
+      "id": "question:authorship-localization",
+      "question": "Can modern scholarship refine or confirm Horstmann's distinct northwestern-prologue and southern-homilist authorship/localization hypotheses?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Review current scholarship on the Vernon/Simeon first expansion and the Proprium sequence", "Keep dialect, composition place, and manuscript production place distinct"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1881", "evidence:thompson-2008"]
+    },
+    {
+      "id": "question:italic-convention",
+      "question": "Did Horstmann explicitly define every italic insertion in the transcription as an abbreviation expansion?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Search Horstmann's editorial prefaces for a convention statement", "Use manuscript images and the complete Scase transcription to verify individual forms"],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:horstmann-1888", "evidence:vernon-mapping", "evidence:repo-xml"]
+    }
+  ]
+}

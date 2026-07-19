@@ -1,0 +1,4155 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:bau1376",
+  "work_id": "bau1376",
+  "title": "Prik of Conscience",
+  "primary_subject": "artifact:general-corpus:bau1376",
+  "record_status": "reviewed",
+  "created": "2026-07-17",
+  "last_reviewed": "2026-07-17",
+  "summary": "The General Corpus XML copies U-M's uncorrected OCR, which was created from a 372-TIFF carrier of Morris's 1863 edition. Morris's main reading text follows Cotton Galba E IX, with two precisely scoped Harley 4196 supplies, eight additional cited collation sources, and a Garrett MS 138 table of contents. The graph preserves facsimiles, access routes, and rights layers without equating Morris's unresolved H106 with the current BL catalog record.",
+  "languages": [
+    "enm",
+    "eng",
+    "lat"
+  ],
+  "review_notes": [
+    "The 29-entity, 17-relation graph is completely classified across five primary paths and three supporting groups.",
+    "The shared digital trunk is artifact → U-M OCR encoding → 372-TIFF carrier → Morris edition; unavailable TIFF payloads do not justify bypassing the image layer.",
+    "Morris's H106 is an unidentified historical witness; the current BL Harley MS 106 record is separate conflict evidence with no lineage edge.",
+    "The complete Garrett surrogate retains the whole codex ff. 1r–130v; only the table-of-contents relation is narrowed to ff. 1r–6v / PDF pp. 4–10.",
+    "Every one of the 33 cached files has exactly one delivery owner, exact URL, size, SHA-256, coverage, and explicit target-presence decision."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:bau1376",
+      "type": "repository_artifact",
+      "label": "General Corpus bau1376 XML",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-license"
+      ],
+      "description": "Pinned General Corpus copy of the U-M CME XML encoding.",
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/bau1376.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "3a60f39fa194084aaa4bf2d860e605998b26fd0e",
+        "sha256": "04d957d7c26e660c1d45732de571d6a1068dacfe81852e6e0700fe8c96d9bfc5"
+      }
+    },
+    {
+      "id": "encoding:umich:BAU1376.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME encoding BAU1376.0001.001",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-live-item"
+      ],
+      "description": "Uncorrected TEI-in-Libraries Level-1 OCR electronic text created from and linked to 372 TIFF page images.",
+      "identifiers": [
+        {
+          "scheme": "U-M DLPS",
+          "value": "BAU1376.0001.001",
+          "uri": "https://name.umdl.umich.edu/BAU1376.0001.001"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich"
+      ]
+    },
+    {
+      "id": "facsimile:umich:BAU1376-page-images",
+      "type": "facsimile",
+      "label": "University of Michigan 372 TIFF page-image set",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ia-bau1376-dark"
+      ],
+      "description": "Historically linked set of 372 600-dpi TIFF G4 images of Morris's edition; the payload was not publicly retrievable during this research.",
+      "creator_ids": [
+        "agent:umich"
+      ],
+      "reproduction_format": "372 600-dpi TIFF G4 page images"
+    },
+    {
+      "id": "edition:morris:1863",
+      "type": "scholarly_edition",
+      "label": "Richard Morris, The Pricke of Conscience (1863)",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:repo-xml"
+      ],
+      "description": "Morris's eclectic edition: Galba E IX supplies the main reading text, Harley 4196 two gaps, eight additional cited copies collation, and Garrett MS 138 the printed table of contents.",
+      "creator_ids": [
+        "agent:richard-morris"
+      ],
+      "bibliographic": {
+        "citation": "Richard Morris, ed., The Pricke of Conscience (Stimulus Conscientiae): A Northumbrian Poem (Berlin: A. Asher & Co. for the Philological Society, 1863).",
+        "title": "The Pricke of Conscience (Stimulus Conscientiae)",
+        "publisher": "A. Asher & Co. for the Philological Society",
+        "publication_place": "Berlin",
+        "date": "1863",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      }
+    },
+    {
+      "id": "facsimile:wikimedia:morris-1863",
+      "type": "facsimile",
+      "label": "Wikimedia Commons complete scan of Morris 1863",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:commons-morris-extmetadata"
+      ],
+      "description": "Complete 380-page scan of Morris's 1863 edition, content-identified against exact Commons SHA-1 and size metadata.",
+      "creator_ids": [
+        "agent:wikimedia-commons"
+      ],
+      "reproduction_format": "380-page PDF"
+    },
+    {
+      "id": "witness:bl:Add-MS-11305",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 11305",
+      "evidence_ids": [
+        "evidence:bl-add-11305",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 11305",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002109062"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "14th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-add-11305"
+          ],
+          "normalized": "1300/1399"
+        }
+      ],
+      "notes": [
+        "Current record inherits obsolete Rolle attribution."
+      ]
+    },
+    {
+      "id": "witness:bl:Add-MS-22283",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 22283",
+      "evidence_ids": [
+        "evidence:bl-add-22283",
+        "evidence:bl-add-22283-legacy-viewer",
+        "evidence:bl-add-22283-cdx",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Add MS 22283",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/032-002034756"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "late 14th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-add-22283"
+          ],
+          "normalized": "1375/1399"
+        }
+      ],
+      "notes": [
+        "Main Version component is complete inside an imperfect 172-folio composite codex.",
+        "Legacy record exposed 379 images; current full images are unavailable and Wayback preserved only one tiny tile, so no partial image was substituted for a whole-manuscript facsimile."
+      ]
+    },
+    {
+      "id": "witness:bl:Cotton-Galba-E-IX",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Galba E IX",
+      "evidence_ids": [
+        "evidence:bl-cotton-galba-e-ix",
+        "evidence:morris-1863-scan",
+        "evidence:lightbown-1935"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Cotton MS Galba E IX",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/041-001607569"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "1400-1424",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-cotton-galba-e-ix"
+          ],
+          "normalized": "1400/1424"
+        }
+      ],
+      "notes": [
+        "Morris's base witness."
+      ]
+    },
+    {
+      "id": "witness:historical:morris-H106",
+      "type": "manuscript_witness",
+      "label": "Unidentified manuscript cited by Morris as Harl. 106",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:bl-harley-106",
+        "evidence:washington-poc"
+      ],
+      "description": "The manuscript Morris cited as H106. Its present identity and target extent are unresolved; it is not equated with the current BL Harley MS 106 record.",
+      "survival_status": "unknown",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "medieval, exact date unknown",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:morris-1863-scan"
+          ]
+        }
+      ],
+      "notes": [
+        "This entity preserves Morris's historical source claim without asserting identity with the codex currently cataloged as British Library Harley MS 106."
+      ]
+    },
+    {
+      "id": "catalog:bl:Harley-MS-106-current-record",
+      "type": "catalog_description",
+      "label": "Current British Library record for Harley MS 106",
+      "evidence_ids": [
+        "evidence:bl-harley-106",
+        "evidence:washington-poc"
+      ],
+      "description": "Conflict-evidence layer for the current record, which catalogs a Latin theological codex. Washington reports only Latin prose Prik-related passages at ff. 138va–vb and 344vb; no continuous Middle English target or identity with Morris's H106 is asserted."
+    },
+    {
+      "id": "witness:bl:Harley-MS-1731",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 1731",
+      "evidence_ids": [
+        "evidence:bl-harley-1731",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 1731",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002047562"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "15th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-harley-1731"
+          ],
+          "normalized": "1400/1499"
+        }
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-2377",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2377",
+      "evidence_ids": [
+        "evidence:bl-harley-2377",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 2377",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048208"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "1350-1449",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-harley-2377"
+          ],
+          "normalized": "1350/1449"
+        }
+      ],
+      "notes": [
+        "East Midland recension; misbound sequence 1-33, 36-106, 34-35."
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-2394",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2394",
+      "evidence_ids": [
+        "evidence:bl-harley-2394",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 2394",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048225"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "15th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-harley-2394"
+          ],
+          "normalized": "1400/1499"
+        }
+      ],
+      "notes": [
+        "Imperfect at beginning; ff. 1-7 damaged; substitute leaves ff. 128-129."
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-4196",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 4196",
+      "evidence_ids": [
+        "evidence:bl-harley-4196",
+        "evidence:lightbown-1935"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 4196",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002050033"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "1375-1425",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-harley-4196"
+          ],
+          "normalized": "1375/1425"
+        }
+      ],
+      "notes": [
+        "Seven leaves missing between ff. 228 and 229; nevertheless supplies two large gaps in Galba in Morris's edition."
+      ]
+    },
+    {
+      "id": "witness:bl:Harley-MS-6923",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 6923",
+      "evidence_ids": [
+        "evidence:bl-harley-6923",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 6923",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002052775"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "15th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-harley-6923"
+          ],
+          "normalized": "1400/1499"
+        }
+      ],
+      "notes": [
+        "Later sixteenth-century Rolle attribution is not authorship evidence."
+      ]
+    },
+    {
+      "id": "witness:bl:Lansdowne-MS-348",
+      "type": "manuscript_witness",
+      "label": "British Library Lansdowne MS 348",
+      "evidence_ids": [
+        "evidence:bl-lansdowne-348",
+        "evidence:morris-1863-scan"
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Lansdowne MS 348",
+        "historical_designations": [],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002074749"
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "1400-1424",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:bl-lansdowne-348"
+          ],
+          "normalized": "1400/1424"
+        }
+      ],
+      "notes": [
+        "Missing quire ff. 57-58 corresponds to lines 3842-4394; ff. 65-66 to lines 4960-5520; lines 950-1181 are displaced after line 585 and omitted in their proper place."
+      ]
+    },
+    {
+      "id": "witness:princeton:Garrett-MS-138",
+      "type": "manuscript_witness",
+      "label": "Princeton University Library Garrett MS 138",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-catalog",
+        "evidence:princeton-garrett-138-marc",
+        "evidence:princeton-checklist",
+        "evidence:princeton-garrett-138-facsimile"
+      ],
+      "description": "Early-fifteenth-century English codex of Prik of Conscience, possibly from Herefordshire; formerly the Yates manuscript used by Morris for his table of contents.",
+      "holding": {
+        "institution_id": "agent:princeton",
+        "shelfmark": "Garrett MS 138",
+        "historical_designations": [
+          "Morris MS Y",
+          "Yates manuscript"
+        ],
+        "catalog_url": "https://catalog.princeton.edu/catalog/99108868793506421"
+      },
+      "physical_description": {
+        "extent": "130 folios",
+        "notes": [
+          "The target work occupies the whole codex, ff. 1r–130v."
+        ]
+      },
+      "survival_status": "extant",
+      "date_statements": [
+        {
+          "label": "production",
+          "value": "early 15th century",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:princeton-garrett-138-catalog"
+          ],
+          "normalized": "1400/1425"
+        }
+      ],
+      "notes": [
+        "Formerly owned by Joseph Brooks Yates and Henry Yates Thompson; this identifies Morris's MS Y.",
+        "Rolle is only an attributed author in MARC; work authorship remains anonymous."
+      ]
+    },
+    {
+      "id": "facsimile:princeton:Garrett-MS-138-wayback",
+      "type": "facsimile",
+      "label": "Archived complete grayscale facsimile of Garrett MS 138",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-facsimile",
+        "evidence:princeton-garrett-138-cdx"
+      ],
+      "description": "Archived complete grayscale surrogate: 135 PDF pages containing description cards, covers, and all 130 folios.",
+      "creator_ids": [
+        "agent:princeton"
+      ],
+      "reproduction_format": "135-page grayscale PDF microfilm surrogate"
+    },
+    {
+      "id": "scholarship:lightbown-1935",
+      "type": "catalog_description",
+      "label": "J. Lightbown, Cotton Galba E. IX and Harley 4196 (1935)",
+      "evidence_ids": [
+        "evidence:lightbown-1935"
+      ],
+      "creator_ids": [
+        "agent:j-lightbown"
+      ],
+      "bibliographic": {
+        "citation": "J. Lightbown, ‘Cotton Galba E. IX and Harley 4196’ (1935), five-page scholarly article.",
+        "date": "1935",
+        "pages": "5"
+      }
+    },
+    {
+      "id": "scholarship:mets-morey-introduction",
+      "type": "catalog_description",
+      "label": "METS Prik of Conscience Introduction",
+      "evidence_ids": [
+        "evidence:mets-morey-introduction"
+      ],
+      "creator_ids": [
+        "agent:mets"
+      ],
+      "description": "Complete cached Introduction page only, not a complete local copy of the Morey edition."
+    },
+    {
+      "id": "scholarship:trudel-1999-volume-2",
+      "type": "catalog_description",
+      "label": "Guy Trudel, Speculum huius vite, volume 2 (1999)",
+      "evidence_ids": [
+        "evidence:trudel-1999"
+      ],
+      "creator_ids": [
+        "agent:guy-trudel"
+      ],
+      "bibliographic": {
+        "citation": "Guy Trudel, Speculum huius vite, doctoral thesis, vol. 2 (1999).",
+        "date": "1999",
+        "volume": "2"
+      }
+    },
+    {
+      "id": "catalog:princeton:medieval-manuscripts-checklist",
+      "type": "catalog_description",
+      "label": "Princeton Medieval and Renaissance Manuscripts checklist",
+      "evidence_ids": [
+        "evidence:princeton-checklist"
+      ]
+    },
+    {
+      "id": "project:washington:prick-of-conscience",
+      "type": "catalog_description",
+      "label": "University of Washington Prick of Conscience project",
+      "evidence_ids": [
+        "evidence:washington-poc"
+      ],
+      "creator_ids": [
+        "agent:university-washington"
+      ]
+    },
+    {
+      "id": "package:internet-archive:bau1376-dark",
+      "type": "catalog_description",
+      "label": "Dark Internet Archive U-M item record",
+      "evidence_ids": [
+        "evidence:ia-bau1376-dark"
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "description": "Metadata-only record with no public file list or recoverable raw U-M package."
+    },
+    {
+      "id": "service:bl:imaging",
+      "type": "catalog_description",
+      "label": "British Library Digitisation and Imaging Services",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitised-manuscripts-list"
+      ],
+      "creator_ids": [
+        "agent:british-library"
+      ]
+    },
+    {
+      "id": "policy:princeton:special-collections",
+      "type": "catalog_description",
+      "label": "Princeton Special Collections rights and digitization policy",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy",
+        "evidence:princeton-digitization-policy"
+      ],
+      "creator_ids": [
+        "agent:princeton"
+      ]
+    },
+    {
+      "id": "law:us:17-USC-303",
+      "type": "catalog_description",
+      "label": "17 U.S.C. section 303",
+      "evidence_ids": [
+        "evidence:17-usc-303"
+      ],
+      "creator_ids": [
+        "agent:us-house"
+      ]
+    },
+    {
+      "id": "law:us:17-USC-304",
+      "type": "catalog_description",
+      "label": "17 U.S.C. section 304",
+      "evidence_ids": [
+        "evidence:17-usc-304"
+      ],
+      "creator_ids": [
+        "agent:us-house"
+      ]
+    },
+    {
+      "id": "guidance:usco:circular-15a",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A",
+      "evidence_ids": [
+        "evidence:usco-circular-15a"
+      ],
+      "creator_ids": [
+        "agent:us-copyright-office"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:general-corpus",
+      "type": "organization",
+      "name": "General Corpus"
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ]
+    },
+    {
+      "id": "agent:richard-morris",
+      "type": "person",
+      "name": "Richard Morris",
+      "dates": "1833–1894"
+    },
+    {
+      "id": "agent:wikimedia-commons",
+      "type": "organization",
+      "name": "Wikimedia Commons"
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library"
+    },
+    {
+      "id": "agent:princeton",
+      "type": "organization",
+      "name": "Princeton University Library"
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive"
+    },
+    {
+      "id": "agent:wayback",
+      "type": "organization",
+      "name": "Internet Archive Wayback Machine"
+    },
+    {
+      "id": "agent:mets",
+      "type": "organization",
+      "name": "Middle English Texts Series"
+    },
+    {
+      "id": "agent:university-washington",
+      "type": "organization",
+      "name": "University of Washington"
+    },
+    {
+      "id": "agent:us-house",
+      "type": "organization",
+      "name": "Office of the Law Revision Counsel, U.S. House of Representatives"
+    },
+    {
+      "id": "agent:us-copyright-office",
+      "type": "organization",
+      "name": "United States Copyright Office"
+    },
+    {
+      "id": "agent:j-lightbown",
+      "type": "person",
+      "name": "J. Lightbown"
+    },
+    {
+      "id": "agent:guy-trudel",
+      "type": "person",
+      "name": "Guy Trudel"
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel:artifact-copied-from-umich-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:bau1376",
+      "object": "encoding:umich:BAU1376.0001.001",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Pinned repository XML artifact"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME encoding BAU1376.0001.001"
+        },
+        "notes": "complete XML artifact"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml"
+        ]
+      }
+    },
+    {
+      "id": "rel:umich-encoding-ocr-from-page-images",
+      "type": "encoded_from",
+      "subject": "encoding:umich:BAU1376.0001.001",
+      "object": "facsimile:umich:BAU1376-page-images",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete uncorrected OCR electronic text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "All 372 TIFF page images of the edition"
+        },
+        "notes": "complete uncorrected OCR electronic text created from the 372-TIFF page-image carrier; the XML links each page image to the text"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml"
+        ]
+      }
+    },
+    {
+      "id": "rel:umich-images-facsimile-of-morris",
+      "type": "facsimile_of",
+      "subject": "facsimile:umich:BAU1376-page-images",
+      "object": "edition:morris:1863",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete page-image carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Morris's complete 1863 printed edition"
+        },
+        "notes": "372 linked 600-dpi TIFF page images"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml"
+        ]
+      }
+    },
+    {
+      "id": "rel:commons-scan-facsimile-of-morris",
+      "type": "facsimile_of",
+      "subject": "facsimile:wikimedia:morris-1863",
+      "object": "edition:morris:1863",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete page-image carrier"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Morris's complete 1863 printed edition"
+        },
+        "notes": "complete 380-page scan"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan",
+          "evidence:commons-morris-extmetadata"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-transcribes-galba-main",
+      "type": "transcribes",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Cotton-Galba-E-IX",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Main reading text except two Harley 4196 supplies and the Garrett-derived table of contents",
+          "locators": [
+            "Morris conventional lines 1–9624, excluding 1537–1730 and 6922–9211"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Galba main-text locus",
+          "locators": [
+            "ff. 76r–113r"
+          ]
+        },
+        "notes": "main reading text except the two Harley-supplied gaps and separately sourced table of contents"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan",
+          "evidence:lightbown-1935"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-transcribes-harley4196-1537-1730",
+      "type": "transcribes",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-4196",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Harley-supplied passage in Morris's reading text",
+          "locators": [
+            "Morris conventional lines 1537–1730"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Readings taken from Harley MS 4196",
+          "locators": [
+            "ff. 215v–258v",
+            "exact leaf mapping for Morris lines 1537–1730 not established"
+          ]
+        },
+        "notes": "Morris conventional lines 1537-1730"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:lightbown-1935"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-transcribes-harley4196-6922-9211",
+      "type": "transcribes",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-4196",
+      "scope": {
+        "subject": {
+          "kind": "selected_passages",
+          "description": "Harley-supplied passage in Morris's reading text",
+          "locators": [
+            "Morris conventional lines 6922–9211"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Readings taken from Harley MS 4196",
+          "locators": [
+            "ff. 215v–258v",
+            "exact leaf mapping for Morris lines 6922–9211 not established"
+          ]
+        },
+        "notes": "Morris conventional lines 6922-9211"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:lightbown-1935"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-add11305",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Add-MS-11305",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "target locus not supplied by the current exact record"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris; exact reading loci not exhaustively inventoried"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-add22283",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Add-MS-22283",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 62r(a)–78v(a)"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-harley106",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:historical:morris-H106",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "unknown",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "unknown historical extent"
+          ]
+        },
+        "notes": "Morris explicitly lists H106; the cited witness's present physical identity and target extent remain unresolved"
+      },
+      "assertion": {
+        "status": "tentative",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:morris-1863-scan",
+          "evidence:bl-harley-106",
+          "evidence:washington-poc"
+        ],
+        "notes": "The edge preserves Morris's explicit H106 citation but does not identify it with the current BL Harley MS 106 cataloged codex."
+      }
+    },
+    {
+      "id": "rel:morris-collates-harley1731",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-1731",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 1r–132v"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-harley2377",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-2377",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 1r–106v"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-harley2394",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-2394",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 1r–129r"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-harley6923",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Harley-MS-6923",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 2r–117v"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-collates-lansdowne348",
+      "type": "collated_against",
+      "subject": "edition:morris:1863",
+      "object": "witness:bl:Lansdowne-MS-348",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Morris's edited poem and apparatus"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Witness readings collated by Morris",
+          "locators": [
+            "ff. 2r–127v"
+          ]
+        },
+        "notes": "edition-wide collation as stated by Morris"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan"
+        ]
+      }
+    },
+    {
+      "id": "rel:morris-transcribes-garrett-toc",
+      "type": "transcribes",
+      "subject": "edition:morris:1863",
+      "object": "witness:princeton:Garrett-MS-138",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Printed table of contents only",
+          "locators": [
+            "Morris pp. xxxiv–xli"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Garrett table of contents",
+          "locators": [
+            "Garrett ff. 1r–6v",
+            "archived facsimile PDF pp. 4–10"
+          ]
+        },
+        "notes": "table of contents only: Garrett ff. 1r-6v, archived facsimile PDF pp. 4-10, printed by Morris on pp. xxxiv-xli"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:morris-1863-scan",
+          "evidence:princeton-garrett-138-facsimile",
+          "evidence:trudel-1999"
+        ]
+      }
+    },
+    {
+      "id": "rel:garrett-facsimile-of-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:princeton:Garrett-MS-138-wayback",
+      "object": "witness:princeton:Garrett-MS-138",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 135-page surrogate including cards, covers, and all folios"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 130-folio codex",
+          "locators": [
+            "ff. 1r–130v"
+          ]
+        },
+        "notes": "complete 130-folio codex plus cards and covers"
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:princeton-garrett-138-facsimile",
+          "evidence:princeton-garrett-138-cdx"
+        ]
+      }
+    }
+  ],
+  "primary_transmission_paths": [
+    {
+      "id": "path:shared-repository-trunk",
+      "label": "Repository artifact through U-M OCR and page images to Morris edition",
+      "relation_ids": [
+        "rel:artifact-copied-from-umich-encoding",
+        "rel:umich-encoding-ocr-from-page-images",
+        "rel:umich-images-facsimile-of-morris"
+      ],
+      "entity_sequence": [
+        "artifact:general-corpus:bau1376",
+        "encoding:umich:BAU1376.0001.001",
+        "facsimile:umich:BAU1376-page-images",
+        "edition:morris:1863"
+      ],
+      "description": "The repository artifact copies the U-M encoding; the header says that uncorrected OCR was created from the linked 372-TIFF image carrier, which reproduces Morris's edition."
+    },
+    {
+      "id": "path:galba-main-reading-text",
+      "label": "Morris main reading text from Cotton Galba E IX",
+      "relation_ids": [
+        "rel:morris-transcribes-galba-main"
+      ],
+      "entity_sequence": [
+        "edition:morris:1863",
+        "witness:bl:Cotton-Galba-E-IX"
+      ],
+      "description": "Morris's main reading text follows Cotton Galba E IX except for explicitly separated supplies and paratext."
+    },
+    {
+      "id": "path:harley4196-gap-1537-1730",
+      "label": "Harley 4196 first supplied gap",
+      "relation_ids": [
+        "rel:morris-transcribes-harley4196-1537-1730"
+      ],
+      "entity_sequence": [
+        "edition:morris:1863",
+        "witness:bl:Harley-MS-4196"
+      ],
+      "description": "Harley 4196 supplies the first documented gap in the Galba-based reading text."
+    },
+    {
+      "id": "path:harley4196-gap-6922-9211",
+      "label": "Harley 4196 second supplied gap",
+      "relation_ids": [
+        "rel:morris-transcribes-harley4196-6922-9211"
+      ],
+      "entity_sequence": [
+        "edition:morris:1863",
+        "witness:bl:Harley-MS-4196"
+      ],
+      "description": "Harley 4196 supplies the second documented gap in the Galba-based reading text."
+    },
+    {
+      "id": "path:garrett-table-of-contents",
+      "label": "Morris table of contents from Garrett MS 138",
+      "relation_ids": [
+        "rel:morris-transcribes-garrett-toc"
+      ],
+      "entity_sequence": [
+        "edition:morris:1863",
+        "witness:princeton:Garrett-MS-138"
+      ],
+      "description": "Only Morris's printed table of contents, not his main poem text, is transcribed from Garrett MS 138 ff. 1r–6v."
+    }
+  ],
+  "supporting_relationships": [
+    {
+      "id": "support:edition-facsimiles",
+      "label": "Alternative complete facsimile of the immediate edition",
+      "relation_ids": [
+        "rel:commons-scan-facsimile-of-morris"
+      ],
+      "description": "A complete independently downloaded Commons scan reproduces the same immediate edition without replacing the U-M OCR carrier in the production trunk."
+    },
+    {
+      "id": "support:morris-collation-witnesses",
+      "label": "Eight additional British Museum collation witnesses",
+      "relation_ids": [
+        "rel:morris-collates-add11305",
+        "rel:morris-collates-add22283",
+        "rel:morris-collates-harley106",
+        "rel:morris-collates-harley1731",
+        "rel:morris-collates-harley2377",
+        "rel:morris-collates-harley2394",
+        "rel:morris-collates-harley6923",
+        "rel:morris-collates-lansdowne348"
+      ],
+      "description": "Eight additional cited collation sources support Morris's apparatus. The H106 member is an unidentified historical witness, not the current BL record."
+    },
+    {
+      "id": "support:garrett-facsimile",
+      "label": "Complete facsimile of the table-of-contents witness",
+      "relation_ids": [
+        "rel:garrett-facsimile-of-witness"
+      ],
+      "description": "The complete Garrett surrogate supports inspection of the entire codex and the exact table-of-contents locus."
+    }
+  ],
+  "access": [
+    {
+      "id": "access:artifact:general-corpus:bau1376",
+      "entity": "artifact:general-corpus:bau1376",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the checked-out pinned CME submodule path.",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-license"
+      ],
+      "provider_id": "agent:general-corpus",
+      "repository_path": "CME/source/CME_phase_1-2/bau1376.xml",
+      "format": "XML"
+    },
+    {
+      "id": "access:encoding:umich:BAU1376.0001.001",
+      "entity": "encoding:umich:BAU1376.0001.001",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the U-M CME item and full-text view.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-live-item"
+      ],
+      "provider_id": "agent:umich",
+      "url": "https://quod.lib.umich.edu/c/cme/BAU1376.0001.001"
+    },
+    {
+      "id": "access:facsimile:umich:BAU1376-page-images",
+      "entity": "facsimile:umich:BAU1376-page-images",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Historical TIFF links are evidenced in the XML; no current complete download was verified.",
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ia-bau1376-dark"
+      ],
+      "provider_id": "agent:umich",
+      "url": "https://quod.lib.umich.edu/c/cme/BAU1376.0001.001",
+      "notes": [
+        "The dark Internet Archive metadata record exposes no raw package; unavailability does not collapse the image layer out of the OCR lineage."
+      ]
+    },
+    {
+      "id": "access:edition:morris:1863",
+      "entity": "edition:morris:1863",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Use the complete Commons facsimile of the edition.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:repo-xml"
+      ],
+      "url": "https://commons.wikimedia.org/wiki/File:The_Pricke_of_Conscience_(Stimulus_Conscientiae);_a_Northumbrian_Poem,_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_(IA_dli.granth.72675).pdf"
+    },
+    {
+      "id": "access:facsimile:wikimedia:morris-1863",
+      "entity": "facsimile:wikimedia:morris-1863",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete verified PDF surrogate.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:commons-morris-extmetadata"
+      ],
+      "provider_id": "agent:wikimedia-commons",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Pricke_of_Conscience_(Stimulus_Conscientiae);_a_Northumbrian_Poem,_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_(IA_dli.granth.72675).pdf",
+      "alternate_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf",
+        "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cmediatype%7Cextmetadata&titles=File%3AThe_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "morris-1863-pricke-of-conscience.pdf",
+          "path": "source-cache/bau1376/morris-1863-pricke-of-conscience.pdf",
+          "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf",
+          "sha256": "dc135f4ddb76af4260465a3f9755d2f88e0c0cc77db0ca266237a20cb8c3d4f6",
+          "bytes": 11785920,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "notes": [
+            "Packet coverage: complete 380-page edition scan; target text printed pp. 1-259. Carrier-rights profile: commons_public_domain."
+          ],
+          "work_portion": {
+            "label": "Complete edited text of Prik of Conscience",
+            "locators": [
+              "Morris printed pp. 1–259"
+            ],
+            "notes": [
+              "The complete edition scan is retained; the locators associate the poem without cropping the PDF."
+            ]
+          }
+        },
+        {
+          "label": "wikimedia-commons-morris-1863-extmetadata.json",
+          "path": "source-cache/bau1376/wikimedia-commons-morris-1863-extmetadata.json",
+          "source_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cmediatype%7Cextmetadata&titles=File%3AThe_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf",
+          "sha256": "682ab701bcbbd4b8365f9ebb1cf2f2a0e540232dd66c7f2ec10ce24db874f042",
+          "bytes": 3359,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete API response for exact Commons file. Carrier-rights profile: commons_public_domain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-11305",
+      "entity": "witness:bl:Add-MS-11305",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-11305",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/032-002109062",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002109062.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-add-ms-11305-catalog.json",
+          "path": "source-cache/bau1376/british-library-add-ms-11305-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/032-002109062.json",
+          "sha256": "3884179a74a99fe65cd052e2f9b477382a664dc4cfd721f87f8b83f9ca79181a",
+          "bytes": 8226,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-22283",
+      "entity": "witness:bl:Add-MS-22283",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-22283",
+        "evidence:bl-add-22283-legacy-viewer",
+        "evidence:bl-add-22283-cdx",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/032-002034756",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/032-002034756.json",
+        "https://web.archive.org/web/20140621100302id_/http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283",
+        "https://web.archive.org/cdx/search/cdx?url=www.bl.uk/manuscripts/Proxy.ashx%3Fsrc%3Dadd_ms_22283_fs001r_files%2F%2A&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aimage%2Fjpeg&collapse=digest"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-add-ms-22283-catalog.json",
+          "path": "source-cache/bau1376/british-library-add-ms-22283-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/032-002034756.json",
+          "sha256": "523372ec63cd90187cda02c12cef87ff0bf1b8fef2ecb17ac323a744ac02eba5",
+          "bytes": 98072,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        },
+        {
+          "label": "british-library-add-ms-22283-legacy-full-display-2014.html",
+          "path": "source-cache/bau1376/british-library-add-ms-22283-legacy-full-display-2014.html",
+          "source_url": "https://web.archive.org/web/20140621100302id_/http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283",
+          "sha256": "eb19c2c8782ccc0742188cbaf040a4e127bb50f49297e48b475f47922bc33387",
+          "bytes": 140052,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete archived metadata page; image payloads absent. Carrier-rights profile: archived_web_capture_unknown."
+          ]
+        },
+        {
+          "label": "wayback-british-library-add-ms-22283-proxy-cdx.json",
+          "path": "source-cache/bau1376/wayback-british-library-add-ms-22283-proxy-cdx.json",
+          "source_url": "https://web.archive.org/cdx/search/cdx?url=www.bl.uk/manuscripts/Proxy.ashx%3Fsrc%3Dadd_ms_22283_fs001r_files%2F%2A&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aimage%2Fjpeg&collapse=digest",
+          "sha256": "2822ddeab58580a683e0fa4bd0ebcb4c336620fc91935add3f4b3a8da018b4db",
+          "bytes": 232,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete CDX result for archived viewer tiles under first-image prefix. Carrier-rights profile: metadata_api_unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Cotton-Galba-E-IX",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-cotton-galba-e-ix",
+        "evidence:morris-1863-scan",
+        "evidence:lightbown-1935"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/041-001607569",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/041-001607569.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-cotton-galba-e-ix-ff3-114-catalog.json",
+          "path": "source-cache/bau1376/british-library-cotton-galba-e-ix-ff3-114-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/041-001607569.json",
+          "sha256": "f0ed270e306022b1960b6b4ecd02af7eca41a820091abd118bb5b94be71c3cb6",
+          "bytes": 8557,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current component record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:historical:morris-H106",
+      "entity": "witness:historical:morris-H106",
+      "resource_kind": "repository_enquiry",
+      "status": "unknown",
+      "access_method": "Identify Morris's historical H106 before assigning a present repository request route.",
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:bl-harley-106",
+        "evidence:washington-poc"
+      ],
+      "notes": [
+        "Do not order current BL Harley MS 106 as Morris's source unless identity is independently reconciled."
+      ]
+    },
+    {
+      "id": "access:catalog:bl:Harley-MS-106-current-record",
+      "entity": "catalog:bl:Harley-MS-106-current-record",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-106",
+        "evidence:washington-poc"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002045934",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002045934.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-106-catalog.json",
+          "path": "source-cache/bau1376/british-library-harley-ms-106-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002045934.json",
+          "sha256": "44f526686027c3f9bda584cdeada9f93e5a370abe2183df5d905d73b122830c4",
+          "bytes": 12006,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ],
+      "notes": [
+        "Conflict evidence only: current Latin theological codex record, not a proved request route to Morris's H106."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-1731",
+      "entity": "witness:bl:Harley-MS-1731",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-1731",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002047562",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002047562.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-1731-catalog.json",
+          "path": "source-cache/bau1376/british-library-harley-ms-1731-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002047562.json",
+          "sha256": "1953403b530a132b9d112602432c8ceb0b540022360719176be4707211e636c2",
+          "bytes": 12012,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2377",
+      "entity": "witness:bl:Harley-MS-2377",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-2377",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048208",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048208.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-2377-catalog.json",
+          "path": "source-cache/bau1376/british-library-harley-ms-2377-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002048208.json",
+          "sha256": "29e74d3ce4f21fad42a954fccbe272c9a61128625b982c06dbb2094dc8d8fdf4",
+          "bytes": 12321,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2394",
+      "entity": "witness:bl:Harley-MS-2394",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-2394",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048225",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048225.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-2394-catalog.json",
+          "path": "source-cache/bau1376/british-library-harley-ms-2394-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002048225.json",
+          "sha256": "1346ce48cf49a1806873492114fb870d7f5db599e75757220859213bd218fbe3",
+          "bytes": 11859,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-4196",
+      "entity": "witness:bl:Harley-MS-4196",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-4196",
+        "evidence:lightbown-1935"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050033",
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-4196-catalog.html",
+          "path": "source-cache/bau1376/british-library-harley-ms-4196-catalog.html",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002050033",
+          "sha256": "1b6b72367043cc94a197ae88c71fb854efa8a39861480273ad79b614d1fd4afc",
+          "bytes": 46373,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item page. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-6923",
+      "entity": "witness:bl:Harley-MS-6923",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-6923",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002052775",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002052775.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-harley-ms-6923-catalog.json",
+          "path": "source-cache/bau1376/british-library-harley-ms-6923-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002052775.json",
+          "sha256": "17e25fc68dc097ec29d4deb8c363a3c733ad7978ae83d67c898b93f0b6e72d4f",
+          "bytes": 13189,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Lansdowne-MS-348",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-lansdowne-348",
+        "evidence:morris-1863-scan"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://searcharchives.bl.uk/catalog/040-002074749",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002074749.json"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-lansdowne-ms-348-catalog.json",
+          "path": "source-cache/bau1376/british-library-lansdowne-ms-348-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-002074749.json",
+          "sha256": "3f8745ff678e78e189933125bd816bd5bd7586b116c747659cf20cc2b65e87c8",
+          "bytes": 14562,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current item record. Carrier-rights profile: bl_catalog_text_cc_by_4."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:princeton:Garrett-MS-138",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-catalog",
+        "evidence:princeton-garrett-138-marc",
+        "evidence:princeton-checklist",
+        "evidence:princeton-garrett-138-facsimile"
+      ],
+      "provider_id": "agent:princeton",
+      "url": "https://catalog.princeton.edu/catalog/99108868793506421",
+      "alternate_urls": [
+        "https://catalog.princeton.edu/catalog/99108868793506421.json",
+        "https://bibdata.princeton.edu/bibliographic/99108868793506421.json"
+      ],
+      "local_copies": [
+        {
+          "label": "princeton-garrett-ms-138-catalog.json",
+          "path": "source-cache/bau1376/princeton-garrett-ms-138-catalog.json",
+          "source_url": "https://catalog.princeton.edu/catalog/99108868793506421.json",
+          "sha256": "05096379e38fa0b3fa7d36ddd0e83470848608fd8e472f2235205ef4257b381f",
+          "bytes": 6500,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current catalog JSON. Carrier-rights profile: provider_catalog_unknown."
+          ]
+        },
+        {
+          "label": "princeton-garrett-ms-138-marc.json",
+          "path": "source-cache/bau1376/princeton-garrett-ms-138-marc.json",
+          "source_url": "https://bibdata.princeton.edu/bibliographic/99108868793506421.json",
+          "sha256": "457efe6182dcea8bbf747b35f9c6869249dadf649c755b4a78d5425563326ce3",
+          "bytes": 6606,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current MARC JSON. Carrier-rights profile: provider_catalog_unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:facsimile:princeton:Garrett-MS-138-wayback",
+      "entity": "facsimile:princeton:Garrett-MS-138-wayback",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete verified PDF surrogate.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-facsimile",
+        "evidence:princeton-garrett-138-cdx"
+      ],
+      "provider_id": "agent:princeton",
+      "url": "https://web.archive.org/web/20230626091443id_/https://library.princeton.edu/visual_materials/mss/ME/Garrett_MS_138_OPT.pdf",
+      "alternate_urls": [
+        "https://web.archive.org/cdx/search/cdx?url=library.princeton.edu%2Fvisual_materials%2Fmss%2FME%2FGarrett_MS_138_OPT.pdf&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aapplication%2Fpdf&collapse=digest"
+      ],
+      "local_copies": [
+        {
+          "label": "princeton-garrett-ms-138-complete-facsimile.pdf",
+          "path": "source-cache/bau1376/princeton-garrett-ms-138-complete-facsimile.pdf",
+          "source_url": "https://web.archive.org/web/20230626091443id_/https://library.princeton.edu/visual_materials/mss/ME/Garrett_MS_138_OPT.pdf",
+          "sha256": "470dcf3f78907bf5563e35597e8766b0b369b19ee4f0e193c83775fe0b7d5785",
+          "bytes": 54619088,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "notes": [
+            "Packet coverage: complete 135-page grayscale microfilm surrogate of the 130-folio codex. Carrier-rights profile: princeton_current_policy_legacy_conflict."
+          ],
+          "work_portion": {
+            "label": "Complete manuscript witness of Prik of Conscience",
+            "locators": [
+              "whole codex ff. 1r–130v",
+              "PDF pp. 4–134"
+            ],
+            "start_url": "https://web.archive.org/web/20230626091443id_/https://library.princeton.edu/visual_materials/mss/ME/Garrett_MS_138_OPT.pdf#page=4",
+            "end_url": "https://web.archive.org/web/20230626091443id_/https://library.princeton.edu/visual_materials/mss/ME/Garrett_MS_138_OPT.pdf#page=134",
+            "notes": [
+              "The whole 130-folio codex is the target work; Morris's narrower table-of-contents use, ff. 1r–6v / PDF pp. 4–10, is recorded only on the scoped lineage relation."
+            ]
+          }
+        },
+        {
+          "label": "wayback-princeton-garrett-ms-138-cdx.json",
+          "path": "source-cache/bau1376/wayback-princeton-garrett-ms-138-cdx.json",
+          "source_url": "https://web.archive.org/cdx/search/cdx?url=library.princeton.edu%2Fvisual_materials%2Fmss%2FME%2FGarrett_MS_138_OPT.pdf&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aapplication%2Fpdf&collapse=digest",
+          "sha256": "fb3ec6e211b143d5dbf5ce28425bf592fee6c81583bbdf2990a1ee83c8038ab2",
+          "bytes": 238,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete exact-URL CDX result. Carrier-rights profile: metadata_api_unknown."
+          ]
+        }
+      ],
+      "notes": [
+        "Complete archived grayscale surrogate already cached; request new imaging only for color or another unmet technical requirement."
+      ]
+    },
+    {
+      "id": "access:scholarship:lightbown-1935",
+      "entity": "scholarship:lightbown-1935",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:lightbown-1935"
+      ],
+      "url": "https://ludos.leeds.ac.uk:443/R/-?func=dbin-jump-full&object_id=134487&silo_library=GEN01",
+      "local_copies": [
+        {
+          "label": "lightbown-1935-galba-harley-collation.pdf",
+          "path": "source-cache/bau1376/lightbown-1935-galba-harley-collation.pdf",
+          "source_url": "https://ludos.leeds.ac.uk:443/R/-?func=dbin-jump-full&object_id=134487&silo_library=GEN01",
+          "sha256": "3a10e8ba928ccc61304835422fc8791c709e259c230e9b57818e8e2b0f5f9928",
+          "bytes": 187251,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete five-page article. Carrier-rights profile: modern_scholarship_unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:scholarship:mets-morey-introduction",
+      "entity": "scholarship:mets-morey-introduction",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:mets-morey-introduction"
+      ],
+      "url": "https://metseditions.org/read/18kBGqeDCD67LU4rQizPWviyjBVbNVvG",
+      "local_copies": [
+        {
+          "label": "mets-prik-of-conscience-introduction.html",
+          "path": "source-cache/bau1376/mets-prik-of-conscience-introduction.html",
+          "source_url": "https://metseditions.org/read/18kBGqeDCD67LU4rQizPWviyjBVbNVvG",
+          "sha256": "e8f7f612c1fed0cfdd660cd50242be7809ee6e1693747e48533829111423b501",
+          "bytes": 324446,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete Introduction web page only; not complete Morey edition. Carrier-rights profile: open_access_no_explicit_license."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:scholarship:trudel-1999-volume-2",
+      "entity": "scholarship:trudel-1999-volume-2",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:trudel-1999"
+      ],
+      "url": "https://ora.ox.ac.uk/objects/uuid:4399e35a-e138-4622-9d45-3f9862633706",
+      "alternate_urls": [
+        "https://ora.ox.ac.uk/objects/uuid%3A4399e35a-e138-4622-9d45-3f9862633706/files/mc5a16f96b7b08cc8647966403ed15f49"
+      ],
+      "local_copies": [
+        {
+          "label": "trudel-1999-speculum-huius-vite-volume-2.pdf",
+          "path": "source-cache/bau1376/trudel-1999-speculum-huius-vite-volume-2.pdf",
+          "source_url": "https://ora.ox.ac.uk/objects/uuid%3A4399e35a-e138-4622-9d45-3f9862633706/files/mc5a16f96b7b08cc8647966403ed15f49",
+          "sha256": "97eacc88a598fad48bccf50003d482be275ef29ea1ed9a421f34ec9e37b05265",
+          "bytes": 3166163,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete thesis volume 2. Carrier-rights profile: modern_scholarship_copyrighted."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:catalog:princeton:medieval-manuscripts-checklist",
+      "entity": "catalog:princeton:medieval-manuscripts-checklist",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-checklist"
+      ],
+      "provider_id": "agent:princeton",
+      "url": "https://blogs.princeton.edu/manuscripts/wp-content/uploads/sites/7/2013/10/Checklist-Mss-PUL.pdf",
+      "local_copies": [
+        {
+          "label": "princeton-medieval-manuscripts-checklist.pdf",
+          "path": "source-cache/bau1376/princeton-medieval-manuscripts-checklist.pdf",
+          "source_url": "https://blogs.princeton.edu/manuscripts/wp-content/uploads/sites/7/2013/10/Checklist-Mss-PUL.pdf",
+          "sha256": "588a8e526cceba91e020fae9eae9f254210bff062a25f85415acc4bca89335ce",
+          "bytes": 3526906,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete 96-page checklist. Carrier-rights profile: modern_scholarship_unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:project:washington:prick-of-conscience",
+      "entity": "project:washington:prick-of-conscience",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:washington-poc"
+      ],
+      "provider_id": "agent:university-washington",
+      "url": "https://staff.washington.edu/stacy/public/POC/index.html",
+      "local_copies": [
+        {
+          "label": "washington-prick-of-conscience-project.html",
+          "path": "source-cache/bau1376/washington-prick-of-conscience-project.html",
+          "source_url": "https://staff.washington.edu/stacy/public/POC/index.html",
+          "sha256": "a0576c71f537b71acd10d0a4a6a69e6c4cbdb24351c5cc38f5d5dbcc8f10137c",
+          "bytes": 8039,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete project landing page. Carrier-rights profile: cc_by_nc_sa_3."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:package:internet-archive:bau1376-dark",
+      "entity": "package:internet-archive:bau1376-dark",
+      "resource_kind": "catalog_record",
+      "status": "unavailable",
+      "access_method": "Consult the exact catalog, metadata, or archival record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:ia-bau1376-dark"
+      ],
+      "provider_id": "agent:internet-archive",
+      "url": "https://archive.org/metadata/bau1376.0001.001.umich.edu",
+      "local_copies": [
+        {
+          "label": "internet-archive-bau1376-umich-metadata.json",
+          "path": "source-cache/bau1376/internet-archive-bau1376-umich-metadata.json",
+          "source_url": "https://archive.org/metadata/bau1376.0001.001.umich.edu",
+          "sha256": "a12e602c53b61315dd9eb46effc19c4b4824cc0d7c3f246b5c458240b52acfad",
+          "bytes": 269,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete metadata API response. Carrier-rights profile: metadata_api_unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:service:bl:imaging",
+      "entity": "service:bl:imaging",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request an item-specific whole-codex quote from BL Digitisation and Imaging Services.",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitised-manuscripts-list"
+      ],
+      "provider_id": "agent:british-library",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+        "https://www.bl.uk/services/digitisation",
+        "https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl=",
+        "https://www.bl.uk/terms/imaging-services-terms-and-conditions"
+      ],
+      "local_copies": [
+        {
+          "label": "british-library-digitisation-rate-card-2025-26.pdf",
+          "path": "source-cache/bau1376/british-library-digitisation-rate-card-2025-26.pdf",
+          "source_url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+          "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+          "bytes": 181286,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete two-page rate card. Carrier-rights profile: provider_policy_page."
+          ]
+        },
+        {
+          "label": "british-library-digitisation-service.html",
+          "path": "source-cache/bau1376/british-library-digitisation-service.html",
+          "source_url": "https://www.bl.uk/services/digitisation",
+          "sha256": "2901b6ccc8254d75f053daa4765ada9b23c38397c41ec7cf31153cfbaec54bc5",
+          "bytes": 159175,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current service page. Carrier-rights profile: provider_policy_page."
+          ]
+        },
+        {
+          "label": "british-library-digitised-manuscripts-2025-10-10.pdf",
+          "path": "source-cache/bau1376/british-library-digitised-manuscripts-2025-10-10.pdf",
+          "source_url": "https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl=",
+          "sha256": "22c3da6d07a30b0b4d95d143d77dfc8ecfb330cbc14191b92930b1f635f29311",
+          "bytes": 2931179,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete 261-page list. Carrier-rights profile: provider_policy_page."
+          ]
+        },
+        {
+          "label": "british-library-imaging-services-terms.html",
+          "path": "source-cache/bau1376/british-library-imaging-services-terms.html",
+          "source_url": "https://www.bl.uk/terms/imaging-services-terms-and-conditions",
+          "sha256": "59ddc6ebb1dab35ed9ca406701a1fc9ed77bf32a3e09f75b36af7a63a18a66fa",
+          "bytes": 91241,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete January 2026 terms page. Carrier-rights profile: provider_policy_page."
+          ]
+        }
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk"
+    },
+    {
+      "id": "access:policy:princeton:special-collections",
+      "entity": "policy:princeton:special-collections",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy",
+        "evidence:princeton-digitization-policy"
+      ],
+      "provider_id": "agent:princeton",
+      "url": "https://library.princeton.edu/about/policies/special-collections-copyright-credit-and-citation-guidelines",
+      "alternate_urls": [
+        "https://library.princeton.edu/services/special-collections/explore-special-collections"
+      ],
+      "local_copies": [
+        {
+          "label": "princeton-special-collections-copyright-credit-citation.html",
+          "path": "source-cache/bau1376/princeton-special-collections-copyright-credit-citation.html",
+          "source_url": "https://library.princeton.edu/about/policies/special-collections-copyright-credit-and-citation-guidelines",
+          "sha256": "45e80056bde8dd01dc3de58d7a1fef4a769c64b3955b1af70bee82b528c92512",
+          "bytes": 65511,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current policy page. Carrier-rights profile: provider_policy_page."
+          ]
+        },
+        {
+          "label": "princeton-special-collections-digitization-services.html",
+          "path": "source-cache/bau1376/princeton-special-collections-digitization-services.html",
+          "source_url": "https://library.princeton.edu/services/special-collections/explore-special-collections",
+          "sha256": "cd7783af34f3e52a47580d2ae6a9daab42f2ec1d5e78254dd3eb269600852666",
+          "bytes": 81103,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete current service page. Carrier-rights profile: provider_policy_page."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:law:us:17-USC-303",
+      "entity": "law:us:17-USC-303",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:17-usc-303"
+      ],
+      "provider_id": "agent:us-house",
+      "url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section303",
+      "local_copies": [
+        {
+          "label": "us-code-title17-section303.html",
+          "path": "source-cache/bau1376/us-code-title17-section303.html",
+          "source_url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section303",
+          "sha256": "66836bc8cefe454340c0624acfc0c0f46dc48b5b287ea96e38df658f81712a05",
+          "bytes": 162284,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete official section page. Carrier-rights profile: us_government_public_domain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:law:us:17-USC-304",
+      "entity": "law:us:17-USC-304",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:17-usc-304"
+      ],
+      "provider_id": "agent:us-house",
+      "url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section304",
+      "local_copies": [
+        {
+          "label": "us-code-title17-section304.html",
+          "path": "source-cache/bau1376/us-code-title17-section304.html",
+          "source_url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section304",
+          "sha256": "f2ac81933ec1aa4129d02f0682e2f627ee73c6f86e538df44060b75549009104",
+          "bytes": 212566,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete official section page. Carrier-rights profile: us_government_public_domain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:guidance:usco:circular-15a",
+      "entity": "guidance:usco:circular-15a",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Open or download the complete research source or policy record.",
+      "cost": "free",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:usco-circular-15a"
+      ],
+      "provider_id": "agent:us-copyright-office",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies": [
+        {
+          "label": "us-copyright-office-circular-15a.pdf",
+          "path": "source-cache/bau1376/us-copyright-office-circular-15a.pdf",
+          "source_url": "https://www.copyright.gov/circs/circ15a.pdf",
+          "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+          "bytes": 273867,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-17",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "Packet coverage: complete four-page circular. Carrier-rights profile: us_government_public_domain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-11305:physical-request",
+      "entity": "witness:bl:Add-MS-11305",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/032-002109062"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-11305",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-11305:whole-codex-reproduction",
+      "entity": "witness:bl:Add-MS-11305",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/032-002109062"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-22283:physical-request",
+      "entity": "witness:bl:Add-MS-22283",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/032-002034756"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-add-22283",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Add-MS-22283:whole-codex-reproduction",
+      "entity": "witness:bl:Add-MS-22283",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/032-002034756"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Cotton-Galba-E-IX:physical-request",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/041-001607569"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-cotton-galba-e-ix",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Cotton-Galba-E-IX:whole-codex-reproduction",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/041-001607569"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-1731:physical-request",
+      "entity": "witness:bl:Harley-MS-1731",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002047562"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-1731",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-1731:whole-codex-reproduction",
+      "entity": "witness:bl:Harley-MS-1731",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002047562"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2377:physical-request",
+      "entity": "witness:bl:Harley-MS-2377",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002048208"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-2377",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2377:whole-codex-reproduction",
+      "entity": "witness:bl:Harley-MS-2377",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002048208"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2394:physical-request",
+      "entity": "witness:bl:Harley-MS-2394",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002048225"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-2394",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-2394:whole-codex-reproduction",
+      "entity": "witness:bl:Harley-MS-2394",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002048225"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-4196:physical-request",
+      "entity": "witness:bl:Harley-MS-4196",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002050033"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-4196",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-4196:whole-codex-reproduction",
+      "entity": "witness:bl:Harley-MS-4196",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002050033"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-6923:physical-request",
+      "entity": "witness:bl:Harley-MS-6923",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002052775"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-6923",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Harley-MS-6923:whole-codex-reproduction",
+      "entity": "witness:bl:Harley-MS-6923",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002052775"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:bl:Lansdowne-MS-348:physical-request",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Submit the BL physical-items request form or a reference enquiry, citing the exact shelfmark and target locus.",
+      "url": "https://forms.office.com/e/SbCAGb201x",
+      "alternate_urls": [
+        "https://bl.libanswers.com/form?queue_id=2371",
+        "https://searcharchives.bl.uk/catalog/040-002074749"
+      ],
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-lansdowne-348",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "access:witness:bl:Lansdowne-MS-348:whole-codex-reproduction",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request the complete current codex in color, including covers, boards, spine, pastedowns, flyleaves, blanks, every leaf, and edges if offered; separately state the target locus.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.office.com/e/SbCAGb201x",
+        "https://searcharchives.bl.uk/catalog/040-002074749"
+      ],
+      "contact": "licensing@bl.uk; permissions@bl.uk",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Published per-image rates are not a whole-codex quote; large or difficult orders are assessed individually. Supplied images have separate permission terms."
+      ]
+    },
+    {
+      "id": "access:witness:princeton:Garrett-MS-138:consultation",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "provider_id": "agent:princeton",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Use Princeton Special Collections' Ask Special Collections / consultation route for the physical codex.",
+      "url": "https://library.princeton.edu/services/special-collections/explore-special-collections",
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-catalog",
+        "evidence:princeton-digitization-policy"
+      ]
+    },
+    {
+      "id": "access:witness:princeton:Garrett-MS-138:new-digitization",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "provider_id": "agent:princeton",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Request fresh digitization only if the cached complete grayscale surrogate does not meet the research need.",
+      "url": "https://library.princeton.edu/services/special-collections/explore-special-collections",
+      "cost": "fee",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-digitization-policy",
+        "evidence:princeton-rights-policy"
+      ],
+      "notes": [
+        "Packet rate: $2 per image for non-Princeton requesters, maximum 300 pages per project per six months, expected 6–8 weeks; verify current terms before ordering."
+      ]
+    },
+    {
+      "id": "access:catalog:bl:Harley-MS-106-current-record:identity-enquiry",
+      "entity": "catalog:bl:Harley-MS-106-current-record",
+      "provider_id": "agent:british-library",
+      "resource_kind": "repository_enquiry",
+      "status": "requestable",
+      "access_method": "Ask the BL to reconcile Morris's historical H106 citation with the present cataloged codex before treating it as a target witness.",
+      "url": "https://bl.libanswers.com/form?queue_id=2371",
+      "cost": "unknown",
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-harley-106",
+        "evidence:morris-1863-scan",
+        "evidence:washington-poc"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:artifact:general-corpus:bau1376",
+      "entity": "artifact:general-corpus:bau1376",
+      "component": "repository XML artifact and markup",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "The pinned CME LICENSE is the Unlicense but expressly speaks of software; no separate XML/data/markup grant was found, so it is not silently extended to the artifact.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-license"
+      ],
+      "asserted_by_id": "agent:general-corpus",
+      "access_id": "access:artifact:general-corpus:bau1376"
+    },
+    {
+      "id": "rights:encoding:umich:BAU1376.0001.001",
+      "entity": "encoding:umich:BAU1376.0001.001",
+      "component": "current U-M encoding item statement",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-17",
+      "basis": "Current item says Public Domain and links RightsStatements.org No Copyright - United States; this is a rights statement, not an open license.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-live-item"
+      ],
+      "asserted_by_id": "agent:umich",
+      "access_id": "access:encoding:umich:BAU1376.0001.001",
+      "rights_statement_uri": "https://rightsstatements.org/page/NoC-US/1.0/",
+      "notes": [
+        "No Copyright–United States is a rights statement, not an open license, and its practical scope must be kept separate from the older XML-header caution."
+      ]
+    },
+    {
+      "id": "rights:facsimile:umich:BAU1376-page-images",
+      "entity": "facsimile:umich:BAU1376-page-images",
+      "component": "historically linked 372 TIFF page-image set",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "The item-level No Copyright-US statement is recorded, but no separately retrievable TIFF bundle or image-specific license was verified.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ia-bau1376-dark"
+      ],
+      "asserted_by_id": "agent:umich",
+      "access_id": "access:facsimile:umich:BAU1376-page-images",
+      "notes": [
+        "The item-level statement was found, but no image-specific grant or separately retrievable TIFF package was verified."
+      ]
+    },
+    {
+      "id": "rights:edition:morris:1863",
+      "entity": "edition:morris:1863",
+      "component": "Morris's 1863 edition content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Publication in 1863; 17 U.S.C. section 304 and Copyright Office Circular 15A retained as supporting evidence.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:17-usc-304",
+        "evidence:usco-circular-15a"
+      ]
+    },
+    {
+      "id": "rights:facsimile:wikimedia:morris-1863",
+      "entity": "facsimile:wikimedia:morris-1863",
+      "component": "complete Morris edition scan carrier",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Exact Commons extmetadata marks the file public domain and requires no attribution; SHA-1 and size match the cached PDF.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:commons-morris-extmetadata"
+      ],
+      "asserted_by_id": "agent:wikimedia-commons",
+      "access_id": "access:facsimile:wikimedia:morris-1863"
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-11305",
+      "entity": "witness:bl:Add-MS-11305",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-11305",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-22283",
+      "entity": "witness:bl:Add-MS-22283",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-22283",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Cotton-Galba-E-IX",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-galba-e-ix",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:historical:morris-H106",
+      "entity": "witness:historical:morris-H106",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:17-usc-303"
+      ]
+    },
+    {
+      "id": "rights:catalog:bl:Harley-MS-106-current-record",
+      "entity": "catalog:bl:Harley-MS-106-current-record",
+      "component": "current British Library catalog description only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; this does not license a physical manuscript, manuscript text, or images.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-106"
+      ],
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "asserted_by_id": "agent:british-library",
+      "access_id": "access:catalog:bl:Harley-MS-106-current-record"
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-1731",
+      "entity": "witness:bl:Harley-MS-1731",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-1731",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2377",
+      "entity": "witness:bl:Harley-MS-2377",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2377",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2394",
+      "entity": "witness:bl:Harley-MS-2394",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2394",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-4196",
+      "entity": "witness:bl:Harley-MS-4196",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-4196",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-6923",
+      "entity": "witness:bl:Harley-MS-6923",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-6923",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:bl:Lansdowne-MS-348",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-lansdowne-348",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:british-library"
+    },
+    {
+      "id": "rights:witness:princeton:Garrett-MS-138",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "component": "medieval text and physical witness contents, not new photography or catalog prose",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "Created more than 120 years ago; 17 U.S.C. section 303. Future repository photographs and contractual reproduction conditions remain separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-catalog",
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:princeton",
+      "access_id": "access:witness:princeton:Garrett-MS-138"
+    },
+    {
+      "id": "rights:facsimile:princeton:Garrett-MS-138-current-policy",
+      "entity": "facsimile:princeton:Garrett-MS-138-wayback",
+      "access_id": "access:facsimile:princeton:Garrett-MS-138-wayback",
+      "component": "Archived grayscale facsimile carrier under Princeton's current Special Collections policy",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Current Princeton policy says institutional permission and usage fees are not required for publication or other use and requests a credit line; users remain responsible for third-party copyright and other restrictions.",
+      "asserted_by_id": "agent:princeton",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy"
+      ],
+      "notes": [
+        "This current policy layer is recorded independently from the carrier's embedded 1965 instruction."
+      ]
+    },
+    {
+      "id": "rights:facsimile:princeton:Garrett-MS-138-1965-card",
+      "entity": "facsimile:princeton:Garrett-MS-138-wayback",
+      "access_id": "access:facsimile:princeton:Garrett-MS-138-wayback",
+      "component": "Publication instruction printed on the 1965 microfilm card embedded in the archived facsimile",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "The embedded 1965 Princeton microfilm card says that publication permission is required; the packet does not silently decide whether current policy supersedes this carrier-specific instruction.",
+      "asserted_by_id": "agent:princeton",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-facsimile"
+      ],
+      "notes": [
+        "Conflict remains open; contact Princeton before redistributing the facsimile itself."
+      ]
+    },
+    {
+      "id": "rights:scholarship:lightbown-1935",
+      "entity": "scholarship:lightbown-1935",
+      "component": "modern scholarly carrier",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "No explicit open license was verified; retained as a research source only.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:lightbown-1935"
+      ],
+      "access_id": "access:scholarship:lightbown-1935"
+    },
+    {
+      "id": "rights:scholarship:mets-morey-introduction",
+      "entity": "scholarship:mets-morey-introduction",
+      "component": "METS Introduction page",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Provider describes the edition as Open Access, but no explicit Creative Commons or equivalent license was found on the cached page.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:mets-morey-introduction"
+      ],
+      "access_id": "access:scholarship:mets-morey-introduction"
+    },
+    {
+      "id": "rights:scholarship:trudel-1999-volume-2",
+      "entity": "scholarship:trudel-1999-volume-2",
+      "component": "modern doctoral thesis carrier",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "1999 thesis with no explicit open license verified; repository access terms do not erase copyright.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:trudel-1999"
+      ],
+      "access_id": "access:scholarship:trudel-1999-volume-2"
+    },
+    {
+      "id": "rights:catalog:princeton:medieval-manuscripts-checklist",
+      "entity": "catalog:princeton:medieval-manuscripts-checklist",
+      "component": "modern scholarly carrier",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "No explicit open license was verified; retained as a research source only.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:princeton-checklist"
+      ],
+      "asserted_by_id": "agent:princeton",
+      "access_id": "access:catalog:princeton:medieval-manuscripts-checklist"
+    },
+    {
+      "id": "rights:project:washington:prick-of-conscience",
+      "entity": "project:washington:prick-of-conscience",
+      "component": "Washington project page",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "License statement on cached project page; does not license third-party manuscripts or Morris's edition.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:washington-poc"
+      ],
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "asserted_by_id": "agent:university-washington",
+      "access_id": "access:project:washington:prick-of-conscience"
+    },
+    {
+      "id": "rights:package:internet-archive:bau1376-dark",
+      "entity": "package:internet-archive:bau1376-dark",
+      "component": "API response or archival index metadata",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Factual metadata retained for research; no independent carrier license conclusion needed for underlying target text.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:ia-bau1376-dark"
+      ],
+      "asserted_by_id": "agent:internet-archive",
+      "access_id": "access:package:internet-archive:bau1376-dark"
+    },
+    {
+      "id": "rights:service:bl:imaging",
+      "entity": "service:bl:imaging",
+      "component": "provider service, policy, or price page",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Supporting policy evidence only; no reuse license inferred.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitised-manuscripts-list"
+      ],
+      "asserted_by_id": "agent:british-library",
+      "access_id": "access:service:bl:imaging"
+    },
+    {
+      "id": "rights:policy:princeton:special-collections",
+      "entity": "policy:princeton:special-collections",
+      "component": "provider service, policy, or price page",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Supporting policy evidence only; no reuse license inferred.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy",
+        "evidence:princeton-digitization-policy"
+      ],
+      "asserted_by_id": "agent:princeton",
+      "access_id": "access:policy:princeton:special-collections"
+    },
+    {
+      "id": "rights:law:us:17-USC-303",
+      "entity": "law:us:17-USC-303",
+      "component": "United States federal government legal text or guidance",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "17 U.S.C. section 105; used only as supporting legal evidence.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:17-usc-303"
+      ],
+      "asserted_by_id": "agent:us-house",
+      "access_id": "access:law:us:17-USC-303"
+    },
+    {
+      "id": "rights:law:us:17-USC-304",
+      "entity": "law:us:17-USC-304",
+      "component": "United States federal government legal text or guidance",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "17 U.S.C. section 105; used only as supporting legal evidence.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:17-usc-304"
+      ],
+      "asserted_by_id": "agent:us-house",
+      "access_id": "access:law:us:17-USC-304"
+    },
+    {
+      "id": "rights:guidance:usco:circular-15a",
+      "entity": "guidance:usco:circular-15a",
+      "component": "United States federal government legal text or guidance",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-17",
+      "basis": "17 U.S.C. section 105; used only as supporting legal evidence.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:usco-circular-15a"
+      ],
+      "asserted_by_id": "agent:us-copyright-office",
+      "access_id": "access:guidance:usco:circular-15a"
+    },
+    {
+      "id": "rights:encoding:umich:BAU1376.0001.001-header-caution",
+      "entity": "encoding:umich:BAU1376.0001.001",
+      "access_id": "access:encoding:umich:BAU1376.0001.001",
+      "component": "2006 XML encoding and distribution notice preserved in the TEI header",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-17",
+      "basis": "The XML header says copyright applies where applicable and other distribution restrictions may apply. This historical caution is retained separately from the live NoC-US statement.",
+      "asserted_by_id": "agent:umich",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-11305:catalog-prose",
+      "entity": "witness:bl:Add-MS-11305",
+      "access_id": "access:witness:bl:Add-MS-11305",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-11305"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-11305:ordered-photography",
+      "entity": "witness:bl:Add-MS-11305",
+      "access_id": "access:witness:bl:Add-MS-11305:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-22283:catalog-prose",
+      "entity": "witness:bl:Add-MS-22283",
+      "access_id": "access:witness:bl:Add-MS-22283",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-add-22283"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Add-MS-22283:ordered-photography",
+      "entity": "witness:bl:Add-MS-22283",
+      "access_id": "access:witness:bl:Add-MS-22283:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Cotton-Galba-E-IX:catalog-prose",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "access_id": "access:witness:bl:Cotton-Galba-E-IX",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-cotton-galba-e-ix"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Cotton-Galba-E-IX:ordered-photography",
+      "entity": "witness:bl:Cotton-Galba-E-IX",
+      "access_id": "access:witness:bl:Cotton-Galba-E-IX:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-1731:catalog-prose",
+      "entity": "witness:bl:Harley-MS-1731",
+      "access_id": "access:witness:bl:Harley-MS-1731",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-1731"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-1731:ordered-photography",
+      "entity": "witness:bl:Harley-MS-1731",
+      "access_id": "access:witness:bl:Harley-MS-1731:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2377:catalog-prose",
+      "entity": "witness:bl:Harley-MS-2377",
+      "access_id": "access:witness:bl:Harley-MS-2377",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2377"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2377:ordered-photography",
+      "entity": "witness:bl:Harley-MS-2377",
+      "access_id": "access:witness:bl:Harley-MS-2377:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2394:catalog-prose",
+      "entity": "witness:bl:Harley-MS-2394",
+      "access_id": "access:witness:bl:Harley-MS-2394",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-2394"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-2394:ordered-photography",
+      "entity": "witness:bl:Harley-MS-2394",
+      "access_id": "access:witness:bl:Harley-MS-2394:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-4196:catalog-prose",
+      "entity": "witness:bl:Harley-MS-4196",
+      "access_id": "access:witness:bl:Harley-MS-4196",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-4196"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-4196:ordered-photography",
+      "entity": "witness:bl:Harley-MS-4196",
+      "access_id": "access:witness:bl:Harley-MS-4196:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-6923:catalog-prose",
+      "entity": "witness:bl:Harley-MS-6923",
+      "access_id": "access:witness:bl:Harley-MS-6923",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley-6923"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Harley-MS-6923:ordered-photography",
+      "entity": "witness:bl:Harley-MS-6923",
+      "access_id": "access:witness:bl:Harley-MS-6923:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Lansdowne-MS-348:catalog-prose",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "access_id": "access:witness:bl:Lansdowne-MS-348",
+      "component": "Current British Library catalog text only",
+      "jurisdiction": "unspecified",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-17",
+      "basis": "The current catalog footer licenses British Library catalog text under CC BY 4.0 except where otherwise stated; it does not license manuscript text or images.",
+      "asserted_by_id": "agent:british-library",
+      "license": {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-lansdowne-348"
+      ]
+    },
+    {
+      "id": "rights:witness:bl:Lansdowne-MS-348:ordered-photography",
+      "entity": "witness:bl:Lansdowne-MS-348",
+      "access_id": "access:witness:bl:Lansdowne-MS-348:whole-codex-reproduction",
+      "component": "New images supplied through British Library Digitisation and Imaging Services",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "BL imaging terms require separate written permission for reproduction or publication of supplied material; public-domain status of the medieval text does not grant image reuse.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation-service"
+      ]
+    },
+    {
+      "id": "rights:witness:princeton:Garrett-MS-138:catalog-metadata",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "access_id": "access:witness:princeton:Garrett-MS-138",
+      "component": "Current Princeton catalog and MARC carriers",
+      "jurisdiction": "unspecified",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Factual metadata is retained for research, but no independent reuse license for the catalog carriers was verified.",
+      "asserted_by_id": "agent:princeton",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:princeton-garrett-138-catalog",
+        "evidence:princeton-garrett-138-marc"
+      ]
+    },
+    {
+      "id": "rights:witness:princeton:Garrett-MS-138:new-images",
+      "entity": "witness:princeton:Garrett-MS-138",
+      "access_id": "access:witness:princeton:Garrett-MS-138:new-digitization",
+      "component": "Future newly supplied Princeton images",
+      "jurisdiction": "Provider terms and intended place of reuse",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-17",
+      "basis": "Current policy says Princeton permission and usage fees are not required, requests credit, and leaves third-party rights clearance to the user; the exact delivery terms for a future order remain request-stage evidence.",
+      "asserted_by_id": "agent:princeton",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy",
+        "evidence:princeton-digitization-policy"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:bau1376-umich-ocr",
+      "entity": "encoding:umich:BAU1376.0001.001",
+      "practice": "selection",
+      "description": "The electronic text is uncorrected OCR linked page by page to the 372-TIFF carrier; some front matter is represented by omitted-front-matter divisions rather than full transcription.",
+      "scope": "Complete U-M electronic representation",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml"
+      ]
+    },
+    {
+      "id": "practice:bau1376-morris-collation",
+      "entity": "edition:morris:1863",
+      "practice": "collation",
+      "description": "Morris based the main reading text on Galba E IX, supplied two gaps from Harley 4196, collated eight additional cited sources, and copied the table of contents from Garrett MS 138.",
+      "scope": "Morris edition text, apparatus, supplied passages, and table of contents",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:lightbown-1935",
+        "evidence:princeton-garrett-138-facsimile"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus CME source bau1376.xml",
+      "summary": "University of Michigan, 2006; uncorrected OCR; TEI in Libraries Level 1; linked to 372 600-dpi TIFF G4 page images.",
+      "accessed_on": "2026-07-17",
+      "repository_path": "CME/source/CME_phase_1-2/bau1376.xml",
+      "sha256": "04d957d7c26e660c1d45732de571d6a1068dacfe81852e6e0700fe8c96d9bfc5"
+    },
+    {
+      "id": "evidence:umich-live-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan CME item BAU1376.0001.001",
+      "summary": "Current item states Public Domain and links RightsStatements.org No Copyright - United States; no cache bypass was attempted after non-browser access failed.",
+      "accessed_on": "2026-07-17",
+      "url": "https://quod.lib.umich.edu/c/cme/BAU1376.0001.001"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Pinned CME repository LICENSE",
+      "summary": "Unlicense text speaks of software. It is not treated as a proved license for XML, data, or markup.",
+      "accessed_on": "2026-07-17",
+      "url": "https://raw.githubusercontent.com/Kyvero-Press/CME/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE"
+    },
+    {
+      "id": "evidence:bl-add-11305",
+      "type": "official_catalog",
+      "citation": "british-library-add-ms-11305-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/032-002109062.json",
+      "repository_path": "source-cache/bau1376/british-library-add-ms-11305-catalog.json",
+      "sha256": "3884179a74a99fe65cd052e2f9b477382a664dc4cfd721f87f8b83f9ca79181a",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-add-22283",
+      "type": "official_catalog",
+      "citation": "british-library-add-ms-22283-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/032-002034756.json",
+      "repository_path": "source-cache/bau1376/british-library-add-ms-22283-catalog.json",
+      "sha256": "523372ec63cd90187cda02c12cef87ff0bf1b8fef2ecb17ac323a744ac02eba5",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-add-22283-legacy-viewer",
+      "type": "official_webpage",
+      "citation": "british-library-add-ms-22283-legacy-full-display-2014.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete archived metadata page; image payloads absent; packet target assessment: metadata_only_379_image_claim.",
+      "accessed_on": "2026-07-17",
+      "url": "https://web.archive.org/web/20140621100302id_/http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Add_MS_22283",
+      "repository_path": "source-cache/bau1376/british-library-add-ms-22283-legacy-full-display-2014.html",
+      "sha256": "eb19c2c8782ccc0742188cbaf040a4e127bb50f49297e48b475f47922bc33387",
+      "locator": "complete archived metadata page; image payloads absent; target-work assessment: metadata_only_379_image_claim"
+    },
+    {
+      "id": "evidence:bl-cotton-galba-e-ix",
+      "type": "official_catalog",
+      "citation": "british-library-cotton-galba-e-ix-ff3-114-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current component record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/041-001607569.json",
+      "repository_path": "source-cache/bau1376/british-library-cotton-galba-e-ix-ff3-114-catalog.json",
+      "sha256": "f0ed270e306022b1960b6b4ecd02af7eca41a820091abd118bb5b94be71c3cb6",
+      "locator": "complete current component record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-rate-card",
+      "type": "official_webpage",
+      "citation": "british-library-digitisation-rate-card-2025-26.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete two-page rate card; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+      "repository_path": "source-cache/bau1376/british-library-digitisation-rate-card-2025-26.pdf",
+      "sha256": "93117e4edce3d017c404d1da6b6c628c07b818db2d90e4c2986267ac07922597",
+      "locator": "complete two-page rate card; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:bl-digitisation-service",
+      "type": "official_webpage",
+      "citation": "british-library-digitisation-service.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current service page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.bl.uk/services/digitisation",
+      "repository_path": "source-cache/bau1376/british-library-digitisation-service.html",
+      "sha256": "2901b6ccc8254d75f053daa4765ada9b23c38397c41ec7cf31153cfbaec54bc5",
+      "locator": "complete current service page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:bl-digitised-manuscripts-list",
+      "type": "official_webpage",
+      "citation": "british-library-digitised-manuscripts-2025-10-10.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete 261-page list; packet target assessment: all_ten_exact_shelfmarks_absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.bl.uk/files/v5dwkion/production/f66693975b985b9dbc61bf8385ecf40f3da1cd08.pdf/digitised-manuscripts.pdf?dl=",
+      "repository_path": "source-cache/bau1376/british-library-digitised-manuscripts-2025-10-10.pdf",
+      "sha256": "22c3da6d07a30b0b4d95d143d77dfc8ecfb330cbc14191b92930b1f635f29311",
+      "locator": "complete 261-page list; target-work assessment: all_ten_exact_shelfmarks_absent"
+    },
+    {
+      "id": "evidence:bl-harley-106",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-106-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_conflict_evidence_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002045934.json",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-106-catalog.json",
+      "sha256": "44f526686027c3f9bda584cdeada9f93e5a370abe2183df5d905d73b122830c4",
+      "locator": "complete current item record; target-work assessment: catalog_conflict_evidence_only",
+      "notes": [
+        "Current Latin theological codex record is conflict evidence, not proof of identity with Morris's H106."
+      ]
+    },
+    {
+      "id": "evidence:bl-harley-1731",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-1731-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002047562.json",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-1731-catalog.json",
+      "sha256": "1953403b530a132b9d112602432c8ceb0b540022360719176be4707211e636c2",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-harley-2377",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-2377-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048208.json",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-2377-catalog.json",
+      "sha256": "29e74d3ce4f21fad42a954fccbe272c9a61128625b982c06dbb2094dc8d8fdf4",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-harley-2394",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-2394-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048225.json",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-2394-catalog.json",
+      "sha256": "1346ce48cf49a1806873492114fb870d7f5db599e75757220859213bd218fbe3",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-harley-4196",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-4196-catalog.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item page; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050033",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-4196-catalog.html",
+      "sha256": "1b6b72367043cc94a197ae88c71fb854efa8a39861480273ad79b614d1fd4afc",
+      "locator": "complete current item page; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-harley-6923",
+      "type": "official_catalog",
+      "citation": "british-library-harley-ms-6923-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002052775.json",
+      "repository_path": "source-cache/bau1376/british-library-harley-ms-6923-catalog.json",
+      "sha256": "17e25fc68dc097ec29d4deb8c363a3c733ad7978ae83d67c898b93f0b6e72d4f",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "british-library-imaging-services-terms.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete January 2026 terms page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.bl.uk/terms/imaging-services-terms-and-conditions",
+      "repository_path": "source-cache/bau1376/british-library-imaging-services-terms.html",
+      "sha256": "59ddc6ebb1dab35ed9ca406701a1fc9ed77bf32a3e09f75b36af7a63a18a66fa",
+      "locator": "complete January 2026 terms page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:bl-lansdowne-348",
+      "type": "official_catalog",
+      "citation": "british-library-lansdowne-ms-348-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current item record; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://searcharchives.bl.uk/catalog/040-002074749.json",
+      "repository_path": "source-cache/bau1376/british-library-lansdowne-ms-348-catalog.json",
+      "sha256": "3f8745ff678e78e189933125bd816bd5bd7586b116c747659cf20cc2b65e87c8",
+      "locator": "complete current item record; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:ia-bau1376-dark",
+      "type": "official_webpage",
+      "citation": "internet-archive-bau1376-umich-metadata.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete metadata API response; packet target assessment: dark_no_files_list.",
+      "accessed_on": "2026-07-17",
+      "url": "https://archive.org/metadata/bau1376.0001.001.umich.edu",
+      "repository_path": "source-cache/bau1376/internet-archive-bau1376-umich-metadata.json",
+      "sha256": "a12e602c53b61315dd9eb46effc19c4b4824cc0d7c3f246b5c458240b52acfad",
+      "locator": "complete metadata API response; target-work assessment: dark_no_files_list"
+    },
+    {
+      "id": "evidence:lightbown-1935",
+      "type": "scholarly_source",
+      "citation": "lightbown-1935-galba-harley-collation.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete five-page article; packet target assessment: scholarly_discussion_not_facsimile.",
+      "accessed_on": "2026-07-17",
+      "url": "https://ludos.leeds.ac.uk:443/R/-?func=dbin-jump-full&object_id=134487&silo_library=GEN01",
+      "repository_path": "source-cache/bau1376/lightbown-1935-galba-harley-collation.pdf",
+      "sha256": "3a10e8ba928ccc61304835422fc8791c709e259c230e9b57818e8e2b0f5f9928",
+      "locator": "complete five-page article; target-work assessment: scholarly_discussion_not_facsimile"
+    },
+    {
+      "id": "evidence:mets-morey-introduction",
+      "type": "scholarly_source",
+      "citation": "mets-prik-of-conscience-introduction.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete Introduction web page only; not complete Morey edition; packet target assessment: scholarly_discussion.",
+      "accessed_on": "2026-07-17",
+      "url": "https://metseditions.org/read/18kBGqeDCD67LU4rQizPWviyjBVbNVvG",
+      "repository_path": "source-cache/bau1376/mets-prik-of-conscience-introduction.html",
+      "sha256": "e8f7f612c1fed0cfdd660cd50242be7809ee6e1693747e48533829111423b501",
+      "locator": "complete Introduction web page only; not complete Morey edition; target-work assessment: scholarly_discussion"
+    },
+    {
+      "id": "evidence:morris-1863-scan",
+      "type": "digital_surrogate",
+      "citation": "morris-1863-pricke-of-conscience.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete 380-page edition scan; target text printed pp. 1-259; packet target assessment: complete_edited_text.",
+      "accessed_on": "2026-07-17",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf",
+      "repository_path": "source-cache/bau1376/morris-1863-pricke-of-conscience.pdf",
+      "sha256": "dc135f4ddb76af4260465a3f9755d2f88e0c0cc77db0ca266237a20cb8c3d4f6",
+      "locator": "complete 380-page edition scan; target text printed pp. 1-259; target-work assessment: complete_edited_text"
+    },
+    {
+      "id": "evidence:princeton-garrett-138-catalog",
+      "type": "official_catalog",
+      "citation": "princeton-garrett-ms-138-catalog.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current catalog JSON; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://catalog.princeton.edu/catalog/99108868793506421.json",
+      "repository_path": "source-cache/bau1376/princeton-garrett-ms-138-catalog.json",
+      "sha256": "05096379e38fa0b3fa7d36ddd0e83470848608fd8e472f2235205ef4257b381f",
+      "locator": "complete current catalog JSON; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:princeton-garrett-138-facsimile",
+      "type": "digital_surrogate",
+      "citation": "princeton-garrett-ms-138-complete-facsimile.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete 135-page grayscale microfilm surrogate of the 130-folio codex; packet target assessment: complete_work_and_whole_codex.",
+      "accessed_on": "2026-07-17",
+      "url": "https://web.archive.org/web/20230626091443id_/https://library.princeton.edu/visual_materials/mss/ME/Garrett_MS_138_OPT.pdf",
+      "repository_path": "source-cache/bau1376/princeton-garrett-ms-138-complete-facsimile.pdf",
+      "sha256": "470dcf3f78907bf5563e35597e8766b0b369b19ee4f0e193c83775fe0b7d5785",
+      "locator": "complete 135-page grayscale microfilm surrogate of the 130-folio codex; target-work assessment: complete_work_and_whole_codex",
+      "notes": [
+        "Direct inspection confirms a complete 135-page surrogate of cards, covers, and ff. 1r–130v; the 1965 permission card is embedded in this carrier."
+      ]
+    },
+    {
+      "id": "evidence:princeton-garrett-138-marc",
+      "type": "official_catalog",
+      "citation": "princeton-garrett-ms-138-marc.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current MARC JSON; packet target assessment: catalog_description_only.",
+      "accessed_on": "2026-07-17",
+      "url": "https://bibdata.princeton.edu/bibliographic/99108868793506421.json",
+      "repository_path": "source-cache/bau1376/princeton-garrett-ms-138-marc.json",
+      "sha256": "457efe6182dcea8bbf747b35f9c6869249dadf649c755b4a78d5425563326ce3",
+      "locator": "complete current MARC JSON; target-work assessment: catalog_description_only"
+    },
+    {
+      "id": "evidence:princeton-checklist",
+      "type": "official_catalog",
+      "citation": "princeton-medieval-manuscripts-checklist.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete 96-page checklist; packet target assessment: brief_catalog_entry.",
+      "accessed_on": "2026-07-17",
+      "url": "https://blogs.princeton.edu/manuscripts/wp-content/uploads/sites/7/2013/10/Checklist-Mss-PUL.pdf",
+      "repository_path": "source-cache/bau1376/princeton-medieval-manuscripts-checklist.pdf",
+      "sha256": "588a8e526cceba91e020fae9eae9f254210bff062a25f85415acc4bca89335ce",
+      "locator": "complete 96-page checklist; target-work assessment: brief_catalog_entry"
+    },
+    {
+      "id": "evidence:princeton-rights-policy",
+      "type": "official_webpage",
+      "citation": "princeton-special-collections-copyright-credit-citation.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current policy page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://library.princeton.edu/about/policies/special-collections-copyright-credit-and-citation-guidelines",
+      "repository_path": "source-cache/bau1376/princeton-special-collections-copyright-credit-citation.html",
+      "sha256": "45e80056bde8dd01dc3de58d7a1fef4a769c64b3955b1af70bee82b528c92512",
+      "locator": "complete current policy page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:princeton-digitization-policy",
+      "type": "official_webpage",
+      "citation": "princeton-special-collections-digitization-services.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete current service page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://library.princeton.edu/services/special-collections/explore-special-collections",
+      "repository_path": "source-cache/bau1376/princeton-special-collections-digitization-services.html",
+      "sha256": "cd7783af34f3e52a47580d2ae6a9daab42f2ec1d5e78254dd3eb269600852666",
+      "locator": "complete current service page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:trudel-1999",
+      "type": "scholarly_source",
+      "citation": "trudel-1999-speculum-huius-vite-volume-2.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete thesis volume 2; packet target assessment: scholarly_discussion.",
+      "accessed_on": "2026-07-17",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A4399e35a-e138-4622-9d45-3f9862633706/files/mc5a16f96b7b08cc8647966403ed15f49",
+      "repository_path": "source-cache/bau1376/trudel-1999-speculum-huius-vite-volume-2.pdf",
+      "sha256": "97eacc88a598fad48bccf50003d482be275ef29ea1ed9a421f34ec9e37b05265",
+      "locator": "complete thesis volume 2; target-work assessment: scholarly_discussion"
+    },
+    {
+      "id": "evidence:17-usc-303",
+      "type": "law",
+      "citation": "us-code-title17-section303.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete official section page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section303",
+      "repository_path": "source-cache/bau1376/us-code-title17-section303.html",
+      "sha256": "66836bc8cefe454340c0624acfc0c0f46dc48b5b287ea96e38df658f81712a05",
+      "locator": "complete official section page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:17-usc-304",
+      "type": "law",
+      "citation": "us-code-title17-section304.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete official section page; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title17-section304",
+      "repository_path": "source-cache/bau1376/us-code-title17-section304.html",
+      "sha256": "f2ac81933ec1aa4129d02f0682e2f627ee73c6f86e538df44060b75549009104",
+      "locator": "complete official section page; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:usco-circular-15a",
+      "type": "law",
+      "citation": "us-copyright-office-circular-15a.pdf",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete four-page circular; packet target assessment: absent.",
+      "accessed_on": "2026-07-17",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "repository_path": "source-cache/bau1376/us-copyright-office-circular-15a.pdf",
+      "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+      "locator": "complete four-page circular; target-work assessment: absent"
+    },
+    {
+      "id": "evidence:washington-poc",
+      "type": "scholarly_source",
+      "citation": "washington-prick-of-conscience-project.html",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete project landing page; packet target assessment: project_description_and_witness_list.",
+      "accessed_on": "2026-07-17",
+      "url": "https://staff.washington.edu/stacy/public/POC/index.html",
+      "repository_path": "source-cache/bau1376/washington-prick-of-conscience-project.html",
+      "sha256": "a0576c71f537b71acd10d0a4a6a69e6c4cbdb24351c5cc38f5d5dbcc8f10137c",
+      "locator": "complete project landing page; target-work assessment: project_description_and_witness_list"
+    },
+    {
+      "id": "evidence:bl-add-22283-cdx",
+      "type": "official_webpage",
+      "citation": "wayback-british-library-add-ms-22283-proxy-cdx.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete CDX result for archived viewer tiles under first-image prefix; packet target assessment: one_1471_byte_tile_only_not_cached.",
+      "accessed_on": "2026-07-17",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.bl.uk/manuscripts/Proxy.ashx%3Fsrc%3Dadd_ms_22283_fs001r_files%2F%2A&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aimage%2Fjpeg&collapse=digest",
+      "repository_path": "source-cache/bau1376/wayback-british-library-add-ms-22283-proxy-cdx.json",
+      "sha256": "2822ddeab58580a683e0fa4bd0ebcb4c336620fc91935add3f4b3a8da018b4db",
+      "locator": "complete CDX result for archived viewer tiles under first-image prefix; target-work assessment: one_1471_byte_tile_only_not_cached"
+    },
+    {
+      "id": "evidence:princeton-garrett-138-cdx",
+      "type": "official_webpage",
+      "citation": "wayback-princeton-garrett-ms-138-cdx.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete exact-URL CDX result; packet target assessment: metadata_for_complete_facsimile.",
+      "accessed_on": "2026-07-17",
+      "url": "https://web.archive.org/cdx/search/cdx?url=library.princeton.edu%2Fvisual_materials%2Fmss%2FME%2FGarrett_MS_138_OPT.pdf&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode%3A200&filter=mimetype%3Aapplication%2Fpdf&collapse=digest",
+      "repository_path": "source-cache/bau1376/wayback-princeton-garrett-ms-138-cdx.json",
+      "sha256": "fb3ec6e211b143d5dbf5ce28425bf592fee6c81583bbdf2990a1ee83c8038ab2",
+      "locator": "complete exact-URL CDX result; target-work assessment: metadata_for_complete_facsimile"
+    },
+    {
+      "id": "evidence:commons-morris-extmetadata",
+      "type": "official_webpage",
+      "citation": "wikimedia-commons-morris-1863-extmetadata.json",
+      "summary": "Cached and fixity-verified source. Packet coverage: complete API response for exact Commons file; packet target assessment: metadata_for_complete_edition_scan.",
+      "accessed_on": "2026-07-17",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Csha1%7Cmediatype%7Cextmetadata&titles=File%3AThe_Pricke_of_Conscience_%28Stimulus_Conscientiae%29%3B_a_Northumbrian_Poem%2C_copied_and_edited_from_Manuscripts_in_the_Library_of_the_British_Museum_%28IA_dli.granth.72675%29.pdf",
+      "repository_path": "source-cache/bau1376/wikimedia-commons-morris-1863-extmetadata.json",
+      "sha256": "682ab701bcbbd4b8365f9ebb1cf2f2a0e540232dd66c7f2ec10ce24db874f042",
+      "locator": "complete API response for exact Commons file; target-work assessment: metadata_for_complete_edition_scan"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:bau1376-h106-identity",
+      "question": "What present physical object, if any, corresponds to the manuscript Morris cited as H106?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Reconcile Morris's siglum through historical British Museum catalogs, accession and renumbering evidence, and reading-level comparison before adding any same-as or direct current-shelfmark edge.",
+        "Treat the current BL Harley MS 106 Latin theological codex and Washington's Latin prose loci as conflict evidence only until resolved."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:morris-1863-scan",
+        "evidence:bl-harley-106",
+        "evidence:washington-poc"
+      ]
+    },
+    {
+      "id": "question:bau1376-princeton-rights-conflict",
+      "question": "Does Princeton's current no-institutional-permission-required policy supersede the publication-permission instruction on the archived facsimile's embedded 1965 microfilm card?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask Princeton Special Collections for a carrier-specific written interpretation before redistributing the Garrett facsimile itself."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:princeton-rights-policy",
+        "evidence:princeton-garrett-138-facsimile"
+      ]
+    },
+    {
+      "id": "question:bau1376-umich-tiffs",
+      "question": "Can the historical 372-TIFF U-M page-image set be recovered with an image-layer reuse statement?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Ask U-M for the archived page-image package and a layer-specific rights statement; do not treat the dark Internet Archive record as a file delivery."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-live-item",
+        "evidence:ia-bau1376-dark"
+      ]
+    },
+    {
+      "id": "question:bau1376-bl-reproductions",
+      "question": "What whole-codex imaging scope, condition limits, color availability, price, and reuse permission would the BL offer for each identified witness?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Request item-specific quotes only as needed, naming the complete codex and separate target locus."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:bl-digitisation-service",
+        "evidence:bl-rate-card",
+        "evidence:bl-imaging-terms"
+      ]
+    },
+    {
+      "id": "question:bau1376-mets-license",
+      "question": "What explicit reuse license, if any, applies to the METS Prik of Conscience Introduction and wider edition?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Seek a resource-level license; do not infer redistribution rights from the Open Access label alone."
+      ],
+      "last_checked": "2026-07-17",
+      "evidence_ids": [
+        "evidence:mets-morey-introduction"
+      ]
+    }
+  ]
+}

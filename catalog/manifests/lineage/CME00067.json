@@ -1,0 +1,792 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00067",
+  "work_id": "CME00067",
+  "title": "Magnificencia Ecclesie",
+  "primary_subject": "artifact:general-corpus:CME00067",
+  "record_status": "partial",
+  "created": "2026-07-12",
+  "last_reviewed": "2026-07-12",
+  "summary": "The repository XML is copied from University of Michigan CME item CME00067 and encodes the full textual matter of Henry Noble MacCracken's twelve-page 1909 PMLA article, including his introduction, a seventeen-line Longfellow quotation, the complete 312-line Middle English poem, notes, explicit, and signature. MacCracken transcribed the poem from the sole witness listed in the consulted register, Trinity College Cambridge MS R.3.21, ff. 285r-287r. The complete 686-canvas Trinity IIIF provider object is cached at 1600-pixel width, with the poem mapped only to canvases 573-577; f. 287v begins adjacent works. A complete 952-page Harvard/Google scan of the 1909 PMLA volume and complete PDF, OCR, structured OCR, and scan-data derivatives are also cached, as is the complete 1920 Brown register volume containing entry 459.",
+  "languages": ["enm", "lat", "eng"],
+  "review_notes": [
+    "Whole-object caching is used throughout: the Trinity bundle contains all 686 canvases exposed by its manifest, the PMLA PDF contains all 952 provider pages including bindings, issue wrappers, advertisements, and blanks, and the Brown PDF contains the complete 498-page provider object.",
+    "The work portion is a mapping inside each complete object, never a cropped substitute: the manuscript poem is ff. 285r-287r, Trinity canvases 573-577, while the MacCracken article is printed pp. 687-698 and PDF pp. 743-754 in the complete PMLA scan.",
+    "Complete means all provider-exposed canvases or pages. Trinity exposes covers, boards, leaves, flyleaves, and envelope matter but no distinct spine, head, tail, or fore-edge canvases, so its IIIF object is not a complete physical-surface study.",
+    "The medieval poem, MacCracken's editorial article, the University of Michigan encoding, provider image derivatives, and access or publication policies are modeled as distinct rights layers.",
+    "MacCracken's Westminster localization and rejection of Lydgate are edition-level arguments; the manifest does not conflate manuscript production, later codex assembly, ownership, and medieval work composition."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00067",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for CME00067",
+      "description": "The XML artifact used by this repository's publication workflow through the pinned Kyvero-Press/CME submodule.",
+      "identifiers": [
+        {"scheme": "CME/UMDL", "value": "CME00067"},
+        {"scheme": "git-blob", "value": "731c2a2d5f0b3c8e69d3f3a3015a4dc3463af0d8"}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00067.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "731c2a2d5f0b3c8e69d3f3a3015a4dc3463af0d8",
+        "sha256": "6168b1d5c310178d02a6aa08baec1fdd98978dfbee8f8b93d5c2bb5630c86fba"
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "encoding:umich-cme:CME00067",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME item CME00067",
+      "description": "A public SGML/XML-derived encoding of MacCracken's complete PMLA article text. It distinguishes the modern introduction from the medieval poem while retaining the article's Longfellow quotation, source headnotes, footnotes, explicit, and author signature.",
+      "identifiers": [
+        {"scheme": "UMDL handle", "value": "CME00067", "uri": "https://name.umdl.umich.edu/CME00067"},
+        {"scheme": "BIBNO", "value": "CME00067"}
+      ],
+      "creator_ids": ["agent:umich"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:xml", "evidence:umich"]
+    },
+    {
+      "id": "edition:maccracken:pmla:1909",
+      "type": "scholarly_edition",
+      "label": "Henry Noble MacCracken's Magnificencia Ecclesie",
+      "description": "The immediate source edition and article for CME00067. MacCracken introduces and transcribes the anonymous poem from Trinity R.3.21, rejects Lydgate's authorship, and supplies a local note about a disordered stanza and a conjecturally missing rhyme word.",
+      "identifiers": [
+        {"scheme": "DOI", "value": "10.2307/456803", "uri": "https://doi.org/10.2307/456803"}
+      ],
+      "creator_ids": ["agent:henry-noble-maccracken"],
+      "date_statements": [
+        {"label": "publication", "value": "December 1909", "normalized": "1909-12", "certainty": "high", "evidence_ids": ["evidence:maccracken-article", "evidence:cambridge-core-article"]}
+      ],
+      "bibliographic": {
+        "citation": "Henry Noble MacCracken, 'Magnificencia Ecclesie,' PMLA 24, no. 4 (December 1909): 687-698, https://doi.org/10.2307/456803.",
+        "title": "Magnificencia Ecclesie",
+        "container_title": "PMLA",
+        "volume": "24, no. 4",
+        "publisher": "Modern Language Association of America",
+        "publication_place": "Baltimore",
+        "date": "December 1909",
+        "pages": "687-698",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:cambridge-core-article", "evidence:xml"]
+    },
+    {
+      "id": "witness:trinity:R.3.21",
+      "type": "manuscript_witness",
+      "label": "Trinity College Cambridge MS R.3.21",
+      "alternate_labels": ["James MS 601", "Miscellaneous Poems in English"],
+      "description": "A fifteenth-century composite paper manuscript of miscellaneous Latin and Middle English poems. Magnificencia Ecclesie begins at f. 285r and ends at f. 287r; the next cataloged works begin on f. 287v. The inherited contents heading attributes the poem to Lydgate, but that attribution is disputed and the work is cataloged as anonymous.",
+      "identifiers": [
+        {"scheme": "Trinity shelfmark", "value": "R.3.21", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21"},
+        {"scheme": "James number", "value": "601"}
+      ],
+      "date_statements": [
+        {"label": "manuscript production", "value": "fifteenth century", "certainty": "high", "evidence_ids": ["evidence:trinity-catalog"], "notes": "The official whole-codex date is broader than work-specific modern dating and does not by itself date composition."}
+      ],
+      "holding": {
+        "institution_id": "agent:trinity",
+        "shelfmark": "R.3.21",
+        "historical_designations": ["James 601"],
+        "catalog_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21",
+        "notes": "Given by George Wilmer; formerly owned by John Stow. The official catalog separately records the poem as item 60 at f. 285."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "320 folios; target ff. 285r-287r",
+        "format": "Composite volume of miscellaneous poems in Latin and Middle English",
+        "dimensions": "28 x 21.5 cm",
+        "notes": [
+          "The IIIF provider sequence exposes 686 canvases from the front cover through envelope verso.",
+          "The provider manifest does not expose distinct spine, head, tail, or fore-edge photographs."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif", "evidence:trinity-visual"]
+    },
+    {
+      "id": "facsimile:trinity:R.3.21-iiif",
+      "type": "facsimile",
+      "label": "Complete Trinity R.3.21 IIIF provider object",
+      "description": "The full 686-canvas color sequence exposed by Trinity's IIIF Presentation 2 manifest, from front cover through envelope verso. The poem is mapped to canvases 573-577; f. 287v on canvas 578 is adjacent content, not part of the work.",
+      "identifiers": [
+        {"scheme": "IIIF Presentation manifest", "value": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/manifest.json", "uri": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/manifest.json"}
+      ],
+      "creator_ids": ["agent:trinity"],
+      "reproduction_format": "686 IIIF color canvases; cached as the exact manifest, inventory, and 1600-pixel JPEG bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual"]
+    },
+    {
+      "id": "facsimile:pmla:1909-harvard-google",
+      "type": "facsimile",
+      "label": "Complete Harvard/Google scan of PMLA volume 24 (1909)",
+      "description": "A 952-page bound-volume scan exposed by Internet Archive, retaining covers, volume and issue title matter, all four issues, advertisements, blanks, and binding context. MacCracken's article occupies PDF pp. 743-754.",
+      "identifiers": [
+        {"scheme": "Internet Archive", "value": "PMLA1909", "uri": "https://archive.org/details/PMLA1909"}
+      ],
+      "creator_ids": ["agent:google", "agent:internet-archive", "agent:arlima"],
+      "reproduction_format": "952-page Google Books PDF plus OCR text, page-structured OCR XML, and scan data",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:pmla-surrogate", "evidence:pmla-visual"]
+    },
+    {
+      "id": "catalog:brown:register:1920",
+      "type": "catalog_description",
+      "label": "Brown, Register of Middle English Religious and Didactic Verse, Part II",
+      "description": "Carleton Brown's complete 1920 register volume. Entry 459 gives the incipit and rubric for Magnificencia Ecclesie, counts thirty-nine eight-line stanzas, lists Trinity Cambridge 601 at f. 285a as the witness, and cites MacCracken's PMLA edition.",
+      "identifiers": [
+        {"scheme": "Brown Register", "value": "459"},
+        {"scheme": "Internet Archive", "value": "registerofmiddle02brow", "uri": "https://archive.org/details/registerofmiddle02brow"}
+      ],
+      "creator_ids": ["agent:carleton-brown"],
+      "date_statements": [
+        {"label": "publication", "value": "1920", "normalized": "1920", "certainty": "high", "evidence_ids": ["evidence:brown-register"]}
+      ],
+      "bibliographic": {
+        "citation": "Carleton Brown, A Register of Middle English Religious & Didactic Verse, Part II (Oxford: Bibliographical Society at the University Press, 1920), 78, entry 459.",
+        "title": "A Register of Middle English Religious & Didactic Verse, Part II",
+        "publisher": "Bibliographical Society at the University Press",
+        "publication_place": "Oxford",
+        "date": "1920",
+        "pages": "entry 459 on p. 78",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:brown-register", "evidence:brown-visual"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:umich", "type": "organization", "name": "University of Michigan Library", "urls": ["https://www.lib.umich.edu/"], "evidence_ids": ["evidence:umich"]},
+    {"id": "agent:henry-noble-maccracken", "type": "person", "name": "Henry Noble MacCracken", "alternate_names": ["H. N. MacCracken"], "evidence_ids": ["evidence:maccracken-article", "evidence:cambridge-core-article"]},
+    {"id": "agent:mla", "type": "organization", "name": "Modern Language Association of America", "urls": ["https://www.mla.org/"], "evidence_ids": ["evidence:maccracken-article", "evidence:cambridge-core-article"]},
+    {"id": "agent:trinity", "type": "organization", "name": "Trinity College Cambridge Library", "urls": ["https://www.trin.cam.ac.uk/library/"], "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-reproduction"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:pmla-surrogate", "evidence:brown-register"]},
+    {"id": "agent:google", "type": "organization", "name": "Google Books", "urls": ["https://books.google.com/"], "evidence_ids": ["evidence:pmla-surrogate"]},
+    {"id": "agent:harvard", "type": "organization", "name": "Harvard University Library", "evidence_ids": ["evidence:pmla-surrogate"]},
+    {"id": "agent:arlima", "type": "organization", "name": "ARLIMA", "urls": ["https://www.arlima.net/"], "evidence_ids": ["evidence:pmla-surrogate"]},
+    {"id": "agent:cambridge-core", "type": "organization", "name": "Cambridge University Press & Assessment", "urls": ["https://www.cambridge.org/core/"], "evidence_ids": ["evidence:cambridge-core-article"]},
+    {"id": "agent:carleton-brown", "type": "person", "name": "Carleton Brown", "evidence_ids": ["evidence:brown-register"]},
+    {"id": "agent:bibliographical-society", "type": "organization", "name": "The Bibliographical Society", "evidence_ids": ["evidence:brown-register"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-umich",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00067",
+      "object": "encoding:umich-cme:CME00067",
+      "scope": {
+        "subject": {"kind": "whole", "description": "checked-in CME00067 XML"},
+        "object": {"kind": "whole", "description": "U-M CME00067 encoded article text"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:umich"]}
+    },
+    {
+      "id": "relation:umich-encoded-from-maccracken",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00067",
+      "object": "edition:maccracken:pmla:1909",
+      "scope": {
+        "subject": {"kind": "whole", "description": "complete encoded article text"},
+        "object": {"kind": "whole", "description": "article on printed pp. 687-698", "locators": ["PMLA 24 (1909), pp. 687-698", "complete-scan PDF pp. 743-754"]},
+        "notes": "The encoding preserves the article's title, introduction, Longfellow quotation, medieval text, attribution footnote, two callouts to a single reconstruction footnote, explicit, and MacCracken signature; journal running matter and page-image layout are not the encoded object."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:xml", "evidence:maccracken-article", "evidence:pmla-visual"]}
+    },
+    {
+      "id": "relation:maccracken-transcribes-trinity",
+      "type": "transcribes",
+      "subject": "edition:maccracken:pmla:1909",
+      "object": "witness:trinity:R.3.21",
+      "scope": {
+        "subject": {"kind": "part", "description": "Middle English edition on printed pp. 688-698"},
+        "object": {"kind": "part", "description": "complete poem", "locators": ["ff. 285r-287r", "catalog fols. 285a-287a", "IIIF canvases 573-577"]},
+        "notes": "Printed p. 687 and part of p. 688 are MacCracken's introduction. The poem begins on f. 285r and ends on f. 287r; f. 287v is adjacent content."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:maccracken-article", "evidence:trinity-catalog", "evidence:trinity-visual"]}
+    },
+    {
+      "id": "relation:trinity-iiif-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:trinity:R.3.21-iiif",
+      "object": "witness:trinity:R.3.21",
+      "scope": {
+        "subject": {"kind": "whole", "description": "all 686 provider canvases"},
+        "object": {"kind": "part", "description": "all provider-exposed manuscript, binding, and enclosure views; separate spine and edge photography absent"},
+        "notes": "The work portion is ff. 285r-287r on canvases 573-577, not the full manuscript object."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual"]}
+    },
+    {
+      "id": "relation:pmla-scan-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:pmla:1909-harvard-google",
+      "object": "edition:maccracken:pmla:1909",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "article images within the complete 952-page scan", "locators": ["PDF pp. 743-754", "Internet Archive leaf views n742-n753"]},
+        "object": {"kind": "whole", "description": "complete article, printed pp. 687-698"},
+        "notes": "The facsimile entity is the complete provider volume; this relation maps only the article portion inside it."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:pmla-surrogate", "evidence:pmla-visual"]}
+    },
+    {
+      "id": "relation:brown-describes-trinity",
+      "type": "describes",
+      "subject": "catalog:brown:register:1920",
+      "object": "witness:trinity:R.3.21",
+      "scope": {
+        "subject": {"kind": "part", "description": "entry 459 on printed p. 78", "locators": ["PDF p. 108", "printed p. 78", "entry 459"]},
+        "object": {"kind": "part", "description": "Magnificencia Ecclesie at f. 285a"},
+        "notes": "The register lists only this witness, but the present record leaves the post-1920 witness census open."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:brown-register", "evidence:brown-visual"]}
+    },
+    {
+      "id": "relation:brown-cites-maccracken",
+      "type": "cites",
+      "subject": "catalog:brown:register:1920",
+      "object": "edition:maccracken:pmla:1909",
+      "scope": {
+        "subject": {"kind": "part", "description": "entry 459 bibliography"},
+        "object": {"kind": "whole", "description": "MacCracken's article and edition on pp. 687-698"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:brown-register", "evidence:maccracken-article"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:artifact",
+      "entity": "artifact:general-corpus:CME00067",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "repository_path": "CME/source/CME_phase_3/CME00067.xml",
+      "cost": "not_applicable",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:xml"]
+    },
+    {
+      "id": "access:umich",
+      "entity": "encoding:umich-cme:CME00067",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "University of Michigan Middle English Corpus item page",
+      "url": "https://name.umdl.umich.edu/CME00067",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/"],
+      "cost": "free",
+      "format": "HTML/SGML-derived encoded text",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "access:maccracken-cambridge-core",
+      "entity": "edition:maccracken:pmla:1909",
+      "provider_id": "agent:cambridge-core",
+      "resource_kind": "download",
+      "status": "subscription_required",
+      "access_method": "Public article metadata and extract; provider PDF access requires an entitled account or purchase",
+      "url": "https://www.cambridge.org/core/journals/pmla/article/abs/magnificencia-ecclesie/20C87119B5502B8779CC0DABB011D67B",
+      "alternate_urls": ["https://doi.org/10.2307/456803"],
+      "cost": "fee",
+      "format": "HTML metadata and PDF",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cambridge-core-article"]
+    },
+    {
+      "id": "access:pmla-ia",
+      "entity": "facsimile:pmla:1909-harvard-google",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item page, leaf viewer, and exact derivative downloads",
+      "url": "https://archive.org/details/PMLA1909",
+      "alternate_urls": [
+        "https://archive.org/download/PMLA1909/PMLA_1909.pdf",
+        "https://archive.org/download/PMLA1909/PMLA_1909_djvu.txt",
+        "https://archive.org/download/PMLA1909/PMLA_1909_djvu.xml",
+        "https://archive.org/download/PMLA1909/PMLA_1909_scandata.xml"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete PMLA volume 24 (1909) Harvard/Google facsimile PDF",
+          "path": "source-cache/CME00067/pmla-volume-24-1909-complete.pdf",
+          "source_url": "https://archive.org/download/PMLA1909/PMLA_1909.pdf",
+          "sha256": "9838df599270c346a4fbd837403f3f978683fb3c69a39ea4f9ad0fdb86afb9b1",
+          "bytes": 236803348,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "MacCracken's complete article within the complete PMLA volume",
+            "locators": ["PDF pp. 743-754", "printed pp. 687-698", "Internet Archive leaf views n742-n753"],
+            "start_url": "https://archive.org/details/PMLA1909/page/n742/mode/1up",
+            "end_url": "https://archive.org/details/PMLA1909/page/n753/mode/1up",
+            "notes": ["The complete scan also retains all other volume matter, issue wrappers, advertisements, blanks, covers, and binding context."]
+          },
+          "notes": ["Visual inspection confirmed the first and last bound views, volume title page, issue wrapper, first and last article pages, and the article page crosswalk."]
+        },
+        {
+          "label": "Complete PMLA volume 24 (1909) OCR text",
+          "path": "source-cache/CME00067/pmla-volume-24-1909-ocr.txt",
+          "source_url": "https://archive.org/download/PMLA1909/PMLA_1909_djvu.txt",
+          "sha256": "fdf4ba82ecffc9a70a72d57647258bc20078520ac4ada3c313fa104a723fa3e5",
+          "bytes": 1770556,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "OCR for MacCracken's article", "locators": ["OCR page objects corresponding to PDF pp. 743-754 and printed pp. 687-698"]},
+          "notes": ["OCR is retained as a search aid, not as authority for Middle English readings."]
+        },
+        {
+          "label": "Complete PMLA volume 24 (1909) page-structured OCR XML",
+          "path": "source-cache/CME00067/pmla-volume-24-1909-djvu.xml",
+          "source_url": "https://archive.org/download/PMLA1909/PMLA_1909_djvu.xml",
+          "sha256": "e86aede147ad8b7e440dc2b664bb0961e0b39326902cccb68568620e5e542aab",
+          "bytes": 18925638,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {"label": "Structured OCR for MacCracken's article", "locators": ["OBJECT elements 743-754; printed pp. 687-698"]}
+        },
+        {
+          "label": "PMLA volume 24 (1909) scan data",
+          "path": "source-cache/CME00067/pmla-volume-24-1909-scandata.xml",
+          "source_url": "https://archive.org/download/PMLA1909/PMLA_1909_scandata.xml",
+          "sha256": "c3629d54113e3fa038bba9d5a591b9de0138df85b6cb4b589b505d9464c33cd1",
+          "bytes": 285711,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-12",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "952-page PDF, OCR TXT, DjVu XML, and scan data",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:pmla-surrogate", "evidence:pmla-visual"]
+    },
+    {
+      "id": "access:trinity-iiif",
+      "entity": "facsimile:trinity:R.3.21-iiif",
+      "provider_id": "agent:trinity",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Trinity catalog viewer, IIIF Presentation manifest, and Image API",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21",
+      "alternate_urls": [
+        "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/manifest.json",
+        "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/UV"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Trinity R.3.21 IIIF facsimile bundle at 1600 pixels",
+          "path": "source-cache/CME00067/trinity-r-3-21-complete-iiif-1600px.zip",
+          "source_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/manifest.json",
+          "sha256": "960c3c9dc1a686c6b7202c77d6bf8dc0612114aa8f03ea70f19523265770631a",
+          "bytes": 1515443579,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 686,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Magnificencia Ecclesie within the complete manuscript provider object",
+            "locators": ["manuscript ff. 285r-287r", "catalog fols. 285a-287a", "IIIF canvases 573-577 of 686", "ZIP images/000573.jpg-images/000577.jpg"],
+            "start_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/UV#?c=0&m=0&s=0&cv=572",
+            "end_url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/UV#?c=0&m=0&s=0&cv=576",
+            "notes": ["Canvas 578 is f. 287v and begins adjacent works; it is retained only as complete-object context."]
+          },
+          "notes": [
+            "ZIP contains the exact provider manifest, an inventory, and all 686 canvas images.",
+            "Effective Image API profiles are 1600, for 684 canvases and full at native 1127 x 5708 pixels for back-stub canvases 649-650; target canvases 573-578 are 1600 x 2158 pixels.",
+            "Coverage is complete for the provider inventory but omits physical spine and edge views not offered by the manifest."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 and Image API 2",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif", "evidence:trinity-visual"],
+      "notes": ["The exact IIIF object licenses attributed noncommercial sharing and adaptation under CC BY-NC 4.0. Commercial reuse, print-on-demand distribution, or uses outside that license require separate authorization; Trinity's broader publication wording is recorded as a distinct policy ambiguity."]
+    },
+    {
+      "id": "access:trinity-physical",
+      "entity": "witness:trinity:R.3.21",
+      "provider_id": "agent:trinity",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Contact the Wren Library about research access or missing physical-surface photography",
+      "url": "https://www.trin.cam.ac.uk/library/manuscripts/",
+      "alternate_urls": ["https://www.trin.cam.ac.uk/library/wren-digital-library/"],
+      "contact": "wren.library@trin.cam.ac.uk",
+      "cost": "unknown",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-reproduction"]
+    },
+    {
+      "id": "access:brown-ia",
+      "entity": "catalog:brown:register:1920",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item page, leaf viewer, and exact PDF download",
+      "url": "https://archive.org/details/registerofmiddle02brow",
+      "alternate_urls": ["https://archive.org/download/registerofmiddle02brow/registerofmiddle02brow.pdf"],
+      "local_copies": [
+        {
+          "label": "Complete Brown Register Part II facsimile PDF",
+          "path": "source-cache/CME00067/brown-robbins-register-volume-2-complete.pdf",
+          "source_url": "https://archive.org/download/registerofmiddle02brow/registerofmiddle02brow.pdf",
+          "sha256": "20da3224b0bafd263b3b699c9511498bfd5e20c697077d8a707914374fb9f359",
+          "bytes": 29560106,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-12",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Register entry for Magnificencia Ecclesie within the complete volume",
+            "locators": ["PDF p. 108", "printed p. 78", "entry 459"],
+            "start_url": "https://archive.org/details/registerofmiddle02brow/page/n107/mode/1up",
+            "end_url": "https://archive.org/details/registerofmiddle02brow/page/n107/mode/1up"
+          },
+          "notes": ["Visual inspection confirmed the title page, entry 459, final printed matter, and first and last bound views."]
+        }
+      ],
+      "cost": "free",
+      "format": "498-page PDF",
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:brown-register", "evidence:brown-visual"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:medieval-poem",
+      "entity": "edition:maccracken:pmla:1909",
+      "component": "underlying anonymous fifteenth-century Middle English poem",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The anonymous medieval work predates modern copyright terms by centuries; this conclusion concerns the underlying poem, not modern editions, encodings, photographs, or provider terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:trinity-catalog", "evidence:us-copyright-duration", "evidence:uk-copyright-duration"]
+    },
+    {
+      "id": "rights:maccracken-article-us",
+      "entity": "edition:maccracken:pmla:1909",
+      "component": "MacCracken's 1909 article, introduction, notes, and edition text as published",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The article was published in the United States in 1909, and the maximum federal term for that publication has expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:cambridge-core-article", "evidence:us-copyright-duration"]
+    },
+    {
+      "id": "rights:maccracken-article-outside-us",
+      "entity": "edition:maccracken:pmla:1909",
+      "access_id": "access:maccracken-cambridge-core",
+      "component": "MacCracken's article and editorial contributions",
+      "jurisdiction": "Outside the United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-12",
+      "basis": "Copyright duration and publication history vary by jurisdiction, and Cambridge Core currently displays a 1909 MLA copyright notice. No worldwide public-domain conclusion is made.",
+      "asserted_by_id": "agent:cambridge-core",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:cambridge-core-article"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:CME00067",
+      "access_id": "access:umich",
+      "component": "University of Michigan Middle English Corpus digital encoding",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The collection describes its manually keyed corpus editions as public-domain source texts and labels the collection No Copyright - United States; this provider statement is distinct from rights in scans or later transformations.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich"]
+    },
+    {
+      "id": "rights:pmla-provider-mark",
+      "entity": "facsimile:pmla:1909-harvard-google",
+      "access_id": "access:pmla-ia",
+      "component": "Internet Archive provider object and Harvard/Google page-image derivative",
+      "jurisdiction": "Worldwide provider assertion",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-12",
+      "basis": "Internet Archive applies the Public Domain Mark 1.0 to this provider object. The mark records the provider's no-known-copyright assertion and is not a license or a substitute for jurisdiction-specific analysis.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:pmla-surrogate"]
+    },
+    {
+      "id": "rights:trinity-iiif-images",
+      "entity": "facsimile:trinity:R.3.21-iiif",
+      "access_id": "access:trinity-iiif",
+      "component": "Trinity IIIF images and provider manifest",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-12",
+      "basis": "The exact IIIF manifest and item page state CC BY-NC 4.0 with attribution to Trinity College Cambridge, affirmatively licensing attributed noncommercial sharing and adaptation. Trinity's broader Wren policy separately permits downloads for personal study and asks researchers to apply for publication permission.",
+      "asserted_by_id": "agent:trinity",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-iiif", "evidence:trinity-reproduction"],
+      "notes": ["The license and broader publication-permission wording are recorded separately rather than harmonized without an item-specific institutional interpretation.", "Attributed noncommercial reuse within CC BY-NC 4.0 is licensed; commercial reuse, print-on-demand distribution, and uses outside the license require separate permission.", "Caching the bundle does not grant rights beyond the exact license and applicable provider terms."]
+    },
+    {
+      "id": "rights:brown-register-us",
+      "entity": "catalog:brown:register:1920",
+      "access_id": "access:brown-ia",
+      "component": "Brown's 1920 register text as published",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-12",
+      "basis": "The volume was published in 1920, and the maximum federal term for that publication has expired.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:brown-register", "evidence:us-copyright-duration"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:CME00067",
+      "practice": "selection",
+      "source_feature": "MacCracken's complete twelve-page PMLA article",
+      "representation": "two top-level divisions for the introduction and poem, with page and manuscript-folio milestones",
+      "description": "The encoding represents the entire article's textual matter rather than extracting only the medieval poem. It keeps MacCracken's introduction, Longfellow quotation, source headnotes, poem, footnotes, explicit, and signature, and marks the structural boundary between modern paratext and medieval work.",
+      "scope": "PMLA printed pp. 687-698",
+      "confidence": "high",
+      "evidence_ids": ["evidence:xml", "evidence:maccracken-article", "evidence:pmla-visual"]
+    },
+    {
+      "id": "practice:maccracken-collation",
+      "entity": "edition:maccracken:pmla:1909",
+      "practice": "collation",
+      "source_feature": "single identified manuscript witness with a locally disordered stanza",
+      "representation": "diplomatic-leaning edited transcription with manuscript-folio milestones and a reconstruction note",
+      "description": "MacCracken names Trinity R.3.21 as his source. At one stanza he reports the scribe's marginal 'a,' proposes the order 1, 2, 8, 3, 4, 5, 6, 7, and suggests that line 2 originally ended in a word such as 'vertuous.' The print and encoding retain the manuscript order while attaching the same note at two callout locations; the repeated encoded note text is not evidence of two distinct notes.",
+      "scope": "Middle English poem on printed pp. 688-698",
+      "confidence": "high",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:xml", "evidence:trinity-visual"]
+    },
+    {
+      "id": "practice:maccracken-expansions",
+      "entity": "edition:maccracken:pmla:1909",
+      "practice": "abbreviation_expansion",
+      "source_feature": "manuscript abbreviations in the Latin rubric and Middle English text",
+      "representation": "expanded letters are distinguished typographically in italics within otherwise roman words",
+      "description": "Comparison of the printed article, encoding, and target manuscript pages shows MacCracken using italic letter sequences within words to signal supplied expansions. Italics also mark Latin passages and titles, so individual italic spans must be interpreted in context rather than treated mechanically as expansions.",
+      "scope": "rubric, Latin material, and poem on printed pp. 688-698",
+      "confidence": "high",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:xml", "evidence:trinity-visual"]
+    },
+    {
+      "id": "practice:umich-abbreviation-markup",
+      "entity": "encoding:umich-cme:CME00067",
+      "practice": "abbreviation_expansion",
+      "source_feature": "MacCracken's typographic distinction between manuscript letters and editorial expansions",
+      "representation": "HI elements with REND italic preserve print typography; capitalization inside mixed roman/italic sequences is retained",
+      "description": "The encoding preserves MacCracken's expansion typography through italic HI elements rather than asserting a normalized reading layer. Because the same markup also represents titles, Latin quotations, and emphasis, context remains necessary.",
+      "scope": "complete encoded article",
+      "confidence": "high",
+      "evidence_ids": ["evidence:xml", "evidence:maccracken-article"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:xml",
+      "type": "repository_file",
+      "citation": "General Corpus source XML for CME00067.",
+      "repository_path": "CME/source/CME_phase_3/CME00067.xml",
+      "locator": "TEMPHEAD; IDG; title and introduction DIV1; poem DIV1; HEADNOTE, PB, MILESTONE, LG, L, NOTE, HI, TRAILER, CLOSER, and SIGNED elements",
+      "summary": "Confirms identifiers, immediate source article, full encoded selection boundary, article and poem structure, thirty-nine eight-line poem stanzas, source pagination and foliation, editorial notes and typography, explicit, and signature.",
+      "accessed_on": "2026-07-12",
+      "sha256": "6168b1d5c310178d02a6aa08baec1fdd98978dfbee8f8b93d5c2bb5630c86fba"
+    },
+    {
+      "id": "evidence:umich",
+      "type": "official_webpage",
+      "citation": "University of Michigan Middle English Corpus, CME00067 and collection information.",
+      "url": "https://name.umdl.umich.edu/CME00067",
+      "alternate_urls": ["https://quod.lib.umich.edu/c/cme/"],
+      "summary": "Provides the public item identity and access route. The collection describes manually keyed editions based on public-domain sources and displays the No Copyright - United States rights statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:maccracken-article",
+      "type": "edition_statement",
+      "citation": "Henry Noble MacCracken, 'Magnificencia Ecclesie,' PMLA 24, no. 4 (December 1909): 687-698.",
+      "url": "https://archive.org/details/PMLA1909/page/n742/mode/1up",
+      "alternate_urls": ["https://doi.org/10.2307/456803", "https://archive.org/download/PMLA1909/PMLA_1909.pdf"],
+      "repository_path": "source-cache/CME00067/pmla-volume-24-1909-complete.pdf",
+      "locator": "PDF pp. 743-754; printed pp. 687-698",
+      "summary": "Establishes article bibliography, the complete immediate source, MacCracken's direct use of Trinity R.3.21, late-fifteenth-century translation claim, Lydgate attribution history and rejection, rubric, complete poem, local reconstruction note, explicit, and signature.",
+      "accessed_on": "2026-07-12",
+      "sha256": "9838df599270c346a4fbd837403f3f978683fb3c69a39ea4f9ad0fdb86afb9b1"
+    },
+    {
+      "id": "evidence:pmla-surrogate",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive item PMLA1909, Harvard/Google scan of PMLA volume 24 (1909).",
+      "url": "https://archive.org/details/PMLA1909",
+      "alternate_urls": ["https://archive.org/metadata/PMLA1909", "https://archive.org/download/PMLA1909/PMLA_1909.pdf"],
+      "repository_path": "source-cache/CME00067/pmla-volume-24-1909-complete.pdf",
+      "locator": "952-page provider object; MacCracken article at PDF pp. 743-754",
+      "summary": "Identifies the Harvard source copy, Google scanning, ARLIMA upload, exact derivatives, and Public Domain Mark 1.0 provider assertion.",
+      "accessed_on": "2026-07-12",
+      "sha256": "9838df599270c346a4fbd837403f3f978683fb3c69a39ea4f9ad0fdb86afb9b1"
+    },
+    {
+      "id": "evidence:pmla-visual",
+      "type": "visual_inspection",
+      "citation": "Direct visual and structural inspection of the cached complete PMLA volume 24 facsimile and derivatives.",
+      "repository_path": "source-cache/CME00067/pmla-volume-24-1909-complete.pdf",
+      "locator": "first and last bound views; volume title; December issue wrapper; PDF pp. 743-754; printed pp. 687-698; OCR OBJECT crosswalk",
+      "summary": "Confirms that the 952-page provider sequence retains the complete bound volume, that the article begins on PDF p. 743 and ends on PDF p. 754, and that all matter represented by the encoding is present.",
+      "accessed_on": "2026-07-12",
+      "sha256": "9838df599270c346a4fbd837403f3f978683fb3c69a39ea4f9ad0fdb86afb9b1"
+    },
+    {
+      "id": "evidence:cambridge-core-article",
+      "type": "official_webpage",
+      "citation": "Cambridge Core, 'Magnificencia Ecclesie,' PMLA 24.4 (1909).",
+      "url": "https://www.cambridge.org/core/journals/pmla/article/abs/magnificencia-ecclesie/20C87119B5502B8779CC0DABB011D67B",
+      "alternate_urls": ["https://doi.org/10.2307/456803"],
+      "summary": "Confirms the article title, Henry Noble MacCracken, volume, issue, year, pages 687-698, DOI, research-article type, access mode, and current provider copyright notice.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:trinity-catalog",
+      "type": "official_catalog",
+      "citation": "Trinity College Cambridge, James Catalogue of Western Manuscripts, R.3.21.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21",
+      "locator": "main details; contents items 60-61; provenance; bibliography; item-page footer",
+      "summary": "Confirms shelfmark, James number 601, fifteenth-century date, paper support, 320-folio extent, dimensions, Latin and Middle English, provenance, the poem at f. 285 with incipit and explicit, adjacent content from f. 287v, IIIF manifest, and CC BY-NC 4.0 item-page statement.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:trinity-iiif",
+      "type": "digital_surrogate",
+      "citation": "Trinity College Cambridge, IIIF Presentation manifest for MS R.3.21.",
+      "url": "https://mss-cat.trin.cam.ac.uk/Manuscript/R.3.21/manifest.json",
+      "locator": "686 canvases; canvases 573-577 for ff. 285r-287r; canvas 578 for adjacent f. 287v",
+      "summary": "Provides the complete published canvas inventory, labels, exact Image API services, institutional attribution, and CC BY-NC 4.0 license.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:trinity-visual",
+      "type": "visual_inspection",
+      "citation": "Integrity, inventory, and representative visual audit of the cached complete Trinity R.3.21 IIIF bundle.",
+      "repository_path": "source-cache/CME00067/trinity-r-3-21-complete-iiif-1600px.zip",
+      "locator": "front cover; ff. 285r, 285v, 286r, 286v, and 287r; adjacent f. 287v; final envelope verso; ZIP manifest, inventory, and integrity test",
+      "summary": "Confirms 686 of 686 images, the work's exact five-canvas start and end, manuscript rubric and incipit, explicit, adjacent content boundary, effective 1600, and full non-upscaling image profiles, complete provider inventory, and absence of distinct spine or edge canvases.",
+      "accessed_on": "2026-07-12",
+      "sha256": "960c3c9dc1a686c6b7202c77d6bf8dc0612114aa8f03ea70f19523265770631a"
+    },
+    {
+      "id": "evidence:trinity-reproduction",
+      "type": "official_webpage",
+      "citation": "Trinity College Cambridge, Wren Digital Collections: Digital Photography, Image Supply and Licensing.",
+      "url": "https://www.trin.cam.ac.uk/library/wren-digital-library/",
+      "summary": "States that already digitized images may be downloaded for personal study, offers quoted image supply, and asks researchers to apply for permission to publish collection images.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:brown-register",
+      "type": "scholarly_source",
+      "citation": "Carleton Brown, A Register of Middle English Religious & Didactic Verse, Part II (Oxford: Bibliographical Society at the University Press, 1920), entry 459.",
+      "url": "https://archive.org/details/registerofmiddle02brow/page/n107/mode/1up",
+      "alternate_urls": ["https://archive.org/download/registerofmiddle02brow/registerofmiddle02brow.pdf"],
+      "repository_path": "source-cache/CME00067/brown-robbins-register-volume-2-complete.pdf",
+      "locator": "PDF p. 108; printed p. 78; entry 459",
+      "summary": "Confirms the incipit, short Latin rubric, thirty-nine eight-line stanzas, Trinity Cambridge 601 at f. 285a as the listed witness, and MacCracken's PMLA edition.",
+      "accessed_on": "2026-07-12",
+      "sha256": "20da3224b0bafd263b3b699c9511498bfd5e20c697077d8a707914374fb9f359"
+    },
+    {
+      "id": "evidence:brown-visual",
+      "type": "visual_inspection",
+      "citation": "Direct visual inspection of the cached complete Brown Register Part II facsimile.",
+      "repository_path": "source-cache/CME00067/brown-robbins-register-volume-2-complete.pdf",
+      "locator": "first and last bound views; title page; PDF p. 108 / printed p. 78 / entry 459; final printed matter",
+      "summary": "Confirms the 498-page provider object is the complete Part II volume and establishes the exact register-entry crosswalk.",
+      "accessed_on": "2026-07-12",
+      "sha256": "20da3224b0bafd263b3b699c9511498bfd5e20c697077d8a707914374fb9f359"
+    },
+    {
+      "id": "evidence:us-copyright-duration",
+      "type": "official_webpage",
+      "citation": "U.S. Copyright Office, Circular 15A, Duration of Copyright.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "summary": "States federal term rules for works published before 1978, including the maximum ninety-five-year term used for the 1909 article and 1920 register analysis.",
+      "accessed_on": "2026-07-12"
+    },
+    {
+      "id": "evidence:uk-copyright-duration",
+      "type": "official_webpage",
+      "citation": "Copyright, Designs and Patents Act 1988, section 12, duration of copyright in literary, dramatic, musical or artistic works.",
+      "url": "https://www.legislation.gov.uk/ukpga/1988/48/section/12",
+      "summary": "Provides the United Kingdom's duration rules for known and unknown authors, supporting only the underlying medieval-work analysis rather than a conclusion about modern editions or photographs.",
+      "accessed_on": "2026-07-12"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:trinity-physical-surfaces",
+      "question": "Can Trinity provide separate spine and head, tail, and fore-edge views absent from the otherwise complete 686-canvas R.3.21 IIIF provider object, and how does its publication-permission policy interact with the exact CC BY-NC 4.0 license?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask the Wren Library for an item-specific image inventory, interpretation, and quote only if physical binding documentation or publication is needed.", "Treat the cached bundle as complete only relative to the provider-published canvas inventory.", "Do not infer redistribution permission from local caching."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:trinity-iiif", "evidence:trinity-visual", "evidence:trinity-reproduction"]
+    },
+    {
+      "id": "question:maccracken-editorial-conventions",
+      "question": "Did MacCracken state fuller principles for expansion, punctuation, capitalization, lineation, or emendation than the local evidence in his 1909 article?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare every edited line against ff. 285r-287r, including superscript, deletion, punctuation, and line-boundary evidence.", "Consult MacCracken's related Lydgate publications or archival papers for an explicit transcription statement.", "Retain the printed typography in the encoding without treating every italic span as the same intervention category."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:maccracken-article", "evidence:xml", "evidence:trinity-visual"]
+    },
+    {
+      "id": "question:trinity-production-history",
+      "question": "What are the exact booklet, scribal, paper-stock, binding, and provenance histories of the R.3.21 unit containing ff. 285r-287r, and which of those layers can legitimately inform the poem's date or place?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": ["Consult current codicological and scribal studies cited by Trinity and inspect quire boundaries around ff. 285-287.", "Distinguish the production of the target booklet from assembly or rebinding of the present composite manuscript and from the work's composition.", "Do not promote MacCracken's Westminster conjecture or London-centered ownership into a composition-place assertion."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:trinity-catalog", "evidence:trinity-visual", "evidence:maccracken-article"]
+    },
+    {
+      "id": "question:article-rights-outside-us",
+      "question": "What is the current copyright status of MacCracken's editorial article outside the United States, and what reuse terms does the MLA or Cambridge Core assert for its hosted edition?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Perform country-specific term analysis before reuse outside the United States.", "Ask the MLA or Cambridge Core for rights clarification if reusing article-level modern contributions in a jurisdiction where copyright may persist.", "Keep the public-domain medieval poem separate from MacCracken's introduction and editorial apparatus."],
+      "last_checked": "2026-07-12",
+      "evidence_ids": ["evidence:cambridge-core-article", "evidence:us-copyright-duration"]
+    }
+  ]
+}

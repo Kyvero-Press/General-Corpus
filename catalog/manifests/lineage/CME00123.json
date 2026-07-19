@@ -1,0 +1,790 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:CME00123",
+  "work_id": "CME00123",
+  "title": "Household Inventory of the Fifteenth Century",
+  "primary_subject": "artifact:general-corpus:CME00123",
+  "record_status": "reviewed",
+  "created": "2026-07-13",
+  "last_reviewed": "2026-07-13",
+  "summary": "The checked-in XML is a repository copy of University of Michigan CME00123, an encoding of the complete signed two-page contribution 'Household Inventory of the Fifteenth Century' in the November 1852 installment of The Retrospective Review, new series volume 1, pp. 101-102; the collected-volume title page is dated 1853. The contribution transcribes the anonymous household inventory dated 15 May 1463 on Huntington Library HM 744, rear flyleaf f. ir, but omits the different 1444 inventory material on f. iv. The article named no private owner; recorded provenance includes the Earl of Ashburnham's Appendix collection and a documented chain ending in Huntington's 1925 acquisition. A complete 451-page scan of the printed volume and all 153 images in Huntington's provider-published IIIF sequence are cached locally with fixity. The work-specific manuscript boundary is f. ir, canvas 145, images/000145.jpg; the full-manuscript cache deliberately retains the adjacent f. iv context without treating it as part of CME00123.",
+  "languages": ["enm", "eng"],
+  "review_notes": [
+    "The primary subject is the repository artifact at CME/source/CME_phase_3/CME00123.xml. The anonymous 1463 inventory, the 1852 printed contribution, U-M encoding, physical codex, facsimiles, and catalog description are modeled separately.",
+    "The current witness is Huntington HM 744, not HM 114. Dutschke explicitly identifies the 1852 Retrospective Review text as printed from HM 744 when the codex was privately held.",
+    "The target work occupies HM 744 f. ir alone. F. iv contains a separate heading and inventory material dated 1444 in the same hand; it is retained as neighboring context in the complete facsimile bundle but excluded from the transcription relation's target scope.",
+    "The Huntington catalog's broad 1425-1450 date describes the principal codex. The inventory addition on the rear flyleaf explicitly dates itself 15 May 1463 and is modeled at component level.",
+    "The article appeared in the November 1852 installment, as shown by its running header and the volume's installment history. The collected volume is dated 1853, so both dates occur in legitimate catalog citations.",
+    "The 1852 print preserves three doubtful readings in italics and uses ellipses for incomplete kitchen entries. Dutschke reports severe outer-edge deterioration and reagent treatment, and says several bracket-supplied words in his description are no longer present.",
+    "The printed article is signed only 'W.' No reliable evidence was found for expanding that initial to Thomas Wright.",
+    "Sutton links HM 744, a merchant mark, Thomas Fyler, and property at Little Baddow; LMES instead says the flyleaf inventories were probably by or for John Fyler. Neither claim overrides the manuscript's anonymous status.",
+    "The XML contains sixty-nine ITEM nodes, but one is administrative content inside TEMPHEAD. The intellectual text contains sixty-eight body ITEM nodes: nine top-level room or space entries and fifty-nine nested list entries, not sixty-eight discrete physical objects.",
+    "The IIIF canvas identifier published inside the legacy manifest does not currently dereference directly. Exact Image API request URLs are therefore used for the work boundary, while the manifest URL remains the bundle source."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:CME00123",
+      "type": "repository_artifact",
+      "label": "General Corpus repository artifact for CME00123",
+      "description": "The checked-in XML file in the pinned CME submodule, including its TEMPHEAD revision metadata and the complete encoded Retrospective Review contribution.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00123", "uri": "https://name.umdl.umich.edu/CME00123"},
+        {"scheme": "Git blob", "value": "f6db4a9524a258e7036c6e49f735567a2a535560"}
+      ],
+      "creator_ids": ["agent:kyvero-press"],
+      "date_statements": [
+        {"label": "Pinned CME submodule revision", "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c", "certainty": "high", "evidence_ids": ["evidence:repo-xml"]}
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_3/CME00123.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "f6db4a9524a258e7036c6e49f735567a2a535560",
+        "sha256": "4ad3584ba5fe2771821d3b4a6c9eac16de43018e34e7f2abaf5335d342c1f24d"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repo-xml", "evidence:xml-audit", "evidence:repo-license"],
+      "notes": ["TEMPHEAD contains one administrative ITEM that must be excluded from intellectual-content counts."]
+    },
+    {
+      "id": "encoding:umich-cme:CME00123",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME00123 electronic text",
+      "alternate_labels": ["Household inventory of the fifteenth century. [Retrospective Review 1 (1852-3)]"],
+      "description": "The U-M Corpus of Middle English Prose and Verse item encoding the 1852 article's supplied title, headnote, inventory, tailnote, and signature. It represents the full article but not the surrounding journal volume.",
+      "identifiers": [
+        {"scheme": "CME", "value": "CME00123", "uri": "https://quod.lib.umich.edu/c/cme/CME00123"},
+        {"scheme": "UMDL name", "value": "CME00123", "uri": "https://name.umdl.umich.edu/CME00123"}
+      ],
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-item", "evidence:repo-xml", "evidence:xml-audit"],
+      "notes": ["The root TEXT language is Middle English. The modern English title and notes are editorial layers within the same item."]
+    },
+    {
+      "id": "edition:retrospective-review:household-inventory-1852",
+      "type": "scholarly_edition",
+      "label": "W.'s 1852 printed transcription, Household Inventory of the Fifteenth Century",
+      "alternate_labels": ["Household Inventory of the Fifteenth Century (Retrospective Review new series 1)"],
+      "description": "A signed two-page antiquarian contribution printing the 1463 inventory from a manuscript then in private hands. It supplies the modern title and headnote, gives the inventory in two columns, italicizes three doubtful readings, uses ellipses for damaged or incomplete kitchen entries, and closes with a note that the writer cannot be identified. It does not print the 1444 heading and material on the reverse flyleaf.",
+      "creator_ids": ["agent:w-editor"],
+      "date_statements": [
+        {"label": "Installment publication", "value": "November 1852", "normalized": "1852-11", "certainty": "high", "evidence_ids": ["evidence:retrospective-review", "evidence:routledge-installments"], "notes": "The article pages carry the running headers [1852.] and [Nov.]."},
+        {"label": "Collected-volume title page", "value": "1853", "normalized": "1853", "certainty": "high", "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"], "notes": "This later volume date explains citations to new series volume 1 (1853)."}
+      ],
+      "bibliographic": {
+        "citation": "W., 'Household Inventory of the Fifteenth Century,' The Retrospective Review, new series 1 (November 1852): 101-102; collected volume, London: John Russell Smith, 1853.",
+        "title": "Household Inventory of the Fifteenth Century",
+        "container_title": "The Retrospective Review: Criticisms upon, Analyses of, and Extracts from Curious, Valuable, and Scarce Old Books",
+        "volume": "New series 1",
+        "publisher": "John Russell Smith",
+        "publication_place": "London",
+        "date": "November 1852; collected volume 1853",
+        "pages": "101-102",
+        "languages": ["enm", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata", "evidence:routledge-installments", "evidence:dutschke"],
+      "notes": ["The contributor is known only by the printed signature W.; no full name is supplied.", "Dutschke describes the article as printed from HM 744 while it was privately held and notes its omission of the heading on f. iv."]
+    },
+    {
+      "id": "witness:huntington:HM-744",
+      "type": "manuscript_witness",
+      "label": "San Marino, Huntington Library, HM 744, f. ir",
+      "alternate_labels": ["mssHM 744", "Ashburnham Appendix 133", "Ashburnham 133"],
+      "description": "The physical composite codex now called HM 744. The target household inventory is a later addition in another hand on the recto of the rear flyleaf, f. ir, dated 15 May 1463. The verso, f. iv, bears different inventory material and a possibly erroneous 1444 date in the same hand; it is not part of CME00123.",
+      "identifiers": [
+        {"scheme": "Huntington shelfmark", "value": "HM 744", "uri": "https://www.huntington.org/collections/lib-p15150coll7-18518"},
+        {"scheme": "Huntington ContentDM parent ID", "value": "p15150coll7/18518", "uri": "https://huntington.contentdm.oclc.org/digital/api/singleitem/collection/p15150coll7/id/18518"},
+        {"scheme": "Historical shelfmark", "value": "Ashburnham Appendix 133"}
+      ],
+      "date_statements": [
+        {"label": "Principal codex production", "value": "Between 1425 and 1450", "normalized": "1425/1450", "certainty": "high", "evidence_ids": ["evidence:huntington-catalog"], "notes": "This broad catalog date does not date the later inventory addition."},
+        {"label": "Target inventory addition", "value": "15 May 1463", "normalized": "1463-05-15", "certainty": "high", "evidence_ids": ["evidence:repo-xml", "evidence:retrospective-review", "evidence:dutschke", "evidence:huntington-visual"]}
+      ],
+      "holding": {
+        "institution_id": "agent:huntington-library",
+        "shelfmark": "HM 744",
+        "historical_designations": ["Ashburnham Appendix 133", "Ashburnham 133", "Manuscript in private hands"],
+        "catalog_url": "https://www.huntington.org/collections/lib-p15150coll7-18518",
+        "notes": "At the 1852 publication the owner was not named beyond 'private hands.' Recorded provenance then identifies the Earl of Ashburnham's Appendix 133; the Appendix manuscripts passed to Henry Yates Thompson in 1897, this item sold through Leighton in 1899, then belonged to George Dunn, passed through Maggs, and was owned by Sir Israel Gollancz. Henry E. Huntington acquired it from A. S. W. Rosenbach in June 1925. The evidence does not establish whether Ashburnham already owned it when the article appeared."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "68 leaves; target addition on rear flyleaf f. ir",
+        "format": "Bound composite manuscript with later flyleaf additions",
+        "dimensions": "160 x 233 mm",
+        "notes": [
+          "The principal codex contains didactic and literary pieces, including Hoccleve material; the household inventory is a separate flyleaf addition in another hand.",
+          "The target leaf's outer edge is badly deteriorated, and reagent treatment made portions difficult or nearly impossible to read.",
+          "Dutschke says bracket-supplied words in the catalog description are no longer present; the 1852 transcription may therefore preserve readings no longer legible, but the exact chronology of loss is not known.",
+          "The f. ir inventory and f. iv inventory material are in the same hand but bear different dates, 1463 and 1444 respectively.",
+          "Recorded modern provenance: Earl of Ashburnham, Appendix 133; Henry Yates Thompson; Leighton; George Dunn; Maggs; Sir Israel Gollancz; A. S. W. Rosenbach; Henry E. Huntington, 1925."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:huntington-catalog", "evidence:huntington-visual", "evidence:dutschke", "evidence:retrospective-review", "evidence:sutton", "evidence:lmes"]
+    },
+    {
+      "id": "facsimile:internet-archive:retrospective-review-v1",
+      "type": "facsimile",
+      "label": "Internet Archive digital facsimile of The Retrospective Review, new series volume 1",
+      "description": "A complete 451-page Google scan of an Oxford University copy of the collected volume, with OCR and item metadata. CME00123's source article occupies printed pp. 101-102, physical PDF pages 116-117, BookReader leaves n115-n116.",
+      "creator_ids": ["agent:google", "agent:internet-archive"],
+      "reproduction_format": "451-page PDF with OCR text and Internet Archive metadata",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"],
+      "notes": ["The local PDF caches the complete collected volume rather than only the article pages."]
+    },
+    {
+      "id": "facsimile:huntington:HM-744-digital",
+      "type": "facsimile",
+      "label": "Huntington complete provider-published digital facsimile of HM 744",
+      "description": "The public 153-canvas IIIF sequence for HM 744, from front cover through spine. The target 1463 inventory is f. ir, canvas 145, ContentDM child 18509, locally images/000145.jpg. Canvas 146/images/000146.jpg is the separate f. iv inventory context.",
+      "creator_ids": ["agent:huntington-library"],
+      "reproduction_format": "IIIF Presentation 2 manifest with 153 color image canvases",
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:huntington-iiif", "evidence:huntington-visual", "evidence:huntington-catalog"],
+      "notes": ["Complete means all images currently exposed by the provider manifest, including covers and spine; it does not imply that every physical surface beyond the published sequence has been independently audited.", "The legacy canvas URI for canvas 145 returned HTTP 404 on 2026-07-13, so the working exact Image API request is recorded as the work-boundary link."]
+    },
+    {
+      "id": "catalog:dutschke:HM-744",
+      "type": "catalog_description",
+      "label": "Dutschke catalog description of Huntington HM 744",
+      "description": "The detailed item-level description in the Guide to Medieval and Renaissance Manuscripts in the Huntington Library. Item 21 identifies the 1463 inventory on f. ir with the Retrospective Review article, distinguishes the omitted 1444 material on f. iv, records deterioration and reagent damage, and outlines the codex's Fyler-family evidence and Ashburnham provenance.",
+      "creator_ids": ["agent:cw-dutschke"],
+      "date_statements": [
+        {"label": "Print guide publication", "value": "1989", "normalized": "1989", "certainty": "high", "evidence_ids": ["evidence:dutschke"]},
+        {"label": "Electronic encoding", "value": "2003", "normalized": "2003", "certainty": "high", "evidence_ids": ["evidence:dutschke"]}
+      ],
+      "bibliographic": {
+        "citation": "C. W. Dutschke with R. H. Rouse et al., Guide to Medieval and Renaissance Manuscripts in the Huntington Library (San Marino, 1989), vol. 1, 247-251, HM 744, item 21.",
+        "title": "HM 744",
+        "container_title": "Guide to Medieval and Renaissance Manuscripts in the Huntington Library",
+        "volume": "1",
+        "publication_place": "San Marino",
+        "date": "1989; electronic encoding 2003",
+        "pages": "247-251",
+        "languages": ["eng"]
+      },
+      "survival_status": "not_applicable",
+      "evidence_ids": ["evidence:dutschke"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:kyvero-press", "type": "organization", "name": "Kyvero Press", "urls": ["https://github.com/Kyvero-Press/CME"], "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme"], "evidence_ids": ["evidence:umich-item"]},
+    {"id": "agent:w-editor", "type": "person", "name": "W.", "evidence_ids": ["evidence:retrospective-review"], "notes": ["Unidentified signer of the 1852 contribution; no reliable full-name expansion was found."]},
+    {"id": "agent:john-russell-smith", "type": "organization", "name": "John Russell Smith", "urls": ["https://archive.org/details/retrospectivere01unkngoog"], "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"]},
+    {"id": "agent:huntington-library", "type": "organization", "name": "The Huntington Library, Art Museum, and Botanical Gardens", "urls": ["https://www.huntington.org/library"], "evidence_ids": ["evidence:huntington-catalog", "evidence:huntington-iiif", "evidence:huntington-rights", "evidence:huntington-imaging"]},
+    {"id": "agent:cw-dutschke", "type": "person", "name": "C. W. Dutschke", "evidence_ids": ["evidence:dutschke"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"], "evidence_ids": ["evidence:ia-metadata", "evidence:retrospective-review"]},
+    {"id": "agent:google", "type": "organization", "name": "Google", "urls": ["https://books.google.com/"], "evidence_ids": ["evidence:ia-metadata"]},
+    {"id": "agent:oxford-university", "type": "organization", "name": "University of Oxford", "urls": ["https://www.ox.ac.uk/"], "evidence_ids": ["evidence:ia-metadata"]},
+    {"id": "agent:anne-sutton", "type": "person", "name": "Anne F. Sutton", "evidence_ids": ["evidence:sutton"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repo-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:CME00123",
+      "object": "encoding:umich-cme:CME00123",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete checked-in XML repository copy"},
+        "object": {"kind": "whole", "description": "Complete U-M CME00123 item"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item"]}
+    },
+    {
+      "id": "relation:encoding-edition",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:CME00123",
+      "object": "edition:retrospective-review:household-inventory-1852",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete U-M electronic item, including title, headnote, inventory, tailnote, and signature"},
+        "object": {"kind": "whole", "description": "Complete two-page printed contribution", "locators": ["printed pp. 101-102", "PDF pages 116-117", "BookReader leaves n115-n116"]},
+        "notes": "The U-M item does not encode surrounding contributions from the journal volume."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repo-xml", "evidence:umich-item", "evidence:retrospective-review", "evidence:xml-audit"]}
+    },
+    {
+      "id": "relation:edition-witness",
+      "type": "transcribes",
+      "subject": "edition:retrospective-review:household-inventory-1852",
+      "object": "witness:huntington:HM-744",
+      "scope": {
+        "subject": {"kind": "part", "description": "The medieval inventory text printed between the editorial headnote and tailnote", "locators": ["printed pp. 101-102"]},
+        "object": {"kind": "part", "description": "The target 1463 inventory only", "locators": ["rear flyleaf f. ir", "IIIF canvas 145", "ContentDM child 18509", "local ZIP images/000145.jpg"]},
+        "notes": "The editor's title, headnote, tailnote, and signature are not manuscript text. The separate 1444 heading and inventory on f. iv/canvas 146 are omitted."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:retrospective-review", "evidence:dutschke", "evidence:huntington-visual"], "notes": "Dutschke directly identifies the Retrospective Review text as printed from HM 744 when the manuscript was in private hands."}
+    },
+    {
+      "id": "relation:ia-facsimile-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:retrospective-review-v1",
+      "object": "edition:retrospective-review:household-inventory-1852",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Article pages within the complete 451-page local and provider scan", "locators": ["printed pp. 101-102", "PDF pages 116-117", "BookReader leaves n115-n116"]},
+        "object": {"kind": "whole", "description": "Complete two-page printed contribution"},
+        "notes": "The facsimile entity covers the complete collected volume; the relation scope identifies only the article reproduced for this work."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"]}
+    },
+    {
+      "id": "relation:huntington-facsimile-witness",
+      "type": "facsimile_of",
+      "subject": "facsimile:huntington:HM-744-digital",
+      "object": "witness:huntington:HM-744",
+      "scope": {
+        "subject": {"kind": "whole", "description": "All 153 provider-published images cached from front cover through spine"},
+        "object": {"kind": "part", "description": "Every physical-object surface exposed in the current provider sequence; target inventory locus f. ir", "locators": ["target f. ir = canvas 145 = images/000145.jpg", "context f. iv = canvas 146 = images/000146.jpg"]},
+        "notes": "Completeness is relative to the current IIIF manifest. The work-specific association is the single surface f. ir; f. iv is retained only as neighboring manuscript context."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:huntington-iiif", "evidence:huntington-visual", "evidence:huntington-catalog"]}
+    },
+    {
+      "id": "relation:dutschke-witness",
+      "type": "describes",
+      "subject": "catalog:dutschke:HM-744",
+      "object": "witness:huntington:HM-744",
+      "scope": {
+        "subject": {"kind": "part", "description": "HM 744 item 21 and related codex/provenance description"},
+        "object": {"kind": "part", "description": "Rear flyleaf inventories, especially the 1463 target on f. ir", "locators": ["f. i recto-verso", "target f. ir"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dutschke"]}
+    },
+    {
+      "id": "relation:dutschke-edition",
+      "type": "cites",
+      "subject": "catalog:dutschke:HM-744",
+      "object": "edition:retrospective-review:household-inventory-1852",
+      "scope": {
+        "subject": {"kind": "part", "description": "Bibliographic note in item 21"},
+        "object": {"kind": "whole", "description": "Retrospective Review new series 1, pp. 101-102"},
+        "notes": "The catalog's 1853 date follows the collected-volume date rather than the November 1852 installment date."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:dutschke", "evidence:retrospective-review"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:CME00123",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "publicly_available",
+      "access_method": "Repository checkout or pinned GitHub blob",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00123.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00123.xml",
+      "cost": "free",
+      "format": "application/xml",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:repo-xml", "evidence:repo-license"]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:CME00123",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Public U-M item page with searchable/readable electronic text",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00123",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00123"],
+      "cost": "free",
+      "format": "text/html and XML-derived views",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:umich-item"]
+    },
+    {
+      "id": "access:ia-edition",
+      "entity": "facsimile:internet-archive:retrospective-review-v1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive BookReader or direct complete-volume derivatives",
+      "url": "https://archive.org/details/retrospectivere01unkngoog/page/n115/mode/1up",
+      "alternate_urls": [
+        "https://archive.org/details/retrospectivere01unkngoog/page/n116/mode/1up",
+        "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog.pdf",
+        "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog_djvu.txt",
+        "https://archive.org/metadata/retrospectivere01unkngoog"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete collected-volume PDF",
+          "path": "source-cache/CME00123/retrospective-review-new-series-volume-1-1853-complete.pdf",
+          "source_url": "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog.pdf",
+          "sha256": "618aa4959b9ecbad6c423db69f7a489f074d3a1c4c3b3e446f0de3290f9b796b",
+          "bytes": 16229809,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "work_portion": {
+            "label": "W., Household Inventory of the Fifteenth Century",
+            "locators": ["printed pp. 101-102", "physical PDF pages 116-117", "BookReader leaves n115-n116"],
+            "start_url": "https://archive.org/details/retrospectivere01unkngoog/page/n115/mode/1up",
+            "end_url": "https://archive.org/details/retrospectivere01unkngoog/page/n116/mode/1up",
+            "notes": ["The PDF remains a complete 451-page collected-volume scan; these locators associate the two-page work without cropping it."]
+          }
+        },
+        {
+          "label": "Complete provider OCR derivative",
+          "path": "source-cache/CME00123/retrospective-review-new-series-volume-1-1853-ocr.txt",
+          "source_url": "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog_djvu.txt",
+          "sha256": "44082c15374625b5a020c8a5bc9aec83b5dbc1d52ecf4ba5f93b7405b1752609",
+          "bytes": 1215151,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "work_portion": {
+            "label": "OCR corresponding to printed pp. 101-102",
+            "locators": ["article title Household Inventory of the Fifteenth Century", "printed page markers 101-102"],
+            "start_url": "https://archive.org/details/retrospectivere01unkngoog/page/n115/mode/1up",
+            "end_url": "https://archive.org/details/retrospectivere01unkngoog/page/n116/mode/1up",
+            "notes": ["Coverage is complete relative to the provider OCR derivative; OCR accuracy is not equivalent to diplomatic transcription accuracy."]
+          }
+        },
+        {
+          "label": "Internet Archive item metadata",
+          "path": "source-cache/CME00123/retrospective-review-new-series-volume-1-1853-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/retrospectivere01unkngoog",
+          "sha256": "2bff055b9276e701fddb7595f1dd469e8cc877d99d5632c2a574f2045bef10f2",
+          "bytes": 5380,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-13",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "source_file_count": 1,
+          "notes": ["Preserves provider identifier, source institution, scan provenance, publication metadata, image count, and possible-copyright-status fields."]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR text, JSON metadata, and browser page images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"],
+      "notes": ["Direct PDF, OCR, metadata, and both work-boundary BookReader URLs returned HTTP 200 on 2026-07-13."]
+    },
+    {
+      "id": "access:huntington-catalog",
+      "entity": "witness:huntington:HM-744",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Public Huntington collection record and ContentDM API record",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-18518",
+      "alternate_urls": ["https://huntington.contentdm.oclc.org/digital/api/singleitem/collection/p15150coll7/id/18518"],
+      "cost": "free",
+      "format": "text/html and application/json",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:huntington-catalog"],
+      "notes": ["The Huntington website returned rate-limiting HTTP 429 to an automated recheck on 2026-07-13 after earlier successful inspection; the ContentDM API and digital images remained public."]
+    },
+    {
+      "id": "access:huntington-iiif",
+      "entity": "facsimile:huntington:HM-744-digital",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Public IIIF Presentation manifest and Image API requests",
+      "url": "https://cdm16003.contentdm.oclc.org/iiif/info/p15150coll7/18518/manifest.json",
+      "alternate_urls": [
+        "https://cdm16003.contentdm.oclc.org/iiif/2/p15150coll7:18509/full/1800,/0/default.jpg",
+        "https://huntington.contentdm.oclc.org/iiif/2/p15150coll7:18518/manifest.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete provider-published HM 744 IIIF image bundle",
+          "path": "source-cache/CME00123/huntington-hm744-complete.zip",
+          "source_url": "https://cdm16003.contentdm.oclc.org/iiif/info/p15150coll7/18518/manifest.json",
+          "sha256": "57f16cb42209fe77175babdf7192773b0b4ad2defee2398bb2cc6fa3416c2caf",
+          "bytes": 81239343,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-13",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 153,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "1463 household inventory on rear flyleaf f. ir",
+            "locators": ["f. ir", "IIIF canvas 145 of 153", "ContentDM child 18509", "ZIP images/000145.jpg"],
+            "start_url": "https://cdm16003.contentdm.oclc.org/iiif/2/p15150coll7:18509/full/1800,/0/default.jpg",
+            "end_url": "https://cdm16003.contentdm.oclc.org/iiif/2/p15150coll7:18509/full/1800,/0/default.jpg",
+            "notes": ["A single manuscript surface contains the target work. The following f. iv/canvas 146/images/000146.jpg has separate 1444 inventory material and is context, not part of CME00123."]
+          },
+          "notes": ["The ZIP caches all 153 current manifest images at requested width 1800 pixels, with native-size fallback for the narrow spine image.", "ZIP integrity and exact target-image boundary were verified locally; the file is shared by hardlink with the existing HM 744 cache for CME00032 and with the main checkout."]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 2 JSON and JPEG images",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:huntington-iiif", "evidence:huntington-visual"],
+      "notes": ["The manifest and exact target Image API URL returned HTTP 200 on 2026-07-13. The legacy canvas URL returned HTTP 404 and is not used as a boundary link."]
+    },
+    {
+      "id": "access:huntington-original",
+      "entity": "witness:huntington:HM-744",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Consult the digital reproduction; request special permission from the Huntington Library for original-manuscript use where necessary",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-18518",
+      "contact": "reference@huntington.org",
+      "cost": "unknown",
+      "format": "Physical manuscript",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:huntington-catalog", "evidence:huntington-imaging"],
+      "notes": ["The current catalog instructs researchers to use the digital reproduction and says the original requires special permission."]
+    },
+    {
+      "id": "access:huntington-reproduction-order",
+      "entity": "facsimile:huntington:HM-744-digital",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "reproduction_order",
+      "status": "purchasable",
+      "access_method": "Submit an imaging request through a Huntington Aeon account",
+      "url": "https://researchguides.huntington.org/imagingservices",
+      "alternate_urls": ["https://libanswers.huntington.org/faq/52020"],
+      "contact": "reference@huntington.org",
+      "cost": "fee",
+      "format": "Institution-supplied digital reproductions",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:huntington-imaging", "evidence:huntington-aeon"],
+      "notes": ["A paid reproduction order is optional because a complete public IIIF sequence is already available."]
+    },
+    {
+      "id": "access:dutschke-catalog",
+      "entity": "catalog:dutschke:HM-744",
+      "provider_id": "agent:huntington-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Archived institutional electronic catalog description",
+      "url": "https://web.archive.org/web/20180604091931id_/http://bancroft.berkeley.edu/digitalscriptorium/huntington/HM744.html",
+      "cost": "free",
+      "format": "text/html",
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:dutschke"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:medieval-work",
+      "entity": "witness:huntington:HM-744",
+      "component": "The anonymous Middle English inventory text created in 1463",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The text was created in 1463 and its author is anonymous; any copyright in the medieval composition has long expired.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:retrospective-review", "evidence:huntington-catalog"]
+    },
+    {
+      "id": "rights:edition-1852",
+      "entity": "edition:retrospective-review:household-inventory-1852",
+      "component": "The 1852 printed transcription, title, headnote, tailnote, and typography",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-13",
+      "basis": "The contribution was published in 1852 and is outside copyright term in both jurisdictions.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:ia-metadata"]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-cme:CME00123",
+      "access_id": "access:umich-text",
+      "component": "U-M-hosted CME00123 electronic item and encoded materials",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "The U-M item says the materials are in the public domain and supplies RightsStatements.org No Copyright - United States status; provider conditions and attribution guidance still apply to use of the service.",
+      "asserted_by_id": "agent:umich-library",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-item"],
+      "notes": ["This provider assertion is scoped to the U-M item; it does not license Huntington photographs or modern scholarship."
+      ]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:CME00123",
+      "access_id": "access:repository-xml",
+      "component": "Repository-specific XML file, markup, and revision metadata",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "The pinned CME repository contains an Unlicense text framed as applying to software. Its scope over corpus XML, markup, and data is not explicit enough to treat the full artifact as unambiguously licensed, although the underlying medieval text and 1852 edition are public domain.",
+      "contract_terms_status": "none_known",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:repo-license", "evidence:repo-xml"],
+      "notes": ["Do not extend this uncertainty to the underlying 1463 work or 1852 edition, which are separately modeled as public domain."]
+    },
+    {
+      "id": "rights:ia-facsimile",
+      "entity": "facsimile:internet-archive:retrospective-review-v1",
+      "access_id": "access:ia-edition",
+      "component": "Internet Archive/Google scan derivatives of the 1853 collected volume",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-13",
+      "basis": "Internet Archive item metadata records possible-copyright-status NOT_IN_COPYRIGHT and copyright-region US for this 1853 volume.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ia-metadata", "evidence:retrospective-review"]
+    },
+    {
+      "id": "rights:huntington-images",
+      "entity": "facsimile:huntington:HM-744-digital",
+      "access_id": "access:huntington-iiif",
+      "component": "Huntington digital photographs and IIIF derivatives of HM 744",
+      "jurisdiction": "Worldwide",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-13",
+      "basis": "No item-level Creative Commons or equivalent open license was found. Huntington's rights page says users need no Huntington permission for public-domain material or material whose copyright Huntington does not own, but it places responsibility for copyright determination on the researcher; that general statement does not by itself resolve rights in these photographs.",
+      "asserted_by_id": "agent:huntington-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:huntington-rights", "evidence:huntington-iiif", "evidence:huntington-catalog"],
+      "notes": ["Public viewability and research caching are recorded under access, not treated as a redistribution license. Cite the item and ask Huntington if intended reuse depends on an item-specific determination."]
+    },
+    {
+      "id": "rights:dutschke-catalog",
+      "entity": "catalog:dutschke:HM-744",
+      "access_id": "access:dutschke-catalog",
+      "component": "Dutschke's 1989 catalog description and 2003 electronic encoding",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-13",
+      "basis": "The modern scholarly catalog description was published in 1989; no open-content license was found for wholesale reuse.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:dutschke"],
+      "notes": ["Facts are cited as evidence; the catalog prose is not reproduced wholesale in this repository."]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:edition-selection",
+      "entity": "edition:retrospective-review:household-inventory-1852",
+      "practice": "selection",
+      "source_feature": "Inventory material on both sides of HM 744 rear flyleaf f. i",
+      "representation": "The article prints the 1463 f. ir inventory but omits the heading and different inventory material dated 1444 on f. iv.",
+      "description": "The printed contribution is a selected transcription of one flyleaf side, not a complete edition of all inventory additions in HM 744.",
+      "scope": "Printed pp. 101-102 relative to HM 744 f. ir-v",
+      "confidence": "high",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:dutschke", "evidence:huntington-visual"]
+    },
+    {
+      "id": "practice:encoding-selection",
+      "entity": "encoding:umich-cme:CME00123",
+      "practice": "selection",
+      "source_feature": "Two-page article inside a 451-page collected journal volume",
+      "representation": "The electronic item encodes the complete article and its editorial paratext, but excludes the surrounding journal volume.",
+      "description": "CME00123 is complete relative to the immediate two-page source contribution and selective relative to its serial carrier.",
+      "scope": "Entire CME00123 item relative to Retrospective Review new series 1",
+      "confidence": "high",
+      "evidence_ids": ["evidence:repo-xml", "evidence:retrospective-review", "evidence:xml-audit"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "CME/source/CME_phase_3/CME00123.xml at pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/source/CME_phase_3/CME00123.xml",
+      "repository_path": "CME/source/CME_phase_3/CME00123.xml",
+      "summary": "Primary local evidence for file identity, encoded content, structural boundaries, language, date, uncertain readings, paratext, and signature.",
+      "accessed_on": "2026-07-13",
+      "sha256": "4ad3584ba5fe2771821d3b4a6c9eac16de43018e34e7f2abaf5335d342c1f24d"
+    },
+    {
+      "id": "evidence:xml-audit",
+      "type": "repository_file",
+      "citation": "Local structural and textual audit of CME00123.xml against the 1852 page images.",
+      "repository_path": "CME/source/CME_phase_3/CME00123.xml",
+      "summary": "Confirmed complete article boundaries and counted one DIV1, one HEAD, one HEADNOTE, one TAILNOTE, three body paragraphs, eight body LIST elements, sixty-eight body ITEM elements, three PB elements, three italic HI elements, four SUP elements, and one signature; excluded one administrative TEMPHEAD ITEM.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:repo-license",
+      "type": "repository_file",
+      "citation": "CME/LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "summary": "Contains the Unlicense text framed as applying to software; it does not explicitly resolve the license scope for XML, markup, data, underlying editions, or manuscript images.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:umich-item",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library, 'Household inventory of the fifteenth century. [Retrospective Review 1 (1852-3)],' CME00123.",
+      "url": "https://quod.lib.umich.edu/c/cme/CME00123",
+      "alternate_urls": ["https://name.umdl.umich.edu/CME00123"],
+      "summary": "Official item page confirming the title, source container, public electronic text, educational/research access statement, and No Copyright - United States rights assertion.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:retrospective-review",
+      "type": "digital_surrogate",
+      "citation": "W., 'Household Inventory of the Fifteenth Century,' The Retrospective Review, new series 1 (November 1852): 101-102; complete collected volume dated 1853.",
+      "url": "https://archive.org/details/retrospectivere01unkngoog/page/n115/mode/1up",
+      "alternate_urls": ["https://archive.org/details/retrospectivere01unkngoog/page/n116/mode/1up", "https://archive.org/download/retrospectivere01unkngoog/retrospectivere01unkngoog.pdf"],
+      "locator": "Printed pp. 101-102; PDF pages 116-117; BookReader leaves n115-n116",
+      "summary": "Exact source article, visually inspected to verify title, full text, two-column list layout, italic doubtful readings, superscript date letters, ellipses, tailnote, signature, and November 1852 running headers.",
+      "accessed_on": "2026-07-13",
+      "sha256": "618aa4959b9ecbad6c423db69f7a489f074d3a1c4c3b3e446f0de3290f9b796b",
+      "notes": ["The hash is for the complete locally cached PDF; qpdf inspection reports 451 pages and no structural error."]
+    },
+    {
+      "id": "evidence:ia-metadata",
+      "type": "official_webpage",
+      "citation": "Internet Archive metadata for retrospectivere01unkngoog.",
+      "url": "https://archive.org/metadata/retrospectivere01unkngoog",
+      "summary": "Records the 1853 volume title, J. R. Smith publication, Oxford University source copy, Google scanning, 451 images, and possible-copyright-status NOT_IN_COPYRIGHT for the United States.",
+      "accessed_on": "2026-07-13",
+      "sha256": "2bff055b9276e701fddb7595f1dd469e8cc877d99d5632c2a574f2045bef10f2",
+      "notes": ["The hash is for the exact locally cached metadata JSON response."]
+    },
+    {
+      "id": "evidence:routledge-installments",
+      "type": "official_webpage",
+      "citation": "Routledge, product description for The Retrospective Review, Vol. 17, reprinting new-series volume I.",
+      "url": "https://www.routledge.com/The-Retrospective-Review-Vol-17/Deguchi/p/book/9781138762541",
+      "summary": "Confirms the volume's four installment dates: November 1852 and February, May, and August 1853.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:huntington-catalog",
+      "type": "official_catalog",
+      "citation": "The Huntington Library, 'Didactic pieces: manuscript, [between 1425 and 1450],' mssHM 744.",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-18518",
+      "alternate_urls": ["https://huntington.contentdm.oclc.org/digital/api/singleitem/collection/p15150coll7/id/18518"],
+      "locator": "Back flyleaf f. i recto-verso; target inventory f. ir",
+      "summary": "Current institutional catalog record for shelfmark, codex date and extent, parchment support, dimensions, flyleaf inventories, provenance, digital-surrogate preference, and restricted original access.",
+      "accessed_on": "2026-07-13",
+      "notes": ["The public page was inspected successfully during research; a later automated status recheck returned HTTP 429 rate limiting rather than evidence of withdrawal."]
+    },
+    {
+      "id": "evidence:huntington-iiif",
+      "type": "digital_surrogate",
+      "citation": "The Huntington Library, IIIF Presentation manifest for HM 744, parent p15150coll7/18518.",
+      "url": "https://cdm16003.contentdm.oclc.org/iiif/info/p15150coll7/18518/manifest.json",
+      "alternate_urls": ["https://huntington.contentdm.oclc.org/iiif/2/p15150coll7:18518/manifest.json"],
+      "summary": "Provider manifest enumerating 153 canvases from front cover through spine and supplying the image-service requests used for the complete local bundle.",
+      "accessed_on": "2026-07-13",
+      "sha256": "57f16cb42209fe77175babdf7192773b0b4ad2defee2398bb2cc6fa3416c2caf",
+      "notes": ["The hash is for the complete locally cached 153-image ZIP, not the small manifest JSON. The bundle passed ZIP integrity validation."]
+    },
+    {
+      "id": "evidence:huntington-visual",
+      "type": "visual_inspection",
+      "citation": "Visual inspection of HM 744 rear flyleaves in the provider IIIF sequence and local complete bundle.",
+      "url": "https://cdm16003.contentdm.oclc.org/iiif/2/p15150coll7:18509/full/1800,/0/default.jpg",
+      "locator": "Target f. ir = canvas 145 = ContentDM child 18509 = ZIP images/000145.jpg; separate f. iv = canvas 146 = images/000146.jpg",
+      "summary": "Confirmed that the entire CME00123 inventory occupies the damaged f. ir surface; canvas 144 is f. 68v, canvas 146 is the different faded inventory on f. iv, and canvas 147 is the next rear flyleaf.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:dutschke",
+      "type": "scholarly_source",
+      "citation": "C. W. Dutschke with R. H. Rouse et al., Guide to Medieval and Renaissance Manuscripts in the Huntington Library (San Marino, 1989), vol. 1, 247-251, HM 744, item 21; electronic encoding 2003.",
+      "url": "https://web.archive.org/web/20180604091931id_/http://bancroft.berkeley.edu/digitalscriptorium/huntington/HM744.html",
+      "locator": "Item 21, f. i recto-verso",
+      "summary": "Directly identifies the Retrospective Review text as printed from HM 744 when privately held, separates 1463 recto from omitted 1444 verso material, records severe damage and reagent treatment, and provides Fyler-family and Ashburnham provenance evidence.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:sutton",
+      "type": "scholarly_source",
+      "citation": "Anne F. Sutton, 'Alice Claver, Silkwoman (d. 1489),' in Caroline M. Barron and Anne F. Sutton, eds., Medieval London Widows, 1300-1500 (London: Hambledon Press, 1994), 135-136 and n. 20.",
+      "url": "https://books.google.com/books?id=3-veBAAAQBAJ",
+      "locator": "pp. 135-136, especially n. 20",
+      "summary": "Links HM 744, a merchant mark, Thomas and possibly Beatrice Fyler, the 'litill Barw' inventory, and Thomas Fyler's documented Little Baddow property; supports historical context without securely identifying the writer.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:lmes",
+      "type": "scholarly_source",
+      "citation": "Late Medieval English Scribes, manuscript record 237, San Marino, Huntington Library, HM 744.",
+      "url": "https://www.medievalscribes.com/index.php?browse=manuscripts&id=237&navappellation=John+Brode&navtype=scribes",
+      "summary": "Describes the 1444 and 1463 back-flyleaf inventories as in the same hand and probably by or for John Fyler, preserving a scholarly attribution conflict rather than resolving authorship by inference.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:huntington-rights",
+      "type": "official_webpage",
+      "citation": "The Huntington Library, 'Library Rights and Permissions.'",
+      "url": "https://www.huntington.org/library/library-rights-and-permissions",
+      "summary": "States that Huntington permission is unnecessary for public-domain materials or materials whose copyright it does not own, requests appropriate citation, and places copyright determination responsibility on the researcher; it does not supply an item-level open license for HM 744 photographs.",
+      "accessed_on": "2026-07-13",
+      "notes": ["The page was inspected successfully during research; a later automated status check returned HTTP 429 rate limiting."]
+    },
+    {
+      "id": "evidence:huntington-imaging",
+      "type": "official_webpage",
+      "citation": "The Huntington Library, Imaging Services research guide.",
+      "url": "https://researchguides.huntington.org/imagingservices",
+      "summary": "Explains the imaging-services workflow and paid digital reproduction requests through an Aeon account.",
+      "accessed_on": "2026-07-13"
+    },
+    {
+      "id": "evidence:huntington-aeon",
+      "type": "official_webpage",
+      "citation": "The Huntington Library, 'How can I order digital reproductions of items in the Library collection?'",
+      "url": "https://libanswers.huntington.org/faq/52020",
+      "summary": "Direct FAQ for ordering digital reproductions through Aeon and contacting library reference staff.",
+      "accessed_on": "2026-07-13"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:writer-identity",
+      "question": "Was the 1463 inventory written by Thomas Fyler, John Fyler, another Fyler-family member, or an unidentified householder?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Compare the inventory hand and merchant marks against identified Fyler-family entries throughout HM 744.", "Seek specialist paleographic assessment or Huntington curatorial guidance before strengthening an attribution."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:dutschke", "evidence:sutton", "evidence:lmes"],
+      "notes": ["Current cataloging retains anonymous authorship; Thomas Fyler is only a low-confidence contextual attribution."]
+    },
+    {
+      "id": "question:w-identity",
+      "question": "Who was the 1852 Retrospective Review contributor signing as 'W.'?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": ["Search publisher correspondence, contributor indexes, and contemporary journal notices for the new series."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:retrospective-review"],
+      "notes": ["No reliable source found supports expanding the initial to Thomas Wright."]
+    },
+    {
+      "id": "question:diplomatic-readings",
+      "question": "Which original readings, supplied words, cancellations, and line-layout details can now be recovered from damaged HM 744 f. ir independently of the 1852 print?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Collate the high-resolution image line by line against the 1852 print and XML.", "Ask Huntington whether higher-resolution, ultraviolet, infrared, or multispectral imaging exists or can be commissioned for f. ir."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:retrospective-review", "evidence:huntington-visual", "evidence:dutschke", "evidence:huntington-imaging"],
+      "notes": ["The print may preserve readings now lost or illegible, but the exact chronology of damage and editorial intervention is not established."]
+    },
+    {
+      "id": "question:image-reuse",
+      "question": "What item-specific reuse terms, if any, does Huntington apply to republication of the HM 744 digital photographs?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": ["Ask reference@huntington.org for an item-specific written determination before redistributing the complete image bundle or reproducing the photographs in a publication."],
+      "last_checked": "2026-07-13",
+      "evidence_ids": ["evidence:huntington-rights", "evidence:huntington-iiif", "evidence:huntington-imaging"],
+      "notes": ["Public access and local research caching do not themselves establish an open redistribution license."]
+    }
+  ]
+}

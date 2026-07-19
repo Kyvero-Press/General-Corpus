@@ -1,0 +1,356 @@
+{
+  "$schema": "../schemas/work-metadata-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "metadata:York",
+  "work_id": "York",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "cataloging_subject": {
+    "id": "work:York",
+    "unit_type": "compilation",
+    "label": "York Corpus Christi Play",
+    "scope_note": "The cataloged subject is the anonymous civic biblical dramatic cycle represented by the pinned U-M/OTA-derived York XML: fifty separately encoded pageant divisions drawn through Richard Beadle's 1982 edition. It is one historically assembled cycle or compilation, not fifty unrelated works. The fifty divisions preserve the 1-47 sequence plus parallel Cardmakers play 3B, the two-line Vintners' Cana remnant 22A, and later Coronation fragment 46A; they omit the textless Ironmongers entry and the unregistered Funeral of the Virgin. The medieval work, physical witnesses, Beadle's edition, the electronic encoding, and this repository artifact remain distinct transmission layers."
+  },
+  "catalog_summary": {
+    "title": "York Corpus Christi Play",
+    "author": "Anonymous York playwrights, revisers, and civic compilers",
+    "editor": "Richard Beadle (1982 immediate source edition); U-M/OTA electronic edition (1993)",
+    "date": "Developed from at least the late fourteenth century and revised through the sixteenth century; final medieval performance in 1569",
+    "region": "York, England",
+    "genres": ["Mystery plays", "Cycle drama", "Biblical drama", "Religious drama", "Civic drama"],
+    "form": "verse",
+    "language_codes": ["enm"],
+    "tags": ["biblical-drama", "christian-salvation-history", "civic-drama", "compilation", "corpus-christi", "cycle-drama", "english-drama", "last-judgment", "marian-drama", "middle-english", "mystery-play", "nativity", "passion-and-resurrection", "religious-drama", "verse", "york"]
+  },
+  "identifiers": [
+    {"scheme": "CME/UMDL", "value": "York", "uri": "https://name.umdl.umich.edu/York"},
+    {"scheme": "OTA", "value": "U-1392-B"},
+    {"scheme": "OTA repository", "value": "ota:1392", "uri": "https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392"}
+  ],
+  "titles": [
+    {
+      "id": "title:preferred",
+      "type": "preferred",
+      "value": "York Corpus Christi Play",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:york-structure", "evidence:mets-york"]},
+      "notes": ["Established discovery title for the historical civic dramatic compilation; the exact electronic boundary is recorded in the cataloging scope and alternate titles rather than conflated with this preferred intellectual title."]
+    },
+    {
+      "id": "title:source-edition",
+      "type": "alternate",
+      "value": "The York plays",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:beadle-1982"]},
+      "notes": ["Exact title in the electronic header and Beadle's 1982 source edition."]
+    },
+    {
+      "id": "title:electronic-boundary",
+      "type": "supplied",
+      "value": "The York Plays (fifty-division U-M/OTA electronic representation)",
+      "language": "eng",
+      "script": "Latn",
+      "supplied_by": "General Corpus cataloger",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:york-structure", "evidence:ota-files"]},
+      "notes": ["Boundary label for the represented source selection, not a replacement title for the historical work."]
+    },
+    {
+      "id": "title:ota",
+      "type": "alternate",
+      "value": "York miracle play cycle",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ota-item"]}
+    },
+    {
+      "id": "title:traditional",
+      "type": "uniform",
+      "value": "York Corpus Christi Play",
+      "language": "eng",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog"]}
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:anonymous-york-dramatists",
+      "type": "collective",
+      "name": "Anonymous York playwrights, revisers, and civic compilers",
+      "notes": ["The pageants are the work of multiple unknown hands across a long civic transmission; guild performance responsibility is not converted into authorship."]
+    },
+    {"id": "agent:richard-beadle", "type": "person", "name": "Richard Beadle"},
+    {"id": "agent:gerald-b-kinneavy", "type": "person", "name": "Gerald Byron Kinneavy"}
+  ],
+  "responsibilities": [
+    {
+      "id": "responsibility:anonymous-authors",
+      "agent_id": "agent:anonymous-york-dramatists",
+      "role": "author",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole", "description": "The cycle's medieval dramatic texts and revisions, without assigning individual guilds as authors"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog"]}
+    },
+    {
+      "id": "responsibility:anonymous-compilers",
+      "agent_id": "agent:anonymous-york-dramatists",
+      "role": "compiler",
+      "attribution_status": "anonymous",
+      "scope": {"kind": "whole", "description": "Historical assembly and continuing revision of the civic pageant sequence"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-york", "evidence:ordo-history"]}
+    },
+    {
+      "id": "responsibility:beadle-editor",
+      "agent_id": "agent:richard-beadle",
+      "role": "editor",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The 1982 immediate source edition, not medieval authorship"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:beadle-1982"]}
+    },
+    {
+      "id": "responsibility:kinneavy-corrections",
+      "agent_id": "agent:gerald-b-kinneavy",
+      "role": "collator",
+      "attribution_status": "known",
+      "scope": {"kind": "whole", "description": "The electronic text as a whole; Kinneavy's corrections affect selected passages whose exact locations are not itemized in the XML header"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:kinneavy"]}
+    }
+  ],
+  "date_statements": [
+    {
+      "id": "date:development",
+      "type": "composition",
+      "display": "The pageant tradition developed over the late fourteenth and fifteenth centuries; individual pageant dates and stages of revision vary",
+      "normalized": {"not_before": 1376, "not_after": 1500},
+      "scope": {"kind": "whole", "description": "Broad development window, not a claim of simultaneous composition"},
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:mets-york", "evidence:ordo-history"]},
+      "notes": ["The inherited XML value 1440 is an imprecise legacy collection-level date and is not normalized as a single composition year."]
+    },
+    {
+      "id": "date:first-pageant-wagons",
+      "type": "first_known_attestation",
+      "display": "York civic records document pageant wagons in 1376/1377",
+      "normalized": {"not_before": 1376, "not_after": 1377},
+      "scope": {"kind": "whole", "description": "Earliest documentary evidence for the civic performance tradition, not attestation of every surviving text"},
+      "source_lineage_entity_id": "catalog:reed:york-collection",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:reed-york"]}
+    },
+    {
+      "id": "date:continuing-revision",
+      "type": "revision",
+      "display": "The civic pageant tradition and constituent texts continued to be revised through the sixteenth century; the final medieval performance was in 1569",
+      "normalized": {"not_before": 1477, "not_after": 1569},
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog"]}
+    }
+  ],
+  "places": [
+    {"id": "place:york", "label": "York", "kind": "settlement", "broader_place_ids": ["place:england"], "identifiers": [{"scheme": "Wikidata", "value": "Q42462", "uri": "https://www.wikidata.org/entity/Q42462"}]},
+    {"id": "place:england", "label": "England", "kind": "country", "identifiers": [{"scheme": "Wikidata", "value": "Q21", "uri": "https://www.wikidata.org/entity/Q21"}]}
+  ],
+  "place_statements": [
+    {
+      "id": "place-statement:york-cultural",
+      "place_id": "place:york",
+      "type": "cultural_origin",
+      "scope": {"kind": "whole"},
+      "source_lineage_entity_id": "witness:bl:Add-MS-35290",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog"]},
+      "notes": ["York is the civic performance, record-production, and compilation context; the statement does not prove one exact composition site for every pageant."]
+    },
+    {
+      "id": "place-statement:york-compilation",
+      "place_id": "place:york",
+      "type": "place_of_compilation",
+      "scope": {"kind": "whole", "description": "The civic Register and pageant sequence"},
+      "source_lineage_entity_id": "witness:bl:Add-MS-35290",
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:bl-catalog", "evidence:ordo-history"]}
+    }
+  ],
+  "language_statements": [
+    {
+      "id": "language:middle-english",
+      "code": "enm",
+      "label": "Middle English",
+      "usage": "primary",
+      "script": "Latn",
+      "scope": {"kind": "whole"},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:bl-catalog", "evidence:mets-york"]},
+      "notes": ["Brief Latin incipits, rubrics, and formulae are embedded rather than a sustained secondary-language component."]
+    }
+  ],
+  "form_statements": [
+    {
+      "id": "form:verse",
+      "value": "verse",
+      "scope": {"kind": "whole"},
+      "description": "Dramatic verse with speech labels, rubrics, stage directions, and limited embedded prose-like matter",
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:york-structure", "evidence:beadle-1982"], "notes": "The 13,638 XML L elements are a representation metric, not a clean intellectual line count: numbering is partial and Play XVI includes shared and alternative Goldsmiths/Masons blocks."}
+    }
+  ],
+  "genre_statements": [
+    {"id": "genre:mystery-play", "term": "mystery-play", "label": "Mystery plays", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog"]}},
+    {"id": "genre:cycle-drama", "term": "cycle-drama", "label": "Cycle drama", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:york-structure"]}, "notes": ["Cycle is used as a discovery term without implying a single authorial Urtext or an unchanging complete sequence."]},
+    {"id": "genre:biblical-drama", "term": "biblical-drama", "label": "Biblical drama", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:beadle-1982"]}},
+    {"id": "genre:religious-drama", "term": "religious-drama", "label": "Religious drama", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:mets-york"]}},
+    {"id": "genre:civic-drama", "term": "civic-drama", "label": "Civic drama", "scheme": "general-corpus", "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:mets-york", "evidence:ordo-history"]}}
+  ],
+  "subject_statements": [
+    {"id": "subject:salvation-history", "term": "christian-salvation-history", "label": "Christian salvation history", "scheme": "general-corpus", "primary": true, "scope": {"kind": "whole"}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:york-xml", "evidence:beadle-1982"]}},
+    {"id": "subject:creation-fall", "term": "creation-and-fall", "label": "Creation and Fall", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:play-01", "part:play-02", "part:play-03a", "part:play-03b", "part:play-04", "part:play-05", "part:play-06", "part:play-07"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:beadle-1982", "evidence:york-xml"]}},
+    {"id": "subject:nativity", "term": "nativity-and-childhood-of-jesus", "label": "Nativity and childhood of Jesus", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:play-12", "part:play-13", "part:play-14", "part:play-15", "part:play-16", "part:play-17", "part:play-18", "part:play-19", "part:play-20"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:beadle-1982", "evidence:york-xml"]}},
+    {"id": "subject:passion-resurrection", "term": "passion-death-and-resurrection-of-jesus", "label": "Passion, death, and resurrection of Jesus", "scheme": "general-corpus", "primary": true, "scope": {"kind": "part", "part_ids": ["part:play-25", "part:play-26", "part:play-27", "part:play-28", "part:play-29", "part:play-30", "part:play-31", "part:play-32", "part:play-33", "part:play-34", "part:play-35", "part:play-36", "part:play-37", "part:play-38", "part:play-39", "part:play-40", "part:play-41"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:beadle-1982", "evidence:york-xml"]}},
+    {"id": "subject:virgin-mary", "term": "virgin-mary", "label": "Virgin Mary", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:play-12", "part:play-13", "part:play-14", "part:play-17", "part:play-18", "part:play-44", "part:play-45", "part:play-46", "part:play-46a"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:beadle-1982", "evidence:york-xml"]}},
+    {"id": "subject:last-judgment", "term": "last-judgment", "label": "Last Judgment", "scheme": "general-corpus", "scope": {"kind": "part", "part_ids": ["part:play-47"]}, "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:beadle-1982", "evidence:york-xml"]}}
+  ],
+  "tags": ["biblical-drama", "christian-salvation-history", "civic-drama", "compilation", "corpus-christi", "cycle-drama", "english-drama", "last-judgment", "marian-drama", "middle-english", "mystery-play", "nativity", "passion-and-resurrection", "religious-drama", "verse", "york"],
+  "summaries": [
+    {
+      "id": "summary:abstract",
+      "type": "abstract",
+      "value": "A civic Middle English dramatic sequence spanning the Fall of the Angels, Creation and Old Testament history, Christ's birth, ministry, Passion and Resurrection, Marian conclusion, and Last Judgment. York crafts maintained and performed pageants on wagons at established stations; the surviving Register records a layered, revised sequence rather than a pristine authorial cycle.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:mets-york", "evidence:bl-catalog", "evidence:ordo-history"]
+    },
+    {
+      "id": "summary:electronic-boundary",
+      "type": "scope_note",
+      "value": "The XML contains fifty top-level DIV1 pageants: the numbered 1-47 sequence, parallel play 3B, a two-line 22A remnant, and 46A's later Coronation fragment. It excludes the Ironmongers' textless register space and the Funeral of the Virgin, which was never entered in the Register. Play XVI serializes shared and alternative Masons/Goldsmiths blocks as 539 L elements and must not be treated as a simple 539-line intellectual play.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:york-structure", "evidence:beadle-1982", "evidence:bl-catalog"]
+    },
+    {
+      "id": "summary:encoding",
+      "type": "cataloging_note",
+      "value": "The XML has 13,638 L, 2,754 SP, 2,754 SPEAKER, 367 PB, and 368 EPB elements. Only 2,815 L elements carry N values. Direct comparison with the four OTA text files shows exactly 13,638 text rows after excluding control records, with 13,226 normalized exact row matches; this supports direct derivation but also exposes formatting, correction, and Play XVI ordering changes.",
+      "language": "eng",
+      "scope": {"kind": "whole"},
+      "evidence_ids": ["evidence:york-structure", "evidence:ota-files"]
+    }
+  ],
+  "extent": {
+    "numbered_items": 51,
+    "sections": 50,
+    "prose_only_items": 0,
+    "verse_only_items": 51,
+    "mixed_items": 0,
+    "verse_groups": null,
+    "verse_lines": null,
+    "description": "One cycle-level compilation represented by fifty top-level XML containers and fifty-one counted pageant or fragment components. Forty-nine top-level containers count once; Play XVI is a zero-count editorial container with two nested counted pageant units, the Masons' Herod and Goldsmiths' Magi. The count retains the two-line 22A and 47-line 46A fragments as explicit components. The XML has 13,638 L elements, but no clean total of intellectual verse lines is asserted because numbering is incomplete, lacunae are represented as line elements, and Play XVI serializes shared text plus alternative Masons and Goldsmiths branches.",
+    "evidence_ids": ["evidence:york-structure", "evidence:beadle-1982"]
+  },
+  "content_structure_status": "complete",
+  "content_parts": [
+    {"id":"part:play-01","parent_id":null,"sequence":1,"type":"section","label":"I. The Barkers — The Fall of the Angels","summary":"The Barkers' pageant of the fall of the angels.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"1"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"49-54"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 4r-7r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-02","parent_id":null,"sequence":2,"type":"section","label":"II. The Plasterers — The Creation","summary":"The Plasterers' Creation pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"2"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"55-58"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 7v-9r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-03a","parent_id":null,"sequence":3,"type":"section","label":"IIIA. The Cardmakers — The Creation of Adam and Eve","summary":"The Cardmakers' first Creation version; one of two parallel 96-line pageants.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"3A"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"59-62"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 9v-11r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-03b","parent_id":null,"sequence":4,"type":"section","label":"IIIB. The Cardmakers — The Creation of Adam and Eve (parallel version)","summary":"The second full 96-line Cardmakers version, parallel to IIIA.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"3B"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"59-62"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 12r-13r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-04","parent_id":null,"sequence":5,"type":"section","label":"IV. The Fullers — Adam and Eve in Eden","summary":"The Fullers' Adam and Eve in Eden pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"4"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"63-64"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 13v-14v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-05","parent_id":null,"sequence":6,"type":"section","label":"V. The Coopers — The Fall of Man","summary":"The Coopers' Fall of Man pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"5"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"65-69"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 16v-18v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-06","parent_id":null,"sequence":7,"type":"section","label":"VI. The Armourers — The Expulsion","summary":"The Armourers' Expulsion pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"6"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"70-74"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 19v-21r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-07","parent_id":null,"sequence":8,"type":"section","label":"VII. The Glovers — Cain and Abel","summary":"The Glovers' Cain and Abel pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"7"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"75-78"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 22r-23v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-08","parent_id":null,"sequence":9,"type":"section","label":"VIII. The Shipwrights — The Building of the Ark","summary":"The Shipwrights' Building of the Ark pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"8"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"79-83"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 24v-26v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-09","parent_id":null,"sequence":10,"type":"section","label":"IX. The Fishers and Mariners — The Flood","summary":"The Fishers and Mariners' Flood pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"9"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"84-91"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 27r-31v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-10","parent_id":null,"sequence":11,"type":"section","label":"X. The Parchmentmakers and Bookbinders — Abraham and Isaac","summary":"The Parchmentmakers and Bookbinders' Abraham and Isaac pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"10"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"92-100"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 32r-37v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-11","parent_id":null,"sequence":12,"type":"section","label":"XI. The Hosiers — Moses and Pharaoh","summary":"The Hosiers' Moses and Pharaoh pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"11"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"101-110"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 38r-43r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-12","parent_id":null,"sequence":13,"type":"section","label":"XII. The Spicers — The Annunciation and the Visitation","summary":"The Spicers' Annunciation and Visitation pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"12"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"111-117"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 44r-47v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-13","parent_id":null,"sequence":14,"type":"section","label":"XIII. The Pewterers and Founders — Joseph's Trouble about Mary","summary":"The Pewterers and Founders' Joseph pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"13"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"118-125"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 48r-52r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-14","parent_id":null,"sequence":15,"type":"section","label":"XIV. The Tilethatchers — The Nativity","summary":"The Tilethatchers' Nativity pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"14"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"126-129"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 53r-55r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-15","parent_id":null,"sequence":16,"type":"section","label":"XV. The Chandlers — The Shepherds","summary":"The Chandlers' Shepherds pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"15"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"130-134"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 56r-58r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-16","parent_id":null,"sequence":17,"type":"section","label":"XVI. The Masons / The Goldsmiths — Herod / The Magi","summary":"Beadle's editorial container combines two separately registered pageants whose middle Herod-and-kings scene exists in Masons and Goldsmiths versions. It is not counted independently from its two nested pageant units.","item_count":0,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"16"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"135-149"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 59v-69v"}],"evidence_ids":["evidence:york-xml","evidence:york-structure","evidence:ota-files","evidence:beadle-1982","evidence:bl-catalog"],"notes":["The XML has 539 L elements assembled from shared Yk.16 rows and distinct Yk.16G/Yk.16M variant blocks. Because those branches repeat alternative versions of the same middle scene, 539 is not asserted as a clean intellectual line count."]},
+    {"id":"part:play-16-masons","parent_id":"part:play-16","sequence":1,"type":"item","label":"The Masons — Herod","summary":"The separately registered Masons' pageant: Herod's boastful opening plus the Masons version of his encounter with the three kings.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"encoding:umich-ota:U-1392-B-York","scheme":"OTA source blocks","value":"Yk.16 shared lines 1-56 plus Yk.16M alternative lines 129-261"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 59v-63r"}],"evidence_ids":["evidence:york-structure","evidence:ota-files","evidence:bl-catalog","evidence:smith-1885"],"notes":["The XML does not wrap this version as a child element; the locator reconstructs the branch from preserved OTA record labels and the manuscript folio boundary."]},
+    {"id":"part:play-16-goldsmiths","parent_id":"part:play-16","sequence":2,"type":"item","label":"The Goldsmiths — The Magi","summary":"The separately registered Goldsmiths' pageant: the kings' approach, the Goldsmiths version of their encounter with Herod, the Adoration, and their departure by another route.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"encoding:umich-ota:U-1392-B-York","scheme":"OTA source blocks","value":"Yk.16 shared lines 57-128 and 273-389 plus Yk.16G alternative lines 129-261"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 64r-69v"}],"evidence_ids":["evidence:york-structure","evidence:ota-files","evidence:bl-catalog","evidence:smith-1885"],"notes":["The XML does not wrap this version as a child element; the locator reconstructs the branch from preserved OTA record labels and the manuscript folio boundary."]},
+    {"id":"part:play-17","parent_id":null,"sequence":18,"type":"section","label":"XVII. The Hatmakers, Masons and Labourers — The Purification of the Virgin","summary":"The Hatmakers, Masons and Labourers' Purification pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"17"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"150-161"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 212v-217r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"],"notes":["The physical Register places this pageant out of sequence at ff. 212v-217r; a note at f. 70r directs that it should occur after the Magi."]},
+    {"id":"part:play-18","parent_id":null,"sequence":19,"type":"section","label":"XVIII. The Marshals — The Flight into Egypt","summary":"The Marshals' Flight into Egypt pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"18"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"162-166"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 71r-74v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-19","parent_id":null,"sequence":20,"type":"section","label":"XIX. The Girdlers and Nailers — The Slaughter of the Innocents","summary":"The Girdlers and Nailers' Slaughter of the Innocents pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"19"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"167-174"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 76r-80v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-20","parent_id":null,"sequence":21,"type":"section","label":"XX. The Spurriers and Lorimers — Christ and the Doctors","summary":"The Spurriers and Lorimers' Christ and the Doctors pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"20"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"175-181"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 82r-86v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-21","parent_id":null,"sequence":22,"type":"section","label":"XXI. The Barbers — The Baptism","summary":"The Barbers' Baptism pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"21"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"182-186"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 87r-89r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-22","parent_id":null,"sequence":23,"type":"section","label":"XXII. The Smiths — The Temptation","summary":"The Smiths' Temptation pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"22"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"187-192"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 90r-92r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-22a","parent_id":null,"sequence":24,"type":"fragment","label":"XXIIA. The Vintners — The Marriage at Cana remnant","summary":"A two-line Vintners' Cana remnant preserved at the end of the register passage.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"22A"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"192"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"f. 92v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-23","parent_id":null,"sequence":25,"type":"section","label":"XXIII. The Curriers — The Transfiguration","summary":"The Curriers' Transfiguration pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"23"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"193-199"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 96r-100r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"],"notes":["The Ironmongers' ff. 100v-101r contain no pageant text and are outside the fifty encoded divisions."]},
+    {"id":"part:play-24","parent_id":null,"sequence":26,"type":"section","label":"XXIV. The Cappers — The Woman Taken in Adultery / The Raising of Lazarus","summary":"The Cappers' two-subject pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"24"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"200-205"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 102r-105v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-25","parent_id":null,"sequence":27,"type":"section","label":"XXV. The Skinners — The Entry into Jerusalem","summary":"The Skinners' Entry into Jerusalem pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"25"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"206-220"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 106v-112v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-26","parent_id":null,"sequence":28,"type":"section","label":"XXVI. The Cutlers — The Conspiracy","summary":"The Cutlers' Conspiracy pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"26"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"221-228"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 113r-120r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-27","parent_id":null,"sequence":29,"type":"section","label":"XXVII. The Bakers — The Last Supper","summary":"The Bakers' Last Supper pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"27"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"229-234"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 121v-124v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-28","parent_id":null,"sequence":30,"type":"section","label":"XXVIII. The Cordwainers — The Agony in the Garden and the Betrayal","summary":"The Cordwainers' Agony and Betrayal pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"28"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"235-242"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 125r-131v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-29","parent_id":null,"sequence":31,"type":"section","label":"XXIX. The Bowers and Fletchers — Christ before Annas and Caiaphas","summary":"The Bowers and Fletchers' Annas and Caiaphas pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"29"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"243-254"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 132r-139r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-30","parent_id":null,"sequence":32,"type":"section","label":"XXX. The Tapiters and Couchers — Christ before Pilate 1: The Dream of Pilate's Wife","summary":"The Tapiters and Couchers' first Pilate pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"30"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"255-270"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 140v-151r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-31","parent_id":null,"sequence":33,"type":"section","label":"XXXI. The Litsters — Christ before Herod","summary":"The Litsters' Christ before Herod pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"31"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"271-283"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 152r-159v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-32","parent_id":null,"sequence":34,"type":"section","label":"XXXII. The Cooks and Waterleaders — The Remorse of Judas","summary":"The Cooks and Waterleaders' Remorse of Judas pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"32"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"284-293"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 160v-166v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-33","parent_id":null,"sequence":35,"type":"section","label":"XXXIII. The Tilemakers — Christ before Pilate 2: The Judgement","summary":"The Tilemakers' second Pilate pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"33"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"294-306"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 167r-174v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-34","parent_id":null,"sequence":36,"type":"section","label":"XXXIV. The Shearmen — The Road to Calvary","summary":"The Shearmen's Road to Calvary pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"34"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"307-315"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 175r-180r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-35","parent_id":null,"sequence":37,"type":"section","label":"XXXV. The Pinners — The Crucifixion","summary":"The Pinners' Crucifixion pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"35"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"316-323"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 181r-186r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-36","parent_id":null,"sequence":38,"type":"section","label":"XXXVI. The Butchers — The Death of Christ","summary":"The Butchers' Death of Christ pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"36"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"324-333"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 187r-192r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-37","parent_id":null,"sequence":39,"type":"section","label":"XXXVII. The Saddlers — The Harrowing of Hell","summary":"The Saddlers' Harrowing of Hell pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"37"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"334-344"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 193v-199v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-38","parent_id":null,"sequence":40,"type":"section","label":"XXXVIII. The Carpenters — The Resurrection","summary":"The Carpenters' Resurrection pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"38"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"345-356"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 200r-205r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-39","parent_id":null,"sequence":41,"type":"section","label":"XXXIX. The Winedrawers — Christ's Appearance to Mary Magdalene","summary":"The Winedrawers' Appearance to Mary Magdalene pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"39"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"357-360"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 206v-208v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-40","parent_id":null,"sequence":42,"type":"section","label":"XL. The Woolpackers and Woolbrokers — The Supper at Emmaus","summary":"The Woolpackers and Woolbrokers' Emmaus pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"40"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"361-366"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 209r-212v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-41","parent_id":null,"sequence":43,"type":"section","label":"XLI. The Scriveners — The Incredulity of Thomas","summary":"The Scriveners' Incredulity of Thomas pageant, also preserved in a separate guild copy.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"41"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"367-373"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 218r-220r"},{"lineage_entity_id":"witness:york-city-archives:Acc-104-G-1","scheme":"manuscript extent","value":"four vellum leaves"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog","evidence:cawley-sykes"]},
+    {"id":"part:play-42","parent_id":null,"sequence":44,"type":"section","label":"XLII. The Tailors — The Ascension","summary":"The Tailors' Ascension pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"42"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"374-380"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 221v-225v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-43","parent_id":null,"sequence":45,"type":"section","label":"XLIII. The Potters — Pentecost","summary":"The Potters' Pentecost pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"43"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"381-386"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 226r-229v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-44","parent_id":null,"sequence":46,"type":"section","label":"XLIV. The Drapers — The Death of the Virgin","summary":"The Drapers' Death of the Virgin pageant; it does not include the unregistered Funeral or Fergus material.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"44"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"387-392"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 230v-233r"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"],"notes":["Beadle prints the Funeral of the Virgin separately as XLIVA, but it was never entered in the Register and is absent from this XML."]},
+    {"id":"part:play-45","parent_id":null,"sequence":47,"type":"section","label":"XLV. The Weavers — The Assumption of the Virgin","summary":"The Weavers' Assumption pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"45"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"393-400"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 234r-241v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-46","parent_id":null,"sequence":48,"type":"section","label":"XLVI. The Hostelers — The Coronation of the Virgin","summary":"The Hostelers' Coronation pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"46"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"401-404"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 242r-244v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-46a","parent_id":null,"sequence":49,"type":"fragment","label":"XLVIA. The Coronation of the Virgin (later fragment)","summary":"A 47-line later Coronation fragment physically placed after the Last Judgment.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"46A"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"405-406"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 252r-252v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]},
+    {"id":"part:play-47","parent_id":null,"sequence":50,"type":"section","label":"XLVII. The Mercers — The Last Judgement","summary":"The Mercers' Last Judgment pageant.","item_count":1,"textual_form":"verse","locators":[{"lineage_entity_id":"artifact:general-corpus:York","scheme":"XML DIV1/@N","value":"47"},{"lineage_entity_id":"edition:beadle:york-plays-1982","scheme":"printed pages","value":"407-415"},{"lineage_entity_id":"witness:bl:Add-MS-35290","scheme":"folios","value":"ff. 246r-251v"}],"evidence_ids":["evidence:york-xml","evidence:beadle-1982","evidence:bl-catalog"]}
+  ],
+  "related_works": [
+    {
+      "id": "related:towneley-cycle",
+      "title": "The Towneley Plays",
+      "relation": "related_to",
+      "identifiers": [{"scheme": "CME/UMDL", "value": "Towneley", "uri": "https://name.umdl.umich.edu/Towneley"}],
+      "evidence_ids": ["evidence:mets-york", "evidence:cawley-sykes"],
+      "notes": ["The Towneley manuscript preserves adapted or borrowed material related to selected York pageants; it is a distinct compilation and not a witness of the exact York cycle as a whole."]
+    }
+  ],
+  "lineage": {
+    "manifest_id": "lineage:York",
+    "manifest_path": "manifests/lineage/works/York.json",
+    "bindings": [
+      {"metadata_target":"work:York","lineage_entity_id":"artifact:general-corpus:York","role":"repository_representation"},
+      {"metadata_target":"work:York","lineage_entity_id":"encoding:umich-ota:U-1392-B-York","role":"digital_encoding"},
+      {"metadata_target":"work:York","lineage_entity_id":"edition:beadle:york-plays-1982","role":"source_edition"},
+      {"metadata_target":"work:York","lineage_entity_id":"witness:bl:Add-MS-35290","role":"source_witness"},
+      {"metadata_target":"part:play-41","lineage_entity_id":"witness:york-city-archives:Acc-104-G-1","role":"source_witness"},
+      {"metadata_target":"work:York","lineage_entity_id":"witness:huntington:HM-1","role":"related_source"},
+      {"metadata_target":"work:York","lineage_entity_id":"witness:borthwick:E-20-1327-1547","role":"related_source"},
+      {"metadata_target":"work:York","lineage_entity_id":"edition:smith:york-plays-1885","role":"related_source"},
+      {"metadata_target":"work:York","lineage_entity_id":"edition:beadle:york-plays-2009-2013","role":"related_source"}
+    ]
+  },
+  "evidence": [
+    {"id":"evidence:york-xml","type":"repository_file","citation":"General Corpus source XML, CME/source/CME_from_OTA/York.xml, pinned CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.","repository_path":"CME/source/CME_from_OTA/York.xml","summary":"Direct source for the encoded text, header, fifty DIV1 identifiers, and repository boundary.","sha256":"21de160d526dff4c0899c290fb0308f52f52dcde216ae9a49336dda8339c1a52"},
+    {"id":"evidence:york-structure","type":"computational_inspection","citation":"Targeted XML and OTA source-file inspection performed 2026-07-15.","repository_path":"CME/source/CME_from_OTA/York.xml","summary":"Counted 50 DIV1, 13,638 L, 2,754 SP/SPEAKER, 367 PB, and 368 EPB elements; inspected N sequence, lacuna markers, page boundaries, and one-for-one OTA source rows. Play XVI uses Yk.16/Yk.16G/Yk.16M shared and alternative blocks.","accessed_on":"2026-07-15","sha256":"21de160d526dff4c0899c290fb0308f52f52dcde216ae9a49336dda8339c1a52"},
+    {"id":"evidence:beadle-1982","type":"scholarly_source","citation":"The York Plays, ed. Richard Beadle (London: Edward Arnold, 1982), 537 pp.","url":"https://archive.org/details/yorkplays0000unse","summary":"Immediate source edition. Cached title, copyright, and contents preview pages confirm bibliographic data, fifty encoded pageant headings, guilds, and printed-page boundaries.","accessed_on":"2026-07-15"},
+    {"id":"evidence:ota-item","type":"official_catalog","citation":"Oxford Text Archive, York miracle play cycle, ota:1392 / U-1392-B.","url":"https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392","summary":"Current OTA item metadata, identifier, issue date, file inventory, and Academic Use designation.","accessed_on":"2026-07-15"},
+    {"id":"evidence:ota-files","type":"digital_surrogate","citation":"Oxford Text Archive U-1392-B plain-text files york1-york4 and input conventions.","url":"https://ota.ox.ac.uk/llds/xmlui/handle/20.500.14106/1392","summary":"Five cached public files preserve plays 1-18, 19-30, 31-40, 41-47, and encoding conventions; direct comparison establishes the XML derivation and Play XVI variant blocks.","accessed_on":"2026-07-15"},
+    {"id":"evidence:bl-catalog","type":"official_catalog","citation":"British Library, Add MS 35290, York Mystery Plays, current Archives and Manuscripts record 040-002088765.","url":"https://searcharchives.bl.uk/catalog/040-002088765","summary":"Current shelfmark, dates, physical description, provenance, detailed pageant folio map, access restrictions, and current lack of digital images.","accessed_on":"2026-07-15"},
+    {"id":"evidence:mets-york","type":"scholarly_source","citation":"Clifford Davidson, ed., The York Corpus Christi Play, Middle English Texts Series reading edition (2011; current web edition).","url":"https://metseditions.org/read/VEVbdg4i9xbBCRY8Ulyq4S2vNg7NGYW","summary":"Current scholarly account of the civic cycle, pageant wagons and stations, Ordo layers, Register production and revisions, guild-copy relationships, omitted entries, and performance through 1569.","accessed_on":"2026-07-15"},
+    {"id":"evidence:reed-york","type":"official_catalog","citation":"Records of Early English Drama, York collection, pinned repository commit 1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66.","url":"https://github.com/REEDProject/Collections/blob/1bec27e917f17f9ebdefc6ec6f9c79c8a1605f66/tei/records/yorkc.xml","summary":"Documentary evidence for the York civic performance tradition and the Ordo; cached exact TEI source is separately modeled in lineage.","accessed_on":"2026-07-15"},
+    {"id":"evidence:ordo-history","type":"scholarly_source","citation":"Peter Meredith, ‘The Ordo Paginarum and the Development of the York Tilemakers' Pageant,’ Leeds Studies in English, n.s. 11 (1980): 59-73.","url":"https://archive.org/details/lse-1979-whole-issue","summary":"Shows that the Ordo is layered, erased, and rewritten and that the Tilemakers entry cannot be treated as a homogeneous 1415 record.","accessed_on":"2026-07-15"},
+    {"id":"evidence:cawley-sykes","type":"scholarly_source","citation":"A. C. Cawley, ‘The Sykes MS of the York Scriveners' Play,’ Leeds Studies in English 7-8 (1952): 45-80.","url":"https://digital.library.leeds.ac.uk/71/","summary":"Description, photograph, complete transcription, and collation of the separate Scriveners witness against the Register; neither manuscript is a direct copy of the other.","accessed_on":"2026-07-15"},
+    {"id":"evidence:smith-1885","type":"scholarly_source","citation":"York Plays, ed. Lucy Toulmin Smith (Oxford: Clarendon Press, 1885).","url":"https://archive.org/details/yorkplaysnowfir00smitgoog","summary":"The first complete edition prints the Masons as Play XVI and the Goldsmiths as Play XVII. Smith explains that their middle scene overlaps, with a Masons-specific opening and Goldsmiths-specific approach and Adoration, supporting two nested pageant units inside Beadle's later combined Play XVI container.","accessed_on":"2026-07-15"},
+    {"id":"evidence:kinneavy","type":"scholarly_source","citation":"Gerald Byron Kinneavy, A Concordance to the York Plays (New York: Garland, 1986), xxxviii + 936 pp., ISBN 0-8240-8656-2.","url":"https://lccn.loc.gov/85045133","summary":"The electronic header identifies corrections recorded on pp. xxxi-xxxii as incorporated into the electronic text; no complete public digital copy was found.","accessed_on":"2026-07-15"}
+  ],
+  "open_questions": [
+    {"id":"question:play-16-branches","question":"What exact textual genealogy and editorial rationale underlie the Yk.16, Yk.16G, and Yk.16M shared and alternative blocks serialized inside Play XVI?","status":"unresolved","impact":"medium","next_steps":["Consult the complete 1982 edition and Kinneavy's correction list, then collate the shared and variant blocks without treating alternative branches as additive intellectual lines."],"last_checked":"2026-07-15","evidence_ids":["evidence:york-structure","evidence:beadle-1982","evidence:kinneavy"],"notes":["The division is securely labeled XVI, Masons/Goldsmiths, Herod/Magi; the unresolved issue is internal branch genealogy, not play numbering."]},
+    {"id":"question:ordo-holding","question":"What is the current authoritative shelfmark and custody statement for the A/Y Memorandum Book containing the Ordo Paginarum?","status":"unresolved","impact":"medium","next_steps":["Obtain a current Borthwick Institute or York City Archives catalog response; preserve the conflict between current REED attribution and older scholarship until then."],"last_checked":"2026-07-15","evidence_ids":["evidence:reed-york","evidence:ordo-history"]},
+    {"id":"question:lost-guild-copies","question":"What recoverable evidence remains for the lost pageant copies supplied by individual York crafts to the Register compilers?","status":"no_public_source_found","impact":"medium","next_steps":["Continue documentary and archival research without inventing one manuscript entity per guild; treat the Sykes Scriveners copy as the only separately surviving script currently established."],"last_checked":"2026-07-15","evidence_ids":["evidence:mets-york","evidence:cawley-sykes"]}
+  ],
+  "notes": [
+    "Guild names describe recorded production responsibility, not proven authorship.",
+    "The Funeral of the Virgin is not folded into XML Play XLIV: the encoded Death of the Virgin is a 196-line pageant, while the Funeral was never entered in the Register and is absent.",
+    "The related Towneley material is collateral adaptation or borrowing, not the exact York target work."
+  ]
+}

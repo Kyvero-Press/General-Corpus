@@ -1,0 +1,2176 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Towneley",
+  "work_id": "Towneley",
+  "title": "Source lineage for The Towneley Plays",
+  "primary_subject": "artifact:general-corpus:Towneley",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The pinned repository XML derives from a 1993 U-M/Oxford Text Archive encoding of the 1966 Oxford/EETS reprint of George England and Alfred W. Pollard's 1897 edition. Current scholarship finds that the 1897 text substantially depends on the first complete Surtees Society edition of 1836, while its editors also consulted HM 1 and corrected proofs against it; the 1836 edition was transcribed from and checked against the manuscript. Huntington HM 1 is the unique surviving witness of this manuscript compilation. Complete public scans of the 1836 and 1897 editions and a complete public later Epp edition are cached; Huntington's public digital object contains all 60 canvases it publishes but explicitly represents only selected, non-contiguous views of the 132-folio manuscript.",
+  "languages": [
+    "enm",
+    "lat",
+    "eng"
+  ],
+  "review_notes": [
+    "The textual, physical, editorial, electronic, and repository layers are modeled separately.",
+    "The 1966 reprint is the immediate source named by the XML header. No complete public 1966 carrier was found, so its exact reset/reprint details remain unverified.",
+    "The 1897 editors' claim of a new transcript and proof correction against HM 1 is preserved alongside Epp's current finding that the 1836 Surtees text was substantially the base; the relation is therefore modeled as 1836 version dependence plus manuscript collation, not as an uncomplicated direct transcription.",
+    "The 1818 Noah/Herod excerpts, Francis Douce's complete Judgment of 1822, and John Payne Collier's Second Shepherds' Play of 1835 were checked through Epp's publication history. They are earlier partial publications, not evidenced intermediaries in the complete 1836-to-1897-to-1966-to-encoding chain.",
+    "The 1976 Cawley-Stevens volume is a complete facsimile of the surviving manuscript but no complete public digital copy was found. It is available in physical research-library copies.",
+    "The official Huntington ContentDM exact-shelfmark search returned one HM 1 parent object, and its compound object and IIIF Presentation manifest expose exactly 60 selected canvases. Complete coverage of that provider-selected object is distinguished from its partial coverage of HM 1.",
+    "No direct physical-source relation is asserted from the surviving York Register to HM 1 because Epp warns that some Towneley readings may predate the register and exact exemplars remain unknown."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Towneley",
+      "type": "repository_artifact",
+      "label": "General Corpus source XML for Towneley",
+      "description": "The pinned XML artifact consumed by this repository and supplied through the Kyvero-Press/CME git submodule.",
+      "identifiers": [
+        {
+          "scheme": "CME/UMDL",
+          "value": "Towneley"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "1ba68ab30bd7bdb0d7ef3d7cef8ac9941473ec9b"
+        },
+        {
+          "scheme": "CME git commit",
+          "value": "e1d77c88ca561be924b2fedc54dd474be2e7e49c"
+        }
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/Towneley.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "1ba68ab30bd7bdb0d7ef3d7cef8ac9941473ec9b",
+        "sha256": "be65c295c382c4843347d4a47fa146799f1488adb8390329a581787460d69818"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:cme-git-state"
+      ],
+      "notes": [
+        "File size is 674,028 bytes at the reviewed CME commit."
+      ]
+    },
+    {
+      "id": "encoding:umich-ota:U-1397-B-Towneley",
+      "type": "digital_encoding",
+      "label": "University of Michigan / Oxford Text Archive electronic item Towneley, U-1397-B",
+      "alternate_labels": [
+        "U-M CME item Towneley"
+      ],
+      "description": "A 1993 electronic encoding of the thirty-two traditional units. Its header names the 1966 Oxford University Press/EETS reprint as the print source and records the omission of printed front and back matter and editorial notes.",
+      "identifiers": [
+        {
+          "scheme": "Oxford Text Archive",
+          "value": "U-1397-B"
+        },
+        {
+          "scheme": "CME/UMDL",
+          "value": "Towneley",
+          "uri": "https://name.umdl.umich.edu/Towneley"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich",
+        "agent:ota"
+      ],
+      "date_statements": [
+        {
+          "label": "electronic edition",
+          "value": "1993",
+          "normalized": "1993",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:towneley-xml",
+            "evidence:umich-towneley"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:umich-towneley"
+      ],
+      "notes": [
+        "The header says Latin character names were often changed to English equivalents, printed marginalia were deleted, and italics and archaic characters were removed.",
+        "The legacy header limits use to personal scholarship, whereas the current U-M item assigns No Copyright - United States; both dated layers are preserved under rights."
+      ]
+    },
+    {
+      "id": "edition:eets:towneley-1966",
+      "type": "scholarly_edition",
+      "label": "The Towneley Plays, Oxford University Press / EETS reprint (1966)",
+      "description": "The complete printed source edition expressly named by the 1993 encoding. The header calls it a 1966 Oxford/EETS publication of xxxiv + 418 pages and states that it was first published in 1897.",
+      "identifiers": [
+        {
+          "scheme": "Early English Text Society",
+          "value": "Extra Series 71"
+        }
+      ],
+      "creator_ids": [
+        "agent:george-england",
+        "agent:alfred-pollard",
+        "agent:eets",
+        "agent:oup"
+      ],
+      "date_statements": [
+        {
+          "label": "reprint publication",
+          "value": "1966",
+          "normalized": "1966",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:towneley-xml",
+            "evidence:umich-towneley"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Towneley Plays, re-edited from the unique manuscript by George England, with side-notes and introduction by Alfred W. Pollard, Early English Text Society, Extra Series 71 (London and New York: Oxford University Press, [1966]).",
+        "title": "The Towneley Plays",
+        "series": "Early English Text Society, Extra Series 71",
+        "publisher": "Oxford University Press",
+        "publication_place": "London; New York",
+        "date": "1966",
+        "pages": "xxxiv, 418",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:umich-towneley",
+        "evidence:england-pollard-1897"
+      ],
+      "notes": [
+        "The exact physical relationship to the 1897 impression has not been inspected from a complete public copy; substantive text, pagination, and paratextual differences remain an open question."
+      ]
+    },
+    {
+      "id": "edition:eets:towneley-1897",
+      "type": "scholarly_edition",
+      "label": "George England and Alfred W. Pollard, The Towneley Plays (1897)",
+      "description": "The complete EETS Extra Series 71 edition in the traditional thirty-two-unit order, with the play text on printed pp. 1-396 and an appendix. Its title page says it was re-edited from the unique manuscript; Pollard's introduction credits England with a new transcript and proof correction against HM 1.",
+      "identifiers": [
+        {
+          "scheme": "Early English Text Society",
+          "value": "Extra Series 71"
+        },
+        {
+          "scheme": "Internet Archive",
+          "value": "towneleyplays71engl",
+          "uri": "https://archive.org/details/towneleyplays71engl"
+        }
+      ],
+      "creator_ids": [
+        "agent:george-england",
+        "agent:alfred-pollard",
+        "agent:eets"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1897",
+          "normalized": "1897",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:england-pollard-1897",
+            "evidence:ia-1897-metadata"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Towneley Plays, re-edited from the unique manuscript by George England, with side-notes and introduction by Alfred W. Pollard, Early English Text Society, Extra Series 71 (London: Kegan Paul, Trench, Trübner & Co., 1897).",
+        "title": "The Towneley Plays",
+        "series": "Early English Text Society, Extra Series 71",
+        "publisher": "Kegan Paul, Trench, Trübner & Co.",
+        "publication_place": "London",
+        "date": "1897",
+        "pages": "xxxiv, 418; play text 1-396",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:ia-1897-metadata",
+        "evidence:epp-edition"
+      ],
+      "notes": [
+        "Epp finds that the edition was based less on HM 1 than on the 1836 Surtees Society text and identifies reproduced errors, despite the direct-manuscript consultation documented by Pollard."
+      ]
+    },
+    {
+      "id": "edition:surtees:towneley-1836",
+      "type": "scholarly_edition",
+      "label": "The Towneley Mysteries, Surtees Society (1836)",
+      "description": "The first complete printed edition of the manuscript collection. The Surtees preface records Peregrine Edward Towneley's permission to transcribe the manuscript, and the volume says Joseph Stevenson carefully compared the printed sheets with the original.",
+      "identifiers": [
+        {
+          "scheme": "Surtees Society",
+          "value": "Publications 3"
+        },
+        {
+          "scheme": "Internet Archive",
+          "value": "towneleymysterie00rainrich",
+          "uri": "https://archive.org/details/towneleymysterie00rainrich"
+        }
+      ],
+      "creator_ids": [
+        "agent:surtees-society",
+        "agent:james-raine",
+        "agent:joseph-hunter",
+        "agent:james-gordon",
+        "agent:joseph-stevenson"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1836",
+          "normalized": "1836",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:surtees-1836",
+            "evidence:ia-1836-metadata"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Towneley Mysteries, Publications of the Surtees Society 3 (London: J. B. Nichols and Son; William Pickering, 1836), with preface by Joseph Hunter, glossary by James Gordon, James Raine as Society secretary/editor, and manuscript comparison by Joseph Stevenson.",
+        "title": "The Towneley Mysteries",
+        "series": "Publications of the Surtees Society 3",
+        "publisher": "J. B. Nichols and Son; William Pickering",
+        "publication_place": "London",
+        "date": "1836",
+        "pages": "complete text, printed pp. 1-352",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:surtees-1836",
+        "evidence:ia-1836-metadata",
+        "evidence:epp-edition"
+      ],
+      "notes": [
+        "Epp identifies this as the first complete edition and the substantial base used by the 1897 EETS edition."
+      ]
+    },
+    {
+      "id": "witness:huntington:HM-1",
+      "type": "manuscript_witness",
+      "label": "Huntington Library, HM 1",
+      "alternate_labels": [
+        "mssHM 1",
+        "Towneley manuscript",
+        "Towneley cycle manuscript"
+      ],
+      "description": "The unique surviving physical witness of this compilation: a 132-folio parchment codex containing thirty-one main collection units and a later Judas fragment. Uniqueness applies to the manuscript compilation, not to every constituent play tradition.",
+      "identifiers": [
+        {
+          "scheme": "Huntington Library shelfmark",
+          "value": "HM 1",
+          "uri": "https://catalog.huntington.org/record=b1862079"
+        },
+        {
+          "scheme": "Huntington Digital Library parent ID",
+          "value": "52988",
+          "uri": "https://hdl.huntington.org/digital/collection/p15150coll7/id/52988"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "current Huntington catalog assignment",
+          "value": "between 1490 and 1510",
+          "normalized": "1490/1510",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:huntington-hm1-record"
+          ],
+          "notes": "The catalog also summarizes the assignment as s. XV/XVI."
+        },
+        {
+          "label": "current Epp scholarly argument",
+          "value": "possibly mid-sixteenth century, likely the 1550s",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:epp-edition"
+          ],
+          "notes": "This conflicts with the institutional catalog assignment and remains an attributed interpretation."
+        },
+        {
+          "label": "later Judas addition",
+          "value": "sixteenth century",
+          "normalized": "1500/1599",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:huntington-hm1-record",
+            "evidence:epp-edition"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:huntington",
+        "shelfmark": "HM 1",
+        "historical_designations": [
+          "mssHM 1"
+        ],
+        "catalog_url": "https://catalog.huntington.org/record=b1862079",
+        "notes": "Current citation form: HM 1. Huntington Library, San Marino, CA."
+      },
+      "physical_description": {
+        "support": "parchment",
+        "extent": "132 folios (ff. 1-132v; f. 132v covered with modern paper)",
+        "format": "bound manuscript codex",
+        "dimensions": "210 × 305 mm",
+        "notes": [
+          "Twenty-eight leaves are missing, affecting portions of plays 1, 4, 5, 17, 18, 29, and 30 and possibly lost bans and Marian material.",
+          "Play 7 is unfinished; plays 7, 8, 31, and 32 were copied out of narrative sequence.",
+          "The Judas fragment on ff. 131v-132 was added by a later hand."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:epp-edition"
+      ],
+      "notes": [
+        "The current Huntington catalog records Christopher Towneley's seventeenth-century pressmark, the 1814 sale to John Louis Goldsmid, the 1815 sale to John North, the 1819 return to Peregrine Edward Towneley, the 1883 sale to Bernard Quaritch, sale in 1900 to Sir Edward F. Coates, and acquisition in 1922 by A. S. W. Rosenbach for Henry E. Huntington.",
+        "Physical access is restricted, requires curatorial approval, and requires extended retrieval and delivery time.",
+        "The current Huntington catalog associates arms on the binding with Sir Isaac Lyon Goldsmid; Epp corrects the ownership/binding history toward John Louis Goldsmid, so the exact heraldic attribution is retained as a conflict."
+      ]
+    },
+    {
+      "id": "facsimile:ia:towneley-1897",
+      "type": "facsimile",
+      "label": "Internet Archive scan of The Towneley Plays (1897)",
+      "description": "A complete 468-page PDF scan of the 1897 EETS volume, including its introduction, complete play text, apparatus, appendix, glossary, and index.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive",
+          "value": "towneleyplays71engl",
+          "uri": "https://archive.org/details/towneleyplays71engl"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "digitization record",
+          "value": "Internet Archive public scan",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ia-1897-metadata"
+          ]
+        }
+      ],
+      "reproduction_format": "PDF page-image scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:ia-1897-metadata"
+      ]
+    },
+    {
+      "id": "facsimile:ia:towneley-1836",
+      "type": "facsimile",
+      "label": "Internet Archive scan of The Towneley Mysteries (1836)",
+      "description": "A complete 398-page PDF scan of the 1836 Surtees Society volume, including the complete play text and editorial matter.",
+      "identifiers": [
+        {
+          "scheme": "Internet Archive",
+          "value": "towneleymysterie00rainrich",
+          "uri": "https://archive.org/details/towneleymysterie00rainrich"
+        }
+      ],
+      "creator_ids": [
+        "agent:internet-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "digitization record",
+          "value": "Internet Archive public scan",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ia-1836-metadata"
+          ]
+        }
+      ],
+      "reproduction_format": "PDF page-image scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:surtees-1836",
+        "evidence:ia-1836-metadata"
+      ]
+    },
+    {
+      "id": "facsimile:huntington:HM-1-selected",
+      "type": "facsimile",
+      "label": "Huntington Digital Library selected images of HM 1",
+      "description": "The official public ContentDM/IIIF compound object containing 60 selected, non-contiguous manuscript and binding views. The provider explicitly states that HM 1 was only partially scanned for the Digital Scriptorium project.",
+      "identifiers": [
+        {
+          "scheme": "Huntington Digital Library parent ID",
+          "value": "52988",
+          "uri": "https://hdl.huntington.org/digital/collection/p15150coll7/id/52988"
+        },
+        {
+          "scheme": "IIIF Presentation manifest",
+          "value": "p15150coll7:52988",
+          "uri": "https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json"
+        }
+      ],
+      "creator_ids": [
+        "agent:huntington"
+      ],
+      "date_statements": [
+        {
+          "label": "digitization",
+          "value": "early 2000s Digital Scriptorium project; current object checked 2026-07-15",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:huntington-hm1-record",
+            "evidence:huntington-iiif"
+          ]
+        }
+      ],
+      "reproduction_format": "60 IIIF page-image canvases",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-iiif",
+        "evidence:huntington-digital-audit"
+      ],
+      "notes": [
+        "The 60 canvases begin with f. 1r, include non-contiguous selected folios and ultraviolet views, reach ff. 131v-132r, and conclude with front-cover and binding-stitching views.",
+        "This is complete coverage of the selected provider object but partial coverage of the 132-folio witness."
+      ]
+    },
+    {
+      "id": "facsimile:huntington-leeds:HM-1-1976",
+      "type": "facsimile",
+      "label": "The Towneley Cycle: A Facsimile of Huntington MS HM 1 (1976)",
+      "description": "A complete black-and-white facsimile of the surviving HM 1 folios with an introduction by A. C. Cawley and Martin Stevens, issued jointly by the Huntington Library and the University of Leeds.",
+      "identifiers": [
+        {
+          "scheme": "ISBN",
+          "value": "0902296167"
+        },
+        {
+          "scheme": "LCCN",
+          "value": "75042854"
+        }
+      ],
+      "creator_ids": [
+        "agent:a-c-cawley",
+        "agent:martin-stevens",
+        "agent:huntington",
+        "agent:university-leeds"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1976",
+          "normalized": "1976",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:facsimile-1976"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Towneley Cycle: A Facsimile of Huntington MS HM 1, introduction by A. C. Cawley and Martin Stevens, Leeds Texts and Monographs, Medieval Drama Facsimiles 2 (Leeds: University of Leeds, School of English, jointly with the Huntington Library, 1976).",
+        "title": "The Towneley Cycle: A Facsimile of Huntington MS HM 1",
+        "series": "Leeds Texts and Monographs, Medieval Drama Facsimiles 2",
+        "publisher": "University of Leeds, School of English; Huntington Library",
+        "publication_place": "Leeds; San Marino",
+        "date": "1976",
+        "pages": "xix pages plus facsimiles of 132 leaves",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "reproduction_format": "Printed black-and-white facsimile with color frontispiece",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:facsimile-1976",
+        "evidence:huntington-hm1-record"
+      ],
+      "notes": [
+        "The University of Leeds archive marks the title out of print. Physical copies are held by research libraries; no complete public digital copy was located."
+      ]
+    },
+    {
+      "id": "edition:mets:epp-towneley-2018",
+      "type": "scholarly_edition",
+      "label": "Garrett P. J. Epp, The Towneley Plays (2018)",
+      "description": "A complete current TEAMS Middle English Texts Series scholarly edition. It foregrounds HM 1 as a disparate compilation, reorganizes manuscript material as twenty-seven numbered edition units plus a Judas appendix, and supplies introduction, headnotes, annotations, bibliography, and glossary.",
+      "identifiers": [
+        {
+          "scheme": "ISBN paperback",
+          "value": "978-1-58044-283-1"
+        },
+        {
+          "scheme": "ISBN hardback",
+          "value": "978-1-58044-304-3"
+        },
+        {
+          "scheme": "ISBN PDF",
+          "value": "978-1-58044-284-8"
+        },
+        {
+          "scheme": "METS edition",
+          "value": "Towneley Plays",
+          "uri": "https://metseditions.org/read/0pkMKY9ecEpZU3gKHVXzWcMq1kg53EQ"
+        }
+      ],
+      "creator_ids": [
+        "agent:garrett-epp",
+        "agent:mets",
+        "agent:medieval-institute-publications"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "2018",
+          "normalized": "2018",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:epp-edition"
+          ]
+        },
+        {
+          "label": "downloadable PDF creation",
+          "value": "2024-09-25",
+          "normalized": "2024-09-25",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:epp-edition"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Towneley Plays, ed. Garrett P. J. Epp, TEAMS Middle English Texts Series (Kalamazoo: Medieval Institute Publications, 2018).",
+        "title": "The Towneley Plays",
+        "series": "TEAMS Middle English Texts Series",
+        "publisher": "Medieval Institute Publications",
+        "publication_place": "Kalamazoo",
+        "date": "2018",
+        "pages": "downloadable version: 594 PDF pages",
+        "languages": [
+          "enm",
+          "eng",
+          "lat"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ],
+      "notes": [
+        "The edition's 14,385-line total reflects a different editorial lineation and reconstruction from the pinned XML's 12,293 represented logical rows.",
+        "Its reorganization is valuable scholarly analysis but is not substituted for the exact thirty-two-unit XML hierarchy."
+      ]
+    },
+    {
+      "id": "facsimile:mets:epp-towneley-pdf",
+      "type": "facsimile",
+      "label": "METS downloadable PDF of Epp's The Towneley Plays",
+      "description": "The complete 594-page downloadable PDF representation of Epp's 2018 edition, generated on 2024-09-25.",
+      "creator_ids": [
+        "agent:mets",
+        "agent:medieval-institute-publications"
+      ],
+      "date_statements": [
+        {
+          "label": "PDF creation",
+          "value": "2024-09-25",
+          "normalized": "2024-09-25",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:epp-edition"
+          ]
+        }
+      ],
+      "reproduction_format": "PDF",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ]
+    },
+    {
+      "id": "catalog:usco:circular-15a-2026",
+      "type": "catalog_description",
+      "label": "U.S. Copyright Office Circular 15A (April 2026)",
+      "description": "Official U.S. Copyright Office guidance used only for the United States public-domain term assessment of the 1836 and 1897 publications.",
+      "creator_ids": [
+        "agent:us-copyright-office"
+      ],
+      "date_statements": [
+        {
+          "label": "publication revision",
+          "value": "April 2026",
+          "normalized": "2026-04",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:usco-circular15a"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:usco-circular15a"
+      ],
+      "notes": [
+        "catalog_description is a provisional schema workaround for a separately delivered legal-guidance source; the circular contains no target-work text."
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:general-corpus",
+      "type": "organization",
+      "name": "General Corpus",
+      "urls": [
+        "https://github.com/Kyvero-Press/General-Corpus"
+      ]
+    },
+    {
+      "id": "agent:umich",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ]
+    },
+    {
+      "id": "agent:ota",
+      "type": "organization",
+      "name": "Oxford Text Archive"
+    },
+    {
+      "id": "agent:eets",
+      "type": "organization",
+      "name": "Early English Text Society",
+      "urls": [
+        "https://www.eets.org.uk/"
+      ]
+    },
+    {
+      "id": "agent:oup",
+      "type": "organization",
+      "name": "Oxford University Press"
+    },
+    {
+      "id": "agent:george-england",
+      "type": "person",
+      "name": "George England",
+      "notes": [
+        "Editor and transcriber credited on the 1897 edition and its 1966 reprint."
+      ]
+    },
+    {
+      "id": "agent:alfred-pollard",
+      "type": "person",
+      "name": "Alfred W. Pollard",
+      "alternate_names": [
+        "Alfred William Pollard"
+      ],
+      "dates": "1859-1944",
+      "notes": [
+        "Provided side-notes and introduction for the 1897 edition and documented England's manuscript consultation."
+      ]
+    },
+    {
+      "id": "agent:surtees-society",
+      "type": "organization",
+      "name": "Surtees Society",
+      "urls": [
+        "https://www.surteessociety.org.uk/"
+      ]
+    },
+    {
+      "id": "agent:james-raine",
+      "type": "person",
+      "name": "James Raine",
+      "notes": [
+        "Surtees Society secretary and the editor conventionally associated with the 1836 volume."
+      ]
+    },
+    {
+      "id": "agent:joseph-hunter",
+      "type": "person",
+      "name": "Joseph Hunter",
+      "notes": [
+        "Author of the 1836 preface, according to Epp's edition history."
+      ]
+    },
+    {
+      "id": "agent:james-gordon",
+      "type": "person",
+      "name": "James Gordon",
+      "notes": [
+        "Compiler of the 1836 glossary, according to Epp's edition history."
+      ]
+    },
+    {
+      "id": "agent:joseph-stevenson",
+      "type": "person",
+      "name": "Joseph Stevenson",
+      "notes": [
+        "Credited in the 1836 volume with carefully comparing the printed sheets against the original manuscript."
+      ]
+    },
+    {
+      "id": "agent:huntington",
+      "type": "organization",
+      "name": "The Huntington Library, Art Museum, and Botanical Gardens",
+      "alternate_names": [
+        "Huntington Library"
+      ],
+      "urls": [
+        "https://www.huntington.org/library"
+      ]
+    },
+    {
+      "id": "agent:internet-archive",
+      "type": "organization",
+      "name": "Internet Archive",
+      "urls": [
+        "https://archive.org/"
+      ]
+    },
+    {
+      "id": "agent:garrett-epp",
+      "type": "person",
+      "name": "Garrett P. J. Epp"
+    },
+    {
+      "id": "agent:mets",
+      "type": "organization",
+      "name": "TEAMS Middle English Texts Series",
+      "alternate_names": [
+        "Middle English Texts Series"
+      ],
+      "urls": [
+        "https://metseditions.org/"
+      ]
+    },
+    {
+      "id": "agent:medieval-institute-publications",
+      "type": "organization",
+      "name": "Medieval Institute Publications, Western Michigan University",
+      "urls": [
+        "https://wmich.edu/medievalpublications"
+      ]
+    },
+    {
+      "id": "agent:a-c-cawley",
+      "type": "person",
+      "name": "A. C. Cawley",
+      "alternate_names": [
+        "Arthur C. Cawley"
+      ]
+    },
+    {
+      "id": "agent:martin-stevens",
+      "type": "person",
+      "name": "Martin Stevens"
+    },
+    {
+      "id": "agent:university-leeds",
+      "type": "organization",
+      "name": "University of Leeds, School of English",
+      "urls": [
+        "https://ahc.leeds.ac.uk/english"
+      ]
+    },
+    {
+      "id": "agent:folger",
+      "type": "organization",
+      "name": "Folger Shakespeare Library",
+      "urls": [
+        "https://www.folger.edu/"
+      ]
+    },
+    {
+      "id": "agent:us-copyright-office",
+      "type": "organization",
+      "name": "United States Copyright Office",
+      "urls": [
+        "https://www.copyright.gov/"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-copied-from-encoding",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:Towneley",
+      "object": "encoding:umich-ota:U-1397-B-Towneley",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Entire pinned repository XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M/CME electronic item Towneley"
+        },
+        "notes": "Repository identity, source header, internal ID, node structure, and text agree; no intervening substantive revision was evidenced."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:towneley-xml",
+          "evidence:umich-towneley",
+          "evidence:cme-git-state"
+        ]
+      }
+    },
+    {
+      "id": "relation:encoding-from-1966",
+      "type": "encoded_from",
+      "subject": "encoding:umich-ota:U-1397-B-Towneley",
+      "object": "edition:eets:towneley-1966",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "All thirty-two DIV1 units in Towneley",
+          "locators": [
+            "Towneley:1-Towneley:32"
+          ]
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Complete play text on printed pp. 1-396",
+          "locators": [
+            "printed pp. 1-396"
+          ]
+        },
+        "notes": "The XML header expressly names the 1966 edition; printed front matter, back matter, editorial notes, and marginalia were omitted or transformed."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:towneley-xml",
+          "evidence:umich-towneley"
+        ]
+      }
+    },
+    {
+      "id": "relation:1966-version-of-1897",
+      "type": "version_of",
+      "subject": "edition:eets:towneley-1966",
+      "object": "edition:eets:towneley-1897",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 1966 Oxford/EETS reprint"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 1897 EETS Extra Series 71 edition"
+        },
+        "notes": "The XML header says the 1966 source was first published in 1897; exact carrier and reset differences were not inspected."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:towneley-xml",
+          "evidence:england-pollard-1897",
+          "evidence:umich-towneley"
+        ]
+      }
+    },
+    {
+      "id": "relation:1897-version-of-1836",
+      "type": "version_of",
+      "subject": "edition:eets:towneley-1897",
+      "object": "edition:surtees:towneley-1836",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 1897 EETS text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 1836 Surtees Society text"
+        },
+        "notes": "Epp states that 1897 was based less on HM 1 than on the 1836 edition and notes reproduced errors. Direct manuscript collation is modeled separately."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:epp-edition",
+          "evidence:england-pollard-1897",
+          "evidence:surtees-1836"
+        ]
+      }
+    },
+    {
+      "id": "relation:1897-collated-hm1",
+      "type": "collated_against",
+      "subject": "edition:eets:towneley-1897",
+      "object": "witness:huntington:HM-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete edition text and proofs"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Surviving HM 1 text"
+        },
+        "notes": "Pollard says George England made a new transcript and corrected the proofs against the manuscript, which Quaritch made available. This confirms consultation and collation but does not erase the edition's substantial 1836 dependence."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:england-pollard-1897",
+          "evidence:epp-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:1836-transcribes-hm1",
+      "type": "transcribes",
+      "subject": "edition:surtees:towneley-1836",
+      "object": "witness:huntington:HM-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "First complete printed text"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Surviving HM 1 text"
+        },
+        "notes": "The preface records permission to transcribe the manuscript, and the edition credits Joseph Stevenson with carefully comparing printed sheets against the original."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:surtees-1836",
+          "evidence:epp-edition"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-1897-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:towneley-1897",
+      "object": "edition:eets:towneley-1897",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 468-page scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 1897 published volume"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:england-pollard-1897",
+          "evidence:ia-1897-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:ia-1836-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:ia:towneley-1836",
+      "object": "edition:surtees:towneley-1836",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 398-page scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete 1836 published volume"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:surtees-1836",
+          "evidence:ia-1836-metadata"
+        ]
+      }
+    },
+    {
+      "id": "relation:huntington-selected-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:huntington:HM-1-selected",
+      "object": "witness:huntington:HM-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "All 60 canvases in the official selected-image object"
+        },
+        "object": {
+          "kind": "selected_passages",
+          "description": "Non-contiguous selected folios and binding views from HM 1",
+          "locators": [
+            "f. 1r; selected intermediate folios; ff. 131v-132r; front cover; binding stitching"
+          ]
+        },
+        "notes": "Complete relative to the provider-selected object; partial relative to the 132-folio manuscript."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:huntington-hm1-record",
+          "evidence:huntington-iiif",
+          "evidence:huntington-digital-audit"
+        ]
+      }
+    },
+    {
+      "id": "relation:1976-facsimile-hm1",
+      "type": "facsimile_of",
+      "subject": "facsimile:huntington-leeds:HM-1-1976",
+      "object": "witness:huntington:HM-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete published facsimile volume"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "All surviving 132 folios of HM 1"
+        },
+        "notes": "Completeness is relative to the surviving, already lacunose manuscript."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:facsimile-1976",
+          "evidence:huntington-hm1-record"
+        ]
+      }
+    },
+    {
+      "id": "relation:epp-transcribes-hm1",
+      "type": "transcribes",
+      "subject": "edition:mets:epp-towneley-2018",
+      "object": "witness:huntington:HM-1",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete current edition, reorganized as 27 numbered units plus Judas appendix"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Surviving HM 1 text"
+        },
+        "notes": "Epp's edition incorporates modern editorial lineation, reconstruction, reordering, and annotation; those decisions do not alter the physical witness order."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:epp-edition",
+          "evidence:huntington-hm1-record"
+        ]
+      }
+    },
+    {
+      "id": "relation:epp-pdf-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:mets:epp-towneley-pdf",
+      "object": "edition:mets:epp-towneley-2018",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Complete 594-page downloadable PDF"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Complete Epp edition"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:epp-edition"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository-xml",
+      "entity": "artifact:general-corpus:Towneley",
+      "provider_id": "agent:general-corpus",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Pinned CME submodule path in the General Corpus checkout",
+      "repository_path": "CME/source/CME_phase_1-2/Towneley.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "access:umich-encoding",
+      "entity": "encoding:umich-ota:U-1397-B-Towneley",
+      "provider_id": "agent:umich",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "U-M Library Digital Collections item page, table of contents, and full-text views",
+      "url": "https://quod.lib.umich.edu/c/cme/Towneley?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Towneley"
+      ],
+      "cost": "free",
+      "format": "HTML-rendered structured text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-towneley"
+      ]
+    },
+    {
+      "id": "access:1966-no-public-copy",
+      "entity": "edition:eets:towneley-1966",
+      "resource_kind": "download",
+      "status": "no_public_copy_found",
+      "access_method": "No complete public 1966 scan located in searches of the U-M source statement, Internet Archive, Google Books, HathiTrust-facing results, OUP/EETS records, and general web results; library or licensed access may exist.",
+      "cost": "unknown",
+      "format": "Printed volume; digital availability unverified",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:umich-towneley",
+        "evidence:england-pollard-1897"
+      ],
+      "notes": [
+        "The freely accessible U-M text is an encoding from the edition, not a page facsimile of the 1966 carrier."
+      ]
+    },
+    {
+      "id": "access:1897-download",
+      "entity": "facsimile:ia:towneley-1897",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item files",
+      "url": "https://archive.org/download/towneleyplays71engl/towneleyplays71engl.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/towneleyplays71engl",
+        "https://archive.org/metadata/towneleyplays71engl"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete 1897 EETS Towneley Plays PDF",
+          "path": "source-cache/Towneley/towneley-plays-1897-complete.pdf",
+          "source_url": "https://archive.org/download/towneleyplays71engl/towneleyplays71engl.pdf",
+          "sha256": "edde7ef751cb5ee8730a9748082b3a69e83905f57b46eaa06f1bd8eecfceb8c1",
+          "bytes": 29022331,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete Towneley play text",
+            "locators": [
+              "printed pp. 1-396; all thirty-two traditional units"
+            ],
+            "notes": [
+              "The cached file also includes all surrounding matter in the 1897 volume."
+            ]
+          },
+          "target_work_presence": "present",
+          "notes": [
+            "qpdf --check reports no syntax or stream-encoding errors; pdfinfo reports 468 pages."
+          ]
+        },
+        {
+          "label": "Internet Archive metadata for the 1897 EETS Towneley Plays",
+          "path": "source-cache/Towneley/towneley-plays-1897-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/towneleyplays71engl",
+          "sha256": "2d60aae100922a2cf7cf83f56509fae32e5ee4f254c38b4807f19f250b458415",
+          "bytes": 88966,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF and metadata JSON",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:ia-1897-metadata"
+      ]
+    },
+    {
+      "id": "access:1836-download",
+      "entity": "facsimile:ia:towneley-1836",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Internet Archive item files",
+      "url": "https://archive.org/download/towneleymysterie00rainrich/towneleymysterie00rainrich.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/towneleymysterie00rainrich",
+        "https://archive.org/metadata/towneleymysterie00rainrich"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete 1836 Surtees Society Towneley Mysteries PDF",
+          "path": "source-cache/Towneley/towneley-mysteries-1836-complete.pdf",
+          "source_url": "https://archive.org/download/towneleymysterie00rainrich/towneleymysterie00rainrich.pdf",
+          "sha256": "81ae9a08290fca703992167519496414824b4342a4f4882d0fb1d3b690387e46",
+          "bytes": 17624122,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete Towneley play text",
+            "locators": [
+              "printed pp. 1-352; complete first printed edition"
+            ],
+            "notes": [
+              "The cached file also includes all surrounding matter in the 1836 volume."
+            ]
+          },
+          "target_work_presence": "present",
+          "notes": [
+            "qpdf --check reports no syntax or stream-encoding errors; pdfinfo reports 398 pages."
+          ]
+        },
+        {
+          "label": "Internet Archive metadata for the 1836 Surtees Towneley Mysteries",
+          "path": "source-cache/Towneley/towneley-mysteries-1836-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/towneleymysterie00rainrich",
+          "sha256": "90cb8daf20945f59a2df98c5b6d986948a155e8a6a17df4d884230b1336bad14",
+          "bytes": 78632,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF and metadata JSON",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:surtees-1836",
+        "evidence:ia-1836-metadata"
+      ]
+    },
+    {
+      "id": "access:huntington-catalog",
+      "entity": "witness:huntington:HM-1",
+      "provider_id": "agent:huntington",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Huntington collection page, permanent catalog record, and ContentDM parent API",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-52988",
+      "alternate_urls": [
+        "https://catalog.huntington.org/record=b1862079",
+        "https://hdl.huntington.org/digital/collection/p15150coll7/id/52988",
+        "https://hdl.huntington.org/digital/api/singleitem/collection/p15150coll7/id/52988"
+      ],
+      "local_copies": [
+        {
+          "label": "Huntington ContentDM parent record for HM 1",
+          "path": "source-cache/Towneley/huntington-hm1-contentdm-parent-record.json",
+          "source_url": "https://hdl.huntington.org/digital/api/singleitem/collection/p15150coll7/id/52988",
+          "sha256": "05e74feb009d2a604d52b02b4cc6636e5818d4ff957d4556c1545a105e1eb685",
+          "bytes": 13863,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "HTML and JSON metadata",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record"
+      ]
+    },
+    {
+      "id": "access:huntington-physical",
+      "entity": "witness:huntington:HM-1",
+      "provider_id": "agent:huntington",
+      "resource_kind": "physical_manuscript",
+      "status": "requestable",
+      "access_method": "Create an Aeon account, establish a research need, and request HM 1; the item itself requires curatorial approval and extended retrieval/delivery time.",
+      "url": "https://aeon.huntington.org/",
+      "alternate_urls": [
+        "https://www.huntington.org/library/using-library",
+        "https://catalog.huntington.org/record=b1862079"
+      ],
+      "contact": "reference@huntington.org; +1 626-405-2191",
+      "cost": "not_applicable",
+      "format": "Restricted physical manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-access-rights"
+      ]
+    },
+    {
+      "id": "access:huntington-reproductions",
+      "entity": "witness:huntington:HM-1",
+      "provider_id": "agent:huntington",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit an Imaging Services request through Aeon; fulfillment depends on condition, restrictions, and copyright, and orders over 50 pages require extended delivery time.",
+      "url": "https://aeon.huntington.org/",
+      "alternate_urls": [
+        "https://www.huntington.org/library/using-library",
+        "https://hdl.huntington.org/digital/about"
+      ],
+      "contact": "reference@huntington.org; Imaging Services +1 626-405-2182",
+      "cost": "fee",
+      "format": "Digital reproductions by request",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-access-rights"
+      ]
+    },
+    {
+      "id": "access:huntington-selected-images",
+      "entity": "facsimile:huntington:HM-1-selected",
+      "provider_id": "agent:huntington",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Huntington Digital Library compound object and official IIIF Presentation manifest",
+      "url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/52988",
+      "alternate_urls": [
+        "https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete 60-canvas Huntington selected-image IIIF bundle at requested 1600-pixel width",
+          "path": "source-cache/Towneley/huntington-hm1-selected-iiif-1600px.zip",
+          "source_url": "https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json",
+          "sha256": "1ad0a3639bcdb684cc1bba23e3a30ecac753d84c944330769a9f22e02e548003",
+          "bytes": 28960505,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 60,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "work_portion": {
+            "label": "Selected non-contiguous views of HM 1",
+            "locators": [
+              "60 provider canvases including f. 1r; selected intermediate folios; ff. 131v-132r; front cover; binding stitching"
+            ],
+            "start_url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/52928",
+            "end_url": "https://hdl.huntington.org/digital/collection/p15150coll7/id/52985",
+            "notes": [
+              "The end URL is the final canvas containing text; the complete bundle continues with two binding views.",
+              "Coverage is complete for the provider's selected 60-canvas object and partial for the physical manuscript."
+            ]
+          },
+          "target_work_presence": "present",
+          "notes": [
+            "All 60 manifest canvases, the exact provider manifest, and a per-image inventory are present in the ZIP.",
+            "ContentDM returned image widths of 1600 or 1601 pixels for the 1600, request; the one-pixel variation is provider rounding."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF JPEG images; cached ZIP bundle",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-iiif",
+        "evidence:huntington-digital-audit"
+      ],
+      "notes": [
+        "The official record states that the manuscript was only partially scanned for the Digital Scriptorium project."
+      ]
+    },
+    {
+      "id": "access:huntington-full-digital-audit",
+      "entity": "witness:huntington:HM-1",
+      "provider_id": "agent:huntington",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "Exact shelfmark audit of the Huntington ContentDM collection found one HM 1 parent object; its compound API and IIIF manifest expose 60 selected canvases, not a complete 132-folio sequence.",
+      "url": "https://hdl.huntington.org/digital/api/search/collection/p15150coll7/field/callid/searchterm/mssHM%201/mode/exact/maxRecords/1024",
+      "local_copies": [
+        {
+          "label": "Huntington ContentDM exact shelfmark search for mssHM 1",
+          "path": "source-cache/Towneley/huntington-hm1-contentdm-exact-search.json",
+          "source_url": "https://hdl.huntington.org/digital/api/search/collection/p15150coll7/field/callid/searchterm/mssHM%201/mode/exact/maxRecords/1024",
+          "sha256": "e03b744f10d75851ae7b4bff4dc5c45194be24b012ffe1c279cdc1c47280c613",
+          "bytes": 3436,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "Search-result JSON and audited IIIF/compound object",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-digital-audit",
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-iiif"
+      ],
+      "notes": [
+        "Negative scope: Huntington catalog and exact ContentDM shelfmark search, parent object, compound child list, and IIIF manifest; broader searches for a separate full digital object and the 1976 facsimile found no complete public delivery."
+      ]
+    },
+    {
+      "id": "access:1976-facsimile-onsite",
+      "entity": "facsimile:huntington-leeds:HM-1-1976",
+      "provider_id": "agent:folger",
+      "resource_kind": "catalog_record",
+      "status": "onsite_only",
+      "access_method": "Request the printed facsimile at a holding research library; the Folger copy is in open stacks, and NYPL lists an onsite research copy.",
+      "url": "https://catalog.folger.edu/record/27390",
+      "alternate_urls": [
+        "https://web.nypl.org/research/research-catalog/bib/b10474163",
+        "https://natlib.govt.nz/records/36791466"
+      ],
+      "cost": "not_applicable",
+      "format": "Oversize printed facsimile",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:facsimile-1976"
+      ]
+    },
+    {
+      "id": "access:1976-facsimile-digital",
+      "entity": "facsimile:huntington-leeds:HM-1-1976",
+      "resource_kind": "download",
+      "status": "no_public_copy_found",
+      "access_method": "No complete public digital copy located through the Huntington record, University of Leeds facsimile archive, Google Books record, Internet Archive, or general web search.",
+      "url": "https://ahc.leeds.ac.uk/medieval/doc/facsimiles-monographs-archive",
+      "alternate_urls": [
+        "https://books.google.com/books?id=eoTgAAAAMAAJ"
+      ],
+      "cost": "unknown",
+      "format": "Google Books snippet/no-preview record only; title out of print",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:facsimile-1976"
+      ]
+    },
+    {
+      "id": "access:epp-digital-edition",
+      "entity": "edition:mets:epp-towneley-2018",
+      "provider_id": "agent:mets",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "METS edition landing and reading interface",
+      "url": "https://metseditions.org/read/0pkMKY9ecEpZU3gKHVXzWcMq1kg53EQ",
+      "alternate_urls": [
+        "https://wmich.edu/medievalpublications/teams/middle-english"
+      ],
+      "cost": "free",
+      "format": "HTML digital edition",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ]
+    },
+    {
+      "id": "access:epp-pdf",
+      "entity": "facsimile:mets:epp-towneley-pdf",
+      "provider_id": "agent:mets",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Direct downloadable version from the METS edition",
+      "url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/9a25e465-f0ce-4015-baf1-85c1fce484f9/downloadable_version/d17c3f988d274aefd143c429eb6b7547.pdf",
+      "alternate_urls": [
+        "https://metseditions.org/read/0pkMKY9ecEpZU3gKHVXzWcMq1kg53EQ"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete Epp/METS Towneley Plays PDF",
+          "path": "source-cache/Towneley/towneley-plays-epp-mets-complete.pdf",
+          "source_url": "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/9a25e465-f0ce-4015-baf1-85c1fce484f9/downloadable_version/d17c3f988d274aefd143c429eb6b7547.pdf",
+          "sha256": "0b6631c62fa2665fc1c28fcd56bc5e22bf3515362babc459f729c4cb5cd60312",
+          "bytes": 7264096,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Complete later scholarly edition of the Towneley compilation",
+            "locators": [
+              "594-page PDF; 27 numbered edition units plus Judas appendix, introduction, notes, bibliography, and glossary"
+            ],
+            "notes": [
+              "This is collateral to, not the source of, the 1993 U-M encoding."
+            ]
+          },
+          "target_work_presence": "present",
+          "notes": [
+            "qpdf --check returned status 3 because multiple cross-reference objects have offset 0; qpdf identifies this as a common error it handles correctly and reports that the operation succeeded with warnings.",
+            "pdfinfo reports 594 pages, and pdftotext extracted the complete file successfully.",
+            "The downloaded 7,264,096-byte file is retained byte-for-byte at SHA-256 0b6631c62fa2665fc1c28fcd56bc5e22bf3515362babc459f729c4cb5cd60312; no repair or rewrite was performed."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ]
+    },
+    {
+      "id": "access:usco-circular15a",
+      "entity": "catalog:usco:circular-15a-2026",
+      "provider_id": "agent:us-copyright-office",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the official U.S. Copyright Office PDF. A complete byte-for-byte copy is cached locally.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "local_copies": [
+        {
+          "label": "Complete U.S. Copyright Office Circular 15A, April 2026",
+          "path": "source-cache/Towneley/us-copyright-office-circular-15a-2026.pdf",
+          "source_url": "https://www.copyright.gov/circs/circ15a.pdf",
+          "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef",
+          "bytes": 273867,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": [
+            "This is general legal guidance and contains no Towneley Plays text.",
+            "qpdf completed with recoverable linearization hint-table warnings; pdfinfo identified all four pages and pdftotext extracted the complete file. The exact official download is preserved without repair."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:usco-circular15a"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:underlying-texts",
+      "entity": "witness:huntington:HM-1",
+      "component": "Underlying medieval and early-modern play and fragment texts",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The underlying anonymous texts and manuscript compilation long predate modern copyright terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:epp-edition"
+      ]
+    },
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:Towneley",
+      "access_id": "access:repository-xml",
+      "component": "Pinned repository XML markup and data",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The pinned CME root LICENSE dedicates 'software' to the public domain, but it does not expressly define whether inherited XML text, data, or markup is covered; the XML also retains a legacy OTA personal-scholarly-use statement.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:cme-license"
+      ],
+      "notes": [
+        "Do not silently extend a software dedication to data layers that it does not expressly identify."
+      ]
+    },
+    {
+      "id": "rights:umich-encoding",
+      "entity": "encoding:umich-ota:U-1397-B-Towneley",
+      "access_id": "access:umich-encoding",
+      "component": "Current U-M digital item and electronic text",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "The current U-M item says the materials are in the public domain and assigns DPLA No Copyright - United States.",
+      "asserted_by_id": "agent:umich",
+      "rights_statement_uri": "http://rightsstatements.org/vocab/NoC-US/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:umich-towneley"
+      ],
+      "notes": [
+        "The embedded 1993 header instead says personal scholarly use only. The current provider statement governs present public access, but the historical conflict is retained rather than erased."
+      ]
+    },
+    {
+      "id": "rights:1966-edition",
+      "entity": "edition:eets:towneley-1966",
+      "access_id": "access:1966-no-public-copy",
+      "component": "1966 reprint carrier, reset, and any added editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The underlying 1897 text is public domain under the current United States term guidance, but the exact 1966 carrier and any newly protected editorial or typographic contributions have not been inspected.",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:umich-towneley",
+        "evidence:england-pollard-1897",
+        "evidence:usco-circular15a"
+      ]
+    },
+    {
+      "id": "rights:1897-edition",
+      "entity": "edition:eets:towneley-1897",
+      "access_id": "access:1897-download",
+      "component": "1897 edition text and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1897, before the current U.S. public-domain cutoff described in U.S. Copyright Office Circular 15A; the complete scan is publicly distributed by Internet Archive.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:ia-1897-metadata",
+        "evidence:usco-circular15a"
+      ]
+    },
+    {
+      "id": "rights:1836-edition",
+      "entity": "edition:surtees:towneley-1836",
+      "access_id": "access:1836-download",
+      "component": "1836 edition text and editorial matter",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The edition was published in 1836, before the current U.S. public-domain cutoff described in U.S. Copyright Office Circular 15A; Internet Archive metadata marks the item not in copyright.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:surtees-1836",
+        "evidence:ia-1836-metadata",
+        "evidence:usco-circular15a"
+      ]
+    },
+    {
+      "id": "rights:ia-1897-facsimile",
+      "entity": "facsimile:ia:towneley-1897",
+      "access_id": "access:1897-download",
+      "component": "Internet Archive page-image scan and delivery files for the 1897 public-domain volume",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "No separately licensed creative scan layer is identified in the Internet Archive item; the United States term status of the source edition is recorded separately.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:ia-1897-metadata"
+      ],
+      "notes": [
+        "This statement is limited to the cached mechanical page-image surrogate and does not waive Internet Archive service terms."
+      ]
+    },
+    {
+      "id": "rights:ia-1836-facsimile",
+      "entity": "facsimile:ia:towneley-1836",
+      "access_id": "access:1836-download",
+      "component": "Internet Archive page-image scan and delivery files for the 1836 public-domain volume",
+      "jurisdiction": "United States",
+      "copyright_status": "no_known_copyright",
+      "as_of": "2026-07-15",
+      "basis": "Internet Archive metadata marks the item NOT_IN_COPYRIGHT and identifies no separately licensed creative scan layer; the United States term status of the source edition is recorded separately.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:surtees-1836",
+        "evidence:ia-1836-metadata"
+      ],
+      "notes": [
+        "This statement is limited to the cached mechanical page-image surrogate and does not waive Internet Archive service terms."
+      ]
+    },
+    {
+      "id": "rights:huntington-selected-images",
+      "entity": "facsimile:huntington:HM-1-selected",
+      "access_id": "access:huntington-selected-images",
+      "component": "Huntington digital page images and IIIF delivery",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The exact item supplies no explicit open license and directs users to Huntington's rights policy. That policy distinguishes physical ownership from copyright, does not require permission for public-domain content, and places rights determinations on the researcher.",
+      "asserted_by_id": "agent:huntington",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-access-rights",
+        "evidence:huntington-iiif"
+      ],
+      "notes": [
+        "Public viewing and IIIF delivery do not by themselves establish a Creative Commons license or an independent copyright claim in the image layer."
+      ]
+    },
+    {
+      "id": "rights:1976-facsimile",
+      "entity": "facsimile:huntington-leeds:HM-1-1976",
+      "access_id": "access:1976-facsimile-onsite",
+      "component": "1976 facsimile volume, introduction, and photographic reproductions",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The modern facsimile and introduction were published in 1976, and the Google Books record includes a copyright section; no open license was identified.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:facsimile-1976"
+      ]
+    },
+    {
+      "id": "rights:epp-edition",
+      "entity": "edition:mets:epp-towneley-2018",
+      "access_id": "access:epp-digital-edition",
+      "component": "Epp's modern edition, introduction, apparatus, notes, and digital presentation",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "Medieval Institute Publications lists the edition as © 2018. METS states that digital editions are for individual use and that reprinting requires contact with the Executive Director.",
+      "asserted_by_id": "agent:medieval-institute-publications",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ],
+      "notes": [
+        "METS separately licenses its XML under CC BY-NC-SA 4.0; that XML-specific license is not extended here to the cached downloadable PDF or print-format edition."
+      ]
+    },
+    {
+      "id": "rights:epp-pdf",
+      "entity": "facsimile:mets:epp-towneley-pdf",
+      "access_id": "access:epp-pdf",
+      "component": "Downloadable PDF representation of the 2018 Epp edition",
+      "jurisdiction": "United States",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The PDF reproduces the copyrighted 2018 edition and is publicly downloadable without an identified open PDF license; METS limits digital editions to individual use.",
+      "asserted_by_id": "agent:mets",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:epp-edition",
+        "evidence:mets-copyright"
+      ]
+    },
+    {
+      "id": "rights:usco-circular15a",
+      "entity": "catalog:usco:circular-15a-2026",
+      "access_id": "access:usco-circular15a",
+      "component": "The official Circular 15A text and PDF delivery file",
+      "jurisdiction": "United States",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-15",
+      "basis": "The circular is an official U.S. Copyright Office publication and is publicly downloadable, but this manifest did not verify an item-specific rights statement or separately document the statutory federal-government-work rule for the delivery file.",
+      "asserted_by_id": "agent:us-copyright-office",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:usco-circular15a"
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-ota:U-1397-B-Towneley",
+      "practice": "selection",
+      "source_feature": "Complete 1966 printed volume with introduction, side-notes, marginalia, back matter, typographic distinctions, and archaic characters",
+      "representation": "Thirty-two play units; printed front/back matter and editorial notes omitted; marginalia deleted; many Latin character names Anglicized; italic and archaic-character distinctions removed",
+      "description": "The XML header expressly documents a selective and normalized electronic representation rather than a page-faithful transcription.",
+      "scope": "Entire U-M/OTA encoding",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:towneley-xml"
+      ]
+    },
+    {
+      "id": "practice:1897-collation",
+      "entity": "edition:eets:towneley-1897",
+      "practice": "collation",
+      "source_feature": "Surtees 1836 complete edition and Huntington HM 1",
+      "representation": "Re-edited EETS text with side-notes and introduction",
+      "description": "Pollard documents a new transcript and proof correction against HM 1, while Epp finds that 1836 substantially remained the base. Both the collation and the version dependence are therefore explicit.",
+      "scope": "Complete 1897 edition",
+      "confidence": "medium",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:epp-edition",
+        "evidence:surtees-1836"
+      ]
+    },
+    {
+      "id": "practice:epp-collation",
+      "entity": "edition:mets:epp-towneley-2018",
+      "practice": "collation",
+      "source_feature": "Huntington HM 1 and prior editorial scholarship",
+      "representation": "Twenty-seven numbered units plus Judas appendix, with reconstructed sequences, reordered material, and a 14,385-line modern lineation",
+      "description": "Epp's later edition makes its own structural and lineation decisions; these are retained as a collateral editorial layer rather than imposed on the pinned XML.",
+      "scope": "Complete later edition",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:epp-edition"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:towneley-xml",
+      "type": "repository_file",
+      "citation": "General Corpus, CME/source/CME_phase_1-2/Towneley.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Towneley.xml",
+      "locator": "HEADER; BODY/DIV1/HEAD/L/PB elements",
+      "summary": "Supplies the exact repository artifact, internal ID, 1993 electronic-edition statement, OTA number, 1966 print-source description, omission/normalization notes, legacy availability statement, traditional structure, and text.",
+      "accessed_on": "2026-07-15",
+      "sha256": "be65c295c382c4843347d4a47fa146799f1488adb8390329a581787460d69818"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "Pinned Kyvero-Press/CME git state for Towneley.xml.",
+      "repository_path": "CME/source/CME_phase_1-2/Towneley.xml",
+      "locator": "commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob 1ba68ab30bd7bdb0d7ef3d7cef8ac9941473ec9b; 674,028 bytes",
+      "summary": "Fixes the repository artifact to an exact commit, git blob, byte size, and SHA-256.",
+      "accessed_on": "2026-07-15",
+      "sha256": "be65c295c382c4843347d4a47fa146799f1488adb8390329a581787460d69818"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "official_webpage",
+      "citation": "Kyvero-Press/CME root LICENSE at the pinned commit.",
+      "url": "https://github.com/Kyvero-Press/CME/blob/e1d77c88ca561be924b2fedc54dd474be2e7e49c/LICENSE",
+      "locator": "commit e1d77c88ca561be924b2fedc54dd474be2e7e49c; blob fdddb29aa445bf3d6a5d843d6dd77e10a9f99657; 1,211 bytes",
+      "summary": "Contains an Unlicense-style public-domain dedication expressly phrased for 'software'; it does not expressly define its application to inherited XML text, data, or markup.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "id": "evidence:umich-towneley",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, The Towneley plays.",
+      "url": "https://quod.lib.umich.edu/c/cme/Towneley?view=toc",
+      "alternate_urls": [
+        "https://name.umdl.umich.edu/Towneley"
+      ],
+      "summary": "Confirms current public access, OTA U-1397-B, anonymous authorship label, the 1966 OUP/EETS publication statement, thirty-two-item table of contents, and current public-domain/No Copyright - United States designation.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:england-pollard-1897",
+      "type": "edition_statement",
+      "citation": "The Towneley Plays, re-edited by George England with side-notes and introduction by Alfred W. Pollard, EETS Extra Series 71 (1897), complete Internet Archive scan.",
+      "url": "https://archive.org/download/towneleyplays71engl/towneleyplays71engl.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/towneleyplays71engl"
+      ],
+      "repository_path": "source-cache/Towneley/towneley-plays-1897-complete.pdf",
+      "locator": "title page; introduction; contents; printed pp. 1-396; complete volume",
+      "summary": "Confirms edition title and responsibilities, traditional order, complete text, publication details, England's claimed new transcript, Quaritch's provision of HM 1, and proof correction against the original.",
+      "accessed_on": "2026-07-15",
+      "sha256": "edde7ef751cb5ee8730a9748082b3a69e83905f57b46eaa06f1bd8eecfceb8c1"
+    },
+    {
+      "id": "evidence:ia-1897-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for towneleyplays71engl.",
+      "url": "https://archive.org/metadata/towneleyplays71engl",
+      "repository_path": "source-cache/Towneley/towneley-plays-1897-internet-archive-metadata.json",
+      "summary": "Confirms the Internet Archive item identity, files, 1897 publication record, and public delivery of the complete scan.",
+      "accessed_on": "2026-07-15",
+      "sha256": "2d60aae100922a2cf7cf83f56509fae32e5ee4f254c38b4807f19f250b458415"
+    },
+    {
+      "id": "evidence:surtees-1836",
+      "type": "edition_statement",
+      "citation": "The Towneley Mysteries, Surtees Society (1836), complete Internet Archive scan.",
+      "url": "https://archive.org/download/towneleymysterie00rainrich/towneleymysterie00rainrich.pdf",
+      "alternate_urls": [
+        "https://archive.org/details/towneleymysterie00rainrich"
+      ],
+      "repository_path": "source-cache/Towneley/towneley-mysteries-1836-complete.pdf",
+      "locator": "title matter; resolution of 3 November 1835; preface; editor credits; complete play text",
+      "summary": "Confirms the complete 1836 volume, Peregrine Edward Towneley's permission to transcribe HM 1, and Joseph Stevenson's careful comparison of printed sheets against the original.",
+      "accessed_on": "2026-07-15",
+      "sha256": "81ae9a08290fca703992167519496414824b4342a4f4882d0fb1d3b690387e46"
+    },
+    {
+      "id": "evidence:ia-1836-metadata",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive metadata for towneleymysterie00rainrich.",
+      "url": "https://archive.org/metadata/towneleymysterie00rainrich",
+      "repository_path": "source-cache/Towneley/towneley-mysteries-1836-internet-archive-metadata.json",
+      "summary": "Confirms the Internet Archive item identity, files, 1836 publication record, possible-copyright-status NOT_IN_COPYRIGHT, and public delivery of the complete scan.",
+      "accessed_on": "2026-07-15",
+      "sha256": "90cb8daf20945f59a2df98c5b6d986948a155e8a6a17df4d884230b1336bad14"
+    },
+    {
+      "id": "evidence:epp-edition",
+      "type": "scholarly_source",
+      "citation": "The Towneley Plays, ed. Garrett P. J. Epp, TEAMS Middle English Texts Series (Medieval Institute Publications, 2018), complete downloadable version.",
+      "url": "https://metseditions.org/read/0pkMKY9ecEpZU3gKHVXzWcMq1kg53EQ",
+      "alternate_urls": [
+        "https://mets-api-prd.nyc3.digitaloceanspaces.com/store/edition/9a25e465-f0ce-4015-baf1-85c1fce484f9/downloadable_version/d17c3f988d274aefd143c429eb6b7547.pdf",
+        "https://wmich.edu/medievalpublications/teams/middle-english"
+      ],
+      "repository_path": "source-cache/Towneley/towneley-plays-epp-mets-complete.pdf",
+      "locator": "introduction pp. 1-31; manuscript-order table; complete edited texts; notes and bibliography",
+      "summary": "Supports the disparate-compilation model, the lack of secure evidence for one coherent Wakefield cycle, likely 1550s manuscript argument, York-tradition relationships, missing leaves, later Judas appendix, alternative 27-unit structure, folio/line counts, complete-edition history, and 1897 dependence on 1836.",
+      "accessed_on": "2026-07-15",
+      "sha256": "0b6631c62fa2665fc1c28fcd56bc5e22bf3515362babc459f729c4cb5cd60312"
+    },
+    {
+      "id": "evidence:mets-copyright",
+      "type": "official_webpage",
+      "citation": "Middle English Texts Series, Copyright & Citation.",
+      "url": "https://metseditions.org/copyright-citation",
+      "summary": "States that digital editions are provided for individual use, reprinting requires contact with the Executive Director, and METS XML is separately licensed CC BY-NC-SA 4.0.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:huntington-hm1-record",
+      "type": "official_catalog",
+      "citation": "The Huntington, Towneley cycle: [manuscript], mssHM 1.",
+      "url": "https://www.huntington.org/collections/lib-p15150coll7-52988",
+      "alternate_urls": [
+        "https://catalog.huntington.org/record=b1862079",
+        "https://hdl.huntington.org/digital/collection/p15150coll7/id/52988",
+        "https://hdl.huntington.org/digital/api/singleitem/collection/p15150coll7/id/52988"
+      ],
+      "repository_path": "source-cache/Towneley/huntington-hm1-contentdm-parent-record.json",
+      "locator": "Description, Date, Call Number, Physical Description, Provenance, Restrictions, Cataloging Notes, objectInfo.page",
+      "summary": "Confirms HM 1 as the unique manuscript, current 1490-1510 date, 132 parchment folios, dimensions, lacunae, order, later Judas hand, provenance, restricted access, exact parent object, 60 published child views, and the explicit statement that the manuscript was only partially scanned.",
+      "accessed_on": "2026-07-15",
+      "sha256": "05e74feb009d2a604d52b02b4cc6636e5818d4ff957d4556c1545a105e1eb685",
+      "notes": [
+        "The evidence SHA identifies the cached ContentDM parent JSON; the primary collection and catalog pages are dynamic HTML representations of the same record."
+      ]
+    },
+    {
+      "id": "evidence:huntington-iiif",
+      "type": "digital_surrogate",
+      "citation": "Huntington Digital Library IIIF Presentation manifest for p15150coll7:52988.",
+      "url": "https://cdm16003.contentdm.oclc.org/iiif/p15150coll7:52988/manifest.json",
+      "repository_path": "source-cache/Towneley/huntington-hm1-selected-iiif-1600px.zip",
+      "locator": "manifest.json, inventory.json, images/000001.jpg-images/000060.jpg",
+      "summary": "The official manifest exposes exactly 60 selected canvases. The cached bundle captures every canvas at requested width 1600 pixels and preserves the manifest and per-image hash/byte inventory.",
+      "accessed_on": "2026-07-15",
+      "sha256": "1ad0a3639bcdb684cc1bba23e3a30ecac753d84c944330769a9f22e02e548003"
+    },
+    {
+      "id": "evidence:huntington-digital-audit",
+      "type": "search_result",
+      "citation": "Exact Huntington ContentDM shelfmark search for mssHM 1 and audit of its sole parent object.",
+      "url": "https://hdl.huntington.org/digital/api/search/collection/p15150coll7/field/callid/searchterm/mssHM%201/mode/exact/maxRecords/1024",
+      "repository_path": "source-cache/Towneley/huntington-hm1-contentdm-exact-search.json",
+      "locator": "totalResults=1; itemId=52988; parent objectInfo.page count=60; IIIF canvas count=60",
+      "summary": "An exact call-number query returns one HM 1 compound object. Its child list and IIIF manifest both contain 60 selected views, providing no separate complete 132-folio sequence.",
+      "accessed_on": "2026-07-15",
+      "sha256": "e03b744f10d75851ae7b4bff4dc5c45194be24b012ffe1c279cdc1c47280c613"
+    },
+    {
+      "id": "evidence:huntington-access-rights",
+      "type": "official_webpage",
+      "citation": "The Huntington Library, research access, Aeon Imaging Services, and Library Rights and Permissions.",
+      "url": "https://www.huntington.org/library/using-library",
+      "alternate_urls": [
+        "https://aeon.huntington.org/",
+        "https://www.huntington.org/library/library-rights-and-permissions",
+        "https://hdl.huntington.org/digital/about"
+      ],
+      "summary": "Confirms Aeon registration, onsite and virtual research routes, fee-based Imaging Services, extended delivery for orders over 50 pages, reproduction-order contact routes, the distinction between physical ownership and copyright, no permission requirement for public-domain material, and researcher responsibility for rights.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:facsimile-1976",
+      "type": "official_catalog",
+      "citation": "University of Leeds facsimile archive and Folger Shakespeare Library catalog record for The Towneley Cycle: A Facsimile of Huntington MS HM 1 (1976).",
+      "url": "https://ahc.leeds.ac.uk/medieval/doc/facsimiles-monographs-archive",
+      "alternate_urls": [
+        "https://catalog.folger.edu/record/27390",
+        "https://web.nypl.org/research/research-catalog/bib/b10474163",
+        "https://books.google.com/books?id=eoTgAAAAMAAJ"
+      ],
+      "summary": "Confirms the complete 1976 facsimile's title, editors, publication, series, 132-leaf coverage, ISBN, out-of-print status, and current onsite holdings; Google Books provides only a limited/no-preview record.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:usco-circular15a",
+      "type": "law",
+      "citation": "United States Copyright Office, Circular 15A: Duration of Copyright, April 2026.",
+      "url": "https://www.copyright.gov/circs/circ15a.pdf",
+      "repository_path": "source-cache/Towneley/us-copyright-office-circular-15a-2026.pdf",
+      "locator": "complete four-page official circular, April 2026",
+      "summary": "Official legal guidance used only for United States term calculations and the public-domain status of the 1836 and 1897 publications; it does not decide provider terms, scan rights, foreign jurisdictions, or modern additions.",
+      "accessed_on": "2026-07-15",
+      "sha256": "6ff3c5612e1cd56469b3eb7d35eba7fd3374843d82744c63ab909225f53b7aef"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:1897-textual-basis",
+      "question": "What proportion of the 1897 EETS text comes directly from HM 1 rather than the 1836 Surtees edition?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Perform a systematic three-way collation of HM 1, the 1836 text, and the 1897 text; meanwhile preserve both documented manuscript collation and substantial 1836 version dependence."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:england-pollard-1897",
+        "evidence:surtees-1836",
+        "evidence:epp-edition"
+      ]
+    },
+    {
+      "id": "question:1966-reprint",
+      "question": "What exactly changed between the 1897 edition and the 1966 Oxford/EETS reprint used for the encoding?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Inspect a physical or licensed complete 1966 copy and compare title matter, pagination, play text, appendix, notes, glossary, and corrections against the cached 1897 scan."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:towneley-xml",
+        "evidence:umich-towneley",
+        "evidence:england-pollard-1897"
+      ],
+      "notes": [
+        "Searches located bibliographic records and citations but no complete public 1966 page facsimile."
+      ]
+    },
+    {
+      "id": "question:hm1-date",
+      "question": "How should the conflicting dates for HM 1 be resolved?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Keep Huntington's 1490-1510 assignment and Epp's likely-1550s argument separate until updated codicological, paleographical, or material analysis resolves the conflict."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:epp-edition"
+      ]
+    },
+    {
+      "id": "question:full-hm1-public",
+      "question": "Does a complete public digital facsimile of HM 1 exist outside the audited Huntington selected object?",
+      "status": "no_public_source_found",
+      "impact": "high",
+      "next_steps": [
+        "Periodically recheck Huntington's exact shelfmark search, catalog, ContentDM compound object, IIIF manifest, and institutional announcements; use Aeon reproduction services or the complete 1976 printed facsimile meanwhile."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:huntington-iiif",
+        "evidence:huntington-digital-audit",
+        "evidence:huntington-access-rights",
+        "evidence:facsimile-1976"
+      ],
+      "notes": [
+        "The current public object is complete as a 60-canvas selected object and partial as a representation of HM 1."
+      ]
+    },
+    {
+      "id": "question:repository-rights",
+      "question": "Does the pinned CME software-focused LICENSE cover the XML text, markup, and data, and how should it be reconciled with the embedded OTA restriction and current U-M NoC-US statement?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Seek an explicit repository data/XML rights statement; until then distinguish the underlying public-domain texts, current U-M provider assertion, historical OTA wording, and ambiguous repository-license scope."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:towneley-xml",
+        "evidence:umich-towneley"
+      ]
+    },
+    {
+      "id": "question:goldsmid-arms",
+      "question": "Whose arms appear on the present HM 1 binding?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Preserve the current catalog's Sir Isaac Lyon Goldsmid identification and Epp's correction toward John Louis Goldsmid as an attributed conflict; consult heraldic and binding evidence before normalizing."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:huntington-hm1-record",
+        "evidence:epp-edition"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3481 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:ajt2514",
+  "work_id": "ajt2514",
+  "title": "Die Kildare-Gedichte (U-M main-text-and-appendix selection)",
+  "primary_subject": "artifact:general-corpus:ajt2514",
+  "record_status": "draft",
+  "created": "2026-07-16",
+  "last_reviewed": "2026-07-16",
+  "summary": "Evidence-separated lineage for the bounded U-M selection of Heuser's title page, seventeen-poem main text, and scholarly appendix. The graph distinguishes the pinned repository XML, conceptual/current U-M item, exact raw U-M XML member, raw compound carrier, 1904 scholarly edition, historical intermediary editions, nineteen manuscript carriers, modern support expressions, and provider-specific facsimile, access, and rights layers. Direct and indirect witness routes remain explicit, and the disputed Harley 1706 attribution is retained only as tentative.",
+  "languages": ["deu", "enm", "lat", "fro"],
+  "review_notes": [
+    "The cataloging subject is an edited selection, not a single poem, authorial collection, complete codex, or complete 1904 volume.",
+    "Only the first poem is assigned to Friar Michael Kildare; the remaining main poems and the whole selection have no blanket medieval author.",
+    "Complete IIIF coverage means complete provider-exposed canvas sequence unless physical-exterior completeness is explicitly proven."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:ajt2514",
+      "type": "repository_artifact",
+      "label": "General Corpus pinned XML for ajt2514",
+      "description": "Repository-normalized XML for the bounded title-page, main-text, and appendix selection.",
+      "identifiers": [{"scheme": "General Corpus work ID", "value": "ajt2514"}],
+      "repository_file": {
+        "path": "CME/source/CME_phase_1-2/ajt2514.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "5774ece274b88a0f94fbb944ab1d90eed40aaad0",
+        "xml_identifier_aliases": ["AJT2514.0001.001"],
+        "sha256": "1d14efef5f2bf3592a2f48ec77a63e09b2c062f9951bb8912883d6fc49f2b794"
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:raw-package-audit"],
+      "notes": ["The CME submodule commit pins this file; copied_from denotes normalized textual and structural descent, not byte identity."]
+    },
+    {
+      "id": "encoding:umich:AJT2514.0001.001",
+      "type": "digital_encoding",
+      "label": "University of Michigan conceptual/current AJT2514.0001.001 item",
+      "description": "The conceptual/current U-M electronic item addressed by the name resolver, kept distinct from the 2011 Internet Archive raw package.",
+      "identifiers": [{"scheme": "U-M DLPS", "value": "AJT2514.0001.001", "uri": "https://name.umdl.umich.edu/AJT2514.0001.001"}],
+      "creator_ids": ["agent:umich-library"],
+      "date_statements": [{
+        "label": "electronic publication",
+        "value": "2006",
+        "normalized": "2006",
+        "certainty": "high",
+        "evidence_ids": ["evidence:repository-xml", "evidence:umich-coding"]
+      }],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-coding", "evidence:raw-package-audit"],
+      "notes": ["Scripted checking reached a challenge-protected endpoint; this does not show that the item is gone or that current bytes equal the raw package."]
+    },
+    {
+      "id": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "type": "digital_encoding",
+      "label": "Raw U-M AJT2514.0001.001 XML member",
+      "description": "Exact embedded XML member ajt2514.0001.001.xml in the raw U-M package, containing the selected title page, main text, and appendix.",
+      "identifiers": [{"scheme": "raw package member", "value": "ajt2514.0001.001.xml"}],
+      "creator_ids": ["agent:umich-library"],
+      "date_statements": [{
+        "label": "raw package source dates",
+        "value": "loaded 2003-06-26; pageview created 2006-02-22",
+        "certainty": "high",
+        "evidence_ids": ["evidence:raw-package-audit"]
+      }],
+      "reproduction_format": "SGML-derived XML member inside Raw Michigan Book ZIP",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:raw-package-audit", "evidence:umich-coding"],
+      "notes": [
+        "Member size 323,588 bytes; SHA-256 3b1a577a7635300ac5eb543661aa86b1cb965b1abab49e0817144e7fc6dfcc84.",
+        "The raw carrier access and exact member locator provide access; the ZIP local-copy record is not duplicated here."
+      ]
+    },
+    {
+      "id": "edition:heuser:kildare-1904",
+      "type": "scholarly_edition",
+      "label": "Wilhelm Heuser, Die Kildare-Gedichte (1904)",
+      "description": "Complete 1904 scholarly edition from which U-M selected the title page, main text on pages 77-184, and appendix on pages 185-229.",
+      "identifiers": [{"scheme": "OCLC", "value": "4912693"}],
+      "creator_ids": ["agent:wilhelm-heuser"],
+      "date_statements": [{
+        "label": "publication",
+        "value": "1904",
+        "normalized": "1904",
+        "certainty": "high",
+        "evidence_ids": ["evidence:heuser-1904"]
+      }],
+      "bibliographic": {
+        "citation": "Wilhelm Heuser, Die Kildare-Gedichte: Die ältesten mittelenglischen Denkmäler in anglo-irischer Überlieferung. Bonner Beiträge zur Anglistik 14. Bonn: P. Hanstein, 1904.",
+        "title": "Die Kildare-Gedichte: Die ältesten mittelenglischen Denkmäler in anglo-irischer Überlieferung",
+        "series": "Bonner Beiträge zur Anglistik 14",
+        "publisher": "P. Hanstein",
+        "publication_place": "Bonn",
+        "date": "1904",
+        "languages": ["deu", "enm", "lat", "fro"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:heuser-hathi"],
+      "notes": ["The lineage graph scopes every witness relation to selected passages; it does not treat the complete volume as the cataloging subject."]
+    },
+    {
+      "id": "facsimile:internet-archive:diekildaregedic00musegoog",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Heuser 1904",
+      "description": "Complete 254-page Harvard/Google-source scan with PDF, OCR, layout OCR, metadata, and scandata deliveries.",
+      "identifiers": [
+        {"scheme": "Internet Archive identifier", "value": "diekildaregedic00musegoog", "uri": "https://archive.org/details/diekildaregedic00musegoog"},
+        {"scheme": "HathiTrust item", "value": "hvd.32044011402047", "uri": "https://babel.hathitrust.org/cgi/pt?id=hvd.32044011402047"}
+      ],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Whole-book scan, PDF, OCR, layout OCR, and scan metadata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:heuser-hathi"]
+    },
+    {
+      "id": "catalog:hathitrust:100324504",
+      "type": "catalog_description",
+      "label": "HathiTrust record 100324504 for Heuser 1904",
+      "description": "Bibliographic and item-rights record for the Harvard copy that identifies full-view pdus access in the United States.",
+      "identifiers": [{"scheme": "HathiTrust record", "value": "100324504", "uri": "https://catalog.hathitrust.org/Record/100324504"}],
+      "creator_ids": ["agent:hathitrust"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:heuser-hathi"]
+    },
+    {
+      "id": "facsimile:internet-archive:ajt2514.0001.001.umich.edu-umichbook",
+      "type": "facsimile",
+      "label": "Internet Archive raw U-M AJT2514 umichbook carrier",
+      "description": "Compound Raw Michigan Book ZIP with 240 complete-volume TIFFs, exact raw XML, pageview and header control files, a tagged text-body fragment, and load log.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "ajt2514.0001.001.umich.edu", "uri": "https://archive.org/details/ajt2514.0001.001.umich.edu"}],
+      "creator_ids": ["agent:umich-library", "agent:internet-archive"],
+      "reproduction_format": "Raw Michigan Book ZIP: 240 Group-4 TIFFs, XML, text, header, pageview, and load log",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:raw-package-audit"],
+      "notes": ["All 240 TIFF MD5 values and XML page references were verified; image 1 is the title page, 85 begins printed p. 77, 193 begins p. 185, and 240 is the colophon."]
+    },
+    {
+      "id": "catalog:umich:AJT2514-coding-instructions",
+      "type": "catalog_description",
+      "label": "U-M AJT2514 coding instructions",
+      "description": "Book-specific instruction page defining the title/main/appendix electronic selection and division hierarchy.",
+      "creator_ids": ["agent:umich-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:umich-coding"]
+    },
+    {
+      "id": "witness:bl:Harley-MS-913",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 913",
+      "alternate_labels": ["Kildare Lyrics manuscript"],
+      "description": "Principal source of all seventeen main poem components: a mixed trilingual parchment miscellany from south-east Ireland, probably Waterford.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 913", "uri": "https://searcharchives.bl.uk/catalog/040-002046742"}],
+      "date_statements": [{
+        "label": "current catalog date",
+        "value": "circa 1330-1370",
+        "normalized": "1330/1370",
+        "certainty": "high",
+        "evidence_ids": ["evidence:harley-913"]
+      }],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 913",
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002046742",
+        "notes": "64 folios plus flyleaves; main components occur at discontiguous loci."
+      },
+      "physical_description": {
+        "support": "Parchment",
+        "extent": "64 folios plus flyleaves",
+        "dimensions": "approximately 140 x 95 mm",
+        "notes": ["Current catalog favors south-east Ireland, probably Waterford; Kildare remains a conventional label."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:harley-913", "evidence:heuser-1904"],
+      "notes": ["Only the hymn at ff. 9r-10r names Friar Michael Kildare."]
+    },
+    {
+      "id": "facsimile:bl:Harley-MS-913-complete",
+      "type": "facsimile",
+      "label": "British Library complete IIIF facsimile of Harley MS 913",
+      "description": "Complete 145-canvas provider sequence containing every main-text target locus.",
+      "creator_ids": ["agent:british-library"],
+      "reproduction_format": "IIIF Presentation 3, 145 published canvases",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:harley-913", "evidence:bl-image-reuse"],
+      "notes": ["Complete means the complete provider-exposed canvas sequence; no stronger claim about every physical exterior surface or archival master is made."]
+    },
+    {
+      "id": "witness:bl:Cotton-MS-Cleopatra-C-VI",
+      "type": "manuscript_witness",
+      "label": "British Library Cotton MS Cleopatra C VI",
+      "description": "Carrier of the seven-line comparison version for main component 17 at Heuser's f. 22.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Cotton MS Cleopatra C VI", "uri": "https://searcharchives.bl.uk/catalog/040-001103771"}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Cotton MS Cleopatra C VI", "catalog_url": "https://searcharchives.bl.uk/catalog/040-001103771"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"],
+      "notes": ["Heuser says nach der Handschrift; current parent/component records encompass f. 22 but do not itemize this short entry."]
+    },
+    {
+      "id": "witness:bodleian:MS-Rawl-poet-32",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Rawlinson poet. 32",
+      "description": "Carrier of the six-line analogue at f. 1v, mediated to Heuser through Wright and Halliwell rather than directly transcribed by Heuser.",
+      "identifiers": [{"scheme": "Bodleian catalog", "value": "manuscript_8769", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_8769"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Rawl. poet. 32", "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_8769"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:bodleian:MS-Rawl-poet-32-published-selection",
+      "type": "facsimile",
+      "label": "Digital Bodleian published selection for Rawlinson poet. 32",
+      "description": "The complete two-canvas published selection, ff. 30r and 57r, with zero overlap with the target at f. 1v.",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "Two-canvas IIIF selected-image object",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]
+    },
+    {
+      "id": "witness:bodleian:MS-Laud-Misc-463",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Laud Misc. 463",
+      "description": "Late-fourteenth-century parchment carrier of appendix Commandments and Seven Sins versions at Heuser ff. 157r-159v.",
+      "identifiers": [{"scheme": "Bodleian catalog", "value": "manuscript_7020", "uri": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7020"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Laud Misc. 463", "catalog_url": "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7020"},
+      "physical_description": {"support": "Parchment"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:bodleian:MS-Laud-Misc-463-published-selection",
+      "type": "facsimile",
+      "label": "Digital Bodleian published selection for Laud Misc. 463",
+      "description": "One published image, f. 115r, which does not overlap the target at ff. 157r-159v.",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "One-canvas IIIF selected-image object",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]
+    },
+    {
+      "id": "witness:bl:Harley-MS-1706",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 1706",
+      "description": "Historically attributed by Heuser as the source of appendix Decem Mandata and Seven Sins selections at fol. 306; the present record conflicts in support, extent, and contents.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 1706", "uri": "https://searcharchives.bl.uk/catalog/040-001988626"}],
+      "date_statements": [{
+        "label": "current catalog date",
+        "value": "1474-1524; principal component circa 1480-1500",
+        "normalized": "1474/1524",
+        "certainty": "high",
+        "evidence_ids": ["evidence:harley-1706-conflict"]
+      }],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 1706", "catalog_url": "https://searcharchives.bl.uk/catalog/040-001988626"},
+      "physical_description": {
+        "support": "Current catalog: parchment; Heuser: paper",
+        "extent": "Current catalog: 216 folios; Heuser prints fol. 306",
+        "notes": ["The historical/current contradiction remains unresolved; Harley 5396 is not substituted."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:harley-1706-conflict", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:bl:Arundel-MS-20",
+      "type": "manuscript_witness",
+      "label": "British Library Arundel MS 20",
+      "description": "Fifteenth-century paper carrier of two seven-line appendix stanzas related to Commandments and Seven Sins tracts.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Arundel MS 20", "uri": "https://searcharchives.bl.uk/catalog/040-002039300"}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Arundel MS 20", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002039300"},
+      "physical_description": {"support": "Paper", "extent": "Relevant tracts at ff. 43-56v and 57-70v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:bodleian:MS-Laud-Misc-416",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Laud Misc. 416",
+      "description": "Fifteenth-century paper carrier of an appendix Seven Sins opening at Heuser f. 35.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS. Laud Misc. 416"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Laud Misc. 416"},
+      "physical_description": {"support": "Paper", "notes": ["Dated in part 1459."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:new-college:MS-88",
+      "type": "manuscript_witness",
+      "label": "New College, Oxford, MS 88",
+      "description": "Carrier of the fifteen-line Christ-on-the-Cross analogue at f. 179r-v.",
+      "identifiers": [{"scheme": "New College shelfmark", "value": "MS 88"}],
+      "holding": {"institution_id": "agent:new-college-oxford", "shelfmark": "MS 88", "catalog_url": "https://www.new.ox.ac.uk/rare-books-and-manuscripts"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:coxe-new-college", "evidence:heuser-1904"]
+    },
+    {
+      "id": "catalog:coxe:oxford-college-manuscripts-1852",
+      "type": "catalog_description",
+      "label": "H. O. Coxe, Catalogus codicum MSS. ... Oxoniensibus, Part I (1852)",
+      "description": "Historical Oxford college-manuscript catalog supporting New College MS 88 and its locus.",
+      "creator_ids": ["agent:henry-coxe"],
+      "bibliographic": {
+        "citation": "Henry O. Coxe, Catalogus codicum MSS. qui in collegiis aulisque Oxoniensibus hodie adservantur, Part I. Oxford, 1852.",
+        "title": "Catalogus codicum MSS. qui in collegiis aulisque Oxoniensibus hodie adservantur",
+        "publication_place": "Oxford",
+        "date": "1852",
+        "languages": ["lat", "eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:coxe-new-college"]
+    },
+    {
+      "id": "witness:bodleian:MS-Bodl-42",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Bodl. 42",
+      "description": "Early-fourteenth-century parchment carrier of two poems at f. 250; Heuser directly checked the ten-line Christ analogue.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS. Bodl. 42"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Bodl. 42"},
+      "physical_description": {"support": "Parchment in the relevant early-fourteenth-century part", "extent": "Two poems at f. 250"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:durham:A-III-12",
+      "type": "manuscript_witness",
+      "label": "Durham Cathedral Library MS A.III.12",
+      "description": "Carrier of a four-line Christ-on-the-Cross analogue at f. 49r, mediated to Heuser through Furnivall.",
+      "identifiers": [{"scheme": "Durham Cathedral Library shelfmark", "value": "A.III.12"}],
+      "holding": {"institution_id": "agent:durham-cathedral-library", "shelfmark": "A.III.12"},
+      "physical_description": {"extent": "Middle English fourth item at f. 49r"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:durham", "evidence:furnivall-1866", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:durham:A-III-12-complete",
+      "type": "facsimile",
+      "label": "Durham Priory Library Project complete IIIF facsimile of A.III.12",
+      "description": "Complete 460-canvas provider sequence; the target at f. 49r is canvas 101.",
+      "creator_ids": ["agent:durham-priory-project"],
+      "reproduction_format": "IIIF Presentation manifest, 460 published canvases",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:durham"],
+      "notes": ["Complete means the complete provider-exposed sequence, not a verified inventory of every physical exterior surface or archival master."]
+    },
+    {
+      "id": "witness:bl:Arundel-MS-507",
+      "type": "manuscript_witness",
+      "label": "British Library Arundel MS 507",
+      "description": "Composite paper/parchment carrier whose fourteenth-century component includes the exact eight-line Christ analogue at f. 10r.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Arundel MS 507", "uri": "https://searcharchives.bl.uk/catalog/040-002039790"}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Arundel MS 507", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002039790"},
+      "physical_description": {"support": "Composite paper and parchment"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:bl:Add-MS-31042",
+      "type": "manuscript_witness",
+      "label": "British Library Add MS 31042",
+      "description": "Carrier of the sixteen-line Christ analogue at Heuser f. 94v/current f. 94; Heuser's parchment description conflicts with the current chiefly paper description.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Add MS 31042", "uri": "https://searcharchives.bl.uk/catalog/032-002022830"}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Add MS 31042", "catalog_url": "https://searcharchives.bl.uk/catalog/032-002022830"},
+      "physical_description": {
+        "support": "Current catalog: paper except some leaves; Heuser: parchment",
+        "extent": "Target at current f. 94 / Heuser f. 94v",
+        "notes": ["Both physical and locator claims are retained without premature harmonization."]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:bl:Harley-MS-7358",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 7358",
+      "description": "Paper carrier of the thirty-six-line Lullay at f. 12v; current catalog dates the manuscript to the fifteenth century while Heuser assigned the fourteenth.",
+      "identifiers": [{"scheme": "British Library shelfmark", "value": "Harley MS 7358", "uri": "https://searcharchives.bl.uk/catalog/040-002053212"}],
+      "holding": {"institution_id": "agent:british-library", "shelfmark": "Harley MS 7358", "catalog_url": "https://searcharchives.bl.uk/catalog/040-002053212"},
+      "physical_description": {"support": "Paper", "extent": "Lullay at f. 12v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:cul:Ii-4-9",
+      "type": "manuscript_witness",
+      "label": "Cambridge University Library MS Ii.4.9",
+      "description": "Fifteenth-century, 197-leaf paper manuscript with the eighty-two-line Earth version at ff. 67r-68v.",
+      "identifiers": [{"scheme": "CUL shelfmark", "value": "Ii.4.9"}],
+      "holding": {"institution_id": "agent:cambridge-university-library", "shelfmark": "Ii.4.9"},
+      "physical_description": {"support": "Paper", "extent": "197 leaves; target ff. 67r-68v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:cul-ii49", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:lambeth:MS-598",
+      "type": "manuscript_witness",
+      "label": "Lambeth Palace Library MS 598",
+      "description": "Carrier of the Conquest of Ireland prose extract at ff. 14v-15r.",
+      "identifiers": [{"scheme": "Lambeth Palace Library shelfmark", "value": "MS 598"}],
+      "holding": {"institution_id": "agent:lambeth-palace-library", "shelfmark": "MS 598"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:lambeth:MS-598-complete",
+      "type": "facsimile",
+      "label": "Lambeth Palace Library complete published sequence for MS 598",
+      "description": "All 310 currently published, numerically labeled LUNA canvases; target ff. 14v-15r are canvases 47-48.",
+      "creator_ids": ["agent:lambeth-palace-library"],
+      "reproduction_format": "Complete provider-published 310-canvas IIIF sequence",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth"],
+      "notes": ["The audit did not prove inclusion of every board, cover, spine, pastedown, or other exterior surface."]
+    },
+    {
+      "id": "witness:lambeth:MS-633",
+      "type": "manuscript_witness",
+      "label": "Lambeth Palace Library MS 633",
+      "description": "Late-fifteenth-century parchment carrier of the Secreta Secretorum prose extract at ff. 45r-46v.",
+      "identifiers": [{"scheme": "Lambeth Palace Library shelfmark", "value": "MS 633"}],
+      "holding": {"institution_id": "agent:lambeth-palace-library", "shelfmark": "MS 633"},
+      "physical_description": {"support": "Parchment", "extent": "85 folios; target ff. 45r-46v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:lambeth:MS-633-published-selection",
+      "type": "facsimile",
+      "label": "Lambeth Palace Library published image selections for MS 633",
+      "description": "Public images for f. 84r and f. 85v only; neither overlaps the target at ff. 45r-46v.",
+      "creator_ids": ["agent:lambeth-palace-library"],
+      "reproduction_format": "Two separate one-canvas LUNA IIIF objects",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "witness:lambeth:MS-623",
+      "type": "manuscript_witness",
+      "label": "Lambeth Palace Library MS 623",
+      "description": "Sixteenth-century Carew/Book of Howth compilation carrying the Conquest of Ireland werewolf prose extract at ff. 47r-v.",
+      "identifiers": [{"scheme": "Lambeth Palace Library shelfmark", "value": "MS 623"}],
+      "holding": {"institution_id": "agent:lambeth-palace-library", "shelfmark": "MS 623"},
+      "physical_description": {"extent": "Target ff. 47r-v"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:lambeth:MS-623-published-selection",
+      "type": "facsimile",
+      "label": "Lambeth Palace Library published image selection for MS 623",
+      "description": "Seven published images, nearest target-adjacent image f. 48v; target ff. 47r-v are absent.",
+      "creator_ids": ["agent:lambeth-palace-library"],
+      "reproduction_format": "Seven-image LUNA inventory bundle",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "witness:bodleian:MS-Laud-Misc-526",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Laud Misc. 526",
+      "description": "Mixed parchment/paper carrier of a Conquest of Ireland prose extract on the final parchment leaf.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS. Laud Misc. 526"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Laud Misc. 526"},
+      "physical_description": {"support": "Mixed parchment and paper", "notes": ["Current TEI describes mid-fifteenth-century Irish annals but does not itemize the target."]},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:heuser-1904"]
+    },
+    {
+      "id": "witness:bodleian:MS-Douce-104",
+      "type": "manuscript_witness",
+      "label": "Bodleian Library MS Douce 104",
+      "description": "One physical witness supplying Tutivillus at f. 112v and four Piers Plowman C-text extracts at ff. 12r-v, 13v-14v, 35r-v, and 67r-v.",
+      "identifiers": [{"scheme": "Bodleian shelfmark", "value": "MS. Douce 104"}],
+      "holding": {"institution_id": "agent:bodleian-libraries", "shelfmark": "MS. Douce 104"},
+      "physical_description": {"extent": "112 folios plus inserted 33a/33b leaves in the published sequence"},
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:douce-104", "evidence:heuser-1904"]
+    },
+    {
+      "id": "facsimile:bodleian:MS-Douce-104-complete",
+      "type": "facsimile",
+      "label": "Digital Bodleian complete published folio sequence for Douce 104",
+      "description": "All 226 provider canvases from fol. 1r through fol. 112v, including inserted 33a and 33b; all five target loci are present.",
+      "creator_ids": ["agent:bodleian-libraries"],
+      "reproduction_format": "IIIF Presentation manifest, 226 published folio canvases",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:douce-104", "evidence:bodleian-images"],
+      "notes": ["Complete provider-exposed folio sequence, not complete physical-object coverage or an archival master; no covers, boards, spine, or pastedowns are in the provider sequence."]
+    },
+    {
+      "id": "edition:furnivall:eets-15-1866",
+      "type": "scholarly_edition",
+      "label": "Furnivall, Political, Religious, and Love Poems (EETS 15, 1866)",
+      "description": "Immediate printed source for Heuser's four-line Durham A.III.12 excerpt and a comparative source for Bodl. 42.",
+      "creator_ids": ["agent:frederick-furnivall"],
+      "date_statements": [{"label": "publication", "value": "1866", "normalized": "1866", "certainty": "high", "evidence_ids": ["evidence:furnivall-1866"]}],
+      "bibliographic": {
+        "citation": "Frederick J. Furnivall, ed., Political, Religious, and Love Poems. EETS Original Series 15. London, 1866.",
+        "title": "Political, Religious, and Love Poems",
+        "series": "Early English Text Society, Original Series 15",
+        "publication_place": "London",
+        "date": "1866",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:furnivall-1866"]
+    },
+    {
+      "id": "facsimile:internet-archive:politicalreligi00musegoog",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Furnivall EETS 15",
+      "description": "Complete 338-page PDF and OCR deliveries; printed p. 214 / PDF p. 274 / DjVu leaf 273 carries the Durham and Bodl. 42 four-line versions.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "politicalreligi00musegoog", "uri": "https://archive.org/details/politicalreligi00musegoog"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Whole-book PDF, OCR, layout OCR, metadata, and scandata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:furnivall-1866"]
+    },
+    {
+      "id": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "type": "scholarly_edition",
+      "label": "Wright and Halliwell, Reliquiae Antiquae, volume I (1845)",
+      "description": "Immediate source for Heuser's Rawlinson analogue and comparator for doubtful bracketed Tutivillus restorations.",
+      "creator_ids": ["agent:thomas-wright", "agent:james-halliwell"],
+      "date_statements": [{"label": "publication", "value": "1845", "normalized": "1845", "certainty": "high", "evidence_ids": ["evidence:wright-halliwell-1845"]}],
+      "bibliographic": {
+        "citation": "Thomas Wright and James Orchard Halliwell, eds., Reliquiae Antiquae, volume I. London, 1845.",
+        "title": "Reliquiae Antiquae: Scraps from Ancient Manuscripts",
+        "volume": "I",
+        "publication_place": "London",
+        "date": "1845",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wright-halliwell-1845"]
+    },
+    {
+      "id": "facsimile:internet-archive:ReliquiaeAntiquaeV1",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Reliquiae Antiquae volume I",
+      "description": "Complete 342-page PDF and OCR deliveries; printed p. 257 carries Tutivillus and p. 316 the Rawlinson analogue.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "ReliquiaeAntiquaeV1", "uri": "https://archive.org/details/ReliquiaeAntiquaeV1"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Whole-book PDF, OCR, metadata, and scandata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:wright-halliwell-1845"]
+    },
+    {
+      "id": "edition:skeat:eets-54-1873",
+      "type": "scholarly_edition",
+      "label": "Skeat, The Vision of William concerning Piers the Plowman, Part III (EETS 54, 1873)",
+      "description": "Comparator for the four Piers Plowman C-text passages transcribed directly by Heuser from Douce 104.",
+      "creator_ids": ["agent:walter-skeat"],
+      "date_statements": [{"label": "publication", "value": "1873", "normalized": "1873", "certainty": "high", "evidence_ids": ["evidence:skeat-1873"]}],
+      "bibliographic": {
+        "citation": "Walter W. Skeat, ed., The Vision of William concerning Piers the Plowman, Part III. EETS Original Series 54. London, 1873.",
+        "title": "The Vision of William concerning Piers the Plowman, Part III",
+        "series": "Early English Text Society, Original Series 54",
+        "publication_place": "London",
+        "date": "1873",
+        "languages": ["eng", "enm", "lat"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-1873"]
+    },
+    {
+      "id": "facsimile:internet-archive:TheVisionOfWilliamConcerning1873",
+      "type": "facsimile",
+      "label": "Internet Archive complete scan of Skeat EETS 54",
+      "description": "Complete 680-page PDF and OCR deliveries; comparison passages are at printed pp. 46, 52, 139, and 264.",
+      "identifiers": [{"scheme": "Internet Archive identifier", "value": "TheVisionOfWilliamConcerning1873", "uri": "https://archive.org/details/TheVisionOfWilliamConcerning1873"}],
+      "creator_ids": ["agent:internet-archive"],
+      "reproduction_format": "Whole-book PDF, OCR, metadata, and scandata",
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:skeat-1873"]
+    },
+    {
+      "id": "edition:ucc-celt:E300000-001",
+      "type": "scholarly_edition",
+      "label": "Angela Lucas, The Kildare Poems (UCC CELT E300000-001)",
+      "description": "Modern complete edition of seventeen independently headed main-poem counterparts, including the seven-line Five Hateful Things; it does not contain Heuser's appendix.",
+      "identifiers": [{"scheme": "CELT electronic text ID", "value": "E300000-001", "uri": "https://celt.ucc.ie/published/E300000-001.html"}],
+      "creator_ids": ["agent:angela-lucas", "agent:ucc-celt"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:ucc-lucas"],
+      "notes": ["Used as independent structural support, not asserted as a historical source for Heuser."]
+    },
+    {
+      "id": "catalog:sinisi:urbanization-pollution-2003",
+      "type": "catalog_description",
+      "label": "Lucía Sinisi, Urbanization and Pollution in an Irish (?) Town in the 14th Century",
+      "description": "Secondary support study explaining that a conventional count of sixteen becomes seventeen when Five Hateful Things at f. 6v is included.",
+      "creator_ids": ["agent:lucia-sinisi"],
+      "bibliographic": {
+        "citation": "Lucía Sinisi, Urbanization and Pollution in an Irish (?) Town in the 14th Century, Selim 12 (2003-2004): 160-178.",
+        "title": "Urbanization and Pollution in an Irish (?) Town in the 14th Century",
+        "container_title": "Selim",
+        "volume": "12",
+        "date": "2003-2004",
+        "pages": "160-178",
+        "languages": ["eng"]
+      },
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:sinisi"]
+    },
+    {
+      "id": "catalog:bl:unpublished-manuscript-image-reuse-2023",
+      "type": "catalog_description",
+      "label": "Archived British Library unpublished-manuscript image-reuse page",
+      "description": "Archived official page supporting the item-linked public-domain image assertion, attribution request, and no-new-restrictions request; the live page returns 404.",
+      "creator_ids": ["agent:british-library"],
+      "survival_status": "extant",
+      "evidence_ids": ["evidence:bl-image-reuse"]
+    }
+  ],
+  "agents": [
+    {"id": "agent:wilhelm-heuser", "type": "person", "name": "Wilhelm Heuser"},
+    {"id": "agent:michael-kildare", "type": "person", "name": "Friar Michael Kildare", "alternate_names": ["Frere Michel Kyldare"]},
+    {"id": "agent:frederick-furnivall", "type": "person", "name": "Frederick James Furnivall"},
+    {"id": "agent:thomas-wright", "type": "person", "name": "Thomas Wright"},
+    {"id": "agent:james-halliwell", "type": "person", "name": "James Orchard Halliwell"},
+    {"id": "agent:walter-skeat", "type": "person", "name": "Walter W. Skeat"},
+    {"id": "agent:henry-coxe", "type": "person", "name": "Henry Octavius Coxe"},
+    {"id": "agent:angela-lucas", "type": "person", "name": "Angela M. Lucas"},
+    {"id": "agent:lucia-sinisi", "type": "person", "name": "Lucía Sinisi"},
+    {"id": "agent:umich-library", "type": "organization", "name": "University of Michigan Library", "urls": ["https://quod.lib.umich.edu/c/cme/"]},
+    {"id": "agent:internet-archive", "type": "organization", "name": "Internet Archive", "urls": ["https://archive.org/"]},
+    {"id": "agent:hathitrust", "type": "organization", "name": "HathiTrust Digital Library", "urls": ["https://www.hathitrust.org/"]},
+    {"id": "agent:british-library", "type": "organization", "name": "British Library", "urls": ["https://searcharchives.bl.uk/"]},
+    {"id": "agent:bodleian-libraries", "type": "organization", "name": "Bodleian Libraries", "urls": ["https://digital.bodleian.ox.ac.uk/"]},
+    {"id": "agent:new-college-oxford", "type": "organization", "name": "New College Library, Oxford", "urls": ["https://www.new.ox.ac.uk/rare-books-and-manuscripts"]},
+    {"id": "agent:durham-cathedral-library", "type": "organization", "name": "Durham Cathedral Library"},
+    {"id": "agent:durham-priory-project", "type": "organization", "name": "Durham Priory Library Project", "urls": ["https://www.durhampriory.ac.uk/"]},
+    {"id": "agent:cambridge-university-library", "type": "organization", "name": "Cambridge University Library", "urls": ["https://www.lib.cam.ac.uk/collections/special-collections"]},
+    {"id": "agent:lambeth-palace-library", "type": "organization", "name": "Lambeth Palace Library", "urls": ["https://www.lambethpalacelibrary.info/"]},
+    {"id": "agent:ucc-celt", "type": "organization", "name": "CELT: Corpus of Electronic Texts, University College Cork", "urls": ["https://celt.ucc.ie/"]},
+    {"id": "agent:university-oviedo-press", "type": "organization", "name": "University of Oviedo Press", "urls": ["https://reunido.uniovi.es/"]}
+  ],
+  "relations": [
+    {
+      "id": "relation:repository-from-raw",
+      "type": "copied_from",
+      "subject": "artifact:general-corpus:ajt2514",
+      "object": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Pinned normalized XML textual and structural content"},
+        "object": {"kind": "whole", "description": "Raw embedded XML textual and structural content"},
+        "notes": "Supported textual and structural descent after normalization; byte identity and the exact transformation process are not asserted."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "high",
+        "evidence_ids": ["evidence:repository-xml", "evidence:raw-package-audit"],
+        "notes": "After removing repository-added NODE and NOTE1 ID attributes, resetting EDITORIALDECL N, and ignoring whitespace-only nodes, both serializations canonicalize identically."
+      }
+    },
+    {
+      "id": "relation:raw-version-current",
+      "type": "version_of",
+      "subject": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "object": "encoding:umich:AJT2514.0001.001",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Raw selected U-M encoding"},
+        "object": {"kind": "whole", "description": "Conceptual/current U-M item"},
+        "notes": "The raw package serializes a version of the item; current endpoint byte identity is not asserted."
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:raw-package-audit", "evidence:umich-coding"]}
+    },
+    {
+      "id": "relation:raw-encoded-heuser",
+      "type": "encoded_from",
+      "subject": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "object": "edition:heuser:kildare-1904",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Title page, seventeen-poem main text, and appendix"},
+        "object": {"kind": "selected_passages", "description": "Title page and printed pp. 77-229", "locators": ["title page", "pp. 77-184", "pp. 185-229"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:repository-xml", "evidence:umich-coding", "evidence:raw-package-audit", "evidence:heuser-1904"]}
+    },
+    {
+      "id": "relation:raw-carrier-contains-xml",
+      "type": "contains",
+      "subject": "facsimile:internet-archive:ajt2514.0001.001.umich.edu-umichbook",
+      "object": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "scope": {
+        "subject": {"kind": "part", "description": "ZIP member ajt2514.0001.001.xml", "locators": ["ajt2514.0001.001.xml"]},
+        "object": {"kind": "whole", "description": "Exact raw XML serialization"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:raw-package-audit"]}
+    },
+    {
+      "id": "relation:raw-carrier-heuser",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:ajt2514.0001.001.umich.edu-umichbook",
+      "object": "edition:heuser:kildare-1904",
+      "scope": {
+        "subject": {"kind": "part", "description": "Continuous 240-TIFF complete printed-volume surface sequence", "locators": ["00000001.tif-00000240.tif"]},
+        "object": {"kind": "whole", "description": "Complete printed volume surfaces"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:raw-package-audit", "evidence:heuser-1904"]}
+    },
+    {
+      "id": "relation:coding-describes-current",
+      "type": "describes",
+      "subject": "catalog:umich:AJT2514-coding-instructions",
+      "object": "encoding:umich:AJT2514.0001.001",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Book-specific coding instruction page"},
+        "object": {"kind": "whole", "description": "Selection boundary and division hierarchy"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:umich-coding"]}
+    },
+    {
+      "id": "relation:ia-heuser-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:diekildaregedic00musegoog",
+      "object": "edition:heuser:kildare-1904",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 254-page scan"},
+        "object": {"kind": "whole", "description": "Complete 1904 edition"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:heuser-hathi"]}
+    },
+    {
+      "id": "relation:hathi-describes-heuser-scan",
+      "type": "describes",
+      "subject": "catalog:hathitrust:100324504",
+      "object": "facsimile:internet-archive:diekildaregedic00musegoog",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Bibliographic and Harvard-item access record"},
+        "object": {"kind": "whole", "description": "Harvard/Google-source scanned copy identity"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser-hathi", "evidence:heuser-1904"]}
+    },
+    {
+      "id": "relation:heuser-harley913",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Harley-MS-913",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Seventeen main poem components on pp. 79-184"},
+        "object": {
+          "kind": "selected_passages",
+          "description": "All exact and discontiguous main-text loci",
+          "locators": ["ff. 3r-10r", "ff. 16r-22v", "ff. 28r-32v", "ff. 44v-54v", "ff. 58r-v", "ff. 62r-63v"]
+        },
+        "notes": "Only the first poem has explicit named authorship; transcription does not imply common authorship or one contiguous manuscript unit."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:harley-913"]}
+    },
+    {
+      "id": "relation:heuser-cotton",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Cotton-MS-Cleopatra-C-VI",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Seven-line component-17 comparison version, XML node 2.4.4.1.1"},
+        "object": {"kind": "part", "description": "Heuser f. 22", "locators": ["f. 22"]}
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"],
+        "notes": "Heuser says nach der Handschrift; the current broad component record does not itemize the short entry."
+      }
+    },
+    {
+      "id": "relation:heuser-wright-rawlinson",
+      "type": "excerpted_from",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Six-line Rawlinson analogue, XML node 2.4.4.1.2"},
+        "object": {"kind": "selected_passages", "description": "Reliquiae Antiquae I, printed p. 316", "locators": ["printed p. 316", "PDF p. 326"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:wright-halliwell-1845"]}
+    },
+    {
+      "id": "relation:wright-rawl",
+      "type": "transcribes",
+      "subject": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "object": "witness:bodleian:MS-Rawl-poet-32",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Six lines on printed p. 316"},
+        "object": {"kind": "part", "description": "f. 1v", "locators": ["f. 1v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:wright-halliwell-1845", "evidence:witness-catalogs"]}
+    },
+    {
+      "id": "relation:heuser-laud463",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bodleian:MS-Laud-Misc-463",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Appendix Septem peccata mortalia and Incipiunt decem precepta, XML nodes 3.1.1.1.2-.3, pp. 186-204"},
+        "object": {"kind": "selected_passages", "description": "Heuser ff. 157r-159v", "locators": ["ff. 157r-159v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"], "notes": "Heuser explicitly says the texts were copied by him; the current TEI confirms carrier identity but not the target locus."}
+    },
+    {
+      "id": "relation:heuser-harley1706",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Harley-MS-1706",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Appendix Decem Mandata and Sieben Todsünden, XML nodes 3.1.1.2.2-.3, pp. 205-206"},
+        "object": {"kind": "part", "description": "Heuser's exact printed locus fol. 306", "locators": ["fol. 306"]}
+      },
+      "assertion": {
+        "status": "tentative",
+        "confidence": "low",
+        "evidence_ids": ["evidence:heuser-1904", "evidence:harley-1706-conflict"],
+        "notes": "Heuser's paper manuscript at fol. 306 conflicts with the current 216-folio parchment record and nonmatching contents. Harley 5396 is not substituted."
+      }
+    },
+    {
+      "id": "relation:heuser-arundel20",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Arundel-MS-20",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Two seven-line appendix stanzas, XML node 3.1.1.3.2, p. 207"},
+        "object": {"kind": "selected_passages", "description": "Stanzas associated with the tracts at ff. 43-56v and 57-70v", "locators": ["ff. 43-56v", "ff. 57-70v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"]}
+    },
+    {
+      "id": "relation:heuser-laud416",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bodleian:MS-Laud-Misc-416",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Fourteen-line Seven Sins opening, XML node 3.1.1.4.2, p. 207"},
+        "object": {"kind": "part", "description": "Heuser f. 35", "locators": ["f. 35"]}
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"]}
+    },
+    {
+      "id": "relation:heuser-newcollege88",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:new-college:MS-88",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Fifteen-line Christ analogue, XML node 3.1.2.1, pp. 208-209"},
+        "object": {"kind": "part", "description": "f. 179r-v", "locators": ["f. 179r-v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:heuser-1904", "evidence:coxe-new-college"]}
+    },
+    {
+      "id": "relation:coxe-newcollege88",
+      "type": "describes",
+      "subject": "catalog:coxe:oxford-college-manuscripts-1852",
+      "object": "witness:new-college:MS-88",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "New College manuscript entry"},
+        "object": {"kind": "whole", "description": "Historical catalog description"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:coxe-new-college"]}
+    },
+    {
+      "id": "relation:heuser-bodl42",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bodleian:MS-Bodl-42",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Ten-line Christ analogue, XML node 3.1.2.2.1, p. 209"},
+        "object": {"kind": "part", "description": "f. 250", "locators": ["f. 250"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"], "notes": "Heuser explicitly checked the original because Furnivall printed only part."}
+    },
+    {
+      "id": "relation:heuser-furnivall-durham",
+      "type": "excerpted_from",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "edition:furnivall:eets-15-1866",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Four-line Durham appendix item, XML node 3.1.2.2.2, pp. 209-210"},
+        "object": {"kind": "selected_passages", "description": "Printed p. 214 / PDF p. 274 / DjVu leaf 273", "locators": ["printed p. 214", "PDF p. 274", "DjVu leaf 273"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:furnivall-1866"]}
+    },
+    {
+      "id": "relation:furnivall-durham",
+      "type": "transcribes",
+      "subject": "edition:furnivall:eets-15-1866",
+      "object": "witness:durham:A-III-12",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Four lines on printed p. 214"},
+        "object": {"kind": "part", "description": "f. 49r", "locators": ["f. 49r"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:furnivall-1866", "evidence:durham"]}
+    },
+    {
+      "id": "relation:furnivall-bodl42",
+      "type": "transcribes",
+      "subject": "edition:furnivall:eets-15-1866",
+      "object": "witness:bodleian:MS-Bodl-42",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Four lines on printed p. 214"},
+        "object": {"kind": "part", "description": "f. 250", "locators": ["f. 250"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:furnivall-1866", "evidence:witness-catalogs"], "notes": "This does not replace Heuser's separately documented direct check of the full Bodl. 42 passage."}
+    },
+    {
+      "id": "relation:heuser-arundel507",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Arundel-MS-507",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Eight-line Christ analogue, XML node 3.1.2.3, p. 210"},
+        "object": {"kind": "part", "description": "f. 10r", "locators": ["f. 10r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"]}
+    },
+    {
+      "id": "relation:heuser-add31042",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Add-MS-31042",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Sixteen-line Christ analogue, XML node 3.1.2.4, p. 210"},
+        "object": {"kind": "part", "description": "Heuser f. 94v / current f. 94", "locators": ["Heuser f. 94v", "current f. 94"]}
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"], "notes": "The parchment/paper and recto-verso discrepancies are retained."}
+    },
+    {
+      "id": "relation:heuser-harley7358",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bl:Harley-MS-7358",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Thirty-six-line Lullay, XML node 3.1.3, pp. 211-212"},
+        "object": {"kind": "part", "description": "f. 12v", "locators": ["f. 12v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"], "notes": "Identity and locus are secure; Heuser's fourteenth-century date and the current fifteenth-century date remain parallel claims."}
+    },
+    {
+      "id": "relation:heuser-cul-ii49",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:cul:Ii-4-9",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Eighty-two-line Earth version, XML node 3.1.4, pp. 213-215"},
+        "object": {"kind": "part", "description": "ff. 67r-68v", "locators": ["ff. 67r-68v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:cul-ii49"]}
+    },
+    {
+      "id": "relation:heuser-lambeth598",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:lambeth:MS-598",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Conquest of Ireland prose extract, XML node 3.2.2.2, pp. 217-218"},
+        "object": {"kind": "part", "description": "ff. 14v-15r", "locators": ["ff. 14v-15r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:lambeth"]}
+    },
+    {
+      "id": "relation:heuser-lambeth633",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:lambeth:MS-633",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Secreta Secretorum prose extract, XML node 3.2.3.2, pp. 219-220"},
+        "object": {"kind": "part", "description": "ff. 45r-46v", "locators": ["ff. 45r-46v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:lambeth"]}
+    },
+    {
+      "id": "relation:heuser-lambeth623",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:lambeth:MS-623",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Conquest of Ireland werewolf prose extract, XML node 3.2.4.2, p. 221"},
+        "object": {"kind": "part", "description": "ff. 47r-v", "locators": ["ff. 47r-v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:lambeth"]}
+    },
+    {
+      "id": "relation:heuser-laud526",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bodleian:MS-Laud-Misc-526",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Conquest of Ireland prose extract, XML node 3.2.5.2, p. 222"},
+        "object": {"kind": "part", "description": "Final parchment leaf", "locators": ["final parchment leaf"]}
+      },
+      "assertion": {"status": "supported", "confidence": "medium", "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"]}
+    },
+    {
+      "id": "relation:heuser-douce104",
+      "type": "transcribes",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "witness:bodleian:MS-Douce-104",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Tutivillus and four Piers Plowman C-text extracts, XML nodes 3.2.6.1-3.2.7.3, pp. 223-229"},
+        "object": {"kind": "selected_passages", "description": "Five direct manuscript extracts", "locators": ["f. 112v", "f. 12r-v", "ff. 13v-14v", "f. 35r-v", "f. 67r-v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:douce-104"]}
+    },
+    {
+      "id": "relation:heuser-wright-tutivillus",
+      "type": "collated_against",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Tutivillus bracketed Latin restorations, XML node 3.2.6.1, p. 223"},
+        "object": {"kind": "selected_passages", "description": "Printed p. 257 / PDF p. 267", "locators": ["printed p. 257", "PDF p. 267"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:wright-halliwell-1845"], "notes": "Heuser explicitly remains doubtful about the restorations; the manuscript source remains Douce 104."}
+    },
+    {
+      "id": "relation:wright-douce104",
+      "type": "transcribes",
+      "subject": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "object": "witness:bodleian:MS-Douce-104",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Tutivillus on printed p. 257"},
+        "object": {"kind": "part", "description": "f. 112v", "locators": ["f. 112v"]}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:wright-halliwell-1845", "evidence:douce-104"]}
+    },
+    {
+      "id": "relation:heuser-skeat",
+      "type": "collated_against",
+      "subject": "edition:heuser:kildare-1904",
+      "object": "edition:skeat:eets-54-1873",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Four Piers Plowman C-text comparison extracts, XML nodes 3.2.6.2 and 3.2.7.1-.3"},
+        "object": {"kind": "selected_passages", "description": "Printed pp. 46, 52, 139, and 264", "locators": ["p. 46", "p. 52", "p. 139", "p. 264"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:heuser-1904", "evidence:skeat-1873"], "notes": "Skeat is a comparator, not a substitute for Heuser's direct Douce 104 source."}
+    },
+    {
+      "id": "relation:furnivall-scan",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:politicalreligi00musegoog",
+      "object": "edition:furnivall:eets-15-1866",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 338-page scan"}, "object": {"kind": "whole", "description": "Complete 1866 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:furnivall-1866"]}
+    },
+    {
+      "id": "relation:wright-scan",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:ReliquiaeAntiquaeV1",
+      "object": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 342-page scan"}, "object": {"kind": "whole", "description": "Complete 1845 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:wright-halliwell-1845"]}
+    },
+    {
+      "id": "relation:skeat-scan",
+      "type": "facsimile_of",
+      "subject": "facsimile:internet-archive:TheVisionOfWilliamConcerning1873",
+      "object": "edition:skeat:eets-54-1873",
+      "scope": {"subject": {"kind": "whole", "description": "Complete 680-page scan"}, "object": {"kind": "whole", "description": "Complete 1873 edition"}},
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:skeat-1873"]}
+    },
+    {
+      "id": "relation:harley-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:Harley-MS-913-complete",
+      "object": "witness:bl:Harley-MS-913",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 145-canvas provider sequence"},
+        "object": {"kind": "whole", "description": "Provider-exposed manuscript surfaces"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:harley-913"]}
+    },
+    {
+      "id": "relation:rawl-selection",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:MS-Rawl-poet-32-published-selection",
+      "object": "witness:bodleian:MS-Rawl-poet-32",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Published two-canvas selection, zero target overlap"},
+        "object": {"kind": "selected_passages", "description": "Unrelated ff. 30r and 57r", "locators": ["f. 30r", "f. 57r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]}
+    },
+    {
+      "id": "relation:laud463-selection",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:MS-Laud-Misc-463-published-selection",
+      "object": "witness:bodleian:MS-Laud-Misc-463",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Published one-canvas selection, zero target overlap"},
+        "object": {"kind": "selected_passages", "description": "Unrelated f. 115r", "locators": ["f. 115r"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]}
+    },
+    {
+      "id": "relation:durham-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:durham:A-III-12-complete",
+      "object": "witness:durham:A-III-12",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete 460-canvas provider sequence"},
+        "object": {"kind": "whole", "description": "Provider-exposed manuscript surfaces"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:durham"]}
+    },
+    {
+      "id": "relation:lambeth598-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:lambeth:MS-598-complete",
+      "object": "witness:lambeth:MS-598",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete provider-published 310-canvas sequence"},
+        "object": {"kind": "whole", "description": "Provider-exposed manuscript surfaces, without a claim that every physical exterior is present"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lambeth"]}
+    },
+    {
+      "id": "relation:lambeth633-selection",
+      "type": "facsimile_of",
+      "subject": "facsimile:lambeth:MS-633-published-selection",
+      "object": "witness:lambeth:MS-633",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Two published one-canvas image objects, zero target overlap"},
+        "object": {"kind": "selected_passages", "description": "Unrelated ff. 84r and 85v", "locators": ["f. 84r", "f. 85v"]}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lambeth"]}
+    },
+    {
+      "id": "relation:lambeth623-selection",
+      "type": "facsimile_of",
+      "subject": "facsimile:lambeth:MS-623-published-selection",
+      "object": "witness:lambeth:MS-623",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Seven published images, zero target overlap"},
+        "object": {"kind": "selected_passages", "description": "Published unrelated leaves; nearest target-adjacent leaf f. 48v"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:lambeth"]}
+    },
+    {
+      "id": "relation:douce-facsimile",
+      "type": "facsimile_of",
+      "subject": "facsimile:bodleian:MS-Douce-104-complete",
+      "object": "witness:bodleian:MS-Douce-104",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Complete provider-exposed folio sequence, 226 canvases"},
+        "object": {"kind": "part", "description": "Published folio sequence from f. 1r through f. 112v, including inserted 33a/33b; exteriors unrepresented"}
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:douce-104"]}
+    },
+    {
+      "id": "relation:bl-reuse-describes-harley",
+      "type": "describes",
+      "subject": "catalog:bl:unpublished-manuscript-image-reuse-2023",
+      "object": "facsimile:bl:Harley-MS-913-complete",
+      "scope": {
+        "subject": {"kind": "whole", "description": "Archived item-linked reuse policy"},
+        "object": {"kind": "whole", "description": "British Library unpublished-manuscript images"}
+      },
+      "assertion": {"status": "supported", "confidence": "high", "evidence_ids": ["evidence:bl-image-reuse"], "notes": "The item manifest points to the now-404 live page; the archived official page preserves the public-domain assertion and requests."}
+    },
+    {
+      "id": "relation:ucc-lucas-transcribes-harley",
+      "type": "transcribes",
+      "subject": "edition:ucc-celt:E300000-001",
+      "object": "witness:bl:Harley-MS-913",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "CELT representation of Angela Lucas's 1995 edition, pp. 46-172", "locators": ["Lucas 1995, pp. 46-172"]},
+        "object": {"kind": "selected_passages", "description": "Kildare Poems manuscript source explicitly named by the CELT header", "locators": ["ff. 3r-63v"]},
+        "notes": "Supporting relation for the independently published CELT edition; it is not a historical source relation for Heuser's 1904 edition."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:ucc-lucas"]}
+    },
+    {
+      "id": "relation:sinisi-describes-harley-count",
+      "type": "describes",
+      "subject": "catalog:sinisi:urbanization-pollution-2003",
+      "object": "witness:bl:Harley-MS-913",
+      "scope": {
+        "subject": {"kind": "selected_passages", "description": "Discussion of the conventional sixteen-poem count and the seventeen-poem count when Five Hateful Things is included"},
+        "object": {"kind": "selected_passages", "description": "Seven-line Five Hateful Things item and its effect on Kildare Poems accounting", "locators": ["f. 6v"]},
+        "notes": "Supporting descriptive relation only; it does not place Sinisi in the Heuser derivation path."
+      },
+      "assertion": {"status": "confirmed", "confidence": "high", "evidence_ids": ["evidence:sinisi"]}
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repository:ajt2514",
+      "entity": "artifact:general-corpus:ajt2514",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Pinned repository file.",
+      "repository_path": "CME/source/CME_phase_1-2/ajt2514.xml",
+      "cost": "not_applicable",
+      "format": "XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml"]
+    },
+    {
+      "id": "access:umich:AJT2514.0001.001",
+      "entity": "encoding:umich:AJT2514.0001.001",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "unknown",
+      "access_method": "Name resolver redirects to a current Quod endpoint that was challenge-protected during scripted checking; no bypass was attempted.",
+      "url": "https://name.umdl.umich.edu/AJT2514.0001.001",
+      "cost": "unknown",
+      "format": "Current U-M web presentation",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml", "evidence:umich-coding", "evidence:raw-package-audit"],
+      "notes": ["Unknown scripted access status is not a claim that the item is unavailable."]
+    },
+    {
+      "id": "access:bodleian:MS-Bodl-42-catalog",
+      "entity": "witness:bodleian:MS-Bodl-42",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Fixed catalog TEI; target manuscript images were not verified publicly.",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Bodl/MS_Bodl_42.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for MS Bodl. 42",
+        "path": "source-cache/ajt2514/bodleian-ms-bodl-42-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Bodl/MS_Bodl_42.xml",
+        "sha256": "1748c3cba18808339bc83aaa720b4ed914c3295e40d8dddd4ee33e543de00ff6",
+        "bytes": 16477,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent",
+        "notes": ["Catalog metadata only; no target text or image is serialized."]
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bodleian:MS-Douce-104-catalog",
+      "entity": "witness:bodleian:MS-Douce-104",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Douce/MS_Douce_104.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for MS Douce 104",
+        "path": "source-cache/ajt2514/bodleian-ms-douce-104-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Douce/MS_Douce_104.xml",
+        "sha256": "b597692a5151476d571e38704290a1064a7bb4731e3f83b3b2903fe955a07391",
+        "bytes": 29520,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:douce-104"]
+    },
+    {
+      "id": "access:bodleian:MS-Douce-104-complete-images",
+      "entity": "facsimile:bodleian:MS-Douce-104-complete",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "access_method": "Digital Bodleian IIIF manifest and locally generated verified bundle.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a241fe3e-e78e-498a-8c6d-7eae61464e54.json",
+      "alternate_urls": [
+        "https://www.bodleian.ox.ac.uk/services/remote-access/special-collections-copying",
+        "https://www.bodleian.ox.ac.uk/about/work-with-us/imaging-services"
+      ],
+      "local_copies": [{
+        "label": "Complete provider-exposed Douce 104 folio sequence",
+        "path": "source-cache/ajt2514/bodleian-ms-douce-104-complete-iiif-1800px.zip",
+        "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a241fe3e-e78e-498a-8c6d-7eae61464e54.json",
+        "sha256": "ef8a3d8c63e5eff838eff38fb1866d191f110b3c3a20fe8555a80aa95f72e3de",
+        "bytes": 242858767,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-16",
+        "coverage": "complete",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 226,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "target_work_presence": "present",
+        "work_portion": {
+          "label": "Five appendix extracts",
+          "locators": ["f. 112v", "ff. 12r-v", "ff. 13v-14v", "ff. 35r-v", "ff. 67r-v", "canvases 226, 23-24, 26-28, 71-72, and 135-136"]
+        },
+        "notes": [
+          "Complete provider-exposed folio sequence from f. 1r through f. 112v, including 33a/33b; no covers, boards, spine, or pastedowns.",
+          "Complete means provider-sequence completeness, not complete physical-object coverage or an archival master."
+        ]
+      }],
+      "cost": "free",
+      "format": "IIIF images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:douce-104", "evidence:bodleian-images"]
+    },
+    {
+      "id": "access:bodleian:MS-Laud-Misc-416-catalog",
+      "entity": "witness:bodleian:MS-Laud-Misc-416",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Laud_Misc/MS_Laud_Misc_416.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for Laud Misc. 416",
+        "path": "source-cache/ajt2514/bodleian-ms-laud-misc-416-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Laud_Misc/MS_Laud_Misc_416.xml",
+        "sha256": "ec155bce270fe04e433adc11d94170cc42a429370fc1e017db24d54474f9ab8d",
+        "bytes": 8861,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bodleian:MS-Laud-Misc-463-catalog",
+      "entity": "witness:bodleian:MS-Laud-Misc-463",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/e865840e73308c58846a24da10c431a88193ddd2/collections/Laud_Misc/MS_Laud_Misc_463.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for Laud Misc. 463",
+        "path": "source-cache/ajt2514/bodleian-ms-laud-misc-463-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/e865840e73308c58846a24da10c431a88193ddd2/collections/Laud_Misc/MS_Laud_Misc_463.xml",
+        "sha256": "4b0c6af5be8a6079ccf4a3dbf3bfa0d48738e83aa62b2e136339a70ce76b97b0",
+        "bytes": 6362,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bodleian:MS-Laud-Misc-463-published-selection",
+      "entity": "facsimile:bodleian:MS-Laud-Misc-463-published-selection",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c893cd69-c139-4179-92f0-40e6d91c1817.json",
+      "local_copies": [{
+        "label": "Complete one-canvas published selection for Laud Misc. 463",
+        "path": "source-cache/ajt2514/bodleian-ms-laud-misc-463-selected-iiif-1600px.zip",
+        "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c893cd69-c139-4179-92f0-40e6d91c1817.json",
+        "sha256": "503a9f892c2a95af387fb4e46b0e95b40617023324e663eb05287078a9f49d15",
+        "bytes": 1342360,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-16",
+        "coverage": "partial",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 1,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "target_work_presence": "absent",
+        "notes": ["The sole published canvas is f. 115r; the target at ff. 157r-159v is absent."]
+      }],
+      "cost": "free",
+      "format": "IIIF selected image",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]
+    },
+    {
+      "id": "access:bodleian:MS-Laud-Misc-526-catalog",
+      "entity": "witness:bodleian:MS-Laud-Misc-526",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Laud_Misc/MS_Laud_Misc_526.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for Laud Misc. 526",
+        "path": "source-cache/ajt2514/bodleian-ms-laud-misc-526-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Laud_Misc/MS_Laud_Misc_526.xml",
+        "sha256": "16eba670c5749cd0b9bd3624fb80cdf089167672e6e57cac38f7a63802f20f6d",
+        "bytes": 4970,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bodleian:MS-Rawl-poet-32-catalog",
+      "entity": "witness:bodleian:MS-Rawl-poet-32",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Rawl_poet/MS_Rawl_poet_32.xml",
+      "local_copies": [{
+        "label": "Bodleian catalog TEI for Rawlinson poet. 32",
+        "path": "source-cache/ajt2514/bodleian-ms-rawl-poet-32-catalog-tei.xml",
+        "source_url": "https://raw.githubusercontent.com/bodleian/medieval-mss/master/collections/Rawl_poet/MS_Rawl_poet_32.xml",
+        "sha256": "167188f03d034f27381d664fc72eb39a175bba86d13544b32c203881eff42c56",
+        "bytes": 42452,
+        "media_type": "application/xml",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "TEI XML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bodleian:MS-Rawl-poet-32-published-selection",
+      "entity": "facsimile:bodleian:MS-Rawl-poet-32-published-selection",
+      "provider_id": "agent:bodleian-libraries",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2b3d3041-515d-4690-83ba-476c32da9671.json",
+      "local_copies": [{
+        "label": "Complete two-canvas published selection for Rawlinson poet. 32",
+        "path": "source-cache/ajt2514/bodleian-ms-rawl-poet-32-complete-published-selection-iiif-1800px.zip",
+        "source_url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2b3d3041-515d-4690-83ba-476c32da9671.json",
+        "sha256": "874adacd24492b762b7d268bfc2473c9652a129a3f481acd456b87454b8bbb41",
+        "bytes": 3438656,
+        "media_type": "application/zip",
+        "downloaded_on": "2026-07-16",
+        "coverage": "partial",
+        "retrieval_method": "iiif_bundle",
+        "source_file_count": 2,
+        "bundle_source_kind": "iiif_presentation_manifest",
+        "target_work_presence": "absent",
+        "notes": ["The provider selection contains ff. 30r and 57r; the target at f. 1v is absent."]
+      }],
+      "cost": "free",
+      "format": "IIIF selected images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images"]
+    },
+    {
+      "id": "access:bl:Add-MS-31042-catalog",
+      "entity": "witness:bl:Add-MS-31042",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/032-002022830.json",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/032-002022830"],
+      "local_copies": [{
+        "label": "British Library catalog JSON for Add MS 31042",
+        "path": "source-cache/ajt2514/british-library-add-ms-31042-catalog.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/032-002022830.json",
+        "sha256": "26fbee7cb059b6e92f20ff55d15763cb368cb37979be64c554a4321a0397a888",
+        "bytes": 17438,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bl:Arundel-MS-20-catalog",
+      "entity": "witness:bl:Arundel-MS-20",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039300.json",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002039300"],
+      "local_copies": [{
+        "label": "British Library catalog JSON for Arundel MS 20",
+        "path": "source-cache/ajt2514/british-library-arundel-ms-20-catalog.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/040-002039300.json",
+        "sha256": "e6d71194c7351fd892fed275fd2e2c3ad7bc8efecdf3960544fb6350c580bd1b",
+        "bytes": 11363,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bl:Arundel-MS-507-catalog",
+      "entity": "witness:bl:Arundel-MS-507",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002039790.json",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002039790"],
+      "local_copies": [{
+        "label": "British Library catalog JSON for Arundel MS 507",
+        "path": "source-cache/ajt2514/british-library-arundel-ms-507-catalog.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/040-002039790.json",
+        "sha256": "a8ca275726600bde3889707eadbe923dd63abb1c0cc2b57cc94db72a9f7a634e",
+        "bytes": 41241,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bl:Cotton-MS-Cleopatra-C-VI-catalog",
+      "entity": "witness:bl:Cotton-MS-Cleopatra-C-VI",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-001103771.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/041-001103773.json",
+        "https://searcharchives.bl.uk/catalog/040-001103771",
+        "https://searcharchives.bl.uk/catalog/041-001103773"
+      ],
+      "local_copies": [
+        {
+          "label": "British Library parent catalog JSON for Cotton MS Cleopatra C VI",
+          "path": "source-cache/ajt2514/british-library-cotton-ms-cleopatra-c-vi-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-001103771.json",
+          "sha256": "42fefbd26eee3239b8d4ee1bf67dcb971dfa87c9e0f3f214f184dfe0859bacd6",
+          "bytes": 13724,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "British Library component catalog JSON for Cotton MS Cleopatra C VI ff. 2-203",
+          "path": "source-cache/ajt2514/british-library-cotton-ms-cleopatra-c-vi-ff2-203-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/041-001103773.json",
+          "sha256": "e0ee1a1aeff0518f9a63033059aeafceaff5f07f054e9101bdf74b7f1bdc68f1",
+          "bytes": 15774,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bl:Harley-MS-1706-catalog",
+      "entity": "witness:bl:Harley-MS-1706",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-001988626.json",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/041-001988628.json",
+        "https://searcharchives.bl.uk/catalog/040-001988626",
+        "https://searcharchives.bl.uk/catalog/041-001988628"
+      ],
+      "local_copies": [
+        {
+          "label": "British Library parent catalog JSON for Harley MS 1706",
+          "path": "source-cache/ajt2514/british-library-harley-ms-1706-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/040-001988626.json",
+          "sha256": "01c7c9ee60106e26294528080f959b958580c28dc685cf3efca8e57db011d530",
+          "bytes": 18537,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "British Library component catalog JSON for Harley MS 1706 ff. 3r-95v",
+          "path": "source-cache/ajt2514/british-library-harley-ms-1706-ff3-95v-catalog.json",
+          "source_url": "https://searcharchives.bl.uk/catalog/041-001988628.json",
+          "sha256": "3113366d58ba6cd996438c35287f2efb317abaf9cda206503e0ad0eabe654b0f",
+          "bytes": 14546,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:harley-1706-conflict"]
+    },
+    {
+      "id": "access:bl:Harley-MS-7358-catalog",
+      "entity": "witness:bl:Harley-MS-7358",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002053212.json",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002053212"],
+      "local_copies": [{
+        "label": "British Library catalog JSON for Harley MS 7358",
+        "path": "source-cache/ajt2514/british-library-harley-ms-7358-catalog.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/040-002053212.json",
+        "sha256": "7199a04e071158e567af3dd0735ee2d2459650d8879d2f4482c791e20facad69",
+        "bytes": 11832,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "access:bl:Harley-MS-913-catalog",
+      "entity": "witness:bl:Harley-MS-913",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046742.json",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/040-002046742"],
+      "local_copies": [{
+        "label": "British Library catalog JSON for Harley MS 913",
+        "path": "source-cache/ajt2514/british-library-harley-ms-913-catalog.json",
+        "source_url": "https://searcharchives.bl.uk/catalog/040-002046742.json",
+        "sha256": "1b29b30388ad502a371f9f614228e7a0e7d2a7f01dc2f235135a2a932d0f1d36",
+        "bytes": 22960,
+        "media_type": "application/json",
+        "downloaded_on": "2026-07-16",
+        "coverage": "metadata_only",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:harley-913"]
+    },
+    {
+      "id": "access:bl:Harley-MS-913-complete-images",
+      "entity": "facsimile:bl:Harley-MS-913-complete",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100161517925.0x000001",
+      "local_copies": [
+        {
+          "label": "British Library complete Harley MS 913 IIIF bundle",
+          "path": "source-cache/ajt2514/british-library-harley-913-complete-iiif-1600px.zip",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100161517925.0x000001",
+          "sha256": "7ad288a19a854f6875e49c95c184976bbd73d13dd7713cceb212e52a6b44ab04",
+          "bytes": 96409181,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 145,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "All seventeen main poem components",
+            "locators": ["all exact loci listed in relation:heuser-harley913", "canvases 13-134, discontiguous"]
+          },
+          "notes": ["Complete 145-canvas provider sequence; complete does not assert every physical exterior or archival-master surface."]
+        },
+        {
+          "label": "British Library Harley MS 913 IIIF manifest JSON",
+          "path": "source-cache/ajt2514/british-library-harley-ms-913-iiif-manifest.json",
+          "source_url": "https://bl.digirati.io/iiif/ark:/81055/vdc_100161517925.0x000001",
+          "sha256": "f3bd8532ed354a6dc54ad9ff70328a3fa58c837b57789c0ac02ae6aa2a316cbc",
+          "bytes": 305491,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent",
+          "notes": ["Manifest metadata and image references only; it does not itself serialize the target images or text."]
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation 3",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:harley-913", "evidence:bl-image-reuse"]
+    },
+    {
+      "id": "access:bl:unpublished-manuscript-image-reuse-archive",
+      "entity": "catalog:bl:unpublished-manuscript-image-reuse-2023",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Archived official page; the live item-linked URL returns 404.",
+      "url": "https://web.archive.org/web/20230806153008id_/https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts",
+      "alternate_urls": ["https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts"],
+      "local_copies": [{
+        "label": "Archived British Library unpublished-manuscript image-reuse page",
+        "path": "source-cache/ajt2514/british-library-unpublished-manuscript-image-reuse-2023.html.gz",
+        "source_url": "https://web.archive.org/web/20230806153008id_/https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts",
+        "sha256": "d62c299d612c8a00be915bd6fa4c82719cddffa11f3f3bd7be9be00f240d9662",
+        "bytes": 14901,
+        "media_type": "application/gzip",
+        "downloaded_on": "2026-07-16",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "Archived HTML, gzip encoded",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:bl-image-reuse"]
+    },
+    {
+      "id": "access:cul:MS-Ii-4-9-catalog",
+      "entity": "witness:cul:Ii-4-9",
+      "provider_id": "agent:cambridge-university-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "CUL repository item and James catalog PDF; no complete manuscript facsimile was verified.",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/20ad6596-3c51-4849-a250-bc682d5f7df1/content",
+      "alternate_urls": [
+        "https://api.repository.cam.ac.uk/server/api/core/items/8991de06-1540-4afe-98bb-1ca151bacf6d",
+        "https://www.repository.cam.ac.uk/handle/1810/320889",
+        "https://www.lib.cam.ac.uk/collections/departments/chil/ordering-images"
+      ],
+      "local_copies": [
+        {
+          "label": "M. R. James catalog description for Cambridge Ii.4.9",
+          "path": "source-cache/ajt2514/cambridge-university-library-ms-ii-4-9-james-catalog-description.pdf",
+          "source_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/20ad6596-3c51-4849-a250-bc682d5f7df1/content",
+          "sha256": "c7a6b6f8ed4dd7fc3162cc0fc542f85d5bdb98c8db9971ce27545aeeb18621bc",
+          "bytes": 125427,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "CUL repository item metadata for the James catalog description",
+          "path": "source-cache/ajt2514/cambridge-university-library-ms-ii-4-9-repository-item.json",
+          "source_url": "https://api.repository.cam.ac.uk/server/api/core/items/8991de06-1540-4afe-98bb-1ca151bacf6d",
+          "sha256": "79a140b3fb3b55d6915669d88c77a9d8d68401126479022b84a444ee775c7fb5",
+          "bytes": 6719,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "Catalog PDF and repository JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:cul-ii49"]
+    },
+    {
+      "id": "access:durham:A-III-12-complete-images",
+      "entity": "facsimile:durham:A-III-12-complete",
+      "provider_id": "agent:durham-priory-project",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://iiif.durham.ac.uk/manifests/trifle/32150/t1/m9/59/t1m9593tv186/manifest",
+      "local_copies": [
+        {
+          "label": "Durham A.III.12 complete provider IIIF bundle",
+          "path": "source-cache/ajt2514/durham-cathedral-library-ms-a-iii-12-complete-iiif-1200px.zip",
+          "source_url": "https://iiif.durham.ac.uk/manifests/trifle/32150/t1/m9/59/t1m9593tv186/manifest",
+          "sha256": "7941e622bc506b2e5d3a1177343b3b4d0a07acec8d9895da9907556c96348e83",
+          "bytes": 126402412,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 460,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Four-line Christ analogue", "locators": ["f. 49r", "canvas 101"]},
+          "notes": ["Complete 460-canvas provider sequence; complete does not assert every physical exterior or archival-master surface."]
+        },
+        {
+          "label": "Durham A.III.12 IIIF manifest JSON",
+          "path": "source-cache/ajt2514/durham-cathedral-library-ms-a-iii-12-iiif-manifest.json",
+          "source_url": "https://iiif.durham.ac.uk/manifests/trifle/32150/t1/m9/59/t1m9593tv186/manifest",
+          "sha256": "58bd3464e8ffb3e39ff4712a8f39dba44171a75968f52762f73d15a7e0f68a2f",
+          "bytes": 693998,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "IIIF Presentation images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:durham"]
+    },
+    {
+      "id": "access:hathitrust:100324504",
+      "entity": "catalog:hathitrust:100324504",
+      "provider_id": "agent:hathitrust",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://catalog.hathitrust.org/api/volumes/brief/recordnumber/100324504.json",
+      "alternate_urls": [
+        "https://catalog.hathitrust.org/api/volumes/full/recordnumber/100324504.json",
+        "https://catalog.hathitrust.org/Record/100324504",
+        "https://babel.hathitrust.org/cgi/pt?id=hvd.32044011402047"
+      ],
+      "local_copies": [
+        {
+          "label": "HathiTrust brief record for Heuser 1904",
+          "path": "source-cache/ajt2514/heuser-1904-hathitrust-brief-record.json",
+          "source_url": "https://catalog.hathitrust.org/api/volumes/brief/recordnumber/100324504.json",
+          "sha256": "65c43fff8e5b7ea1424d8ece355c34abb725365bf0449ea002e0bb540501680f",
+          "bytes": 549,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "HathiTrust full MARC-bearing record for Heuser 1904",
+          "path": "source-cache/ajt2514/heuser-1904-hathitrust-full-record.json",
+          "source_url": "https://catalog.hathitrust.org/api/volumes/full/recordnumber/100324504.json",
+          "sha256": "d5452690a734701b1db8e9bc6f6fe8eb4b01cecc693e0bd6471e1a258fe1a076",
+          "bytes": 5982,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "JSON",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:heuser-hathi"]
+    },
+    {
+      "id": "access:internet-archive:ReliquiaeAntiquaeV1",
+      "entity": "facsimile:internet-archive:ReliquiaeAntiquaeV1",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1.pdf",
+      "alternate_urls": [
+        "https://archive.org/metadata/ReliquiaeAntiquaeV1",
+        "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1_djvu.txt",
+        "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1_scandata.xml",
+        "https://archive.org/details/ReliquiaeAntiquaeV1"
+      ],
+      "local_copies": [
+        {
+          "label": "Reliquiae Antiquae volume I complete PDF",
+          "path": "source-cache/ajt2514/wright-halliwell-1845-reliquiae-antiquae-v1-complete.pdf",
+          "source_url": "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1.pdf",
+          "sha256": "a24f89a9a77140c795b12d7770f3a8c242d6c7852060fd7bf0dd5e7748f3d483",
+          "bytes": 8076281,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Rawlinson analogue and Tutivillus comparator", "locators": ["printed p. 316 / PDF p. 326", "printed p. 257 / PDF p. 267"]}
+        },
+        {
+          "label": "Reliquiae Antiquae Internet Archive metadata",
+          "path": "source-cache/ajt2514/wright-halliwell-1845-reliquiae-antiquae-v1-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/ReliquiaeAntiquaeV1",
+          "sha256": "e63572bee1c96c6e919b871d57719ca9a20bc0a19602b6bf05afed6bd0b9081f",
+          "bytes": 6717,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Reliquiae Antiquae OCR text",
+          "path": "source-cache/ajt2514/wright-halliwell-1845-reliquiae-antiquae-v1-internet-archive-ocr.txt",
+          "source_url": "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1_djvu.txt",
+          "sha256": "ce7dc880683b97ff4f29731585fff3bf40aab0397cbff3d4266d0c68cd283cc3",
+          "bytes": 588127,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Rawlinson analogue and Tutivillus comparator", "locators": ["printed p. 316", "printed p. 257"]}
+        },
+        {
+          "label": "Reliquiae Antiquae scandata",
+          "path": "source-cache/ajt2514/wright-halliwell-1845-reliquiae-antiquae-v1-internet-archive-scandata.xml",
+          "source_url": "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1_scandata.xml",
+          "sha256": "34cc9bd7c3264a0adc88dabe46373edfdebd0474a25969f7e43186562cd9e405",
+          "bytes": 102722,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR, metadata, and scandata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:wright-halliwell-1845"]
+    },
+    {
+      "id": "access:internet-archive:TheVisionOfWilliamConcerning1873",
+      "entity": "facsimile:internet-archive:TheVisionOfWilliamConcerning1873",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873.pdf",
+      "alternate_urls": [
+        "https://archive.org/metadata/TheVisionOfWilliamConcerning1873",
+        "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873_djvu.txt",
+        "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873_scandata.xml",
+        "https://archive.org/details/TheVisionOfWilliamConcerning1873"
+      ],
+      "local_copies": [
+        {
+          "label": "Skeat EETS 54 complete PDF",
+          "path": "source-cache/ajt2514/skeat-1873-eets-54-piers-plowman-c-text-complete.pdf",
+          "source_url": "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873.pdf",
+          "sha256": "7e76cc7ce8eba33d9843640f987424955a918bd96aa083fd2b1c2f480175c0c4",
+          "bytes": 27871522,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Four Piers Plowman comparison passages", "locators": ["printed pp. 46, 52, 139, and 264", "PDF pp. 180, 186, 273, and 398"]}
+        },
+        {
+          "label": "Skeat Internet Archive metadata",
+          "path": "source-cache/ajt2514/skeat-1873-eets-54-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/TheVisionOfWilliamConcerning1873",
+          "sha256": "030cf34550a8a05d4a13f4fee3cdcf8a45f0ecdd50dc5e099ceba9f89638522b",
+          "bytes": 5693,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Skeat OCR text",
+          "path": "source-cache/ajt2514/skeat-1873-eets-54-internet-archive-ocr.txt",
+          "source_url": "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873_djvu.txt",
+          "sha256": "f8e23e9a78db52281d742558e2a93cc1a2ad2cb1815a8e2707f919d7d564d8df",
+          "bytes": 1522030,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Four Piers Plowman comparison passages", "locators": ["printed pp. 46, 52, 139, and 264"]}
+        },
+        {
+          "label": "Skeat scandata",
+          "path": "source-cache/ajt2514/skeat-1873-eets-54-internet-archive-scandata.xml",
+          "source_url": "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873_scandata.xml",
+          "sha256": "f4fd781ba7bd87abe994328c4021fbbd965f58b45c43c65c96ccbc89cca2946d",
+          "bytes": 204135,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR, metadata, and scandata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:skeat-1873"]
+    },
+    {
+      "id": "access:internet-archive:ajt2514-umichbook-raw",
+      "entity": "facsimile:internet-archive:ajt2514.0001.001.umich.edu-umichbook",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/ajt2514.0001.001.umich.edu/ajt2514.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": [
+        "https://archive.org/metadata/ajt2514.0001.001.umich.edu",
+        "https://archive.org/details/ajt2514.0001.001.umich.edu"
+      ],
+      "local_copies": [
+        {
+          "label": "Raw U-M AJT2514 umichbook ZIP",
+          "path": "source-cache/ajt2514/umich-ajt2514-raw-umichbook.zip",
+          "source_url": "https://archive.org/download/ajt2514.0001.001.umich.edu/ajt2514.0001.001.umich.edu_umichbook.zip",
+          "sha256": "17e2f0aa61ccae3233bfc9ede9c287f50a9d685ad927e67bf11ce26cf1778707",
+          "bytes": 16602079,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {
+            "label": "Raw XML selection and complete printed-volume TIFF carrier",
+            "locators": ["member ajt2514.0001.001.xml", "title image 00000001.tif", "main images 00000085-00000192", "appendix images 00000193-00000237"]
+          },
+          "notes": ["The ZIP is recorded exactly once. Raw XML and TIFF-stream claims cite this access and exact member paths."]
+        },
+        {
+          "label": "Internet Archive metadata for raw U-M carrier",
+          "path": "source-cache/ajt2514/umich-ajt2514-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/ajt2514.0001.001.umich.edu",
+          "sha256": "fcff8c4bf56354057d7cecfd23597c4a57d4c6e0123da1c55807e98a844dcdc1",
+          "bytes": 1968,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "Raw Michigan Book ZIP and item metadata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:raw-package-audit"]
+    },
+    {
+      "id": "access:internet-archive:coxe-1852-ocr",
+      "entity": "catalog:coxe:oxford-college-manuscripts-1852",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/cataloguscodicum01coxeuoft/cataloguscodicum01coxeuoft_djvu.txt",
+      "alternate_urls": ["https://archive.org/details/cataloguscodicum01coxeuoft"],
+      "local_copies": [{
+        "label": "Coxe 1852 Oxford college-manuscript catalog OCR",
+        "path": "source-cache/ajt2514/coxe-1852-oxford-college-manuscripts-ocr.txt",
+        "source_url": "https://archive.org/download/cataloguscodicum01coxeuoft/cataloguscodicum01coxeuoft_djvu.txt",
+        "sha256": "9aaf771bfed4801fada21c6804811f3271c4e1d2a58c2e74804d644f68edda12",
+        "bytes": 2634095,
+        "media_type": "text/plain",
+        "downloaded_on": "2026-07-16",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "OCR text",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:coxe-new-college"]
+    },
+    {
+      "id": "access:internet-archive:diekildaregedic00musegoog",
+      "entity": "facsimile:internet-archive:diekildaregedic00musegoog",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog.pdf",
+      "alternate_urls": [
+        "https://archive.org/metadata/diekildaregedic00musegoog",
+        "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_djvu.xml",
+        "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_djvu.txt",
+        "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_scandata.xml",
+        "https://archive.org/details/diekildaregedic00musegoog"
+      ],
+      "local_copies": [
+        {
+          "label": "Heuser 1904 complete edition PDF",
+          "path": "source-cache/ajt2514/heuser-1904-die-kildare-gedichte-complete-edition.pdf",
+          "source_url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog.pdf",
+          "sha256": "57a0a60ce949a6e74e4ad9e773aee3b53d4b0e2cc03271f14679da753946c6e1",
+          "bytes": 4262417,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Complete bounded electronic target", "locators": ["title page", "main text pp. 77-184", "appendix pp. 185-229"]},
+          "notes": ["The complete scan also carries omitted introduction, front matter, and back matter."]
+        },
+        {
+          "label": "Heuser Internet Archive item metadata",
+          "path": "source-cache/ajt2514/heuser-1904-internet-archive-item-metadata.json",
+          "source_url": "https://archive.org/metadata/diekildaregedic00musegoog",
+          "sha256": "1ea0671b74cfe34e1c8f3b886cab8ae1975d543bfa76f27bcf565089a3d90dbe",
+          "bytes": 5925,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Heuser layout OCR",
+          "path": "source-cache/ajt2514/heuser-1904-internet-archive-ocr-layout.xml",
+          "source_url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_djvu.xml",
+          "sha256": "9a87f037f8784dbd3fc23256490d37a83492c3c8ded9cd76e376b08e8e9805b8",
+          "bytes": 3973260,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Bounded title, main text, and appendix within whole-book layout OCR", "locators": ["title page", "printed pp. 77-229"]}
+        },
+        {
+          "label": "Heuser plain OCR",
+          "path": "source-cache/ajt2514/heuser-1904-internet-archive-ocr.txt",
+          "source_url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_djvu.txt",
+          "sha256": "6923f3740f054d81bc1dcc756e0fd2cc26119a274d6b40a85c9ed6927c197b74",
+          "bytes": 412399,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Bounded title, main text, and appendix within whole-book OCR", "locators": ["title page", "printed pp. 77-229"]}
+        },
+        {
+          "label": "Heuser scan-data XML",
+          "path": "source-cache/ajt2514/heuser-1904-internet-archive-scandata.xml",
+          "source_url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog_scandata.xml",
+          "sha256": "9f2fae17cce1035c12d86cdd92de9ea60d1e918eafa401279dd43a270686c282",
+          "bytes": 76328,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR, layout OCR, metadata, and scandata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:heuser-1904"]
+    },
+    {
+      "id": "access:internet-archive:politicalreligi00musegoog",
+      "entity": "facsimile:internet-archive:politicalreligi00musegoog",
+      "provider_id": "agent:internet-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog.pdf",
+      "alternate_urls": [
+        "https://archive.org/metadata/politicalreligi00musegoog",
+        "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_djvu.xml",
+        "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_djvu.txt",
+        "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_scandata.xml",
+        "https://archive.org/details/politicalreligi00musegoog"
+      ],
+      "local_copies": [
+        {
+          "label": "Furnivall EETS 15 complete PDF",
+          "path": "source-cache/ajt2514/furnivall-1866-eets-15-political-religious-love-poems-complete.pdf",
+          "source_url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog.pdf",
+          "sha256": "460b5cd39ded5ba627a4d9bcdc03656a9eb17e2fe6b20c66204e7ed4bec7c8e0",
+          "bytes": 12610107,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Durham and Bodl. 42 four-line intermediary page", "locators": ["printed p. 214", "PDF p. 274"]}
+        },
+        {
+          "label": "Furnivall Internet Archive metadata",
+          "path": "source-cache/ajt2514/furnivall-1866-eets-15-internet-archive-metadata.json",
+          "source_url": "https://archive.org/metadata/politicalreligi00musegoog",
+          "sha256": "696e30167f4c79549fde72891fd42576b08775959663f8b9502d2387fd21a3ca",
+          "bytes": 6516,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Furnivall layout OCR",
+          "path": "source-cache/ajt2514/furnivall-1866-eets-15-internet-archive-ocr-djvu.xml",
+          "source_url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_djvu.xml",
+          "sha256": "d98361a64fc661d8360a937685de83f5a49cd2a7bcac3fc941f44df371a812cf",
+          "bytes": 6625702,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Durham and Bodl. 42 four-line intermediary page", "locators": ["printed p. 214", "DjVu leaf 273"]}
+        },
+        {
+          "label": "Furnivall plain OCR",
+          "path": "source-cache/ajt2514/furnivall-1866-eets-15-internet-archive-ocr.txt",
+          "source_url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_djvu.txt",
+          "sha256": "72dae090838d2bbcbac5cca9323de79ee6dbef8abe393ff054cdfbc68c530e7d",
+          "bytes": 531268,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Durham and Bodl. 42 four-line intermediary page", "locators": ["printed p. 214"]}
+        },
+        {
+          "label": "Furnivall scandata",
+          "path": "source-cache/ajt2514/furnivall-1866-eets-15-internet-archive-scandata.xml",
+          "source_url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog_scandata.xml",
+          "sha256": "c77bda08dce042aea26fa277f7652329d44fd6451af8bca72d7648d2cc8e8192",
+          "bytes": 101528,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        }
+      ],
+      "cost": "free",
+      "format": "PDF, OCR, layout OCR, metadata, and scandata",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:furnivall-1866"]
+    },
+    {
+      "id": "access:lambeth:MS-598-complete-images",
+      "entity": "facsimile:lambeth:MS-598-complete",
+      "provider_id": "agent:lambeth-palace-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS598*&os=0&bs=200&format=json",
+      "alternate_urls": [
+        "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~179915~127680/manifest",
+        "https://www.lambethpalacelibrary.info/using-the-library/registering-and-booking/",
+        "https://www.lambethpalacelibrary.info/services/imaging-services/"
+      ],
+      "local_copies": [
+        {
+          "label": "Lambeth MS 598 LUNA search metadata",
+          "path": "source-cache/ajt2514/lambeth-ms598-luna-search.json",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS598*&os=0&bs=200&format=json",
+          "sha256": "ee5d722dba6a25b0371279b7f1e2fe6f50db42fa2863b6c91100cc70a7e11ab6",
+          "bytes": 18338,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Lambeth MS 598 selected-image IIIF manifest",
+          "path": "source-cache/ajt2514/lambeth-ms598-selected-image-object-iiif-manifest.json",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~179915~127680/manifest",
+          "sha256": "0ac88128231f057807fabf540db85d49f628284ca7e0b61f968f0243f93632d6",
+          "bytes": 913449,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Lambeth MS 598 complete provider-published IIIF bundle",
+          "path": "source-cache/ajt2514/lambeth-palace-library-ms-598-complete-iiif-1200px.zip",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~179915~127680/manifest",
+          "sha256": "b5621c18e84be5cdd1e634f81cd04d85d01ab2d911e5c6d286385fccad4cde9f",
+          "bytes": 109599193,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 310,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Conquest of Ireland prose extract", "locators": ["ff. 14v-15r", "canvases 47-48"]},
+          "notes": ["Complete provider-published 310-canvas numeric sequence; physical exterior completeness was not established."]
+        }
+      ],
+      "cost": "free",
+      "format": "LUNA search metadata and IIIF images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "access:lambeth:MS-623-published-selection",
+      "entity": "facsimile:lambeth:MS-623-published-selection",
+      "provider_id": "agent:lambeth-palace-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS623*&os=0&bs=200&format=json",
+      "local_copies": [
+        {
+          "label": "Lambeth MS 623 LUNA search metadata",
+          "path": "source-cache/ajt2514/lambeth-ms623-luna-search.json",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS623*&os=0&bs=200&format=json",
+          "sha256": "e2efd40d9fe00e95ad4f7c91a599fddf00c3c97595cbba3cffb4d944e5db0b1d",
+          "bytes": 8517,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Lambeth MS 623 complete seven-image published selection",
+          "path": "source-cache/ajt2514/lambeth-palace-library-ms-623-complete-published-selection-iiif.zip",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS623*&os=0&bs=200&format=json",
+          "sha256": "604498e536b1b1a2d27572126a69c4e75f14de9c1faa9bfb091405a1ce0db102",
+          "bytes": 2351415,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "partial",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 7,
+          "bundle_source_kind": "image_url_inventory",
+          "target_work_presence": "absent",
+          "notes": ["All seven published images were cached; target ff. 47r-v are absent and the nearest published leaf is f. 48v."]
+        }
+      ],
+      "cost": "free",
+      "format": "LUNA search metadata and selected images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "access:lambeth:MS-633-published-selection",
+      "entity": "facsimile:lambeth:MS-633-published-selection",
+      "provider_id": "agent:lambeth-palace-library",
+      "resource_kind": "page_images",
+      "status": "publicly_available",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS633*&os=0&bs=200&format=json",
+      "alternate_urls": [
+        "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~8824~102289/manifest",
+        "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~8828~102288/manifest"
+      ],
+      "local_copies": [
+        {
+          "label": "Lambeth MS 633 LUNA search metadata",
+          "path": "source-cache/ajt2514/lambeth-ms633-luna-search.json",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS633*&os=0&bs=200&format=json",
+          "sha256": "13be1cf06b2e4867e1053ea53460301f9f118adeb88a5549ec88e463a484404a",
+          "bytes": 3355,
+          "media_type": "application/json",
+          "downloaded_on": "2026-07-16",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "absent"
+        },
+        {
+          "label": "Lambeth MS 633 f. 84r published image",
+          "path": "source-cache/ajt2514/lambeth-palace-library-ms-633-f84r-selected-iiif.zip",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~8824~102289/manifest",
+          "sha256": "2f4a9280e2127212ac597a53f8f80f42c04fc4b5670ee774cdf6b4f69da17fe2",
+          "bytes": 400222,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "partial",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 1,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "absent",
+          "notes": ["Target ff. 45r-46v are absent."]
+        },
+        {
+          "label": "Lambeth MS 633 f. 85v published image",
+          "path": "source-cache/ajt2514/lambeth-palace-library-ms-633-f85v-selected-iiif.zip",
+          "source_url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/iiif/m/LPLIBLPL~17~17~8828~102288/manifest",
+          "sha256": "ff1c36c3eeef29509c9f5d96deb481f29bb791cc4b71a74a77866169212f1c87",
+          "bytes": 376525,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-16",
+          "coverage": "partial",
+          "retrieval_method": "iiif_bundle",
+          "source_file_count": 1,
+          "bundle_source_kind": "iiif_presentation_manifest",
+          "target_work_presence": "absent",
+          "notes": ["Target ff. 45r-46v are absent."]
+        }
+      ],
+      "cost": "free",
+      "format": "LUNA search metadata and selected images",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "access:selim:sinisi-urbanization-pollution-pdf",
+      "entity": "catalog:sinisi:urbanization-pollution-2003",
+      "provider_id": "agent:university-oviedo-press",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "url": "https://reunido.uniovi.es/index.php/SELIM/article/download/13468/12192/28600",
+      "local_copies": [{
+        "label": "Sinisi support-study PDF",
+        "path": "source-cache/ajt2514/sinisi-2003-2004-urbanization-pollution-kildare.pdf",
+        "source_url": "https://reunido.uniovi.es/index.php/SELIM/article/download/13468/12192/28600",
+        "sha256": "136a86e23116bae903bb6041bdb15d647b9fc6f864f401a3df7ac0f80b4a775e",
+        "bytes": 1298853,
+        "media_type": "application/pdf",
+        "downloaded_on": "2026-07-16",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent",
+        "notes": ["Secondary support study; quotations do not make it a source expression of the cataloged target."]
+      }],
+      "cost": "free",
+      "format": "PDF",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:sinisi"]
+    },
+    {
+      "id": "access:ucc-celt:E300000-001",
+      "entity": "edition:ucc-celt:E300000-001",
+      "provider_id": "agent:ucc-celt",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "url": "https://celt.ucc.ie/published/E300000-001.html",
+      "alternate_urls": ["https://celt.ucc.ie/published/E300000-001/text002.html"],
+      "local_copies": [
+        {
+          "label": "UCC CELT complete Kildare Poems edition",
+          "path": "source-cache/ajt2514/ucc-celt-kildare-poems-complete-edition.html",
+          "source_url": "https://celt.ucc.ie/published/E300000-001.html",
+          "sha256": "7ed342b13509ba98b7b8478b1bcb1442e3873dc49159a76dd20cc419afc55d8e",
+          "bytes": 91898,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-16",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "All seventeen main poem counterparts", "locators": ["seventeen independently headed poems; excludes Heuser appendix"]}
+        },
+        {
+          "label": "UCC CELT Five Hateful Things page",
+          "path": "source-cache/ajt2514/ucc-celt-kildare-poems-five-hateful-things.html",
+          "source_url": "https://celt.ucc.ie/published/E300000-001/text002.html",
+          "sha256": "6d67966707f026c4a89d40abdb40e2764f4e1ef96a8e1d972ad1ae01ac6610cf",
+          "bytes": 961,
+          "media_type": "text/html",
+          "downloaded_on": "2026-07-16",
+          "coverage": "partial",
+          "retrieval_method": "direct_download",
+          "target_work_presence": "present",
+          "work_portion": {"label": "Main component 17 counterpart", "locators": ["Poem 2, Five Hateful Things", "Harley MS 913 f. 6v"]}
+        }
+      ],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:ucc-lucas"]
+    },
+    {
+      "id": "access:umich:AJT2514-coding-instructions",
+      "entity": "catalog:umich:AJT2514-coding-instructions",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "url": "https://public.websites.umich.edu/~pfs/mec/CD.spec.html",
+      "local_copies": [{
+        "label": "U-M AJT2514 coding instructions",
+        "path": "source-cache/ajt2514/umich-ajt2514-coding-instructions.html",
+        "source_url": "https://public.websites.umich.edu/~pfs/mec/CD.spec.html",
+        "sha256": "2fa40ea9723106a5f25f4f854a9ae5ad007fd637b382f2f892c0ada3c6d7a11a",
+        "bytes": 4967,
+        "media_type": "text/html",
+        "downloaded_on": "2026-07-16",
+        "coverage": "complete",
+        "retrieval_method": "direct_download",
+        "target_work_presence": "absent"
+      }],
+      "cost": "free",
+      "format": "HTML",
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:umich-coding"]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repository-artifact",
+      "entity": "artifact:general-corpus:ajt2514",
+      "component": "Pinned XML serialization and embedded source content",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "The repository top-level Unlicense expressly covers software and does not by itself settle rights in embedded source XML, U-M encoding work, Heuser editorial apparatus, or provider-supplied content.",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cme-license", "evidence:repository-xml", "evidence:umich-rights"],
+      "notes": ["Medieval textual content and the 1904 edition layer have separate public-domain records."]
+    },
+    {
+      "id": "rights:umich-current",
+      "entity": "encoding:umich:AJT2514.0001.001",
+      "access_id": "access:umich:AJT2514.0001.001",
+      "component": "Conceptual/current U-M electronic presentation and encoding layer",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "Current U-M policy leaves public-domain evaluation to users and requests attribution; the challenge-protected endpoint did not expose item-specific content-layer terms during scripted checking.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "unknown",
+      "confidence": "medium",
+      "evidence_ids": ["evidence:umich-rights", "evidence:umich-coding"],
+      "notes": ["The raw package's missing license is not imported as a current U-M rights statement."]
+    },
+    {
+      "id": "rights:umich-raw-xml",
+      "entity": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "access_id": "access:internet-archive:ajt2514-umichbook-raw",
+      "component": "Raw U-M XML serialization and encoding layer",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "The exact embedded legacy notice states that copyright applies where applicable and that other distribution restrictions may apply.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:raw-package-audit", "evidence:umich-rights"],
+      "notes": ["The medieval text and 1904 source edition are separate public-domain layers."]
+    },
+    {
+      "id": "rights:heuser-edition",
+      "entity": "edition:heuser:kildare-1904",
+      "component": "1904 edition text and editorial apparatus",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1904; HathiTrust marks the Harvard item pdus and full view in the United States.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:heuser-hathi"]
+    },
+    {
+      "id": "rights:heuser-ia-scan",
+      "entity": "facsimile:internet-archive:diekildaregedic00musegoog",
+      "access_id": "access:internet-archive:diekildaregedic00musegoog",
+      "component": "Underlying 1904 edition in Internet Archive scan and OCR deliveries",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The underlying 1904 edition is public domain in the United States; delivery-platform terms remain distinct.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:heuser-hathi"]
+    },
+    {
+      "id": "rights:hathi-record",
+      "entity": "catalog:hathitrust:100324504",
+      "access_id": "access:hathitrust:100324504",
+      "component": "HathiTrust catalog metadata and access assertions",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "No separate open license for the downloaded catalog JSON was established; its pdus code applies to the underlying item, not automatically to catalog metadata.",
+      "asserted_by_id": "agent:hathitrust",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-hathi"]
+    },
+    {
+      "id": "rights:raw-carrier",
+      "entity": "facsimile:internet-archive:ajt2514.0001.001.umich.edu-umichbook",
+      "access_id": "access:internet-archive:ajt2514-umichbook-raw",
+      "component": "Raw U-M TIFF digitization and compound ZIP packaging layer",
+      "jurisdiction": "United States / provider terms",
+      "copyright_status": "unknown",
+      "as_of": "2026-07-16",
+      "basis": "Internet Archive metadata supplies no license for the raw digitization or package layer; the underlying 1904 edition is separately public domain.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:raw-package-audit"],
+      "notes": ["Do not infer an open license from public download access."]
+    },
+    {
+      "id": "rights:umich-coding-page",
+      "entity": "catalog:umich:AJT2514-coding-instructions",
+      "access_id": "access:umich:AJT2514-coding-instructions",
+      "component": "U-M coding-instruction webpage",
+      "jurisdiction": "United States",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "No item-level license is displayed on the cached instruction page.",
+      "asserted_by_id": "agent:umich-library",
+      "contract_terms_status": "unknown",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-coding", "evidence:umich-rights"]
+    },
+    {
+      "id": "rights:harley913-text",
+      "entity": "witness:bl:Harley-MS-913",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age in the United States; this does not determine image or access terms.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley-913"]
+    },
+    {
+      "id": "rights:harley913-images",
+      "entity": "facsimile:bl:Harley-MS-913-complete",
+      "access_id": "access:bl:Harley-MS-913-complete-images",
+      "component": "British Library Harley MS 913 unpublished-manuscript images",
+      "jurisdiction": "Provider assertion",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The IIIF manifest points to a now-404 live reuse page; the archived official page states that designated unpublished-manuscript images were released into the public domain.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley-913", "evidence:bl-image-reuse"],
+      "notes": ["Credit requested: The British Library, shelfmark and folio. The archived page also asks downstream users not to impose new restrictions; these are requests, not a permission requirement."]
+    },
+    {
+      "id": "rights:cotton-text",
+      "entity": "witness:bl:Cotton-MS-Cleopatra-C-VI",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern photography and access terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:rawl-text",
+      "entity": "witness:bodleian:MS-Rawl-poet-32",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:rawl-images",
+      "entity": "facsimile:bodleian:MS-Rawl-poet-32-published-selection",
+      "access_id": "access:bodleian:MS-Rawl-poet-32-published-selection",
+      "component": "Digital Bodleian image derivatives",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Digital Bodleian image attribution identifies Bodleian Libraries photography under CC BY-NC 4.0.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-images"]
+    },
+    {
+      "id": "rights:laud463-text",
+      "entity": "witness:bodleian:MS-Laud-Misc-463",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:laud463-images",
+      "entity": "facsimile:bodleian:MS-Laud-Misc-463-published-selection",
+      "access_id": "access:bodleian:MS-Laud-Misc-463-published-selection",
+      "component": "Digital Bodleian image derivative",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Digital Bodleian image attribution identifies Bodleian Libraries photography under CC BY-NC 4.0.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-images"]
+    },
+    {
+      "id": "rights:harley1706-text",
+      "entity": "witness:bl:Harley-MS-1706",
+      "component": "Medieval textual content if the disputed target attribution is correct",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Any medieval textual content is public domain by age; the witness relation itself remains disputed.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:harley-1706-conflict"]
+    },
+    {
+      "id": "rights:arundel20-text",
+      "entity": "witness:bl:Arundel-MS-20",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; image and service terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:laud416-text",
+      "entity": "witness:bodleian:MS-Laud-Misc-416",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:newcollege88-text",
+      "entity": "witness:new-college:MS-88",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; no image license is inferred because no target digital copy was found.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:coxe-new-college"]
+    },
+    {
+      "id": "rights:coxe",
+      "entity": "catalog:coxe:oxford-college-manuscripts-1852",
+      "access_id": "access:internet-archive:coxe-1852-ocr",
+      "component": "1852 printed catalog text",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The catalog was published in 1852; Internet Archive delivery terms remain separate.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:coxe-new-college"]
+    },
+    {
+      "id": "rights:bodl42-text",
+      "entity": "witness:bodleian:MS-Bodl-42",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:durham-text",
+      "entity": "witness:durham:A-III-12",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:durham"]
+    },
+    {
+      "id": "rights:durham-images",
+      "entity": "facsimile:durham:A-III-12-complete",
+      "access_id": "access:durham:A-III-12-complete-images",
+      "component": "Durham Priory Library Project image derivatives",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The IIIF manifest declares CC BY-NC-ND 4.0 and identifies the Durham Priory Library Project attribution.",
+      "asserted_by_id": "agent:durham-priory-project",
+      "license": {"name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International", "spdx": "CC-BY-NC-ND-4.0", "uri": "https://creativecommons.org/licenses/by-nc-nd/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:durham"],
+      "notes": ["Attribution: Provided by Durham Priory Library Project - a collaboration between Durham University and Durham Cathedral."]
+    },
+    {
+      "id": "rights:arundel507-text",
+      "entity": "witness:bl:Arundel-MS-507",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern photography and access terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:add31042-text",
+      "entity": "witness:bl:Add-MS-31042",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern photography and access terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:harley7358-text",
+      "entity": "witness:bl:Harley-MS-7358",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern photography and access terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:cul-ii49-text",
+      "entity": "witness:cul:Ii-4-9",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age. The cached James catalog PDF is separately licensed CC BY 4.0; no manuscript-image license is inferred.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:cul-ii49"],
+      "notes": ["CUL repository metadata applies CC BY 4.0 to the James catalog PDF, not to nonexistent manuscript images."]
+    },
+    {
+      "id": "rights:lambeth598-text",
+      "entity": "witness:lambeth:MS-598",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; Lambeth image and service terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:lambeth598-images",
+      "entity": "facsimile:lambeth:MS-598-complete",
+      "access_id": "access:lambeth:MS-598-complete-images",
+      "component": "Lambeth Palace Library digital images",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "LUNA records state Rights: LPL and expose no open license; Lambeth's imaging page requires contact and payment for publishing or sharing.",
+      "asserted_by_id": "agent:lambeth-palace-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:lambeth633-text",
+      "entity": "witness:lambeth:MS-633",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; Lambeth image and service terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:lambeth633-images",
+      "entity": "facsimile:lambeth:MS-633-published-selection",
+      "access_id": "access:lambeth:MS-633-published-selection",
+      "component": "Lambeth Palace Library digital images",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "LUNA records state Rights: LPL and expose no open license; publication or sharing requires provider contact.",
+      "asserted_by_id": "agent:lambeth-palace-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:lambeth623-text",
+      "entity": "witness:lambeth:MS-623",
+      "component": "Early modern textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Sixteenth-century textual content is public domain by age; Lambeth image and service terms are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:lambeth623-images",
+      "entity": "facsimile:lambeth:MS-623-published-selection",
+      "access_id": "access:lambeth:MS-623-published-selection",
+      "component": "Lambeth Palace Library digital images",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "LUNA records state Rights: LPL and expose no open license; publication or sharing requires provider contact.",
+      "asserted_by_id": "agent:lambeth-palace-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:lambeth"]
+    },
+    {
+      "id": "rights:laud526-text",
+      "entity": "witness:bodleian:MS-Laud-Misc-526",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:witness-catalogs"]
+    },
+    {
+      "id": "rights:douce104-text",
+      "entity": "witness:bodleian:MS-Douce-104",
+      "component": "Medieval textual content",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Medieval textual content is public domain by age; modern image rights are separate.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:douce-104"]
+    },
+    {
+      "id": "rights:douce104-images",
+      "entity": "facsimile:bodleian:MS-Douce-104-complete",
+      "access_id": "access:bodleian:MS-Douce-104-complete-images",
+      "component": "Digital Bodleian image derivatives",
+      "jurisdiction": "Provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Digital Bodleian image attribution identifies Bodleian Libraries photography under CC BY-NC 4.0.",
+      "asserted_by_id": "agent:bodleian-libraries",
+      "license": {"name": "Creative Commons Attribution-NonCommercial 4.0 International", "spdx": "CC-BY-NC-4.0", "uri": "https://creativecommons.org/licenses/by-nc/4.0/"},
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bodleian-images", "evidence:douce-104"]
+    },
+    {
+      "id": "rights:furnivall-edition",
+      "entity": "edition:furnivall:eets-15-1866",
+      "component": "1866 scholarly edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1866.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:furnivall-1866"]
+    },
+    {
+      "id": "rights:furnivall-ia",
+      "entity": "facsimile:internet-archive:politicalreligi00musegoog",
+      "access_id": "access:internet-archive:politicalreligi00musegoog",
+      "component": "Underlying 1866 edition in scan and OCR deliveries",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The underlying edition is public domain; IA/Google delivery terms are separate and metadata supplies no item license.",
+      "asserted_by_id": "agent:internet-archive",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:furnivall-1866"]
+    },
+    {
+      "id": "rights:wright-edition",
+      "entity": "edition:wright-halliwell:reliquiae-antiquae-vol-1-1845",
+      "component": "1845 scholarly edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1845.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wright-halliwell-1845"]
+    },
+    {
+      "id": "rights:wright-ia",
+      "entity": "facsimile:internet-archive:ReliquiaeAntiquaeV1",
+      "access_id": "access:internet-archive:ReliquiaeAntiquaeV1",
+      "component": "Underlying 1845 edition in scan and OCR deliveries",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The underlying edition is public domain; IA metadata supplies a Public Domain Mark assertion, not a license.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:wright-halliwell-1845"]
+    },
+    {
+      "id": "rights:skeat-edition",
+      "entity": "edition:skeat:eets-54-1873",
+      "component": "1873 scholarly edition",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "Published in 1873.",
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-1873"]
+    },
+    {
+      "id": "rights:skeat-ia",
+      "entity": "facsimile:internet-archive:TheVisionOfWilliamConcerning1873",
+      "access_id": "access:internet-archive:TheVisionOfWilliamConcerning1873",
+      "component": "Underlying 1873 edition in scan and OCR deliveries",
+      "jurisdiction": "United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-16",
+      "basis": "The underlying edition is public domain; IA metadata supplies a Public Domain Mark assertion, not a license.",
+      "asserted_by_id": "agent:internet-archive",
+      "rights_statement_uri": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:skeat-1873"]
+    },
+    {
+      "id": "rights:ucc-edition",
+      "entity": "edition:ucc-celt:E300000-001",
+      "access_id": "access:ucc-celt:E300000-001",
+      "component": "Angela Lucas modern electronic edition",
+      "jurisdiction": "Ireland / provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "The exact CELT header attributes copyright to Angela Lucas, restricts availability, and requires prior CELT consent for academic research and teaching use.",
+      "asserted_by_id": "agent:ucc-celt",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": ["evidence:ucc-lucas"],
+      "notes": ["Public HTTP access is not treated as an open license."]
+    },
+    {
+      "id": "rights:sinisi",
+      "entity": "catalog:sinisi:urbanization-pollution-2003",
+      "access_id": "access:selim:sinisi-urbanization-pollution-pdf",
+      "component": "Sinisi article PDF",
+      "jurisdiction": "Spain / provider terms",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-16",
+      "basis": "Current SELIM pages agree that Oviedo University Press holds copyright but conflict between CC BY-NC-ND 3.0 Spain and 4.0 wording; no exact article-level license version was assigned.",
+      "asserted_by_id": "agent:university-oviedo-press",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:sinisi"],
+      "notes": ["The exact license version remains unresolved."]
+    },
+    {
+      "id": "rights:bl-reuse-page",
+      "entity": "catalog:bl:unpublished-manuscript-image-reuse-2023",
+      "access_id": "access:bl:unpublished-manuscript-image-reuse-archive",
+      "component": "Archived British Library policy webpage",
+      "jurisdiction": "United Kingdom / provider terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-16",
+      "basis": "The archived webpage is evidence for image reuse but no open license for the webpage text itself was established.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": ["evidence:bl-image-reuse"]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-raw:AJT2514.0001.001-xml",
+      "practice": "selection",
+      "source_feature": "Complete Heuser 1904 volume",
+      "representation": "Title page, main text pp. 77-184, and appendix pp. 185-229",
+      "description": "U-M deliberately encoded image 1 for the title page, images 85-192 for the main text, and images 193-237 for the appendix, omitting the introduction and remaining book matter.",
+      "scope": "Whole raw electronic selection",
+      "confidence": "high",
+      "evidence_ids": ["evidence:umich-coding", "evidence:raw-package-audit", "evidence:repository-xml"]
+    },
+    {
+      "id": "practice:heuser-selection",
+      "entity": "edition:heuser:kildare-1904",
+      "practice": "selection",
+      "description": "Heuser selected seventeen principal Harley poem components, nested translations and analogues, and appendix extracts from larger manuscript carriers.",
+      "scope": "Main text and appendix, pp. 77-229",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"],
+      "notes": ["The selected appendix publications remain scholarly apparatus, not newly counted intellectual works."]
+    },
+    {
+      "id": "practice:heuser-expansion",
+      "entity": "edition:heuser:kildare-1904",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations including a', i-c, h, and k",
+      "representation": "Expanded editorial forms, including Iesus and Iesu",
+      "description": "Heuser states that manuscript abbreviations are expanded according to his editorial conventions.",
+      "scope": "Transcribed medieval texts in the selected main text and appendix",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904"]
+    },
+    {
+      "id": "practice:heuser-collation",
+      "entity": "edition:heuser:kildare-1904",
+      "practice": "collation",
+      "source_feature": "Earlier English editions and direct manuscript readings",
+      "representation": "Variants, restorations, comparison passages, and readings Heuser believed earlier editors modernized or misread",
+      "description": "Heuser collated against earlier editions while retaining direct manuscript sources where documented; the Durham and Rawlinson intermediary routes and the Douce comparator routes remain explicit in the graph.",
+      "scope": "Selected main analogues and appendix comparison passages",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:furnivall-1866", "evidence:wright-halliwell-1845", "evidence:skeat-1873"]
+    },
+    {
+      "id": "practice:heuser-rubric",
+      "entity": "edition:heuser:kildare-1904",
+      "practice": "rubrication_representation",
+      "source_feature": "Red manuscript heading for Quindecim Signa",
+      "representation": "Editorial note describing the rubric",
+      "description": "The source rubric is represented editorially rather than as a new textual item.",
+      "scope": "Main component 3",
+      "confidence": "high",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:harley-913"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repository-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned CME XML for ajt2514.",
+      "repository_path": "CME/source/CME_phase_1-2/ajt2514.xml",
+      "locator": "HEADER, TITLEPAGE, main DIV1, appendix DIV1, and all descendants",
+      "summary": "Confirms the repository artifact, electronic identifier, 2006 U-M responsibility, 1904 source edition, uncorrected OCR declaration, selected hierarchy, 240 page references, and exact text structure.",
+      "accessed_on": "2026-07-16",
+      "sha256": "1d14efef5f2bf3592a2f48ec77a63e09b2c062f9951bb8912883d6fc49f2b794"
+    },
+    {
+      "id": "evidence:raw-package-audit",
+      "type": "digital_surrogate",
+      "citation": "Internet Archive raw U-M AJT2514 umichbook package and exact member audit.",
+      "url": "https://archive.org/download/ajt2514.0001.001.umich.edu/ajt2514.0001.001.umich.edu_umichbook.zip",
+      "alternate_urls": ["https://archive.org/metadata/ajt2514.0001.001.umich.edu"],
+      "repository_path": "source-cache/ajt2514/umich-ajt2514-raw-umichbook.zip",
+      "locator": "245 members: 240 TIFFs plus XML, TXT, HDR, pageview.dat, and loadcd.log",
+      "summary": "Verifies package fixity, 240 continuous page images, all TIFF MD5 values, exact raw XML member identity, page-reference equality, boundary images, and normalization-only differences between raw and pinned XML. The ZIP is cited once through its carrier access.",
+      "accessed_on": "2026-07-16",
+      "sha256": "17e2f0aa61ccae3233bfc9ede9c287f50a9d685ad927e67bf11ce26cf1778707"
+    },
+    {
+      "id": "evidence:umich-coding",
+      "type": "official_webpage",
+      "citation": "University of Michigan AJT2514 coding instructions.",
+      "url": "https://public.websites.umich.edu/~pfs/mec/CD.spec.html",
+      "repository_path": "source-cache/ajt2514/umich-ajt2514-coding-instructions.html",
+      "locator": "AJT2514 image and division instructions",
+      "summary": "Explicitly orders the title page at image 1, main text pp. 77-184 at images 85-192, and appendix pp. 185-229 at images 193-237, and distinguishes front/title, texts, and appendix hierarchy.",
+      "accessed_on": "2026-07-16",
+      "sha256": "2fa40ea9723106a5f25f4f854a9ae5ad007fd637b382f2f892c0ada3c6d7a11a"
+    },
+    {
+      "id": "evidence:heuser-1904",
+      "type": "edition_statement",
+      "citation": "Wilhelm Heuser, Die Kildare-Gedichte (Bonn, 1904), complete Internet Archive scan.",
+      "url": "https://archive.org/download/diekildaregedic00musegoog/diekildaregedic00musegoog.pdf",
+      "alternate_urls": ["https://archive.org/details/diekildaregedic00musegoog"],
+      "repository_path": "source-cache/ajt2514/heuser-1904-die-kildare-gedichte-complete-edition.pdf",
+      "locator": "Title page; main text pp. 77-184; appendix pp. 185-229; editorial introductions and source notes",
+      "summary": "Primary evidence for the title, editor, seventeen main components, exact printed loci, appendix structure and quantities, named Michael attribution, manuscript claims, direct/indirect source statements, disputed Harley 1706 fol. 306, and editorial practices.",
+      "accessed_on": "2026-07-16",
+      "sha256": "57a0a60ce949a6e74e4ad9e773aee3b53d4b0e2cc03271f14679da753946c6e1"
+    },
+    {
+      "id": "evidence:heuser-hathi",
+      "type": "official_catalog",
+      "citation": "HathiTrust bibliographic and item record 100324504 for Heuser 1904.",
+      "url": "https://catalog.hathitrust.org/api/volumes/full/recordnumber/100324504.json",
+      "alternate_urls": [
+        "https://catalog.hathitrust.org/Record/100324504",
+        "https://babel.hathitrust.org/cgi/pt?id=hvd.32044011402047"
+      ],
+      "repository_path": "source-cache/ajt2514/heuser-1904-hathitrust-full-record.json",
+      "summary": "Confirms the Harvard copy, bibliographic identity, Hathi item hvd.32044011402047, US full view, and pdus rights code.",
+      "accessed_on": "2026-07-16",
+      "sha256": "d5452690a734701b1db8e9bc6f6fe8eb4b01cecc693e0bd6471e1a258fe1a076"
+    },
+    {
+      "id": "evidence:harley-913",
+      "type": "digital_surrogate",
+      "citation": "British Library catalog and complete IIIF object for Harley MS 913.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002046742",
+      "alternate_urls": ["https://bl.digirati.io/iiif/ark:/81055/vdc_100161517925.0x000001"],
+      "repository_path": "source-cache/ajt2514/british-library-harley-913-complete-iiif-1600px.zip",
+      "locator": "145 canvases; all exact main-text loci from ff. 3r through 63v, discontiguous",
+      "summary": "Supports the current date, parchment support, south-east Irish probable Waterford origin, mixed contents, itemization of Five Evil Things at f. 6v, exact main loci, complete provider sequence, and direct visual verification.",
+      "accessed_on": "2026-07-16",
+      "sha256": "7ad288a19a854f6875e49c95c184976bbd73d13dd7713cceb212e52a6b44ab04"
+    },
+    {
+      "id": "evidence:witness-catalogs",
+      "type": "official_catalog",
+      "citation": "Official British Library and Bodleian catalog records for the main analogue and appendix witnesses.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001103771",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002039300",
+        "https://searcharchives.bl.uk/catalog/040-002039790",
+        "https://searcharchives.bl.uk/catalog/032-002022830",
+        "https://searcharchives.bl.uk/catalog/040-002053212",
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_8769",
+        "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_7020"
+      ],
+      "repository_path": "source-cache/ajt2514/british-library-cotton-ms-cleopatra-c-vi-catalog.json",
+      "summary": "Supports current carrier identities, shelfmarks, support/date/extent where stated, exact Arundel and Harley itemization, and target-image gaps. Catalog descriptions are support evidence, not target transcriptions.",
+      "accessed_on": "2026-07-16",
+      "sha256": "42fefbd26eee3239b8d4ee1bf67dcb971dfa87c9e0f3f214f184dfe0859bacd6"
+    },
+    {
+      "id": "evidence:harley-1706-conflict",
+      "type": "official_catalog",
+      "citation": "British Library current parent and component records for Harley MS 1706, compared with Heuser's printed attribution.",
+      "url": "https://searcharchives.bl.uk/catalog/040-001988626",
+      "alternate_urls": ["https://searcharchives.bl.uk/catalog/041-001988628"],
+      "repository_path": "source-cache/ajt2514/british-library-harley-ms-1706-catalog.json",
+      "locator": "Current 216-folio parchment extent and ff. 3r-95v component record; Heuser appendix pp. 205-206 and fol. 306",
+      "summary": "The current record gives parchment, 216 folios, and nonmatching contents, while Heuser says paper and prints fol. 306. The contradiction is preserved and the relation remains tentative; Harley 5396 is not substituted.",
+      "accessed_on": "2026-07-16",
+      "sha256": "01c7c9ee60106e26294528080f959b958580c28dc685cf3efca8e57db011d530"
+    },
+    {
+      "id": "evidence:bodleian-images",
+      "type": "digital_surrogate",
+      "citation": "Digital Bodleian IIIF objects and image attribution for Douce 104, Laud Misc. 463, and Rawlinson poet. 32.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a241fe3e-e78e-498a-8c6d-7eae61464e54.json",
+      "alternate_urls": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c893cd69-c139-4179-92f0-40e6d91c1817.json",
+        "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2b3d3041-515d-4690-83ba-476c32da9671.json"
+      ],
+      "repository_path": "source-cache/ajt2514/bodleian-ms-douce-104-complete-iiif-1800px.zip",
+      "summary": "Supports exact canvas inventories, target presence or absence, provider-sequence boundaries, and the Bodleian CC BY-NC 4.0 photography attribution.",
+      "accessed_on": "2026-07-16",
+      "sha256": "ef8a3d8c63e5eff838eff38fb1866d191f110b3c3a20fe8555a80aa95f72e3de"
+    },
+    {
+      "id": "evidence:douce-104",
+      "type": "visual_inspection",
+      "citation": "Bodleian MS Douce 104 catalog and complete 226-canvas provider sequence.",
+      "url": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a241fe3e-e78e-498a-8c6d-7eae61464e54.json",
+      "repository_path": "source-cache/ajt2514/bodleian-ms-douce-104-complete-iiif-1800px.zip",
+      "locator": "f. 112v and ff. 12r-v, 13v-14v, 35r-v, 67r-v; canvases 226, 23-24, 26-28, 71-72, 135-136",
+      "summary": "Confirms that all five appendix extracts belong to one physical witness and are visible in the complete provider-exposed folio sequence. The sequence excludes physical exteriors.",
+      "accessed_on": "2026-07-16",
+      "sha256": "ef8a3d8c63e5eff838eff38fb1866d191f110b3c3a20fe8555a80aa95f72e3de",
+      "notes": ["A transient buffered-page-cache mismatch was resolved by cache eviction without modifying or replacing the inode; subsequent ordinary/direct hashes and full ZIP tests agree at this recorded hash."]
+    },
+    {
+      "id": "evidence:durham",
+      "type": "digital_surrogate",
+      "citation": "Durham Priory Library Project catalog and complete IIIF object for Durham Cathedral Library MS A.III.12.",
+      "url": "https://iiif.durham.ac.uk/manifests/trifle/32150/t1/m9/59/t1m9593tv186/manifest",
+      "repository_path": "source-cache/ajt2514/durham-cathedral-library-ms-a-iii-12-complete-iiif-1200px.zip",
+      "locator": "460 canvases; target f. 49r at canvas 101",
+      "summary": "Confirms the Middle English fourth item at f. 49r, target image presence, complete provider sequence, and the manifest's CC BY-NC-ND 4.0 license and attribution.",
+      "accessed_on": "2026-07-16",
+      "sha256": "7941e622bc506b2e5d3a1177343b3b4d0a07acec8d9895da9907556c96348e83"
+    },
+    {
+      "id": "evidence:cul-ii49",
+      "type": "official_catalog",
+      "citation": "Cambridge University Library repository copy of M. R. James's catalog description for MS Ii.4.9.",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/20ad6596-3c51-4849-a250-bc682d5f7df1/content",
+      "alternate_urls": ["https://www.repository.cam.ac.uk/handle/1810/320889"],
+      "repository_path": "source-cache/ajt2514/cambridge-university-library-ms-ii-4-9-james-catalog-description.pdf",
+      "locator": "Ii.4.9 entry; Earth through f. 68b",
+      "summary": "Supports the CUL shelfmark, fifteenth-century date, paper support, 197-leaf extent, target locus, repository access route, and CC BY 4.0 license for the catalog PDF only.",
+      "accessed_on": "2026-07-16",
+      "sha256": "c7a6b6f8ed4dd7fc3162cc0fc542f85d5bdb98c8db9971ce27545aeeb18621bc"
+    },
+    {
+      "id": "evidence:lambeth",
+      "type": "digital_surrogate",
+      "citation": "Lambeth Palace Library LUNA search records, IIIF objects, registration page, and imaging-service terms for MSS 598, 623, and 633.",
+      "url": "https://images.lambethpalacelibrary.org.uk/luna/servlet/as/search?lc=LPLIBLPL~17~17&q=MS598*&os=0&bs=200&format=json",
+      "alternate_urls": [
+        "https://www.lambethpalacelibrary.info/using-the-library/registering-and-booking/",
+        "https://www.lambethpalacelibrary.info/services/imaging-services/"
+      ],
+      "repository_path": "source-cache/ajt2514/lambeth-palace-library-ms-598-complete-iiif-1200px.zip",
+      "locator": "MS 598 complete 310-canvas sequence and target canvases 47-48; MS 623/633 target-omitting selections",
+      "summary": "Confirms MS 598 target presence and provider-sequence coverage, MS 623 and 633 target absence from current selections, and provider Rights: LPL / permission-required publication terms.",
+      "accessed_on": "2026-07-16",
+      "sha256": "b5621c18e84be5cdd1e634f81cd04d85d01ab2d911e5c6d286385fccad4cde9f"
+    },
+    {
+      "id": "evidence:coxe-new-college",
+      "type": "scholarly_source",
+      "citation": "Henry O. Coxe, Catalogus codicum MSS. ... Oxoniensibus, Part I (1852), Internet Archive OCR.",
+      "url": "https://archive.org/download/cataloguscodicum01coxeuoft/cataloguscodicum01coxeuoft_djvu.txt",
+      "alternate_urls": [
+        "https://archive.org/details/cataloguscodicum01coxeuoft",
+        "https://www.new.ox.ac.uk/rare-books-and-manuscripts"
+      ],
+      "repository_path": "source-cache/ajt2514/coxe-1852-oxford-college-manuscripts-ocr.txt",
+      "locator": "New College MS 88 description",
+      "summary": "Supports the historical New College carrier description and appointment-based access route; no complete public target facsimile was verified.",
+      "accessed_on": "2026-07-16",
+      "sha256": "9aaf771bfed4801fada21c6804811f3271c4e1d2a58c2e74804d644f68edda12"
+    },
+    {
+      "id": "evidence:furnivall-1866",
+      "type": "edition_statement",
+      "citation": "Frederick J. Furnivall, Political, Religious, and Love Poems, EETS 15 (1866), complete scan and OCR.",
+      "url": "https://archive.org/download/politicalreligi00musegoog/politicalreligi00musegoog.pdf",
+      "repository_path": "source-cache/ajt2514/furnivall-1866-eets-15-political-religious-love-poems-complete.pdf",
+      "locator": "Printed p. 214 / PDF p. 274 / DjVu leaf 273",
+      "summary": "Confirms bibliographic identity and the four-line Durham A.III.12 and Bodl. 42 versions on the exact intermediary page used by Heuser for Durham.",
+      "accessed_on": "2026-07-16",
+      "sha256": "460b5cd39ded5ba627a4d9bcdc03656a9eb17e2fe6b20c66204e7ed4bec7c8e0"
+    },
+    {
+      "id": "evidence:wright-halliwell-1845",
+      "type": "edition_statement",
+      "citation": "Thomas Wright and James Orchard Halliwell, Reliquiae Antiquae, volume I (1845), complete scan and OCR.",
+      "url": "https://archive.org/download/ReliquiaeAntiquaeV1/ReliquiaeAntiquaeV1.pdf",
+      "repository_path": "source-cache/ajt2514/wright-halliwell-1845-reliquiae-antiquae-v1-complete.pdf",
+      "locator": "Tutivillus at printed p. 257 / PDF p. 267; Rawlinson analogue at p. 316 / PDF p. 326",
+      "summary": "Confirms bibliographic identity, Heuser's immediate source for the Rawlinson analogue, and the comparator used for doubtful Tutivillus restorations.",
+      "accessed_on": "2026-07-16",
+      "sha256": "a24f89a9a77140c795b12d7770f3a8c242d6c7852060fd7bf0dd5e7748f3d483"
+    },
+    {
+      "id": "evidence:skeat-1873",
+      "type": "edition_statement",
+      "citation": "Walter W. Skeat, The Vision of William concerning Piers the Plowman, Part III, EETS 54 (1873), complete scan and OCR.",
+      "url": "https://archive.org/download/TheVisionOfWilliamConcerning1873/The_Vision_of_William_Concerning_1873.pdf",
+      "repository_path": "source-cache/ajt2514/skeat-1873-eets-54-piers-plowman-c-text-complete.pdf",
+      "locator": "Printed pp. 46, 52, 139, and 264 / PDF pp. 180, 186, 273, and 398",
+      "summary": "Confirms bibliographic identity and exact comparison passages; Skeat remains a comparator, not the direct manuscript source.",
+      "accessed_on": "2026-07-16",
+      "sha256": "7e76cc7ce8eba33d9843640f987424955a918bd96aa083fd2b1c2f480175c0c4"
+    },
+    {
+      "id": "evidence:ucc-lucas",
+      "type": "edition_statement",
+      "citation": "Angela Lucas, The Kildare Poems, UCC CELT E300000-001.",
+      "url": "https://celt.ucc.ie/published/E300000-001.html",
+      "alternate_urls": ["https://celt.ucc.ie/published/E300000-001/text002.html"],
+      "repository_path": "source-cache/ajt2514/ucc-celt-kildare-poems-complete-edition.html",
+      "locator": "Seventeen independently headed poems; Poem 2, Five Hateful Things",
+      "summary": "Independently supports a seventeen-poem main count and the distinct seven-line f. 6v item, while the exact header supplies copyrighted/restricted CELT terms.",
+      "accessed_on": "2026-07-16",
+      "sha256": "7ed342b13509ba98b7b8478b1bcb1442e3873dc49159a76dd20cc419afc55d8e"
+    },
+    {
+      "id": "evidence:sinisi",
+      "type": "scholarly_source",
+      "citation": "Lucía Sinisi, Urbanization and Pollution in an Irish (?) Town in the 14th Century, Selim 12 (2003-2004).",
+      "url": "https://reunido.uniovi.es/index.php/SELIM/article/download/13468/12192/28600",
+      "repository_path": "source-cache/ajt2514/sinisi-2003-2004-urbanization-pollution-kildare.pdf",
+      "locator": "Discussion of sixteen versus seventeen poems and the seven-line f. 6v item",
+      "summary": "Explicitly explains that the count rises from sixteen to seventeen when Five Hateful Things is included. Current SELIM pages conflict on exact CC BY-NC-ND version; no article-level version is assigned.",
+      "accessed_on": "2026-07-16",
+      "sha256": "136a86e23116bae903bb6041bdb15d647b9fc6f864f401a3df7ac0f80b4a775e"
+    },
+    {
+      "id": "evidence:bl-image-reuse",
+      "type": "official_webpage",
+      "citation": "British Library, How to reuse images of unpublished manuscripts, archived official page.",
+      "url": "https://web.archive.org/web/20230806153008id_/https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts",
+      "alternate_urls": ["https://www.bl.uk/help/how-to-reuse-images-of-unpublished-manuscripts"],
+      "repository_path": "source-cache/ajt2514/british-library-unpublished-manuscript-image-reuse-2023.html.gz",
+      "summary": "Preserves the official public-domain release statement for designated unpublished-manuscript images, requested British Library shelfmark/folio credit, ethical-respect request, and request not to add new restrictions. The live link returned 404.",
+      "accessed_on": "2026-07-16",
+      "sha256": "d62c299d612c8a00be915bd6fa4c82719cddffa11f3f3bd7be9be00f240d9662"
+    },
+    {
+      "id": "evidence:umich-rights",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library copyright policy and the legacy availability notice embedded in the AJT2514 XML.",
+      "url": "https://lib.umich.edu/about-us/policies/copyright-policy",
+      "repository_path": "CME/source/CME_phase_1-2/ajt2514.xml",
+      "locator": "AVAILABILITY and current copyright-policy statements",
+      "summary": "The legacy notice says copyright applies where applicable and other distribution restrictions may apply. Current policy says public-domain material needs no permission, requests attribution, and leaves rights evaluation to users; neither settles all encoding-layer and contractual questions.",
+      "accessed_on": "2026-07-16",
+      "sha256": "1d14efef5f2bf3592a2f48ec77a63e09b2c062f9951bb8912883d6fc49f2b794"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Pinned CME repository top-level LICENSE.",
+      "repository_path": "CME/LICENSE",
+      "summary": "The Unlicense text speaks of software. It does not expressly resolve rights in imported source XML, U-M encoding, historical editorial content, or provider images.",
+      "accessed_on": "2026-07-16",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:harley-1706",
+      "question": "What manuscript and locus underlie Heuser's Harley 1706 appendix attribution at fol. 306, given the current 216-folio parchment description and nonmatching contents?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask British Library staff to reconcile the historical shelfmark, support, extent, and foliation.",
+        "Inspect Harley MS 1706 and catalog history directly.",
+        "Do not silently substitute Harley MS 5396."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:harley-1706-conflict"]
+    },
+    {
+      "id": "question:umich-current-rights",
+      "question": "What current bytes, access conditions, and component-level reuse terms apply to U-M item AJT2514.0001.001, and how do they relate to the legacy notice and raw package?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Recheck the resolver in a normal browser or request U-M clarification without bypassing automated protections.",
+        "Seek U-M ingest/migration history and current downloadable serialization if available.",
+        "Keep current, raw, and repository rights and serialization layers separate."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:repository-xml", "evidence:raw-package-audit", "evidence:umich-rights", "evidence:umich-coding"]
+    },
+    {
+      "id": "question:target-image-gaps",
+      "question": "Can complete target images or orderable reproductions be obtained for the main and appendix witnesses whose current public selections omit the target?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Use British Library, Bodleian, New College, CUL, and Lambeth consultation or imaging routes for the exact target loci.",
+        "Record exact image coverage and terms before adding new facsimile claims.",
+        "Retain current negative-coverage findings rather than treating public visibility of unrelated leaves as target verification."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:witness-catalogs", "evidence:bodleian-images", "evidence:cul-ii49", "evidence:lambeth"]
+    },
+    {
+      "id": "question:sinisi-license",
+      "question": "Which exact CC BY-NC-ND version, if any, applies article-by-article to the cached 2003-2004 Sinisi PDF?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Request article-level clarification from SELIM or University of Oviedo Press.",
+        "Do not assign 3.0 Spain or 4.0 by inference while current policy pages conflict."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:sinisi"]
+    },
+    {
+      "id": "question:physical-description-conflicts",
+      "question": "How should Heuser's and current catalogs' differing support, date, and folio claims for Add MS 31042 and Harley MS 7358 be reconciled?",
+      "status": "unresolved",
+      "impact": "low",
+      "next_steps": [
+        "Inspect the manuscripts or authoritative catalog histories.",
+        "Keep historical and current claims parallel until the relevant component boundaries are verified."
+      ],
+      "last_checked": "2026-07-16",
+      "evidence_ids": ["evidence:heuser-1904", "evidence:witness-catalogs"]
+    }
+  ]
+}

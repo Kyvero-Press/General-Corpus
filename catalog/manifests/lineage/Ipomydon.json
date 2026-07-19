@@ -1,0 +1,2520 @@
+{
+  "$schema": "../schemas/lineage-manifest.schema.json",
+  "schema_version": "1.0.0",
+  "id": "lineage:Ipomydon",
+  "work_id": "Ipomydon",
+  "title": "The Lyfe of Ipomydon",
+  "primary_subject": "artifact:general-corpus:Ipomydon",
+  "record_status": "reviewed",
+  "created": "2026-07-15",
+  "last_reviewed": "2026-07-15",
+  "summary": "The repository XML is a local pinned copy of the University of Michigan CME encoding of the anonymous Middle English B version of The Lyfe of Ipomydon. File comparison shows that U-M transformed the Oxford Text Archive's harley2252-0658 text stream, preserving its numbering and readings apart from two localized differences; OTA documentation says that stream was transcribed from Tadahiro Ikegami's 1983 Seijo edition, and Ikegami transcribed the unique copy in British Library Harley MS 2252, ff. 54r-84r. The same OTA deposit also preserves separate transcriptions of two fragmentary Wynkyn de Worde print witnesses from Ikegami's 1985 volume. Complete official PDFs of both Seijo volumes, the three OTA payloads and package, and Nora Mayer's later thesis edition are cached locally. The British Library's catalog-linked manuscript images are currently unavailable, but a complete-manuscript surrogate can be requested through its paid digitisation service.",
+  "languages": [
+    "enm",
+    "eng"
+  ],
+  "review_notes": [
+    "Hue de Rotelande is the author of the late-twelfth-century Anglo-Norman source work, not the author of this anonymous Middle English B version; inherited U-M, OTA, and Morgan creator headings are not treated as target-work responsibility.",
+    "The primary text path is repository artifact -> U-M encoding -> OTA harley2252 stream -> Ikegami volume I -> Harley MS 2252, ff. 54r-84r.",
+    "OTA item 0658 is modeled as a deposit containing three distinct text streams. Its two early-print streams support print transmission but are not upstream of the repository artifact.",
+    "The OTA landing's 1976 issue date cannot describe these payloads: Ikegami's source volumes appeared in 1983 and 1985, and all three files contain embedded processing timestamps from 22 April 1986. Those timestamps establish file processing, not the exact OTA deposit date.",
+    "The current British Library record links a digital-image object but explicitly marks its images unavailable. No current public whole-manuscript image inventory could be audited; selected plates inside the Seijo volumes remain partial manuscript or print reproductions.",
+    "Current scholarship and catalogs disagree about the order and dates of the two de Worde editions. No print-to-print direction is asserted.",
+    "Local caching records research availability only. It does not authorize redistribution of the Seijo PDFs, British Library or Morgan images, or any other protected layer."
+  ],
+  "entities": [
+    {
+      "id": "artifact:general-corpus:Ipomydon",
+      "type": "repository_artifact",
+      "label": "General Corpus pinned repository copy of Ipomydon.xml",
+      "description": "The 117,344-byte DLPSTEXTCLASS XML artifact used by this repository, pinned through the CME git submodule. It represents 2,346 verse lines plus a separately encoded explicit as numbered XML line 2347.",
+      "identifiers": [
+        {
+          "scheme": "General Corpus work ID",
+          "value": "Ipomydon"
+        },
+        {
+          "scheme": "git-blob",
+          "value": "20b18767e46050f95b914246432d89a6e102332f"
+        }
+      ],
+      "creator_ids": [
+        "agent:kyvero-press"
+      ],
+      "repository_file": {
+        "path": "CME/source/CME_from_OTA/Ipomydon.xml",
+        "media_type": "application/xml",
+        "git_repository": "https://github.com/Kyvero-Press/CME",
+        "git_commit": "e1d77c88ca561be924b2fedc54dd474be2e7e49c",
+        "git_blob": "20b18767e46050f95b914246432d89a6e102332f",
+        "sha256": "ace867067c84be34d15d01fbe57c5e893b3a10c76da8358010c76c81214cc790"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-git-state"
+      ],
+      "notes": [
+        "The XML has 10 DIV1 and 10 LG containers supplied for navigation, 2,347 L elements, 31 folio milestones, and 83 page milestones. The containers are not ten authorial parts.",
+        "The final L element is the explicit, not a 2,347th verse line."
+      ]
+    },
+    {
+      "id": "encoding:umich-cme:Ipomydon",
+      "type": "digital_encoding",
+      "label": "University of Michigan CME encoding Ipomydon / OTA U-658-A",
+      "alternate_labels": [
+        "The Lyfe of Ipomydon",
+        "U-658-A"
+      ],
+      "description": "The U-M Humanities Text Initiative representation published in March 1996. Its header names Ikegami's 1983 edition, omits front and back matter plus printed editorial notes, and states that large structural divisions were supplied only for navigation.",
+      "identifiers": [
+        {
+          "scheme": "UMDL",
+          "value": "Ipomydon",
+          "uri": "https://name.umdl.umich.edu/Ipomydon"
+        },
+        {
+          "scheme": "OTA legacy number",
+          "value": "U-658-A"
+        }
+      ],
+      "creator_ids": [
+        "agent:umich-library",
+        "agent:oxford-text-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "U-M electronic publication",
+          "value": "March 1996",
+          "normalized": "1996-03",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:repo-xml"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "The Lyfe of Ipomydon, ed. Tadahiro Ikegami, electronic text U-658-A (Oxford Text Archive / University of Michigan Humanities Text Initiative, March 1996).",
+        "title": "The Lyfe of Ipomydon",
+        "publisher": "University of Michigan Humanities Text Initiative",
+        "publication_place": "Ann Arbor",
+        "date": "1996",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:umich-collection",
+        "evidence:encoding-comparison"
+      ],
+      "notes": [
+        "The inherited header credits Hue de Rotelande as author, but the encoded text is the anonymous Middle English B version.",
+        "After normalization of OTA legacy thorn/yogh codes, angle-bracket insertion markers, and whitespace, comparison with harley2252-0658.txt found only two localized differences across 2,347 numbered positions; this confirms the immediate electronic source at high confidence."
+      ]
+    },
+    {
+      "id": "encoding:ota:0658-deposit",
+      "type": "digital_encoding",
+      "label": "Oxford Text Archive deposit 0658",
+      "alternate_labels": [
+        "ota:0658",
+        "The lyfe of Ipomydon"
+      ],
+      "description": "A legacy OTA deposit now exposed by the Linguistic Linked Data Service. It contains three ASCII text streams: the complete Harley manuscript version and transcriptions of two incomplete de Worde prints. The current landing applies CC BY-NC-SA 3.0 but carries inherited creator and date fields that do not accurately describe the Middle English B work or payload chronology.",
+      "identifiers": [
+        {
+          "scheme": "OTA handle",
+          "value": "20.500.14106/0658",
+          "uri": "https://hdl.handle.net/20.500.14106/0658"
+        },
+        {
+          "scheme": "OTA legacy handle",
+          "value": "20.500.12024/0658",
+          "uri": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0658"
+        }
+      ],
+      "creator_ids": [
+        "agent:oxford-text-archive",
+        "agent:michael-day",
+        "agent:lou-burnard"
+      ],
+      "date_statements": [
+        {
+          "label": "embedded file-processing timestamps",
+          "value": "22 April 1986",
+          "normalized": "1986-04-22",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-payload-audit"
+          ],
+          "notes": "These terminal machine records prove that all three payload files were processed on this date; they do not by themselves establish the deposit date."
+        },
+        {
+          "label": "header editorial work",
+          "value": "1990-1991",
+          "normalized": "1990/1991",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-legacy-header"
+          ]
+        },
+        {
+          "label": "automated header conversion",
+          "value": "14 January 1998",
+          "normalized": "1998-01-14",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-legacy-header"
+          ]
+        },
+        {
+          "label": "current repository availability",
+          "value": "21 August 2022",
+          "normalized": "2022-08-21",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-current-record"
+          ],
+          "notes": "This is migration/repository availability, not textual creation or first deposit."
+        }
+      ],
+      "bibliographic": {
+        "citation": "The lyfe of Ipomydon, ota:0658, Oxford Text Archive legacy deposit, current LLDS handle 20.500.14106/0658.",
+        "title": "The lyfe of Ipomydon",
+        "publisher": "Oxford Text Archive",
+        "publication_place": "Oxford",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-current-record",
+        "evidence:ota-current-header",
+        "evidence:ota-legacy-header",
+        "evidence:ota-payload-audit"
+      ],
+      "notes": [
+        "The current landing's creator Hue and created 1170-1190 fields belong to the Anglo-Norman source author/work and are not target-layer metadata.",
+        "The landing's issued 1976 field is incompatible with source volumes dated 1983 and 1985 and with the files' 1986 processing records; its origin remains unexplained.",
+        "The current migrated header is malformed at an authority/distributor boundary. The cached legacy Bodleian header is well formed and preserves the same source and file-map statements."
+      ]
+    },
+    {
+      "id": "encoding:ota:0658-harley2252",
+      "type": "digital_encoding",
+      "label": "OTA 0658 harley2252 text stream",
+      "description": "The complete deposited ASCII representation of the Harley MS 2252 B text, with numbered positions 1-2347. Positions 1-2346 are verse lines and position 2347 is the explicit. Legacy character codes and angle brackets mark thorn/yogh and supplied text.",
+      "identifiers": [
+        {
+          "scheme": "OTA bitstream filename",
+          "value": "harley2252-0658.txt"
+        }
+      ],
+      "creator_ids": [
+        "agent:oxford-text-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "embedded file-processing timestamp",
+          "value": "22 April 1986, 18:06:37",
+          "normalized": "1986-04-22",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-payload-audit"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-payloads",
+        "evidence:ota-payload-audit",
+        "evidence:encoding-comparison"
+      ]
+    },
+    {
+      "id": "encoding:ota:0658-worde1522",
+      "type": "digital_encoding",
+      "label": "OTA 0658 worde1522 text stream",
+      "description": "The deposited transcription of the one-leaf British Library de Worde fragment under its legacy c. 1522 filename. It labels positions 261-320; four dotted missing positions (289-292) leave 56 extant verbal lines.",
+      "identifiers": [
+        {
+          "scheme": "OTA bitstream filename",
+          "value": "worde1522-0658.txt"
+        }
+      ],
+      "creator_ids": [
+        "agent:oxford-text-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "embedded file-processing timestamp",
+          "value": "22 April 1986, 18:06:47",
+          "normalized": "1986-04-22",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-payload-audit"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-payloads",
+        "evidence:ota-payload-audit",
+        "evidence:ikegami-vol2"
+      ],
+      "notes": [
+        "The filename preserves Ikegami-era dating and is not treated as resolving current print chronology."
+      ]
+    },
+    {
+      "id": "encoding:ota:0658-worde30",
+      "type": "digital_encoding",
+      "label": "OTA 0658 worde30 text stream",
+      "description": "The deposited transcription of the incomplete Morgan de Worde copy under its legacy c. 1530 filename. It contains numbered positions 193-2346 and lacks the opening represented by quire A.",
+      "identifiers": [
+        {
+          "scheme": "OTA bitstream filename",
+          "value": "worde30-0658.txt"
+        }
+      ],
+      "creator_ids": [
+        "agent:oxford-text-archive"
+      ],
+      "date_statements": [
+        {
+          "label": "embedded file-processing timestamp",
+          "value": "22 April 1986, 18:09:16",
+          "normalized": "1986-04-22",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ota-payload-audit"
+          ]
+        }
+      ],
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ota-payloads",
+        "evidence:ota-payload-audit",
+        "evidence:ikegami-vol2",
+        "evidence:morgan-print"
+      ],
+      "notes": [
+        "The current Morgan catalog dates the physical copy approximately 1520-1524; the OTA filename does not supersede that catalog evidence."
+      ]
+    },
+    {
+      "id": "edition:ikegami:ipomydon-vol1-1983",
+      "type": "scholarly_edition",
+      "label": "Tadahiro Ikegami, The Lyfe of Ipomydon, volume I (1983)",
+      "description": "The immediate scholarly edition behind the Harley text stream. Ikegami presents a conservative transcription of Harley MS 2252, ff. 54r-84r, retains manuscript spelling, silently expands abbreviations and numerals, supplies punctuation and word division, and marks emendation or restoration with brackets.",
+      "creator_ids": [
+        "agent:tadahiro-ikegami",
+        "agent:seijo-university"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1983",
+          "normalized": "1983",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ikegami-vol1",
+            "evidence:seijo-vol1-record"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Tadahiro Ikegami, ed., The Lyfe of Ipomydon, vol. I: Text and Introduction, Seijo English Monographs 21 (Tokyo: Department of English, Seijo University, 1983), lxvi + 86 pp.",
+        "title": "The Lyfe of Ipomydon",
+        "volume": "I: Text and Introduction",
+        "series": "Seijo English Monographs 21",
+        "publisher": "Department of English, Seijo University",
+        "publication_place": "Tokyo",
+        "date": "1983",
+        "pages": "lxvi + 86",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:seijo-vol1-record",
+        "evidence:ota-legacy-header"
+      ],
+      "notes": [
+        "The edition prints the 2,346-line B text on pp. 1-84 and a two-page appendix transcribing the de Worde leaf on pp. 85-86.",
+        "Its selected manuscript plate of f. 57r and watermark photographs are partial supporting images, not a complete Harley MS 2252 facsimile."
+      ]
+    },
+    {
+      "id": "facsimile:seijo:ikegami-vol1-pdf",
+      "type": "facsimile",
+      "label": "Official Seijo PDF of Ikegami volume I",
+      "description": "A complete 158-page grayscale scan of the 1983 volume, including title matter, introduction, selected manuscript and watermark plates, the entire edited text, and appendix.",
+      "creator_ids": [
+        "agent:seijo-university"
+      ],
+      "reproduction_format": "158-page grayscale PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:seijo-scan-inspection"
+      ]
+    },
+    {
+      "id": "edition:ikegami:ipomydon-vol2-1985",
+      "type": "scholarly_edition",
+      "label": "Tadahiro Ikegami, The Lyfe of Ipomydon, volume II (1985)",
+      "description": "A scholarly edition of the two incomplete early de Worde print survivors. The British Library leaf was transcribed from the original; the Morgan text was prepared from microfilm and checked against the original. The volume also compares those print readings with Harley MS 2252.",
+      "creator_ids": [
+        "agent:tadahiro-ikegami",
+        "agent:seijo-university"
+      ],
+      "date_statements": [
+        {
+          "label": "publication",
+          "value": "1985",
+          "normalized": "1985",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:ikegami-vol2",
+            "evidence:seijo-journal"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Tadahiro Ikegami, ed., The Lyfe of Ipomydon, vol. II: The Two Imperfect Early Printed Editions of The Lyfe of Ipomydon Published by Wynkyn de Worde, Seijo English Monographs 22 (Tokyo: Department of English, Seijo University, 1985).",
+        "title": "The Lyfe of Ipomydon",
+        "volume": "II: The Two Imperfect Early Printed Editions",
+        "series": "Seijo English Monographs 22",
+        "publisher": "Department of English, Seijo University",
+        "publication_place": "Tokyo",
+        "date": "1985",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:seijo-journal",
+        "evidence:ota-legacy-header"
+      ],
+      "notes": [
+        "Ikegami's c. 1522 and c. 1530-1531 labels are preserved as historical editorial claims. Current catalogs and later scholarship give different date ranges and dispute ordering."
+      ]
+    },
+    {
+      "id": "facsimile:seijo:ikegami-vol2-pdf",
+      "type": "facsimile",
+      "label": "Official Seijo PDF of Ikegami volume II",
+      "description": "A complete 146-page grayscale scan of the 1985 volume. It includes full edited transcriptions of both incomplete prints but only two images of the British Library leaf and two selected Morgan pages, not complete photographic facsimiles of both print objects.",
+      "creator_ids": [
+        "agent:seijo-university"
+      ],
+      "reproduction_format": "146-page grayscale PDF scan",
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:seijo-scan-inspection"
+      ]
+    },
+    {
+      "id": "witness:bl:harley-ms-2252",
+      "type": "manuscript_witness",
+      "label": "British Library Harley MS 2252",
+      "description": "The composite Commonplace Book of John Colyns. The unique manuscript copy of Ipomydon B occupies ff. 54r-84r and was copied in the second half of the fifteenth century; Colyns acquired the book in 1517 and compiled the composite volume in the early sixteenth century.",
+      "identifiers": [
+        {
+          "scheme": "British Library record ID",
+          "value": "040-002048083",
+          "uri": "https://searcharchives.bl.uk/catalog/040-002048083"
+        },
+        {
+          "scheme": "MDARK",
+          "value": "ark:/81055/vdc_100000000709.0x0002f8"
+        },
+        {
+          "scheme": "LARK",
+          "value": "ark:/81055/vdc_100163436000.0x000001"
+        },
+        {
+          "scheme": "DIMEV occurrence",
+          "value": "3462-1"
+        }
+      ],
+      "date_statements": [
+        {
+          "label": "Ipomydon B copy",
+          "value": "second half of the fifteenth century",
+          "normalized": "1450/1499",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-harley",
+            "evidence:ikegami-vol1"
+          ]
+        },
+        {
+          "label": "composite host volume",
+          "value": "late fifteenth to early sixteenth century",
+          "normalized": "1460/1540",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:bl-harley"
+          ]
+        }
+      ],
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "Harley MS 2252",
+        "historical_designations": [
+          "British Museum, Harley 2252"
+        ],
+        "catalog_url": "https://searcharchives.bl.uk/catalog/040-002048083",
+        "notes": "The exact item record identifies Ipomydon B at ff. 54r-84r and calls it a unique copy."
+      },
+      "physical_description": {
+        "support": "Paper",
+        "extent": "One composite volume; ff. i + 133* + 166, with additional unfoliated flyleaves and pastedowns",
+        "dimensions": "280 x 190 mm",
+        "notes": [
+          "The target text is copied in single columns across ff. 54r-84r within the first poetic booklet.",
+          "The current catalog describes English Gothic cursive scripts, Secretary with Anglicana features; Ikegami discusses the target booklet and a localized hand change on f. 83v."
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:bl-harley",
+        "evidence:ikegami-vol1",
+        "evidence:middle-english-romance"
+      ]
+    },
+    {
+      "id": "facsimile:bl:harley-ms-2252-digital",
+      "type": "facsimile",
+      "label": "British Library digital-image object for Harley MS 2252",
+      "description": "The current BL catalog links an item-level digital-image viewer for Harley MS 2252 but explicitly reports that images are currently unavailable. The former viewer and current image inventory could not be audited, so exact surface coverage remains unknown; the reproduction request route is recorded separately for a complete manuscript order.",
+      "identifiers": [
+        {
+          "scheme": "British Library digital-object ARK",
+          "value": "ark:/81055/vdc_100163436000.0x000001",
+          "uri": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100163436000.0x000001"
+        }
+      ],
+      "creator_ids": [
+        "agent:british-library"
+      ],
+      "reproduction_format": "Item-level digital images; current inventory unavailable",
+      "survival_status": "unknown",
+      "evidence_ids": [
+        "evidence:bl-harley",
+        "evidence:bl-image-checks"
+      ]
+    },
+    {
+      "id": "edition:de-worde:bagford-fragment",
+      "type": "scholarly_edition",
+      "label": "Wynkyn de Worde Ipomydon one-leaf fragment, British Library C.40.m.9 (18)",
+      "description": "The sole known physical fragment of one de Worde print state, preserved in the Bagford Ballads. Its one leaf carries 56 extant verbal lines corresponding to manuscript positions 261-320, with four positions lost. The schema has no historical-print type, so this physical early-print survivor is represented provisionally as a scholarly-edition entity.",
+      "identifiers": [
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "5732.5"
+        }
+      ],
+      "creator_ids": [
+        "agent:wynkyn-de-worde"
+      ],
+      "date_statements": [
+        {
+          "label": "traditional STC dating",
+          "value": "c. 1522",
+          "normalized": "1522",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:folger-bagford",
+            "evidence:middle-english-romance",
+            "evidence:ikegami-vol2"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "[The life of Ipomydon] ([London]: Wynkyn de Worde, c. 1522), one-leaf fragment, British Library C.40.m.9 (18); STC 5732.5.",
+        "title": "The life of Ipomydon",
+        "publisher": "Wynkyn de Worde",
+        "publication_place": "London",
+        "date": "c. 1522",
+        "pages": "one surviving leaf; 56 extant verbal lines",
+        "languages": [
+          "enm"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:british-library",
+        "shelfmark": "C.40.m.9 (18)",
+        "historical_designations": [
+          "Bagford Ballads Collection, vol. I",
+          "C.40.m.9.(18.)"
+        ],
+        "notes": "The exact shelfmark and physical extent are stated by Ikegami and corroborated by institutional/vendor catalog data; no current item-level BL catalog page was located."
+      },
+      "physical_description": {
+        "extent": "One surviving leaf; 56 extant verbal lines",
+        "format": "quarto print fragment"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:folger-bagford",
+        "evidence:middle-english-romance"
+      ],
+      "notes": [
+        "The Database of Middle English Romance currently reports three leaves and misassigns the longer print to the British Library; direct Ikegami and Morgan evidence control the physical extents here."
+      ]
+    },
+    {
+      "id": "edition:de-worde:morgan-pml-20896-2",
+      "type": "scholarly_edition",
+      "label": "Wynkyn de Worde Ipomydon, Morgan PML 20896.2",
+      "description": "The only recorded copy of the longer de Worde print state. It lacks quire A but preserves signatures B-H4 I6 and text corresponding to manuscript positions 193-2346, ending with Robert Copland's printer's envoi. The schema has no historical-print type, so this physical early-print survivor is represented provisionally as a scholarly-edition entity.",
+      "identifiers": [
+        {
+          "scheme": "Morgan accession",
+          "value": "PML 20896.2",
+          "uri": "https://www.themorgan.org/printed-books/173482"
+        },
+        {
+          "scheme": "STC (2nd ed.)",
+          "value": "5733"
+        }
+      ],
+      "creator_ids": [
+        "agent:wynkyn-de-worde",
+        "agent:robert-copland"
+      ],
+      "date_statements": [
+        {
+          "label": "current Morgan catalog dating",
+          "value": "approximately 1520-1524",
+          "normalized": "1520/1524",
+          "certainty": "medium",
+          "evidence_ids": [
+            "evidence:morgan-print"
+          ]
+        },
+        {
+          "label": "older Ikegami dating",
+          "value": "c. 1530-1531",
+          "normalized": "1530/1531",
+          "certainty": "low",
+          "evidence_ids": [
+            "evidence:ikegami-vol2"
+          ],
+          "notes": "Retained as editorial history, not preferred over the current holding catalog."
+        }
+      ],
+      "bibliographic": {
+        "citation": "The lyfe of Ipomydon (London: Wynkyn de Worde, approximately 1520-1524), imperfect Morgan copy PML 20896.2; STC 5733.",
+        "title": "The lyfe of Ipomydon",
+        "publisher": "Wynkyn de Worde",
+        "publication_place": "London",
+        "date": "approximately 1520-1524",
+        "pages": "[68+] pages; signatures [A?] B-H4 I6; quire A missing",
+        "languages": [
+          "enm"
+        ]
+      },
+      "holding": {
+        "institution_id": "agent:morgan-library",
+        "shelfmark": "PML 20896.2",
+        "historical_designations": [
+          "Acc. 20896",
+          "PML 20896"
+        ],
+        "catalog_url": "https://www.themorgan.org/printed-books/173482",
+        "notes": "The current Morgan record says this is the only recorded copy, missing quire A."
+      },
+      "physical_description": {
+        "extent": "[68+] pages; signatures [A?] B-H4 I6; quire A missing",
+        "format": "quarto; 18 cm"
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:ikegami-vol2",
+        "evidence:mayer-thesis"
+      ],
+      "notes": [
+        "The current Morgan record's Hue creator heading is inherited source-work metadata. Its own notes correctly state that this print is an English translation/condensation and that Copland's envoi does not make him the adapter.",
+        "The Morgan record calls this possibly the earliest surviving edition, while Mayer's account of Sánchez-Martí describes the Morgan copy as later than the Bagford state. The discrepancy remains open."
+      ]
+    },
+    {
+      "id": "edition:mayer:ipomedon-b-c-2011",
+      "type": "scholarly_edition",
+      "label": "Nora Mayer, An Edition of the Ipomedon B and C Texts (2011)",
+      "description": "A later MPhil thesis containing a student-oriented edition of the B text from Harley MS 2252 and the separate prose C text from Longleat House MS 257, with introduction and explanatory notes. It is collateral scholarship, not a source of the 1980s OTA or 1996 U-M encodings.",
+      "identifiers": [
+        {
+          "scheme": "White Rose eTheses",
+          "value": "2161",
+          "uri": "https://etheses.whiterose.ac.uk/id/eprint/2161/"
+        },
+        {
+          "scheme": "OAI",
+          "value": "oai:etheses.whiterose.ac.uk:2161"
+        }
+      ],
+      "creator_ids": [
+        "agent:nora-mayer",
+        "agent:university-of-york"
+      ],
+      "date_statements": [
+        {
+          "label": "thesis",
+          "value": "2011",
+          "normalized": "2011",
+          "certainty": "high",
+          "evidence_ids": [
+            "evidence:white-rose-record",
+            "evidence:mayer-thesis"
+          ]
+        }
+      ],
+      "bibliographic": {
+        "citation": "Nora Mayer, An Edition of the Ipomedon B and C Texts (MPhil thesis, University of York, 2011).",
+        "title": "An Edition of the Ipomedon B and C Texts",
+        "publisher": "University of York",
+        "publication_place": "York",
+        "date": "2011",
+        "pages": "147 numbered pages; 148 PDF pages",
+        "languages": [
+          "enm",
+          "eng"
+        ]
+      },
+      "survival_status": "extant",
+      "evidence_ids": [
+        "evidence:white-rose-record",
+        "evidence:mayer-thesis"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent:kyvero-press",
+      "type": "organization",
+      "name": "Kyvero Press",
+      "urls": [
+        "https://github.com/Kyvero-Press"
+      ],
+      "evidence_ids": [
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "agent:umich-library",
+      "type": "organization",
+      "name": "University of Michigan Library",
+      "urls": [
+        "https://www.lib.umich.edu/"
+      ],
+      "evidence_ids": [
+        "evidence:umich-collection",
+        "evidence:repo-xml"
+      ]
+    },
+    {
+      "id": "agent:oxford-text-archive",
+      "type": "organization",
+      "name": "Oxford Text Archive",
+      "urls": [
+        "https://ota.bodleian.ox.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:ota-current-record",
+        "evidence:ota-legacy-header"
+      ]
+    },
+    {
+      "id": "agent:michael-day",
+      "type": "person",
+      "name": "Michael Day",
+      "evidence_ids": [
+        "evidence:ota-legacy-header"
+      ],
+      "notes": [
+        "Named as editor in the 1990-1991 OTA header revision trail."
+      ]
+    },
+    {
+      "id": "agent:lou-burnard",
+      "type": "person",
+      "name": "Lou Burnard",
+      "evidence_ids": [
+        "evidence:ota-legacy-header"
+      ],
+      "notes": [
+        "Named as converter in the 14 January 1998 header revision."
+      ]
+    },
+    {
+      "id": "agent:tadahiro-ikegami",
+      "type": "person",
+      "name": "Tadahiro Ikegami",
+      "alternate_names": [
+        "Ikegami, Tadahiro"
+      ],
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:ikegami-vol2"
+      ]
+    },
+    {
+      "id": "agent:seijo-university",
+      "type": "organization",
+      "name": "Seijo University",
+      "urls": [
+        "https://www.seijo.ac.jp/"
+      ],
+      "evidence_ids": [
+        "evidence:seijo-vol1-record",
+        "evidence:seijo-journal"
+      ]
+    },
+    {
+      "id": "agent:british-library",
+      "type": "organization",
+      "name": "British Library",
+      "urls": [
+        "https://www.bl.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:bl-harley",
+        "evidence:bl-digitisation"
+      ]
+    },
+    {
+      "id": "agent:wynkyn-de-worde",
+      "type": "person",
+      "name": "Wynkyn de Worde",
+      "dates": "d. 1534/1535",
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:folger-bagford",
+        "evidence:ikegami-vol2"
+      ]
+    },
+    {
+      "id": "agent:robert-copland",
+      "type": "person",
+      "name": "Robert Copland",
+      "dates": "active 1508-1547",
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:ikegami-vol2"
+      ],
+      "notes": [
+        "Credited by the surviving envoi as printer; current Morgan catalog explicitly says he is not the adapter."
+      ]
+    },
+    {
+      "id": "agent:morgan-library",
+      "type": "organization",
+      "name": "The Morgan Library & Museum",
+      "urls": [
+        "https://www.themorgan.org/"
+      ],
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:morgan-imaging"
+      ]
+    },
+    {
+      "id": "agent:nora-mayer",
+      "type": "person",
+      "name": "Nora Mayer",
+      "evidence_ids": [
+        "evidence:white-rose-record",
+        "evidence:mayer-thesis"
+      ]
+    },
+    {
+      "id": "agent:university-of-york",
+      "type": "organization",
+      "name": "University of York",
+      "urls": [
+        "https://www.york.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:white-rose-record"
+      ]
+    },
+    {
+      "id": "agent:white-rose-etheses",
+      "type": "organization",
+      "name": "White Rose eTheses Online",
+      "urls": [
+        "https://etheses.whiterose.ac.uk/"
+      ],
+      "evidence_ids": [
+        "evidence:white-rose-record"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "relation:artifact-encoded-from-umich",
+      "type": "encoded_from",
+      "subject": "artifact:general-corpus:Ipomydon",
+      "object": "encoding:umich-cme:Ipomydon",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "Pinned repository XML"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "U-M CME item Ipomydon"
+        },
+        "notes": "The repository file preserves the U-M/OTA header, identifier, lineation, and body structure."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml",
+          "evidence:cme-git-state"
+        ]
+      }
+    },
+    {
+      "id": "relation:umich-encoded-from-ota-harley",
+      "type": "encoded_from",
+      "subject": "encoding:umich-cme:Ipomydon",
+      "object": "encoding:ota:0658-harley2252",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "2,347 numbered XML L elements"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "2,347 numbered OTA positions"
+        },
+        "notes": "Direct normalized comparison found only two localized differences and preserves the same sequence, explicit, and foliation."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:repo-xml",
+          "evidence:ota-payloads",
+          "evidence:encoding-comparison"
+        ]
+      }
+    },
+    {
+      "id": "relation:deposit-contains-harley",
+      "type": "contains",
+      "subject": "encoding:ota:0658-deposit",
+      "object": "encoding:ota:0658-harley2252",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "harley2252-0658.txt bitstream"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete deposited Harley text stream"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-current-record",
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads"
+        ]
+      }
+    },
+    {
+      "id": "relation:deposit-contains-worde1522",
+      "type": "contains",
+      "subject": "encoding:ota:0658-deposit",
+      "object": "encoding:ota:0658-worde1522",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "worde1522-0658.txt bitstream"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete deposited one-leaf print transcription"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-current-record",
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads"
+        ]
+      }
+    },
+    {
+      "id": "relation:deposit-contains-worde30",
+      "type": "contains",
+      "subject": "encoding:ota:0658-deposit",
+      "object": "encoding:ota:0658-worde30",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "worde30-0658.txt bitstream"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete deposited Morgan print transcription"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-current-record",
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads"
+        ]
+      }
+    },
+    {
+      "id": "relation:ota-harley-encoded-from-ikegami-vol1",
+      "type": "encoded_from",
+      "subject": "encoding:ota:0658-harley2252",
+      "object": "edition:ikegami:ipomydon-vol1-1983",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "numbered positions 1-2347"
+        },
+        "object": {
+          "kind": "part",
+          "description": "edited B text and explicit",
+          "locators": [
+            "printed pp. 1-84",
+            "PDF pp. 72-155"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads",
+          "evidence:ikegami-vol1"
+        ]
+      }
+    },
+    {
+      "id": "relation:ota-worde1522-encoded-from-ikegami-vol2",
+      "type": "encoded_from",
+      "subject": "encoding:ota:0658-worde1522",
+      "object": "edition:ikegami:ipomydon-vol2-1985",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "numbered positions 261-320, with missing 289-292"
+        },
+        "object": {
+          "kind": "part",
+          "description": "British Library one-leaf transcription",
+          "locators": [
+            "PDF pp. 65-67"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads",
+          "evidence:ikegami-vol2"
+        ]
+      }
+    },
+    {
+      "id": "relation:ota-worde30-encoded-from-ikegami-vol2",
+      "type": "encoded_from",
+      "subject": "encoding:ota:0658-worde30",
+      "object": "edition:ikegami:ipomydon-vol2-1985",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "numbered positions 193-2346"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Morgan print transcription",
+          "locators": [
+            "PDF pp. 68-144"
+          ]
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ota-legacy-header",
+          "evidence:ota-payloads",
+          "evidence:ikegami-vol2"
+        ]
+      }
+    },
+    {
+      "id": "relation:ikegami-vol1-transcribes-harley",
+      "type": "transcribes",
+      "subject": "edition:ikegami:ipomydon-vol1-1983",
+      "object": "witness:bl:harley-ms-2252",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "edited B text",
+          "locators": [
+            "printed pp. 1-84",
+            "lines 1-2346 plus explicit"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "unique manuscript copy of Ipomydon B",
+          "locators": [
+            "ff. 54r-84r"
+          ]
+        },
+        "notes": "Ikegami states a conservative transcription and separately documents emendations, abbreviation expansion, and editorial punctuation."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ikegami-vol1",
+          "evidence:bl-harley"
+        ]
+      }
+    },
+    {
+      "id": "relation:ikegami-vol2-transcribes-bagford",
+      "type": "transcribes",
+      "subject": "edition:ikegami:ipomydon-vol2-1985",
+      "object": "edition:de-worde:bagford-fragment",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "British Library print transcription",
+          "locators": [
+            "PDF pp. 65-67",
+            "positions 261-320"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "one surviving leaf, 56 extant verbal lines"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ikegami-vol2",
+          "evidence:folger-bagford"
+        ]
+      }
+    },
+    {
+      "id": "relation:ikegami-vol2-transcribes-morgan",
+      "type": "transcribes",
+      "subject": "edition:ikegami:ipomydon-vol2-1985",
+      "object": "edition:de-worde:morgan-pml-20896-2",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "Morgan print transcription",
+          "locators": [
+            "PDF pp. 68-144",
+            "positions 193-2346"
+          ]
+        },
+        "object": {
+          "kind": "whole",
+          "description": "surviving signatures B-H4 I6; quire A missing"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ikegami-vol2",
+          "evidence:morgan-print"
+        ]
+      }
+    },
+    {
+      "id": "relation:seijo-vol1-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:seijo:ikegami-vol1-pdf",
+      "object": "edition:ikegami:ipomydon-vol1-1983",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 158-page PDF scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete printed 1983 volume"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ikegami-vol1",
+          "evidence:seijo-scan-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:seijo-vol2-facsimile-of-edition",
+      "type": "facsimile_of",
+      "subject": "facsimile:seijo:ikegami-vol2-pdf",
+      "object": "edition:ikegami:ipomydon-vol2-1985",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "complete 146-page PDF scan"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "complete printed 1985 volume"
+        }
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:ikegami-vol2",
+          "evidence:seijo-scan-inspection"
+        ]
+      }
+    },
+    {
+      "id": "relation:bl-digital-facsimile-of-harley",
+      "type": "facsimile_of",
+      "subject": "facsimile:bl:harley-ms-2252-digital",
+      "object": "witness:bl:harley-ms-2252",
+      "scope": {
+        "subject": {
+          "kind": "unknown",
+          "description": "currently unavailable image object; canvas/surface inventory cannot be audited"
+        },
+        "object": {
+          "kind": "whole",
+          "description": "Harley MS 2252 as a physical volume"
+        },
+        "notes": "The item-level link establishes association with the whole manuscript record, but current unavailability prevents a complete-coverage claim."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:bl-harley",
+          "evidence:bl-image-checks"
+        ]
+      }
+    },
+    {
+      "id": "relation:bagford-copied-from-harley",
+      "type": "copied_from",
+      "subject": "edition:de-worde:bagford-fragment",
+      "object": "witness:bl:harley-ms-2252",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "surviving leaf of the de Worde state"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Ipomydon B setting-copy evidence",
+          "locators": [
+            "ff. 54r-84r",
+            "corresponding lines 261-320"
+          ]
+        },
+        "notes": "Ink traces, compositorial marks, and shared altered readings support Harley 2252 as print-shop copy; exact intervening production stages are not extant."
+      },
+      "assertion": {
+        "status": "supported",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ikegami-vol2",
+          "evidence:mayer-thesis",
+          "evidence:bl-harley"
+        ]
+      }
+    },
+    {
+      "id": "relation:morgan-copied-from-harley",
+      "type": "copied_from",
+      "subject": "edition:de-worde:morgan-pml-20896-2",
+      "object": "witness:bl:harley-ms-2252",
+      "scope": {
+        "subject": {
+          "kind": "whole",
+          "description": "surviving longer de Worde print state"
+        },
+        "object": {
+          "kind": "part",
+          "description": "Ipomydon B text prepared for print",
+          "locators": [
+            "ff. 54r-84r"
+          ]
+        },
+        "notes": "The printed tradition derives from the prepared Harley text, but whether this exact state was set directly from the manuscript or through another de Worde state remains disputed."
+      },
+      "assertion": {
+        "status": "tentative",
+        "confidence": "medium",
+        "evidence_ids": [
+          "evidence:ikegami-vol2",
+          "evidence:mayer-thesis",
+          "evidence:morgan-print"
+        ]
+      }
+    },
+    {
+      "id": "relation:mayer-transcribes-harley-b",
+      "type": "transcribes",
+      "subject": "edition:mayer:ipomedon-b-c-2011",
+      "object": "witness:bl:harley-ms-2252",
+      "scope": {
+        "subject": {
+          "kind": "part",
+          "description": "B-text edition",
+          "locators": [
+            "PDF pp. 33-84",
+            "printed pp. 32-83"
+          ]
+        },
+        "object": {
+          "kind": "part",
+          "description": "Ipomydon B",
+          "locators": [
+            "ff. 54r-84r"
+          ]
+        },
+        "notes": "Mayer's separate C-text edition derives from Longleat House MS 257 and is outside this target-work edge."
+      },
+      "assertion": {
+        "status": "confirmed",
+        "confidence": "high",
+        "evidence_ids": [
+          "evidence:mayer-thesis",
+          "evidence:white-rose-record"
+        ]
+      }
+    }
+  ],
+  "access": [
+    {
+      "id": "access:repo-file",
+      "entity": "artifact:general-corpus:Ipomydon",
+      "provider_id": "agent:kyvero-press",
+      "resource_kind": "repository_file",
+      "status": "local_only",
+      "access_method": "Read the pinned CME submodule path in this repository.",
+      "repository_path": "CME/source/CME_from_OTA/Ipomydon.xml",
+      "cost": "not_applicable",
+      "format": "DLPSTEXTCLASS XML",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:cme-git-state"
+      ]
+    },
+    {
+      "id": "access:umich-text",
+      "entity": "encoding:umich-cme:Ipomydon",
+      "provider_id": "agent:umich-library",
+      "resource_kind": "digital_text",
+      "status": "publicly_available",
+      "access_method": "Open the stable U-M item link; the collection browse page also lists the title.",
+      "url": "https://name.umdl.umich.edu/Ipomydon",
+      "alternate_urls": [
+        "https://quod.lib.umich.edu/c/cme/browse.html"
+      ],
+      "cost": "free",
+      "format": "Web-readable electronic text",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:umich-collection",
+        "evidence:repo-xml"
+      ],
+      "notes": [
+        "The stable item endpoint returned an automated 403 during this review, while U-M's public collection browse page continued to list and link the item; the access status is therefore based on the current public collection and long-lived item route, not an inferred file download."
+      ]
+    },
+    {
+      "id": "access:ota-0658-deposit",
+      "entity": "encoding:ota:0658-deposit",
+      "provider_id": "agent:oxford-text-archive",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Use the current LLDS record, direct bitstreams, or generated all-files ZIP. Exact files were retrieved and validated without authentication.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0658",
+      "alternate_urls": [
+        "https://hdl.handle.net/20.500.14106/0658",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0658",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/harley2252-0658.txt?sequence=4&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/worde1522-0658.txt?sequence=5&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/worde30-0658.txt?sequence=6&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/header0658.xml?sequence=3&isAllowed=y",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0658/header0658.xml?sequence=4&isAllowed=y",
+        "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0658/allzip"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete OTA Harley text stream",
+          "path": "source-cache/Ipomydon/ota-0658-harley2252.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/harley2252-0658.txt?sequence=4&isAllowed=y",
+          "sha256": "4d7c6350cac79a8ad33d0c66f552a97161b1c7e42ca2a09bf77f7e2b8bb97a44",
+          "bytes": 140798,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "The Lyfe of Ipomydon, B text",
+            "locators": [
+              "numbered positions 1-2346",
+              "explicit at position 2347"
+            ]
+          },
+          "notes": [
+            "Contains 24 NUL bytes in a terminal machine record; preserved byte-for-byte."
+          ]
+        },
+        {
+          "label": "Complete OTA Bagford-fragment text stream",
+          "path": "source-cache/Ipomydon/ota-0658-worde1522.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/worde1522-0658.txt?sequence=5&isAllowed=y",
+          "sha256": "3135833f93a3b453edad15686876c224df0925e7d3bef7d56e7f49435e95bc41",
+          "bytes": 4228,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "One-leaf de Worde print fragment",
+            "locators": [
+              "numbered positions 261-320",
+              "56 extant verbal lines; dotted missing positions 289-292"
+            ]
+          },
+          "notes": [
+            "Contains 24 NUL bytes in a terminal machine record; preserved byte-for-byte."
+          ]
+        },
+        {
+          "label": "Complete OTA Morgan-print text stream",
+          "path": "source-cache/Ipomydon/ota-0658-worde-c1530.txt",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/worde30-0658.txt?sequence=6&isAllowed=y",
+          "sha256": "60d600a5456ef6d11e7d97d504756a741f9f9c8fbcdb98f8997cbf0fd14a84ca",
+          "bytes": 129640,
+          "media_type": "text/plain",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Incomplete Morgan de Worde print",
+            "locators": [
+              "numbered positions 193-2346",
+              "opening quire A absent"
+            ]
+          },
+          "notes": [
+            "Contains 24 NUL bytes in a terminal machine record; preserved byte-for-byte."
+          ]
+        },
+        {
+          "label": "OTA 0658 complete three-payload ZIP",
+          "path": "source-cache/Ipomydon/ota-0658-complete-deposit.zip",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0658/allzip",
+          "sha256": "7075c3daa41241c5e93132ca5cb821e28a21fa54c7acd383b6694050d66b6ce8",
+          "bytes": 275275,
+          "media_type": "application/zip",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "All three deposited text streams",
+            "locators": [
+              "harley2252-0658.txt: positions 1-2347",
+              "worde1522-0658.txt: positions 261-320",
+              "worde30-0658.txt: positions 193-2346"
+            ],
+            "notes": [
+              "The ZIP has exactly three members whose extracted checksums match the separately cached payloads."
+            ]
+          },
+          "notes": [
+            "The provider regenerates ZIP timestamps; archive-level checksum may change on a later retrieval even when member bytes do not."
+          ]
+        },
+        {
+          "label": "Current migrated OTA header",
+          "path": "source-cache/Ipomydon/ota-0658-current-deposit-header.xml",
+          "source_url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/header0658.xml?sequence=3&isAllowed=y",
+          "sha256": "f52b2992e8064f3a0be480edc48b63e01a0d999b5c3e2e61f9ba34a6fa394ee4",
+          "bytes": 4951,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download",
+          "notes": [
+            "Exact provider bytes retained despite an authority/distributor tag mismatch; source and file-map statements remain readable."
+          ]
+        },
+        {
+          "label": "Well-formed Bodleian legacy OTA header",
+          "path": "source-cache/Ipomydon/ota-0658-bodleian-legacy-deposit-header.xml",
+          "source_url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0658/header0658.xml?sequence=4&isAllowed=y",
+          "sha256": "3fe1cdb9f61c380a511ec7cb71fc816546d620c87aed279ec59065f9fe75ce51",
+          "bytes": 5705,
+          "media_type": "application/xml",
+          "downloaded_on": "2026-07-15",
+          "coverage": "metadata_only",
+          "retrieval_method": "direct_download"
+        }
+      ],
+      "cost": "free",
+      "format": "ASCII text, XML headers, and ZIP",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ota-current-record",
+        "evidence:ota-payloads",
+        "evidence:ota-payload-audit"
+      ]
+    },
+    {
+      "id": "access:seijo-vol1-pdf",
+      "entity": "facsimile:seijo:ikegami-vol1-pdf",
+      "provider_id": "agent:seijo-university",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete official journal PDF from Seijo University or its institutional repository.",
+      "url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-21-etc.pdf",
+      "alternate_urls": [
+        "https://seijo.repo.nii.ac.jp/records/134",
+        "https://seijo.repo.nii.ac.jp/record/134/files/seng-21-etc.pdf"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete official Seijo volume I PDF",
+          "path": "source-cache/Ipomydon/ikegami-1983-the-lyfe-of-ipomydon-vol-1.pdf",
+          "source_url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-21-etc.pdf",
+          "sha256": "85fe6c0ef8ba04e271e3831adb00f3689d878c8dc3c012431ad0a0b95fc9410f",
+          "bytes": 5665427,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "The Lyfe of Ipomydon, B text",
+            "locators": [
+              "PDF pp. 72-155",
+              "printed pp. 1-84",
+              "manuscript ff. 54r-84r represented by edited text"
+            ],
+            "notes": [
+              "The entire 158-page volume was downloaded, not a cropped text extract."
+            ]
+          },
+          "notes": [
+            "qpdf reports 158 pages, no encryption, and no syntax or stream-encoding errors."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "158-page PDF scan",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:seijo-vol1-record",
+        "evidence:seijo-scan-inspection"
+      ]
+    },
+    {
+      "id": "access:seijo-vol2-pdf",
+      "entity": "facsimile:seijo:ikegami-vol2-pdf",
+      "provider_id": "agent:seijo-university",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete official journal PDF from Seijo University.",
+      "url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-22-etc.pdf",
+      "alternate_urls": [
+        "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/index.html"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete official Seijo volume II PDF",
+          "path": "source-cache/Ipomydon/ikegami-1985-the-lyfe-of-ipomydon-vol-2.pdf",
+          "source_url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-22-etc.pdf",
+          "sha256": "3ef05f4ddfc6baf2fa4430551fda82bbb2619ce8c39861f68aa29b0701900055",
+          "bytes": 5712267,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Two incomplete de Worde witnesses of the B text",
+            "locators": [
+              "British Library leaf transcription: PDF pp. 65-67",
+              "Morgan print transcription: PDF pp. 68-144",
+              "selected physical plates: PDF pp. 4-7"
+            ],
+            "notes": [
+              "The entire 146-page volume was downloaded. Its four print plates are selected images, not full facsimiles of both physical print objects."
+            ]
+          },
+          "notes": [
+            "qpdf reports 146 pages, no encryption, and no syntax or stream-encoding errors."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "146-page PDF scan",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:seijo-journal",
+        "evidence:seijo-scan-inspection"
+      ]
+    },
+    {
+      "id": "access:bl-harley-catalog",
+      "entity": "witness:bl:harley-ms-2252",
+      "provider_id": "agent:british-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the exact British Library Archives and Manuscripts record.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048083",
+      "cost": "free",
+      "format": "Institutional catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-harley"
+      ]
+    },
+    {
+      "id": "access:bl-harley-physical",
+      "entity": "witness:bl:harley-ms-2252",
+      "provider_id": "agent:british-library",
+      "resource_kind": "physical_manuscript",
+      "status": "onsite_only",
+      "access_method": "Register or renew a British Library Reader Pass and request Harley MS 2252 using the collection-item form; manuscripts must be consulted in London.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048083",
+      "alternate_urls": [
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82Y2W5G0R4_R2u4AJcX93qEhUQkVWOTU1UVpSQzZJME81VU5TTEdIRzNZSC4u"
+      ],
+      "cost": "unknown",
+      "format": "Original manuscript",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-harley"
+      ]
+    },
+    {
+      "id": "access:bl-harley-images-unavailable",
+      "entity": "facsimile:bl:harley-ms-2252-digital",
+      "provider_id": "agent:british-library",
+      "resource_kind": "page_images",
+      "status": "unavailable",
+      "access_method": "The exact BL catalog currently marks the linked digital images unavailable. Former manuscript viewer and tested IIIF routes did not deliver an image inventory.",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100163436000.0x000001",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048083",
+        "https://www.bl.uk/manuscripts/Viewer.aspx?ref=harley_ms_2252_fs001r"
+      ],
+      "cost": "free",
+      "format": "Digital manuscript images; current coverage inaccessible",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-harley",
+        "evidence:bl-image-checks"
+      ],
+      "notes": [
+        "This is a dated availability finding, not a claim that the manuscript was never digitized or that images will remain unavailable."
+      ]
+    },
+    {
+      "id": "access:bl-harley-reproduction-order",
+      "entity": "facsimile:bl:harley-ms-2252-digital",
+      "provider_id": "agent:british-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Use the British Library digitisation form, identify Harley MS 2252, request a complete color surrogate of the whole physical manuscript where feasible, and list covers/boards, spine, pastedowns, flyleaves, blanks, edges if offered, and every manuscript leaf; identify ff. 54r-84r separately as the work portion. The Library will quote after conservation and existing-surrogate checks.",
+      "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+      "alternate_urls": [
+        "https://www.bl.uk/services/digitisation",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf",
+        "https://www.bl.uk/terms/imaging-services"
+      ],
+      "cost": "fee",
+      "format": "Existing surrogate scan or new digital photography; quote required",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-digitisation",
+        "evidence:bl-imaging-terms"
+      ],
+      "notes": [
+        "Original manuscripts cannot normally be flatbed scanned; new photography may be required unless an existing surrogate can be supplied.",
+        "Publication or redistribution permission is separate from obtaining the files."
+      ]
+    },
+    {
+      "id": "access:bagford-catalog",
+      "entity": "edition:de-worde:bagford-fragment",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Consult the Folger's institutional vendor record and the public scholarly romance record for bibliographic identity; quote British Library C.40.m.9 (18) when contacting the holding institution.",
+      "url": "https://catalog.folger.edu/record/396642",
+      "alternate_urls": [
+        "https://www.middleenglishromance.org.uk/romances/lyfe-ipomydon"
+      ],
+      "cost": "free",
+      "format": "Catalog and repertory records",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:folger-bagford",
+        "evidence:middle-english-romance"
+      ]
+    },
+    {
+      "id": "access:bagford-eebo",
+      "entity": "edition:de-worde:bagford-fragment",
+      "resource_kind": "page_images",
+      "status": "subscription_required",
+      "access_method": "Open the EEBO/ProQuest reproductions through an entitled institutional subscription; the record lists two microfilm-derived digital versions.",
+      "url": "https://search.proquest.com/docview/2248583062",
+      "alternate_urls": [
+        "https://search.proquest.com/docview/2248568172",
+        "https://catalog.folger.edu/record/396642"
+      ],
+      "cost": "unknown",
+      "format": "EEBO page images of one surviving leaf",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:folger-bagford"
+      ]
+    },
+    {
+      "id": "access:morgan-catalog",
+      "entity": "edition:de-worde:morgan-pml-20896-2",
+      "provider_id": "agent:morgan-library",
+      "resource_kind": "catalog_record",
+      "status": "publicly_available",
+      "access_method": "Open the exact Morgan collection record.",
+      "url": "https://www.themorgan.org/printed-books/173482",
+      "cost": "free",
+      "format": "Institutional catalog record",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:morgan-print"
+      ]
+    },
+    {
+      "id": "access:morgan-images",
+      "entity": "edition:de-worde:morgan-pml-20896-2",
+      "provider_id": "agent:morgan-library",
+      "resource_kind": "page_images",
+      "status": "no_public_copy_found",
+      "access_method": "The exact public catalog exposes no complete image set. Ikegami volume II prints only two selected Morgan pages. Request complete photography from the Morgan or arrange approved research photography onsite.",
+      "url": "https://www.themorgan.org/printed-books/173482",
+      "alternate_urls": [
+        "https://www.themorgan.org/research/imaging-and-rights",
+        "https://www.themorgan.org/research/digital-photography-policy"
+      ],
+      "cost": "unknown",
+      "format": "Digital page images or researcher photographs",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:morgan-imaging",
+        "evidence:morgan-photo-policy"
+      ]
+    },
+    {
+      "id": "access:morgan-reproduction-order",
+      "entity": "edition:de-worde:morgan-pml-20896-2",
+      "provider_id": "agent:morgan-library",
+      "resource_kind": "reproduction_order",
+      "status": "requestable",
+      "access_method": "Submit the Morgan photography form for PML 20896.2. Digital files are sold for research or publication; provide intended use, exact object description, and publication details if applicable.",
+      "url": "https://www.themorgan.org/research/photo-application",
+      "alternate_urls": [
+        "https://www.themorgan.org/research/imaging-and-rights"
+      ],
+      "contact": "photoservices@themorgan.org",
+      "cost": "fee",
+      "format": "Existing or new digital photography; quote required",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:morgan-imaging"
+      ]
+    },
+    {
+      "id": "access:mayer-thesis-pdf",
+      "entity": "edition:mayer:ipomedon-b-c-2011",
+      "provider_id": "agent:white-rose-etheses",
+      "resource_kind": "download",
+      "status": "publicly_available",
+      "access_method": "Download the complete thesis PDF from the official White Rose record.",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/2161/1/An_Edition_of_the_Ipomedon_B_and_C_Texts.pdf",
+      "alternate_urls": [
+        "https://etheses.whiterose.ac.uk/id/eprint/2161/"
+      ],
+      "local_copies": [
+        {
+          "label": "Complete White Rose thesis PDF",
+          "path": "source-cache/Ipomydon/mayer-2011-ipomedon-b-c-thesis.pdf",
+          "source_url": "https://etheses.whiterose.ac.uk/id/eprint/2161/1/An_Edition_of_the_Ipomedon_B_and_C_Texts.pdf",
+          "sha256": "4ef02150502d1d456eaa47f8dbd0aead3818428769e70333aa3cd99925a563e9",
+          "bytes": 1297931,
+          "media_type": "application/pdf",
+          "downloaded_on": "2026-07-15",
+          "coverage": "complete",
+          "retrieval_method": "direct_download",
+          "work_portion": {
+            "label": "Study and edition of the Ipomedon B text",
+            "locators": [
+              "study: PDF pp. 7-28",
+              "B-text edition: PDF pp. 33-84 / printed pp. 32-83",
+              "B-text explanatory notes: PDF pp. 132-139 / printed pp. 131-138"
+            ],
+            "notes": [
+              "The full 148-page thesis, including its separate C-text edition, was downloaded."
+            ]
+          },
+          "notes": [
+            "qpdf reports no syntax or stream-encoding errors; pdfinfo reports 148 unencrypted pages."
+          ]
+        }
+      ],
+      "cost": "free",
+      "format": "148-page born-digital PDF",
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:white-rose-record",
+        "evidence:mayer-thesis"
+      ]
+    }
+  ],
+  "rights": [
+    {
+      "id": "rights:repo-unlicense",
+      "entity": "artifact:general-corpus:Ipomydon",
+      "access_id": "access:repo-file",
+      "component": "Repository-authored software/source layer insofar as copyright is controlled by CME contributors",
+      "jurisdiction": "Worldwide dedication; legal effect may vary by jurisdiction",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The exact pinned CME LICENSE dedicates the software/source to the public domain under the Unlicense.",
+      "asserted_by_id": "agent:kyvero-press",
+      "license": {
+        "name": "The Unlicense",
+        "spdx": "Unlicense",
+        "uri": "https://unlicense.org/"
+      },
+      "contract_terms_status": "none_known",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:cme-license",
+        "evidence:cme-git-state"
+      ],
+      "notes": [
+        "The dedication cannot license material contributors do not own, including Ikegami's editorial contribution, provider images, or manuscript/print photographs."
+      ]
+    },
+    {
+      "id": "rights:umich-legacy",
+      "entity": "encoding:umich-cme:Ipomydon",
+      "access_id": "access:repo-file",
+      "component": "Legacy U-M/OTA electronic text represented by the pinned XML header",
+      "jurisdiction": "Unspecified",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "The XML header says the text was made available through the Oxford Text Archive for personal scholarly use only.",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml"
+      ],
+      "notes": [
+        "This historical use condition conflicts with the current OTA deposit license and does not independently clear Ikegami's edition."
+      ]
+    },
+    {
+      "id": "rights:ota-0658-cc-by-nc-sa",
+      "entity": "encoding:ota:0658-deposit",
+      "access_id": "access:ota-0658-deposit",
+      "component": "Current OTA 0658 deposit, three distributed text bitstreams, and repository package",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The current official OTA/LLDS record applies Creative Commons Attribution-NonCommercial-ShareAlike 3.0.",
+      "asserted_by_id": "agent:oxford-text-archive",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "spdx": "CC-BY-NC-SA-3.0",
+        "uri": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ota-current-record",
+        "evidence:ota-current-header"
+      ],
+      "notes": [
+        "The license is recorded at the OTA digital-deposit layer. It does not independently license the underlying Seijo editions, manuscript, early prints, or third-party photographs."
+      ]
+    },
+    {
+      "id": "rights:ikegami-vol1",
+      "entity": "edition:ikegami:ipomydon-vol1-1983",
+      "component": "Ikegami's 1983 edited text, introduction, apparatus, notes, selection, and typographic presentation",
+      "jurisdiction": "Japan and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The volume states copyright by the Department of English, Seijo University, 1983, and no open license was found on the official repository record.",
+      "asserted_by_id": "agent:seijo-university",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:seijo-vol1-record"
+      ],
+      "notes": [
+        "The medieval B work is a separate historical layer; this record does not treat public access to the PDF as permission to redistribute the modern edition."
+      ]
+    },
+    {
+      "id": "rights:seijo-vol1-pdf",
+      "entity": "facsimile:seijo:ikegami-vol1-pdf",
+      "access_id": "access:seijo-vol1-pdf",
+      "component": "Official Seijo scan and included modern/photographic content",
+      "jurisdiction": "Japan and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The scanned carrier reproduces the copyrighted 1983 volume, including British Library manuscript photography, and the official record provides no open reuse license.",
+      "asserted_by_id": "agent:seijo-university",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:seijo-vol1-record",
+        "evidence:seijo-scan-inspection"
+      ],
+      "notes": [
+        "Keep the cached scan private and ignored unless permission or another applicable legal basis supports redistribution."
+      ]
+    },
+    {
+      "id": "rights:ikegami-vol2",
+      "entity": "edition:ikegami:ipomydon-vol2-1985",
+      "component": "Ikegami's 1985 edited texts, introduction, apparatus, notes, selection, and typographic presentation",
+      "jurisdiction": "Japan and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The volume states copyright by the Department of English, Seijo University, 1985, with all rights reserved.",
+      "asserted_by_id": "agent:seijo-university",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol2"
+      ]
+    },
+    {
+      "id": "rights:seijo-vol2-pdf",
+      "entity": "facsimile:seijo:ikegami-vol2-pdf",
+      "access_id": "access:seijo-vol2-pdf",
+      "component": "Official Seijo scan and included modern/photographic content",
+      "jurisdiction": "Japan and other treaty jurisdictions",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The scanned carrier reproduces the copyrighted 1985 volume and selected British Library/Morgan photographs; no open reuse license was found.",
+      "asserted_by_id": "agent:seijo-university",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:seijo-scan-inspection"
+      ],
+      "notes": [
+        "Keep the cached scan private and ignored unless permission or another applicable legal basis supports redistribution."
+      ]
+    },
+    {
+      "id": "rights:harley-medieval-content",
+      "entity": "witness:bl:harley-ms-2252",
+      "component": "Fifteenth-century manuscript text, script, and historical content",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The target manuscript copy and historical content were created in the fifteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-harley"
+      ],
+      "notes": [
+        "Physical ownership, access rules, image rights, and contractual reproduction terms remain separate."
+      ]
+    },
+    {
+      "id": "rights:bl-harley-images",
+      "entity": "facsimile:bl:harley-ms-2252-digital",
+      "access_id": "access:bl-harley-reproduction-order",
+      "component": "British Library supplied digital images and reproduction/publication use",
+      "jurisdiction": "British Library service terms; intended-use jurisdictions as licensed",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "British Library Imaging Services terms prohibit copying or reproducing supplied images without written permission and route publication uses through separate licensing.",
+      "asserted_by_id": "agent:british-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:bl-imaging-terms",
+        "evidence:bl-digitisation"
+      ],
+      "notes": [
+        "Ordering a research facsimile does not by itself authorize Git publication, print-on-demand distribution, or commercial reuse."
+      ]
+    },
+    {
+      "id": "rights:bagford-historical-print",
+      "entity": "edition:de-worde:bagford-fragment",
+      "component": "Early-sixteenth-century printed text and typography",
+      "jurisdiction": "United Kingdom and United States",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The print dates from the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:folger-bagford",
+        "evidence:ikegami-vol2"
+      ],
+      "notes": [
+        "Modern photographs, EEBO access, and British Library reproduction terms are separate layers."
+      ]
+    },
+    {
+      "id": "rights:morgan-historical-print",
+      "entity": "edition:de-worde:morgan-pml-20896-2",
+      "component": "Early-sixteenth-century printed text and typography",
+      "jurisdiction": "United States and United Kingdom",
+      "copyright_status": "public_domain",
+      "as_of": "2026-07-15",
+      "basis": "The print dates from the early sixteenth century, centuries beyond ordinary copyright terms.",
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morgan-print"
+      ],
+      "notes": [
+        "The Morgan's photography and dissemination policies remain separate from public-domain status of the historical printed content."
+      ]
+    },
+    {
+      "id": "rights:morgan-photography",
+      "entity": "edition:de-worde:morgan-pml-20896-2",
+      "access_id": "access:morgan-reproduction-order",
+      "component": "Morgan-supplied photography and researcher photographs",
+      "jurisdiction": "United States and Morgan service terms",
+      "copyright_status": "copyright_may_apply",
+      "as_of": "2026-07-15",
+      "basis": "Morgan policy forbids unauthorized duplication or dissemination of its photographic material; personal reading-room photographs are limited to private research and cannot be published or displayed online.",
+      "asserted_by_id": "agent:morgan-library",
+      "contract_terms_status": "permission_required",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:morgan-imaging",
+        "evidence:morgan-photo-policy"
+      ]
+    },
+    {
+      "id": "rights:mayer-thesis",
+      "entity": "edition:mayer:ipomedon-b-c-2011",
+      "access_id": "access:mayer-thesis-pdf",
+      "component": "Mayer's thesis text, editions, apparatus, and PDF",
+      "jurisdiction": "Worldwide license grant",
+      "copyright_status": "copyrighted",
+      "as_of": "2026-07-15",
+      "basis": "The official White Rose record applies Creative Commons Attribution-NonCommercial-NoDerivatives 2.5.",
+      "asserted_by_id": "agent:white-rose-etheses",
+      "license": {
+        "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 2.5 Generic",
+        "spdx": "CC-BY-NC-ND-2.5",
+        "uri": "https://creativecommons.org/licenses/by-nc-nd/2.5/"
+      },
+      "contract_terms_status": "provider_terms_apply",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:white-rose-record",
+        "evidence:mayer-thesis"
+      ],
+      "notes": [
+        "The license permits attributed noncommercial sharing of the unchanged thesis but not derivative redistribution; it does not license the Seijo edition or provider photographs."
+      ]
+    }
+  ],
+  "editorial_practices": [
+    {
+      "id": "practice:umich-selection",
+      "entity": "encoding:umich-cme:Ipomydon",
+      "practice": "selection",
+      "source_feature": "Ikegami volume I includes front matter, introduction, notes, apparatus, appendix, and plates around the edited text.",
+      "representation": "The XML retains the 2,346-line B text and explicit but omits front and back matter and printed editorial notes; ten large divisions and line groups are supplied for navigation.",
+      "description": "The electronic object is a selected, structurally normalized representation of the edition, not a facsimile of either book or manuscript.",
+      "scope": "Entire U-M/OTA Ipomydon XML",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:repo-structure",
+        "evidence:ikegami-vol1"
+      ]
+    },
+    {
+      "id": "practice:ikegami-abbreviations",
+      "entity": "edition:ikegami:ipomydon-vol1-1983",
+      "practice": "abbreviation_expansion",
+      "source_feature": "Manuscript abbreviations and numerals",
+      "representation": "Abbreviations and numerals are silently expanded in the edited text, with selected abbreviation discussion in the introduction and footnotes.",
+      "description": "Expanded forms in the U-M/OTA text descend through the edition and cannot be read as literal manuscript letterforms.",
+      "scope": "Edited B text, lines 1-2346",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol1"
+      ]
+    },
+    {
+      "id": "practice:ikegami-punctuation",
+      "entity": "edition:ikegami:ipomydon-vol1-1983",
+      "practice": "punctuation_normalization",
+      "source_feature": "The manuscript has effectively no systematic punctuation; capitalization and word division also require editorial intervention.",
+      "representation": "Ikegami supplies punctuation, capitalization, and word division while retaining manuscript spelling.",
+      "description": "Punctuation and word boundaries in the electronic text are editorial evidence, not photographic evidence of manuscript formatting.",
+      "scope": "Edited B text, lines 1-2346",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol1"
+      ]
+    },
+    {
+      "id": "practice:ikegami-collation",
+      "entity": "edition:ikegami:ipomydon-vol1-1983",
+      "practice": "collation",
+      "source_feature": "Harley MS 2252 readings, later-hand corrections, and comparison with Kölbing and Weber",
+      "representation": "A conservative base text with few emendations; square brackets mark editorial insertion or alteration, angle brackets mark restoration or possible omission, and footnotes record variants.",
+      "description": "The XML omits the printed notes, so its bracketed readings retain some editorial signals without the full supporting apparatus.",
+      "scope": "Edited B text and printed apparatus",
+      "confidence": "high",
+      "evidence_ids": [
+        "evidence:ikegami-vol1",
+        "evidence:repo-xml"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:repo-xml",
+      "type": "repository_file",
+      "citation": "General Corpus pinned CME source file Ipomydon.xml, CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/source/CME_from_OTA/Ipomydon.xml",
+      "locator": "HEADER; complete TEXT/BODY; numbered lines 1-2347",
+      "summary": "Primary repository evidence for the U-M/OTA identity, March 1996 electronic publication, Ikegami 1983 source statement, personal-scholarly-use condition, omitted apparatus, supplied structural divisions, complete B text, folio/page milestones, lineation, and explicit.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ace867067c84be34d15d01fbe57c5e893b3a10c76da8358010c76c81214cc790"
+    },
+    {
+      "id": "evidence:repo-structure",
+      "type": "repository_file",
+      "citation": "Structural and content audit of the pinned Ipomydon.xml.",
+      "repository_path": "CME/source/CME_from_OTA/Ipomydon.xml",
+      "locator": "Element counts, numbered-line sequence, folio milestones, first and final text units",
+      "summary": "Counted 10 DIV1, 10 LG, 2,347 L, 31 MILESTONE, and 83 PB elements; verified 2,346 verse lines plus a numbered explicit and folio milestones from 54r through 84r.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ace867067c84be34d15d01fbe57c5e893b3a10c76da8358010c76c81214cc790"
+    },
+    {
+      "id": "evidence:cme-git-state",
+      "type": "repository_file",
+      "citation": "CME git tree and parent submodule state for Ipomydon.xml.",
+      "repository_path": "CME/source/CME_from_OTA/Ipomydon.xml",
+      "summary": "Confirms CME commit e1d77c88ca561be924b2fedc54dd474be2e7e49c, git blob 20b18767e46050f95b914246432d89a6e102332f, byte count 117,344, and the matching parent gitlink.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ace867067c84be34d15d01fbe57c5e893b3a10c76da8358010c76c81214cc790"
+    },
+    {
+      "id": "evidence:cme-license",
+      "type": "repository_file",
+      "citation": "Kyvero-Press/CME LICENSE at pinned commit e1d77c88ca561be924b2fedc54dd474be2e7e49c.",
+      "repository_path": "CME/LICENSE",
+      "summary": "Exact pinned repository license dedicating its software/source layer to the public domain under the Unlicense; it cannot grant rights in third-party editions or images.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:umich-collection",
+      "type": "official_webpage",
+      "citation": "University of Michigan Library Digital Collections, Corpus of Middle English Prose and Verse browse and collection pages.",
+      "url": "https://quod.lib.umich.edu/c/cme/browse.html",
+      "alternate_urls": [
+        "https://quod.lib.umich.edu/c/cme/about.html",
+        "https://name.umdl.umich.edu/Ipomydon"
+      ],
+      "summary": "The current public collection browse lists The Lyfe of Ipomydon edited by Tadahiro Ikegami and links the stable U-M item identifier; the collection history explains that early holdings included OTA texts.",
+      "accessed_on": "2026-07-15",
+      "notes": [
+        "The exact stable item endpoint returned an automated 403 during review, so no unverified current item-specific rights label is asserted from it."
+      ]
+    },
+    {
+      "id": "evidence:ota-current-record",
+      "type": "official_catalog",
+      "citation": "Oxford Text Archive / Linguistic Linked Data Service, item 0658, The lyfe of Ipomydon.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0658",
+      "alternate_urls": [
+        "https://hdl.handle.net/20.500.14106/0658",
+        "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0658"
+      ],
+      "summary": "Official deposit record for ota:0658, its three public bitstreams, current accepted/available dates, inherited Hue/1170-1190/1976 fields, Legacy Collection placement, and CC BY-NC-SA 3.0 license.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ota-current-header",
+      "type": "digital_surrogate",
+      "citation": "Cached current OTA/LLDS header0658.xml.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/bitstream/handle/20.500.14106/0658/header0658.xml?sequence=3&isAllowed=y",
+      "repository_path": "source-cache/Ipomydon/ota-0658-current-deposit-header.xml",
+      "locator": "sourceDesc, fileDesc, revisionDesc, availability",
+      "summary": "Preserves the Ikegami volumes 21-22 transcription statement, three-file map, 1990-1991 and 1998 revision trail, and current CC statement despite a migration-introduced tag mismatch.",
+      "accessed_on": "2026-07-15",
+      "sha256": "f52b2992e8064f3a0be480edc48b63e01a0d999b5c3e2e61f9ba34a6fa394ee4",
+      "notes": [
+        "xmllint reports an opening/ending tag mismatch around authority/distributor; exact bytes were not repaired."
+      ]
+    },
+    {
+      "id": "evidence:ota-legacy-header",
+      "type": "digital_surrogate",
+      "citation": "Cached Bodleian legacy OTA header0658.xml.",
+      "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/0658/header0658.xml?sequence=4&isAllowed=y",
+      "repository_path": "source-cache/Ipomydon/ota-0658-bodleian-legacy-deposit-header.xml",
+      "locator": "sourceDesc, fileDesc, revisionDesc, availability",
+      "summary": "Well-formed legacy header directly identifying Ikegami volumes I-II as transcription sources, mapping the Harley and two de Worde files, naming Michael Day and Lou Burnard, and retaining the anomalous 1976 authority date.",
+      "accessed_on": "2026-07-15",
+      "sha256": "3fe1cdb9f61c380a511ec7cb71fc816546d620c87aed279ec59065f9fe75ce51"
+    },
+    {
+      "id": "evidence:ota-payloads",
+      "type": "digital_surrogate",
+      "citation": "Cached OTA 0658 three-payload package and separately downloaded text bitstreams.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0658/allzip",
+      "repository_path": "source-cache/Ipomydon/ota-0658-complete-deposit.zip",
+      "locator": "harley2252-0658.txt; worde1522-0658.txt; worde30-0658.txt",
+      "summary": "Complete public package containing exactly three members; extracted checksums match the separately cached files and preserve target/print line ranges and legacy machine records.",
+      "accessed_on": "2026-07-15",
+      "sha256": "7075c3daa41241c5e93132ca5cb821e28a21fa54c7acd383b6694050d66b6ce8"
+    },
+    {
+      "id": "evidence:ota-payload-audit",
+      "type": "digital_surrogate",
+      "citation": "Byte, structure, and archive audit of cached OTA 0658 payloads.",
+      "repository_path": "source-cache/Ipomydon/ota-0658-complete-deposit.zip",
+      "summary": "Verified ZIP integrity and three exact members; counted 24 NUL bytes in the common terminal machine record of each raw payload; read embedded 22 April 1986 processing timestamps and CAMB END A* markers; verified complete sequential Harley positions 1-2347, 56 extant Bagford lines within 261-320, and Morgan positions 193-2346.",
+      "accessed_on": "2026-07-15",
+      "sha256": "7075c3daa41241c5e93132ca5cb821e28a21fa54c7acd383b6694050d66b6ce8"
+    },
+    {
+      "id": "evidence:encoding-comparison",
+      "type": "repository_file",
+      "citation": "Normalized line-by-line comparison of pinned U-M XML and OTA harley2252-0658 payload.",
+      "repository_path": "CME/source/CME_from_OTA/Ipomydon.xml",
+      "locator": "2,347 numbered positions after legacy thorn/yogh, insertion-marker, and whitespace normalization",
+      "summary": "Found identical numbering and only two localized textual differences: XML nonesuche versus OTA <none> suche at 240 and XML þat versus a malformed OTA legacy sequence at 1269. This confirms the OTA Harley stream as the U-M encoding's immediate electronic source.",
+      "accessed_on": "2026-07-15",
+      "sha256": "ace867067c84be34d15d01fbe57c5e893b3a10c76da8358010c76c81214cc790"
+    },
+    {
+      "id": "evidence:ikegami-vol1",
+      "type": "digital_surrogate",
+      "citation": "Tadahiro Ikegami, ed., The Lyfe of Ipomydon, vol. I, Seijo English Monographs 21 (1983), complete official PDF.",
+      "url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-21-etc.pdf",
+      "repository_path": "source-cache/Ipomydon/ikegami-1983-the-lyfe-of-ipomydon-vol-1.pdf",
+      "locator": "title/copyright pages; preface; introduction pp. i-lxvi; text pp. 1-84; appendix pp. 85-86",
+      "summary": "Direct edition evidence for title, editor, 1983 copyright, three Middle English versions, unique B witness and locators, manuscript/booklet description, second-half-fifteenth-century dating and North-East Midlands localization, editorial method, 2,346-line text, and selected plates.",
+      "accessed_on": "2026-07-15",
+      "sha256": "85fe6c0ef8ba04e271e3831adb00f3689d878c8dc3c012431ad0a0b95fc9410f"
+    },
+    {
+      "id": "evidence:seijo-vol1-record",
+      "type": "official_catalog",
+      "citation": "Seijo University Repository, record 134, The Lyfe of Ipomydon, volume I.",
+      "url": "https://seijo.repo.nii.ac.jp/records/134",
+      "alternate_urls": [
+        "https://seijo.repo.nii.ac.jp/record/134/files/seng-21-etc.pdf"
+      ],
+      "summary": "Official institutional record identifying Ikegami, Seijo English Monographs 21, 1983, and pagination 1-86 and i-lxvi, with direct complete PDF access and no stated open license.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:ikegami-vol2",
+      "type": "digital_surrogate",
+      "citation": "Tadahiro Ikegami, ed., The Lyfe of Ipomydon, vol. II, Seijo English Monographs 22 (1985), complete official PDF.",
+      "url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/pdf/seng-22-etc.pdf",
+      "repository_path": "source-cache/Ipomydon/ikegami-1985-the-lyfe-of-ipomydon-vol-2.pdf",
+      "locator": "title/copyright pages; plates; introduction; presentation of text; BL and Morgan transcriptions",
+      "summary": "Direct edition evidence for the two incomplete print objects, historical c. 1522/c. 1530-1531 dating, exact shelfmarks and extents, transcription methods, full printed transcriptions, selected plates, comparison with Harley, and 1985 all-rights-reserved statement.",
+      "accessed_on": "2026-07-15",
+      "sha256": "3ef05f4ddfc6baf2fa4430551fda82bbb2619ce8c39861f68aa29b0701900055"
+    },
+    {
+      "id": "evidence:seijo-journal",
+      "type": "official_webpage",
+      "citation": "Seijo University, Seijo English Monographs journal index.",
+      "url": "https://www.seijo.ac.jp/graduate/gslit/orig/journal/english/index.html",
+      "summary": "Official series index listing The Lyfe of Ipomydon volume I as no. 21 (1983) and volume II as no. 22 (1985), with direct PDFs.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:seijo-scan-inspection",
+      "type": "visual_inspection",
+      "citation": "Representative page and contact-sheet inspection of the complete cached Seijo PDFs.",
+      "repository_path": "source-cache/Ipomydon/ikegami-1983-the-lyfe-of-ipomydon-vol-1.pdf",
+      "locator": "All pages overview; vol. I PDF pp. 1-10, 72-158; vol. II PDF pp. 1-10, 65-146",
+      "summary": "Confirmed complete grayscale book scans, title and copyright pages, text boundaries, one manuscript-page plate plus watermark photographs in volume I, two Bagford leaf images and two selected Morgan pages in volume II, and no whole-manuscript or whole-Morgan photographic facsimile.",
+      "accessed_on": "2026-07-15",
+      "sha256": "85fe6c0ef8ba04e271e3831adb00f3689d878c8dc3c012431ad0a0b95fc9410f",
+      "notes": [
+        "The companion volume II checksum is 3ef05f4ddfc6baf2fa4430551fda82bbb2619ce8c39861f68aa29b0701900055."
+      ]
+    },
+    {
+      "id": "evidence:bl-harley",
+      "type": "official_catalog",
+      "citation": "British Library Archives and Manuscripts Catalogue, Harley MS 2252, record 040-002048083.",
+      "url": "https://searcharchives.bl.uk/catalog/040-002048083",
+      "locator": "title, scope, ff. 54r-84r content entry, digitised content, access, physical characteristics, provenance, publications",
+      "summary": "Exact holding record for the composite John Colyns commonplace book, unique Ipomydon B copy at ff. 54r-84r, second-half-fifteenth-century copying, DIMEV 3462-1, paper/extent/dimensions/script, 1517 Colyns acquisition, physical request route, and currently unavailable digital images.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-image-checks",
+      "type": "official_webpage",
+      "citation": "Dated access checks of the British Library Harley MS 2252 viewer and plausible IIIF routes.",
+      "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100163436000.0x000001",
+      "alternate_urls": [
+        "https://searcharchives.bl.uk/catalog/040-002048083",
+        "https://www.bl.uk/manuscripts/Viewer.aspx?ref=harley_ms_2252_fs001r"
+      ],
+      "summary": "The official catalog expressly marked images unavailable; the legacy access host did not resolve and tested item/shelfmark IIIF routes returned 403 or 404 without a canvas inventory. No whole-manuscript file was cached.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-digitisation",
+      "type": "official_webpage",
+      "citation": "British Library, Digitisation Services and online request form.",
+      "url": "https://www.bl.uk/services/digitisation",
+      "alternate_urls": [
+        "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=t0ykIcP5AE-a-r0ejoi82a3WkC3PLq1No_6AEThlXfxUM0FGU0Q0WTQ1NzlXQlE2NUY0UkFIU1lDSy4u",
+        "https://cdn.sanity.io/files/v5dwkion/production/1cf7e551b0f86fe2e664ca9c4b65b75ed463fb04.pdf"
+      ],
+      "summary": "Official paid digitisation route, request form, and price schedule; manuscripts may require new photography rather than scanning, subject to condition and existing surrogates.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:bl-imaging-terms",
+      "type": "official_webpage",
+      "citation": "British Library, Imaging Services Terms and Conditions.",
+      "url": "https://www.bl.uk/terms/imaging-services",
+      "summary": "Current service terms governing supplied image use and requiring written permission or licensing for copying, reproduction, publication, or other dissemination beyond the ordered purpose.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:middle-english-romance",
+      "type": "scholarly_source",
+      "citation": "Database of Middle English Romance, Lyfe of Ipomydon.",
+      "url": "https://www.middleenglishromance.org.uk/romances/lyfe-ipomydon",
+      "summary": "University of York scholarly repertory supporting romance classification, plot, verse form, Harley MS 2252 ff. 54r-84r, early-print STC identifiers, and modern editions. Its current early-print holding/extents conflict with direct institutional and edition evidence and are not adopted uncritically.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:folger-bagford",
+      "type": "official_catalog",
+      "citation": "Folger Shakespeare Library catalog record 396642, The lady commaunded anone soone [electronic resource].",
+      "url": "https://catalog.folger.edu/record/396642",
+      "summary": "Institutional vendor record for STC 5732.5, c. 1522, one-leaf British Library fragment, verse form, EEBO reproductions, and note that Copland's envoi belongs to the other edition and does not make him adapter. The record warns that vendor metadata may be incomplete.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:morgan-print",
+      "type": "official_catalog",
+      "citation": "The Morgan Library & Museum, The lyfe of Ipomydon, PML 20896.2.",
+      "url": "https://www.themorgan.org/printed-books/173482",
+      "summary": "Exact holding record for the unique imperfect longer print copy: de Worde imprint, approximately 1520-1524, signatures [A?] B-H4 I6, missing quire A, [68+] pages, Copland envoi/printer role, STC-based date, and a claim that it may be the earliest surviving edition.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:morgan-imaging",
+      "type": "official_webpage",
+      "citation": "The Morgan Library & Museum, Imaging & Rights and Application for Photography.",
+      "url": "https://www.themorgan.org/research/imaging-and-rights",
+      "alternate_urls": [
+        "https://www.themorgan.org/research/photo-application"
+      ],
+      "summary": "Official route for purchasing digital reproductions for research or publication, required request details, processing times, safety review, and prohibition on unauthorized duplication or dissemination of Morgan photography.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:morgan-photo-policy",
+      "type": "official_webpage",
+      "citation": "The Morgan Library & Museum, Digital Photography Policy.",
+      "url": "https://www.themorgan.org/research/digital-photography-policy",
+      "summary": "Permits approved personal reading-room photography for research only and prohibits third-party dissemination, publication, broadcast, or online display; publication images must be requested from Imaging & Rights.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:white-rose-record",
+      "type": "official_catalog",
+      "citation": "White Rose eTheses Online, Nora Mayer, An Edition of the Ipomedon B and C Texts, record 2161.",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/2161/",
+      "alternate_urls": [
+        "https://etheses.whiterose.ac.uk/id/eprint/2161/1/An_Edition_of_the_Ipomedon_B_and_C_Texts.pdf"
+      ],
+      "summary": "Official thesis record identifying Mayer, University of York, 2011 MPhil, complete public PDF, abstract distinguishing independently derived B and C texts, B as a 2,346-line late-fifteenth-century romance in Harley 2252, North-East Midlands linguistic evidence, and CC BY-NC-ND 2.5.",
+      "accessed_on": "2026-07-15"
+    },
+    {
+      "id": "evidence:mayer-thesis",
+      "type": "digital_surrogate",
+      "citation": "Nora Mayer, An Edition of the Ipomedon B and C Texts (University of York MPhil thesis, 2011), complete official PDF.",
+      "url": "https://etheses.whiterose.ac.uk/id/eprint/2161/1/An_Edition_of_the_Ipomedon_B_and_C_Texts.pdf",
+      "repository_path": "source-cache/Ipomydon/mayer-2011-ipomedon-b-c-thesis.pdf",
+      "locator": "abstract; introduction; B-text edition pp. 32-83; B explanatory notes pp. 131-138",
+      "summary": "Direct scholarly evidence for anonymous B responsibility, independent derivation from Hue's Anglo-Norman Ipomedon, 2,346 rhyming-couplet lines, late-fifteenth-century/North-East Midlands conclusions, plot and themes, Harley/print transmission discussion, and a later complete B edition.",
+      "accessed_on": "2026-07-15",
+      "sha256": "4ef02150502d1d456eaa47f8dbd0aead3818428769e70333aa3cd99925a563e9"
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "question:ota-chronology",
+      "question": "What original deposit or creation date should replace OTA 0658's impossible 1976 issue field?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Ask the Oxford Text Archive to inspect legacy accession logs for item 0658.",
+        "Preserve 22 April 1986 only as an embedded file-processing timestamp unless deposit documentation establishes more."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ota-current-record",
+        "evidence:ota-legacy-header",
+        "evidence:ota-payload-audit",
+        "evidence:ikegami-vol2"
+      ]
+    },
+    {
+      "id": "question:print-order",
+      "question": "Which de Worde state was printed first, what are the best current date ranges, and was either state set through the other rather than directly from Harley MS 2252?",
+      "status": "unresolved",
+      "impact": "medium",
+      "next_steps": [
+        "Consult Sánchez-Martí's complete 2005 argument and current ESTC/USTC records together with the two physical survivors.",
+        "Do not assert a print-to-print direction until bibliographical evidence resolves the conflict between the Morgan record, Mayer's summary, and Ikegami."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:morgan-print",
+        "evidence:mayer-thesis",
+        "evidence:ikegami-vol2",
+        "evidence:folger-bagford"
+      ]
+    },
+    {
+      "id": "question:harley-public-facsimile",
+      "question": "When will the British Library's existing Harley MS 2252 image object become publicly available again, and did its published inventory cover the complete physical manuscript?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Monitor the exact catalog's digitised-content status and test a provider-published image manifest when service is restored.",
+        "Use the digitisation form to request a complete color surrogate of the whole physical manuscript, naming all exterior and interior surfaces and mapping ff. 54r-84r separately.",
+        "Obtain written publication/redistribution terms before placing any supplied images in Git or print-on-demand outputs."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:bl-harley",
+        "evidence:bl-image-checks",
+        "evidence:bl-digitisation",
+        "evidence:bl-imaging-terms"
+      ]
+    },
+    {
+      "id": "question:electronic-rights-conflict",
+      "question": "How should users reconcile the legacy personal-scholarly-use condition in U-M's XML with the current OTA deposit's CC BY-NC-SA 3.0 label and protected Seijo source edition?",
+      "status": "unresolved",
+      "impact": "high",
+      "next_steps": [
+        "Ask U-M and OTA to clarify which electronic layer each statement governs and whether they had authority to license inherited editorial readings.",
+        "Keep the Seijo PDFs private and treat OTA's Creative Commons license as applying only to the digital deposit unless providers confirm broader scope."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:repo-xml",
+        "evidence:ota-current-record",
+        "evidence:ikegami-vol1",
+        "evidence:seijo-vol1-record"
+      ]
+    },
+    {
+      "id": "question:complete-print-images",
+      "question": "Can complete authorized image sets be obtained for the Bagford leaf and Morgan PML 20896.2?",
+      "status": "no_public_source_found",
+      "impact": "medium",
+      "next_steps": [
+        "Use the British Library or EEBO route for the Bagford leaf and ask which image terms apply.",
+        "Request a quote from the Morgan for every surviving page of PML 20896.2 and secure separate online/publication permission.",
+        "Keep Ikegami volume II's four selected plates labeled partial."
+      ],
+      "last_checked": "2026-07-15",
+      "evidence_ids": [
+        "evidence:ikegami-vol2",
+        "evidence:folger-bagford",
+        "evidence:morgan-print",
+        "evidence:morgan-imaging"
+      ]
+    }
+  ]
+}
