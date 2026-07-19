@@ -79,7 +79,7 @@ export function WorkCard({ work, onOpen }: WorkCardProps) {
             target={publication.isLocal ? undefined : "_blank"}
             rel={publication.isLocal ? undefined : "noopener noreferrer"}
           >
-            {publication.isLocal ? "Download PDF" : "Open PDF"}
+            Download PDF
           </a>
         ) : (
           <span className="pdf-unavailable">PDF not staged</span>

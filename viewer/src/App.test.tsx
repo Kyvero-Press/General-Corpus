@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import App from "./App";
 import type {
@@ -147,13 +147,19 @@ const detail: WorkDetailRecord = {
             resourceKind: "page_images",
             status: "publicly_available",
             accessMethod: "Public page images",
-            url: "https://example.test/holthausen",
-            alternateUrls: ["https://example.test/holthausen.pdf"],
-            contact: null,
+            url: "https://example.test/holthausen.pdf",
+            alternateUrls: [
+              "https://example.test/holthausen.pdf",
+              "https://example.test/holthausen/catalogue",
+            ],
+            contact: "images@example.test",
             cost: "free",
             format: "PDF",
             lastChecked: "2026-07-11",
-            notes: [],
+            notes: [
+              "The provider route remains useful for source comparison.",
+              "The local cache is retained for private research.",
+            ],
             localCopies: [{
               label: "Complete Holthausen PDF",
               path: "source-cache/CME00099/holthausen.pdf",
@@ -197,6 +203,22 @@ const detail: WorkDetailRecord = {
                 notes: ["The ZIP contains all manuscript canvases."],
               },
               notes: ["Includes the provider manifest and exact-source inventory."],
+              available: true,
+            }, {
+              label: "Cached reproduction policy page",
+              path: "source-cache/CME00099/reproduction-policy.html",
+              sourceUrl: "https://example.test/x90/reproduction-policy",
+              sha256: "c".repeat(64),
+              bytes: 1024,
+              sizeLabel: "1.0 KiB",
+              mediaType: "text/html",
+              downloadedOn: "2026-07-11",
+              coverage: "metadata_only",
+              retrievalMethod: "direct_download",
+              sourceFileCount: null,
+              bundleSourceKind: null,
+              workPortion: null,
+              notes: ["Cached only to document the provider's reproduction route."],
               available: true,
             }],
             rights: [],
@@ -263,6 +285,10 @@ describe("App", () => {
     );
   });
 
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
   it("browses and filters human-readable work cards", async () => {
     const user = userEvent.setup();
     render(<App />);
@@ -312,13 +338,15 @@ describe("App", () => {
     ).toBeInTheDocument();
     expect(within(dialog).getByRole("link", { name: /View page images/ })).toHaveAttribute(
       "href",
-      "https://example.test/holthausen",
+      "https://example.test/holthausen.pdf",
     );
     expect(within(dialog).getByText("Downloaded locally")).toBeInTheDocument();
     expect(
       within(dialog).getByText("Checksum-verified local copy: Complete Holthausen PDF"),
     ).toBeInTheDocument();
-    expect(within(dialog).getByRole("link", { name: /Exact file download/ })).toHaveAttribute(
+    expect(within(dialog).getByRole("link", {
+      name: /Download source file: Complete Holthausen PDF/,
+    })).toHaveAttribute(
       "href",
       "https://example.test/holthausen.pdf",
     );
@@ -337,6 +365,9 @@ describe("App", () => {
         .getAllByRole("link", { name: /Open work start/ })
         .some((link) => link.getAttribute("href") === "https://example.test/x90/image/16"),
     ).toBe(true);
+    expect(within(dialog).getByText("The cached file contains the complete manuscript.")).toBeInTheDocument();
+    expect(within(dialog).getByText("Includes the provider manifest and exact-source inventory.")).toBeInTheDocument();
+    expect(within(dialog).getByText("The local cache is retained for private research.")).toBeInTheDocument();
     await user.click(within(lineageView).getByRole("button", { name: "Table" }));
     expect(within(lineageView).getByRole("button", { name: "Table" })).toHaveAttribute(
       "aria-pressed",
@@ -366,6 +397,139 @@ describe("App", () => {
     await user.click(within(dialog).getByRole("button", { name: /Close/ }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     expect(title).toHaveFocus();
+  });
+
+  it("hides local cache details in public mode while preserving source acquisition routes", async () => {
+    vi.stubEnv("VITE_SHOW_LOCAL_SOURCE_CACHE", "false");
+    const publicDetail = structuredClone(detail);
+    for (const entity of publicDetail.lineage?.entities ?? []) {
+      for (const access of entity.access) {
+        for (const localCopy of access.localCopies) localCopy.available = false;
+      }
+    }
+    vi.mocked(fetch).mockImplementation(async (input: RequestInfo | URL) => {
+      const url = String(input);
+      if (url.includes("catalog/index.json")) return response(catalog);
+      if (url.includes("catalog/works/CME00099.json")) return response(publicDetail);
+      throw new Error(`Unexpected fetch: ${url}`);
+    });
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(await screen.findByRole("button", {
+      name: "Recipes, Blessings, and Charms from Two Stockholm Manuscripts",
+    }));
+    const dialog = await screen.findByRole("dialog", {
+      name: "Recipes, Blessings, and Charms from Two Stockholm Manuscripts",
+    });
+    const source = within(dialog).getByRole("article", {
+      name: "Holthausen’s 1897 edition",
+    });
+    const sourceView = within(source);
+
+    expect(sourceView.queryByText("Downloaded locally")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Cache files absent")).not.toBeInTheDocument();
+    expect(sourceView.queryByText(/Checksum-verified local copy/)).not.toBeInTheDocument();
+    expect(sourceView.queryByText(/Local copy recorded but absent/)).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Cache path")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Source coverage")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Retrieval")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Source files")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Bundle source")).not.toBeInTheDocument();
+    expect(sourceView.queryByText(/^Downloaded$/)).not.toBeInTheDocument();
+    expect(sourceView.queryByText("a".repeat(64))).not.toBeInTheDocument();
+    expect(sourceView.getByText("The cached file contains the complete manuscript.")).toBeInTheDocument();
+    expect(sourceView.getByText("The ZIP contains all manuscript canvases.")).toBeInTheDocument();
+    expect(sourceView.queryByText("Includes the provider manifest and exact-source inventory.")).not.toBeInTheDocument();
+    expect(sourceView.getByText("The local cache is retained for private research.")).toBeInTheDocument();
+    expect(sourceView.getByText("The provider route remains useful for source comparison.")).toBeInTheDocument();
+    expect(sourceView.queryByText("Complete Holthausen PDF")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Complete manuscript IIIF bundle")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Cached reproduction policy page")).not.toBeInTheDocument();
+    expect(sourceView.queryByText("Cached only to document the provider's reproduction route.")).not.toBeInTheDocument();
+
+    expect(sourceView.queryByRole("link", { name: /View page images/ })).not.toBeInTheDocument();
+    expect(sourceView.getByRole("link", {
+      name: /Source 1 — Download source PDF/,
+    })).toHaveAttribute(
+      "href",
+      "https://example.test/holthausen.pdf",
+    );
+    expect(sourceView.getByRole("link", { name: /Source 2 — Open IIIF manifest/ })).toHaveAttribute(
+      "href",
+      "https://example.test/x90/manifest",
+    );
+    expect(sourceView.getByRole("link", { name: /Source 3 — Open exact source/ })).toHaveAttribute(
+      "href",
+      "https://example.test/x90/reproduction-policy",
+    );
+    expect(sourceView.getByRole("link", { name: "Alternate link 1" })).toHaveAttribute(
+      "href",
+      "https://example.test/holthausen/catalogue",
+    );
+    expect(sourceView.getByRole("link", { name: "Email images@example.test" })).toHaveAttribute(
+      "href",
+      "mailto:images@example.test",
+    );
+    expect(
+      sourceView.getAllByText("Work location within source: Recipes in KB X 90"),
+    ).toHaveLength(2);
+    expect(sourceView.getAllByText("manuscript pages 12–21")).toHaveLength(2);
+    expect(
+      sourceView
+        .getAllByRole("link", { name: /Open work start/ })
+        .some((link) => link.getAttribute("href") === "https://example.test/x90/image/16"),
+    ).toBe(true);
+    expect(
+      sourceView
+        .getAllByRole("link", { name: /Open work end/ })
+        .some((link) => link.getAttribute("href") === "https://example.test/x90/image/25"),
+    ).toBe(true);
+    expect(sourceView.getByText("The 1897 edition and editorial text")).toBeInTheDocument();
+  });
+
+  it("presents external publication assets as downloads without an embedded preview", async () => {
+    const externalUrl = "https://github.com/example/corpus/releases/download/set/CME00099.pdf";
+    const externalWork: WorkCardRecord = {
+      ...catalogedWork,
+      publication: {
+        ...publication,
+        path: null,
+        externalUrl,
+      },
+    };
+    const externalCatalog: CatalogIndex = {
+      ...catalog,
+      counts: { ...catalog.counts, works: 1 },
+      works: [externalWork],
+    };
+    const externalDetail: WorkDetailRecord = { ...detail, work: externalWork };
+    vi.mocked(fetch).mockImplementation(async (input: RequestInfo | URL) => {
+      const url = String(input);
+      if (url.includes("catalog/index.json")) return response(externalCatalog);
+      if (url.includes("catalog/works/CME00099.json")) return response(externalDetail);
+      throw new Error(`Unexpected fetch: ${url}`);
+    });
+    const user = userEvent.setup();
+    render(<App />);
+
+    const cardDownload = await screen.findByRole("link", { name: "Download PDF" });
+    expect(cardDownload).toHaveAttribute("href", externalUrl);
+    expect(cardDownload).not.toHaveAttribute("download");
+    await user.click(screen.getByRole("button", {
+      name: "Recipes, Blessings, and Charms from Two Stockholm Manuscripts",
+    }));
+
+    const dialog = await screen.findByRole("dialog", {
+      name: "Recipes, Blessings, and Charms from Two Stockholm Manuscripts",
+    });
+    expect(within(dialog).getByRole("link", { name: "Download PDF" })).toHaveAttribute(
+      "href",
+      externalUrl,
+    );
+    expect(within(dialog).queryByRole("link", { name: "Open in new tab" })).not.toBeInTheDocument();
+    expect(within(dialog).queryByRole("button", { name: "Preview here" })).not.toBeInTheDocument();
+    expect(within(dialog).queryByTitle(/PDF preview/)).not.toBeInTheDocument();
   });
 
   it("keeps mobile filters modal and restores the trigger on Escape", async () => {

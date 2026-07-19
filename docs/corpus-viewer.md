@@ -37,10 +37,18 @@ work is still pending. The generator writes:
 For every lineage access route with `local_copies`, the normalized work record
 also reports whether each ignored `source-cache/<work_id>/…` file is present
 and checksum-valid in the checkout that built the catalog. The work detail UI
-shows that status, the cache path and checksum, and the exact upstream file
-URL. For an IIIF bundle it also identifies the retrieval method, captured
-image count, bundle source kind, and exact Presentation-manifest or official
-whole-facsimile source URL. When a complete manuscript
+shows that local status, cache path, and checksum by default. Set
+`VITE_SHOW_LOCAL_SOURCE_CACHE=false` at Vite build time to hide checkout-local
+cache state while retaining the exact upstream download, IIIF, and work-locus
+links. The GitHub Pages build uses this public presentation through
+`viewer/.env.pages`; ordinary local development keeps the cache details
+visible. Public mode groups duplicate upstream URLs, hides the local-copy
+records and their notes, and uses neutral source-link labels rather than cached
+copy labels. Access and work-locus notes remain verbatim because an individual
+note can combine acquisition context with rights, uncertainty, or boundary
+evidence. For an IIIF bundle the local view also identifies the retrieval
+method, captured image count, bundle source kind, and exact Presentation-
+manifest or official whole-facsimile source URL. When a complete manuscript
 contains only one portion relevant to the current work, the viewer separately
 shows the physical and digital locators and any start/end deep links recorded
 in `work_portion`. Cached research sources are deliberately not copied into
@@ -110,7 +118,11 @@ content is ignored by Git and should be recreated from the manifests and
 canonical PDFs.
 
 The lower-level package commands are `npm run catalog` for data without copied
-PDFs and `npm run catalog:assets` for data plus copied PDFs.
+PDFs and `npm run catalog:assets` for data plus copied PDFs. The deployment-only
+commands are `npm run catalog:pages` and `npm run build:pages`. They require
+`PUBLICATION_PDF_BASE_URL`, validate the complete local `dist/` set against the
+tracked publication inventory, write external PDF links, and build Vite in
+`pages` mode without copying publication PDFs.
 
 ## Joining works to publications
 
@@ -175,26 +187,100 @@ generated catalog and the staged `publication-pdfs/` directory. The Vite base
 path is relative, so the site can be hosted below a domain subpath as long as
 the whole directory is kept together.
 
-For externally hosted PDFs, generate the catalog with
-`--external-pdf-base-url`, then build the already-prepared public tree without
-running the package's catalog-rebuilding `build` wrapper:
+The public deployment is available at
+[https://kyvero-press.github.io/General-Corpus/](https://kyvero-press.github.io/General-Corpus/).
+It uses the same React application as local development, but its `pages` Vite
+mode loads `viewer/.env.pages` and hides checkout-local source-cache status.
+Upstream source-download and manuscript-location links remain visible.
 
-```bash
-python3 scripts/build-corpus-viewer-catalog.py \
-  --require-pdfs \
-  --publication-inventory manifests/publication-set/viewer-default.json \
-  --external-pdf-base-url https://downloads.example.org/general-corpus
-cd viewer
-npm run typecheck
-npm exec vite build
+### Publication PDF releases
+
+Canonical PDFs are hosted as individual assets on a dated GitHub Release. The
+release tag is derived exactly from the tracked publication snapshot:
+
+```text
+publication-set-<viewer-default snapshot_date>
 ```
 
-Deploy `build/corpus-viewer/site/` only after verifying several work pages,
-source links, and PDF downloads. There is currently no repository CI or hosting
-configuration that publishes the viewer automatically. Because `dist/` and
-`build/` are intentionally untracked, a deployment job must either obtain the
-approved publication PDFs as an artifact, build them through the documented
-publication workflow, or use an external PDF host. The viewer generator does
-not verify remote objects in external-PDF mode, so a release operator must
-sample hosted downloads and confirm that deployment preserves the locally
-validated filenames and hashes.
+For example, snapshot date `2026-07-11` resolves to release tag
+`publication-set-2026-07-11` and PDF base URL
+`https://github.com/Kyvero-Press/General-Corpus/releases/download/publication-set-2026-07-11`.
+The URL is stable because a published snapshot is never replaced or uploaded
+with `--clobber`, and repository release immutability locks its tag and assets
+at publication. A newly approved publication set receives a new snapshot date
+and release.
+
+After completing the
+[fail-closed corpus refresh](architecture.md#fail-closed-corpus-refresh-contract),
+refreshing `viewer-default.json`, and committing and pushing the approved
+snapshot, create its release from the validated top-level `dist/` files. Enable
+immutable releases before publishing the repository's first snapshot; the
+setting is idempotent and remains enabled for later snapshots.
+
+```bash
+snapshot_date="$(python3 -c 'import json; print(json.load(open("manifests/publication-set/viewer-default.json", encoding="utf-8"))["snapshot_date"])')"
+release_tag="publication-set-$snapshot_date"
+pdf_base_url="https://github.com/Kyvero-Press/General-Corpus/releases/download/$release_tag"
+
+cd viewer
+PUBLICATION_PDF_BASE_URL="$pdf_base_url" npm run catalog:pages
+cd ..
+
+gh api --method PUT repos/Kyvero-Press/General-Corpus/immutable-releases
+gh release create "$release_tag" dist/*.pdf \
+  --repo Kyvero-Press/General-Corpus \
+  --target main \
+  --title "General Corpus publication set $snapshot_date" \
+  --notes "Canonical PDFs validated against manifests/publication-set/viewer-default.json." \
+  --latest=false
+```
+
+Every approved PDF is a separate release asset, so the viewer can link directly
+to one book without making readers retrieve the whole corpus. If the snapshot
+commit triggered Pages before its release was available, publish the immutable
+release and rerun the workflow with:
+
+```bash
+gh workflow run pages.yml --repo Kyvero-Press/General-Corpus --ref main
+```
+
+### Pages workflow
+
+The Pages workflow derives the same tag and base URL from
+`manifests/publication-set/viewer-default.json`, downloads every release PDF
+into the runner's ignored `dist/`, and runs:
+
+```bash
+cd viewer
+PUBLICATION_PDF_BASE_URL="$pdf_base_url" npm run build:pages
+```
+
+`catalog:pages` requires every indexed work to have a PDF and verifies the
+downloaded release set's complete filename list, SHA-256 digests, byte counts,
+and page counts against the tracked snapshot before emitting any external
+links. `build:pages` then type-checks the application and builds the already
+prepared catalog without copying `publication-pdfs/` into the Pages artifact.
+The workflow runs the viewer tests, refuses draft or mutable releases, and fails
+if that directory appears. Only the deployment job receives Pages write and
+identity permissions; the build job has read-only repository access and retains
+no Git credentials after checkout.
+
+CI deliberately never regenerates canonical PDFs. `dist/` can be replaced only
+through the reviewed fail-closed publication procedure, and the repository has
+no maintained turnkey batch command that can safely reproduce that decision.
+The Pages runner therefore consumes the already approved release artifacts and
+uses the tracked inventory as its integrity boundary.
+
+Enable the workflow publishing source once, then dispatch the workflow:
+
+```bash
+gh api --method POST repos/Kyvero-Press/General-Corpus/pages \
+  -f build_type=workflow
+gh workflow run pages.yml --repo Kyvero-Press/General-Corpus --ref main
+```
+
+After deployment, verify several work records, upstream source links, and PDF
+release downloads at the live URL. The external-PDF generator validates the
+local release copies used for the build; it does not make a second HTTP request
+to each emitted release URL, so this final live smoke test remains part of the
+release procedure.

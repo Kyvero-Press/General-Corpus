@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { assetUrl, publicationLink, safeExternalHttpUrl } from "../catalog";
+import { showLocalSourceCache } from "../features";
 import { humanizeToken } from "../filters";
 import { duplicateEntityLabelIds, partitionLineageRelations } from "../lineage";
 import { LineageDiagram } from "./LineageDiagram";
@@ -10,9 +11,11 @@ import type {
   LineageEntity,
   LineageRelation,
   LineageRelationClassification,
+  LocalCopyRecord,
   MetadataStatement,
   RightRecord,
   WorkDetailRecord,
+  WorkPortionRecord,
   QuestionRecord,
 } from "../types";
 
@@ -122,8 +125,101 @@ function accessActionLabel(access: AccessRecord): string {
   return "Open access record";
 }
 
+function localCopyActionLabel(localCopy: LocalCopyRecord): string {
+  const action =
+    localCopy.retrievalMethod !== "iiif_bundle"
+      ? "Download source file"
+      : localCopy.bundleSourceKind === "image_url_inventory"
+        ? "Complete IIIF source record"
+        : "Exact IIIF manifest";
+  return `${action}: ${localCopy.label}`;
+}
+
+function WorkPortion({
+  workPortion,
+}: {
+  workPortion: WorkPortionRecord;
+}) {
+  return (
+    <div className="work-portion">
+      <strong>Work location within source: {workPortion.label}</strong>
+      <ul className="compact-notes">
+        {workPortion.locators.map((locator) => (
+          <li key={locator}>{locator}</li>
+        ))}
+      </ul>
+      {(workPortion.startUrl || workPortion.endUrl) && (
+        <div className="work-portion-actions">
+          {workPortion.startUrl && (
+            <ExternalLink href={workPortion.startUrl}>Open work start</ExternalLink>
+          )}
+          {workPortion.endUrl && (
+            <ExternalLink href={workPortion.endUrl}>Open work end</ExternalLink>
+          )}
+        </div>
+      )}
+      <Notes notes={workPortion.notes} />
+    </div>
+  );
+}
+
+interface PublicSourceGroup {
+  sourceUrl: string;
+  localCopies: LocalCopyRecord[];
+}
+
+function groupPublicSources(localCopies: LocalCopyRecord[]): PublicSourceGroup[] {
+  const groups = new Map<string, LocalCopyRecord[]>();
+  for (const localCopy of localCopies) {
+    const group = groups.get(localCopy.sourceUrl);
+    if (group) group.push(localCopy);
+    else groups.set(localCopy.sourceUrl, [localCopy]);
+  }
+  return [...groups].map(([sourceUrl, copies]) => ({ sourceUrl, localCopies: copies }));
+}
+
+function publicSourceActionLabel(source: PublicSourceGroup, access: AccessRecord): string {
+  const bundle = source.localCopies.find((copy) => copy.retrievalMethod === "iiif_bundle");
+  if (bundle) {
+    return bundle.bundleSourceKind === "image_url_inventory"
+      ? "Open complete IIIF source record"
+      : "Open IIIF manifest";
+  }
+  const mediaTypes = new Set(source.localCopies.map((copy) => copy.mediaType));
+  if (mediaTypes.has("application/pdf")) return "Download source PDF";
+  if (mediaTypes.has("application/zip")) return "Download source archive";
+  if ([...mediaTypes].some((mediaType) => mediaType.startsWith("image/"))) {
+    return "Open source image";
+  }
+  if (source.sourceUrl === access.url) return accessActionLabel(access);
+  return "Open exact source";
+}
+
+function uniqueWorkPortions(localCopies: LocalCopyRecord[]): WorkPortionRecord[] {
+  const portions = new Map<string, WorkPortionRecord>();
+  for (const { workPortion } of localCopies) {
+    if (!workPortion) continue;
+    const key = JSON.stringify(workPortion);
+    if (!portions.has(key)) portions.set(key, workPortion);
+  }
+  return [...portions.values()];
+}
+
 function AccessCard({ access }: { access: AccessRecord }) {
+  const showCache = showLocalSourceCache();
   const availableCopies = access.localCopies.filter((copy) => copy.available).length;
+  const publicSources = groupPublicSources(access.localCopies);
+  const sourceUrls = new Set(publicSources.map((source) => source.sourceUrl));
+  const accessUrl = access.url && (showCache || !sourceUrls.has(access.url))
+    ? access.url
+    : null;
+  const seenActionUrls = new Set(sourceUrls);
+  if (accessUrl) seenActionUrls.add(accessUrl);
+  const alternateUrls = access.alternateUrls.filter((url) => {
+    if (seenActionUrls.has(url)) return false;
+    seenActionUrls.add(url);
+    return true;
+  });
   return (
     <article className="access-card">
       <div className="access-card-heading">
@@ -133,7 +229,7 @@ function AccessCard({ access }: { access: AccessRecord }) {
         </div>
         <div className="access-statuses">
           <StatusBadge value={access.status} />
-          {access.localCopies.length > 0 && (
+          {showCache && access.localCopies.length > 0 && (
             <StatusBadge
               value={
                 availableCopies === access.localCopies.length
@@ -167,94 +263,86 @@ function AccessCard({ access }: { access: AccessRecord }) {
           </div>
         )}
       </dl>
-      {access.localCopies.map((localCopy) => (
-        <div
-          className={`local-copy ${localCopy.available ? "is-available" : "is-absent"}`}
-          key={localCopy.path}
-        >
-          <strong>
-            {localCopy.available
-              ? `Checksum-verified local copy: ${localCopy.label}`
-              : `Local copy recorded but absent: ${localCopy.label}`}
-          </strong>
-          <dl>
-            <div>
-              <dt>Cache path</dt>
-              <dd><code>{localCopy.path}</code></dd>
-            </div>
-            <div>
-              <dt>File</dt>
-              <dd>{localCopy.sizeLabel ?? `${localCopy.bytes} bytes`} · {localCopy.mediaType}</dd>
-            </div>
-            <div>
-              <dt>Source coverage</dt>
-              <dd>{humanizeToken(localCopy.coverage)}</dd>
-            </div>
-            <div>
-              <dt>Retrieval</dt>
-              <dd>{humanizeToken(localCopy.retrievalMethod)}</dd>
-            </div>
-            {localCopy.sourceFileCount && (
+      {access.localCopies.map((localCopy) =>
+        showCache ? (
+          <div
+            className={`local-copy ${localCopy.available ? "is-available" : "is-absent"}`}
+            key={localCopy.path}
+          >
+            <strong>
+              {localCopy.available
+                ? `Checksum-verified local copy: ${localCopy.label}`
+                : `Local copy recorded but absent: ${localCopy.label}`}
+            </strong>
+            <dl>
               <div>
-                <dt>Source files</dt>
-                <dd>{localCopy.sourceFileCount.toLocaleString()}</dd>
+                <dt>Cache path</dt>
+                <dd><code>{localCopy.path}</code></dd>
               </div>
-            )}
-            {localCopy.bundleSourceKind && (
               <div>
-                <dt>Bundle source</dt>
-                <dd>{humanizeToken(localCopy.bundleSourceKind)}</dd>
+                <dt>File</dt>
+                <dd>{localCopy.sizeLabel ?? `${localCopy.bytes} bytes`} · {localCopy.mediaType}</dd>
               </div>
-            )}
-            <div>
-              <dt>Downloaded</dt>
-              <dd>{localCopy.downloadedOn}</dd>
-            </div>
-            <div>
-              <dt>SHA-256</dt>
-              <dd><code>{localCopy.sha256}</code></dd>
-            </div>
-          </dl>
-          {localCopy.workPortion && (
-            <div className="work-portion">
-              <strong>Work location within source: {localCopy.workPortion.label}</strong>
-              <ul className="compact-notes">
-                {localCopy.workPortion.locators.map((locator) => (
-                  <li key={locator}>{locator}</li>
-                ))}
-              </ul>
-              {(localCopy.workPortion.startUrl || localCopy.workPortion.endUrl) && (
-                <div className="work-portion-actions">
-                  {localCopy.workPortion.startUrl && (
-                    <ExternalLink href={localCopy.workPortion.startUrl}>Open work start</ExternalLink>
-                  )}
-                  {localCopy.workPortion.endUrl && (
-                    <ExternalLink href={localCopy.workPortion.endUrl}>Open work end</ExternalLink>
-                  )}
+              <div>
+                <dt>Source coverage</dt>
+                <dd>{humanizeToken(localCopy.coverage)}</dd>
+              </div>
+              <div>
+                <dt>Retrieval</dt>
+                <dd>{humanizeToken(localCopy.retrievalMethod)}</dd>
+              </div>
+              {localCopy.sourceFileCount && (
+                <div>
+                  <dt>Source files</dt>
+                  <dd>{localCopy.sourceFileCount.toLocaleString()}</dd>
                 </div>
               )}
-              <Notes notes={localCopy.workPortion.notes} />
+              {localCopy.bundleSourceKind && (
+                <div>
+                  <dt>Bundle source</dt>
+                  <dd>{humanizeToken(localCopy.bundleSourceKind)}</dd>
+                </div>
+              )}
+              <div>
+                <dt>Downloaded</dt>
+                <dd>{localCopy.downloadedOn}</dd>
+              </div>
+              <div>
+                <dt>SHA-256</dt>
+                <dd><code>{localCopy.sha256}</code></dd>
+              </div>
+            </dl>
+            {localCopy.workPortion && <WorkPortion workPortion={localCopy.workPortion} />}
+            <div className="local-copy-action">
+              <ExternalLink href={localCopy.sourceUrl}>
+                {localCopyActionLabel(localCopy)}
+              </ExternalLink>
             </div>
-          )}
-          <div className="local-copy-action">
-            <ExternalLink href={localCopy.sourceUrl}>
-              {localCopy.retrievalMethod === "iiif_bundle"
-                ? localCopy.bundleSourceKind === "image_url_inventory"
-                  ? "Complete IIIF source record"
-                  : "Exact IIIF manifest"
-                : "Exact file download"}
+            <Notes notes={localCopy.notes} />
+          </div>
+        ) : null,
+      )}
+      {!showCache && publicSources.map((source, index) => (
+        <div className="source-acquisition" key={source.sourceUrl}>
+          <div className="access-actions">
+            <ExternalLink href={source.sourceUrl}>
+              {publicSources.length > 1 ? `Source ${index + 1} — ` : ""}
+              {publicSourceActionLabel(source, access)}
             </ExternalLink>
           </div>
-          <Notes notes={localCopy.notes} />
+          {uniqueWorkPortions(source.localCopies).map((workPortion) => (
+            <WorkPortion
+              key={JSON.stringify(workPortion)}
+              workPortion={workPortion}
+            />
+          ))}
         </div>
       ))}
       <div className="access-actions">
-        {access.url && (
-          <ExternalLink href={access.url}>{accessActionLabel(access)}</ExternalLink>
+        {accessUrl && (
+          <ExternalLink href={accessUrl}>{accessActionLabel(access)}</ExternalLink>
         )}
-        {access.alternateUrls.filter(
-          (url) => !access.localCopies.some((copy) => copy.sourceUrl === url),
-        ).map((url, index) => (
+        {alternateUrls.map((url, index) => (
           <ExternalLink href={url} key={url}>
             Alternate link {index + 1}
           </ExternalLink>
@@ -728,25 +816,29 @@ function PublicationSection({ detail }: { detail: WorkDetailRecord }) {
               target={link.isLocal ? undefined : "_blank"}
               rel={link.isLocal ? undefined : "noopener noreferrer"}
             >
-              {link.isLocal ? "Download PDF" : "Open hosted PDF"}
+              Download PDF
             </a>
-            <a
-              className="button button-secondary"
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in new tab
-            </a>
-            <button
-              className="button button-secondary"
-              type="button"
-              aria-expanded={preview}
-              aria-controls={previewId}
-              onClick={() => setPreview((value) => !value)}
-            >
-              {preview ? "Hide preview" : "Preview here"}
-            </button>
+            {link.isLocal && (
+              <>
+                <a
+                  className="button button-secondary"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open in new tab
+                </a>
+                <button
+                  className="button button-secondary"
+                  type="button"
+                  aria-expanded={preview}
+                  aria-controls={previewId}
+                  onClick={() => setPreview((value) => !value)}
+                >
+                  {preview ? "Hide preview" : "Preview here"}
+                </button>
+              </>
+            )}
           </div>
           <dl className="pdf-facts">
             <div>
@@ -775,7 +867,7 @@ function PublicationSection({ detail }: { detail: WorkDetailRecord }) {
               </div>
             )}
           </dl>
-          {preview && (
+          {link.isLocal && preview && (
             <div className="pdf-preview" id={previewId}>
               <p>
                 If this browser or an external host blocks the embedded preview, use “Open in new tab” above.
