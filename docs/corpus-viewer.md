@@ -261,9 +261,15 @@ and page counts against the tracked snapshot before emitting any external
 links. `build:pages` then type-checks the application and builds the already
 prepared catalog without copying `publication-pdfs/` into the Pages artifact.
 The workflow runs the viewer tests, refuses draft or mutable releases, and fails
-if that directory appears. Only the deployment job receives Pages write and
-identity permissions; the build job has read-only repository access and retains
-no Git credentials after checkout.
+if that directory appears. It passes the static site to a separate deployment
+job through a one-day Actions artifact. That job alone receives repository write
+and Pages-build access, updates the `gh-pages` branch, and explicitly requests a
+Pages build after every successful branch sync. The explicit request is
+necessary because a branch push made with the workflow's `GITHUB_TOKEN` does
+not itself trigger another workflow. Making the request unconditional also lets
+a rerun recover when the branch update succeeded but the build request did not.
+The build job has read-only repository access and retains no Git credentials
+after checkout.
 
 CI deliberately never regenerates canonical PDFs. `dist/` can be replaced only
 through the reviewed fail-closed publication procedure, and the repository has
@@ -271,11 +277,14 @@ no maintained turnkey batch command that can safely reproduce that decision.
 The Pages runner therefore consumes the already approved release artifacts and
 uses the tracked inventory as its integrity boundary.
 
-Enable the workflow publishing source once, then dispatch the workflow:
+Configure Pages to publish the deployment branch once, then dispatch the
+workflow:
 
 ```bash
-gh api --method POST repos/Kyvero-Press/General-Corpus/pages \
-  -f build_type=workflow
+gh api --method PUT repos/Kyvero-Press/General-Corpus/pages \
+  -f build_type=legacy \
+  -f 'source[branch]=gh-pages' \
+  -f 'source[path]=/'
 gh workflow run pages.yml --repo Kyvero-Press/General-Corpus --ref main
 ```
 
