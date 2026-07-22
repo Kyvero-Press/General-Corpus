@@ -255,6 +255,35 @@ def fake_pdfinfo() -> mock._patch:
 
 
 class CorpusViewerCatalogTests(unittest.TestCase):
+    def test_pages_cache_policy_is_explicit_and_propagated(self) -> None:
+        args = build_corpus_viewer_catalog._parser().parse_args(
+            ["--allow-missing-source-cache"]
+        )
+        self.assertTrue(args.allow_missing_source_cache)
+
+        package = json.loads((REPO_ROOT / "viewer/package.json").read_text(encoding="utf-8"))
+        self.assertIn("--allow-missing-source-cache", package["scripts"]["catalog:pages"])
+        self.assertNotIn("--allow-missing-source-cache", package["scripts"]["catalog"])
+        self.assertNotIn("--allow-missing-source-cache", package["scripts"]["build"])
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fixture = CatalogFixture(Path(temp_dir))
+            with mock.patch.object(
+                build_corpus_viewer_catalog,
+                "validate_manifests",
+            ) as validate:
+                build_corpus_viewer_catalog.build_catalog(
+                    fixture.root,
+                    pdf_root=fixture.pdf_root,
+                    output_root=fixture.root / "build" / "viewer",
+                    include_pdf_only=False,
+                    allow_missing_source_cache=True,
+                )
+            validate.assert_called_once_with(
+                fixture.root.resolve(),
+                allow_missing_source_cache=True,
+            )
+
     def test_exact_work_id_joins_metadata_lineage_and_canonical_pdf(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir, fake_pdfinfo():
             fixture = CatalogFixture(Path(temp_dir))

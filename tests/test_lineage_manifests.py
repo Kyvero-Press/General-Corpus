@@ -22,6 +22,95 @@ class LineageManifestTests(unittest.TestCase):
     def test_committed_lineage_repository_validates(self) -> None:
         self.assertEqual([], validate_lineage_manifests.validate_repository(REPO_ROOT))
 
+    def test_missing_source_cache_policy_is_narrow_and_checks_present_files(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest_path = root / "manifests/lineage/works/TestWork.json"
+            evidence = {
+                "id": "evidence:test",
+                "repository_path": "source-cache/TestWork/source.pdf",
+                "sha256": "0" * 64,
+            }
+            manifest = {
+                "id": "lineage:TestWork",
+                "work_id": "TestWork",
+                "entities": [],
+                "agents": [],
+                "relations": [],
+                "access": [],
+                "rights": [],
+                "editorial_practices": [],
+                "evidence": [evidence],
+                "open_questions": [],
+            }
+
+            strict_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+            )
+            self.assertTrue(any("repository file does not exist" in item for item in strict_errors))
+
+            pages_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=True,
+            )
+            self.assertEqual([], pages_errors)
+
+            evidence["repository_path"] = "CME/source/missing.xml"
+            tracked_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=True,
+            )
+            self.assertTrue(any("repository file does not exist" in item for item in tracked_errors))
+
+            evidence["repository_path"] = "source-cache/../outside.pdf"
+            traversal_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=True,
+            )
+            self.assertTrue(any("repository file does not exist" in item for item in traversal_errors))
+
+            for cache_root_path in ("source-cache", "source-cache/TestWork/.."):
+                evidence["repository_path"] = cache_root_path
+                cache_root_errors = validate_lineage_manifests._semantic_manifest_errors(
+                    root,
+                    manifest_path,
+                    manifest,
+                    allow_missing_source_cache=True,
+                )
+                self.assertTrue(
+                    any("repository file does not exist" in item for item in cache_root_errors)
+                )
+
+            evidence["repository_path"] = "source-cache/TestWork/source.pdf"
+            cached = root / evidence["repository_path"]
+            cached.parent.mkdir(parents=True)
+            cached.write_bytes(b"%PDF-1.7\nfixture\n%%EOF\n")
+            checksum_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=True,
+            )
+            self.assertTrue(any("checksum mismatch" in item for item in checksum_errors))
+
+            cached.unlink()
+            cached.mkdir()
+            directory_errors = validate_lineage_manifests._semantic_manifest_errors(
+                root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=True,
+            )
+            self.assertTrue(any("repository file does not exist" in item for item in directory_errors))
+
     def test_unresolved_relation_endpoint_is_rejected(self) -> None:
         path = REPO_ROOT / "manifests" / "lineage" / "works" / "CME00099.json"
         manifest = json.loads(path.read_text(encoding="utf-8"))

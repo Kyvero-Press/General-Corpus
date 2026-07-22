@@ -252,7 +252,13 @@ def _check_extent_totals(manifest: dict[str, Any], location: str, errors: list[s
                     )
 
 
-def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, Any]) -> list[str]:
+def _semantic_manifest_errors(
+    repo_root: Path,
+    path: Path,
+    manifest: dict[str, Any],
+    *,
+    allow_missing_source_cache: bool = False,
+) -> list[str]:
     errors: list[str] = []
     location = str(path.relative_to(repo_root))
     work_id = manifest.get("work_id")
@@ -548,6 +554,7 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 evidence.get("repository_path"),
                 f"{item_location}.repository_path",
                 errors,
+                allow_missing_source_cache=allow_missing_source_cache,
             )
             if evidence_path is not None:
                 expected_sha = evidence.get("sha256")
@@ -581,7 +588,11 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
     return errors
 
 
-def validate_repository(repo_root: Path) -> list[str]:
+def validate_repository(
+    repo_root: Path,
+    *,
+    allow_missing_source_cache: bool = False,
+) -> list[str]:
     repo_root = repo_root.resolve()
     errors: list[str] = []
     index_schema = _SCHEMA_SUPPORT._load_json(repo_root / INDEX_SCHEMA_PATH, errors)
@@ -643,7 +654,14 @@ def validate_repository(repo_root: Path) -> list[str]:
                 manifest, manifest_schema, manifest_schema, manifest_location
             )
         )
-        errors.extend(_semantic_manifest_errors(repo_root, manifest_path, manifest))
+        errors.extend(
+            _semantic_manifest_errors(
+                repo_root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=allow_missing_source_cache,
+            )
+        )
 
         summary = manifest.get("catalog_summary", {})
         subject = manifest.get("cataloging_subject", {})
@@ -693,12 +711,23 @@ def _parser() -> argparse.ArgumentParser:
         default=Path(__file__).resolve().parents[1],
         help="repository root (defaults to the parent of scripts/)",
     )
+    parser.add_argument(
+        "--allow-missing-source-cache",
+        action="store_true",
+        help=(
+            "allow absent evidence files only when they resolve inside the "
+            "gitignored source-cache directory"
+        ),
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
-    errors = validate_repository(args.root)
+    errors = validate_repository(
+        args.root,
+        allow_missing_source_cache=args.allow_missing_source_cache,
+    )
     if errors:
         for item in errors:
             print(f"ERROR: {item}", file=sys.stderr)

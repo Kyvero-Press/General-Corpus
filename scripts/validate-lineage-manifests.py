@@ -176,7 +176,14 @@ def _schema_errors(
     return errors
 
 
-def _safe_repo_file(repo_root: Path, raw_path: Any, location: str, errors: list[str]) -> Path | None:
+def _safe_repo_file(
+    repo_root: Path,
+    raw_path: Any,
+    location: str,
+    errors: list[str],
+    *,
+    allow_missing_source_cache: bool = False,
+) -> Path | None:
     if not isinstance(raw_path, str) or not raw_path:
         errors.append(f"{location}: repository path must be a non-empty string")
         return None
@@ -191,6 +198,22 @@ def _safe_repo_file(repo_root: Path, raw_path: Any, location: str, errors: list[
     except ValueError:
         errors.append(f"{location}: repository path escapes the repository: {raw_path!r}")
         return None
+    if resolved.is_file():
+        return resolved
+    if (
+        allow_missing_source_cache
+        and not resolved.exists()
+        and path.parts
+        and path.parts[0] == SOURCE_CACHE_DIR.name
+    ):
+        resolved_cache = (repo_root / SOURCE_CACHE_DIR).resolve()
+        try:
+            cache_relative = resolved.relative_to(resolved_cache)
+        except ValueError:
+            pass
+        else:
+            if cache_relative.parts:
+                return None
     if not resolved.is_file():
         errors.append(f"{location}: repository file does not exist: {raw_path!r}")
         return None
@@ -395,7 +418,13 @@ def _validate_xml_work_id(
     )
 
 
-def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, Any]) -> list[str]:
+def _semantic_manifest_errors(
+    repo_root: Path,
+    path: Path,
+    manifest: dict[str, Any],
+    *,
+    allow_missing_source_cache: bool = False,
+) -> list[str]:
     errors: list[str] = []
     location = str(path.relative_to(repo_root))
     work_id = manifest.get("work_id")
@@ -501,6 +530,7 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 repository_file.get("path"),
                 f"{item_location}.repository_file.path",
                 errors,
+                allow_missing_source_cache=allow_missing_source_cache,
             )
             if file_path is not None:
                 expected_sha = repository_file.get("sha256")
@@ -662,7 +692,13 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
             _check_agent_ref(access.get("provider_id"), agent_ids, f"{item_location}.provider_id", errors)
         _check_evidence_refs(access.get("evidence_ids"), evidence_ids, f"{item_location}.evidence_ids", errors)
         if "repository_path" in access:
-            _safe_repo_file(repo_root, access.get("repository_path"), f"{item_location}.repository_path", errors)
+            _safe_repo_file(
+                repo_root,
+                access.get("repository_path"),
+                f"{item_location}.repository_path",
+                errors,
+                allow_missing_source_cache=allow_missing_source_cache,
+            )
         local_copies = access.get("local_copies", [])
         if isinstance(local_copies, list):
             alternate_urls = access.get("alternate_urls", [])
@@ -765,6 +801,7 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
                 evidence.get("repository_path"),
                 f"{item_location}.repository_path",
                 errors,
+                allow_missing_source_cache=allow_missing_source_cache,
             )
             if file_path is not None and isinstance(evidence.get("sha256"), str):
                 if _sha256(file_path) != evidence["sha256"]:
@@ -779,7 +816,11 @@ def _semantic_manifest_errors(repo_root: Path, path: Path, manifest: dict[str, A
     return errors
 
 
-def validate_repository(repo_root: Path) -> list[str]:
+def validate_repository(
+    repo_root: Path,
+    *,
+    allow_missing_source_cache: bool = False,
+) -> list[str]:
     repo_root = repo_root.resolve()
     errors: list[str] = []
     index_schema = _load_json(repo_root / INDEX_SCHEMA_PATH, errors)
@@ -836,7 +877,14 @@ def validate_repository(repo_root: Path) -> list[str]:
             continue
         manifest_location = str(manifest_path.relative_to(repo_root))
         errors.extend(_schema_errors(manifest, manifest_schema, manifest_schema, manifest_location))
-        errors.extend(_semantic_manifest_errors(repo_root, manifest_path, manifest))
+        errors.extend(
+            _semantic_manifest_errors(
+                repo_root,
+                manifest_path,
+                manifest,
+                allow_missing_source_cache=allow_missing_source_cache,
+            )
+        )
 
         for key in ("id", "work_id", "title", "record_status", "last_reviewed"):
             if item.get(key) != manifest.get(key):
@@ -855,7 +903,13 @@ def validate_repository(repo_root: Path) -> list[str]:
         }
         entity_paths.discard(None)
         for repository_path in repository_paths:
-            _safe_repo_file(repo_root, repository_path, f"{item_location}.repository_paths", errors)
+            _safe_repo_file(
+                repo_root,
+                repository_path,
+                f"{item_location}.repository_paths",
+                errors,
+                allow_missing_source_cache=allow_missing_source_cache,
+            )
             if repository_path not in entity_paths:
                 errors.append(
                     f"{item_location}.repository_paths: {repository_path!r} is not represented "
@@ -873,12 +927,23 @@ def _parser() -> argparse.ArgumentParser:
         default=Path(__file__).resolve().parents[1],
         help="repository root (defaults to the parent of scripts/)",
     )
+    parser.add_argument(
+        "--allow-missing-source-cache",
+        action="store_true",
+        help=(
+            "allow absent repository_path files only when they resolve inside the "
+            "gitignored source-cache directory"
+        ),
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
-    errors = validate_repository(args.root)
+    errors = validate_repository(
+        args.root,
+        allow_missing_source_cache=args.allow_missing_source_cache,
+    )
     if errors:
         for item in errors:
             print(f"ERROR: {item}", file=sys.stderr)

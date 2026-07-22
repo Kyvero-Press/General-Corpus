@@ -29,6 +29,37 @@ class WorkMetadataManifestTests(unittest.TestCase):
     def test_committed_work_metadata_repository_validates(self) -> None:
         self.assertEqual([], validate_work_metadata_manifests.validate_repository(REPO_ROOT))
 
+    def test_missing_source_cache_policy_does_not_relax_tracked_evidence(self) -> None:
+        changed = copy.deepcopy(self.manifest)
+        changed["evidence"][0]["repository_path"] = (
+            "source-cache/CME00099/missing-pages-fixture.pdf"
+        )
+        changed["evidence"][0]["sha256"] = "0" * 64
+
+        strict_errors = validate_work_metadata_manifests._semantic_manifest_errors(
+            REPO_ROOT,
+            self.path,
+            changed,
+        )
+        self.assertTrue(any("repository file does not exist" in item for item in strict_errors))
+
+        pages_errors = validate_work_metadata_manifests._semantic_manifest_errors(
+            REPO_ROOT,
+            self.path,
+            changed,
+            allow_missing_source_cache=True,
+        )
+        self.assertFalse(any("repository file does not exist" in item for item in pages_errors))
+
+        changed["evidence"][0]["repository_path"] = "CME/source/missing-fixture.xml"
+        tracked_errors = validate_work_metadata_manifests._semantic_manifest_errors(
+            REPO_ROOT,
+            self.path,
+            changed,
+            allow_missing_source_cache=True,
+        )
+        self.assertTrue(any("repository file does not exist" in item for item in tracked_errors))
+
     def test_unresolved_scope_part_is_rejected(self) -> None:
         changed = copy.deepcopy(self.manifest)
         changed["responsibilities"][0]["scope"]["part_ids"] = ["part:missing"]

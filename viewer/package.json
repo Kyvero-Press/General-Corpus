@@ -7,7 +7,7 @@
   "scripts": {
     "catalog": "python3 ../scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public",
     "catalog:assets": "python3 ../scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public --copy-pdfs",
-    "catalog:pages": "python3 ../scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public --require-pdfs --publication-inventory manifests/publication-set/viewer-default.json --external-pdf-base-url \"$PUBLICATION_PDF_BASE_URL\"",
+    "catalog:pages": "python3 ../scripts/build-corpus-viewer-catalog.py --output-root build/corpus-viewer/public --require-pdfs --publication-inventory manifests/publication-set/viewer-default.json --external-pdf-base-url \"$PUBLICATION_PDF_BASE_URL\" --allow-missing-source-cache",
     "dev": "npm run catalog && vite",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
     "test": "vitest run",

@@ -52,7 +52,11 @@ def _load_module(path: Path, name: str) -> Any:
     return module
 
 
-def validate_manifests(repo_root: Path) -> None:
+def validate_manifests(
+    repo_root: Path,
+    *,
+    allow_missing_source_cache: bool = False,
+) -> None:
     scripts = repo_root / "scripts"
     lineage = _load_module(
         scripts / "validate-lineage-manifests.py",
@@ -62,7 +66,16 @@ def validate_manifests(repo_root: Path) -> None:
         scripts / "validate-work-metadata-manifests.py",
         "_viewer_metadata_validation",
     )
-    errors = [*lineage.validate_repository(repo_root), *metadata.validate_repository(repo_root)]
+    errors = [
+        *lineage.validate_repository(
+            repo_root,
+            allow_missing_source_cache=allow_missing_source_cache,
+        ),
+        *metadata.validate_repository(
+            repo_root,
+            allow_missing_source_cache=allow_missing_source_cache,
+        ),
+    ]
     if errors:
         rendered = "\n".join(f"- {item}" for item in errors)
         raise CatalogError(f"manifest validation failed:\n{rendered}")
@@ -1032,10 +1045,14 @@ def build_catalog(
     external_pdf_base_url: str | None = None,
     publication_inventory: Path | None = None,
     validate: bool = True,
+    allow_missing_source_cache: bool = False,
 ) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     if validate:
-        validate_manifests(repo_root)
+        validate_manifests(
+            repo_root,
+            allow_missing_source_cache=allow_missing_source_cache,
+        )
     if external_pdf_base_url is not None:
         external_pdf_base_url = validate_external_pdf_base_url(external_pdf_base_url)
     lineage_records = _load_lineage_records(repo_root)
@@ -1281,6 +1298,14 @@ def _parser() -> argparse.ArgumentParser:
         action="store_true",
         help="skip manifest validators (intended only for focused unit tests)",
     )
+    parser.add_argument(
+        "--allow-missing-source-cache",
+        action="store_true",
+        help=(
+            "retain manifest validation but allow absent repository_path files "
+            "inside the gitignored source-cache directory"
+        ),
+    )
     return parser
 
 
@@ -1308,6 +1333,7 @@ def main(argv: list[str] | None = None) -> int:
             external_pdf_base_url=args.external_pdf_base_url,
             publication_inventory=args.publication_inventory,
             validate=not args.skip_manifest_validation,
+            allow_missing_source_cache=args.allow_missing_source_cache,
         )
     except CatalogError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

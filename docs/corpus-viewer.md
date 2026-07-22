@@ -258,8 +258,14 @@ PUBLICATION_PDF_BASE_URL="$pdf_base_url" npm run build:pages
 `catalog:pages` requires every indexed work to have a PDF and verifies the
 downloaded release set's complete filename list, SHA-256 digests, byte counts,
 and page counts against the tracked snapshot before emitting any external
-links. `build:pages` then type-checks the application and builds the already
-prepared catalog without copying `publication-pdfs/` into the Pages artifact.
+links. It retains manifest schema, index, reference, path-containment, and
+tracked-file validation while allowing an absent `repository_path` only when
+that path is contained by the gitignored `source-cache/` tree, which is not
+present in a clean Actions checkout. Ordinary local builds and repository gates
+remain strict, and any recorded checksum is still verified when a cache file is
+present.
+`build:pages` then type-checks the application and builds the already prepared
+catalog without copying `publication-pdfs/` into the Pages artifact.
 The workflow runs the viewer tests, refuses draft or mutable releases, and fails
 if that directory appears. It passes the static site to a separate deployment
 job through a one-day Actions artifact. That job alone receives repository write
